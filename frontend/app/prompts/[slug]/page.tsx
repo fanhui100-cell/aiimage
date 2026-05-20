@@ -6,6 +6,7 @@ import PromptCard from "@/components/PromptCard";
 import PromptVisual from "@/components/PromptVisual";
 import PromptVariableBuilder from "@/components/PromptVariableBuilder";
 import PromptViewTracker from "@/components/PromptViewTracker";
+import PromptJsonLd from "@/components/PromptJsonLd";
 import { getAllPrompts, getPromptBySlug, getRelatedPrompts, fetchPromptBySlug, apiToItem } from "@/lib/prompts";
 
 export function generateStaticParams() {
@@ -48,6 +49,7 @@ export default async function PromptDetailPage({ params }: { params: Promise<{ s
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-950">
       <PromptViewTracker slug={slug} />
+      <PromptJsonLd prompt={prompt} />
       <header className="border-b border-slate-200 bg-white/90">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
           <Link href="/" className="flex items-center gap-3">
