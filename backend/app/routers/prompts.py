@@ -1,6 +1,9 @@
 # backend/app/routers/prompts.py
+import io
+import zipfile
 from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from sqlalchemy import or_, update as sql_update, cast, String
 
@@ -8,7 +11,7 @@ from app.database import get_db
 from app.middleware.auth import get_current_user
 from app.models.prompt import Prompt, PromptFavorite, PromptStat
 from app.models.user import User
-from app.schemas.prompt import FavoriteToggleOut, PromptListOut, PromptOut, PromptStatOut
+from app.schemas.prompt import FavoriteToggleOut, PromptListOut, PromptOut, PromptStatOut, PromptPackRequest
 
 router = APIRouter(prefix="/api/prompts", tags=["prompts"])
 
@@ -142,6 +145,55 @@ def list_prompts(
 
     items = query.offset(skip).limit(limit).all()
     return PromptListOut(total=total, items=[_prompt_to_out(p, db) for p in items])
+
+
+@router.post("/pack")
+def download_pack(
+    body: PromptPackRequest,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    if not 1 <= len(body.slugs) <= 20:
+        raise HTTPException(status_code=400, detail="请选择 1-20 个提示词")
+
+    prompts = db.query(Prompt).filter(Prompt.slug.in_(body.slugs)).all()
+    if not prompts:
+        raise HTTPException(status_code=404, detail="未找到提示词")
+
+    has_premium = any(p.is_premium for p in prompts)
+    if has_premium and current_user.tier != "paid":
+        raise HTTPException(status_code=403, detail="高级提示词需要付费会员")
+
+    cost = len(prompts)
+    result = db.execute(
+        sql_update(User)
+        .where(User.id == current_user.id, User.credit_balance >= cost)
+        .values(credit_balance=User.credit_balance - cost)
+    )
+    db.commit()
+    if result.rowcount == 0:
+        raise HTTPException(status_code=402, detail=f"积分不足，需要 {cost} 积分")
+
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        for p in prompts:
+            content = (
+                f"# {p.title}\n"
+                f"模型：{p.model_name} | 平台：{p.platform} | 难度：{p.difficulty}\n"
+                f"场景：{p.scenario}\n\n"
+                f"## 中文提示词\n{p.prompt_zh}\n\n"
+                f"## English Prompt\n{p.prompt_en}\n\n"
+                f"## 使用建议\n" + "\n".join(f"- {t}" for t in (p.usage_tips or [])) + "\n"
+            )
+            zf.writestr(f"{p.slug}.txt", content)
+        zf.writestr("README.txt", f"Prompt Pack | {len(prompts)} 个提示词\n来自 Prompt123\n")
+    buf.seek(0)
+
+    return StreamingResponse(
+        buf,
+        media_type="application/zip",
+        headers={"Content-Disposition": f'attachment; filename="prompt-pack-{len(prompts)}.zip"'},
+    )
 
 
 @router.get("/{slug}", response_model=PromptOut)

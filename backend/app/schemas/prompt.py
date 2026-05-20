@@ -47,3 +47,7 @@ class PromptListOut(BaseModel):
 class FavoriteToggleOut(BaseModel):
     favorited: bool
     favorite_count: int
+
+
+class PromptPackRequest(BaseModel):
+    slugs: list[str]
