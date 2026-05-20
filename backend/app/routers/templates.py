@@ -10,7 +10,7 @@ router = APIRouter()
 def list_templates(platform: str | None = None, db: Session = Depends(get_db)):
     q = db.query(Template).filter(Template.is_active == True)
     if platform:
-        q = q.filter(Template.platform == platform)
+        q = q.filter(Template.platform == platform.lower())
     return [
         {
             "id": t.id,

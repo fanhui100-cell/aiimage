@@ -81,15 +81,17 @@ TEMPLATES = [
 
 def seed():
     db = SessionLocal()
-    count = 0
-    for t in TEMPLATES:
-        exists = db.query(Template).filter(Template.name == t["name"]).first()
-        if not exists:
-            db.add(Template(**t))
-            count += 1
-    db.commit()
-    print(f"Seeded {count} new templates (skipped existing).")
-    db.close()
+    try:
+        count = 0
+        for t in TEMPLATES:
+            exists = db.query(Template).filter(Template.name == t["name"]).first()
+            if not exists:
+                db.add(Template(**t))
+                count += 1
+        db.commit()
+        print(f"Seeded {count} new templates (skipped existing).")
+    finally:
+        db.close()
 
 if __name__ == "__main__":
     seed()
