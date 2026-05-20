@@ -4,6 +4,7 @@ def test_send_code_returns_200(client):
     with patch("app.routers.auth.send_sms_code") as mock_sms, \
          patch("app.routers.auth.redis_client") as mock_redis:
         mock_sms.return_value = None
+        mock_redis.get.return_value = None  # no rate limit hit
         mock_redis.setex.return_value = True
         resp = client.post("/api/auth/send-code", json={"phone": "13800138000"})
     assert resp.status_code == 200
