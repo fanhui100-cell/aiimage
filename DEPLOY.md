@@ -48,6 +48,21 @@ docker run -d \
 
 ---
 
+## Step 2b: Provision Redis (on the same EC2 instance)
+
+```bash
+# Run Redis (on same EC2 instance)
+docker run -d --name redis --restart unless-stopped redis:7-alpine
+# Then update REDIS_URL in .env to: redis://localhost:6379
+# Or use docker network if backend is containerized:
+docker network create app-net
+docker run -d --name redis --network app-net --restart unless-stopped redis:7-alpine
+docker run -d --env-file .env --network app-net -p 8000:8000 --name backend ai-image-backend
+# Then set REDIS_URL=redis://redis:6379
+```
+
+---
+
 ## Step 3: Configure Nginx + HTTPS (Let's Encrypt)
 
 ```bash
@@ -62,6 +77,7 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
+        client_max_body_size 100M;
     }
 }
 
