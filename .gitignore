@@ -1,8 +1,12 @@
 backend/.env
+backend/test.db
+backend/.uv-cache/
+backend/uv.lock
+backend/.venv/
+backend/.pytest_cache/
 __pycache__/
 *.pyc
 .pytest_cache/
-backend/.venv/
 node_modules/
 .next/
 *.log

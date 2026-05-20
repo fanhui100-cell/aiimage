@@ -1,19 +1,20 @@
-# backend/app/routers/auth.py
 import re
+
 import redis as redis_lib
-from fastapi import APIRouter, HTTPException, Depends
-from sqlalchemy.orm import Session
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.database import get_db
-from app.models.user import User
-from app.schemas.user import SendCodeRequest, LoginRequest, LoginResponse
-from app.services.sms import generate_code, send_sms_code
 from app.middleware.auth import create_jwt
+from app.models.user import User
+from app.schemas.user import LoginRequest, LoginResponse, SendCodeRequest
+from app.services.sms import generate_code, send_sms_code
 
 router = APIRouter()
 redis_client = redis_lib.from_url(settings.REDIS_URL, decode_responses=False)
+
 
 @router.post("/send-code")
 def send_code(body: SendCodeRequest):
@@ -21,11 +22,13 @@ def send_code(body: SendCodeRequest):
         raise HTTPException(status_code=422, detail="请输入正确的手机号")
     if redis_client.get(f"sms_rate:{body.phone}"):
         raise HTTPException(status_code=429, detail="请稍后再试")
+
     code = generate_code()
     send_sms_code(body.phone, code)
     redis_client.setex(f"sms:{body.phone}", 300, code.encode())
     redis_client.setex(f"sms_rate:{body.phone}", 60, "1")
     return {"message": "验证码已发送"}
+
 
 @router.post("/login", response_model=LoginResponse)
 def login(body: LoginRequest, db: Session = Depends(get_db)):
@@ -44,6 +47,9 @@ def login(body: LoginRequest, db: Session = Depends(get_db)):
         except IntegrityError:
             db.rollback()
             user = db.query(User).filter(User.phone == body.phone).first()
+
+    if not user:
+        raise HTTPException(status_code=500, detail="用户创建失败")
 
     token = create_jwt(user.id)
     return LoginResponse(token=token, credit_balance=user.credit_balance, tier=user.tier)

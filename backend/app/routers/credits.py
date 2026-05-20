@@ -1,36 +1,39 @@
-# backend/app/routers/credits.py
 import uuid
 from datetime import datetime, timezone
+
 from fastapi import APIRouter, Depends, HTTPException, Request
-from sqlalchemy.orm import Session
 from sqlalchemy import update as sql_update
+from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.database import get_db
 from app.middleware.auth import get_current_user
-from app.models.user import User
 from app.models.credit_order import CreditOrder
-from app.schemas.credit import PackageInfo, CreateOrderRequest, CreateOrderResponse
-from app.services.payment import PACKAGES, get_package, create_payment_order, verify_webhook
+from app.models.user import User
+from app.schemas.credit import CreateOrderRequest, CreateOrderResponse, PackageInfo
+from app.services.payment import PACKAGES, create_payment_order, get_package, verify_webhook
 
 router = APIRouter()
+
 
 @router.get("/packages")
 def list_packages():
     return [
         PackageInfo(
-            id=pkg_id,
+            id=package_id,
             name=info["name"],
             price_cny=info["price_cny"],
             credits=info["credits"],
-            description=f"¥{info['price_cny']} / {info['credits']}张",
+            description=f"¥{info['price_cny']} / {info['credits']} 张",
         )
-        for pkg_id, info in PACKAGES.items()
+        for package_id, info in PACKAGES.items()
     ]
+
 
 @router.get("/balance")
 def get_balance(current_user: User = Depends(get_current_user)):
     return {"credit_balance": current_user.credit_balance, "tier": current_user.tier}
+
 
 @router.post("/create-order", response_model=CreateOrderResponse)
 async def create_order(
@@ -40,9 +43,9 @@ async def create_order(
     current_user: User = Depends(get_current_user),
 ):
     try:
-        pkg = get_package(body.package_id)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        package = get_package(body.package_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     order_id = str(uuid.uuid4())
     base_url = str(request.base_url).rstrip("/")
@@ -51,14 +54,14 @@ async def create_order(
 
     try:
         pay_url = await create_payment_order(order_id, body.package_id, notify_url, return_url)
-    except RuntimeError as e:
-        raise HTTPException(status_code=502, detail=str(e))
+    except RuntimeError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
 
     order = CreditOrder(
         id=order_id,
         user_id=current_user.id,
-        amount_cny=pkg["price_cny"],
-        credits=pkg["credits"],
+        amount_cny=package["price_cny"],
+        credits=package["credits"],
         status="pending",
     )
     db.add(order)
@@ -67,15 +70,16 @@ async def create_order(
     return CreateOrderResponse(
         order_id=order_id,
         pay_url=pay_url,
-        amount_cny=pkg["price_cny"],
-        credits=pkg["credits"],
+        amount_cny=package["price_cny"],
+        credits=package["credits"],
     )
+
 
 @router.post("/webhook")
 async def payment_webhook(request: Request, db: Session = Depends(get_db)):
-    """Hupijiao payment callback — processes successful payments and credits user."""
+    """Process successful payment callbacks and credit the user account."""
     form = dict(await request.form())
-    if not verify_webhook(dict(form)):
+    if not verify_webhook(form):
         return {"errcode": 1, "errmsg": "签名错误"}
 
     order_id = form.get("trade_order_id")
@@ -86,7 +90,6 @@ async def payment_webhook(request: Request, db: Session = Depends(get_db)):
     if not order:
         return {"errcode": 0, "errmsg": "ok"}
 
-    # Atomic update: only succeeds if status is still "pending" (prevents duplicate webhook race)
     result = db.execute(
         sql_update(CreditOrder)
         .where(CreditOrder.id == order.id, CreditOrder.status == "pending")
@@ -99,10 +102,8 @@ async def payment_webhook(request: Request, db: Session = Depends(get_db)):
     )
     db.commit()
     if result.rowcount == 0:
-        # Already processed (concurrent duplicate webhook)
         return {"errcode": 0, "errmsg": "ok"}
 
-    # Only grant credits if we won the race
     db.execute(
         sql_update(User)
         .where(User.id == order.user_id)

@@ -1,6 +1,8 @@
-# backend/scripts/seed_templates.py
 """Run: cd backend && poetry run python scripts/seed_templates.py"""
-import sys, os
+
+import os
+import sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from app.database import SessionLocal
@@ -79,19 +81,21 @@ TEMPLATES = [
     },
 ]
 
+
 def seed():
     db = SessionLocal()
     try:
         count = 0
-        for t in TEMPLATES:
-            exists = db.query(Template).filter(Template.name == t["name"]).first()
+        for template in TEMPLATES:
+            exists = db.query(Template).filter(Template.name == template["name"]).first()
             if not exists:
-                db.add(Template(**t))
+                db.add(Template(**template))
                 count += 1
         db.commit()
         print(f"Seeded {count} new templates (skipped existing).")
     finally:
         db.close()
+
 
 if __name__ == "__main__":
     seed()

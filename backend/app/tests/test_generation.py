@@ -1,9 +1,10 @@
-# backend/app/tests/test_generation.py
-from unittest.mock import patch, AsyncMock
+from unittest.mock import AsyncMock, patch
+
 
 def test_estimate_requires_auth(client):
     resp = client.post("/api/generate/estimate", json={"mode": "keyword", "has_reference_image": False})
-    assert resp.status_code == 422  # missing Authorization header
+    assert resp.status_code == 422
+
 
 def test_estimate_returns_credits(client):
     with patch("app.routers.auth.redis_client") as mock_redis:
@@ -19,6 +20,7 @@ def test_estimate_returns_credits(client):
     )
     assert resp.status_code == 200
     assert resp.json()["credits_required"] == 1
+
 
 def test_keyword_generate_deducts_credits(client):
     with patch("app.routers.auth.redis_client") as mock_redis:
@@ -39,10 +41,12 @@ def test_keyword_generate_deducts_credits(client):
             data={"keywords": "蓝色连衣裙"},
             headers={"Authorization": f"Bearer {token}"},
         )
+
     assert resp.status_code == 200
     data = resp.json()
-    assert data["credits_remaining"] == 2   # 3 - 1
+    assert data["credits_remaining"] == 2
     assert data["image_url"] == "https://images.example.com/test.png"
+
 
 def test_generate_fails_with_insufficient_credits(client):
     with patch("app.routers.auth.redis_client") as mock_redis:
@@ -50,11 +54,11 @@ def test_generate_fails_with_insufficient_credits(client):
         mock_redis.delete.return_value = True
         login = client.post("/api/auth/login", json={"phone": "13900139002", "code": "333333"})
     token = login.json()["token"]
-    # Drain credits first - patch user to have 0 balance
+
     from app.models.user import User
-    from app.tests.conftest import TestSession as _TS
-    # Directly set balance to 0 for this test user
-    db = _TS()
+    from app.tests.conftest import TestSession
+
+    db = TestSession()
     user = db.query(User).filter(User.phone == "13900139002").first()
     if user:
         user.credit_balance = 0

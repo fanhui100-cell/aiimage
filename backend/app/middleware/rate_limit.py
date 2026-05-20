@@ -1,15 +1,18 @@
-# backend/app/middleware/rate_limit.py
-from datetime import datetime, date, timezone, time as dt_time
+from datetime import datetime, time as dt_time, timezone
+
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
+
+from app.config import settings
 from app.models.generation import Generation
 from app.models.user import User
-from app.config import settings
+
 
 def check_daily_limit(user: User, db: Session) -> None:
-    """Raise 429 if free user exceeded daily generation limit."""
+    """Raise 429 if a free user exceeded the daily generation limit."""
     if user.tier == "paid":
         return
+
     today_utc = datetime.now(timezone.utc).date()
     today_start = datetime.combine(today_utc, dt_time.min, tzinfo=timezone.utc)
     count = (
