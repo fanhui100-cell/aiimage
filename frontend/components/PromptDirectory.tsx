@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { PromptItem, PromptModel } from "@/lib/prompts";
-import { hotSearches, promptCategories, promptModels } from "@/lib/prompts";
+import type { PromptDifficulty, PromptItem, PromptModel } from "@/lib/prompts";
+import { hotSearches, promptCategories, promptCollections, promptDifficulties, promptModels } from "@/lib/prompts";
 import PromptCard from "@/components/PromptCard";
 
 type SortMode = "最新" | "热门" | "收藏最多";
@@ -26,6 +26,7 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("全部");
   const [model, setModel] = useState<"全部" | PromptModel>("全部");
+  const [difficulty, setDifficulty] = useState<"全部" | PromptDifficulty>("全部");
   const [sort, setSort] = useState<SortMode>("热门");
 
   const filtered = useMemo(() => {
@@ -33,43 +34,68 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
     const result = prompts.filter((prompt) => {
       const matchQuery =
         !keyword ||
-        [prompt.title, prompt.model, prompt.category, prompt.scenario, prompt.summary, ...prompt.tags]
+        [
+          prompt.title,
+          prompt.model,
+          prompt.category,
+          prompt.scenario,
+          prompt.summary,
+          prompt.platform,
+          prompt.outputType,
+          prompt.difficulty,
+          ...prompt.tags,
+        ]
           .join(" ")
           .toLowerCase()
           .includes(keyword);
       const matchCategory = category === "全部" || prompt.category === category;
       const matchModel = model === "全部" || prompt.model === model;
-      return matchQuery && matchCategory && matchModel;
+      const matchDifficulty = difficulty === "全部" || prompt.difficulty === difficulty;
+      return matchQuery && matchCategory && matchModel && matchDifficulty;
     });
 
     return [...result].sort((a, b) => {
-      if (sort === "热门" || sort === "收藏最多") return b.popularity - a.popularity;
-      return prompts.indexOf(b) - prompts.indexOf(a);
+      if (sort === "收藏最多") {
+        const aFav = a.stat?.favorite_count ?? 0;
+        const bFav = b.stat?.favorite_count ?? 0;
+        return bFav - aFav;
+      }
+      if (sort === "热门") return b.popularity - a.popularity;
+      return 0;
     });
-  }, [category, model, prompts, query, sort]);
+  }, [category, difficulty, model, prompts, query, sort]);
 
-  const renderSearchBox = (className = "border-slate-200 bg-white text-slate-500 shadow-sm") => (
-    <form
-      className={`flex h-14 items-center gap-3 rounded-xl border px-4 ${className}`}
-      onSubmit={(event) => event.preventDefault()}
-    >
-      <SearchIcon />
-      <input
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        className="min-w-0 flex-1 bg-transparent text-sm text-slate-950 outline-none placeholder:text-slate-400"
-        placeholder="搜索提示词、模型、主题或关键词，例如：淘宝主图 / Nano Banana / 人物写真"
-      />
-      {query && (
-        <button type="button" onClick={() => setQuery("")} className="text-xs font-semibold text-slate-400 hover:text-slate-950">
-          清空
+  function applyQuery(value: string) {
+    setQuery(value);
+    window.requestAnimationFrame(() => {
+      document.getElementById("directory")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function renderSearchBox(className = "border-slate-200 bg-white text-slate-500 shadow-sm") {
+    return (
+      <form
+        className={`flex h-14 items-center gap-3 rounded-xl border px-4 ${className}`}
+        onSubmit={(event) => event.preventDefault()}
+      >
+        <SearchIcon />
+        <input
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          className="min-w-0 flex-1 bg-transparent text-sm text-slate-950 outline-none placeholder:text-slate-400"
+          placeholder="搜索提示词、模型、主题或关键词，例如：淘宝主图 / Nano Banana / 人物写真"
+        />
+        {query && (
+          <button type="button" onClick={() => setQuery("")} className="text-xs font-semibold text-slate-400 hover:text-slate-950">
+            清空
+          </button>
+        )}
+        <button className="rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white">
+          搜索
         </button>
-      )}
-      <button className="rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white">
-        搜索
-      </button>
-    </form>
-  );
+      </form>
+    );
+  }
 
   return (
     <>
@@ -101,10 +127,24 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
             收集 GPT-Image-2、Gemini Nano Banana、Midjourney、视频生成等平台的中文提示词，按模型、场景和行业整理。
           </p>
 
-          <div className="mx-auto mt-9 max-w-5xl rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-left shadow-2xl shadow-black/25 backdrop-blur">
+          <div className="mt-8 grid gap-3 md:grid-cols-3">
+            {promptCollections.map((collection) => (
+              <button
+                key={collection.id}
+                onClick={() => applyQuery(collection.query)}
+                className="rounded-xl border border-white/10 bg-white/[0.05] p-5 text-left transition hover:-translate-y-0.5 hover:border-white/30"
+              >
+                <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-950">{collection.tag}</span>
+                <h2 className="mt-4 text-lg font-semibold text-white">{collection.title}</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{collection.desc}</p>
+              </button>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-6 max-w-5xl rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-left shadow-2xl shadow-black/25 backdrop-blur">
             {renderSearchBox("border-white/10 bg-slate-950/70 text-slate-400 shadow-none [&_input]:text-white [&_input]:placeholder:text-slate-500")}
 
-            <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="mt-4 grid gap-3 md:grid-cols-4">
               <label className="block">
                 <span className="mb-2 block text-xs text-slate-400">分类</span>
                 <select value={category} onChange={(event) => setCategory(event.target.value)} className="h-11 w-full rounded-lg border border-white/10 bg-slate-950/70 px-3 text-sm text-white outline-none">
@@ -117,6 +157,14 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
                 <span className="mb-2 block text-xs text-slate-400">模型</span>
                 <select value={model} onChange={(event) => setModel(event.target.value as "全部" | PromptModel)} className="h-11 w-full rounded-lg border border-white/10 bg-slate-950/70 px-3 text-sm text-white outline-none">
                   {promptModels.map((item) => (
+                    <option key={item}>{item}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="block">
+                <span className="mb-2 block text-xs text-slate-400">难度</span>
+                <select value={difficulty} onChange={(event) => setDifficulty(event.target.value as "全部" | PromptDifficulty)} className="h-11 w-full rounded-lg border border-white/10 bg-slate-950/70 px-3 text-sm text-white outline-none">
+                  {promptDifficulties.map((item) => (
                     <option key={item}>{item}</option>
                   ))}
                 </select>
@@ -139,7 +187,7 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
                 {hotSearches.map((item) => (
                   <button
                     key={item}
-                    onClick={() => setQuery(item)}
+                    onClick={() => applyQuery(item)}
                     className="rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-xs text-slate-300 hover:border-indigo-400 hover:text-white"
                   >
                     {item}
