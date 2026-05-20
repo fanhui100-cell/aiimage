@@ -8,7 +8,7 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
-    phone = Column(String(20), unique=True, nullable=True, index=True)
+    phone = Column(String(20), unique=True, nullable=True)
     email = Column(String(255), unique=True, nullable=True)
     credit_balance = Column(Integer, default=0, nullable=False)
     tier = Column(String(20), default="free", nullable=False)  # free | paid

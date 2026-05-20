@@ -30,7 +30,7 @@ def upgrade() -> None:
         sa.Column('tier', sa.String(20), nullable=False, server_default='free'),
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()')),
     )
-    op.create_index('ix_users_phone', 'users', ['phone'])
+    # unique=True on phone already creates an index; no separate ix_users_phone needed
 
     # templates table (no FK deps)
     op.create_table(
@@ -54,20 +54,20 @@ def upgrade() -> None:
         sa.Column('credits', sa.Integer(), nullable=False),
         sa.Column('status', sa.String(20), nullable=False, server_default='pending'),
         sa.Column('payment_channel', sa.String(20), nullable=True),
-        sa.Column('external_order_id', sa.String(100), nullable=True),
+        sa.Column('external_order_id', sa.String(100), nullable=True, unique=True),
         sa.Column('paid_at', sa.DateTime(), nullable=True),
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()')),
     )
     op.create_index('ix_credit_orders_user_id', 'credit_orders', ['user_id'])
 
-    # generations table (FK -> users)
+    # generations table (FK -> users, FK -> templates)
     op.create_table(
         'generations',
         sa.Column('id', sa.String(36), primary_key=True, nullable=False),
         sa.Column('user_id', sa.String(36), sa.ForeignKey('users.id'), nullable=False),
         sa.Column('mode', sa.String(20), nullable=False),
         sa.Column('prompt', sa.Text(), nullable=False),
-        sa.Column('template_id', sa.String(36), nullable=True),
+        sa.Column('template_id', sa.String(36), sa.ForeignKey('templates.id'), nullable=True),
         sa.Column('image_url', sa.String(500), nullable=True),
         sa.Column('credits_used', sa.Integer(), nullable=False, server_default='0'),
         sa.Column('tokens_used', sa.Integer(), nullable=False, server_default='0'),
@@ -76,10 +76,12 @@ def upgrade() -> None:
         sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()')),
     )
     op.create_index('ix_generations_user_id', 'generations', ['user_id'])
+    op.create_index('ix_generations_expires_at', 'generations', ['expires_at'])
 
 
 def downgrade() -> None:
     """Drop all tables in reverse dependency order."""
+    op.drop_index('ix_generations_expires_at', table_name='generations')
     op.drop_index('ix_generations_user_id', table_name='generations')
     op.drop_table('generations')
 
@@ -88,5 +90,4 @@ def downgrade() -> None:
 
     op.drop_table('templates')
 
-    op.drop_index('ix_users_phone', table_name='users')
     op.drop_table('users')

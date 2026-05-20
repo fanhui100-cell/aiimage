@@ -11,10 +11,10 @@ class Generation(Base):
     user_id = Column(String(36), ForeignKey("users.id"), nullable=False, index=True)
     mode = Column(String(20), nullable=False)  # template | keyword | custom
     prompt = Column(Text, nullable=False)
-    template_id = Column(String(36), nullable=True)
+    template_id = Column(String(36), ForeignKey("templates.id"), nullable=True)
     image_url = Column(String(500), nullable=True)
-    credits_used = Column(Integer, default=0)
-    tokens_used = Column(Integer, default=0)
-    status = Column(String(20), default="pending")  # pending | success | failed | expired
-    expires_at = Column(DateTime, nullable=False)
+    credits_used = Column(Integer, nullable=False, server_default="0")
+    tokens_used = Column(Integer, nullable=False, server_default="0")
+    status = Column(String(20), nullable=False, server_default="pending")  # pending | success | failed | expired
+    expires_at = Column(DateTime, nullable=False, index=True)
     created_at = Column(DateTime, server_default=func.now())

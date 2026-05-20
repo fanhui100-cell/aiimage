@@ -13,4 +13,4 @@ class Template(Base):
     size = Column(String(20), nullable=False)        # 1024x1024 | 1024x1280
     prompt_template = Column(Text, nullable=False)
     thumbnail_url = Column(String(500), nullable=True)
-    is_active = Column(Boolean, default=True)
+    is_active = Column(Boolean, nullable=False, server_default="true")
