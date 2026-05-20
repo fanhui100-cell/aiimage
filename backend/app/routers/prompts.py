@@ -2,7 +2,7 @@
 from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from sqlalchemy import or_, update as sql_update, text
+from sqlalchemy import or_, update as sql_update, cast, String
 
 from app.database import get_db
 from app.middleware.auth import get_current_user
@@ -118,7 +118,7 @@ def list_prompts(
                 Prompt.summary.ilike(kw),
                 Prompt.scenario.ilike(kw),
                 Prompt.platform.ilike(kw),
-                text("prompts.tags::text ilike :kw").bindparams(kw=kw),
+                cast(Prompt.tags, String).ilike(kw),
             )
         )
     if category and category != "全部":
