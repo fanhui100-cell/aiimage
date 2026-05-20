@@ -24,6 +24,7 @@ export type PromptItem = {
   usageTips: string[];
   exampleImageUrl?: string;
   isFavorited?: boolean;
+  isPremium?: boolean;
   stat?: { view_count: number; copy_count: number; favorite_count: number };
 };
 
@@ -464,6 +465,7 @@ export function apiToItem(p: PromptAPI): PromptItem {
     usageTips: p.usage_tips,
     exampleImageUrl: p.example_image_url ?? undefined,
     isFavorited: p.is_favorited,
+    isPremium: p.is_premium,
     stat: p.stat ?? undefined,
   };
 }

@@ -7,6 +7,7 @@ import PromptVisual from "@/components/PromptVisual";
 import PromptVariableBuilder from "@/components/PromptVariableBuilder";
 import PromptViewTracker from "@/components/PromptViewTracker";
 import PromptJsonLd from "@/components/PromptJsonLd";
+import PremiumLock from "@/components/PremiumLock";
 import { getAllPrompts, getPromptBySlug, getRelatedPrompts, fetchPromptBySlug, apiToItem } from "@/lib/prompts";
 
 export function generateStaticParams() {
@@ -114,19 +115,41 @@ export default async function PromptDetailPage({ params }: { params: Promise<{ s
             </div>
           </section>
 
-          <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-slate-950">中文提示词</h2>
-            <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-50 p-4 text-sm leading-7 text-slate-700">
-              {prompt.promptZh}
-            </p>
-          </section>
+          {prompt.isPremium ? (
+            <PremiumLock>
+              <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 className="text-xl font-semibold text-slate-950">中文提示词</h2>
+                <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                  {prompt.promptZh}
+                </p>
+              </section>
+            </PremiumLock>
+          ) : (
+            <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-slate-950">中文提示词</h2>
+              <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                {prompt.promptZh}
+              </p>
+            </section>
+          )}
 
-          <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-slate-950">英文提示词</h2>
-            <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-950 p-4 text-sm leading-7 text-slate-100">
-              {prompt.promptEn}
-            </p>
-          </section>
+          {prompt.isPremium ? (
+            <PremiumLock>
+              <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 className="text-xl font-semibold text-slate-950">英文提示词</h2>
+                <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-950 p-4 text-sm leading-7 text-slate-100">
+                  {prompt.promptEn}
+                </p>
+              </section>
+            </PremiumLock>
+          ) : (
+            <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-slate-950">英文提示词</h2>
+              <p className="mt-4 whitespace-pre-wrap rounded-lg bg-slate-950 p-4 text-sm leading-7 text-slate-100">
+                {prompt.promptEn}
+              </p>
+            </section>
+          )}
 
           <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-slate-950">使用建议</h2>
