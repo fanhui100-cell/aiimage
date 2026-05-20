@@ -1,9 +1,11 @@
 # backend/app/routers/credits.py
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
+from sqlalchemy import update as sql_update
 
+from app.config import settings
 from app.database import get_db
 from app.middleware.auth import get_current_user
 from app.models.user import User
@@ -45,7 +47,7 @@ async def create_order(
     order_id = str(uuid.uuid4())
     base_url = str(request.base_url).rstrip("/")
     notify_url = f"{base_url}/api/credits/webhook"
-    return_url = f"{base_url.replace(':8000', ':3000')}/credits?status=success"
+    return_url = f"{settings.FRONTEND_URL}/credits?status=success"
 
     try:
         pay_url = await create_payment_order(order_id, body.package_id, notify_url, return_url)
@@ -81,19 +83,30 @@ async def payment_webhook(request: Request, db: Session = Depends(get_db)):
         return {"errcode": 1, "errmsg": "缺少订单号"}
 
     order = db.get(CreditOrder, order_id)
-    if not order or order.status == "paid":
-        return {"errcode": 0, "errmsg": "ok"}  # idempotent
+    if not order:
+        return {"errcode": 0, "errmsg": "ok"}
 
-    order.status = "paid"
-    order.payment_channel = form.get("channel", "")
-    order.external_order_id = form.get("transaction_id") or None
-    order.paid_at = datetime.utcnow()
+    # Atomic update: only succeeds if status is still "pending" (prevents duplicate webhook race)
+    result = db.execute(
+        sql_update(CreditOrder)
+        .where(CreditOrder.id == order.id, CreditOrder.status == "pending")
+        .values(
+            status="paid",
+            payment_channel=form.get("channel", ""),
+            external_order_id=form.get("transaction_id") or None,
+            paid_at=datetime.now(timezone.utc),
+        )
+    )
+    db.commit()
+    if result.rowcount == 0:
+        # Already processed (concurrent duplicate webhook)
+        return {"errcode": 0, "errmsg": "ok"}
 
-    user = db.get(User, order.user_id)
-    if user:
-        user.credit_balance += order.credits
-        if user.tier == "free":
-            user.tier = "paid"
-
+    # Only grant credits if we won the race
+    db.execute(
+        sql_update(User)
+        .where(User.id == order.user_id)
+        .values(credit_balance=User.credit_balance + order.credits, tier="paid")
+    )
     db.commit()
     return {"errcode": 0, "errmsg": "ok"}

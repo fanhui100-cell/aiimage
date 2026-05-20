@@ -9,6 +9,7 @@ IMPORTANT: Verify before going live:
 - Risk control rules
 """
 import hashlib
+import hmac as hmac_module
 import time
 import httpx
 from app.config import settings
@@ -58,4 +59,4 @@ def verify_webhook(params: dict) -> bool:
     received_hash = params.get("hash", "")
     params_without_hash = {k: v for k, v in params.items() if k != "hash"}
     expected = _sign(params_without_hash)
-    return received_hash == expected
+    return hmac_module.compare_digest(received_hash, expected)

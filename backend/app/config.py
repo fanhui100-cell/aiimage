@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     HUPIJIAO_KEY: str
     HUPIJIAO_SECRET: str
     MAX_DAILY_FREE_GENERATIONS: int = 1
+    FRONTEND_URL: str = "http://localhost:3000"
 
     model_config = SettingsConfigDict(env_file=".env")
 

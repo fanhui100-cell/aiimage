@@ -29,6 +29,14 @@ export default function Dashboard() {
   }, [token, router]);
 
   useEffect(() => {
+    if (token) {
+      api.get('/credits/balance').then(res => {
+        updateBalance(res.data.credit_balance);
+      }).catch(() => {});
+    }
+  }, [token]);
+
+  useEffect(() => {
     api
       .post("/generate/estimate", { mode, has_reference_image: !!referenceFile })
       .then((r) => setCreditsRequired(r.data.credits_required))

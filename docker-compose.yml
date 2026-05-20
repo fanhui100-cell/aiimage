@@ -1,4 +1,6 @@
 version: "3.9"
+# DEV ONLY — Do NOT use these credentials in staging/production.
+# Override with a secrets manager or environment-specific .env file.
 services:
   postgres:
     image: postgres:16

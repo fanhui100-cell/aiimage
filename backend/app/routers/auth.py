@@ -19,9 +19,12 @@ redis_client = redis_lib.from_url(settings.REDIS_URL, decode_responses=False)
 def send_code(body: SendCodeRequest):
     if not re.match(r"^1[3-9]\d{9}$", body.phone):
         raise HTTPException(status_code=422, detail="请输入正确的手机号")
+    if redis_client.get(f"sms_rate:{body.phone}"):
+        raise HTTPException(status_code=429, detail="请稍后再试")
     code = generate_code()
     send_sms_code(body.phone, code)
     redis_client.setex(f"sms:{body.phone}", 300, code.encode())
+    redis_client.setex(f"sms_rate:{body.phone}", 60, "1")
     return {"message": "验证码已发送"}
 
 @router.post("/login", response_model=LoginResponse)
