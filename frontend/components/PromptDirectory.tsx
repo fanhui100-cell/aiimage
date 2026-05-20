@@ -108,6 +108,12 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
             <span className="text-sm font-semibold text-slate-950">Prompt123</span>
           </a>
           <div className="min-w-0 flex-1">{renderSearchBox()}</div>
+          <a href="/prompts/hot" className="hidden rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-slate-400 lg:block">
+            🔥 热门榜
+          </a>
+          <a href="/prompts/pack" className="hidden rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:border-slate-400 lg:block">
+            📦 Pack 下载
+          </a>
           <a href="/dashboard" className="hidden rounded-lg bg-slate-950 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-800 lg:block">
             生成台
           </a>
