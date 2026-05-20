@@ -1,17 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { useAuth } from "@/lib/auth";
 
 const STORAGE_KEY = "prompt123:favorites";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
-function readFavorites() {
-  if (typeof window === "undefined") return new Set<string>();
+function readLocalFavorites(): Set<string> {
+  if (typeof window === "undefined") return new Set();
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     return new Set<string>(raw ? (JSON.parse(raw) as string[]) : []);
   } catch {
-    return new Set<string>();
+    return new Set();
   }
+}
+
+function writeLocalFavorites(favorites: Set<string>) {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(favorites)));
 }
 
 export default function PromptFavoriteButton({
@@ -25,23 +32,46 @@ export default function PromptFavoriteButton({
   initialFavorited?: boolean;
   initialCount?: number;
 }) {
+  const { token } = useAuth();
   const [active, setActive] = useState(initialFavorited);
-  const [count] = useState(initialCount);
+  const [count, setCount] = useState(initialCount);
 
   useEffect(() => {
-    setActive(readFavorites().has(slug));
-  }, [slug]);
-
-  function toggleFavorite() {
-    const favorites = readFavorites();
-    if (favorites.has(slug)) {
-      favorites.delete(slug);
-      setActive(false);
+    if (!token) {
+      setActive(readLocalFavorites().has(slug));
     } else {
-      favorites.add(slug);
-      setActive(true);
+      setActive(initialFavorited);
     }
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(favorites)));
+  }, [slug, token, initialFavorited]);
+
+  async function toggleFavorite() {
+    if (token) {
+      try {
+        const res = await fetch(`${API_BASE}/api/prompts/${slug}/favorite`, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json() as { favorited: boolean; favorite_count: number };
+        setActive(data.favorited);
+        setCount(data.favorite_count);
+        toast.success(data.favorited ? "已收藏" : "已取消收藏");
+      } catch {
+        toast.error("操作失败，请重试");
+      }
+    } else {
+      const favorites = readLocalFavorites();
+      if (favorites.has(slug)) {
+        favorites.delete(slug);
+        setActive(false);
+        toast.success("已取消收藏");
+      } else {
+        favorites.add(slug);
+        setActive(true);
+        toast.success("已收藏（登录后可同步到云端）");
+      }
+      writeLocalFavorites(favorites);
+    }
   }
 
   return (
