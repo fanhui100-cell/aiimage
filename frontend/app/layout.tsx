@@ -3,8 +3,8 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "主图工厂 | AI 电商商品图生成平台",
-  description: "面向淘宝、拼多多、抖音小店卖家的 AI 商品图批量生成工具。",
+  title: "Prompt123 | 高质量中文 AI 提示词库",
+  description: "面向 GPT-Image-2、Gemini Nano Banana、Midjourney 和视频生成平台的中文提示词库与 AI 图像生成工作台。",
 };
 
 export default function RootLayout({

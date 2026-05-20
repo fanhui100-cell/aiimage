@@ -77,7 +77,7 @@ export default function LoginPage() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-sm font-bold text-slate-950">
             图
           </span>
-          <span className="font-semibold">主图工厂</span>
+          <span className="font-semibold">Prompt123</span>
         </Link>
         <div>
           <p className="mb-4 text-sm font-medium text-amber-200">Seller image studio</p>
@@ -111,7 +111,7 @@ export default function LoginPage() {
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-950 text-sm font-bold text-white">
                 图
               </span>
-              <span className="font-semibold text-slate-950">主图工厂</span>
+              <span className="font-semibold text-slate-950">Prompt123</span>
             </Link>
             <h1 className="text-2xl font-semibold text-slate-950">登录 / 注册</h1>
             <p className="mt-2 text-sm text-slate-500">手机号验证登录，无需单独创建密码。</p>

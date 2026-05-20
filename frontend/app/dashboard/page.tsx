@@ -9,6 +9,7 @@ import ImageResult from "@/components/ImageResult";
 import TemplateSelector from "@/components/TemplateSelector";
 import { api } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
+import { getPromptBySlug } from "@/lib/prompts";
 
 type Mode = "template" | "keyword" | "custom";
 
@@ -30,6 +31,16 @@ export default function Dashboard() {
   const [creditsRequired, setCreditsRequired] = useState(1);
   const [loading, setLoading] = useState(false);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const slug = new URLSearchParams(window.location.search).get("prompt");
+    if (!slug) return;
+    const prompt = getPromptBySlug(slug);
+    if (!prompt) return;
+    setMode("custom");
+    setCustomPrompt(prompt.promptZh);
+    toast.success(`已载入提示词：${prompt.title}`);
+  }, []);
 
   useEffect(() => {
     if (!token) router.push("/login");
@@ -125,7 +136,7 @@ export default function Dashboard() {
             <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-950 text-sm font-bold text-white">
               图
             </span>
-            <span className="text-sm font-semibold text-slate-950">主图工厂</span>
+            <span className="text-sm font-semibold text-slate-950">Prompt123</span>
           </Link>
           <nav className="flex items-center gap-3 text-sm">
             <Link href="/history" className="hidden text-slate-500 hover:text-slate-950 sm:inline">

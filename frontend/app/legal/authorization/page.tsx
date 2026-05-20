@@ -4,7 +4,7 @@ export default function AuthorizationPage() {
   return (
     <main className="min-h-screen px-5 py-10 sm:px-8">
       <article className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-900/5 sm:p-10">
-        <Link href="/" className="text-sm font-semibold text-amber-700">主图工厂</Link>
+        <Link href="/" className="text-sm font-semibold text-amber-700">Prompt123</Link>
         <h1 className="mt-6 text-3xl font-semibold text-slate-950">用户上传素材授权说明</h1>
 
         <div className="mt-8 space-y-6 text-sm leading-7 text-slate-700">

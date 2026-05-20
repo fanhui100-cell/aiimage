@@ -4,7 +4,7 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen px-5 py-10 sm:px-8">
       <article className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-900/5 sm:p-10">
-        <Link href="/" className="text-sm font-semibold text-amber-700">主图工厂</Link>
+        <Link href="/" className="text-sm font-semibold text-amber-700">Prompt123</Link>
         <h1 className="mt-6 text-3xl font-semibold text-slate-950">服务条款</h1>
         <p className="mt-3 text-sm text-slate-500">最后更新：2026 年 5 月 20 日</p>
 
