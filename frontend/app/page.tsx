@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PromptCard from "@/components/PromptCard";
 import PromptDirectory from "@/components/PromptDirectory";
-import { getAllPrompts } from "@/lib/prompts";
+import { getAllPrompts, fetchPrompts, apiToItem } from "@/lib/prompts";
 
 const navItems = [
   { label: "首页", href: "#" },
@@ -49,8 +49,14 @@ const topicMap = [
   },
 ] as const;
 
-export default function LandingPage() {
-  const prompts = getAllPrompts();
+export default async function LandingPage() {
+  let prompts;
+  try {
+    const data = await fetchPrompts({ limit: 100 });
+    prompts = data.items.map(apiToItem);
+  } catch {
+    prompts = getAllPrompts();
+  }
 
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-950">
