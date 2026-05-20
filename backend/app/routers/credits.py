@@ -73,8 +73,7 @@ async def create_order(
 async def payment_webhook(request: Request, db: Session = Depends(get_db)):
     """Hupijiao payment callback — processes successful payments and credits user."""
     form = dict(await request.form())
-    params_copy = dict(form)
-    if not verify_webhook(params_copy):
+    if not verify_webhook(dict(form)):
         return {"errcode": 1, "errmsg": "签名错误"}
 
     order_id = form.get("trade_order_id")
@@ -87,7 +86,7 @@ async def payment_webhook(request: Request, db: Session = Depends(get_db)):
 
     order.status = "paid"
     order.payment_channel = form.get("channel", "")
-    order.external_order_id = form.get("transaction_id", "")
+    order.external_order_id = form.get("transaction_id") or None
     order.paid_at = datetime.utcnow()
 
     user = db.get(User, order.user_id)

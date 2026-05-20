@@ -55,6 +55,7 @@ async def create_payment_order(order_id: str, package_id: str, notify_url: str, 
 
 def verify_webhook(params: dict) -> bool:
     """Verify Hupijiao callback signature."""
-    received_hash = params.pop("hash", "")
-    expected = _sign(dict(params))
+    received_hash = params.get("hash", "")
+    params_without_hash = {k: v for k, v in params.items() if k != "hash"}
+    expected = _sign(params_without_hash)
     return received_hash == expected
