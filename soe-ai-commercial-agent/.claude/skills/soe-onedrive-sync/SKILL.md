@@ -101,12 +101,47 @@ Do NOT request write permissions. The system is read-only.
 
 ## Webhook Processing
 
+Microsoft Graph sends two distinct request types to the webhook URL:
+
+### Subscription validation (sent once on creation)
 ```
-POST /onedrive/webhook receives Graph change notification
-→ Validate subscription (return validationToken if present)
+POST /onedrive/webhook?validationToken=<token>
+Body: may also contain validationToken
+
+Required response:
+  Status:       200 OK   (NOT 202)
+  Content-Type: text/plain
+  Body:         <validationToken value verbatim>
+
+If you return JSON or 202, Graph rejects the subscription silently.
+```
+
+Implementation:
+```python
+@router.post("/onedrive/webhook")
+async def webhook(request: Request, validationToken: str | None = Query(None)):
+    if validationToken:
+        # Subscription validation — must return token as plain text
+        return PlainTextResponse(content=validationToken, status_code=200)
+    # Actual change notification
+    body = await request.json()
+    # Do NOT process inline — set pending flag only
+    sync_service.mark_pending_delta_sync()
+    return Response(status_code=202)
+```
+
+### Change notification (ongoing)
+```
+POST /onedrive/webhook
+Body: JSON change notification payload
+
+Required response:
+  Status: 202 Accepted   (NOT 200)
+
+Processing:
 → Set OneDriveSyncState.pending_delta_sync = True
-→ Return 202 Accepted immediately (do NOT process inline)
-→ Background task picks up pending_delta_sync flag and runs delta sync
+→ Return 202 immediately (do NOT process inline)
+→ Background task picks up flag and runs delta sync
 ```
 
 ---

@@ -621,6 +621,36 @@ LLM-assisted classification is enabled when `LLM_PROVIDER != mock`.
 
 ## 11. Agent Definitions
 
+### 11.0 Unified Agent Output Envelope
+
+Every agent's `review()` method must return a dict conforming to this envelope.
+Agent-specific fields go inside `details`. This structure is what gets stored in
+`Review.review_json` and drives frontend display, risk creation, and reporting.
+
+```python
+{
+  # Common fields — required on every agent response
+  "agent_name": str,                        # e.g. "document_control_agent"
+  "summary": str,                           # one-sentence human-readable conclusion
+  "risk_level": str,                        # LOW | MEDIUM | HIGH | CRITICAL
+  "confidence": float,                      # 0.0–1.0 (rule-based: 1.0; LLM: model-reported)
+  "findings": list[str],                    # bullet list of specific observations
+  "missing_fields": list[str],              # required fields not found in the document
+  "recommended_actions": list[str],         # specific next steps for the human reviewer
+  "requires_professional_review": bool,
+  "professional_type": str | None,          # "HK_CPA" | "INDONESIA_TAX_ADVISOR" | "LEGAL" | "QS"
+
+  # Agent-specific output — each agent adds its own keys here
+  "details": dict,
+}
+```
+
+Frontend uses `findings`, `missing_fields`, `recommended_actions`, and `risk_level`
+as the primary display fields. `details` is collapsed by default and shown on expand.
+
+Tests assert on `agent_name`, `risk_level`, and `requires_professional_review` as
+the stable contract; `details` contents are agent-specific.
+
 ### Orchestrator Agent
 Receives document + context → dispatches to specialist agents → merges outputs →
 assigns overall risk level → prepares human review package.

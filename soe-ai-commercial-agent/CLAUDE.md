@@ -9,8 +9,8 @@ accounting pre-entry review, tax compliance, supplier control, and reporting.
 
 Current pilot project: **Indonesia Jetty Extension Project (IDN-JETTY-2026)**
 
-Design spec: `docs/superpowers/specs/2026-05-27-soe-ai-commercial-agent-design.md`
-Implementation plan: `docs/superpowers/plans/2026-05-27-soe-ai-commercial-agent-plan.md`
+Design spec: `../docs/superpowers/specs/2026-05-27-soe-ai-commercial-agent-design.md`
+Implementation plan: `../docs/superpowers/plans/2026-05-27-soe-ai-commercial-agent-plan.md`
 
 ---
 

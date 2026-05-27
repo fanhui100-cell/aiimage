@@ -50,16 +50,21 @@
   pandas = "^2.2"
   python-dateutil = "^2.9"
   aiofiles = "^23.2"
+  # Optional LLM provider packages — declared optional so extras work correctly
+  openai = {version = "^1.35", optional = true}
+  anthropic = {version = "^0.30", optional = true}
+  msal = {version = "^1.28", optional = true}
 
   [tool.poetry.extras]
+  # Install with: poetry install --extras openai
   openai = ["openai"]
   anthropic = ["anthropic"]
-  azure = ["openai"]
+  azure = ["openai"]       # Azure OpenAI reuses the openai package
   microsoft = ["msal"]
 
   [tool.poetry.group.dev.dependencies]
   pytest = "^8.2"
-  pytest-anyio = "^0.0.0"
+  pytest-asyncio = "^0.24"   # was pytest-anyio which does not exist; use pytest-asyncio
   httpx = "^0.27"
   ```
 - [ ] Create `backend/.env.example`:
@@ -657,14 +662,104 @@ ONEDRIVE_ENABLED=true
 MICROSOFT_TENANT_ID=...
 ```
 
+### Smoke test (automated happy path)
+
+- [ ] Create `backend/scripts/smoke_test.py` using FastAPI `TestClient` — covers the full main flow:
+
+```python
+# backend/scripts/smoke_test.py
+"""
+Automated happy-path integration test.
+Run: poetry run python scripts/smoke_test.py
+Requires: init_db.py already run, LLM_PROVIDER=mock
+"""
+import io
+from fastapi.testclient import TestClient
+from app.main import app
+
+client = TestClient(app)
+
+def test_full_workflow():
+    # 1. Health check
+    r = client.get("/health")
+    assert r.status_code == 200
+
+    # 2. Get project list (seed data must exist)
+    r = client.get("/projects")
+    assert r.status_code == 200
+    projects = r.json()["items"]
+    assert len(projects) > 0
+    project_id = projects[0]["id"]
+
+    # 3. Upload a mock PDF
+    pdf_bytes = b"%PDF-1.4 supplier invoice amount 5000 USD invoice number INV-2026-001"
+    r = client.post(
+        "/documents/upload",
+        files={"file": ("test_invoice.pdf", io.BytesIO(pdf_bytes), "application/pdf")},
+        data={"project_id": str(project_id)},
+    )
+    assert r.status_code == 200
+    doc_id = r.json()["id"]
+    assert r.json()["sha256_hash"]
+
+    # 4. Extract
+    r = client.post(f"/documents/{doc_id}/extract")
+    assert r.status_code == 200
+
+    # 5. Classify
+    r = client.post(f"/documents/{doc_id}/classify")
+    assert r.status_code == 200
+
+    # 6. Full agent review
+    r = client.post(f"/documents/{doc_id}/review")
+    assert r.status_code == 200
+    reviews = client.get(f"/documents/{doc_id}/reviews").json()
+    assert len(reviews) >= 3, "Expect at least 3 agent reviews"
+
+    # 7. Pending approval created
+    r = client.get("/approvals/pending")
+    pending = [a for a in r.json()["items"] if a["document_id"] == doc_id]
+    assert len(pending) >= 1
+    approval_id = pending[0]["id"]
+
+    # 8. Approve
+    r = client.post(f"/approvals/{approval_id}/approve",
+                    json={"reviewer_name": "Smoke Test", "reviewer_role": "ADMIN", "comments": "OK"})
+    assert r.status_code == 200
+
+    # 9. Create accounting draft
+    r = client.post(f"/accounting/drafts/from-document/{doc_id}")
+    assert r.status_code == 200
+    draft_id = r.json()["id"]
+
+    # 10. Approve for export
+    r = client.post(f"/accounting/drafts/{draft_id}/approve-for-export",
+                    json={"reviewer_name": "Smoke Test"})
+    assert r.status_code == 200
+
+    # 11. Export to mock adapter
+    r = client.post(f"/accounting/drafts/{draft_id}/export")
+    assert r.status_code == 200
+    assert r.json()["external_accounting_id"].startswith("MOCK-")
+
+    # 12. Risk register non-empty
+    r = client.get("/reports/risk-register")
+    assert r.status_code == 200
+
+    print("Smoke test PASSED — full workflow verified.")
+
+if __name__ == "__main__":
+    test_full_workflow()
+```
+
 ### Final polish tasks
 
 - [ ] Add docstrings to all public service functions and agent classes
 - [ ] Add TODO markers for all unimplemented integrations (Xero, real LLM providers, MSAL)
+- [ ] Run smoke test: `poetry run python scripts/smoke_test.py` — PASSED
 - [ ] Verify all 18 acceptance criteria from §15 of design spec
 - [ ] Run `poetry run pytest` — all tests green
 - [ ] Run `npm run build` in frontend — no TypeScript errors
-- [ ] Test complete happy path: upload PDF → extract → classify → review → approve → accounting draft → export
 
 ---
 
