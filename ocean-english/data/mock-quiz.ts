@@ -1,0 +1,173 @@
+import type { QuizQuestion } from '@/types/quiz'
+
+export const mockQuizQuestions: QuizQuestion[] = [
+  {
+    id: 'q-ubiquitous-1',
+    type: 'multiple-choice',
+    wordId: 'ubiquitous',
+    word: 'ubiquitous',
+    question: 'Which sentence uses "ubiquitous" correctly?',
+    options: [
+      { id: 'a', text: 'The ubiquitous mountain stands alone in the desert.' },
+      { id: 'b', text: 'Plastic waste has become ubiquitous in ocean environments.' },
+      { id: 'c', text: 'She felt ubiquitous after the long journey.' },
+      { id: 'd', text: 'The ubiquitous rain only fell in one small area.' },
+    ],
+    correctAnswer: 'b',
+    explanation: '"Ubiquitous" means present everywhere. Plastic waste being found throughout ocean environments is the correct usage.',
+    explanationZh: '"Ubiquitous"意为无处不在。塑料垃圾遍布整个海洋环境，符合该词的含义。',
+  },
+  {
+    id: 'q-ubiquitous-2',
+    type: 'multiple-choice',
+    wordId: 'ubiquitous',
+    word: 'ubiquitous',
+    question: 'What does "ubiquitous" most closely mean?',
+    options: [
+      { id: 'a', text: 'Very large in size' },
+      { id: 'b', text: 'Present or found everywhere' },
+      { id: 'c', text: 'Ancient and historical' },
+      { id: 'd', text: 'Extremely loud and noticeable' },
+    ],
+    correctAnswer: 'b',
+    explanation: '"Ubiquitous" comes from Latin ubique meaning "everywhere".',
+    explanationZh: '"Ubiquitous"源自拉丁语 ubique，意为"到处"，指无处不在。',
+  },
+  {
+    id: 'q-ephemeral-1',
+    type: 'multiple-choice',
+    wordId: 'ephemeral',
+    word: 'ephemeral',
+    question: 'What does "ephemeral" mean?',
+    options: [
+      { id: 'a', text: 'Lasting forever' },
+      { id: 'b', text: 'Extremely rare' },
+      { id: 'c', text: 'Lasting for a very short time' },
+      { id: 'd', text: 'Very beautiful' },
+    ],
+    correctAnswer: 'c',
+    explanation: '"Ephemeral" describes something that lasts only a very brief time. It comes from Greek ephemeros, "lasting a day".',
+    explanationZh: '"Ephemeral"描述极为短暂的事物，来自希腊语 ephemeros，意为"仅持续一天"。',
+  },
+  {
+    id: 'q-resilient-1',
+    type: 'multiple-choice',
+    wordId: 'resilient',
+    word: 'resilient',
+    question: 'A "resilient" person is someone who ___.',
+    options: [
+      { id: 'a', text: 'Gives up easily under pressure' },
+      { id: 'b', text: 'Recovers quickly from difficulties' },
+      { id: 'c', text: 'Never faces any challenges' },
+      { id: 'd', text: 'Is inflexible and rigid' },
+    ],
+    correctAnswer: 'b',
+    explanation: 'Resilient means able to bounce back quickly from setbacks, just like a rubber band returns to its original shape.',
+    explanationZh: 'Resilient 意为能够从挫折中快速恢复，就像橡皮筋恢复原形一样。',
+  },
+  {
+    id: 'q-meticulous-1',
+    type: 'multiple-choice',
+    wordId: 'meticulous',
+    word: 'meticulous',
+    question: 'Which scenario best describes someone being "meticulous"?',
+    options: [
+      { id: 'a', text: 'Quickly finishing a report without checking it.' },
+      { id: 'b', text: 'Carefully reviewing every calculation three times.' },
+      { id: 'c', text: 'Randomly guessing answers on a test.' },
+      { id: 'd', text: 'Delegating all work to others.' },
+    ],
+    correctAnswer: 'b',
+    explanation: 'Meticulous means showing great attention to detail — carefully reviewing every calculation is a perfect example.',
+    explanationZh: 'Meticulous 意为一丝不苟——仔细核查每个计算数据是最佳示例。',
+  },
+  {
+    id: 'q-ambiguous-1',
+    type: 'multiple-choice',
+    wordId: 'ambiguous',
+    word: 'ambiguous',
+    question: 'An "ambiguous" statement is one that ___.',
+    options: [
+      { id: 'a', text: 'Has only one clear meaning' },
+      { id: 'b', text: 'Is completely false' },
+      { id: 'c', text: 'Can be interpreted in more than one way' },
+      { id: 'd', text: 'Is extremely long and detailed' },
+    ],
+    correctAnswer: 'c',
+    explanation: 'Ambiguous means open to multiple interpretations. An ambiguous message can mean different things to different people.',
+    explanationZh: 'Ambiguous 意为可有多种解释，模棱两可。',
+  },
+  {
+    id: 'q-pragmatic-1',
+    type: 'multiple-choice',
+    wordId: 'pragmatic',
+    word: 'pragmatic',
+    question: 'A "pragmatic" approach to a problem focuses on ___.',
+    options: [
+      { id: 'a', text: 'Ideal theoretical solutions' },
+      { id: 'b', text: 'Practical, realistic outcomes' },
+      { id: 'c', text: 'Emotionally satisfying choices' },
+      { id: 'd', text: 'The most expensive option' },
+    ],
+    correctAnswer: 'b',
+    explanation: 'Pragmatic means focused on practical results rather than theory or ideals.',
+    explanationZh: 'Pragmatic 意为务实的，关注实际结果而非理论或理想。',
+  },
+  {
+    id: 'q-eloquent-1',
+    type: 'multiple-choice',
+    wordId: 'eloquent',
+    word: 'eloquent',
+    question: 'Which describes an "eloquent" speaker?',
+    options: [
+      { id: 'a', text: 'Someone who speaks very loudly' },
+      { id: 'b', text: 'Someone who stutters and struggles to express ideas' },
+      { id: 'c', text: 'Someone who speaks fluently and persuasively' },
+      { id: 'd', text: 'Someone who rarely speaks in public' },
+    ],
+    correctAnswer: 'c',
+    explanation: 'Eloquent describes someone who speaks or writes fluently and persuasively.',
+    explanationZh: 'Eloquent 描述能够流利、有说服力地表达的人。',
+  },
+  {
+    id: 'q-inevitable-1',
+    type: 'multiple-choice',
+    wordId: 'inevitable',
+    word: 'inevitable',
+    question: 'If something is "inevitable", it is ___.',
+    options: [
+      { id: 'a', text: 'Possible but unlikely' },
+      { id: 'b', text: 'Certain to happen; unavoidable' },
+      { id: 'c', text: 'Desirable and planned' },
+      { id: 'd', text: 'Sudden and unexpected' },
+    ],
+    correctAnswer: 'b',
+    explanation: 'Inevitable means something that cannot be avoided or prevented — it will definitely happen.',
+    explanationZh: 'Inevitable 意为不可避免的、必然发生的。',
+  },
+  {
+    id: 'q-alleviate-1',
+    type: 'multiple-choice',
+    wordId: 'alleviate',
+    word: 'alleviate',
+    question: 'What does "alleviate" mean?',
+    options: [
+      { id: 'a', text: 'To make a problem more severe' },
+      { id: 'b', text: 'To completely solve a problem' },
+      { id: 'c', text: 'To make suffering or a problem less severe' },
+      { id: 'd', text: 'To discover a new problem' },
+    ],
+    correctAnswer: 'c',
+    explanation: 'Alleviate means to reduce or relieve suffering, pain, or a difficult situation — not to eliminate it entirely.',
+    explanationZh: 'Alleviate 意为减轻痛苦或困难，是部分缓解而非彻底消除。',
+  },
+]
+
+export function getQuizForWord(wordId: string): QuizQuestion[] {
+  return mockQuizQuestions.filter(q => q.wordId === wordId)
+}
+
+export function getRandomQuiz(count = 5): QuizQuestion[] {
+  const shuffled = [...mockQuizQuestions].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, count)
+}

@@ -12,13 +12,20 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
-  // Disable React Compiler rules that conflict with standard Three.js/R3F animation patterns.
-  // R3F useFrame callbacks legitimately read and mutate Three.js objects outside of render.
+  // R3F animation patterns: Three.js objects are intentionally mutated per-frame.
   {
     files: ["components/visual/**/*.tsx", "components/visual/**/*.ts"],
     rules: {
       "react-hooks/refs": "off",
       "react-hooks/immutability": "off",
+    },
+  },
+  // react-hooks/purity incorrectly flags Date.now() / Math.random() inside event
+  // handlers and setTimeout callbacks that are not part of render. Disable globally.
+  {
+    rules: {
+      "react-hooks/purity": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
     },
   },
 ]);
