@@ -1,0 +1,148 @@
+import type { LearningModule } from '@/types/learning'
+
+export const learningModules: LearningModule[] = [
+  {
+    id: 'vocabulary-roots',
+    name: 'Vocabulary Roots',
+    nameZh: '词汇根系',
+    type: 'Core Vocabulary',
+    typeZh: '核心词汇',
+    description:
+      'Search words, explore definitions, phonetics, etymology, mnemonics, and example sentences. Your growing vocabulary root system.',
+    descriptionZh: '搜索单词，探索释义、音标、词源、记忆法与例句。你不断生长的词汇根系。',
+    abilities: [
+      'Search and look up any English word',
+      'View phonetics, etymology, and mnemonics',
+      'Save words to your personal word bank',
+    ],
+    abilitiesZh: ['搜索并查阅任意英文单词', '查看音标、词源与记忆法', '收藏单词到个人词库'],
+    route: '/dictionary',
+    visualPosition: { x: 2, y: 8, z: 5 },
+    color: '#38BDF8',
+    icon: '🌱',
+  },
+  {
+    id: 'voice-sonar',
+    name: 'Voice Sonar',
+    nameZh: '声音脉络',
+    type: 'Pronunciation & Speaking',
+    typeZh: '发音与口语',
+    description:
+      'Phonetics, pronunciation playback, dictation, shadowing, and speaking practice. Train your ear and your voice.',
+    descriptionZh: '音标、发音播放、听写、跟读与口语训练。训练你的耳朵与声音。',
+    abilities: [
+      'Listen to native pronunciation of any word',
+      'Practice dictation and shadowing',
+      'Speaking training with AI feedback',
+    ],
+    abilitiesZh: ['收听任意单词的母语发音', '练习听写与跟读', 'AI 反馈辅助口语训练'],
+    route: '/study',
+    visualPosition: { x: -58, y: 54, z: 0 },
+    color: '#7EF9FF',
+    icon: '🔊',
+  },
+  {
+    id: 'ai-navigator',
+    name: 'AI Navigator',
+    nameZh: 'AI 导学核心',
+    type: 'Core System',
+    typeZh: '核心系统',
+    description:
+      'Your intelligent study guide for word explanation, sentence analysis, quiz generation, and long-term learning plans.',
+    descriptionZh: '你的智能学习向导，可用于单词解释、句子分析、练习生成与长期学习计划。',
+    abilities: [
+      'Ask about words, sentences, grammar, and exams',
+      'Generate personalized quizzes',
+      'Build adaptive learning plans',
+    ],
+    abilitiesZh: ['提问单词、句子、语法与考试', '生成个性化练习', '制定自适应学习计划'],
+    route: '/chat',
+    visualPosition: { x: 0, y: 38, z: 0 },
+    color: '#8B5CF6',
+    icon: '🤖',
+  },
+  {
+    id: 'reading-canopy',
+    name: 'Reading Canopy',
+    nameZh: '阅读树冠',
+    type: 'Reading Training',
+    typeZh: '阅读训练',
+    description:
+      'Reading training, long-sentence analysis, article comprehension, and vocabulary annotation inside real texts.',
+    descriptionZh: '阅读训练、长难句分析、文章理解与文本内生词标注。',
+    abilities: [
+      'Read annotated articles with difficulty grading',
+      'Analyze complex sentences with AI breakdown',
+      'Track unfamiliar words while reading',
+    ],
+    abilitiesZh: ['阅读带注释的分级文章', 'AI 辅助分析复杂句子', '阅读时追踪生词'],
+    route: '/study',
+    visualPosition: { x: 58, y: 56, z: 10 },
+    color: '#B8FFB2',
+    icon: '📖',
+  },
+  {
+    id: 'scan-hollow',
+    name: 'Scan Hollow',
+    nameZh: '文档树洞',
+    type: 'Document Intelligence',
+    typeZh: '文档智能',
+    description:
+      'Upload PDFs or images of worksheets. Extract questions, pull out unfamiliar words, and get answer suggestions.',
+    descriptionZh: '上传 PDF 或题目图片，识别题目，提取生词，获取答案建议。',
+    abilities: [
+      'Upload PDF or image of any worksheet',
+      'Auto-extract vocabulary from documents',
+      'Get AI-suggested answers and explanations',
+    ],
+    abilitiesZh: ['上传任意题目的 PDF 或图片', '自动从文档中提取词汇', '获取 AI 答案建议与解析'],
+    route: '/scan',
+    visualPosition: { x: 9, y: 22, z: 8 },
+    color: '#FFD76A',
+    icon: '📄',
+  },
+  {
+    id: 'exam-branch',
+    name: 'Exam Branch',
+    nameZh: '考试枝路',
+    type: 'Exam Preparation',
+    typeZh: '考试备考',
+    description:
+      'Targeted training for TOEFL, IELTS, CET-4/6, 考研, and 高考. Mock exams, specialist drills, and progress tracking.',
+    descriptionZh: '托福、雅思、四六级、考研与高考专项训练。模拟考试、专项练习与进度追踪。',
+    abilities: [
+      'Select your target exam and start drilling',
+      'Take timed mock exam sections',
+      'Review wrong answers with AI explanations',
+    ],
+    abilitiesZh: ['选择目标考试开始专项训练', '计时模拟考试', '结合 AI 解析复习错题'],
+    route: '/exam',
+    visualPosition: { x: 72, y: 46, z: 0 },
+    color: '#F97316',
+    icon: '📝',
+  },
+  {
+    id: 'memory-roots',
+    name: 'Memory Roots',
+    nameZh: '记忆根系',
+    type: 'Spaced Repetition',
+    typeZh: '间隔复习',
+    description:
+      'Spaced repetition, wrong-answer notebook, saved word collections, memory curves, and weak-point reinforcement.',
+    descriptionZh: '间隔复习、错题本、收藏单词、记忆曲线与弱点强化。',
+    abilities: [
+      'Review due words based on your memory curve',
+      'Track and retry your wrong answers',
+      'Strengthen weak vocabulary automatically',
+    ],
+    abilitiesZh: ['按记忆曲线复习到期单词', '追踪并重练错题', '自动强化薄弱词汇'],
+    route: '/memory',
+    visualPosition: { x: -14, y: 0, z: 0 },
+    color: '#34D399',
+    icon: '🧠',
+  },
+]
+
+export function getModuleById(id: string): LearningModule | undefined {
+  return learningModules.find(m => m.id === id)
+}
