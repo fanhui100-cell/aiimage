@@ -181,8 +181,8 @@ export default function MemoryPage() {
                 </div>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {wrongAnswers.slice(0, 20).map((wa, i) => (
-                    <div key={`${wa.wordId}-${i}`}
+                  {wrongAnswers.slice(0, 20).map(wa => (
+                    <div key={wa.id}
                       style={{ background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: '10px', padding: '16px' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div style={{ flex: 1 }}>
@@ -203,7 +203,7 @@ export default function MemoryPage() {
                           </div>
                         </div>
                         <button
-                          onClick={() => removeWrongAnswer(wa.wordId)}
+                          onClick={() => removeWrongAnswer(wa.id)}
                           style={{ background: 'none', border: 'none', color: 'rgba(155,191,202,0.3)', cursor: 'pointer', fontSize: '16px', padding: '4px', marginLeft: '12px' }}
                           aria-label="Remove from wrong answers"
                         >

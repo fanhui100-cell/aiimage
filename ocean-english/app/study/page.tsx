@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { AppShell } from '@/components/layout/AppShell'
 import { useLearningStore } from '@/store/learningStore'
@@ -31,7 +32,13 @@ const learningPaths = [
 ]
 
 export default function StudyPage() {
-  const { dailyTasks, studyProgress, completeTaskUnit } = useLearningStore()
+  const { dailyTasks, studyProgress, completeTaskUnit, autoResetDailyTasksIfNewDay } =
+    useLearningStore()
+
+  // Reset tasks if user hasn't studied today (tasks belong to the current day)
+  useEffect(() => {
+    autoResetDailyTasksIfNewDay()
+  }, [autoResetDailyTasksIfNewDay])
 
   const completedTasks = dailyTasks.filter(t => t.completedCount >= t.targetCount).length
   const totalXpToday = dailyTasks
@@ -63,7 +70,7 @@ export default function StudyPage() {
           >
             {[
               { label: 'Total XP', labelZh: '总经验值', value: studyProgress.totalXp, color: '#FFD76A', icon: '⚡' },
-              { label: 'Streak', labelZh: '连续天数', value: `${studyProgress.currentStreak}d`, color: '#F97316', icon: '🔥' },
+              { label: 'Streak (days)', labelZh: '连续天数', value: studyProgress.currentStreak, color: '#F97316', icon: '🔥' },
               { label: "Today's XP", labelZh: '今日获得', value: totalXpToday, color: '#34D399', icon: '✓' },
               { label: 'Words Learned', labelZh: '已学单词', value: studyProgress.totalWordsLearned, color: '#38BDF8', icon: '📚' },
             ].map(stat => (

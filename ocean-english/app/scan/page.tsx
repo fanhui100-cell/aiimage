@@ -84,7 +84,6 @@ export default function ScanPage() {
               <div style={{ fontSize: '32px', marginBottom: '16px', animation: 'spin 1s linear infinite' }}>⚙️</div>
               <div style={{ fontSize: '16px', marginBottom: '4px' }}>Analyzing document...</div>
               <div style={{ fontSize: '13px', color: 'rgba(155,191,202,0.6)' }}>正在分析文档...</div>
-              <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
             </div>
           )}
 

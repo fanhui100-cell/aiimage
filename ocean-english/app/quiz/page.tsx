@@ -21,7 +21,8 @@ function QuizContent() {
   const [attempts, setAttempts] = useState<QuizAttempt[]>([])
   const [finished, setFinished] = useState(false)
 
-  const { addWrongAnswer, completeTaskUnit, incrementXp, markStudyToday } = useLearningStore()
+  const { addWrongAnswer, addQuizSession, completeTaskUnit, incrementXp, markStudyToday } =
+    useLearningStore()
 
   const current = questions[currentIdx]
   const isCorrect = selected === current?.correctAnswer
@@ -64,13 +65,26 @@ function QuizContent() {
 
   const handleNext = useCallback(() => {
     if (currentIdx + 1 >= questions.length) {
+      // Save completed session to quiz history
+      const finalAttempts = [...attempts]
+      if (selected && current) {
+        // current attempt already in `attempts` via handleSelect
+      }
+      addQuizSession({
+        id: `session-${Date.now()}`,
+        startedAt: Date.now(),
+        completedAt: Date.now(),
+        attempts: finalAttempts,
+        score: finalAttempts.filter(a => a.correct).length,
+        total: questions.length,
+      })
       setFinished(true)
     } else {
       setCurrentIdx(i => i + 1)
       setSelected(null)
       setShowFeedback(false)
     }
-  }, [currentIdx, questions.length])
+  }, [currentIdx, questions.length, attempts, selected, current, addQuizSession])
 
   const score = attempts.filter(a => a.correct).length
 

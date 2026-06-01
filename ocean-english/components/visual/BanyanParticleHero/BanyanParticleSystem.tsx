@@ -168,8 +168,9 @@ export function BanyanParticleSystem({ animationKey = 0 }: BanyanParticleSystemP
   const isMobile = size.width < 768
   const cfg = isMobile ? BANYAN_CURVES_MOBILE : BANYAN_CURVES_DESKTOP
 
-  const prefersReducedMotion =
-    typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const prefersReducedMotion = useRef(
+    typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  ).current
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const geometry = useMemo(() => buildGeometry(cfg), [isMobile, animationKey])
@@ -196,14 +197,18 @@ export function BanyanParticleSystem({ animationKey = 0 }: BanyanParticleSystemP
     clockRef.current = -0.5
   }, [animationKey])
 
+  // Dispose geometry when it changes (new geometry built on restart or mobile toggle).
+  // Material lives for the component lifetime — disposing it here would leave
+  // materialRef pointing to a destroyed object, causing useFrame errors.
   useEffect(() => {
     const geo = geometry
-    const mat = materialRef.current
-    return () => {
-      geo.dispose()
-      mat?.dispose()
-    }
+    return () => { geo.dispose() }
   }, [geometry])
+
+  // Dispose material only on component unmount.
+  useEffect(() => {
+    return () => { materialRef.current?.dispose() }
+  }, [])
 
   useFrame((_, delta) => {
     const mat = materialRef.current

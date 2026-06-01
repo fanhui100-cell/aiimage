@@ -20,10 +20,11 @@ export const siteConfig = {
   ctaSecondaryZh: '选择等级',
   navigation: [
     { label: 'Dictionary', labelZh: '词典', href: '/dictionary' },
-    { label: 'AI Chat', labelZh: 'AI 导学', href: '/chat' },
+    { label: 'Study', labelZh: '学习', href: '/study' },
     { label: 'Quiz', labelZh: '练习', href: '/quiz' },
     { label: 'Exam', labelZh: '考试', href: '/exam' },
     { label: 'Memory', labelZh: '记忆', href: '/memory' },
+    { label: 'AI Chat', labelZh: 'AI 导学', href: '/chat' },
   ],
 } as const
 

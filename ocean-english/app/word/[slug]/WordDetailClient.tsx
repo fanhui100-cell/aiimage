@@ -29,7 +29,8 @@ interface WordDetailClientProps {
 
 export function WordDetailClient({ word }: WordDetailClientProps) {
   const [showEvil, setShowEvil] = useState(false)
-  const { addToReview, completeTaskUnit, markStudyToday, incrementXp } = useLearningStore()
+  const { addToReview, completeTaskUnit, markStudyToday, incrementXp, incrementWordsLearned } =
+    useLearningStore()
   const router = useRouter()
 
   function handleAddToReview() {
@@ -37,6 +38,7 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
     completeTaskUnit('vocab-5', 1)
     markStudyToday()
     incrementXp(10)
+    incrementWordsLearned()
   }
 
   function handleQuizThis() {

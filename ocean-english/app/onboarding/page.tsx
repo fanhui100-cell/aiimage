@@ -3,15 +3,18 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { siteConfig, levelOptions } from '@/config/site'
+import { useLearningStore } from '@/store/learningStore'
 import type { LearningLevel } from '@/types/learning'
 
 export default function OnboardingPage() {
   const router = useRouter()
-  const [selected, setSelected] = useState<LearningLevel | null>(null)
+  const { userLevel, setUserLevel } = useLearningStore()
+  // Initialize with persisted level so the current selection is pre-highlighted
+  const [selected, setSelected] = useState<LearningLevel | null>(userLevel)
 
   function handleConfirm() {
     if (!selected) return
-    localStorage.setItem('lexiocean_level', selected)
+    setUserLevel(selected)
     router.push('/')
   }
 
@@ -72,12 +75,30 @@ export default function OnboardingPage() {
                 boxShadow: isSelected ? '0 0 20px rgba(56,189,248,0.15)' : 'none',
               }}
             >
-              <div style={{ fontSize: '17px', fontWeight: 700, color: isSelected ? '#38BDF8' : '#ECFBFF', marginBottom: '2px' }}>
+              <div
+                style={{
+                  fontSize: '17px',
+                  fontWeight: 700,
+                  color: isSelected ? '#38BDF8' : '#ECFBFF',
+                  marginBottom: '2px',
+                }}
+              >
                 {level.name}
               </div>
-              <div style={{ fontSize: '13px', color: '#9BBFCA', marginBottom: '10px' }}>{level.nameZh}</div>
-              <div style={{ fontSize: '13px', color: '#9BBFCA', lineHeight: 1.5 }}>{level.description}</div>
-              <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.65)', marginTop: '4px', lineHeight: 1.5 }}>
+              <div style={{ fontSize: '13px', color: '#9BBFCA', marginBottom: '10px' }}>
+                {level.nameZh}
+              </div>
+              <div style={{ fontSize: '13px', color: '#9BBFCA', lineHeight: 1.5 }}>
+                {level.description}
+              </div>
+              <div
+                style={{
+                  fontSize: '12px',
+                  color: 'rgba(155,191,202,0.65)',
+                  marginTop: '4px',
+                  lineHeight: 1.5,
+                }}
+              >
                 {level.descriptionZh}
               </div>
             </button>

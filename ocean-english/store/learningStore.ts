@@ -1,12 +1,13 @@
 'use client'
 
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { persist, createJSONStorage } from 'zustand/middleware'
 import type { LearningLevel } from '@/types/learning'
 import type { QuizSession } from '@/types/quiz'
 import type { DailyTask, StudyProgress, ChatMessage } from '@/types/study'
 
-interface WrongAnswer {
+export interface WrongAnswer {
+  id: string
   wordId: string
   word: string
   question: string
@@ -16,7 +17,7 @@ interface WrongAnswer {
   timestamp: number
 }
 
-interface ReviewWord {
+export interface ReviewWord {
   wordId: string
   word: string
   nextReviewAt: number
@@ -45,8 +46,8 @@ interface LearningStore {
 
   // Wrong answers
   wrongAnswers: WrongAnswer[]
-  addWrongAnswer: (entry: WrongAnswer) => void
-  removeWrongAnswer: (wordId: string, questionId?: string) => void
+  addWrongAnswer: (entry: Omit<WrongAnswer, 'id'>) => void
+  removeWrongAnswer: (id: string) => void
   clearWrongAnswers: () => void
 
   // Quiz history
@@ -56,17 +57,22 @@ interface LearningStore {
   // Study progress
   studyProgress: StudyProgress
   incrementXp: (amount: number) => void
+  incrementWordsLearned: () => void
   markStudyToday: () => void
 
   // Daily tasks
   dailyTasks: DailyTask[]
   completeTaskUnit: (taskId: string, count?: number) => void
   resetDailyTasks: () => void
+  autoResetDailyTasksIfNewDay: () => void
 
   // Chat history
   chatMessages: ChatMessage[]
   addChatMessage: (message: ChatMessage) => void
   clearChat: () => void
+
+  // Store management
+  resetStore: () => void
 }
 
 const DEFAULT_TASKS: DailyTask[] = [
@@ -114,14 +120,31 @@ const DEFAULT_PROGRESS: StudyProgress = {
   levelProgress: {},
 }
 
+const INITIAL_STATE = {
+  userLevel: null as LearningLevel | null,
+  savedWords: [] as string[],
+  reviewWords: [] as ReviewWord[],
+  wrongAnswers: [] as WrongAnswer[],
+  quizHistory: [] as QuizSession[],
+  studyProgress: DEFAULT_PROGRESS,
+  dailyTasks: DEFAULT_TASKS,
+  chatMessages: [] as ChatMessage[],
+}
+
 // SM-2 simplified spaced repetition
 function calculateNextReview(review: ReviewWord, correct: boolean): ReviewWord {
   if (!correct) {
-    return { ...review, interval: 1, repetitions: 0, nextReviewAt: Date.now() + 60 * 60 * 1000 }
+    return {
+      ...review,
+      interval: 1,
+      repetitions: 0,
+      nextReviewAt: Date.now() + 60 * 60 * 1000, // retry in 1 hour
+    }
   }
   const newReps = review.repetitions + 1
-  const newEase = Math.max(1.3, review.ease + (correct ? 0.1 : -0.2))
-  const newInterval = newReps === 1 ? 1 : newReps === 2 ? 6 : Math.round(review.interval * newEase)
+  const newEase = Math.max(1.3, review.ease + 0.1)
+  const newInterval =
+    newReps === 1 ? 1 : newReps === 2 ? 6 : Math.round(review.interval * newEase)
   return {
     ...review,
     interval: newInterval,
@@ -131,22 +154,34 @@ function calculateNextReview(review: ReviewWord, correct: boolean): ReviewWord {
   }
 }
 
+function todayStr(): string {
+  return new Date().toISOString().split('T')[0]
+}
+
+function yesterdayStr(): string {
+  return new Date(Date.now() - 86400000).toISOString().split('T')[0]
+}
+
 export const useLearningStore = create<LearningStore>()(
   persist(
     (set, get) => ({
-      userLevel: null,
+      ...INITIAL_STATE,
+
+      // ── User profile ──────────────────────────────────────────────────────
       setUserLevel: level => set({ userLevel: level }),
 
-      savedWords: [],
+      // ── Saved words ───────────────────────────────────────────────────────
       saveWord: wordId =>
-        set(s => ({ savedWords: s.savedWords.includes(wordId) ? s.savedWords : [...s.savedWords, wordId] })),
-      unsaveWord: wordId => set(s => ({ savedWords: s.savedWords.filter(id => id !== wordId) })),
+        set(s => ({
+          savedWords: s.savedWords.includes(wordId) ? s.savedWords : [...s.savedWords, wordId],
+        })),
+      unsaveWord: wordId =>
+        set(s => ({ savedWords: s.savedWords.filter(id => id !== wordId) })),
       isWordSaved: wordId => get().savedWords.includes(wordId),
 
-      reviewWords: [],
+      // ── Review queue ──────────────────────────────────────────────────────
       addToReview: (wordId, word) => {
-        const existing = get().reviewWords.find(r => r.wordId === wordId)
-        if (existing) return
+        if (get().reviewWords.some(r => r.wordId === wordId)) return
         set(s => ({
           reviewWords: [
             ...s.reviewWords,
@@ -167,47 +202,59 @@ export const useLearningStore = create<LearningStore>()(
         return get().reviewWords.filter(r => r.nextReviewAt <= now)
       },
 
-      wrongAnswers: [],
-      addWrongAnswer: entry =>
+      // ── Wrong answers ─────────────────────────────────────────────────────
+      addWrongAnswer: entry => {
+        const id = `${entry.wordId}-${entry.timestamp}`
         set(s => {
+          // Deduplicate by wordId + question
           const exists = s.wrongAnswers.some(
             w => w.wordId === entry.wordId && w.question === entry.question,
           )
           if (exists) return s
-          return { wrongAnswers: [entry, ...s.wrongAnswers].slice(0, 200) }
-        }),
-      removeWrongAnswer: wordId =>
-        set(s => ({ wrongAnswers: s.wrongAnswers.filter(w => w.wordId !== wordId) })),
+          return { wrongAnswers: [{ ...entry, id }, ...s.wrongAnswers].slice(0, 200) }
+        })
+      },
+      // Remove a single wrong-answer entry by its unique id
+      removeWrongAnswer: (id: string) =>
+        set(s => ({ wrongAnswers: s.wrongAnswers.filter(w => w.id !== id) })),
       clearWrongAnswers: () => set({ wrongAnswers: [] }),
 
-      quizHistory: [],
+      // ── Quiz history ──────────────────────────────────────────────────────
       addQuizSession: session =>
         set(s => ({ quizHistory: [session, ...s.quizHistory].slice(0, 50) })),
 
-      studyProgress: DEFAULT_PROGRESS,
+      // ── Study progress ────────────────────────────────────────────────────
       incrementXp: amount =>
         set(s => ({
           studyProgress: { ...s.studyProgress, totalXp: s.studyProgress.totalXp + amount },
         })),
+      incrementWordsLearned: () =>
+        set(s => ({
+          studyProgress: {
+            ...s.studyProgress,
+            totalWordsLearned: s.studyProgress.totalWordsLearned + 1,
+          },
+        })),
       markStudyToday: () => {
-        const today = new Date().toISOString().split('T')[0]
+        const today = todayStr()
         const last = get().studyProgress.lastStudyDate
-        const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0]
+        if (last === today) return // already marked today — no changes needed
+
+        const yesterday = yesterdayStr()
+        const newStreak =
+          last === yesterday ? get().studyProgress.currentStreak + 1 : 1
+
         set(s => ({
           studyProgress: {
             ...s.studyProgress,
             lastStudyDate: today,
-            currentStreak:
-              last === yesterday || last === today ? s.studyProgress.currentStreak + (last === today ? 0 : 1) : 1,
-            longestStreak: Math.max(
-              s.studyProgress.longestStreak,
-              last === yesterday ? s.studyProgress.currentStreak + 1 : 1,
-            ),
+            currentStreak: newStreak,
+            longestStreak: Math.max(s.studyProgress.longestStreak, newStreak),
           },
         }))
       },
 
-      dailyTasks: DEFAULT_TASKS,
+      // ── Daily tasks ───────────────────────────────────────────────────────
       completeTaskUnit: (taskId, count = 1) =>
         set(s => ({
           dailyTasks: s.dailyTasks.map(t =>
@@ -218,14 +265,28 @@ export const useLearningStore = create<LearningStore>()(
         })),
       resetDailyTasks: () =>
         set({ dailyTasks: DEFAULT_TASKS.map(t => ({ ...t, completedCount: 0 })) }),
+      // Call on page load: if the last study date is not today, reset tasks
+      autoResetDailyTasksIfNewDay: () => {
+        const last = get().studyProgress.lastStudyDate
+        if (last && last !== todayStr()) {
+          set({ dailyTasks: DEFAULT_TASKS.map(t => ({ ...t, completedCount: 0 })) })
+        }
+      },
 
-      chatMessages: [],
+      // ── Chat ──────────────────────────────────────────────────────────────
       addChatMessage: message =>
         set(s => ({ chatMessages: [...s.chatMessages, message].slice(-100) })),
       clearChat: () => set({ chatMessages: [] }),
+
+      // ── Store management ──────────────────────────────────────────────────
+      resetStore: () => set({ ...INITIAL_STATE }),
     }),
     {
       name: 'lexiocean-learning',
+      version: 1,
+      storage: createJSONStorage(() => localStorage),
+      // On version mismatch: wipe and start fresh rather than crash on stale schema
+      migrate: () => ({ ...INITIAL_STATE }),
       partialize: state => ({
         userLevel: state.userLevel,
         savedWords: state.savedWords,

@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react'
 import { AppShell } from '@/components/layout/AppShell'
 import { WordSearchBox } from '@/components/learning/WordSearchBox'
 import { WordCard } from '@/components/learning/WordCard'
+import { useLearningStore } from '@/store/learningStore'
 import { mockWords } from '@/data/mock-words'
 import type { Word } from '@/types/word'
 
@@ -26,8 +27,10 @@ const difficultyOptions = [
 ]
 
 export default function DictionaryPage() {
+  const { userLevel } = useLearningStore()
   const [query, setQuery] = useState('')
-  const [levelFilter, setLevelFilter] = useState('')
+  // Pre-select the user's chosen level but allow them to override
+  const [levelFilter, setLevelFilter] = useState(userLevel ?? '')
   const [diffFilter, setDiffFilter] = useState('')
 
   const filtered = useMemo(() => {
@@ -54,6 +57,8 @@ export default function DictionaryPage() {
     fontSize: '13px',
     cursor: 'pointer',
     outline: 'none',
+    minWidth: '160px',
+    flex: '1',
   }
 
   return (

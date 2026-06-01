@@ -121,15 +121,6 @@ export function BanyanModuleNodes({
         )
       })}
 
-      {/* Pulse keyframe injection */}
-      <Html>
-        <style>{`
-          @keyframes banyanPulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-            50% { transform: translate(-50%, -50%) scale(1.45); opacity: 0.15; }
-          }
-        `}</style>
-      </Html>
     </>
   )
 }
