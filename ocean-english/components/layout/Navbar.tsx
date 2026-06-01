@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { siteConfig } from '@/config/site'
+import { UserMenu } from '@/components/auth/UserMenu'
 
 export function Navbar() {
   return (
@@ -37,13 +38,16 @@ export function Navbar() {
         ))}
       </div>
 
-      <Link
-        href="/onboarding"
-        className="text-xs tracking-widest px-4 py-2 rounded border transition-colors"
-        style={{ borderColor: 'var(--accent-blue)', color: 'var(--accent-blue)' }}
-      >
-        Choose Level / 选择等级
-      </Link>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <Link
+          href="/onboarding"
+          className="text-xs tracking-widest px-4 py-2 rounded border transition-colors"
+          style={{ borderColor: 'var(--accent-blue)', color: 'var(--accent-blue)' }}
+        >
+          Choose Level / 选择等级
+        </Link>
+        <UserMenu />
+      </div>
     </nav>
   )
 }
