@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { isSupabaseConfigured } from '@/lib/supabase/client'
+import { ProfileCloudStats } from '@/components/auth/ProfileCloudStats'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 
@@ -54,17 +55,7 @@ export default async function ProfilePage() {
           </div>
         </div>
 
-        {/* Cloud stats placeholder — will be populated in Phase 5C */}
-        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(155,191,202,0.1)', borderRadius: '10px', padding: '16px 18px', marginBottom: '20px' }}>
-          <div style={{ fontSize: '11px', color: 'rgba(56,189,248,0.6)', fontFamily: 'ui-monospace, monospace', marginBottom: '12px', letterSpacing: '0.1em' }}>
-            CLOUD DATA / 云端数据
-          </div>
-          <div style={{ fontSize: '13px', color: 'rgba(155,191,202,0.5)', fontStyle: 'italic' }}>
-            Cloud data statistics will appear here after Phase 5C database setup.
-            <br />
-            <span style={{ fontSize: '12px' }}>云端数据统计将在 Phase 5C 数据库配置后显示。</span>
-          </div>
-        </div>
+        <ProfileCloudStats />
 
         {/* Sign out */}
         <form action="/auth/logout" method="POST">
