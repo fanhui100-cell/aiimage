@@ -212,7 +212,10 @@ export const useScanHistoryStore = create<ScanHistoryStore>()(
       name: 'lexiocean-scan-history',
       version: 1,
       storage: createJSONStorage(() => localStorage),
-      migrate: () => ({ ...INITIAL_STATE }),
+      migrate: (persistedState: unknown) => ({
+        ...INITIAL_STATE,
+        ...(persistedState as object),
+      }),
       partialize: state => ({
         scanDocuments: state.scanDocuments,
         scanHistoryFilters: state.scanHistoryFilters,
