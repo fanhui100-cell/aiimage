@@ -36,6 +36,7 @@ export default function ScanPage() {
     markStudyToday,
     reviewWords,
     userLevel,
+    addWrongAnswer,
   } = useLearningStore()
 
   const {
@@ -179,6 +180,17 @@ export default function ScanPage() {
 
   function handleSaveAsDraft(draft: ScanQuizDraft) {
     addScanQuizDraft(draft)
+    if (draft.status === 'needs-review') {
+      addWrongAnswer({
+        wordId: `scan-${draft.documentId}`,
+        word: draft.sourceFileName,
+        question: draft.prompt,
+        userAnswer: '',
+        correctAnswer: draft.answerSuggestion ?? '—',
+        explanation: draft.explanation ?? '',
+        timestamp: Date.now(),
+      })
+    }
     completeTaskUnit('quiz-5', 1)
     incrementXp(5)
   }

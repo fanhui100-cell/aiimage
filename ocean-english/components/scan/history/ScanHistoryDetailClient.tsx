@@ -33,7 +33,7 @@ interface ScanHistoryDetailClientProps {
 export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientProps) {
   const { getScanDocumentById, deleteScanDocument, markVocabularyAdded, markQuizDraftsSaved, markWrongAnswersSaved, markStudyNotesSaved } = useScanHistoryStore()
   const { addScanQuizDraft, addScanStudyNote, scanQuizDrafts, scanStudyNotes } = useScanStore()
-  const { reviewWords, addToReview, saveWord, incrementXp, markStudyToday } = useLearningStore()
+  const { reviewWords, addToReview, saveWord, incrementXp, markStudyToday, addWrongAnswer } = useLearningStore()
 
   const doc = getScanDocumentById(documentId)
 
@@ -116,6 +116,15 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
     addScanQuizDraft(draft)
     if (isNew) {
       if (draft.status === 'needs-review') {
+        addWrongAnswer({
+          wordId: `scan-${draft.documentId}`,
+          word: draft.sourceFileName,
+          question: draft.prompt,
+          userAnswer: '',
+          correctAnswer: draft.answerSuggestion ?? '—',
+          explanation: draft.explanation ?? '',
+          timestamp: Date.now(),
+        })
         markWrongAnswersSaved(documentId, 1)
       } else {
         markQuizDraftsSaved(documentId, 1)
