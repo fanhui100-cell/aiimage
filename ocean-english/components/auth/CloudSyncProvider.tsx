@@ -12,6 +12,16 @@ import {
   syncStudyProgress,
   syncQuizSession,
 } from '@/lib/sync/learning-sync'
+import { useScanHistoryStore } from '@/store/useScanHistoryStore'
+import { useScanStore } from '@/store/scanStore'
+import {
+  syncScanDocument,
+  syncDeleteScanDocument,
+  syncClearScanHistory,
+  syncScanQuizDraft,
+  syncScanStudyNote,
+} from '@/lib/sync/scan-sync'
+import { createChatSession, syncChatMessages } from '@/lib/sync/chat-sync'
 import type { User } from '@supabase/supabase-js'
 
 /** Debounce helper — calls fn after `ms` ms of no further calls */
@@ -53,6 +63,72 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
     let prevQuizHistory = getState().quizHistory
     let prevStudyProgress = getState().studyProgress
     let prevUserLevel = getState().userLevel
+
+    // ── Scan history store subscriptions ─────────────────────────────────
+    const getScanHistoryState = useScanHistoryStore.getState
+    let prevScanDocuments = getScanHistoryState().scanDocuments
+
+    const unsubscribeScanHistory = useScanHistoryStore.subscribe((state) => {
+      if (!userRef.current) return
+
+      if (state.scanDocuments !== prevScanDocuments) {
+        const prevIds = new Set(prevScanDocuments.map(d => d.id))
+        const currIds = new Set(state.scanDocuments.map(d => d.id))
+
+        // Added documents → sync to cloud
+        state.scanDocuments
+          .filter(d => !prevIds.has(d.id))
+          .forEach(d => syncScanDocument(d))
+
+        // Cleared (all gone at once) → use clear-all endpoint
+        if (state.scanDocuments.length === 0 && prevScanDocuments.length > 1) {
+          syncClearScanHistory()
+        } else {
+          // Individual deletes
+          prevScanDocuments
+            .filter(d => !currIds.has(d.id))
+            .forEach(d => syncDeleteScanDocument(d.id))
+        }
+
+        prevScanDocuments = state.scanDocuments
+      }
+    })
+
+    // ── Scan store subscriptions (quiz drafts + study notes) ──────────────
+    const getScanState = useScanStore.getState
+    let prevDrafts = getScanState().scanQuizDrafts
+    let prevNotes = getScanState().scanStudyNotes
+
+    const unsubscribeScanStore = useScanStore.subscribe((state) => {
+      if (!userRef.current) return
+
+      if (state.scanQuizDrafts !== prevDrafts) {
+        const prevIds = new Set(prevDrafts.map(d => d.id))
+        state.scanQuizDrafts
+          .filter(d => !prevIds.has(d.id))
+          .forEach(d => syncScanQuizDraft(d))
+        prevDrafts = state.scanQuizDrafts
+      }
+
+      if (state.scanStudyNotes !== prevNotes) {
+        const prevIds = new Set(prevNotes.map(n => n.id))
+        state.scanStudyNotes
+          .filter(n => !prevIds.has(n.id))
+          .forEach(n => syncScanStudyNote(n))
+        prevNotes = state.scanStudyNotes
+      }
+    })
+
+    // ── Chat sync ─────────────────────────────────────────────────────────
+    const chatSessionIdRef = { current: null as string | null }
+    let prevChatMessages = getState().chatMessages
+
+    // Create a chat session when user is logged in
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        createChatSession().then(id => { chatSessionIdRef.current = id })
+      }
+    })
 
     const unsubscribeStore = useLearningStore.subscribe((state) => {
       if (!userRef.current) return // Not logged in — skip
@@ -109,11 +185,22 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
         prevUserLevel = state.userLevel
         debouncedSyncStudyProgress(state.studyProgress, state.userLevel)
       }
+
+      if (state.chatMessages !== prevChatMessages) {
+        const prevIds = new Set(prevChatMessages.map(m => m.id))
+        const newMessages = state.chatMessages.filter(m => !prevIds.has(m.id))
+        if (newMessages.length > 0 && chatSessionIdRef.current) {
+          syncChatMessages(chatSessionIdRef.current, newMessages)
+        }
+        prevChatMessages = state.chatMessages
+      }
     })
 
     return () => {
       subscription.unsubscribe()
       unsubscribeStore()
+      unsubscribeScanHistory()
+      unsubscribeScanStore()
     }
   }, [])
 
