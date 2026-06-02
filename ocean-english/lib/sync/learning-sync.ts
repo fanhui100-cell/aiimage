@@ -50,6 +50,11 @@ export function syncRemoveSavedWord(wordId: string): void {
     .catch(err => console.warn('[sync] remove saved-word failed:', err))
 }
 
+export function syncRemoveReviewWord(wordId: string): void {
+  void fetch(`/api/user/review-words?wordId=${encodeURIComponent(wordId)}`, { method: 'DELETE' })
+    .catch(err => console.warn('[sync] remove review-word failed:', err))
+}
+
 export function syncReviewWords(reviewWords: ReviewWord[]): void {
   if (reviewWords.length === 0) return
   void safePut('/api/user/review-words', { reviewWords })
