@@ -104,11 +104,42 @@ Animation state machine driven by `useFrame`. Reads `animState` from the store a
 
 - Framer Motion `AnimatePresence` for enter/exit
 - Appears above the cat (offset upward)
-- Three items: **前往 AI 聊天** / **摸摸我** / **心情 ❤️ {mood}**
+- Menu items driven by a `CatMenuItem[]` array (not hardcoded); new items can be added without touching the component:
+
+```ts
+// cat-pet/config.ts  ← add/remove items here only
+export const catMenuItems: CatMenuItem[] = [
+  { id: 'chat',  label: '前往 AI 聊天', icon: '💬', action: 'navigate', target: '/chat' },
+  { id: 'pet',   label: '摸摸我',       icon: '🐾', action: 'pet' },
+  { id: 'mood',  label: '',             icon: '❤️', action: 'display-mood', readonly: true },
+]
+
+interface CatMenuItem {
+  id: string
+  label: string
+  icon: string
+  action: 'navigate' | 'pet' | 'display-mood' | 'custom'
+  target?: string           // for 'navigate'
+  handler?: () => void      // for 'custom'
+  readonly?: boolean
+}
+```
 
 ---
 
 ## Animation States
+
+States are defined in a registry (`animationRegistry`) — adding a new state means adding one entry to the registry, not modifying the state machine loop.
+
+```ts
+// cat-pet/animations/registry.ts
+export type AnimState = 'idle' | 'walking' | 'jumping' | 'rolling' | 'petting' | 'sleeping'
+// extend the union and add a handler to register new states
+
+export const animationRegistry: Record<AnimState, AnimHandler> = { ... }
+```
+
+Current state transitions:
 
 ```
 idle ──(random 30–60 s)──→ walking ──(arrives)──→ idle
@@ -149,10 +180,22 @@ idle ──(random 30–60 s)──→ walking ──(arrives)──→ idle
 
 ### Mood decay / growth
 
-- +10 on pet (button)
-- +1 per minute while page is active (capped 100)
-- −1 per minute while page is inactive (minimum 0)
-- Stored in `localStorage` as `cat-mood`
+Rules are defined in a config object so thresholds and rates can be tuned without touching logic:
+
+```ts
+// cat-pet/config.ts
+export const moodConfig = {
+  initial: 50,
+  max: 100,
+  min: 0,
+  petGain: 10,
+  activeGainPerMin: 1,
+  inactiveDecayPerMin: 1,
+  highThreshold: 80,   // above → more expressive idle
+  lowThreshold: 30,    // below → sleep timeout halved
+  storageKey: 'cat-mood',
+}
+```
 
 ---
 
@@ -169,9 +212,19 @@ idle ──(random 30–60 s)──→ walking ──(arrives)──→ idle
 
 ---
 
+## Extensibility Notes
+
+The design is intentionally open on three axes:
+
+| Axis | How to extend |
+|------|---------------|
+| **Menu items** | Add a new `CatMenuItem` to `config.ts` — no component changes |
+| **Animation states** | Add entry to `animationRegistry` + extend `AnimState` union — no state-machine changes |
+| **Mood rules** | Adjust values in `moodConfig` — no logic changes |
+
 ## Out of Scope (v1)
 
-- Mixamo rigged walk/run animations (can be added in v2)
-- Sound effects
+- Mixamo rigged walk/run animations (can be added in v2 via animationRegistry)
+- Sound effects (can hook into `CatMenuItem` with `action: 'custom'`)
 - Mobile touch drag
-- Multiple cat skins
+- Multiple cat skins / model swap
