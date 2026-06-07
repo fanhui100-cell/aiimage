@@ -69,6 +69,29 @@ export interface Vec3 {
   z: number
 }
 
+// ── Sector — spatial cluster within a galaxy ──────────────────────────────
+// Sectors are NOT separate pages. They are REGIONS of the galaxy's continuous
+// 3D field. Camera navigation (not routing) moves between them.
+// Camera distance drives LOD: far → SectorGlow nebula; near → full planets.
+export type SectorStatus = 'active' | 'growing' | 'forming'
+export interface LexiverseSector {
+  id: string
+  name: string
+  nameZh: string
+  color: string
+  status: SectorStatus
+  /** position relative to galaxy.visualPosition (galaxy-space) */
+  center: Vec3
+  /** planet scatter radius around center (units) */
+  radius: number
+  wordCount: number
+  masteryRatio: number
+  reviewWords: number
+  weakWords: number
+  /** one-line English description shown in the sector card and detail panel */
+  blurb: string
+}
+
 // ── Constellation — visual region grouping galaxies ───────────────────────
 export interface LexiverseConstellation {
   id: string
@@ -134,6 +157,8 @@ export interface LexiversePlanet {
   themeTags?: string[]
   domainTags?: string[]
   learningState: PlanetLearningState
+  /** which sector cluster this planet belongs to */
+  sectorId: string
   position: Vec3
   /** celestial archetype: 'gas' | 'rocky' | 'molten' | 'geodesic' | 'orb' | 'ringed' | 'galaxy' | 'crystal' | 'dwarf' */
   visualType: string
@@ -166,6 +191,7 @@ export interface PlanetActionPayload {
 // ── Built galaxy (catalog meta + materialised planet field + progress) ────
 export interface BuiltGalaxy {
   meta: LexiverseGalaxy
+  sectors: LexiverseSector[]
   planets: LexiversePlanet[]
   edges: { source: string; target: string }[]
   adjacency: Map<string, string[]>
@@ -184,8 +210,9 @@ export interface LexiverseStoreSlices {
 
 // ── Lexiverse view mode (URL state) ───────────────────────────────────────
 // The /lexiverse route is single-page; the layer in view is encoded as
-// ?galaxy=<id> (absent = universe view).
+// ?galaxy=<id> (absent = universe view), ?sector=<id> (sector focus within galaxy).
 export interface LexiverseViewState {
   galaxyId: string | null
+  sectorId: string | null
   selectedPlanetId: string | null
 }

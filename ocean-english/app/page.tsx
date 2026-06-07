@@ -15,7 +15,9 @@ const HomeHeroVisual = dynamic(
 export default function HomePage() {
   return (
     <AppShell>
+      {/* 深海 hero 满屏,底部渐变溶入米白 */}
       <HomeHeroVisual />
+      {/* 米白日光模块区 */}
       <HomeLearningCTA />
     </AppShell>
   )

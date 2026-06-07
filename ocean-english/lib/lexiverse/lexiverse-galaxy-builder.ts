@@ -17,13 +17,15 @@ import type {
   GalaxyProgress,
   LexiverseGalaxy,
   LexiversePlanet,
+  LexiverseSector,
   PlanetLearningState,
 } from './lexiverse-types'
 import type { FilterableWord } from './lexiverse-word-filter'
 import { resolveGalaxyWords } from './lexiverse-word-filter'
+import { deriveSectors } from './lexiverse-sector-builder'
 
-// ── tunables (mirror the prototype defaults) ─────────────────────────────
-const FIELD_R = 130          // sphere-volume radius for planet placement
+// ── tunables ──────────────────────────────────────────────────────────────
+const FIELD_R = 130          // fallback sphere radius (used when no sectors)
 const MAX_PLANETS_DEFAULT = 300
 const K_NEAREST = 3          // edges per planet (undirected, deduped)
 
@@ -109,19 +111,33 @@ export function buildGalaxy(
     matches.push(...supplemental)
   }
 
+  // ── derive sectors from the full matched word list ─────────────────────
+  const { sectors, wordToSector } = deriveSectors(meta.id, matches.map(m => m.word))
+
+  // Fallback sector for any word not covered by deriveSectors (should be rare)
+  const fallbackSectorId = sectors[0]?.id ?? `${meta.id}::sector::general`
+  const fallbackCenter = sectors[0]?.center ?? { x: 0, y: 0, z: 0 }
+  const fallbackRadius = sectors[0]?.radius ?? FIELD_R
+
   // ── build planets ──────────────────────────────────────────────────────
   const planets: LexiversePlanet[] = matches.map(({ word }) => {
     const seed = hashStr(meta.id + ':' + word.id)
     const r = mulberry32(seed)
 
-    // sphere-volume position (cube-root for even density), flattened y
-    const u = r(), v = r(), w = r()
-    const rad = FIELD_R * Math.cbrt(0.06 + 0.94 * u)
+    // Resolve which sector this word belongs to
+    const sectorId = wordToSector.get(word.id) ?? fallbackSectorId
+    const sector: LexiverseSector | undefined = sectors.find(s => s.id === sectorId)
+    const sc = sector?.center ?? fallbackCenter
+    const sRadius = sector?.radius ?? fallbackRadius
+
+    // Sphere-volume position relative to sector center (cube-root for even density), flattened y
+    const u = r(), v = r(), ww = r()
+    const rad = sRadius * Math.cbrt(0.06 + 0.94 * u)
     const theta = v * Math.PI * 2
-    const phi = Math.acos(2 * w - 1)
-    const x = +(rad * Math.sin(phi) * Math.cos(theta)).toFixed(2)
-    const y = +(rad * Math.cos(phi) * 0.72).toFixed(2)
-    const z = +(rad * Math.sin(phi) * Math.sin(theta)).toFixed(2)
+    const phi = Math.acos(2 * ww - 1)
+    const x = +(sc.x + rad * Math.sin(phi) * Math.cos(theta)).toFixed(2)
+    const y = +(sc.y + rad * Math.cos(phi) * 0.72).toFixed(2)
+    const z = +(sc.z + rad * Math.sin(phi) * Math.sin(theta)).toFixed(2)
 
     const category = inferCategory(word)
     const archChoices = ARCH_BY_CAT[category]
@@ -135,6 +151,7 @@ export function buildGalaxy(
       word: word.word,
       normalizedWord: normalizeWord(word.word),
       galaxyId: meta.id,
+      sectorId,
       ipa: word.phoneticIpa ?? undefined,
       definition: word.definitions?.[0]?.definitionEn,
       definitionZh: word.definitions?.[0]?.definitionZh,
@@ -195,6 +212,7 @@ export function buildGalaxy(
 
   return {
     meta,
+    sectors,
     planets,
     edges,
     adjacency,

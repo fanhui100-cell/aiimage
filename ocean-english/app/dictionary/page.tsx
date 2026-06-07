@@ -111,40 +111,46 @@ export default function DictionaryPage() {
 
   return (
     <AppShell>
-      <PageShell maxWidth={960}>
-        <div style={{ marginBottom: '8px', fontSize: '10px', letterSpacing: '0.15em', color: 'rgba(56,189,248,0.45)', fontFamily: 'var(--font-mono)' }}>
-          LEXIOCEAN / VOCABULARY ROOTS
-        </div>
-        <h1 style={{ margin: '0 0 6px', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 700, color: '#ECFBFF' }}>
-          Vocabulary Roots{' '}
-          <span style={{ fontSize: '18px', color: '#9BBFCA' }}>词汇根系</span>
+      <PageShell maxWidth={960} theme="light">
+        {/* 区块小标题 */}
+        <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.7 }}>
+          词汇根系 · Vocabulary
+        </p>
+        {/* 中文领衔主标 */}
+        <h1 style={{ margin: '0 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
+          词汇根系
         </h1>
+        <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: '15px', color: 'var(--teal-ink)' }}>
+          Vocabulary Roots
+        </p>
 
-        {/* LexiGraph entry card */}
+        {/* 进入星图卡 */}
         <Link
           href="/lexigraph"
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '12px 18px',
-            marginBottom: '20px',
-            borderRadius: '10px',
+            padding: '14px 18px',
+            marginBottom: '22px',
+            borderRadius: 'var(--r-sm)',
             textDecoration: 'none',
-            background: 'rgba(126,249,255,0.04)',
-            border: '1px solid rgba(126,249,255,0.18)',
+            background: 'var(--teal-bg)',
+            border: '1px solid rgba(14,140,122,0.2)',
             transition: 'border-color 0.2s',
           }}
         >
           <div>
-            <div style={{ fontSize: '13px', fontWeight: 700, color: '#7EF9FF', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em' }}>
-              ✦ Explore in LexiGraph / 进入词汇星图
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)', marginBottom: '3px' }}>
+              在词汇星图中探索
             </div>
-            <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.6)', marginTop: '3px' }}>
-              Explore word relationships, collocations, synonyms &amp; review status on an interactive map.
+            <div style={{ fontSize: '12px', color: 'var(--ink-sub)' }}>
+              单词关系、搭配与近反义词的交互图谱
             </div>
           </div>
-          <span style={{ fontSize: '18px', color: 'rgba(126,249,255,0.5)', marginLeft: '12px', flexShrink: 0 }}>→</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginLeft: '12px' }}>
+            <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+          </svg>
         </Link>
 
         {/* Search */}
@@ -153,22 +159,22 @@ export default function DictionaryPage() {
         </div>
 
         {/* Filter rows */}
-        <GlassCard style={{ marginBottom: '20px', padding: '14px 16px' }}>
+        <GlassCard theme="light" style={{ marginBottom: '20px', padding: '14px 16px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: '10px', letterSpacing: '0.12em', color: 'rgba(155,191,202,0.4)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>LEVEL</span>
+              <span style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>LEVEL</span>
               <PillFilter options={levelOptions} value={levelFilter} onChange={setLevelFilter} />
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: '10px', letterSpacing: '0.12em', color: 'rgba(155,191,202,0.4)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>DIFF</span>
+              <span style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>DIFF</span>
               <PillFilter options={difficultyOptions} value={diffFilter} onChange={setDiffFilter} accentColor="#8B5CF6" />
             </div>
           </div>
         </GlassCard>
 
         {/* Result count */}
-        <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.45)', marginBottom: '16px', fontFamily: 'var(--font-mono)' }}>
-          {loading ? '…' : `${results.length} result${results.length !== 1 ? 's' : ''}`}
+        <div style={{ fontSize: '12px', color: 'var(--ink-muted)', marginBottom: '16px', fontFamily: 'var(--font-mono)' }}>
+          {loading ? '…' : `${results.length} 个单词`}
         </div>
 
         {/* Loading skeleton */}

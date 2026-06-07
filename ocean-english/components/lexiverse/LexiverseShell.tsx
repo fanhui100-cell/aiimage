@@ -31,6 +31,8 @@ import { LearningStateLegend } from './LearningStateLegend'
 import { WebGLFallback } from './WebGLFallback'
 import { LoadingState } from './LoadingState'
 import { PlanetDetailPanel } from './PlanetDetailPanel'
+import { SectorPanel } from './SectorPanel'
+import { SectorDetailPanel } from './SectorDetailPanel'
 import { useLexiverseSlices } from './useLexiverseSlices'
 import { useRecentlyMasteredIds } from './useRecentlyMasteredIds'
 import { useGalaxyMastery } from './useGalaxyMastery'
@@ -56,6 +58,7 @@ export function LexiverseShell() {
   const searchParams = useSearchParams()
 
   const galaxyId = searchParams.get('galaxy')
+  const sectorId = searchParams.get('sector')
   const planetId = searchParams.get('planet')
   const filterSource = searchParams.get('source') ?? 'all'
 
@@ -80,6 +83,9 @@ export function LexiverseShell() {
       .map(r => r.wordId)
   }, [reviewWords])
 
+  // detail panel: which sector card is "open" in the right slide-in
+  const [detailSectorId, setDetailSectorId] = useState<string | null>(null)
+
   const [webglOk, setWebglOk] = useState<boolean | null>(null)
   useEffect(() => { setWebglOk(detectWebGL()) }, [])
 
@@ -90,9 +96,14 @@ export function LexiverseShell() {
     router.replace(q ? `${pathname}?${q}` : pathname)
   }, [router, pathname, searchParams])
 
-  const onSelectGalaxy = useCallback((id: string) => updateSearch({ galaxy: id, planet: null }), [updateSearch])
+  const onSelectGalaxy = useCallback((id: string) => updateSearch({ galaxy: id, planet: null, sector: null }), [updateSearch])
   const onSelectPlanet = useCallback((id: string | null) => updateSearch({ planet: id }), [updateSearch])
-  const onReturnToUniverse = useCallback(() => updateSearch({ galaxy: null, planet: null }), [updateSearch])
+  const onReturnToUniverse = useCallback(() => updateSearch({ galaxy: null, planet: null, sector: null }), [updateSearch])
+  const onFocusSector = useCallback((id: string | null) => {
+    updateSearch({ sector: id, planet: null })
+    setDetailSectorId(null)
+  }, [updateSearch])
+  const onOpenSectorDetail = useCallback((id: string) => setDetailSectorId(id), [])
   const onChangeFilter = useCallback((v: string) => updateSearch({ source: v === 'all' ? null : v }), [updateSearch])
   const onReplay = useCallback((gid: string, pid: string) => updateSearch({ galaxy: gid, planet: pid }), [updateSearch])
 
@@ -100,11 +111,12 @@ export function LexiverseShell() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return
       if (planetId) onSelectPlanet(null)
+      else if (sectorId) onFocusSector(null)
       else if (galaxyId) onReturnToUniverse()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [planetId, galaxyId, onSelectPlanet, onReturnToUniverse])
+  }, [planetId, sectorId, galaxyId, onSelectPlanet, onFocusSector, onReturnToUniverse])
 
   const visibleGalaxies = useMemo(() => {
     if (filterSource === 'all') return GALAXIES
@@ -117,6 +129,21 @@ export function LexiverseShell() {
   }, [currentGalaxy, dictWords])
 
   const recentlyMasteredIds = useRecentlyMasteredIds(builtGalaxy, slices)
+
+  // sector detail panel support
+  const detailSector = useMemo(() =>
+    detailSectorId ? (builtGalaxy?.sectors.find(s => s.id === detailSectorId) ?? null) : null,
+    [detailSectorId, builtGalaxy],
+  )
+  const featuredWords = useMemo(() =>
+    detailSectorId && builtGalaxy
+      ? builtGalaxy.planets
+          .filter(p => p.sectorId === detailSectorId)
+          .slice(0, 8)
+          .map(p => p.word)
+      : [],
+    [detailSectorId, builtGalaxy],
+  )
 
   // resolver for the ribbon to look up planet meta
   const resolveRibbonEntry = useCallback((pid: string) => {
@@ -195,6 +222,9 @@ export function LexiverseShell() {
         masteryByGalaxyId={masteryByGalaxyId}
         echoes={echoes}
         overdueWordIds={overdueWordIds}
+        focusSectorId={sectorId}
+        onFocusSector={onFocusSector}
+        builtGalaxy={builtGalaxy}
       />
 
       <header style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '14px 22px',
@@ -222,6 +252,26 @@ export function LexiverseShell() {
           recentlyMasteredIds={recentlyMasteredIds}
           resolve={resolveRibbonEntry}
           onReplay={onReplay}
+        />
+      )}
+
+      {/* Sector model · sector list panel (only in galaxy view) */}
+      {!isUniverse && builtGalaxy && builtGalaxy.sectors.length > 0 && (
+        <SectorPanel
+          sectors={builtGalaxy.sectors}
+          detailSectorId={detailSectorId}
+          onOpenDetail={onOpenSectorDetail}
+          onEnterSector={onFocusSector}
+        />
+      )}
+
+      {/* Sector detail slide-in panel (right side) */}
+      {!isUniverse && (
+        <SectorDetailPanel
+          sector={detailSector}
+          featuredWords={featuredWords}
+          onClose={() => setDetailSectorId(null)}
+          onEnterSector={onFocusSector}
         />
       )}
 

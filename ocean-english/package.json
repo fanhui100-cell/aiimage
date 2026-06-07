@@ -9,7 +9,9 @@
     "lint": "eslint",
     "validate:dictionary": "npx tsx scripts/validate-dictionary-import.ts",
     "validate:questions": "npx tsx scripts/validate-question-bank.ts",
-    "analyze:lexigraph": "npx tsx scripts/analyze-lexigraph-readiness.ts"
+    "analyze:lexigraph": "npx tsx scripts/analyze-lexigraph-readiness.ts",
+    "report:coverage": "npx tsx scripts/coverage-report.ts",
+    "dedupe:dictionary": "npx tsx scripts/deduplicate-seeds.ts"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

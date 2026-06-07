@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { UserMenu } from '@/components/auth/UserMenu'
 
-/* 深色形态路由前缀:首页 / 星图 / Lexiverse */
-const DARK_ROUTES = ['/', '/lexigraph', '/lexiverse']
+/* 深色形态路由前缀:首页 / 星图 / Lexiverse / 探索 */
+const DARK_ROUTES = ['/', '/lexigraph', '/lexiverse', '/explore']
 
 function isDarkRoute(pathname: string) {
   return DARK_ROUTES.some(r => r === '/' ? pathname === '/' : pathname.startsWith(r))
@@ -54,7 +54,6 @@ export function Navbar() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
-  const moreRef = useRef<HTMLDivElement>(null)
   const dark = isDarkRoute(pathname)
 
   /* ── 颜色 token ── */
@@ -136,7 +135,7 @@ export function Navbar() {
           }}
         >
           {siteConfig.navigation.map(item => {
-            const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
+            const active = pathname === item.href || pathname.startsWith(item.href + '/')
             return (
               <Link
                 key={item.href}
@@ -173,11 +172,15 @@ export function Navbar() {
         {/* ── 右侧:更多下拉 + 等级胶囊 + 头像 ── */}
         <div className="flex items-center gap-3 shrink-0">
 
-          {/* 桌面端"更多"下拉 */}
-          <div className="hidden md:block" style={{ position: 'relative' }} ref={moreRef}>
+          {/* 桌面端"更多"下拉 — hover 触发,避免 onBlur 时序问题 */}
+          <div
+            className="hidden md:block"
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setMoreOpen(true)}
+            onMouseLeave={() => setMoreOpen(false)}
+          >
             <button
-              onClick={() => setMoreOpen(p => !p)}
-              onBlur={() => setTimeout(closeMore, 160)}
+              type="button"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -200,8 +203,14 @@ export function Navbar() {
               <div
                 style={{
                   position: 'absolute',
-                  top: 'calc(100% + 8px)',
+                  top: '100%',
                   right: 0,
+                  paddingTop: '8px',  /* bridge to prevent gap closing dropdown */
+                  zIndex: 60,
+                }}
+              >
+              <div
+                style={{
                   background: dropBg,
                   border: `1px solid ${dropBorder}`,
                   borderRadius: 'var(--r-sm)',
@@ -209,7 +218,6 @@ export function Navbar() {
                   minWidth: '180px',
                   overflow: 'hidden',
                   backdropFilter: 'blur(12px)',
-                  zIndex: 60,
                 }}
               >
                 {moreItems.map(item => {
@@ -218,7 +226,6 @@ export function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      onClick={closeMore}
                       style={{
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -238,6 +245,7 @@ export function Navbar() {
                     </Link>
                   )
                 })}
+              </div>
               </div>
             )}
           </div>
@@ -297,7 +305,7 @@ export function Navbar() {
           }}
         >
           {siteConfig.navigation.map(item => {
-            const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
+            const active = pathname === item.href || pathname.startsWith(item.href + '/')
             return (
               <Link
                 key={item.href}

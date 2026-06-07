@@ -46,17 +46,15 @@ export default function MemoryPage() {
 
   return (
     <AppShell>
-      <PageShell maxWidth={900}>
-        <div style={{ marginBottom: '8px', fontSize: '10px', letterSpacing: '0.15em', color: 'rgba(56,189,248,0.45)', fontFamily: 'var(--font-mono)' }}>
-          LEXIOCEAN / MEMORY ROOTS
-        </div>
-        <h1 style={{ margin: '0 0 6px', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 700, color: '#ECFBFF' }}>
-          Memory Roots <span style={{ fontSize: '18px', color: '#9BBFCA' }}>记忆根系</span>
+      <PageShell maxWidth={900} theme="light">
+        <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.7 }}>
+          记忆根系 · Review
+        </p>
+        <h1 style={{ margin: '0 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
+          记忆根系
         </h1>
-        <p style={{ margin: '0 0 28px', color: '#9BBFCA', fontSize: '14px', lineHeight: 1.6 }}>
-          Spaced repetition, saved words, and your wrong-answer notebook.
-          <br />
-          <span style={{ color: 'rgba(155,191,202,0.5)', fontSize: '13px' }}>间隔复习、收藏单词与错题本。</span>
+        <p style={{ margin: '0 0 28px', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: '15px', color: 'var(--teal-ink)' }}>
+          Memory Roots — Spaced repetition &amp; saved words
         </p>
 
         {/* Stats strip */}
@@ -66,19 +64,18 @@ export default function MemoryPage() {
               key={s.label}
               onClick={() => setActiveTab(s.tab)}
               style={{
-                background: activeTab === s.tab ? `${s.color}12` : 'var(--glass-bg)',
-                border: `1px solid ${activeTab === s.tab ? `${s.color}50` : 'var(--glass-border)'}`,
-                borderRadius: '12px',
+                background: activeTab === s.tab ? 'var(--teal-bg)' : 'var(--card)',
+                border: `1px solid ${activeTab === s.tab ? 'rgba(14,140,122,0.3)' : 'var(--line)'}`,
+                borderRadius: 'var(--r-sm)',
                 padding: '16px',
                 textAlign: 'center',
                 cursor: 'pointer',
                 transition: 'all 0.2s',
+                boxShadow: 'var(--card-shadow-sm)',
               }}
             >
-              <div style={{ fontSize: '20px', marginBottom: '4px', color: activeTab === s.tab ? s.color : 'rgba(155,191,202,0.5)' }}>{s.icon}</div>
-              <div style={{ fontSize: '26px', fontWeight: 700, color: s.color, marginBottom: '2px' }}>{s.count}</div>
-              <div style={{ fontSize: '11px', color: '#9BBFCA' }}>{s.label}</div>
-              <div style={{ fontSize: '10px', color: 'rgba(155,191,202,0.45)' }}>{s.labelZh}</div>
+              <div style={{ fontSize: '22px', fontFamily: 'var(--font-serif)', fontWeight: 700, color: activeTab === s.tab ? 'var(--teal-ink)' : 'var(--ink)', marginBottom: '2px' }}>{s.count}</div>
+              <div style={{ fontSize: '12px', color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>{s.labelZh}</div>
             </button>
           ))}
         </div>
@@ -86,18 +83,18 @@ export default function MemoryPage() {
         {/* Tab bar */}
         <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', flexWrap: 'wrap' }}>
           <Button variant={tabVariant('saved')} size="sm" onClick={() => setActiveTab('saved')}>
-            ★ Saved / 收藏
+            收藏
           </Button>
           <Button variant={tabVariant('review')} size="sm" onClick={() => setActiveTab('review')}>
-            ◎ Review / 复习
+            复习
             {dueWords.length > 0 && (
-              <span style={{ marginLeft: '6px', background: '#38BDF8', color: '#020617', borderRadius: '8px', padding: '1px 6px', fontSize: '10px', fontFamily: 'var(--font-mono)' }}>
+              <span style={{ marginLeft: '6px', background: 'var(--teal-ink)', color: '#fff', borderRadius: 'var(--r-pill)', padding: '1px 7px', fontSize: '11px', fontFamily: 'var(--font-mono)' }}>
                 {dueWords.length}
               </span>
             )}
           </Button>
           <Button variant={tabVariant('wrong')} size="sm" onClick={() => setActiveTab('wrong')}>
-            ✗ Wrong / 错题本
+            错题本
           </Button>
         </div>
 
@@ -126,12 +123,12 @@ export default function MemoryPage() {
                         transition={{ delay: i * 0.04, duration: 0.25 }}
                         whileHover={{ y: -2 }}
                       >
-                        <GlassCard accentColor="#FBBF24" style={{ border: '1px solid rgba(251,191,36,0.18)', height: '100%' }}>
+                        <GlassCard theme="light" style={{ height: '100%' }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                             <Link href={`/word/${wordId}`} style={{ textDecoration: 'none', flex: 1 }}>
-                              <div style={{ fontSize: '17px', fontWeight: 700, color: '#ECFBFF', marginBottom: '2px' }}>{wordId}</div>
-                              {w && <div style={{ fontSize: '12px', color: '#7EF9FF', fontFamily: 'var(--font-mono)', marginBottom: '4px' }}>{w.phonetic}</div>}
-                              {w && <div style={{ fontSize: '12px', color: '#9BBFCA', lineHeight: 1.5 }}>{w.definitions[0]?.meaningZh}</div>}
+                              <div style={{ fontSize: '17px', fontFamily: 'var(--font-serif)', color: 'var(--ink)', marginBottom: '4px' }}>{wordId}</div>
+                              {w && <div style={{ fontSize: '12px', color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)', marginBottom: '4px' }}>{w.phonetic}</div>}
+                              {w && <div style={{ fontSize: '13px', color: 'var(--ink-sub)', lineHeight: 1.5 }}>{w.definitions[0]?.meaningZh}</div>}
                             </Link>
                             <Link
                               href={`/lexigraph?word=${wordId}`}
@@ -181,15 +178,14 @@ export default function MemoryPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.05, duration: 0.25 }}
                       >
-                        <GlassCard accentColor="#38BDF8" style={{ border: '1px solid rgba(56,189,248,0.18)' }}>
+                        <GlassCard theme="light">
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
-                            <div style={{ fontSize: '26px', fontWeight: 700, color: '#ECFBFF' }}>{r.word}</div>
+                            <div style={{ fontSize: '26px', fontFamily: 'var(--font-serif)', color: 'var(--ink)' }}>{r.word}</div>
                             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                              <Link href={`/word/${r.wordId}`} style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', textDecoration: 'none' }}>Detail</Link>
-                              <Link href={`/lexigraph?word=${r.wordId}`} style={{ fontSize: '11px', color: 'rgba(126,249,255,0.5)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>✦</Link>
+                              <Link href={`/word/${r.wordId}`} style={{ fontSize: '12px', color: 'var(--teal-ink)', textDecoration: 'none' }}>详情</Link>
                             </div>
                           </div>
-                          {w && <div style={{ fontSize: '13px', color: '#7EF9FF', fontFamily: 'var(--font-mono)', marginBottom: '14px' }}>{w.phonetic}</div>}
+                          {w && <div style={{ fontSize: '12px', color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)', marginBottom: '14px' }}>{w.phonetic}</div>}
 
                           <AnimatePresence mode="wait">
                             {!isRevealed ? (
@@ -201,9 +197,9 @@ export default function MemoryPage() {
                             ) : (
                               <motion.div key="revealed" initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
                                 {w && (
-                                  <div style={{ fontSize: '14px', color: '#9BBFCA', marginBottom: '16px', lineHeight: 1.6 }}>
+                                  <div style={{ fontSize: '14px', color: 'var(--ink-sub)', marginBottom: '16px', lineHeight: 1.6 }}>
                                     {w.definitions[0]?.meaningZh}<br />
-                                    <span style={{ color: 'rgba(155,191,202,0.6)', fontSize: '13px' }}>{w.definitions[0]?.meaning}</span>
+                                    <span style={{ color: 'var(--ink-muted)', fontSize: '13px', fontFamily: 'var(--font-news)', fontStyle: 'italic' }}>{w.definitions[0]?.meaning}</span>
                                   </div>
                                 )}
                                 <div style={{ display: 'flex', gap: '10px' }}>
@@ -249,25 +245,25 @@ export default function MemoryPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.04, duration: 0.25 }}
                       >
-                        <GlassCard style={{ border: '1px solid rgba(239,68,68,0.18)', background: 'rgba(239,68,68,0.03)' }}>
+                        <GlassCard theme="light" style={{ borderLeft: '3px solid var(--rose-ink)' }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                             <div style={{ flex: 1 }}>
-                              <div style={{ fontSize: '16px', fontWeight: 700, color: '#ECFBFF', marginBottom: '6px' }}>
-                                <Link href={`/word/${wa.wordId}`} style={{ color: '#ECFBFF', textDecoration: 'none' }}>{wa.word}</Link>
+                              <div style={{ fontSize: '17px', fontFamily: 'var(--font-serif)', color: 'var(--ink)', marginBottom: '6px' }}>
+                                <Link href={`/word/${wa.wordId}`} style={{ color: 'var(--ink)', textDecoration: 'none' }}>{wa.word}</Link>
                               </div>
-                              <div style={{ fontSize: '13px', color: '#9BBFCA', marginBottom: '8px' }}>{wa.question}</div>
-                              <div style={{ fontSize: '12px', color: 'rgba(239,68,68,0.7)', marginBottom: '4px' }}>Your answer: {wa.userAnswer} ✗</div>
-                              <div style={{ fontSize: '12px', color: '#34D399', marginBottom: '8px' }}>Correct: {wa.correctAnswer} ✓</div>
-                              <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.6)', lineHeight: 1.5 }}>{wa.explanation}</div>
+                              <div style={{ fontSize: '13px', color: 'var(--ink-sub)', marginBottom: '8px' }}>{wa.question}</div>
+                              <div style={{ fontSize: '12px', color: 'var(--rose-ink)', marginBottom: '4px' }}>你的答案: {wa.userAnswer}</div>
+                              <div style={{ fontSize: '12px', color: 'var(--teal-ink)', marginBottom: '8px' }}>正确答案: {wa.correctAnswer}</div>
+                              <div style={{ fontSize: '12px', color: 'var(--ink-muted)', lineHeight: 1.5 }}>{wa.explanation}</div>
                               <div style={{ marginTop: '10px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                                <Link href={`/lexigraph?word=${wa.wordId}`} style={{ fontSize: '11px', color: 'rgba(126,249,255,0.6)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>✦ LexiGraph</Link>
-                                <Link href={`/chat?context=wrong_answer&id=${wa.id}`} style={{ fontSize: '11px', color: 'rgba(139,92,246,0.7)', textDecoration: 'none' }}>✦ Ask AI / 问 AI</Link>
+                                <Link href={`/lexigraph?word=${wa.wordId}`} style={{ fontSize: '12px', color: 'var(--teal-ink)', textDecoration: 'none' }}>在星图中查看</Link>
+                                <Link href={`/chat?context=wrong_answer&id=${wa.id}`} style={{ fontSize: '12px', color: 'var(--ink-sub)', textDecoration: 'none' }}>问 AI</Link>
                               </div>
                             </div>
                             <button
                               onClick={() => removeWrongAnswer(wa.id)}
-                              style={{ background: 'none', border: 'none', color: 'rgba(155,191,202,0.3)', cursor: 'pointer', fontSize: '16px', padding: '4px', marginLeft: '12px' }}
-                              aria-label="Remove from wrong answers"
+                              style={{ background: 'none', border: 'none', color: 'var(--ink-muted)', cursor: 'pointer', fontSize: '18px', padding: '4px', marginLeft: '12px' }}
+                              aria-label="删除错题"
                             >
                               ×
                             </button>

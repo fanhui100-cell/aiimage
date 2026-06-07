@@ -177,3 +177,48 @@ html, body {
 @media (max-width: 767px) {
   body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
 }
+
+/* ── §9 + §15.5 微交互 ───────────────────────────────────────────────────── */
+
+/* 卡片 hover 上浮 */
+@keyframes cardLift { to { transform: translateY(-2px); box-shadow: var(--card-shadow); } }
+
+/* 按钮按压缩放 */
+.btn-press:active { transform: scale(0.97); }
+
+/* 通用可点击卡片 hover 效果 */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+/* 链接淡入下划线 */
+.link-underline {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease;
+}
+.link-underline:hover { background-size: 100% 1px; }
+
+/* 平板响应断点补充 (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* PageShell padding 在平板稍收窄 */
+  .page-shell-inner { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
+/* Mobile 安全区 + overflow 防侧滚 */
+@media (max-width: 767px) {
+  .theme-light { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+}
+
+/* NightModeToggle + AIGuideButton 在移动端避开底部 Tab */
+@media (max-width: 767px) {
+  /* bottom 28px + 56px tab bar = 84px */
+  .float-btn-stack { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}

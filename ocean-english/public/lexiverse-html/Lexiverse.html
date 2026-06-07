@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Lexiverse · 词汇星图 3D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; background: #050505; color: #ECFBFF;
+    font-family: 'Space Grotesk', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  #stage { position: fixed; inset: 0; }
+
+  /* Canvas + its depth-fold transition */
+  #canvas-wrap { position: absolute; inset: 0; transform-origin: 50% 45%;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, filter; }
+  #canvas-wrap.folded { transform: scale(0.93); filter: blur(15px) brightness(0.6); }
+  #canvas-wrap canvas { display: block; }
+
+  /* Projected node labels */
+  .lv-label { position: absolute; left: 0; top: 0; white-space: nowrap;
+    font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 500;
+    color: #ECFBFF; letter-spacing: 0.01em; padding: 1px 0; transition: opacity 0.25s ease;
+    text-shadow: 0 0 8px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.9); }
+  .lv-label[data-kind="mastered"] { color: #cdeffd; }
+  .lv-label[data-kind="unlockable"] { color: #8fd6ff; }
+
+  /* ── Top bar ── */
+  #topbar { position: absolute; top: 0; left: 0; right: 0; height: 56px; z-index: 6;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 22px;
+    pointer-events: none; }
+  #topbar .brand { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: #7EF9FF; }
+  #topbar .sub { margin-left: 11px; font-size: 12px; color: #6f8aa0; font-family: 'Space Mono', monospace; }
+
+  /* ── Legend (state) top-right ── */
+  #legend { position: absolute; top: 64px; right: 20px; z-index: 6;
+    background: rgba(8,12,20,0.66); border: 1px solid rgba(126,249,255,0.12);
+    border-radius: 12px; padding: 11px 13px; backdrop-filter: blur(14px);
+    display: flex; flex-direction: column; gap: 8px; }
+  #legend .row { display: flex; align-items: center; gap: 9px; }
+  #legend .ring { width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0; }
+  #legend .t { font-size: 11px; color: #9fb6c6; font-family: 'Space Mono', monospace; white-space: nowrap; }
+  #legend .t b { color: #cfe6f2; font-weight: 400; }
+
+  /* ── HUD bottom-left ── */
+  #hud { position: absolute; left: 20px; bottom: 20px; z-index: 6;
+    background: rgba(8,12,20,0.66); border: 1px solid rgba(126,249,255,0.12);
+    border-radius: 14px; padding: 14px 16px; backdrop-filter: blur(14px); width: 248px; }
+  #hud .hud-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+  #hud .hud-title { font-size: 11px; letter-spacing: 0.12em; color: #6f8aa0; font-family: 'Space Mono', monospace; }
+  #hud .hud-pct { font-size: 20px; font-weight: 700; color: #7EF9FF; font-family: 'Space Mono', monospace; }
+  #hud .bar { height: 4px; border-radius: 2px; background: rgba(126,249,255,0.12); overflow: hidden; margin-bottom: 12px; }
+  #hud .bar > i { display: block; height: 100%; background: linear-gradient(90deg, #38BDF8, #7EF9FF); border-radius: 2px; transition: width 0.5s cubic-bezier(0.22,1,0.36,1); }
+  #hud .stats { display: flex; gap: 14px; }
+  #hud .stat { display: flex; flex-direction: column; gap: 2px; }
+  #hud .stat b { font-size: 16px; font-weight: 700; font-family: 'Space Mono', monospace; line-height: 1; }
+  #hud .stat span { font-size: 9.5px; color: #6f8aa0; letter-spacing: 0.02em; }
+
+  /* ── Controls hint ── */
+  #hint { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 5;
+    font-size: 11px; color: rgba(159,182,198,0.45); font-family: 'Space Mono', monospace;
+    letter-spacing: 0.06em; pointer-events: none; }
+
+  /* ── Detail panel (slides from right) ── */
+  #detail { position: absolute; top: 0; right: 0; bottom: 0; width: 380px; z-index: 8;
+    background: linear-gradient(180deg, rgba(11,16,26,0.92), rgba(7,11,19,0.95));
+    border-left: 1px solid rgba(126,249,255,0.14); backdrop-filter: blur(22px) saturate(1.2);
+    box-shadow: -30px 0 80px rgba(0,0,0,0.6);
+    transform: translateX(102%); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex; flex-direction: column; }
+  #detail.open { transform: translateX(0); }
+  #detail::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(126,249,255,0.5), transparent); }
+  #close-btn { position: absolute; top: 16px; right: 16px; z-index: 2; width: 32px; height: 32px;
+    border-radius: 50%; border: 1px solid rgba(159,182,198,0.22); background: rgba(255,255,255,0.04);
+    color: #9fb6c6; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s ease; }
+  #close-btn:hover { border-color: rgba(126,249,255,0.5); color: #7EF9FF; background: rgba(126,249,255,0.08); }
+  #detail-body { padding: 30px 26px; overflow-y: auto; flex: 1; }
+
+  .d-status { display: inline-flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 600;
+    padding: 4px 11px; border-radius: 20px; border: 1px solid; font-family: 'Space Mono', monospace; }
+  .d-dot { width: 7px; height: 7px; border-radius: 50%; }
+  .d-word { font-size: 44px; font-weight: 700; letter-spacing: -0.025em; margin-top: 16px; line-height: 1; color: #ECFBFF; }
+  .d-ipa { display: flex; align-items: center; gap: 12px; margin-top: 10px; font-size: 15px; color: #7EF9FF; font-family: 'Space Mono', monospace; }
+  .d-cat { font-size: 12px; color: #6f8aa0; }
+  .d-sec-label { font-size: 10px; letter-spacing: 0.14em; color: rgba(126,249,255,0.5);
+    font-family: 'Space Mono', monospace; margin: 26px 0 10px; }
+  .d-def { font-size: 15px; line-height: 1.6; color: #dceaf2; }
+  .d-def-zh { font-size: 13px; color: #8aa2b2; margin-top: 5px; }
+  .d-neighbors { display: flex; flex-wrap: wrap; gap: 7px; }
+  .d-nb { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 8px;
+    background: rgba(255,255,255,0.035); border: 1px solid rgba(159,182,198,0.14); color: #cfe6f2;
+    font-size: 12.5px; font-family: 'Space Grotesk', sans-serif; cursor: pointer; transition: all 0.18s ease; }
+  .d-nb:hover { border-color: rgba(126,249,255,0.45); background: rgba(126,249,255,0.08); transform: translateY(-1px); }
+  .d-nb-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .d-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 30px; }
+  .d-primary { padding: 13px; border-radius: 11px; border: none; cursor: pointer; font-size: 14px; font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif; color: #04202b;
+    background: linear-gradient(135deg, #7EF9FF, #38BDF8); box-shadow: 0 8px 26px rgba(56,189,248,0.32); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .d-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(56,189,248,0.45); }
+  .d-primary:active { transform: translateY(0); }
+  .d-ghost { padding: 11px; border-radius: 11px; cursor: pointer; font-size: 13px; font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif; color: #9fb6c6; background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(159,182,198,0.18); transition: all 0.18s ease; }
+  .d-ghost:hover { border-color: rgba(126,249,255,0.4); color: #cfe6f2; }
+  .d-mastered { padding: 12px; border-radius: 11px; text-align: center; font-size: 13px; font-weight: 600;
+    color: #7EF9FF; background: rgba(126,249,255,0.07); border: 1px solid rgba(126,249,255,0.25);
+    font-family: 'Space Mono', monospace; }
+
+  /* ── Toast ── */
+  #lv-toast { position: absolute; left: 50%; bottom: 84px; transform: translate(-50%, 12px); z-index: 9;
+    background: rgba(8,12,20,0.95); border: 1px solid rgba(126,249,255,0.3); border-radius: 10px;
+    padding: 10px 18px; font-size: 13px; color: #7EF9FF; font-family: 'Space Mono', monospace;
+    backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease; }
+  #lv-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 640px) {
+    #detail { width: 100%; }
+    #hud { width: calc(100% - 40px); }
+    #legend { top: 60px; right: 14px; padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <div id="canvas-wrap"></div>
+
+    <div id="topbar">
+      <div><span class="brand">Lexiverse</span><span class="sub">词汇星图 · explore what you know, unlock what's near</span></div>
+    </div>
+
+    <div id="legend">
+      <div class="row"><span class="ring" style="background:#7EF9FF;box-shadow:0 0 10px #7EF9FF"></span><span class="t"><b>Mastered</b> 已掌握</span></div>
+      <div class="row"><span class="ring" style="background:#38BDF8;opacity:0.85;box-shadow:0 0 8px #38BDF8"></span><span class="t"><b>Unlockable</b> 待解锁 · breathing</span></div>
+      <div class="row"><span class="ring" style="background:#33415a"></span><span class="t"><b>Locked</b> 静默</span></div>
+    </div>
+
+    <div id="hud">
+      <div class="hud-top">
+        <span class="hud-title">YOUR SKY / 词汇星空</span>
+        <span class="hud-pct" id="hud-pct">0%</span>
+      </div>
+      <div class="bar"><i id="hud-bar" style="width:0%"></i></div>
+      <div class="stats">
+        <div class="stat"><b id="hud-m" style="color:#7EF9FF">0</b><span>Mastered 已掌握</span></div>
+        <div class="stat"><b id="hud-u" style="color:#38BDF8">0</b><span>Unlockable 待解锁</span></div>
+        <div class="stat"><b id="hud-l" style="color:#5a6b80">0</b><span>Locked 静默</span></div>
+      </div>
+    </div>
+
+    <div id="hint">drag to orbit · scroll to zoom · click a star to open</div>
+
+    <div id="detail">
+      <button id="close-btn">✕</button>
+      <div id="detail-body"></div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.184.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script src="lexiverse/data.js"></script>
+  <script type="module" src="lexiverse/ui.js"></script>
+</body>
+</html>

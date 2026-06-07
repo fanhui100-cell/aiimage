@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LexiGraph / 词汇星图 — LexiOcean</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #020617; color: #ECFBFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; overflow: hidden; }
+  #root { height: 100vh; }
+  button { font-family: inherit; }
+  ::-webkit-scrollbar { width: 7px; }
+  ::-webkit-scrollbar-thumb { background: rgba(56,189,248,0.22); border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  /* ── LexiGraph SVG node state rings (verbatim from globals.css) ─────────── */
+  @keyframes lexiPulse { 0%,100% { opacity: 0.45; } 50% { opacity: 1; } }
+  @keyframes lexiGlow  { 0%,100% { opacity: 0.5;  } 50% { opacity: 1; } }
+  .lxi-pulse { animation: lexiPulse 2s ease-in-out infinite; }
+  .lxi-glow  { animation: lexiGlow 2.5s ease-in-out infinite; }
+
+  /* Center-node pulse aura (Phase 7.5 addition) */
+  @keyframes lexiCorePulse {
+    0%   { transform: scale(0.82); opacity: 0.55; }
+    70%  { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
+  }
+  .lxi-core-pulse { animation: lexiCorePulse 2.6s ease-out infinite;
+    transform-box: fill-box; transform-origin: center; pointer-events: none; }
+
+  /* Pronunciation wave ring (verbatim from globals.css) */
+  @keyframes lxiWave { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(2.8); opacity: 0; } }
+  .lxi-wave { animation: lxiWave 1.6s ease-out forwards; transform-box: fill-box; transform-origin: center; pointer-events: none; }
+
+  /* Lumi companion (verbatim keyframes from globals.css) */
+  @keyframes lumiFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .lumi-float { animation: lumiFloat 4s ease-in-out infinite; }
+  @keyframes lumiOrbit0 { from { transform: translate(-50%,-50%) rotate(0)   translateX(22px); } to { transform: translate(-50%,-50%) rotate(360deg) translateX(22px); } }
+  @keyframes lumiOrbit1 { from { transform: translate(-50%,-50%) rotate(90deg) translateX(19px); } to { transform: translate(-50%,-50%) rotate(450deg) translateX(19px); } }
+  @keyframes lumiOrbit2 { from { transform: translate(-50%,-50%) rotate(200deg) translateX(25px); } to { transform: translate(-50%,-50%) rotate(560deg) translateX(25px); } }
+  @keyframes lumiOrbit3 { from { transform: translate(-50%,-50%) rotate(310deg) translateX(16px); } to { transform: translate(-50%,-50%) rotate(670deg) translateX(16px); } }
+  .lumi-orbit { animation-timing-function: linear; animation-iteration-count: infinite; }
+  .lumi-orbit-0 { animation-name: lumiOrbit0; animation-duration: 4s; }
+  .lumi-orbit-1 { animation-name: lumiOrbit1; animation-duration: 6s; }
+  .lumi-orbit-2 { animation-name: lumiOrbit2; animation-duration: 5s; }
+  .lumi-orbit-3 { animation-name: lumiOrbit3; animation-duration: 7s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lxi-pulse, .lxi-glow, .lxi-core-pulse, .lumi-float, .lumi-orbit { animation: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="lexigraph/data.js"></script>
+  <script src="lexigraph/particles.js"></script>
+  <script type="text/babel" src="lexigraph/graph.jsx"></script>
+  <script type="text/babel" src="lexigraph/panel.jsx"></script>
+  <script type="text/babel" src="lexigraph/page.jsx"></script>
+</body>
+</html>

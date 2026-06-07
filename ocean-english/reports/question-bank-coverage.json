@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-07T14:59:47.124Z",
+  "totalQuestions": 24,
+  "uniqueTargetWords": 24,
+  "wordsWithQuestions": 24,
+  "wordsWithoutQuestions": 354,
+  "questionTypeDistribution": {
+    "definition_to_word": 16,
+    "synonym_choice": 2,
+    "antonym_choice": 2,
+    "zh_definition_to_word": 1,
+    "en_to_zh": 1,
+    "zh_to_en": 1,
+    "collocation_choice": 1
+  },
+  "difficultyDistribution": {
+    "2": 9,
+    "3": 11,
+    "4": 4
+  },
+  "examTagDistribution": {
+    "(none)": 9,
+    "CET-4": 11,
+    "CET-6": 11,
+    "TOEFL": 4,
+    "IELTS": 4
+  },
+  "questionsPerWordStats": {
+    "min": 1,
+    "max": 1,
+    "avg": 1
+  },
+  "zeroQuestionWordCount": 354
+}

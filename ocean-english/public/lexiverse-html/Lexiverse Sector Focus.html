@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lexiverse · Sector Focus · 星区聚焦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lexiverse-ui/liquid-glass.css" />
+<link rel="stylesheet" href="lexiverse-ui/galaxy-app.css" />
+<style> html,body{height:100%;overflow:hidden;background:#05080f;} </style>
+</head>
+<body>
+  <div class="cosmic-bg"></div>
+  <div id="stage"></div>
+  <div id="ui"></div>
+
+  <script type="importmap">
+  { "imports": {
+      "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.184.0/examples/jsm/"
+  } }
+  </script>
+  <script src="lexiverse-ui/exam-data.js"></script>
+  <script>window.__galaxyExam = new URLSearchParams(location.search).get('exam') || 'all';</script>
+  <script src="lexiverse-ui/sector-data.js"></script>
+  <script>window.LEX_MODE = {"mode":"focus","sector":"research-method","pageTitle":"Lexiverse · Sector Focus · 星区聚焦"};</script>
+  <script type="module" src="lexiverse-ui/galaxy-app.js"></script>
+</body>
+</html>

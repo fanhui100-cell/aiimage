@@ -3,8 +3,9 @@ import type { LevelOption } from '@/types/learning'
 export const siteConfig = {
   projectName: 'LexiOcean',
   projectNameZh: '深海英语学习系统',
-  slogan: 'Grow your English into a living knowledge tree.',
-  sloganZh: '让英语生长成一棵动态知识树。',
+  slogan: '万词成海,自有光',
+  sloganEn: 'An ocean of words, lit from within.',
+  sloganZh: '万词成海,自有光',
   description:
     'An AI-powered English learning system where vocabulary, pronunciation, reading, documents, exams, and memory grow together.',
   descriptionZh:
@@ -18,25 +19,22 @@ export const siteConfig = {
   ctaPrimaryZh: '开始学习',
   ctaSecondary: 'Choose Level',
   ctaSecondaryZh: '选择等级',
-  /** Primary navigation — kept to 7 items to prevent overflow */
+  /** Primary navigation — 新 IA §16:今日·学习·复习·练习·探索 */
   navigation: [
-    { label: 'Home', labelZh: '首页', href: '/' },
-    { label: 'LexiGraph', labelZh: '星图', href: '/lexigraph' },
-    { label: 'Dictionary', labelZh: '词典', href: '/dictionary' },
+    { label: 'Today', labelZh: '今日', href: '/today' },
+    { label: 'Learn', labelZh: '学习', href: '/dictionary' },
     { label: 'Review', labelZh: '复习', href: '/memory' },
-    { label: 'Scan', labelZh: '扫描', href: '/scan' },
-    { label: 'AI Chat', labelZh: '导学', href: '/chat' },
+    { label: 'Practice', labelZh: '练习', href: '/quiz' },
+    { label: 'Explore', labelZh: '探索', href: '/explore' },
   ],
-  /** Secondary items shown in the More dropdown (grouped) */
+  /** Secondary items in the More dropdown */
   navigationMore: [
-    { label: 'Quiz', labelZh: '练习', href: '/quiz', group: 'learning' as const },
-    { label: 'Study Hub', labelZh: '学习中心', href: '/study', group: 'learning' as const },
+    { label: 'Scan', labelZh: '文档扫描', href: '/scan', group: 'learning' as const },
+    { label: 'Reading', labelZh: '阅读', href: '/reading', group: 'learning' as const },
+    { label: 'Listening', labelZh: '听力', href: '/pronunciation', group: 'learning' as const },
     { label: 'Exam Drill', labelZh: '考试训练', href: '/exam', group: 'learning' as const },
-    { label: 'Lexiverse', labelZh: '词汇宇宙', href: '/lexiverse', group: 'lexiverse' as const },
     { label: 'Vocab Browser', labelZh: '词库浏览', href: '/lexiverse/vocab', group: 'lexiverse' as const },
     { label: 'Lexiverse Quiz', labelZh: '词汇练习', href: '/lexiverse/quiz', group: 'lexiverse' as const },
-    { label: 'Reading Canopy', labelZh: '阅读树冠', href: '/reading', group: 'coming' as const, comingSoon: true as const },
-    { label: 'Voice Sonar', labelZh: '声音脉络', href: '/pronunciation', group: 'coming' as const, comingSoon: true as const },
   ],
 } as const
 

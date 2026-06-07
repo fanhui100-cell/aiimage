@@ -78,6 +78,22 @@ export type DictionarySourceType = 'original' | 'ai-generated' | 'adapted' | 'pu
 export type WordLevel = 'beginner' | 'elementary' | 'intermediate' | 'advanced' | 'exam-prep'
 export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
+/**
+ * Phase 8C — per-exam profile for fine-grained exam tagging.
+ * examTags[] on DictionaryWord remains the primary filter field.
+ * This provides additional metadata when a word belongs to a specific exam tier.
+ */
+export interface DictionaryExamProfile {
+  exam: ExamTag
+  /** e.g. 'Band-6', 'Core', 'Advanced' — exam-specific tier label */
+  band?: string
+  /** Official word list name, e.g. 'LexiOcean-Core', 'ETS-TOEFL-2024' */
+  sourceList?: string
+  /** Times the word appeared in recent exam papers (estimated/tracked) */
+  appearanceCount?: number
+  lastSeenYear?: number
+}
+
 // ── Main DictionaryWord type ───────────────────────────────────────────────
 
 export interface DictionaryWord {
@@ -99,6 +115,12 @@ export interface DictionaryWord {
   frequencyRank: number | null
   sourceType: DictionarySourceType
   sourceNote: string | null
+  /** Phase 8C: per-exam profiles (fine-grained). examTags[] remains the primary filter. */
+  examProfiles?: DictionaryExamProfile[]
+  /** Phase 8C: name of the source word list, e.g. 'LexiOcean-Core', 'ETS-TOEFL-2024' */
+  sourceWordList?: string
+  /** Phase 8C: how often this word appears in exam papers (for future analytics) */
+  appearanceFrequency?: number
 
   definitions: DictionaryDefinition[]
   examples: DictionaryExample[]

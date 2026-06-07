@@ -1,0 +1,283 @@
+{
+  "generatedAt": "2026-06-07T14:59:47.124Z",
+  "sources": [
+    {
+      "label": "expanded",
+      "entries": 74
+    },
+    {
+      "label": "batch-1",
+      "entries": 150
+    },
+    {
+      "label": "batch-2",
+      "entries": 120
+    },
+    {
+      "label": "core-seed",
+      "entries": 60
+    }
+  ],
+  "totalAcrossAllSources": 404,
+  "uniqueWordCount": 378,
+  "duplicateCount": 26,
+  "runtimeReachableWordCount": 378,
+  "cefrDistribution": {
+    "B2": 138,
+    "B1": 119,
+    "C1": 72,
+    "A2": 42,
+    "C2": 7
+  },
+  "difficultyDistribution": {
+    "1": 37,
+    "2": 125,
+    "3": 138,
+    "4": 73,
+    "5": 5
+  },
+  "examTagDistribution": {
+    "TOEFL": 108,
+    "IELTS": 96,
+    "CET-6": 118,
+    "GRE": 35,
+    "SAT": 20,
+    "CET-4": 108
+  },
+  "fieldCoverage": {
+    "definitionEn": {
+      "count": 378,
+      "total": 378,
+      "pct": "100%"
+    },
+    "definitionZh": {
+      "count": 378,
+      "total": 378,
+      "pct": "100%"
+    },
+    "examples": {
+      "count": 378,
+      "total": 378,
+      "pct": "100%"
+    },
+    "synonyms": {
+      "count": 378,
+      "total": 378,
+      "pct": "100%"
+    },
+    "antonyms": {
+      "count": 204,
+      "total": 378,
+      "pct": "54%"
+    },
+    "collocations": {
+      "count": 303,
+      "total": 378,
+      "pct": "80%"
+    },
+    "mnemonics": {
+      "count": 279,
+      "total": 378,
+      "pct": "74%"
+    },
+    "examTags": {
+      "count": 222,
+      "total": 378,
+      "pct": "59%"
+    },
+    "themeTags": {
+      "count": 304,
+      "total": 378,
+      "pct": "80%"
+    },
+    "domainTags": {
+      "count": 270,
+      "total": 378,
+      "pct": "71%"
+    }
+  },
+  "duplicates": [
+    {
+      "id": "achieve",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "create",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "accurate",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "adapt",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "capable",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "demonstrate",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "anticipate",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "clarify",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "consistent",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "construct",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "elaborate",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "emphasize",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "enhance",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "expand",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "identify",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "justify",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "maintain",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "significant",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "advocate",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "coherent",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "comprehensive",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "constitute",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "contradict",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "conventional",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "implement",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    },
+    {
+      "id": "perceive",
+      "sources": [
+        "batch-1",
+        "core-seed"
+      ]
+    }
+  ]
+}
