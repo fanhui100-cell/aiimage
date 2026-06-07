@@ -2,7 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { AppShell } from '@/components/layout/AppShell'
+import { PageShell } from '@/components/ui/PageShell'
+import { GlassCard } from '@/components/ui/GlassCard'
+import { Button } from '@/components/ui/Button'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 import { mockExamQuestions } from '@/data/mock-exam-questions'
 import type { ExamQuestion } from '@/data/mock-exam-questions'
 
@@ -27,7 +32,7 @@ function MockDrillSection({ exam }: { exam: ExamType }) {
 
   if (questions.length === 0) {
     return (
-      <div style={{ color: 'rgba(155,191,202,0.4)', fontSize: '13px', padding: '20px', textAlign: 'center', fontFamily: 'ui-monospace, monospace' }}>
+      <div style={{ color: 'rgba(155,191,202,0.4)', fontSize: '13px', padding: '20px', textAlign: 'center', fontFamily: 'var(--font-mono)' }}>
         [ Sample questions for {exam} — more content in Phase 3 ]
       </div>
     )
@@ -39,8 +44,8 @@ function MockDrillSection({ exam }: { exam: ExamType }) {
         const isRevealed = revealed.has(q.id)
         const selectedIdx = selected[q.id]
         return (
-          <div key={q.id} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(155,191,202,0.12)', borderRadius: '10px', padding: '18px' }}>
-            <div style={{ fontSize: '12px', color: 'rgba(56,189,248,0.5)', marginBottom: '8px', fontFamily: 'ui-monospace, monospace' }}>
+          <div key={q.id} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(155,191,202,0.1)', borderRadius: '10px', padding: '18px' }}>
+            <div style={{ fontSize: '11px', color: 'rgba(56,189,248,0.5)', marginBottom: '8px', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>
               {q.type.toUpperCase()} — {q.exam}
             </div>
             <div style={{ fontSize: '14px', color: '#ECFBFF', marginBottom: '14px', lineHeight: 1.6 }}>{q.question}</div>
@@ -51,20 +56,25 @@ function MockDrillSection({ exam }: { exam: ExamType }) {
                 const isWrong = isRevealed && isSel && !isCorrect
                 return (
                   <button key={opt} onClick={() => { setSelected(s => ({ ...s, [q.id]: i })) }}
-                    style={{ padding: '10px 14px', borderRadius: '8px', textAlign: 'left', background: isCorrect ? 'rgba(52,211,153,0.08)' : isWrong ? 'rgba(239,68,68,0.06)' : isSel ? 'rgba(56,189,248,0.08)' : 'rgba(255,255,255,0.02)', border: `1px solid ${isCorrect ? 'rgba(52,211,153,0.4)' : isWrong ? 'rgba(239,68,68,0.3)' : isSel ? 'rgba(56,189,248,0.4)' : 'rgba(155,191,202,0.1)'}`, color: isCorrect ? '#34D399' : isWrong ? 'rgba(239,68,68,0.7)' : '#ECFBFF', fontSize: '13px', cursor: 'pointer' }}>
+                    style={{
+                      padding: '10px 14px', borderRadius: '8px', textAlign: 'left',
+                      background: isCorrect ? 'rgba(52,211,153,0.08)' : isWrong ? 'rgba(239,68,68,0.06)' : isSel ? 'rgba(56,189,248,0.08)' : 'rgba(255,255,255,0.02)',
+                      border: `1px solid ${isCorrect ? 'rgba(52,211,153,0.4)' : isWrong ? 'rgba(239,68,68,0.3)' : isSel ? 'rgba(56,189,248,0.4)' : 'rgba(155,191,202,0.1)'}`,
+                      color: isCorrect ? '#34D399' : isWrong ? 'rgba(239,68,68,0.7)' : '#ECFBFF',
+                      fontSize: '13px', cursor: 'pointer',
+                    }}>
                     {String.fromCharCode(65 + i)}. {opt}
                   </button>
                 )
               })}
             </div>
             {selectedIdx !== undefined && !isRevealed && (
-              <button onClick={() => setRevealed(prev => new Set(prev).add(q.id))}
-                style={{ padding: '8px 18px', borderRadius: '6px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.3)', color: '#38BDF8', fontSize: '12px', cursor: 'pointer' }}>
+              <Button size="sm" onClick={() => setRevealed(prev => new Set(prev).add(q.id))}>
                 Check Answer / 查看答案
-              </button>
+              </Button>
             )}
             {isRevealed && (
-              <div style={{ background: 'rgba(52,211,153,0.05)', border: '1px solid rgba(52,211,153,0.2)', borderRadius: '8px', padding: '12px' }}>
+              <div style={{ background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.2)', borderRadius: '8px', padding: '12px' }}>
                 <div style={{ fontSize: '12px', color: '#34D399', marginBottom: '6px' }}>
                   Correct answer: {q.options[q.correctIndex]}
                 </div>
@@ -83,59 +93,74 @@ export default function ExamPage() {
 
   return (
     <AppShell>
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 24px' }}>
-          <h1 style={{ margin: '0 0 6px', fontSize: '32px', fontWeight: 700, color: '#ECFBFF' }}>
-            Exam Branch <span style={{ fontSize: '18px', color: '#9BBFCA' }}>考试枝路</span>
-          </h1>
-          <p style={{ margin: '0 0 28px', color: '#9BBFCA', fontSize: '14px' }}>
-            Choose your target exam for focused preparation and practice questions.
-            <br />
-            <span style={{ color: 'rgba(155,191,202,0.6)', fontSize: '13px' }}>选择目标考试，专项备考与练习。</span>
-          </p>
+      <PageShell maxWidth={900}>
+        <div style={{ marginBottom: '8px', fontSize: '10px', letterSpacing: '0.15em', color: 'rgba(139,92,246,0.5)', fontFamily: 'var(--font-mono)' }}>
+          LEXIOCEAN / EXAM BRANCH
+        </div>
+        <h1 style={{ margin: '0 0 6px', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 700, color: '#ECFBFF' }}>
+          Exam Branch <span style={{ fontSize: '18px', color: '#9BBFCA' }}>考试枝路</span>
+        </h1>
+        <p style={{ margin: '0 0 28px', color: '#9BBFCA', fontSize: '14px', lineHeight: 1.6 }}>
+          Choose your target exam for focused preparation and practice questions.
+          <br />
+          <span style={{ color: 'rgba(155,191,202,0.5)', fontSize: '13px' }}>选择目标考试，专项备考与练习。</span>
+        </p>
 
-          {/* Exam selector */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '12px', marginBottom: '32px' }}>
-            {examTypes.map(exam => (
-              <button
+        {/* Exam selector grid */}
+        <SectionHeader label="SELECT EXAM" labelZh="选择考试" style={{ marginBottom: '14px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px', marginBottom: '28px' }}>
+          {examTypes.map((exam, i) => {
+            const active = selectedExam === exam.id
+            return (
+              <motion.button
                 key={exam.id}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05, duration: 0.25 }}
+                whileHover={{ y: -2 }}
                 onClick={() => setSelectedExam(selectedExam === exam.id ? null : exam.id)}
                 style={{
-                  background: selectedExam === exam.id ? `${exam.color}12` : 'rgba(255,255,255,0.03)',
-                  border: `1px solid ${selectedExam === exam.id ? `${exam.color}60` : 'rgba(155,191,202,0.15)'}`,
+                  background: active ? `${exam.color}10` : 'var(--glass-bg)',
+                  border: `1px solid ${active ? `${exam.color}60` : 'var(--glass-border)'}`,
                   borderRadius: '10px',
                   padding: '18px',
                   textAlign: 'left',
                   cursor: 'pointer',
-                  transition: 'all 0.2s',
-                  boxShadow: selectedExam === exam.id ? `0 0 16px ${exam.color}10` : 'none',
+                  transition: 'border-color 0.2s, background 0.2s',
+                  boxShadow: active ? `0 0 18px ${exam.color}12` : 'none',
                 }}
               >
-                <div style={{ fontSize: '18px', fontWeight: 700, color: selectedExam === exam.id ? exam.color : '#ECFBFF', marginBottom: '2px' }}>
+                <div style={{ fontSize: '18px', fontWeight: 700, color: active ? exam.color : '#ECFBFF', marginBottom: '2px' }}>
                   {exam.id}
                 </div>
-                <div style={{ fontSize: '13px', color: '#9BBFCA', marginBottom: '6px' }}>{exam.zh}</div>
-                <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)' }}>{exam.desc}</div>
-              </button>
-            ))}
-          </div>
-
-          {/* Sample drill */}
-          <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(155,191,202,0.12)', borderRadius: '12px', padding: '24px' }}>
-            <div style={{ fontSize: '12px', letterSpacing: '0.1em', color: 'rgba(56,189,248,0.5)', fontFamily: 'ui-monospace, monospace', marginBottom: '18px' }}>
-              {selectedExam ? `${selectedExam} SAMPLE DRILL / 样题练习` : 'SAMPLE QUESTIONS / 样题示例'}
-              <span style={{ marginLeft: '12px', color: 'rgba(155,191,202,0.3)' }}>(Mock data — 模拟数据)</span>
-            </div>
-            <MockDrillSection exam={selectedExam} />
-          </div>
-
-          <div style={{ marginTop: '24px' }}>
-            <Link href="/" style={{ fontSize: '13px', color: '#38BDF8', textDecoration: 'none' }}>
-              ← Back to Home / 返回首页
-            </Link>
-          </div>
+                <div style={{ fontSize: '13px', color: '#9BBFCA', marginBottom: '4px' }}>{exam.zh}</div>
+                <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.45)', lineHeight: 1.4 }}>{exam.desc}</div>
+              </motion.button>
+            )
+          })}
         </div>
-      </div>
+
+        {/* Sample drill */}
+        <GlassCard>
+          <div style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(56,189,248,0.5)', fontFamily: 'var(--font-mono)', marginBottom: '18px' }}>
+            {selectedExam ? `${selectedExam} SAMPLE DRILL / 样题练习` : 'SAMPLE QUESTIONS / 样题示例'}
+            <span style={{ marginLeft: '10px', color: 'rgba(155,191,202,0.3)' }}>(Mock data — 模拟数据)</span>
+          </div>
+          <MockDrillSection exam={selectedExam} />
+        </GlassCard>
+
+        <div style={{ marginTop: '24px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Link href="/study" style={{ fontSize: '13px', color: '#38BDF8', textDecoration: 'none' }}>
+            ← Back to Study
+          </Link>
+          <Button as="a" href="/quiz" variant="secondary" size="sm">
+            Quiz More Words / 练习 →
+          </Button>
+          <Link href="/lexigraph" style={{ fontSize: '13px', color: 'rgba(126,249,255,0.55)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>
+            ✦ LexiGraph
+          </Link>
+        </div>
+      </PageShell>
     </AppShell>
   )
 }
