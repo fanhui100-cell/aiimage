@@ -138,11 +138,14 @@ export default function PromptDirectory({ prompts }: { prompts: PromptItem[] }) 
               <button
                 key={collection.id}
                 onClick={() => applyQuery(collection.query)}
-                className="rounded-xl border border-white/10 bg-white/[0.05] p-5 text-left transition hover:-translate-y-0.5 hover:border-white/30"
+                className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] text-left transition hover:-translate-y-0.5 hover:border-white/30"
               >
-                <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-950">{collection.tag}</span>
-                <h2 className="mt-4 text-lg font-semibold text-white">{collection.title}</h2>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{collection.desc}</p>
+                <img src={collection.imageUrl} alt={collection.title} className="h-32 w-full object-cover opacity-95" />
+                <div className="p-5">
+                  <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-950">{collection.tag}</span>
+                  <h2 className="mt-4 text-lg font-semibold text-white">{collection.title}</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{collection.desc}</p>
+                </div>
               </button>
             ))}
           </div>

@@ -1,0 +1,355 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Banyan Tree - Particle Particle Flow</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #020617; /* Deep Ocean / Mystical Slate */
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #ui {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(34, 211, 238, 0.6);
+            font-family: sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="ui">Living Particle Simulation // Neural Banyan Structure</div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d', { alpha: false });
+        
+        let width, height, centerX, groundY;
+        let dpr = window.devicePixelRatio || 1;
+        
+        // Colors (Bioluminescent palette based on user context)
+        const COLOR_BG = '#020617';
+        const COLOR_CYAN = '34, 211, 238';  // #22D3EE
+        const COLOR_GOLD = '255, 215, 0';   // #FFD700
+        const COLOR_WHITE = '224, 248, 255'; // E0F8FF
+        
+        const PI2 = Math.PI * 2;
+        
+        let curves = [];
+        let particles = [];
+        let startTime = 0;
+        
+        // Utility: Random range
+        const rand = (min, max) => Math.random() * (max - min) + min;
+        
+        // Utility: Ease In Out Cubic
+        const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        // Utility: Cubic Bezier Point
+        function getBezierPoint(t, p0, p1, p2, p3) {
+            const cX = 3 * (p1.x - p0.x), bX = 3 * (p2.x - p1.x) - cX, aX = p3.x - p0.x - cX - bX;
+            const cY = 3 * (p1.y - p0.y), bY = 3 * (p2.y - p1.y) - cY, aY = p3.y - p0.y - cY - bY;
+            const x = (aX * Math.pow(t, 3)) + (bX * Math.pow(t, 2)) + (cX * t) + p0.x;
+            const y = (aY * Math.pow(t, 3)) + (bY * Math.pow(t, 2)) + (cY * t) + p0.y;
+            return { x, y };
+        }
+
+        class Curve {
+            constructor(type, p0, p1, p2, p3, startDelay, duration, color, thickness) {
+                this.type = type;
+                this.p0 = p0; this.p1 = p1; this.p2 = p2; this.p3 = p3;
+                this.startDelay = startDelay;
+                this.duration = duration;
+                this.color = color;
+                this.thickness = thickness;
+                
+                // Flow properties
+                this.flowSpeed = rand(0.1, 0.3);
+                this.pulses = Array.from({ length: type === 'trunk' ? 3 : 2 }, () => rand(0, 1));
+            }
+
+            draw(timeElapsed) {
+                let localTime = timeElapsed - this.startDelay;
+                if (localTime < 0) return; // Not born yet
+
+                let rawProgress = Math.min(1, localTime / this.duration);
+                let growth = easeInOutCubic(rawProgress);
+
+                // 1. Draw structural beads (the trail left behind)
+                // We don't draw every single frame continuously to save performance,
+                // instead we draw slightly spaced beads that act as the structure.
+                ctx.fillStyle = `rgba(${this.color}, 0.05)`;
+                const steps = Math.floor(growth * 40); // Number of structural dots
+                for (let i = 0; i <= steps; i++) {
+                    let t = i / 40;
+                    if (t > growth) break;
+                    let pos = getBezierPoint(t, this.p0, this.p1, this.p2, this.p3);
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, this.thickness * 0.4, 0, PI2);
+                    ctx.fill();
+                }
+
+                // 2. Draw active flow pulses (living energy flowing along the grown curve)
+                for (let i = 0; i < this.pulses.length; i++) {
+                    // Update pulse position
+                    this.pulses[i] += this.flowSpeed * 0.016; // Approx 60fps delta
+                    if (this.pulses[i] > 1) this.pulses[i] -= 1;
+                    
+                    // Only draw pulse if it is within the currently grown portion
+                    if (this.pulses[i] <= growth) {
+                        let pos = getBezierPoint(this.pulses[i], this.p0, this.p1, this.p2, this.p3);
+                        
+                        // Fake Glow for high performance
+                        ctx.fillStyle = `rgba(${this.color}, 0.4)`;
+                        ctx.beginPath();
+                        ctx.arc(pos.x, pos.y, this.thickness * 3, 0, PI2);
+                        ctx.fill();
+
+                        // Core
+                        ctx.fillStyle = `rgb(${this.color})`;
+                        ctx.beginPath();
+                        ctx.arc(pos.x, pos.y, this.thickness, 0, PI2);
+                        ctx.fill();
+                    }
+                }
+
+                // 3. Draw the growing head (brightest part)
+                if (growth > 0 && growth < 1) {
+                    let headPos = getBezierPoint(growth, this.p0, this.p1, this.p2, this.p3);
+                    ctx.fillStyle = `rgba(255, 255, 255, 0.8)`;
+                    ctx.beginPath();
+                    ctx.arc(headPos.x, headPos.y, this.thickness * 1.5, 0, PI2);
+                    ctx.fill();
+                    
+                    ctx.fillStyle = `rgba(${this.color}, 0.5)`;
+                    ctx.beginPath();
+                    ctx.arc(headPos.x, headPos.y, this.thickness * 5, 0, PI2);
+                    ctx.fill();
+                }
+            }
+            
+            getPointAt(t) {
+                return getBezierPoint(t, this.p0, this.p1, this.p2, this.p3);
+            }
+        }
+
+        class FloatingParticle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.baseX = x;
+                this.baseY = y;
+                this.color = color;
+                this.size = rand(0.5, 1.5);
+                this.seed = rand(0, 100);
+                this.speedX = rand(-0.2, 0.2);
+                this.speedY = rand(-0.5, 0.1);
+                this.alpha = 0;
+                this.targetAlpha = rand(0.3, 0.8);
+                this.delay = rand(3.5, 5.0); // Show up when canopy forms
+            }
+            draw(timeElapsed) {
+                if (timeElapsed < this.delay) return;
+                
+                this.alpha += (this.targetAlpha - this.alpha) * 0.02;
+                
+                // Organic drifting movement
+                this.x += this.speedX + Math.sin(timeElapsed + this.seed) * 0.2;
+                this.y += this.speedY + Math.cos(timeElapsed * 0.8 + this.seed) * 0.1;
+
+                ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, PI2);
+                ctx.fill();
+                
+                // Subtle glow
+                ctx.fillStyle = `rgba(${this.color}, ${this.alpha * 0.2})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 4, 0, PI2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            ctx.scale(dpr, dpr);
+
+            centerX = width / 2;
+            groundY = height * 0.85;
+            
+            curves = [];
+            particles = [];
+            
+            let trunkTopY = groundY - height * 0.45;
+
+            // 0-1s: Eruption Curves (Initial burst)
+            for (let i = 0; i < 30; i++) {
+                let p0 = { x: centerX, y: groundY + 20 };
+                let p3 = { x: centerX + rand(-150, 150), y: groundY - rand(100, 300) };
+                let p1 = { x: centerX + rand(-50, 50), y: groundY - rand(50, 100) };
+                let p2 = { x: p3.x + rand(-50, 50), y: p3.y + rand(50, 100) };
+                let color = Math.random() > 0.5 ? COLOR_CYAN : COLOR_WHITE;
+                curves.push(new Curve('eruption', p0, p1, p2, p3, 0, 1.2, color, rand(1, 2)));
+            }
+
+            // 1-2.5s: Trunk
+            for (let i = 0; i < 40; i++) {
+                let p0 = { x: centerX + rand(-15, 15), y: groundY };
+                let p3 = { x: centerX + rand(-30, 30), y: trunkTopY + rand(-30, 30) };
+                // Weaving control points
+                let weaveDir = i % 2 === 0 ? 1 : -1;
+                let p1 = { x: centerX + weaveDir * rand(40, 80), y: groundY - height * 0.15 };
+                let p2 = { x: centerX - weaveDir * rand(40, 80), y: groundY - height * 0.3 };
+                let color = Math.random() > 0.7 ? COLOR_CYAN : COLOR_GOLD;
+                curves.push(new Curve('trunk', p0, p1, p2, p3, rand(0.8, 1.2), 1.8, color, rand(1.5, 3)));
+            }
+
+            // 1-2.5s: Roots
+            for (let i = 0; i < 60; i++) {
+                let spreadDir = Math.random() > 0.5 ? 1 : -1;
+                let endX = centerX + spreadDir * rand(50, width * 0.35);
+                let p0 = { x: centerX + rand(-20, 20), y: groundY - rand(0, 40) };
+                let p3 = { x: endX, y: groundY + rand(20, 80) };
+                let p1 = { x: centerX + spreadDir * rand(20, 100), y: groundY - rand(20, 60) };
+                let p2 = { x: p3.x - spreadDir * rand(20, 50), y: groundY - rand(0, 20) };
+                let color = Math.random() > 0.6 ? COLOR_GOLD : COLOR_CYAN;
+                curves.push(new Curve('root', p0, p1, p2, p3, rand(1.0, 1.4), 1.6, color, rand(1, 2.5)));
+            }
+
+            // 2.5-4s: Branches (Banyan Canopy Spread)
+            let branchEnds = [];
+            for (let i = 0; i < 80; i++) {
+                let p0 = { x: centerX + rand(-30, 30), y: trunkTopY + rand(-40, 40) };
+                
+                // Banyans grow extremely wide horizontally
+                let angle = rand(Math.PI * 1.05, Math.PI * 1.95); // Upward hemi-circle
+                let radius = rand(width * 0.1, width * 0.4); 
+                
+                // Flatten the ellipse to make it a wide canopy
+                let p3 = { 
+                    x: centerX + Math.cos(angle) * radius, 
+                    y: trunkTopY + Math.sin(angle) * (radius * 0.5) - rand(0, 100) 
+                };
+                
+                let p1 = { x: p0.x + rand(-50, 50), y: p0.y - rand(50, 100) };
+                let p2 = { x: p3.x + rand(-50, 50), y: p3.y + rand(50, 100) };
+                
+                let color = Math.random() > 0.3 ? COLOR_CYAN : COLOR_WHITE;
+                let delay = rand(2.2, 2.8);
+                let duration = rand(1.5, 2.0);
+                
+                let branchCurve = new Curve('branch', p0, p1, p2, p3, delay, duration, color, rand(1, 2));
+                curves.push(branchCurve);
+                branchEnds.push(branchCurve);
+            }
+
+            // 3.5-5s: Aerial Roots (Dropping from branches)
+            for (let i = 0; i < 100; i++) {
+                // Pick a random branch to drop from
+                let parentBranch = branchEnds[Math.floor(rand(0, branchEnds.length))];
+                
+                // Get a point along the outer half of that branch
+                let startPos = parentBranch.getPointAt(rand(0.5, 0.95));
+                
+                let dropLength = rand(height * 0.1, height * 0.5);
+                let p0 = { x: startPos.x, y: startPos.y };
+                let p3 = { x: startPos.x + rand(-10, 10), y: startPos.y + dropLength };
+                let p1 = { x: p0.x + rand(-15, 15), y: p0.y + dropLength * 0.3 };
+                let p2 = { x: p3.x + rand(-15, 15), y: p3.y - dropLength * 0.3 };
+                
+                let color = Math.random() > 0.5 ? COLOR_GOLD : COLOR_CYAN;
+                curves.push(new Curve('aerial', p0, p1, p2, p3, rand(3.2, 4.0), 1.5, color, rand(0.5, 1.5)));
+            }
+
+            // Canopy Leaf Particles (Floating spiritual energy)
+            for(let i = 0; i < 200; i++) {
+                let angle = rand(Math.PI, Math.PI * 2);
+                let radiusX = rand(0, width * 0.45);
+                let radiusY = rand(0, height * 0.25);
+                let px = centerX + Math.cos(angle) * radiusX;
+                let py = trunkTopY + Math.sin(angle) * radiusY;
+                let color = Math.random() > 0.5 ? COLOR_CYAN : COLOR_WHITE;
+                particles.push(new FloatingParticle(px, py, color));
+            }
+        }
+
+        function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let timeElapsed = (timestamp - startTime) / 1000; // in seconds
+
+            // TouchDesigner Feedback loop aesthetic:
+            // Instead of clearing the canvas completely, draw a semi-transparent dark background
+            // This creates the beautiful luminous trails and smooth organic motion blur.
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = `rgba(2, 6, 23, 0.12)`; // Base background with alpha
+            ctx.fillRect(0, 0, width, height);
+
+            // Base glow energy source at the bottom
+            ctx.globalCompositeOperation = 'lighter';
+            let sourcePulse = (Math.sin(timeElapsed * 2) + 1) * 0.5;
+            let glowRadius = 30 + sourcePulse * 20;
+            
+            let grd = ctx.createRadialGradient(centerX, groundY + 10, 0, centerX, groundY + 10, glowRadius * 3);
+            grd.addColorStop(0, `rgba(34, 211, 238, ${0.4 + sourcePulse * 0.2})`);
+            grd.addColorStop(1, 'rgba(2, 6, 23, 0)');
+            
+            ctx.fillStyle = grd;
+            ctx.beginPath();
+            ctx.arc(centerX, groundY + 10, glowRadius * 3, 0, PI2);
+            ctx.fill();
+
+            // Render all procedural curves (living particles flowing)
+            for (let i = 0; i < curves.length; i++) {
+                // Eruption curves fade out after 1.5s
+                if (curves[i].type === 'eruption' && timeElapsed > 1.5) continue;
+                curves[i].draw(timeElapsed);
+            }
+            
+            // Render floating canopy particles
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].draw(timeElapsed);
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            init();
+            startTime = performance.now(); // Restart animation on resize
+        });
+
+        // Click to restart
+        window.addEventListener('click', () => {
+            init();
+            startTime = performance.now();
+        });
+
+        // Start
+        init();
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
+
+```

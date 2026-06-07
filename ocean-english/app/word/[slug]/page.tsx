@@ -1,11 +1,11 @@
 import { AppShell } from '@/components/layout/AppShell'
 import Link from 'next/link'
-import { getMockWord } from '@/data/mock-words'
+import { getDictionaryClient } from '@/lib/dictionary/dictionary-client'
 import { WordDetailClient } from './WordDetailClient'
 
 export default async function WordPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const word = getMockWord(slug)
+  const word = await getDictionaryClient().lookupWord(slug)
 
   if (!word) {
     return (
@@ -22,13 +22,15 @@ export default async function WordPage({ params }: { params: Promise<{ slug: str
         >
           <div style={{ textAlign: 'center' }}>
             <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌊</div>
-            <h1 style={{ color: '#ECFBFF', marginBottom: '8px' }}>Word not found</h1>
+            <h1 style={{ color: '#ECFBFF', marginBottom: '8px' }}>Word not found / 未找到单词</h1>
             <p style={{ color: '#9BBFCA', marginBottom: '24px' }}>
-              &quot;{slug}&quot; is not in the mock dictionary yet.
+              &quot;{slug}&quot; is not in the dictionary yet.
             </p>
-            <Link href="/dictionary" style={{ color: '#38BDF8', textDecoration: 'none' }}>
-              ← Back to Dictionary / 返回词典
-            </Link>
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+              <Link href="/dictionary" style={{ color: '#38BDF8', textDecoration: 'none', fontSize: '14px' }}>
+                ← Browse Dictionary / 浏览词典
+              </Link>
+            </div>
           </div>
         </div>
       </AppShell>

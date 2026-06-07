@@ -34,6 +34,7 @@ export type PromptCollection = {
   desc: string;
   query: string;
   tag: string;
+  imageUrl: string;
 };
 
 export const promptCategories = [
@@ -79,6 +80,7 @@ export const promptCollections: PromptCollection[] = [
     desc: "白底主图、促销主图、小红书封面，一套覆盖商品上架前的高频测图。",
     query: "主图",
     tag: "高转化",
+    imageUrl: "/prompt-covers/taobao-premium-white-background.png",
   },
   {
     id: "nano-editing",
@@ -86,6 +88,7 @@ export const promptCollections: PromptCollection[] = [
     desc: "人物一致性、局部重绘、盲盒手办，适合参考图驱动的图片编辑。",
     query: "Nano Banana",
     tag: "参考图",
+    imageUrl: "/prompt-covers/nano-banana-blind-box-toy.png",
   },
   {
     id: "creator-growth",
@@ -93,6 +96,7 @@ export const promptCollections: PromptCollection[] = [
     desc: "小红书封面、信息图、Vlog 转场和商品短视频开场。",
     query: "封面",
     tag: "内容增长",
+    imageUrl: "/prompt-covers/prompt-library-workspace.png",
   },
 ];
 
@@ -106,6 +110,7 @@ export const prompts: PromptItem[] = [
     summary: "保留商品比例，强化白底阴影、材质细节和上架质感。",
     tags: ["电商", "白底", "主图", "商品保真"],
     visual: "product",
+    exampleImageUrl: "/prompt-covers/taobao-premium-white-background.png",
     popularity: 98,
     difficulty: "入门",
     platform: "淘宝 / 天猫",
@@ -129,6 +134,7 @@ export const prompts: PromptItem[] = [
     summary: "高饱和背景、价格气泡、强卖点位置，为测图准备多个版本。",
     tags: ["拼多多", "促销", "测图", "高点击"],
     visual: "sale",
+    exampleImageUrl: "/prompt-covers/pdd-promotion-main-image.png",
     popularity: 95,
     difficulty: "进阶",
     platform: "拼多多",
@@ -152,6 +158,7 @@ export const prompts: PromptItem[] = [
     summary: "把商品融入生活方式场景，保留干净标题区和笔记感排版。",
     tags: ["小红书", "封面", "生活方式", "种草"],
     visual: "poster",
+    exampleImageUrl: "/prompt-covers/xiaohongshu-product-cover.png",
     popularity: 91,
     difficulty: "入门",
     platform: "小红书",
@@ -175,6 +182,7 @@ export const prompts: PromptItem[] = [
     summary: "用同一人物生成多套服装、场景和镜头角度，保持脸部一致。",
     tags: ["人物", "写真", "一致性", "参考图"],
     visual: "portrait",
+    exampleImageUrl: "/prompt-covers/nano-banana-character-consistency.png",
     popularity: 96,
     difficulty: "专业",
     platform: "Gemini Nano Banana",
@@ -198,6 +206,7 @@ export const prompts: PromptItem[] = [
     summary: "把人物或商品转成 3D 手办，并生成透明盒、吊牌和陈列背景。",
     tags: ["3D", "手办", "盲盒", "包装"],
     visual: "toy",
+    exampleImageUrl: "/prompt-covers/nano-banana-blind-box-toy.png",
     popularity: 93,
     difficulty: "进阶",
     platform: "Gemini Nano Banana",
@@ -221,6 +230,7 @@ export const prompts: PromptItem[] = [
     summary: "只改背景、材质、服装或道具，不破坏主体结构。",
     tags: ["局部编辑", "换背景", "保主体"],
     visual: "edit",
+    exampleImageUrl: "/prompt-covers/nano-banana-local-repaint.png",
     popularity: 88,
     difficulty: "专业",
     platform: "Gemini Nano Banana",
@@ -244,6 +254,7 @@ export const prompts: PromptItem[] = [
     summary: "从行业关键词扩展成标志、色彩、材质和品牌应用场景。",
     tags: ["Logo", "品牌", "VI", "提案"],
     visual: "logo",
+    exampleImageUrl: "/prompt-covers/brand-logo-moodboard.png",
     popularity: 84,
     difficulty: "进阶",
     platform: "Midjourney",
@@ -267,6 +278,7 @@ export const prompts: PromptItem[] = [
     summary: "控制镜头、光影、色温和构图，生成强叙事视觉。",
     tags: ["电影感", "海报", "构图"],
     visual: "cinema",
+    exampleImageUrl: "/prompt-covers/cinematic-scene-poster.png",
     popularity: 86,
     difficulty: "进阶",
     platform: "Midjourney",
@@ -290,6 +302,7 @@ export const prompts: PromptItem[] = [
     summary: "把复杂卖点整理成高可读的信息卡、长图和封面版式。",
     tags: ["信息图", "社媒", "版式"],
     visual: "layout",
+    exampleImageUrl: "/prompt-covers/social-infographic-layout.png",
     popularity: 82,
     difficulty: "入门",
     platform: "小红书 / 公众号",
@@ -313,6 +326,7 @@ export const prompts: PromptItem[] = [
     summary: "3 秒抓眼球镜头，包含运动轨迹、转场、光线和主体动作。",
     tags: ["短视频", "镜头", "电商"],
     visual: "video",
+    exampleImageUrl: "/prompt-covers/ecommerce-short-video-opening.png",
     popularity: 89,
     difficulty: "进阶",
     platform: "可灵 / 即梦 / Seedance",
@@ -336,6 +350,7 @@ export const prompts: PromptItem[] = [
     summary: "把生活场景拆成可连续生成的镜头组，适合种草内容。",
     tags: ["Vlog", "场景", "节奏"],
     visual: "vlog",
+    exampleImageUrl: "/prompt-covers/vlog-scene-transition.png",
     popularity: 80,
     difficulty: "入门",
     platform: "可灵 / 即梦 / Seedance",
@@ -443,6 +458,8 @@ export async function fetchPromptBySlug(slug: string): Promise<PromptAPI | null>
 }
 
 export function apiToItem(p: PromptAPI): PromptItem {
+  const fallback = getPromptBySlug(p.slug);
+
   return {
     slug: p.slug,
     title: p.title,
@@ -463,7 +480,7 @@ export function apiToItem(p: PromptAPI): PromptItem {
     promptZh: p.prompt_zh,
     promptEn: p.prompt_en,
     usageTips: p.usage_tips,
-    exampleImageUrl: p.example_image_url ?? undefined,
+    exampleImageUrl: p.example_image_url ?? fallback?.exampleImageUrl,
     isFavorited: p.is_favorited,
     isPremium: p.is_premium,
     stat: p.stat ?? undefined,

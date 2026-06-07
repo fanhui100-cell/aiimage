@@ -92,7 +92,7 @@ export function ScanHistoryFilters({ filters, onChange, totalCount, filteredCoun
       </div>
 
       {/* Result count */}
-      <div style={{ marginTop: '8px', fontSize: '11px', color: 'rgba(155,191,202,0.4)', fontFamily: 'ui-monospace, monospace' }}>
+      <div style={{ marginTop: '8px', fontSize: '11px', color: 'rgba(155,191,202,0.4)', fontFamily: 'var(--font-mono)' }}>
         {filteredCount === totalCount
           ? `${totalCount} document${totalCount !== 1 ? 's' : ''}`
           : `${filteredCount} of ${totalCount} documents`}

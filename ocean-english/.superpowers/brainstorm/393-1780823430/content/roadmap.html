@@ -1,0 +1,220 @@
+<h2>LexiOcean 前端完整优化路线图</h2>
+<p class="subtitle">按「影响力 / 工作量」排序，共 4 个 Phase，16 项改动。先做收益最大的。</p>
+
+<style>
+.phase { margin-bottom: 28px; }
+.phase-title {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 12px; letter-spacing: .1em; font-weight: 700;
+  margin-bottom: 12px; padding: 8px 14px;
+  border-radius: 8px;
+}
+.phase-1 { background: rgba(126,249,255,0.12); color: #7EF9FF; border: 1px solid rgba(126,249,255,0.3); }
+.phase-2 { background: rgba(56,189,248,0.10); color: #38BDF8; border: 1px solid rgba(56,189,248,0.25); }
+.phase-3 { background: rgba(255,212,107,0.10); color: #FFD46B; border: 1px solid rgba(255,212,107,0.25); }
+.phase-4 { background: rgba(139,92,246,0.10); color: #A78BFA; border: 1px solid rgba(139,92,246,0.25); }
+.items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.item {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(155,191,202,0.12);
+  border-radius: 8px; padding: 12px 14px;
+}
+.item-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+.item-name { font-size: 13px; font-weight: 600; color: #ECFBFF; }
+.effort {
+  font-size: 10px; letter-spacing: .06em; padding: 2px 7px;
+  border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-left: 8px;
+}
+.s { background: rgba(126,249,255,0.12); color: #7EF9FF; }   /* Small */
+.m { background: rgba(255,212,107,0.12); color: #FFD46B; }   /* Medium */
+.l { background: rgba(255,165,74,0.12); color: #FFA94D; }    /* Large */
+.item-desc { font-size: 11.5px; color: rgba(155,191,202,0.8); line-height: 1.55; }
+.tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:3px; margin-right:4px; margin-bottom:4px; }
+.tag-page { background:rgba(56,189,248,0.1); color:#38BDF8; }
+.tag-global { background:rgba(126,249,255,0.1); color:#7EF9FF; }
+.tag-ux { background:rgba(255,212,107,0.1); color:#FFD46B; }
+.impact { font-size:10px; color:rgba(155,191,202,0.55); margin-top:5px; }
+</style>
+
+<!-- Phase 1 -->
+<div class="phase">
+  <div class="phase-title phase-1">⚡ Phase 1 — 全局基础设施（先做，影响所有页面）</div>
+  <div class="items">
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">① 全局字体：Space Grotesk</div>
+        <span class="effort s">S · 1h</span>
+      </div>
+      <div class="item-desc">在 layout.tsx 里用 next/font/google 加载 Space Grotesk + Space Mono，globals.css 里把 font-family 换掉。Lexiverse 之外的所有页面文字质感立刻提升。</div>
+      <div class="impact">📁 layout.tsx · globals.css</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">② layout.tsx 加 Provider 层</div>
+        <span class="effort s">S · 1h</span>
+      </div>
+      <div class="item-desc">加入 Toaster（react-hot-toast 或 sonner）、全局 Suspense fallback、CloudSyncProvider。目前 layout.tsx 只有 5 行，缺少全局通知系统。</div>
+      <div class="impact">📁 layout.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">③ 导航重构：压缩 More 菜单</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">现在 navigationMore 有 10 项，打开像一个列表页。方案：① 按功能分组（学习工具 / Lexiverse 系列 / 其他）② 把 Lexiverse 提到主导航（替换不常用项）③ 用图标 + 标签让 More 菜单更紧凑。</div>
+      <div class="impact">📁 Navbar.tsx · site.ts · MoreMenu.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">④ .gitignore 加 .superpowers/</div>
+        <span class="effort s">S · 5min</span>
+      </div>
+      <div class="item-desc">brainstorm 会话文件不应提交。顺手加进去。</div>
+      <div class="impact">📁 .gitignore</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Phase 2 -->
+<div class="phase">
+  <div class="phase-title phase-2">🎨 Phase 2 — 老页面视觉升级（影响最多用户）</div>
+  <div class="items">
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑤ /memory 全面重设计</div>
+        <span class="effort l">L · 6h</span>
+      </div>
+      <div class="item-desc">当前 Tab 用原生 button，卡片用 inline style 拼凑。升级：GlassCard Tab 栏、单词卡片加 reveal 动画（Framer Motion）、SM-2 复习卡的进度环、错题本加筛选和统计图。</div>
+      <div class="impact">📁 app/memory/page.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑥ /dictionary 筛选器升级</div>
+        <span class="effort m">M · 4h</span>
+      </div>
+      <div class="item-desc">把原生 &lt;select&gt; 换成 Pill 选择器（参考 Lexiverse vocab 里的实现）。加搜索高亮、词卡加 CEFR 彩色徽章、加载骨架屏、空状态引导。</div>
+      <div class="impact">📁 app/dictionary/page.tsx · WordCard.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑦ /quiz 体验升级</div>
+        <span class="effort m">M · 4h</span>
+      </div>
+      <div class="item-desc">加顶部进度条（5 题中的第 X 题）、答题后正确/错误动画（绿色爆炸 / 红色震动）、解析展开动画、完成后得分卡配合 confetti 效果。</div>
+      <div class="impact">📁 app/quiz/page.tsx · QuizModeSelector.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑧ /word/[slug] 视觉提升</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">单词大字展示区加入口音波形动画（SpeechSynthesis 播放时）、近义词/反义词 chip 加 hover 跳转效果、助记法卡片加颜色区分、页面顶部加渐变光晕装饰。</div>
+      <div class="impact">📁 app/word/[slug]/WordDetailClient.tsx</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Phase 3 -->
+<div class="phase">
+  <div class="phase-title phase-3">✨ Phase 3 — 核心流程体验打磨</div>
+  <div class="items">
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑨ 首页 Hero 信息升级</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">当前 HomeLearningCTA 在粒子树下方，视觉层次弱。加入：当日学习进度（XP 条）、今日单词任务、最近 lit 词汇数，让首页感觉"活着"而不是纯展示。</div>
+      <div class="impact">📁 components/product-flow/HomeLearningCTA.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑩ /study Hub 卡片动效</div>
+        <span class="effort s">S · 2h</span>
+      </div>
+      <div class="item-desc">8 个 Panel 组件加入 stagger 入场动画（依次错开 50ms 出现），鼠标 hover 时面板微浮（translateY -2px），让 Hub 有"活跃感"而不是静态卡片列表。</div>
+      <div class="impact">📁 components/study/*.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑪ 页面切换过渡动画</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">在 layout.tsx 里加 Framer Motion AnimatePresence，路由切换时做 fade + slight translateY。Lexiverse 路由可以单独做更炫的过渡（从普通页面"飞入"3D 宇宙的感觉）。</div>
+      <div class="impact">📁 layout.tsx · app/lexiverse/page.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑫ 全局空状态和骨架屏</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">/memory 无单词时、/dictionary 搜索无结果时、/chat 无历史时，需要有引导性的 EmptyState（图示 + CTA）。加骨架屏替代原来的"Loading..."文字。</div>
+      <div class="impact">📁 components/ui/ 新建通用 EmptyState + Skeleton</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Phase 4 -->
+<div class="phase">
+  <div class="phase-title phase-4">🔮 Phase 4 — 细节打磨（锦上添花）</div>
+  <div class="items">
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑬ /profile 页面建设</div>
+        <span class="effort l">L · 5h</span>
+      </div>
+      <div class="item-desc">目前 profile 页面内容未知，大概率需要加：学习数据图表（7 天 XP 趋势）、CEFR 进度圈、考试标签覆盖率、最近活动日历热力图（GitHub 风格）。</div>
+      <div class="impact">📁 app/profile/page.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑭ CatPet 交互升级</div>
+        <span class="effort m">M · 3h</span>
+      </div>
+      <div class="item-desc">最近刚合并的桌宠。优化：学习状态联动（掌握单词后猫猫高兴动画）、长按菜单加"去 Lexiverse"快捷入口、确保不遮挡各页面的关键 UI 区域。</div>
+      <div class="impact">📁 components/cat-pet/*.tsx</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑮ 移动端响应式审查</div>
+        <span class="effort m">M · 4h</span>
+      </div>
+      <div class="item-desc">所有页面在 375px 宽度下的显示审查。重点：Lexiverse 3D 在手机端 fallback 体验、/study 的 grid 布局折叠逻辑、导航菜单动画。</div>
+      <div class="impact">📁 全站移动端 viewport</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div class="item-name">⑯ 全局 Toast 通知系统</div>
+        <span class="effort s">S · 1h</span>
+      </div>
+      <div class="item-desc">Add to Review、保存单词、Quiz 完成等操作目前无任何视觉反馈。加 sonner / react-hot-toast，统一所有操作的成功/失败提示风格（暗色 Glass 样式）。</div>
+      <div class="impact">📁 layout.tsx · 各操作回调</div>
+    </div>
+
+  </div>
+</div>
+
+<div style="margin-top:16px;padding:14px 18px;background:rgba(126,249,255,0.06);border:1px solid rgba(126,249,255,0.2);border-radius:10px;font-size:12px;color:rgba(155,191,202,0.8);line-height:1.7">
+  <strong style="color:#7EF9FF">总工作量估计：</strong>
+  Phase 1 约 5h · Phase 2 约 17h · Phase 3 约 11h · Phase 4 约 13h
+  &nbsp;|&nbsp; <strong style="color:#7EF9FF">建议起点：</strong>先做 ①②③（1天内完成，全站即时提升），再做 ⑤⑥⑦（最高频页面）。<br>
+  <br>
+  浏览器里点选你想<strong style="color:#7EF9FF">深入看 mockup 的改动</strong>，或在终端告诉我从哪里开始实现。
+</div>

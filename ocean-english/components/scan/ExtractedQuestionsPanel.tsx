@@ -100,7 +100,7 @@ export function ExtractedQuestionsPanel({
         fontSize: '11px',
         letterSpacing: '0.1em',
         color: 'rgba(139,92,246,0.6)',
-        fontFamily: 'ui-monospace, monospace',
+        fontFamily: 'var(--font-mono)',
         marginBottom: '12px',
       }}>
         EXTRACTED QUESTIONS / 题目分析 ({questions.length})
@@ -128,7 +128,7 @@ export function ExtractedQuestionsPanel({
                       background: 'rgba(139,92,246,0.12)',
                       border: '1px solid rgba(139,92,246,0.3)',
                       color: 'rgba(139,92,246,0.9)',
-                      fontFamily: 'ui-monospace, monospace',
+                      fontFamily: 'var(--font-mono)',
                     }}>
                       {TYPE_LABELS[q.type] ?? 'Q'}
                     </span>
@@ -202,7 +202,7 @@ export function ExtractedQuestionsPanel({
                     fontSize: '11px',
                     color: 'rgba(139,92,246,0.7)',
                     marginBottom: '6px',
-                    fontFamily: 'ui-monospace, monospace',
+                    fontFamily: 'var(--font-mono)',
                   }}>
                     AI SUGGESTED ANSWER / AI 建议答案
                   </div>

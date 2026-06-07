@@ -101,4 +101,86 @@ export interface DbCloudStats {
   reviewWordsCount: number
   wrongAnswersCount: number
   quizSessionsCount: number
+  // Phase 5D — scan + chat
+  scanDocumentsCount: number
+  quizDraftsCount: number
+  studyNotesCount: number
+  chatSessionsCount: number
+  chatMessagesCount: number
+}
+
+// ── Phase 5D types ──────────────────────────────────────────────────────────
+
+export interface DbScanDocument {
+  id: string
+  user_id: string
+  file_name: string
+  file_type: 'pdf' | 'image' | 'text'
+  status: 'analyzed' | 'partially-analyzed' | 'needs-ocr' | 'error'
+  extraction_method: string
+  created_at: string
+  updated_at: string
+  summary_en: string | null
+  summary_zh: string | null
+  raw_text_preview: string | null
+  raw_text_length: number | null
+  page_count: number | null
+  ocr_confidence: number | null
+  warnings: unknown[]
+  question_count: number
+  vocabulary_count: number
+  study_note_count: number
+  warning_count: number
+  questions_json: unknown[]
+  vocabulary_json: unknown[]
+  study_notes_json: unknown[]
+  answer_suggestions_json: unknown[]
+}
+
+export interface DbQuizDraft {
+  id: string
+  user_id: string
+  scan_document_id: string | null
+  source_file_name: string | null
+  source: string
+  status: 'draft' | 'needs-review' | 'ready' | 'saved' | 'discarded'
+  question_type: string | null
+  prompt: string
+  options: unknown[]
+  answer_suggestion: string | null
+  explanation: string | null
+  source_text: string | null
+  copyright_warning: string | null
+  created_at: string
+}
+
+export interface DbStudyNote {
+  id: string
+  user_id: string
+  scan_document_id: string | null
+  source_file_name: string | null
+  title: string
+  title_zh: string | null
+  content: string
+  content_zh: string | null
+  created_at: string
+}
+
+export interface DbChatSession {
+  id: string
+  user_id: string
+  started_at: string
+  ended_at: string | null
+  message_count: number
+  topic_context: string | null
+}
+
+export interface DbChatMessage {
+  id: string
+  session_id: string
+  user_id: string
+  role: 'user' | 'assistant'
+  content: string
+  word_ref: string | null
+  sent_at: string
 }

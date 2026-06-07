@@ -105,11 +105,11 @@ Your review sessions are in the **Memory** section. Words are scheduled based on
 
 export const suggestedPrompts = [
   { label: 'Explain a word', labelZh: '解释单词', prompt: 'What is the meaning of ubiquitous?' },
-  { label: 'Make a study plan', labelZh: '制定学习计划', prompt: 'Create a 30-day vocabulary study plan for me.' },
-  { label: 'TOEFL tips', labelZh: '托福建议', prompt: 'What vocabulary should I focus on for TOEFL?' },
   { label: 'Word difference', labelZh: '词汇区别', prompt: "What's the difference between 'affect' and 'effect'?" },
-  { label: 'Test me', labelZh: '测试我', prompt: 'Quiz me on the words I recently learned.' },
-  { label: 'Sentence analysis', labelZh: '句子分析', prompt: "Help me analyze this sentence: 'The ephemeral nature of celebrity is well documented.'" },
+  { label: 'Generate a quiz', labelZh: '生成练习题', prompt: 'Give me 5 multiple-choice vocabulary quiz questions for intermediate level.' },
+  { label: 'Analyze a sentence', labelZh: '句子分析', prompt: "Help me analyze this sentence: 'The ephemeral nature of celebrity is well documented.'" },
+  { label: 'Study plan', labelZh: '制定学习计划', prompt: 'Create a 30-day vocabulary study plan for intermediate English level.' },
+  { label: 'Exam strategy', labelZh: '考试策略', prompt: 'What vocabulary should I focus on for TOEFL, and what is the best strategy?' },
 ]
 
 export function getMockAiResponse(userMessage: string): string {

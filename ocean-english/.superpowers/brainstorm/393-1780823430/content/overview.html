@@ -1,0 +1,68 @@
+<h2>LexiOcean 前端现状分析</h2>
+<p class="subtitle">读完全部页面源码后，发现这个项目有两套并行的设计系统，质量差距很明显。</p>
+
+<div class="section">
+  <h3 style="font-size:13px;letter-spacing:.08em;opacity:.6;margin-bottom:12px">▸ 设计成熟度地图</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+
+    <div style="background:rgba(126,249,255,0.08);border:1px solid rgba(126,249,255,0.3);border-radius:10px;padding:16px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#7EF9FF;margin-bottom:8px">★★★★★ &nbsp;高成熟度</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:6px">/lexiverse 全族</div>
+      <div style="font-size:12px;opacity:.7;line-height:1.6">Liquid Glass 设计系统、Space Grotesk 字体、毛玻璃面板、7 种学习状态色、React Three Fiber 3D 宇宙。与其他页面像两个不同产品。</div>
+    </div>
+
+    <div style="background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.2);border-radius:10px;padding:16px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#38BDF8;margin-bottom:8px">★★★☆☆ &nbsp;中成熟度</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:6px">/study &nbsp;/chat &nbsp;/word/[slug]</div>
+      <div style="font-size:12px;opacity:.7;line-height:1.6">有 PageShell、GlassCard 等组件，布局合理，但字体是系统 sans-serif，动效稀少，和 Lexiverse 差距明显。</div>
+    </div>
+
+    <div style="background:rgba(255,165,0,0.07);border:1px solid rgba(255,165,0,0.2);border-radius:10px;padding:16px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#FFA94D;margin-bottom:8px">★★☆☆☆ &nbsp;低成熟度</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:6px">/memory &nbsp;/dictionary &nbsp;/quiz</div>
+      <div style="font-size:12px;opacity:.7;line-height:1.6">大量 inline style 硬编码，没有组件复用。/memory 的 Tab 用原生 button 样式，/dictionary 的筛选器是原生 &lt;select&gt;，视觉停留在 Phase 1。</div>
+    </div>
+
+    <div style="background:rgba(255,100,100,0.07);border:1px solid rgba(255,100,100,0.2);border-radius:10px;padding:16px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#FF6B6B;margin-bottom:8px">⚠ &nbsp;全局缺失</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:6px">字体 / 布局 / 导航</div>
+      <div style="font-size:12px;opacity:.7;line-height:1.6">globals.css 用 ui-sans-serif（系统字体），未全局加载 Space Grotesk。layout.tsx 几乎空的，无全局 Provider。导航 More 下拉有 10 项严重过多。</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3 style="font-size:13px;letter-spacing:.08em;opacity:.6;margin-bottom:12px">▸ 第一个问题：你最想优先改哪个方向？</h3>
+  <p style="font-size:13px;opacity:.7;margin-bottom:16px">选一个，后面的分析和 mockup 会围绕它展开</p>
+  <div class="options">
+    <div class="option" data-choice="a" onclick="toggleSelect(this)">
+      <div class="letter">A</div>
+      <div class="content">
+        <h3>拉平设计系统差距</h3>
+        <p>把 /memory、/dictionary、/quiz 等老页面升级到和 Lexiverse 一致的视觉水准——字体、Glass 面板、Pill 筛选器、动效。整体品质大幅提升。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="b" onclick="toggleSelect(this)">
+      <div class="letter">B</div>
+      <div class="content">
+        <h3>优化核心学习流程体验</h3>
+        <p>重点优化用户最高频使用的路径：首页 → Study Hub → 单词详情 → Quiz → Memory。强化进度感知、动效反馈、空状态引导。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="c" onclick="toggleSelect(this)">
+      <div class="letter">C</div>
+      <div class="content">
+        <h3>全局基础设施改进</h3>
+        <p>字体系统（全局 Space Grotesk）、导航重构（压缩 More 菜单）、layout.tsx 加 Provider 层、页面过渡动画、移动端响应式。地基稳了其他才好做。</p>
+      </div>
+    </div>
+    <div class="option" data-choice="d" onclick="toggleSelect(this)">
+      <div class="letter">D</div>
+      <div class="content">
+        <h3>全部都要，给我一个完整路线图</h3>
+        <p>出一份完整优先级排序的改进路线图，从最高影响力的改动开始，包含每个改动的工作量估计。</p>
+      </div>
+    </div>
+  </div>
+</div>

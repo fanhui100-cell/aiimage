@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Process -Name \"streamlit\",\"python\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\fanhu\\.EasyOCR\\model"
+    ]
+  }
+}

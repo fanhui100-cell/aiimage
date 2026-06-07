@@ -175,7 +175,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
               <h1 style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: 700, color: '#ECFBFF', wordBreak: 'break-word' }}>
                 {doc.fileName}
               </h1>
-              <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', fontFamily: 'ui-monospace, monospace' }}>
+              <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>
                 {formatDate(doc.createdAt)} · {doc.extractionMethod}
                 {doc.pageCount ? ` · ${doc.pageCount}p` : ''}
                 {doc.confidence !== undefined ? ` · OCR ${Math.round(doc.confidence * 100)}%` : ''}
@@ -189,7 +189,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
               background: `${statusColor}18`,
               border: `1px solid ${statusColor}40`,
               color: statusColor,
-              fontFamily: 'ui-monospace, monospace',
+              fontFamily: 'var(--font-mono)',
               marginTop: '2px',
             }}>
               {doc.status}
@@ -204,7 +204,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
               { label: 'Notes', value: doc.studyNoteCount, color: '#34D399' },
               { label: 'Warnings', value: doc.warningCount, color: '#FFD76A' },
             ].map(({ label, value, color }) => (
-              <div key={label} style={{ fontSize: '12px', fontFamily: 'ui-monospace, monospace', color }}>
+              <div key={label} style={{ fontSize: '12px', fontFamily: 'var(--font-mono)', color }}>
                 {value} {label}
               </div>
             ))}
@@ -236,7 +236,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
             padding: '16px 18px',
             marginBottom: '20px',
           }}>
-            <div style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(56,189,248,0.6)', fontFamily: 'ui-monospace, monospace', marginBottom: '10px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(56,189,248,0.6)', fontFamily: 'var(--font-mono)', marginBottom: '10px' }}>
               DOCUMENT SUMMARY / 文档摘要
             </div>
             {doc.summaryEn && (
@@ -261,7 +261,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
                 color: 'rgba(155,191,202,0.5)',
                 fontSize: '11px',
                 cursor: 'pointer',
-                fontFamily: 'ui-monospace, monospace',
+                fontFamily: 'var(--font-mono)',
               }}
             >
               {rawExpanded ? '▲ Hide' : '▼ Show'} Raw Text Preview / 原始文本预览
@@ -276,7 +276,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
                   fontSize: '12px',
                   color: '#9BBFCA',
                   lineHeight: 1.8,
-                  fontFamily: 'ui-monospace, monospace',
+                  fontFamily: 'var(--font-mono)',
                   whiteSpace: 'pre-wrap',
                   maxHeight: '300px',
                   overflowY: 'auto',
@@ -315,7 +315,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
         {/* Study notes */}
         {doc.studyNotes.length > 0 && (
           <div style={{ marginBottom: '20px' }}>
-            <div style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(52,211,153,0.6)', fontFamily: 'ui-monospace, monospace', marginBottom: '12px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'rgba(52,211,153,0.6)', fontFamily: 'var(--font-mono)', marginBottom: '12px' }}>
               STUDY NOTES / 学习笔记 ({doc.studyNotes.length})
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>

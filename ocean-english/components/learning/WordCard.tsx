@@ -58,7 +58,7 @@ export function WordCard({ word }: WordCardProps) {
                 background: `${difficultyColors[word.difficulty]}20`,
                 color: difficultyColors[word.difficulty],
                 border: `1px solid ${difficultyColors[word.difficulty]}50`,
-                fontFamily: 'ui-monospace, monospace',
+                fontFamily: 'var(--font-mono)',
               }}
             >
               {['', 'L1', 'L2', 'L3', 'L4', 'L5'][word.difficulty]}
@@ -68,7 +68,7 @@ export function WordCard({ word }: WordCardProps) {
             style={{
               fontSize: '12px',
               color: 'rgba(126,249,255,0.7)',
-              fontFamily: 'ui-monospace, monospace',
+              fontFamily: 'var(--font-mono)',
               marginBottom: '6px',
             }}
           >
@@ -105,7 +105,7 @@ export function WordCard({ word }: WordCardProps) {
               background: 'rgba(56,189,248,0.08)',
               color: 'rgba(56,189,248,0.6)',
               border: '1px solid rgba(56,189,248,0.2)',
-              fontFamily: 'ui-monospace, monospace',
+              fontFamily: 'var(--font-mono)',
             }}
           >
             {exam}

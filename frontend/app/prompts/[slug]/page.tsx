@@ -67,7 +67,17 @@ export default async function PromptDetailPage({ params }: { params: Promise<{ s
 
       <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[420px_1fr]">
         <aside className="lg:sticky lg:top-6 lg:h-fit">
-          <PromptVisual type={prompt.visual} />
+          {prompt.exampleImageUrl ? (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/60 bg-slate-100 shadow-sm">
+              <img
+                src={prompt.exampleImageUrl}
+                alt={prompt.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ) : (
+            <PromptVisual type={prompt.visual} />
+          )}
             <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="mb-3 flex flex-wrap gap-2">
                 <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold text-white">{prompt.model}</span>

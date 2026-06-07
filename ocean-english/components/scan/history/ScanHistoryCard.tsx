@@ -70,7 +70,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
               background: 'rgba(56,189,248,0.1)',
               border: '1px solid rgba(56,189,248,0.25)',
               color: '#38BDF8',
-              fontFamily: 'ui-monospace, monospace',
+              fontFamily: 'var(--font-mono)',
             }}>
               {FILETYPE_LABELS[doc.fileType] ?? doc.fileType}
             </span>
@@ -81,12 +81,12 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
               background: `${statusColor}18`,
               border: `1px solid ${statusColor}40`,
               color: statusColor,
-              fontFamily: 'ui-monospace, monospace',
+              fontFamily: 'var(--font-mono)',
             }}>
               {doc.status}
             </span>
           </div>
-          <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', fontFamily: 'ui-monospace, monospace' }}>
+          <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>
             {formatDate(doc.createdAt)} · {doc.extractionMethod}
           </div>
         </div>
@@ -109,17 +109,17 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
           { label: 'Words', value: doc.vocabularyCount, color: '#38BDF8' },
           { label: 'Notes', value: doc.studyNoteCount, color: '#34D399' },
         ].map(({ label, value, color }) => (
-          <div key={label} style={{ fontSize: '11px', color, fontFamily: 'ui-monospace, monospace' }}>
+          <div key={label} style={{ fontSize: '11px', color, fontFamily: 'var(--font-mono)' }}>
             {value} {label}
           </div>
         ))}
         {doc.reviewWordsAddedCount > 0 && (
-          <div style={{ fontSize: '11px', color: 'rgba(52,211,153,0.6)', fontFamily: 'ui-monospace, monospace' }}>
+          <div style={{ fontSize: '11px', color: 'rgba(52,211,153,0.6)', fontFamily: 'var(--font-mono)' }}>
             +{doc.reviewWordsAddedCount} reviewed
           </div>
         )}
         {doc.quizDraftsSavedCount > 0 && (
-          <div style={{ fontSize: '11px', color: 'rgba(255,215,106,0.6)', fontFamily: 'ui-monospace, monospace' }}>
+          <div style={{ fontSize: '11px', color: 'rgba(255,215,106,0.6)', fontFamily: 'var(--font-mono)' }}>
             +{doc.quizDraftsSavedCount} drafts
           </div>
         )}

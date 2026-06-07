@@ -2,11 +2,12 @@
 
 import dynamic from 'next/dynamic'
 import { AppShell } from '@/components/layout/AppShell'
+import { HomeLearningCTA } from '@/components/product-flow/HomeLearningCTA'
 
-const BanyanParticleHero = dynamic(
+const HomeHeroVisual = dynamic(
   () =>
-    import('@/components/visual/BanyanParticleHero/BanyanParticleHero').then(m => ({
-      default: m.BanyanParticleHero,
+    import('@/components/visual/HomeHeroVisual').then(m => ({
+      default: m.HomeHeroVisual,
     })),
   { ssr: false },
 )
@@ -14,7 +15,8 @@ const BanyanParticleHero = dynamic(
 export default function HomePage() {
   return (
     <AppShell>
-      <BanyanParticleHero />
+      <HomeHeroVisual />
+      <HomeLearningCTA />
     </AppShell>
   )
 }

@@ -1,0 +1,71 @@
+{
+  "name": "Demo 1: 客服自动回复",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "customer-service",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-0001-0001-000000000001",
+      "name": "接收客户消息",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://8.218.40.11:8080/v1/chat-messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer app-6hCfoSdDsTT2a3uiR14zn1xm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": \"{{ $json.body.message }}\",\n  \"user\": \"{{ $json.body.customer_name || 'anonymous' }}\",\n  \"response_mode\": \"blocking\",\n  \"inputs\": {}\n}",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0002-0002-0002-000000000002",
+      "name": "调用 Dify 客服AI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ intent: $json.answer ? JSON.parse($json.answer.match(/\\{[\\s\\S]*\\}/)?.[0] || '{}').intent : '未知', reply: $json.answer ? JSON.parse($json.answer.match(/\\{[\\s\\S]*\\}/)?.[0] || '{\"reply\":\"处理中\"}').reply : $json.answer, need_human: false, raw: $json.answer }) }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "a1b2c3d4-0003-0003-0003-000000000003",
+      "name": "返回回复结果",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [720, 300]
+    }
+  ],
+  "connections": {
+    "接收客户消息": {
+      "main": [[{ "node": "调用 Dify 客服AI", "type": "main", "index": 0 }]]
+    },
+    "调用 Dify 客服AI": {
+      "main": [[{ "node": "返回回复结果", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "meta": { "templateCredsSetupCompleted": true }
+}

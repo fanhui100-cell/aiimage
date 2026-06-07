@@ -108,7 +108,7 @@ export function UserMenu() {
           }}
         >
           <div style={{ padding: '8px 10px', borderBottom: '1px solid rgba(155,191,202,0.1)', marginBottom: '4px' }}>
-            <div style={{ fontSize: '10px', color: 'rgba(155,191,202,0.5)', fontFamily: 'ui-monospace, monospace' }}>SIGNED IN AS</div>
+            <div style={{ fontSize: '10px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>SIGNED IN AS</div>
             <div style={{ fontSize: '11px', color: '#9BBFCA', marginTop: '2px', wordBreak: 'break-all' }}>{user.email}</div>
           </div>
 

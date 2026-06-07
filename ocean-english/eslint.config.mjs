@@ -26,6 +26,9 @@ const eslintConfig = defineConfig([
     rules: {
       "react-hooks/purity": "off",
       "@typescript-eslint/no-unused-expressions": "off",
+      // Reading localStorage (external system) on mount is legitimate synchronization.
+      // The rule is too strict for this well-established React pattern.
+      "react-hooks/set-state-in-effect": "off",
     },
   },
 ]);

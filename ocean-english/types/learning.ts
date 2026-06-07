@@ -24,6 +24,7 @@ export interface LearningModule {
   abilities: readonly string[]
   abilitiesZh: readonly string[]
   route: string
+  universeRoute?: string
   visualPosition: ModulePosition3D
   color: string
   icon: string
