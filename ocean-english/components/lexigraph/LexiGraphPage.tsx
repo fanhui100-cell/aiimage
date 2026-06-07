@@ -158,37 +158,37 @@ export function LexiGraphPage() {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '0 20px',
-          borderBottom: '1px solid rgba(56,189,248,0.1)',
-          background: 'rgba(2,6,23,0.9)',
+          borderBottom: '1px solid var(--glass-border)',
+          background: 'rgba(5,9,15,0.92)',
           backdropFilter: 'blur(12px)',
         }}>
           <div>
             <span style={{
-              fontSize: '15px', fontWeight: 700, color: '#7EF9FF',
+              fontSize: '15px', fontWeight: 700, color: 'var(--teal)',
               letterSpacing: '0.06em', fontFamily: 'var(--font-mono)',
             }}>
               LexiGraph
             </span>
             <span style={{
-              marginLeft: '10px', fontSize: '11px', color: 'rgba(155,191,202,0.45)',
+              marginLeft: '10px', fontSize: '11px', color: 'var(--text-muted)',
               letterSpacing: '0.04em',
             }}>
-              词汇星图 · Explore word relationships, usage &amp; memory
+              词汇星图 · 探索单词关系与记忆
             </span>
           </div>
           <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
             <Link
               href="/dictionary"
-              style={{ fontSize: '12px', color: 'rgba(56,189,248,0.65)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}
+              style={{ fontSize: '12px', color: 'var(--teal-deep)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}
             >
-              ← Dictionary / 词典
+              ← 词汇根系
             </Link>
             {panelWord && (
               <Link
                 href={`/word/${panelWord.id}`}
-                style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}
+                style={{ fontSize: '12px', color: 'var(--text-muted)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}
               >
-                ↗ Full Detail
+                ↗ 完整词条
               </Link>
             )}
           </div>
@@ -216,9 +216,9 @@ export function LexiGraphPage() {
                       style={{
                         padding: '2px 8px', borderRadius: '4px', fontSize: '10px',
                         fontFamily: 'var(--font-mono)', cursor: 'pointer',
-                        background: w === centerWord ? 'rgba(56,189,248,0.15)' : 'rgba(2,6,23,0.75)',
-                        border: `1px solid ${w === centerWord ? 'rgba(56,189,248,0.45)' : 'rgba(56,189,248,0.18)'}`,
-                        color: w === centerWord ? '#38BDF8' : 'rgba(155,191,202,0.5)',
+                        background: w === centerWord ? 'rgba(79,230,206,0.14)' : 'rgba(5,9,15,0.75)',
+                        border: `1px solid ${w === centerWord ? 'rgba(79,230,206,0.45)' : 'rgba(79,230,206,0.18)'}`,
+                        color: w === centerWord ? 'var(--teal)' : 'var(--text-muted)',
                         backdropFilter: 'blur(6px)',
                         lineHeight: 1.5,
                       }}
@@ -251,10 +251,10 @@ export function LexiGraphPage() {
               ) : (
                 <div style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  height: '100%', color: '#38BDF8', fontSize: '13px',
+                  height: '100%', color: 'var(--teal)', fontSize: '13px',
                   fontFamily: 'var(--font-mono)',
                 }}>
-                  {isLoading ? 'Loading graph… / 加载星图中…' : 'Enter a word to begin / 输入单词开始探索'}
+                  {isLoading ? '加载星图中…' : '输入单词开始探索'}
                 </div>
               )}
             </div>
@@ -264,7 +264,7 @@ export function LexiGraphPage() {
           <div style={{
             width: '340px',
             flexShrink: 0,
-            borderLeft: '1px solid rgba(56,189,248,0.08)',
+            borderLeft: '1px solid var(--glass-border)',
             overflow: 'hidden',
           }}>
             <LexiGraphPanel

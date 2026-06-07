@@ -218,20 +218,18 @@ export default function ScanPage() {
 
   return (
     <AppShell>
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
+      <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '80px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
 
           {/* Header */}
-          <h1 style={{ margin: '0 0 6px', fontSize: '32px', fontWeight: 700, color: '#ECFBFF' }}>
-            Scan Mode{' '}
-            <span style={{ fontSize: '18px', color: '#9BBFCA' }}>文档扫描</span>
+          <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.7 }}>
+            文档扫描 · Scan
+          </p>
+          <h1 style={{ margin: '0 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
+            文档扫描
           </h1>
-          <p style={{ margin: '0 0 28px', color: '#9BBFCA', fontSize: '14px', lineHeight: 1.6 }}>
-            Upload PDFs or images to extract questions, vocabulary, and study suggestions.
-            <br />
-            <span style={{ color: 'rgba(155,191,202,0.6)', fontSize: '13px' }}>
-              上传 PDF 或图片，提取题目、生词与学习建议。
-            </span>
+          <p style={{ margin: '0 0 28px', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: '15px', color: 'var(--teal-ink)' }}>
+            Scan Mode — Extract vocabulary &amp; study notes from PDFs
           </p>
 
           {status === 'idle' && (
@@ -282,17 +280,17 @@ export default function ScanPage() {
                 onClick={handleReset}
                 style={{
                   padding: '10px 24px',
-                  borderRadius: '8px',
-                  background: 'rgba(56,189,248,0.12)',
-                  border: '1px solid rgba(56,189,248,0.4)',
-                  color: '#38BDF8',
+                  borderRadius: 'var(--r-sm)',
+                  background: 'var(--teal-bg)',
+                  border: '1px solid rgba(14,140,122,0.35)',
+                  color: 'var(--teal-ink)',
                   fontSize: '14px',
                   fontWeight: 600,
                   cursor: 'pointer',
                   marginTop: '8px',
                 }}
               >
-                ↩ Try Again / 重试
+                ↩ 重试
               </button>
             </div>
           )}
@@ -323,11 +321,11 @@ export default function ScanPage() {
           )}
 
           <div style={{ marginTop: '40px', display: 'flex', gap: '20px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <Link href="/" style={{ fontSize: '13px', color: '#38BDF8', textDecoration: 'none' }}>
-              ← Back to Home / 返回首页
+            <Link href="/" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
+              ← 返回首页
             </Link>
-            <Link href="/scan/history" style={{ fontSize: '13px', color: 'rgba(56,189,248,0.7)', textDecoration: 'none' }}>
-              View Scan History / 查看扫描历史 →
+            <Link href="/scan/history" style={{ fontSize: '13px', color: 'var(--ink-sub)', textDecoration: 'none' }}>
+              查看扫描历史 →
             </Link>
           </div>
 

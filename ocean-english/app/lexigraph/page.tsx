@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import { LexiGraphPage } from '@/components/lexigraph/LexiGraphPage'
 
 export const metadata: Metadata = {
-  title: 'LexiGraph / 词汇星图 — LexiOcean',
-  description: 'Explore word relationships, usage, memory, and review status.',
+  title: '词汇星图 · LexiGraph — LexiOcean',
+  description: '用交互星图探索单词关系、搭配与记忆状态。',
 }
 
 export default function LexiGraphRoute() {

@@ -111,9 +111,9 @@ function QuizContent() {
 
   if (!current || questions.length === 0) {
     return (
-      <div style={{ textAlign: 'center', padding: '80px 24px', color: '#9BBFCA' }}>
-        No questions available.{' '}
-        <Link href="/dictionary" style={{ color: '#38BDF8' }}>Go to Dictionary</Link>
+      <div style={{ textAlign: 'center', padding: '80px 24px', color: 'var(--ink-sub)' }}>
+        暂无题目。{' '}
+        <Link href="/dictionary" style={{ color: 'var(--teal-ink)' }}>前往词典</Link>
       </div>
     )
   }
@@ -127,16 +127,15 @@ function QuizContent() {
         transition={{ duration: 0.35 }}
         style={{ maxWidth: '520px', margin: '0 auto', padding: '40px 24px', textAlign: 'center' }}
       >
-        <div style={{ fontSize: '52px', marginBottom: '20px' }}>{pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪'}</div>
-        <GlassCard style={{ marginBottom: '24px', border: `1px solid ${pct >= 80 ? 'rgba(52,211,153,0.3)' : pct >= 60 ? 'rgba(56,189,248,0.25)' : 'rgba(155,191,202,0.15)'}` }}>
-          <div style={{ fontSize: '36px', fontWeight: 700, color: '#ECFBFF', marginBottom: '4px' }}>
-            {score} <span style={{ fontSize: '18px', color: '#9BBFCA' }}>/ {questions.length}</span>
+        <GlassCard theme="light" style={{ marginBottom: '24px' }}>
+          <div style={{ fontSize: '36px', fontFamily: 'var(--font-serif)', fontWeight: 700, color: 'var(--ink)', marginBottom: '4px' }}>
+            {score} <span style={{ fontSize: '18px', color: 'var(--ink-sub)' }}>/ {questions.length}</span>
           </div>
-          <div style={{ fontSize: '20px', color: pct >= 80 ? '#34D399' : pct >= 60 ? '#38BDF8' : '#9BBFCA', fontWeight: 600, marginBottom: '4px' }}>
+          <div style={{ fontSize: '20px', color: pct >= 80 ? 'var(--teal-ink)' : pct >= 60 ? 'var(--teal-ink)' : 'var(--ink-sub)', fontWeight: 600, marginBottom: '4px' }}>
             {pct}%
           </div>
-          <div style={{ fontSize: '13px', color: 'rgba(155,191,202,0.6)' }}>
-            {pct >= 80 ? 'Excellent! 优秀！' : pct >= 60 ? 'Good effort! 不错！' : 'Keep going! 继续加油！'}
+          <div style={{ fontSize: '13px', color: 'var(--ink-muted)' }}>
+            {pct >= 80 ? '优秀！Excellent!' : pct >= 60 ? '不错！Good effort!' : '继续加油！Keep going!'}
           </div>
         </GlassCard>
 
@@ -145,19 +144,19 @@ function QuizContent() {
             variant="primary"
             onClick={() => { setCurrentIdx(0); setSelected(null); setShowFeedback(false); setAttempts([]); setFinished(false) }}
           >
-            ↺ Try Again / 再试一次
+            再试一次
           </Button>
           <Button as="a" href="/memory" variant="success">
-            Continue Review / 继续复习 →
+            继续复习 →
           </Button>
         </div>
         <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Button as="a" href="/chat" variant="secondary" size="sm">
-            ✦ Ask AI / 问 AI
+          <Button as="a" href="/chat" variant="ghost" size="sm">
+            问 AI
           </Button>
           {wordParam && (
             <Button as="a" href={`/lexigraph?word=${wordParam}`} variant="ghost" size="sm">
-              ✦ LexiGraph
+              词汇星图
             </Button>
           )}
         </div>
@@ -171,16 +170,16 @@ function QuizContent() {
 
       {/* Progress */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-        <div style={{ fontSize: '12px', color: '#9BBFCA', fontFamily: 'var(--font-mono)' }}>
+        <div style={{ fontSize: '12px', color: 'var(--ink-sub)', fontFamily: 'var(--font-mono)' }}>
           {currentIdx + 1} / {questions.length}
         </div>
-        <div style={{ fontSize: '12px', color: '#34D399', fontFamily: 'var(--font-mono)' }}>
+        <div style={{ fontSize: '12px', color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)' }}>
           ✓ {attempts.filter(a => a.correct).length}
         </div>
       </div>
-      <div style={{ height: '3px', background: 'rgba(255,255,255,0.07)', borderRadius: '2px', marginBottom: '32px', overflow: 'hidden' }}>
+      <div style={{ height: '3px', background: 'rgba(20,30,40,0.08)', borderRadius: '2px', marginBottom: '32px', overflow: 'hidden' }}>
         <motion.div
-          style={{ height: '100%', background: 'linear-gradient(90deg, #38BDF8, #7EF9FF)', borderRadius: '2px' }}
+          style={{ height: '100%', background: 'linear-gradient(90deg, var(--teal-ink), var(--teal))', borderRadius: '2px' }}
           initial={false}
           animate={{ width: `${((currentIdx) / questions.length) * 100}%` }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
@@ -190,15 +189,15 @@ function QuizContent() {
       {/* Word tag */}
       <div style={{
         display: 'inline-block', fontSize: '11px', padding: '3px 10px',
-        borderRadius: '4px', background: 'rgba(56,189,248,0.08)', color: 'rgba(56,189,248,0.7)',
-        border: '1px solid rgba(56,189,248,0.2)', fontFamily: 'var(--font-mono)', marginBottom: '14px',
+        borderRadius: '4px', background: 'var(--teal-bg)', color: 'var(--teal-ink)',
+        border: '1px solid rgba(14,140,122,0.2)', fontFamily: 'var(--font-mono)', marginBottom: '14px',
       }}>
         {current.word}
         {activeMode === 'vocabulary-drill' && <QuizSourceBadge questionId={current.id} />}
       </div>
 
       {/* Question */}
-      <h2 style={{ color: '#ECFBFF', margin: '0 0 28px', fontSize: '20px', lineHeight: 1.5 }}>
+      <h2 style={{ color: 'var(--ink)', margin: '0 0 28px', fontSize: '20px', lineHeight: 1.5 }}>
         {current.question}
       </h2>
 
@@ -207,14 +206,14 @@ function QuizContent() {
         {current.options?.map((opt, idx) => {
           const isSelected = selected === opt.id
           const isCorrectOpt = opt.id === current.correctAnswer
-          let borderColor = 'rgba(155,191,202,0.2)'
-          let bgColor = 'rgba(255,255,255,0.03)'
-          let textColor = '#ECFBFF'
+          let borderColor = 'var(--line)'
+          let bgColor = 'var(--card)'
+          let textColor = 'var(--ink)'
           if (showFeedback) {
-            if (isCorrectOpt) { borderColor = 'rgba(52,211,153,0.6)'; bgColor = 'rgba(52,211,153,0.1)'; textColor = '#34D399' }
-            else if (isSelected && !isCorrectOpt) { borderColor = 'rgba(239,68,68,0.5)'; bgColor = 'rgba(239,68,68,0.08)'; textColor = 'rgba(239,68,68,0.8)' }
+            if (isCorrectOpt) { borderColor = 'rgba(14,140,122,0.5)'; bgColor = 'rgba(14,140,122,0.07)'; textColor = 'var(--teal-ink)' }
+            else if (isSelected && !isCorrectOpt) { borderColor = 'rgba(191,74,48,0.4)'; bgColor = 'rgba(191,74,48,0.06)'; textColor = 'var(--rose-ink)' }
           } else if (isSelected) {
-            borderColor = 'rgba(56,189,248,0.6)'; bgColor = 'rgba(56,189,248,0.08)'
+            borderColor = 'rgba(14,140,122,0.4)'; bgColor = 'var(--teal-bg)'
           }
 
           const shakeAnim = showFeedback && isSelected && !isCorrectOpt
@@ -242,6 +241,7 @@ function QuizContent() {
                 alignItems: 'center',
                 gap: '12px',
                 width: '100%',
+                boxShadow: 'var(--card-shadow-sm)',
               }}
             >
               <span style={{
@@ -269,19 +269,19 @@ function QuizContent() {
             transition={{ duration: 0.25 }}
           >
             <div style={{
-              background: isCorrect ? 'rgba(52,211,153,0.07)' : 'rgba(239,68,68,0.05)',
-              border: `1px solid ${isCorrect ? 'rgba(52,211,153,0.3)' : 'rgba(239,68,68,0.2)'}`,
+              background: isCorrect ? 'rgba(14,140,122,0.06)' : 'rgba(191,74,48,0.05)',
+              border: `1px solid ${isCorrect ? 'rgba(14,140,122,0.25)' : 'rgba(191,74,48,0.18)'}`,
               borderRadius: '10px', padding: '16px', marginBottom: '16px',
             }}>
-              <div style={{ fontSize: '15px', fontWeight: 600, color: isCorrect ? '#34D399' : 'rgba(239,68,68,0.8)', marginBottom: '8px' }}>
-                {isCorrect ? '✓ Correct! 答对了！' : '✗ Incorrect. 答错了。'}
+              <div style={{ fontSize: '15px', fontWeight: 600, color: isCorrect ? 'var(--teal-ink)' : 'var(--rose-ink)', marginBottom: '8px' }}>
+                {isCorrect ? '✓ 答对了！' : '✗ 答错了。'}
               </div>
-              <p style={{ margin: '0 0 4px', fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6 }}>{current.explanation}</p>
-              <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA' }}>{current.explanationZh}</p>
+              <p style={{ margin: '0 0 4px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6 }}>{current.explanation}</p>
+              <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)' }}>{current.explanationZh}</p>
             </div>
 
             <Button onClick={handleNext} style={{ width: '100%', padding: '14px' }}>
-              {currentIdx + 1 >= questions.length ? 'See Results / 查看结果' : 'Next Question / 下一题'} →
+              {currentIdx + 1 >= questions.length ? '查看结果' : '下一题'} →
             </Button>
           </motion.div>
         )}
@@ -293,21 +293,19 @@ function QuizContent() {
 export default function QuizPage() {
   return (
     <AppShell>
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
+      <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '80px' }}>
         <div style={{ maxWidth: '680px', margin: '0 auto', padding: '40px 24px 0' }}>
-          <div style={{ marginBottom: '8px', fontSize: '10px', letterSpacing: '0.15em', color: 'rgba(56,189,248,0.45)', fontFamily: 'var(--font-mono)' }}>
-            LEXIOCEAN / QUIZ MODE
-          </div>
-          <h1 style={{ margin: '0 0 4px', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 700, color: '#ECFBFF' }}>
-            Quiz Mode <span style={{ fontSize: '18px', color: '#9BBFCA' }}>练习模式</span>
+          <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.7 }}>
+            练习模式 · Quiz
+          </p>
+          <h1 style={{ margin: '0 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
+            练习模式
           </h1>
-          <p style={{ margin: '0 0 32px', color: '#9BBFCA', fontSize: '14px' }}>
-            Test your vocabulary. Wrong answers go to your error notebook.
-            <br />
-            <span style={{ color: 'rgba(155,191,202,0.5)', fontSize: '13px' }}>词汇测试。答错的题目自动加入错题本。</span>
+          <p style={{ margin: '0 0 32px', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: '15px', color: 'var(--teal-ink)' }}>
+            Quiz Mode — Vocabulary testing &amp; error notebook
           </p>
         </div>
-        <Suspense fallback={<div style={{ color: '#9BBFCA', textAlign: 'center', padding: '40px', fontFamily: 'var(--font-mono)' }}>loading…</div>}>
+        <Suspense fallback={<div style={{ color: 'var(--ink-sub)', textAlign: 'center', padding: '40px', fontFamily: 'var(--font-mono)' }}>loading…</div>}>
           <QuizContent />
         </Suspense>
       </div>
