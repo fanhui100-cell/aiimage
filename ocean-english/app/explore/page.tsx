@@ -27,7 +27,7 @@ const EXPLORE_MODES = [
     ),
   },
   {
-    href: '/lexiverse',
+    href: '/lexiverse-html/Lexiverse%20Galaxy%20Overview.html',
     labelZh: '词汇宇宙',
     label: 'Lexiverse',
     descZh: '以星球和星系可视化你掌握的词汇版图',
