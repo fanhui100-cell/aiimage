@@ -35,14 +35,15 @@ const EMPTY_FILTERS: Filters = {
   state: new Set(),
 }
 
+/* Light-theme state colors — visible on var(--paper) */
 const STATE_COLORS: Record<PlanetLearningState, string> = {
-  mastered: '#7EF9FF',
-  recommended: '#FFD66B',
-  learning: '#38BDF8',
-  review: '#FFA85A',
-  weak: '#FF8FA8',
-  unknown: '#9FB6C6',
-  locked: '#52617A',
+  mastered:     '#0a8a6e',
+  recommended:  '#b3781f',
+  learning:     '#1a6a9a',
+  review:       '#c07030',
+  weak:         '#bf4a30',
+  unknown:      '#7a8f9f',
+  locked:       '#b0bcc8',
 }
 
 const STATE_LABELS: Record<PlanetLearningState, string> = {
@@ -146,8 +147,7 @@ export function LexiverseVocabBrowserClient() {
   if (error) return <EmptyFrame title="Dictionary unavailable" detail={error.message} />
 
   return (
-    <main style={styles.page}>
-      <div style={styles.space} />
+    <main className="theme-light" style={styles.page}>
       <header style={styles.topbar}>
         <div>
           <Link href="/lexiverse" style={styles.brand}>Lexiverse</Link>
@@ -178,7 +178,7 @@ export function LexiverseVocabBrowserClient() {
 
       <section style={{ ...styles.shell, ...(compact ? styles.shellCompact : null) }}>
         <aside style={{ ...styles.sidebar, ...(compact ? styles.compactSidebar : null), ...(compact && mobilePanel === 'detail' ? styles.mobileHidden : null) }}>
-          <LiquidGlassPanel padding={16} style={styles.fullPanel}>
+          <LiquidGlassPanel padding={16} style={{ ...styles.fullPanel, ...styles.lightPanel }}>
             <PanelTitle title="FILTERS" subtitle="筛选" />
             <FilterGroup title="CEFR" values={facets.cefr} selected={filters.cefr} onToggle={v => toggleFilter('cefr', v)} />
             <FilterGroup title="PART OF SPEECH" values={facets.pos} selected={filters.pos} onToggle={v => toggleFilter('pos', v)} />
@@ -196,7 +196,7 @@ export function LexiverseVocabBrowserClient() {
         </aside>
 
         <section style={{ ...styles.listCol, ...(compact && mobilePanel === 'detail' ? styles.mobileHidden : null) }}>
-          <LiquidGlassPanel padding={16} style={styles.fullPanel}>
+          <LiquidGlassPanel padding={16} style={{ ...styles.fullPanel, ...styles.lightPanel }}>
             <div style={styles.searchRow}>
               <input
                 value={query}
@@ -225,7 +225,7 @@ export function LexiverseVocabBrowserClient() {
         </section>
 
         <aside style={{ ...styles.detailCol, ...(compact && mobilePanel === 'list' ? styles.mobileHidden : null) }}>
-          <LiquidGlassPanel padding={0} style={styles.fullPanel}>
+          <LiquidGlassPanel padding={0} style={{ ...styles.fullPanel, ...styles.lightPanel }}>
             {selectedWord ? (
               <WordPreview
                 word={selectedWord}
@@ -251,7 +251,7 @@ function WordRow({ word, state, selected, onClick }: {
   const definition = firstDefinition(word)
   const color = STATE_COLORS[state]
   return (
-    <button type="button" onClick={onClick} style={{ ...styles.wordRow, borderColor: selected ? `${color}88` : 'rgba(126,249,255,0.10)' }}>
+    <button type="button" onClick={onClick} style={{ ...styles.wordRow, borderColor: selected ? `${color}` : 'var(--line)' }}>
       <span style={{ ...styles.stateDot, background: color, boxShadow: `0 0 10px ${color}` }} />
       <span style={styles.wordMain}>
         <span style={styles.wordTitle}>{word.word}</span>
@@ -259,7 +259,7 @@ function WordRow({ word, state, selected, onClick }: {
         <span style={styles.wordDefinition}>{definition.en}</span>
       </span>
       <span style={styles.rowBadges}>
-        {word.cefrLevel && <LiquidBadge size="sm" color="#7EF9FF">{word.cefrLevel}</LiquidBadge>}
+        {word.cefrLevel && <LiquidBadge size="sm" color="var(--teal-ink)">{word.cefrLevel}</LiquidBadge>}
         <LiquidBadge size="sm" color={color}>{STATE_LABELS[state]}</LiquidBadge>
       </span>
     </button>
@@ -286,7 +286,7 @@ function WordPreview({ word, state, onAddToReview }: {
       <h1 style={styles.previewWord}>{word.word}</h1>
       <div style={styles.previewIpa}>{word.phoneticIpa ?? '/-/'}</div>
       <div style={styles.badges}>
-        {word.cefrLevel && <LiquidBadge color="#7EF9FF">{word.cefrLevel}</LiquidBadge>}
+        {word.cefrLevel && <LiquidBadge color="var(--teal-ink)">{word.cefrLevel}</LiquidBadge>}
         {word.partOfSpeech && <LiquidBadge color="#9FB6C6">{word.partOfSpeech}</LiquidBadge>}
         {(word.examTags ?? []).map(tag => <LiquidBadge key={tag} color="#FFD66B">{tag}</LiquidBadge>)}
       </div>
@@ -314,7 +314,7 @@ function WordPreview({ word, state, onAddToReview }: {
       </div>
 
       <SectionLabel>RELATED · 关联</SectionLabel>
-      <ChipList title="Synonyms" items={word.synonyms ?? []} color="#7EF9FF" />
+      <ChipList title="Synonyms" items={word.synonyms ?? []} color="var(--teal-ink)" />
       <ChipList title="Antonyms" items={word.antonyms ?? []} color="#FF8FA8" />
       <ChipList title="Tags" items={[...(word.themeTags ?? []), ...(word.domainTags ?? [])]} color="#6BE0A0" />
     </div>
@@ -337,7 +337,7 @@ function FilterGroup({ title, values, selected, onToggle, colorFor, limit }: {
       <div style={styles.filterPills}>
         {shown.map(value => {
           const active = selected.has(value)
-          const color = colorFor?.(value) ?? '#7EF9FF'
+          const color = colorFor?.(value) ?? 'var(--teal-ink)'
           return (
             <button
               key={value}
@@ -345,9 +345,9 @@ function FilterGroup({ title, values, selected, onToggle, colorFor, limit }: {
               onClick={() => onToggle(value)}
               style={{
                 ...styles.filterPill,
-                color: active ? color : LIQUID.textDim,
-                borderColor: active ? `${color}88` : LIQUID.border,
-                background: active ? `${color}20` : 'rgba(255,255,255,0.025)',
+                color: active ? color : 'var(--ink-sub)',
+                borderColor: active ? color : 'var(--line)',
+                background: active ? `${color}18` : 'transparent',
               }}
             >
               {value}
@@ -401,7 +401,7 @@ function EmptyFrame({ title, detail }: { title: string; detail: string }) {
     <main style={styles.page}>
       <LiquidGlassPanel style={{ width: 420, margin: '18vh auto' }}>
         <h1 style={{ fontSize: 24 }}>{title}</h1>
-        <p style={{ color: LIQUID.textDim, marginTop: 10 }}>{detail}</p>
+        <p style={{ color: 'var(--ink-sub)', marginTop: 10 }}>{detail}</p>
       </LiquidGlassPanel>
     </main>
   )
@@ -431,7 +431,7 @@ function highlightWord(sentence: string, word: string) {
   return (
     <>
       {sentence.slice(0, idx)}
-      <strong style={{ color: '#7EF9FF' }}>{sentence.slice(idx, idx + word.length)}</strong>
+      <strong style={{ color: 'var(--teal-ink)' }}>{sentence.slice(idx, idx + word.length)}</strong>
       {sentence.slice(idx + word.length)}
     </>
   )
@@ -464,18 +464,19 @@ function cloneFilters(source: Filters): Filters {
 const styles: Record<string, React.CSSProperties> = {
   page: {
     minHeight: '100vh',
-    background: 'radial-gradient(circle at 20% 12%, rgba(126,249,255,0.08), transparent 32%), radial-gradient(circle at 82% 72%, rgba(183,155,255,0.10), transparent 34%), #040407',
-    color: '#ECFBFF',
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
+    background: 'var(--paper)',
+    color: 'var(--ink)',
+    fontFamily: 'var(--font-sans)',
     overflow: 'hidden',
   },
-  space: {
-    position: 'fixed',
-    inset: 0,
-    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.42) 1px, transparent 1px)',
-    backgroundSize: '72px 72px',
-    opacity: 0.12,
-    pointerEvents: 'none',
+  /* overrides LiquidGlassPanel's dark defaults for milk-white skin */
+  lightPanel: {
+    background: 'var(--card)',
+    border: '1px solid var(--line)',
+    backdropFilter: 'none',
+    WebkitBackdropFilter: 'none',
+    boxShadow: 'var(--card-shadow)',
+    color: 'var(--ink)',
   },
   topbar: {
     position: 'relative',
@@ -485,18 +486,20 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0 22px',
+    borderBottom: '1px solid var(--line)',
   },
   brand: {
-    color: '#7EF9FF',
+    color: 'var(--teal-ink)',
     fontWeight: 700,
     fontSize: 18,
     textDecoration: 'none',
+    fontFamily: 'var(--font-serif)',
   },
   sub: {
     marginLeft: 12,
-    color: '#6F8AA0',
+    color: 'var(--ink-muted)',
     fontSize: 12,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
   },
   shell: {
     position: 'relative',
@@ -521,20 +524,23 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 8,
     alignItems: 'baseline',
     marginBottom: 10,
-    color: 'rgba(126,249,255,0.65)',
+    color: 'var(--teal-ink)',
     fontSize: 10,
     letterSpacing: '0.14em',
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
+    opacity: 0.75,
   },
   filterGroup: { marginBottom: 17 },
   filterPills: { display: 'flex', flexWrap: 'wrap', gap: 7 },
   filterPill: {
-    border: `1px solid ${LIQUID.border}`,
+    border: '1px solid var(--line)',
     borderRadius: 999,
     padding: '5px 9px',
     cursor: 'pointer',
     fontSize: 11,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
+    background: 'transparent',
+    color: 'var(--ink-sub)',
   },
   searchRow: { display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 },
   input: {
@@ -542,13 +548,13 @@ const styles: Record<string, React.CSSProperties> = {
     minWidth: 0,
     padding: '11px 13px',
     borderRadius: 11,
-    border: `1px solid ${LIQUID.border}`,
-    background: 'rgba(255,255,255,0.035)',
-    color: '#ECFBFF',
+    border: '1px solid var(--line)',
+    background: 'var(--card-2)',
+    color: 'var(--ink)',
     outline: 'none',
     fontSize: 13,
   },
-  count: { color: '#6F8AA0', fontSize: 12, fontFamily: "'Space Mono', monospace", whiteSpace: 'nowrap' },
+  count: { color: 'var(--ink-muted)', fontSize: 12, fontFamily: 'var(--font-mono)', whiteSpace: 'nowrap' },
   wordList: { overflowY: 'auto', paddingRight: 4, display: 'flex', flexDirection: 'column', gap: 8 },
   wordRow: {
     display: 'grid',
@@ -556,31 +562,31 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     gap: 10,
     padding: '10px 11px',
-    border: '1px solid rgba(126,249,255,0.10)',
+    border: '1px solid var(--line)',
     borderRadius: 10,
-    background: 'rgba(255,255,255,0.032)',
-    color: '#ECFBFF',
+    background: 'var(--card-2)',
+    color: 'var(--ink)',
     textAlign: 'left',
     cursor: 'pointer',
   },
   stateDot: { width: 9, height: 9, borderRadius: '50%', flexShrink: 0 },
   wordMain: { minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2 },
   wordTitle: { fontSize: 17, fontWeight: 700 },
-  wordMeta: { color: '#6F8AA0', fontSize: 11, fontFamily: "'Space Mono', monospace" },
-  wordDefinition: { color: '#9FB6C6', fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
+  wordMeta: { color: 'var(--ink-muted)', fontSize: 11, fontFamily: 'var(--font-mono)' },
+  wordDefinition: { color: 'var(--ink-sub)', fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
   rowBadges: { display: 'flex', gap: 5, flexWrap: 'wrap', justifyContent: 'flex-end' },
-  preview: { padding: 24, overflowY: 'auto', height: '100%' },
+  preview: { padding: 24, overflowY: 'auto', height: '100%', color: 'var(--ink)' },
   previewHead: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10 },
-  tinyLink: { color: '#7EF9FF', fontSize: 12, textDecoration: 'none', fontFamily: "'Space Mono', monospace" },
-  previewWord: { fontSize: 'clamp(42px, 5vw, 70px)', lineHeight: 1, margin: '16px 0 8px', letterSpacing: 0 },
-  previewIpa: { color: '#7EF9FF', fontSize: 15, fontFamily: "'Space Mono', monospace" },
+  tinyLink: { color: 'var(--teal-ink)', fontSize: 12, textDecoration: 'none', fontFamily: 'var(--font-mono)' },
+  previewWord: { fontSize: 'clamp(42px, 5vw, 70px)', lineHeight: 1, margin: '16px 0 8px', letterSpacing: 0, color: 'var(--ink)' },
+  previewIpa: { color: 'var(--teal-ink)', fontSize: 15, fontFamily: 'var(--font-mono)' },
   badges: { display: 'flex', flexWrap: 'wrap', gap: 7, marginTop: 14 },
-  sectionLabel: { margin: '24px 0 10px', color: 'rgba(126,249,255,0.58)', fontSize: 10, letterSpacing: '0.14em', fontFamily: "'Space Mono', monospace" },
-  defEn: { color: '#DCEAF2', fontSize: 17, lineHeight: 1.6 },
-  defZh: { color: '#8AA2B2', fontSize: 13, lineHeight: 1.6, marginTop: 5 },
-  exampleCard: { borderLeft: '2px solid rgba(126,249,255,0.65)' },
-  exampleEn: { color: '#DCEAF2', fontSize: 14, lineHeight: 1.6 },
-  exampleZh: { color: '#8AA2B2', fontSize: 12.5, lineHeight: 1.5, marginTop: 6 },
+  sectionLabel: { margin: '24px 0 10px', color: 'var(--teal-ink)', fontSize: 10, letterSpacing: '0.14em', fontFamily: 'var(--font-mono)', opacity: 0.7 },
+  defEn: { color: 'var(--ink)', fontSize: 17, lineHeight: 1.6 },
+  defZh: { color: 'var(--ink-sub)', fontSize: 13, lineHeight: 1.6, marginTop: 5 },
+  exampleCard: { borderLeft: '2px solid var(--teal-ink)', background: 'var(--card-2)', border: '1px solid var(--line)' },
+  exampleEn: { color: 'var(--ink)', fontSize: 14, lineHeight: 1.6 },
+  exampleZh: { color: 'var(--ink-sub)', fontSize: 12.5, lineHeight: 1.5, marginTop: 6 },
   actions: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 9 },
   linkButton: {
     display: 'inline-flex',
@@ -588,18 +594,18 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: 'center',
     minHeight: 43,
     borderRadius: 11,
-    border: `1px solid ${LIQUID.border}`,
-    background: 'rgba(255,255,255,0.03)',
-    color: '#CFE6F2',
+    border: '1px solid var(--line)',
+    background: 'var(--card-2)',
+    color: 'var(--teal-ink)',
     textDecoration: 'none',
     fontSize: 13,
     fontWeight: 700,
   },
   chipBlock: { marginTop: 10 },
-  chipTitle: { display: 'block', color: '#6F8AA0', fontSize: 11, marginBottom: 7, fontFamily: "'Space Mono', monospace" },
+  chipTitle: { display: 'block', color: 'var(--ink-muted)', fontSize: 11, marginBottom: 7, fontFamily: 'var(--font-mono)' },
   chips: { display: 'flex', flexWrap: 'wrap', gap: 7 },
-  chip: { border: '1px solid', borderRadius: 8, padding: '5px 9px', background: 'rgba(255,255,255,0.028)', textDecoration: 'none', fontSize: 12 },
-  emptyInline: { color: '#6F8AA0', padding: 18, fontSize: 13 },
+  chip: { border: '1px solid', borderRadius: 8, padding: '5px 9px', background: 'var(--card-2)', textDecoration: 'none', fontSize: 12 },
+  emptyInline: { color: 'var(--ink-muted)', padding: 18, fontSize: 13 },
   mobileTabs: { position: 'relative', zIndex: 2, padding: '0 20px 12px' },
   mobileHidden: { display: 'none' },
 }

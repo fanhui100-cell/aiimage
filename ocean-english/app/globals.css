@@ -1,136 +1,179 @@
 @import "tailwindcss";
 
+/* =========================================================================
+   LexiOcean — "Abyssal Luminescence / 深海辉光" 设计系统
+   深↔浅双环境:沉浸探索走深海暗色,日常学习/阅读走米白日光。
+   - 单一主辉光(青绿),金色仅用于成就。
+   - 向后兼容:保留旧 var 名(--bg-deep / --accent-blue / --glass-* / --particle-*),
+     现有组件不会立刻崩;新增 token 供逐页迁移使用。
+   ========================================================================= */
+
 :root {
-  /* ── Brand colors ── */
-  --bg-deep: #020617;
-  --bg-ocean: #031827;
+  /* ── 深海暗色环境(沉浸:首页 hero / 星图 LexiGraph / Lexiverse) ── */
+  --bg-deep: #05090f;          /* 页面海床(较旧版更深更克制) */
+  --bg-ocean: #081320;
+  --ink-700: #0f1c2e;          /* 抬升玻璃面板 */
+  --ink-600: #16273d;
+
+  /* ── 主辉光:唯一强调色(青绿) ── */
+  --teal: #4fe6ce;             /* 暗色环境用 */
+  --teal-deep: #1f9f8c;
+  --teal-glow: rgba(79, 230, 206, 0.45);
+  --teal-ink: #0e8c7a;         /* 浅色/米白环境用(对纸面有足够对比) */
+
+  /* ── 支撑色(克制使用,按角色而非装饰) ── */
+  --aqua: #8ad7ff;             /* 链接 / 信息 */
+  --gold: #f1c879;             /* 成就 / 连续(暗) */
+  --gold-ink: #b3781f;         /* 成就(浅) */
+  --rose: #ff8a72;             /* due / 告警(暗) */
+  --rose-ink: #bf4a30;         /* (浅) */
+
+  /* ── 暗色文字 ── */
+  --text-primary: #eef5f9;
+  --text-secondary: #9fb6c6;
+  --text-muted: #5f7689;
+
+  /* ── 暗色玻璃面板 ── */
+  --glass-bg: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012) 60%), #0a1320;
+  --glass-border: rgba(150,196,222,0.12);
+  --glass-bg-hover: rgba(255,255,255,0.055);
+  --glass-border-hover: rgba(79,230,206,0.30);
+  --glass-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 24px 60px -28px rgba(0,0,0,0.8);
+
+  /* ── 米白日光环境(词典 / 单词 / 学习中枢 / 复习 / 扫描 / 导学 / 阅读 / 听力) ── */
+  --paper: #f2efe9;            /* 页面底 */
+  --paper-2: #ece8df;
+  --card: #fbf9f4;             /* 卡片 */
+  --card-2: #ffffff;           /* 强调卡 / 输入 */
+  --ink: #14191e;              /* 主文字 */
+  --ink-sub: #5b6b78;          /* 次文字 */
+  --ink-muted: #8a97a2;
+  --line: rgba(20,30,40,0.10);
+  --line-strong: rgba(20,30,40,0.16);
+  --teal-bg: rgba(14,140,122,0.08);
+  --card-shadow: 0 18px 40px -26px rgba(20,30,40,0.5);
+  --card-shadow-sm: 0 10px 24px -18px rgba(20,30,40,0.45);
+
+  /* ── 旧粒子色(榕树 WebGL 用,保持不变) ── */
   --particle-cyan: #7ef9ff;
   --particle-mint: #b8ffb2;
   --particle-gold: #ffd76a;
-  --accent-blue: #38bdf8;
+  --accent-blue: #38bdf8;      /* 兼容旧组件;新代码请改用 --teal / --teal-ink */
   --accent-violet: #8b5cf6;
-  --text-primary: #ecfbff;
-  --text-secondary: #9bbfca;
 
-  /* ── Surface / card tokens ── */
-  --glass-bg: rgba(255,255,255,0.03);
-  --glass-border: rgba(155,191,202,0.12);
-  --glass-bg-hover: rgba(255,255,255,0.055);
-  --glass-border-hover: rgba(155,191,202,0.22);
+  /* ── 区块小标题 ── */
+  --section-head-color: rgba(79,230,206,0.55);
+  --section-head-spacing: 0.16em;
 
-  /* ── Section header tokens ── */
-  --section-head-color: rgba(56,189,248,0.5);
-  --section-head-spacing: 0.12em;
-
-  /* ── Typography (filled by next/font at runtime) ── */
-  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  /* ── 字体(由 next/font 在 layout.tsx 注入) ── */
+  --font-serif: 'Instrument Serif', 'Noto Serif SC', Georgia, serif;
+  --font-serif-zh: 'Noto Serif SC', serif;
+  --font-news: 'Newsreader', Georgia, serif;
+  --font-sans: 'Space Grotesk', 'Noto Sans SC', system-ui, sans-serif;
   --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  /* ── 圆角 ── */
+  --r-card: 18px;
+  --r-sm: 12px;
+  --r-pill: 999px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-deep);
   color: var(--text-primary);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Dark ocean scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+/* =========================================================================
+   日光环境作用域 —— 给"浮出水面"的内容页根节点加 class="theme-light"
+   即可整页切换到米白。
+   ========================================================================= */
+.theme-light {
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
 }
-::-webkit-scrollbar-track {
-  background: var(--bg-deep);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--accent-blue);
-  border-radius: 3px;
-}
+.theme-light ::selection { background: rgba(14,140,122,0.18); }
 
-/* Respect reduced motion — skip to stable state */
+/* 中文领衔的双语标题工具类 */
+.zh-display { font-family: var(--font-serif-zh); font-weight: 600; letter-spacing: 0.01em; }
+.en-display { font-family: var(--font-serif); font-weight: 400; }
+.en-italic  { font-family: var(--font-news); font-style: italic; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--teal-deep); border-radius: 3px; }
+.theme-light ::-webkit-scrollbar-track { background: var(--paper); }
+.theme-light ::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 /* Skeleton shimmer */
-@keyframes skeletonShimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
+@keyframes skeletonShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes banyanPulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: .5; } 50% { transform: translate(-50%,-50%) scale(1.45); opacity: .15; } }
 
-/* Shared keyframes used across pages */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-@keyframes banyanPulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
-  50%       { transform: translate(-50%, -50%) scale(1.45); opacity: 0.15; }
-}
-
-/* ── LexiGraph SVG node state rings ───────────────────────────────────────── */
-@keyframes lexiPulse {
-  0%, 100% { opacity: 0.45; }
-  50%       { opacity: 1; }
-}
-@keyframes lexiGlow {
-  0%, 100% { opacity: 0.5; }
-  50%       { opacity: 1; }
-}
+/* ── LexiGraph SVG node state rings ─────────────────────────────────────── */
+@keyframes lexiPulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+@keyframes lexiGlow  { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
 .lxi-pulse { animation: lexiPulse 2s ease-in-out infinite; }
-.lxi-glow  { animation: lexiGlow  2.5s ease-in-out infinite; }
+.lxi-glow  { animation: lexiGlow 2.5s ease-in-out infinite; }
 
-/* ── Lumi Companion ───────────────────────────────────────────────────────── */
-@keyframes lumiFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-6px); }
-}
-
-/* Orbit particle keyframes (4 particles, different radii + phase offsets) */
-@keyframes lumiOrbit0 {
-  from { transform: translate(-50%, -50%) rotate(0deg)   translateX(28px) scale(1); }
-  to   { transform: translate(-50%, -50%) rotate(360deg) translateX(28px) scale(1); }
-}
-@keyframes lumiOrbit1 {
-  from { transform: translate(-50%, -50%) rotate(90deg)  translateX(24px) scale(1); }
-  to   { transform: translate(-50%, -50%) rotate(450deg) translateX(24px) scale(1); }
-}
-@keyframes lumiOrbit2 {
-  from { transform: translate(-50%, -50%) rotate(200deg) translateX(32px) scale(1); }
-  to   { transform: translate(-50%, -50%) rotate(560deg) translateX(32px) scale(1); }
-}
-@keyframes lumiOrbit3 {
-  from { transform: translate(-50%, -50%) rotate(310deg) translateX(20px) scale(1); }
-  to   { transform: translate(-50%, -50%) rotate(670deg) translateX(20px) scale(1); }
-}
-
-.lumi-orbit {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+/* ── Lumi Companion ──────────────────────────────────────────────────────── */
+@keyframes lumiFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes lumiOrbit0 { from { transform: translate(-50%,-50%) rotate(0deg) translateX(28px) scale(1); } to { transform: translate(-50%,-50%) rotate(360deg) translateX(28px) scale(1); } }
+@keyframes lumiOrbit1 { from { transform: translate(-50%,-50%) rotate(90deg) translateX(24px) scale(1); } to { transform: translate(-50%,-50%) rotate(450deg) translateX(24px) scale(1); } }
+@keyframes lumiOrbit2 { from { transform: translate(-50%,-50%) rotate(200deg) translateX(32px) scale(1); } to { transform: translate(-50%,-50%) rotate(560deg) translateX(32px) scale(1); } }
+@keyframes lumiOrbit3 { from { transform: translate(-50%,-50%) rotate(310deg) translateX(20px) scale(1); } to { transform: translate(-50%,-50%) rotate(670deg) translateX(20px) scale(1); } }
+.lumi-orbit { animation-timing-function: linear; animation-iteration-count: infinite; }
 .lumi-orbit-0 { animation-name: lumiOrbit0; animation-duration: 4s; }
 .lumi-orbit-1 { animation-name: lumiOrbit1; animation-duration: 6s; }
 .lumi-orbit-2 { animation-name: lumiOrbit2; animation-duration: 5s; }
 .lumi-orbit-3 { animation-name: lumiOrbit3; animation-duration: 7s; }
 
-/* ── LexiGraph pronunciation wave ring (one-shot outward expand) ──────────── */
-@keyframes lxiWave {
-  0%   { transform: scale(1);   opacity: 0.8; }
-  100% { transform: scale(2.8); opacity: 0; }
+/* ── LexiGraph pronunciation wave ring ──────────────────────────────────── */
+@keyframes lxiWave { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(2.8); opacity: 0; } }
+.lxi-wave { animation: lxiWave 1.6s ease-out forwards; transform-box: fill-box; transform-origin: center; pointer-events: none; }
+
+/* ── §15.1 夜间模式 — data-theme="night" ──────────────────────────────────
+   覆盖米白环境的纸面/卡片/文字变量,深色页面保持不变。
+   CSS 自定义属性在行内样式中也会被正确解析,无需额外类名。
+   ────────────────────────────────────────────────────────────────────────── */
+[data-theme="night"] {
+  --paper:      #1c1a17;
+  --paper-2:    #211f1b;
+  --card:       #252320;
+  --card-2:     #2e2c28;
+  --card-3:     #333028;
+
+  --ink:        #e4dcc8;
+  --ink-sub:    #9e9380;
+  --ink-muted:  #6a6055;
+
+  --line:        rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.14);
+
+  /* 夜间米白页面用亮青绿,保持对比度 */
+  --teal-ink:   #4fe6ce;
+
+  --gold-ink:   #d4a24a;
+  --rose-ink:   #e06055;
+
+  --card-shadow:    0 2px 12px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3);
+  --card-shadow-sm: 0 1px 6px rgba(0,0,0,0.28);
 }
-.lxi-wave {
-  animation: lxiWave 1.6s ease-out forwards;
-  transform-box: fill-box;
-  transform-origin: center;
-  pointer-events: none;
+
+/* ── §15.2 移动端底部 Tab 安全间距 ─────────────────────────────────────── */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
 }

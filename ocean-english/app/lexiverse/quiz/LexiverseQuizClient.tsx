@@ -45,10 +45,10 @@ const MODE_OPTIONS: { value: QuizMode; label: ReactNode }[] = [
 ]
 
 const MODE_CARDS: { mode: QuizMode; title: string; subtitle: string; accent: string; description: string }[] = [
-  { mode: 'vocabulary-drill', title: 'Vocabulary Drill', subtitle: '词汇速记', accent: '#7EF9FF', description: 'Choose the right meaning from the full Lexiverse dictionary.' },
-  { mode: 'sentence-practice', title: 'Sentence Practice', subtitle: '句子练习', accent: '#B79BFF', description: 'Fill sentence blanks using real example sentences.' },
-  { mode: 'exam-practice', title: 'Exam Practice', subtitle: '应试模拟', accent: '#FFD66B', description: 'Practice words filtered by TOEFL, IELTS, CET, GRE, and more.' },
-  { mode: 'wrong-answer-booster', title: 'Wrong Answer Booster', subtitle: '错题强化', accent: '#FF8FA8', description: 'Rebuild confidence from your saved wrong-answer notebook.' },
+  { mode: 'vocabulary-drill',    title: 'Vocabulary Drill',      subtitle: '词汇速记', accent: '#0E8C7A', description: 'Choose the right meaning from the full Lexiverse dictionary.' },
+  { mode: 'sentence-practice',   title: 'Sentence Practice',     subtitle: '句子练习', accent: '#7c5cbf', description: 'Fill sentence blanks using real example sentences.' },
+  { mode: 'exam-practice',       title: 'Exam Practice',         subtitle: '应试模拟', accent: '#b3781f', description: 'Practice words filtered by TOEFL, IELTS, CET, GRE, and more.' },
+  { mode: 'wrong-answer-booster', title: 'Wrong Answer Booster', subtitle: '错题强化', accent: '#bf4a30', description: 'Rebuild confidence from your saved wrong-answer notebook.' },
 ]
 
 const EXAM_TAGS = ['TOEFL', 'IELTS', 'CET-4', 'CET-6', 'KAOYAN', 'GAOKAO', 'SAT', 'GRE']
@@ -183,8 +183,8 @@ export function LexiverseQuizClient() {
             onClick={() => chooseMode(card.mode)}
             style={{
               ...styles.modeCard,
-              borderColor: mode === card.mode ? `${card.accent}88` : LIQUID.border,
-              boxShadow: mode === card.mode ? `0 0 28px ${card.accent}22` : 'none',
+              borderColor: mode === card.mode ? card.accent : 'var(--line)',
+              boxShadow: mode === card.mode ? `0 0 20px ${card.accent}18` : 'none',
             }}
           >
             <span style={{ ...styles.modeIcon, color: card.accent, borderColor: `${card.accent}55` }}>{modeGlyph(card.mode)}</span>
@@ -211,8 +211,9 @@ export function LexiverseQuizClient() {
               }}
               style={{
                 ...styles.examButton,
-                color: examTag === tag ? '#FFD66B' : LIQUID.textDim,
-                borderColor: examTag === tag ? 'rgba(255,214,107,0.55)' : LIQUID.border,
+                color: examTag === tag ? 'var(--gold-ink)' : 'var(--ink-sub)',
+                borderColor: examTag === tag ? 'var(--gold-ink)' : 'var(--line)',
+                background: examTag === tag ? 'rgba(179,120,31,0.08)' : 'transparent',
               }}
             >
               {tag}
@@ -248,9 +249,9 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
   const answered = selected !== null
   const correct = selected === question.answer
   return (
-    <LiquidGlassPanel padding={22} style={styles.questionPanel}>
+    <LiquidGlassPanel padding={22} style={{ ...styles.questionPanel }}>
       <div style={styles.progressTop}>
-        <LiquidBadge color="#7EF9FF">{question.prompt}</LiquidBadge>
+        <LiquidBadge color="var(--teal-ink)">{question.prompt}</LiquidBadge>
         <span>{currentIndex + 1} / {total}</span>
       </div>
       <div style={styles.progressBar}><i style={{ width: `${(currentIndex / total) * 100}%` }} /></div>
@@ -259,7 +260,7 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
         {question.options.map((option, index) => {
           const isSelected = selected === option.id
           const isAnswer = question.answer === option.id
-          const stateColor = answered && isAnswer ? '#6BE0A0' : answered && isSelected ? '#FF8FA8' : '#7EF9FF'
+          const stateColor = answered && isAnswer ? '#0a8a6e' : answered && isSelected ? '#bf4a30' : 'var(--teal-ink)'
           return (
             <button
               type="button"
@@ -268,9 +269,9 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
               disabled={answered}
               style={{
                 ...styles.option,
-                borderColor: answered && (isSelected || isAnswer) ? `${stateColor}88` : LIQUID.border,
-                background: answered && (isSelected || isAnswer) ? `${stateColor}12` : 'rgba(255,255,255,0.035)',
-                color: answered && (isSelected || isAnswer) ? stateColor : LIQUID.text,
+                borderColor: answered && (isSelected || isAnswer) ? stateColor : 'var(--line)',
+                background: answered && (isSelected || isAnswer) ? `${stateColor}12` : 'var(--card-2)',
+                color: answered && (isSelected || isAnswer) ? stateColor : 'var(--ink)',
               }}
             >
               <span style={styles.optionKey}>{String.fromCharCode(65 + index)}</span>
@@ -280,8 +281,8 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
         })}
       </div>
       {answered && (
-        <LiquidGlassCard style={{ borderLeft: `2px solid ${correct ? '#6BE0A0' : '#FF8FA8'}` }}>
-          <strong style={{ color: correct ? '#6BE0A0' : '#FF8FA8' }}>
+        <LiquidGlassCard style={{ borderLeft: `2px solid ${correct ? '#0a8a6e' : '#bf4a30'}`, background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none' }}>
+          <strong style={{ color: correct ? '#0a8a6e' : '#bf4a30' }}>
             {correct ? 'Correct · 答对了' : 'Not quite · 再看一次'}
           </strong>
           <p style={styles.explanation}>{question.explanation}</p>
@@ -306,7 +307,7 @@ function Results({ score, total, onRestart, returnTo }: {
   const pct = Math.round((score / total) * 100)
   return (
     <LiquidGlassPanel padding={28} style={styles.results}>
-      <LiquidBadge color={pct >= 80 ? '#6BE0A0' : pct >= 60 ? '#FFD66B' : '#FF8FA8'}>{pct}% accuracy</LiquidBadge>
+      <LiquidBadge color={pct >= 80 ? '#0a8a6e' : pct >= 60 ? 'var(--gold-ink)' : 'var(--rose-ink)'}>{pct}% accuracy</LiquidBadge>
       <h1 style={styles.resultScore}>{score} / {total}</h1>
       <p style={styles.resultText}>
         {pct >= 80 ? 'Strong recall. The sky is getting brighter.' : pct >= 60 ? 'Good pass. A few stars still need another orbit.' : 'Keep practicing. The weak spots are now saved for review.'}
@@ -332,8 +333,7 @@ function EmptyState({ title, detail, action }: { title: string; detail: string; 
 
 function QuizFrame({ children }: { children: ReactNode }) {
   return (
-    <main style={styles.page}>
-      <div style={styles.stars} />
+    <main className="theme-light" style={styles.page}>
       <div style={styles.wrap}>{children}</div>
     </main>
   )
@@ -503,17 +503,9 @@ function escapeRegExp(value: string) {
 const styles: Record<string, React.CSSProperties> = {
   page: {
     minHeight: '100vh',
-    background: 'radial-gradient(circle at 16% 10%, rgba(126,249,255,0.10), transparent 30%), radial-gradient(circle at 84% 80%, rgba(255,143,168,0.10), transparent 30%), #040407',
-    color: '#ECFBFF',
-    fontFamily: "'Space Grotesk', system-ui, sans-serif",
-  },
-  stars: {
-    position: 'fixed',
-    inset: 0,
-    opacity: 0.12,
-    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
-    backgroundSize: '68px 68px',
-    pointerEvents: 'none',
+    background: 'var(--paper)',
+    color: 'var(--ink)',
+    fontFamily: 'var(--font-sans)',
   },
   wrap: {
     position: 'relative',
@@ -529,20 +521,21 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: 'space-between',
     gap: 16,
   },
-  brand: { color: '#7EF9FF', fontSize: 18, fontWeight: 700, textDecoration: 'none' },
-  sub: { marginLeft: 12, color: '#6F8AA0', fontSize: 12, fontFamily: "'Space Mono', monospace" },
+  brand: { color: 'var(--teal-ink)', fontSize: 18, fontWeight: 700, textDecoration: 'none', fontFamily: 'var(--font-serif)' },
+  sub: { marginLeft: 12, color: 'var(--ink-muted)', fontSize: 12, fontFamily: 'var(--font-mono)' },
   modeGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12, margin: '14px 0' },
   modeCard: {
     minHeight: 146,
     padding: 15,
-    border: `1px solid ${LIQUID.border}`,
+    border: '1px solid var(--line)',
     borderRadius: 12,
-    background: 'rgba(255,255,255,0.032)',
-    color: '#ECFBFF',
+    background: 'var(--card)',
+    color: 'var(--ink)',
     textAlign: 'left',
     cursor: 'pointer',
     display: 'grid',
     gap: 6,
+    boxShadow: 'var(--card-shadow-sm)',
   },
   modeIcon: {
     width: 28,
@@ -552,28 +545,30 @@ const styles: Record<string, React.CSSProperties> = {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
     fontWeight: 700,
   },
   examRow: { display: 'flex', gap: 8, flexWrap: 'wrap', margin: '0 0 14px' },
   examButton: {
     padding: '7px 11px',
     borderRadius: 999,
-    border: `1px solid ${LIQUID.border}`,
-    background: 'rgba(255,255,255,0.03)',
+    border: '1px solid var(--line)',
+    background: 'transparent',
     cursor: 'pointer',
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
     fontSize: 11,
+    color: 'var(--ink-sub)',
   },
-  questionPanel: { maxWidth: 760, margin: '18px auto 0' },
-  progressTop: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#6F8AA0', fontSize: 12, fontFamily: "'Space Mono', monospace" },
-  progressBar: { height: 4, borderRadius: 999, background: 'rgba(126,249,255,0.10)', margin: '14px 0 24px', overflow: 'hidden' },
-  question: { fontSize: 'clamp(26px, 4vw, 46px)', lineHeight: 1.12, letterSpacing: 0, margin: '0 0 22px' },
+  questionPanel: { maxWidth: 760, margin: '18px auto 0', background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none', boxShadow: 'var(--card-shadow)', color: 'var(--ink)' },
+  progressTop: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--ink-muted)', fontSize: 12, fontFamily: 'var(--font-mono)' },
+  progressBar: { height: 4, borderRadius: 999, background: 'var(--line)', margin: '14px 0 24px', overflow: 'hidden' },
+  question: { fontSize: 'clamp(26px, 4vw, 46px)', lineHeight: 1.12, letterSpacing: 0, margin: '0 0 22px', color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' },
   options: { display: 'grid', gap: 10, marginBottom: 18 },
   option: {
     minHeight: 58,
     borderRadius: 12,
-    border: `1px solid ${LIQUID.border}`,
+    border: '1px solid var(--line)',
+    background: 'var(--card-2)',
     padding: '12px 14px',
     display: 'flex',
     gap: 12,
@@ -582,6 +577,7 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: 'pointer',
     fontSize: 14,
     fontFamily: 'inherit',
+    color: 'var(--ink)',
   },
   optionKey: {
     width: 28,
@@ -592,22 +588,22 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: 'var(--font-mono)',
   },
-  explanation: { margin: '9px 0 0', color: '#DCEAF2', lineHeight: 1.6, fontSize: 14 },
-  explanationZh: { margin: '4px 0 0', color: '#8AA2B2', lineHeight: 1.5, fontSize: 13 },
+  explanation: { margin: '9px 0 0', color: 'var(--ink)', lineHeight: 1.6, fontSize: 14 },
+  explanationZh: { margin: '4px 0 0', color: 'var(--ink-sub)', lineHeight: 1.5, fontSize: 13 },
   nextRow: { display: 'flex', justifyContent: 'flex-end', marginTop: 18 },
-  results: { maxWidth: 560, margin: '32px auto 0', textAlign: 'center' },
-  resultScore: { fontSize: 'clamp(54px, 10vw, 92px)', margin: '16px 0 6px', letterSpacing: 0 },
-  resultText: { color: '#9FB6C6', lineHeight: 1.6, marginBottom: 24 },
+  results: { maxWidth: 560, margin: '32px auto 0', textAlign: 'center', background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none', boxShadow: 'var(--card-shadow)', color: 'var(--ink)' },
+  resultScore: { fontSize: 'clamp(54px, 10vw, 92px)', margin: '16px 0 6px', letterSpacing: 0, color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)' },
+  resultText: { color: 'var(--ink-sub)', lineHeight: 1.6, marginBottom: 24 },
   resultActions: { display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' },
   linkButton: {
     minHeight: 43,
     padding: '0 16px',
     borderRadius: 12,
-    border: `1px solid ${LIQUID.border}`,
-    background: 'rgba(255,255,255,0.035)',
-    color: '#CFE6F2',
+    border: '1px solid var(--line)',
+    background: 'var(--card-2)',
+    color: 'var(--teal-ink)',
     textDecoration: 'none',
     display: 'inline-flex',
     alignItems: 'center',
@@ -615,5 +611,5 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: 13,
     fontWeight: 700,
   },
-  empty: { maxWidth: 520, margin: '18vh auto 0', textAlign: 'center' },
+  empty: { maxWidth: 520, margin: '18vh auto 0', textAlign: 'center', background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none', color: 'var(--ink)' },
 }
