@@ -1,12 +1,21 @@
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
+import { Space_Grotesk, Space_Mono } from 'next/font/google'
+import { Toaster } from 'sonner'
 import './globals.css'
 import { siteConfig } from '@/config/site'
 
-const CatPet = dynamic(
-  () => import('@/components/cat-pet/CatPet').then(m => ({ default: m.CatPet })),
-  { ssr: false },
-)
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: `${siteConfig.projectName} — ${siteConfig.slogan}`,
@@ -15,10 +24,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
       <body>
         {children}
-        <CatPet />
+        <Toaster theme="dark" position="bottom-right" toastOptions={{ style: { background: 'rgba(2,6,23,0.95)', border: '1px solid rgba(56,189,248,0.2)', color: '#ECFBFF', fontFamily: 'var(--font-sans)' } }} />
       </body>
     </html>
   )
