@@ -1,13 +1,8 @@
-// middleware.ts
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 import { SUPABASE_URL, SUPABASE_ANON_KEY, isSupabaseConfigured } from '@/lib/supabase/client'
 
-/**
- * Refreshes the Supabase session cookie on every request.
- * Does not protect any routes — Phase 5B only establishes the auth foundation.
- */
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   if (!isSupabaseConfigured) return NextResponse.next({ request })
 
   let supabaseResponse = NextResponse.next({ request })
