@@ -191,7 +191,6 @@ export function LiquidActionButton({ children, onClick, variant = 'primary', dis
         fontSize: 14,
         fontWeight: 700,
         fontFamily: 'inherit',
-        whiteSpace: 'nowrap',
         cursor: disabled ? 'default' : 'pointer',
         opacity: disabled ? 0.5 : 1,
         boxShadow: primary ? `0 8px 26px ${accent}44` : 'none',

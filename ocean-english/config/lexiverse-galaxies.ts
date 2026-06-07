@@ -61,16 +61,6 @@ export const CONSTELLATIONS: LexiverseConstellation[] = [
     taglineZh: '战略、项目、商务沟通的词汇。',
   },
   {
-    id: 'exam-targets',
-    title: 'Exam Targets',
-    titleZh: '考试光柱',
-    centroid: { x: 0, y: 30, z: 220 },
-    color: '#FFD66B',
-    hullColor: 'rgba(255,214,107,0.05)',
-    tagline: 'Specialised vocabulary clusters for major exams.',
-    taglineZh: '面向各大考试的专项词汇星群。',
-  },
-  {
     id: 'cefr-ladder',
     title: 'CEFR Ladder',
     titleZh: '能级阶梯',
@@ -288,63 +278,7 @@ export const GALAXIES: LexiverseGalaxy[] = [
     visualPosition: { x: -240, y: 0, z: 40 }, colorTheme: '#82B6FF', visualType: 'spiral',
   },
 
-  // ╔═══ 🟡 Exam Targets (8) ══════════════════════════════════════════════╗
-  {
-    id: 'toefl-core', constellationId: 'exam-targets',
-    title: 'TOEFL', titleZh: 'TOEFL 托福',
-    description: 'High-frequency TOEFL vocabulary.', descriptionZh: '托福高频词汇集群。',
-    sourceType: 'exam', filter: { examTags: ['TOEFL'] },
-    visualPosition: { x: -40, y: 60, z: 200 }, colorTheme: '#FFD66B', visualType: 'cluster',
-  },
-  {
-    id: 'ielts-core', constellationId: 'exam-targets',
-    title: 'IELTS', titleZh: 'IELTS 雅思',
-    description: 'High-frequency IELTS vocabulary.', descriptionZh: '雅思高频词汇集群。',
-    sourceType: 'exam', filter: { examTags: ['IELTS'] },
-    visualPosition: { x: 40, y: 60, z: 200 }, colorTheme: '#FFC861', visualType: 'cluster',
-  },
-  {
-    id: 'cet-4-core', constellationId: 'exam-targets',
-    title: 'CET-4', titleZh: '大学英语四级',
-    description: 'CET-4 core vocabulary.', descriptionZh: '大学英语四级核心词汇。',
-    sourceType: 'exam', filter: { examTags: ['CET-4'] },
-    visualPosition: { x: -80, y: 30, z: 220 }, colorTheme: '#FFB070', visualType: 'cluster',
-  },
-  {
-    id: 'cet-6-core', constellationId: 'exam-targets',
-    title: 'CET-6', titleZh: '大学英语六级',
-    description: 'CET-6 core vocabulary.', descriptionZh: '大学英语六级核心词汇。',
-    sourceType: 'exam', filter: { examTags: ['CET-6'] },
-    visualPosition: { x: 80, y: 30, z: 220 }, colorTheme: '#E8C877', visualType: 'cluster',
-  },
-  {
-    id: 'postgraduate-cn', constellationId: 'exam-targets',
-    title: 'Postgraduate Entrance', titleZh: '考研词汇',
-    description: 'Chinese postgrad-entrance exam vocabulary.', descriptionZh: '研究生入学考试词汇。',
-    sourceType: 'exam', filter: { examTags: ['postgraduate'] },
-    visualPosition: { x: -30, y: 0, z: 240 }, colorTheme: '#FFA85A', visualType: 'cluster',
-  },
-  {
-    id: 'gaokao-cn', constellationId: 'exam-targets',
-    title: 'Gaokao', titleZh: '高考词汇',
-    description: 'Chinese college-entrance vocabulary.', descriptionZh: '高考核心词汇。',
-    sourceType: 'exam', filter: { examTags: ['gaokao'] },
-    visualPosition: { x: 30, y: 0, z: 240 }, colorTheme: '#F8B85C', visualType: 'cluster',
-  },
-  {
-    id: 'mixed-exam-prep', constellationId: 'exam-targets',
-    title: 'Mixed Exam Prep', titleZh: '综合应试',
-    description: 'Words common across TOEFL + IELTS.', descriptionZh: '跨考试通用高频词。',
-    sourceType: 'custom', filter: { examTags: ['IELTS', 'TOEFL'] },
-    visualPosition: { x: -60, y: -30, z: 210 }, colorTheme: '#FFB050', visualType: 'nebula',
-  },
-  {
-    id: 'advanced-exam-vocab', constellationId: 'exam-targets',
-    title: 'Advanced Test Vocabulary', titleZh: '高阶考试词汇',
-    description: 'C1+ vocabulary that surfaces in advanced tests.', descriptionZh: 'C1+ 级别的高阶考试词汇。',
-    sourceType: 'custom', filter: { examTags: ['IELTS', 'TOEFL'], cefrLevels: ['C1', 'C2'] },
-    visualPosition: { x: 60, y: -30, z: 210 }, colorTheme: '#FF9E6B', visualType: 'wireframe',
-  },
+// (Exam Targets constellation removed — exams are now an overlay route, not galaxies. See exam-data.js / EXAM_ROUTES handoff.)
 
   // ╔═══ 🟢 CEFR Ladder (6) ═══════════════════════════════════════════════╗
   {

@@ -20,7 +20,6 @@ export interface LexiverseSceneProps {
   currentGalaxyId: string | null
   selectedPlanetId: string | null
   onSelectGalaxy: (id: string) => void
-  onHoverGalaxy?: (galaxy: LexiverseGalaxy | null) => void
   onSelectPlanet: (id: string | null) => void
   slices?: LexiverseStoreSlices
   recentlyMasteredIds?: string[]
@@ -31,7 +30,7 @@ export interface LexiverseSceneProps {
 }
 
 export function LexiverseScene({
-  galaxies, currentGalaxyId, selectedPlanetId, onSelectGalaxy, onSelectPlanet, onHoverGalaxy,
+  galaxies, currentGalaxyId, selectedPlanetId, onSelectGalaxy, onSelectPlanet,
   slices, recentlyMasteredIds, masteryByGalaxyId, echoes, overdueWordIds,
 }: LexiverseSceneProps) {
   return (
@@ -52,7 +51,6 @@ export function LexiverseScene({
         galaxies={galaxies}
         currentGalaxyId={currentGalaxyId}
         onSelectGalaxy={onSelectGalaxy}
-        onHoverGalaxy={onHoverGalaxy}
         masteryByGalaxyId={masteryByGalaxyId}
         echoGalaxyIds={echoes?.galaxyIds}
       />
@@ -70,7 +68,6 @@ export function LexiverseScene({
       )}
 
       <OrbitControls
-        makeDefault
         enableDamping dampingFactor={0.06} rotateSpeed={0.6}
         autoRotate={!currentGalaxyId} autoRotateSpeed={0.16}
         minDistance={20} maxDistance={800} enablePan={false}
@@ -80,7 +77,7 @@ export function LexiverseScene({
 }
 
 function CameraTween({ galaxies, currentGalaxyId }: { galaxies: LexiverseGalaxy[]; currentGalaxyId: string | null }) {
-  const { camera, controls } = useThree() as { camera: THREE.PerspectiveCamera; controls: { target: THREE.Vector3; update?: () => void } | null }
+  const { camera, controls } = useThree() as { camera: THREE.PerspectiveCamera; controls: { target: THREE.Vector3 } | null }
   const desired = useRef({ target: new THREE.Vector3(0, 0, 0), camera: new THREE.Vector3(0, 40, 480) })
   const targetGalaxy = useMemo(
     () => (currentGalaxyId ? galaxies.find(g => g.id === currentGalaxyId) ?? null : null),
@@ -92,7 +89,7 @@ function CameraTween({ galaxies, currentGalaxyId }: { galaxies: LexiverseGalaxy[
       desired.current.target.set(p.x, p.y, p.z)
       const offset = new THREE.Vector3().subVectors(camera.position, new THREE.Vector3(p.x, p.y, p.z))
       if (offset.length() < 80) offset.set(0, 0, 80)
-      offset.normalize().multiplyScalar(280)
+      offset.normalize().multiplyScalar(140)
       desired.current.camera.set(p.x + offset.x, p.y + offset.y, p.z + offset.z)
     } else {
       desired.current.target.set(0, 0, 0)
@@ -101,12 +98,7 @@ function CameraTween({ galaxies, currentGalaxyId }: { galaxies: LexiverseGalaxy[
   }, [targetGalaxy, camera])
   useFrame(() => {
     camera.position.lerp(desired.current.camera, 0.04)
-    if (controls && 'target' in controls) {
-      controls.target.lerp(desired.current.target, 0.06)
-      if ('update' in controls && typeof controls.update === 'function') controls.update()
-    } else {
-      camera.lookAt(desired.current.target)
-    }
+    if (controls && 'target' in controls) controls.target.lerp(desired.current.target, 0.06)
   })
   return null
 }

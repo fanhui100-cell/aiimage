@@ -17,7 +17,7 @@ import { GALAXIES, getGalaxyById, getConstellationById } from '@/config/lexivers
 import { buildGalaxy } from '@/lib/lexiverse/lexiverse-galaxy-builder'
 import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
-import type { LexiverseGalaxy, PlanetAction } from '@/lib/lexiverse/lexiverse-types'
+import type { PlanetAction } from '@/lib/lexiverse/lexiverse-types'
 import { useLearningStore } from '@/store/learningStore'
 
 import { LexiverseScene } from './LexiverseScene'
@@ -81,7 +81,6 @@ export function LexiverseShell() {
   }, [reviewWords])
 
   const [webglOk, setWebglOk] = useState<boolean | null>(null)
-  const [hoveredGalaxy, setHoveredGalaxy] = useState<LexiverseGalaxy | null>(null)
   useEffect(() => { setWebglOk(detectWebGL()) }, [])
 
   const updateSearch = useCallback((patch: Record<string, string | null>) => {
@@ -96,6 +95,7 @@ export function LexiverseShell() {
   const onReturnToUniverse = useCallback(() => updateSearch({ galaxy: null, planet: null }), [updateSearch])
   const onChangeFilter = useCallback((v: string) => updateSearch({ source: v === 'all' ? null : v }), [updateSearch])
   const onReplay = useCallback((gid: string, pid: string) => updateSearch({ galaxy: gid, planet: pid }), [updateSearch])
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return
@@ -116,11 +116,6 @@ export function LexiverseShell() {
     return buildGalaxy(currentGalaxy, dictWords)
   }, [currentGalaxy, dictWords])
 
-  const onDemoPlanet = useCallback(() => {
-    if (!builtGalaxy?.planets.length) return
-    updateSearch({ planet: builtGalaxy.planets[0].id })
-  }, [builtGalaxy, updateSearch])
-
   const recentlyMasteredIds = useRecentlyMasteredIds(builtGalaxy, slices)
 
   // resolver for the ribbon to look up planet meta
@@ -128,7 +123,7 @@ export function LexiverseShell() {
     if (!builtGalaxy) return null
     const p = builtGalaxy.planets.find(p => p.id === pid)
     if (!p) return null
-    return { word: p.word, galaxyId: builtGalaxy.meta.id, color: builtGalaxy.meta.colorTheme ?? '#7EF9FF' }
+    return { word: p.word, galaxyId: builtGalaxy.meta.id, color: p.color }
   }, [builtGalaxy])
 
   const selectedPlanet = useMemo(() => {
@@ -195,7 +190,6 @@ export function LexiverseShell() {
         selectedPlanetId={planetId}
         onSelectGalaxy={onSelectGalaxy}
         onSelectPlanet={onSelectPlanet}
-        onHoverGalaxy={setHoveredGalaxy}
         slices={slices}
         recentlyMasteredIds={recentlyMasteredIds}
         masteryByGalaxyId={masteryByGalaxyId}
@@ -205,8 +199,7 @@ export function LexiverseShell() {
 
       <header style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: '14px 22px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 6, pointerEvents: 'none' }}>
-        <div style={{ pointerEvents: 'auto', display: 'flex', alignItems: 'center', gap: 14 }}>
-          <BrandChip />
+        <div style={{ pointerEvents: 'auto' }}>
           <LexiverseBreadcrumb constellation={currentConstellation ?? null} galaxy={currentGalaxy ?? null} onHomeClick={onReturnToUniverse} />
         </div>
         {!isUniverse && (
@@ -221,10 +214,6 @@ export function LexiverseShell() {
           <GalaxySearch galaxies={GALAXIES} onSelect={onSelectGalaxy} />
           <GalaxyFilter value={filterSource} onChange={onChangeFilter} />
         </div>
-      )}
-
-      {isUniverse && (
-        <GalaxyPreview galaxy={hoveredGalaxy} />
       )}
 
       {/* STAGE D · recently lit ribbon (only in galaxy view) */}
@@ -243,7 +232,6 @@ export function LexiverseShell() {
             visibleGalaxies={visibleGalaxies.length}
             litWordsTotal={slices.litWords.length}
             knownWordsTotal={slices.savedWords.length}
-            reviewWordsTotal={slices.reviewWordIds.length}
           />
         ) : galaxyProgress && currentGalaxy ? (
           <GalaxyHUD galaxyTitle={currentGalaxy.title} galaxyTitleZh={currentGalaxy.titleZh} progress={galaxyProgress} />
@@ -254,21 +242,6 @@ export function LexiverseShell() {
         <LearningStateLegend />
       </div>
 
-      {!isUniverse && (
-        <>
-          <div style={{ position: 'absolute', bottom: 22, left: '50%', transform: 'translateX(-50%)', zIndex: 5, fontSize: 11, color: 'rgba(159,182,198,0.4)', fontFamily: "'Space Mono', monospace", letterSpacing: '0.06em', pointerEvents: 'none' }}>
-            drag to orbit · scroll to zoom · click a planet to fly in
-          </div>
-          <button
-            type="button"
-            onClick={onDemoPlanet}
-            style={{ position: 'absolute', bottom: 54, left: '50%', transform: 'translateX(-50%)', zIndex: 6, padding: '9px 18px', borderRadius: 22, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, color: '#04202B', background: 'linear-gradient(135deg, #7EF9FF, #38BDF8)', border: 'none', boxShadow: '0 8px 26px rgba(56,189,248,0.35)', fontFamily: "'Space Grotesk', system-ui, sans-serif" }}
-          >
-            Show me · 演示点亮一颗星
-          </button>
-        </>
-      )}
-
       <PlanetDetailPanel
         open={!!selectedPlanet}
         planet={selectedPlanet}
@@ -276,52 +249,6 @@ export function LexiverseShell() {
         onAction={onPlanetAction}
         isInReview={isPlanetInReview}
       />
-    </div>
-  )
-}
-
-function BrandChip() {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '7px 13px 7px 8px', borderRadius: 999, background: 'rgba(186,220,252,0.16)', border: '1px solid rgba(190,228,255,0.30)', backdropFilter: 'blur(24px) saturate(1.5)', WebkitBackdropFilter: 'blur(24px) saturate(1.5)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 30px rgba(2,8,26,0.4)' }}>
-      <span style={{ width: 26, height: 26, borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg,#BFF6FF,#7EF9FF 45%,#38BDF8)', color: '#051421', fontWeight: 700, fontSize: 14, boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.6)' }}>
-        L
-      </span>
-      <span style={{ lineHeight: 1.05 }}>
-        <b style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#F2FAFF' }}>LexiOcean</b>
-        <i style={{ fontSize: 10, fontStyle: 'normal', color: '#9DB6CB', fontFamily: "'Space Mono', monospace" }}>Lexiverse · 词汇宇宙</i>
-      </span>
-    </div>
-  )
-}
-
-function GalaxyPreview({ galaxy }: { galaxy: LexiverseGalaxy | null }) {
-  if (!galaxy) return null
-  const tags = [
-    galaxy.sourceType,
-    ...(galaxy.filter.themeTags ?? []),
-    ...(galaxy.filter.domainTags ?? []),
-    ...(galaxy.filter.examTags ?? []),
-    ...(galaxy.filter.cefrLevels ?? []),
-  ].slice(0, 5)
-
-  return (
-    <div style={{ position: 'absolute', left: 22, top: 60, width: 280, zIndex: 6, padding: 14, background: 'rgba(186,220,252,0.16)', border: '1px solid rgba(190,228,255,0.30)', borderRadius: 12, backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', boxShadow: '0 14px 36px rgba(0,0,0,0.5)', pointerEvents: 'none' }}>
-      <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-        <span style={{ width: 10, height: 10, borderRadius: '50%', marginTop: 4, flexShrink: 0, background: galaxy.colorTheme ?? '#7EF9FF', boxShadow: `0 0 8px ${galaxy.colorTheme ?? '#7EF9FF'}` }} />
-        <div>
-          <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: '-0.005em' }}>{galaxy.title}</div>
-          <div style={{ fontSize: 12, color: '#9FB6C6' }}>{galaxy.titleZh}</div>
-        </div>
-      </div>
-      <div style={{ fontSize: 12, color: '#DCEAF2', lineHeight: 1.55, marginTop: 8 }}>{galaxy.description}</div>
-      {galaxy.descriptionZh && <div style={{ fontSize: 12, color: '#8AA2B2', lineHeight: 1.55, marginTop: 4 }}>{galaxy.descriptionZh}</div>}
-      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 10 }}>
-        {tags.map((tag) => (
-          <span key={tag} style={{ fontSize: 10.5, padding: '2px 7px', borderRadius: 4, color: '#7EF9FF', border: '1px solid rgba(126,249,255,0.3)', background: 'rgba(126,249,255,0.06)', fontFamily: "'Space Mono', monospace" }}>
-            {tag}
-          </span>
-        ))}
-      </div>
     </div>
   )
 }
