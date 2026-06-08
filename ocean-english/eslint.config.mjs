@@ -11,10 +11,16 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "public/**",
   ]),
   // R3F animation patterns: Three.js objects are intentionally mutated per-frame.
   {
-    files: ["components/visual/**/*.tsx", "components/visual/**/*.ts"],
+    files: [
+      "components/visual/**/*.tsx",
+      "components/visual/**/*.ts",
+      "components/lexiverse/**/*.tsx",
+      "components/lexiverse/**/*.ts",
+    ],
     rules: {
       "react-hooks/refs": "off",
       "react-hooks/immutability": "off",

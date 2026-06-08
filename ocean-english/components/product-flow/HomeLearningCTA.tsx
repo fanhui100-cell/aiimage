@@ -117,7 +117,7 @@ function ArrowRight() {
 }
 
 export function HomeLearningCTA() {
-  const { reviewWords, getDueWords } = useLearningStore()
+  const { getDueWords } = useLearningStore()
   const dueCount = getDueWords().length
 
   return (
@@ -146,10 +146,10 @@ export function HomeLearningCTA() {
         {/* 2 大模块卡 */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '14px', marginBottom: '14px' }}>
           <LargeCard
-            href="/study"
+            href="/today"
             icon={<IconStudy />}
-            titleZh="学习中枢"
-            titleEn="Study Hub"
+            titleZh="今日中枢"
+            titleEn="Today Hub"
             descZh="每日任务、学习路径和你的进度看板"
           />
           <LargeCard

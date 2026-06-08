@@ -192,7 +192,7 @@ export function LuminousBanyanHero() {
           }}
         >
           <Link
-            href="/study"
+            href="/today"
             style={{
               padding: '12px 26px',
               borderRadius: 'var(--r-pill)',

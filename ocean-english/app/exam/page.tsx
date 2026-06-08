@@ -150,8 +150,8 @@ export default function ExamPage() {
         </GlassCard>
 
         <div style={{ marginTop: '24px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <Link href="/study" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
-            ← 返回学习中心
+          <Link href="/today" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
+            ← 返回今日
           </Link>
           <Button as="a" href="/quiz" variant="ghost" size="sm">
             词汇练习 →

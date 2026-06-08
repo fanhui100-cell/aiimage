@@ -8,7 +8,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 const alternatives = [
   { labelZh: '单词详情', label: 'Word Detail', href: '/dictionary', descZh: '每个单词都有 IPA 音标、发音播放和美式/英式切换' },
   { labelZh: 'AI 导学', label: 'AI Navigator', href: '/chat', descZh: '向 AI 请教发音技巧、音标讲解或跟读建议' },
-  { labelZh: '学习中心', label: 'Study Mode', href: '/study', descZh: '跟踪发音练习记录，完成每日目标' },
+  { labelZh: '今日中枢', label: 'Today Hub', href: '/today', descZh: '跟踪发音练习记录，完成每日目标' },
 ]
 
 export default function PronunciationPage() {
@@ -53,8 +53,8 @@ export default function PronunciationPage() {
         </div>
 
         <div style={{ marginTop: '28px' }}>
-          <Link href="/study" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
-            ← 返回学习中心
+          <Link href="/today" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
+            ← 返回今日
           </Link>
         </div>
       </PageShell>

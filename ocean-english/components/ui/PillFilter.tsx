@@ -14,7 +14,6 @@ interface PillFilterProps {
 }
 
 export function PillFilter({ options, value, onChange, accentColor = '#38BDF8' }: PillFilterProps) {
-  const hex = accentColor.replace('#', '')
   return (
     <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
       {options.map(opt => {

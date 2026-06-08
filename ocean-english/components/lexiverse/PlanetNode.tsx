@@ -40,11 +40,12 @@ export interface PlanetNodeProps {
 }
 
 export function PlanetNode({ planet, isSelected, isHovered, onSelect, onHover, forceLabel, echoing, isReviewOverdue }: PlanetNodeProps) {
+  const r = useMemo(() => readRadius(planet.id, planet.seed, planet.visualType), [planet.id, planet.seed, planet.visualType])
   const built = useMemo(() => {
     const seed = planet.seed ?? hashStr(planet.id)
     const rnd = mulberry32(seed)
-    return buildArchetype(planet.visualType, readRadius(planet), planet.color ?? '#7EF9FF', rnd)
-  }, [planet.id, planet.visualType, planet.color])
+    return buildArchetype(planet.visualType, r, planet.color ?? '#7EF9FF', rnd)
+  }, [planet.id, planet.seed, planet.visualType, planet.color, r])
 
   useEffect(() => () => {
     built.object3D.traverse(o => {
@@ -66,7 +67,6 @@ export function PlanetNode({ planet, isSelected, isHovered, onSelect, onHover, f
   const ringColor = ringColorFor(planet.learningState)
   const groupRef = useRef<THREE.Group>(null)
   const spinTarget = built.spinTarget ?? built.object3D
-  const r = readRadius(planet)
 
   useFrame((state, dt) => {
     if (!groupRef.current) return
@@ -135,11 +135,11 @@ export function PlanetNode({ planet, isSelected, isHovered, onSelect, onHover, f
   )
 }
 
-function readRadius(planet: LexiversePlanet): number {
-  const seed = (planet as { seed?: number }).seed ?? hashStr(planet.id)
+function readRadius(id: string, seedValue: number | undefined, visualType: LexiversePlanet['visualType']): number {
+  const seed = seedValue ?? hashStr(id)
   const r = mulberry32(seed)
   r(); r(); r(); r(); r()
-  switch (planet.visualType) {
+  switch (visualType) {
     case 'galaxy':   return 2.4 + r() * 1.4
     case 'dwarf':    return 0.6 + r() * 0.5
     case 'ringed':   return 1.5 + r() * 1.2

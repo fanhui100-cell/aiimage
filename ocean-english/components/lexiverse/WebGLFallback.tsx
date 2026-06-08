@@ -23,7 +23,7 @@ export function WebGLFallback() {
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 36 }}>
           <Link href="/dictionary" style={{ textDecoration: 'none' }}><LiquidActionButton>Open Dictionary · 词库</LiquidActionButton></Link>
           <Link href="/lexigraph" style={{ textDecoration: 'none' }}><LiquidActionButton variant="secondary">Open LexiGraph · 词图</LiquidActionButton></Link>
-          <Link href="/study" style={{ textDecoration: 'none' }}><LiquidActionButton variant="secondary">Open Study · 学习</LiquidActionButton></Link>
+          <Link href="/today" style={{ textDecoration: 'none' }}><LiquidActionButton variant="secondary">Today Hub · 今日</LiquidActionButton></Link>
           <Link href="/memory" style={{ textDecoration: 'none' }}><LiquidActionButton variant="secondary">Open Memory · 复习</LiquidActionButton></Link>
         </div>
 

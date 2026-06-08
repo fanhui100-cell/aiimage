@@ -8,8 +8,11 @@ export interface LexiverseBreadcrumbProps {
   onHomeClick: () => void
 }
 
+function Sep() {
+  return <span style={{ color: 'rgba(159,182,198,0.35)', margin: '0 8px' }}>/</span>
+}
+
 export function LexiverseBreadcrumb({ constellation, galaxy, onHomeClick }: LexiverseBreadcrumbProps) {
-  const Sep = () => <span style={{ color: 'rgba(159,182,198,0.35)', margin: '0 8px' }}>/</span>
   return (
     <nav aria-label="Lexiverse breadcrumb" style={{ fontFamily: "'Space Grotesk', system-ui, sans-serif", fontSize: 13 }}>
       <button

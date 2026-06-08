@@ -153,7 +153,7 @@ export function AINavigatorContextPanel({ context }: Props) {
           </div>
           <div style={{ marginTop: '10px' }}>
             <Link
-              href="/study"
+              href="/today"
               style={{
                 padding: '5px 12px', borderRadius: '6px', textDecoration: 'none',
                 fontSize: '11px', fontWeight: 600, color: 'rgba(52,211,153,0.7)',

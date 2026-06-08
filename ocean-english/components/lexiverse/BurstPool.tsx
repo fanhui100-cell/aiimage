@@ -11,7 +11,7 @@
 // burst at each new planet's position.
 // ─────────────────────────────────────────────────────────────────────────
 
-import { useRef, useEffect, useMemo } from 'react'
+import { useCallback, useRef, useEffect, useMemo } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
@@ -53,17 +53,7 @@ export function BurstPool({ planets, triggerIds }: BurstPoolProps) {
   }, [scene, burstTex])
 
   // ── react to new triggerIds ─────────────────────────────────────────────
-  useEffect(() => {
-    const byId = new Map(planets.map(p => [p.id, p]))
-    for (const id of triggerIds) {
-      if (seenIds.current.has(id)) continue
-      seenIds.current.add(id)
-      const p = byId.get(id); if (!p) continue
-      spawnBurst(new THREE.Vector3(p.position.x, p.position.y, p.position.z), p.color ?? '#7EF9FF')
-    }
-  }, [triggerIds, planets])
-
-  function spawnBurst(pos: THREE.Vector3, color: string) {
+  const spawnBurst = useCallback((pos: THREE.Vector3, color: string) => {
     const tint = new THREE.Color(color)
     let spawned = 0
     for (let i = 0; i < sprites.current.length && spawned < PER_BURST; i++) {
@@ -88,7 +78,17 @@ export function BurstPool({ planets, triggerIds }: BurstPoolProps) {
     ring.position.copy(pos); ring.lookAt(camera.position)
     scene.add(ring)
     shocks.current.push({ mesh: ring, ttl: 0.95, max: 0.95 })
-  }
+  }, [camera, scene])
+
+  useEffect(() => {
+    const byId = new Map(planets.map(p => [p.id, p]))
+    for (const id of triggerIds) {
+      if (seenIds.current.has(id)) continue
+      seenIds.current.add(id)
+      const p = byId.get(id); if (!p) continue
+      spawnBurst(new THREE.Vector3(p.position.x, p.position.y, p.position.z), p.color ?? '#7EF9FF')
+    }
+  }, [triggerIds, planets, spawnBurst])
 
   useFrame((_, dt) => {
     // sprite particles

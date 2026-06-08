@@ -49,8 +49,8 @@ export default function ReadingPage() {
         </div>
 
         <div style={{ marginTop: '28px' }}>
-          <Link href="/study" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
-            ← 返回学习中心
+          <Link href="/today" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
+            ← 返回今日
           </Link>
         </div>
       </PageShell>
