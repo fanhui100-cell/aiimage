@@ -1,44 +1,44 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
+import { isDarkRoute } from '@/lib/theme-route'
 import type { User } from '@supabase/supabase-js'
 
+function LoginIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+      <polyline points="10 17 15 12 10 7" />
+      <line x1="15" y1="12" x2="3" y2="12" />
+    </svg>
+  )
+}
+
 export function UserMenu() {
+  const pathname = usePathname()
+  const dark = isDarkRoute(pathname)
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(isSupabaseConfigured)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const menuRef = useRef<HTMLDivElement>(null)
+
+  const accent = dark ? 'var(--teal)' : 'var(--teal-ink)'
+  const accentBg = dark ? 'rgba(79,230,206,0.08)' : 'var(--teal-bg)'
+  const accentBorder = dark ? 'rgba(79,230,206,0.3)' : 'rgba(14,140,122,0.25)'
 
   useEffect(() => {
-    if (!isSupabaseConfigured) {
-      return
-    }
-
+    if (!isSupabaseConfigured) return
     const supabase = createClient()
-
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user ?? null)
       setLoading(false)
     })
-
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
       setUser(session?.user ?? null)
     })
-
     return () => subscription.unsubscribe()
   }, [])
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setMenuOpen(false)
-      }
-    }
-    if (menuOpen) document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [menuOpen])
 
   if (!isSupabaseConfigured || loading) return null
 
@@ -47,99 +47,44 @@ export function UserMenu() {
       <Link
         href="/auth/login"
         style={{
-          padding: '6px 14px',
-          borderRadius: '6px',
-          background: 'rgba(56,189,248,0.08)',
-          border: '1px solid rgba(56,189,248,0.3)',
-          color: '#38BDF8',
+          padding: '6px 13px',
+          borderRadius: '8px',
+          background: accentBg,
+          border: `1px solid ${accentBorder}`,
+          color: accent,
           fontSize: '12px',
           textDecoration: 'none',
           whiteSpace: 'nowrap',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '5px',
         }}
       >
+        <LoginIcon />
         Sign In / 登录
       </Link>
     )
   }
 
+  const initial = user.email ? user.email[0].toUpperCase() : '?'
   const displayEmail = user.email
-    ? user.email.length > 18
-      ? user.email.slice(0, 15) + '…'
-      : user.email
+    ? user.email.length > 18 ? user.email.slice(0, 15) + '…' : user.email
     : 'Account'
 
   return (
-    <div ref={menuRef} style={{ position: 'relative' }}>
-      <button
-        onClick={() => setMenuOpen(v => !v)}
-        style={{
-          padding: '6px 12px',
-          borderRadius: '6px',
-          background: menuOpen ? 'rgba(56,189,248,0.15)' : 'rgba(56,189,248,0.08)',
-          border: '1px solid rgba(56,189,248,0.3)',
-          color: '#38BDF8',
-          fontSize: '12px',
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        <span style={{ fontSize: '14px' }}>◎</span>
-        {displayEmail}
-        <span style={{ fontSize: '10px', opacity: 0.7 }}>{menuOpen ? '▲' : '▾'}</span>
-      </button>
-
-      {menuOpen && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '100%',
-            right: 0,
-            marginTop: '6px',
-            width: '180px',
-            background: 'rgba(2,6,23,0.95)',
-            border: '1px solid rgba(56,189,248,0.25)',
-            borderRadius: '10px',
-            padding: '6px',
-            zIndex: 100,
-            boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-          }}
-        >
-          <div style={{ padding: '8px 10px', borderBottom: '1px solid rgba(155,191,202,0.1)', marginBottom: '4px' }}>
-            <div style={{ fontSize: '10px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>SIGNED IN AS</div>
-            <div style={{ fontSize: '11px', color: '#9BBFCA', marginTop: '2px', wordBreak: 'break-all' }}>{user.email}</div>
-          </div>
-
-          <Link
-            href="/profile"
-            onClick={() => setMenuOpen(false)}
-            style={{ display: 'block', padding: '8px 10px', borderRadius: '6px', color: '#9BBFCA', fontSize: '13px', textDecoration: 'none' }}
-          >
-            ◉ Profile / 个人中心
-          </Link>
-
-          <form action="/auth/logout" method="POST">
-            <button
-              type="submit"
-              style={{
-                width: '100%',
-                padding: '8px 10px',
-                borderRadius: '6px',
-                background: 'none',
-                border: 'none',
-                color: 'rgba(239,68,68,0.7)',
-                fontSize: '13px',
-                cursor: 'pointer',
-                textAlign: 'left',
-              }}
-            >
-              ← Sign Out / 登出
-            </button>
-          </form>
-        </div>
-      )}
+    <div
+      title={displayEmail}
+      style={{
+        width: 32, height: 32, borderRadius: '50%',
+        background: accentBg,
+        border: `1px solid ${accentBorder}`,
+        color: accent,
+        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+        fontSize: '13px', fontWeight: 600, fontFamily: 'var(--font-mono)',
+        flexShrink: 0, cursor: 'default',
+      }}
+    >
+      {initial}
     </div>
   )
 }

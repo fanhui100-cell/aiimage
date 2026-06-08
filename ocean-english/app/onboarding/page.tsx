@@ -6,16 +6,17 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { levelOptions } from '@/config/site'
 import { useLearningStore } from '@/store/learningStore'
 import type { LearningLevel } from '@/types/learning'
+import { IconGoalExam, IconGoalDaily, IconGoalAcademic, IconGoalInterest, IconOceanWave } from '@/components/ui/icons'
 
 /* ── Types ── */
 type Goal = 'exam' | 'daily' | 'academic' | 'interest'
 type Step = 1 | 2 | 3 | 4 | 'done'
 
-const GOAL_OPTIONS: { id: Goal; labelZh: string; descZh: string; icon: string }[] = [
-  { id: 'exam',     labelZh: '备考达标', descZh: '系统备战 CET / 考研 / IELTS / TOEFL', icon: '🎯' },
-  { id: 'daily',    labelZh: '日常积累', descZh: '每天学几个词，轻松持续提升',            icon: '🌱' },
-  { id: 'academic', labelZh: '学术提升', descZh: '强化学术词汇与论文阅读能力',            icon: '📚' },
-  { id: 'interest', labelZh: '兴趣探索', descZh: '随心所欲，探索感兴趣的话题词汇',        icon: '✨' },
+const GOAL_OPTIONS: { id: Goal; labelZh: string; descZh: string; icon: React.ReactNode }[] = [
+  { id: 'exam',     labelZh: '备考达标', descZh: '系统备战 CET / 考研 / IELTS / TOEFL', icon: <IconGoalExam /> },
+  { id: 'daily',    labelZh: '日常积累', descZh: '每天学几个词，轻松持续提升',            icon: <IconGoalDaily /> },
+  { id: 'academic', labelZh: '学术提升', descZh: '强化学术词汇与论文阅读能力',            icon: <IconGoalAcademic /> },
+  { id: 'interest', labelZh: '兴趣探索', descZh: '随心所欲，探索感兴趣的话题词汇',        icon: <IconGoalInterest /> },
 ]
 
 const DIRECTION_OPTIONS = [
@@ -181,7 +182,7 @@ export default function OnboardingPage() {
                     onMouseEnter={e => { if (goal !== opt.id) e.currentTarget.style.background = 'rgba(255,255,255,0.06)' }}
                     onMouseLeave={e => { if (goal !== opt.id) e.currentTarget.style.background = 'rgba(255,255,255,0.03)' }}
                   >
-                    <div style={{ fontSize: '22px', marginBottom: '8px' }}>{opt.icon}</div>
+                    <div style={{ marginBottom: '8px', color: goal === opt.id ? 'var(--teal)' : 'rgba(255,255,255,0.55)' }}>{opt.icon}</div>
                     <div style={{ fontFamily: 'var(--font-serif-zh)', fontSize: '16px', fontWeight: 600, color: goal === opt.id ? 'var(--teal)' : 'var(--text-primary)', marginBottom: '4px' }}>
                       {opt.labelZh}
                     </div>
@@ -315,7 +316,7 @@ export default function OnboardingPage() {
           {step === 'done' && (
             <motion.div key="done" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }}>
               <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌊</div>
+                <div style={{ marginBottom: '16px', color: 'var(--teal)', display: 'flex', justifyContent: 'center' }}><IconOceanWave /></div>
                 <h2 style={{ margin: '0 0 8px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(22px, 3vw, 30px)', color: 'var(--text-primary)' }}>
                   设置完成！
                 </h2>

@@ -2,8 +2,8 @@ import { Navbar } from './Navbar'
 import { MobileTabBar } from './MobileTabBar'
 import { AIGuideButton } from './AIGuideButton'
 import { CloudSyncProvider } from '@/components/auth/CloudSyncProvider'
-import { NightModeToggle } from '@/components/ui/NightModeToggle'
 import { MilestoneToast } from '@/components/ui/MilestoneToast'
+import { LevelGate } from '@/components/product-flow/LevelGate'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -14,7 +14,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </CloudSyncProvider>
       <MobileTabBar />
       <AIGuideButton />
-      <NightModeToggle />
+      <LevelGate />
       <MilestoneToast />
     </div>
   )

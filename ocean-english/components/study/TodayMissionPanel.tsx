@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { useLearningStore } from '@/store/learningStore'
 
 interface MissionProgress {
   litCount: number
@@ -13,46 +14,62 @@ interface Props {
   progress: MissionProgress
 }
 
-const MISSIONS = [
-  {
-    id: 'light',
-    label: 'Light 3 word nodes',
-    labelZh: '点亮 3 个词汇节点',
-    current: (p: MissionProgress) => Math.min(p.litCount, 3),
-    target: 3,
-    reward: 15,
-    href: '/lexigraph',
-    icon: '✦',
-    color: 'var(--teal-ink)',
-    colorRaw: '#0e8c7a',
-  },
-  {
-    id: 'review',
-    label: 'Add 1 word to review',
-    labelZh: '加入 1 个单词到复习',
-    current: (p: MissionProgress) => Math.min(p.reviewCount, 1),
-    target: 1,
-    reward: 10,
-    href: '/dictionary',
-    icon: '+',
-    color: '#34D399',
-    colorRaw: '#34D399',
-  },
-  {
-    id: 'pronunciation',
-    label: 'Play pronunciation 3×',
-    labelZh: '播放 3 次发音',
-    current: (p: MissionProgress) => Math.min(p.pronunciationCount, 3),
-    target: 3,
-    reward: 8,
-    href: '/lexigraph',
-    icon: '🔊',
-    color: 'var(--teal-ink)',
-    colorRaw: '#0e8c7a',
-  },
-]
+function getTargets(level: string | null) {
+  switch (level) {
+    case 'beginner':
+    case 'elementary':
+      return { light: 3, review: 1, pronunciation: 3 }
+    case 'advanced':
+    case 'exam-prep':
+      return { light: 8, review: 3, pronunciation: 8 }
+    default: // intermediate + null
+      return { light: 5, review: 2, pronunciation: 5 }
+  }
+}
 
 export function TodayMissionPanel({ progress }: Props) {
+  const { userLevel } = useLearningStore()
+  const t = getTargets(userLevel)
+
+  const MISSIONS = [
+    {
+      id: 'light',
+      label: `Light ${t.light} word nodes`,
+      labelZh: `点亮 ${t.light} 个词汇节点`,
+      current: (p: MissionProgress) => Math.min(p.litCount, t.light),
+      target: t.light,
+      reward: 15,
+      href: '/lexigraph',
+      icon: '✦',
+      color: 'var(--teal-ink)',
+      colorRaw: '#0e8c7a',
+    },
+    {
+      id: 'review',
+      label: `Add ${t.review} word${t.review > 1 ? 's' : ''} to review`,
+      labelZh: `加入 ${t.review} 个单词到复习`,
+      current: (p: MissionProgress) => Math.min(p.reviewCount, t.review),
+      target: t.review,
+      reward: 10,
+      href: '/dictionary',
+      icon: '+',
+      color: '#34D399',
+      colorRaw: '#34D399',
+    },
+    {
+      id: 'pronunciation',
+      label: `Play pronunciation ${t.pronunciation}×`,
+      labelZh: `播放 ${t.pronunciation} 次发音`,
+      current: (p: MissionProgress) => Math.min(p.pronunciationCount, t.pronunciation),
+      target: t.pronunciation,
+      reward: 8,
+      href: '/lexigraph',
+      icon: '🔊',
+      color: 'var(--teal-ink)',
+      colorRaw: '#0e8c7a',
+    },
+  ]
+
   const completedCount = MISSIONS.filter(m => m.current(progress) >= m.target).length
   const allDone = completedCount === MISSIONS.length
 
