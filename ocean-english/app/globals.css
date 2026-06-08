@@ -76,6 +76,14 @@
   --r-card: 18px;
   --r-sm: 12px;
   --r-pill: 999px;
+
+  /* ── 字号 scale ── */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   17px;
+  --text-xl:   20px;
 }
 
 * { box-sizing: border-box; }
@@ -186,13 +194,20 @@ html, body {
 /* 按钮按压缩放 */
 .btn-press:active { transform: scale(0.97); }
 
-/* 通用可点击卡片 hover 效果 */
+/* 通用可点击卡片 hover / focus 效果 */
 .card-hover {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
-.card-hover:hover {
+.card-hover:hover,
+.card-hover:focus-visible {
   transform: translateY(-2px);
   box-shadow: var(--card-shadow);
+  outline: none;
+}
+/* 深色变体 */
+.card-hover.is-dark:hover,
+.card-hover.is-dark:focus-visible {
+  border-color: var(--glass-border-hover) !important;
 }
 
 /* 链接淡入下划线 */
@@ -221,4 +236,96 @@ html, body {
 @media (max-width: 767px) {
   /* bottom 28px + 56px tab bar = 84px */
   .float-btn-stack { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+
+/* ── §B0 Button CSS classes ──────────────────────────────────────────────── */
+.lx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.4;
+  transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.lx-btn:hover   { opacity: 0.88; }
+.lx-btn:active  { transform: scale(0.97); }
+.lx-btn:focus-visible { outline: 2px solid var(--teal-ink); outline-offset: 2px; }
+.lx-btn--primary   { background: var(--teal-ink); color: #fff; border: none; box-shadow: 0 12px 26px -14px rgba(14,140,122,0.8); }
+.lx-btn--ghost     { background: var(--card); border: 1px solid var(--line-strong); color: var(--ink); }
+.lx-btn--dark-ghost { background: rgba(255,255,255,0.03); border: 1px solid rgba(225,238,244,0.3); color: #eaf3f6; }
+.lx-btn--success   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.4); color: #34D399; }
+.lx-btn--secondary { background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.4); color: #8B5CF6; }
+.lx-btn--danger    { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.35); color: #EF4444; }
+.lx-btn--sm  { padding: 8px 16px; font-size: 13px; border-radius: var(--r-pill); }
+.lx-btn--md  { padding: 12px 22px; font-size: 14px; border-radius: var(--r-pill); }
+.lx-btn--lg  { padding: 14px 28px; font-size: 15px; border-radius: var(--r-pill); }
+
+/* ── §B3 SpotlightCard ───────────────────────────────────────────────────── */
+.spotlight-host:hover .spotlight-glow,
+.spotlight-host:focus-within .spotlight-glow { opacity: 1 !important; }
+
+/* ── §B7 ShinyText ───────────────────────────────────────────────────────── */
+.shiny-text {
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyTextSweep var(--shiny-speed, 3.2s) linear infinite;
+}
+@keyframes shinyTextSweep { to { background-position: -220% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text { animation: none; -webkit-text-fill-color: currentColor; color: var(--gold-ink); }
+}
+
+/* ── §B6 PronunciationButton EQ bars ────────────────────────────────────── */
+@keyframes eqBar {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+.eq-bar {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--teal-ink);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: eqBar 0.7s ease-in-out infinite;
+}
+.eq-bar:nth-child(2) { animation-delay: 0.12s; }
+.eq-bar:nth-child(3) { animation-delay: 0.24s; }
+.eq-bar:nth-child(4) { animation-delay: 0.36s; }
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar { animation: none; transform: scaleY(0.6); }
+}
+
+/* ── §B4 TodayMission progress bar + sweep ──────────────────────────────── */
+@keyframes missionBarGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.mission-bar-fill {
+  transform-origin: left;
+  animation: missionBarGrow 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes missionSweep {
+  0%   { opacity: 0; left: -40%; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; left: 110%; }
+}
+.mission-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: missionSweep 0.9s ease-out 0.5s forwards;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mission-bar-fill { animation: none; }
+  .mission-sweep::after { display: none; }
 }

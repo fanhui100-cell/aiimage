@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { isDarkRoute } from '@/lib/theme-route'
 
 const TABS = [
   {
@@ -65,6 +66,12 @@ const TABS = [
 
 export function MobileTabBar() {
   const pathname = usePathname()
+  const dark = isDarkRoute(pathname)
+
+  const bg = dark ? 'rgba(5,9,15,0.95)' : 'var(--card-2)'
+  const border = dark ? '1px solid rgba(79,230,206,0.12)' : '1px solid var(--line)'
+  const activeColor = dark ? 'var(--teal)' : 'var(--teal-ink)'
+  const inactiveColor = dark ? 'rgba(255,255,255,0.38)' : 'var(--ink-muted)'
 
   return (
     <nav
@@ -75,8 +82,8 @@ export function MobileTabBar() {
         left: 0,
         right: 0,
         zIndex: 100,
-        background: 'rgba(5,9,15,0.95)',
-        borderTop: '1px solid rgba(79,230,206,0.12)',
+        background: bg,
+        borderTop: border,
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         display: 'flex',
@@ -85,7 +92,7 @@ export function MobileTabBar() {
     >
       {TABS.map(tab => {
         const active = tab.exact ? pathname === tab.href : (pathname === tab.href || pathname.startsWith(tab.href + '/'))
-        const color = active ? 'var(--teal)' : 'rgba(255,255,255,0.38)'
+        const color = active ? activeColor : inactiveColor
         return (
           <Link
             key={tab.href}
@@ -102,9 +109,28 @@ export function MobileTabBar() {
               color,
               minHeight: '56px',
               transition: 'color 0.15s',
+              position: 'relative',
             }}
           >
-            {tab.icon}
+            {active && (
+              <span style={{
+                position: 'absolute',
+                top: 0,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '2px',
+                borderRadius: '1px',
+                background: activeColor,
+              }} />
+            )}
+            <span style={{
+              display: 'inline-flex',
+              transition: 'transform 0.15s ease',
+              transform: active ? 'scale(1.08)' : 'scale(1)',
+            }}>
+              {tab.icon}
+            </span>
             <span style={{
               fontFamily: 'var(--font-sans)',
               fontSize: '10px',

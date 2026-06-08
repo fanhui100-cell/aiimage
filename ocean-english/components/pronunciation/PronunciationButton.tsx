@@ -13,21 +13,17 @@ interface PronunciationButtonProps {
   onPlayed?: () => void
 }
 
-const ICON_IDLE = '▶'
-const ICON_SPEAKING = '■'
-const ICON_LOADING = '…'
-const ICON_ERROR = '✕'
+function PlayIcon() {
+  return (
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+      <polygon points="5 3 19 12 5 21 5 3" />
+    </svg>
+  )
+}
 
 /**
  * Self-contained pronunciation button using browser SpeechSynthesis.
  * Drop this anywhere a word or example sentence should be speakable.
- *
- * Phase 6D: wired to browser TTS, no external API required.
- * Future: swap PronunciationProvider to use cloud TTS.
- *
- * Usage:
- *   <PronunciationButton text="ubiquitous" accent="us" />
- *   <PronunciationButton text="ubiquitous" accent="uk" size="sm" />
  */
 export function PronunciationButton({ text, accent = 'auto', size = 'sm', onPlayed }: PronunciationButtonProps) {
   const { speak, stop, state, isSupported } = usePronunciation()
@@ -36,18 +32,16 @@ export function PronunciationButton({ text, accent = 'auto', size = 'sm', onPlay
 
   const isSpeaking = state === 'speaking' || state === 'loading'
   const isError = state === 'error'
-
-  const icon = state === 'speaking'
-    ? ICON_SPEAKING
-    : state === 'loading'
-    ? ICON_LOADING
-    : isError
-    ? ICON_ERROR
-    : ICON_IDLE
+  const isLoading = state === 'loading'
 
   const accentLabel = accent === 'uk' ? 'UK' : accent === 'au' ? 'AU' : accent === 'auto' ? 'Auto' : 'US'
 
   const handleClick = () => {
+    if (isError) {
+      speak(text, { accent, rate: 0.9 })
+      onPlayed?.()
+      return
+    }
     if (!text.trim()) return
     if (isSpeaking) {
       stop()
@@ -63,42 +57,52 @@ export function PronunciationButton({ text, accent = 'auto', size = 'sm', onPlay
     gap: '4px',
     border: 'none',
     borderRadius: '5px',
-    cursor: isError ? 'default' : 'pointer',
+    cursor: 'pointer',
     transition: 'opacity 0.15s',
     userSelect: 'none',
-    // Sizing
     ...(size === 'sm'
       ? { padding: '3px 7px', fontSize: '11px' }
       : { padding: '5px 12px', fontSize: '13px' }),
-    // State-based color
     background: isError
-      ? 'rgba(248,113,113,0.08)'
+      ? 'rgba(191,74,48,0.08)'
       : isSpeaking
-      ? 'rgba(56,189,248,0.15)'
-      : 'rgba(56,189,248,0.07)',
+      ? 'rgba(14,140,122,0.12)'
+      : 'rgba(14,140,122,0.06)',
     color: isError
-      ? '#F87171'
-      : isSpeaking
-      ? '#38BDF8'
-      : 'rgba(56,189,248,0.8)',
-    outline: isSpeaking ? '1px solid rgba(56,189,248,0.35)' : '1px solid rgba(56,189,248,0.15)',
+      ? 'var(--rose-ink)'
+      : 'var(--teal-ink)',
+    outline: isSpeaking
+      ? '1px solid rgba(14,140,122,0.35)'
+      : isError
+      ? '1px solid rgba(191,74,48,0.3)'
+      : '1px solid rgba(14,140,122,0.15)',
+    opacity: isLoading ? 0.7 : 1,
   }
 
   return (
     <button
       onClick={handleClick}
       style={baseStyle}
-      title={isSpeaking ? 'Stop / 停止' : `Pronounce (${accentLabel}) / 朗读`}
-      aria-label={isSpeaking ? 'Stop pronunciation' : `Pronounce "${text}" in ${accentLabel} accent`}
+      title={isError ? 'Retry / 重试' : isSpeaking ? 'Stop / 停止' : `Pronounce (${accentLabel}) / 朗读`}
+      aria-label={isError ? 'Retry pronunciation' : isSpeaking ? 'Stop pronunciation' : `Pronounce "${text}" in ${accentLabel} accent`}
       aria-pressed={isSpeaking}
     >
-      <span style={{ fontFamily: 'var(--font-mono)', lineHeight: 1 }}>
-        {icon}
-      </span>
-      {size === 'md' && (
-        <span>
-          {isSpeaking ? 'Stop' : accentLabel}
+      {isSpeaking ? (
+        <span style={{ display: 'inline-flex', alignItems: 'flex-end', gap: '2px', height: '14px' }}>
+          <i className="eq-bar" />
+          <i className="eq-bar" />
+          <i className="eq-bar" />
+          <i className="eq-bar" />
         </span>
+      ) : isLoading ? (
+        <span style={{ fontFamily: 'var(--font-mono)', lineHeight: 1, opacity: 0.7 }}>…</span>
+      ) : isError ? (
+        <span style={{ fontFamily: 'var(--font-mono)', lineHeight: 1 }}>↺</span>
+      ) : (
+        <PlayIcon />
+      )}
+      {size === 'md' && !isSpeaking && (
+        <span>{isError ? 'Retry' : accentLabel}</span>
       )}
     </button>
   )

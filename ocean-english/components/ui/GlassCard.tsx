@@ -10,11 +10,13 @@ interface GlassCardProps {
   /** @deprecated 新代码请用 theme 控制;旧组件 hover 边框颜色(向后兼容) */
   accentColor?: string
   onClick?: () => void
+  tabIndex?: number
   style?: React.CSSProperties
 }
 
-export function GlassCard({ children, className, theme, accentColor, onClick, style }: GlassCardProps) {
+export function GlassCard({ children, className, theme, accentColor, onClick, tabIndex, style }: GlassCardProps) {
   const isLight = theme === 'light'
+  const isDark = !isLight
 
   const base: React.CSSProperties = isLight
     ? {
@@ -23,7 +25,8 @@ export function GlassCard({ children, className, theme, accentColor, onClick, st
         borderRadius: 'var(--r-card)',
         boxShadow: 'var(--card-shadow-sm)',
         padding: '20px 22px',
-        transition: 'border-color 0.2s, box-shadow 0.2s, transform 0.2s',
+        // accent border on hover via CSS if accentColor provided
+        ...(accentColor ? { ['--accent' as string]: accentColor } : {}),
       }
     : {
         background: 'var(--glass-bg)',
@@ -31,45 +34,18 @@ export function GlassCard({ children, className, theme, accentColor, onClick, st
         borderRadius: 'var(--r-card)',
         boxShadow: 'var(--glass-shadow)',
         padding: '20px 22px',
-        transition: 'border-color 0.2s, background 0.2s, transform 0.2s',
       }
-
-  function onEnter(e: React.MouseEvent<HTMLDivElement>) {
-    const el = e.currentTarget
-    if (accentColor) {
-      el.style.borderColor = `${accentColor}40`
-      el.style.background = `${accentColor}08`
-    } else if (isLight) {
-      el.style.borderColor = 'rgba(14,140,122,0.4)'
-      el.style.transform = 'translateY(-2px)'
-    } else {
-      el.style.borderColor = 'var(--glass-border-hover)'
-      el.style.background = 'var(--glass-bg-hover)'
-      el.style.transform = 'translateY(-2px)'
-    }
-  }
-
-  function onLeave(e: React.MouseEvent<HTMLDivElement>) {
-    const el = e.currentTarget
-    if (accentColor) {
-      el.style.borderColor = 'var(--glass-border)'
-      el.style.background = ''
-    } else if (isLight) {
-      el.style.borderColor = 'var(--line)'
-      el.style.transform = ''
-    } else {
-      el.style.borderColor = 'var(--glass-border)'
-      el.style.background = ''
-      el.style.transform = ''
-    }
-  }
 
   return (
     <div
-      className={cn(onClick && 'cursor-pointer', className)}
+      className={cn(
+        'card-hover',
+        isDark && 'is-dark',
+        onClick && 'cursor-pointer',
+        className,
+      )}
       onClick={onClick}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
+      tabIndex={tabIndex}
       style={{ ...base, ...style }}
     >
       {children}

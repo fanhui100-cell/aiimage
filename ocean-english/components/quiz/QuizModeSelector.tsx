@@ -5,7 +5,7 @@ interface QuizModeSelectorProps {
   wordParam?: string | null
 }
 
-const linkBase = {
+const linkBase: React.CSSProperties = {
   display: 'block',
   padding: '12px 14px',
   borderRadius: '10px',
@@ -14,7 +14,7 @@ const linkBase = {
   background: 'rgba(255,255,255,0.03)',
   color: '#9BBFCA',
   fontSize: '13px',
-} satisfies React.CSSProperties
+}
 
 export function QuizModeSelector({ activeMode, wordParam }: QuizModeSelectorProps) {
   const wordSuffix = wordParam ? `&word=${encodeURIComponent(wordParam)}` : ''
@@ -35,13 +35,13 @@ export function QuizModeSelector({ activeMode, wordParam }: QuizModeSelectorProp
             href={mode.href}
             style={{
               ...linkBase,
-              border: active ? '1px solid rgba(56,189,248,0.55)' : linkBase.border,
-              background: active ? 'rgba(56,189,248,0.1)' : linkBase.background,
-              color: active ? '#38BDF8' : linkBase.color,
+              border: active ? '1px solid rgba(79,230,206,0.45)' : linkBase.border,
+              background: active ? 'rgba(79,230,206,0.08)' : linkBase.background,
+              color: active ? 'var(--teal)' : linkBase.color,
             }}
           >
             <div style={{ fontWeight: 700, marginBottom: '3px' }}>{mode.title}</div>
-            <div style={{ color: active ? 'rgba(125,211,252,0.75)' : 'rgba(155,191,202,0.65)' }}>{mode.desc}</div>
+            <div style={{ color: active ? 'rgba(79,230,206,0.65)' : 'rgba(155,191,202,0.65)' }}>{mode.desc}</div>
           </Link>
         )
       })}

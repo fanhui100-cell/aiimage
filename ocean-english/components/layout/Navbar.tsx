@@ -1,17 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { UserMenu } from '@/components/auth/UserMenu'
-
-/* 深色形态路由前缀:首页 / 星图 / Lexiverse / 探索 */
-const DARK_ROUTES = ['/', '/lexigraph', '/lexiverse', '/explore']
-
-function isDarkRoute(pathname: string) {
-  return DARK_ROUTES.some(r => r === '/' ? pathname === '/' : pathname.startsWith(r))
-}
+import { isDarkRoute } from '@/lib/theme-route'
 
 /* 菜单/关闭图标 SVG */
 function MenuIcon() {
@@ -54,6 +48,7 @@ export function Navbar() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+  const moreRef = useRef<HTMLDivElement>(null)
   const dark = isDarkRoute(pathname)
 
   /* ── 颜色 token ── */
@@ -71,6 +66,26 @@ export function Navbar() {
   function closeMore() {
     setMoreOpen(false)
   }
+
+  /* 点击外部 + Esc 关闭下拉 */
+  useEffect(() => {
+    if (!moreOpen) return
+    function handle(e: MouseEvent | KeyboardEvent) {
+      if (e instanceof KeyboardEvent) {
+        if (e.key === 'Escape') closeMore()
+        return
+      }
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        closeMore()
+      }
+    }
+    document.addEventListener('mousedown', handle)
+    document.addEventListener('keydown', handle)
+    return () => {
+      document.removeEventListener('mousedown', handle)
+      document.removeEventListener('keydown', handle)
+    }
+  }, [moreOpen])
 
   return (
     <>
@@ -172,15 +187,17 @@ export function Navbar() {
         {/* ── 右侧:更多下拉 + 等级胶囊 + 头像 ── */}
         <div className="flex items-center gap-3 shrink-0">
 
-          {/* 桌面端"更多"下拉 — hover 触发,避免 onBlur 时序问题 */}
+          {/* 桌面端"更多"下拉 — click 触发，支持 Esc + 点击外部关闭 */}
           <div
+            ref={moreRef}
             className="hidden md:block"
             style={{ position: 'relative' }}
-            onMouseEnter={() => setMoreOpen(true)}
-            onMouseLeave={() => setMoreOpen(false)}
           >
             <button
               type="button"
+              aria-expanded={moreOpen}
+              aria-haspopup="menu"
+              onClick={() => setMoreOpen(p => !p)}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -201,16 +218,12 @@ export function Navbar() {
 
             {moreOpen && (
               <div
+                role="menu"
                 style={{
                   position: 'absolute',
-                  top: '100%',
+                  top: 'calc(100% + 8px)',
                   right: 0,
-                  paddingTop: '8px',  /* bridge to prevent gap closing dropdown */
                   zIndex: 60,
-                }}
-              >
-              <div
-                style={{
                   background: dropBg,
                   border: `1px solid ${dropBorder}`,
                   borderRadius: 'var(--r-sm)',
@@ -226,6 +239,8 @@ export function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      role="menuitem"
+                      onClick={closeMore}
                       style={{
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -245,7 +260,6 @@ export function Navbar() {
                     </Link>
                   )
                 })}
-              </div>
               </div>
             )}
           </div>

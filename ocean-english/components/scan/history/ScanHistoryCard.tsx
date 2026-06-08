@@ -43,8 +43,8 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
 
   return (
     <div style={{
-      background: 'rgba(255,255,255,0.02)',
-      border: '1px solid rgba(155,191,202,0.12)',
+      background: 'var(--glass-bg)',
+      border: '1px solid var(--glass-border)',
       borderRadius: '12px',
       padding: '16px 18px',
     }}>
@@ -55,7 +55,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
             <span style={{
               fontSize: '14px',
               fontWeight: 700,
-              color: '#ECFBFF',
+              color: 'var(--text-primary)',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
@@ -67,9 +67,9 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
               fontSize: '10px',
               padding: '1px 7px',
               borderRadius: '3px',
-              background: 'rgba(56,189,248,0.1)',
-              border: '1px solid rgba(56,189,248,0.25)',
-              color: '#38BDF8',
+              background: 'rgba(79,230,206,0.1)',
+              border: '1px solid rgba(79,230,206,0.25)',
+              color: 'var(--teal)',
               fontFamily: 'var(--font-mono)',
             }}>
               {FILETYPE_LABELS[doc.fileType] ?? doc.fileType}
@@ -86,7 +86,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
               {doc.status}
             </span>
           </div>
-          <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
             {formatDate(doc.createdAt)} · {doc.extractionMethod}
           </div>
         </div>
@@ -97,7 +97,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
 
       {/* Summary */}
       {(doc.summaryZh || doc.summaryEn) && (
-        <p style={{ margin: '0 0 10px', fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+        <p style={{ margin: '0 0 10px', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
           {truncate(doc.summaryZh || doc.summaryEn, 120)}
         </p>
       )}
@@ -106,7 +106,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '12px' }}>
         {[
           { label: 'Questions', value: doc.questionCount, color: '#8B5CF6' },
-          { label: 'Words', value: doc.vocabularyCount, color: '#38BDF8' },
+          { label: 'Words', value: doc.vocabularyCount, color: 'var(--teal)' },
           { label: 'Notes', value: doc.studyNoteCount, color: '#34D399' },
         ].map(({ label, value, color }) => (
           <div key={label} style={{ fontSize: '11px', color, fontFamily: 'var(--font-mono)' }}>
@@ -132,9 +132,9 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
           style={{
             padding: '6px 14px',
             borderRadius: '7px',
-            background: 'rgba(56,189,248,0.1)',
-            border: '1px solid rgba(56,189,248,0.3)',
-            color: '#38BDF8',
+            background: 'rgba(79,230,206,0.08)',
+            border: '1px solid rgba(79,230,206,0.25)',
+            color: 'var(--teal)',
             fontSize: '12px',
             fontWeight: 600,
             textDecoration: 'none',

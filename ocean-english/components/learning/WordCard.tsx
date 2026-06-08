@@ -1,14 +1,16 @@
 'use client'
 
+import { useRef } from 'react'
 import Link from 'next/link'
+import { toast } from 'sonner'
 import { useLearningStore } from '@/store/learningStore'
+import { SparkBurst, type SparkBurstHandle } from '@/components/ui/motion/SparkBurst'
 import type { Word } from '@/types/word'
 
 interface WordCardProps {
   word: Word
 }
 
-/* 线性收藏星 SVG — 选中金色,未选中弱色 */
 function StarIcon({ filled }: { filled: boolean }) {
   return (
     <svg
@@ -22,17 +24,26 @@ function StarIcon({ filled }: { filled: boolean }) {
 }
 
 export function WordCard({ word }: WordCardProps) {
-  const { isWordSaved, saveWord, unsaveWord } = useLearningStore()
+  const { isWordSaved, saveWord, unsaveWord, addToReview } = useLearningStore()
   const saved = isWordSaved(word.id)
+  const sparkRef = useRef<SparkBurstHandle>(null)
 
   function toggleSave(e: React.MouseEvent) {
     e.preventDefault()
-    saved ? unsaveWord(word.id) : saveWord(word.id)
+    if (saved) {
+      unsaveWord(word.id)
+    } else {
+      saveWord(word.id)
+      addToReview(word.id, word.word)
+      sparkRef.current?.fire()
+      toast.success('已加入复习 · +10★')
+    }
   }
 
   return (
     <Link
       href={`/word/${word.id}`}
+      className="card-hover"
       style={{
         display: 'block',
         textDecoration: 'none',
@@ -41,17 +52,6 @@ export function WordCard({ word }: WordCardProps) {
         borderRadius: 'var(--r-card)',
         padding: '20px 22px',
         boxShadow: 'var(--card-shadow-sm)',
-        transition: 'border-color 0.2s, transform 0.2s',
-      }}
-      onMouseEnter={e => {
-        const el = e.currentTarget as HTMLAnchorElement
-        el.style.borderColor = 'rgba(14,140,122,0.4)'
-        el.style.transform = 'translateY(-2px)'
-      }}
-      onMouseLeave={e => {
-        const el = e.currentTarget as HTMLAnchorElement
-        el.style.borderColor = 'var(--line)'
-        el.style.transform = ''
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
@@ -72,13 +72,15 @@ export function WordCard({ word }: WordCardProps) {
           </div>
         </div>
         {/* 收藏按钮 */}
-        <button
-          onClick={toggleSave}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', flexShrink: 0, marginLeft: '8px' }}
-          aria-label={saved ? '取消收藏' : '收藏单词'}
-        >
-          <StarIcon filled={saved} />
-        </button>
+        <SparkBurst ref={sparkRef} style={{ marginLeft: '8px', flexShrink: 0 }}>
+          <button
+            onClick={toggleSave}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}
+            aria-label={saved ? '取消收藏' : '收藏单词'}
+          >
+            <StarIcon filled={saved} />
+          </button>
+        </SparkBurst>
       </div>
 
       {/* 考试标签 */}

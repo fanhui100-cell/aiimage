@@ -42,15 +42,15 @@ export function ExampleSentencePlayer({ sentence, accent = 'auto', onPlayed }: P
         borderRadius: '4px',
         fontSize: '10px',
         fontFamily: 'var(--font-mono)',
-        cursor: isSpeaking ? 'default' : 'pointer',
-        border: `1px solid ${isError ? 'rgba(248,113,113,0.22)' : isSpeaking ? 'rgba(56,189,248,0.38)' : 'rgba(56,189,248,0.18)'}`,
-        background: isError ? 'rgba(248,113,113,0.06)' : isSpeaking ? 'rgba(56,189,248,0.12)' : 'transparent',
-        color: isError ? '#F87171' : isSpeaking ? '#38BDF8' : 'rgba(56,189,248,0.6)',
+        cursor: 'pointer',
+        border: `1px solid ${isError ? 'rgba(191,74,48,0.22)' : isSpeaking ? 'rgba(14,140,122,0.38)' : 'rgba(14,140,122,0.18)'}`,
+        background: isError ? 'rgba(191,74,48,0.06)' : isSpeaking ? 'rgba(14,140,122,0.1)' : 'transparent',
+        color: isError ? 'var(--rose-ink)' : 'var(--teal-ink)',
         flexShrink: 0,
         lineHeight: 1,
       }}
     >
-      <span>{isSpeaking ? '■' : isError ? '✕' : '▶'}</span>
+      <span>{isSpeaking ? '■' : isError ? '↺' : '▶'}</span>
       <span>EN</span>
     </button>
   )

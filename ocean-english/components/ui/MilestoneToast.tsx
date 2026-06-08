@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMotivationStore } from '@/store/useMotivationStore'
+import { ShinyText } from '@/components/ui/motion/ShinyText'
 import { checkMilestoneCrossed, type Milestone } from '@/lib/motivation/starfield'
 
 export function MilestoneToast() {
@@ -73,10 +74,9 @@ export function MilestoneToast() {
                 fontFamily: 'var(--font-serif-zh)',
                 fontWeight: 600,
                 fontSize: '15px',
-                color: active.color,
                 marginBottom: '2px',
               }}>
-                {active.labelZh}
+                <ShinyText baseColor={active.color} shineColor="#ffffff">{active.labelZh}</ShinyText>
               </div>
               <div style={{
                 fontFamily: 'var(--font-news)',

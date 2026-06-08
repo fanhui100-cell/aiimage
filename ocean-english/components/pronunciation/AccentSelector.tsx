@@ -17,7 +17,6 @@ const OPTIONS: Array<{ value: Accent; label: string; ariaLabel: string }> = [
 /**
  * Compact 3-button accent toggle (Auto / US / UK).
  * Reads/writes the shared lexiocean-accent-preference localStorage key via pronunciation-client helpers.
- * Fully self-contained — drop it anywhere near a PronunciationButton.
  */
 export function AccentSelector({ value, onChange }: Props) {
   return (
@@ -44,9 +43,9 @@ export function AccentSelector({ value, onChange }: Props) {
               fontFamily: 'var(--font-mono)',
               letterSpacing: '0.05em',
               cursor: 'pointer',
-              border: `1px solid ${active ? 'rgba(56,189,248,0.55)' : 'rgba(56,189,248,0.18)'}`,
-              background: active ? 'rgba(56,189,248,0.14)' : 'transparent',
-              color: active ? '#38BDF8' : 'rgba(155,191,202,0.5)',
+              border: `1px solid ${active ? 'rgba(14,140,122,0.5)' : 'rgba(14,140,122,0.18)'}`,
+              background: active ? 'rgba(14,140,122,0.12)' : 'transparent',
+              color: active ? 'var(--teal-ink)' : 'var(--ink-muted)',
               transition: 'color 0.12s, background 0.12s, border-color 0.12s',
               lineHeight: 1.4,
             }}

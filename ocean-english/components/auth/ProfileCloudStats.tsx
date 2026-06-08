@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import type { DbCloudStats } from '@/types/database'
+import { CountUp } from '@/components/ui/motion/CountUp'
 
 interface StatTile {
   label: string
@@ -23,9 +24,9 @@ function StatGrid({ items }: { items: StatTile[] }) {
             padding: '10px 12px',
           }}
         >
-          <div style={{ fontSize: '20px', fontWeight: 700, color, marginBottom: '2px' }}>{value}</div>
-          <div style={{ fontSize: '11px', color: '#9BBFCA' }}>{label}</div>
-          <div style={{ fontSize: '10px', color: 'rgba(155,191,202,0.5)' }}>{labelZh}</div>
+          <div style={{ fontSize: '20px', fontWeight: 700, color, marginBottom: '2px' }}><CountUp to={value} /></div>
+          <div style={{ fontSize: '11px', color: 'var(--text-secondary)' }}>{label}</div>
+          <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>{labelZh}</div>
         </div>
       ))}
     </div>
@@ -36,7 +37,7 @@ function SectionLabel({ text }: { text: string }) {
   return (
     <div style={{
       fontSize: '10px',
-      color: 'rgba(56,189,248,0.45)',
+      color: 'var(--section-head-color)',
       fontFamily: 'var(--font-mono)',
       letterSpacing: '0.08em',
       marginTop: '14px',
@@ -60,9 +61,9 @@ export function ProfileCloudStats() {
   }, [])
 
   const learningItems: StatTile[] = stats ? [
-    { label: 'Saved Words', labelZh: '收藏单词', value: stats.savedWordsCount, color: '#FFD76A' },
-    { label: 'Review Words', labelZh: '复习队列', value: stats.reviewWordsCount, color: '#38BDF8' },
-    { label: 'Wrong Answers', labelZh: '错题', value: stats.wrongAnswersCount, color: '#F87171' },
+    { label: 'Saved Words', labelZh: '收藏单词', value: stats.savedWordsCount, color: 'var(--gold)' },
+    { label: 'Review Words', labelZh: '复习队列', value: stats.reviewWordsCount, color: 'var(--teal)' },
+    { label: 'Wrong Answers', labelZh: '错题', value: stats.wrongAnswersCount, color: 'var(--rose)' },
     { label: 'Quiz Sessions', labelZh: '练习记录', value: stats.quizSessionsCount, color: '#34D399' },
   ] : []
 
@@ -73,21 +74,21 @@ export function ProfileCloudStats() {
   ] : []
 
   const chatItems: StatTile[] = stats ? [
-    { label: 'Chat Sessions', labelZh: '聊天会话', value: stats.chatSessionsCount, color: '#38BDF8' },
+    { label: 'Chat Sessions', labelZh: '聊天会话', value: stats.chatSessionsCount, color: 'var(--teal)' },
     { label: 'Chat Messages', labelZh: '消息记录', value: stats.chatMessagesCount, color: '#6EE7B7' },
   ] : []
 
   return (
     <div style={{
-      background: 'rgba(255,255,255,0.02)',
-      border: '1px solid rgba(155,191,202,0.1)',
+      background: 'var(--glass-bg)',
+      border: '1px solid var(--glass-border)',
       borderRadius: '10px',
       padding: '16px 18px',
       marginBottom: '20px',
     }}>
       <div style={{
         fontSize: '11px',
-        color: 'rgba(56,189,248,0.6)',
+        color: 'var(--section-head-color)',
         fontFamily: 'var(--font-mono)',
         marginBottom: '4px',
         letterSpacing: '0.1em',
@@ -96,11 +97,11 @@ export function ProfileCloudStats() {
       </div>
 
       {loading ? (
-        <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.4)', marginTop: '10px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '10px' }}>
           Loading cloud stats…
         </div>
       ) : !stats ? (
-        <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', marginTop: '10px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '10px' }}>
           No cloud data yet. Start studying to sync your progress.
           <br />
           <span style={{ fontSize: '11px' }}>暂无云端数据，开始学习后将自动同步。</span>
@@ -119,7 +120,7 @@ export function ProfileCloudStats() {
           <div style={{
             marginTop: '14px',
             fontSize: '11px',
-            color: 'rgba(155,191,202,0.4)',
+            color: 'var(--text-muted)',
             lineHeight: 1.5,
           }}>
             Local-first — new data syncs automatically when signed in.

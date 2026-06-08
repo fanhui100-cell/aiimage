@@ -8,8 +8,10 @@ import { PillFilter } from '@/components/ui/PillFilter'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { GlassCard } from '@/components/ui/GlassCard'
+import { SectionHeader } from '@/components/ui/SectionHeader'
 import { WordSearchBox } from '@/components/learning/WordSearchBox'
 import { WordCard } from '@/components/learning/WordCard'
+import { AnimatedList } from '@/components/ui/motion/AnimatedList'
 import { useLearningStore } from '@/store/learningStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { Word, ExamFrequency } from '@/types/word'
@@ -112,12 +114,9 @@ export default function DictionaryPage() {
   return (
     <AppShell>
       <PageShell maxWidth={960} theme="light">
-        {/* 区块小标题 */}
-        <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.7 }}>
-          词汇根系 · Vocabulary
-        </p>
-        {/* 中文领衔主标 */}
-        <h1 style={{ margin: '0 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
+        {/* 页面标题 */}
+        <SectionHeader label="VOCABULARY · 词汇根系" theme="light" divider style={{ marginTop: 0 }} />
+        <h1 style={{ margin: '10px 0 4px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px, 3.5vw, 38px)', color: 'var(--ink)', letterSpacing: '0.01em' }}>
           词汇根系
         </h1>
         <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: '15px', color: 'var(--teal-ink)' }}>
@@ -163,11 +162,11 @@ export default function DictionaryPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>LEVEL</span>
-              <PillFilter options={levelOptions} value={levelFilter} onChange={setLevelFilter} />
+              <PillFilter options={levelOptions} value={levelFilter} onChange={setLevelFilter} theme="light" />
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '11px', letterSpacing: '0.12em', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', flexShrink: 0, minWidth: '48px' }}>DIFF</span>
-              <PillFilter options={difficultyOptions} value={diffFilter} onChange={setDiffFilter} accentColor="#8B5CF6" />
+              <PillFilter options={difficultyOptions} value={diffFilter} onChange={setDiffFilter} accentColor="#8B5CF6" theme="light" />
             </div>
           </div>
         </GlassCard>
@@ -181,10 +180,10 @@ export default function DictionaryPage() {
         {loading && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
             {Array.from({ length: 8 }, (_, i) => (
-              <div key={i} style={{ borderRadius: '10px', padding: '16px 20px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)' }}>
-                <Skeleton height={20} width="60%" style={{ marginBottom: '8px' }} />
-                <Skeleton height={12} width="40%" style={{ marginBottom: '8px' }} />
-                <Skeleton height={12} count={2} />
+              <div key={i} style={{ borderRadius: '10px', padding: '16px 20px', background: 'var(--card)', border: '1px solid var(--line)' }}>
+                <Skeleton height={20} width="60%" theme="light" style={{ marginBottom: '8px' }} />
+                <Skeleton height={12} width="40%" theme="light" style={{ marginBottom: '8px' }} />
+                <Skeleton height={12} count={2} theme="light" />
               </div>
             ))}
           </div>
@@ -203,11 +202,11 @@ export default function DictionaryPage() {
 
         {/* Word list */}
         {!loading && results.length > 0 && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
+          <AnimatedList style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '12px' }}>
             {results.map(w => (
               <WordCard key={w.id} word={toWordCardProp(w)} />
             ))}
-          </div>
+          </AnimatedList>
         )}
       </PageShell>
     </AppShell>

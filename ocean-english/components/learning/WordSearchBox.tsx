@@ -7,6 +7,15 @@ interface WordSearchBoxProps {
   placeholder?: string
 }
 
+function SearchIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  )
+}
+
 export function WordSearchBox({ onSearch, placeholder = 'Search words... / 搜索单词...' }: WordSearchBoxProps) {
   const [value, setValue] = useState('')
 
@@ -31,12 +40,13 @@ export function WordSearchBox({ onSearch, placeholder = 'Search words... / 搜�
           left: '14px',
           top: '50%',
           transform: 'translateY(-50%)',
-          color: 'rgba(56,189,248,0.5)',
-          fontSize: '16px',
+          color: 'var(--teal-ink)',
+          opacity: 0.5,
           pointerEvents: 'none',
+          display: 'flex',
         }}
       >
-        🔍
+        <SearchIcon />
       </span>
       <input
         type="text"
@@ -46,17 +56,17 @@ export function WordSearchBox({ onSearch, placeholder = 'Search words... / 搜�
         style={{
           width: '100%',
           padding: '14px 44px 14px 44px',
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(56,189,248,0.3)',
+          background: 'var(--card-2)',
+          border: '1px solid var(--line-strong)',
           borderRadius: '10px',
-          color: '#ECFBFF',
+          color: 'var(--ink)',
           fontSize: '15px',
           outline: 'none',
           transition: 'border-color 0.2s',
           boxSizing: 'border-box',
         }}
-        onFocus={e => (e.target.style.borderColor = 'rgba(56,189,248,0.7)')}
-        onBlur={e => (e.target.style.borderColor = 'rgba(56,189,248,0.3)')}
+        onFocus={e => (e.currentTarget.style.borderColor = 'rgba(14,140,122,0.55)')}
+        onBlur={e => (e.currentTarget.style.borderColor = 'var(--line-strong)')}
       />
       {value && (
         <button
@@ -68,7 +78,7 @@ export function WordSearchBox({ onSearch, placeholder = 'Search words... / 搜�
             transform: 'translateY(-50%)',
             background: 'none',
             border: 'none',
-            color: '#9BBFCA',
+            color: 'var(--ink-muted)',
             cursor: 'pointer',
             fontSize: '18px',
             padding: '4px',

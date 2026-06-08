@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useLearningStore } from '@/store/learningStore'
+import { SpotlightCard } from '@/components/ui/motion/SpotlightCard'
 
 /* 线性 SVG 图标集 */
 function IconStudy() {
@@ -198,22 +199,11 @@ function LargeCard({
   titleEn: string
   descZh: string
 }) {
-  function onEnter(e: React.MouseEvent<HTMLAnchorElement>) {
-    const el = e.currentTarget
-    el.style.borderColor = 'rgba(14,140,122,0.4)'
-    el.style.transform = 'translateY(-3px)'
-  }
-  function onLeave(e: React.MouseEvent<HTMLAnchorElement>) {
-    const el = e.currentTarget
-    el.style.borderColor = 'var(--line)'
-    el.style.transform = ''
-  }
-
   return (
-    <Link
+    <SpotlightCard
+      as="a"
       href={href}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
+      className="card-hover spotlight-host"
       style={{
         display: 'block',
         textDecoration: 'none',
@@ -222,7 +212,6 @@ function LargeCard({
         borderRadius: 'var(--r-card)',
         boxShadow: 'var(--card-shadow)',
         padding: '28px 28px 24px',
-        transition: 'border-color 0.2s, transform 0.2s',
       }}
     >
       <div style={{ color: 'var(--teal-ink)', marginBottom: '14px' }}>{icon}</div>
@@ -238,7 +227,7 @@ function LargeCard({
       <div style={{ marginTop: '18px', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', fontWeight: 600 }}>
         进入 <ArrowRight />
       </div>
-    </Link>
+    </SpotlightCard>
   )
 }
 
@@ -250,22 +239,10 @@ function SmallCard({
   titleZh: string
   children?: React.ReactNode
 }) {
-  function onEnter(e: React.MouseEvent<HTMLAnchorElement>) {
-    const el = e.currentTarget
-    el.style.borderColor = 'rgba(14,140,122,0.35)'
-    el.style.transform = 'translateY(-2px)'
-  }
-  function onLeave(e: React.MouseEvent<HTMLAnchorElement>) {
-    const el = e.currentTarget
-    el.style.borderColor = 'var(--line)'
-    el.style.transform = ''
-  }
-
   return (
     <Link
       href={href}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
+      className="card-hover"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -276,7 +253,6 @@ function SmallCard({
         borderRadius: 'var(--r-card)',
         boxShadow: 'var(--card-shadow-sm)',
         padding: '18px 18px 16px',
-        transition: 'border-color 0.2s, transform 0.2s',
         minHeight: '90px',
       }}
     >
