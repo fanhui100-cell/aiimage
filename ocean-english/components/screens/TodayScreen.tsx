@@ -1,7 +1,7 @@
 'use client'
 // TodayScreen — 1:1 port of prototype/screen-today.jsx
 
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { hexA } from '@/lib/utils'
@@ -89,7 +89,15 @@ export function TodayScreen() {
   const navigate = useNavigate()
   const { getToday, getTodayProgress, streakData, xp, profile, counts } = useLexiStore()
 
-  const today = useMemo(() => getToday(), [])
+  // A5：挂载时生成今日包（当天只生成一次），订阅 words/todayPack 以便生成后刷新
+  const words = useLexiStore(s => s.words)
+  const todayPackCache = useLexiStore(s => s.todayPack)
+  useEffect(() => {
+    void useLexiStore.getState().buildTodayPack()
+  }, [])
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const today = useMemo(() => getToday(), [words, todayPackCache])
   const progress = getTodayProgress()
   const studiedToday = progress.n
   const goalToday = progress.goal
@@ -161,7 +169,10 @@ export function TodayScreen() {
           <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink-sub)', marginBottom: 12 }}>今日学习三步走</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             <StepNode
-              step={1} label="学习单词" sub={`${today.recommended.length} 个新词等待学习`}
+              step={1} label="学习单词"
+              sub={today.recommended.length > 0
+                ? `${today.recommended.length} 个新词等待学习`
+                : todayPackCache.date ? '今日新词暂不可用 · 先复习巩固' : '正在准备今日新词…'}
               color={STEP_COLORS[0]} locked={false} active={stage === 0}
               onClick={() => navigate('learn', { flow: true })}
             />

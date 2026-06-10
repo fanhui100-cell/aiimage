@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { BanyanHero, NAVIGATE_MAP } from './BanyanHero'
 import { useLexiStore } from '@/store/lexiStore'
@@ -264,6 +265,11 @@ function EntriesSection({ navigate }: { navigate: (go: string) => void }) {
 export function HomeScreen() {
   const router = useRouter()
   const profile = useLexiStore(s => s.profile)
+
+  // A5：挂载时生成今日包（当天只生成一次）
+  useEffect(() => {
+    void useLexiStore.getState().buildTodayPack()
+  }, [])
 
   function navigate(go: string) {
     const href = NAVIGATE_MAP[go]

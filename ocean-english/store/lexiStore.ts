@@ -9,6 +9,7 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 import { type WordState, STATE_ORDER } from '@/lib/state-meta'
 import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
 import { toWordEntry } from '@/lib/dictionary/entry-adapter'
+import { mapExamKeyToTag } from '@/lib/dictionary/exam-tag-map'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LearningLevel } from '@/types/learning'
 
@@ -81,6 +82,12 @@ export interface TodayPack {
   review: WordEntry[]
   weak: WordEntry[]
   all: WordEntry[]
+}
+
+/** 每日生成一次的今日包缓存（A5）：生成与读取分离，getToday 只读 */
+export interface TodayPackCache {
+  date: string
+  recommendedIds: string[]
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -200,6 +207,7 @@ interface LexiStoreState {
   daily: DailyRecord
   streakData: StreakData
   goalToday: number
+  todayPack: TodayPackCache
   log: LogEntry[]
   profile: Profile
 }
@@ -236,6 +244,7 @@ interface LexiStoreActions {
   ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
   hydrateMissingEntries: () => Promise<void>
   injectOfflineSeedIfEmpty: () => Promise<void>
+  buildTodayPack: () => Promise<void>
   setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
@@ -296,6 +305,7 @@ export const useLexiStore = create<LexiStore>()(
       daily: { date: '', learned: 0, quizzed: 0, reviewed: 0 },
       streakData: { current: 0, longest: 0, lastStudyDate: '' },
       goalToday: 12,
+      todayPack: { date: '', recommendedIds: [] },
       log: [],
       profile: { onboarded: false, skipped: false, targetExam: null, band: 5, dailyGoal: 12 },
 
@@ -309,12 +319,16 @@ export const useLexiStore = create<LexiStore>()(
         get().words.forEach(w => c[w.state]++)
         return c
       },
+      // 只读 todayPack 缓存（由 buildTodayPack 每日生成一次）；复习/薄弱按配比截断
       getToday: () => {
-        const ws = get().words
-        const recommended = ws.filter(w => w.state === 'recommended')
-        const review = get().getDue()
+        const { words, todayPack, goalToday } = get()
+        const ids = new Set(todayPack.recommendedIds)
+        const recommended = words.filter(w => ids.has(w.id) && w.state === 'recommended')
+        const review = get().getDue().slice(0, Math.max(1, Math.round(goalToday * 0.35)))
         const dueIds = new Set(review.map(w => w.id))
-        const weak = ws.filter(w => w.state === 'weak' && !dueIds.has(w.id))
+        const weak = words
+          .filter(w => w.state === 'weak' && !dueIds.has(w.id))
+          .slice(0, Math.max(1, Math.round(goalToday * 0.25)))
         return { recommended, review, weak, all: [...recommended, ...review, ...weak] }
       },
       // 时间派生：nextReviewAt 到点即到期（review / weak 词都可能在内）
@@ -448,6 +462,36 @@ export const useLexiStore = create<LexiStore>()(
           } catch {
             // 断网等瞬时失败：保留 stub，下次启动重试
           }
+        }
+      },
+
+      // 今日包生成器（A5）：每天一次，新词 40% 配比经推荐 API 拉取并入库；
+      // 失败降级：离线种子兜底 → 仍无则今日包只剩复习+薄弱（recommendedIds 为空）
+      buildTodayPack: async () => {
+        const today = new Date().toISOString().slice(0, 10)
+        if (get().todayPack.date === today) return   // 当天只生成一次
+        const { profile, words } = get()
+        const newN = Math.max(1, Math.round((profile.dailyGoal || 12) * 0.4))
+        try {
+          const exam = mapExamKeyToTag(profile.targetExam)
+          const res = await fetch(
+            `/api/dictionary/recommend?band=${profile.band}&limit=${newN}` +
+            (exam ? `&exam=${exam}` : '') +
+            `&exclude=${words.map(w => w.id).join(',')}`,
+          )
+          if (!res.ok) throw new Error(`recommend ${res.status}`)
+          const { data } = await res.json() as { data?: DictionaryWord[] }
+          if (!Array.isArray(data) || data.length === 0) throw new Error('empty')
+          data.forEach(dw => get().ensureWord(dw, 'today-pack', 'recommended'))
+          set({ todayPack: { date: today, recommendedIds: data.map(d => d.id) } })
+        } catch {
+          // 降级：尝试离线种子；把库中现存 recommended 词（如种子）收进今日包
+          await get().injectOfflineSeedIfEmpty()
+          const fallback = get().words
+            .filter(w => w.state === 'recommended')
+            .slice(0, newN)
+            .map(w => w.id)
+          set({ todayPack: { date: today, recommendedIds: fallback } })
         }
       },
 
@@ -650,6 +694,7 @@ export const useLexiStore = create<LexiStore>()(
         daily: s.daily,
         streakData: s.streakData,
         goalToday: s.goalToday,
+        todayPack: s.todayPack,
         log: s.log,
         profile: s.profile,
       }),

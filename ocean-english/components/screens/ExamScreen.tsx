@@ -14,7 +14,7 @@ const SECS_PER_Q = 20
 
 export function ExamScreen() {
   const navigate = useNavigate()
-  const { all, markCorrect, markWrong, incXp, distractorsFor, recordActivity } = useLexiStore()
+  const { all, markCorrect, markWrong, incXp, distractorsFor, recordActivity, profile } = useLexiStore()
   const addWrongAnswer = useLearningStore(s => s.addWrongAnswer)
 
   function logWrong(w: WordEntry, options: DistractorOption[] | null, userAnswer: string) {
@@ -31,8 +31,17 @@ export function ExamScreen() {
   }
 
   const questions = useMemo<Array<{ word: WordEntry; options: DistractorOption[] }>>(() => {
-    const pool = all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
-    const sample = pool.sort(() => Math.random() - 0.5).slice(0, N)
+    // A5：题池按 band±1 覆盖当前水平；不足 N 时先补到期/薄弱词，仍不足才放开全库
+    const shuffle = (a: WordEntry[]) => [...a].sort(() => Math.random() - 0.5)
+    const eligible = all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
+    const banded = eligible.filter(w => !w.band || Math.abs(w.band - profile.band) <= 1)
+    const bandedIds = new Set(banded.map(w => w.id))
+    const now = Date.now()
+    const dueWeak = eligible.filter(w => !bandedIds.has(w.id)
+      && (w.state === 'weak' || (w.nextReviewAt != null && w.nextReviewAt <= now)))
+    const dueWeakIds = new Set(dueWeak.map(w => w.id))
+    const rest = eligible.filter(w => !bandedIds.has(w.id) && !dueWeakIds.has(w.id))
+    const sample = [...shuffle(banded), ...shuffle(dueWeak), ...shuffle(rest)].slice(0, N)
     return sample.map(w => ({ word: w, options: distractorsFor(w) }))
   }, [])
 
