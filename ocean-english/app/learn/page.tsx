@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 import { AppShell } from '@/components/layout/AppShell'
-import { QuizScreen } from '@/components/screens/QuizScreen'
+import { LearnScreen } from '@/components/screens/LearnScreen'
 
-export default function QuizPage() {
+export default function LearnPage() {
   return (
     <AppShell>
       <Suspense>
-        <QuizScreen />
+        <LearnScreen />
       </Suspense>
     </AppShell>
   )
