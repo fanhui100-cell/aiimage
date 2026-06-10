@@ -9,6 +9,7 @@
  */
 
 import { useLexiStore, type WordEntry, type WordState } from '@/store/lexiStore'
+import { syncWordStates } from '@/lib/sync/learning-sync'
 
 interface CloudWordState {
   wordId: string
@@ -39,7 +40,13 @@ export async function hydrateWordStatesFromCloud(): Promise<void> {
     const res = await fetch('/api/user/word-states')
     if (!res.ok) return
     const { data } = await res.json() as { data?: CloudWordState[] }
-    if (!Array.isArray(data) || data.length === 0) return
+    if (!Array.isArray(data)) return
+    if (data.length === 0) {
+      // 云端为空而本地有词（如 word_states 表晚于使用建立）：一次性全量补传
+      const words = useLexiStore.getState().words
+      if (words.length > 0) syncWordStates(words)
+      return
+    }
 
     const store = useLexiStore.getState()
     const byId = new Map(store.words.map(w => [w.id, w]))
