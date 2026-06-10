@@ -34,7 +34,6 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
   const pathname = usePathname()
   const dark = isDarkRoute(pathname)
   const [open, setOpen] = useState(false)
-  const [night, setNight] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [user, setUser] = useState<User | null>(null)
   const ref = useRef<HTMLDivElement>(null)
@@ -46,12 +45,6 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
     mq.addEventListener('change', handler)
     return () => mq.removeEventListener('change', handler)
-  }, [])
-
-  // Night mode state (same source as NightModeToggle)
-  useEffect(() => {
-    const stored = localStorage.getItem('lexiocean-night-mode')
-    setNight(stored === 'true')
   }, [])
 
   // Supabase auth state
@@ -97,14 +90,6 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
   function close() {
     if (controlledOpen !== undefined) onControlledClose?.()
     else setOpen(false)
-  }
-
-  function toggleNight() {
-    const next = !night
-    setNight(next)
-    if (next) document.documentElement.setAttribute('data-theme', 'night')
-    else document.documentElement.removeAttribute('data-theme')
-    localStorage.setItem('lexiocean-night-mode', String(next))
   }
 
   async function handleSignOut() {
@@ -163,11 +148,10 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
             }}
           >
             <MenuContent
-              items={items} user={user} night={night} dark={dark}
+              items={items} user={user} dark={dark}
               text={text} sub={sub} accent={accent} hoverBg={hoverBg}
               panelBorder={panelBorder}
               onClose={() => setOpen(false)}
-              onToggleNight={toggleNight}
               onSignOut={handleSignOut}
             />
           </div>
@@ -235,11 +219,10 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
 
             {/* Rest of content */}
             <MenuContent
-              items={items} user={user} night={night} dark={dark}
+              items={items} user={user} dark={dark}
               text={text} sub={sub} accent={accent} hoverBg={hoverBg}
               panelBorder={panelBorder}
               onClose={close}
-              onToggleNight={toggleNight}
               onSignOut={handleSignOut}
             />
 
@@ -267,16 +250,14 @@ export function UnifiedMenu({ controlledOpen, onControlledClose }: UnifiedMenuPr
 
 /* ── Shared inner content (desktop + mobile) ── */
 function MenuContent({
-  items, user, night, dark, text, sub, accent, hoverBg, panelBorder,
-  onClose, onToggleNight, onSignOut,
+  items, user, dark, text, sub, accent, hoverBg, panelBorder,
+  onClose, onSignOut,
 }: {
   items: { label: string; labelZh: string; href: string }[]
   user: User | null
-  night: boolean
   dark: boolean
   text: string; sub: string; accent: string; hoverBg: string; panelBorder: string
   onClose: () => void
-  onToggleNight: () => void
   onSignOut: () => void
 }) {
   return (
@@ -290,21 +271,10 @@ function MenuContent({
       </Group>
 
       {/* 设置 */}
+      {/* TODO（暗色主题后置）：B11-2 决策删除 NightModeToggle——纸面色系做合格暗色版
+          需要整套 token 重调（纸纹理/阴影/状态色对比度），lexiverse 深色页已天然适配；
+          不留不工作的开关，待「暗色主题」立项后重做。 */}
       <Group label="设置 · Settings" sub={sub} border={panelBorder}>
-        <Row text={text} hoverBg={hoverBg}>
-          <span>夜间模式</span>
-          <button
-            type="button" role="switch" aria-checked={night} aria-label="夜间模式"
-            onClick={onToggleNight}
-            style={{
-              width: 38, height: 22, borderRadius: 11, border: 'none', cursor: 'pointer',
-              background: night ? accent : (dark ? 'rgba(255,255,255,0.15)' : 'var(--line-strong)'),
-              position: 'relative', flexShrink: 0, transition: 'background .2s',
-            }}
-          >
-            <span style={{ position: 'absolute', top: 3, left: night ? 19 : 3, width: 16, height: 16, borderRadius: '50%', background: '#fff', transition: 'left .2s' }} />
-          </button>
-        </Row>
         <Row text={text} hoverBg={hoverBg}>
           <span>发音口音</span>
           <AccentSeg accent={accent} sub={sub} dark={dark} />

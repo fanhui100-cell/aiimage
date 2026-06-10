@@ -269,7 +269,7 @@ interface LexiStoreActions {
   ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
   hydrateMissingEntries: () => Promise<void>
   injectOfflineSeedIfEmpty: () => Promise<void>
-  buildTodayPack: () => Promise<void>
+  buildTodayPack: (force?: boolean) => Promise<void>
   setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   // B7-3：词详情「移出」——从学习库删除（云端同步删除由 CloudSyncProvider diff 触发）
@@ -506,9 +506,9 @@ export const useLexiStore = create<LexiStore>()(
 
       // 今日包生成器（A5）：每天一次，新词 40% 配比经推荐 API 拉取并入库；
       // 失败降级：离线种子兜底 → 仍无则今日包只剩复习+薄弱（recommendedIds 为空）
-      buildTodayPack: async () => {
+      buildTodayPack: async (force = false) => {
         const today = new Date().toISOString().slice(0, 10)
-        if (get().todayPack.date === today) return   // 当天只生成一次
+        if (!force && get().todayPack.date === today) return   // 当天只生成一次（重试按钮可 force）
         const { profile, words } = get()
         const newN = Math.max(1, Math.round((profile.dailyGoal || 12) * 0.4))
         try {

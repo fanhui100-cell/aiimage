@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry, type LogEntry } from '@/store/lexiStore'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 import { useNavigate } from '@/hooks/useNavigate'
-import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, EmptyState, useToast, BackBtn } from '@/components/screens/SharedUI'
 import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
 /** 相对时间：刚刚 / N 小时前 / N 天前 */
@@ -73,12 +73,22 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
   }
 
   if (!queue.length) {
+    // B10-3：空状态给下一步动作（文案照 README 空状态表）
+    const newN = useLexiStore.getState().getToday().recommended.length
     return (
-      <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 }}>
-        <div style={{ fontSize: 48 }}>🌟</div>
-        <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>无需复习</div>
-        <div style={{ fontSize: 14, color: 'var(--ink-sub)' }}>今日无到期词汇，继续保持！</div>
-        <PrimaryBtn onClick={finish}>返回今日</PrimaryBtn>
+      <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+        {source === 'weak' ? (
+          <EmptyState icon="🌟" text="没有薄弱词，状态很好"
+            desc="去测验检验一下？"
+            actions={[{ label: '去测验', onClick: () => navigate('quiz') }]} />
+        ) : (
+          <EmptyState icon="🌟" text="没有到期的词"
+            desc={newN > 0 ? `去学 ${newN} 个新词，明天这里就会有复习任务` : '去学几个新词，明天这里就会有复习任务'}
+            actions={[
+              { label: '去学新词', onClick: () => navigate('learn', { flow: true }) },
+              { label: '返回今日', onClick: finish, primary: false },
+            ]} />
+        )}
       </div>
     )
   }

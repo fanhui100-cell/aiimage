@@ -182,6 +182,17 @@ export function TodayScreen() {
           </div>
         )}
 
+        {/* B10-3：今日包生成失败明示 + 重试 */}
+        {todayPackCache.date !== '' && today.recommended.length === 0 && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: 'var(--card-2)', border: '1px solid var(--line)', borderRadius: 12, padding: '11px 14px', marginBottom: 14 }}>
+            <span style={{ flex: 1, fontSize: 13, color: 'var(--ink-sub)' }}>新词推荐暂时不可用，先完成复习部分</span>
+            <button onClick={() => void useLexiStore.getState().buildTodayPack(true)} className="btn-press"
+              style={{ flexShrink: 0, padding: '7px 14px', borderRadius: 999, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: 'pointer', fontSize: 12.5, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
+              重试
+            </button>
+          </div>
+        )}
+
         {/* Flow steps（B3-1：独立判定 + 去完成按钮） */}
         <div style={{ marginBottom: 20 }}>
           <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink-sub)', marginBottom: 12 }}>今日学习三步走</div>

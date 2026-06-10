@@ -19,6 +19,7 @@ import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { PlanetAction } from '@/lib/lexiverse/lexiverse-types'
 import { useLexiStore } from '@/store/lexiStore'
+import { FirstVisitHint } from '@/components/ui/FirstVisitHint'
 
 import { LexiverseScene } from './LexiverseScene'
 import { UniverseHUD } from './UniverseHUD'
@@ -219,6 +220,9 @@ export function LexiverseShell() {
   return (
     <div style={{ position: 'fixed', inset: 0, background: '#040407', color: '#ECFBFF',
         fontFamily: "'Space Grotesk', system-ui, sans-serif", overflow: 'hidden' }}>
+      {/* B8-2 / B10：宇宙首访一句话浮条 */}
+      <FirstVisitHint storageKey="lexi-seen-cosmos"
+        text="每颗星球是一个词——颜色就是它的掌握状态，学一个亮一个" />
       <LexiverseScene
         galaxies={visibleGalaxies}
         currentGalaxyId={galaxyId}

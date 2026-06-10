@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
-import { FlowBar, StateToast, SoundBtn, GhostBtn, PrimaryBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, StateToast, SoundBtn, GhostBtn, PrimaryBtn, EmptyState, useToast, BackBtn } from '@/components/screens/SharedUI'
 
 // ── Flashcard ──────────────────────────────────────────────────
 function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolean; onFlip: () => void }) {
@@ -118,12 +118,16 @@ export function LearnScreen() {
   }
 
   if (!queue.length) {
+    // B10-3：空状态给下一步动作（文案照 README 空状态表）
+    const dueN = useLexiStore.getState().getDue().length
     return (
-      <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 }}>
-        <div style={{ fontSize: 48 }}>✨</div>
-        <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>今日无新词</div>
-        <div style={{ fontSize: 14, color: 'var(--ink-sub)' }}>所有词汇已完成今日学习</div>
-        <PrimaryBtn onClick={finish}>继续 →</PrimaryBtn>
+      <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+        <EmptyState icon="✨" text="今日新词已学完"
+          desc={dueN > 0 ? `复习 ${dueN} 个到期词，或去词典探索` : '去词典探索更多词汇'}
+          actions={[
+            { label: '去复习', onClick: () => navigate('review', { flow: isFlow }) },
+            { label: '逛词典', onClick: () => navigate('words'), primary: false },
+          ]} />
       </div>
     )
   }

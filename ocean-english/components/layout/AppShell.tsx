@@ -8,6 +8,7 @@ import { CHROMELESS_ROUTES, FOCUS_ROUTES } from './MobileTabBar'
 import { FocusBackButton } from './FocusBackButton'
 import { CloudSyncProvider } from '@/components/auth/CloudSyncProvider'
 import { MilestoneToast } from '@/components/ui/MilestoneToast'
+import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { useLexiStore } from '@/store/lexiStore'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -44,6 +45,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </CloudSyncProvider>
       <MobileTabBar />
       <MilestoneToast />
+      {/* B10-2：陪伴系统挂 Lumi（仅非 chromeless；设置可关，会话频控 ≤2 条） */}
+      <LumiCompanion />
     </div>
   )
 }

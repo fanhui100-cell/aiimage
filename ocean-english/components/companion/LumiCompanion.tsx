@@ -1,13 +1,73 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { LumiBubble } from './LumiBubble'
+import { useLexiStore } from '@/store/lexiStore'
+import { useMotivationStore } from '@/store/useMotivationStore'
 
 const ORBIT_COUNT = 4
+const DAY = 86_400_000
+const STREAK_MILESTONES = new Set([7, 30, 100])
+const SESSION_CAP = 2          // B10-2 频控：每会话最多 2 条自动消息
+const COUNT_KEY = 'lexi-lumi-auto-count'
 
 export function LumiCompanion() {
   const [bubbleOpen, setBubbleOpen] = useState(false)
   const [hovered, setHovered] = useState(false)
+  const [disabled, setDisabled] = useState(true)   // SSR 安全：挂载后读取设置
+  const closedLoopShown = useRef(false)
+
+  useEffect(() => {
+    setDisabled(localStorage.getItem('lexi-lumi-off') === '1')
+  }, [])
+
+  // 自动消息：频控 + 写入 motivationStore 后弹泡
+  function autoSay(message: string) {
+    const n = Number(sessionStorage.getItem(COUNT_KEY) ?? '0')
+    if (n >= SESSION_CAP) return
+    sessionStorage.setItem(COUNT_KEY, String(n + 1))
+    useMotivationStore.getState().setCompanionMessage(message)
+    setBubbleOpen(true)
+  }
+
+  // ① 回访问候：连续 3 天未学习
+  useEffect(() => {
+    if (disabled) return
+    const { lastStudyDate } = useLexiStore.getState().streakData
+    if (!lastStudyDate) return
+    const gap = Date.now() - new Date(lastStudyDate).getTime()
+    if (gap >= 3 * DAY) {
+      autoSay('好久不见。哪怕今天只学 3 分钟，也能让学习信号继续存在。')
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [disabled])
+
+  // ② streak 里程碑（7/30/100）③ 今日闭环完成
+  useEffect(() => {
+    if (disabled) return
+    let prevStreak = useLexiStore.getState().streakData.current
+    const unsub = useLexiStore.subscribe(state => {
+      const cur = state.streakData.current
+      if (cur !== prevStreak && STREAK_MILESTONES.has(cur)) {
+        autoSay(`连续学习 ${cur} 天了——里程碑达成，继续点亮前行的路。`)
+      }
+      prevStreak = cur
+
+      if (!closedLoopShown.current) {
+        const today = new Date().toISOString().slice(0, 10)
+        const d = state.daily
+        if (d.date === today && d.quizzed >= 5 && d.learned > 0
+          && !state.words.some(w => w.nextReviewAt != null && w.nextReviewAt <= Date.now())) {
+          closedLoopShown.current = true
+          autoSay('今日闭环完成！学习 → 练习 → 复习一气呵成。')
+        }
+      }
+    })
+    return unsub
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [disabled])
+
+  if (disabled) return null
 
   return (
     <div

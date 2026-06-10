@@ -162,8 +162,16 @@ export function FlowBar({ step }: { step: number }) {
   )
 }
 
-// ── EmptyState ─────────────────────────────────────────────────
-export function EmptyState({ icon = '📭', text }: { icon?: string; text: string }) {
+// ── EmptyState（B10-3：扩展 desc + actions[]，空状态必须给下一步动作）──
+export interface EmptyStateAction {
+  label: string
+  onClick: () => void
+  primary?: boolean
+}
+
+export function EmptyState({ icon = '📭', text, desc, actions }: {
+  icon?: string; text: string; desc?: string; actions?: EmptyStateAction[]
+}) {
   return (
     <div style={{
       display: 'flex', flexDirection: 'column', alignItems: 'center',
@@ -171,7 +179,24 @@ export function EmptyState({ icon = '📭', text }: { icon?: string; text: strin
       color: 'var(--ink-muted)', textAlign: 'center',
     }}>
       <span style={{ fontSize: 36 }}>{icon}</span>
-      <span style={{ fontSize: 14, lineHeight: 1.5 }}>{text}</span>
+      <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.5, fontFamily: 'var(--font-serif-zh)' }}>{text}</span>
+      {desc && <span style={{ fontSize: 13, lineHeight: 1.6, maxWidth: 320 }}>{desc}</span>}
+      {actions && actions.length > 0 && (
+        <div style={{ display: 'flex', gap: 10, marginTop: 8, flexWrap: 'wrap', justifyContent: 'center' }}>
+          {actions.map(a => (
+            <button key={a.label} onClick={a.onClick} className="btn-press"
+              style={{
+                padding: '10px 22px', borderRadius: 999, cursor: 'pointer',
+                border: a.primary === false ? '1px solid var(--line)' : '1.5px solid var(--teal-ink)',
+                background: a.primary === false ? 'var(--card)' : 'var(--teal-bg)',
+                color: a.primary === false ? 'var(--ink-sub)' : 'var(--teal-ink)',
+                fontSize: 13.5, fontWeight: 700, fontFamily: 'var(--font-sans)',
+              }}>
+              {a.label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

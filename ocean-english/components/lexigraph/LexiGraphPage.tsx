@@ -13,6 +13,7 @@ import { LexiGraphRelationFilter, type RelationFilter } from './LexiGraphRelatio
 import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { buildLexiGraphModel } from '@/lib/lexigraph/lexigraph-data-mapper'
 import { useLexiStore } from '@/store/lexiStore'
+import { FirstVisitHint } from '@/components/ui/FirstVisitHint'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LexiGraphModel, LexiGraphNode } from '@/types/lexigraph'
@@ -140,6 +141,9 @@ export function LexiGraphPage() {
 
   return (
     <AppShell>
+      {/* B8-2 / B10：词图首访一句话浮条 */}
+      <FirstVisitHint storageKey="lexi-seen-graph"
+        text="连线是词根与近义关系，点节点跳转词详情" />
       <div
         style={{
           height: '100vh',
