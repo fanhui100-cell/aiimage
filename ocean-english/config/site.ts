@@ -1,4 +1,5 @@
 import type { LevelOption } from '@/types/learning'
+import { PRIMARY_NAV, TOOL_NAV } from '@/lib/product-flow/nav'
 
 export const siteConfig = {
   projectName: 'Lexiverse',
@@ -19,20 +20,9 @@ export const siteConfig = {
   ctaPrimaryZh: '开始学习',
   ctaSecondary: '选择等级',
   ctaSecondaryZh: '选择等级',
-  navigation: [
-    { label: 'Today',    labelZh: '今日', href: '/today' },
-    { label: 'Words',    labelZh: '词',   href: '/dictionary' },
-    { label: 'Review',   labelZh: '复习', href: '/memory' },
-    { label: 'Practice', labelZh: '练习', href: '/quiz' },
-    { label: 'Universe', labelZh: '宇宙', href: '/lexiverse' },
-  ],
-  navigationMore: [
-    { label: 'Scan', labelZh: 'Scan', href: '/scan', group: 'learning' as const },
-    { label: 'Reading', labelZh: 'Reading', href: '/reading', group: 'learning' as const },
-    { label: 'Listening', labelZh: 'Listening', href: '/pronunciation', group: 'learning' as const },
-    { label: 'Exam Drill', labelZh: 'Exam Drill', href: '/exam', group: 'learning' as const },
-    { label: 'Vocab Browser', labelZh: 'Vocab Browser', href: '/lexiverse/vocab', group: 'lexiverse' as const },
-  ],
+  // B1：两套导航均派生自 lib/product-flow/nav.ts 唯一词表
+  navigation: PRIMARY_NAV.map(i => ({ label: i.en, labelZh: i.zh, href: i.href })),
+  navigationMore: TOOL_NAV.map(i => ({ label: i.en, labelZh: i.zh, href: i.href, group: 'learning' as const })),
 } as const
 
 export const levelOptions: LevelOption[] = [

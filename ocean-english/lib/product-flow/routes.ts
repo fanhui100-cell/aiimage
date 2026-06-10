@@ -19,7 +19,8 @@ export const routes = {
   pronunciation: '/pronunciation',
   reading: '/reading',
   wrongAnswers: '/wrong-answers',
-  universe: '/universe',
+  // B1-4：/universe 已删除，宇宙统一指 /lexiverse（与 NAVIGATE_MAP 对齐）
+  universe: '/lexiverse',
   profile: '/profile',
   onboarding: '/onboarding',
 } as const

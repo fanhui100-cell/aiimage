@@ -4,7 +4,8 @@ import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { Navbar } from './Navbar'
 import { MobileTabBar } from './MobileTabBar'
-import { CHROMELESS_ROUTES } from './MobileTabBar'
+import { CHROMELESS_ROUTES, FOCUS_ROUTES } from './MobileTabBar'
+import { FocusBackButton } from './FocusBackButton'
 import { CloudSyncProvider } from '@/components/auth/CloudSyncProvider'
 import { MilestoneToast } from '@/components/ui/MilestoneToast'
 import { useLexiStore } from '@/store/lexiStore'
@@ -21,6 +22,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const chromeless = CHROMELESS_ROUTES.some(
     r => pathname === r || pathname.startsWith(r + '/')
   )
+  // B1-3：聚焦页（tab bar 隐藏）移动端给悬浮返回；chromeless 页自带返回
+  const focus = !chromeless && FOCUS_ROUTES.some(
+    r => pathname === r || pathname.startsWith(r + '/')
+  )
 
   if (chromeless) {
     return (
@@ -33,6 +38,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
       <Navbar />
+      {focus && <FocusBackButton />}
       <CloudSyncProvider>
         <main>{children}</main>
       </CloudSyncProvider>

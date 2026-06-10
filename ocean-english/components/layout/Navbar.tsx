@@ -1,11 +1,13 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
+import { PRIMARY_NAV, TOOL_NAV } from '@/lib/product-flow/nav'
 
 export function Navbar() {
   const pathname = usePathname()
@@ -60,17 +62,17 @@ export function Navbar() {
         </div>
       </Link>
 
-      {/* ── 桌面主导航：今日/词/复习/练习/宇宙 ── */}
+      {/* ── 桌面主导航（B1：PRIMARY_NAV 5 项 + 工具下拉）── */}
       <div
         className="hidden md:flex"
         style={{ flex: 1, justifyContent: 'center', alignItems: 'stretch' }}
       >
-        {siteConfig.navigation.map(item => {
+        {PRIMARY_NAV.map(item => {
           const active = pathname === item.href || pathname.startsWith(item.href + '/')
-          const isReview = item.href === '/memory'
+          const isReview = item.key === 'review'
           return (
             <Link
-              key={item.href}
+              key={item.key}
               href={item.href}
               style={{
                 textDecoration: 'none',
@@ -92,7 +94,7 @@ export function Navbar() {
                 color: active ? activeColor : textColor,
                 transition: 'color 0.15s',
               }}>
-                {item.labelZh}
+                {item.zh}
               </span>
               {/* 复习到期红点 */}
               {isReview && dueCount > 0 && (
@@ -109,6 +111,7 @@ export function Navbar() {
             </Link>
           )
         })}
+        <ToolsDropdown textColor={textColor} activeColor={activeColor} dark={dark} pathname={pathname} />
       </div>
 
       {/* ── 右侧: streak + 头像 ── */}
@@ -136,5 +139,85 @@ export function Navbar() {
         <UserMenu />
       </div>
     </nav>
+  )
+}
+
+/** B1：桌面「工具」下拉（TOOL_NAV 6 项） */
+function ToolsDropdown({ textColor, activeColor, dark, pathname }: {
+  textColor: string; activeColor: string; dark: boolean; pathname: string
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    function onDown(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDown)
+    return () => document.removeEventListener('mousedown', onDown)
+  }, [open])
+
+  const toolActive = TOOL_NAV.some(t => pathname === t.href || pathname.startsWith(t.href + '/'))
+
+  return (
+    <div ref={ref} style={{ position: 'relative', display: 'inline-flex', alignItems: 'stretch' }}>
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={() => setOpen(o => !o)}
+        style={{
+          background: 'none', border: 'none', cursor: 'pointer',
+          display: 'inline-flex', alignItems: 'center', gap: 4,
+          padding: '0 16px', height: 64,
+          borderBottom: toolActive ? `2px solid ${activeColor}` : '2px solid transparent',
+          fontSize: 13, fontFamily: 'var(--font-sans)',
+          color: open || toolActive ? activeColor : textColor,
+          transition: 'color 0.15s',
+        }}
+      >
+        工具
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+          style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}>
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          role="menu"
+          style={{
+            position: 'absolute', top: 'calc(100% - 6px)', left: '50%', transform: 'translateX(-50%)',
+            minWidth: 160, padding: 6, zIndex: 60,
+            background: dark ? 'rgba(8,19,32,0.97)' : 'var(--card-2)',
+            border: `1px solid ${dark ? 'var(--glass-border)' : 'var(--line)'}`,
+            borderRadius: 12,
+            boxShadow: dark ? '0 18px 50px rgba(0,0,0,0.5)' : '0 18px 50px -16px rgba(20,30,40,0.4)',
+            backdropFilter: 'blur(12px)',
+          }}
+        >
+          {TOOL_NAV.map(t => {
+            const active = pathname === t.href || pathname.startsWith(t.href + '/')
+            return (
+              <Link
+                key={t.key}
+                href={t.href}
+                onClick={() => setOpen(false)}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  padding: '9px 12px', borderRadius: 8, textDecoration: 'none',
+                  fontSize: 13, fontFamily: 'var(--font-sans)',
+                  color: active ? activeColor : (dark ? 'var(--text-primary)' : 'var(--ink)'),
+                }}
+              >
+                <span>{t.zh}</span>
+                <span style={{ fontSize: 11, fontFamily: 'var(--font-news)', fontStyle: 'italic', opacity: 0.5 }}>{t.en}</span>
+              </Link>
+            )
+          })}
+        </div>
+      )}
+    </div>
   )
 }
