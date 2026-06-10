@@ -118,9 +118,10 @@ export function TodayScreen() {
   const daily = useLexiStore(s => s.daily)
   const dueLen = useLexiStore(s => s.getDue().length)
   const todayStr = new Date().toISOString().slice(0, 10)
-  const learnedToday = daily.date === todayStr ? daily.learned : 0
   const quizzedToday = daily.date === todayStr ? daily.quizzed : 0
-  const step1done = today.recommended.length === 0 || learnedToday >= today.recommended.length
+  // 步骤1以「包内仍是 recommended 的词清零」为准（today.recommended 随学习消耗）
+  const packTotal = todayPackCache.recommendedIds.length
+  const step1done = today.recommended.length === 0
   const step2done = quizzedToday >= 5
   const step3done = dueLen === 0
   const allDone = step1done && step2done && step3done
@@ -182,8 +183,8 @@ export function TodayScreen() {
           </div>
         )}
 
-        {/* B10-3：今日包生成失败明示 + 重试 */}
-        {todayPackCache.date !== '' && today.recommended.length === 0 && (
+        {/* B10-3：今日包生成失败明示 + 重试（按包本身为空判定，学完不误报） */}
+        {todayPackCache.date !== '' && todayPackCache.recommendedIds.length === 0 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: 'var(--card-2)', border: '1px solid var(--line)', borderRadius: 12, padding: '11px 14px', marginBottom: 14 }}>
             <span style={{ flex: 1, fontSize: 13, color: 'var(--ink-sub)' }}>新词推荐暂时不可用，先完成复习部分</span>
             <button onClick={() => void useLexiStore.getState().buildTodayPack(true)} className="btn-press"
@@ -199,11 +200,11 @@ export function TodayScreen() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             <StepNode
               step={1} label="学习单词"
-              sub={step1done && today.recommended.length > 0
-                ? `今日 ${today.recommended.length} 个新词已学完`
-                : today.recommended.length > 0
-                  ? `新词 ${Math.min(learnedToday, today.recommended.length)}/${today.recommended.length}`
-                  : todayPackCache.date ? '今日新词暂不可用 · 先复习巩固' : '正在准备今日新词…'}
+              sub={packTotal > 0
+                ? step1done
+                  ? `今日 ${packTotal} 个新词已学完`
+                  : `新词 ${packTotal - today.recommended.length}/${packTotal}`
+                : todayPackCache.date ? '今日新词暂不可用 · 先复习巩固' : '正在准备今日新词…'}
               color={STEP_COLORS[0]} locked={false} done={step1done}
               onClick={() => navigate('learn', { flow: true })}
             />

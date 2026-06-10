@@ -228,7 +228,6 @@ function ToolsRow() {
 function ResumeCard() {
   const router = useRouter()
   const daily = useLexiStore(s => s.daily)
-  const goalToday = useLexiStore(s => s.goalToday)
   const dueCount = useLexiStore(s => s.getDue().length)
   const recommendedCount = useLexiStore(s => s.getToday().recommended.length)
   const latestScan = useScanHistoryStore(s => s.scanDocuments[0])
@@ -255,7 +254,6 @@ function ResumeCard() {
     href = `/scan/history/${latestScan.id}`
   }
   if (!label || !href) return null
-  void goalToday
 
   return (
     <button onClick={() => router.push(href!)} className="btn-press card-hover"

@@ -615,9 +615,13 @@ export const useLexiStore = create<LexiStore>()(
       }),
 
       setProfile: (p) => set(s => {
+        // 只有带 band 的写入（= 完成定级）才标记 onboarded；
+        // 「我的」页单独调整 dailyGoal 不应让未定级用户跳过引导（B9-3）
+        const completing = p.band !== undefined || s.profile.onboarded
         const profile = {
-          ...s.profile, ...p, onboarded: true, skipped: false,
-          ...(p.dailyGoal ? {} : {}),
+          ...s.profile, ...p,
+          onboarded: completing,
+          skipped: completing ? false : s.profile.skipped,
           ...(p.targetExam && (!s.profile.goals?.length) ? { goals: [p.targetExam] } : {}),
         }
         // userLevel 未显式设置时由 band 派生
