@@ -6,11 +6,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
   const reduce = useReducedMotion()
 
   return (
+    // Demo09：页面过场 — 出入各 160ms · fade + 4px 位移
     <motion.div
-      initial={reduce ? {} : { opacity: 0, y: 8 }}
+      initial={reduce ? {} : { opacity: 0, y: 4 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={reduce ? {} : { opacity: 0, y: -8 }}
-      transition={{ duration: reduce ? 0 : 0.22, ease: [0.2, 0.7, 0.3, 1] }}
+      exit={reduce ? {} : { opacity: 0, y: -4 }}
+      transition={{ duration: reduce ? 0 : 0.16, ease: 'easeOut' }}
     >
       {children}
     </motion.div>

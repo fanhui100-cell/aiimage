@@ -1,25 +1,67 @@
 'use client'
+// B11-3：里程碑庆祝白名单 — 仅五类：首次闭环、streak 7/30/100、第 100/500 个掌握词。
+// 高频奖励会迅速贬值（Duolingo 只在 lesson 级别庆祝）。
 
 import { useEffect, useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useMotivationStore } from '@/store/useMotivationStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { ShinyText } from '@/components/ui/motion/ShinyText'
-import { checkMilestoneCrossed, type Milestone } from '@/lib/motivation/starfield'
+
+interface Milestone {
+  id: string
+  labelZh: string
+  labelEn: string
+  color: string
+}
+
+const STREAK_MARKS = [7, 30, 100]
+const MASTERED_MARKS = [100, 500]
+const FIRST_LOOP_KEY = 'lexi-first-loop-celebrated'
 
 export function MilestoneToast() {
-  const litNodeCount = useMotivationStore(s => s.litNodeCount)
-  const [active, setActive] = useState<Milestone | null>(null)
-  const prevCount = useRef(litNodeCount)
+  const streak = useLexiStore(s => s.streakData.current)
+  const mastered = useLexiStore(s => s.words.filter(w => w.state === 'mastered').length)
+  const daily = useLexiStore(s => s.daily)
+  const dueLen = useLexiStore(s => s.getDue().length)
 
+  const [active, setActive] = useState<Milestone | null>(null)
+  const prevStreak = useRef(streak)
+  const prevMastered = useRef(mastered)
+
+  // 弹出 + 3.5s 自动收起
+  function fire(m: Milestone) {
+    setActive(m)
+  }
   useEffect(() => {
-    const crossed = checkMilestoneCrossed(prevCount.current, litNodeCount)
-    prevCount.current = litNodeCount
-    if (crossed) {
-      setActive(crossed)
-      const t = setTimeout(() => setActive(null), 3500)
-      return () => clearTimeout(t)
+    if (!active) return
+    const t = setTimeout(() => setActive(null), 3500)
+    return () => clearTimeout(t)
+  }, [active])
+
+  // streak 7/30/100
+  useEffect(() => {
+    const hit = STREAK_MARKS.find(m => prevStreak.current < m && streak >= m)
+    prevStreak.current = streak
+    if (hit) fire({ id: `streak-${hit}`, labelZh: `连续学习 ${hit} 天`, labelEn: `${hit}-day streak`, color: '#f1c879' })
+  }, [streak])
+
+  // 第 100 / 500 个掌握词
+  useEffect(() => {
+    const hit = MASTERED_MARKS.find(m => prevMastered.current < m && mastered >= m)
+    prevMastered.current = mastered
+    if (hit) fire({ id: `mastered-${hit}`, labelZh: `第 ${hit} 个掌握词`, labelEn: `${hit} words mastered`, color: '#4fe6ce' })
+  }, [mastered])
+
+  // 首次闭环（学→练→复 全完成，仅一次）
+  useEffect(() => {
+    const today = new Date().toISOString().slice(0, 10)
+    if (daily.date !== today) return
+    if (daily.learned > 0 && daily.quizzed >= 5 && dueLen === 0
+      && !localStorage.getItem(FIRST_LOOP_KEY)) {
+      localStorage.setItem(FIRST_LOOP_KEY, '1')
+      fire({ id: 'first-loop', labelZh: '首次完成今日闭环', labelEn: 'First full loop', color: '#4fe6ce' })
     }
-  }, [litNodeCount])
+  }, [daily, dueLen])
 
   return (
     <AnimatePresence>

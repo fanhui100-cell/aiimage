@@ -80,6 +80,7 @@ export function SoundBtn({ word, size = 28 }: { word: string; size?: number }) {
     <button
       onClick={play}
       title={`Read "${word}"`}
+      className="hit-44"
       style={{
         width: size, height: size, borderRadius: '50%', border: 'none', cursor: 'pointer',
         display: 'flex', alignItems: 'center', justifyContent: 'center',

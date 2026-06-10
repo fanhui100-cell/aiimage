@@ -52,8 +52,11 @@
   --line: rgba(20,30,40,0.10);
   --line-strong: rgba(20,30,40,0.16);
   --teal-bg: rgba(14,140,122,0.08);
-  --card-shadow: 0 18px 40px -26px rgba(20,30,40,0.5);
-  --card-shadow-sm: 0 10px 24px -18px rgba(20,30,40,0.45);
+  /* Demo07：阴影收敛两档 token（旧 --card-shadow* 全站引用映射到新档） */
+  --shadow-rest: 0 1px 2px rgba(20,30,40,.05), 0 4px 14px -8px rgba(20,30,40,.08);
+  --shadow-hover: 0 2px 4px rgba(20,30,40,.06), 0 12px 28px -12px rgba(20,30,40,.16);
+  --card-shadow: var(--shadow-hover);
+  --card-shadow-sm: var(--shadow-rest);
 
   /* ── 旧粒子色(榕树 WebGL 用,保持不变) ── */
   --particle-cyan: #7ef9ff;
@@ -195,9 +198,9 @@ html, body {
 /* 按钮按压缩放 */
 .btn-press:active { transform: scale(0.97); }
 
-/* 通用可点击卡片 hover / focus 效果 */
+/* 通用可点击卡片 hover / focus 效果（Demo07：220ms + -2px 抬升） */
 .card-hover {
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 .card-hover:hover,
 .card-hover:focus-visible {
@@ -371,3 +374,110 @@ html, body {
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 .fade-up { animation: fadeUp 0.25s ease; }
+
+/* ════ 界面优化5 阶段4 · 微交互（Demo 参数即规格） ════════════════════════ */
+
+/* Demo06：纸面噪点 — feTurbulence 0.9 · 2 octaves · 160 平铺 · opacity .018 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Demo01：测验答对弹跳 + 描边扩散 / 答错抖动 */
+@keyframes quizCorrect { 0% { transform: scale(1); } 50% { transform: scale(1.025); } 100% { transform: scale(1); } }
+@keyframes quizRing { from { opacity: .8; transform: scale(1); } to { opacity: 0; transform: scale(1.06); } }
+@keyframes quizWrong {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+.quiz-correct { animation: quizCorrect 260ms cubic-bezier(.34,1.56,.64,1); position: relative; }
+.quiz-correct::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--teal-ink);
+  border-radius: inherit;
+  pointer-events: none;
+  animation: quizRing 500ms ease-out forwards;
+}
+.quiz-wrong { animation: quizWrong 320ms ease-in-out; }
+
+/* Demo02：状态 chip morph + 换色弹跳 */
+.chip-morph { transition: background .45s ease, color .45s ease, border-color .45s ease; }
+@keyframes chipPop { 0% { transform: scale(1); } 50% { transform: scale(1.07); } 100% { transform: scale(1); } }
+.chip-pop { animation: chipPop 400ms cubic-bezier(.34,1.56,.64,1); }
+
+/* Demo03：进度环 100% 粒子迸发 */
+@keyframes ringBurst {
+  from { transform: translate(0, 0) scale(1); opacity: 1; }
+  to { transform: var(--burst-t) scale(.6); opacity: 0; }
+}
+.ring-burst-p {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ringBurst 750ms cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+/* Demo05：列表 stagger 入场（调用方 inline animation-delay = i×30ms，仅首屏 ≤10 项） */
+@keyframes staggerIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.stagger-item { animation: staggerIn .32s ease both; }
+
+/* Demo08：深海光斑极慢漂移（仅 transform） */
+@keyframes driftA { to { transform: translate(-36px, 22px) scale(1.12); } }
+@keyframes driftB { to { transform: translate(30px, -18px) scale(1.08); } }
+.drift-a { animation: driftA 20s ease-in-out infinite alternate; }
+.drift-b { animation: driftB 26s ease-in-out infinite alternate; }
+
+/* Demo10：闪卡真 3D 翻转 */
+.flip-outer { perspective: 1200px; }
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .45s cubic-bezier(.4,1.4,.4,1);
+}
+.flip-inner.flipped { transform: rotateY(180deg); }
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back { transform: rotateY(180deg); }
+
+/* Demo11：中文衬线大标题呼吸（inline 自带 lineHeight 的标题不受影响） */
+.theme-light h1, .theme-light h2 {
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* Demo04：数字滚动配套（等宽数字不抖动） */
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* 收尾：键盘焦点环（全局） */
+:focus-visible {
+  outline: 2px solid var(--teal-ink);
+  outline-offset: 2px;
+}
+
+/* 收尾：小按钮 44px 热区（SoundBtn 等包一层） */
+.hit-44 {
+  position: relative;
+}
+.hit-44::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
