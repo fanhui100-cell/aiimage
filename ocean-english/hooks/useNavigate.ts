@@ -15,7 +15,7 @@ export const NAVIGATE_MAP: Record<string, string> = {
   chat:          '/chat',
   universe:      '/lexiverse',
   lexigraph:     '/lexigraph',
-  knowledge:     '/knowledge',
+  knowledge:     '/dictionary?state=weak',
   me:            '/profile',
   onboarding:    '/onboarding',
 }
