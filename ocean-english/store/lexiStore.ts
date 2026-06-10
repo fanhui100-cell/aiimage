@@ -12,6 +12,8 @@ import { toWordEntry } from '@/lib/dictionary/entry-adapter'
 import { mapExamKeyToTag } from '@/lib/dictionary/exam-tag-map'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LearningLevel } from '@/types/learning'
+import type { QuizSession } from '@/types/quiz'
+import type { ChatMessage } from '@/types/study'
 
 export type { ReviewGrade }
 
@@ -88,6 +90,18 @@ export interface TodayPack {
 export interface TodayPackCache {
   date: string
   recommendedIds: string[]
+}
+
+/** 结构化错题（A7 平移自 learningStore，结构不变，云同步端点沿用） */
+export interface WrongAnswer {
+  id: string
+  wordId: string
+  word: string
+  question: string
+  userAnswer: string
+  correctAnswer: string
+  explanation: string
+  timestamp: number
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -210,6 +224,11 @@ interface LexiStoreState {
   todayPack: TodayPackCache
   log: LogEntry[]
   profile: Profile
+  // ── practice 切片（A7 平移自 learningStore）──
+  wrongAnswers: WrongAnswer[]
+  quizHistory: QuizSession[]
+  // ── chat 切片（A7 平移自 learningStore）──
+  chatMessages: ChatMessage[]
 }
 
 interface LexiStoreActions {
@@ -252,6 +271,14 @@ interface LexiStoreActions {
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
   toggleGoal: (exam: string) => void
+  // practice 切片
+  addWrongAnswer: (entry: Omit<WrongAnswer, 'id'>) => void
+  removeWrongAnswer: (id: string) => void
+  clearWrongAnswers: () => void
+  addQuizSession: (session: QuizSession) => void
+  // chat 切片
+  addChatMessage: (message: ChatMessage) => void
+  clearChat: () => void
 }
 
 type LexiStore = LexiStoreState & LexiStoreActions
@@ -308,6 +335,9 @@ export const useLexiStore = create<LexiStore>()(
       todayPack: { date: '', recommendedIds: [] },
       log: [],
       profile: { onboarded: false, skipped: false, targetExam: null, band: 5, dailyGoal: 12 },
+      wrongAnswers: [],
+      quizHistory: [],
+      chatMessages: [],
 
       // ── read views ──
       byId: (id) => get().words.find(w => w.id === id),
@@ -581,14 +611,43 @@ export const useLexiStore = create<LexiStore>()(
         g.has(exam) ? g.delete(exam) : g.add(exam)
         return { profile: { ...s.profile, goals: [...g] } }
       }),
+
+      // ── practice 切片（逻辑平移自 learningStore，结构不变）──
+      addWrongAnswer: (entry) => set(s => {
+        // 按 wordId + question 去重
+        const exists = s.wrongAnswers.some(
+          w => w.wordId === entry.wordId && w.question === entry.question,
+        )
+        if (exists) return {}
+        const id = `${entry.wordId}-${entry.timestamp}`
+        return { wrongAnswers: [{ ...entry, id }, ...s.wrongAnswers].slice(0, 200) }
+      }),
+
+      removeWrongAnswer: (id) => set(s => ({
+        wrongAnswers: s.wrongAnswers.filter(w => w.id !== id),
+      })),
+
+      clearWrongAnswers: () => set({ wrongAnswers: [] }),
+
+      addQuizSession: (session) => set(s => ({
+        quizHistory: [session, ...s.quizHistory].slice(0, 50),
+      })),
+
+      // ── chat 切片 ──
+      addChatMessage: (message) => set(s => ({
+        chatMessages: [...s.chatMessages, message].slice(-100),
+      })),
+
+      clearChat: () => set({ chatMessages: [] }),
     }),
     {
       name: 'lexi-store-v1',
       storage: createJSONStorage(() => localStorage),
-      version: 4,
+      version: 5,
       // v1 → v2：给存量词补时间戳调度字段，去掉假进度
       // v2 → v3：吸收旧 learningStore（localStorage['lexiocean-learning']）本地数据
       // v3 → v4：种子词 id 重映射为词典 slug（w01 → unavoidable），学习进度保留
+      // v4 → v5：平移 learningStore 的 practice/chat 切片（错题/测验史/聊天记录）
       migrate: (persisted: any, from: number) => {
         if (!persisted) return persisted
         if (from < 2) {
@@ -672,6 +731,26 @@ export const useLexiStore = create<LexiStore>()(
             // 旧数据损坏：跳过合并，不阻塞启动
           }
         }
+        if (from < 5) {
+          try {
+            const raw = typeof localStorage !== 'undefined'
+              ? localStorage.getItem('lexiocean-learning') : null
+            const legacy = raw ? JSON.parse(raw)?.state : null
+            if (legacy) {
+              if (!Array.isArray(persisted.wrongAnswers) || persisted.wrongAnswers.length === 0) {
+                persisted.wrongAnswers = Array.isArray(legacy.wrongAnswers) ? legacy.wrongAnswers : []
+              }
+              if (!Array.isArray(persisted.quizHistory) || persisted.quizHistory.length === 0) {
+                persisted.quizHistory = Array.isArray(legacy.quizHistory) ? legacy.quizHistory : []
+              }
+              if (!Array.isArray(persisted.chatMessages) || persisted.chatMessages.length === 0) {
+                persisted.chatMessages = Array.isArray(legacy.chatMessages) ? legacy.chatMessages : []
+              }
+            }
+          } catch {
+            // 旧数据损坏：跳过，不阻塞启动
+          }
+        }
         if (from < 4 && Array.isArray(persisted.words)) {
           // 种子词 id → 词典 slug；slug 已存在则丢弃旧种子条目（保词典侧进度）
           const seen = new Set(
@@ -697,6 +776,9 @@ export const useLexiStore = create<LexiStore>()(
         todayPack: s.todayPack,
         log: s.log,
         profile: s.profile,
+        wrongAnswers: s.wrongAnswers,
+        quizHistory: s.quizHistory,
+        chatMessages: s.chatMessages,
       }),
     }
   )
