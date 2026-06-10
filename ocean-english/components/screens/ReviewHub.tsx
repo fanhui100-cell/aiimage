@@ -4,7 +4,6 @@
 
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
-import { useLearningStore } from '@/store/learningStore'
 import { ReviewScreen } from '@/components/screens/ReviewScreen'
 import { WrongAnswerList } from '@/components/screens/WrongAnswerList'
 
@@ -24,7 +23,7 @@ export function ReviewHub() {
 
   const dueCount = useLexiStore(s => s.getDue().length)
   const weakCount = useLexiStore(s => s.getWeak().length)
-  const wrongCount = useLearningStore(s => s.wrongAnswers.length)
+  const wrongCount = useLexiStore(s => s.wrongAnswers.length)
   const counts: Record<Tab, number> = { due: dueCount, weak: weakCount, wrong: wrongCount }
 
   function go(t: Tab) {

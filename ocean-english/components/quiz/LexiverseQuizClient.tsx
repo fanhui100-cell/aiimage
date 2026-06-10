@@ -15,8 +15,7 @@ import { LoadingState } from '@/components/lexiverse/LoadingState'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { FilterableWord } from '@/lib/lexiverse/lexiverse-word-filter'
 import type { DictionaryDefinition, DictionaryExample, DictionaryWord } from '@/lib/dictionary/dictionary-types'
-import { useLearningStore, type WrongAnswer } from '@/store/learningStore'
-import { useLexiStore } from '@/store/lexiStore'
+import { useLexiStore, type WrongAnswer } from '@/store/lexiStore'
 import type { QuizAttempt } from '@/types/quiz'
 
 type QuizMode = 'vocabulary-drill' | 'sentence-practice' | 'exam-practice' | 'wrong-answer-booster'
@@ -58,12 +57,10 @@ export function LexiverseQuizClient() {
   const searchParams = useSearchParams()
   const { words: rawWords, loading, error } = useLexiverseDictionary()
   const words = rawWords as VocabWord[]
-  const wrongAnswers = useLearningStore(s => s.wrongAnswers)
-  const addWrongAnswer = useLearningStore(s => s.addWrongAnswer)
-  const addQuizSession = useLearningStore(s => s.addQuizSession)
-  const incrementXp = useLearningStore(s => s.incrementXp)
-  const completeTaskUnit = useLearningStore(s => s.completeTaskUnit)
-  const markStudyToday = useLearningStore(s => s.markStudyToday)
+  const wrongAnswers = useLexiStore(s => s.wrongAnswers)
+  const addWrongAnswer = useLexiStore(s => s.addWrongAnswer)
+  const addQuizSession = useLexiStore(s => s.addQuizSession)
+  const incrementXp = useLexiStore(s => s.incXp)
 
   const urlMode = parseMode(searchParams.get('mode'))
   const wordParam = searchParams.get('word') ?? undefined
@@ -116,8 +113,6 @@ export function LexiverseQuizClient() {
     const lexi = useLexiStore.getState()
     if (correct) {
       incrementXp(10)
-      completeTaskUnit('quiz-5', 1)
-      markStudyToday()
       if (lexi.byId(current.wordId)) lexi.markCorrect(current.wordId)
     } else {
       const picked = current.options.find(o => o.id === optionId)
@@ -134,7 +129,7 @@ export function LexiverseQuizClient() {
       if (lexi.byId(current.wordId)) lexi.markWrong(current.wordId)
     }
     lexi.recordActivity('quizzed')
-  }, [current, answered, incrementXp, completeTaskUnit, markStudyToday, addWrongAnswer])
+  }, [current, answered, incrementXp, addWrongAnswer])
 
   const nextQuestion = useCallback(() => {
     if (currentIndex + 1 >= questions.length) {

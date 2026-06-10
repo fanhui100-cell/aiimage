@@ -4,7 +4,6 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { useLexiStore, type WordEntry, type DistractorOption } from '@/store/lexiStore'
-import { useLearningStore } from '@/store/learningStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { PrimaryBtn, GhostBtn, BackBtn } from '@/components/screens/SharedUI'
 
@@ -14,8 +13,7 @@ const SECS_PER_Q = 20
 
 export function ExamScreen() {
   const navigate = useNavigate()
-  const { all, markCorrect, markWrong, incXp, distractorsFor, recordActivity, profile } = useLexiStore()
-  const addWrongAnswer = useLearningStore(s => s.addWrongAnswer)
+  const { all, markCorrect, markWrong, incXp, distractorsFor, recordActivity, profile, addWrongAnswer } = useLexiStore()
 
   function logWrong(w: WordEntry, options: DistractorOption[] | null, userAnswer: string) {
     const correctOpt = options?.find(o => o.correct)

@@ -2,16 +2,14 @@
 
 import { useEffect, useRef } from 'react'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import {
-  syncSavedWord,
-  syncRemoveSavedWord,
-  syncReviewWords,
-  syncRemoveReviewWord,
+  syncWordStates,
   syncWrongAnswers,
   syncStudyProgress,
   syncQuizSession,
 } from '@/lib/sync/learning-sync'
+import { hydrateWordStatesFromCloud } from '@/lib/sync/learning-hydration'
 import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { useScanStore } from '@/store/scanStore'
 import {
@@ -41,28 +39,94 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
 
     const supabase = createClient()
 
-    // Track current auth user
+    // Track current auth user; 登录后从云端恢复词状态机
     supabase.auth.getUser().then(({ data }) => {
       userRef.current = data.user ?? null
+      if (data.user) void hydrateWordStatesFromCloud()
     })
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      const wasLoggedOut = !userRef.current
       userRef.current = session?.user ?? null
+      if (session?.user && wasLoggedOut && event === 'SIGNED_IN') {
+        void hydrateWordStatesFromCloud()
+      }
     })
 
-    // Debounced sync functions (fire after 1.5s quiet period)
-    const debouncedSyncReviewWords = debounce(syncReviewWords, 1500)
+    // ── lexiStore：词状态机 diff → 1.5s 防抖批量 upsert ────────────────────
+    const getLexi = useLexiStore.getState
+    let prevWords = getLexi().words
+    let prevWrongAnswers = getLexi().wrongAnswers
+    let prevQuizHistory = getLexi().quizHistory
+    let prevChatMessages = getLexi().chatMessages
+    let prevStreakData = getLexi().streakData
+    let prevXp = getLexi().xp
+    let prevUserLevel = getLexi().profile.userLevel ?? null
+
+    // 防抖窗口内累积变更词条，flush 时一次性上传
+    const pendingWords = new Map<string, WordEntry>()
+    const flushWordStates = debounce(() => {
+      const batch = [...pendingWords.values()]
+      pendingWords.clear()
+      syncWordStates(batch)
+    }, 1500)
+
     const debouncedSyncWrongAnswers = debounce(syncWrongAnswers, 1500)
     const debouncedSyncStudyProgress = debounce(syncStudyProgress, 2000)
 
-    // Track previous state to detect changes
-    const getState = useLearningStore.getState
-    let prevSavedWords = getState().savedWords
-    let prevReviewWords = getState().reviewWords
-    let prevWrongAnswers = getState().wrongAnswers
-    let prevQuizHistory = getState().quizHistory
-    let prevStudyProgress = getState().studyProgress
-    let prevUserLevel = getState().userLevel
+    const unsubscribeLexi = useLexiStore.subscribe((state) => {
+      if (!userRef.current) return // Not logged in — skip
+
+      // ── words：找出新增/变更词条（引用比较，store 始终整表替换）──────────
+      if (state.words !== prevWords) {
+        const prevById = new Map(prevWords.map(w => [w.id, w]))
+        for (const w of state.words) {
+          if (prevById.get(w.id) !== w) pendingWords.set(w.id, w)
+        }
+        prevWords = state.words
+        if (pendingWords.size > 0) flushWordStates()
+      }
+
+      if (state.wrongAnswers !== prevWrongAnswers) {
+        prevWrongAnswers = state.wrongAnswers
+        // Sync only the newest entry (last added)
+        const newest = state.wrongAnswers[0]
+        if (newest) debouncedSyncWrongAnswers([newest])
+      }
+
+      if (state.quizHistory !== prevQuizHistory) {
+        const newest = state.quizHistory[0]
+        if (newest && newest !== prevQuizHistory[0]) {
+          syncQuizSession(newest)
+        }
+        prevQuizHistory = state.quizHistory
+      }
+
+      const userLevel = state.profile.userLevel ?? null
+      if (state.streakData !== prevStreakData || state.xp !== prevXp || userLevel !== prevUserLevel) {
+        prevStreakData = state.streakData
+        prevXp = state.xp
+        prevUserLevel = userLevel
+        const totalWordsLearned = state.words.filter(
+          w => w.state === 'learning' || w.state === 'review' || w.state === 'weak' || w.state === 'mastered',
+        ).length
+        debouncedSyncStudyProgress({
+          totalWordsLearned,
+          streakData: state.streakData,
+          xp: state.xp,
+          userLevel,
+        })
+      }
+
+      if (state.chatMessages !== prevChatMessages) {
+        const prevIds = new Set(prevChatMessages.map(m => m.id))
+        const newMessages = state.chatMessages.filter(m => !prevIds.has(m.id))
+        if (newMessages.length > 0 && chatSessionIdRef.current) {
+          syncChatMessages(chatSessionIdRef.current, newMessages)
+        }
+        prevChatMessages = state.chatMessages
+      }
+    })
 
     // ── Scan history store subscriptions ─────────────────────────────────
     const getScanHistoryState = useScanHistoryStore.getState
@@ -119,9 +183,8 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
       }
     })
 
-    // ── Chat sync ─────────────────────────────────────────────────────────
+    // ── Chat session ──────────────────────────────────────────────────────
     const chatSessionIdRef = { current: null as string | null }
-    let prevChatMessages = getState().chatMessages
 
     // Create a chat session when user is logged in
     supabase.auth.getUser().then(({ data }) => {
@@ -130,75 +193,9 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
       }
     })
 
-    const unsubscribeStore = useLearningStore.subscribe((state) => {
-      if (!userRef.current) return // Not logged in — skip
-
-      // ── savedWords: diff for additions and removals ───────────────────────
-      if (state.savedWords !== prevSavedWords) {
-        const prevSet = new Set(prevSavedWords)
-        const currSet = new Set(state.savedWords)
-        // Added
-        state.savedWords
-          .filter(id => !prevSet.has(id))
-          .forEach(wordId => {
-            // Look up word text from reviewWords (added together in the typical flow)
-            const word = state.reviewWords.find(r => r.wordId === wordId)?.word ?? wordId
-            syncSavedWord(wordId, word)
-          })
-        // Removed
-        prevSavedWords
-          .filter(id => !currSet.has(id))
-          .forEach(wordId => syncRemoveSavedWord(wordId))
-        prevSavedWords = state.savedWords
-      }
-
-      // ── reviewWords: detect deletions then upsert survivors ───────────────
-      if (state.reviewWords !== prevReviewWords) {
-        const currWordIds = new Set(state.reviewWords.map(r => r.wordId))
-        // Deleted words → remove from cloud
-        prevReviewWords
-          .filter(r => !currWordIds.has(r.wordId))
-          .forEach(r => syncRemoveReviewWord(r.wordId))
-        // Upsert surviving / updated words
-        prevReviewWords = state.reviewWords
-        debouncedSyncReviewWords(state.reviewWords)
-      }
-
-      if (state.wrongAnswers !== prevWrongAnswers) {
-        prevWrongAnswers = state.wrongAnswers
-        // Sync only the newest entry (last added)
-        const newest = state.wrongAnswers[0]
-        if (newest) debouncedSyncWrongAnswers([newest])
-      }
-
-      if (state.quizHistory !== prevQuizHistory) {
-        // Sync only the newest session
-        const newest = state.quizHistory[0]
-        if (newest && newest !== prevQuizHistory[0]) {
-          syncQuizSession(newest)
-        }
-        prevQuizHistory = state.quizHistory
-      }
-
-      if (state.studyProgress !== prevStudyProgress || state.userLevel !== prevUserLevel) {
-        prevStudyProgress = state.studyProgress
-        prevUserLevel = state.userLevel
-        debouncedSyncStudyProgress(state.studyProgress, state.userLevel)
-      }
-
-      if (state.chatMessages !== prevChatMessages) {
-        const prevIds = new Set(prevChatMessages.map(m => m.id))
-        const newMessages = state.chatMessages.filter(m => !prevIds.has(m.id))
-        if (newMessages.length > 0 && chatSessionIdRef.current) {
-          syncChatMessages(chatSessionIdRef.current, newMessages)
-        }
-        prevChatMessages = state.chatMessages
-      }
-    })
-
     return () => {
       subscription.unsubscribe()
-      unsubscribeStore()
+      unsubscribeLexi()
       unsubscribeScanHistory()
       unsubscribeScanStore()
     }

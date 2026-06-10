@@ -4,7 +4,6 @@
 
 import { useState } from 'react'
 import { useLexiStore, bandToLevel, PROBE_LADDER, BAND_CEFR } from '@/store/lexiStore'
-import { useLearningStore } from '@/store/learningStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { PrimaryBtn, GhostBtn, Eyebrow } from '@/components/screens/SharedUI'
 
@@ -108,8 +107,6 @@ export function OnboardingScreen() {
       onboarded: true,
       userLevel,
     })
-    // 镜像写 learningStore：云同步（CloudSyncProvider）仍监听它，A7 改造后移除
-    useLearningStore.getState().setUserLevel(userLevel)
     // A5：定级完成立即生成个性化今日包，再进今日页
     await useLexiStore.getState().buildTodayPack()
     navigate('today', { flow: true })

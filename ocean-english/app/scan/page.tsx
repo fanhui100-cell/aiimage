@@ -3,7 +3,6 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { AppShell } from '@/components/layout/AppShell'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { useScanStore } from '@/store/scanStore'
 import { DocumentComplianceNotice } from '@/components/scan/DocumentComplianceNotice'
@@ -29,15 +28,7 @@ function newDocumentId(): string {
 }
 
 export default function ScanPage() {
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const {
-    addToReview,
-    saveWord,
-    completeTaskUnit,
-    incrementXp,
-    markStudyToday,
-    addWrongAnswer,
-  } = useLearningStore()
+  const addWrongAnswer = useLexiStore(s => s.addWrongAnswer)
   const lexiWords = useLexiStore(s => s.words)
   const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
 
@@ -178,12 +169,6 @@ export default function ScanPage() {
     lexi.addToReview(id)
     lexi.recordActivity('learned')
     lexi.incXp(10)
-    // 镜像写 learningStore（云同步），A7 改造后移除
-    addToReview(id, word.word)
-    saveWord(id)
-    completeTaskUnit('vocab-5', 1)
-    incrementXp(10)
-    markStudyToday()
   }
 
   // ── Scan store: quiz drafts + study notes ────────────────────────────────
@@ -201,14 +186,14 @@ export default function ScanPage() {
         timestamp: Date.now(),
       })
     }
-    completeTaskUnit('quiz-5', 1)
-    incrementXp(5)
+    useLexiStore.getState().incXp(5)
   }
 
   function handleSaveNote(note: ScanStudyNote) {
     addScanStudyNote(note)
-    incrementXp(5)
-    markStudyToday()
+    const lexi = useLexiStore.getState()
+    lexi.incXp(5)
+    lexi.recordActivity('learned')
   }
 
   // Update statuses for all reviewed drafts after a practice session
@@ -220,7 +205,7 @@ export default function ScanPage() {
         updateScanQuizDraftStatus(id, 'needs-review')
       }
     })
-    markStudyToday()
+    useLexiStore.getState().recordActivity('quizzed')
   }
 
   const isActivelyProcessing =

@@ -8,7 +8,6 @@ import { PronunciationButton } from '@/components/pronunciation/PronunciationBut
 import { ExampleSentencePlayer } from '@/components/pronunciation/ExampleSentencePlayer'
 import { AccentSelector } from '@/components/pronunciation/AccentSelector'
 import { readAccentPreference } from '@/lib/pronunciation/pronunciation-client'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
@@ -169,9 +168,6 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
   // Anti-spam: each word's pronunciation awards LexiStar at most once per page lifecycle
   const hasAwardedPronunciationRef = useRef(false)
 
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const { addToReview, completeTaskUnit, markStudyToday, incrementXp, incrementWordsLearned } =
-    useLearningStore()
   const ensureWord = useLexiStore(s => s.ensureWord)
   const recordActivity = useLexiStore(s => s.recordActivity)
   const incXp = useLexiStore(s => s.incXp)
@@ -215,12 +211,6 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
     ensureWord(word, 'lookup')
     recordActivity('learned')
     incXp(10)
-    // 兼容旧组件读取的 learningStore 计数（収編完成后移除）
-    addToReview(word.id, word.word)
-    completeTaskUnit('vocab-5', 1)
-    markStudyToday()
-    incrementXp(10)
-    incrementWordsLearned()
   }
 
   function handleQuizThis() {

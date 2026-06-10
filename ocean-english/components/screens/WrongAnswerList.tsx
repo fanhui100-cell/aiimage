@@ -3,7 +3,7 @@
 // 题面 / 我的答案 / 正确答案 / 解析折叠 / 重练 / 移除；同词折叠 ×N
 
 import { useMemo, useState } from 'react'
-import { useLearningStore, type WrongAnswer } from '@/store/learningStore'
+import { useLexiStore, type WrongAnswer } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
 
 function WrongCard({ group, onRetry, onRemove }: {
@@ -59,8 +59,8 @@ function WrongCard({ group, onRetry, onRemove }: {
 
 export function WrongAnswerList() {
   const navigate = useNavigate()
-  const wrongAnswers = useLearningStore(s => s.wrongAnswers)
-  const removeWrongAnswer = useLearningStore(s => s.removeWrongAnswer)
+  const wrongAnswers = useLexiStore(s => s.wrongAnswers)
+  const removeWrongAnswer = useLexiStore(s => s.removeWrongAnswer)
 
   // 按 wordId 折叠，组内按时间倒序
   const groups = useMemo(() => {

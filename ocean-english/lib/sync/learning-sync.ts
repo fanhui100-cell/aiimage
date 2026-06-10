@@ -2,12 +2,14 @@
  * Cloud sync utility functions for core learning data.
  * All functions are fire-and-forget: they log warnings on failure but never throw.
  * Only called when the user is logged in (CloudSyncProvider checks auth before calling).
+ *
+ * A7：词状态机（lexiStore.words）整体经 /api/user/word-states 同步，
+ * 取代旧的 saved-words / review-words 两条链路（端点暂留，A8 清理）。
  */
 
-import type { ReviewWord, WrongAnswer } from '@/store/learningStore'
+import type { WordEntry, WrongAnswer, StreakData } from '@/store/lexiStore'
 import type { QuizSession } from '@/types/quiz'
 import type { LearningLevel } from '@/types/learning'
-import type { StudyProgress } from '@/types/study'
 
 async function safePost(url: string, body: unknown): Promise<void> {
   try {
@@ -41,23 +43,22 @@ async function safePut(url: string, body: unknown): Promise<void> {
   }
 }
 
-export function syncSavedWord(wordId: string, word: string): void {
-  void safePost('/api/user/saved-words', { wordId, word })
-}
-
-export function syncRemoveSavedWord(wordId: string): void {
-  void fetch(`/api/user/saved-words?wordId=${encodeURIComponent(wordId)}`, { method: 'DELETE' })
-    .catch(err => console.warn('[sync] remove saved-word failed:', err))
-}
-
-export function syncRemoveReviewWord(wordId: string): void {
-  void fetch(`/api/user/review-words?wordId=${encodeURIComponent(wordId)}`, { method: 'DELETE' })
-    .catch(err => console.warn('[sync] remove review-word failed:', err))
-}
-
-export function syncReviewWords(reviewWords: ReviewWord[]): void {
-  if (reviewWords.length === 0) return
-  void safePut('/api/user/review-words', { reviewWords })
+/** 批量上传变更词条（CloudSyncProvider 1.5s 防抖后调用） */
+export function syncWordStates(entries: WordEntry[]): void {
+  if (entries.length === 0) return
+  void safePost('/api/user/word-states', {
+    wordStates: entries.map(w => ({
+      wordId: w.id,
+      word: w.word,
+      state: w.state,
+      streak: w.streak,
+      ease: w.ease,
+      interval: w.interval,
+      nextReviewAt: w.nextReviewAt ?? null,
+      saved: !!w.saved,
+      source: w.source ?? 'lookup',
+    })),
+  })
 }
 
 export function syncWrongAnswers(wrongAnswers: WrongAnswer[]): void {
@@ -69,16 +70,22 @@ export function syncQuizSession(session: QuizSession): void {
   void safePost('/api/user/quiz-history', { session })
 }
 
-export function syncStudyProgress(progress: StudyProgress, userLevel: LearningLevel | null): void {
+/** 进度同步：从 lexiStore 的 streakData/xp/词表派生，沿用 study-progress 端点 */
+export function syncStudyProgress(args: {
+  totalWordsLearned: number
+  streakData: StreakData
+  xp: number
+  userLevel: LearningLevel | null
+}): void {
   void safePut('/api/user/study-progress', {
-    totalWordsLearned: progress.totalWordsLearned,
-    currentStreak: progress.currentStreak,
-    longestStreak: progress.longestStreak,
-    totalXp: progress.totalXp,
-    lastStudyDate: progress.lastStudyDate,
-    levelProgress: progress.levelProgress,
+    totalWordsLearned: args.totalWordsLearned,
+    currentStreak: args.streakData.current,
+    longestStreak: args.streakData.longest,
+    totalXp: args.xp,
+    lastStudyDate: args.streakData.lastStudyDate,
+    levelProgress: {},
   })
-  if (userLevel) {
-    void safePut('/api/user/preferences', { level: userLevel })
+  if (args.userLevel) {
+    void safePut('/api/user/preferences', { level: args.userLevel })
   }
 }

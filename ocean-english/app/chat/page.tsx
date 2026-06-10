@@ -1,10 +1,9 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo, Suspense } from 'react'
+import { useState, useRef, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppShell } from '@/components/layout/AppShell'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { getMockAiResponse } from '@/data/mock-chat'
 import { resolveNavigatorContext } from '@/lib/ai-navigator/ai-navigator-context'
@@ -92,27 +91,14 @@ function ChatEmptyState({ context }: { context: AINavigatorContext }) {
 
 function ChatInner() {
   const searchParams = useSearchParams()
-  // chat/错题/进度暂留 learningStore（A7 迁移）；学习状态读 lexiStore
-  const {
-    chatMessages,
-    addChatMessage,
-    clearChat,
-    addToReview,
-    wrongAnswers,
-    studyProgress,
-  } = useLearningStore()
+  const chatMessages = useLexiStore(s => s.chatMessages)
+  const addChatMessage = useLexiStore(s => s.addChatMessage)
+  const clearChat = useLexiStore(s => s.clearChat)
+  const wrongAnswers = useLexiStore(s => s.wrongAnswers)
+  const totalXp = useLexiStore(s => s.xp)
+  const currentStreak = useLexiStore(s => s.streakData.current)
   const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
   const words = useLexiStore(s => s.words)
-  const savedWords = useMemo(() => words.filter(w => w.saved).map(w => w.id), [words])
-  const reviewWords = useMemo(
-    () => words
-      .filter(w => w.nextReviewAt != null)
-      .map(w => ({
-        wordId: w.id, word: w.word, nextReviewAt: w.nextReviewAt!,
-        interval: w.interval, ease: w.ease, repetitions: w.streak,
-      })),
-    [words],
-  )
 
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -122,9 +108,9 @@ function ChatInner() {
   const context: AINavigatorContext = resolveNavigatorContext({
     params: searchParams,
     wrongAnswers,
-    studyProgress,
-    savedWords,
-    reviewWords,
+    totalXp,
+    currentStreak,
+    words,
   })
 
   useEffect(() => {
@@ -144,9 +130,17 @@ function ChatInner() {
     }
     addChatMessage(userMsg)
 
-    // Auto-add words mentioned in user message
+    // Auto-add words mentioned in user message（内容字段由 hydrate 补拉）
     const wordMatch = message.match(/\b(ubiquitous|ephemeral|resilient|meticulous|eloquent|pragmatic)\b/i)
-    if (wordMatch) addToReview(wordMatch[0].toLowerCase(), wordMatch[0].toLowerCase())
+    if (wordMatch) {
+      const id = wordMatch[0].toLowerCase()
+      const lexi = useLexiStore.getState()
+      if (!lexi.byId(id)) {
+        lexi.addWord({ id, word: id, zh: '', source: 'lookup' })
+        void lexi.hydrateMissingEntries()
+      }
+      lexi.addToReview(id)
+    }
 
     setIsTyping(true)
     try {

@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import { PronunciationButton } from '@/components/pronunciation/PronunciationButton'
@@ -85,10 +84,6 @@ export function LexiGraphPanel({ word, mode, notInCorpusWord, onSynonymClick, on
   const hasAwardedPronunciationRef = useRef(false)
 
   const router = useRouter()
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const {
-    addToReview, completeTaskUnit, markStudyToday, incrementXp,
-  } = useLearningStore()
   const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
   const lexiWords = useLexiStore(s => s.words)
   const { addLexiStar, markReviewAction, lightUpWordNode, setCompanionMessage, recordPronunciationPlay, recordQuizStart } = useMotivationStore()
@@ -186,12 +181,8 @@ export function LexiGraphPanel({ word, mode, notInCorpusWord, onSynonymClick, on
     const lexi = useLexiStore.getState()
     lexi.ensureWord(word!, 'lookup')
     lexi.addToReview(word!.id)
+    lexi.recordActivity('learned')
     lexi.incXp(10)
-    // 镜像写 learningStore（云同步），A7 改造后移除
-    addToReview(word!.id, word!.word)
-    completeTaskUnit('vocab-5', 1)
-    markStudyToday()
-    incrementXp(10)
     setReviewAdded(true)
     try {
       addLexiStar(8, 'review', word!.id)

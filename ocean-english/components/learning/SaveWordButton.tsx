@@ -2,7 +2,6 @@
 
 import { useRef } from 'react'
 import { toast } from 'sonner'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { SparkBurst, type SparkBurstHandle } from '@/components/ui/motion/SparkBurst'
 
@@ -25,20 +24,16 @@ function StarIcon({ filled }: { filled: boolean }) {
 }
 
 export function SaveWordButton({ wordId, word, compact = false }: SaveWordButtonProps) {
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const { saveWord, unsaveWord, addToReview } = useLearningStore()
   const setSaved = useLexiStore(s => s.setSaved)
   const saved = useLexiStore(s => !!s.words.find(w => w.id === wordId)?.saved)
   const sparkRef = useRef<SparkBurstHandle>(null)
 
   function handleSave() {
     if (saved) {
-      unsaveWord(wordId)
-      setSaved(wordId, false)            // A4：统一中枢取消收藏
+      setSaved(wordId, false)
     } else {
-      saveWord(wordId)
-      addToReview(wordId, word)
-      setSaved(wordId, true, word)       // A4：统一中枢标记收藏（旧 store 暂作云同步镜像）
+      setSaved(wordId, true, word)
+      useLexiStore.getState().addToReview(wordId)   // 收藏即进 SRS 队列
       sparkRef.current?.fire()
       toast.success('已加入复习 · +10★')
     }

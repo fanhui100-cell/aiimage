@@ -8,7 +8,6 @@ import { getConstellationById, getGalaxyById } from '@/config/lexiverse-galaxies
 import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
 import { resolveGalaxyWords } from '@/lib/lexiverse/lexiverse-word-filter'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { LiquidActionButton, LiquidBadge, LiquidGlassCard, LiquidGlassPanel } from '@/components/lexiverse/liquid-ui'
 import { useLexiverseSlices } from '@/components/lexiverse/useLexiverseSlices'
@@ -31,8 +30,6 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
   const currentUrl = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
 
   const slices = useLexiverseSlices()
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const addToReview = useLearningStore((state) => state.addToReview)
   const { words } = useLexiverseDictionary()
 
   const learningState = resolveLearningState({ wordId: word.id, normalizedWord: word.id, slices })
@@ -40,11 +37,10 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
   const isInReview = useLexiStore(s => s.words.some(w => w.id === word.id && w.nextReviewAt != null))
 
   function handleAddToReview() {
-    // 词典词经唯一入口进入统一状态机，再进 SRS 队列；镜像写 learningStore（A7 移除）
+    // 词典词经唯一入口进入统一状态机，再进 SRS 队列
     const lexi = useLexiStore.getState()
     lexi.ensureWord(word, 'lookup')
     lexi.addToReview(word.id)
-    addToReview(word.id, word.word)
   }
 
   const galaxy = galaxyId ? getGalaxyById(galaxyId) : null

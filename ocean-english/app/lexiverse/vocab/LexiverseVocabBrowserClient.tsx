@@ -17,7 +17,6 @@ import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { FilterableWord } from '@/lib/lexiverse/lexiverse-word-filter'
 import type { PlanetLearningState } from '@/lib/lexiverse/lexiverse-types'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import type { DictionaryDefinition, DictionaryExample, DictionaryWord } from '@/lib/dictionary/dictionary-types'
 
@@ -63,7 +62,6 @@ export function LexiverseVocabBrowserClient() {
   const { words: rawWords, loading, error } = useLexiverseDictionary()
   const words = rawWords as VocabWord[]
   const slices = useLexiverseSlices()
-  const addToReview = useLearningStore(s => s.addToReview)
 
   const [query, setQuery] = useState('')
   const [filters, setFilters] = useState<Filters>(() => cloneFilters(EMPTY_FILTERS))
@@ -231,7 +229,7 @@ export function LexiverseVocabBrowserClient() {
                 word={selectedWord}
                 state={stateFor(selectedWord)}
                 onAddToReview={() => {
-                  // 词进统一状态机再入 SRS 队列；镜像写 learningStore（A7 移除）
+                  // 词进统一状态机再入 SRS 队列
                   const lexi = useLexiStore.getState()
                   if (!lexi.byId(selectedWord.id)) {
                     lexi.addWord({
@@ -243,7 +241,6 @@ export function LexiverseVocabBrowserClient() {
                     void lexi.hydrateMissingEntries()
                   }
                   lexi.addToReview(selectedWord.id)
-                  addToReview(selectedWord.id, selectedWord.word)
                 }}
               />
             ) : (

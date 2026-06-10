@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { useScanStore } from '@/store/scanStore'
-import { useLearningStore } from '@/store/learningStore'
 import { useLexiStore } from '@/store/lexiStore'
 import { ExtractedVocabularyPanel } from '@/components/scan/ExtractedVocabularyPanel'
 import { ExtractedQuestionsPanel } from '@/components/scan/ExtractedQuestionsPanel'
@@ -34,8 +33,7 @@ interface ScanHistoryDetailClientProps {
 export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientProps) {
   const { getScanDocumentById, deleteScanDocument, markVocabularyAdded, markQuizDraftsSaved, markWrongAnswersSaved, markStudyNotesSaved } = useScanHistoryStore()
   const { addScanQuizDraft, addScanStudyNote, scanQuizDrafts, scanStudyNotes } = useScanStore()
-  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
-  const { addToReview, saveWord, incrementXp, markStudyToday, addWrongAnswer } = useLearningStore()
+  const addWrongAnswer = useLexiStore(s => s.addWrongAnswer)
   const lexiWords = useLexiStore(s => s.words)
 
   const doc = getScanDocumentById(documentId)
@@ -112,11 +110,6 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
     lexi.addToReview(id)
     lexi.recordActivity('learned')
     lexi.incXp(10)
-    // 镜像写 learningStore（云同步），A7 改造后移除
-    addToReview(id, word.word)
-    saveWord(id)
-    incrementXp(10)
-    markStudyToday()
     markVocabularyAdded(documentId, 1)
   }
 
@@ -141,7 +134,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
         markQuizDraftsSaved(documentId, 1)
       }
     }
-    incrementXp(5)
+    useLexiStore.getState().incXp(5)
   }
 
   function handleSaveNote(index: number) {
@@ -151,8 +144,9 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
     addScanStudyNote(note)
     if (isNew) markStudyNotesSaved(documentId, 1)
     setLocalSavedNotes(prev => new Set(prev).add(index))
-    incrementXp(5)
-    markStudyToday()
+    const lexi = useLexiStore.getState()
+    lexi.incXp(5)
+    lexi.recordActivity('learned')
   }
 
   function handleDelete() {

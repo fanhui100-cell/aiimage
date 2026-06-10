@@ -7,21 +7,19 @@
 
 import type { ReadonlyURLSearchParams } from 'next/navigation'
 import type { AINavigatorContext } from './ai-navigator-types'
-import type { WrongAnswer } from '@/store/learningStore'
-import type { StudyProgress } from '@/types/study'
-import type { ReviewWord } from '@/store/learningStore'
+import type { WrongAnswer, WordEntry } from '@/store/lexiStore'
 
 export interface ContextResolverInput {
   params: ReadonlyURLSearchParams | null
   wrongAnswers: WrongAnswer[]
-  studyProgress: StudyProgress
-  savedWords: string[]
-  reviewWords: ReviewWord[]
+  totalXp: number
+  currentStreak: number
+  words: WordEntry[]
 }
 
 /** Parse URL params and resolve context. Always returns a valid context (falls back to free_chat). */
 export function resolveNavigatorContext(input: ContextResolverInput): AINavigatorContext {
-  const { params, wrongAnswers, studyProgress, savedWords, reviewWords } = input
+  const { params, wrongAnswers, totalXp, currentStreak, words } = input
 
   if (!params) return { type: 'free_chat' }
 
@@ -56,12 +54,13 @@ export function resolveNavigatorContext(input: ContextResolverInput): AINavigato
   }
 
   if (contextType === 'study_goal') {
-    const dueNow = reviewWords.filter(r => r.nextReviewAt <= Date.now()).length
+    const now = Date.now()
+    const dueNow = words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= now).length
     return {
       type: 'study_goal',
-      totalXp: studyProgress.totalXp,
-      currentStreak: studyProgress.currentStreak,
-      savedWordCount: savedWords.length,
+      totalXp,
+      currentStreak,
+      savedWordCount: words.filter(w => w.saved).length,
       dueWordCount: dueNow,
     }
   }
