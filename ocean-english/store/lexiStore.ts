@@ -8,6 +8,8 @@ import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 import { type WordState, STATE_ORDER } from '@/lib/state-meta'
 import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
+import { toWordEntry } from '@/lib/dictionary/entry-adapter'
+import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 
 export type { ReviewGrade }
 
@@ -29,6 +31,10 @@ export interface WordEntry {
   interval: number
   nextReviewAt?: number     // 时间戳；undefined = 不在 SRS 队列
   lastReviewedAt?: number
+  // ── A4 缝合：入库元信息（可选，便于存量数据渐进迁移）──
+  addedAt?: number
+  source?: 'today-pack' | 'lookup' | 'scan' | 'reading' | 'seed'
+  saved?: boolean           // 收编 learningStore.savedWords
   cefr?: string
   band?: number
   examTags?: string[]
@@ -215,6 +221,8 @@ interface LexiStoreActions {
   reviewGrade: (id: string, g: ReviewGrade) => void
   relearn: (id: string) => void
   addToReview: (id: string) => void
+  // A4 缝合：唯一词典入库入口（已存在不重置学习进度）
+  ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
   recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
@@ -369,6 +377,16 @@ export const useLexiStore = create<LexiStore>()(
         if (!word) return {}
         return transition(s.words, s.log, id, 'review', '加入复习', { nextReviewAt: Date.now() })
       }),
+
+      // 唯一词典入库入口：已在库中则原样返回（绝不重置进度）
+      ensureWord: (dw, source, state = 'learning') => {
+        const existing = get().words.find(w => w.id === dw.id)
+        if (existing) return existing
+        const entry: WordEntry = { ...toWordEntry(dw, source), state }
+        const logEntry: LogEntry = { id: entry.id, word: entry.word, from: 'unknown', to: state, note: '入库', t: Date.now() }
+        set(s => ({ words: [...s.words, entry], log: [logEntry, ...s.log].slice(0, 30) }))
+        return entry
+      },
 
       addWord: (entry) => {
         const current = get()

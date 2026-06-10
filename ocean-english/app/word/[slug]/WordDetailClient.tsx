@@ -9,6 +9,7 @@ import { ExampleSentencePlayer } from '@/components/pronunciation/ExampleSentenc
 import { AccentSelector } from '@/components/pronunciation/AccentSelector'
 import { readAccentPreference } from '@/lib/pronunciation/pronunciation-client'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { Accent } from '@/lib/pronunciation/pronunciation-types'
@@ -170,6 +171,9 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
 
   const { addToReview, completeTaskUnit, markStudyToday, incrementXp, incrementWordsLearned, userLevel } =
     useLearningStore()
+  const ensureWord = useLexiStore(s => s.ensureWord)
+  const recordActivity = useLexiStore(s => s.recordActivity)
+  const incXp = useLexiStore(s => s.incXp)
   const { addLexiStar, recordPronunciationPlay } = useMotivationStore()
   const router = useRouter()
 
@@ -205,6 +209,11 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
   }
 
   function handleAddToReview() {
+    // A4: 词典词经唯一入口进入统一状态机（已入库不重置进度）
+    ensureWord(word, 'lookup')
+    recordActivity('learned')
+    incXp(10)
+    // 兼容旧组件读取的 learningStore 计数（収編完成后移除）
     addToReview(word.id, word.word)
     completeTaskUnit('vocab-5', 1)
     markStudyToday()
@@ -326,7 +335,7 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
                   cursor: 'pointer',
                 }}
               >
-                + 加入复习
+                + 加入学习
               </button>
               <button
                 onClick={handleQuizThis}
