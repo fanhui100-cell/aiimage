@@ -42,3 +42,7 @@ next-env.d.ts
 
 # smoke test logs
 smoke-*.log
+
+# playwright
+/test-results/
+/playwright-report/
