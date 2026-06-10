@@ -115,14 +115,6 @@ export const PROBE_LADDER = [
   { word: 'ubiquitous', zh: '无处不在的', cefr: 'C2', band: 8 },
 ]
 
-export const EXTRA_DICT: WordEntry[] = [
-  { id: 'd_ubiquitous', word: 'ubiquitous', phon: '/juːˈbɪkwɪtəs/', pos: 'adj.',    zh: '无处不在的',      galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'C2', band: 8, examTags: ['GRE', 'TOEFL'],    ex: 'Smartphones have become ubiquitous.',  exZh: '智能手机已无处不在。',     syn: ['omnipresent', 'pervasive'], ant: ['rare'] },
-  { id: 'd_ephemeral',  word: 'ephemeral',  phon: '/ɪˈfemərəl/',    pos: 'adj.',    zh: '短暂的、转瞬即逝的', galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'C2', band: 8, examTags: ['GRE', 'IELTS'],    ex: 'Fame can be ephemeral.',               exZh: '名声可能转瞬即逝。',       syn: ['transient', 'fleeting'],    ant: ['permanent'] },
-  { id: 'd_benefit',    word: 'benefit',    phon: '/ˈbenɪfɪt/',     pos: 'n./v.',   zh: '益处；得益',       galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'B1', band: 3, examTags: ['CET4', 'GAOKAO'],  ex: 'Exercise benefits your health.',       exZh: '锻炼有益健康。',           syn: ['advantage', 'gain'],        ant: ['drawback'] },
-  { id: 'd_persuade',   word: 'persuade',   phon: '/pəˈsweɪd/',     pos: 'v.',      zh: '说服、劝说',       galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'B1', band: 4, examTags: ['CET4', 'GAOKAO'],  ex: 'She persuaded him to stay.',           exZh: '她说服他留下。',           syn: ['convince'],                 ant: ['dissuade'] },
-  { id: 'd_resilient',  word: 'resilient',  phon: '/rɪˈzɪliənt/',   pos: 'adj.',    zh: '有韧性的、能复原的',  galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'C1', band: 7, examTags: ['IELTS', 'TOEFL'], ex: 'Children are remarkably resilient.',   exZh: '孩子的恢复力惊人。',       syn: ['tough', 'flexible'],        ant: ['fragile'] },
-]
-
 const WORD_AUG: Record<string, Partial<WordEntry>> = {
   w01: { cefr: 'B2', band: 5, examTags: ['CET6', 'IELTS'],          ex: 'The change felt unavoidable once the data was clear.',          exZh: '数据一清晰，这个变化就显得难以避免。',   syn: ['inevitable', 'inescapable'], ant: ['avoidable'] },
   w02: { cefr: 'B2', band: 5, examTags: ['CET6', 'IELTS', 'KAOYAN'], ex: 'Conflict seemed inevitable after the talks broke down.',       exZh: '谈判破裂后冲突似乎不可避免。',           syn: ['unavoidable', 'certain'],    ant: ['avoidable', 'uncertain'] },
@@ -165,9 +157,25 @@ const SEED_WORDS_BASE: Omit<WordEntry, 'cefr' | 'band' | 'examTags' | 'ex' | 'ex
   { id: 'w18', word: 'incentive',   phon: '/ɪnˈsentɪv/',   pos: 'n.',   zh: '激励、动机',      galaxy: 'society',   state: 'locked',       streak: 0, ease: 2.5, interval: 0 },
 ]
 
-const INITIAL_WORDS: WordEntry[] = SEED_WORDS_BASE.map(w => ({
+// 旧种子 id → 词典 slug（DictionaryWord.id 即小写词形）
+export const SEED_SLUG: Record<string, string> = {
+  w01: 'unavoidable', w02: 'inevitable', w03: 'profound', w04: 'ambiguous',
+  w05: 'coherent', w06: 'paradigm', w07: 'nuance', w08: 'rhetoric',
+  w09: 'empirical', w10: 'cognition', w11: 'advocate', w12: 'consensus',
+  w13: 'mitigate', w14: 'sustainable', w15: 'discourse', w16: 'pragmatic',
+  w17: 'equitable', w18: 'incentive',
+}
+
+// 零网络兜底包：仅当词典不可用且词库为空时注入（A4-6）。
+// id = 词典 slug；学习字段全部归零，source 标 'seed'。
+const OFFLINE_SEED_WORDS: WordEntry[] = SEED_WORDS_BASE.map(w => ({
   ...(w as WordEntry),
   ...(WORD_AUG[w.id] ?? {}),
+  id: SEED_SLUG[w.id],
+  state: 'recommended' as WordState,
+  streak: 0, ease: 2.5, interval: 0,
+  nextReviewAt: undefined,
+  source: 'seed' as const,
 }))
 
 // ─────────────────────────────────────────────────────────────
@@ -194,7 +202,6 @@ interface LexiStoreState {
   goalToday: number
   log: LogEntry[]
   profile: Profile
-  user: { loggedIn: boolean; name: string; email: string }
 }
 
 interface LexiStoreActions {
@@ -213,7 +220,6 @@ interface LexiStoreActions {
   getSaved: () => WordEntry[]
   isSaved: (id: string) => boolean
   masteredPct: () => number
-  extraDict: () => WordEntry[]
   probeLadder: () => typeof PROBE_LADDER
   examBands: () => typeof EXAM_BANDS
   bandCefr: (b: number) => string
@@ -229,6 +235,7 @@ interface LexiStoreActions {
   // A4 缝合：唯一词典入库入口（已存在不重置学习进度）
   ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
   hydrateMissingEntries: () => Promise<void>
+  injectOfflineSeedIfEmpty: () => Promise<void>
   setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
@@ -236,8 +243,6 @@ interface LexiStoreActions {
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
   toggleGoal: (exam: string) => void
-  login: (name?: string) => void
-  logout: () => void
 }
 
 type LexiStore = LexiStoreState & LexiStoreActions
@@ -285,14 +290,14 @@ export const useLexiStore = create<LexiStore>()(
   persist(
     (set, get) => ({
       // ── initial state ──
-      words: INITIAL_WORDS,
+      // 新用户词库为空：词由词典推荐/查词进入；离线时由 injectOfflineSeedIfEmpty 兜底
+      words: [],
       xp: 0,
       daily: { date: '', learned: 0, quizzed: 0, reviewed: 0 },
       streakData: { current: 0, longest: 0, lastStudyDate: '' },
       goalToday: 12,
       log: [],
       profile: { onboarded: false, skipped: false, targetExam: null, band: 5, dailyGoal: 12 },
-      user: { loggedIn: false, name: '', email: '' },
 
       // ── read views ──
       byId: (id) => get().words.find(w => w.id === id),
@@ -334,7 +339,6 @@ export const useLexiStore = create<LexiStore>()(
         if (!active.length) return 0
         return Math.round(ws.filter(w => w.state === 'mastered').length / active.length * 100)
       },
-      extraDict: () => EXTRA_DICT,
       probeLadder: () => PROBE_LADDER,
       examBands: () => EXAM_BANDS,
       bandCefr: (b) => BAND_CEFR[b] ?? 'B2',
@@ -447,6 +451,20 @@ export const useLexiStore = create<LexiStore>()(
         }
       },
 
+      // 零网络兜底：词库为空且词典完全不可用时注入离线种子包
+      injectOfflineSeedIfEmpty: async () => {
+        if (get().words.length > 0) return
+        try {
+          const res = await fetch('/api/dictionary/word/inevitable')
+          if (res.ok) return   // 词典可用：交给推荐/查词流程，不注入
+        } catch {
+          // 断网 → 落入注入
+        }
+        if (get().words.length > 0) return
+        const now = Date.now()
+        set(s => ({ words: [...s.words, ...OFFLINE_SEED_WORDS.map(w => ({ ...w, addedAt: now }))] }))
+      },
+
       // 收藏标记（收编 learningStore.savedWords）：词不在库则建轻量 stub
       setSaved: (id, value, fallbackWord) => set(s => {
         const exists = s.words.find(w => w.id === id)
@@ -519,23 +537,14 @@ export const useLexiStore = create<LexiStore>()(
         g.has(exam) ? g.delete(exam) : g.add(exam)
         return { profile: { ...s.profile, goals: [...g] } }
       }),
-
-      login: (name) => set(() => ({
-        user: {
-          loggedIn: true,
-          name: name ?? 'Voyager',
-          email: (name ?? 'voyager').toLowerCase() + '@lexiverse.app',
-        },
-      })),
-
-      logout: () => set(() => ({ user: { loggedIn: false, name: '', email: '' } })),
     }),
     {
       name: 'lexi-store-v1',
       storage: createJSONStorage(() => localStorage),
-      version: 3,
+      version: 4,
       // v1 → v2：给存量词补时间戳调度字段，去掉假进度
       // v2 → v3：吸收旧 learningStore（localStorage['lexiocean-learning']）本地数据
+      // v3 → v4：种子词 id 重映射为词典 slug（w01 → unavoidable），学习进度保留
       migrate: (persisted: any, from: number) => {
         if (!persisted) return persisted
         if (from < 2) {
@@ -619,6 +628,19 @@ export const useLexiStore = create<LexiStore>()(
             // 旧数据损坏：跳过合并，不阻塞启动
           }
         }
+        if (from < 4 && Array.isArray(persisted.words)) {
+          // 种子词 id → 词典 slug；slug 已存在则丢弃旧种子条目（保词典侧进度）
+          const seen = new Set(
+            persisted.words.map((w: any) => w.id).filter((id: string) => !SEED_SLUG[id]),
+          )
+          persisted.words = persisted.words.flatMap((w: any) => {
+            const slug = SEED_SLUG[w.id]
+            if (!slug) return [w]
+            if (seen.has(slug)) return []
+            seen.add(slug)
+            return [{ ...w, id: slug, source: w.source ?? 'seed' }]
+          })
+        }
         return persisted
       },
       // Only persist state fields, not action functions
@@ -630,7 +652,6 @@ export const useLexiStore = create<LexiStore>()(
         goalToday: s.goalToday,
         log: s.log,
         profile: s.profile,
-        user: s.user,
       }),
     }
   )

@@ -78,36 +78,16 @@ function WordRow({ entry }: { entry: WordEntry }) {
   )
 }
 
-// ── DictResult ─────────────────────────────────────────────────
-function DictResult({ entry }: { entry: WordEntry }) {
-  return (
-    <div style={{ padding: '16px 18px', background: 'var(--teal-bg)', border: '1.5px solid var(--line)', borderRadius: 14, marginBottom: 8 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-        <span style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{entry.word}</span>
-        {entry.pos && <span style={{ fontSize: 11, color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>{entry.pos}</span>}
-        <SoundBtn word={entry.word} size={24} />
-      </div>
-      {entry.phon && <div style={{ fontSize: 12, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', marginBottom: 6 }}>{entry.phon}</div>}
-      <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>{entry.zh}</div>
-      {entry.ex && <div style={{ fontSize: 12, color: 'var(--ink-sub)', fontStyle: 'italic', marginTop: 6, lineHeight: 1.6 }}>"{entry.ex}"</div>}
-    </div>
-  )
-}
 
 // ── WordsScreen ────────────────────────────────────────────────
 export function WordsScreen() {
   const navigate = useNavigate()
-  const { all, extraDict, byState, getWeak, addToReview } = useLexiStore()
+  const { all, byState, getWeak, addToReview } = useLexiStore()
 
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<WordState | 'all'>('all')
 
   const allWords = useMemo(() => all(), [])
-  const dictHits = useMemo(() => {
-    if (query.trim().length < 2) return []
-    const q = query.toLowerCase().trim()
-    return extraDict().filter(e => e.word.toLowerCase().includes(q) || e.zh.includes(q))
-  }, [query])
 
   const displayed = useMemo(() => {
     let words = filter === 'all' ? allWords : allWords.filter(w => w.state === filter)
@@ -147,14 +127,6 @@ export function WordsScreen() {
             style={{ width: '100%', padding: '12px 16px 12px 42px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', fontSize: 15, color: 'var(--ink)', outline: 'none', fontFamily: 'var(--font-sans)', boxSizing: 'border-box' }}
           />
         </div>
-
-        {/* Dict results */}
-        {dictHits.length > 0 && (
-          <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--teal-ink)', marginBottom: 8, letterSpacing: '0.08em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>词典匹配</div>
-            {dictHits.map(e => <DictResult key={e.id} entry={e} />)}
-          </div>
-        )}
 
         {/* Filter chips */}
         <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4, marginBottom: 16, scrollbarWidth: 'none' }}>

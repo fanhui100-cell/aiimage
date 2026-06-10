@@ -12,9 +12,11 @@ import { useLexiStore } from '@/store/lexiStore'
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
 
-  // 启动兜底：v3 迁移产生的 stub 词条（zh === ''）补拉词典内容
+  // 启动兜底：① 词库空且断网时注入离线种子包；② stub 词条（zh === ''）补拉词典内容
   useEffect(() => {
-    useLexiStore.getState().hydrateMissingEntries()
+    const lexi = useLexiStore.getState()
+    void lexi.injectOfflineSeedIfEmpty()
+    void lexi.hydrateMissingEntries()
   }, [])
   const chromeless = CHROMELESS_ROUTES.some(
     r => pathname === r || pathname.startsWith(r + '/')

@@ -38,7 +38,7 @@ function VaultTab({ words, emptyText }: { words: WordEntry[]; emptyText: string 
 // ── MeScreen ───────────────────────────────────────────────────
 export function MeScreen() {
   const navigate = useNavigate()
-  const { streakData, xp, masteredPct, getWeak, getSaved, counts, addToReview, profile, bandCefr, user } = useLexiStore()
+  const { streakData, xp, masteredPct, getWeak, getSaved, counts, addToReview, profile, bandCefr } = useLexiStore()
   const streak = streakData.current
 
   const [tab, setTab] = useState<'weak' | 'saved' | 'notes'>('weak')
@@ -69,10 +69,10 @@ export function MeScreen() {
         {/* Profile header */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24 }}>
           <div style={{ width: 58, height: 58, borderRadius: '50%', background: 'linear-gradient(135deg, var(--teal), #3b5bd9)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, color: '#fff', fontWeight: 700, flexShrink: 0 }}>
-            {(user.name || 'L')[0].toUpperCase()}
+            L
           </div>
           <div>
-            <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>{user.name || '词渊学员'}</div>
+            <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>词渊学员</div>
             <div style={{ display: 'flex', gap: 8, marginTop: 4 }}>
               <span style={{ fontSize: 12, padding: '2px 9px', borderRadius: 99, background: 'var(--teal-bg)', color: 'var(--teal-ink)', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>{cefr}</span>
               {profile.targetExam && (
