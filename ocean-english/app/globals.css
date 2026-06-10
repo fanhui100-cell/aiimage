@@ -27,6 +27,7 @@
   --gold-ink: #b3781f;         /* 成就(浅) */
   --rose: #ff8a72;             /* due / 告警(暗) */
   --rose-ink: #bf4a30;         /* (浅) */
+  --blue-ink: #3b5bd9;         /* 学习中(浅色环境) */
 
   /* ── 暗色文字 ── */
   --text-primary: #eef5f9;
@@ -328,4 +329,14 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .mission-bar-fill { animation: none; }
   .mission-sweep::after { display: none; }
+}
+
+/* ── Desktop: always hide mobile bottom tab bar ── */
+@media (min-width: 768px) {
+  .mobile-tab-bar { display: none !important; }
+}
+
+/* ── Mobile: pad main content above bottom tab bar ── */
+@media (max-width: 767px) {
+  .page-shell-content { padding-bottom: 80px; }
 }

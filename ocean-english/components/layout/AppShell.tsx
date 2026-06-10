@@ -1,11 +1,26 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import { Navbar } from './Navbar'
 import { MobileTabBar } from './MobileTabBar'
-import { AIGuideButton } from './AIGuideButton'
+import { CHROMELESS_ROUTES } from './MobileTabBar'
 import { CloudSyncProvider } from '@/components/auth/CloudSyncProvider'
 import { MilestoneToast } from '@/components/ui/MilestoneToast'
-import { LevelGate } from '@/components/product-flow/LevelGate'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const chromeless = CHROMELESS_ROUTES.some(
+    r => pathname === r || pathname.startsWith(r + '/')
+  )
+
+  if (chromeless) {
+    return (
+      <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
+        <main>{children}</main>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
       <Navbar />
@@ -13,8 +28,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <main>{children}</main>
       </CloudSyncProvider>
       <MobileTabBar />
-      <AIGuideButton />
-      <LevelGate />
       <MilestoneToast />
     </div>
   )
