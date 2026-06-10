@@ -220,6 +220,7 @@ interface LexiStoreActions {
   addToReview: (id: string) => void
   // A4 缝合：唯一词典入库入口（已存在不重置学习进度）
   ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
+  hydrateMissingEntries: () => Promise<void>
   setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
@@ -234,8 +235,21 @@ interface LexiStoreActions {
 type LexiStore = LexiStoreState & LexiStoreActions
 
 // ─────────────────────────────────────────────────────────────
-// Internal helper: push log entry + update words
+// Internal helpers
 // ─────────────────────────────────────────────────────────────
+// 迁移用轻量 stub：内容字段留空，由启动时 hydrateMissingEntries() 补全
+function stubEntry(
+  id: string,
+  word: string,
+  source: NonNullable<WordEntry['source']>,
+  state: WordState,
+): WordEntry {
+  return {
+    id, word, zh: '', phon: '', pos: '', galaxy: 'cognition',
+    state, streak: 0, ease: 2.5, interval: 0, addedAt: Date.now(), source,
+  }
+}
+
 function transition(
   words: WordEntry[],
   log: LogEntry[],
@@ -399,6 +413,32 @@ export const useLexiStore = create<LexiStore>()(
         return entry
       },
 
+      // 启动兜底：对内容缺失的 stub 词条（zh === ''）逐个调词典 API 补全。
+      // 只补内容缓存字段，绝不动学习状态（state/streak/ease/interval/nextReviewAt/saved）。
+      hydrateMissingEntries: async () => {
+        const missing = get().words.filter(w => !w.zh)
+        for (const w of missing) {
+          try {
+            const res = await fetch(`/api/dictionary/word/${encodeURIComponent(w.id)}`)
+            if (!res.ok) continue
+            const { data } = await res.json() as { data?: DictionaryWord }
+            if (!data) continue
+            const content = toWordEntry(data, w.source ?? 'lookup')
+            set(s => ({
+              words: s.words.map(x => x.id === w.id ? {
+                ...x,
+                word: content.word, zh: content.zh, phon: content.phon, pos: content.pos,
+                cefr: content.cefr, band: content.band, examTags: content.examTags,
+                ex: content.ex, exZh: content.exZh, syn: content.syn, ant: content.ant,
+                galaxy: content.galaxy,
+              } : x),
+            }))
+          } catch {
+            // 断网等瞬时失败：保留 stub，下次启动重试
+          }
+        }
+      },
+
       // 收藏标记（收编 learningStore.savedWords）：词不在库则建轻量 stub
       setSaved: (id, value, fallbackWord) => set(s => {
         const exists = s.words.find(w => w.id === id)
@@ -483,8 +523,9 @@ export const useLexiStore = create<LexiStore>()(
     {
       name: 'lexi-store-v1',
       storage: createJSONStorage(() => localStorage),
-      version: 2,
+      version: 3,
       // v1 → v2：给存量词补时间戳调度字段，去掉假进度
+      // v2 → v3：吸收旧 learningStore（localStorage['lexiocean-learning']）本地数据
       migrate: (persisted: any, from: number) => {
         if (!persisted) return persisted
         if (from < 2) {
@@ -507,6 +548,62 @@ export const useLexiStore = create<LexiStore>()(
           delete persisted.studiedToday
           persisted.daily = persisted.daily ?? { date: '', learned: 0, quizzed: 0, reviewed: 0 }
           persisted.streakData = persisted.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
+        }
+        if (from < 3) {
+          try {
+            const raw = typeof localStorage !== 'undefined'
+              ? localStorage.getItem('lexiocean-learning') : null
+            const legacy = raw ? JSON.parse(raw)?.state : null
+            if (legacy) {
+              const words: any[] = Array.isArray(persisted.words) ? persisted.words : []
+              // reviewWords → 词条 SRS 字段（词不在库则建 stub，内容启动后补拉）
+              for (const r of legacy.reviewWords ?? []) {
+                if (!r?.wordId) continue
+                let w = words.find((x: any) => x.id === r.wordId)
+                if (!w) {
+                  w = stubEntry(r.wordId, r.word ?? r.wordId, 'lookup', 'review')
+                  words.push(w)
+                }
+                w.interval = r.interval ?? w.interval
+                w.ease = r.ease ?? w.ease
+                w.streak = r.repetitions ?? w.streak
+                // nextReviewAt 取更早者：宁可多复习不漏复习
+                w.nextReviewAt = w.nextReviewAt != null && r.nextReviewAt != null
+                  ? Math.min(w.nextReviewAt, r.nextReviewAt)
+                  : (r.nextReviewAt ?? w.nextReviewAt)
+              }
+              // savedWords → WordEntry.saved
+              for (const id of legacy.savedWords ?? []) {
+                if (typeof id !== 'string' || !id) continue
+                let w = words.find((x: any) => x.id === id)
+                if (!w) {
+                  w = stubEntry(id, id, 'lookup', 'learning')
+                  words.push(w)
+                }
+                w.saved = true
+              }
+              persisted.words = words
+              // streak / xp 取两边较大者
+              const sp = legacy.studyProgress
+              if (sp) {
+                const sd = persisted.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
+                persisted.streakData = {
+                  current: Math.max(sd.current ?? 0, sp.currentStreak ?? 0),
+                  longest: Math.max(sd.longest ?? 0, sp.longestStreak ?? 0),
+                  lastStudyDate: (sd.lastStudyDate ?? '') > (sp.lastStudyDate ?? '')
+                    ? sd.lastStudyDate
+                    : (sp.lastStudyDate ?? ''),
+                }
+                persisted.xp = Math.max(
+                  typeof persisted.xp === 'number' ? persisted.xp : 0,
+                  sp.totalXp ?? 0,
+                )
+              }
+              // 旧 key 不删：learningStore 仍是云同步镜像，A7 改造后再清
+            }
+          } catch {
+            // 旧数据损坏：跳过合并，不阻塞启动
+          }
         }
         return persisted
       },
