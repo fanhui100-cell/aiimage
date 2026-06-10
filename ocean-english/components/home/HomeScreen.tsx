@@ -119,7 +119,9 @@ function ContinueCard({ navigate }: { navigate: (go: string) => void }) {
 
   return (
     <div style={{ position: 'relative', borderRadius: 'var(--r-card)', overflow: 'hidden', background: bg, color: '#eaf3f6', padding: 'clamp(22px,4vw,34px)', boxShadow: '0 30px 60px -32px rgba(8,20,30,0.7)', border: '1px solid rgba(79,230,206,0.14)' }}>
-      <div style={{ position: 'absolute', top: -80, right: -60, width: 260, height: 260, borderRadius: 999, background: 'radial-gradient(circle, rgba(79,230,206,0.22), transparent 70%)', pointerEvents: 'none' }} />
+      {/* Demo08：深海光斑 20s/26s 极慢漂移（仅 transform） */}
+      <div className="drift-a" style={{ position: 'absolute', top: -80, right: -60, width: 260, height: 260, borderRadius: 999, background: 'radial-gradient(circle, rgba(79,230,206,0.22), transparent 70%)', pointerEvents: 'none' }} />
+      <div className="drift-b" style={{ position: 'absolute', bottom: -100, left: -70, width: 220, height: 220, borderRadius: 999, background: 'radial-gradient(circle, rgba(59,91,217,0.14), transparent 70%)', pointerEvents: 'none' }} />
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap', position: 'relative' }}>
         <div style={{ flex: '1 1 300px', minWidth: 0 }}>
           <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(79,230,206,0.8)' }}>今日学习 · Today</p>

@@ -2,39 +2,40 @@
 // LearnScreen — 1:1 port of prototype/screen-learn.jsx
 // Flashcard learn flow with state-toast feedback
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
-import { FlowBar, StateToast, SoundBtn, GhostBtn, PrimaryBtn, EmptyState, useToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, SoundBtn, GhostBtn, PrimaryBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
 
-// ── Flashcard ──────────────────────────────────────────────────
+// ── Flashcard（Demo10：真 3D rotateY 翻转，两面 backface-hidden）─
+const faceStyle: React.CSSProperties = {
+  position: 'absolute', inset: 0,
+  background: 'var(--card)', borderRadius: 24, border: '1px solid var(--line)',
+  padding: '40px 32px', textAlign: 'center',
+  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+  gap: 12, userSelect: 'none',
+  boxShadow: 'var(--card-shadow-sm)',
+}
+
 function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolean; onFlip: () => void }) {
   const m = STATE_META[word.state]
   return (
-    <div
-      onClick={onFlip}
-      style={{
-        background: 'var(--card)', borderRadius: 24, border: '1px solid var(--line)',
-        padding: '40px 32px', textAlign: 'center', cursor: 'pointer',
-        minHeight: 260, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-        gap: 12, transition: 'transform 0.15s', userSelect: 'none',
-        boxShadow: 'var(--card-shadow-sm)',
-      }}
-    >
-      {!flipped ? (
-        <>
+    <div className="flip-outer" onClick={onFlip} style={{ cursor: 'pointer', minHeight: 340 }}>
+      <div className={`flip-inner${flipped ? ' flipped' : ''}`} style={{ height: 340 }}>
+        {/* 正面：词 + 音标 */}
+        <div className="flip-face" style={faceStyle}>
           <div style={{ fontSize: 40, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
             {word.word}
           </div>
           {word.phon && (
             <div style={{ fontSize: 14, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>{word.phon}</div>
           )}
-          <div style={{ fontSize: 12, color: 'var(--ink-muted)', marginTop: 8 }}>点击翻面查看</div>
-        </>
-      ) : (
-        <>
+          <div style={{ fontSize: 12, color: 'var(--ink-muted)', marginTop: 8 }}>点击翻面 · Space</div>
+        </div>
+        {/* 背面：释义 + 例句 */}
+        <div className="flip-face flip-back" style={faceStyle}>
           <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>{word.zh}</div>
           {word.pos && <div style={{ fontSize: 12, color: m.light, fontWeight: 600, fontFamily: 'var(--font-mono)' }}>{word.pos}</div>}
           {word.ex && (
@@ -50,8 +51,8 @@ function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolea
               <span key={s} style={{ fontSize: 11, padding: '2px 8px', borderRadius: 99, background: 'var(--teal-bg)', color: 'var(--teal-ink)', fontWeight: 600 }}>{s}</span>
             ))}
           </div>
-        </>
-      )}
+        </div>
+      </div>
     </div>
   )
 }
@@ -75,10 +76,14 @@ export function LearnScreen() {
   const [queue, setQueue] = useState<WordEntry[]>(() => initialList)
   const [idx, setIdx] = useState(0)
   const [flipped, setFlipped] = useState(false)
-  const [toast, showToast] = useToast()
   const [done, setDone] = useState(false)
   const [knewCount, setKnewCount] = useState(0)
   const [retried, setRetried] = useState<Set<string>>(new Set())
+  // B4-3：首访提示「先回忆，再翻面作答」
+  const [showRecallHint, setShowRecallHint] = useState(false)
+  useEffect(() => {
+    if (!localStorage.getItem('lexi-seen-recall-hint')) setShowRecallHint(true)
+  }, [])
 
   const current = queue[idx]
   const isRetry = current ? retried.has(current.id) : false
@@ -92,12 +97,12 @@ export function LearnScreen() {
   }
 
   function advance(action: 'know' | 'again') {
-    if (!current) return
+    if (!current || !flipped) return   // B4-3：未翻面禁止作答（先回忆）
     const prevState = current.state as WordState
     if (action === 'know') {
       markLearning(current.id)
       recordActivity('learned')
-      showToast(current.word, prevState, 'learning')
+      showStateToast(current.word, prevState, 'learning')   // B4-2：非阻塞 sonner，无 700ms 等待
       setKnewCount(c => c + 1)
       goNext()
     } else if (!retried.has(current.id)) {
@@ -107,10 +112,23 @@ export function LearnScreen() {
     } else {
       // 第二次仍不熟：转薄弱
       markWrong(current.id)
-      showToast(current.word, prevState, 'weak')
+      showStateToast(current.word, prevState, 'weak')
       goNext()
     }
   }
+
+  // B4-2：键盘 — Space 翻面、1=还不熟、2=认识、→=下一张（翻面后等同认识跳过）
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (done || !current) return
+      if (e.code === 'Space') { e.preventDefault(); setFlipped(f => !f) }
+      else if (e.key === '1') advance('again')
+      else if (e.key === '2') advance('know')
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done, current, flipped, idx, queue, retried])
 
   function finish() {
     if (isFlow) navigate('quiz', { flow: true })
@@ -176,20 +194,34 @@ export function LearnScreen() {
           <div style={{ height: '100%', width: `${(idx / queue.length) * 100}%`, borderRadius: 99, background: 'var(--teal)', transition: 'width 0.3s' }} />
         </div>
 
-        {/* Action buttons */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 12 }}>
-          <button onClick={() => advance('again')} className="btn-press"
-            style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', cursor: 'pointer', fontSize: 15, fontWeight: 600, color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>
-            还不熟 ✗
+        {/* Action buttons（B4-3：未翻面 40% 透明禁用——先回忆再作答） */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 12, opacity: flipped ? 1 : 0.4, transition: 'opacity .2s ease' }}>
+          <button onClick={() => advance('again')} disabled={!flipped} className={flipped ? 'btn-press' : ''}
+            style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', cursor: flipped ? 'pointer' : 'default', fontSize: 15, fontWeight: 600, color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>
+            还不熟 ✗ <span style={{ fontSize: 11, opacity: 0.6, fontFamily: 'var(--font-mono)' }}>1</span>
           </button>
-          <button onClick={() => advance('know')} className="btn-press"
-            style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: 'pointer', fontSize: 15, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
-            认识 ✓
+          <button onClick={() => advance('know')} disabled={!flipped} className={flipped ? 'btn-press' : ''}
+            style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: flipped ? 'pointer' : 'default', fontSize: 15, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
+            认识 ✓ <span style={{ fontSize: 11, opacity: 0.6, fontFamily: 'var(--font-mono)' }}>2</span>
           </button>
         </div>
-      </div>
+        {!flipped && (
+          <div style={{ textAlign: 'center', fontSize: 12, color: 'var(--ink-muted)', marginTop: 10 }}>
+            先回忆，再翻面作答
+          </div>
+        )}
 
-      {toast && <StateToast word={toast.word} from={toast.from} to={toast.to} visible={toast.visible} />}
+        {/* B4-3：首访一次性提示 */}
+        {showRecallHint && (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginTop: 12, padding: '10px 14px', borderRadius: 12, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+            <span style={{ fontSize: 12.5, color: 'var(--ink-sub)' }}>记忆诀窍：翻面之前先在脑子里回想词义，效果翻倍</span>
+            <button onClick={() => { localStorage.setItem('lexi-seen-recall-hint', '1'); setShowRecallHint(false) }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)', flexShrink: 0 }}>
+              知道了
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

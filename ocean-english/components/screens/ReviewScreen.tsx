@@ -2,12 +2,12 @@
 // ReviewScreen — 1:1 port of prototype/screen-review.jsx
 // SRS grading: 忘了/勉强/记得/简单
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry, type LogEntry } from '@/store/lexiStore'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 import { useNavigate } from '@/hooks/useNavigate'
-import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, EmptyState, useToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, SoundBtn, PrimaryBtn, GhostBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
 import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
 /** 相对时间：刚刚 / N 小时前 / N 天前 */
@@ -42,21 +42,20 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
 
   const [idx, setIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
-  const [toast, showToast] = useToast()
   const [done, setDone] = useState(false)
   const [graded, setGraded] = useState(0)
 
   const current = queue[idx]
 
   function grade(g: ReviewGrade) {
-    if (!current) return
+    if (!current || !revealed) return
     const prev = current.state
     reviewGrade(current.id, g)
     recordActivity('reviewed')
     if (g !== 'again') incXp(15)
-    // 取流转后的真实状态做 toast
+    // 取流转后的真实状态做 toast（B11：sonner 自动队列，不互顶）
     const to = byId(current.id)?.state ?? prev
-    showToast(current.word, prev, to)
+    showStateToast(current.word, prev, to)
     setGraded(c => c + 1)
     const next = idx + 1
     if (next >= queue.length) {
@@ -66,6 +65,20 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
       setRevealed(false)
     }
   }
+
+  // B4-2 / 阶段4：键盘 — Space 显示答案、1-4 = 忘了/勉强/记得/简单
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (done || !current) return
+      if (e.code === 'Space') { e.preventDefault(); setRevealed(true) }
+      else if (revealed && ['1', '2', '3', '4'].includes(e.key)) {
+        grade(GRADE_OPTS[Number(e.key) - 1].id)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done, current, revealed, idx, queue])
 
   function finish() {
     if (isFlow) navigate('today')
@@ -208,7 +221,6 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
         </div>
       </div>
 
-      {toast && <StateToast word={toast.word} from={toast.from} to={toast.to} visible={toast.visible} />}
     </div>
   )
 }

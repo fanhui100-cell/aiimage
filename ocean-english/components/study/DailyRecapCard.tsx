@@ -75,7 +75,8 @@ export function DailyRecapCard() {
           boxSizing: 'border-box',
         }}
       >
-        <div style={{ position: 'absolute', top: -90, right: -70, width: 280, height: 280, borderRadius: 999, background: 'radial-gradient(circle, rgba(79,230,206,0.2), transparent 70%)', pointerEvents: 'none' }} />
+        {/* Demo08：光斑 20s 漂移 */}
+        <div className="drift-a" style={{ position: 'absolute', top: -90, right: -70, width: 280, height: 280, borderRadius: 999, background: 'radial-gradient(circle, rgba(79,230,206,0.2), transparent 70%)', pointerEvents: 'none' }} />
 
         {/* Eyebrow */}
         <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(79,230,206,0.8)' }}>

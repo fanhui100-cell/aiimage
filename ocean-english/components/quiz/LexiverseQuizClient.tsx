@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 
@@ -80,9 +80,25 @@ export function LexiverseQuizClient() {
     return buildQuestions({ mode, words, wrongAnswers, wordId: wordParam, examTag, seed })
   }, [mode, words, wrongAnswers, wordParam, examTag, seed])
 
-  const current = questions[currentIndex] ?? null
+  // B5-2：「30 秒后再考我」克隆题插到队列倒数第二位（不计分，只为再曝光）
+  const [extras, setExtras] = useState<QuizQuestion[]>([])
+  useEffect(() => { setExtras([]) }, [questions])
+  const queue = useMemo(() => {
+    if (!extras.length) return questions
+    const q = [...questions]
+    for (const e of extras) q.splice(Math.max(0, q.length - 1), 0, e)
+    return q
+  }, [questions, extras])
+
+  const current = queue[currentIndex] ?? null
+  const isRetryQuestion = !!current && current.id.startsWith('retry-')
   const score = attempts.filter(a => a.correct).length
   const answered = selected !== null
+
+  const retryLater = useCallback(() => {
+    if (!current) return
+    setExtras(prev => [...prev, { ...current, id: `retry-${current.id}-${Date.now()}` }])
+  }, [current])
 
   const chooseMode = useCallback((next: QuizMode) => {
     setMode(next)
@@ -100,6 +116,8 @@ export function LexiverseQuizClient() {
     if (!current || answered) return
     setSelected(optionId)
     const correct = optionId === current.answer
+    // 重曝光题：只给反馈，不计分、不写状态机、不进错题本
+    if (isRetryQuestion) return
     const attempt: QuizAttempt = {
       questionId: current.id,
       wordId: current.wordId,
@@ -133,10 +151,10 @@ export function LexiverseQuizClient() {
       if (lexi.byId(current.wordId)) lexi.markWrong(current.wordId)
     }
     lexi.recordActivity('quizzed')
-  }, [current, answered, incrementXp, addWrongAnswer])
+  }, [current, answered, isRetryQuestion, incrementXp, addWrongAnswer])
 
   const nextQuestion = useCallback(() => {
-    if (currentIndex + 1 >= questions.length) {
+    if (currentIndex + 1 >= queue.length) {
       addQuizSession({
         id: `lexiverse-${Date.now()}`,
         startedAt: Date.now() - Math.max(1, attempts.length) * 18000,
@@ -150,15 +168,32 @@ export function LexiverseQuizClient() {
     }
     setCurrentIndex(i => i + 1)
     setSelected(null)
-  }, [currentIndex, questions.length, attempts, score, addQuizSession])
+  }, [currentIndex, queue.length, questions.length, attempts, score, addQuizSession])
 
   const restart = useCallback(() => {
     setSeed(s => s + 1)
     setCurrentIndex(0)
     setSelected(null)
     setAttempts([])
+    setExtras([])
     setFinished(false)
   }, [])
+
+  // B5-1：键盘 — 1-4 / a-d 选项、Enter 下一题
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (finished || !current) return
+      if (!answered) {
+        const k = e.key.toLowerCase()
+        const i = ['1', '2', '3', '4'].includes(k) ? Number(k) - 1 : ['a', 'b', 'c', 'd'].indexOf(k)
+        if (i >= 0 && current.options[i]) handleSelect(current.options[i].id)
+      } else if (e.key === 'Enter') {
+        nextQuestion()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [finished, current, answered, handleSelect, nextQuestion])
 
   if (loading) return <LoadingState message="Loading Quiz Center..." />
   if (error) return <QuizFrame><EmptyState title="Dictionary unavailable" detail={error.message} /></QuizFrame>
@@ -233,38 +268,44 @@ export function LexiverseQuizClient() {
       )}
 
       {finished ? (
-        <Results score={score} total={questions.length} onRestart={restart} returnTo={returnTo} />
+        <Results score={score} total={questions.length} onRestart={restart} returnTo={returnTo}
+          wrongTotal={wrongAnswers.length} />
       ) : current ? (
         <QuestionPanel
           question={current}
           currentIndex={currentIndex}
-          total={questions.length}
+          total={queue.length}
           selected={selected}
           onSelect={handleSelect}
           onNext={nextQuestion}
+          onRetryLater={isRetryQuestion ? undefined : retryLater}
         />
       ) : null}
     </QuizFrame>
   )
 }
 
-function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNext }: {
+function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNext, onRetryLater }: {
   question: QuizQuestion
   currentIndex: number
   total: number
   selected: string | null
   onSelect: (id: string) => void
   onNext: () => void
+  onRetryLater?: () => void
 }) {
   const answered = selected !== null
   const correct = selected === question.answer
+  const [retryQueued, setRetryQueued] = useState(false)
+  useEffect(() => { setRetryQueued(false) }, [question.id])
   return (
     <LiquidGlassPanel padding={22} style={{ ...styles.questionPanel }}>
       <div style={styles.progressTop}>
         <LiquidBadge color="var(--teal-ink)">{question.prompt}</LiquidBadge>
         <span>{currentIndex + 1} / {total}</span>
       </div>
-      <div style={styles.progressBar}><i style={{ width: `${(currentIndex / total) * 100}%` }} /></div>
+      {/* B5-1：分子含当前题 — 答完最后一题满格 */}
+      <div style={styles.progressBar}><i style={{ width: `${((currentIndex + (answered ? 1 : 0)) / total) * 100}%` }} /></div>
       <h1 style={styles.question}>{question.question}</h1>
       <div style={styles.options}>
         {question.options.map((option, index) => {
@@ -296,12 +337,30 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
         })}
       </div>
       {answered && (
-        <LiquidGlassCard style={{ borderLeft: `2px solid ${correct ? '#0a8a6e' : '#bf4a30'}`, background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none' }}>
+        <LiquidGlassCard style={{ background: 'var(--card)', border: '1px solid var(--line)', backdropFilter: 'none' }}>
           <strong style={{ color: correct ? '#0a8a6e' : '#bf4a30' }}>
             {correct ? 'Correct · 答对了' : 'Not quite · 再看一次'}
           </strong>
           <p style={styles.explanation}>{question.explanation}</p>
           {question.explanationZh && <p style={styles.explanationZh}>{question.explanationZh}</p>}
+          {/* B5-2：答错即时教学 — 错题归档确认 + 当场再曝光 */}
+          {!correct && onRetryLater && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 10, flexWrap: 'wrap' }}>
+              <span style={{ fontSize: 12, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>已加入错题本 ✓</span>
+              <button
+                type="button"
+                disabled={retryQueued}
+                onClick={() => { setRetryQueued(true); onRetryLater() }}
+                style={{
+                  padding: '6px 12px', borderRadius: 999, cursor: retryQueued ? 'default' : 'pointer',
+                  border: '1px solid var(--line-strong)', background: 'var(--card-2)',
+                  fontSize: 12, fontWeight: 600, color: retryQueued ? 'var(--ink-muted)' : 'var(--teal-ink)',
+                  fontFamily: 'var(--font-sans)',
+                }}>
+                {retryQueued ? '已排进本轮队尾 ✓' : '30 秒后再考我'}
+              </button>
+            </div>
+          )}
         </LiquidGlassCard>
       )}
       <div style={styles.nextRow}>
@@ -313,13 +372,14 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
   )
 }
 
-function Results({ score, total, onRestart, returnTo }: {
+function Results({ score, total, onRestart, returnTo, wrongTotal }: {
   score: number
   total: number
   onRestart: () => void
   returnTo: string | null
+  wrongTotal: number
 }) {
-  const pct = Math.round((score / total) * 100)
+  const pct = total > 0 ? Math.round((score / total) * 100) : 0
   return (
     <LiquidGlassPanel padding={28} style={styles.results}>
       <LiquidBadge color={pct >= 80 ? '#0a8a6e' : pct >= 60 ? 'var(--gold-ink)' : 'var(--rose-ink)'}>{pct}% accuracy</LiquidBadge>
@@ -327,11 +387,26 @@ function Results({ score, total, onRestart, returnTo }: {
       <p style={styles.resultText}>
         {pct >= 80 ? 'Strong recall. The sky is getting brighter.' : pct >= 60 ? 'Good pass. A few stars still need another orbit.' : 'Keep practicing. The weak spots are now saved for review.'}
       </p>
+      {/* B5-3：动作收敛 — 主按钮唯一，其余降级 */}
       <div style={styles.resultActions}>
-        <LiquidActionButton onClick={onRestart}>Try Again · 再练一次</LiquidActionButton>
-        {returnTo ? <LinkButton href={returnTo}>Return to Lexiverse</LinkButton> : <LinkButton href="/lexiverse">Back to Lexiverse</LinkButton>}
-        <LinkButton href="/dictionary?tab=explore">Vocab Browser</LinkButton>
+        {wrongTotal > 0 ? (
+          <Link href="/memory?tab=wrong" style={{ textDecoration: 'none' }}>
+            <LiquidActionButton>复习错题（{wrongTotal}）</LiquidActionButton>
+          </Link>
+        ) : (
+          <Link href="/memory" style={{ textDecoration: 'none' }}>
+            <LiquidActionButton>继续复习到期词</LiquidActionButton>
+          </Link>
+        )}
+        <button type="button" onClick={onRestart} style={{ ...styles.linkButton, border: '1px solid var(--line)', cursor: 'pointer' }}>
+          Try Again · 再练一次
+        </button>
       </div>
+      <p style={{ marginTop: 14, marginBottom: 0 }}>
+        <Link href={returnTo ?? '/lexiverse'} style={{ fontSize: 13, color: 'var(--ink-sub)', textDecorationColor: 'var(--line-strong)' }}>
+          看星球变化 →
+        </Link>
+      </p>
     </LiquidGlassPanel>
   )
 }

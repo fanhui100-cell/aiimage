@@ -37,9 +37,11 @@ export interface PlanetDetailPanelProps {
   onAction: (action: PlanetAction) => void
   /** review-list membership lights up the add-to-review button (Stage C) */
   isInReview?: boolean
+  /** B8-1：薄弱/到期词的「现在复习」直达 /memory */
+  onGoReview?: () => void
 }
 
-export function PlanetDetailPanel({ open, planet, onClose, onAction, isInReview }: PlanetDetailPanelProps) {
+export function PlanetDetailPanel({ open, planet, onClose, onAction, isInReview, onGoReview }: PlanetDetailPanelProps) {
   const accent = planet ? STATE_META[planet.learningState].color : '#7EF9FF'
 
   return (
@@ -104,6 +106,15 @@ export function PlanetDetailPanel({ open, planet, onClose, onAction, isInReview 
               ↗ Word Detail · 单词详情
             </LiquidActionButton>
           </div>
+
+          {/* B8-1：薄弱/到期词接回闭环 */}
+          {onGoReview && (planet.learningState === 'weak' || planet.learningState === 'review') && (
+            <div style={{ marginTop: 8 }}>
+              <LiquidActionButton onClick={onGoReview} accent="#FFA85A" fullWidth>
+                ↻ Review Now · 现在复习
+              </LiquidActionButton>
+            </div>
+          )}
 
           <div style={{ marginTop: 14 }}>
             <LiquidActionButton onClick={() => onAction('open_lexigraph')} variant="secondary" fullWidth>

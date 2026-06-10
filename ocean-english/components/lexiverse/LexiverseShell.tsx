@@ -310,6 +310,7 @@ export function LexiverseShell() {
         onClose={() => onSelectPlanet(null)}
         onAction={onPlanetAction}
         isInReview={isPlanetInReview}
+        onGoReview={() => router.push('/memory')}
       />
     </div>
   )

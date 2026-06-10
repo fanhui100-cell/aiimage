@@ -1,19 +1,30 @@
 'use client'
 // Shared UI primitives — 1:1 port of prototype/ui.jsx
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { toast as sonnerToast } from 'sonner'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { hexA } from '@/lib/utils'
 
-// ── StateChip ──────────────────────────────────────────────────
+// ── StateChip（Demo02：颜色 morph 450ms + 换色 7% 弹跳）─────────
 export function StateChip({ state, size = 'sm' }: { state: WordState; size?: 'xs' | 'sm' | 'md' }) {
   const m = STATE_META[state]
+  const [pop, setPop] = useState(false)
+  const prevState = useRef(state)
+  useEffect(() => {
+    if (prevState.current !== state) {
+      prevState.current = state
+      setPop(true)
+      const t = setTimeout(() => setPop(false), 420)
+      return () => clearTimeout(t)
+    }
+  }, [state])
   const style: React.CSSProperties =
     size === 'xs' ? { fontSize: 10, padding: '2px 6px' } :
     size === 'sm' ? { fontSize: 11.5, padding: '3px 9px' } :
                    { fontSize: 13, padding: '4px 12px' }
   return (
-    <span style={{
+    <span className={`chip-morph${pop ? ' chip-pop' : ''}`} style={{
       display: 'inline-flex', alignItems: 'center', borderRadius: 999, fontWeight: 600,
       background: hexA(m.light, 0.12), color: m.light,
       border: `1px solid ${hexA(m.light, 0.28)}`,
@@ -26,7 +37,7 @@ export function StateChip({ state, size = 'sm' }: { state: WordState; size?: 'xs
   )
 }
 
-// ── ProgressRing ───────────────────────────────────────────────
+// ── ProgressRing（B11：0% 画 2% 最小弧；Demo03：100% 粒子迸发）──
 export function ProgressRing({
   pct, size = 64, stroke = 5, color, label,
 }: {
@@ -34,12 +45,40 @@ export function ProgressRing({
 }) {
   const r = (size - stroke * 2) / 2
   const circ = 2 * Math.PI * r
-  const offset = circ * (1 - Math.min(Math.max(pct, 0), 100) / 100)
+  // 0% 也画 2% 最小弧（仅作用于绘制，不影响数值显示）
+  const drawPct = Math.max(Math.min(Math.max(pct, 0), 100), 2)
+  const offset = circ * (1 - drawPct / 100)
+
+  const circleRef = useRef<SVGCircleElement>(null)
+  const [burst, setBurst] = useState<{ x: number; y: number }[] | null>(null)
+  const burstedRef = useRef(false)
+
+  // Demo03：填充 transition 结束（transitionend）后触发 12 粒粒子
+  useEffect(() => {
+    const el = circleRef.current
+    if (!el) return
+    const onEnd = () => {
+      if (pct >= 100 && !burstedRef.current) {
+        burstedRef.current = true
+        setBurst(Array.from({ length: 12 }, (_, i) => {
+          const ang = (i / 12) * Math.PI * 2 + Math.random() * 0.4
+          const dist = 36 + Math.random() * 28
+          return { x: Math.cos(ang) * dist, y: Math.sin(ang) * dist }
+        }))
+        setTimeout(() => setBurst(null), 800)
+      }
+    }
+    el.addEventListener('transitionend', onEnd)
+    return () => el.removeEventListener('transitionend', onEnd)
+  }, [pct])
+  useEffect(() => { if (pct < 100) burstedRef.current = false }, [pct])
+
   return (
     <div style={{ position: 'relative', width: size, height: size, flexShrink: 0 }}>
       <svg width={size} height={size} style={{ display: 'block' }}>
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--line)" strokeWidth={stroke} />
         <circle
+          ref={circleRef}
           cx={size / 2} cy={size / 2} r={r} fill="none"
           stroke={color ?? 'var(--teal-ink)'}
           strokeWidth={stroke}
@@ -47,9 +86,16 @@ export function ProgressRing({
           strokeDashoffset={offset}
           strokeLinecap="round"
           transform={`rotate(-90 ${size / 2} ${size / 2})`}
-          style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+          style={{ transition: 'stroke-dashoffset 0.7s cubic-bezier(.34,1.56,.64,1)' }}
         />
       </svg>
+      {burst && burst.map((p, i) => (
+        <span key={i} className="ring-burst-p" style={{
+          left: '50%', top: '50%', marginLeft: -2.5, marginTop: -2.5,
+          background: i % 2 ? 'var(--gold-ink)' : 'var(--teal-ink)',
+          ['--burst-t' as string]: `translate(${p.x}px, ${p.y}px)`,
+        } as React.CSSProperties} />
+      ))}
       {label && (
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column',
@@ -98,21 +144,16 @@ export function SoundBtn({ word, size = 28 }: { word: string; size?: number }) {
   )
 }
 
-// ── StateToast ─────────────────────────────────────────────────
-export function StateToast({ word, from, to, visible }: {
-  word: string; from: WordState; to: WordState; visible: boolean
-}) {
-  if (!visible) return null
-  return (
+// ── 状态流转 toast（B11：迁 sonner，toast.custom 渲染原样式，自动队列）──
+export function showStateToast(word: string, from: WordState, to: WordState) {
+  sonnerToast.custom(() => (
     <div style={{
-      position: 'fixed', bottom: 88, left: '50%', transform: 'translateX(-50%)',
       background: 'var(--card)', borderRadius: 999,
       padding: '8px 18px',
       boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
       border: '1px solid var(--line-strong)',
-      display: 'flex', alignItems: 'center', gap: 8,
-      zIndex: 300, whiteSpace: 'nowrap',
-      animation: 'toastIn 0.22s ease',
+      display: 'inline-flex', alignItems: 'center', gap: 8,
+      whiteSpace: 'nowrap',
       fontFamily: 'var(--font-sans)',
     }}>
       <span style={{ fontWeight: 700, color: 'var(--ink)', fontSize: 14 }}>{word}</span>
@@ -120,7 +161,7 @@ export function StateToast({ word, from, to, visible }: {
       <span style={{ color: 'var(--ink-muted)', fontSize: 12 }}>→</span>
       <StateChip state={to} size="xs" />
     </div>
-  )
+  ), { duration: 1800 })
 }
 
 // ── FlowBar ────────────────────────────────────────────────────
@@ -292,11 +333,3 @@ export function BackBtn({ onClick }: { onClick: () => void }) {
 
 // ── useToast ───────────────────────────────────────────────────
 // Returns [toastProps, showToast] — showToast auto-dismisses after 1.8s
-export function useToast() {
-  const [toast, setToast] = useState<{ word: string; from: WordState; to: WordState; visible: boolean } | null>(null)
-  function showToast(word: string, from: WordState, to: WordState) {
-    setToast({ word, from, to, visible: true })
-    setTimeout(() => setToast(null), 1800)
-  }
-  return [toast, showToast] as const
-}
