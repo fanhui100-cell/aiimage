@@ -57,6 +57,8 @@ export interface Profile {
   goals?: string[]
   // 收编 learningStore.userLevel；未显式设置时由 band 派生
   userLevel?: LearningLevel | null
+  // B2-4：最近一次定级时间（重测 30 天提醒用）；带 band 的 setProfile 时刷新
+  onboardedAt?: number
 }
 
 // band → userLevel 派生默认值（spec A4-3）
@@ -598,6 +600,8 @@ export const useLexiStore = create<LexiStore>()(
         }
         // userLevel 未显式设置时由 band 派生
         if (!profile.userLevel) profile.userLevel = bandToLevel(profile.band)
+        // 带 band 的写入视为（重新）定级，刷新定级时间
+        if (p.band !== undefined) profile.onboardedAt = Date.now()
         return {
           profile,
           goalToday: p.dailyGoal ?? s.goalToday,
