@@ -271,12 +271,17 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
           const isSelected = selected === option.id
           const isAnswer = question.answer === option.id
           const stateColor = answered && isAnswer ? '#0a8a6e' : answered && isSelected ? '#bf4a30' : 'var(--teal-ink)'
+          // Demo01：答对 scale 弹跳 + 描边扩散；答错 ±4px shake
+          const fxClass = answered && isSelected
+            ? (isAnswer ? 'quiz-correct' : 'quiz-wrong')
+            : ''
           return (
             <button
               type="button"
               key={option.id}
               onClick={() => onSelect(option.id)}
               disabled={answered}
+              className={fxClass}
               style={{
                 ...styles.option,
                 borderColor: answered && (isSelected || isAnswer) ? stateColor : 'var(--line)',

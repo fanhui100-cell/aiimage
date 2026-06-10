@@ -8,6 +8,7 @@ import { useLexiStore } from '@/store/lexiStore'
 import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { STATE_META, STATE_ORDER, type WordState } from '@/lib/state-meta'
 import { TOOL_NAV, type ToolNavKey } from '@/lib/product-flow/nav'
+import { NumberRoll } from '@/components/ui/NumberRoll'
 import { hexA } from '@/lib/utils'
 
 // ── Shared UI ──────────────────────────────────────────────────────────────
@@ -151,7 +152,7 @@ function ContinueCard({ navigate }: { navigate: (go: string) => void }) {
         </div>
         <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
           <ProgressRing value={pct} size={120} stroke={10} color="#4fe6ce" track="rgba(255,255,255,0.08)">
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 28, fontWeight: 700, color: '#eaf3f6' }}>{pct}<span style={{ fontSize: 15 }}>%</span></div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 28, fontWeight: 700, color: '#eaf3f6' }}><NumberRoll value={pct} /><span style={{ fontSize: 15 }}>%</span></div>
             <div style={{ fontSize: 11, color: 'rgba(234,243,246,0.55)', letterSpacing: '0.08em' }}>今日完成</div>
           </ProgressRing>
           <div style={{ display: 'flex', gap: 14 }}>
@@ -178,7 +179,7 @@ function MasteryStrip({ navigate }: { navigate: (go: string) => void }) {
           <div style={{ fontSize: 12.5, color: 'var(--ink-sub)' }}>所有板块共享同一套状态 · 学一个亮一个</div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ color: 'var(--teal-ink)', fontSize: 13, fontWeight: 600 }}>{pct}% 已掌握</span>
+          <span style={{ color: 'var(--teal-ink)', fontSize: 13, fontWeight: 600 }}><NumberRoll value={pct} />% 已掌握</span>
           <button onClick={() => navigate('universe')} className="btn-press"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'none', border: 'none', cursor: 'pointer', fontSize: 12.5, color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)', padding: 0 }}>
             查看宇宙
@@ -209,9 +210,9 @@ function ToolsRow() {
         <div style={{ flex: 1, height: 1, background: 'var(--line)' }} />
       </div>
       <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
-        {TOOL_NAV.map(t => (
-          <Link key={t.key} href={t.href} className="btn-press"
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, textDecoration: 'none', flexShrink: 0, minWidth: 64, padding: '10px 8px', borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+        {TOOL_NAV.map((t, i) => (
+          <Link key={t.key} href={t.href} className="btn-press stagger-item"
+            style={{ animationDelay: `${i * 30}ms`, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, textDecoration: 'none', flexShrink: 0, minWidth: 64, padding: '10px 8px', borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
             <span style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--teal-bg)', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {TOOL_ICON[t.key]?.({ s: 19 })}
             </span>

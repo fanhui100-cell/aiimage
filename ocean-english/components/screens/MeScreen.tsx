@@ -10,6 +10,7 @@ import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import { TOOL_NAV } from '@/lib/product-flow/nav'
 import { StudyHeatmap } from '@/components/profile/StudyHeatmap'
+import { NumberRoll } from '@/components/ui/NumberRoll'
 import { ReviewForecast } from '@/components/profile/ReviewForecast'
 import { AccentSelector } from '@/components/pronunciation/AccentSelector'
 import { readAccentPreference, writeAccentPreference } from '@/lib/pronunciation/pronunciation-client'
@@ -109,7 +110,7 @@ export function MeScreen() {
           ].map(s => (
             <div key={s.label} style={{ background: 'var(--card)', borderRadius: 16, padding: '18px 14px', border: '1px solid var(--line)', textAlign: 'center' }}>
               <div style={{ fontSize: 20 }}>{s.icon}</div>
-              <div style={{ fontSize: 26, fontWeight: 800, color: s.color, fontFamily: 'var(--font-news)', lineHeight: 1.1, marginTop: 6 }}>{s.val}</div>
+              <div style={{ fontSize: 26, fontWeight: 800, color: s.color, fontFamily: 'var(--font-news)', lineHeight: 1.1, marginTop: 6 }}><NumberRoll value={s.val} /></div>
               <div style={{ fontSize: 10, color: 'var(--ink-muted)', marginTop: 2 }}>{s.label}</div>
             </div>
           ))}
@@ -121,7 +122,7 @@ export function MeScreen() {
           <div style={{ background: 'var(--card)', borderRadius: 16, padding: '18px 20px', border: '1px solid var(--line)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
               <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)' }}>词汇掌握率</span>
-              <span style={{ fontSize: 16, fontWeight: 800, color: 'var(--teal-ink)', fontFamily: 'var(--font-news)' }}>{pct.toFixed(0)}%</span>
+              <span style={{ fontSize: 16, fontWeight: 800, color: 'var(--teal-ink)', fontFamily: 'var(--font-news)' }}><NumberRoll value={Math.round(pct)} />%</span>
             </div>
             <div style={{ height: 8, borderRadius: 99, background: 'var(--line)', overflow: 'hidden' }}>
               <div style={{ height: '100%', width: `${pct}%`, borderRadius: 99, background: 'linear-gradient(90deg, var(--teal), #34d8c0)', transition: 'width 0.5s ease' }} />

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
 import { PRIMARY_NAV, type PrimaryNavKey } from '@/lib/product-flow/nav'
+import { NumberRoll } from '@/components/ui/NumberRoll'
 
 /* 聚焦流路由 — 在这些页面隐藏底部 Tab，显示悬浮返回 */
 export const FOCUS_ROUTES = ['/quiz', '/exam', '/pronunciation', '/scan', '/chat', '/learn']
@@ -105,7 +106,7 @@ export function MobileTabBar() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: '0 3px', fontFamily: 'var(--font-mono)',
                 }}>
-                  {badge}
+                  <NumberRoll value={badge} />
                 </span>
               )}
             </span>

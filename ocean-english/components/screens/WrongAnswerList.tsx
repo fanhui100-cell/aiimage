@@ -100,13 +100,14 @@ export function WrongAnswerList() {
 
   return (
     <div style={{ padding: '4px 2px' }}>
-      {groups.map(group => (
-        <WrongCard
-          key={group[0].wordId}
-          group={group}
-          onRetry={wordId => navigate('quiz', { word: wordId })}
-          onRemove={ids => ids.forEach(id => removeWrongAnswer(id))}
-        />
+      {groups.map((group, i) => (
+        <div key={group[0].wordId} className="stagger-item" style={{ animationDelay: `${Math.min(i, 9) * 30}ms` }}>
+          <WrongCard
+            group={group}
+            onRetry={wordId => navigate('quiz', { word: wordId })}
+            onRemove={ids => ids.forEach(id => removeWrongAnswer(id))}
+          />
+        </div>
       ))}
     </div>
   )

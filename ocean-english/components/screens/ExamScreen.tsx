@@ -208,9 +208,11 @@ export function ExamScreen() {
             } else if (picked !== null && opt.correct) {
               bg = 'rgba(14,140,122,0.07)'; border = '1.5px solid rgba(14,140,122,0.4)'
             }
+            // Demo01：答对弹跳+描边 / 答错 shake
+            const fxClass = picked === opt.id ? (opt.correct ? 'quiz-correct' : 'quiz-wrong') : ''
             return (
               <button key={opt.id} onClick={() => pick(opt)} disabled={picked !== null}
-                className={picked === null ? 'btn-press' : ''}
+                className={picked === null ? 'btn-press' : fxClass}
                 style={{ padding: '14px 18px', borderRadius: 12, border, background: bg, cursor: picked !== null ? 'default' : 'pointer', fontSize: 14, fontWeight: 500, color, fontFamily: 'var(--font-sans)', textAlign: 'left', transition: 'all 0.15s' }}>
                 {opt.text}
               </button>

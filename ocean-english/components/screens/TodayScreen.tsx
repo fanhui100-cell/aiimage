@@ -8,6 +8,7 @@ import { hexA } from '@/lib/utils'
 import { useNavigate } from '@/hooks/useNavigate'
 import { ProgressRing, Eyebrow } from '@/components/screens/SharedUI'
 import { DailyRecapCard } from '@/components/study/DailyRecapCard'
+import { NumberRoll } from '@/components/ui/NumberRoll'
 
 // ── WordChip（B3-3：done = 实底 + 划除）────────────────────────
 function WordChip({ entry, done }: { entry: WordEntry; done?: boolean }) {
@@ -39,7 +40,11 @@ function PackRow({ label, words, isDone }: {
         {label} · {doneN}/{words.length} 完成
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-        {words.map(w => <WordChip key={w.id} entry={w} done={isDone(w)} />)}
+        {words.map((w, i) => (
+          <span key={w.id} className="stagger-item" style={{ animationDelay: `${Math.min(i, 9) * 30}ms` }}>
+            <WordChip entry={w} done={isDone(w)} />
+          </span>
+        ))}
       </div>
     </div>
   )
@@ -168,7 +173,7 @@ export function TodayScreen() {
               <div style={{ height: '100%', width: `${pct}%`, borderRadius: 99, background: 'linear-gradient(90deg, var(--teal), #34d8c0)', transition: 'width 0.5s ease' }} />
             </div>
             <div style={{ marginTop: 8, display: 'flex', gap: 16 }}>
-              <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>⚡ {xp} XP</span>
+              <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>⚡ <NumberRoll value={xp} /> XP</span>
               {totalDue > 0 && <span style={{ fontSize: 12, color: '#d2792f' }}>📋 {totalDue} 待复习</span>}
             </div>
           </div>
