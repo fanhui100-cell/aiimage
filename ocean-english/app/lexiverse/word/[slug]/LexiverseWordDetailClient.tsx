@@ -112,7 +112,7 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
             <LiquidActionButton onClick={handleAddToReview} disabled={isInReview} accent="#FFA85A">
               {isInReview ? 'In Review · 已加入复习' : 'Add to Review · 加入复习'}
             </LiquidActionButton>
-            <Link href={`/lexiverse/quiz?mode=vocabulary-drill&word=${word.id}&returnTo=${encodeURIComponent(currentUrl)}`} style={{ textDecoration: 'none' }}>
+            <Link href={`/quiz?mode=vocabulary-drill&word=${word.id}&returnTo=${encodeURIComponent(currentUrl)}`} style={{ textDecoration: 'none' }}>
               <LiquidActionButton accent="#7EF9FF">Quiz this word · 练习</LiquidActionButton>
             </Link>
             <Link href={`/chat?context=word&word=${word.id}&returnTo=${encodeURIComponent(currentUrl)}`} style={{ textDecoration: 'none' }}>

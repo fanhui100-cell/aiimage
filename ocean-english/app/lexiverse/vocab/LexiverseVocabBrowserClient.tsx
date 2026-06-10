@@ -322,7 +322,7 @@ function WordPreview({ word, state, onAddToReview }: {
       <SectionLabel>TOOLS · 操作</SectionLabel>
       <div style={styles.actions}>
         <LiquidActionButton onClick={onAddToReview} fullWidth>Add to Review</LiquidActionButton>
-        <LinkButton href={`/lexiverse/quiz?word=${word.id}`}>Quiz · 练习</LinkButton>
+        <LinkButton href={`/quiz?word=${word.id}`}>Quiz · 练习</LinkButton>
         <LinkButton href={`/chat?context=word&word=${word.id}`}>Ask AI · 问 AI</LinkButton>
         <LinkButton href={`/lexigraph?word=${word.id}`}>LexiGraph</LinkButton>
       </div>

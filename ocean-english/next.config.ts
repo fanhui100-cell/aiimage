@@ -2,6 +2,12 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   transpilePackages: ['three'],
+  // A6：测验合并 — /lexiverse/quiz 永久重定向到全站唯一测验入口 /quiz（query 透传）
+  async redirects() {
+    return [
+      { source: '/lexiverse/quiz', destination: '/quiz', permanent: true },
+    ]
+  },
   // pdf-parse 2.x (pdfjs-dist 5.x) uses dynamic require() for its worker script.
   // Turbopack cannot statically analyze that expression and fails at runtime with
   // "Cannot find module as expression is too dynamic".

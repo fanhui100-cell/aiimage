@@ -16,6 +16,7 @@ import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { FilterableWord } from '@/lib/lexiverse/lexiverse-word-filter'
 import type { DictionaryDefinition, DictionaryExample, DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import { useLearningStore, type WrongAnswer } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import type { QuizAttempt } from '@/types/quiz'
 
 type QuizMode = 'vocabulary-drill' | 'sentence-practice' | 'exam-practice' | 'wrong-answer-booster'
@@ -95,7 +96,7 @@ export function LexiverseQuizClient() {
     const sp = new URLSearchParams(searchParams.toString())
     sp.set('mode', next)
     if (next === 'exam-practice') sp.set('exam', examTag)
-    router.replace(`/lexiverse/quiz?${sp.toString()}`)
+    router.replace(`/quiz?${sp.toString()}`)
   }, [router, searchParams, examTag])
 
   const handleSelect = useCallback((optionId: string) => {
@@ -111,10 +112,13 @@ export function LexiverseQuizClient() {
       timestamp: Date.now(),
     }
     setAttempts(prev => [...prev, attempt])
+    // A6：答题驱动统一状态机（词不在学习库则静默跳过，纯刷题不强制入库）
+    const lexi = useLexiStore.getState()
     if (correct) {
       incrementXp(10)
       completeTaskUnit('quiz-5', 1)
       markStudyToday()
+      if (lexi.byId(current.wordId)) lexi.markCorrect(current.wordId)
     } else {
       const picked = current.options.find(o => o.id === optionId)
       const answer = current.options.find(o => o.id === current.answer)
@@ -127,7 +131,9 @@ export function LexiverseQuizClient() {
         explanation: current.explanation,
         timestamp: Date.now(),
       })
+      if (lexi.byId(current.wordId)) lexi.markWrong(current.wordId)
     }
+    lexi.recordActivity('quizzed')
   }, [current, answered, incrementXp, completeTaskUnit, markStudyToday, addWrongAnswer])
 
   const nextQuestion = useCallback(() => {
@@ -158,10 +164,16 @@ export function LexiverseQuizClient() {
   if (loading) return <LoadingState message="Loading Quiz Center..." />
   if (error) return <QuizFrame><EmptyState title="Dictionary unavailable" detail={error.message} /></QuizFrame>
   if (!questions.length) {
-    const detail = mode === 'wrong-answer-booster'
-      ? 'No wrong answers yet. Try a vocabulary drill first.'
-      : 'No questions are available for this mode yet.'
-    return <QuizFrame><EmptyState title="Nothing to practice yet" detail={detail} action={<LinkButton href="/lexiverse/quiz?mode=vocabulary-drill">Start Vocabulary Drill</LinkButton>} /></QuizFrame>
+    // A3：单词测验找不到该词时显示空状态，不回退成随机题
+    const detail = wordParam
+      ? '该词还没有题目，去词典看看。 / No questions for this word yet.'
+      : mode === 'wrong-answer-booster'
+        ? 'No wrong answers yet. Try a vocabulary drill first.'
+        : 'No questions are available for this mode yet.'
+    const action = wordParam
+      ? <LinkButton href={`/word/${wordParam}`}>查看词条 · View Word</LinkButton>
+      : <LinkButton href="/quiz?mode=vocabulary-drill">Start Vocabulary Drill</LinkButton>
+    return <QuizFrame><EmptyState title="Nothing to practice yet" detail={detail} action={action} /></QuizFrame>
   }
 
   return (
@@ -206,7 +218,7 @@ export function LexiverseQuizClient() {
                 const sp = new URLSearchParams(searchParams.toString())
                 sp.set('mode', 'exam-practice')
                 sp.set('exam', tag)
-                router.replace(`/lexiverse/quiz?${sp.toString()}`)
+                router.replace(`/quiz?${sp.toString()}`)
               }}
               style={{
                 ...styles.examButton,
@@ -353,6 +365,9 @@ function buildQuestions(args: {
   const rng = mulberry32(hash(`${args.mode}:${args.wordId ?? ''}:${args.examTag}:${args.seed}`))
   const usable = args.words.filter(w => firstDefinition(w).en && w.word)
   const preferred = args.wordId ? usable.find(w => w.id === args.wordId || w.word.toLowerCase() === args.wordId?.toLowerCase()) : null
+
+  // A3：指定单词但词典无此词 → 空题集（上层显示空状态），不回退随机题
+  if (args.wordId && !preferred && args.mode !== 'wrong-answer-booster') return []
 
   if (args.mode === 'wrong-answer-booster') {
     return args.wrongAnswers.slice(0, 8).map((wrong, index) => {

@@ -32,7 +32,6 @@ export const siteConfig = {
     { label: 'Listening', labelZh: 'Listening', href: '/pronunciation', group: 'learning' as const },
     { label: 'Exam Drill', labelZh: 'Exam Drill', href: '/exam', group: 'learning' as const },
     { label: 'Vocab Browser', labelZh: 'Vocab Browser', href: '/lexiverse/vocab', group: 'lexiverse' as const },
-    { label: 'Lexiverse Quiz', labelZh: 'Lexiverse Quiz', href: '/lexiverse/quiz', group: 'lexiverse' as const },
   ],
 } as const
 
