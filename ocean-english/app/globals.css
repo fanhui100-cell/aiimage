@@ -340,3 +340,23 @@ html, body {
 @media (max-width: 767px) {
   .page-shell-content { padding-bottom: 80px; }
 }
+
+/* ── 榕树 Hero 节点层 ── */
+.hero-nodes-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+.hero-nodes-wrap > * { pointer-events: auto; }
+.hero-node { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 640px) { .hero-nodes-wrap { display: none; } }
+
+/* ── 功能入口卡片 hover ── */
+.entry-card {
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.entry-card:hover {
+  border-color: var(--accent, var(--teal-ink)) !important;
+  transform: translateY(-2px);
+}
