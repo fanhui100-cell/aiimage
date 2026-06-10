@@ -117,7 +117,7 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
             <Link href={`/lexigraph?word=${word.id}`} style={{ textDecoration: 'none' }}>
               <LiquidActionButton variant="secondary">Open in LexiGraph</LiquidActionButton>
             </Link>
-            <Link href={`/lexiverse/vocab?word=${word.id}`} style={{ textDecoration: 'none' }}>
+            <Link href={`/dictionary?tab=explore`} style={{ textDecoration: 'none' }}>
               <LiquidActionButton variant="secondary">Open Vocab Browser</LiquidActionButton>
             </Link>
           </div>

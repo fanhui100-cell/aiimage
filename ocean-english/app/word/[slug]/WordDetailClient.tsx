@@ -9,6 +9,7 @@ import { ExampleSentencePlayer } from '@/components/pronunciation/ExampleSentenc
 import { AccentSelector } from '@/components/pronunciation/AccentSelector'
 import { readAccentPreference } from '@/lib/pronunciation/pronunciation-client'
 import { useLexiStore } from '@/store/lexiStore'
+import { STATE_META } from '@/lib/state-meta'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { Accent } from '@/lib/pronunciation/pronunciation-types'
@@ -172,6 +173,8 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
   const recordActivity = useLexiStore(s => s.recordActivity)
   const incXp = useLexiStore(s => s.incXp)
   const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
+  // B7-3：已入库 → 主按钮变状态显示 + 「移出」次级项
+  const inStore = useLexiStore(s => s.words.find(w => w.id === word.id))
   const { addLexiStar, recordPronunciationPlay } = useMotivationStore()
   const router = useRouter()
 
@@ -284,19 +287,70 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
               </div>
             </div>
 
-            {/* Action buttons */}
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <SaveWordButton wordId={word.id} word={word.word} />
+            {/* Action buttons（B7-3 收敛：主「加入学习」/次「考一考」/右上星标收藏） */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-end' }}>
+              <SaveWordButton wordId={word.id} word={word.word} compact />
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                {inStore ? (
+                  <span style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '10px',
+                    padding: '10px 16px', borderRadius: 'var(--r-pill)',
+                    background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.3)',
+                    color: 'var(--teal-ink)', fontSize: '14px', fontWeight: 600,
+                  }}>
+                    已在学习 · {STATE_META[inStore.state].zh}
+                    <button
+                      onClick={() => useLexiStore.getState().removeWord(word.id)}
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', color: 'var(--ink-muted)', padding: 0, fontFamily: 'var(--font-sans)' }}
+                    >
+                      移出
+                    </button>
+                  </span>
+                ) : (
+                  <button
+                    onClick={handleAddToReview}
+                    style={{
+                      padding: '10px 22px',
+                      borderRadius: 'var(--r-pill)',
+                      background: 'var(--teal-ink)',
+                      border: 'none',
+                      color: '#fff',
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      boxShadow: '0 8px 20px -10px rgba(14,140,122,0.7)',
+                    }}
+                  >
+                    + 加入学习
+                  </button>
+                )}
+                <button
+                  onClick={handleQuizThis}
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: 'var(--r-pill)',
+                    background: 'var(--card)',
+                    border: '1px solid var(--line-strong)',
+                    color: 'var(--ink)',
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                  }}
+                >
+                  考一考
+                </button>
+              </div>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
               <button
                 onClick={handleAIExplain}
                 disabled={aiLoading || !!aiExplanation}
                 style={{
-                  padding: '10px 20px',
+                  padding: '8px 14px',
                   borderRadius: 'var(--r-pill)',
                   background: aiExplanation ? 'rgba(139,92,246,0.06)' : 'rgba(139,92,246,0.1)',
                   border: `1px solid ${aiExplanation ? 'rgba(139,92,246,0.3)' : 'rgba(139,92,246,0.5)'}`,
                   color: aiExplanation ? 'rgba(139,92,246,0.5)' : '#8B5CF6',
-                  fontSize: '14px',
+                  fontSize: '13px',
                   fontWeight: 600,
                   cursor: aiLoading || !!aiExplanation ? 'default' : 'pointer',
                   opacity: aiLoading ? 0.7 : 1,
@@ -307,52 +361,22 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
               <Link
                 href={`/chat?context=word&word=${encodeURIComponent(word.id)}`}
                 style={{
-                  padding: '10px 16px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
+                  padding: '8px 14px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
                   background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.25)',
-                  color: 'var(--teal-ink)', fontSize: '14px', fontWeight: 600,
+                  color: 'var(--teal-ink)', fontSize: '13px', fontWeight: 600,
                 }}
               >
                 AI 导学 →
               </Link>
-              <button
-                onClick={handleAddToReview}
-                style={{
-                  padding: '10px 20px',
-                  borderRadius: 'var(--r-pill)',
-                  background: 'var(--teal-bg)',
-                  border: '1px solid rgba(14,140,122,0.3)',
-                  color: 'var(--teal-ink)',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                }}
-              >
-                + 加入学习
-              </button>
-              <button
-                onClick={handleQuizThis}
-                style={{
-                  padding: '10px 20px',
-                  borderRadius: 'var(--r-pill)',
-                  background: 'rgba(139,92,246,0.1)',
-                  border: '1px solid rgba(139,92,246,0.3)',
-                  color: '#8B5CF6',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                }}
-              >
-                练习此词
-              </button>
               <Link
                 href={`/lexigraph?word=${word.id}`}
                 style={{
-                  padding: '10px 20px',
+                  padding: '8px 14px',
                   borderRadius: 'var(--r-pill)',
                   background: 'var(--card)',
                   border: '1px solid var(--line-strong)',
                   color: 'var(--ink)',
-                  fontSize: '14px',
+                  fontSize: '13px',
                   fontWeight: 600,
                   textDecoration: 'none',
                   display: 'inline-block',
@@ -362,6 +386,7 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
               >
                 ✦ 词汇星图
               </Link>
+              </div>
             </div>
           </div>
         </div>

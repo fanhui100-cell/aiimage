@@ -61,6 +61,12 @@ export function syncWordStates(entries: WordEntry[]): void {
   })
 }
 
+/** 移出学习：云端同步删除（B7-3，防止登录水合时复活） */
+export function syncRemoveWordState(wordId: string): void {
+  void fetch(`/api/user/word-states?wordId=${encodeURIComponent(wordId)}`, { method: 'DELETE' })
+    .catch(err => console.warn('[sync] remove word-state failed:', err))
+}
+
 export function syncWrongAnswers(wrongAnswers: WrongAnswer[]): void {
   if (wrongAnswers.length === 0) return
   void safePost('/api/user/wrong-answers', { wrongAnswers })

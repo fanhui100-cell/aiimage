@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: '/lexiverse/quiz', destination: '/quiz', permanent: true },
+      // B7-4：旧词汇浏览器并入词库页「探索词典」tab
+      { source: '/lexiverse/vocab', destination: '/dictionary?tab=explore', permanent: true },
     ]
   },
   // pdf-parse 2.x (pdfjs-dist 5.x) uses dynamic require() for its worker script.

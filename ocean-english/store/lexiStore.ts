@@ -272,6 +272,8 @@ interface LexiStoreActions {
   buildTodayPack: () => Promise<void>
   setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
+  // B7-3：词详情「移出」——从学习库删除（云端同步删除由 CloudSyncProvider diff 触发）
+  removeWord: (id: string) => void
   incXp: (n: number) => void
   recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
   setProfile: (p: Partial<Profile>) => void
@@ -577,6 +579,13 @@ export const useLexiStore = create<LexiStore>()(
         }))
         return newWord
       },
+
+      removeWord: (id) => set(s => {
+        const word = s.words.find(w => w.id === id)
+        if (!word) return {}
+        const entry: LogEntry = { id, word: word.word, from: word.state, to: 'unknown', note: '移出学习', t: Date.now() }
+        return { words: s.words.filter(w => w.id !== id), log: [entry, ...s.log].slice(0, 30) }
+      }),
 
       incXp: (n) => set(s => ({ xp: s.xp + n })),
 

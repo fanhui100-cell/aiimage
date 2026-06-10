@@ -1,9 +1,11 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getDictionaryClient } from '@/lib/dictionary/dictionary-client'
-import type { WordLevel } from '@/lib/dictionary/dictionary-types'
+import type { CefrLevel, ExamTag, WordLevel } from '@/lib/dictionary/dictionary-types'
 
 const VALID_LEVELS: WordLevel[] = ['beginner', 'elementary', 'intermediate', 'advanced', 'exam-prep']
 const VALID_DIFFICULTY = [1, 2, 3, 4, 5] as const
+const VALID_CEFR = new Set<string>(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'])
+const VALID_EXAM = new Set<string>(['TOEFL', 'IELTS', 'CET-4', 'CET-6', 'KAOYAN', 'GAOKAO', 'SAT', 'GRE'])
 const MAX_LIMIT = 50
 
 /**
@@ -34,6 +36,25 @@ export async function GET(request: NextRequest) {
     : undefined
   const limit = Math.min(isNaN(limitRaw) ? 20 : Math.max(1, limitRaw), MAX_LIMIT)
   const offset = isNaN(offsetRaw) ? 0 : Math.max(0, offsetRaw)
+
+  // B7：cefr / exam 过滤（WordSearchOptions 不含 cefr，取大池后置过滤再分页）
+  const cefrRaw = searchParams.get('cefr') ?? ''
+  const examRaw = searchParams.get('exam') ?? ''
+  const cefr = VALID_CEFR.has(cefrRaw) ? (cefrRaw as CefrLevel) : undefined
+  const exam = VALID_EXAM.has(examRaw) ? (examRaw as ExamTag) : undefined
+
+  if (cefr || exam) {
+    const pool = await getDictionaryClient().searchWords(q, { level, difficulty, limit: 500 })
+    const filtered = pool
+      .filter(w => !cefr || w.cefrLevel === cefr)
+      .filter(w => !exam || w.examTags.includes(exam))
+    return NextResponse.json({
+      ok: true,
+      query: q,
+      total: filtered.length,
+      data: filtered.slice(offset, offset + limit),
+    })
+  }
 
   const results = await getDictionaryClient().searchWords(q, { level, difficulty, limit, offset })
 

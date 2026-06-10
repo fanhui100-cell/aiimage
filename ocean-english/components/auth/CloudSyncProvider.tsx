@@ -5,6 +5,7 @@ import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import {
   syncWordStates,
+  syncRemoveWordState,
   syncWrongAnswers,
   syncStudyProgress,
   syncQuizSession,
@@ -77,11 +78,19 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
     const unsubscribeLexi = useLexiStore.subscribe((state) => {
       if (!userRef.current) return // Not logged in — skip
 
-      // ── words：找出新增/变更词条（引用比较，store 始终整表替换）──────────
+      // ── words：找出新增/变更/删除词条（引用比较，store 始终整表替换）──────
       if (state.words !== prevWords) {
         const prevById = new Map(prevWords.map(w => [w.id, w]))
+        const currIds = new Set(state.words.map(w => w.id))
         for (const w of state.words) {
           if (prevById.get(w.id) !== w) pendingWords.set(w.id, w)
+        }
+        // 删除（B7-3 移出学习）→ 云端立即删，避免水合复活
+        for (const w of prevWords) {
+          if (!currIds.has(w.id)) {
+            pendingWords.delete(w.id)
+            syncRemoveWordState(w.id)
+          }
         }
         prevWords = state.words
         if (pendingWords.size > 0) flushWordStates()

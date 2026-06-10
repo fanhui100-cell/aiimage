@@ -1,10 +1,13 @@
+import { Suspense } from 'react'
 import { AppShell } from '@/components/layout/AppShell'
-import { WordsScreen } from '@/components/screens/WordsScreen'
+import { DictionaryScreen } from '@/components/screens/DictionaryScreen'
 
 export default function DictionaryPage() {
   return (
     <AppShell>
-      <WordsScreen />
+      <Suspense>
+        <DictionaryScreen />
+      </Suspense>
     </AppShell>
   )
 }

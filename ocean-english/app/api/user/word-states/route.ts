@@ -4,8 +4,9 @@ import { NextResponse, type NextRequest } from 'next/server'
 
 /**
  * /api/user/word-states — 词状态机云同步端点（A7）
- * GET  全量拉取当前用户的词状态（登录换浏览器恢复用）
- * POST 批量 upsert 变更词条（CloudSyncProvider 1.5s 防抖 diff 上传）
+ * GET    全量拉取当前用户的词状态（登录换浏览器恢复用）
+ * POST   批量 upsert 变更词条（CloudSyncProvider 1.5s 防抖 diff 上传）
+ * DELETE ?wordId= 删除单词条（B7-3「移出学习」，防止水合复活）
  */
 
 interface WordStatePayload {
@@ -89,4 +90,24 @@ export async function POST(request: NextRequest) {
 
   if (error) return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
   return NextResponse.json({ ok: true, upserted: rows.length })
+}
+
+export async function DELETE(request: NextRequest) {
+  if (!isSupabaseConfigured) return NextResponse.json({ ok: false, error: 'auth_not_configured' }, { status: 503 })
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 })
+
+  const { searchParams } = new URL(request.url)
+  const wordId = searchParams.get('wordId')
+  if (!wordId) return NextResponse.json({ ok: false, error: 'missing_wordId' }, { status: 400 })
+
+  const { error } = await supabase
+    .from('word_states')
+    .delete()
+    .eq('user_id', user.id)
+    .eq('word_id', wordId)
+
+  if (error) return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
+  return NextResponse.json({ ok: true })
 }

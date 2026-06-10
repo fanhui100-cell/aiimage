@@ -325,7 +325,7 @@ function Results({ score, total, onRestart, returnTo }: {
       <div style={styles.resultActions}>
         <LiquidActionButton onClick={onRestart}>Try Again · 再练一次</LiquidActionButton>
         {returnTo ? <LinkButton href={returnTo}>Return to Lexiverse</LinkButton> : <LinkButton href="/lexiverse">Back to Lexiverse</LinkButton>}
-        <LinkButton href="/lexiverse/vocab">Vocab Browser</LinkButton>
+        <LinkButton href="/dictionary?tab=explore">Vocab Browser</LinkButton>
       </div>
     </LiquidGlassPanel>
   )
