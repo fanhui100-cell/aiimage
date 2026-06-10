@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { AppShell } from '@/components/layout/AppShell'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useScanStore } from '@/store/scanStore'
 import { DocumentComplianceNotice } from '@/components/scan/DocumentComplianceNotice'
 import { DocumentUploadPanel } from '@/components/scan/DocumentUploadPanel'
@@ -171,6 +172,7 @@ export default function ScanPage() {
     const id = word.word.toLowerCase().replace(/\s+/g, '-')
     addToReview(id, word.word)
     saveWord(id)
+    useLexiStore.getState().setSaved(id, true, word.word)   // A4：统一中枢标记收藏
     completeTaskUnit('vocab-5', 1)
     incrementXp(10)
     markStudyToday()

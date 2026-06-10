@@ -207,6 +207,8 @@ interface LexiStoreActions {
   getLearning: () => WordEntry[]
   getTodayProgress: () => { n: number; goal: number; pct: number }
   previewFor: (w: WordEntry) => Record<ReviewGrade, string>
+  getSaved: () => WordEntry[]
+  isSaved: (id: string) => boolean
   masteredPct: () => number
   extraDict: () => WordEntry[]
   probeLadder: () => typeof PROBE_LADDER
@@ -223,6 +225,7 @@ interface LexiStoreActions {
   addToReview: (id: string) => void
   // A4 缝合：唯一词典入库入口（已存在不重置学习进度）
   ensureWord: (dw: DictionaryWord, source: NonNullable<WordEntry['source']>, state?: WordState) => WordEntry
+  setSaved: (id: string, value: boolean, fallbackWord?: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
   recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
@@ -306,6 +309,8 @@ export const useLexiStore = create<LexiStore>()(
         return { n, goal: goalToday, pct: Math.min(100, Math.round((n / (goalToday || 1)) * 100)) }
       },
       previewFor: (w) => previewIntervals({ interval: w.interval, ease: w.ease, streak: w.streak }),
+      getSaved: () => get().words.filter(w => w.saved),
+      isSaved: (id) => !!get().words.find(w => w.id === id)?.saved,
       masteredPct: () => {
         const ws = get().words
         const active = ws.filter(w => w.state !== 'locked')
@@ -387,6 +392,19 @@ export const useLexiStore = create<LexiStore>()(
         set(s => ({ words: [...s.words, entry], log: [logEntry, ...s.log].slice(0, 30) }))
         return entry
       },
+
+      // 收藏标记（收编 learningStore.savedWords）：词不在库则建轻量 stub
+      setSaved: (id, value, fallbackWord) => set(s => {
+        const exists = s.words.find(w => w.id === id)
+        if (exists) return { words: s.words.map(w => w.id === id ? { ...w, saved: value } : w) }
+        if (!value) return {}
+        const stub: WordEntry = {
+          id, word: fallbackWord ?? id, zh: '', phon: '', pos: '', galaxy: 'cognition',
+          state: 'learning', streak: 0, ease: 2.5, interval: 0,
+          saved: true, addedAt: Date.now(), source: 'lookup',
+        }
+        return { words: [...s.words, stub] }
+      }),
 
       addWord: (entry) => {
         const current = get()

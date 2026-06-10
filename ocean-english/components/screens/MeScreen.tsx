@@ -38,7 +38,7 @@ function VaultTab({ words, emptyText }: { words: WordEntry[]; emptyText: string 
 // ── MeScreen ───────────────────────────────────────────────────
 export function MeScreen() {
   const navigate = useNavigate()
-  const { streakData, xp, masteredPct, byState, getWeak, counts, addToReview, profile, bandCefr, user } = useLexiStore()
+  const { streakData, xp, masteredPct, getWeak, getSaved, counts, addToReview, profile, bandCefr, user } = useLexiStore()
   const streak = streakData.current
 
   const [tab, setTab] = useState<'weak' | 'saved' | 'notes'>('weak')
@@ -46,6 +46,7 @@ export function MeScreen() {
   const wordCounts = useMemo(() => counts(), [])
   const pct = useMemo(() => masteredPct(), [])
   const weakWords = useMemo(() => getWeak(), [])
+  const savedWords = useMemo(() => getSaved(), [])
   const cefr = bandCefr(profile.band)
 
   function reflux() {
@@ -55,7 +56,7 @@ export function MeScreen() {
 
   const TABS = [
     { id: 'weak',  zh: '薄弱词', words: weakWords },
-    { id: 'saved', zh: '收藏', words: byState('mastered').slice(0, 20) },
+    { id: 'saved', zh: '收藏', words: savedWords },
     { id: 'notes', zh: '笔记', words: [] as WordEntry[] },
   ] as const
 

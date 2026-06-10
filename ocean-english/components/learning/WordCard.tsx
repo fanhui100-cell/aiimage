@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import Link from 'next/link'
 import { toast } from 'sonner'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { SparkBurst, type SparkBurstHandle } from '@/components/ui/motion/SparkBurst'
 import type { Word } from '@/types/word'
 
@@ -25,6 +26,7 @@ function StarIcon({ filled }: { filled: boolean }) {
 
 export function WordCard({ word }: WordCardProps) {
   const { isWordSaved, saveWord, unsaveWord, addToReview } = useLearningStore()
+  const setSaved = useLexiStore(s => s.setSaved)
   const saved = isWordSaved(word.id)
   const sparkRef = useRef<SparkBurstHandle>(null)
 
@@ -32,9 +34,11 @@ export function WordCard({ word }: WordCardProps) {
     e.preventDefault()
     if (saved) {
       unsaveWord(word.id)
+      setSaved(word.id, false)
     } else {
       saveWord(word.id)
       addToReview(word.id, word.word)
+      setSaved(word.id, true, word.word)
       sparkRef.current?.fire()
       toast.success('已加入复习 · +10★')
     }
