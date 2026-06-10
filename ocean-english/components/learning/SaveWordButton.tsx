@@ -25,9 +25,10 @@ function StarIcon({ filled }: { filled: boolean }) {
 }
 
 export function SaveWordButton({ wordId, word, compact = false }: SaveWordButtonProps) {
-  const { isWordSaved, saveWord, unsaveWord, addToReview } = useLearningStore()
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
+  const { saveWord, unsaveWord, addToReview } = useLearningStore()
   const setSaved = useLexiStore(s => s.setSaved)
-  const saved = isWordSaved(wordId)
+  const saved = useLexiStore(s => !!s.words.find(w => w.id === wordId)?.saved)
   const sparkRef = useRef<SparkBurstHandle>(null)
 
   function handleSave() {

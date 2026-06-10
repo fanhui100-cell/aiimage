@@ -169,11 +169,13 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
   // Anti-spam: each word's pronunciation awards LexiStar at most once per page lifecycle
   const hasAwardedPronunciationRef = useRef(false)
 
-  const { addToReview, completeTaskUnit, markStudyToday, incrementXp, incrementWordsLearned, userLevel } =
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
+  const { addToReview, completeTaskUnit, markStudyToday, incrementXp, incrementWordsLearned } =
     useLearningStore()
   const ensureWord = useLexiStore(s => s.ensureWord)
   const recordActivity = useLexiStore(s => s.recordActivity)
   const incXp = useLexiStore(s => s.incXp)
+  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
   const { addLexiStar, recordPronunciationPlay } = useMotivationStore()
   const router = useRouter()
 

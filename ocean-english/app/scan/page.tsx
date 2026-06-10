@@ -29,16 +29,17 @@ function newDocumentId(): string {
 }
 
 export default function ScanPage() {
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
   const {
     addToReview,
     saveWord,
     completeTaskUnit,
     incrementXp,
     markStudyToday,
-    reviewWords,
-    userLevel,
     addWrongAnswer,
   } = useLearningStore()
+  const lexiWords = useLexiStore(s => s.words)
+  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
 
   const {
     scanQuizDrafts,
@@ -59,8 +60,8 @@ export default function ScanPage() {
 
   // Build Set of already-in-review word IDs for the VocabPanel dedup display
   const alreadyInReview = useMemo<Set<string>>(
-    () => new Set(reviewWords.map(r => r.wordId)),
-    [reviewWords],
+    () => new Set(lexiWords.filter(w => w.nextReviewAt != null).map(w => w.id)),
+    [lexiWords],
   )
 
   // Quiz drafts for the current document session
@@ -170,9 +171,16 @@ export default function ScanPage() {
 
   function handleAddToReview(word: ExtractedVocabulary) {
     const id = word.word.toLowerCase().replace(/\s+/g, '-')
+    // A4：扫描词进统一状态机（带释义与来源），收藏 + 进 SRS 队列
+    const lexi = useLexiStore.getState()
+    lexi.addWord({ id, word: word.word, zh: word.meaningZh ?? word.definitionEn ?? '', source: 'scan' })
+    lexi.setSaved(id, true, word.word)
+    lexi.addToReview(id)
+    lexi.recordActivity('learned')
+    lexi.incXp(10)
+    // 镜像写 learningStore（云同步），A7 改造后移除
     addToReview(id, word.word)
     saveWord(id)
-    useLexiStore.getState().setSaved(id, true, word.word)   // A4：统一中枢标记收藏
     completeTaskUnit('vocab-5', 1)
     incrementXp(10)
     markStudyToday()

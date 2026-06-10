@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import { PronunciationButton } from '@/components/pronunciation/PronunciationButton'
 import { ExampleSentencePlayer } from '@/components/pronunciation/ExampleSentencePlayer'
@@ -84,10 +85,12 @@ export function LexiGraphPanel({ word, mode, notInCorpusWord, onSynonymClick, on
   const hasAwardedPronunciationRef = useRef(false)
 
   const router = useRouter()
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
   const {
     addToReview, completeTaskUnit, markStudyToday, incrementXp,
-    userLevel, reviewWords,
   } = useLearningStore()
+  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
+  const lexiWords = useLexiStore(s => s.words)
   const { addLexiStar, markReviewAction, lightUpWordNode, setCompanionMessage, recordPronunciationPlay, recordQuizStart } = useMotivationStore()
 
   function handlePronunciationPlayed() {
@@ -150,7 +153,7 @@ export function LexiGraphPanel({ word, mode, notInCorpusWord, onSynonymClick, on
 
   if (!word) return null
 
-  const isInReview = reviewWords.some(r => r.wordId === word.id)
+  const isInReview = lexiWords.some(w => w.id === word.id && w.nextReviewAt != null)
   const standardMnem = word.mnemonics.find(m => m.style === 'standard')
   const cefrColor: Record<string, string> = {
     A1: '#34D399', A2: '#34D399', B1: '#38BDF8', B2: '#38BDF8', C1: '#F97316', C2: '#F97316',
@@ -179,6 +182,12 @@ export function LexiGraphPanel({ word, mode, notInCorpusWord, onSynonymClick, on
   }
 
   function handleAddToReview() {
+    // 词典词经唯一入口进入统一状态机，再进 SRS 队列
+    const lexi = useLexiStore.getState()
+    lexi.ensureWord(word!, 'lookup')
+    lexi.addToReview(word!.id)
+    lexi.incXp(10)
+    // 镜像写 learningStore（云同步），A7 改造后移除
     addToReview(word!.id, word!.word)
     completeTaskUnit('vocab-5', 1)
     markStudyToday()

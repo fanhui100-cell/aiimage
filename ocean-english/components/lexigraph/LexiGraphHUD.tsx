@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import { calculateLevel } from '@/lib/motivation/motivation-levels'
 import { deriveMissions } from '@/lib/motivation/motivation-daily-missions'
 
 export function LexiGraphHUD() {
-  const { reviewWords, studyProgress } = useLearningStore()
+  const words = useLexiStore(s => s.words)
+  const streakCurrent = useLexiStore(s => s.streakData.current)
   const {
     lexiStar, litNodeCount, dailyMissionProgress,
     resetDailyMissionsIfNewDay, seedFromV1IfNeeded,
@@ -19,7 +20,7 @@ export function LexiGraphHUD() {
     seedFromV1IfNeeded()
   }, [resetDailyMissionsIfNewDay, seedFromV1IfNeeded])
 
-  const dueCount = reviewWords.filter(r => r.nextReviewAt <= Date.now()).length
+  const dueCount = words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= Date.now()).length
   const { level, progress } = calculateLevel(lexiStar)
   const missions = deriveMissions(dailyMissionProgress)
   const missionsDone = missions.filter(m => m.completed).length
@@ -84,7 +85,7 @@ export function LexiGraphHUD() {
       {/* Streak */}
       <div style={cellStyle()}>
         <div style={{ fontSize: '15px', fontWeight: 700, color: '#34D399', fontFamily: 'var(--font-mono)', lineHeight: 1 }}>
-          {studyProgress.currentStreak}d
+          {streakCurrent}d
         </div>
         <div style={{ fontSize: '9px', color: 'rgba(155,191,202,0.45)', marginTop: '3px', letterSpacing: '0.04em' }}>
           Streak / 连学

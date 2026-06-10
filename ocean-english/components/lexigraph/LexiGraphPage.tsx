@@ -12,7 +12,7 @@ import { LexiGraphLegend } from './LexiGraphLegend'
 import { LexiGraphRelationFilter, type RelationFilter } from './LexiGraphRelationFilter'
 import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { buildLexiGraphModel } from '@/lib/lexigraph/lexigraph-data-mapper'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LexiGraphModel, LexiGraphNode } from '@/types/lexigraph'
@@ -70,12 +70,12 @@ export function LexiGraphPage() {
     }
 
     // Read store state at call time — avoids stale closure without deps
-    const lStore = useLearningStore.getState()
+    const lexi = useLexiStore.getState()
     const mStore = useMotivationStore.getState()
     const slices = {
-      savedWords: lStore.savedWords,
-      reviewWordIds: lStore.reviewWords.map(r => r.wordId),
-      weakWordIds: lStore.wrongAnswers.map(w => w.wordId),
+      savedWords: lexi.words.filter(w => w.saved).map(w => w.id),
+      reviewWordIds: lexi.words.filter(w => w.nextReviewAt != null).map(w => w.id),
+      weakWordIds: lexi.words.filter(w => w.state === 'weak').map(w => w.id),
       litWords: mStore.litWords,
     }
 

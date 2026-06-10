@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import Link from 'next/link'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import { calculateLevel } from '@/lib/motivation/motivation-levels'
 import { ACHIEVEMENT_DEFS } from '@/lib/motivation/motivation-achievements'
@@ -74,15 +74,20 @@ function AchievementBadge({ titleZh, descriptionZh, unlocked }: { titleZh: strin
 }
 
 export function ProfileBody({ userEmail, createdAt }: { userEmail: string; createdAt: string }) {
-  const { studyProgress, getDueWords } = useLearningStore()
+  const words = useLexiStore(s => s.words)
+  const currentStreak = useLexiStore(s => s.streakData.current)
+  const totalXp = useLexiStore(s => s.xp)
   const lexiStar = useMotivationStore(s => s.lexiStar)
   const achievements = useMotivationStore(s => s.achievements)
 
   const { level, progress } = useMemo(() => calculateLevel(lexiStar), [lexiStar])
   const levelName = LEVEL_NAMES[level] ?? '探索者'
 
-  const { totalWordsLearned, currentStreak, totalXp } = studyProgress
-  const dueCount = getDueWords().length
+  // 已学 = 进入过学习闭环的词（排除 locked/unknown/recommended）
+  const totalWordsLearned = words.filter(
+    w => w.state === 'learning' || w.state === 'review' || w.state === 'weak' || w.state === 'mastered',
+  ).length
+  const dueCount = words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= Date.now()).length
 
   const displayName = userEmail.split('@')[0]
   const joinDate = new Date(createdAt).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })

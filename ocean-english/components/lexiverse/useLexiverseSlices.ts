@@ -11,14 +11,13 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 import { useMemo } from 'react'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import type { LexiverseStoreSlices } from '@/lib/lexiverse/lexiverse-types'
 
 export function useLexiverseSlices(): LexiverseStoreSlices {
-  // ── learningStore ───────────────────────────────────────────────────────
-  const savedWords  = useLearningStore(s => s.savedWords)
-  const reviewWords = useLearningStore(s => s.reviewWords)
+  // ── lexiStore（A4 缝合后的唯一学习状态源）────────────────────────────────
+  const words = useLexiStore(s => s.words)
 
   // ── motivationStore ─────────────────────────────────────────────────────
   const litWords = useMotivationStore(s => s.litWords)
@@ -26,21 +25,12 @@ export function useLexiverseSlices(): LexiverseStoreSlices {
   // not in current Phase 7; safely default to empty)
   const recommendedWordIds = useMotivationStore(s => (s as unknown as { recommendedWords?: string[] }).recommendedWords ?? null) as string[] | null
 
-  // ── weak word ids (derive from reviewWords history) ─────────────────────
-  // The current schema doesn't ship a `weakWordIds` field; we approximate
-  // it as words whose review interval has been reset more than once.
-  const weakWordIds = useMemo(() => {
-    if (!reviewWords) return []
-    return reviewWords
-      .filter(r => (r as unknown as { wrongCount?: number }).wrongCount && (r as unknown as { wrongCount: number }).wrongCount >= 2)
-      .map(r => r.wordId)
-  }, [reviewWords])
-
   return useMemo<LexiverseStoreSlices>(() => ({
-    savedWords: savedWords ?? [],
+    savedWords: words.filter(w => w.saved).map(w => w.id),
     litWords: litWords ?? [],
-    reviewWordIds: (reviewWords ?? []).map(r => r.wordId),
-    weakWordIds,
+    // 在 SRS 队列中 = 有下次复习时间
+    reviewWordIds: words.filter(w => w.nextReviewAt != null).map(w => w.id),
+    weakWordIds: words.filter(w => w.state === 'weak').map(w => w.id),
     recommendedWordIds: recommendedWordIds ?? [],
-  }), [savedWords, litWords, reviewWords, weakWordIds, recommendedWordIds])
+  }), [words, litWords, recommendedWordIds])
 }

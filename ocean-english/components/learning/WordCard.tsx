@@ -25,9 +25,10 @@ function StarIcon({ filled }: { filled: boolean }) {
 }
 
 export function WordCard({ word }: WordCardProps) {
-  const { isWordSaved, saveWord, unsaveWord, addToReview } = useLearningStore()
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
+  const { saveWord, unsaveWord, addToReview } = useLearningStore()
   const setSaved = useLexiStore(s => s.setSaved)
-  const saved = isWordSaved(word.id)
+  const saved = useLexiStore(s => !!s.words.find(w => w.id === word.id)?.saved)
   const sparkRef = useRef<SparkBurstHandle>(null)
 
   function toggleSave(e: React.MouseEvent) {

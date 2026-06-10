@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { useScanStore } from '@/store/scanStore'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { ExtractedVocabularyPanel } from '@/components/scan/ExtractedVocabularyPanel'
 import { ExtractedQuestionsPanel } from '@/components/scan/ExtractedQuestionsPanel'
 import type { ExtractedVocabulary } from '@/types/document'
@@ -33,7 +34,9 @@ interface ScanHistoryDetailClientProps {
 export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientProps) {
   const { getScanDocumentById, deleteScanDocument, markVocabularyAdded, markQuizDraftsSaved, markWrongAnswersSaved, markStudyNotesSaved } = useScanHistoryStore()
   const { addScanQuizDraft, addScanStudyNote, scanQuizDrafts, scanStudyNotes } = useScanStore()
-  const { reviewWords, addToReview, saveWord, incrementXp, markStudyToday, addWrongAnswer } = useLearningStore()
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
+  const { addToReview, saveWord, incrementXp, markStudyToday, addWrongAnswer } = useLearningStore()
+  const lexiWords = useLexiStore(s => s.words)
 
   const doc = getScanDocumentById(documentId)
 
@@ -42,8 +45,8 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
   const [deleted, setDeleted] = useState(false)
 
   const alreadyInReview = useMemo(
-    () => new Set(reviewWords.map(r => r.wordId)),
-    [reviewWords],
+    () => new Set(lexiWords.filter(w => w.nextReviewAt != null).map(w => w.id)),
+    [lexiWords],
   )
 
   const preExistingSavedDraftIds = useMemo(() => {
@@ -102,6 +105,14 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
 
   function handleAddToReview(word: ExtractedVocabulary) {
     const id = word.word.toLowerCase().replace(/\s+/g, '-')
+    // A4：扫描词进统一状态机（带释义与来源），收藏 + 进 SRS 队列
+    const lexi = useLexiStore.getState()
+    lexi.addWord({ id, word: word.word, zh: word.meaningZh ?? word.definitionEn ?? '', source: 'scan' })
+    lexi.setSaved(id, true, word.word)
+    lexi.addToReview(id)
+    lexi.recordActivity('learned')
+    lexi.incXp(10)
+    // 镜像写 learningStore（云同步），A7 改造后移除
     addToReview(id, word.word)
     saveWord(id)
     incrementXp(10)

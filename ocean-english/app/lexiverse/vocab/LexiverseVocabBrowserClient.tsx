@@ -18,6 +18,7 @@ import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { FilterableWord } from '@/lib/lexiverse/lexiverse-word-filter'
 import type { PlanetLearningState } from '@/lib/lexiverse/lexiverse-types'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import type { DictionaryDefinition, DictionaryExample, DictionaryWord } from '@/lib/dictionary/dictionary-types'
 
 type FilterKey = 'cefr' | 'pos' | 'exam' | 'theme' | 'state'
@@ -229,7 +230,21 @@ export function LexiverseVocabBrowserClient() {
               <WordPreview
                 word={selectedWord}
                 state={stateFor(selectedWord)}
-                onAddToReview={() => addToReview(selectedWord.id, selectedWord.word)}
+                onAddToReview={() => {
+                  // 词进统一状态机再入 SRS 队列；镜像写 learningStore（A7 移除）
+                  const lexi = useLexiStore.getState()
+                  if (!lexi.byId(selectedWord.id)) {
+                    lexi.addWord({
+                      id: selectedWord.id,
+                      word: selectedWord.word,
+                      zh: selectedWord.definitions?.[0]?.definitionZh ?? '',
+                      source: 'lookup',
+                    })
+                    void lexi.hydrateMissingEntries()
+                  }
+                  lexi.addToReview(selectedWord.id)
+                  addToReview(selectedWord.id, selectedWord.word)
+                }}
               />
             ) : (
               <EmptyInline>Select a word to preview it.</EmptyInline>

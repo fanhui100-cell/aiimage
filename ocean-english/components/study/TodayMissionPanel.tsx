@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 
 interface MissionProgress {
   litCount: number
@@ -28,7 +28,7 @@ function getTargets(level: string | null) {
 }
 
 export function TodayMissionPanel({ progress }: Props) {
-  const { userLevel } = useLearningStore()
+  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
   const t = getTargets(userLevel)
 
   const MISSIONS = [

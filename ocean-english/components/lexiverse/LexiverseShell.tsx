@@ -19,6 +19,7 @@ import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
 import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import type { PlanetAction } from '@/lib/lexiverse/lexiverse-types'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 
 import { LexiverseScene } from './LexiverseScene'
 import { UniverseHUD } from './UniverseHUD'
@@ -69,8 +70,9 @@ export function LexiverseShell() {
   // ── hooks ──────────────────────────────────────────────────────────────
   const slices = useLexiverseSlices()
   const { words: dictWords, loading: dictLoading } = useLexiverseDictionary()
+  // 写双发（learningStore 仍是云同步镜像），读以 lexiStore 为准
   const addToReview = useLearningStore(s => s.addToReview)
-  const reviewWords = useLearningStore(s => s.reviewWords)
+  const lexiWords = useLexiStore(s => s.words)
   // STAGE D
   const masteryByGalaxyId = useGalaxyMastery(slices)
   const echoes = useCrossGalaxyEchoes(slices)
@@ -78,10 +80,10 @@ export function LexiverseShell() {
   // STAGE D · overdue word ids (nextReviewAt < now)
   const overdueWordIds = useMemo(() => {
     const now = Date.now()
-    return (reviewWords ?? [])
-      .filter(r => (r as unknown as { nextReviewAt?: number }).nextReviewAt && (r as unknown as { nextReviewAt: number }).nextReviewAt < now)
-      .map(r => r.wordId)
-  }, [reviewWords])
+    return lexiWords
+      .filter(w => w.nextReviewAt != null && w.nextReviewAt < now)
+      .map(w => w.id)
+  }, [lexiWords])
 
   // detail panel: which sector card is "open" in the right slide-in
   const [detailSectorId, setDetailSectorId] = useState<string | null>(null)
@@ -162,8 +164,8 @@ export function LexiverseShell() {
 
   const isPlanetInReview = useMemo(() => {
     if (!selectedPlanet) return false
-    return reviewWords?.some(r => r.wordId === selectedPlanet.wordId) ?? false
-  }, [selectedPlanet, reviewWords])
+    return lexiWords.some(w => w.id === selectedPlanet.wordId && w.nextReviewAt != null)
+  }, [selectedPlanet, lexiWords])
 
   const galaxyProgress = useMemo(() => {
     if (!builtGalaxy) return null
@@ -197,7 +199,17 @@ export function LexiverseShell() {
       case 'open_lexigraph':      router.push(`/lexigraph?word=${p.normalizedWord}`); break
       case 'start_quiz':          router.push(`/quiz?mode=vocabulary-drill&word=${p.normalizedWord}&returnTo=${returnTo}`); break
       case 'ask_ai':              router.push(`/chat?context=word&word=${p.normalizedWord}&returnTo=${returnTo}`); break
-      case 'add_to_review':       addToReview(p.wordId, p.word); break
+      case 'add_to_review': {
+        // 词进统一状态机再入 SRS 队列（内容字段由 hydrate 补拉）；镜像写 learningStore（A7 移除）
+        const lexi = useLexiStore.getState()
+        if (!lexi.byId(p.wordId)) {
+          lexi.addWord({ id: p.wordId, word: p.word, zh: '', source: 'lookup' })
+          void lexi.hydrateMissingEntries()
+        }
+        lexi.addToReview(p.wordId)
+        addToReview(p.wordId, p.word)
+        break
+      }
       case 'play_pronunciation':  void speakWord(p.word); break
     }
   }, [selectedPlanet, router, returnTo, addToReview])

@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useRef, useEffect, Suspense } from 'react'
+import { useState, useRef, useEffect, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppShell } from '@/components/layout/AppShell'
 import { useLearningStore } from '@/store/learningStore'
+import { useLexiStore } from '@/store/lexiStore'
 import { getMockAiResponse } from '@/data/mock-chat'
 import { resolveNavigatorContext } from '@/lib/ai-navigator/ai-navigator-context'
 import { AINavigatorHeader } from '@/components/ai-navigator/AINavigatorHeader'
@@ -91,17 +92,27 @@ function ChatEmptyState({ context }: { context: AINavigatorContext }) {
 
 function ChatInner() {
   const searchParams = useSearchParams()
+  // chat/错题/进度暂留 learningStore（A7 迁移）；学习状态读 lexiStore
   const {
     chatMessages,
     addChatMessage,
     clearChat,
     addToReview,
-    userLevel,
     wrongAnswers,
     studyProgress,
-    savedWords,
-    reviewWords,
   } = useLearningStore()
+  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
+  const words = useLexiStore(s => s.words)
+  const savedWords = useMemo(() => words.filter(w => w.saved).map(w => w.id), [words])
+  const reviewWords = useMemo(
+    () => words
+      .filter(w => w.nextReviewAt != null)
+      .map(w => ({
+        wordId: w.id, word: w.word, nextReviewAt: w.nextReviewAt!,
+        interval: w.interval, ease: w.ease, repetitions: w.streak,
+      })),
+    [words],
+  )
 
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
