@@ -115,11 +115,6 @@ export const EXTRA_DICT: WordEntry[] = [
   { id: 'd_resilient',  word: 'resilient',  phon: '/rɪˈzɪliənt/',   pos: 'adj.',    zh: '有韧性的、能复原的',  galaxy: 'cognition', state: 'unknown', streak: 0, ease: 2.5, interval: 0, cefr: 'C1', band: 7, examTags: ['IELTS', 'TOEFL'], ex: 'Children are remarkably resilient.',   exZh: '孩子的恢复力惊人。',       syn: ['tough', 'flexible'],        ant: ['fragile'] },
 ]
 
-const DISTRACTORS = [
-  '显著的增长', '短暂的停留', '公开的声明', '强烈的反对',
-  '微弱的信号', '彻底的改变', '细致的观察', '广泛的影响',
-]
-
 const WORD_AUG: Record<string, Partial<WordEntry>> = {
   w01: { cefr: 'B2', band: 5, examTags: ['CET6', 'IELTS'],          ex: 'The change felt unavoidable once the data was clear.',          exZh: '数据一清晰，这个变化就显得难以避免。',   syn: ['inevitable', 'inescapable'], ant: ['avoidable'] },
   w02: { cefr: 'B2', band: 5, examTags: ['CET6', 'IELTS', 'KAOYAN'], ex: 'Conflict seemed inevitable after the talks broke down.',       exZh: '谈判破裂后冲突似乎不可避免。',           syn: ['unavoidable', 'certain'],    ant: ['avoidable', 'uncertain'] },
@@ -326,7 +321,18 @@ export const useLexiStore = create<LexiStore>()(
         return p.goals?.length ? p.goals : (p.targetExam ? [p.targetExam] : [])
       },
       distractorsFor: (w) => {
-        const pool = DISTRACTORS.filter(d => d !== w.zh)
+        // 干扰项 = 同词性、band±1 的真实词典释义；不足则放开到全库
+        const sameLevel = get().words
+          .filter(c => c.id !== w.id && c.zh && c.zh !== w.zh
+            && c.pos === w.pos
+            && (!w.band || !c.band || Math.abs(c.band - w.band) <= 1))
+          .map(c => c.zh)
+        const fallback = get().words
+          .filter(c => c.id !== w.id && c.zh && c.zh !== w.zh)
+          .map(c => c.zh)
+        const candidates = sameLevel.length >= 3 ? sameLevel : [...sameLevel, ...fallback]
+        // 去重，避免选项重复
+        const pool = Array.from(new Set(candidates))
         const picks: string[] = []
         const available = [...pool]
         for (let i = 0; i < 3 && available.length; i++) {
