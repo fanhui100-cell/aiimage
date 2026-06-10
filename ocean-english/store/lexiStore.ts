@@ -217,10 +217,14 @@ export interface StreakData {
   lastStudyDate: string
 }
 
+/** 按日归档的活动计数（B9 热力图 / B3 周打卡条），上限 366 天 */
+export type DailyHistory = Record<string, { learned: number; quizzed: number; reviewed: number }>
+
 interface LexiStoreState {
   words: WordEntry[]
   xp: number
   daily: DailyRecord
+  history: DailyHistory
   streakData: StreakData
   goalToday: number
   todayPack: TodayPackCache
@@ -332,6 +336,7 @@ export const useLexiStore = create<LexiStore>()(
       words: [],
       xp: 0,
       daily: { date: '', learned: 0, quizzed: 0, reviewed: 0 },
+      history: {},
       streakData: { current: 0, longest: 0, lastStudyDate: '' },
       goalToday: 12,
       todayPack: { date: '', recommendedIds: [] },
@@ -575,10 +580,18 @@ export const useLexiStore = create<LexiStore>()(
 
       incXp: (n) => set(s => ({ xp: s.xp + n })),
 
-      // 统一活动记录入口：跨天自动清零 + streak 计算
+      // 统一活动记录入口：跨天自动清零（昨天归档进 history）+ streak 计算
       recordActivity: (kind) => set(s => {
         const today = new Date().toISOString().slice(0, 10)
-        const d = s.daily.date === today
+        const crossing = s.daily.date !== today
+        let history = s.history
+        if (crossing && s.daily.date) {
+          // B9-1：跨天时把上一天的 daily 归档（上限 366 条，溢出删最旧）
+          history = { ...history, [s.daily.date]: { learned: s.daily.learned, quizzed: s.daily.quizzed, reviewed: s.daily.reviewed } }
+          const dates = Object.keys(history).sort()
+          while (dates.length > 366) delete history[dates.shift()!]
+        }
+        const d = !crossing
           ? s.daily
           : { date: today, learned: 0, quizzed: 0, reviewed: 0 }
         const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10)
@@ -589,7 +602,7 @@ export const useLexiStore = create<LexiStore>()(
           longest: Math.max(sd.longest, nextCurrent),
           lastStudyDate: today,
         }
-        return { daily: { ...d, [kind]: d[kind] + 1 }, streakData }
+        return { daily: { ...d, [kind]: d[kind] + 1 }, history, streakData }
       }),
 
       setProfile: (p) => set(s => {
@@ -775,6 +788,7 @@ export const useLexiStore = create<LexiStore>()(
         words: s.words,
         xp: s.xp,
         daily: s.daily,
+        history: s.history,
         streakData: s.streakData,
         goalToday: s.goalToday,
         todayPack: s.todayPack,

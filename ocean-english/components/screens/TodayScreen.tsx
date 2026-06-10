@@ -7,16 +7,19 @@ import { STATE_META, type WordState } from '@/lib/state-meta'
 import { hexA } from '@/lib/utils'
 import { useNavigate } from '@/hooks/useNavigate'
 import { ProgressRing, Eyebrow } from '@/components/screens/SharedUI'
+import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
-// ── WordChip ───────────────────────────────────────────────────
-function WordChip({ entry }: { entry: WordEntry }) {
+// ── WordChip（B3-3：done = 实底 + 划除）────────────────────────
+function WordChip({ entry, done }: { entry: WordEntry; done?: boolean }) {
   const m = STATE_META[entry.state]
   return (
     <span style={{
       display: 'inline-flex', alignItems: 'center', padding: '3px 9px',
       borderRadius: 99, fontSize: 11.5, fontWeight: 600,
-      background: hexA(m.light, 0.1), color: m.light,
-      border: `1px solid ${hexA(m.light, 0.25)}`,
+      background: done ? m.light : hexA(m.light, 0.1),
+      color: done ? '#fff' : m.light,
+      border: `1px solid ${done ? m.light : hexA(m.light, 0.25)}`,
+      textDecoration: done ? 'line-through' : 'none',
       fontFamily: 'var(--font-sans)',
     }}>
       {entry.word}
@@ -24,39 +27,40 @@ function WordChip({ entry }: { entry: WordEntry }) {
   )
 }
 
-// ── PackRow ────────────────────────────────────────────────────
-function PackRow({ label, words }: { label: string; words: WordEntry[] }) {
+// ── PackRow（B3-3：完成计数「3/5 完成」）────────────────────────
+function PackRow({ label, words, isDone }: {
+  label: string; words: WordEntry[]; isDone: (w: WordEntry) => boolean
+}) {
   if (!words.length) return null
+  const doneN = words.filter(isDone).length
   return (
     <div style={{ marginBottom: 16 }}>
       <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-muted)', marginBottom: 8, fontFamily: 'var(--font-mono)' }}>
-        {label} · {words.length}
+        {label} · {doneN}/{words.length} 完成
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-        {words.map(w => <WordChip key={w.id} entry={w} />)}
+        {words.map(w => <WordChip key={w.id} entry={w} done={isDone(w)} />)}
       </div>
     </div>
   )
 }
 
-// ── StepNode ───────────────────────────────────────────────────
+// ── StepNode（B3-1：独立完成态 + 「去完成 →」动作按钮）──────────
 function StepNode({
-  step, label, sub, color, locked, active, onClick,
+  step, label, sub, color, locked, done, onClick,
 }: {
   step: number; label: string; sub: string; color: string
-  locked: boolean; active: boolean; onClick: () => void
+  locked: boolean; done: boolean; onClick: () => void
 }) {
+  const active = !locked && !done
   return (
-    <button
-      onClick={onClick}
-      disabled={locked}
-      className={locked ? '' : 'btn-press card-hover'}
+    <div
+      className={locked ? '' : 'card-hover'}
       style={{
         display: 'flex', alignItems: 'center', gap: 16,
         padding: '16px 20px', borderRadius: 16,
-        border: `1.5px solid ${active ? color : locked ? 'var(--line)' : 'var(--line)'}`,
+        border: `1.5px solid ${active ? color : 'var(--line)'}`,
         background: active ? hexA(color, 0.07) : 'var(--card)',
-        cursor: locked ? 'default' : 'pointer',
         opacity: locked ? 0.45 : 1,
         width: '100%', textAlign: 'left',
         transition: 'all 0.2s',
@@ -65,22 +69,25 @@ function StepNode({
       <div style={{
         width: 38, height: 38, borderRadius: '50%', flexShrink: 0,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        background: active ? color : locked ? 'var(--line)' : hexA(color, 0.15),
-        color: active ? '#fff' : color,
+        background: done ? color : active ? color : 'var(--line)',
+        color: done || active ? '#fff' : 'var(--ink-muted)',
         fontSize: 15, fontWeight: 800,
       }}>
-        {step}
+        {done ? (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+        ) : step}
       </div>
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-sans)' }}>{label}</div>
         <div style={{ fontSize: 12, color: 'var(--ink-sub)', marginTop: 2 }}>{sub}</div>
       </div>
-      {!locked && (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={active ? color : 'var(--ink-muted)'} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
+      {!locked && !done && (
+        <button onClick={onClick} className="btn-press"
+          style={{ flexShrink: 0, padding: '9px 16px', borderRadius: 999, border: `1.5px solid ${color}`, background: hexA(color, 0.08), cursor: 'pointer', fontSize: 13, fontWeight: 700, color, fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
+          去完成 →
+        </button>
       )}
-    </button>
+    </div>
   )
 }
 
@@ -103,10 +110,21 @@ export function TodayScreen() {
   const goalToday = progress.goal
   const streak = streakData.current
   const pct = progress.pct
-  const stage = pct === 0 ? 0 : pct < 50 ? 1 : pct < 100 ? 2 : 3
 
   const wordCounts = useMemo(() => counts(), [])
   const totalDue = today.review.length + today.weak.length
+
+  // B3-1：三步动线真实判定（学=新词学完；练=当日答题≥5；复=到期清零）
+  const daily = useLexiStore(s => s.daily)
+  const dueLen = useLexiStore(s => s.getDue().length)
+  const todayStr = new Date().toISOString().slice(0, 10)
+  const learnedToday = daily.date === todayStr ? daily.learned : 0
+  const quizzedToday = daily.date === todayStr ? daily.quizzed : 0
+  const step1done = today.recommended.length === 0 || learnedToday >= today.recommended.length
+  const step2done = quizzedToday >= 5
+  const step3done = dueLen === 0
+  const allDone = step1done && step2done && step3done
+  const now = Date.now()
 
   const STEP_COLORS = ['#0e8c7a', '#3b5bd9', '#d2792f']
 
@@ -119,7 +137,7 @@ export function TodayScreen() {
           <div>
             <Eyebrow>今日学习</Eyebrow>
             <h1 style={{ margin: '6px 0 0', fontSize: 26, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>
-              {stage === 0 ? '准备好了吗？' : stage < 3 ? '继续保持 💪' : '今日完成 🎉'}
+              {allDone ? '今日已闭环 🎉' : pct === 0 ? '准备好了吗？' : '继续保持 💪'}
             </h1>
           </div>
           {streak > 0 && (
@@ -155,39 +173,54 @@ export function TodayScreen() {
           </div>
         </div>
 
-        {/* Today's word packs */}
+        {/* Today's word packs（B3-3：完成态可见） */}
         {today.all.length > 0 && (
           <div style={{ background: 'var(--card)', borderRadius: 16, padding: '18px 20px', border: '1px solid var(--line)', marginBottom: 20 }}>
-            <PackRow label="今日推荐" words={today.recommended} />
-            <PackRow label="待复习" words={today.review} />
-            <PackRow label="薄弱词" words={today.weak} />
+            <PackRow label="今日推荐" words={today.recommended} isDone={w => w.state !== 'recommended'} />
+            <PackRow label="待复习" words={today.review} isDone={w => w.nextReviewAt == null || w.nextReviewAt > now} />
+            <PackRow label="薄弱词" words={today.weak} isDone={w => w.state !== 'weak'} />
           </div>
         )}
 
-        {/* Flow steps */}
+        {/* Flow steps（B3-1：独立判定 + 去完成按钮） */}
         <div style={{ marginBottom: 20 }}>
           <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink-sub)', marginBottom: 12 }}>今日学习三步走</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             <StepNode
               step={1} label="学习单词"
-              sub={today.recommended.length > 0
-                ? `${today.recommended.length} 个新词等待学习`
-                : todayPackCache.date ? '今日新词暂不可用 · 先复习巩固' : '正在准备今日新词…'}
-              color={STEP_COLORS[0]} locked={false} active={stage === 0}
+              sub={step1done && today.recommended.length > 0
+                ? `今日 ${today.recommended.length} 个新词已学完`
+                : today.recommended.length > 0
+                  ? `新词 ${Math.min(learnedToday, today.recommended.length)}/${today.recommended.length}`
+                  : todayPackCache.date ? '今日新词暂不可用 · 先复习巩固' : '正在准备今日新词…'}
+              color={STEP_COLORS[0]} locked={false} done={step1done}
               onClick={() => navigate('learn', { flow: true })}
             />
             <StepNode
-              step={2} label="单词练习" sub="MCQ 巩固记忆"
-              color={STEP_COLORS[1]} locked={stage < 1} active={stage === 1}
+              step={2} label="单词练习"
+              sub={step2done ? `今日已答 ${quizzedToday} 题` : `MCQ 巩固记忆 · ${quizzedToday}/5 题`}
+              color={STEP_COLORS[1]} locked={!step1done} done={step2done}
               onClick={() => navigate('quiz', { flow: true })}
             />
             <StepNode
-              step={3} label="记忆复习" sub={totalDue > 0 ? `${totalDue} 词待复习` : 'SRS 间隔复习'}
-              color={STEP_COLORS[2]} locked={stage < 2} active={stage >= 2}
+              step={3} label="记忆复习"
+              sub={step3done ? '到期复习已清零' : `${dueLen} 词到期待复习`}
+              color={STEP_COLORS[2]} locked={!step2done} done={step3done}
               onClick={() => navigate('review', { flow: true })}
             />
           </div>
         </div>
+
+        {/* B3-2：全闭环 → 今日小结分享卡 */}
+        {allDone && (
+          <div style={{ background: 'var(--card)', borderRadius: 16, padding: '22px 20px', border: '1px solid var(--line)', marginBottom: 20 }}>
+            <div style={{ textAlign: 'center', marginBottom: 16 }}>
+              <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-serif-zh)' }}>🎯 今日已闭环</div>
+              <div style={{ fontSize: 12.5, color: 'var(--ink-sub)', marginTop: 4 }}>学习 → 练习 → 复习全部完成，保存今天的航行记录吧</div>
+            </div>
+            <DailyRecapCard />
+          </div>
+        )}
 
         {/* Stats grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 20 }}>

@@ -8,6 +8,7 @@ import { useLexiStore, type WordEntry, type LogEntry } from '@/store/lexiStore'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 import { useNavigate } from '@/hooks/useNavigate'
 import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
+import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
 const GRADE_OPTS: { id: ReviewGrade; zh: string; color: string; bg: string }[] = [
   { id: 'again', zh: '忘了',   color: '#d4477e',  bg: 'rgba(212,71,126,0.1)' },
@@ -84,6 +85,13 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
             <div style={{ marginBottom: 24 }}>
               <div style={{ textAlign: 'center', fontSize: 22, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-serif-zh)', marginBottom: 8 }}>🎯 今日闭环完成！</div>
               <div style={{ textAlign: 'center', fontSize: 13, color: 'var(--ink-sub)' }}>完整学习→练习→复习流程</div>
+            </div>
+          )}
+
+          {/* B3-2：复习流结束页展示今日小结分享卡 */}
+          {isFlow && (
+            <div style={{ marginBottom: 20 }}>
+              <DailyRecapCard />
             </div>
           )}
 
