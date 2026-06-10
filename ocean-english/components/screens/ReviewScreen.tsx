@@ -10,6 +10,14 @@ import { useNavigate } from '@/hooks/useNavigate'
 import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
 import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
+/** 相对时间：刚刚 / N 小时前 / N 天前 */
+function relTime(t: number): string {
+  const diff = Date.now() - t
+  if (diff < 3_600_000) return '刚刚'
+  if (diff < 86_400_000) return `${Math.floor(diff / 3_600_000)} 小时前`
+  return `${Math.floor(diff / 86_400_000)} 天前`
+}
+
 const GRADE_OPTS: { id: ReviewGrade; zh: string; color: string; bg: string }[] = [
   { id: 'again', zh: '忘了',   color: '#d4477e',  bg: 'rgba(212,71,126,0.1)' },
   { id: 'hard',  zh: '勉强',   color: '#d2792f',  bg: 'rgba(210,121,47,0.1)' },
@@ -135,7 +143,19 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
         {isFlow && <div style={{ marginBottom: 24 }}><FlowBar step={2} /></div>}
 
         {/* Word card */}
-        <div style={{ background: 'var(--card)', borderRadius: 24, padding: '40px 32px', border: '1px solid var(--line)', marginBottom: 20, textAlign: 'center', minHeight: 200, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 12 }}>
+        <div style={{ background: 'var(--card)', borderRadius: 24, padding: '40px 32px', border: '1px solid var(--line)', marginBottom: 20, textAlign: 'center', minHeight: 200, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 12, position: 'relative' }}>
+          {/* B6-3：来源行 — 这个词为什么出现在队列里（调度透明） */}
+          {(() => {
+            const entry = log.find(l => l.id === current.id)
+            const line = entry
+              ? `${relTime(entry.t)}${entry.note}`
+              : current.lastReviewedAt ? `${relTime(current.lastReviewedAt)}复习过` : null
+            return line ? (
+              <span style={{ position: 'absolute', top: 14, left: 0, right: 0, fontSize: 11, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>
+                {line}
+              </span>
+            ) : null
+          })()}
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{ fontSize: 38, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{current.word}</div>
             <SoundBtn word={current.word} />

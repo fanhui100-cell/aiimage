@@ -5,6 +5,15 @@
 import { useMemo, useState } from 'react'
 import { useLexiStore, type WrongAnswer } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
+import { SoundBtn } from '@/components/screens/SharedUI'
+
+/** 相对时间：刚刚 / N 小时前 / N 天前 */
+function relTime(t: number): string {
+  const diff = Date.now() - t
+  if (diff < 3_600_000) return '刚刚'
+  if (diff < 86_400_000) return `${Math.floor(diff / 3_600_000)} 小时前`
+  return `${Math.floor(diff / 86_400_000)} 天前`
+}
 
 function WrongCard({ group, onRetry, onRemove }: {
   group: WrongAnswer[]
@@ -19,9 +28,11 @@ function WrongCard({ group, onRetry, onRemove }: {
     <div style={{ background: 'var(--card)', borderRadius: 16, border: '1px solid var(--line)', padding: '16px 18px', marginBottom: 12 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
         <span style={{ fontSize: 17, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{latest.word}</span>
+        <SoundBtn word={latest.word} size={22} />
         {count > 1 && (
           <span style={{ fontSize: 11, fontWeight: 700, padding: '1px 7px', borderRadius: 99, background: 'rgba(212,71,126,0.1)', color: '#d4477e', fontFamily: 'var(--font-mono)' }}>×{count}</span>
         )}
+        <span style={{ marginLeft: 'auto', fontSize: 11, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>{relTime(latest.timestamp)}</span>
       </div>
 
       <div style={{ fontSize: 13, color: 'var(--ink-sub)', marginBottom: 8 }}>{latest.question}</div>

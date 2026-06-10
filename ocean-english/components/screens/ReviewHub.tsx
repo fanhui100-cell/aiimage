@@ -15,12 +15,16 @@ const TABS: { id: Tab; zh: string }[] = [
   { id: 'wrong', zh: '错题' },
 ]
 
+const DAY = 86_400_000
+const WEEKDAY = ['日', '一', '二', '三', '四', '五', '六']
+
 export function ReviewHub() {
   const router = useRouter()
   const sp = useSearchParams()
   const raw = sp.get('tab')
   const tab: Tab = raw === 'weak' || raw === 'wrong' ? raw : 'due'
 
+  const words = useLexiStore(s => s.words)
   const dueCount = useLexiStore(s => s.getDue().length)
   const weakCount = useLexiStore(s => s.getWeak().length)
   const wrongCount = useLexiStore(s => s.wrongAnswers.length)
@@ -28,6 +32,33 @@ export function ReviewHub() {
 
   function go(t: Tab) {
     router.replace(t === 'due' ? '/memory' : `/memory?tab=${t}`)
+  }
+
+  // B6-3：复习预算行 — 预计时长（约 30 秒/词）+ 未来 7 天到期高峰日
+  const estMinutes = Math.max(1, Math.ceil(dueCount * 0.5))
+  const peakLabel = (() => {
+    const now = Date.now()
+    let best = 0, bestDay = -1
+    for (let i = 1; i <= 7; i++) {
+      const start = now + (i - 1) * DAY
+      const end = now + i * DAY
+      const n = words.filter(w => w.nextReviewAt != null && w.nextReviewAt > start && w.nextReviewAt <= end).length
+      if (n > best) { best = n; bestDay = i }
+    }
+    if (bestDay < 0) return null
+    const d = new Date(now + bestDay * DAY)
+    return `下次高峰周${WEEKDAY[d.getDay()]}`
+  })()
+
+  // B6：底部「全部重练」（仅 weak / wrong tab）
+  function retrainAll() {
+    if (tab === 'weak') {
+      const lexi = useLexiStore.getState()
+      lexi.getWeak().forEach(w => lexi.addToReview(w.id))
+      router.replace('/memory')
+    } else if (tab === 'wrong') {
+      router.push('/quiz?mode=wrong-answer-booster')
+    }
   }
 
   return (
@@ -54,12 +85,32 @@ export function ReviewHub() {
         </div>
       </div>
 
+      {/* B6-3：到期 tab 顶部复习预算行 */}
+      {tab === 'due' && dueCount > 0 && (
+        <div style={{ maxWidth: 560, margin: '0 auto', padding: '12px 20px 0' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12.5, color: 'var(--ink-sub)', fontFamily: 'var(--font-mono)' }}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+            今日到期 {dueCount} · 预计 {estMinutes} 分钟{peakLabel ? ` · ${peakLabel}` : ''}
+          </div>
+        </div>
+      )}
+
       {/* tab content */}
       {tab === 'due' && <ReviewScreen source="due" />}
       {tab === 'weak' && <ReviewScreen source="weak" />}
       {tab === 'wrong' && (
         <div style={{ maxWidth: 560, margin: '0 auto', padding: '16px 20px 100px' }}>
           <WrongAnswerList />
+        </div>
+      )}
+
+      {/* B6：底部常驻「全部重练」（仅 weak/wrong 且有内容时） */}
+      {((tab === 'weak' && weakCount > 0) || (tab === 'wrong' && wrongCount > 0)) && (
+        <div style={{ position: 'fixed', bottom: 'calc(64px + env(safe-area-inset-bottom))', left: 0, right: 0, display: 'flex', justifyContent: 'center', pointerEvents: 'none', zIndex: 90 }}>
+          <button onClick={retrainAll} className="btn-press"
+            style={{ pointerEvents: 'auto', padding: '12px 28px', borderRadius: 999, border: 'none', cursor: 'pointer', background: 'var(--teal-ink)', color: '#fff', fontSize: 14, fontWeight: 700, fontFamily: 'var(--font-sans)', boxShadow: '0 10px 26px -10px rgba(14,140,122,0.7)' }}>
+            全部重练（{tab === 'weak' ? weakCount : wrongCount}）
+          </button>
         </div>
       )}
     </div>

@@ -114,6 +114,10 @@ export function LexiverseQuizClient() {
     if (correct) {
       incrementXp(10)
       if (lexi.byId(current.wordId)) lexi.markCorrect(current.wordId)
+      // B6-2：重练答对 → 自动从错题本移除（按 wordId 匹配）
+      lexi.wrongAnswers
+        .filter(w => w.wordId === current.wordId)
+        .forEach(w => lexi.removeWrongAnswer(w.id))
     } else {
       const picked = current.options.find(o => o.id === optionId)
       const answer = current.options.find(o => o.id === current.answer)
