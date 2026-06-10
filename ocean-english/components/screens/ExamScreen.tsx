@@ -4,6 +4,7 @@
 
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { useLexiStore, type WordEntry, type DistractorOption } from '@/store/lexiStore'
+import { useLearningStore } from '@/store/learningStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { PrimaryBtn, GhostBtn, BackBtn } from '@/components/screens/SharedUI'
 
@@ -13,7 +14,21 @@ const SECS_PER_Q = 20
 
 export function ExamScreen() {
   const navigate = useNavigate()
-  const { all, markCorrect, markWrong, incXp, distractorsFor } = useLexiStore()
+  const { all, markCorrect, markWrong, incXp, distractorsFor, recordActivity } = useLexiStore()
+  const addWrongAnswer = useLearningStore(s => s.addWrongAnswer)
+
+  function logWrong(w: WordEntry, options: DistractorOption[] | null, userAnswer: string) {
+    const correctOpt = options?.find(o => o.correct)
+    addWrongAnswer({
+      wordId: w.id,
+      word: w.word,
+      question: `"${w.word}" 的意思是？`,
+      userAnswer,
+      correctAnswer: correctOpt?.text ?? w.zh,
+      explanation: w.ex ? `例句：${w.ex}（${w.exZh ?? ''}）` : '',
+      timestamp: Date.now(),
+    })
+  }
 
   const questions = useMemo<Array<{ word: WordEntry; options: DistractorOption[] }>>(() => {
     const pool = all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
@@ -29,12 +44,29 @@ export function ExamScreen() {
   const [timeLeft, setTimeLeft] = useState(N * SECS_PER_Q)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
+  // refs 供 timer 闭包读取最新进度（在 effect 中同步，避免 render 期写 ref）
+  const qIdxRef = useRef(0)
+  const pickedRef = useRef<string | null>(null)
+  useEffect(() => { qIdxRef.current = qIdx }, [qIdx])
+  useEffect(() => { pickedRef.current = picked }, [picked])
+
+  function settleUnanswered() {
+    // 未答的题全部按答错结算（含状态流转 + 错题记录）
+    const startFrom = qIdxRef.current + (pickedRef.current ? 1 : 0)
+    questions.slice(startFrom).forEach(({ word, options }) => {
+      markWrong(word.id)
+      setWrong(ws => [...ws, word])
+      logWrong(word, options, '（超时未答）')
+    })
+  }
+
   function startExam() {
     setPhase('run')
     timerRef.current = setInterval(() => {
       setTimeLeft(t => {
         if (t <= 1) {
           clearInterval(timerRef.current!)
+          settleUnanswered()
           setPhase('result')
           return 0
         }
@@ -59,7 +91,9 @@ export function ExamScreen() {
     } else {
       markWrong(q.word.id)
       setWrong(w => [...w, q.word])
+      logWrong(q.word, q.options, opt.text)
     }
+    recordActivity('quizzed')
     setTimeout(() => {
       const next = qIdx + 1
       if (next >= questions.length) {

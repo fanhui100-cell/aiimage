@@ -99,13 +99,18 @@ const ENTRY_GROUPS = [
 // ── Sub-components ─────────────────────────────────────────────────────────
 
 function HomeHeader() {
-  const streak = useLexiStore(s => s.streak)
+  const streak = useLexiStore(s => s.streakData.current)
+  const h = new Date().getHours()
+  const greet = h < 5 ? '夜深了，学一个就睡'
+    : h < 12 ? '早上好，先拿下今天的词'
+    : h < 18 ? '下午好，继续你的航行'
+    : '晚上好，收个尾再休息'
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 22 }}>
       <div>
         <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.72 }}>欢迎回来 · Welcome back</p>
         <h1 style={{ margin: '2px 0 0', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.2vw,32px)', color: 'var(--ink)' }}>
-          下午好，继续你的航行
+          {greet}
         </h1>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '8px 14px', borderRadius: 999, background: 'var(--card)', border: '1px solid var(--line)', flexShrink: 0 }}>
@@ -128,13 +133,14 @@ function MiniStat({ label, n, color }: { label: string; n: number; color: string
 
 function ContinueCard({ navigate }: { navigate: (go: string) => void }) {
   const today = useLexiStore(s => s.getToday())
-  const studiedToday = useLexiStore(s => s.studiedToday)
-  const goalToday = useLexiStore(s => s.goalToday)
+  const progress = useLexiStore(s => s.getTodayProgress())
   const dueCount = useLexiStore(s => s.getDue().length)
   const weakCount = useLexiStore(s => s.getWeak().length)
 
-  const pct = Math.round(studiedToday / goalToday * 100)
-  const remaining = goalToday - studiedToday
+  const studiedToday = progress.n
+  const goalToday = progress.goal
+  const pct = progress.pct
+  const remaining = Math.max(0, goalToday - studiedToday)
   const bg = 'linear-gradient(160deg, #0a1722 0%, #0e2230 60%, #123042 100%)'
 
   return (

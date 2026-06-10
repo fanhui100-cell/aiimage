@@ -5,29 +5,31 @@
 import { useState, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry, type LogEntry } from '@/store/lexiStore'
+import type { ReviewGrade } from '@/lib/srs/schedule'
 import { useNavigate } from '@/hooks/useNavigate'
 import { FlowBar, SoundBtn, StateToast, PrimaryBtn, GhostBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
 
-const GRADE_OPTS = [
+const GRADE_OPTS: { id: ReviewGrade; zh: string; color: string; bg: string }[] = [
   { id: 'again', zh: '忘了',   color: '#d4477e',  bg: 'rgba(212,71,126,0.1)' },
   { id: 'hard',  zh: '勉强',   color: '#d2792f',  bg: 'rgba(210,121,47,0.1)' },
-  { id: 'okay',  zh: '记得',   color: '#3b5bd9',  bg: 'rgba(59,91,217,0.1)'  },
+  { id: 'good',  zh: '记得',   color: '#3b5bd9',  bg: 'rgba(59,91,217,0.1)'  },
   { id: 'easy',  zh: '简单',   color: '#0e8c7a',  bg: 'rgba(14,140,122,0.1)' },
 ]
 
-export function ReviewScreen() {
+export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'all' } = {}) {
   const searchParams = useSearchParams()
   const isFlow = searchParams.get('flow') === 'true'
   const navigate = useNavigate()
 
-  const { getDue, getWeak, reviewCorrect, reviewWrong, incXp, masteredPct, log } = useLexiStore()
+  const { getDue, getWeak, reviewGrade, recordActivity, incXp, masteredPct, byId, previewFor, log } = useLexiStore()
 
   const queue = useMemo<WordEntry[]>(() => {
+    if (source === 'due') return getDue()
+    if (source === 'weak') return getWeak()
     const due = getDue()
     const weak = getWeak()
-    const merged = [...due, ...weak.filter(w => !due.find(d => d.id === w.id))]
-    return merged
-  }, [])
+    return [...due, ...weak.filter(w => !due.find(d => d.id === w.id))]
+  }, [source])
 
   const [idx, setIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -37,17 +39,15 @@ export function ReviewScreen() {
 
   const current = queue[idx]
 
-  function grade(g: string) {
+  function grade(g: ReviewGrade) {
     if (!current) return
     const prev = current.state
-    if (g === 'again') {
-      reviewWrong(current.id)
-      showToast(current.word, prev, 'weak')
-    } else {
-      reviewCorrect(current.id)
-      incXp(15)
-      showToast(current.word, prev, 'mastered')
-    }
+    reviewGrade(current.id, g)
+    recordActivity('reviewed')
+    if (g !== 'again') incXp(15)
+    // 取流转后的真实状态做 toast
+    const to = byId(current.id)?.state ?? prev
+    showToast(current.word, prev, to)
     setGraded(c => c + 1)
     const next = idx + 1
     if (next >= queue.length) {
@@ -148,17 +148,21 @@ export function ReviewScreen() {
           )}
         </div>
 
-        {/* Grade buttons — only show after reveal */}
-        {revealed && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
-            {GRADE_OPTS.map(g => (
-              <button key={g.id} onClick={() => grade(g.id)} className="btn-press"
-                style={{ padding: '14px 8px', borderRadius: 12, border: `1.5px solid ${g.color}`, background: g.bg, cursor: 'pointer', fontSize: 14, fontWeight: 700, color: g.color, fontFamily: 'var(--font-sans)', textAlign: 'center' }}>
-                {g.zh}
-              </button>
-            ))}
-          </div>
-        )}
+        {/* Grade buttons — only show after reveal；副标题为真实 SRS 间隔 */}
+        {revealed && (() => {
+          const iv = previewFor(current)
+          return (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
+              {GRADE_OPTS.map(g => (
+                <button key={g.id} onClick={() => grade(g.id)} className="btn-press"
+                  style={{ display: 'flex', flexDirection: 'column', gap: 3, padding: '12px 8px', borderRadius: 12, border: `1.5px solid ${g.color}`, background: g.bg, cursor: 'pointer', fontFamily: 'var(--font-sans)', textAlign: 'center' }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: g.color }}>{g.zh}</span>
+                  <span style={{ fontSize: 11, color: g.color, opacity: 0.75, fontFamily: 'var(--font-mono)' }}>{iv[g.id]}</span>
+                </button>
+              ))}
+            </div>
+          )
+        })()}
 
         {/* Progress */}
         <div style={{ margin: '20px 0', height: 4, borderRadius: 99, background: 'var(--line)' }}>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
+import { useLearningStore } from '@/store/learningStore'
 
 /* 聚焦流路由 — 在这些页面隐藏底部 Tab，显示悬浮返回 */
 export const FOCUS_ROUTES = ['/quiz', '/exam', '/pronunciation', '/scan', '/chat', '/learn']
@@ -15,7 +16,8 @@ export function MobileTabBar() {
   const router = useRouter()
   const dark = isDarkRoute(pathname)
   const { getDue } = useLexiStore()
-  const dueCount = getDue().length
+  const wrongCount = useLearningStore(s => s.wrongAnswers.length)
+  const dueCount = getDue().length + wrongCount
 
   // 聚焦流 or chromeless → 隐藏
   const hidden =

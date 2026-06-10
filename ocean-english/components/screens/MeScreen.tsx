@@ -38,7 +38,8 @@ function VaultTab({ words, emptyText }: { words: WordEntry[]; emptyText: string 
 // ── MeScreen ───────────────────────────────────────────────────
 export function MeScreen() {
   const navigate = useNavigate()
-  const { streak, xp, masteredPct, byState, getWeak, counts, addToReview, profile, bandCefr, user } = useLexiStore()
+  const { streakData, xp, masteredPct, byState, getWeak, counts, addToReview, profile, bandCefr, user } = useLexiStore()
+  const streak = streakData.current
 
   const [tab, setTab] = useState<'weak' | 'saved' | 'notes'>('weak')
 

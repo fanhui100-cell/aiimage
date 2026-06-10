@@ -1,8 +1,7 @@
 import { redirect } from 'next/navigation'
 
-// /wrong-answers → /memory
-// The Memory Roots page contains the "Wrong Answers / 错题本" tab.
-// This redirect satisfies direct URL navigation while keeping the UX in /memory.
+// /wrong-answers → /memory?tab=wrong
+// 错题本是复习中心的「错题」tab；直达 URL 重定向到该 tab。
 export default function WrongAnswersRedirectPage() {
-  redirect('/memory')
+  redirect('/memory?tab=wrong')
 }

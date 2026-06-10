@@ -62,9 +62,9 @@ export function LearnScreen() {
   const isFlow = searchParams.get('flow') === 'true'
   const navigate = useNavigate()
 
-  const { getToday, getLearning, markLearning, studyOne, byId } = useLexiStore()
+  const { getToday, getLearning, markLearning, markWrong, recordActivity } = useLexiStore()
 
-  const words = useMemo<WordEntry[]>(() => {
+  const initialList = useMemo<WordEntry[]>(() => {
     if (isFlow) {
       const today = getToday()
       return today.recommended.length > 0 ? today.recommended : getLearning()
@@ -72,29 +72,43 @@ export function LearnScreen() {
     return getLearning()
   }, [isFlow])
 
+  const [queue, setQueue] = useState<WordEntry[]>(() => initialList)
   const [idx, setIdx] = useState(0)
   const [flipped, setFlipped] = useState(false)
   const [toast, showToast] = useToast()
   const [done, setDone] = useState(false)
   const [knewCount, setKnewCount] = useState(0)
+  const [retried, setRetried] = useState<Set<string>>(new Set())
 
-  const current = words[idx]
+  const current = queue[idx]
+  const isRetry = current ? retried.has(current.id) : false
 
-  function advance(knew: boolean) {
+  function goNext(append: WordEntry[] = []) {
+    const nextQueue = append.length ? [...queue, ...append] : queue
+    if (append.length) setQueue(nextQueue)
+    const next = idx + 1
+    if (next >= nextQueue.length) setDone(true)
+    else { setIdx(next); setFlipped(false) }
+  }
+
+  function advance(action: 'know' | 'again') {
     if (!current) return
     const prevState = current.state as WordState
-    if (knew) {
+    if (action === 'know') {
       markLearning(current.id)
-      studyOne()
+      recordActivity('learned')
       showToast(current.word, prevState, 'learning')
       setKnewCount(c => c + 1)
-    }
-    const next = idx + 1
-    if (next >= words.length) {
-      setDone(true)
+      goNext()
+    } else if (!retried.has(current.id)) {
+      // 第一次「还不熟」：排到队尾再见一面
+      setRetried(p => new Set(p).add(current.id))
+      goNext([current])
     } else {
-      setIdx(next)
-      setFlipped(false)
+      // 第二次仍不熟：转薄弱
+      markWrong(current.id)
+      showToast(current.word, prevState, 'weak')
+      goNext()
     }
   }
 
@@ -103,7 +117,7 @@ export function LearnScreen() {
     else navigate('today')
   }
 
-  if (!words.length) {
+  if (!queue.length) {
     return (
       <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 }}>
         <div style={{ fontSize: 48 }}>✨</div>
@@ -119,7 +133,7 @@ export function LearnScreen() {
       <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, padding: 24 }}>
         <div style={{ fontSize: 52 }}>🎓</div>
         <div style={{ fontSize: 24, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>学习完成！</div>
-        <div style={{ fontSize: 14, color: 'var(--ink-sub)' }}>认识了 {knewCount} / {words.length} 个词</div>
+        <div style={{ fontSize: 14, color: 'var(--ink-sub)' }}>认识了 {knewCount} 个词</div>
         {isFlow && <div style={{ fontSize: 13, color: 'var(--teal-ink)', fontWeight: 600 }}>下一步：单词练习</div>}
         <PrimaryBtn onClick={finish}>{isFlow ? '去练习 →' : '返回今日'}</PrimaryBtn>
       </div>
@@ -133,7 +147,7 @@ export function LearnScreen() {
         {/* Nav */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
           <BackBtn onClick={() => navigate('today')} />
-          <span style={{ fontSize: 13, color: 'var(--ink-muted)' }}>{idx + 1} / {words.length}</span>
+          <span style={{ fontSize: 13, color: 'var(--ink-muted)' }}>{idx + 1} / {queue.length}</span>
         </div>
 
         {/* FlowBar */}
@@ -144,7 +158,10 @@ export function LearnScreen() {
         )}
 
         {/* Sound + card */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: 8 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: isRetry ? 'space-between' : 'flex-end', marginBottom: 8 }}>
+          {isRetry && (
+            <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 99, background: 'rgba(210,121,47,0.12)', color: '#d2792f', fontFamily: 'var(--font-mono)' }}>再见面</span>
+          )}
           <SoundBtn word={current.word} />
         </div>
 
@@ -152,16 +169,16 @@ export function LearnScreen() {
 
         {/* Progress bar */}
         <div style={{ margin: '16px 0', height: 4, borderRadius: 99, background: 'var(--line)' }}>
-          <div style={{ height: '100%', width: `${(idx / words.length) * 100}%`, borderRadius: 99, background: 'var(--teal)', transition: 'width 0.3s' }} />
+          <div style={{ height: '100%', width: `${(idx / queue.length) * 100}%`, borderRadius: 99, background: 'var(--teal)', transition: 'width 0.3s' }} />
         </div>
 
         {/* Action buttons */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 12 }}>
-          <button onClick={() => advance(false)} className="btn-press"
+          <button onClick={() => advance('again')} className="btn-press"
             style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', cursor: 'pointer', fontSize: 15, fontWeight: 600, color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>
-            再想想 ✗
+            还不熟 ✗
           </button>
-          <button onClick={() => advance(true)} className="btn-press"
+          <button onClick={() => advance('know')} className="btn-press"
             style={{ padding: '16px', borderRadius: 14, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: 'pointer', fontSize: 15, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
             认识 ✓
           </button>

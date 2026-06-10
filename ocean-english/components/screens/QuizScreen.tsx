@@ -5,6 +5,7 @@
 import { useState, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry, type DistractorOption } from '@/store/lexiStore'
+import { useLearningStore } from '@/store/learningStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { FlowBar, StateToast, PrimaryBtn, GhostBtn, useToast, BackBtn } from '@/components/screens/SharedUI'
 
@@ -14,17 +15,25 @@ const QUIZ_SIZE = 5
 export function QuizScreen() {
   const searchParams = useSearchParams()
   const isFlow = searchParams.get('flow') === 'true'
+  // 统一读 'word'，兼容旧 'wordId'
+  const wordParam = searchParams.get('word') ?? searchParams.get('wordId')
   const navigate = useNavigate()
 
-  const { getLearning, getToday, markCorrect, markWrong, incXp, distractorsFor } = useLexiStore()
+  const { getLearning, getToday, markCorrect, markWrong, incXp, distractorsFor, byId, recordActivity } = useLexiStore()
+  const addWrongAnswer = useLearningStore(s => s.addWrongAnswer)
 
   const questions = useMemo<Array<{ word: WordEntry; options: DistractorOption[] }>>(() => {
+    // 单词测验：只考这个词；找不到则空（禁止回退随机题）
+    if (wordParam) {
+      const w = byId(wordParam)
+      return w ? [{ word: w, options: distractorsFor(w) }] : []
+    }
     const today = getToday()
     const pool = [...getLearning(), ...today.recommended]
     const unique = Array.from(new Map(pool.map(w => [w.id, w])).values())
     const sample = unique.sort(() => Math.random() - 0.5).slice(0, QUIZ_SIZE)
     return sample.map(w => ({ word: w, options: distractorsFor(w) }))
-  }, [])
+  }, [wordParam])
 
   const [qIdx, setQIdx] = useState(0)
   const [picked, setPicked] = useState<string | null>(null)
@@ -48,8 +57,19 @@ export function QuizScreen() {
     } else {
       markWrong(q.word.id)
       setWrong(w => [...w, q.word])
+      const correctOpt = q.options.find(o => o.correct)
+      addWrongAnswer({
+        wordId: q.word.id,
+        word: q.word.word,
+        question: `"${q.word.word}" 的意思是？`,
+        userAnswer: opt.text,
+        correctAnswer: correctOpt?.text ?? q.word.zh,
+        explanation: q.word.ex ? `例句：${q.word.ex}（${q.word.exZh ?? ''}）` : '',
+        timestamp: Date.now(),
+      })
       showToast(q.word.word, q.word.state, 'weak')
     }
+    recordActivity('quizzed')
 
     setTimeout(() => {
       const next = qIdx + 1
@@ -68,6 +88,17 @@ export function QuizScreen() {
   }
 
   if (!questions.length) {
+    // 单词测验找不到词：明确空状态，不回退随机题
+    if (wordParam) {
+      return (
+        <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 }}>
+          <div style={{ fontSize: 48 }}>🔍</div>
+          <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>该词还没有题目</div>
+          <div style={{ fontSize: 14, color: 'var(--ink-sub)' }}>去词典看看，先把它加入学习</div>
+          <PrimaryBtn onClick={() => navigate('words')}>去词典</PrimaryBtn>
+        </div>
+      )
+    }
     return (
       <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 }}>
         <div style={{ fontSize: 48 }}>📝</div>
@@ -99,7 +130,9 @@ export function QuizScreen() {
           )}
         </div>
         {isFlow && <div style={{ fontSize: 13, color: 'var(--teal-ink)', fontWeight: 600 }}>下一步：记忆复习</div>}
-        <PrimaryBtn onClick={finish}>{isFlow ? '去复习 →' : '返回今日'}</PrimaryBtn>
+        {wrong.length > 0
+          ? <PrimaryBtn onClick={() => navigate('review', { tab: 'wrong' })}>复习错题（{wrong.length}）</PrimaryBtn>
+          : <PrimaryBtn onClick={finish}>{isFlow ? '去复习 →' : '返回今日'}</PrimaryBtn>}
         {!isFlow && <GhostBtn onClick={() => navigate('today')}>回今日</GhostBtn>}
       </div>
     )

@@ -87,10 +87,14 @@ function StepNode({
 // ── TodayScreen ────────────────────────────────────────────────
 export function TodayScreen() {
   const navigate = useNavigate()
-  const { getToday, studiedToday, goalToday, streak, xp, profile, counts } = useLexiStore()
+  const { getToday, getTodayProgress, streakData, xp, profile, counts } = useLexiStore()
 
   const today = useMemo(() => getToday(), [])
-  const pct = goalToday > 0 ? Math.min(100, Math.round(studiedToday / goalToday * 100)) : 0
+  const progress = getTodayProgress()
+  const studiedToday = progress.n
+  const goalToday = progress.goal
+  const streak = streakData.current
+  const pct = progress.pct
   const stage = pct === 0 ? 0 : pct < 50 ? 1 : pct < 100 ? 2 : 3
 
   const wordCounts = useMemo(() => counts(), [])

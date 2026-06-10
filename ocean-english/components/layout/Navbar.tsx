@@ -6,12 +6,15 @@ import { siteConfig } from '@/config/site'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
+import { useLearningStore } from '@/store/learningStore'
 
 export function Navbar() {
   const pathname = usePathname()
   const dark = isDarkRoute(pathname)
-  const { streak, getDue } = useLexiStore()
-  const dueCount = getDue().length
+  const { streakData, getDue } = useLexiStore()
+  const wrongCount = useLearningStore(s => s.wrongAnswers.length)
+  const streak = streakData.current
+  const dueCount = getDue().length + wrongCount
 
   const navBg = dark
     ? 'linear-gradient(to bottom, rgba(5,9,15,0.92), transparent)'

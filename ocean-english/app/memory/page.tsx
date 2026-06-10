@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 import { AppShell } from '@/components/layout/AppShell'
-import { ReviewScreen } from '@/components/screens/ReviewScreen'
+import { ReviewHub } from '@/components/screens/ReviewHub'
 
 export default function MemoryPage() {
   return (
     <AppShell>
       <Suspense>
-        <ReviewScreen />
+        <ReviewHub />
       </Suspense>
     </AppShell>
   )

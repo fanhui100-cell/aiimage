@@ -7,6 +7,9 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 import { type WordState, STATE_ORDER } from '@/lib/state-meta'
+import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
+
+export type { ReviewGrade }
 
 // ─────────────────────────────────────────────────────────────
 // Types
@@ -24,7 +27,8 @@ export interface WordEntry {
   streak: number
   ease: number
   interval: number
-  due?: boolean
+  nextReviewAt?: number     // 时间戳；undefined = 不在 SRS 队列
+  lastReviewedAt?: number
   cefr?: string
   band?: number
   examTags?: string[]
@@ -135,17 +139,17 @@ const SEED_WORDS_BASE: Omit<WordEntry, 'cefr' | 'band' | 'examTags' | 'ex' | 'ex
   { id: 'w01', word: 'unavoidable', phon: '/ˌʌnəˈvɔɪdəbl/', pos: 'adj.', zh: '难以避免的',      galaxy: 'cognition', state: 'recommended', streak: 0, ease: 2.5, interval: 0 },
   { id: 'w02', word: 'inevitable',  phon: '/ɪnˈevɪtəbl/',  pos: 'adj.', zh: '必然发生的',      galaxy: 'cognition', state: 'recommended', streak: 0, ease: 2.5, interval: 0 },
   { id: 'w03', word: 'profound',    phon: '/prəˈfaʊnd/',   pos: 'adj.', zh: '深刻的、深远的',   galaxy: 'cognition', state: 'learning',     streak: 1, ease: 2.5, interval: 1 },
-  { id: 'w04', word: 'ambiguous',   phon: '/æmˈbɪɡjuəs/',  pos: 'adj.', zh: '模棱两可的',      galaxy: 'cognition', state: 'review',       streak: 2, ease: 2.4, interval: 3,  due: true },
+  { id: 'w04', word: 'ambiguous',   phon: '/æmˈbɪɡjuəs/',  pos: 'adj.', zh: '模棱两可的',      galaxy: 'cognition', state: 'review',       streak: 2, ease: 2.4, interval: 3,  nextReviewAt: Date.now() },
   { id: 'w05', word: 'coherent',    phon: '/kəʊˈhɪərənt/', pos: 'adj.', zh: '连贯的、一致的',   galaxy: 'cognition', state: 'weak',         streak: 0, ease: 2.1, interval: 1 },
   { id: 'w06', word: 'paradigm',    phon: '/ˈpærədaɪm/',   pos: 'n.',   zh: '范式、典范',      galaxy: 'cognition', state: 'mastered',     streak: 5, ease: 2.7, interval: 16 },
-  { id: 'w07', word: 'nuance',      phon: '/ˈnjuːɑːns/',   pos: 'n.',   zh: '细微差别',        galaxy: 'cognition', state: 'review',       streak: 3, ease: 2.5, interval: 7,  due: true },
+  { id: 'w07', word: 'nuance',      phon: '/ˈnjuːɑːns/',   pos: 'n.',   zh: '细微差别',        galaxy: 'cognition', state: 'review',       streak: 3, ease: 2.5, interval: 7,  nextReviewAt: Date.now() },
   { id: 'w08', word: 'rhetoric',    phon: '/ˈretərɪk/',    pos: 'n.',   zh: '修辞、辞令',      galaxy: 'cognition', state: 'unknown',      streak: 0, ease: 2.5, interval: 0 },
   { id: 'w09', word: 'empirical',   phon: '/ɪmˈpɪrɪkl/',   pos: 'adj.', zh: '经验主义的、实证的', galaxy: 'cognition', state: 'unknown',    streak: 0, ease: 2.5, interval: 0 },
   { id: 'w10', word: 'cognition',   phon: '/kɒɡˈnɪʃn/',    pos: 'n.',   zh: '认知、认识',      galaxy: 'cognition', state: 'locked',       streak: 0, ease: 2.5, interval: 0 },
   { id: 'w11', word: 'advocate',    phon: '/ˈædvəkeɪt/',   pos: 'v.',   zh: '提倡、拥护',      galaxy: 'society',   state: 'recommended', streak: 0, ease: 2.5, interval: 0 },
   { id: 'w12', word: 'consensus',   phon: '/kənˈsensəs/',  pos: 'n.',   zh: '共识、一致',      galaxy: 'society',   state: 'learning',     streak: 2, ease: 2.5, interval: 3 },
   { id: 'w13', word: 'mitigate',    phon: '/ˈmɪtɪɡeɪt/',   pos: 'v.',   zh: '缓解、减轻',      galaxy: 'society',   state: 'weak',         streak: 0, ease: 2.0, interval: 1 },
-  { id: 'w14', word: 'sustainable', phon: '/səˈsteɪnəbl/', pos: 'adj.', zh: '可持续的',        galaxy: 'society',   state: 'review',       streak: 4, ease: 2.6, interval: 16, due: true },
+  { id: 'w14', word: 'sustainable', phon: '/səˈsteɪnəbl/', pos: 'adj.', zh: '可持续的',        galaxy: 'society',   state: 'review',       streak: 4, ease: 2.6, interval: 16, nextReviewAt: Date.now() },
   { id: 'w15', word: 'discourse',   phon: '/ˈdɪskɔːs/',    pos: 'n.',   zh: '论述、话语',      galaxy: 'society',   state: 'mastered',     streak: 6, ease: 2.8, interval: 35 },
   { id: 'w16', word: 'pragmatic',   phon: '/præɡˈmætɪk/',  pos: 'adj.', zh: '务实的',          galaxy: 'society',   state: 'unknown',      streak: 0, ease: 2.5, interval: 0 },
   { id: 'w17', word: 'equitable',   phon: '/ˈekwɪtəbl/',   pos: 'adj.', zh: '公平的、公正的',   galaxy: 'society',   state: 'unknown',      streak: 0, ease: 2.5, interval: 0 },
@@ -160,11 +164,24 @@ const INITIAL_WORDS: WordEntry[] = SEED_WORDS_BASE.map(w => ({
 // ─────────────────────────────────────────────────────────────
 // Store interface
 // ─────────────────────────────────────────────────────────────
+export interface DailyRecord {
+  date: string
+  learned: number
+  quizzed: number
+  reviewed: number
+}
+
+export interface StreakData {
+  current: number
+  longest: number
+  lastStudyDate: string
+}
+
 interface LexiStoreState {
   words: WordEntry[]
   xp: number
-  streak: number
-  studiedToday: number
+  daily: DailyRecord
+  streakData: StreakData
   goalToday: number
   log: LogEntry[]
   profile: Profile
@@ -182,6 +199,8 @@ interface LexiStoreActions {
   getDue: () => WordEntry[]
   getWeak: () => WordEntry[]
   getLearning: () => WordEntry[]
+  getTodayProgress: () => { n: number; goal: number; pct: number }
+  previewFor: (w: WordEntry) => Record<ReviewGrade, string>
   masteredPct: () => number
   extraDict: () => WordEntry[]
   probeLadder: () => typeof PROBE_LADDER
@@ -193,13 +212,12 @@ interface LexiStoreActions {
   markLearning: (id: string) => void
   markCorrect: (id: string) => void
   markWrong: (id: string) => void
-  reviewCorrect: (id: string) => void
-  reviewWrong: (id: string) => void
+  reviewGrade: (id: string, g: ReviewGrade) => void
   relearn: (id: string) => void
   addToReview: (id: string) => void
   addWord: (entry: Partial<WordEntry> & Pick<WordEntry, 'id' | 'word' | 'zh'>) => WordEntry | undefined
   incXp: (n: number) => void
-  studyOne: () => void
+  recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
   toggleGoal: (exam: string) => void
@@ -240,9 +258,9 @@ export const useLexiStore = create<LexiStore>()(
     (set, get) => ({
       // ── initial state ──
       words: INITIAL_WORDS,
-      xp: 1240,
-      streak: 7,
-      studiedToday: 4,
+      xp: 0,
+      daily: { date: '', learned: 0, quizzed: 0, reviewed: 0 },
+      streakData: { current: 0, longest: 0, lastStudyDate: '' },
       goalToday: 12,
       log: [],
       profile: { onboarded: false, skipped: false, targetExam: null, band: 5, dailyGoal: 12 },
@@ -261,13 +279,25 @@ export const useLexiStore = create<LexiStore>()(
       getToday: () => {
         const ws = get().words
         const recommended = ws.filter(w => w.state === 'recommended')
-        const review = ws.filter(w => w.state === 'review' && w.due)
-        const weak = ws.filter(w => w.state === 'weak')
+        const review = get().getDue()
+        const dueIds = new Set(review.map(w => w.id))
+        const weak = ws.filter(w => w.state === 'weak' && !dueIds.has(w.id))
         return { recommended, review, weak, all: [...recommended, ...review, ...weak] }
       },
-      getDue: () => get().words.filter(w => w.state === 'review' && w.due),
+      // 时间派生：nextReviewAt 到点即到期（review / weak 词都可能在内）
+      getDue: () => {
+        const now = Date.now()
+        return get().words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= now)
+      },
       getWeak: () => get().words.filter(w => w.state === 'weak'),
       getLearning: () => get().words.filter(w => w.state === 'learning'),
+      getTodayProgress: () => {
+        const { daily, goalToday } = get()
+        const today = new Date().toISOString().slice(0, 10)
+        const n = daily.date === today ? daily.learned + daily.reviewed : 0
+        return { n, goal: goalToday, pct: Math.min(100, Math.round((n / (goalToday || 1)) * 100)) }
+      },
+      previewFor: (w) => previewIntervals({ interval: w.interval, ease: w.ease, streak: w.streak }),
       masteredPct: () => {
         const ws = get().words
         const active = ws.filter(w => w.state !== 'locked')
@@ -302,39 +332,34 @@ export const useLexiStore = create<LexiStore>()(
       // ── write views ──
       markLearning: (id) => set(s => transition(s.words, s.log, id, 'learning', '开始学')),
 
+      // 测验答对：走 'good' 档调度，趋向掌握
       markCorrect: (id) => set(s => {
         const word = s.words.find(w => w.id === id)
         if (!word) return {}
-        const streak = (word.streak ?? 0) + 1
-        const ease = Math.min(2.9, (word.ease ?? 2.5) + 0.1)
-        const idx = Math.min(streak - 1, SM2_INTERVALS.length - 1)
-        const interval = SM2_INTERVALS[Math.max(0, idx)]
-        const next: WordState = streak >= 4 ? 'mastered' : 'learning'
-        const note = streak >= 4 ? '连对4次' : '答对积累'
-        return transition(s.words, s.log, id, next, note, { streak, ease, interval, due: false })
+        const r = gradeSrs({ interval: word.interval, ease: word.ease, streak: word.streak }, 'good')
+        const next: WordState = isMastered(r) ? 'mastered' : 'learning'
+        const note = next === 'mastered' ? '连对达标' : '答对积累'
+        return transition(s.words, s.log, id, next, note, { ...r, lastReviewedAt: Date.now() })
       }),
 
+      // 测验答错：走 'again' 档调度，转薄弱 + 1 小时后回炉
       markWrong: (id) => set(s => {
         const word = s.words.find(w => w.id === id)
         if (!word) return {}
-        return transition(s.words, s.log, id, 'weak', '答错回炉', {
-          streak: 0, ease: Math.max(1.6, (word.ease ?? 2.5) - 0.2), interval: 1, due: false,
-        })
+        const r = gradeSrs({ interval: word.interval, ease: word.ease, streak: word.streak }, 'again')
+        return transition(s.words, s.log, id, 'weak', '答错回炉', { ...r, lastReviewedAt: Date.now() })
       }),
 
-      reviewCorrect: (id) => set(s => {
+      // 复习评分：四档统一入口，状态由结果派生
+      reviewGrade: (id, g) => set(s => {
         const word = s.words.find(w => w.id === id)
         if (!word) return {}
-        const streak = (word.streak ?? 0) + 1
-        const idx = Math.min(streak - 1, SM2_INTERVALS.length - 1)
-        const interval = SM2_INTERVALS[Math.max(0, idx)]
-        return transition(s.words, s.log, id, 'mastered', '复习答对', { streak, interval, due: false })
-      }),
-
-      reviewWrong: (id) => set(s => {
-        const word = s.words.find(w => w.id === id)
-        if (!word) return {}
-        return transition(s.words, s.log, id, 'weak', '复习答错', { streak: 0, interval: 1, due: false })
+        const r = gradeSrs({ interval: word.interval, ease: word.ease, streak: word.streak }, g)
+        const next: WordState =
+          g === 'again' ? 'weak'
+          : isMastered(r) ? 'mastered'
+          : 'review'
+        return transition(s.words, s.log, id, next, GRADE_NOTE[g], { ...r, lastReviewedAt: Date.now() })
       }),
 
       relearn: (id) => set(s => transition(s.words, s.log, id, 'learning', '薄弱重学')),
@@ -342,7 +367,7 @@ export const useLexiStore = create<LexiStore>()(
       addToReview: (id) => set(s => {
         const word = s.words.find(w => w.id === id)
         if (!word) return {}
-        return transition(s.words, s.log, id, 'review', '加入复习', { due: true })
+        return transition(s.words, s.log, id, 'review', '加入复习', { nextReviewAt: Date.now() })
       }),
 
       addWord: (entry) => {
@@ -353,7 +378,7 @@ export const useLexiStore = create<LexiStore>()(
           return get().words.find(w => w.id === entry.id)
         }
         const newWord: WordEntry = {
-          streak: 0, ease: 2.5, interval: 0, galaxy: 'cognition', phon: '', pos: '', due: false,
+          streak: 0, ease: 2.5, interval: 0, galaxy: 'cognition', phon: '', pos: '',
           ...entry, state: 'learning',
         }
         const logEntry: LogEntry = { id: newWord.id, word: newWord.word, from: 'unknown', to: 'learning', note: '查词加入', t: Date.now() }
@@ -365,7 +390,23 @@ export const useLexiStore = create<LexiStore>()(
       },
 
       incXp: (n) => set(s => ({ xp: s.xp + n })),
-      studyOne: () => set(s => ({ studiedToday: Math.min(s.goalToday, s.studiedToday + 1) })),
+
+      // 统一活动记录入口：跨天自动清零 + streak 计算
+      recordActivity: (kind) => set(s => {
+        const today = new Date().toISOString().slice(0, 10)
+        const d = s.daily.date === today
+          ? s.daily
+          : { date: today, learned: 0, quizzed: 0, reviewed: 0 }
+        const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10)
+        const sd = s.streakData
+        const nextCurrent = sd.lastStudyDate === yesterday ? sd.current + 1 : 1
+        const streakData = sd.lastStudyDate === today ? sd : {
+          current: nextCurrent,
+          longest: Math.max(sd.longest, nextCurrent),
+          lastStudyDate: today,
+        }
+        return { daily: { ...d, [kind]: d[kind] + 1 }, streakData }
+      }),
 
       setProfile: (p) => set(s => {
         const profile = {
@@ -400,12 +441,39 @@ export const useLexiStore = create<LexiStore>()(
     {
       name: 'lexi-store-v1',
       storage: createJSONStorage(() => localStorage),
+      version: 2,
+      // v1 → v2：给存量词补时间戳调度字段，去掉假进度
+      migrate: (persisted: any, from: number) => {
+        if (!persisted) return persisted
+        if (from < 2) {
+          const DAY = 86_400_000
+          if (Array.isArray(persisted.words)) {
+            persisted.words = persisted.words.map((w: any) => {
+              const nextReviewAt = w.nextReviewAt ?? (
+                w.due ? Date.now()
+                : w.state === 'review' ? Date.now() + (w.interval || 1) * DAY
+                : w.state === 'weak' ? Date.now() + DAY
+                : undefined
+              )
+              const { due: _due, ...rest } = w
+              return { ...rest, nextReviewAt }
+            })
+          }
+          // 假进度归零：fake 基线 xp=1240，扣掉后保留真实积累
+          persisted.xp = Math.max(0, (typeof persisted.xp === 'number' ? persisted.xp : 0) - 1240)
+          delete persisted.streak
+          delete persisted.studiedToday
+          persisted.daily = persisted.daily ?? { date: '', learned: 0, quizzed: 0, reviewed: 0 }
+          persisted.streakData = persisted.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
+        }
+        return persisted
+      },
       // Only persist state fields, not action functions
       partialize: (s) => ({
         words: s.words,
         xp: s.xp,
-        streak: s.streak,
-        studiedToday: s.studiedToday,
+        daily: s.daily,
+        streakData: s.streakData,
         goalToday: s.goalToday,
         log: s.log,
         profile: s.profile,
