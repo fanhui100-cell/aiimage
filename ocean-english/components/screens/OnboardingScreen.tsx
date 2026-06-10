@@ -3,7 +3,8 @@
 // Steps: goal → path → test → selfcheck → result
 
 import { useState } from 'react'
-import { useLexiStore, PROBE_LADDER, BAND_CEFR } from '@/store/lexiStore'
+import { useLexiStore, bandToLevel, PROBE_LADDER, BAND_CEFR } from '@/store/lexiStore'
+import { useLearningStore } from '@/store/learningStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { PrimaryBtn, GhostBtn, Eyebrow } from '@/components/screens/SharedUI'
 
@@ -99,12 +100,16 @@ export function OnboardingScreen() {
   }
 
   function finish() {
+    const userLevel = bandToLevel(probeBand)
     setProfile({
       targetExam: exam ?? 'casual',
       band: probeBand,
       dailyGoal,
       onboarded: true,
+      userLevel,
     })
+    // 镜像写 learningStore：云同步（CloudSyncProvider）仍监听它，A7 改造后移除
+    useLearningStore.getState().setUserLevel(userLevel)
     navigate('today', { flow: true })
   }
 

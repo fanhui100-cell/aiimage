@@ -10,6 +10,7 @@ import { type WordState, STATE_ORDER } from '@/lib/state-meta'
 import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
 import { toWordEntry } from '@/lib/dictionary/entry-adapter'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
+import type { LearningLevel } from '@/types/learning'
 
 export type { ReviewGrade }
 
@@ -51,6 +52,13 @@ export interface Profile {
   band: number
   dailyGoal: number
   goals?: string[]
+  // 收编 learningStore.userLevel；未显式设置时由 band 派生
+  userLevel?: LearningLevel | null
+}
+
+// band → userLevel 派生默认值（spec A4-3）
+export function bandToLevel(band: number): LearningLevel {
+  return band <= 3 ? 'beginner' : band <= 6 ? 'intermediate' : 'advanced'
 }
 
 export interface LogEntry {
@@ -496,6 +504,8 @@ export const useLexiStore = create<LexiStore>()(
           ...(p.dailyGoal ? {} : {}),
           ...(p.targetExam && (!s.profile.goals?.length) ? { goals: [p.targetExam] } : {}),
         }
+        // userLevel 未显式设置时由 band 派生
+        if (!profile.userLevel) profile.userLevel = bandToLevel(profile.band)
         return {
           profile,
           goalToday: p.dailyGoal ?? s.goalToday,
@@ -583,6 +593,10 @@ export const useLexiStore = create<LexiStore>()(
                 w.saved = true
               }
               persisted.words = words
+              // userLevel 并入 profile（已有显式值则不覆盖）
+              if (legacy.userLevel && persisted.profile && !persisted.profile.userLevel) {
+                persisted.profile.userLevel = legacy.userLevel
+              }
               // streak / xp 取两边较大者
               const sp = legacy.studyProgress
               if (sp) {
