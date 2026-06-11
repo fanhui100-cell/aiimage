@@ -3,7 +3,8 @@
 import { useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { BanyanHero, NAVIGATE_MAP } from './BanyanHero'
+import { NAVIGATE_MAP } from './BanyanHero'
+import { HomeHero } from './HomeHero'
 import { useLexiStore } from '@/store/lexiStore'
 import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { STATE_META, STATE_ORDER, type WordState } from '@/lib/state-meta'
@@ -318,7 +319,7 @@ export function HomeScreen() {
 
   return (
     <div>
-      <BanyanHero navigate={navigate} animate />
+      <HomeHero navigate={navigate} />
       <div style={{ maxWidth: 880, margin: '0 auto', padding: '8px clamp(16px,4vw,32px) 40px', position: 'relative', zIndex: 2 }}>
         <HomeHeader />
         {profile.skipped && !profile.onboarded && (
