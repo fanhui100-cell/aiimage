@@ -64,6 +64,7 @@ export function LexiverseQuizClient() {
 
   const urlMode = parseMode(searchParams.get('mode'))
   const wordParam = searchParams.get('word') ?? undefined
+  const vsParam = searchParams.get('vs') ?? undefined
   const examParam = searchParams.get('exam') ?? 'IELTS'
   const returnTo = searchParams.get('returnTo')
 
@@ -75,10 +76,28 @@ export function LexiverseQuizClient() {
   const [attempts, setAttempts] = useState<QuizAttempt[]>([])
   const [finished, setFinished] = useState(false)
 
+  // P4：vs 辨析模式 — /quiz?word=A&vs=B 生成 A/B 二选一辨析题
+  // （题面 = 例句挖空或中文释义，干扰项 = 另一词；结果走既有写回链路）
+  const [vsQuestions, setVsQuestions] = useState<QuizQuestion[] | null>(null)
+  useEffect(() => {
+    if (!wordParam || !vsParam) { setVsQuestions(null); return }
+    let cancelled = false
+    Promise.all([wordParam, vsParam].map(async w => {
+      const res = await fetch(`/api/dictionary/word/${encodeURIComponent(w.toLowerCase())}`)
+      const json = res.ok ? await res.json() : null
+      return json?.data ?? null
+    })).then(([a, b]) => {
+      if (cancelled || !a || !b) { if (!cancelled) setVsQuestions([]); return }
+      setVsQuestions(buildVsQuestions(a, b))
+    })
+    return () => { cancelled = true }
+  }, [wordParam, vsParam])
+
   const questions = useMemo(() => {
+    if (vsQuestions) return vsQuestions
     if (!words.length) return []
     return buildQuestions({ mode, words, wrongAnswers, wordId: wordParam, examTag, seed })
-  }, [mode, words, wrongAnswers, wordParam, examTag, seed])
+  }, [vsQuestions, mode, words, wrongAnswers, wordParam, examTag, seed])
 
   // B5-2：「30 秒后再考我」克隆题插到队列倒数第二位（不计分，只为再曝光）
   const [extras, setExtras] = useState<QuizQuestion[]>([])
@@ -195,8 +214,11 @@ export function LexiverseQuizClient() {
     return () => window.removeEventListener('keydown', onKey)
   }, [finished, current, answered, handleSelect, nextQuestion])
 
-  if (loading) return <LoadingState message="Loading Quiz Center..." />
-  if (error) return <QuizFrame><EmptyState title="Dictionary unavailable" detail={error.message} /></QuizFrame>
+  const isVsMode = !!(wordParam && vsParam)
+
+  if (loading && !isVsMode) return <LoadingState message="Loading Quiz Center..." />
+  if (isVsMode && vsQuestions === null) return <LoadingState message="生成辨析题…" />
+  if (error && !isVsMode) return <QuizFrame><EmptyState title="Dictionary unavailable" detail={error.message} /></QuizFrame>
   if (!questions.length) {
     // A3：单词测验找不到该词时显示空状态，不回退成随机题
     const detail = wordParam
@@ -217,10 +239,16 @@ export function LexiverseQuizClient() {
           <Link href="/lexiverse" style={styles.brand}>Lexiverse</Link>
           <span style={styles.sub}>Quiz Center · 练习中心</span>
         </div>
-        <LiquidSegmentedControl value={mode} onChange={chooseMode} options={MODE_OPTIONS} />
+        {!isVsMode && <LiquidSegmentedControl value={mode} onChange={chooseMode} options={MODE_OPTIONS} />}
       </header>
 
-      <section style={styles.modeGrid}>
+      {isVsMode && (
+        <div style={{ padding: '10px 16px', borderRadius: 12, border: '1px solid rgba(242,135,158,0.4)', background: 'rgba(242,135,158,0.06)', marginBottom: 16, fontSize: 13.5, color: 'var(--ink)' }}>
+          ⚡ 辨析模式 · <b>{wordParam}</b> vs <b>{vsParam}</b> — 二选一，分清这对易混词
+        </div>
+      )}
+
+      {!isVsMode && <section style={styles.modeGrid}>
         {MODE_CARDS.map(card => (
           <button
             type="button"
@@ -238,7 +266,7 @@ export function LexiverseQuizClient() {
             <span>{card.description}</span>
           </button>
         ))}
-      </section>
+      </section>}
 
       {mode === 'exam-practice' && (
         <div style={styles.examRow}>
@@ -481,6 +509,37 @@ function buildQuestions(args: {
   return targets.map((target, index) => {
     if (args.mode === 'sentence-practice') return sentenceQuestion(target, usable, index, rng)
     return vocabQuestion(target, usable, index, rng, args.mode, args.examTag)
+  })
+}
+
+/* P4：vs 辨析题 — A/B 各出一题，题面 = 例句挖空（无例句退中文释义），
+   选项固定二选一（干扰项 = 另一词）。 */
+function buildVsQuestions(a: DictionaryWord, b: DictionaryWord): QuizQuestion[] {
+  const pair: [DictionaryWord, DictionaryWord][] = [[a, b], [b, a]]
+  return pair.map(([target, other], index) => {
+    const example = target.examples?.[0]
+    const def = target.definitions?.[0]
+    const blanked = example?.sentenceEn ? blankWord(example.sentenceEn, target.word) : ''
+    const question = blanked
+      || (def?.definitionZh ? `哪个词的意思是「${def.definitionZh}」？` : target.word)
+    const options = (index % 2 === 0 ? [target, other] : [other, target]).map((w, i) => ({
+      id: String.fromCharCode(97 + i), text: w.word, wordId: w.id,
+    }))
+    return {
+      id: `vs-${target.id}-${index}`,
+      mode: 'vocabulary-drill' as QuizMode,
+      wordId: target.id,
+      word: target.word,
+      prompt: `辨析 · ${a.word} vs ${b.word}`,
+      question,
+      options,
+      answer: options.find(o => o.wordId === target.id)?.id ?? 'a',
+      explanation: [
+        `${target.word}: ${target.definitions?.[0]?.definitionZh ?? target.definitions?.[0]?.definitionEn ?? ''}`,
+        `${other.word}: ${other.definitions?.[0]?.definitionZh ?? other.definitions?.[0]?.definitionEn ?? ''}`,
+      ].join('  ｜  '),
+      explanationZh: example?.sentenceZh ?? '',
+    }
   })
 }
 
