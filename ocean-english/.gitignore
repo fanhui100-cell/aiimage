@@ -46,3 +46,6 @@ smoke-*.log
 # playwright
 /test-results/
 /playwright-report/
+
+# 词库注入缓存（P2）
+scripts/.vocab-cache/

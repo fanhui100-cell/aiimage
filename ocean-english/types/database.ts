@@ -19,10 +19,35 @@ export interface DbUserLearningPreferences {
   id: string
   user_id: string
   level: 'beginner' | 'elementary' | 'intermediate' | 'advanced' | 'exam-prep' | 'free-explore' | null
+  /** P1-2：7 档数字等级（final-p1-levels.sql） */
+  numeric_level: number | null
   daily_goal: number
   ui_language: string
   created_at: string
   updated_at: string
+}
+
+/** P2：词关系（final-p2-vocab-schema.sql · word_relations） */
+export interface DbWordRelation {
+  id: string
+  word_id: string
+  related_id: string
+  type: 'derivative' | 'confusable-form' | 'synonym-candidate'
+    | 'synonym' | 'antonym' | 'confused' | 'collocation'
+  note: string | null
+  source: 'rule' | 'ai'
+  created_at: string
+}
+
+/** P2：语法点骨架（final-p2-vocab-schema.sql · grammar_points，本阶段仅 schema） */
+export interface DbGrammarPoint {
+  id: string
+  level: number | null
+  title: string
+  explanation_md: string | null
+  examples: unknown[]
+  tags: string[]
+  created_at: string
 }
 
 export interface DbUserStudyProgress {

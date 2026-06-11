@@ -448,6 +448,23 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
           </div>
         )}
 
+        {/* ── PHRASES（P2：词库注入的常用短语）──────────────────────── */}
+        {!!word.phrases?.length && (
+          <div style={card}>
+            <div style={sectionHead}>PHRASES · 常用短语</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {word.phrases.slice(0, 6).map((p, i) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{p.phrase}</span>
+                  {p.translation && (
+                    <span style={{ fontSize: '13px', color: 'var(--ink-sub)' }}>{p.translation}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* ── MEMORY TRICKS ──────────────────────────────────────────── */}
         {hasMnemonic && (
           <div style={card}>

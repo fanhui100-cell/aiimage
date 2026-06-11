@@ -31,6 +31,10 @@ export async function GET(request: NextRequest) {
   const offsetRaw = parseInt(searchParams.get('offset') ?? '0', 10)
 
   const level = VALID_LEVELS.includes(levelRaw as WordLevel) ? (levelRaw as WordLevel) : undefined
+  // P2：level 传数字 1-7 时按 7 档 ±1 过滤（与 WordLevel 字符串共用参数名，按值区分）
+  const numericLevelRaw = parseInt(levelRaw, 10)
+  const numericLevel = Number.isInteger(numericLevelRaw) && numericLevelRaw >= 1 && numericLevelRaw <= 7
+    ? numericLevelRaw : undefined
   const difficulty = (VALID_DIFFICULTY as readonly number[]).includes(diffRaw)
     ? (diffRaw as 1 | 2 | 3 | 4 | 5)
     : undefined
@@ -44,7 +48,7 @@ export async function GET(request: NextRequest) {
   const exam = VALID_EXAM.has(examRaw) ? (examRaw as ExamTag) : undefined
 
   if (cefr || exam) {
-    const pool = await getDictionaryClient().searchWords(q, { level, difficulty, limit: 500 })
+    const pool = await getDictionaryClient().searchWords(q, { level, numericLevel, difficulty, limit: 500 })
     const filtered = pool
       .filter(w => !cefr || w.cefrLevel === cefr)
       .filter(w => !exam || w.examTags.includes(exam))
@@ -56,7 +60,7 @@ export async function GET(request: NextRequest) {
     })
   }
 
-  const results = await getDictionaryClient().searchWords(q, { level, difficulty, limit, offset })
+  const results = await getDictionaryClient().searchWords(q, { level, numericLevel, difficulty, limit, offset })
 
   return NextResponse.json({
     ok: true,

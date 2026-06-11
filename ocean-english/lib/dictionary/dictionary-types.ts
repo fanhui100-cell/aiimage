@@ -146,6 +146,8 @@ export interface DictionaryWord {
 
 export interface WordSearchOptions {
   level?: WordLevel
+  /** P2：7 档等级（1-7），DB 侧按 ±1 档 overlaps 过滤 */
+  numericLevel?: number
   difficulty?: 1 | 2 | 3 | 4 | 5
   examTag?: ExamTag
   limit?: number

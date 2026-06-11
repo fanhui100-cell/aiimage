@@ -42,6 +42,10 @@ interface DbDictionaryWord {
   is_core_word: boolean
   is_exam_word: boolean
   tags: string[]
+  // P2：词库注入新列（final-p2-vocab-schema.sql；执行前为 undefined）
+  levels?: number[] | null
+  primary_level?: number | null
+  phrases?: { phrase: string; translation?: string }[] | null
   source_type: string
   source_note: string | null
   created_at: string
@@ -190,6 +194,12 @@ function mapDbWord(row: DbDictionaryWord): DictionaryWord {
     isDefault: p.is_default,
   }))
 
+  // P2：导入词的考试标签写在 words.tags（无 exam_word_tags 关联行），取并集
+  const VALID_EXAM = new Set(['TOEFL', 'IELTS', 'CET-4', 'CET-6', 'KAOYAN', 'GAOKAO', 'SAT', 'GRE'])
+  const relationExamTags = (row.exam_word_tags ?? []).map(t => t.exam_type as ExamTag)
+  const tagExamTags = (row.tags ?? []).filter(t => VALID_EXAM.has(t)) as ExamTag[]
+  const examTags = [...new Set([...relationExamTags, ...tagExamTags])]
+
   return {
     id: row.id,
     word: row.word,
@@ -200,8 +210,11 @@ function mapDbWord(row: DbDictionaryWord): DictionaryWord {
     difficulty: row.difficulty as 1 | 2 | 3 | 4 | 5,
     isCore: row.is_core_word,
     isExamWord: row.is_exam_word,
-    examTags: (row.exam_word_tags ?? []).map(t => t.exam_type as ExamTag),
+    examTags,
     tags: row.tags ?? [],
+    levels: row.levels ?? undefined,
+    primaryLevel: row.primary_level ?? undefined,
+    phrases: row.phrases ?? undefined,
     frequencyRank: row.frequency_rank,
     sourceType: row.source_type as DictionarySourceType,
     sourceNote: row.source_note,
@@ -279,6 +292,11 @@ class SupabaseDictionaryClient implements DictionaryClient {
       if (q) req = req.ilike('normalized_word', `%${q}%`)
       if (options?.level) req = req.eq('level', options.level)
       if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
+      // P2：7 档 ±1 过滤（GIN overlaps；列未建时该查询报错 → catch 返回 []）
+      if (options?.numericLevel != null) {
+        const l = options.numericLevel
+        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
+      }
 
       const offset = options?.offset ?? 0
       const limit = options?.limit ?? 20

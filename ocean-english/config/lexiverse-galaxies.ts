@@ -326,8 +326,46 @@ export const GALAXIES: LexiverseGalaxy[] = [
 ]
 
 // ── helpers ──────────────────────────────────────────────────────────────
+
+// ── P2：7 档等级星环（外环，无主题标签的词按 primaryLevel 归入）──────────
+// 渲染聚合分支（单星系 >400 词按状态聚合星团）随阶段 3 v2 落地。
+const RING_RADIUS = 420
+const RING_DEFS: { level: number; zh: string; en: string; color: string }[] = [
+  { level: 1, zh: '初中环', en: 'Junior Ring',   color: '#9BE38A' },
+  { level: 2, zh: '高中环', en: 'Senior Ring',   color: '#7FD8A8' },
+  { level: 3, zh: '四级环', en: 'CET-4 Ring',    color: '#5FE0D6' },
+  { level: 4, zh: '六级环', en: 'CET-6 Ring',    color: '#7EC9FF' },
+  { level: 5, zh: '考研环', en: 'KaoYan Ring',   color: '#9FA8FF' },
+  { level: 6, zh: '托福环', en: 'TOEFL Ring',    color: '#C39BFF' },
+  { level: 7, zh: 'SAT 环', en: 'SAT Ring',      color: '#FF9BD2' },
+]
+
+export const RING_GALAXIES: LexiverseGalaxy[] = RING_DEFS.map((d, i) => {
+  const angle = (i / RING_DEFS.length) * Math.PI * 2 - Math.PI / 2
+  return {
+    id: `ring-level-${d.level}`,
+    title: d.en,
+    titleZh: d.zh,
+    description: `Level ${d.level} vocabulary ring — words without a theme home.`,
+    descriptionZh: `第 ${d.level} 档词汇星环：尚未归入主题星系的词。`,
+    sourceType: 'ring',
+    filter: { ringLevels: [d.level] },
+    visualPosition: {
+      x: Math.cos(angle) * RING_RADIUS,
+      y: Math.sin(angle) * RING_RADIUS * 0.4,
+      z: -60,
+    },
+    colorTheme: d.color,
+    visualType: 'cluster',
+    maxPlanets: 400,
+  }
+})
+
+// 含等级星环的完整目录（消费方逐步切换到这一份）
+export const ALL_GALAXIES: LexiverseGalaxy[] = [...GALAXIES, ...RING_GALAXIES]
+
 export function getGalaxyById(id: string): LexiverseGalaxy | undefined {
-  return GALAXIES.find(g => g.id === id)
+  return ALL_GALAXIES.find(g => g.id === id)
 }
 export function getConstellationById(id: string): LexiverseConstellation | undefined {
   return CONSTELLATIONS.find(c => c.id === id)

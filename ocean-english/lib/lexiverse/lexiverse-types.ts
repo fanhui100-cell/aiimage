@@ -42,7 +42,8 @@ export type PlanetLearningState =
 //   cefr     — cefrLevel slice (A1..C2)
 //   private  — user-uploaded (Scan / personal collection); privateSourceId set
 //   custom   — manually-curated mixed filter (escape hatch)
-export type GalaxySourceType = 'theme' | 'domain' | 'exam' | 'cefr' | 'private' | 'custom'
+// P2：'ring' = 7 档等级星环（无主题标签的词按 primaryLevel 归入）
+export type GalaxySourceType = 'theme' | 'domain' | 'exam' | 'cefr' | 'private' | 'custom' | 'ring'
 
 // ── Galaxy filter — the bridge to the real dictionary ─────────────────────
 // All fields are optional and AND-combined; absence means "don't constrain".
@@ -60,6 +61,8 @@ export interface GalaxyFilter {
   cefrLevels?: string[]
   difficultyLevels?: number[]
   privateSourceId?: string
+  /** P2：等级星环 — 词的 primaryLevel 命中其一，且词无 themeTags（主题星系优先） */
+  ringLevels?: number[]
 }
 
 // ── Visual position in universe-space (R3F units) ─────────────────────────

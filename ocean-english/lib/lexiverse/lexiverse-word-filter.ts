@@ -29,6 +29,9 @@ export interface FilterableWord {
   themeTags?: string[]
   domainTags?: string[]
   privateSourceId?: string
+  /** P2：7 档等级标签 / 最低档 */
+  levels?: number[]
+  primaryLevel?: number
 }
 
 /** Returns null if the word doesn't match; else an affinity score 0..1. */
@@ -73,6 +76,15 @@ export function scoreWord(word: FilterableWord, filter: GalaxyFilter): number | 
     dims++
     const difficulty = word.difficultyLevel ?? word.difficulty
     if (typeof difficulty !== 'number' || !filter.difficultyLevels.includes(difficulty)) return null
+    score += 1
+  }
+
+  // ── ringLevels（P2 等级星环）: primaryLevel 命中且无主题标签 ─────────
+  if (filter.ringLevels && filter.ringLevels.length > 0) {
+    dims++
+    if (word.themeTags?.length) return null            // 有主题 → 归主题星系
+    const pl = word.primaryLevel ?? (word.levels?.length ? Math.min(...word.levels) : undefined)
+    if (pl == null || !filter.ringLevels.includes(pl)) return null
     score += 1
   }
 
