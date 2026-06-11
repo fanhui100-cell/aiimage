@@ -63,6 +63,7 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
     let prevStreakData = getLexi().streakData
     let prevXp = getLexi().xp
     let prevUserLevel = getLexi().profile.userLevel ?? null
+    let prevLevel = getLexi().profile.level ?? null
 
     // 防抖窗口内累积变更词条，flush 时一次性上传
     const pendingWords = new Map<string, WordEntry>()
@@ -112,10 +113,13 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
       }
 
       const userLevel = state.profile.userLevel ?? null
-      if (state.streakData !== prevStreakData || state.xp !== prevXp || userLevel !== prevUserLevel) {
+      const level = state.profile.level ?? null
+      if (state.streakData !== prevStreakData || state.xp !== prevXp
+        || userLevel !== prevUserLevel || level !== prevLevel) {
         prevStreakData = state.streakData
         prevXp = state.xp
         prevUserLevel = userLevel
+        prevLevel = level
         const totalWordsLearned = state.words.filter(
           w => w.state === 'learning' || w.state === 'review' || w.state === 'weak' || w.state === 'mastered',
         ).length
@@ -124,6 +128,7 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
           streakData: state.streakData,
           xp: state.xp,
           userLevel,
+          level,
         })
       }
 

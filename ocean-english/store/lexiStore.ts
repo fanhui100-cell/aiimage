@@ -42,6 +42,8 @@ export interface WordEntry {
   cefr?: string
   band?: number
   examTags?: string[]
+  // P1-2：词库 7 档标签（阶段 2 注入；为空时消费方退回 CEFR/band 窗口）
+  levels?: number[]
   ex?: string
   exZh?: string
   syn?: string[]
@@ -57,8 +59,10 @@ export interface Profile {
   goals?: string[]
   // 收编 learningStore.userLevel；未显式设置时由 band 派生
   userLevel?: LearningLevel | null
-  // B2-4：最近一次定级时间（重测 30 天提醒用）；带 band 的 setProfile 时刷新
+  // B2-4：最近一次定级时间（重测 30 天提醒用）；带 band/level 的 setProfile 时刷新
   onboardedAt?: number
+  // P1-2：7 档等级（lib/levels.ts），band = min(level+1, 8) 派生保留兼容
+  level?: number
 }
 
 // band → userLevel 派生默认值（spec A4-3）
@@ -515,6 +519,7 @@ export const useLexiStore = create<LexiStore>()(
           const exam = mapExamKeyToTag(profile.targetExam)
           const res = await fetch(
             `/api/dictionary/recommend?band=${profile.band}&limit=${newN}` +
+            (profile.level != null ? `&level=${profile.level}` : '') +
             (exam ? `&exam=${exam}` : '') +
             `&exclude=${words.map(w => w.id).join(',')}`,
           )
@@ -615,19 +620,24 @@ export const useLexiStore = create<LexiStore>()(
       }),
 
       setProfile: (p) => set(s => {
-        // 只有带 band 的写入（= 完成定级）才标记 onboarded；
+        // 只有带 band/level 的写入（= 完成定级）才标记 onboarded；
         // 「我的」页单独调整 dailyGoal 不应让未定级用户跳过引导（B9-3）
-        const completing = p.band !== undefined || s.profile.onboarded
+        const grading = p.band !== undefined || p.level !== undefined
+        const completing = grading || s.profile.onboarded
         const profile = {
           ...s.profile, ...p,
           onboarded: completing,
           skipped: completing ? false : s.profile.skipped,
           ...(p.targetExam && (!s.profile.goals?.length) ? { goals: [p.targetExam] } : {}),
         }
+        // P1-2：带 level 未带 band 时派生 band = min(level+1, 8)
+        if (p.level !== undefined && p.band === undefined) {
+          profile.band = Math.min(p.level + 1, 8)
+        }
         // userLevel 未显式设置时由 band 派生
         if (!profile.userLevel) profile.userLevel = bandToLevel(profile.band)
-        // 带 band 的写入视为（重新）定级，刷新定级时间
-        if (p.band !== undefined) profile.onboardedAt = Date.now()
+        // 带 band/level 的写入视为（重新）定级，刷新定级时间
+        if (grading) profile.onboardedAt = Date.now()
         return {
           profile,
           goalToday: p.dailyGoal ?? s.goalToday,

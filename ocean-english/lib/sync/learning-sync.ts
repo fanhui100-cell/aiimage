@@ -82,6 +82,8 @@ export function syncStudyProgress(args: {
   streakData: StreakData
   xp: number
   userLevel: LearningLevel | null
+  /** P1-2：7 档数字等级 */
+  level?: number | null
 }): void {
   void safePut('/api/user/study-progress', {
     totalWordsLearned: args.totalWordsLearned,
@@ -91,7 +93,10 @@ export function syncStudyProgress(args: {
     lastStudyDate: args.streakData.lastStudyDate,
     levelProgress: {},
   })
-  if (args.userLevel) {
-    void safePut('/api/user/preferences', { level: args.userLevel })
+  if (args.userLevel || args.level != null) {
+    void safePut('/api/user/preferences', {
+      ...(args.userLevel ? { level: args.userLevel } : {}),
+      ...(args.level != null ? { numericLevel: args.level } : {}),
+    })
   }
 }

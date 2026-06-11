@@ -113,6 +113,12 @@ export interface DictionaryWord {
   /** Lexiverse filter support — domain dimension (e.g. 'engineering', 'ai-tech') */
   domainTags?: string[]
   frequencyRank: number | null
+  /** P1-2/阶段2：词库 7 档标签（1初中…7SAT，多档共存）；阶段 2 注入前为空 */
+  levels?: number[]
+  /** 阶段2：最低档 */
+  primaryLevel?: number
+  /** 阶段2：常用短语（前 6 条） */
+  phrases?: { phrase: string; translation?: string }[]
   sourceType: DictionarySourceType
   sourceNote: string | null
   /** Phase 8C: per-exam profiles (fine-grained). examTags[] remains the primary filter. */

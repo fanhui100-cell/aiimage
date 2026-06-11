@@ -29,10 +29,16 @@ export function ExamScreen() {
   }
 
   const questions = useMemo<Array<{ word: WordEntry; options: DistractorOption[] }>>(() => {
-    // A5：题池按 band±1 覆盖当前水平；不足 N 时先补到期/薄弱词，仍不足才放开全库
+    // A5/P1-2：题池优先 levels 标签 level±1，无标签按 band±1；
+    // 不足 N 时先补到期/薄弱词，仍不足才放开全库
     const shuffle = (a: WordEntry[]) => [...a].sort(() => Math.random() - 0.5)
     const eligible = all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
-    const banded = eligible.filter(w => !w.band || Math.abs(w.band - profile.band) <= 1)
+    const banded = eligible.filter(w => {
+      if (profile.level != null && w.levels?.length) {
+        return w.levels.some(l => Math.abs(l - profile.level!) <= 1)
+      }
+      return !w.band || Math.abs(w.band - profile.band) <= 1
+    })
     const bandedIds = new Set(banded.map(w => w.id))
     const now = Date.now()
     const dueWeak = eligible.filter(w => !bandedIds.has(w.id)

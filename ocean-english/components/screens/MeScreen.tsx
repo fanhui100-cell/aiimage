@@ -9,6 +9,7 @@ import { useLexiStore } from '@/store/lexiStore'
 import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import { TOOL_NAV } from '@/lib/product-flow/nav'
+import { levelDef } from '@/lib/levels'
 import { StudyHeatmap } from '@/components/profile/StudyHeatmap'
 import { NumberRoll } from '@/components/ui/NumberRoll'
 import { ReviewForecast } from '@/components/profile/ReviewForecast'
@@ -145,7 +146,9 @@ export function MeScreen() {
             <div>
               <div style={{ fontSize: 13, color: 'var(--ink-sub)' }}>当前水平</div>
               <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>
-                Band {profile.band} · {cefr}
+                {profile.level != null
+                  ? `${levelDef(profile.level).zh} · L${profile.level} · ${cefr}`
+                  : `Band ${profile.band} · ${cefr}`}
               </div>
             </div>
             <button onClick={() => navigate('onboarding')} className="btn-press"

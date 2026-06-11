@@ -27,6 +27,9 @@ export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams
   const bandRaw = Number(sp.get('band') ?? 5)
   const band = Number.isFinite(bandRaw) ? bandRaw : 5
+  // P1-2：7 档等级参数 — 词有 levels 标签时优先 level±1 匹配，无标签退回 CEFR 窗口
+  const levelRaw = Number(sp.get('level') ?? NaN)
+  const level = Number.isFinite(levelRaw) && levelRaw >= 1 && levelRaw <= 7 ? levelRaw : null
   const examRaw = sp.get('exam')
   const exam = examRaw && VALID_EXAM_TAGS.has(examRaw) ? (examRaw as ExamTag) : null
   const exclude = new Set((sp.get('exclude') ?? '').split(',').filter(Boolean))
@@ -37,9 +40,16 @@ export async function GET(req: NextRequest) {
   const pool = await getDictionaryClient().searchWords('', { limit: 200 })
   const picks = pool
     .filter(w => !exclude.has(w.id))
-    .filter(w => !w.cefrLevel || cefrs.includes(w.cefrLevel))
+    .filter(w => {
+      if (level != null && w.levels?.length) {
+        return w.levels.some(l => Math.abs(l - level) <= 1)
+      }
+      return !w.cefrLevel || cefrs.includes(w.cefrLevel)
+    })
     .sort((a, b) =>
-      Number(exam ? b.examTags.includes(exam) : 0) - Number(exam ? a.examTags.includes(exam) : 0)
+      // levels 精确命中 > exam 命中 > frequencyRank
+      Number(level != null && (b.levels?.includes(level) ? 1 : 0)) - Number(level != null && (a.levels?.includes(level) ? 1 : 0))
+      || Number(exam ? b.examTags.includes(exam) : 0) - Number(exam ? a.examTags.includes(exam) : 0)
       || (a.frequencyRank ?? 9e9) - (b.frequencyRank ?? 9e9))
     .slice(0, limit)
 

@@ -1,9 +1,12 @@
 'use client'
-// OnboardingScreen — 1:1 port of prototype/screen-onboarding.jsx
-// Steps: goal → path → test → selfcheck → result
+// OnboardingScreen — P1-2 双通道定级
+// Steps: goal → path → channel →（test → selfcheck ｜ pick）→ result
+//   a) 快速测评（约1分钟）：PROBE_WORDS 7 档梯度词二分检索
+//   b) 我知道我的水平：7 张等级卡直选
 
 import { useState } from 'react'
-import { useLexiStore, bandToLevel, PROBE_LADDER, BAND_CEFR } from '@/store/lexiStore'
+import { useLexiStore, bandToLevel, BAND_CEFR } from '@/store/lexiStore'
+import { LEVELS, PROBE_WORDS, LEVEL_CEFR, levelToBand, levelDef } from '@/lib/levels'
 import { useNavigate } from '@/hooks/useNavigate'
 import { PrimaryBtn, GhostBtn, Eyebrow } from '@/components/screens/SharedUI'
 
@@ -26,22 +29,22 @@ const PATH_OPTS = [
 
 const GOAL_OPTS = [8, 12, 16, 20]
 
-type Step = 'goal' | 'path' | 'test' | 'selfcheck' | 'result'
+type Step = 'goal' | 'path' | 'channel' | 'test' | 'selfcheck' | 'pick' | 'result'
 
 export function OnboardingScreen() {
   const navigate = useNavigate()
-  const { setProfile, skipOnboarding, probeLadder, bandCefr, profile } = useLexiStore()
+  const { setProfile, skipOnboarding, profile } = useLexiStore()
 
   const [step, setStep] = useState<Step>('goal')
   const [exam, setExam] = useState<string | null>(null)
   const [path, setPath] = useState<string | null>(null)
 
-  // probe state
-  const ladder = probeLadder()
+  // probe state（P1-2：PROBE_WORDS 7 档梯度，按数组索引二分）
+  const ladder = PROBE_WORDS
   const [lo, setLo] = useState(0)
   const [hi, setHi] = useState(ladder.length - 1)
   const [round, setRound] = useState(0)
-  const [probeBand, setProbeBand] = useState(5)
+  const [level, setLevel] = useState(3)
   const MAX_ROUNDS = 6
 
   // selfcheck state
@@ -62,7 +65,7 @@ export function OnboardingScreen() {
 
   function handlePath(id: string) {
     setPath(id)
-    setStep('test')
+    setStep('channel')
   }
 
   function answerProbe(know: boolean) {
@@ -71,17 +74,17 @@ export function OnboardingScreen() {
     setLo(newLo)
     setHi(newHi)
     const newMid = Math.floor((newLo + newHi) / 2)
-    const newBand = Math.max(1, Math.min(8, ladder[Math.max(0, Math.min(newMid, ladder.length - 1))].band))
-    setProbeBand(newBand)
+    const probed = ladder[Math.max(0, Math.min(newMid, ladder.length - 1))].level
+    const newLevel = Math.max(1, Math.min(7, probed))
+    setLevel(newLevel)
     if (round + 1 >= MAX_ROUNDS || newLo >= newHi) {
-      setProbeBand(newBand)
       setStep('selfcheck')
     } else {
       setRound(r => r + 1)
     }
   }
 
-  const scWords = ladder.filter(w => Math.abs(w.band - probeBand) <= 1).slice(0, 3)
+  const scWords = ladder.filter(w => Math.abs(w.level - level) <= 1).slice(0, 3)
   const scWord = scWords[scIdx]
 
   function answerSelf(know: boolean) {
@@ -89,8 +92,7 @@ export function OnboardingScreen() {
     const nextKnow = scKnow + (know ? 1 : 0)
     if (next >= scWords.length) {
       const adj = nextKnow >= 2 ? 1 : nextKnow === 1 ? 0 : -1
-      const finalBand = Math.max(1, Math.min(8, probeBand + adj))
-      setProbeBand(finalBand)
+      setLevel(l => Math.max(1, Math.min(7, l + adj)))
       setStep('result')
     } else {
       setScKnow(nextKnow)
@@ -98,14 +100,21 @@ export function OnboardingScreen() {
     }
   }
 
+  function handlePick(l: number) {
+    setLevel(l)
+    setStep('result')
+  }
+
   async function finish() {
-    const userLevel = bandToLevel(probeBand)
+    const band = levelToBand(level)
+    const def = levelDef(level)
     setProfile({
-      targetExam: exam ?? 'casual',
-      band: probeBand,
+      targetExam: exam ?? def.examKey ?? 'casual',
+      level,
+      band,
       dailyGoal,
       onboarded: true,
-      userLevel,
+      userLevel: bandToLevel(band),
     })
     // A5：定级完成立即生成个性化今日包，再进今日页
     await useLexiStore.getState().buildTodayPack()
@@ -117,8 +126,9 @@ export function OnboardingScreen() {
     navigate('home')
   }
 
-  const cefr = BAND_CEFR[probeBand] ?? 'B2'
-  const estVocab = probeBand * 650
+  const def = levelDef(level)
+  const cefr = LEVEL_CEFR[level] ?? BAND_CEFR[levelToBand(level)] ?? 'B1'
+  const estVocab = def.wordCount
 
   // ── Shared shell ────────────────────────────────────────────
   return (
@@ -133,10 +143,10 @@ export function OnboardingScreen() {
         </button>
       </header>
 
-      {/* Step indicator */}
+      {/* Step indicator（双通道：channel 后 test/selfcheck 与 pick 等价为第 4 段） */}
       <div style={{ padding: '14px 24px 0', display: 'flex', gap: 6, alignItems: 'center' }}>
-        {(['goal', 'path', 'test', 'result'] as const).map((s, i) => {
-          const order = ['goal', 'path', 'test', 'selfcheck', 'result']
+        {(['goal', 'path', 'channel', 'test', 'result'] as const).map(s => {
+          const order = ['goal', 'path', 'channel', 'test', 'selfcheck', 'pick', 'result']
           const current = order.indexOf(step)
           const mine = order.indexOf(s)
           const active = mine <= current
@@ -186,15 +196,58 @@ export function OnboardingScreen() {
           </div>
         )}
 
+        {/* ── Step: channel（P1-2 双通道选择）── */}
+        {step === 'channel' && (
+          <div className="fade-up">
+            <Eyebrow>Step 3 of 4 — 定级方式</Eyebrow>
+            <h2 style={{ margin: '10px 0 6px', fontSize: 24, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>怎么确定你的水平？</h2>
+            <p style={{ margin: '0 0 28px', color: 'var(--ink-sub)', fontSize: 14 }}>两种方式都不到一分钟。</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <button onClick={() => setStep('test')} className="btn-press"
+                style={{ padding: '20px', borderRadius: 14, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: 'pointer', textAlign: 'left' }}>
+                <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>快速测评（约 1 分钟）</div>
+                <div style={{ fontSize: 12.5, color: 'var(--ink-sub)', marginTop: 4 }}>认词二分检索，{MAX_ROUNDS} 轮内锁定你的档位</div>
+              </button>
+              <button onClick={() => setStep('pick')} className="btn-press"
+                style={{ padding: '20px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', cursor: 'pointer', textAlign: 'left' }}>
+                <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-sans)' }}>我知道我的水平</div>
+                <div style={{ fontSize: 12.5, color: 'var(--ink-sub)', marginTop: 4 }}>直接从 7 个等级里选</div>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* ── Step: pick（7 张等级卡直选）── */}
+        {step === 'pick' && (
+          <div className="fade-up">
+            <Eyebrow>选择等级</Eyebrow>
+            <h2 style={{ margin: '10px 0 6px', fontSize: 24, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>你的水平在哪一档？</h2>
+            <p style={{ margin: '0 0 24px', color: 'var(--ink-sub)', fontSize: 14 }}>与词库七档对齐，之后可随时在「我的」页重新定级。</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {LEVELS.map(l => (
+                <button key={l.level} onClick={() => handlePick(l.level)} className="btn-press"
+                  style={{ padding: '14px 18px', borderRadius: 14, border: '1.5px solid var(--line)', background: 'var(--card)', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: 14 }}>
+                  <span style={{ width: 34, height: 34, borderRadius: 10, flexShrink: 0, background: 'var(--teal-bg)', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontFamily: 'var(--font-mono)', fontSize: 14 }}>{l.level}</span>
+                  <span style={{ flex: 1, minWidth: 0 }}>
+                    <span style={{ display: 'block', fontSize: 15, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-sans)' }}>{l.zh}</span>
+                    <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-sub)', marginTop: 2 }}>{l.desc}</span>
+                  </span>
+                  <span style={{ flexShrink: 0, fontSize: 11, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>{l.wordCount.toLocaleString()} 词</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* ── Step: test ── */}
         {step === 'test' && currentWord && (
           <div className="fade-up">
-            <Eyebrow>Step 3 of 4 — 词汇测试</Eyebrow>
+            <Eyebrow>快速测评 — 词汇测试</Eyebrow>
             <h2 style={{ margin: '10px 0 6px', fontSize: 24, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>你认识这个词吗？</h2>
             <p style={{ margin: '0 0 32px', color: 'var(--ink-sub)', fontSize: 14 }}>诚实作答，帮我们找到你的词汇基线。({round + 1}/{MAX_ROUNDS})</p>
             <div style={{ background: 'var(--card)', borderRadius: 20, padding: '48px 32px', textAlign: 'center', border: '1px solid var(--line)', marginBottom: 32 }}>
               <div style={{ fontSize: 40, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)', letterSpacing: '-0.01em', marginBottom: 10 }}>{currentWord.word}</div>
-              <div style={{ fontSize: 13, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>{currentWord.cefr}</div>
+              <div style={{ fontSize: 13, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>{LEVEL_CEFR[currentWord.level]}</div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               <button onClick={() => answerProbe(false)} className="btn-press"
@@ -238,10 +291,11 @@ export function OnboardingScreen() {
             <Eyebrow>测试完成</Eyebrow>
             <h2 style={{ margin: '10px 0 20px', fontSize: 24, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>你的词汇基线</h2>
 
-            {/* CEFR card */}
+            {/* Level card（P1-2：7 档等级 + CEFR 对照 + 该档词库词量） */}
             <div style={{ background: 'linear-gradient(135deg, var(--teal-bg) 0%, var(--card) 100%)', borderRadius: 20, padding: '32px', border: '1px solid var(--line)', marginBottom: 20, textAlign: 'center' }}>
-              <div style={{ fontSize: 56, fontWeight: 800, color: 'var(--teal-ink)', fontFamily: 'var(--font-news)', lineHeight: 1 }}>{cefr}</div>
-              <div style={{ fontSize: 14, color: 'var(--ink-sub)', marginTop: 8 }}>预估词汇量</div>
+              <div style={{ fontSize: 44, fontWeight: 800, color: 'var(--teal-ink)', fontFamily: 'var(--font-serif-zh)', lineHeight: 1.2 }}>{def.zh}</div>
+              <div style={{ fontSize: 13, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', marginTop: 4 }}>Level {level} · {cefr}</div>
+              <div style={{ fontSize: 14, color: 'var(--ink-sub)', marginTop: 12 }}>该档词库</div>
               <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{estVocab.toLocaleString()} 词</div>
             </div>
 

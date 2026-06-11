@@ -30,6 +30,7 @@ export function toWordEntry(dw: DictionaryWord, source: NonNullable<WordEntry['s
     cefr: dw.cefrLevel ?? undefined,
     band: dw.cefrLevel ? CEFR_BAND[dw.cefrLevel] : undefined,
     examTags: dw.examTags,
+    levels: dw.levels,
     ex: ex?.sentenceEn,
     exZh: ex?.sentenceZh,
     syn: dw.synonyms,
