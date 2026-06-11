@@ -81,7 +81,7 @@ function HomeHeader() {
     : h < 18 ? '下午好，继续你的航行'
     : '晚上好，收个尾再休息'
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 22 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
       <div>
         <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.72 }}>欢迎回来 · Welcome back</p>
         <h1 style={{ margin: '2px 0 0', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.2vw,32px)', color: 'var(--ink)' }}>
@@ -225,10 +225,11 @@ function ToolsRow() {
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>工具 · Tools</span>
         <div style={{ flex: 1, height: 1, background: 'var(--line)' }} />
       </div>
-      <div style={{ display: 'flex', gap: 10, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
+      {/* fix3：工具条不与今日大卡抢权重 — 无卡片底，仅 40px 图标 + 11px 标签 */}
+      <div style={{ display: 'flex', gap: 14, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
         {TOOL_NAV.map((t, i) => (
           <Link key={t.key} href={t.href} className="btn-press stagger-item"
-            style={{ animationDelay: `${i * 30}ms`, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, textDecoration: 'none', flexShrink: 0, minWidth: 64, padding: '10px 8px', borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+            style={{ animationDelay: `${i * 30}ms`, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, textDecoration: 'none', flexShrink: 0, minWidth: 56, padding: '4px 2px' }}>
             <span style={{ width: 40, height: 40, borderRadius: 12, background: 'var(--teal-bg)', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {TOOL_ICON[t.key]?.({ s: 19 })}
             </span>
@@ -320,10 +321,11 @@ export function HomeScreen() {
   return (
     <div>
       <HomeHero navigate={navigate} />
-      <div style={{ maxWidth: 880, margin: '0 auto', padding: '8px clamp(16px,4vw,32px) 40px', position: 'relative', zIndex: 2 }}>
+      {/* fix3：内容列 880px 居中 · padding clamp(20px,5vw,48px) · 大区块间 48px 统一节奏 */}
+      <div style={{ maxWidth: 880, margin: '0 auto', padding: '8px clamp(20px,5vw,48px) 64px', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', gap: 48 }}>
         <HomeHeader />
         {profile.skipped && !profile.onboarded && (
-          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(14,140,122,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginBottom: 16 }}>
+          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(14,140,122,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginTop: -24 }}>
             <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--teal-bg)', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>
             </span>
@@ -338,7 +340,7 @@ export function HomeScreen() {
           </button>
         )}
         {needsRecalibration && (
-          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(179,120,31,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginBottom: 16 }}>
+          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(179,120,31,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginTop: -24 }}>
             <span style={{ width: 34, height: 34, borderRadius: 10, background: 'rgba(179,120,31,0.1)', color: 'var(--gold-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
             </span>
@@ -352,12 +354,10 @@ export function HomeScreen() {
             </span>
           </button>
         )}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <ContinueCard navigate={navigate} />
-          <MasteryStrip navigate={navigate} />
-          <ResumeCard />
-          <ToolsRow />
-        </div>
+        <ContinueCard navigate={navigate} />
+        <MasteryStrip navigate={navigate} />
+        <ResumeCard />
+        <ToolsRow />
       </div>
     </div>
   )
