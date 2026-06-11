@@ -47,6 +47,12 @@ async function readStore(page: Page): Promise<any> {
   )
 }
 
+/** 阶段4 B4-3：作答按钮在翻面前禁用——先翻面（点卡片）再点「认识」 */
+async function learnCurrentCard(page: Page) {
+  await page.getByText('点击翻面 · Space').click()
+  await page.getByRole('button', { name: /认识/ }).click()
+}
+
 // ── 1. 定级 → 今日包个性化 ────────────────────────────────────────────────
 test('定级 B1(band4) → 推荐词落在 CEFR 邻近窗口且今日页出现推荐区', async ({ page, request }) => {
   const res = await request.get('/api/dictionary/recommend?band=4&limit=5')
@@ -72,7 +78,7 @@ test('学新词「认识」→ 状态 learning + 今日进度 +1', async ({ page
     todayPack: { date: today(), recommendedIds: ['alpha'] },
   })
   await page.goto('/learn?flow=true')
-  await page.getByRole('button', { name: /认识/ }).click()
+  await learnCurrentCard(page)
   await expect(page.getByText('学习完成')).toBeVisible()
   const st = await readStore(page)
   expect(st.words.find((w: any) => w.id === 'alpha').state).toBe('learning')
@@ -148,7 +154,7 @@ test('昨日有学习 → 今日再学 streak=2；隔一日学习 → streak 归
     streakData: { current: 1, longest: 1, lastStudyDate: dstr(Date.now() - DAY) },
   })
   await page.goto('/learn?flow=true')
-  await page.getByRole('button', { name: /认识/ }).click()
+  await learnCurrentCard(page)
   await expect(page.getByText('学习完成')).toBeVisible()
   let st = await readStore(page)
   expect(st.streakData.current).toBe(2)
@@ -163,7 +169,7 @@ test('昨日有学习 → 今日再学 streak=2；隔一日学习 → streak 归
     streakData: { current: 5, longest: 5, lastStudyDate: dstr(Date.now() - 2 * DAY) },
   })
   await page2.goto('/learn?flow=true')
-  await page2.getByRole('button', { name: /认识/ }).click()
+  await learnCurrentCard(page2)
   await expect(page2.getByText('学习完成')).toBeVisible()
   st = await readStore(page2)
   expect(st.streakData.current).toBe(1)
