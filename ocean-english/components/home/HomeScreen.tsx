@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { BanyanHero, NAVIGATE_MAP } from './BanyanHero'
@@ -106,13 +106,23 @@ function MiniStat({ label, n, color }: { label: string; n: number; color: string
 }
 
 function ContinueCard({ navigate }: { navigate: (go: string) => void }) {
-  const today = useLexiStore(s => s.getToday())
-  const progress = useLexiStore(s => s.getTodayProgress())
-  const dueCount = useLexiStore(s => s.getDue().length)
-  const weakCount = useLexiStore(s => s.getWeak().length)
+  // selector 只订阅稳定切片；返回新对象的派生 getter 用 useMemo 计算，
+  // 否则 SSR 水合时触发 getServerSnapshot 死循环警告
+  const words = useLexiStore(s => s.words)
+  const todayPack = useLexiStore(s => s.todayPack)
+  const goalToday = useLexiStore(s => s.goalToday)
+  const daily = useLexiStore(s => s.daily)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const today = useMemo(() => useLexiStore.getState().getToday(), [words, todayPack, goalToday])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const progress = useMemo(() => useLexiStore.getState().getTodayProgress(), [daily, goalToday])
+  const dueCount = useMemo(() => {
+    const now = Date.now()
+    return words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= now).length
+  }, [words])
+  const weakCount = useMemo(() => words.filter(w => w.state === 'weak').length, [words])
 
   const studiedToday = progress.n
-  const goalToday = progress.goal
   const pct = progress.pct
   const remaining = Math.max(0, goalToday - studiedToday)
   const bg = 'linear-gradient(160deg, #0a1722 0%, #0e2230 60%, #123042 100%)'
@@ -169,7 +179,10 @@ function ContinueCard({ navigate }: { navigate: (go: string) => void }) {
 
 function MasteryStrip({ navigate }: { navigate: (go: string) => void }) {
   const router = useRouter()
-  const counts = useLexiStore(s => s.counts())
+  const words = useLexiStore(s => s.words)
+  // counts() 每次返回新对象 → 不能放进 selector，订阅 words 后 useMemo
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const counts = useMemo(() => useLexiStore.getState().counts(), [words])
   const pct = useLexiStore(s => s.masteredPct())
   // B2-3：看列表去词库（按状态筛选），看星空走「查看宇宙」小链接
   const toDictionary = (s: WordState) => router.push(`/dictionary?state=${s}`)
