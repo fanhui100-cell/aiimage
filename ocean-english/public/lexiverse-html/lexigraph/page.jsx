@@ -54,7 +54,11 @@ function LexiGraphPage() {
     return () => bg.destroy();
   }, []);
 
-  uE(() => { loadCenterWord(DEFAULT_WORD, store); /* eslint-disable-next-line */ }, []);
+  // 接线：支持 /lexigraph?word=xxx 深链（iframe 透传 query），无参数走默认词
+  uE(() => {
+    const q = new URLSearchParams(window.location.search).get("word");
+    loadCenterWord(q || DEFAULT_WORD, store); /* eslint-disable-next-line */
+  }, []);
 
   function flashToast(t) {
     setToast(t);
