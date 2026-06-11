@@ -37,20 +37,16 @@ export function HeroOverlay({ navigate }: { navigate: (go: string) => void }) {
       <div className="hero-nodes-wrap">
         {HERO_NODES.map(n => <HeroNode key={n.go} node={n} navigate={navigate} />)}
       </div>
+      {/* F1：画框卡内排版 — vignette 保留，删除向 paper 过渡与 SCROLL 指示 */}
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 35%, transparent 52%, rgba(4,7,12,0.7) 100%)', pointerEvents: 'none', zIndex: 5 }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 200, background: 'linear-gradient(180deg, transparent, var(--paper))', pointerEvents: 'none', zIndex: 6 }} />
-      <div style={{ position: 'absolute', bottom: 'clamp(64px,12vh,120px)', left: 'clamp(22px,5vw,60px)', zIndex: 10, maxWidth: 'min(620px, calc(100% - 44px))' }}>
-        <h1 style={{ margin: 0, fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(32px,5vw,56px)', lineHeight: 1.18, letterSpacing: '0.02em', color: '#f3f7f8', textShadow: '0 0 40px rgba(79,230,206,0.18)', whiteSpace: 'nowrap' }}>万词成海，自有光</h1>
-        <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 'clamp(14px,1.8vw,21px)', color: 'var(--teal)', opacity: 0.92 }}>An ocean of words, lit from within.</p>
-        <p style={{ margin: '10px 0 0', fontSize: 'clamp(13px,1.4vw,15px)', color: 'rgba(234,243,246,0.62)', lineHeight: 1.6 }}>AI 驱动的深海英语学习系统 — 词汇、星图、阅读、记忆，一起生长。</p>
-        <div style={{ display: 'flex', gap: 12, marginTop: 24, flexWrap: 'wrap' }}>
-          <button onClick={() => navigate('today')} className="btn-press" style={{ padding: '13px 28px', borderRadius: 999, background: 'linear-gradient(180deg,#6ff0db,#34d8c0)', color: '#04241f', fontSize: 14.5, fontWeight: 700, border: 'none', cursor: 'pointer', boxShadow: '0 12px 26px -14px rgba(79,230,206,0.8)', fontFamily: 'var(--font-sans)' }}>开始学习</button>
-          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ padding: '13px 26px', borderRadius: 999, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(225,238,244,0.3)', color: '#eaf3f6', fontSize: 14.5, cursor: 'pointer', fontFamily: 'var(--font-sans)' }}>选择等级</button>
+      <div style={{ position: 'absolute', bottom: 'clamp(22px,6%,36px)', left: 'clamp(20px,4vw,32px)', zIndex: 10, maxWidth: 'min(560px, calc(100% - 40px))' }}>
+        <h1 style={{ margin: 0, fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.4vw,36px)', lineHeight: 1.2, letterSpacing: '0.02em', color: '#f3f7f8', textShadow: '0 0 40px rgba(79,230,206,0.18)', whiteSpace: 'nowrap' }}>万词成海，自有光</h1>
+        <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 'clamp(13px,1.5vw,16px)', color: 'var(--teal)', opacity: 0.92 }}>An ocean of words, lit from within.</p>
+        <p style={{ margin: '6px 0 0', fontSize: 'clamp(12px,1.3vw,13.5px)', color: 'rgba(234,243,246,0.62)', lineHeight: 1.55 }}>AI 驱动的深海英语学习系统 — 词汇、星图、阅读、记忆，一起生长。</p>
+        <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
+          <button onClick={() => navigate('today')} className="btn-press" style={{ padding: '10px 22px', borderRadius: 999, background: 'linear-gradient(180deg,#6ff0db,#34d8c0)', color: '#04241f', fontSize: 13.5, fontWeight: 700, border: 'none', cursor: 'pointer', boxShadow: '0 12px 26px -14px rgba(79,230,206,0.8)', fontFamily: 'var(--font-sans)' }}>开始学习</button>
+          <button onClick={() => navigate('onboarding')} className="btn-press" style={{ padding: '10px 20px', borderRadius: 999, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(225,238,244,0.3)', color: '#eaf3f6', fontSize: 13.5, cursor: 'pointer', fontFamily: 'var(--font-sans)' }}>选择等级</button>
         </div>
-      </div>
-      <div style={{ position: 'absolute', bottom: 18, left: '50%', transform: 'translateX(-50%)', zIndex: 10, color: 'rgba(234,243,246,0.4)', fontSize: 11, fontFamily: 'var(--font-mono)', letterSpacing: '0.12em', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, pointerEvents: 'none' }}>
-        <span>SCROLL</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
     </>
   )

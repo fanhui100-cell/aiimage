@@ -320,10 +320,10 @@ export function HomeScreen() {
   })()
 
   return (
-    <div>
-      <HomeHero navigate={navigate} />
-      {/* fix3：内容列 880px 居中 · padding clamp(20px,5vw,48px) · 大区块间 48px 统一节奏 */}
-      <div style={{ maxWidth: 880, margin: '0 auto', padding: '8px clamp(20px,5vw,48px) 64px', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', gap: 48 }}>
+    <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)' }}>
+      {/* F1：整页米白，深色画框卡与内容列同宽嵌入 · 大区块间 48px 统一节奏 */}
+      <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px clamp(20px,5vw,48px) 64px', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', gap: 48 }}>
+        <HomeHero navigate={navigate} />
         <HomeHeader />
         {profile.skipped && !profile.onboarded && (
           <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(14,140,122,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginTop: -24 }}>

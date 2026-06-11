@@ -55,20 +55,15 @@ export function HomeHero({ navigate }: { navigate: (go: string) => void }) {
     return () => { io.disconnect(); document.removeEventListener('visibilitychange', onVis) }
   }, [mode])
 
-  // 降级：2D Canvas 版（reduced-motion 时静帧）
-  if (mode === '2d') {
-    const reduce = typeof window !== 'undefined'
-      && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    return <BanyanHero navigate={navigate} animate={!reduce} />
-  }
-
-  if (mode === '3d' && HOME_HERO_VISUAL === 'legacy-banyan') {
-    return <LegacyBanyanParticleHero />
-  }
+  // F1：深色画框卡 — 3D/2D 统一嵌进固定尺寸卡（420/340px，无缩放交互）
+  const reduce = typeof window !== 'undefined'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   return (
-    <section ref={sectionRef} id="home-hero" style={{ position: 'relative', width: '100%', height: 'min(86vh, 720px)', minHeight: 460, overflow: 'hidden', background: 'radial-gradient(120% 90% at 50% 30%, #0a1622 0%, #060b12 60%, #04070c 100%)' }}>
-      {mode === '3d' && (
+    <section ref={sectionRef} id="home-hero" className="home-hero-frame">
+      {mode === '3d' && HOME_HERO_VISUAL === 'legacy-banyan' ? (
+        <div style={{ position: 'absolute', inset: 0 }}><LegacyBanyanParticleHero /></div>
+      ) : mode === '3d' ? (
         <div style={{ position: 'absolute', inset: 0 }}>
           {/* 参数 = LuminousBanyanHero 定稿默认值（13ce2aa 深海辉光调参版） */}
           <LuminousBanyanCanvas
@@ -76,7 +71,9 @@ export function HomeHero({ navigate }: { navigate: (go: string) => void }) {
             paused={!inView || !pageVisible}
           />
         </div>
-      )}
+      ) : mode === '2d' ? (
+        <BanyanHero animate={!reduce} fill />
+      ) : null}
       <HeroOverlay navigate={navigate} />
     </section>
   )

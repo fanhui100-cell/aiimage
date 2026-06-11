@@ -56,12 +56,15 @@ export function LuminousBanyanCanvas({
       <LuminousDustSystem tint={tint} />
       <LuminousTrailSystem tint={tint} />
 
+      {/* F1：画框卡内纯静观 — 删除滚轮缩放与拖拽，只留缓慢自转 */}
       <OrbitControls
         autoRotate
         autoRotateSpeed={0.2}
         enableDamping
         dampingFactor={0.05}
         enablePan={false}
+        enableZoom={false}
+        enableRotate={false}
         target={LUMINOUS_CAMERA.target}
       />
 

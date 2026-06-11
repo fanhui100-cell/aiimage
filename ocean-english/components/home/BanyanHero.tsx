@@ -164,14 +164,19 @@ function useBanyanCanvas(ref: React.RefObject<HTMLCanvasElement | null>, active:
 
 // fix1：覆盖层抽至 HeroOverlay 共用；本组件保留 2D Canvas 作为
 // WebGL 不可用 / prefers-reduced-motion 时的降级方案
-export function BanyanHero({ navigate, animate = true }: { navigate: (go: string) => void; animate?: boolean }) {
+export function BanyanHero({ navigate, animate = true, fill = false }: { navigate?: (go: string) => void; animate?: boolean; fill?: boolean }) {
   const ref = useRef<HTMLCanvasElement>(null)
   useBanyanCanvas(ref, animate)
 
+  // F1：fill 模式 — 仅画布，由 HomeHero 的画框卡统一包裹与叠 Overlay
+  if (fill) {
+    return <canvas ref={ref} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
+  }
+
   return (
-    <section style={{ position: 'relative', width: '100%', height: 'min(86vh, 720px)', minHeight: 460, overflow: 'hidden', background: 'radial-gradient(120% 90% at 50% 30%, #0a1622 0%, #060b12 60%, #04070c 100%)' }}>
+    <section className="home-hero-frame">
       <canvas ref={ref} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} />
-      <HeroOverlay navigate={navigate} />
+      {navigate && <HeroOverlay navigate={navigate} />}
     </section>
   )
 }
