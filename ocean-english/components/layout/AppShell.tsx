@@ -10,6 +10,7 @@ import { CloudSyncProvider } from '@/components/auth/CloudSyncProvider'
 import { MilestoneToast } from '@/components/ui/MilestoneToast'
 import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { useLexiStore } from '@/store/lexiStore'
+import { isDarkRoute } from '@/lib/theme-route'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -36,12 +37,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     )
   }
 
+  // P1：固定 Navbar 占位补偿——深色沉浸页（首页 hero 等）设计为顶栏透叠，不补
+  const dark = isDarkRoute(pathname)
+
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
       <Navbar />
       {focus && <FocusBackButton />}
       <CloudSyncProvider>
-        <main>{children}</main>
+        <main style={{ paddingTop: dark ? 0 : 'var(--nav-h)' }}>{children}</main>
       </CloudSyncProvider>
       <MobileTabBar />
       <MilestoneToast />

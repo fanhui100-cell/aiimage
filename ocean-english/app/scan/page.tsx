@@ -213,7 +213,7 @@ export default function ScanPage() {
 
   return (
     <AppShell>
-      <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '80px' }}>
+      <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '16px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
 
           {/* Header */}

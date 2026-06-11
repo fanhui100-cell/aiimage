@@ -87,7 +87,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
 
   if (!doc || deleted) {
     return (
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
+      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '16px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px', textAlign: 'center' }}>
           <div style={{ fontSize: '48px', marginBottom: '16px' }}>🌊</div>
           <p style={{ fontSize: '15px', color: '#ECFBFF', marginBottom: '8px' }}>
@@ -157,7 +157,7 @@ export function ScanHistoryDetailClient({ documentId }: ScanHistoryDetailClientP
   const statusColor = STATUS_COLORS[doc.status] ?? '#9BBFCA'
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
+    <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '16px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
 
         {/* Back link */}

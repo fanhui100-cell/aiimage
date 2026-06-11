@@ -14,7 +14,7 @@ export default async function WordPage({ params }: { params: Promise<{ slug: str
           style={{
             minHeight: '100vh',
             background: 'var(--bg-deep)',
-            paddingTop: '80px',
+            paddingTop: '16px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

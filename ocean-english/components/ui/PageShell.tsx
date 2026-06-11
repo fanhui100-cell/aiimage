@@ -1,7 +1,7 @@
 interface PageShellProps {
   children: React.ReactNode
   maxWidth?: number | string
-  /** paddingTop is 72px by default to clear the fixed Navbar */
+  /** paddingTop 默认 8px——Navbar 高度已由 AppShell 的 var(--nav-h) 全局补偿（P1） */
   paddingTop?: number
   /** 'light' 加 theme-light 作用域(米白);'dark' 或省略用深海默认 */
   theme?: 'light' | 'dark'
@@ -11,7 +11,7 @@ interface PageShellProps {
 export function PageShell({
   children,
   maxWidth = 960,
-  paddingTop = 72,
+  paddingTop = 8,
   theme,
   className,
 }: PageShellProps) {

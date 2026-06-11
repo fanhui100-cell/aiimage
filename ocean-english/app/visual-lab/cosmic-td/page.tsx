@@ -49,7 +49,7 @@ const futurePlans = [
 export default function CosmicTdLabPage() {
   return (
     <AppShell>
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '80px' }}>
+      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '16px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
 
           {/* Header */}

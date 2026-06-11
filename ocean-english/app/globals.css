@@ -9,6 +9,9 @@
    ========================================================================= */
 
 :root {
+  /* ── P1：固定顶栏高度（AppShell 内容区与锚点补偿共用）── */
+  --nav-h: 64px;
+
   /* ── 深海暗色环境(沉浸:首页 hero / 星图 LexiGraph / Lexiverse) ── */
   --bg-deep: #05090f;          /* 页面海床(较旧版更深更克制) */
   --bg-ocean: #081320;
@@ -91,6 +94,12 @@
 }
 
 * { box-sizing: border-box; }
+
+html {
+  /* P1：锚点滚动补偿固定顶栏 */
+  scroll-padding-top: calc(var(--nav-h) + 8px);
+}
+* { scroll-margin-top: calc(var(--nav-h) + 8px); }
 
 html, body {
   margin: 0;
