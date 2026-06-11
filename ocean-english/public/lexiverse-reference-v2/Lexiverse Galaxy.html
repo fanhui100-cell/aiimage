@@ -161,7 +161,23 @@
   </script>
   <script src="lexiverse-galaxy/planets.js"></script>
   <script src="lexiverse-galaxy/data.js"></script>
-  <script type="module" src="lexiverse-galaxy/ui.js"></script>
+  <script type="module">
+    // lv2 真词池 loader：?galaxy= → /api/lexiverse/galaxy-words（同源；
+    // 失败/独立打开 → 演示池回退），就绪后再启动 ui.js
+    try {
+      const sp = new URLSearchParams(location.search);
+      const gid = sp.get('galaxy');
+      const sector = sp.get('sector') || '0';
+      if (gid) {
+        const res = await fetch('/api/lexiverse/galaxy-words?galaxy=' + encodeURIComponent(gid) + '&sector=' + encodeURIComponent(sector));
+        if (res.ok) {
+          const j = await res.json();
+          if (j && j.ok && j.data && j.data.words && j.data.words.length) window.__LV2_POOL = j.data;
+        }
+      }
+    } catch (e) { /* fallback to demo pool */ }
+    await import('./lexiverse-galaxy/ui.js');
+  </script>
   <script src="lv2-bridge.js"></script>
 </body>
 </html>

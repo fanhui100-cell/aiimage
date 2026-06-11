@@ -130,16 +130,19 @@ test.describe('最终整合包 · 闭环 E2E', () => {
 
   test('2. 宇宙就地评分 → SRS 间隔增长（记忆图谱颜色随之变绿/teal）', async ({ page }) => {
     test.setTimeout(120_000)
+    // 真词池后 daily-basics 星系 = seed 主题词（benefit/habit/...），用池内真词
     await seed(page, {
-      words: [entry({ id: 'absorb', word: 'absorb', zh: '吸收', galaxy: 'daily-life', state: 'review', interval: 3, nextReviewAt: Date.now() - 1000 })],
+      words: [entry({ id: 'benefit', word: 'benefit', zh: '益处', galaxy: 'daily-life', state: 'review', interval: 3, nextReviewAt: Date.now() - 1000 })],
     })
     await page.goto('/lexiverse?galaxy=daily-basics')
-    await page.waitForTimeout(4500)
+    await page.waitForTimeout(6000)
     const gf = page.frames().find(f => f.url().includes('Galaxy'))!
     expect(gf).toBeTruthy()
     await gf.evaluate(() => {
-      const g = (window as unknown as { __galaxy: { openDetail: (n: unknown) => void; graph: { nodes: { word: string }[] } } }).__galaxy
-      g.openDetail(g.graph.nodes.find(n => n.word === 'absorb'))
+      const g = (window as unknown as { __galaxy: { openDetail: (n: unknown) => void; graph: { nodes: { word: string; satellite?: boolean }[] } } }).__galaxy
+      const n = g.graph.nodes.find(x => !x.satellite && x.word === 'benefit')
+      if (!n) throw new Error('benefit not in real pool: ' + g.graph.nodes.slice(0, 8).map(x => x.word).join(','))
+      g.openDetail(n)
     })
     await expect.poll(() => gf.locator('.lv2-review').count(), { timeout: 8_000 }).toBe(1)
     await gf.locator('.lv2-card').click()                          // 翻面解锁评分
@@ -148,7 +151,7 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     await page.waitForTimeout(1200)
 
     const st = await readStore(page)
-    const w = st.words.find((x: { id: string }) => x.id === 'absorb')
+    const w = st.words.find((x: { id: string }) => x.id === 'benefit')
     expect(w.interval).toBeGreaterThan(3)                          // 3 → 8
     expect(w.nextReviewAt).toBeGreaterThan(Date.now())             // /memory 队列同步减少
     // 记忆图谱颜色派生自 nextReviewAt/interval（纯函数）：

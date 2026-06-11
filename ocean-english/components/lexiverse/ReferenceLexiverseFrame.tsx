@@ -30,14 +30,18 @@ export function ReferenceLexiverseFrame() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const galaxyId = searchParams.get('galaxy')
+  const sectorParam = searchParams.get('sector')
   const frameRef = useRef<HTMLIFrameElement>(null)
   const [referenceGalaxies, setReferenceGalaxies] = useState<ReferenceGalaxy[]>([])
 
   const src = useMemo(() => {
     const file = galaxyId ? 'Lexiverse Galaxy.html' : 'Lexiverse Universe.html'
-    // 阶段3-0：v1/v2 一行切换（config/lexiverse-build.ts）
-    return `${lexiverseBasePath()}/${encodeURIComponent(file)}`
-  }, [galaxyId])
+    // 阶段3-0：v1/v2 一行切换；真词池：星系页带 ?galaxy=&sector= 供 loader 取词
+    const qs = galaxyId
+      ? `?galaxy=${encodeURIComponent(galaxyId)}${sectorParam ? `&sector=${encodeURIComponent(sectorParam)}` : ''}`
+      : ''
+    return `${lexiverseBasePath()}/${encodeURIComponent(file)}${qs}`
+  }, [galaxyId, sectorParam])
 
   const syncReferenceCatalog = useCallback(() => {
     let attempt = 0
@@ -216,10 +220,18 @@ export function ReferenceLexiverseFrame() {
           router.replace(`${pathname}?${sp.toString()}`)
           break
         }
+        case 'lexiverse-set-sector': {
+          // 方案 A：星区切换 → URL 真实可分享，src 变化触发 iframe 重载新星区
+          const sp = new URLSearchParams(searchParams.toString())
+          sp.set('sector', String((data as { sector?: number }).sector ?? 0))
+          router.replace(`${pathname}?${sp.toString()}`)
+          break
+        }
         case 'lexiverse-exit-galaxy': {
           const sp = new URLSearchParams(searchParams.toString())
           sp.delete('galaxy')
           sp.delete('planet')
+          sp.delete('sector')
           const q = sp.toString()
           router.replace(q ? `${pathname}?${q}` : pathname)
           break

@@ -49,11 +49,19 @@ class CompositeDictionaryClient implements DictionaryClient {
   }
 
   async searchWords(query: string, options?: WordSearchOptions): Promise<DictionaryWord[]> {
-    // Collect all matching words from every adapter without pagination so we
-    // can deduplicate across adapters before applying the global offset/limit.
+    // 真词修复：旧实现给每个 adapter 传 limit: undefined，而 Supabase 端
+    // `?? 20` 把它折叠成 20 —— 1.4 万导入词永远不可见。
+    // 现在：live adapter（Supabase）DB 端过滤+分页直接透传，有结果即用；
+    // 无结果/未配置才回退 seed 链合并去重（保离线可用）。
+    const live = this.adapters.find(a => a.isLive)
+    if (live) {
+      const results = await withAdapterTimeout(live.searchWords(query, options), [])
+      if (results.length) return results
+    }
     const seen = new Set<string>()
     const merged: DictionaryWord[] = []
     for (const adapter of this.adapters) {
+      if (adapter.isLive) continue
       const results = await withAdapterTimeout(
         adapter.searchWords(query, { ...options, offset: 0, limit: undefined }),
         [],

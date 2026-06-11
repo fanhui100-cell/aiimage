@@ -68,8 +68,8 @@ function renderDetail(node) {
     </div>
 
     <div class="d-sec">DEFINITION / 释义</div>
-    <div class="d-def">${gloss.en}</div>
-    <div class="d-def-zh">${gloss.zh}</div>
+    ${node.zh ? `<div class="d-def-zh" style="font-size:14px">${node.zh}</div><div class="d-def" style="opacity:.55">${gloss.en}</div>`
+      : `<div class="d-def">${gloss.en}</div><div class="d-def-zh">${gloss.zh}</div>`}
 
     <div class="d-sec">NEARBY SYSTEMS / 邻近星系 · ${neighbors.length}</div>
     <div class="d-neighbors">

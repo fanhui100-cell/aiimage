@@ -149,7 +149,7 @@
   (function waitReady() {
     if (window.__lexiverse) { initUniverse(); }
     else if (window.__galaxy) { initGalaxy(); }
-    else if (tries++ < 60) { setTimeout(waitReady, 100); }
+    else if (tries++ < 250) { setTimeout(waitReady, 100); }   // 真词池 loader 取词期间需等待
   })();
 
   /* ════════════════════════════ 宇宙页 ═══════════════════════════════════ */
@@ -325,10 +325,22 @@
     });
 
     // 缺陷 a（双语）+ U2（就地复习）：detail 渲染后注入
+    function syncSelectionFromDom() {
+      const wordText = (detailBody.querySelector('.d-word') || {}).textContent;
+      if (!wordText) return false;
+      const w = wordText.trim();
+      const node = G.graph.nodes.find(n => n.word === w);
+      window.__lv2SelectedId = node ? node.id : w;
+      window.__lv2SelectedSlug = slugOf(w);
+      renderCrumbs();
+      return true;
+    }
     async function enrichDetail() {
+      if (!detailEl.classList.contains('open')) return;
+      if (!syncSelectionFromDom()) return;
       const id = window.__lv2SelectedId;
       const slug = window.__lv2SelectedSlug;
-      if (!id || !slug || !detailEl.classList.contains('open')) return;
+      if (!id || !slug) return;
       if (detailBody.querySelector('.lv2-zh-real')) return
       const node = G.graph.byId[id];
       const dict = await fetchDict(slug);
@@ -396,6 +408,15 @@
           rv.querySelector('#lv2-full-review').addEventListener('click', () => send({ type: 'lv:navigate', href: '/memory' }));
         }
       }
+      // 词图联动：面板动作区（词形卫星与词图共用 word_relations 数据源）
+      if (!detailBody.querySelector('.lv2-graph-btn')) {
+        const gb = document.createElement('button');
+        gb.className = 'd-task lv2-graph-btn';
+        gb.textContent = '◈ 在词图中展开';
+        gb.style.cssText = 'margin-top:10px;width:100%';
+        gb.addEventListener('click', () => send({ type: 'lv:navigate', href: '/lexigraph?word=' + encodeURIComponent(slug) }));
+        detailBody.appendChild(gb);
+      }
     }
     new MutationObserver(() => { enrichDetail(); }).observe(detailBody, { childList: true });
 
@@ -413,7 +434,8 @@
           return m;
         })());
         for (const [slug, st] of Object.entries(ext.userStates)) {
-          if (st.state === 'mastered' && prev[slug] && prev[slug].state !== 'mastered') {
+          // 首次推送（prev 无记录）同样点亮——真词池初始全暗，亮度来自学习状态
+          if (st.state === 'mastered' && (!prev[slug] || prev[slug].state !== 'mastered')) {
             for (const n of (bySlug[slug] || [])) G.markAsLearned(n);
           }
         }
@@ -451,6 +473,37 @@
         document.getElementById('lv2-ensure').textContent = '✓ 已加入学习';
       });
     }
+
+    // 方案 A：星区分页控件（真词池 >260 时出现；星区数随词库自动增长）
+    (function buildSectorBar() {
+      const P = window.__LV2_POOL;
+      if (!P || !P.sectorCount || P.sectorCount <= 1) return;
+      const bar = document.createElement('div');
+      bar.style.cssText = 'position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:60;' +
+        'display:flex;gap:10px;align-items:center;background:rgba(2,6,23,.78);backdrop-filter:blur(10px);' +
+        'border:1px solid rgba(126,249,255,.2);border-radius:999px;padding:7px 14px;' +
+        "font:12px 'Space Mono',monospace;color:#9BBFCA";
+      const mk = (label, target, enabled) => {
+        const b = document.createElement('button');
+        b.textContent = label;
+        b.disabled = !enabled;
+        b.style.cssText = 'border:none;background:transparent;cursor:' + (enabled ? 'pointer' : 'default') +
+          ';color:' + (enabled ? '#7EF9FF' : 'rgba(155,191,202,.3)') + ";font:700 12px 'Space Grotesk',sans-serif;padding:2px 6px";
+        if (enabled) b.addEventListener('click', () => {
+          const sp = new URLSearchParams(location.search);
+          sp.set('sector', String(target));
+          if (inFrame) send({ type: 'lexiverse-set-sector', galaxyId: sp.get('galaxy'), sector: target });
+          else location.search = sp.toString();
+        });
+        return b;
+      };
+      bar.appendChild(mk('‹ 上一片', P.sector - 1, P.sector > 0));
+      const label = document.createElement('span');
+      label.textContent = '星区 ' + (P.sector + 1) + '/' + P.sectorCount + ' · 共 ' + P.total + ' 词';
+      bar.appendChild(label);
+      bar.appendChild(mk('下一片 ›', P.sector + 1, P.sector < P.sectorCount - 1));
+      document.body.appendChild(bar);
+    })();
 
     send({ type: 'lv:ready', page: 'galaxy' });
   }

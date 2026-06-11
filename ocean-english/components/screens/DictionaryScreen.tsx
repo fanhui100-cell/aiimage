@@ -25,6 +25,7 @@ const MINE_FILTERS: { id: MineFilter; zh: string }[] = [
 
 const CEFR_CHIPS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 const EXAM_CHIPS = ['CET-4', 'CET-6', 'IELTS', 'TOEFL', 'KAOYAN', 'GAOKAO', 'GRE'] as const
+const LEVEL_CHIPS = [[1, '初中'], [2, '高中'], [3, '四级'], [4, '六级'], [5, '考研'], [6, '托福'], [7, 'SAT']] as const
 const PAGE = 30
 
 // ── chip 通用样式 ──────────────────────────────────────────────
@@ -112,6 +113,8 @@ export function DictionaryScreen() {
   const mineFilter: MineFilter = MINE_FILTERS.some(f => f.id === stateParam) ? (stateParam as MineFilter) : 'all'
   const cefrParam = sp.get('cefr')
   const examParam = sp.get('exam')
+  // 真词接入：7 档等级 chips（1初中…7SAT，API level 参数 ±1 档）
+  const levelParam = sp.get('level')
 
   const words = useLexiStore(s => s.words)
   const [query, setQuery] = useState('')
@@ -139,6 +142,7 @@ export function DictionaryScreen() {
       const params = new URLSearchParams({ q: query.trim(), limit: String(PAGE), offset: String(offset) })
       if (cefrParam) params.set('cefr', cefrParam)
       if (examParam) params.set('exam', examParam)
+      if (levelParam) params.set('level', levelParam)
       const res = await fetch(`/api/dictionary/search?${params}`)
       const { data } = await res.json() as { data?: DictionaryWord[] }
       const page = Array.isArray(data) ? data : []
@@ -151,7 +155,7 @@ export function DictionaryScreen() {
     } finally {
       setLoading(false)
     }
-  }, [query, cefrParam, examParam])
+  }, [query, cefrParam, examParam, levelParam])
 
   useEffect(() => {
     if (tab !== 'explore') return
@@ -231,6 +235,13 @@ export function DictionaryScreen() {
           </div>
         ) : (
           <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4, marginBottom: 14, scrollbarWidth: 'none' }}>
+            {LEVEL_CHIPS.map(([lv, zh]) => (
+              <Chip key={lv} active={levelParam === String(lv)}
+                onClick={() => patchUrl({ level: levelParam === String(lv) ? null : String(lv) })}>
+                {zh}
+              </Chip>
+            ))}
+            <span style={{ width: 1, background: 'var(--line)', flexShrink: 0, margin: '4px 2px' }} />
             {CEFR_CHIPS.map(c => (
               <Chip key={c} active={cefrParam === c}
                 onClick={() => patchUrl({ cefr: cefrParam === c ? null : c })}>

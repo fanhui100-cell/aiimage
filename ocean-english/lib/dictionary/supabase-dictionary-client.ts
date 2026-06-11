@@ -286,8 +286,17 @@ class SupabaseDictionaryClient implements DictionaryClient {
       let req: any = this.getDb()
         .from('dictionary_words')
         .select(SEARCH_SELECT)
-        .order('is_core_word', { ascending: false })
-        .order('difficulty', { ascending: true })
+      // 真词修复：按 7 档浏览时该档词优先（primary_level 降序 → 纯高档词在前，
+      // 多档高频基础词靠后），频率次序兜底；默认浏览维持原核心词优先
+      if (options?.numericLevel != null) {
+        req = req
+          .order('primary_level', { ascending: false, nullsFirst: false })
+          .order('frequency_rank', { ascending: true, nullsFirst: false })
+      } else {
+        req = req
+          .order('is_core_word', { ascending: false })
+          .order('difficulty', { ascending: true })
+      }
 
       if (q) req = req.ilike('normalized_word', `%${q}%`)
       if (options?.level) req = req.eq('level', options.level)

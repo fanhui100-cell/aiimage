@@ -93,11 +93,27 @@ export function LexiverseQuizClient() {
     return () => { cancelled = true }
   }, [wordParam, vsParam])
 
+  // 真词修复：指定词不在客户端词池（池有 1000 行上限）时，按需单词补取——
+  // 14k 词库任意词「考一考」都能出题；词典真没有才显示空状态（A3 语义不变）
+  const [extraWord, setExtraWord] = useState<VocabWord | null>(null)
+  useEffect(() => {
+    setExtraWord(null)
+    if (!wordParam || vsParam) return
+    if (words.some(w => w.id === wordParam || w.word.toLowerCase() === wordParam.toLowerCase())) return
+    let cancelled = false
+    fetch(`/api/dictionary/word/${encodeURIComponent(wordParam.toLowerCase())}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(json => { if (!cancelled && json?.data) setExtraWord(json.data as VocabWord) })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [wordParam, vsParam, words])
+
   const questions = useMemo(() => {
     if (vsQuestions) return vsQuestions
-    if (!words.length) return []
-    return buildQuestions({ mode, words, wrongAnswers, wordId: wordParam, examTag, seed })
-  }, [vsQuestions, mode, words, wrongAnswers, wordParam, examTag, seed])
+    const pool = extraWord ? [extraWord, ...words] : words
+    if (!pool.length) return []
+    return buildQuestions({ mode, words: pool, wrongAnswers, wordId: wordParam, examTag, seed })
+  }, [vsQuestions, extraWord, mode, words, wrongAnswers, wordParam, examTag, seed])
 
   // B5-2：「30 秒后再考我」克隆题插到队列倒数第二位（不计分，只为再曝光）
   const [extras, setExtras] = useState<QuizQuestion[]>([])

@@ -63,9 +63,27 @@
 
   const FIELD_R = 132;
 
+  // lv2 真词池：loader 预取 window.__LV2_POOL = { words: [{word, zh, pos, satellites}] }
+  // 命中时星池=真词（星球数随池大小自动增减），缺省回退演示词
+  function poolEntries() {
+    const P = window.__LV2_POOL;
+    if (P && Array.isArray(P.words) && P.words.length) return P.words;
+    return WORDS.map((w) => ({ word: w }));
+  }
+  function catOf(pos, i) {
+    const p = String(pos || '').toLowerCase();
+    if (p.startsWith('v')) return 'verb';
+    if (p.startsWith('adj') || p === 'a' || p.startsWith('ad')) return 'adj';
+    if (p.startsWith('n')) return 'noun';
+    return CATS[i % 3];
+  }
+
   function build() {
     const nodes = [];
-    WORDS.forEach((word, i) => {
+    const entries = poolEntries();
+    const isReal = !!(window.__LV2_POOL && window.__LV2_POOL.words && window.__LV2_POOL.words.length);
+    entries.forEach((entry, i) => {
+      const word = entry.word;
       const seed = hash(word + '#' + i);
       const r = mulberry32(seed);
       // uniform-ish point in a sphere volume (cube-root for even density), slight shell bias
@@ -77,7 +95,7 @@
       const y = radius * Math.cos(phi) * 0.72;          // flatten a touch → galaxy disc feel
       const z = radius * Math.sin(phi) * Math.sin(theta);
 
-      const category = CATS[i % 3];
+      const category = catOf(entry.pos, i);
       const archetype = pickArchetype(category, r);
       const color = PALETTE[(r() * PALETTE.length) | 0];
       const baseR = archetype === 'galaxy' ? 2.4 + r() * 1.4
@@ -88,12 +106,14 @@
 
       nodes.push({
         id: `${word}-${i}`, word, category,
+        zh: entry.zh || '',
         x: +x.toFixed(2), y: +y.toFixed(2), z: +z.toFixed(2),
         archetype, color, radius: +baseR.toFixed(2),
         // per-planet breathing so the whole sky shimmers at different rates
         breathPhase: +(r() * Math.PI * 2).toFixed(3),
         breathSpeed: +(0.5 + r() * 1.1).toFixed(3),
         seed, status: 'locked',
+        _sats: entry.satellites || [],
       });
     });
 
@@ -112,12 +132,47 @@
     // make adjacency symmetric for navigation
     for (const e of edges) { if (!adjacency.get(e.target).includes(e.source)) adjacency.get(e.target).push(e.source); }
 
+    // lv2：词形卫星 — derivative 派生词作为小星绕母星（不参与 K 近邻），
+    // 母星↔卫星连边（与词图的词形家族同一数据源 word_relations）
+    const satellites = [];
+    for (const parent of [...nodes]) {
+      const sats = parent._sats; delete parent._sats;
+      if (!sats || !sats.length) continue;
+      sats.forEach((sat, k) => {
+        const sr = mulberry32(hash(sat.word + '@' + parent.id));
+        const ang = (k / sats.length) * Math.PI * 2 + sr() * 0.9;
+        const tilt = (sr() - 0.5) * 1.4;
+        const orbit = parent.radius + 3.2 + sr() * 2.4;
+        const sn = {
+          id: `${sat.word}~sat${k}-${parent.id}`, word: sat.word, category: parent.category,
+          zh: sat.zh || '',
+          x: +(parent.x + Math.cos(ang) * orbit).toFixed(2),
+          y: +(parent.y + Math.sin(tilt) * orbit * 0.5).toFixed(2),
+          z: +(parent.z + Math.sin(ang) * orbit).toFixed(2),
+          archetype: 'dwarf', color: parent.color, radius: 0.5,
+          breathPhase: +(sr() * Math.PI * 2).toFixed(3), breathSpeed: 1.2,
+          seed: hash(sat.word), status: 'locked', satellite: true, parentId: parent.id,
+        };
+        satellites.push(sn);
+        adjacency.set(sn.id, [parent.id]);
+        adjacency.get(parent.id).push(sn.id);
+        edges.push({ source: parent.id, target: sn.id });
+      });
+    }
+    nodes.push(...satellites);
+
     const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
 
     // seed a SMALL starting cluster — most of the sky begins dim, leaving room
     // for the learner to light it up (一个一个点亮).
     const rnd = mulberry32(99);
     const masteredIds = new Set();
+    if (isReal) {
+      // 真词池：初始亮度交给外层学习状态推送，全星可探索不再随机点亮
+      for (const n of nodes) n.status = 'unlockable';
+      const byId0 = Object.fromEntries(nodes.map((n) => [n.id, n]));
+      return { nodes, edges, adjacency, byId: byId0, masteredIds, fieldR: FIELD_R };
+    }
     for (let r0 = 0; r0 < 2; r0++) {
       let cur = nodes[(rnd() * nodes.length) | 0].id;
       for (let s = 0; s < 4 && masteredIds.size < 7; s++) { masteredIds.add(cur); const ns = (adjacency.get(cur) || []).filter((x) => !masteredIds.has(x)); cur = ns.length ? ns[(rnd() * ns.length) | 0] : nodes[(rnd() * nodes.length) | 0].id; }
@@ -127,8 +182,10 @@
   }
 
   function deriveStatuses(nodes, adjacency, masteredIds) {
+    const isReal = !!(window.__LV2_POOL && window.__LV2_POOL.words && window.__LV2_POOL.words.length);
     for (const n of nodes) {
       if (masteredIds.has(n.id)) { n.status = 'mastered'; continue; }
+      if (isReal) { n.status = 'unlockable'; continue; }
       const ns = adjacency.get(n.id) || [];
       n.status = ns.some((nb) => masteredIds.has(nb)) ? 'unlockable' : 'locked';
     }
