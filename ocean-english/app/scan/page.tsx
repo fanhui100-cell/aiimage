@@ -162,11 +162,22 @@ export default function ScanPage() {
 
   function handleAddToReview(word: ExtractedVocabulary) {
     const id = word.word.toLowerCase().replace(/\s+/g, '-')
-    // A4：扫描词进统一状态机（带释义与来源），收藏 + 进 SRS 队列
+    // A4/P5-A5：扫描词统一走 ensureWord（词典命中带 levels/galaxy → 宇宙星环
+    // 立即归位；未命中退 stub addWord，由 hydrateMissingEntries 兜底补全）
     const lexi = useLexiStore.getState()
-    lexi.addWord({ id, word: word.word, zh: word.meaningZh ?? word.definitionEn ?? '', source: 'scan' })
-    lexi.setSaved(id, true, word.word)
-    lexi.addToReview(id)
+    void fetch(`/api/dictionary/word/${encodeURIComponent(id)}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(json => {
+        if (json?.data) lexi.ensureWord(json.data, 'scan')
+        else lexi.addWord({ id, word: word.word, zh: word.meaningZh ?? word.definitionEn ?? '', source: 'scan' })
+        lexi.setSaved(id, true, word.word)
+        lexi.addToReview(id)
+      })
+      .catch(() => {
+        lexi.addWord({ id, word: word.word, zh: word.meaningZh ?? word.definitionEn ?? '', source: 'scan' })
+        lexi.setSaved(id, true, word.word)
+        lexi.addToReview(id)
+      })
     lexi.recordActivity('learned')
     lexi.incXp(10)
   }

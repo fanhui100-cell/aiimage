@@ -297,7 +297,8 @@ export function LexiverseQuizClient() {
 
       {finished ? (
         <Results score={score} total={questions.length} onRestart={restart} returnTo={returnTo}
-          wrongTotal={wrongAnswers.length} />
+          wrongTotal={wrongAnswers.length}
+          changedWords={[...new Set(attempts.map(a => a.wordId))]} />
       ) : current ? (
         <QuestionPanel
           question={current}
@@ -400,12 +401,13 @@ function QuestionPanel({ question, currentIndex, total, selected, onSelect, onNe
   )
 }
 
-function Results({ score, total, onRestart, returnTo, wrongTotal }: {
+function Results({ score, total, onRestart, returnTo, wrongTotal, changedWords }: {
   score: number
   total: number
   onRestart: () => void
   returnTo: string | null
   wrongTotal: number
+  changedWords?: string[]
 }) {
   const pct = total > 0 ? Math.round((score / total) * 100) : 0
   return (
@@ -431,7 +433,8 @@ function Results({ score, total, onRestart, returnTo, wrongTotal }: {
         </button>
       </div>
       <p style={{ marginTop: 14, marginBottom: 0 }}>
-        <Link href={returnTo ?? '/lexiverse'} style={{ fontSize: 13, color: 'var(--ink-sub)', textDecorationColor: 'var(--line-strong)' }}>
+        <Link href={returnTo ?? `/lexiverse${changedWords?.length ? `?highlight=${changedWords.slice(0, 8).map(encodeURIComponent).join(',')}` : ''}`}
+          style={{ fontSize: 13, color: 'var(--ink-sub)', textDecorationColor: 'var(--line-strong)' }}>
           看星球变化 →
         </Link>
       </p>

@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
+import Link from 'next/link'
 import { FlowBar, SoundBtn, GhostBtn, PrimaryBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
 
 // ── Flashcard（Demo10：真 3D rotateY 翻转，两面 backface-hidden）─
@@ -19,8 +20,36 @@ const faceStyle: React.CSSProperties = {
   boxShadow: 'var(--card-shadow-sm)',
 }
 
+// P5-A2：闪卡背面「词形家族」行 — word_relations 的 derivative chips，点击进词图
+function useWordFamily(slug: string) {
+  const [family, setFamily] = useState<string[]>([])
+  useEffect(() => {
+    let cancelled = false
+    setFamily([])
+    fetch(`/api/dictionary/relations?word=${encodeURIComponent(slug)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(json => {
+        if (cancelled || !json?.data) return
+        const rels = json.data.relations as { type: string; a: string; b: string }[]
+        const root: string | null = json.data.root
+        const members = new Set<string>()
+        if (root && root !== slug) members.add(root)
+        for (const r of rels) {
+          if (r.type !== 'derivative') continue
+          const other = r.a === slug ? r.b : r.b === slug ? r.a : (r.a === root ? r.b : null)
+          if (other && other !== slug) members.add(other)
+        }
+        setFamily([...members].slice(0, 4))
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [slug])
+  return family
+}
+
 function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolean; onFlip: () => void }) {
   const m = STATE_META[word.state]
+  const family = useWordFamily(word.id)
   return (
     <div className="flip-outer" onClick={onFlip} style={{ cursor: 'pointer', minHeight: 340 }}>
       <div className={`flip-inner${flipped ? ' flipped' : ''}`} style={{ height: 340 }}>
@@ -51,6 +80,17 @@ function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolea
               <span key={s} style={{ fontSize: 11, padding: '2px 8px', borderRadius: 99, background: 'var(--teal-bg)', color: 'var(--teal-ink)', fontWeight: 600 }}>{s}</span>
             ))}
           </div>
+          {/* P5-A2：词形家族（derivative chips → 词图）；无数据不渲染 */}
+          {family.length > 0 && (
+            <div style={{ display: 'flex', gap: 6, marginTop: 10, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
+              onClick={e => e.stopPropagation()}>
+              <span style={{ fontSize: 10, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', letterSpacing: '0.1em' }}>词形家族</span>
+              {family.map(f => (
+                <Link key={f} href={`/lexigraph?word=${encodeURIComponent(f)}`}
+                  style={{ fontSize: 11, padding: '2px 8px', borderRadius: 99, border: '1px solid var(--line-strong)', color: 'var(--ink-sub)', textDecoration: 'none' }}>{f}</Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

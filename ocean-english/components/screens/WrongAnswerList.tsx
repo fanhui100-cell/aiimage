@@ -59,6 +59,15 @@ function WrongCard({ group, onRetry, onRemove }: {
           style={{ flex: 1, padding: '10px', borderRadius: 12, border: '1.5px solid var(--teal-ink)', background: 'var(--teal-bg)', cursor: 'pointer', fontSize: 13, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
           重练
         </button>
+        {/* P5-A4：错因是易混词（错选了另一个词）→ 词图看辨析 */}
+        {/^[a-zA-Z][a-zA-Z' -]*$/.test(latest.userAnswer)
+          && latest.userAnswer.toLowerCase() !== latest.correctAnswer.toLowerCase()
+          && /^[a-zA-Z][a-zA-Z' -]*$/.test(latest.correctAnswer) && (
+          <a href={`/lexigraph?word=${encodeURIComponent(latest.wordId)}&focus=conf`} className="btn-press"
+            style={{ padding: '10px 14px', borderRadius: 12, border: '1px solid rgba(212,71,126,0.4)', background: 'rgba(212,71,126,0.06)', fontSize: 13, fontWeight: 600, color: '#d4477e', fontFamily: 'var(--font-sans)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            词图看辨析
+          </a>
+        )}
         <button onClick={() => onRemove(group.map(g => g.id))} className="btn-press"
           style={{ padding: '10px 16px', borderRadius: 12, border: '1px solid var(--line)', background: 'var(--card)', cursor: 'pointer', fontSize: 13, color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>
           移除

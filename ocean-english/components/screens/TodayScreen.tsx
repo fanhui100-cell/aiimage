@@ -3,6 +3,7 @@
 
 import { useEffect, useMemo } from 'react'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
+import Link from 'next/link'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { hexA } from '@/lib/utils'
 import { useNavigate } from '@/hooks/useNavigate'
@@ -145,6 +146,13 @@ export function TodayScreen() {
             <h1 style={{ margin: '6px 0 0', fontSize: 26, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>
               {allDone ? '今日已闭环 🎉' : pct === 0 ? '准备好了吗？' : '继续保持 💪'}
             </h1>
+            {/* P5-A7：闭环完成 → 宇宙今日星图巡航（结束回今日小结） */}
+            {allDone && (
+              <Link href="/lexiverse?celebrate=1"
+                style={{ display: 'inline-block', marginTop: 8, padding: '7px 16px', borderRadius: 99, background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.3)', color: 'var(--teal-ink)', fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>
+                去宇宙看今天点亮的星 ✦
+              </Link>
+            )}
           </div>
           {streak > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>

@@ -231,6 +231,20 @@
       if (d.type === 'lv:user-states') { ext.userStates = d.states || {}; }
       if (d.type === 'lv:galaxy-stats') { ext.galaxyStats = d.stats || {}; ext.level = d.level ?? null; injectGalaxyProgress(); }
       if (d.type === 'lv:celebrate') { runCruise(d.items); }
+      if (d.type === 'lv:highlight' && Array.isArray(d.items) && d.items.length) {
+        // P5-A3：测验后「看星球变化」→ 2s 脉冲本轮变化词所在星系
+        const first = d.items.find(it => it.galaxyId);
+        if (first) { try { api.universe.focusGalaxy(first.galaxyId); } catch (e) {} }
+        const hl = document.createElement('div');
+        hl.style.cssText = 'position:fixed;left:50%;bottom:14%;transform:translateX(-50%);z-index:75;' +
+          'background:rgba(2,6,23,.88);border:1px solid rgba(126,249,255,.4);border-radius:14px;' +
+          'padding:12px 22px;text-align:center;animation:lv2pulse 1s ease-in-out 2';
+        hl.innerHTML = "<div style=\"font:700 15px 'Space Grotesk',sans-serif;color:#7EF9FF\">✦ " +
+          d.items.map(it => it.word).join(' · ') + '</div>' +
+          "<div style=\"font:11px 'Space Mono',monospace;color:#9BBFCA;margin-top:3px\">本轮测验改变了这些星球</div>";
+        document.body.appendChild(hl);
+        setTimeout(() => hl.remove(), 4000);
+      }
     });
     send({ type: 'lv:ready', page: 'universe' });
   }

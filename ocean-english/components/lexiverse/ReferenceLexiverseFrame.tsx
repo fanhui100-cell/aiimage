@@ -103,12 +103,19 @@ export function ReferenceLexiverseFrame() {
                        lv:ensure-word｜lexiverse-enter/exit-galaxy
      数据归 React store，iframe 只展示转发；统一 origin 校验。 */
 
-  // 词 → 星系归属（word.galaxy 主题 ↔ 星系 filter.themeTags）
-  const galaxyForWord = useCallback((wordGalaxy: string | undefined): string | null => {
-    if (!wordGalaxy) return null
-    const hit = referenceGalaxies.find(g =>
-      g.filter?.themeTags?.includes(wordGalaxy) || g.filter?.domainTags?.includes(wordGalaxy) || g.id === wordGalaxy)
-    return hit?.id ?? null
+  // 词 → 星系归属（word.galaxy 主题 ↔ 星系 filter.themeTags；P5-A5：无主题
+  // 命中时按 levels 最低档落到等级星环 ring-level-N）
+  const galaxyForWord = useCallback((wordGalaxy: string | undefined, levels?: number[]): string | null => {
+    if (wordGalaxy) {
+      const hit = referenceGalaxies.find(g =>
+        g.filter?.themeTags?.includes(wordGalaxy) || g.filter?.domainTags?.includes(wordGalaxy) || g.id === wordGalaxy)
+      if (hit) return hit.id
+    }
+    if (levels?.length) {
+      const ringId = `ring-level-${Math.min(...levels)}`
+      if (referenceGalaxies.some(g => g.id === ringId)) return ringId
+    }
+    return null
   }, [referenceGalaxies])
 
   const pushStates = useCallback(() => {
@@ -125,7 +132,7 @@ export function ReferenceLexiverseFrame() {
     if (referenceGalaxies.length) {
       const stats: Record<string, { mastered: number; total: number; due: number }> = {}
       for (const w of words) {
-        const gid = galaxyForWord(w.galaxy)
+        const gid = galaxyForWord(w.galaxy, w.levels)
         if (!gid) continue
         const s = (stats[gid] ??= { mastered: 0, total: 0, due: 0 })
         s.total++
@@ -158,11 +165,25 @@ export function ReferenceLexiverseFrame() {
       .filter(e => e.t >= dayStart && e.from !== e.to)
       .filter(e => (seen.has(e.id) ? false : (seen.add(e.id), true)))
       .slice(0, 8)
-      .map(e => ({
-        word: e.word, from: e.from, to: e.to,
-        galaxyId: galaxyForWord(words.find(w => w.id === e.id)?.galaxy),
-      }))
+      .map(e => {
+        const entry = words.find(w => w.id === e.id)
+        return { word: e.word, from: e.from, to: e.to, galaxyId: galaxyForWord(entry?.galaxy, entry?.levels) }
+      })
     win.postMessage({ type: 'lv:celebrate', items }, window.location.origin)
+  }, [searchParams, galaxyForWord])
+
+  // P5-A3：?highlight=w1,w2 → 宇宙侧 2s 脉冲这些词所在星系
+  const sendHighlight = useCallback(() => {
+    const raw = searchParams.get('highlight')
+    if (!raw) return
+    const win = frameRef.current?.contentWindow
+    if (!win) return
+    const { words } = useLexiStore.getState()
+    const items = raw.split(',').map(decodeURIComponent).filter(Boolean).slice(0, 8).map(slug => {
+      const entry = words.find(w => w.id === slug)
+      return { word: entry?.word ?? slug, galaxyId: galaxyForWord(entry?.galaxy, entry?.levels) }
+    })
+    win.postMessage({ type: 'lv:highlight', items }, window.location.origin)
   }, [searchParams, galaxyForWord])
 
   // U1：?word= 外部定位 — 解析词所属星系并进入，再让星系页聚焦该词
@@ -240,6 +261,7 @@ export function ReferenceLexiverseFrame() {
         case 'lv:ready': {
           pushStates()
           sendCelebrate()
+          sendHighlight()
           if (focusWordRef.current && galaxyId) {
             frameRef.current?.contentWindow?.postMessage(
               { type: 'lv:focus-word', wordId: focusWordRef.current }, window.location.origin)
@@ -250,7 +272,7 @@ export function ReferenceLexiverseFrame() {
     }
     window.addEventListener('message', onMessage)
     return () => window.removeEventListener('message', onMessage)
-  }, [router, pathname, searchParams, galaxyId, pushStates, sendCelebrate])
+  }, [router, pathname, searchParams, galaxyId, pushStates, sendCelebrate, sendHighlight])
 
   return (
     <>
