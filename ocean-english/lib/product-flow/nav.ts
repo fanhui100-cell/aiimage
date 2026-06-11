@@ -14,12 +14,13 @@ export const PRIMARY_NAV = [
 
 // 二级工具（收进「我的」页 + 首页工具条 + 桌面「工具」下拉）
 export const TOOL_NAV = [
-  { key: 'reading', zh: '阅读',    en: 'Reading',  href: '/reading' },
-  { key: 'scan',    zh: '扫描',    en: 'Scan',     href: '/scan' },
-  { key: 'speak',   zh: '发音',    en: 'Speak',    href: '/pronunciation' },
-  { key: 'tutor',   zh: 'AI 导学', en: 'AI Tutor', href: '/chat' },
-  { key: 'exam',    zh: '模考',    en: 'Exam',     href: '/exam' },
-  { key: 'graph',   zh: '词图',    en: 'Graph',    href: '/lexigraph' },
+  { key: 'reading', zh: '阅读',    en: 'Reading',   href: '/reading' },
+  { key: 'scan',    zh: '扫描',    en: 'Scan',      href: '/scan' },
+  { key: 'speak',   zh: '发音',    en: 'Speak',     href: '/pronunciation' },
+  { key: 'tutor',   zh: 'AI 导学', en: 'AI Tutor',  href: '/chat' },
+  { key: 'exam',    zh: '模考',    en: 'Exam',      href: '/exam' },
+  { key: 'graph',   zh: '词图',    en: 'Graph',     href: '/lexigraph' },
+  { key: 'vault',   zh: '知识库',  en: 'LexiVault', href: '/knowledge' },
 ] as const
 
 export type PrimaryNavKey = (typeof PRIMARY_NAV)[number]['key']

@@ -69,6 +69,7 @@ const TOOL_ICON: Record<ToolNavKey, (p?: { s?: number }) => React.ReactNode> = {
   tutor:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>,
   exam:    p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M4 6h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M8 12h8M8 16h5"/></svg>,
   graph:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="17.5" r="2.4"/><path d="M8 7 16 16M16 8.6 13 15"/></svg>,
+  vault:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v4H4zM4 8v12h16V8M9 12h6"/></svg>,
 }
 
 // ── Sub-components ─────────────────────────────────────────────────────────
