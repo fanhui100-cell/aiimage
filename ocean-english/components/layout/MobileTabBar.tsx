@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { isDarkRoute } from '@/lib/theme-route'
@@ -52,13 +53,28 @@ export function MobileTabBar() {
   // 复习徽标 = 到期数 + 未清错题数
   const reviewBadge = getDue().length + wrongCount
 
+  // fix2-C：首页 hero 动画在视口内时，backdrop-filter 每帧重算模糊 —— 退化为实色底
+  const [heroInView, setHeroInView] = useState(false)
+  useEffect(() => {
+    if (pathname !== '/') { setHeroInView(false); return }
+    const hero = document.getElementById('home-hero')
+    if (!hero) return
+    const io = new IntersectionObserver(([e]) => setHeroInView(e.isIntersecting), { threshold: 0 })
+    io.observe(hero)
+    return () => io.disconnect()
+  }, [pathname])
+
   // 聚焦流 or chromeless → 隐藏
   const hidden =
     FOCUS_ROUTES.some(r => pathname === r || pathname.startsWith(r + '/')) ||
     CHROMELESS_ROUTES.some(r => pathname === r || pathname.startsWith(r + '/'))
   if (hidden) return null
 
-  const bg = dark ? 'rgba(5,9,15,0.95)' : 'var(--card-2)'
+  // hero 可见时换不透明实色，blur 关闭
+  const bg = heroInView
+    ? (dark ? 'rgba(5,9,15,0.98)' : 'var(--card-2)')
+    : (dark ? 'rgba(5,9,15,0.95)' : 'var(--card-2)')
+  const blur = heroInView ? 'none' : 'blur(16px)'
   const border = dark ? '1px solid rgba(79,230,206,0.12)' : '1px solid var(--line)'
   const activeColor = dark ? 'var(--teal)' : 'var(--teal-ink)'
   const inactiveColor = dark ? 'rgba(255,255,255,0.38)' : 'var(--ink-muted)'
@@ -69,7 +85,7 @@ export function MobileTabBar() {
       style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 100,
         background: bg, borderTop: border,
-        backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
+        backdropFilter: blur, WebkitBackdropFilter: blur,
         paddingBottom: 'env(safe-area-inset-bottom)',
       }}
     >

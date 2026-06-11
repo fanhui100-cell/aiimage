@@ -14,6 +14,8 @@ interface LuminousBanyanCanvasProps {
   tailAlpha: number
   tint: string
   animationKey: number
+  /** fix2-D：滚出视口/后台标签时停渲染循环（IntersectionObserver 由挂载方控制） */
+  paused?: boolean
 }
 
 export function LuminousBanyanCanvas({
@@ -21,9 +23,13 @@ export function LuminousBanyanCanvas({
   tailAlpha,
   tint,
   animationKey,
+  paused = false,
 }: LuminousBanyanCanvasProps) {
   return (
     <Canvas
+      // fix2-D：dpr 上限 1.5，出视口停 frameloop
+      dpr={[1, 1.5]}
+      frameloop={paused ? 'never' : 'always'}
       camera={{
         fov: LUMINOUS_CAMERA.fov,
         position: LUMINOUS_CAMERA.position,
@@ -38,7 +44,6 @@ export function LuminousBanyanCanvas({
       onCreated={({ scene, gl }) => {
         scene.fog = new THREE.FogExp2(0x000000, LUMINOUS_CAMERA.fogDensity)
         gl.setClearColor(0x000000)
-        gl.setPixelRatio(Math.min(window.devicePixelRatio, 2))
       }}
       style={{ position: 'absolute', inset: 0 }}
     >

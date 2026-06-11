@@ -377,12 +377,18 @@ html, body {
 
 /* ════ 界面优化5 阶段4 · 微交互（Demo 参数即规格） ════════════════════════ */
 
-/* Demo06：纸面噪点 — feTurbulence 0.9 · 2 octaves · 160 平铺 · opacity .018 */
+/* Demo06：纸面噪点 — feTurbulence 0.9 · 2 octaves · 160 平铺 · opacity .018
+   fix2-B：z-index 0 + body isolation —— 原置顶全屏层盖在动画 canvas 上方，
+   canvas 每帧变化迫使整屏重新合成（灰罩 + 卡顿双重根因）。
+   现在噪点只垫在内容下方，浅色页面仍隐约可见；深色 hero 不需要纸纹。 */
+body {
+  isolation: isolate;
+}
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: 2147483647;
+  z-index: 0;
   pointer-events: none;
   opacity: 0.018;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
