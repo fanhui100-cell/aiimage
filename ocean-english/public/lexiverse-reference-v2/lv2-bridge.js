@@ -18,14 +18,16 @@
   // userStates: { [wordId]: { state, due } }   galaxyStats: { [galaxyId]: {mastered,total,due} }
   const ext = { userStates: {}, galaxyStats: {}, level: null };
 
+  // P5-B1：与 lib/state-meta.ts STATE_META dark 变体逐色同步（唯一来源；
+  // 静态 JS 无法 import，改 state-meta 时此处需手动同步）
   const STATE_META = {
-    mastered:    { zh: '已掌握', color: '#34D399' },
-    review:      { zh: '待复习', color: '#FFA85A' },
-    weak:        { zh: '薄弱',   color: '#FF8FA8' },
-    learning:    { zh: '学习中', color: '#38BDF8' },
-    recommended: { zh: '推荐',   color: '#FFD66B' },
-    unknown:     { zh: '未学习', color: '#9FB6C6' },
-    locked:      { zh: '静默',   color: '#52617A' },
+    mastered:    { zh: '已掌握', color: '#4fe6ce' },
+    review:      { zh: '待复习', color: '#ff9e4d' },
+    weak:        { zh: '薄弱',   color: '#ff6b9d' },
+    learning:    { zh: '学习中', color: '#5b8bff' },
+    recommended: { zh: '推荐',   color: '#f1c879' },
+    unknown:     { zh: '未学',   color: '#7a8a9a' },
+    locked:      { zh: '静默',   color: '#3a4452' },
   };
 
   /* ── 词典缓存（同源 API，真实中文）──────────────────────────────────────── */
@@ -246,6 +248,19 @@
         setTimeout(() => hl.remove(), 4000);
       }
     });
+    // P5-B5：首访一句话引导（dismissible，localStorage flag）
+    if (!localStorage.getItem('lv2-intro-seen')) {
+      const intro = document.createElement('div');
+      intro.style.cssText = 'position:fixed;bottom:70px;left:50%;transform:translateX(-50%);z-index:70;' +
+        'display:flex;gap:12px;align-items:center;background:rgba(8,18,28,.94);' +
+        'border:1px solid rgba(126,249,255,.35);border-radius:12px;padding:10px 18px';
+      intro.innerHTML = '<span style="font:12.5px sans-serif;color:#ECFBFF">点击星系进入 · 星球面板可就地复习 · 右下 dock 跳其他板块</span>' +
+        '<button style="border:none;background:transparent;color:#7EF9FF;cursor:pointer;font:700 12.5px sans-serif">知道了</button>';
+      intro.querySelector('button').addEventListener('click', () => {
+        localStorage.setItem('lv2-intro-seen', '1'); intro.remove();
+      });
+      document.body.appendChild(intro);
+    }
     send({ type: 'lv:ready', page: 'universe' });
   }
 

@@ -563,13 +563,16 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
                 </div>
               </div>
             )}
-            {/* P5-A1：近反义区块尾 → 词图展开 */}
-            <Link href={`/lexigraph?word=${word.id}`}
-              style={{ gridColumn: '1 / -1', fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none', textAlign: 'right', fontWeight: 600 }}>
-              在词图中展开 →
-            </Link>
           </div>
         )}
+        {/* P5-A1：词形/近反义 → 词图展开（关系数据在 word_relations，
+            无旧版 synonyms 行的导入词也要可达，故该入口始终显示） */}
+        <div style={{ textAlign: 'right', marginBottom: '16px' }}>
+          <Link href={`/lexigraph?word=${word.id}`}
+            style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none', fontWeight: 600 }}>
+            在词图中展开 →
+          </Link>
+        </div>
 
         {/* ── COLLOCATIONS ──────────────────────────────────────────── */}
         {word.collocations.length > 0 && (

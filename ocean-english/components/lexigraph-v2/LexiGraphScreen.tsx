@@ -9,14 +9,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
+import { STATE_META, STATE_COLOR_DARK } from '@/lib/state-meta'
 
-/* ── 原型常量（逐项照搬）──────────────────────────────────────────────────── */
-const STATE_COLORS: Record<string, string> = {
-  recommended: '#8a97a1', learning: '#6da7ff', review: '#e8b04b', weak: '#f2879e', mastered: '#4fe6ce',
-}
-const STATE_ZH: Record<string, string> = {
-  recommended: '推荐', learning: '学习中', review: '复习中', weak: '薄弱', mastered: '已掌握',
-}
+/* ── 状态色（P5-B1：唯一来源 STATE_META 暗色变体）────────────────────────── */
+const STATE_COLORS: Record<string, string> = STATE_COLOR_DARK
+const STATE_ZH: Record<string, string> = Object.fromEntries(
+  Object.entries(STATE_META).map(([k, v]) => [k, v.zh]))
 const TYPE_META: Record<string, { color: string; zh: string; en: string; r: number; c: number; spread: number }> = {
   form:  { color: '#4fe6ce', zh: '词形', en: 'MORPHOLOGY',  r: 165, c: -Math.PI / 2, spread: Math.PI * 0.78 },
   syn:   { color: '#4fe6a0', zh: '近义', en: 'SYNONYM',     r: 295, c: -0.25, spread: 0.9 },
@@ -233,18 +231,30 @@ export function LexiGraphScreen() {
 
   /* ── 记忆图谱建图 ─────────────────────────────────────────────────────────── */
   const wrongPairs = useMemo(() => {
-    // 共同出错边：同一 session 双错词对，≥2 次才显示
+    // 共同出错边：同一 session 双错词对，≥2 次才显示；
+    // P5-B：之后某 session 两词全对（如辨析题答对）→ 该红边消退
     const pairCount = new Map<string, number>()
-    for (const s of quizHistory) {
+    const resolved = new Set<string>()
+    const sessions = [...quizHistory].sort((a, b) => (a.completedAt ?? a.startedAt) - (b.completedAt ?? b.startedAt))
+    for (const s of sessions) {
       const wrong = [...new Set(s.attempts.filter(a => !a.correct).map(a => a.wordId))]
+      const right = [...new Set(s.attempts.filter(a => a.correct).map(a => a.wordId))]
       for (let i = 0; i < wrong.length; i++) {
         for (let j = i + 1; j < wrong.length; j++) {
           const k = [wrong[i], wrong[j]].sort().join('|')
           pairCount.set(k, (pairCount.get(k) ?? 0) + 1)
+          resolved.delete(k)            // 又一起错 → 重新点亮
+        }
+      }
+      // 一个 session 里两词都答对 → 视为已辨析清楚
+      for (let i = 0; i < right.length; i++) {
+        for (let j = i + 1; j < right.length; j++) {
+          const k = [right[i], right[j]].sort().join('|')
+          if (pairCount.has(k)) resolved.add(k)
         }
       }
     }
-    return [...pairCount.entries()].filter(([, c]) => c >= 2)
+    return [...pairCount.entries()].filter(([k, c]) => c >= 2 && !resolved.has(k))
       .map(([k, c]) => ({ a: k.split('|')[0], b: k.split('|')[1], count: c }))
   }, [quizHistory])
 
@@ -346,7 +356,10 @@ export function LexiGraphScreen() {
       if (!running) return
       raf = requestAnimationFrame(frame)
       const { mode: m, filters: F } = dataRef.current
-      st.t += 0.016; st.anim = Math.min(1, st.anim + 0.04)
+      // P5-B6：reduced-motion → 跳过补间/渐进，直接定格
+      const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      st.t += 0.016; st.anim = rm ? 1 : Math.min(1, st.anim + 0.04)
+      if (rm) for (const n of st.nodes) { n.x = n.tx; n.y = n.ty; n.a = 1 }
       cam.x += (cam.tx - cam.x) * 0.08; cam.y += (cam.ty - cam.y) * 0.08; cam.s += (cam.ts - cam.s) * 0.08
       const e2 = 1 - Math.pow(1 - st.anim, 3)
       ctx.clearRect(0, 0, W, H)
@@ -600,7 +613,8 @@ export function LexiGraphScreen() {
 
   /* ════════════════════════════ 渲染 ═════════════════════════════════════ */
   return (
-    <div style={{ position: 'fixed', inset: 0, background: '#04070c', overflow: 'hidden', fontFamily: '"Noto Sans SC", sans-serif' }}>
+    <div data-mode={mode} data-wrong-edges={wrongPairs.length}
+      style={{ position: 'fixed', inset: 0, background: '#04070c', overflow: 'hidden', fontFamily: '"Noto Sans SC", sans-serif' }}>
       <canvas
         ref={canvasRef}
         style={{ position: 'absolute', inset: 0, cursor: 'grab' }}
