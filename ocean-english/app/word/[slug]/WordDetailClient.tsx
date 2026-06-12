@@ -264,6 +264,12 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
                   onPlayed={handlePronunciationPlayed}
                 />
                 <AccentSelector value={accent} onChange={setAccent} />
+                {/* F4：发音历史最佳分（浏览器识别评分，/pronunciation 练习写入） */}
+                {(inStore?.pronScore ?? 0) > 0 && (
+                  <span title="发音最佳分（识别比对评分）" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '11px', fontWeight: 700, fontFamily: 'var(--font-mono)', color: 'var(--teal-ink)', background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.25)', borderRadius: 99, padding: '2px 9px' }}>
+                    🎙 {inStore!.pronScore}
+                  </span>
+                )}
               </div>
 
               {/* Metadata badges */}

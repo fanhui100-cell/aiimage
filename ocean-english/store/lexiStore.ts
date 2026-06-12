@@ -48,6 +48,8 @@ export interface WordEntry {
   exZh?: string
   syn?: string[]
   ant?: string[]
+  /** F4：发音历史最佳分（0-100，浏览器识别评分） */
+  pronScore?: number
 }
 
 export interface Profile {
@@ -213,6 +215,8 @@ export interface DailyRecord {
   learned: number
   quizzed: number
   reviewed: number
+  /** F4：今日发音达标次数（评分 ≥80） */
+  pronounced?: number
 }
 
 export interface StreakData {
@@ -279,9 +283,11 @@ interface LexiStoreActions {
   // B7-3：词详情「移出」——从学习库删除（云端同步删除由 CloudSyncProvider diff 触发）
   removeWord: (id: string) => void
   incXp: (n: number) => void
+  /** F4：写入发音最佳分（只升不降） */
+  setPronScore: (id: string, score: number) => void
   /** F1-3：补签 — 扣 50 XP 补昨日 history 缺口并重算 streak；不可补返回 false */
   repairStreak: () => boolean
-  recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
+  recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed' | 'pronounced') => void
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
   toggleGoal: (exam: string) => void
@@ -595,6 +601,9 @@ export const useLexiStore = create<LexiStore>()(
       }),
 
       incXp: (n) => set(s => ({ xp: s.xp + n })),
+      setPronScore: (id, score) => set(s => ({
+        words: s.words.map(w => w.id === id && (w.pronScore ?? 0) < score ? { ...w, pronScore: score } : w),
+      })),
       repairStreak: () => {
         const s = get()
         const day = (off: number) => {
@@ -650,7 +659,7 @@ export const useLexiStore = create<LexiStore>()(
           longest: Math.max(sd.longest, nextCurrent),
           lastStudyDate: today,
         }
-        return { daily: { ...d, [kind]: d[kind] + 1 }, history, streakData }
+        return { daily: { ...d, [kind]: (d[kind] ?? 0) + 1 }, history, streakData }
       }),
 
       setProfile: (p) => set(s => {
