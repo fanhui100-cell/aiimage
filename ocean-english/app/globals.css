@@ -102,6 +102,13 @@ html {
 * { scroll-margin-top: calc(var(--nav-h) + 8px); }
 
 /* ── F1：主页深色画框卡（固定尺寸，嵌入米白页的「望向深海的窗」）── */
+/* F1-2：掌握度分段条 hover 提起 + 双栏栅格 */
+.seg-grow { transition: transform .18s, filter .18s; }
+.seg-grow:hover { transform: scaleY(1.35); filter: brightness(1.1); }
+.home-duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+.home-duo > :only-child { grid-column: 1 / -1; }
+@media (max-width: 640px) { .home-duo { grid-template-columns: 1fr; } }
+
 .home-hero-frame {
   position: relative;
   width: 100%;
