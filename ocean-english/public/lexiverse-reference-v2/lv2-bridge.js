@@ -171,7 +171,7 @@
     // F2：顶部精简入口 — 4 个文字链（今日·复习·词库·词图），与面包屑同层
     if (window.innerWidth >= 720) {
       const links = document.createElement('div');
-      links.style.cssText = 'position:fixed;top:14px;right:16px;z-index:60;display:flex;gap:14px;align-items:center;' +
+      links.style.cssText = 'position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:60;display:flex;gap:14px;align-items:center;' +
         'background:rgba(2,6,23,.6);backdrop-filter:blur(8px);padding:7px 14px;border-radius:9px;border:1px solid rgba(126,249,255,.14)';
       [['今日', '/today'], ['复习', '/memory'], ['词库', '/dictionary'], ['词图', '/lexigraph']].forEach(([zh, href]) => {
         const a = document.createElement('a');
