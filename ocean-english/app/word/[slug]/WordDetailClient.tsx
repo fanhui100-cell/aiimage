@@ -364,6 +364,18 @@ export function WordDetailClient({ word }: WordDetailClientProps) {
               >
                 {aiLoading ? 'AI 思考中…' : aiExplanation ? 'AI 已解释' : 'AI 解释'}
               </button>
+              {inStore && (
+                <Link
+                  href="/knowledge"
+                  style={{
+                    padding: '8px 14px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
+                    background: 'var(--card)', border: '1px solid var(--line-strong)',
+                    color: 'var(--ink)', fontSize: '13px', fontWeight: 600,
+                  }}
+                >
+                  在知识库查看
+                </Link>
+              )}
               <Link
                 href={`/lexiverse?word=${encodeURIComponent(word.id)}`}
                 style={{

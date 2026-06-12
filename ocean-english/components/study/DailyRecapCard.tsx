@@ -18,6 +18,7 @@ export function DailyRecapCard() {
   const history = useLexiStore(s => s.history)
   const streakData = useLexiStore(s => s.streakData)
   const quizHistory = useLexiStore(s => s.quizHistory)
+  const log = useLexiStore(s => s.log)
 
   const today = dstr(Date.now())
   const learned = daily.date === today ? daily.learned : 0
@@ -44,6 +45,8 @@ export function DailyRecapCard() {
   })
 
   const dateLabel = new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric' })
+  // F5：今日写入知识库条数（log 今日去重词数 — 与知识库 feed 同口径）
+  const vaultToday = new Set(log.filter(e => e.t >= todayStart).map(e => e.id)).size
 
   async function save() {
     if (!cardRef.current || saving) return
@@ -124,6 +127,11 @@ export function DailyRecapCard() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f1c879" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2c1 4 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3 .5 2 2 2.5 2 2.5C9 8 12 6 12 2z"/></svg>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 22, fontWeight: 700, color: '#f1c879' }}>{streakData.current}</span>
               <span style={{ fontSize: 12, color: 'rgba(234,243,246,0.55)' }}>天连续</span>
+              {vaultToday > 0 && (
+                <span style={{ display: 'block', fontSize: 11.5, color: 'rgba(79,230,206,0.8)', marginTop: 6 }}>
+                  今日已写入知识库 {vaultToday} 条
+                </span>
+              )}
             </div>
             <span style={{ fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 12, color: 'rgba(234,243,246,0.45)' }}>
               LexiOcean · 万词成海，自有光
