@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { useLexiStore } from '@/store/lexiStore'
+import { STATE_META, type WordState } from '@/lib/state-meta'
 import Link from 'next/link'
 import type { ExtractedVocabulary } from '@/types/document'
 
@@ -28,6 +30,8 @@ export function ExtractedVocabularyPanel({
   onAddToReview,
   alreadyInReview = new Set(),
 }: ExtractedVocabularyPanelProps) {
+  // F3-4：已入库词显示当前学习状态 chip（读 store）
+  const storeWords = useLexiStore(st => st.words)
   const [addedThisSession, setAddedThisSession] = useState<Set<string>>(new Set())
 
   function handleAdd(v: ExtractedVocabulary) {
@@ -163,6 +167,17 @@ export function ExtractedVocabularyPanel({
                   {v.shouldReview && (
                     <span style={{ fontSize: '10px', color: 'rgba(179,120,31,0.55)' }}>★ recommended</span>
                   )}
+                  {/* F3-4：已入库词显示当前学习状态 chip（统一状态色语言） */}
+                  {(() => {
+                    const entry = storeWords.find(w => w.id === wordId(v.word))
+                    if (!entry || entry.state === 'unknown' || entry.state === 'locked') return null
+                    const m = STATE_META[entry.state as WordState]
+                    return (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '10px', padding: '1px 7px', borderRadius: 99, background: `${m.light}14`, color: m.light, border: `1px solid ${m.light}40`, fontWeight: 700 }}>
+                        <i style={{ width: 5, height: 5, borderRadius: 99, background: m.light }} />{m.zh}
+                      </span>
+                    )
+                  })()}
                 </div>
                 {v.meaningZh && (
                   <div style={{ fontSize: '12px', color: 'var(--teal-ink)', marginBottom: '2px' }}>{v.meaningZh}</div>

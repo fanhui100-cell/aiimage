@@ -133,9 +133,10 @@ export function PronunciationScreen() {
   const navigate = useNavigate()
   const { getLearning, getToday, byState, markCorrect } = useLexiStore()
 
+  // F3-5：练习词 = 我的学习词优先（今日包 + 薄弱词在前，再学习中/复习）
   const words = useMemo<WordEntry[]>(() => {
     const today = getToday()
-    const pool = [...getLearning(), ...today.recommended, ...byState('review')]
+    const pool = [...today.recommended, ...byState('weak'), ...getLearning(), ...byState('review')]
     const unique = Array.from(new Map(pool.map(w => [w.id, w])).values())
     return unique.slice(0, MAX_WORDS)
   }, [])

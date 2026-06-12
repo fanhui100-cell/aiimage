@@ -5,7 +5,6 @@ import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppShell } from '@/components/layout/AppShell'
 import { useLexiStore } from '@/store/lexiStore'
-import { getMockAiResponse } from '@/data/mock-chat'
 import { resolveNavigatorContext } from '@/lib/ai-navigator/ai-navigator-context'
 import { AINavigatorHeader } from '@/components/ai-navigator/AINavigatorHeader'
 import { AINavigatorContextPanel } from '@/components/ai-navigator/AINavigatorContextPanel'
@@ -130,21 +129,28 @@ function ChatInner() {
     }
     addChatMessage(userMsg)
 
-    // Auto-add words mentioned in user message（内容字段由 hydrate 补拉）
-    const wordMatch = message.match(/\b(ubiquitous|ephemeral|resilient|meticulous|eloquent|pragmatic)\b/i)
-    if (wordMatch) {
-      const id = wordMatch[0].toLowerCase()
-      const lexi = useLexiStore.getState()
-      if (!lexi.byId(id)) {
-        lexi.addWord({ id, word: id, zh: '', source: 'lookup' })
-        void lexi.hydrateMissingEntries()
-      }
-      lexi.addToReview(id)
-    }
-
     setIsTyping(true)
     try {
-      const history = chatMessages.map(m => ({ role: m.role, content: m.content }))
+      // F3-3：真实学习上下文注入 — 今日包/薄弱词/最近错题/等级，
+      // 作为首条背景消息让 AI 基于真实数据答疑（无 mock 字段）
+      const lexi = useLexiStore.getState()
+      const today = lexi.getToday()
+      const weak = lexi.getWeak().slice(0, 8).map(w => w.word)
+      const recentWrong = lexi.wrongAnswers.slice(0, 5).map(w => `${w.word}(答错:${w.userAnswer})`)
+      const lv = lexi.profile.level
+      const studyBrief = [
+        lv != null ? `学习者等级: L${lv}(${['', '初中', '高中', '四级', '六级', '考研', '托福', 'SAT'][lv] ?? ''})` : null,
+        today.all.length ? `今日包待学: ${today.all.slice(0, 10).map(w => w.word).join(', ')}` : null,
+        weak.length ? `薄弱词: ${weak.join(', ')}` : null,
+        recentWrong.length ? `最近错题: ${recentWrong.join('; ')}` : null,
+      ].filter(Boolean).join('\n')
+
+      const history: { role: string; content: string }[] = []
+      if (studyBrief) {
+        history.push({ role: 'user', content: `[学习背景，仅供参考，不必复述]\n${studyBrief}` })
+        history.push({ role: 'assistant', content: '好的，我会基于你的学习数据来回答。' })
+      }
+      history.push(...chatMessages.map(m => ({ role: m.role, content: m.content })))
       history.push({ role: 'user', content: message })
 
       const res = await fetch('/api/ai/chat', {
@@ -157,10 +163,13 @@ function ChatInner() {
       })
 
       const data = (await res.json()) as { content?: string }
-      const responseText = res.ok && data.content ? data.content : getMockAiResponse(message)
+      // F3-3：删 mock 兜底 — AI 不可用时诚实提示，不再返回预制假回复
+      const responseText = res.ok && data.content
+        ? data.content
+        : 'AI 服务暂时不可用，请稍后重试。（你的消息已保留在上方，重新发送即可）'
       addChatMessage({ id: `a-${Date.now()}`, role: 'assistant', content: responseText, timestamp: Date.now() })
     } catch {
-      addChatMessage({ id: `a-${Date.now()}`, role: 'assistant', content: getMockAiResponse(message), timestamp: Date.now() })
+      addChatMessage({ id: `a-${Date.now()}`, role: 'assistant', content: '无法连接 AI 服务，请检查网络后重试。', timestamp: Date.now() })
     } finally {
       setIsTyping(false)
     }

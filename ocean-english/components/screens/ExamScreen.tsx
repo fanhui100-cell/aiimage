@@ -29,8 +29,9 @@ export function ExamScreen() {
   }
 
   const questions = useMemo<Array<{ word: WordEntry; options: DistractorOption[] }>>(() => {
-    // A5/P1-2：题池优先 levels 标签 level±1，无标签按 band±1；
+    // A5/P1-2/F3-1：题池优先 levels 标签 level±1，无标签按 band±1；
     // 不足 N 时先补到期/薄弱词，仍不足才放开全库
+    // （本地词不足 10 时由下方 effect 从 dictionary 按档补抽真词入池）
     const shuffle = (a: WordEntry[]) => [...a].sort(() => Math.random() - 0.5)
     const eligible = all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
     const banded = eligible.filter(w => {
@@ -90,6 +91,26 @@ export function ExamScreen() {
 
   useEffect(() => {
     return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [])
+
+  // F3-1：本地题池太薄（按档可用 <10 词）→ 从 dictionary 按 level±1 补抽
+  // 真词入池（ensureWord state 'recommended'，不打断当前已生成的卷面，
+  // 下次进考场题池即变厚）
+  useEffect(() => {
+    const lexi = useLexiStore.getState()
+    const eligible = lexi.all().filter(w => w.state !== 'locked' && w.state !== 'unknown')
+    if (eligible.length >= 10) return
+    const lv = lexi.profile.level
+    void fetch(`/api/dictionary/recommend?band=${lexi.profile.band}&limit=12`
+      + (lv != null ? `&level=${lv}` : '')
+      + `&exclude=${lexi.words.map(w => w.id).join(',')}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(json => {
+        for (const dw of (json?.data ?? [])) {
+          lexi.ensureWord(dw, 'today-pack', 'recommended')
+        }
+      })
+      .catch(() => {})
   }, [])
 
   const q = questions[qIdx]
