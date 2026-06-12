@@ -10,6 +10,8 @@ import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import { TOOL_NAV } from '@/lib/product-flow/nav'
 import { levelDef } from '@/lib/levels'
+import { WeeklyReportCard } from '@/components/me/WeeklyReportCard'
+import { ReminderSetting } from '@/components/me/ReminderSetting'
 import { StudyHeatmap } from '@/components/profile/StudyHeatmap'
 import { NumberRoll } from '@/components/ui/NumberRoll'
 import { ReviewForecast } from '@/components/profile/ReviewForecast'
@@ -117,6 +119,8 @@ export function MeScreen() {
           ))}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 4 }}>
+          {/* F6-B3：本周报告（上周聚合，周内无活动不渲染） */}
+          <WeeklyReportCard />
           <StudyHeatmap />
           <ReviewForecast />
           {/* 掌握度 */}
@@ -191,6 +195,8 @@ export function MeScreen() {
             <span style={{ fontSize: 14, color: 'var(--ink)' }}>发音口音</span>
             <AccentSelector value={accent} onChange={changeAccent} />
           </div>
+          {/* F6-B2：每日学习提醒 */}
+          <ReminderSetting />
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 18px', borderBottom: '1px solid var(--line)' }}>
             <span style={{ fontSize: 14, color: 'var(--ink)' }}>学习伙伴 Lumi</span>
             <button onClick={toggleLumi} className="btn-press"

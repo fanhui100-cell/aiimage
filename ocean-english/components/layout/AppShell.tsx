@@ -11,6 +11,7 @@ import { MilestoneToast } from '@/components/ui/MilestoneToast'
 import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { useLexiStore } from '@/store/lexiStore'
 import { isDarkRoute } from '@/lib/theme-route'
+import { checkReminderOnOpen } from '@/components/me/ReminderSetting'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -19,6 +20,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lexi = useLexiStore.getState()
     void lexi.injectOfflineSeedIfEmpty()
+    // F6-B2：页面打开时检查每日提醒（到点未学且有到期词 → 系统通知，每日一次）
+    checkReminderOnOpen()
     void lexi.hydrateMissingEntries()
   }, [])
   const chromeless = CHROMELESS_ROUTES.some(

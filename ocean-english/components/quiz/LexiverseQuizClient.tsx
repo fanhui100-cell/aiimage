@@ -65,6 +65,7 @@ export function LexiverseQuizClient() {
   const urlMode = parseMode(searchParams.get('mode'))
   const wordParam = searchParams.get('word') ?? undefined
   const vsParam = searchParams.get('vs') ?? undefined
+  const yesterdayParam = searchParams.get('yesterday') === '1'
   const examParam = searchParams.get('exam') ?? 'IELTS'
   const returnTo = searchParams.get('returnTo')
 
@@ -108,12 +109,27 @@ export function LexiverseQuizClient() {
     return () => { cancelled = true }
   }, [wordParam, vsParam, words])
 
+  // F6-B1：昨日回顾 — 从昨天学过的词随机抽 5 个快测（log 昨日条目）
+  const yesterdayIds = useMemo(() => {
+    if (!yesterdayParam) return []
+    const lexi = useLexiStore.getState()
+    const dayStart = new Date(new Date().setHours(0, 0, 0, 0)).getTime()
+    const yStart = dayStart - 86_400_000
+    const ids = [...new Set(lexi.log.filter(e => e.t >= yStart && e.t < dayStart).map(e => e.id))]
+    return ids.sort(() => Math.random() - 0.5).slice(0, 5)
+  }, [yesterdayParam])
+
   const questions = useMemo(() => {
     if (vsQuestions) return vsQuestions
     const pool = extraWord ? [extraWord, ...words] : words
     if (!pool.length) return []
+    if (yesterdayParam) {
+      const targets = pool.filter(w => yesterdayIds.includes(w.id))
+      if (!targets.length) return []
+      return targets.map((t, i) => vocabQuestion(t, pool, i, mulberry32(hash('y' + t.id)), 'vocabulary-drill', examTag))
+    }
     return buildQuestions({ mode, words: pool, wrongAnswers, wordId: wordParam, examTag, seed })
-  }, [vsQuestions, extraWord, mode, words, wrongAnswers, wordParam, examTag, seed])
+  }, [vsQuestions, extraWord, mode, words, wrongAnswers, wordParam, examTag, seed, yesterdayParam, yesterdayIds])
 
   // B5-2：「30 秒后再考我」克隆题插到队列倒数第二位（不计分，只为再曝光）
   const [extras, setExtras] = useState<QuizQuestion[]>([])
@@ -230,14 +246,16 @@ export function LexiverseQuizClient() {
     return () => window.removeEventListener('keydown', onKey)
   }, [finished, current, answered, handleSelect, nextQuestion])
 
-  const isVsMode = !!(wordParam && vsParam)
+  const isVsMode = !!(wordParam && vsParam) || yesterdayParam
 
   if (loading && !isVsMode) return <LoadingState message="Loading Quiz Center..." />
   if (isVsMode && vsQuestions === null) return <LoadingState message="生成辨析题…" />
   if (error && !isVsMode) return <QuizFrame><EmptyState title="Dictionary unavailable" detail={error.message} /></QuizFrame>
   if (!questions.length) {
     // A3：单词测验找不到该词时显示空状态，不回退成随机题
-    const detail = wordParam
+    const detail = yesterdayParam
+      ? '昨天没有学习记录 — 先去学今天的词包。'
+      : wordParam
       ? '该词还没有题目，去词典看看。 / No questions for this word yet.'
       : mode === 'wrong-answer-booster'
         ? 'No wrong answers yet. Try a vocabulary drill first.'
@@ -258,9 +276,14 @@ export function LexiverseQuizClient() {
         {!isVsMode && <LiquidSegmentedControl value={mode} onChange={chooseMode} options={MODE_OPTIONS} />}
       </header>
 
-      {isVsMode && (
+      {isVsMode && !yesterdayParam && (
         <div style={{ padding: '10px 16px', borderRadius: 12, border: '1px solid rgba(242,135,158,0.4)', background: 'rgba(242,135,158,0.06)', marginBottom: 16, fontSize: 13.5, color: 'var(--ink)' }}>
           ⚡ 辨析模式 · <b>{wordParam}</b> vs <b>{vsParam}</b> — 二选一，分清这对易混词
+        </div>
+      )}
+      {yesterdayParam && (
+        <div style={{ padding: '10px 16px', borderRadius: 12, border: '1px solid rgba(14,140,122,0.35)', background: 'var(--teal-bg)', marginBottom: 16, fontSize: 13.5, color: 'var(--ink)' }}>
+          ☀ 昨日回顾 · 昨天学过的词抽 {questions.length} 个快测 — 对抗「学完就忘」
         </div>
       )}
 

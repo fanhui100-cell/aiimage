@@ -131,6 +131,12 @@ export function TodayScreen() {
   const step2done = quizzedToday >= 5
   const step3done = dueLen === 0
   const allDone = step1done && step2done && step3done
+  // F6-B1：昨日是否有学习记录（log 昨日条目）
+  const log = useLexiStore(s => s.log)
+  const hasYesterday = useMemo(() => {
+    const dayStart = new Date(new Date().setHours(0, 0, 0, 0)).getTime()
+    return log.some(e => e.t >= dayStart - 86_400_000 && e.t < dayStart)
+  }, [log])
   const now = Date.now()
 
   const STEP_COLORS = ['#0e8c7a', '#3b5bd9', '#d2792f']
@@ -146,6 +152,13 @@ export function TodayScreen() {
             <h1 style={{ margin: '6px 0 0', fontSize: 26, fontWeight: 700, fontFamily: 'var(--font-serif-zh)', color: 'var(--ink)' }}>
               {allDone ? '今日已闭环 🎉' : pct === 0 ? '准备好了吗？' : '继续保持 💪'}
             </h1>
+            {/* F6-B1：第四步（可选）— 昨日回顾小测 */}
+            {allDone && hasYesterday && (
+              <Link href="/quiz?yesterday=1"
+                style={{ display: 'inline-block', marginTop: 8, marginRight: 8, padding: '7px 16px', borderRadius: 99, background: 'var(--card)', border: '1px solid var(--line-strong)', color: 'var(--ink)', fontSize: 13, fontWeight: 700, textDecoration: 'none' }}>
+                第四步 · 昨日回顾（30 秒）
+              </Link>
+            )}
             {/* P5-A7：闭环完成 → 宇宙今日星图巡航（结束回今日小结） */}
             {allDone && (
               <Link href="/lexiverse?celebrate=1"
