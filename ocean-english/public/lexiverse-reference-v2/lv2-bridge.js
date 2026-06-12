@@ -63,9 +63,10 @@
   const css = document.createElement('style');
   css.textContent = `
     .lv2-dock{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:8px}
-    .lv2-dock button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(126,249,255,.25);
-      background:rgba(8,19,32,.72);backdrop-filter:blur(10px);color:#9BBFCA;cursor:pointer;font-size:15px;
-      display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .lv2-dock button{width:50px;height:54px;border-radius:14px;border:1px solid rgba(126,249,255,.25);
+      background:rgba(8,19,32,.72);backdrop-filter:blur(10px);color:rgba(234,243,246,.75);cursor:pointer;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transition:all .2s}
+    .lv2-dock .lv2-lbl{font:10px 'Noto Sans SC',sans-serif;line-height:1;color:inherit}
     .lv2-dock button:hover{color:#7EF9FF;border-color:rgba(126,249,255,.6);box-shadow:0 0 14px rgba(126,249,255,.25)}
     .lv2-dock .lv2-tip{position:absolute;right:50px;top:50%;transform:translateY(-50%);white-space:nowrap;
       font:11px 'Space Mono',monospace;color:#9BBFCA;background:rgba(2,6,23,.9);padding:3px 8px;border-radius:5px;
@@ -114,18 +115,27 @@
   function currentWordId() {
     return window.__lv2SelectedSlug || null;
   }
+  // F2：图标-标签-目标三者语义对齐（今日=日历/复习=循环/词库=书本/词图=节点图）
+  const DOCK_SVG = {
+    today: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+    memory: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
+    dict: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+    graph: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7 11l10-4"/><path d="M7 13l10 4"/></svg>',
+  };
+
   function buildDock() {
     const dock = document.createElement('div');
     dock.className = 'lv2-dock' + (window.innerWidth <= 640 ? ' collapsed' : '');
     const items = [
-      { icon: '☀', zh: '今日', href: () => '/today' },
-      { icon: '↻', zh: '复习', href: () => '/memory' },
-      { icon: '⌕', zh: '词库', href: () => '/dictionary' },
-      { icon: '◈', zh: '词图', href: () => '/lexigraph' + (currentWordId() ? '?word=' + encodeURIComponent(currentWordId()) : '') },
+      { svg: DOCK_SVG.today, zh: '今日', href: () => '/today' },
+      { svg: DOCK_SVG.memory, zh: '复习', href: () => '/memory' },
+      { svg: DOCK_SVG.dict, zh: '词库', href: () => '/dictionary' },
+      { svg: DOCK_SVG.graph, zh: '词图', href: () => '/lexigraph' + (currentWordId() ? '?word=' + encodeURIComponent(currentWordId()) : '') },
     ];
     for (const it of items) {
       const b = document.createElement('button');
-      b.innerHTML = it.icon + '<span class="lv2-tip">' + it.zh + '</span>';
+      b.innerHTML = it.svg + '<span class="lv2-lbl">' + it.zh + '</span><span class="lv2-tip">' + it.zh + '</span>';
+      b.title = it.zh;
       b.addEventListener('click', () => {
         const href = it.href();
         if (inFrame) send({ type: 'lv:navigate', href });
@@ -157,6 +167,27 @@
     buildDock();
     const api = window.__lexiverse;
     const C = api.catalog;
+
+    // F2：顶部精简入口 — 4 个文字链（今日·复习·词库·词图），与面包屑同层
+    if (window.innerWidth >= 720) {
+      const links = document.createElement('div');
+      links.style.cssText = 'position:fixed;top:14px;right:16px;z-index:60;display:flex;gap:14px;align-items:center;' +
+        'background:rgba(2,6,23,.6);backdrop-filter:blur(8px);padding:7px 14px;border-radius:9px;border:1px solid rgba(126,249,255,.14)';
+      [['今日', '/today'], ['复习', '/memory'], ['词库', '/dictionary'], ['词图', '/lexigraph']].forEach(([zh, href]) => {
+        const a = document.createElement('a');
+        a.textContent = zh;
+        a.style.cssText = 'font:12px "Noto Sans SC",sans-serif;color:rgba(234,243,246,.6);cursor:pointer;text-decoration:none;transition:color .15s';
+        a.addEventListener('mouseenter', () => { a.style.color = '#4fe6ce'; });
+        a.addEventListener('mouseleave', () => { a.style.color = 'rgba(234,243,246,.6)'; });
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (inFrame) send({ type: 'lv:navigate', href });
+          else window.location.href = href;
+        });
+        links.appendChild(a);
+      });
+      document.body.appendChild(links);
+    }
 
     // 缺陷 b：层级面包屑（宇宙为根；进星系后 universe ui 已有 trail）
     // U3：星系详情面板内进度环 + 到期红点（galaxyStats 推送后注入）
