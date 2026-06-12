@@ -113,7 +113,7 @@ export function ExtractedQuestionsPanel({
           const isDifficult = savedDifficult.has(q.id)
           return (
             <div key={q.id} style={{
-              background: 'rgba(255,255,255,0.02)',
+              background: 'var(--card)',
               border: '1px solid rgba(139,92,246,0.2)',
               borderRadius: '10px',
               padding: '14px 16px',
@@ -133,7 +133,7 @@ export function ExtractedQuestionsPanel({
                       {TYPE_LABELS[q.type] ?? 'Q'}
                     </span>
                   </div>
-                  <div style={{ fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6, fontWeight: 600 }}>
+                  <div style={{ fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6, fontWeight: 600 }}>
                     {q.prompt}
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export function ExtractedQuestionsPanel({
                       borderRadius: '6px',
                       background: 'rgba(56,189,248,0.08)',
                       border: '1px solid rgba(56,189,248,0.25)',
-                      color: '#38BDF8',
+                      color: 'var(--blue-ink)',
                       fontSize: '11px',
                       cursor: 'pointer',
                     }}
@@ -160,9 +160,9 @@ export function ExtractedQuestionsPanel({
                     style={{
                       padding: '5px 10px',
                       borderRadius: '6px',
-                      background: isDraft ? 'rgba(255,215,106,0.06)' : 'rgba(255,215,106,0.1)',
-                      border: `1px solid ${isDraft ? 'rgba(255,215,106,0.3)' : 'rgba(255,215,106,0.4)'}`,
-                      color: isDraft ? 'rgba(255,215,106,0.5)' : '#FFD76A',
+                      background: isDraft ? 'rgba(255,215,106,0.06)' : 'rgba(179,120,31,0.08)',
+                      border: `1px solid ${isDraft ? 'rgba(179,120,31,0.35)' : 'rgba(255,215,106,0.4)'}`,
+                      color: isDraft ? 'rgba(255,215,106,0.5)' : 'var(--gold-ink)',
                       fontSize: '11px',
                       cursor: isDraft ? 'default' : 'pointer',
                       whiteSpace: 'nowrap',
@@ -179,7 +179,7 @@ export function ExtractedQuestionsPanel({
                       borderRadius: '6px',
                       background: isDifficult ? 'rgba(249,115,22,0.06)' : 'rgba(239,68,68,0.08)',
                       border: `1px solid ${isDifficult ? 'rgba(249,115,22,0.3)' : 'rgba(239,68,68,0.25)'}`,
-                      color: isDifficult ? '#F97316' : 'rgba(239,68,68,0.7)',
+                      color: isDifficult ? '#b3261e' : '#b3261e',
                       fontSize: '11px',
                       cursor: isDifficult ? 'default' : 'pointer',
                       whiteSpace: 'nowrap',
@@ -206,17 +206,17 @@ export function ExtractedQuestionsPanel({
                   }}>
                     AI SUGGESTED ANSWER / AI 建议答案
                   </div>
-                  <div style={{ fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6, marginBottom: '4px' }}>
+                  <div style={{ fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6, marginBottom: '4px' }}>
                     {q.answerSuggestion}
                   </div>
                   {q.explanation && (
-                    <div style={{ fontSize: '12px', color: '#9BBFCA', lineHeight: 1.5, marginBottom: '8px' }}>
+                    <div style={{ fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.5, marginBottom: '8px' }}>
                       {q.explanation}
                     </div>
                   )}
                   <div style={{
                     fontSize: '11px',
-                    color: 'rgba(255,215,106,0.55)',
+                    color: 'rgba(179,120,31,0.7)',
                     borderTop: '1px solid rgba(139,92,246,0.15)',
                     paddingTop: '8px',
                     lineHeight: 1.5,

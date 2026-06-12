@@ -12,14 +12,14 @@ interface PDFExtractionInfoPanelProps {
 
 const LABEL_STYLE: React.CSSProperties = {
   fontSize: '11px',
-  color: 'rgba(155,191,202,0.5)',
+  color: 'var(--ink-muted)',
   marginBottom: '2px',
   fontFamily: 'var(--font-mono)',
 }
 
 const VALUE_STYLE: React.CSSProperties = {
   fontSize: '13px',
-  color: '#ECFBFF',
+  color: 'var(--ink)',
 }
 
 function InfoRow({ label, value }: { label: string; value: string }) {
@@ -76,13 +76,13 @@ export function PDFExtractionInfoPanel({
     <div>
       {/* Success header */}
       <div style={{ marginBottom: '20px' }}>
-        <div style={{ fontSize: '14px', fontWeight: 600, color: '#34D399', marginBottom: '4px' }}>
+        <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--teal-ink)', marginBottom: '4px' }}>
           ✓ Text extraction complete / 文本提取完成
         </div>
         <div
           style={{
             fontSize: '11px',
-            color: 'rgba(155,191,202,0.5)',
+            color: 'var(--ink-muted)',
             fontFamily: 'var(--font-mono)',
           }}
         >
@@ -93,8 +93,8 @@ export function PDFExtractionInfoPanel({
       {/* File info grid */}
       <div
         style={{
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(155,191,202,0.12)',
+          background: 'var(--card)',
+          border: '1px solid var(--line)',
           borderRadius: '12px',
           padding: '18px',
           marginBottom: '12px',
@@ -104,7 +104,7 @@ export function PDFExtractionInfoPanel({
           style={{
             fontSize: '11px',
             letterSpacing: '0.1em',
-            color: 'rgba(56,189,248,0.5)',
+            color: 'rgba(59,91,217,0.45)',
             fontFamily: 'var(--font-mono)',
             marginBottom: '14px',
           }}
@@ -139,8 +139,8 @@ export function PDFExtractionInfoPanel({
       {metaEntries.length > 0 && (
         <div
           style={{
-            background: 'rgba(255,255,255,0.02)',
-            border: '1px solid rgba(155,191,202,0.1)',
+            background: 'var(--card)',
+            border: '1px solid var(--line)',
             borderRadius: '12px',
             padding: '16px 18px',
             marginBottom: '12px',
@@ -150,7 +150,7 @@ export function PDFExtractionInfoPanel({
             style={{
               fontSize: '11px',
               letterSpacing: '0.1em',
-              color: 'rgba(56,189,248,0.4)',
+              color: 'rgba(59,91,217,0.35)',
               fontFamily: 'var(--font-mono)',
               marginBottom: '12px',
             }}
@@ -180,10 +180,10 @@ export function PDFExtractionInfoPanel({
           padding: '12px 16px',
           marginBottom: '12px',
         }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,215,106,0.9)', marginBottom: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--gold-ink)', marginBottom: '4px' }}>
             ⚠ Short text extracted / 提取文本较短
           </div>
-          <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+          <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
             Only {usableTextLength} character{usableTextLength !== 1 ? 's' : ''} were extracted. AI analysis may be limited, but you can still proceed.
             <br />
             仅提取到 {usableTextLength} 个字符，AI 分析效果可能有限，但仍可继续。
@@ -206,16 +206,16 @@ export function PDFExtractionInfoPanel({
             style={{
               fontSize: '13px',
               fontWeight: 600,
-              color: '#F97316',
+              color: '#b3261e',
               marginBottom: '6px',
             }}
           >
             ⚠ No Selectable Text Found / 未找到可选择文本
           </div>
-          <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6 }}>
+          <p style={{ margin: '0 0 8px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6 }}>
             This PDF appears to be image-based or scanned. OCR is required to extract text.
           </p>
-          <p style={{ margin: '0 0 8px', fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+          <p style={{ margin: '0 0 8px', fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
             该 PDF 似乎是图片型或扫描件，需要 OCR 才能提取文字。
           </p>
           <p style={{ margin: 0, fontSize: '12px', color: 'rgba(56,189,248,0.7)', lineHeight: 1.6 }}>
@@ -236,7 +236,7 @@ export function PDFExtractionInfoPanel({
             padding: '10px 14px',
             marginBottom: '12px',
             fontSize: '12px',
-            color: 'rgba(255,215,106,0.8)',
+            color: 'var(--gold-ink)',
           }}
         >
           ⚠ The document is long. Only the first{' '}
@@ -254,7 +254,7 @@ export function PDFExtractionInfoPanel({
               key={i}
               style={{
                 fontSize: '12px',
-                color: 'rgba(155,191,202,0.6)',
+                color: 'var(--ink-muted)',
                 padding: '4px 0',
                 borderBottom: i < warnings.length - 1 ? '1px solid rgba(155,191,202,0.06)' : 'none',
               }}
@@ -272,10 +272,10 @@ export function PDFExtractionInfoPanel({
             onClick={() => setRawExpanded(v => !v)}
             style={{
               background: 'none',
-              border: '1px solid rgba(155,191,202,0.15)',
+              border: '1px solid var(--line)',
               borderRadius: '6px',
               padding: '6px 14px',
-              color: 'rgba(155,191,202,0.5)',
+              color: 'var(--ink-muted)',
               fontSize: '11px',
               cursor: 'pointer',
               fontFamily: 'var(--font-mono)',
@@ -294,11 +294,11 @@ export function PDFExtractionInfoPanel({
               style={{
                 marginTop: '8px',
                 background: 'rgba(0,0,0,0.3)',
-                border: '1px solid rgba(155,191,202,0.1)',
+                border: '1px solid var(--line)',
                 borderRadius: '8px',
                 padding: '14px 16px',
                 fontSize: '12px',
-                color: '#9BBFCA',
+                color: 'var(--ink-sub)',
                 lineHeight: 1.8,
                 fontFamily: 'var(--font-mono)',
                 whiteSpace: 'pre-wrap',
@@ -308,7 +308,7 @@ export function PDFExtractionInfoPanel({
             >
               {previewText}
               {previewTruncated && (
-                <span style={{ display: 'block', marginTop: '8px', color: 'rgba(155,191,202,0.4)', fontStyle: 'italic' }}>
+                <span style={{ display: 'block', marginTop: '8px', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
                   … [preview truncated — full text used for analysis]
                 </span>
               )}
@@ -325,9 +325,9 @@ export function PDFExtractionInfoPanel({
             style={{
               padding: '12px 28px',
               borderRadius: '10px',
-              background: 'rgba(255,215,106,0.12)',
+              background: 'rgba(179,120,31,0.1)',
               border: '1px solid rgba(255,215,106,0.5)',
-              color: '#FFD76A',
+              color: 'var(--gold-ink)',
               fontSize: '14px',
               fontWeight: 600,
               letterSpacing: '0.04em',
@@ -356,8 +356,8 @@ export function PDFExtractionInfoPanel({
             padding: '12px 20px',
             borderRadius: '10px',
             background: 'transparent',
-            border: '1px solid rgba(155,191,202,0.2)',
-            color: '#9BBFCA',
+            border: '1px solid var(--line)',
+            color: 'var(--ink-sub)',
             fontSize: '14px',
             cursor: 'pointer',
           }}

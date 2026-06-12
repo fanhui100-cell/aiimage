@@ -47,7 +47,7 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
     <div>
       {/* Progress */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-        <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>
+        <div style={{ fontSize: '12px', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>
           Question {currentIndex + 1} / {drafts.length} · {reviewed.size} reviewed
         </div>
         <div style={{ display: 'flex', gap: '6px' }}>
@@ -59,10 +59,10 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
                 height: '8px',
                 borderRadius: '50%',
                 background: i === currentIndex
-                  ? '#FFD76A'
+                  ? 'var(--gold-ink)'
                   : reviewed.has(d.id)
-                  ? 'rgba(52,211,153,0.6)'
-                  : 'rgba(155,191,202,0.2)',
+                  ? 'rgba(14,140,122,0.5)'
+                  : 'var(--line)',
               }}
             />
           ))}
@@ -80,9 +80,9 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
         borderRadius: '4px',
         background: current.status === 'needs-review'
           ? 'rgba(249,115,22,0.1)'
-          : 'rgba(255,215,106,0.08)',
+          : 'rgba(179,120,31,0.08)',
         border: `1px solid ${current.status === 'needs-review' ? 'rgba(249,115,22,0.3)' : 'rgba(255,215,106,0.2)'}`,
-        color: current.status === 'needs-review' ? '#F97316' : 'rgba(255,215,106,0.7)',
+        color: current.status === 'needs-review' ? '#b3261e' : 'var(--gold-ink)',
         fontFamily: 'var(--font-mono)',
       }}>
         {current.status === 'needs-review' ? '⚑ difficult' : current.status}
@@ -90,7 +90,7 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
 
       {/* Question card */}
       <div style={{
-        background: 'rgba(255,255,255,0.03)',
+        background: 'var(--card)',
         border: '1px solid rgba(255,215,106,0.2)',
         borderRadius: '10px',
         padding: '18px',
@@ -101,9 +101,9 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
             fontSize: '10px',
             padding: '1px 7px',
             borderRadius: '3px',
-            background: 'rgba(255,215,106,0.1)',
-            border: '1px solid rgba(255,215,106,0.3)',
-            color: 'rgba(255,215,106,0.8)',
+            background: 'rgba(179,120,31,0.08)',
+            border: '1px solid rgba(179,120,31,0.35)',
+            color: 'var(--gold-ink)',
             fontFamily: 'var(--font-mono)',
           }}>
             {current.questionType}
@@ -113,7 +113,7 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
           </span>
         </div>
 
-        <div style={{ fontSize: '15px', color: '#ECFBFF', lineHeight: 1.7, fontWeight: 500, marginBottom: '14px' }}>
+        <div style={{ fontSize: '15px', color: 'var(--ink)', lineHeight: 1.7, fontWeight: 500, marginBottom: '14px' }}>
           {current.prompt}
         </div>
 
@@ -123,10 +123,10 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
               <div key={i} style={{
                 padding: '8px 12px',
                 borderRadius: '7px',
-                background: 'rgba(255,255,255,0.02)',
-                border: '1px solid rgba(155,191,202,0.12)',
+                background: 'var(--card)',
+                border: '1px solid var(--line)',
                 fontSize: '13px',
-                color: '#9BBFCA',
+                color: 'var(--ink-sub)',
               }}>
                 {opt}
               </div>
@@ -166,16 +166,16 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
               AI SUGGESTED ANSWER / AI 建议答案
             </div>
             {current.answerSuggestion ? (
-              <div style={{ fontSize: '14px', color: '#ECFBFF', lineHeight: 1.6, marginBottom: '6px' }}>
+              <div style={{ fontSize: '14px', color: 'var(--ink)', lineHeight: 1.6, marginBottom: '6px' }}>
                 {current.answerSuggestion}
               </div>
             ) : (
-              <div style={{ fontSize: '13px', color: 'rgba(155,191,202,0.4)', fontStyle: 'italic' }}>
+              <div style={{ fontSize: '13px', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
                 No answer suggestion available for this question.
               </div>
             )}
             {current.explanation && (
-              <div style={{ fontSize: '12px', color: '#9BBFCA', lineHeight: 1.5, marginBottom: '8px' }}>
+              <div style={{ fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.5, marginBottom: '8px' }}>
                 {current.explanation}
               </div>
             )}
@@ -201,8 +201,8 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
             padding: '8px 18px',
             borderRadius: '7px',
             background: 'transparent',
-            border: '1px solid rgba(155,191,202,0.2)',
-            color: isFirst ? 'rgba(155,191,202,0.2)' : '#9BBFCA',
+            border: '1px solid var(--line)',
+            color: isFirst ? 'var(--line)' : 'var(--ink-sub)',
             fontSize: '13px',
             cursor: isFirst ? 'default' : 'pointer',
           }}
@@ -216,9 +216,9 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
             style={{
               padding: '8px 18px',
               borderRadius: '7px',
-              background: 'rgba(52,211,153,0.1)',
+              background: 'rgba(14,140,122,0.08)',
               border: '1px solid rgba(52,211,153,0.3)',
-              color: '#34D399',
+              color: 'var(--teal-ink)',
               fontSize: '13px',
               cursor: 'pointer',
               fontWeight: 600,
@@ -232,9 +232,9 @@ export function ScanPracticeMode({ drafts, onClose, onFinish }: ScanPracticeMode
             style={{
               padding: '8px 18px',
               borderRadius: '7px',
-              background: 'rgba(255,215,106,0.1)',
-              border: '1px solid rgba(255,215,106,0.35)',
-              color: '#FFD76A',
+              background: 'rgba(179,120,31,0.08)',
+              border: '1px solid rgba(179,120,31,0.4)',
+              color: 'var(--gold-ink)',
               fontSize: '13px',
               cursor: 'pointer',
               fontWeight: 600,

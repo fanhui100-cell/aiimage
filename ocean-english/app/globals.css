@@ -50,7 +50,7 @@
   --card: #fbf9f4;             /* 卡片 */
   --card-2: #ffffff;           /* 强调卡 / 输入 */
   --ink: #14191e;              /* 主文字 */
-  --ink-sub: #5b6b78;          /* 次文字 */
+  --ink-sub: #4a5a66;          /* 次文字（F1-4：对齐设计稿，米白底 AA 5.3:1） */
   --ink-muted: #8a97a2;
   --line: rgba(20,30,40,0.10);
   --line-strong: rgba(20,30,40,0.16);

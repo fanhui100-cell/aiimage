@@ -29,9 +29,9 @@ export function ScanHistoryFilters({ filters, onChange, totalCount, filteredCoun
           width: '100%',
           padding: '10px 14px',
           borderRadius: '8px',
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(155,191,202,0.2)',
-          color: '#ECFBFF',
+          background: 'var(--card)',
+          border: '1px solid var(--line)',
+          color: 'var(--ink)',
           fontSize: '13px',
           outline: 'none',
           marginBottom: '12px',
@@ -50,9 +50,9 @@ export function ScanHistoryFilters({ filters, onChange, totalCount, filteredCoun
               style={{
                 padding: '4px 12px',
                 borderRadius: '20px',
-                background: active ? 'rgba(56,189,248,0.15)' : 'rgba(255,255,255,0.03)',
-                border: `1px solid ${active ? 'rgba(56,189,248,0.5)' : 'rgba(155,191,202,0.15)'}`,
-                color: active ? '#38BDF8' : '#9BBFCA',
+                background: active ? 'rgba(59,91,217,0.1)' : 'var(--card)',
+                border: `1px solid ${active ? 'rgba(59,91,217,0.45)' : 'var(--line)'}`,
+                color: active ? 'var(--blue-ink)' : 'var(--ink-sub)',
                 fontSize: '12px',
                 cursor: 'pointer',
               }}
@@ -78,9 +78,9 @@ export function ScanHistoryFilters({ filters, onChange, totalCount, filteredCoun
               style={{
                 padding: '4px 12px',
                 borderRadius: '20px',
-                background: active ? 'rgba(255,215,106,0.1)' : 'rgba(255,255,255,0.03)',
-                border: `1px solid ${active ? 'rgba(255,215,106,0.4)' : 'rgba(155,191,202,0.15)'}`,
-                color: active ? '#FFD76A' : 'rgba(155,191,202,0.6)',
+                background: active ? 'rgba(179,120,31,0.08)' : 'var(--card)',
+                border: `1px solid ${active ? 'rgba(255,215,106,0.4)' : 'var(--line)'}`,
+                color: active ? 'var(--gold-ink)' : 'var(--ink-muted)',
                 fontSize: '12px',
                 cursor: 'pointer',
               }}
@@ -92,7 +92,7 @@ export function ScanHistoryFilters({ filters, onChange, totalCount, filteredCoun
       </div>
 
       {/* Result count */}
-      <div style={{ marginTop: '8px', fontSize: '11px', color: 'rgba(155,191,202,0.4)', fontFamily: 'var(--font-mono)' }}>
+      <div style={{ marginTop: '8px', fontSize: '11px', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>
         {filteredCount === totalCount
           ? `${totalCount} document${totalCount !== 1 ? 's' : ''}`
           : `${filteredCount} of ${totalCount} documents`}

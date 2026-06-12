@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/config/site'
-import { UserMenu } from '@/components/auth/UserMenu'
+import { StreakPopover, AccountPopover } from '@/components/layout/NavPopovers'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
 import { PRIMARY_NAV, TOOL_NAV } from '@/lib/product-flow/nav'
@@ -114,29 +114,10 @@ export function Navbar() {
         <ToolsDropdown textColor={textColor} activeColor={activeColor} dark={dark} pathname={pathname} />
       </div>
 
-      {/* ── 右侧: streak + 头像 ── */}
+      {/* ── 右侧: streak popover + 账户 popover（F1-3）── */}
       <div className="flex items-center gap-3 shrink-0">
-        {/* streak 连续天数 */}
-        {streak > 0 && (
-          <div
-            className="hidden sm:flex items-center gap-1.5"
-            style={{
-              padding: '6px 12px',
-              borderRadius: 'var(--r-pill)',
-              background: dark ? 'rgba(241,200,121,0.08)' : 'var(--card)',
-              border: `1px solid ${dark ? 'rgba(241,200,121,0.2)' : 'var(--line)'}`,
-            }}
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold-ink)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2c1 4 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3 .5 2 2 2.5 2 2.5C9 8 12 6 12 2z" />
-            </svg>
-            <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: '13px', color: 'var(--ink)' }}>
-              {streak}
-            </span>
-            <span style={{ fontSize: '11px', color: textColor }}>天</span>
-          </div>
-        )}
-        <UserMenu />
+        {streak > 0 && <StreakPopover dark={dark} />}
+        <AccountPopover dark={dark} />
       </div>
     </nav>
   )

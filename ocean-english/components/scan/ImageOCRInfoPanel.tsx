@@ -12,14 +12,14 @@ interface ImageOCRInfoPanelProps {
 
 const LABEL_STYLE: React.CSSProperties = {
   fontSize: '11px',
-  color: 'rgba(155,191,202,0.5)',
+  color: 'var(--ink-muted)',
   marginBottom: '2px',
   fontFamily: 'var(--font-mono)',
 }
 
 const VALUE_STYLE: React.CSSProperties = {
   fontSize: '13px',
-  color: '#ECFBFF',
+  color: 'var(--ink)',
 }
 
 function InfoRow({ label, value }: { label: string; value: string }) {
@@ -62,10 +62,10 @@ export function ImageOCRInfoPanel({
     <div>
       {/* Header */}
       <div style={{ marginBottom: '20px' }}>
-        <div style={{ fontSize: '14px', fontWeight: 600, color: '#34D399', marginBottom: '4px' }}>
+        <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--teal-ink)', marginBottom: '4px' }}>
           ✓ Image OCR complete / 图片 OCR 完成
         </div>
-        <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', fontFamily: 'var(--font-mono)' }}>
+        <div style={{ fontSize: '11px', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>
           {extractionMethod}
           {confidencePct !== null && ` · confidence ${confidencePct}%`}
           {' · '}
@@ -77,8 +77,8 @@ export function ImageOCRInfoPanel({
 
       {/* File info grid */}
       <div style={{
-        background: 'rgba(255,255,255,0.03)',
-        border: '1px solid rgba(155,191,202,0.12)',
+        background: 'var(--card)',
+        border: '1px solid var(--line)',
         borderRadius: '12px',
         padding: '18px',
         marginBottom: '12px',
@@ -86,7 +86,7 @@ export function ImageOCRInfoPanel({
         <div style={{
           fontSize: '11px',
           letterSpacing: '0.1em',
-          color: 'rgba(56,189,248,0.5)',
+          color: 'rgba(59,91,217,0.45)',
           fontFamily: 'var(--font-mono)',
           marginBottom: '14px',
         }}>
@@ -112,10 +112,10 @@ export function ImageOCRInfoPanel({
           padding: '14px 16px',
           marginBottom: '12px',
         }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: '#38BDF8', marginBottom: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--blue-ink)', marginBottom: '4px' }}>
             Demo OCR Mode / 演示 OCR 模式
           </div>
-          <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+          <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
             No Vision API is configured. Showing demo text. Upload a clear image and configure a Vision API for real OCR results.
             <br />
             未配置 Vision API，当前显示预加载示例文本。配置 Vision API 后上传清晰图片可启用真实 OCR。
@@ -132,10 +132,10 @@ export function ImageOCRInfoPanel({
           padding: '12px 16px',
           marginBottom: '12px',
         }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: 'rgba(255,215,106,0.9)', marginBottom: '4px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--gold-ink)', marginBottom: '4px' }}>
             ⚠ Short text extracted / 提取文本较短
           </div>
-          <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+          <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
             Only {usableTextLength} character{usableTextLength !== 1 ? 's' : ''} were extracted. AI analysis may be limited, but you can still proceed.
             <br />
             仅提取到 {usableTextLength} 个字符，AI 分析效果可能有限，但仍可继续。
@@ -152,13 +152,13 @@ export function ImageOCRInfoPanel({
           padding: '16px 18px',
           marginBottom: '12px',
         }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: '#F97316', marginBottom: '6px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: '#b3261e', marginBottom: '6px' }}>
             ⚠ No Text Extracted / 未提取到文字
           </div>
-          <p style={{ margin: '0 0 4px', fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6 }}>
+          <p style={{ margin: '0 0 4px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6 }}>
             OCR found little or no text in this image. Try a higher-resolution, well-lit image with clear text.
           </p>
-          <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+          <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
             OCR 未能从图片中提取足够文字。请尝试使用更清晰、光线充足、文字清楚的图片。
           </p>
         </div>
@@ -173,7 +173,7 @@ export function ImageOCRInfoPanel({
           padding: '10px 14px',
           marginBottom: '12px',
           fontSize: '12px',
-          color: 'rgba(255,215,106,0.8)',
+          color: 'var(--gold-ink)',
         }}>
           ⚠ The extracted text is long. Only the first{' '}
           {DOCUMENT_CONFIG.maxRawTextForAnalysis.toLocaleString()} characters will be sent to AI
@@ -187,7 +187,7 @@ export function ImageOCRInfoPanel({
           {warnings.map((w, i) => (
             <div key={i} style={{
               fontSize: '12px',
-              color: 'rgba(155,191,202,0.6)',
+              color: 'var(--ink-muted)',
               padding: '4px 0',
               borderBottom: i < warnings.length - 1 ? '1px solid rgba(155,191,202,0.06)' : 'none',
             }}>
@@ -204,10 +204,10 @@ export function ImageOCRInfoPanel({
             onClick={() => setRawExpanded(v => !v)}
             style={{
               background: 'none',
-              border: '1px solid rgba(155,191,202,0.15)',
+              border: '1px solid var(--line)',
               borderRadius: '6px',
               padding: '6px 14px',
-              color: 'rgba(155,191,202,0.5)',
+              color: 'var(--ink-muted)',
               fontSize: '11px',
               cursor: 'pointer',
               fontFamily: 'var(--font-mono)',
@@ -225,11 +225,11 @@ export function ImageOCRInfoPanel({
             <div style={{
               marginTop: '8px',
               background: 'rgba(0,0,0,0.3)',
-              border: '1px solid rgba(155,191,202,0.1)',
+              border: '1px solid var(--line)',
               borderRadius: '8px',
               padding: '14px 16px',
               fontSize: '12px',
-              color: '#9BBFCA',
+              color: 'var(--ink-sub)',
               lineHeight: 1.8,
               fontFamily: 'var(--font-mono)',
               whiteSpace: 'pre-wrap',
@@ -238,7 +238,7 @@ export function ImageOCRInfoPanel({
             }}>
               {previewText}
               {previewTruncated && (
-                <span style={{ display: 'block', marginTop: '8px', color: 'rgba(155,191,202,0.4)', fontStyle: 'italic' }}>
+                <span style={{ display: 'block', marginTop: '8px', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
                   … [preview truncated — full text used for analysis]
                 </span>
               )}
@@ -255,9 +255,9 @@ export function ImageOCRInfoPanel({
             style={{
               padding: '12px 28px',
               borderRadius: '10px',
-              background: 'rgba(255,215,106,0.12)',
+              background: 'rgba(179,120,31,0.1)',
               border: '1px solid rgba(255,215,106,0.5)',
-              color: '#FFD76A',
+              color: 'var(--gold-ink)',
               fontSize: '14px',
               fontWeight: 600,
               letterSpacing: '0.04em',
@@ -286,8 +286,8 @@ export function ImageOCRInfoPanel({
             padding: '12px 20px',
             borderRadius: '10px',
             background: 'transparent',
-            border: '1px solid rgba(155,191,202,0.2)',
-            color: '#9BBFCA',
+            border: '1px solid var(--line)',
+            color: 'var(--ink-sub)',
             fontSize: '14px',
             cursor: 'pointer',
           }}

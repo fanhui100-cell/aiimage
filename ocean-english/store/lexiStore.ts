@@ -279,6 +279,8 @@ interface LexiStoreActions {
   // B7-3：词详情「移出」——从学习库删除（云端同步删除由 CloudSyncProvider diff 触发）
   removeWord: (id: string) => void
   incXp: (n: number) => void
+  /** F1-3：补签 — 扣 50 XP 补昨日 history 缺口并重算 streak；不可补返回 false */
+  repairStreak: () => boolean
   recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed') => void
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
@@ -593,6 +595,38 @@ export const useLexiStore = create<LexiStore>()(
       }),
 
       incXp: (n) => set(s => ({ xp: s.xp + n })),
+      repairStreak: () => {
+        const s = get()
+        const day = (off: number) => {
+          const d = new Date(); d.setDate(d.getDate() - off)
+          return d.toISOString().slice(0, 10)
+        }
+        const yesterday = day(1)
+        const hasYesterday = !!s.history[yesterday]
+          || (s.daily.date === yesterday && (s.daily.learned + s.daily.quizzed + s.daily.reviewed) > 0)
+        if (hasYesterday || s.xp < 50) return false
+        const history = { ...s.history, [yesterday]: { learned: 0, quizzed: 0, reviewed: 0 } }
+        // 重算 streak：从今天（或昨天）起连续往回数有记录的天
+        const today = day(0)
+        const todayActive = s.daily.date === today && (s.daily.learned + s.daily.quizzed + s.daily.reviewed) > 0
+        let current = 0
+        for (let i = todayActive ? 0 : 1; ; i++) {
+          const k = day(i)
+          const active = (k === today && todayActive) || !!history[k]
+          if (active) current++
+          else break
+        }
+        set({
+          xp: s.xp - 50,
+          history,
+          streakData: {
+            current,
+            longest: Math.max(s.streakData.longest, current),
+            lastStudyDate: todayActive ? today : yesterday,
+          },
+        })
+        return true
+      },
 
       // 统一活动记录入口：跨天自动清零（昨天归档进 history）+ streak 计算
       recordActivity: (kind) => set(s => {

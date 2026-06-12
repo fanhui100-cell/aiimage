@@ -47,12 +47,12 @@ export function DocumentAnalysisPanel({
         gap: '10px',
       }}>
         <div>
-          <div style={{ fontSize: '13px', color: '#34D399', marginBottom: '2px' }}>
+          <div style={{ fontSize: '13px', color: 'var(--teal-ink)', marginBottom: '2px' }}>
             ✓ Analysis complete / 分析完成
           </div>
           <div style={{
             fontSize: '11px',
-            color: 'rgba(155,191,202,0.5)',
+            color: 'var(--ink-muted)',
             fontFamily: 'var(--font-mono)',
           }}>
             {result.fileName} · {result.questions.length} questions · {result.vocabulary.length} words
@@ -62,10 +62,10 @@ export function DocumentAnalysisPanel({
           onClick={onReset}
           style={{
             background: 'none',
-            border: '1px solid rgba(155,191,202,0.2)',
+            border: '1px solid var(--line)',
             borderRadius: '7px',
             padding: '7px 14px',
-            color: '#9BBFCA',
+            color: 'var(--ink-sub)',
             fontSize: '12px',
             cursor: 'pointer',
           }}

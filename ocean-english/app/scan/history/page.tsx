@@ -39,25 +39,25 @@ export default function ScanHistoryPage() {
 
   return (
     <AppShell>
-      <div style={{ minHeight: '100vh', background: 'var(--bg-deep)', paddingTop: '16px' }}>
+      <div className="theme-light" style={{ minHeight: '100vh', background: 'var(--paper)', paddingTop: '16px' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
 
           {/* Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '8px' }}>
             <div>
-              <h1 style={{ margin: '0 0 4px', fontSize: '28px', fontWeight: 700, color: '#ECFBFF' }}>
+              <h1 style={{ margin: '0 0 4px', fontSize: '28px', fontWeight: 700, color: 'var(--ink)' }}>
                 Scan History{' '}
-                <span style={{ fontSize: '16px', color: '#9BBFCA' }}>扫描历史</span>
+                <span style={{ fontSize: '16px', color: 'var(--ink-sub)' }}>扫描历史</span>
               </h1>
-              <p style={{ margin: 0, fontSize: '13px', color: '#9BBFCA', lineHeight: 1.6 }}>
+              <p style={{ margin: 0, fontSize: '13px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
                 Review previous document analyses stored locally in this browser.
                 <br />
-                <span style={{ color: 'rgba(155,191,202,0.6)', fontSize: '12px' }}>
+                <span style={{ color: 'var(--ink-muted)', fontSize: '12px' }}>
                   查看保存在当前浏览器本地的历史文档分析结果。
                 </span>
               </p>
             </div>
-            <Link href="/scan" style={{ fontSize: '13px', color: '#38BDF8', textDecoration: 'none', whiteSpace: 'nowrap', alignSelf: 'flex-start', marginTop: '4px' }}>
+            <Link href="/scan" style={{ fontSize: '13px', color: 'var(--blue-ink)', textDecoration: 'none', whiteSpace: 'nowrap', alignSelf: 'flex-start', marginTop: '4px' }}>
               ← Back to Scan / 返回扫描
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default function ScanHistoryPage() {
             padding: '10px 14px',
             margin: '16px 0 20px',
             fontSize: '11px',
-            color: 'rgba(255,215,106,0.6)',
+            color: 'rgba(179,120,31,0.55)',
             lineHeight: 1.7,
           }}>
             🔒 Your scan history is stored locally in this browser only. Original uploaded files are not saved.
@@ -100,7 +100,7 @@ export default function ScanHistoryPage() {
 
           {/* Clear all */}
           {scanDocuments.length > 0 && (
-            <div style={{ borderTop: '1px solid rgba(155,191,202,0.1)', paddingTop: '20px', marginTop: '8px' }}>
+            <div style={{ borderTop: '1px solid var(--line)', paddingTop: '20px', marginTop: '8px' }}>
               {!showClearConfirm ? (
                 <button
                   onClick={() => setShowClearConfirm(true)}
@@ -134,13 +134,13 @@ export default function ScanHistoryPage() {
                   <div style={{ display: 'flex', gap: '8px' }}>
                     <button
                       onClick={handleClearAll}
-                      style={{ padding: '5px 14px', borderRadius: '6px', background: 'rgba(239,68,68,0.18)', border: '1px solid rgba(239,68,68,0.4)', color: '#F87171', fontSize: '12px', cursor: 'pointer' }}
+                      style={{ padding: '5px 14px', borderRadius: '6px', background: 'rgba(239,68,68,0.18)', border: '1px solid rgba(179,38,30,0.35)', color: '#b3261e', fontSize: '12px', cursor: 'pointer' }}
                     >
                       Delete All / 全部删除
                     </button>
                     <button
                       onClick={() => setShowClearConfirm(false)}
-                      style={{ padding: '5px 12px', borderRadius: '6px', background: 'none', border: '1px solid rgba(155,191,202,0.2)', color: '#9BBFCA', fontSize: '12px', cursor: 'pointer' }}
+                      style={{ padding: '5px 12px', borderRadius: '6px', background: 'none', border: '1px solid var(--line)', color: 'var(--ink-sub)', fontSize: '12px', cursor: 'pointer' }}
                     >
                       Cancel / 取消
                     </button>

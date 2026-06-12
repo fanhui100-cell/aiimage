@@ -49,7 +49,7 @@ export function DocumentUploadPanel({ disabled, onFile, onDemo }: DocumentUpload
         }}
         onClick={() => { if (!disabled) fileInputRef.current?.click() }}
         style={{
-          border: `2px dashed ${isDragging && !disabled ? 'rgba(255,215,106,0.7)' : disabled ? 'rgba(155,191,202,0.15)' : 'rgba(255,215,106,0.35)'}`,
+          border: `2px dashed ${isDragging && !disabled ? 'var(--gold-ink)' : disabled ? 'var(--line)' : 'rgba(179,120,31,0.4)'}`,
           borderRadius: '14px',
           padding: '40px 24px',
           textAlign: 'center',
@@ -65,7 +65,7 @@ export function DocumentUploadPanel({ disabled, onFile, onDemo }: DocumentUpload
           style={{
             fontSize: '15px',
             fontWeight: 600,
-            color: disabled ? 'rgba(155,191,202,0.5)' : 'rgba(255,215,106,0.85)',
+            color: disabled ? 'var(--ink-muted)' : 'var(--gold-ink)',
             marginBottom: '6px',
           }}
         >
@@ -76,7 +76,7 @@ export function DocumentUploadPanel({ disabled, onFile, onDemo }: DocumentUpload
         <div
           style={{
             fontSize: '12px',
-            color: 'rgba(155,191,202,0.5)',
+            color: 'var(--ink-muted)',
             fontFamily: 'var(--font-mono)',
           }}
         >
@@ -93,7 +93,7 @@ export function DocumentUploadPanel({ disabled, onFile, onDemo }: DocumentUpload
             border: '1px solid rgba(239,68,68,0.25)',
             borderRadius: '8px',
             fontSize: '13px',
-            color: 'rgba(239,68,68,0.8)',
+            color: '#b3261e',
             marginBottom: '12px',
           }}
         >
@@ -108,10 +108,10 @@ export function DocumentUploadPanel({ disabled, onFile, onDemo }: DocumentUpload
             onClick={onDemo}
             style={{
               background: 'none',
-              border: '1px dashed rgba(155,191,202,0.3)',
+              border: '1px dashed var(--line-strong)',
               borderRadius: '8px',
               padding: '8px 18px',
-              color: 'rgba(155,191,202,0.6)',
+              color: 'var(--ink-muted)',
               fontSize: '12px',
               cursor: 'pointer',
               fontFamily: 'var(--font-mono)',

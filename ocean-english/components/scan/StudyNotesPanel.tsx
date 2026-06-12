@@ -34,8 +34,8 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
     <div style={{ marginBottom: '20px' }}>
       {/* Summary */}
       <div style={{
-        background: 'rgba(255,255,255,0.03)',
-        border: '1px solid rgba(155,191,202,0.12)',
+        background: 'var(--card)',
+        border: '1px solid var(--line)',
         borderRadius: '10px',
         padding: '16px 18px',
         marginBottom: '12px',
@@ -49,10 +49,10 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
         }}>
           DOCUMENT SUMMARY / 文档摘要
         </div>
-        <p style={{ margin: '0 0 6px', fontSize: '13px', color: '#ECFBFF', lineHeight: 1.7 }}>
+        <p style={{ margin: '0 0 6px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.7 }}>
           {result.summaryEn}
         </p>
-        <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.7 }}>
+        <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.7 }}>
           {result.summaryZh}
         </p>
       </div>
@@ -64,20 +64,20 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
             const isSaved = savedNotes.has(i)
             return (
               <div key={i} style={{
-                background: 'rgba(255,255,255,0.02)',
-                border: '1px solid rgba(155,191,202,0.1)',
+                background: 'var(--card)',
+                border: '1px solid var(--line)',
                 borderRadius: '10px',
                 padding: '14px 16px',
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: '13px', fontWeight: 600, color: '#38BDF8', marginBottom: '4px' }}>
+                    <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--blue-ink)', marginBottom: '4px' }}>
                       {note.title} / {note.titleZh}
                     </div>
-                    <p style={{ margin: '0 0 4px', fontSize: '12px', color: '#ECFBFF', lineHeight: 1.6 }}>
+                    <p style={{ margin: '0 0 4px', fontSize: '12px', color: 'var(--ink)', lineHeight: 1.6 }}>
                       {note.content}
                     </p>
-                    <p style={{ margin: 0, fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+                    <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
                       {note.contentZh}
                     </p>
                   </div>
@@ -91,7 +91,7 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
                         borderRadius: '6px',
                         background: isSaved ? 'rgba(52,211,153,0.06)' : 'rgba(56,189,248,0.08)',
                         border: `1px solid ${isSaved ? 'rgba(52,211,153,0.3)' : 'rgba(56,189,248,0.25)'}`,
-                        color: isSaved ? '#34D399' : '#38BDF8',
+                        color: isSaved ? 'var(--teal-ink)' : 'var(--blue-ink)',
                         fontSize: '11px',
                         cursor: isSaved ? 'default' : 'pointer',
                         whiteSpace: 'nowrap',
@@ -118,14 +118,14 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
         }}>
           <div style={{
             fontSize: '11px',
-            color: 'rgba(255,215,106,0.7)',
+            color: 'var(--gold-ink)',
             fontFamily: 'var(--font-mono)',
             marginBottom: '6px',
           }}>
             NOTICES / 提示
           </div>
           {result.warnings.map((w, i) => (
-            <div key={i} style={{ fontSize: '12px', color: 'rgba(255,215,106,0.8)', marginBottom: '3px' }}>
+            <div key={i} style={{ fontSize: '12px', color: 'var(--gold-ink)', marginBottom: '3px' }}>
               ⚠ {w}
             </div>
           ))}
@@ -138,10 +138,10 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
           onClick={() => setRawExpanded(v => !v)}
           style={{
             background: 'none',
-            border: '1px solid rgba(155,191,202,0.15)',
+            border: '1px solid var(--line)',
             borderRadius: '6px',
             padding: '6px 14px',
-            color: 'rgba(155,191,202,0.5)',
+            color: 'var(--ink-muted)',
             fontSize: '11px',
             cursor: 'pointer',
             fontFamily: 'var(--font-mono)',
@@ -153,11 +153,11 @@ export function StudyNotesPanel({ result, documentId = '', onSaveNote }: StudyNo
           <div style={{
             marginTop: '8px',
             background: 'rgba(0,0,0,0.3)',
-            border: '1px solid rgba(155,191,202,0.1)',
+            border: '1px solid var(--line)',
             borderRadius: '8px',
             padding: '14px 16px',
             fontSize: '12px',
-            color: '#9BBFCA',
+            color: 'var(--ink-sub)',
             lineHeight: 1.8,
             fontFamily: 'var(--font-mono)',
             whiteSpace: 'pre-wrap',

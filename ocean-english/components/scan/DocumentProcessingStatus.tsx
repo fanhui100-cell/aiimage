@@ -29,7 +29,7 @@ export function DocumentProcessingStatusPanel({
   return (
     <div
       style={{
-        background: 'rgba(255,255,255,0.03)',
+        background: 'var(--card)',
         border: `1px solid ${status === 'error' ? 'rgba(239,68,68,0.3)' : 'rgba(255,215,106,0.2)'}`,
         borderRadius: '12px',
         padding: '20px 24px',
@@ -40,7 +40,7 @@ export function DocumentProcessingStatusPanel({
         <div
           style={{
             fontSize: '12px',
-            color: '#9BBFCA',
+            color: 'var(--ink-sub)',
             fontFamily: 'var(--font-mono)',
             marginBottom: '14px',
           }}
@@ -51,11 +51,11 @@ export function DocumentProcessingStatusPanel({
 
       {status === 'error' ? (
         <div>
-          <div style={{ fontSize: '14px', fontWeight: 600, color: 'rgba(239,68,68,0.8)', marginBottom: '6px' }}>
+          <div style={{ fontSize: '14px', fontWeight: 600, color: '#b3261e', marginBottom: '6px' }}>
             ✗ Processing failed / 处理失败
           </div>
           {error && (
-            <div style={{ fontSize: '13px', color: 'rgba(155,191,202,0.7)' }}>{error}</div>
+            <div style={{ fontSize: '13px', color: 'var(--ink-sub)' }}>{error}</div>
           )}
         </div>
       ) : (
@@ -81,9 +81,9 @@ export function DocumentProcessingStatusPanel({
                     background: isDone
                       ? 'rgba(52,211,153,0.3)'
                       : isActive
-                        ? 'rgba(255,215,106,0.3)'
+                        ? 'rgba(179,120,31,0.35)'
                         : 'rgba(255,255,255,0.06)',
-                    border: `1px solid ${isDone ? 'rgba(52,211,153,0.6)' : isActive ? 'rgba(255,215,106,0.6)' : 'rgba(155,191,202,0.2)'}`,
+                    border: `1px solid ${isDone ? 'rgba(14,140,122,0.5)' : isActive ? 'rgba(179,120,31,0.55)' : 'var(--line)'}`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -96,7 +96,7 @@ export function DocumentProcessingStatusPanel({
                 <span
                   style={{
                     fontSize: '13px',
-                    color: isDone ? '#34D399' : isActive ? '#FFD76A' : '#9BBFCA',
+                    color: isDone ? 'var(--teal-ink)' : isActive ? 'var(--gold-ink)' : 'var(--ink-sub)',
                     fontWeight: isActive ? 600 : 400,
                   }}
                 >

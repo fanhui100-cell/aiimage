@@ -20,7 +20,7 @@ export function DocumentComplianceNotice({ confirmed, onConfirm }: DocumentCompl
         style={{
           fontSize: '11px',
           letterSpacing: '0.12em',
-          color: 'rgba(255,215,106,0.7)',
+          color: 'var(--gold-ink)',
           fontFamily: 'var(--font-mono)',
           marginBottom: '10px',
         }}
@@ -28,11 +28,11 @@ export function DocumentComplianceNotice({ confirmed, onConfirm }: DocumentCompl
         UPLOAD NOTICE / 上传须知
       </div>
 
-      <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#ECFBFF', lineHeight: 1.6 }}>
+      <p style={{ margin: '0 0 8px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.6 }}>
         Please only upload documents you own or have the right to process. Do not upload copyrighted
         textbooks, past exam papers, or third-party materials without authorization.
       </p>
-      <p style={{ margin: '0 0 14px', fontSize: '12px', color: '#9BBFCA', lineHeight: 1.6 }}>
+      <p style={{ margin: '0 0 14px', fontSize: '12px', color: 'var(--ink-sub)', lineHeight: 1.6 }}>
         请仅上传您拥有或有权处理的文档。请勿上传受版权保护的教材、历年真题或未经授权的第三方材料。
       </p>
 
@@ -52,12 +52,12 @@ export function DocumentComplianceNotice({ confirmed, onConfirm }: DocumentCompl
             marginTop: '2px',
             width: '16px',
             height: '16px',
-            accentColor: '#FFD76A',
+            accentColor: 'var(--gold-ink)',
             flexShrink: 0,
             cursor: 'pointer',
           }}
         />
-        <span style={{ fontSize: '13px', color: confirmed ? '#FFD76A' : '#9BBFCA', lineHeight: 1.5 }}>
+        <span style={{ fontSize: '13px', color: confirmed ? 'var(--gold-ink)' : 'var(--ink-sub)', lineHeight: 1.5 }}>
           I confirm I have the right to process this document / 我确认我有权处理此文档
         </span>
       </label>

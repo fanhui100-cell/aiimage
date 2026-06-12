@@ -205,9 +205,11 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     await page.waitForURL('**/lexiverse?word=accept**', { timeout: 15_000 })
     // 宇宙 dock 词图按钮存在（iframe 注入层；?word= 会跳转进星系页）
     await expect.poll(async () => {
-      const frame = page.frames().find(f => /Galaxy\.html|Universe\.html/.test(f.url()))
-      if (!frame) return -1
-      return frame.locator('.lv2-dock button').count()
-    }, { timeout: 20_000 }).toBeGreaterThanOrEqual(4)
+      try {
+        const frame = page.frames().find(f => /Galaxy\.html|Universe\.html/.test(f.url()))
+        if (!frame) return -1
+        return await frame.locator('.lv2-dock button').count()
+      } catch { return -1 }   // iframe 重载（?word=→?galaxy= src 切换）竞态，继续轮询
+    }, { timeout: 25_000 }).toBeGreaterThanOrEqual(4)
   })
 })

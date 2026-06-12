@@ -12,11 +12,11 @@ interface ExtractedVocabularyPanelProps {
 }
 
 const DIFFICULTY_COLORS: Record<string, string> = {
-  beginner: '#34D399',
-  elementary: '#38BDF8',
-  intermediate: '#7EF9FF',
+  beginner: 'var(--teal-ink)',
+  elementary: 'var(--blue-ink)',
+  intermediate: 'var(--teal-ink)',
   advanced: '#8B5CF6',
-  exam: '#F97316',
+  exam: '#b3261e',
 }
 
 function wordId(word: string): string {
@@ -70,9 +70,9 @@ export function ExtractedVocabularyPanel({
             style={{
               padding: '5px 12px',
               borderRadius: '6px',
-              background: 'rgba(52,211,153,0.1)',
-              border: '1px solid rgba(52,211,153,0.4)',
-              color: '#34D399',
+              background: 'rgba(14,140,122,0.08)',
+              border: '1px solid rgba(14,140,122,0.35)',
+              color: 'var(--teal-ink)',
               fontSize: '11px',
               cursor: 'pointer',
               fontFamily: 'var(--font-mono)',
@@ -87,7 +87,7 @@ export function ExtractedVocabularyPanel({
         {vocabulary.map(v => {
           const inReview = isInReview(v.word)
           const added = isAdded(v.word)
-          const color = DIFFICULTY_COLORS[v.difficulty ?? 'intermediate'] ?? '#9BBFCA'
+          const color = DIFFICULTY_COLORS[v.difficulty ?? 'intermediate'] ?? 'var(--ink-sub)'
 
           // Button state: already in review > added this session > available
           let btnLabel: string
@@ -96,8 +96,8 @@ export function ExtractedVocabularyPanel({
             btnLabel = '✓ In Review'
             btnStyle = {
               background: 'rgba(155,191,202,0.06)',
-              border: '1px solid rgba(155,191,202,0.2)',
-              color: 'rgba(155,191,202,0.45)',
+              border: '1px solid var(--line)',
+              color: 'var(--ink-muted)',
               cursor: 'default',
             }
           } else if (added || inReview) {
@@ -105,15 +105,15 @@ export function ExtractedVocabularyPanel({
             btnStyle = {
               background: 'rgba(52,211,153,0.08)',
               border: '1px solid rgba(52,211,153,0.3)',
-              color: '#34D399',
+              color: 'var(--teal-ink)',
               cursor: 'default',
             }
           } else {
             btnLabel = '+ Review'
             btnStyle = {
-              background: 'rgba(56,189,248,0.1)',
+              background: 'rgba(59,91,217,0.08)',
               border: '1px solid rgba(56,189,248,0.3)',
-              color: '#38BDF8',
+              color: 'var(--blue-ink)',
               cursor: 'pointer',
             }
           }
@@ -127,8 +127,8 @@ export function ExtractedVocabularyPanel({
                 alignItems: 'flex-start',
                 gap: '12px',
                 padding: '12px 16px',
-                background: 'rgba(255,255,255,0.02)',
-                border: '1px solid rgba(155,191,202,0.1)',
+                background: 'var(--card)',
+                border: '1px solid var(--line)',
                 borderRadius: '10px',
               }}
             >
@@ -136,7 +136,7 @@ export function ExtractedVocabularyPanel({
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '3px', flexWrap: 'wrap' }}>
                   <Link
                     href={`/word/${wordId(v.word)}`}
-                    style={{ fontSize: '15px', fontWeight: 700, color: '#ECFBFF', textDecoration: 'none' }}
+                    style={{ fontSize: '15px', fontWeight: 700, color: 'var(--ink)', textDecoration: 'none' }}
                   >
                     {v.word}
                   </Link>
@@ -161,17 +161,17 @@ export function ExtractedVocabularyPanel({
                     </span>
                   )}
                   {v.shouldReview && (
-                    <span style={{ fontSize: '10px', color: 'rgba(255,215,106,0.6)' }}>★ recommended</span>
+                    <span style={{ fontSize: '10px', color: 'rgba(179,120,31,0.55)' }}>★ recommended</span>
                   )}
                 </div>
                 {v.meaningZh && (
-                  <div style={{ fontSize: '12px', color: '#7EF9FF', marginBottom: '2px' }}>{v.meaningZh}</div>
+                  <div style={{ fontSize: '12px', color: 'var(--teal-ink)', marginBottom: '2px' }}>{v.meaningZh}</div>
                 )}
                 {v.definitionEn && (
-                  <div style={{ fontSize: '12px', color: '#9BBFCA', marginBottom: '2px' }}>{v.definitionEn}</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ink-sub)', marginBottom: '2px' }}>{v.definitionEn}</div>
                 )}
                 {v.context && (
-                  <div style={{ fontSize: '11px', color: 'rgba(155,191,202,0.5)', fontStyle: 'italic' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
                     {v.context}
                   </div>
                 )}

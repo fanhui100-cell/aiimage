@@ -38,13 +38,13 @@ export function QuizDraftPreview({ drafts, onRemove, onPracticeFinish }: QuizDra
           <div style={{
             fontSize: '11px',
             letterSpacing: '0.1em',
-            color: 'rgba(255,215,106,0.6)',
+            color: 'rgba(179,120,31,0.55)',
             fontFamily: 'var(--font-mono)',
             marginBottom: '2px',
           }}>
             SCAN QUIZ DRAFTS / 扫描练习草稿
           </div>
-          <div style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', display: 'flex', gap: '10px' }}>
+          <div style={{ fontSize: '12px', color: 'var(--ink-muted)', display: 'flex', gap: '10px' }}>
             {draftCount > 0 && <span>📝 {draftCount} draft{draftCount !== 1 ? 's' : ''}</span>}
             {difficultCount > 0 && <span>⚑ {difficultCount} difficult</span>}
           </div>
@@ -54,9 +54,9 @@ export function QuizDraftPreview({ drafts, onRemove, onPracticeFinish }: QuizDra
           style={{
             padding: '8px 20px',
             borderRadius: '8px',
-            background: practiceOpen ? 'rgba(255,215,106,0.08)' : 'rgba(255,215,106,0.14)',
+            background: practiceOpen ? 'rgba(179,120,31,0.08)' : 'rgba(255,215,106,0.14)',
             border: '1px solid rgba(255,215,106,0.45)',
-            color: '#FFD76A',
+            color: 'var(--gold-ink)',
             fontSize: '13px',
             fontWeight: 600,
             cursor: 'pointer',
@@ -76,8 +76,8 @@ export function QuizDraftPreview({ drafts, onRemove, onPracticeFinish }: QuizDra
               alignItems: 'flex-start',
               gap: '10px',
               padding: '10px 14px',
-              background: 'rgba(255,255,255,0.02)',
-              border: `1px solid ${d.status === 'needs-review' ? 'rgba(249,115,22,0.2)' : 'rgba(255,215,106,0.12)'}`,
+              background: 'var(--card)',
+              border: `1px solid ${d.status === 'needs-review' ? 'rgba(249,115,22,0.2)' : 'rgba(179,120,31,0.1)'}`,
               borderRadius: '8px',
             }}>
               <div style={{ flex: 1, minWidth: 0 }}>
@@ -86,18 +86,18 @@ export function QuizDraftPreview({ drafts, onRemove, onPracticeFinish }: QuizDra
                     fontSize: '10px',
                     padding: '1px 6px',
                     borderRadius: '3px',
-                    background: d.status === 'needs-review' ? 'rgba(249,115,22,0.1)' : 'rgba(255,215,106,0.1)',
+                    background: d.status === 'needs-review' ? 'rgba(249,115,22,0.1)' : 'rgba(179,120,31,0.08)',
                     border: `1px solid ${d.status === 'needs-review' ? 'rgba(249,115,22,0.3)' : 'rgba(255,215,106,0.25)'}`,
-                    color: d.status === 'needs-review' ? '#F97316' : 'rgba(255,215,106,0.7)',
+                    color: d.status === 'needs-review' ? '#b3261e' : 'var(--gold-ink)',
                     fontFamily: 'var(--font-mono)',
                   }}>
                     {d.status === 'needs-review' ? '⚑ difficult' : d.status}
                   </span>
-                  <span style={{ fontSize: '10px', color: 'rgba(155,191,202,0.3)', fontFamily: 'var(--font-mono)' }}>
+                  <span style={{ fontSize: '10px', color: 'var(--line-strong)', fontFamily: 'var(--font-mono)' }}>
                     {d.questionType}
                   </span>
                 </div>
-                <div style={{ fontSize: '13px', color: '#ECFBFF', lineHeight: 1.5 }}>
+                <div style={{ fontSize: '13px', color: 'var(--ink)', lineHeight: 1.5 }}>
                   {d.prompt.length > 100 ? d.prompt.slice(0, 100) + '…' : d.prompt}
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function QuizDraftPreview({ drafts, onRemove, onPracticeFinish }: QuizDra
                   flexShrink: 0,
                   background: 'none',
                   border: 'none',
-                  color: 'rgba(155,191,202,0.3)',
+                  color: 'var(--line-strong)',
                   cursor: 'pointer',
                   fontSize: '16px',
                   padding: '2px 6px',

@@ -9,10 +9,10 @@ interface ScanHistoryCardProps {
 }
 
 const STATUS_COLORS: Record<string, string> = {
-  analyzed: '#34D399',
-  'partially-analyzed': '#FFD76A',
-  'needs-ocr': '#F97316',
-  error: '#F87171',
+  analyzed: 'var(--teal-ink)',
+  'partially-analyzed': 'var(--gold-ink)',
+  'needs-ocr': '#b3261e',
+  error: '#b3261e',
 }
 
 const FILETYPE_LABELS: Record<string, string> = {
@@ -39,7 +39,7 @@ function truncate(str: string | undefined, max: number): string {
 }
 
 export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
-  const statusColor = STATUS_COLORS[doc.status] ?? '#9BBFCA'
+  const statusColor = STATUS_COLORS[doc.status] ?? 'var(--ink-sub)'
 
   return (
     <div style={{
@@ -107,19 +107,19 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
         {[
           { label: 'Questions', value: doc.questionCount, color: '#8B5CF6' },
           { label: 'Words', value: doc.vocabularyCount, color: 'var(--teal)' },
-          { label: 'Notes', value: doc.studyNoteCount, color: '#34D399' },
+          { label: 'Notes', value: doc.studyNoteCount, color: 'var(--teal-ink)' },
         ].map(({ label, value, color }) => (
           <div key={label} style={{ fontSize: '11px', color, fontFamily: 'var(--font-mono)' }}>
             {value} {label}
           </div>
         ))}
         {doc.reviewWordsAddedCount > 0 && (
-          <div style={{ fontSize: '11px', color: 'rgba(52,211,153,0.6)', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontSize: '11px', color: 'rgba(14,140,122,0.5)', fontFamily: 'var(--font-mono)' }}>
             +{doc.reviewWordsAddedCount} reviewed
           </div>
         )}
         {doc.quizDraftsSavedCount > 0 && (
-          <div style={{ fontSize: '11px', color: 'rgba(255,215,106,0.6)', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontSize: '11px', color: 'rgba(179,120,31,0.55)', fontFamily: 'var(--font-mono)' }}>
             +{doc.quizDraftsSavedCount} drafts
           </div>
         )}
@@ -150,7 +150,7 @@ export function ScanHistoryCard({ doc, onDelete }: ScanHistoryCardProps) {
             borderRadius: '7px',
             background: 'rgba(239,68,68,0.06)',
             border: '1px solid rgba(239,68,68,0.2)',
-            color: 'rgba(239,68,68,0.7)',
+            color: '#b3261e',
             fontSize: '12px',
             cursor: 'pointer',
             whiteSpace: 'nowrap',
