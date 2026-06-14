@@ -119,6 +119,10 @@ export interface DictionaryWord {
   primaryLevel?: number
   /** 阶段2：常用短语（前 6 条） */
   phrases?: { phrase: string; translation?: string }[]
+  /** 富化：词形变化（过去式/分词/三单/复数/比较级…，来源 ECDICT exchange） */
+  inflections?: Record<string, string>
+  /** 富化：近义辨析（同义/易混组成员 → 中文辨析） */
+  nuance?: { member: string; nuanceZh: string }[]
   sourceType: DictionarySourceType
   sourceNote: string | null
   /** Phase 8C: per-exam profiles (fine-grained). examTags[] remains the primary filter. */
@@ -146,8 +150,12 @@ export interface DictionaryWord {
 
 export interface WordSearchOptions {
   level?: WordLevel
-  /** P2：7 档等级（1-7），DB 侧按 ±1 档 overlaps 过滤 */
+  /** P2：7 档等级（1-7），DB 侧按 ±1 档 overlaps 过滤（galaxy 浏览用） */
   numericLevel?: number
+  /** P0：按本档原生词过滤（primary_level = 该档），选词推荐 / 单档刷词用 */
+  primaryLevel?: number
+  /** P0：排序策略；'frequency' = 真词频高频优先（选词推荐用） */
+  orderBy?: 'frequency'
   difficulty?: 1 | 2 | 3 | 4 | 5
   examTag?: ExamTag
   limit?: number

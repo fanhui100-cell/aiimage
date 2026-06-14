@@ -46,6 +46,7 @@ interface DbDictionaryWord {
   levels?: number[] | null
   primary_level?: number | null
   phrases?: { phrase: string; translation?: string }[] | null
+  inflections?: Record<string, string> | null
   source_type: string
   source_note: string | null
   created_at: string
@@ -60,6 +61,7 @@ interface DbDictionaryWord {
   dictionary_scene_usages?: DbSceneUsage[]
   word_pronunciations?: DbPronunciation[]
   exam_word_tags?: DbExamTag[]
+  dictionary_word_nuance?: DbNuance[]
 }
 
 interface DbDefinition {
@@ -118,6 +120,7 @@ interface DbPronunciation {
   is_default: boolean
 }
 interface DbExamTag { id: string; exam_type: string }
+interface DbNuance { id: string; member: string; nuance_zh: string; order_index: number }
 
 // ── DB row → DictionaryWord mapper ─────────────────────────────────────────
 
@@ -215,6 +218,10 @@ function mapDbWord(row: DbDictionaryWord): DictionaryWord {
     levels: row.levels ?? undefined,
     primaryLevel: row.primary_level ?? undefined,
     phrases: row.phrases ?? undefined,
+    inflections: row.inflections ?? undefined,
+    nuance: (row.dictionary_word_nuance ?? [])
+      .sort((a, b) => a.order_index - b.order_index)
+      .map(n => ({ member: n.member, nuanceZh: n.nuance_zh })),
     frequencyRank: row.frequency_rank,
     sourceType: row.source_type as DictionarySourceType,
     sourceNote: row.source_note,
@@ -250,6 +257,7 @@ const FULL_SELECT = [
   'dictionary_scene_usages(*)',
   'word_pronunciations(*)',
   'exam_word_tags(*)',
+  'dictionary_word_nuance(*)',
 ].join(', ')
 
 const SEARCH_SELECT = ['*', 'dictionary_definitions(*)', 'exam_word_tags(*)'].join(', ')
@@ -288,7 +296,10 @@ class SupabaseDictionaryClient implements DictionaryClient {
         .select(SEARCH_SELECT)
       // 真词修复：按 7 档浏览时该档词优先（primary_level 降序 → 纯高档词在前，
       // 多档高频基础词靠后），频率次序兜底；默认浏览维持原核心词优先
-      if (options?.numericLevel != null) {
+      if (options?.orderBy === 'frequency') {
+        // P0：选词推荐 — 真词频高频优先（frequency_rank 升序，1 = 最高频）
+        req = req.order('frequency_rank', { ascending: true, nullsFirst: false })
+      } else if (options?.numericLevel != null) {
         req = req
           .order('primary_level', { ascending: false, nullsFirst: false })
           .order('frequency_rank', { ascending: true, nullsFirst: false })
@@ -301,8 +312,12 @@ class SupabaseDictionaryClient implements DictionaryClient {
       if (q) req = req.ilike('normalized_word', `%${q}%`)
       if (options?.level) req = req.eq('level', options.level)
       if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
+      if (options?.examTag) req = req.contains('tags', [options.examTag])
       // P2：7 档 ±1 过滤（GIN overlaps；列未建时该查询报错 → catch 返回 []）
-      if (options?.numericLevel != null) {
+      // P0：primaryLevel = 只取本档原生词（与题库 gen-questions 同口径，避免低档停用词污染）
+      if (options?.primaryLevel != null) {
+        req = req.eq('primary_level', options.primaryLevel)
+      } else if (options?.numericLevel != null) {
         const l = options.numericLevel
         req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
       }
