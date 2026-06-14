@@ -154,6 +154,10 @@ export interface WordSearchOptions {
   numericLevel?: number
   /** P0：按本档原生词过滤（primary_level = 该档），选词推荐 / 单档刷词用 */
   primaryLevel?: number
+  /** 3.4：按考试大纲成员过滤（levels 含该档），考研/目标考试全量选词用 */
+  syllabusLevel?: number
+  /** 3.4：syllabus 模式难度下限（primary_level >= 此值），跳过低档基础词 */
+  minPrimaryLevel?: number
   /** P0：排序策略；'frequency' = 真词频高频优先（选词推荐用） */
   orderBy?: 'frequency'
   difficulty?: 1 | 2 | 3 | 4 | 5

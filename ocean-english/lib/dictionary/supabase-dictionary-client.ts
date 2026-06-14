@@ -314,12 +314,19 @@ class SupabaseDictionaryClient implements DictionaryClient {
       if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
       if (options?.examTag) req = req.contains('tags', [options.examTag])
       // P2：7 档 ±1 过滤（GIN overlaps；列未建时该查询报错 → catch 返回 []）
+      // 3.4：syllabusLevel = 考试大纲全量（levels 含该档，如考研 5047 词）
+      if (options?.syllabusLevel != null) {
+        req = req.contains('levels', [options.syllabusLevel])
       // P0：primaryLevel = 只取本档原生词（与题库 gen-questions 同口径，避免低档停用词污染）
-      if (options?.primaryLevel != null) {
+      } else if (options?.primaryLevel != null) {
         req = req.eq('primary_level', options.primaryLevel)
       } else if (options?.numericLevel != null) {
         const l = options.numericLevel
         req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
+      }
+      // 3.4：syllabus 模式难度下限（与上面过滤 AND，跳过低档基础词）
+      if (options?.minPrimaryLevel != null) {
+        req = req.gte('primary_level', options.minPrimaryLevel)
       }
 
       const offset = options?.offset ?? 0
