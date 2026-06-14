@@ -101,13 +101,20 @@ async function buildDetail(db: Awaited<ReturnType<typeof createClient>>, id: str
     }))
     .filter((q) => q.choices.length >= 2 && q.answer)
 
+  // reading_passages 富化覆盖（有真标题/中文标题/中文翻译/精选 keyWords 时优先；表缺失则静默回退）
+  const { data: rp } = await db.from('reading_passages')
+    .select('title,title_zh,passage_zh,key_words,minutes').eq('id', id).maybeSingle()
+  const p = rp as { title?: string; title_zh?: string; passage_zh?: string; key_words?: string[]; minutes?: number } | null
+
   return {
     id,
-    title: deriveTitle(passage),
+    title: p?.title || deriveTitle(passage),
+    titleZh: p?.title_zh || undefined,
     level,
-    minutes: Math.max(1, Math.round(wordCount(passage) / 200)),
-    paragraphs: passage.split(/\n\n+/).map((p) => p.trim()).filter(Boolean),
-    keyWords,
+    minutes: p?.minutes ?? Math.max(1, Math.round(wordCount(passage) / 200)),
+    paragraphs: passage.split(/\n\n+/).map((s) => s.trim()).filter(Boolean),
+    passageZh: p?.passage_zh || undefined,
+    keyWords: p?.key_words?.length ? p.key_words : keyWords,
     questions,
   }
 }
@@ -146,13 +153,23 @@ export async function GET(req: NextRequest) {
       else byPassage.set(pid, { audio: String(r.audio_ref ?? ''), level: levelOf(r.theme_tags), count: 1 })
     }
 
-    const list = [...byPassage.entries()].map(([pid, v]) => ({
-      id: pid,
-      title: deriveTitle(v.audio),
-      level: v.level,
-      minutes: Math.max(1, Math.round(wordCount(v.audio) / 200)),
-      questionCount: v.count,
-    }))
+    const ids = [...byPassage.keys()]
+    const rpMap = new Map<string, { title?: string; title_zh?: string; minutes?: number }>()
+    if (ids.length) {
+      const { data: rps } = await db.from('reading_passages').select('id,title,title_zh,minutes').in('id', ids)
+      for (const r of (rps ?? []) as { id: string; title?: string; title_zh?: string; minutes?: number }[]) rpMap.set(r.id, r)
+    }
+    const list = [...byPassage.entries()].map(([pid, v]) => {
+      const rp = rpMap.get(pid)
+      return {
+        id: pid,
+        title: rp?.title || deriveTitle(v.audio),
+        titleZh: rp?.title_zh || undefined,
+        level: v.level,
+        minutes: rp?.minutes ?? Math.max(1, Math.round(wordCount(v.audio) / 200)),
+        questionCount: v.count,
+      }
+    })
 
     return NextResponse.json({ ok: true, data: list })
   } catch {
