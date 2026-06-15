@@ -18,6 +18,7 @@ const db = createClient(getEnv('NEXT_PUBLIC_SUPABASE_URL'), getEnv('SUPABASE_SER
 const IMG_KEY = getEnv('IMAGE_API_KEY') || process.env.IMAGE_API_KEY || ''
 const IMG_URL = getEnv('IMAGE_API_URL') || 'https://api.openai.com/v1/images/generations'
 const IMG_MODEL = getEnv('IMAGE_MODEL') || 'gpt-image-1'
+const IMG_SIZE = getEnv('IMAGE_SIZE') || '1024x1024'
 const BUCKET = 'word-images'
 
 const LEVEL = Number(process.argv[2] || 3)
@@ -32,7 +33,7 @@ async function genImage(word: string, zh: string): Promise<Buffer | null> {
     const res = await fetch(IMG_URL, {
       method: 'POST',
       headers: { Authorization: `Bearer ${IMG_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: IMG_MODEL, prompt, size: '512x512', n: 1 }),
+      body: JSON.stringify({ model: IMG_MODEL, prompt, size: IMG_SIZE }),
     })
     if (!res.ok) { console.error('  image API', res.status); return null }
     const j = await res.json() as { data?: { b64_json?: string; url?: string }[] }
