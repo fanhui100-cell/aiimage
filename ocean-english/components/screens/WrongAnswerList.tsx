@@ -2,7 +2,7 @@
 // WrongAnswerList — 错题本列表（/memory?tab=wrong）
 // 题面 / 我的答案 / 正确答案 / 解析折叠 / 重练 / 移除；同词折叠 ×N
 
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { useLexiStore, type WrongAnswer } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { SoundBtn } from '@/components/screens/SharedUI'
@@ -20,7 +20,6 @@ function WrongCard({ group, onRetry, onRemove }: {
   onRetry: (wordId: string) => void
   onRemove: (ids: string[]) => void
 }) {
-  const [open, setOpen] = useState(false)
   const latest = group[0]
   const count = group.length
 
@@ -35,21 +34,28 @@ function WrongCard({ group, onRetry, onRemove }: {
         <span style={{ marginLeft: 'auto', fontSize: 11, color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)' }}>{relTime(latest.timestamp)}</span>
       </div>
 
-      <div style={{ fontSize: 13, color: 'var(--ink-sub)', marginBottom: 8 }}>{latest.question}</div>
+      {latest.question && (
+        <div style={{ fontFamily: 'var(--font-news)', fontSize: 15, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.45, marginBottom: 12 }}>{latest.question}</div>
+      )}
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 13 }}>
-        <div style={{ color: '#d4477e' }}>我的答案：{latest.userAnswer}</div>
-        <div style={{ color: '#0e8c7a' }}>正确答案：{latest.correctAnswer}</div>
+      {/* D12：彩色答案行（错=玫瑰底 / 对=青底 + 图标） */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 7, marginBottom: latest.explanation ? 10 : 2 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 13.5, padding: '8px 12px', borderRadius: 10, background: 'var(--rose-bg)', color: 'var(--ink)' }}>
+          <span style={{ width: 16, flexShrink: 0, display: 'flex', color: 'var(--rose-ink)' }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+          </span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--ink-muted)', marginRight: 2 }}>你的答案</span>{latest.userAnswer}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 13.5, padding: '8px 12px', borderRadius: 10, background: 'var(--teal-bg)', color: 'var(--ink)' }}>
+          <span style={{ width: 16, flexShrink: 0, display: 'flex', color: 'var(--teal-ink)' }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+          </span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--ink-muted)', marginRight: 2 }}>正确答案</span>{latest.correctAnswer}
+        </div>
       </div>
 
       {latest.explanation && (
-        <button onClick={() => setOpen(o => !o)}
-          style={{ marginTop: 8, padding: 0, border: 'none', background: 'none', cursor: 'pointer', fontSize: 12, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
-          {open ? '收起解析 ▲' : '查看解析 ▼'}
-        </button>
-      )}
-      {open && latest.explanation && (
-        <div style={{ marginTop: 6, fontSize: 12, color: 'var(--ink-muted)', lineHeight: 1.6, background: 'var(--card-2)', borderRadius: 10, padding: '10px 12px' }}>
+        <div style={{ fontFamily: 'var(--font-serif-zh)', fontSize: 12.5, color: 'var(--ink-sub)', lineHeight: 1.6, paddingLeft: 11, borderLeft: '2px solid var(--line-strong)' }}>
           {latest.explanation}
         </div>
       )}
@@ -109,6 +115,13 @@ export function WrongAnswerList() {
 
   return (
     <div style={{ padding: '4px 2px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, margin: '4px 0 12px', flexWrap: 'wrap' }}>
+        <span style={{ fontSize: 12.5, color: 'var(--ink-muted)' }}>共 <b style={{ color: 'var(--rose-ink)', fontFamily: 'var(--font-mono)' }}>{wrongAnswers.length}</b> 道错题待巩固</span>
+        <button onClick={() => navigate('quiz', { word: groups[0][0].wordId })} className="btn-press"
+          style={{ padding: '8px 16px', borderRadius: 999, border: 'none', background: 'var(--teal-ink)', color: '#fff', cursor: 'pointer', fontSize: 13, fontWeight: 700, fontFamily: 'var(--font-sans)' }}>
+          全部重做 →
+        </button>
+      </div>
       {groups.map((group, i) => (
         <div key={group[0].wordId} className="stagger-item" style={{ animationDelay: `${Math.min(i, 9) * 30}ms` }}>
           <WrongCard
