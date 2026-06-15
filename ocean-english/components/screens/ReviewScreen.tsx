@@ -31,6 +31,8 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
   const navigate = useNavigate()
 
   const { getDue, getWeak, reviewGrade, recordActivity, incXp, masteredPct, byId, previewFor, log } = useLexiStore()
+  // 订阅 words：store 异步 hydrate 后队列需重算（否则 useMemo 只依赖 source 会停留在空队列）
+  const words = useLexiStore(s => s.words)
 
   const queue = useMemo<WordEntry[]>(() => {
     if (source === 'due') return getDue()
@@ -38,7 +40,8 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
     const due = getDue()
     const weak = getWeak()
     return [...due, ...weak.filter(w => !due.find(d => d.id === w.id))]
-  }, [source])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [source, words])
 
   const [idx, setIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)

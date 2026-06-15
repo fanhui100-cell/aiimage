@@ -37,16 +37,16 @@ export function UniverseScreen() {
   // Listen for postMessages from iframe
   useEffect(() => {
     function onMessage(ev: MessageEvent) {
+      // 安全：仅接受同源 iframe 的消息
+      if (ev.origin !== window.location.origin) return
       if (!ev.data || typeof ev.data !== 'object') return
       const { type, payload } = ev.data
 
       if (type === 'lexiverse:learn' && payload?.wordId) {
+        // 「学过一次」= 一次正常调度（一次 gradeSrs('good')），不再连记 4 次把词强推到 mastered
         markLearning(payload.wordId)
         markCorrect(payload.wordId)
-        markCorrect(payload.wordId)
-        markCorrect(payload.wordId)
-        markCorrect(payload.wordId)
-        incXp(30)
+        incXp(10)
       }
 
       if (type === 'lexiverse:nav') {

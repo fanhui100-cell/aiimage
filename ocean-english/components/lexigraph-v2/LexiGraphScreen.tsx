@@ -164,7 +164,8 @@ export function LexiGraphScreen() {
   })
   const dataRef = useRef<{ centerData: CenterData | null; storeWords: WordEntry[]; mode: string; filters: Record<string, boolean> }>(
     { centerData: null, storeWords: [], mode: 'semantic', filters })
-  dataRef.current = { centerData, storeWords, mode, filters }
+  // 镜像最新值给画布 rAF 循环读取——在 effect 里写 ref（而非 render 中），避免渲染期副作用
+  useEffect(() => { dataRef.current = { centerData, storeWords, mode, filters } })
 
   const wordStateOf = useCallback((slug: string): string | null =>
     storeWords.find(w => w.id === slug)?.state ?? null, [storeWords])

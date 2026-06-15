@@ -229,6 +229,8 @@ function PronCard({
 export function PronunciationScreen() {
   const navigate = useNavigate()
   const { getLearning, getToday, byState, markCorrect } = useLexiStore()
+  // 订阅 words：store 异步 hydrate 后练习词需重算（否则 [] 依赖会停留在空列表）
+  const allWords = useLexiStore(s => s.words)
 
   // F3-5：练习词 = 我的学习词优先（今日包 + 薄弱词在前，再学习中/复习）
   const words = useMemo<WordEntry[]>(() => {
@@ -236,7 +238,8 @@ export function PronunciationScreen() {
     const pool = [...today.recommended, ...byState('weak'), ...getLearning(), ...byState('review')]
     const unique = Array.from(new Map(pool.map(w => [w.id, w])).values())
     return unique.slice(0, MAX_WORDS)
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allWords])
 
   const [idx, setIdx] = useState(0)
   const [scores, setScores] = useState<number[]>([])

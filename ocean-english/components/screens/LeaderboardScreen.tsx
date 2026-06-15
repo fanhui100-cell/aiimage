@@ -22,6 +22,35 @@ const TROPHY = <><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M
 const ALERT = <><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12" y2="17" /></>
 const CROWN = <svg className="lb-crown" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 8l4 4 5-7 5 7 4-4-1.5 11h-15z" /></svg>
 
+// 顶层组件（不在 render 内声明，保证组件身份稳定、不被每次渲染重建）
+function Podium({ top, board }: { top: Row[]; board: Board }) {
+  const order = [top[1], top[0], top[2]].filter(Boolean)
+  return (
+    <div className="lb-podium">
+      {order.map(r => (
+        <div key={r.userId} className={`lb-pod p${r.rank}`}>
+          <div className="lb-pod-av">{r.rank === 1 && CROWN}{initial(r.name)}</div>
+          <div className="lb-pod-rk">{r.rank}</div>
+          <div className="lb-pod-nm">{r.name}</div>
+          <div className="lb-pod-val">{fmt(r.value)}<small style={{ fontSize: 10, color: 'var(--ink-muted)' }}> {UNIT[board]}</small></div>
+          <div className="lb-pod-base" />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function RowEl({ r, board }: { r: Row; board: Board }) {
+  return (
+    <div className={`lb-row ${r.isMe ? 'me' : ''}`}>
+      <span className="lb-rk">{r.rank}</span>
+      <span className="lb-av">{initial(r.name)}</span>
+      <span className="lb-nm"><span className="n">{r.name} {r.isMe && <span className="lb-me-tag">我</span>}</span><span className="s">🔥 {r.streak} 天连击</span></span>
+      <span className="lb-val">{fmt(r.value)}<small>{UNIT[board]}</small></span>
+    </div>
+  )
+}
+
 export function LeaderboardScreen() {
   const router = useRouter()
   const [board, setBoard] = useState<Board>('weekly')
@@ -49,32 +78,6 @@ export function LeaderboardScreen() {
   const Tabs = (
     <div className="lb-tabs">
       {TABS.map(([k, zh]) => <button key={k} className={`lb-tab ${board === k ? 'on' : ''}`} onClick={() => setBoard(k)}>{zh}</button>)}
-    </div>
-  )
-
-  const Podium = ({ top }: { top: Row[] }) => {
-    const order = [top[1], top[0], top[2]].filter(Boolean)
-    return (
-      <div className="lb-podium">
-        {order.map(r => (
-          <div key={r.userId} className={`lb-pod p${r.rank}`}>
-            <div className="lb-pod-av">{r.rank === 1 && CROWN}{initial(r.name)}</div>
-            <div className="lb-pod-rk">{r.rank}</div>
-            <div className="lb-pod-nm">{r.name}</div>
-            <div className="lb-pod-val">{fmt(r.value)}<small style={{ fontSize: 10, color: 'var(--ink-muted)' }}> {UNIT[board]}</small></div>
-            <div className="lb-pod-base" />
-          </div>
-        ))}
-      </div>
-    )
-  }
-
-  const RowEl = ({ r }: { r: Row }) => (
-    <div className={`lb-row ${r.isMe ? 'me' : ''}`}>
-      <span className="lb-rk">{r.rank}</span>
-      <span className="lb-av">{initial(r.name)}</span>
-      <span className="lb-nm"><span className="n">{r.name} {r.isMe && <span className="lb-me-tag">我</span>}</span><span className="s">🔥 {r.streak} 天连击</span></span>
-      <span className="lb-val">{fmt(r.value)}<small>{UNIT[board]}</small></span>
     </div>
   )
 
@@ -112,8 +115,8 @@ export function LeaderboardScreen() {
         )}
         {ui === 'ready' && (
           <>
-            <Podium top={rows.slice(0, 3)} />
-            <div className="lb-list">{rows.slice(3, 30).map(r => <RowEl key={r.userId} r={r} />)}</div>
+            <Podium top={rows.slice(0, 3)} board={board} />
+            <div className="lb-list">{rows.slice(3, 30).map(r => <RowEl key={r.userId} r={r} board={board} />)}</div>
           </>
         )}
       </div>
