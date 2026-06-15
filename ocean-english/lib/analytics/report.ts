@@ -126,3 +126,30 @@ export function buildReport(input: BuildReportInput): LearnReport {
     heatmap,
   }
 }
+
+// ── D3/D4 helpers ──────────────────────────────────────────────────────────
+export interface VocabEstimateCard { vocabEstimate: number; levelName: string; targetExamName?: string; gapToTarget?: number }
+
+/** D3：定级结果词汇量卡数据（target 可空=无目标考试） */
+export function buildVocabCard(level: number, masteredCount: number, target?: { level: number; examName: string }, vocabOverride?: number): VocabEstimateCard {
+  const vocabEstimate = vocabOverride && vocabOverride > 0 ? Math.round(vocabOverride) : estimateVocab(level, masteredCount)
+  const card: VocabEstimateCard = { vocabEstimate, levelName: lvName(level) }
+  if (target) {
+    card.targetExamName = target.examName
+    const tl = Math.max(1, Math.min(7, target.level))
+    card.gapToTarget = Math.max(0, (VOCAB_FLOOR[tl] ?? 0) - vocabEstimate)
+  }
+  return card
+}
+
+// 各档总词量（与 lib/levels.ts wordCount 一致；levelProgress 的"本档共"）
+const LEVEL_TOTALS: Record<number, number> = { 1: 3223, 2: 6008, 3: 7508, 4: 5651, 5: 9602, 6: 13477, 7: 8887 }
+export interface LevelDrillLevel { level: number; name: string; mastered: number; total: number }
+
+/** D4：各档已掌握/共词量（入口卡 + 会话小结用） */
+export function levelProgress(words: WordEntry[]): LevelDrillLevel[] {
+  return [1, 2, 3, 4, 5, 6, 7].map((n) => {
+    const mastered = words.filter(w => w.state === 'mastered' && ((w.levels?.includes(n)) || w.band === n + 1)).length
+    return { level: n, name: LEVEL_NAMES[n], mastered, total: LEVEL_TOTALS[n] ?? 0 }
+  })
+}

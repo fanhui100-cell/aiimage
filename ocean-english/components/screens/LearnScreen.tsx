@@ -3,8 +3,11 @@
 // Flashcard learn flow with state-toast feedback
 
 import { useState, useMemo, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
+import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
+import { levelProgress } from '@/lib/analytics/report'
+import { DrillSummary } from '@/components/screens/LevelDrillEntry'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import Link from 'next/link'
@@ -101,17 +104,21 @@ function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolea
 export function LearnScreen() {
   const searchParams = useSearchParams()
   const isFlow = searchParams.get('flow') === 'true'
+  const drill = searchParams.get('drill') === '1'
+  const drillLevel = Number(searchParams.get('level')) || null
   const navigate = useNavigate()
+  const router = useRouter()
 
   const { getToday, getLearning, markLearning, markWrong, recordActivity } = useLexiStore()
 
   const initialList = useMemo<WordEntry[]>(() => {
+    if (drill) return []   // D4：drill 异步取词（见下方 effect）
     if (isFlow) {
       const today = getToday()
       return today.recommended.length > 0 ? today.recommended : getLearning()
     }
     return getLearning()
-  }, [isFlow])
+  }, [isFlow, drill])
 
   const [queue, setQueue] = useState<WordEntry[]>(() => initialList)
   const [idx, setIdx] = useState(0)
@@ -124,6 +131,31 @@ export function LearnScreen() {
   useEffect(() => {
     if (!localStorage.getItem('lexi-seen-recall-hint')) setShowRecallHint(true)
   }, [])
+
+  // D4：drill 模式按档异步取词（recommend primary_level；不写 profile，只把该档词加进来学）
+  const [drillLoading, setDrillLoading] = useState(drill)
+  const [reloadKey, setReloadKey] = useState(0)
+  useEffect(() => {
+    if (!drill) return
+    let cancelled = false
+    setDrillLoading(true); setDone(false); setIdx(0); setFlipped(false); setKnewCount(0); setRetried(new Set())
+    void (async () => {
+      const lexi = useLexiStore.getState()
+      const lvl = drillLevel ?? lexi.profile.level ?? 3
+      try {
+        const res = await fetch('/api/dictionary/recommend', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ band: lexi.profile.band, level: lvl, limit: 20, exclude: lexi.words.map(w => w.id) }),
+        })
+        const json = res.ok ? await res.json() : null
+        const data = (json?.data ?? []) as DictionaryWord[]
+        const entries = data.map(dw => lexi.ensureWord(dw, 'today-pack', 'recommended'))
+        if (!cancelled) { setQueue(entries); setDrillLoading(false) }
+      } catch { if (!cancelled) { setQueue([]); setDrillLoading(false) } }
+    })()
+    return () => { cancelled = true }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [drill, drillLevel, reloadKey])
 
   const current = queue[idx]
   const isRetry = current ? retried.has(current.id) : false
@@ -173,6 +205,31 @@ export function LearnScreen() {
   function finish() {
     if (isFlow) navigate('quiz', { flow: true })
     else navigate('today')
+  }
+
+  // D4：drill 模式 — 加载 / 单档小结 / 该档无新词
+  if (drill) {
+    const lexi = useLexiStore.getState()
+    const lvl = drillLevel ?? lexi.profile.level ?? 3
+    const prog = levelProgress(lexi.words).find(l => l.level === lvl) ?? { level: lvl, name: '本档', mastered: 0, total: 0 }
+    const sumData = { level: lvl, name: prog.name, learnedThisSession: knewCount, masteredInLevel: prog.mastered, totalInLevel: prog.total }
+    if (drillLoading) {
+      return (
+        <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--ink-muted)', fontSize: 14 }}>
+          正在抽取 {prog.name} 高频新词…
+        </div>
+      )
+    }
+    if (done || !queue.length) {
+      return (
+        <div className="theme-light" style={{ minHeight: '100svh', background: 'var(--paper)' }}>
+          <DrillSummary data={sumData} empty={!queue.length}
+            onAgain={() => setReloadKey(k => k + 1)}
+            onSwitch={() => router.push('/drill')}
+            onBack={() => navigate('today')} />
+        </div>
+      )
+    }
   }
 
   if (!queue.length) {
