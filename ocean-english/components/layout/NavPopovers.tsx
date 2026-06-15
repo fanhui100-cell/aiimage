@@ -130,7 +130,7 @@ export function AccountPopover({ dark }: { dark: boolean }) {
             云同步已启用 · 进度自动同步
           </div>
           <div style={{ height: 1, background: 'var(--line)', margin: '4px 0 8px' }} />
-          <button style={itemStyle} className="btn-press" onClick={() => { close(); router.push('/me') }}>
+          <button style={itemStyle} className="btn-press" onClick={() => { close(); router.push('/profile') }}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
             我的页
           </button>
