@@ -71,7 +71,7 @@ export function AchievementsScreen() {
       <div className="wrap ac-wrap">
         <div className="eyebrow">成就 · Achievements</div>
         <h1 className="h1">你的高光时刻</h1>
-        <p className="sub">每解锁一枚勋章，都是坚持的勋记。还有 {report.total - report.unlocked} 枚等你点亮。</p>
+        <p className="sub">每解锁一枚勋章，都是坚持的勋记。还有 {report.total - report.unlocked} 枚等你点亮。<Link href="/share" style={{ color: 'var(--teal-ink)', fontWeight: 600, marginLeft: 6, textDecoration: 'none' }}>晒出战绩 →</Link></p>
 
         <div className="ac-top">
           <div className="ac-stat"><span className="fig" style={{ color: 'var(--gold-ink)' }}>{report.unlocked}<small style={{ fontSize: 14, color: 'var(--ink-muted)' }}>/{report.total}</small></span><span className="lab">已解锁勋章</span></div>

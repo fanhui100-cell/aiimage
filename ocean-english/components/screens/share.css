@@ -1,0 +1,53 @@
+/* share.css — D14 战绩分享卡（sh-* 页面专属；通用类见 screen-kit.css .scr） */
+.scr .sh-layout { display: flex; gap: 34px; align-items: flex-start; justify-content: center; width: 100%; flex-wrap: wrap; }
+.scr .sh-stage { display: flex; justify-content: center; padding: 4px 0; flex-shrink: 0; }
+/* 分享卡（竖图 9:16） */
+.scr .sh-card { width: 312px; min-height: 556px; border-radius: 26px; overflow: hidden; box-shadow: 0 40px 90px -34px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.05); position: relative; color: #fff; }
+.scr .sh-card .bg { position: absolute; inset: 0; }
+.scr .sh-card .glow { position: absolute; top: -90px; right: -70px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.22), transparent 68%); pointer-events: none; }
+.scr .sh-orbit { position: absolute; top: 18px; right: 18px; opacity: .22; }
+.scr .sh-grain { position: absolute; inset: 0; opacity: .5; background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px); background-size: 13px 13px; mix-blend-mode: overlay; }
+.scr .sh-inner { position: relative; padding: 26px 26px 24px; display: flex; flex-direction: column; min-height: 556px; box-sizing: border-box; }
+.scr .sh-brand { display: flex; align-items: center; gap: 10px; }
+.scr .sh-mark { width: 34px; height: 34px; border-radius: 10px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.scr .sh-wm { line-height: 1; }
+.scr .sh-wm .nm { font-family: var(--font-serif); font-size: 17px; letter-spacing: .01em; }
+.scr .sh-wm .nm em { font-style: italic; }
+.scr .sh-wm .subt { font-family: var(--font-mono); font-size: 8px; letter-spacing: .22em; opacity: .7; margin-top: 4px; }
+.scr .sh-kicker { margin-top: 30px; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase; opacity: .72; display: flex; align-items: center; gap: 8px; }
+.scr .sh-kicker::before { content: ''; width: 16px; height: 1px; background: currentColor; opacity: .6; }
+.scr .sh-big { font-family: var(--font-mono); font-size: 68px; font-weight: 700; line-height: .9; margin: 8px 0 2px; letter-spacing: -.02em; }
+.scr .sh-bigu { font-family: var(--font-serif-zh); font-size: 15px; opacity: .85; }
+.scr .sh-tag { font-family: var(--font-news); font-style: italic; font-size: 14px; line-height: 1.5; opacity: .92; margin-top: 16px; max-width: 230px; }
+.scr .sh-grid { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.scr .sh-cell { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.13); border-radius: 13px; padding: 12px 14px; }
+.scr .sh-cell .v { font-family: var(--font-mono); font-size: 23px; font-weight: 700; line-height: 1; }
+.scr .sh-cell .l { font-size: 11px; opacity: .78; margin-top: 5px; }
+.scr .sh-foot { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.15); display: flex; align-items: center; gap: 10px; }
+.scr .sh-ava { width: 32px; height: 32px; border-radius: 999px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+.scr .sh-handle { flex: 1; min-width: 0; }
+.scr .sh-handle .h { font-size: 12.5px; font-weight: 600; }
+.scr .sh-handle .d { font-family: var(--font-mono); font-size: 9.5px; opacity: .66; margin-top: 1px; }
+.scr .sh-qr { width: 40px; height: 40px; border-radius: 9px; background: rgba(255,255,255,.16); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; padding: 5px; flex-shrink: 0; box-sizing: border-box; }
+.scr .sh-qr i { background: #fff; border-radius: 1px; }
+.scr .sh-qr i.o { background: transparent; }
+/* 控制面板 */
+.scr .sh-controls { width: 300px; flex-shrink: 0; }
+.scr .sh-ctl-row { margin-bottom: 20px; }
+.scr .sh-ctl-lab { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 10px; }
+.scr .sh-themes { display: flex; gap: 10px; }
+.scr .sh-theme { width: 42px; height: 42px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: transform .12s; position: relative; }
+.scr .sh-theme:hover { transform: scale(1.08); }
+.scr .sh-theme.on { border-color: var(--teal-ink); box-shadow: 0 0 0 2px var(--card); }
+.scr .sh-theme.on::after { content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,.4); }
+.scr .sh-segs { display: flex; flex-direction: column; gap: 8px; }
+.scr .sh-seg { display: flex; align-items: center; gap: 11px; white-space: nowrap; padding: 12px 15px; border-radius: 13px; font-size: 13.5px; font-weight: 600; cursor: pointer; background: var(--card); border: 1px solid var(--line-strong); color: var(--ink-sub); transition: all .14s; text-align: left; width: 100%; }
+.scr .sh-seg .ico { font-size: 16px; }
+.scr .sh-seg:hover { border-color: var(--teal-ink); }
+.scr .sh-seg.on { background: var(--teal-bg); border-color: var(--teal-ink); color: var(--teal-ink); }
+.scr .sh-seg .chk { margin-left: auto; opacity: 0; color: var(--teal-ink); }
+.scr .sh-seg.on .chk { opacity: 1; }
+.scr .sh-actions { display: flex; gap: 10px; margin-top: 24px; }
+.scr .sh-actions .btn { flex: 1; }
+.scr .sh-msg { font-size: 12px; color: var(--teal-ink); text-align: center; margin-top: 12px; min-height: 16px; }
+@media (max-width: 680px) { .scr .sh-controls { width: 312px; } }
