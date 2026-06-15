@@ -22,6 +22,8 @@ export function GroupsScreen() {
   const [nonce, setNonce] = useState(0)
   const [creating, setCreating] = useState(false)
   const [form, setForm] = useState({ name: '', desc: '', isPublic: true })
+  const [code, setCode] = useState('')
+  const [joinMsg, setJoinMsg] = useState('')
 
   useEffect(() => {
     let cancelled = false
@@ -47,6 +49,17 @@ export function GroupsScreen() {
     const name = form.name.trim() || '新的小组'
     await fetch('/api/groups', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, description: form.desc.trim(), isPublic: form.isPublic }) })
     setCreating(false); setForm({ name: '', desc: '', isPublic: true }); setNonce(n => n + 1)
+  }
+  async function joinByCode() {
+    const c = code.trim()
+    if (!c) return
+    setJoinMsg('')
+    try {
+      const r = await fetch('/api/groups/join', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: c }) })
+      const j = await r.json()
+      if (j?.ok && j.groupId) { setCode(''); router.push(`/groups/${j.groupId}`) }
+      else setJoinMsg(j?.error === 'invalid_code' ? '邀请码无效' : '加入失败，请重试')
+    } catch { setJoinMsg('网络错误，请重试') }
   }
 
   const Card = ({ g, i }: { g: Group; i: number }) => (
@@ -82,6 +95,14 @@ export function GroupsScreen() {
         {ui === 'ready' && (
           <>
             <div className="gp-sech"><span className="t">我的小组</span><button className="btn btn-ink" style={{ padding: '9px 18px', fontSize: 13 }} onClick={() => setCreating(true)}>+ 创建小组</button></div>
+            {/* 凭邀请码加入私有小组（私有组不可被发现，只能凭码进） */}
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', margin: '4px 0 14px', flexWrap: 'wrap' }}>
+              <input value={code} onChange={e => { setCode(e.target.value); setJoinMsg('') }} placeholder="输入邀请码加入私有小组"
+                onKeyDown={e => { if (e.key === 'Enter') void joinByCode() }}
+                style={{ flex: 1, minWidth: 180, padding: '9px 14px', borderRadius: 999, border: '1px solid var(--line-strong)', background: 'var(--card-2)', color: 'var(--ink)', fontSize: 13, outline: 'none', fontFamily: 'var(--font-mono)' }} />
+              <button className="btn btn-ghost" style={{ padding: '9px 18px', fontSize: 13 }} onClick={() => void joinByCode()} disabled={!code.trim()}>用邀请码加入</button>
+              {joinMsg && <span style={{ fontSize: 12, color: 'var(--rose-ink)' }}>{joinMsg}</span>}
+            </div>
             <div className="gp-grid">
               {groups.filter(g => g.joined).length
                 ? groups.filter(g => g.joined).map((g, i) => <Card key={g.id} g={g} i={i} />)

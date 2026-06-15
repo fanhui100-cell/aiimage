@@ -60,10 +60,11 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   if (!isSupabaseConfigured) return NextResponse.json({ ok: false, error: 'auth_not_configured' }, { status: 503 })
   const { id } = await params
-  let body: { action?: unknown }
+  let body: { action?: unknown; inviteCode?: unknown }
   try { body = await req.json() } catch { return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 }) }
   const action = body.action === 'leave' ? 'leave' : body.action === 'join' ? 'join' : null
   if (!action) return NextResponse.json({ ok: false, error: 'invalid_action' }, { status: 400 })
+  const inviteCode = typeof body.inviteCode === 'string' ? body.inviteCode.trim() : null
 
   try {
     const supabase = await createClient()
@@ -71,8 +72,14 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     if (!user) return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 })
 
     if (action === 'join') {
-      const { error } = await supabase.from('group_members').upsert({ group_id: id, user_id: user.id }, { onConflict: 'group_id,user_id' })
-      if (error) return NextResponse.json({ ok: false, error: 'join_failed' }, { status: 500 })
+      // 经 join_group RPC：公开组直接加入；私有组需匹配邀请码（防止凭 group_id 直接进私有组）
+      const { error } = await supabase.rpc('join_group', { gid: id, code: inviteCode })
+      if (error) {
+        const msg = error.message || ''
+        if (msg.includes('invite_required')) return NextResponse.json({ ok: false, error: 'invite_required' }, { status: 403 })
+        if (msg.includes('group_not_found')) return NextResponse.json({ ok: false, error: 'not_found' }, { status: 404 })
+        return NextResponse.json({ ok: false, error: 'join_failed' }, { status: 500 })
+      }
     } else {
       const { error } = await supabase.from('group_members').delete().eq('group_id', id).eq('user_id', user.id)
       if (error) return NextResponse.json({ ok: false, error: 'leave_failed' }, { status: 500 })
