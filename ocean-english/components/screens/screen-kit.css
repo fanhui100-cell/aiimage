@@ -1,0 +1,36 @@
+/* ============================================================================
+   screen-kit.css — 新功能页通用外壳（作用域 .scr，复用 globals.css 令牌）
+   D5-D19 各 Screen 包一层 .scr，即获得 eyebrow/h1/sub/card/btn/state/skel 等
+   通用类；页面专属类各自单独 css。避免每屏重复声明通用样式。
+   ========================================================================== */
+.scr { position: relative; min-height: calc(100svh - var(--nav-h, 60px)); background: var(--paper); color: var(--ink); }
+.scr .wrap { max-width: 720px; margin: 0 auto; padding: 30px 28px 70px; }
+.scr .eyebrow { margin: 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--teal-ink); opacity: .8; display: flex; align-items: center; gap: 9px; }
+.scr .eyebrow::before { content: ''; width: 22px; height: 1px; background: rgba(14,140,122,.45); }
+.scr .h1 { margin: 12px 0 6px; font-family: var(--font-serif-zh); font-weight: 700; font-size: 27px; color: var(--ink); }
+.scr .sub { margin: 0 0 4px; font-size: 13.5px; line-height: 1.6; color: var(--ink-sub); max-width: 62ch; }
+.scr .kicker { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-ink); opacity: .82; }
+.scr .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-rest); }
+.scr .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.scr .sec-title { font-family: var(--font-serif-zh); font-size: 17px; font-weight: 700; color: var(--ink); }
+.scr .sec-hint { font-size: 12px; color: var(--ink-muted); }
+.scr .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; border-radius: 999px; cursor: pointer; border: 1px solid transparent; font-family: var(--font-sans); font-weight: 700; font-size: 14.5px; padding: 12px 24px; transition: transform .12s, box-shadow .16s, background .15s, color .15s; }
+.scr .btn:active { transform: scale(.97); }
+.scr .btn-primary { color: #04241f; background: linear-gradient(180deg, #6ff0db, #34d8c0); box-shadow: 0 14px 30px -16px rgba(79,230,206,.75); }
+.scr .btn-ink { color: #fff; background: var(--teal-ink); }
+.scr .btn-ink:hover { background: var(--teal-deep); }
+.scr .btn-ghost { color: var(--ink-sub); background: var(--card); border-color: var(--line-strong); }
+.scr .btn-ghost:hover { border-color: var(--teal-ink); color: var(--teal-ink); }
+.scr .btn[disabled] { opacity: .45; cursor: not-allowed; box-shadow: none; }
+.scr .skel { border-radius: 12px; background: linear-gradient(100deg, rgba(20,30,40,.05) 30%, rgba(20,30,40,.10) 50%, rgba(20,30,40,.05) 70%); background-size: 200% 100%; animation: scrShimmer 1.3s linear infinite; }
+.scr .state { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 60px 24px; }
+.scr .state-icon { width: 58px; height: 58px; border-radius: 16px; display: flex; align-items: center; justify-content: center; background: var(--card); border: 1px solid var(--line); color: var(--ink-muted); }
+.scr .state.error .state-icon { color: var(--rose-ink); border-color: rgba(191,74,48,.25); background: var(--rose-bg); }
+.scr .state.empty .state-icon { color: var(--teal-ink); border-color: rgba(14,140,122,.22); background: var(--teal-bg); }
+.scr .state-title { font-family: var(--font-serif-zh); font-size: 16px; font-weight: 600; color: var(--ink); }
+.scr .state-desc { font-size: 13px; line-height: 1.6; color: var(--ink-muted); max-width: 340px; }
+.scr .state-acts { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
+.scr .fade { animation: scrFade .3s cubic-bezier(.2,.7,.2,1) both; }
+.scr .fade-up { animation: scrFade .4s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes scrShimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes scrFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }

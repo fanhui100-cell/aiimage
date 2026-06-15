@@ -1,0 +1,34 @@
+/* leaderboard.css — D5 排行榜（lb-* 页面专属；通用类见 screen-kit.css .scr） */
+.lb-tabs { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--paper-2); margin: 18px 0 22px; }
+.lb-tab { flex: 1; padding: 9px; border: none; background: none; cursor: pointer; border-radius: 999px; font-family: var(--font-sans); font-size: 13.5px; font-weight: 600; color: var(--ink-sub); transition: background .15s, color .15s; }
+.lb-tab.on { background: var(--card-2); color: var(--teal-ink); box-shadow: var(--shadow-rest); }
+.lb-podium { display: flex; align-items: flex-end; justify-content: center; gap: 12px; margin-bottom: 8px; }
+.lb-pod { display: flex; flex-direction: column; align-items: center; gap: 7px; flex: 1; max-width: 130px; }
+.lb-pod-av { border-radius: 999px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #06231d; font-family: var(--font-sans); position: relative; }
+.lb-pod.p1 .lb-pod-av { width: 74px; height: 74px; font-size: 24px; background: linear-gradient(155deg, #f1c879, #e0a93f); box-shadow: 0 12px 30px -12px rgba(224,169,63,.7); }
+.lb-pod.p2 .lb-pod-av { width: 60px; height: 60px; font-size: 20px; background: linear-gradient(155deg, #cfd8de, #aeb9c2); }
+.lb-pod.p3 .lb-pod-av { width: 60px; height: 60px; font-size: 20px; background: linear-gradient(155deg, #e2b48c, #cf9a6c); }
+.lb-crown { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); color: #e0a93f; }
+.lb-pod-rk { width: 22px; height: 22px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--ink-sub); margin-top: -18px; z-index: 2; }
+.lb-pod.p1 .lb-pod-rk { color: #b3781f; border-color: rgba(179,120,31,.4); }
+.lb-pod-nm { font-size: 12.5px; font-weight: 600; color: var(--ink); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lb-pod-val { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--teal-ink); }
+.lb-pod-base { width: 100%; border-radius: 12px 12px 0 0; background: linear-gradient(180deg, var(--card), var(--paper-2)); border: 1px solid var(--line); border-bottom: none; }
+.lb-pod.p1 .lb-pod-base { height: 54px; }
+.lb-pod.p2 .lb-pod-base { height: 38px; }
+.lb-pod.p3 .lb-pod-base { height: 28px; }
+.lb-list { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.lb-row { display: flex; align-items: center; gap: 13px; padding: 12px 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.lb-row.me { border-color: var(--teal-ink); background: var(--teal-bg); box-shadow: 0 8px 22px -14px rgba(14,140,122,.5); }
+.lb-rk { width: 26px; text-align: center; font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--ink-muted); flex-shrink: 0; }
+.lb-av { width: 38px; height: 38px; border-radius: 999px; background: linear-gradient(155deg, #1f9f8c, #4fe6ce); color: #06231d; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+.lb-nm { flex: 1; min-width: 0; }
+.lb-nm .n { font-size: 14px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lb-nm .s { font-size: 11.5px; color: var(--ink-muted); font-family: var(--font-mono); }
+.lb-val { font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--teal-ink); flex-shrink: 0; }
+.lb-val small { font-size: 11px; color: var(--ink-muted); font-weight: 400; margin-left: 2px; }
+.lb-me-tag { font-size: 10px; font-weight: 700; color: #fff; background: var(--teal-ink); border-radius: 999px; padding: 1px 7px; }
+/* 吸底「我的名次」— 接入主站改 fixed */
+.lb-mecard { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 12px 18px calc(12px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(12px); border-top: 1px solid var(--line-strong); }
+.lb-mecard-inner { max-width: 640px; margin: 0 auto; display: flex; align-items: center; gap: 13px; }
+.lb-mecard .lb-rk { color: var(--teal-ink); }
