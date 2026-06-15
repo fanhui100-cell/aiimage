@@ -17,6 +17,7 @@ const RESULTS_KEY = 'rd-results-v1'
 interface ListItem {
   id: string; title: string; titleZh?: string; level: number; minutes: number
   questionCount: number; keyWords: string[]; keyWordCount: number
+  difficulty?: number   // 后端按词频稀有度算的难度底数（0-100），拉开各篇生词率
 }
 interface RQuestion {
   id: string; prompt: string; promptZh?: string
@@ -221,7 +222,14 @@ export function ReadingScreen() {
   const reviewItems = useMemo(() => items.filter(a => hasWrong(a.id)), [items, results]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const stateOf = useMemo(() => new Map(words.map(w => [w.id, w.state])), [words])
-  const newRateOf = (kw: string[]) => kw.length ? Math.round(kw.filter(k => stateOf.get(k) !== 'mastered').length / kw.length * 100) : 0
+  // 生词率 = 难度底数（按词频稀有度，各篇不同）× (1 − 你已掌握占比)；随学习递减
+  const newRateOf = (it: ListItem) => {
+    const kw = it.keyWords
+    if (!kw.length) return it.difficulty ?? 0
+    const masteredFrac = kw.filter(k => stateOf.get(k) === 'mastered').length / kw.length
+    const base = it.difficulty ?? Math.round(kw.filter(k => stateOf.get(k) !== 'mastered').length / kw.length * 100)
+    return Math.round(base * (1 - masteredFrac))
+  }
 
   const filtered = useMemo(() => {
     if (level === 'review') return reviewItems
@@ -264,7 +272,7 @@ export function ReadingScreen() {
   function renderList() {
     const total = items.length
     const doneN = items.filter(a => isDone(a.id)).length
-    const avgRate = total ? Math.round(items.reduce((s, a) => s + newRateOf(a.keyWords), 0) / total) : 0
+    const avgRate = total ? Math.round(items.reduce((s, a) => s + newRateOf(a), 0) / total) : 0
     const reviewN = reviewItems.length
     const chips: ([('all' | number | 'review'), string])[] = [['all', '全部'], ...([1, 2, 3, 4, 5, 6, 7] as number[]).map(n => [n, LV[n]] as [number, string])]
 
@@ -285,7 +293,7 @@ export function ReadingScreen() {
     } else {
       body = <div className="rd-list">{filtered.map(a => {
         const done = isDone(a.id); const r = results[a.id]; const wrong = done && r.pct < 100
-        const nr = newRateOf(a.keyWords)
+        const nr = newRateOf(a)
         return (
           <button className={`rd-card${wrong ? ' has-wrong' : ''}`} key={a.id} onClick={() => openArticle(a.id)}>
             <span className="rd-card-main">

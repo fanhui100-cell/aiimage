@@ -67,19 +67,19 @@ function cleanChoiceText(text: string): string {
   return text.replace(/^[A-Da-d][.)、]\s*/, '').trim()
 }
 
-// 分批查 dictionary_words，返回命中的 id 集合（PostgREST in() 有长度上限，按 200 分批）
-async function dictIntersect(
+// 分批查 dictionary_words，返回命中词 id → frequency_rank（PostgREST in() 限长，按 200 分批）
+async function dictFreq(
   db: Awaited<ReturnType<typeof createClient>>,
   tokens: string[],
-): Promise<Set<string>> {
-  const hit = new Set<string>()
+): Promise<Map<string, number | null>> {
+  const m = new Map<string, number | null>()
   for (let i = 0; i < tokens.length; i += 200) {
     const chunk = tokens.slice(i, i + 200)
     if (!chunk.length) continue
-    const { data } = await db.from('dictionary_words').select('id').in('id', chunk)
-    for (const r of (data ?? []) as { id: string }[]) hit.add(r.id)
+    const { data } = await db.from('dictionary_words').select('id,frequency_rank').in('id', chunk)
+    for (const r of (data ?? []) as { id: string; frequency_rank: number | null }[]) m.set(r.id, r.frequency_rank)
   }
-  return hit
+  return m
 }
 
 async function buildDetail(db: Awaited<ReturnType<typeof createClient>>, id: string) {
@@ -183,12 +183,13 @@ export async function GET(req: NextRequest) {
       perPassageTokens.set(pid, toks)
       for (const t of toks) allTokens.add(t)
     }
-    const dictSet = await dictIntersect(db, [...allTokens])
-    const keyWordsOf = (pid: string) => (perPassageTokens.get(pid) ?? []).filter((t) => dictSet.has(t))
-
+    const freqMap = await dictFreq(db, [...allTokens])
+    const RARE = 4000   // 词频排名 > 此值（或无频）视为偏难/可能生词 → 拉开各篇生词率
     const list = [...byPassage.entries()].map(([pid, v]) => {
       const rp = rpMap.get(pid)
-      const keyWords = keyWordsOf(pid)
+      const keyWords = (perPassageTokens.get(pid) ?? []).filter((t) => freqMap.has(t))
+      const rare = keyWords.filter((k) => { const f = freqMap.get(k); return f == null || f > RARE }).length
+      const difficulty = keyWords.length ? Math.round(rare / keyWords.length * 100) : 0
       return {
         id: pid,
         title: rp?.title || deriveTitle(v.audio),
@@ -198,6 +199,7 @@ export async function GET(req: NextRequest) {
         questionCount: v.count,
         keyWords,
         keyWordCount: keyWords.length,
+        difficulty,
       }
     })
 
