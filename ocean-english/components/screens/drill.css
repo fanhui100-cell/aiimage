@@ -53,3 +53,45 @@
 .dr-sum-acts .dr-btn { flex: 1; padding: 11px 12px; font-size: 13.5px; }
 .dr-done-badge { width: 60px; height: 60px; border-radius: 999px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; background: var(--gold-bg); color: var(--gold-ink); border: 1px solid rgba(179,120,31,0.3); }
 @keyframes drRise { from { transform: translateY(10px); opacity: .4; } to { transform: none; opacity: 1; } }
+
+/* 界面优化1·阶段5：专练三步（等级 × 题型 × 练多久） */
+.dk-step { margin-top: 26px; }
+.dk-step-h { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; font-size: 14px; color: var(--ink); flex-wrap: wrap; }
+.dk-step-h b { font-family: var(--font-serif-zh); font-weight: 700; }
+.dk-step-h span { font-size: 12.5px; color: var(--ink-muted); }
+.dk-n { width: 22px; height: 22px; border-radius: 999px; background: var(--teal-ink); color: #fff; font-family: var(--font-mono); font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.dk-n.off { background: var(--line-strong); color: var(--ink-muted); }
+.dk-lvgrid, .dk-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.dk-lv { text-align: left; padding: 14px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--card); cursor: pointer; transition: border-color .15s, transform .12s, box-shadow .15s; }
+.dk-lv:hover { border-color: var(--teal-ink); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.dk-lv.on { border-color: var(--teal-ink); background: var(--teal-bg); box-shadow: 0 0 0 2px color-mix(in srgb, var(--teal-ink) 18%, transparent); }
+.dk-lv-top { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; }
+.dk-lv-zh { font-family: var(--font-serif-zh); font-weight: 700; font-size: 16px; color: var(--ink); display: inline-flex; align-items: center; gap: 5px; }
+.dk-lv-cefr { font-family: var(--font-mono); font-size: 11px; color: var(--teal-ink); }
+.dk-lv-desc { font-size: 12px; color: var(--ink-sub); margin: 5px 0 8px; line-height: 1.5; }
+.dk-lv-meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); }
+.dk-type { text-align: left; padding: 12px 14px; border-radius: 12px; border: 1.5px solid var(--line-strong); background: var(--card); cursor: pointer; transition: all .14s; }
+.dk-type:hover { border-color: var(--teal-ink); }
+.dk-type.on { background: var(--teal-bg); border-color: var(--teal-ink); }
+.dk-type b { display: block; font-size: 14px; color: var(--ink); }
+.dk-type span { font-size: 11.5px; color: var(--ink-muted); }
+.dk-empty { text-align: center; color: var(--ink-muted); padding: 24px; border: 1px dashed var(--line-strong); border-radius: 14px; font-size: 13px; }
+.dk-lenseg { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-rest); flex-wrap: wrap; }
+.dk-lenseg button { border: none; background: none; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-muted); padding: 8px 16px; border-radius: 999px; }
+.dk-lenseg button.on { background: var(--teal-ink); color: #fff; }
+.dk-len-detail { margin-top: 14px; }
+.dk-presets { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.dk-chip { padding: 7px 14px; border-radius: 999px; font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; cursor: pointer; background: var(--card-2); border: 1px solid var(--line-strong); color: var(--ink-sub); }
+.dk-chip.on { background: var(--teal-ink); border-color: var(--teal-ink); color: #fff; }
+.dk-stepper { display: flex; align-items: center; gap: 12px; }
+.dk-stepper > button { width: 38px; height: 38px; border-radius: 11px; border: 1px solid var(--line-strong); background: var(--card); cursor: pointer; font-size: 20px; color: var(--ink); flex-shrink: 0; }
+.dk-stp-val { display: flex; align-items: baseline; gap: 4px; min-width: 72px; justify-content: center; }
+.dk-stp-val b { font-family: var(--font-mono); font-size: 22px; font-weight: 700; color: var(--ink); }
+.dk-stp-val span { font-size: 12px; color: var(--ink-muted); }
+.dk-stepper input[type=range] { flex: 1; accent-color: var(--teal-ink); }
+.dk-tip, .dk-note { font-size: 12px; color: var(--ink-muted); margin-top: 10px; }
+.dk-note { padding: 12px 14px; border-radius: 12px; background: var(--teal-bg); color: var(--ink-sub); }
+.dk-note b { color: var(--ink); }
+.dk-startbar { display: flex; align-items: center; gap: 12px; margin-top: 26px; padding: 14px 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-rest); flex-wrap: wrap; }
+.dk-summary { flex: 1; min-width: 160px; font-size: 13.5px; color: var(--ink); }
+.dr-btn[disabled] { opacity: .45; cursor: not-allowed; }
