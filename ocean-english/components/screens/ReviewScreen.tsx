@@ -44,6 +44,8 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
   const [revealed, setRevealed] = useState(false)
   const [done, setDone] = useState(false)
   const [graded, setGraded] = useState(0)
+  // D10：本轮记住 / 需加强（按评分实时统计，驱动小结环）
+  const [sess, setSess] = useState({ remembered: 0, weak: 0 })
 
   const current = queue[idx]
 
@@ -57,6 +59,7 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
     const to = byId(current.id)?.state ?? prev
     showStateToast(current.word, prev, to)
     setGraded(c => c + 1)
+    setSess(s => (g === 'good' || g === 'easy') ? { ...s, remembered: s.remembered + 1 } : { ...s, weak: s.weak + 1 })
     const next = idx + 1
     if (next >= queue.length) {
       setDone(true)
@@ -126,12 +129,37 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
             </div>
           )}
 
-          {/* Stats */}
-          <div style={{ background: 'var(--card)', borderRadius: 20, padding: '28px', border: '1px solid var(--line)', marginBottom: 20, textAlign: 'center' }}>
-            <div style={{ fontSize: 48, fontWeight: 800, color: 'var(--teal-ink)', fontFamily: 'var(--font-news)', lineHeight: 1 }}>{pct.toFixed(0)}%</div>
-            <div style={{ fontSize: 14, color: 'var(--ink-sub)', marginTop: 4 }}>词汇掌握率</div>
-            <div style={{ fontSize: 13, color: 'var(--ink-muted)', marginTop: 8 }}>复习了 {graded} 个词</div>
-          </div>
+          {/* D10：本轮小结环 + 记住/需加强 */}
+          {(() => {
+            const total = graded || 1
+            const sPct = Math.round(sess.remembered / total * 100)
+            const C = 2 * Math.PI * 40, off = C * (1 - sPct / 100)
+            return (
+              <div style={{ background: 'var(--card)', borderRadius: 20, padding: '28px', border: '1px solid var(--line)', marginBottom: 20, textAlign: 'center' }}>
+                <svg width="104" height="104" style={{ margin: '0 auto 14px', display: 'block' }}>
+                  <circle cx="52" cy="52" r="40" fill="none" stroke="var(--line)" strokeWidth="8" />
+                  <circle cx="52" cy="52" r="40" fill="none" stroke="var(--teal-ink)" strokeWidth="8" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform="rotate(-90 52 52)" />
+                  <text x="52" y="57" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="22" fontWeight="700" fill="var(--teal-ink)">{sPct}%</text>
+                </svg>
+                <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>复习完成 ✦</div>
+                <div style={{ fontSize: 13, color: 'var(--ink-sub)', margin: '4px 0 18px' }}>本轮复习 {graded} 词 · 已为你安排下次复习时间</div>
+                <div style={{ display: 'flex', gap: 11, justifyContent: 'center' }}>
+                  <div style={{ flex: 1, maxWidth: 130, padding: 14, borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 22, fontWeight: 700, color: 'var(--teal-ink)' }}>{sess.remembered}</div>
+                    <div style={{ fontSize: 11, color: 'var(--ink-muted)', marginTop: 3 }}>记住了</div>
+                  </div>
+                  <div style={{ flex: 1, maxWidth: 130, padding: 14, borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 22, fontWeight: 700, color: 'var(--rose-ink)' }}>{sess.weak}</div>
+                    <div style={{ fontSize: 11, color: 'var(--ink-muted)', marginTop: 3 }}>需加强</div>
+                  </div>
+                  <div style={{ flex: 1, maxWidth: 130, padding: 14, borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 700, color: 'var(--ink)' }}>{pct.toFixed(0)}%</div>
+                    <div style={{ fontSize: 11, color: 'var(--ink-muted)', marginTop: 3 }}>总掌握率</div>
+                  </div>
+                </div>
+              </div>
+            )
+          })()}
 
           {/* Log */}
           {recentLog.length > 0 && (
