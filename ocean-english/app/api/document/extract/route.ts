@@ -9,7 +9,7 @@ export const runtime = 'nodejs'
 export async function POST(req: NextRequest) {
   // Rate limit
   const ip = getClientIP(req)
-  if (!checkRateLimit(rateLimitKey('document-extract', ip), RATE_LIMITS['document-extract'])) {
+  if (!(await checkRateLimit(rateLimitKey('document-extract', ip), RATE_LIMITS['document-extract']))) {
     return NextResponse.json(
       { ok: false, error: { code: 'rate_limit', message: 'Too many uploads. Please wait a moment.' } },
       { status: 429 },

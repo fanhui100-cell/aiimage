@@ -21,7 +21,7 @@ function isClientMessage(m: unknown): m is { role: string; content: string } {
 export async function POST(req: NextRequest) {
   // Rate limit check
   const ip = getClientIP(req)
-  if (!checkRateLimit(rateLimitKey('chat', ip), RATE_LIMITS.chat)) {
+  if (!(await checkRateLimit(rateLimitKey('chat', ip), RATE_LIMITS.chat))) {
     return NextResponse.json(
       { error: { code: 'rate_limit', message: 'Too many requests. Please wait a moment.', retryable: true } },
       { status: 429 },

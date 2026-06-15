@@ -11,7 +11,7 @@ export const runtime = 'nodejs'
 export async function POST(req: NextRequest) {
   // Rate limit check
   const ip = getClientIP(req)
-  if (!checkRateLimit(rateLimitKey('word-explain', ip), RATE_LIMITS['word-explain'])) {
+  if (!(await checkRateLimit(rateLimitKey('word-explain', ip), RATE_LIMITS['word-explain']))) {
     return NextResponse.json(
       { error: { code: 'rate_limit', message: 'Too many requests. Please wait a moment.', retryable: true } },
       { status: 429 },
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
   // Cache lookup — word explanations are deterministic and safe to cache
   if (AI_CONFIG.enableCache) {
     const key = makeCacheKey('word-explain', word.toLowerCase(), userLevel)
-    const cached = cacheGet(key)
+    const cached = await cacheGet(key)
     if (cached) {
       return NextResponse.json({ content: cached, provider: AI_CONFIG.provider, cached: true })
     }
@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     // Cache successful response
     if (AI_CONFIG.enableCache) {
       const key = makeCacheKey('word-explain', word.toLowerCase(), userLevel)
-      cacheSet(key, response.content)
+      await cacheSet(key, response.content)
     }
 
     return NextResponse.json(response)

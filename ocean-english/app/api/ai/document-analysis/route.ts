@@ -14,7 +14,7 @@ export const runtime = 'nodejs'
 export async function POST(req: NextRequest) {
   // Rate limit
   const ip = getClientIP(req)
-  if (!checkRateLimit(rateLimitKey('document-analysis', ip), RATE_LIMITS['document-analysis'])) {
+  if (!(await checkRateLimit(rateLimitKey('document-analysis', ip), RATE_LIMITS['document-analysis']))) {
     return NextResponse.json(
       { ok: false, error: { code: 'rate_limit', message: 'Too many requests. Please wait a moment.' } },
       { status: 429 },

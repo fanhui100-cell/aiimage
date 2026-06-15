@@ -14,7 +14,7 @@ function sanitizeString(val: unknown, maxLen: number): string {
 export async function POST(req: NextRequest) {
   // Rate limit check
   const ip = getClientIP(req)
-  if (!checkRateLimit(rateLimitKey('mistake-analysis', ip), RATE_LIMITS['mistake-analysis'])) {
+  if (!(await checkRateLimit(rateLimitKey('mistake-analysis', ip), RATE_LIMITS['mistake-analysis']))) {
     return NextResponse.json(
       { error: { code: 'rate_limit', message: 'Too many requests. Please wait a moment.', retryable: true } },
       { status: 429 },

@@ -1,7 +1,8 @@
-// Simple in-memory rate limiter keyed by IP + endpoint.
-// TODO Phase 3C: Replace with Redis-based distributed rate limiter before multi-instance deploy.
+// Rate limiter keyed by IP + endpoint.
+// 配了 Upstash（UPSTASH_REDIS_REST_*）→ 走 Redis（跨实例一致）；否则回退进程内存版。
 
 import type { NextRequest } from 'next/server'
+import { redisEnabled, redisCmd } from './redis-client'
 
 interface RateLimitEntry {
   count: number
@@ -36,7 +37,21 @@ export function getClientIP(req: NextRequest): string {
 }
 
 /** Returns true if the request is within limits, false if rate-limited. */
-export function checkRateLimit(key: string, config: RateLimitConfig): boolean {
+export async function checkRateLimit(key: string, config: RateLimitConfig): Promise<boolean> {
+  if (redisEnabled()) {
+    const windowSec = Math.max(1, Math.ceil(config.windowMs / 1000))
+    const count = await redisCmd<number>(['INCR', `rl:${key}`])
+    if (typeof count === 'number') {
+      if (count === 1) await redisCmd(['EXPIRE', `rl:${key}`, windowSec])
+      return count <= config.max
+    }
+    // Redis 抖动 → 落到内存版，避免误杀
+  }
+  return checkRateLimitMemory(key, config)
+}
+
+/** 进程内存版（无 Redis 或 Redis 失败时使用）。 */
+function checkRateLimitMemory(key: string, config: RateLimitConfig): boolean {
   const now = Date.now()
   const entry = store.get(key)
 
