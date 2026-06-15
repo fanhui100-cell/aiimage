@@ -42,8 +42,6 @@ interface DbDictionaryWord {
   is_core_word: boolean
   is_exam_word: boolean
   tags: string[]
-  // D7：单词配图（p2-word-image-url.sql；执行前为 undefined）
-  image_url?: string | null
   // P2：词库注入新列（final-p2-vocab-schema.sql；执行前为 undefined）
   levels?: number[] | null
   primary_level?: number | null
@@ -209,7 +207,6 @@ function mapDbWord(row: DbDictionaryWord): DictionaryWord {
     id: row.id,
     word: row.word,
     phoneticIpa: row.phonetic_ipa,
-    imageUrl: row.image_url ?? undefined,
     partOfSpeech: row.part_of_speech,
     cefrLevel: (row.cefr_level as CefrLevel) ?? null,
     level: row.level as WordLevel,

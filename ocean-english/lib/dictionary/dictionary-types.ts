@@ -113,8 +113,6 @@ export interface DictionaryWord {
   /** Lexiverse filter support — domain dimension (e.g. 'engineering', 'ai-tech') */
   domainTags?: string[]
   frequencyRank: number | null
-  /** D7：单词配图 URL（dictionary_words.image_url）；为空时配图槽优雅降级 */
-  imageUrl?: string | null
   /** P1-2/阶段2：词库 7 档标签（1初中…7SAT，多档共存）；阶段 2 注入前为空 */
   levels?: number[]
   /** 阶段2：最低档 */
