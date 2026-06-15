@@ -15,6 +15,7 @@ import { DOCUMENT_CONFIG } from '../document-config'
 import type { OCRInput } from './ocr-types'
 import { MockOCRProvider } from './mock-ocr-provider'
 import { createVisionOCRProvider } from './vision-ocr-provider'
+import { EasyOCRProvider } from './easyocr-provider'
 
 export async function extractImageText(
   buffer: Buffer,
@@ -33,6 +34,16 @@ export async function extractImageText(
   const visionProvider = createVisionOCRProvider()
 
   const ocrResult = await (async () => {
+    // 1) 本地 EasyOCR（OCR_ENGINE=easyocr 启用，免费无 key）
+    if (process.env.OCR_ENGINE === 'easyocr') {
+      try {
+        return await new EasyOCRProvider().extractText(input)
+      } catch (err) {
+        console.error('[OCR EasyOCR]', err instanceof Error ? err.message : String(err))
+        // Fall through to vision / mock
+      }
+    }
+    // 2) 云 Vision（Gemini/OpenAI，配了对应 key 才有）
     if (visionProvider) {
       try {
         return await visionProvider.extractText(input)
@@ -44,6 +55,7 @@ export async function extractImageText(
         // Fall through to mock
       }
     }
+    // 3) Mock 兜底（管线永不崩）
     return mock.extractText(input)
   })()
 
@@ -70,7 +82,9 @@ export async function extractImageText(
     ocrResult.extractionMethod === 'vision-ocr-gemini' ||
     ocrResult.extractionMethod === 'vision-ocr-openai'
       ? 'vision-ocr'
-      : 'mock-ocr'
+      : ocrResult.extractionMethod === 'easyocr-local'
+        ? 'image-ocr'
+        : 'mock-ocr'
   ) as ExtractedDocumentData['extractionMethod']
 
   const rawText =

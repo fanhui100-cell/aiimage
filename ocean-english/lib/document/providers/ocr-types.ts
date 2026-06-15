@@ -8,6 +8,7 @@ export type OCRExtractionMethod =
   | 'mock-ocr'
   | 'vision-ocr-gemini'
   | 'vision-ocr-openai'
+  | 'easyocr-local'
   | 'not-implemented'
 
 export interface OCRResult {
