@@ -67,6 +67,21 @@ function cleanChoiceText(text: string): string {
   return text.replace(/^[A-Da-d][.)、]\s*/, '').trim()
 }
 
+// 分批查 dictionary_words，返回命中的 id 集合（PostgREST in() 有长度上限，按 200 分批）
+async function dictIntersect(
+  db: Awaited<ReturnType<typeof createClient>>,
+  tokens: string[],
+): Promise<Set<string>> {
+  const hit = new Set<string>()
+  for (let i = 0; i < tokens.length; i += 200) {
+    const chunk = tokens.slice(i, i + 200)
+    if (!chunk.length) continue
+    const { data } = await db.from('dictionary_words').select('id').in('id', chunk)
+    for (const r of (data ?? []) as { id: string }[]) hit.add(r.id)
+  }
+  return hit
+}
+
 async function buildDetail(db: Awaited<ReturnType<typeof createClient>>, id: string) {
   const { data, error } = await db
     .from('question_bank')
@@ -159,8 +174,21 @@ export async function GET(req: NextRequest) {
       const { data: rps } = await db.from('reading_passages').select('id,title,title_zh,minutes').in('id', ids)
       for (const r of (rps ?? []) as { id: string; title?: string; title_zh?: string; minutes?: number }[]) rpMap.set(r.id, r)
     }
+
+    // 每篇 keyWords（实词 ∩ 词典）：跨篇收 token → 分批查词典 → 回填，前端据此算生词率
+    const perPassageTokens = new Map<string, string[]>()
+    const allTokens = new Set<string>()
+    for (const [pid, v] of byPassage) {
+      const toks = candidateTokens(v.audio)
+      perPassageTokens.set(pid, toks)
+      for (const t of toks) allTokens.add(t)
+    }
+    const dictSet = await dictIntersect(db, [...allTokens])
+    const keyWordsOf = (pid: string) => (perPassageTokens.get(pid) ?? []).filter((t) => dictSet.has(t))
+
     const list = [...byPassage.entries()].map(([pid, v]) => {
       const rp = rpMap.get(pid)
+      const keyWords = keyWordsOf(pid)
       return {
         id: pid,
         title: rp?.title || deriveTitle(v.audio),
@@ -168,6 +196,8 @@ export async function GET(req: NextRequest) {
         level: v.level,
         minutes: rp?.minutes ?? Math.max(1, Math.round(wordCount(v.audio) / 200)),
         questionCount: v.count,
+        keyWords,
+        keyWordCount: keyWords.length,
       }
     })
 
