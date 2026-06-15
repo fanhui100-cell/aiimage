@@ -31,7 +31,7 @@ export class AnthropicProvider implements AIProvider {
     this.model = AI_CONFIG.model || 'claude-haiku-4-5-20251001'
 
     if (!this.apiKey) {
-      console.warn('[LexiOcean] ANTHROPIC_API_KEY is not set. Anthropic provider will not function.')
+      console.warn('[Lexiverse] ANTHROPIC_API_KEY is not set. Anthropic provider will not function.')
     }
   }
 
@@ -58,6 +58,15 @@ export class AnthropicProvider implements AIProvider {
       // return { content, provider: 'anthropic', cached: false }
       void builtMessages
       this.notImplemented('chat')
+    } catch (err) {
+      throw normalizeProviderError(err, 'anthropic')
+    }
+  }
+
+  async complete(messages: AIMessage[]): Promise<AIResponse> {
+    try {
+      void messages
+      this.notImplemented('complete')
     } catch (err) {
       throw normalizeProviderError(err, 'anthropic')
     }

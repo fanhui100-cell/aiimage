@@ -1,6 +1,6 @@
 import type { LearningLevel } from './learning'
 
-export type AIProviderName = 'mock' | 'openai' | 'anthropic' | 'gemini'
+export type AIProviderName = 'mock' | 'openai' | 'anthropic' | 'gemini' | 'deepseek'
 
 // Mirrors LearningLevel for consistent vocabulary across the app
 export type AIUserLevel = LearningLevel

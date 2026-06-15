@@ -50,15 +50,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, data: result })
   }
 
-  // Real AI path — uses client.chat() with a dedicated document-analysis message set.
-  // LIMITATION (Phase 4B, mock-only): real providers (OpenAI, Anthropic, Gemini) prepend the
-  // chat-tutor system prompt inside their chat() implementations. When a real provider is activated,
-  // this route must call a dedicated analyzeDocument() method (or a raw completeMessages() path)
-  // that does NOT inject the chat-tutor context. Until then, only the mock provider is safe here.
+  // Real AI path — 用 client.complete() 原样发送 document-analysis 消息集（不注入 chat-tutor 系统提示）。
   try {
     const client = createAIClient()
     const messages = buildDocumentAnalysisMessages(rawText, userLevel)
-    const aiResponse = await client.chat(messages, {
+    const aiResponse = await client.complete(messages, {
       userLevel,
       language: 'bilingual',
       maxTokens: AI_CONFIG.maxOutputTokens,

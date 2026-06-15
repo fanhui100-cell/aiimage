@@ -31,7 +31,7 @@ export class GeminiProvider implements AIProvider {
     this.model = AI_CONFIG.model || 'gemini-1.5-flash'
 
     if (!this.apiKey) {
-      console.warn('[LexiOcean] GEMINI_API_KEY is not set. Gemini provider will not function.')
+      console.warn('[Lexiverse] GEMINI_API_KEY is not set. Gemini provider will not function.')
     }
   }
 
@@ -52,6 +52,15 @@ export class GeminiProvider implements AIProvider {
       // return { content: result.response.text(), provider: 'gemini', cached: false }
       void builtMessages
       this.notImplemented('chat')
+    } catch (err) {
+      throw normalizeProviderError(err, 'gemini')
+    }
+  }
+
+  async complete(messages: AIMessage[]): Promise<AIResponse> {
+    try {
+      void messages
+      this.notImplemented('complete')
     } catch (err) {
       throw normalizeProviderError(err, 'gemini')
     }

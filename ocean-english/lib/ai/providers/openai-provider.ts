@@ -31,7 +31,7 @@ export class OpenAIProvider implements AIProvider {
     this.model = AI_CONFIG.model || 'gpt-4o-mini'
 
     if (!this.apiKey) {
-      console.warn('[LexiOcean] OPENAI_API_KEY is not set. OpenAI provider will not function.')
+      console.warn('[Lexiverse] OPENAI_API_KEY is not set. OpenAI provider will not function.')
     }
   }
 
@@ -54,6 +54,15 @@ export class OpenAIProvider implements AIProvider {
       // return { content: completion.choices[0].message.content ?? '', provider: 'openai', cached: false }
       void builtMessages
       this.notImplemented('chat')
+    } catch (err) {
+      throw normalizeProviderError(err, 'openai')
+    }
+  }
+
+  async complete(messages: AIMessage[]): Promise<AIResponse> {
+    try {
+      void messages
+      this.notImplemented('complete')
     } catch (err) {
       throw normalizeProviderError(err, 'openai')
     }
