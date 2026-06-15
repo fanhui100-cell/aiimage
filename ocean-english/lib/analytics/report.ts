@@ -19,6 +19,8 @@ const ALL_STATES: WordState[] = [
 const VOCAB_FLOOR: Record<number, number> = {
   1: 1500, 2: 3000, 3: 4500, 4: 6000, 5: 8000, 6: 11000, 7: 14000,
 }
+const LEVEL_NAMES: Record<number, string> = { 1: '初中', 2: '高中', 3: '四级', 4: '六级', 5: '考研', 6: '托福', 7: 'SAT' }
+const lvName = (level: number) => LEVEL_NAMES[Math.max(1, Math.min(7, Math.round(level || 1)))] ?? '初学'
 
 /** 估算词汇量 = 该档累计基线 + 应用内已掌握词数（粗估，结果页/复测展示用） */
 export function estimateVocab(level: number, masteredCount: number): number {
@@ -51,6 +53,7 @@ export interface DimStat {
 
 export interface LearnReport {
   vocabEstimate: number
+  levelName: string
   byState: Record<WordState, number>
   totals: { mastered: number; learning: number; due: number; active: number }
   matrix: MatrixPoint[]
@@ -114,6 +117,7 @@ export function buildReport(input: BuildReportInput): LearnReport {
 
   return {
     vocabEstimate: estimateVocab(level, mastered),
+    levelName: lvName(level),
     byState,
     totals: { mastered, learning: byState.learning, due, active: active.length },
     matrix,
