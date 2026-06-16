@@ -51,16 +51,7 @@
 .imm .tabs button{flex:1;padding:10px;border:none;background:none;color:var(--ink-muted);font-weight:600;font-size:13.5px;border-radius:999px;cursor:pointer;transition:all .2s;font-family:var(--font-sans);}
 .imm .tabs button.on{color:#06231d;background:linear-gradient(180deg,#6ff0db,#34d8c0);box-shadow:0 8px 18px -10px rgba(79,230,206,.6);}
 
-/* 方式切换：密码登录 / 验证码登录（注册：邮箱 / 手机） */
-.imm .method-seg{display:flex;gap:8px;width:100%;margin:-6px 0 18px;}
-.imm .method-seg button{flex:1;padding:9px;border-radius:11px;border:1px solid var(--line);background:rgba(255,255,255,.5);color:var(--ink-muted);font-size:12.5px;font-weight:600;cursor:pointer;font-family:var(--font-sans);transition:all .15s;backdrop-filter:blur(8px);}
-.imm .method-seg button.on{color:var(--teal-ink);border-color:var(--teal-ink);background:var(--teal-bg);}
-
 .imm .form{width:100%;display:flex;flex-direction:column;gap:14px;}
-/* 验证码行内「发送」按钮 */
-.imm .code-btn{position:relative;z-index:4;flex-shrink:0;height:40px;padding:0 14px;margin-right:4px;border-radius:9999px;border:none;cursor:pointer;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--teal-ink);background:rgba(14,140,122,.12);white-space:nowrap;transition:opacity .2s;}
-.imm .code-btn:hover{opacity:.85;}
-.imm .code-btn:disabled{opacity:.5;cursor:default;}
 .imm .field-wrap{position:relative;}
 .imm .row{display:flex;align-items:center;justify-content:space-between;margin:6px 4px 4px;}
 .imm .chk{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-sub);cursor:pointer;background:none;border:none;font-family:var(--font-sans);}
