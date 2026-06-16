@@ -92,7 +92,10 @@ function Palette({ onClose }: { onClose: () => void }) {
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
   const rowRefs = useRef<(HTMLButtonElement | null)[]>([])
-  const recent = useMemo(loadRecent, [])
+  // 仅键盘 ↑↓ 切换时滚动选中项入视区；鼠标 hover 改 active 不滚动
+  // （否则 hover→active→scroll 把行移到光标下，又触发 hover，形成失控自动下拉）
+  const kbdNav = useRef(false)
+  const recent = useMemo(() => loadRecent(), [])
 
   const { sections, flat } = useMemo(() => {
     const secs: Section[] = []
@@ -107,8 +110,10 @@ function Palette({ onClose }: { onClose: () => void }) {
   useEffect(() => { setActive(0) }, [q])
   useEffect(() => { const t = setTimeout(() => inputRef.current?.focus(), 50); return () => clearTimeout(t) }, [])
 
-  // 选中项滚入视区（不用 scrollIntoView）
+  // 选中项滚入视区（不用 scrollIntoView）—— 只在键盘导航时滚动
   useEffect(() => {
+    if (!kbdNav.current) return
+    kbdNav.current = false
     const el = rowRefs.current[active], box = listRef.current
     if (!el || !box) return
     const top = el.offsetTop, bottom = top + el.offsetHeight
@@ -120,8 +125,8 @@ function Palette({ onClose }: { onClose: () => void }) {
 
   const onKey = (e: React.KeyboardEvent) => {
     const n = Math.max(flat.length, 1)
-    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(a => (a + 1) % n) }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(a => (a - 1 + n) % n) }
+    if (e.key === 'ArrowDown') { e.preventDefault(); kbdNav.current = true; setActive(a => (a + 1) % n) }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); kbdNav.current = true; setActive(a => (a - 1 + n) % n) }
     else if (e.key === 'Enter') { e.preventDefault(); flat[active] && pick(flat[active]) }
     else if (e.key === 'Escape') { e.preventDefault(); onClose() }
   }
@@ -174,14 +179,15 @@ function Palette({ onClose }: { onClose: () => void }) {
                 idx++; const my = idx; const on = my === active
                 return (
                   <button key={`${si}-${it.key}`} ref={el => { rowRefs.current[my] = el }}
-                    onMouseMove={() => active !== my && setActive(my)} onClick={() => pick(it)}
+                    onMouseMove={() => { if (active !== my) { kbdNav.current = false; setActive(my) } }} onClick={() => pick(it)}
                     style={{ display: 'flex', alignItems: 'center', gap: 12, width: '100%', textAlign: 'left',
                       padding: '10px 11px', borderRadius: 11, border: `1px solid ${on ? T.border : 'transparent'}`,
                       background: on ? T.rowOn : 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)' }}>
-                    <span style={{ flex: 1, fontSize: 14.5, fontWeight: 600, color: T.fg }}>{it.zh}</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: T.muted }}>{it.en}</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: T.muted, opacity: on ? .75 : 0 }}>{it.href}</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: T.accent, width: 14, textAlign: 'center', opacity: on ? 1 : 0 }}>↵</span>
+                    <span style={{ flex: 1, minWidth: 0, fontSize: 14.5, fontWeight: 600, color: T.fg, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{it.zh}</span>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: T.muted, flexShrink: 0 }}>{it.en}</span>
+                    {/* href 仅选中行渲染，避免「隐形但占位」的可变宽度把 en 列挤得参差不齐 */}
+                    {on && <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: T.muted, opacity: .75, flexShrink: 0 }}>{it.href}</span>}
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: T.accent, width: 14, textAlign: 'center', flexShrink: 0, opacity: on ? 1 : 0 }}>↵</span>
                   </button>
                 )
               })}

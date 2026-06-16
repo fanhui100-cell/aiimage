@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { lexiverseBasePath } from '@/config/lexiverse-build'
 import { useLexiStore } from '@/store/lexiStore'
-import { useCommandPalette } from '@/components/ui/motion/CommandPalette'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 
 type ReferenceGalaxy = {
@@ -28,7 +27,6 @@ type LexiverseWindow = Window & {
 
 export function ReferenceLexiverseFrame() {
   const router = useRouter()
-  const cmd = useCommandPalette()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const galaxyId = searchParams.get('galaxy')
@@ -335,27 +333,8 @@ export function ReferenceLexiverseFrame() {
         allow="fullscreen"
       />
 
-      {/* 界面优化2·P1：宇宙面（chromeless 无 Navbar）的命令面板入口；⌘K 已全局可用，这里给可点击 affordance（深海玻璃·暗色令牌） */}
-      <button
-        type="button"
-        onClick={cmd.open}
-        aria-label="全部功能 · 命令面板"
-        title="全部功能 / 跳转 ⌘K"
-        style={{
-          position: 'fixed', right: 18, top: 18, zIndex: 40,
-          display: 'inline-flex', alignItems: 'center', gap: 7,
-          padding: '8px 13px', borderRadius: 999,
-          background: 'rgba(126,249,255,.08)', border: '1px solid rgba(126,249,255,.32)',
-          color: '#7EF9FF', fontSize: 13, fontWeight: 600, cursor: 'pointer',
-          backdropFilter: 'blur(8px)',
-        }}
-      >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" />
-          <rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
-        </svg>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, opacity: .85 }}>⌘K</span>
-      </button>
+      {/* 界面优化2 返修：宇宙面已有 iframe 内「⋯ 全部」模块导航（FIX5 快捷条），
+          原 React ⌘K 浮层与之重复 → 移除。命令面板仍可经全局 ⌘K 唤起。 */}
 
       {/* 19.zip：从单词页进来时显示「返回单词」chip（青色玻璃，HUD 之下） */}
       {returnTo && (
