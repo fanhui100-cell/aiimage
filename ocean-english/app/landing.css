@@ -179,8 +179,19 @@
 /* ════════════════════════════════════════════════════════════════════════
    日光（项目夜间令牌生效时 → 落地页切米白；源文件 body.day 的映射）
    ════════════════════════════════════════════════════════════════════════ */
-:root[data-theme="night"] .lxland{background:#f2efe9;}
+/* 落地页日光态：锁回浅色令牌（否则 var(--ink)/--paper 会取到夜间值 → 米白底上出现奶白字、暗顶栏） */
+:root[data-theme="night"] .lxland{
+  --ink:#14191e; --ink-sub:#3c4a55; --ink-muted:#7a8893;
+  --line:rgba(20,30,40,.10); --line-strong:rgba(20,30,40,.16);
+  --teal-ink:#0c7d6c; --gold-ink:#b3781f; --rose-ink:#bf4a30;
+  --paper:#f2efe9; --paper-2:#ece8df; --card:#fbf9f4; --card-2:#ffffff; --teal-bg:rgba(14,140,122,.08);
+  background:#f2efe9;
+}
 :root[data-theme="night"] .lxland .lqg{--lg-fg:#16201d;--lg-bg:#ffffff;}
+/* 日光态主标题/副标题用更实的深墨色，保证米白底上清晰 */
+:root[data-theme="night"] .lxland .hero h1{color:#101a18;text-shadow:0 0 60px rgba(127,217,207,.35);}
+:root[data-theme="night"] .lxland .chapter h2,:root[data-theme="night"] .lxland .demo .head h2,:root[data-theme="night"] .lxland .show .head h2,:root[data-theme="night"] .lxland .compare .head h2,:root[data-theme="night"] .lxland .closing h2{color:#101a18;}
+:root[data-theme="night"] .lxland .hero p.lead,:root[data-theme="night"] .lxland .chapter p{color:#33424d;}
 :root[data-theme="night"] .lxland .bg-aura .a1{background:#7fd9cf;opacity:.34;}
 :root[data-theme="night"] .lxland .bg-aura .a2{background:#bfe0e8;opacity:.3;}
 :root[data-theme="night"] .lxland .bg-aura .a3{background:#cdd9f0;opacity:.3;}
