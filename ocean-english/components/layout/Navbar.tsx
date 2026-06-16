@@ -9,10 +9,14 @@ import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
 import { PRIMARY_NAV, TOOL_NAV } from '@/lib/product-flow/nav'
 import { ThemeToggle } from '@/components/layout/ThemeToggle'
+// +++ 接入改动：命令面板触发
+import { useCommandPalette } from '@/components/ui/motion/CommandPalette'
 
 export function Navbar() {
   const pathname = usePathname()
   const dark = isDarkRoute(pathname)
+  // +++ 接入改动
+  const cmd = useCommandPalette()
   const { streakData, getDue } = useLexiStore()
   const wrongCount = useLexiStore(s => s.wrongAnswers.length)
   const streak = streakData.current
@@ -115,8 +119,35 @@ export function Navbar() {
         <ToolsDropdown textColor={textColor} activeColor={activeColor} dark={dark} pathname={pathname} />
       </div>
 
-      {/* ── 右侧: 全局搜索 + 主题切换 + streak popover + 账户 popover（F1-3）── */}
+      {/* ── 右侧: 全部(⌘K) + 全局搜索 + 主题切换 + streak popover + 账户 popover（F1-3）── */}
       <div className="flex items-center gap-3 shrink-0">
+        {/* +++ 接入改动：命令面板触发（替代「全部功能」sheet）。田字格=功能跳转，与下方放大镜=搜索内容区分。*/}
+        <button
+          type="button"
+          onClick={cmd.open}
+          aria-label="全部功能 · 命令面板"
+          title="全部功能 / 跳转 ⌘K"
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 7,
+            height: 34, padding: '0 12px', borderRadius: 999,
+            background: dark ? 'rgba(255,255,255,0.04)' : 'var(--card)',
+            border: `1px solid ${dark ? 'var(--glass-border)' : 'var(--line-strong)'}`,
+            color: textColor, cursor: 'pointer',
+            fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600,
+          }}
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+          <span className="hidden sm:inline">全部</span>
+          <kbd style={{
+            fontFamily: 'var(--font-mono)', fontSize: 9, color: 'inherit',
+            border: `1px solid ${dark ? 'var(--glass-border)' : 'var(--line)'}`,
+            borderRadius: 5, padding: '1px 5px',
+          }}>⌘K</kbd>
+        </button>
+
         <Link
           href="/search"
           aria-label="全局搜索"

@@ -9,6 +9,7 @@ import { useLexiStore } from '@/store/lexiStore'
 import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import { TOOL_NAV, MORE_NAV } from '@/lib/product-flow/nav'
+import { useCommandPalette } from '@/components/ui/motion/CommandPalette'
 import { levelDef } from '@/lib/levels'
 import { WeeklyReportCard } from '@/components/me/WeeklyReportCard'
 import { ReminderSetting } from '@/components/me/ReminderSetting'
@@ -34,6 +35,7 @@ function SectionTitle({ zh, en }: { zh: string; en: string }) {
 
 export function MeScreen() {
   const navigate = useNavigate()
+  const cmd = useCommandPalette()
   const { streakData, xp, masteredPct, counts, profile, bandCefr, setProfile } = useLexiStore()
   const streak = streakData.current
 
@@ -208,6 +210,18 @@ export function MeScreen() {
 
         {/* ④' 全部功能（方案 A：复习/试炼/发音/口语/听写/造句/词根/词图/报告/排行/小组/知识库 收纳于此，保持可达） */}
         <SectionTitle zh="全部功能" en="All Tools" />
+        {/* 界面优化2·P1：主入口改为「⌘K 命令面板」；下方宫格保留做可达性/无 JS 降级 */}
+        <button type="button" onClick={cmd.open} className="btn-press"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, width: '100%', marginBottom: 10, padding: '13px 16px', borderRadius: 14, background: 'var(--card)', border: '1px solid var(--line-strong)', cursor: 'pointer', textAlign: 'left' }}>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--teal-ink)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
+            </svg>
+            <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>命令面板 · 一键跳转任意功能</span>
+          </span>
+          <kbd style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--ink-sub)', background: 'var(--paper-2)', border: '1px solid var(--line)', borderRadius: 6, padding: '2px 7px' }}>⌘K</kbd>
+        </button>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))', gap: 10 }}>
           {MORE_NAV.map(t => (
             <Link key={t.key} href={t.href} className="btn-press"

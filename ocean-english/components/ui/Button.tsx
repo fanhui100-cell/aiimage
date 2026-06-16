@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils'
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 
-type Variant = 'primary' | 'ghost' | 'dark-ghost' | 'success' | 'secondary' | 'danger'
+// +++ 接入改动：Variant 增加 'shimmer'（配套 .lx-btn--shimmer 在 globals.additions.css）
+type Variant = 'primary' | 'ghost' | 'dark-ghost' | 'success' | 'secondary' | 'danger' | 'shimmer'
 type Size = 'sm' | 'md' | 'lg'
 
 interface ButtonBaseProps {

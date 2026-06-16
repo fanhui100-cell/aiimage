@@ -12,6 +12,8 @@ import { LumiCompanion } from '@/components/companion/LumiCompanion'
 import { useLexiStore } from '@/store/lexiStore'
 import { isDarkRoute } from '@/lib/theme-route'
 import { checkReminderOnOpen } from '@/components/me/ReminderSetting'
+// +++ 接入改动：全局命令面板 Provider（必须包住两个分支，⌘K 才能在 chromeless 的 /lexiverse 也生效）
+import { CommandPaletteProvider } from '@/components/ui/motion/CommandPalette'
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -34,9 +36,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   if (chromeless) {
     return (
-      <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
-        <main>{children}</main>
-      </div>
+      <CommandPaletteProvider>
+        <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
+          <main>{children}</main>
+        </div>
+      </CommandPaletteProvider>
     )
   }
 
@@ -44,16 +48,18 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const dark = isDarkRoute(pathname)
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
-      <Navbar />
-      {focus && <FocusBackButton />}
-      <CloudSyncProvider>
-        <main style={{ paddingTop: dark ? 0 : 'var(--nav-h)' }}>{children}</main>
-      </CloudSyncProvider>
-      <MobileTabBar />
-      <MilestoneToast />
-      {/* B10-2：陪伴系统挂 Lumi（仅非 chromeless；设置可关，会话频控 ≤2 条） */}
-      <LumiCompanion />
-    </div>
+    <CommandPaletteProvider>
+      <div className="min-h-screen" style={{ background: 'var(--bg-deep)' }}>
+        <Navbar />
+        {focus && <FocusBackButton />}
+        <CloudSyncProvider>
+          <main style={{ paddingTop: dark ? 0 : 'var(--nav-h)' }}>{children}</main>
+        </CloudSyncProvider>
+        <MobileTabBar />
+        <MilestoneToast />
+        {/* B10-2：陪伴系统挂 Lumi（仅非 chromeless；设置可关，会话频控 ≤2 条） */}
+        <LumiCompanion />
+      </div>
+    </CommandPaletteProvider>
   )
 }
