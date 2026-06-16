@@ -4,9 +4,10 @@
    列表（按档 chips + 词族卡）→ 详情（词族成员，可整组/逐词加入学习）。
    数据：/api/roots（词族=base word→derivatives，无 morpheme 含义字段，故略「含义」）。
    ════════════════════════════════════════════════════════════════════════ */
-import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
+import { AnimatedBeam } from '@/components/ui/motion/AnimatedBeam'
 import './screen-kit.css'
 import './roots.css'
 
@@ -26,7 +27,9 @@ function Hl({ word, root }: { word: string; root: string }) {
 }
 
 export function RootsScreen() {
-  const router = useRouter()
+  const searchParams = useSearchParams()
+  const wordParam = searchParams.get('word')
+  const rootParam = searchParams.get('root')
   const [ui, setUi] = useState<'loading' | 'ready' | 'empty' | 'error'>('loading')
   const [fams, setFams] = useState<Family[]>([])
   const [level, setLevel] = useState<'all' | number>('all')
@@ -35,6 +38,10 @@ export function RootsScreen() {
   const [openRoot, setOpenRoot] = useState<string | null>(null)
   const [members, setMembers] = useState<Member[] | null>(null)
   const [added, setAdded] = useState<Set<string>>(new Set())
+  // 界面优化2·P5：词根→派生词流光连线用的 refs（容器 / 词根 / 成员）
+  const beamHostRef = useRef<HTMLDivElement>(null)
+  const rootRef = useRef<HTMLDivElement>(null)
+  const memberRefs = useRef<React.RefObject<HTMLButtonElement | null>[]>([])
 
   useEffect(() => {
     let cancelled = false
@@ -50,6 +57,19 @@ export function RootsScreen() {
       .catch(() => { if (!cancelled) setUi('error') })
     return () => { cancelled = true }
   }, [nonce])
+
+  // 从某词进入（?word= / ?root=）：直接打开它所属的词族，而非列出全部
+  useEffect(() => {
+    const q = wordParam ? `word=${encodeURIComponent(wordParam)}` : rootParam ? `root=${encodeURIComponent(rootParam)}` : ''
+    if (!q) return
+    let cancelled = false
+    setMembers(null)
+    fetch(`/api/roots?${q}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(j => { if (cancelled) return; if (j?.data?.root) { setOpenRoot(String(j.data.root)); setMembers((j.data.members ?? []) as Member[]) } })
+      .catch(() => { })
+    return () => { cancelled = true }
+  }, [wordParam, rootParam])
 
   const levelChips = useMemo(() => {
     const present = [...new Set(fams.map(f => f.level).filter((n): n is number => n != null))].sort((a, b) => a - b)
@@ -73,38 +93,47 @@ export function RootsScreen() {
   // ── 详情视图 ──
   if (openRoot) {
     const fam = fams.find(f => f.root === openRoot)
+    // 取前若干成员画「词根→派生词」连线（铺在内容之下，过多会乱，故限量）
+    const beamCount = members ? Math.min(members.length, 6) : 0
+    for (let i = memberRefs.current.length; i < beamCount; i++) memberRefs.current[i] = { current: null }
     return (
       <div className="scr theme-light">
         <div className="wrap" style={{ maxWidth: 760 }}>
           <button className="rt-back" onClick={() => setOpenRoot(null)}>‹ 返回词族列表</button>
-          <div className="rt-hero">
-            <span className="rt-hero-root">{fam?.word ?? openRoot}</span>
-            <div className="rt-hero-main">
-              <div className="rt-hero-mean">{fam?.word ?? openRoot} 词族</div>
-              <div className="rt-hero-sub">{fam?.level ? LV[fam.level] + ' · ' : ''}{(members?.length ?? fam?.count ?? 0)} 个同族词</div>
+          <div ref={beamHostRef} style={{ position: 'relative' }}>
+            {/* 界面优化2·P5：词根→派生词流光连线（米白 teal-ink），置于内容之下；切词族时 key 含 openRoot 以重算 */}
+            {beamCount > 0 && memberRefs.current.slice(0, beamCount).map((mref, i) => (
+              <AnimatedBeam key={`${openRoot}-${i}`} containerRef={beamHostRef} fromRef={rootRef} toRef={mref} curvature={26} delay={i * 0.16} />
+            ))}
+            <div className="rt-hero" ref={rootRef}>
+              <span className="rt-hero-root">{fam?.word ?? openRoot}</span>
+              <div className="rt-hero-main">
+                <div className="rt-hero-mean">{fam?.word ?? openRoot} 词族</div>
+                <div className="rt-hero-sub">{fam?.level ? LV[fam.level] + ' · ' : ''}{(members?.length ?? fam?.count ?? 0)} 个同族词</div>
+              </div>
             </div>
-          </div>
-          <div className="rt-detail-acts">
-            <button className="btn btn-primary" onClick={() => { members?.forEach(addMember) }}>整组加入学习（{members?.length ?? 0}）</button>
-            <button className="btn btn-ghost" onClick={() => setOpenRoot(null)}>返回</button>
-          </div>
-          {members === null ? (
-            <div className="rt-members">{Array.from({ length: 5 }).map((_, i) => <div key={i} className="skel" style={{ height: 50, borderRadius: 13 }} />)}</div>
-          ) : (
-            <div className="rt-members">
-              {members.map(m => {
-                const on = added.has(m.slug)
-                return (
-                  <button key={m.slug} className="rt-mem" onClick={() => addMember(m)}>
-                    <span className="rt-mem-w"><Hl word={m.word} root={fam?.word ?? openRoot} /></span>
-                    <span className="rt-mem-ipa">{m.phon}</span>
-                    <span className="rt-mem-zh">{m.zh}</span>
-                    <span className={`rt-mem-add ${on ? 'on' : ''}`}>{on ? '✓' : '+'}</span>
-                  </button>
-                )
-              })}
+            <div className="rt-detail-acts">
+              <button className="btn btn-primary" onClick={() => { members?.forEach(addMember) }}>整组加入学习（{members?.length ?? 0}）</button>
+              <button className="btn btn-ghost" onClick={() => setOpenRoot(null)}>返回</button>
             </div>
-          )}
+            {members === null ? (
+              <div className="rt-members">{Array.from({ length: 5 }).map((_, i) => <div key={i} className="skel" style={{ height: 50, borderRadius: 13 }} />)}</div>
+            ) : (
+              <div className="rt-members">
+                {members.map((m, i) => {
+                  const on = added.has(m.slug)
+                  return (
+                    <button key={m.slug} ref={i < beamCount ? memberRefs.current[i] : undefined} className="rt-mem" onClick={() => addMember(m)}>
+                      <span className="rt-mem-w"><Hl word={m.word} root={fam?.word ?? openRoot} /></span>
+                      <span className="rt-mem-ipa">{m.phon}</span>
+                      <span className="rt-mem-zh">{m.zh}</span>
+                      <span className={`rt-mem-add ${on ? 'on' : ''}`}>{on ? '✓' : '+'}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     )

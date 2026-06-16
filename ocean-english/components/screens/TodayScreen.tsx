@@ -15,6 +15,7 @@ import Link from 'next/link'
 import { useLexiStore } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
 import { RingProgress } from '@/components/ui/motion/RingProgress'
+import { RecentlyMasteredRibbon } from '@/components/screens/RecentlyMasteredRibbon'
 import './today-screen.css'
 
 type PathId = 'full' | 'words' | 'reading' | 'exam'
@@ -319,6 +320,9 @@ export function TodayScreen() {
                 )
               })}
             </div>
+
+            {/* 界面优化2·P7：最近掌握词跑马灯（米白，<6 词自动不显示） */}
+            <RecentlyMasteredRibbon />
           </div>
         </div>
       </div>
