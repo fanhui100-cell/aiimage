@@ -12,6 +12,29 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY, isSupabaseConfigured } from '@/lib/sup
 
 interface DerivRow { word_id: string; related_id: string }
 
+// 已知成员里的最长公共词干（小写）
+function commonPrefix(words: string[]): string {
+  const ws = words.filter(Boolean).map(w => w.toLowerCase())
+  if (!ws.length) return ''
+  let p = ws[0]
+  for (const w of ws.slice(1)) {
+    let i = 0
+    while (i < p.length && i < w.length && p[i] === w[i]) i++
+    p = p.slice(0, i)
+    if (!p) break
+  }
+  return p
+}
+// dictionary_words 行 → 轻量元数据
+function metaRow(row: Record<string, unknown>): { word: string; zh: string; phon: string; level: number | null } {
+  const defs = ((row.dictionary_definitions ?? []) as { definition_zh: string | null; definition_en: string; order_index: number }[]).sort((a, b) => a.order_index - b.order_index)
+  return {
+    word: String(row.word), zh: defs[0]?.definition_zh ?? defs[0]?.definition_en ?? '',
+    phon: (row.phonetic_ipa as string) ?? '', level: (row.primary_level as number) ?? null,
+  }
+}
+const DW_SELECT = 'id, word, phonetic_ipa, primary_level, dictionary_definitions(definition_zh, definition_en, order_index)'
+
 function db() {
   return createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: false } })
 }
@@ -39,29 +62,43 @@ async function loadFamilies(): Promise<Map<string, string[]>> {
 export async function GET(req: NextRequest) {
   if (!isSupabaseConfigured) return NextResponse.json({ ok: true, data: [] })
   const sp = req.nextUrl.searchParams
-  const root = sp.get('root')?.toLowerCase().trim()
+  let root = sp.get('root')?.toLowerCase().trim()
+  const wordParam = sp.get('word')?.toLowerCase().trim()   // 从某词进入：定位它所属词族（词根或成员）
   const level = Number(sp.get('level'))
   const sb = db()
 
   try {
+    // ?word= → 找出含该词的词族根；找不到则把该词自身当作单成员族返回
+    if (!root && wordParam) {
+      const fam = await loadFamilies()
+      let found: string | undefined
+      for (const [rk, mem] of fam) { if (rk === wordParam || mem.includes(wordParam)) { found = rk; break } }
+      root = found ?? wordParam
+    }
     // ── 单个词族详情 ──
     if (root) {
       const fam = await loadFamilies()
-      const members = [root, ...(fam.get(root) ?? [])]
+      let members = [root, ...(fam.get(root) ?? [])]
       const meta: Record<string, { word: string; zh: string; phon: string; level: number | null }> = {}
       for (let i = 0; i < members.length; i += 100) {
         const part = members.slice(i, i + 100)
-        const { data } = await sb.from('dictionary_words')
-          .select('id, word, phonetic_ipa, primary_level, dictionary_definitions(definition_zh, definition_en, order_index)')
-          .in('id', part)
-        for (const row of (data ?? []) as Record<string, unknown>[]) {
-          const defs = ((row.dictionary_definitions ?? []) as { definition_zh: string | null; definition_en: string; order_index: number }[]).sort((a, b) => a.order_index - b.order_index)
-          meta[String(row.id)] = {
-            word: String(row.word), zh: defs[0]?.definition_zh ?? defs[0]?.definition_en ?? '',
-            phon: (row.phonetic_ipa as string) ?? '', level: (row.primary_level as number) ?? null,
-          }
-        }
+        const { data } = await sb.from('dictionary_words').select(DW_SELECT).in('id', part)
+        for (const row of (data ?? []) as Record<string, unknown>[]) meta[String(row.id)] = metaRow(row)
       }
+      // #5 返修：derivative 关系稀疏（~3/词根），词库里其实有更多同族词形。
+      // 用「已知成员的最长公共词干」补同前缀同族词；词干 ≥6 才扩展，避免 colon→colonel 之类误并。
+      const stem = commonPrefix(members.map(m => meta[m]?.word).filter(Boolean) as string[])
+      if (stem.length >= 6) {
+        const esc = stem.replace(/[\\%_]/g, '\\$&')
+        const { data: pre } = await sb.from('dictionary_words').select(DW_SELECT).ilike('word', `${esc}%`).limit(40)
+        const extra: string[] = []
+        for (const row of (pre ?? []) as Record<string, unknown>[]) {
+          const id = String(row.id)
+          if (!meta[id]) { meta[id] = metaRow(row); extra.push(id) }
+        }
+        members = [...members, ...extra]
+      }
+      members = members.slice(0, 30)
       return NextResponse.json({ ok: true, data: { root, members: members.filter(m => meta[m]).map(m => ({ slug: m, ...meta[m] })) } })
     }
 
