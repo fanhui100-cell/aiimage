@@ -1,0 +1,112 @@
+/* ════════════════════════════════════════════════════════════════════════
+   Lexiverse · 液态玻璃 (Liquid Glass)
+   移植自 sign-up.tsx 的 .glass-button / .glass-input 技法：
+   conic-gradient 描边环 + @property --angle 动效高光 + oklch 相对色片光。
+   作用域：.lqg 内,设 --lg-fg(前景) / --lg-bg(背景) 两个基色,
+   全部 oklch(from …) 公式据此推导,可在任意明暗环境复用。
+   ════════════════════════════════════════════════════════════════════════ */
+
+@property --angle-1 { syntax: "<angle>"; inherits: false; initial-value: -75deg; }
+@property --angle-2 { syntax: "<angle>"; inherits: false; initial-value: -45deg; }
+
+.lqg{ --lg-fg:#eaf3f6; --lg-bg:#0a1622; --lg-ease:cubic-bezier(.25,1,.5,1); --lg-t:400ms; }
+
+/* ── 共用玻璃底 (按钮 / 输入框) ── */
+.lq{
+  position:relative; isolation:isolate; border-radius:9999px;
+  -webkit-tap-highlight-color:transparent;
+  backdrop-filter:blur(clamp(1px,.125em,4px)); -webkit-backdrop-filter:blur(clamp(1px,.125em,4px));
+  background:linear-gradient(-75deg,
+    oklch(from var(--lg-bg) l c h / 5%),
+    oklch(from var(--lg-bg) l c h / 20%),
+    oklch(from var(--lg-bg) l c h / 5%));
+  box-shadow:
+    inset 0 .125em .125em oklch(from var(--lg-fg) l c h / 5%),
+    inset 0 -.125em .125em oklch(from var(--lg-bg) l c h / 50%),
+    0 .25em .125em -.125em oklch(from var(--lg-fg) l c h / 20%),
+    0 0 .1em .25em inset oklch(from var(--lg-bg) l c h / 20%);
+  transition:all var(--lg-t) var(--lg-ease);
+}
+/* conic 描边环 */
+.lq::after{
+  content:""; position:absolute; z-index:1; inset:0; border-radius:inherit; pointer-events:none;
+  width:calc(100% + clamp(1px,.0625em,4px)); height:calc(100% + clamp(1px,.0625em,4px));
+  top:calc(0% - clamp(1px,.0625em,4px)/2); left:calc(0% - clamp(1px,.0625em,4px)/2);
+  padding:clamp(1px,.0625em,4px); box-sizing:border-box;
+  background:conic-gradient(from var(--angle-1) at 50% 50%,
+      oklch(from var(--lg-fg) l c h / 50%) 0%, transparent 5% 40%,
+      oklch(from var(--lg-fg) l c h / 50%) 50%, transparent 60% 95%,
+      oklch(from var(--lg-fg) l c h / 50%) 100%),
+    linear-gradient(180deg, oklch(from var(--lg-bg) l c h / 50%), oklch(from var(--lg-bg) l c h / 50%));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  box-shadow:inset 0 0 0 calc(clamp(1px,.0625em,4px)/2) oklch(from var(--lg-bg) l c h / 50%);
+  transition:all var(--lg-t) var(--lg-ease), --angle-1 500ms ease;
+}
+
+/* ── 玻璃按钮 ── */
+.lq-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-family:var(--font-sans); font-weight:600; font-size:15px; line-height:1.2;
+  color:oklch(from var(--lg-fg) l c h / 92%); cursor:pointer; border:none;
+  padding:14px 28px; text-shadow:0 .25em .05em oklch(from var(--lg-fg) l c h / 10%);
+}
+/* 片光层 (随 --angle-2 扫动) */
+.lq-btn .lq-sheen, .lq-field .lq-sheen{ position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:3; }
+.lq-btn .lq-sheen::after, .lq-field .lq-sheen::after{
+  content:""; display:block; position:absolute;
+  width:calc(100% - clamp(1px,.0625em,4px)); height:calc(100% - clamp(1px,.0625em,4px));
+  top:calc(0% + clamp(1px,.0625em,4px)/2); left:calc(0% + clamp(1px,.0625em,4px)/2);
+  box-sizing:border-box; border-radius:9999px; overflow:clip;
+  background:linear-gradient(var(--angle-2), transparent 0%, oklch(from var(--lg-bg) l c h / 50%) 40% 50%, transparent 55%);
+  mix-blend-mode:screen; background-size:200% 200%; background-position:0% 50%;
+  transition:background-position calc(var(--lg-t)*1.25) var(--lg-ease), --angle-2 calc(var(--lg-t)*1.25) var(--lg-ease);
+}
+.lq-btn:hover{ transform:scale(.975); }
+.lq-btn:hover::after{ --angle-1:-125deg; }
+.lq-btn:active::after{ --angle-1:-75deg; }
+.lq-btn:hover .lq-sheen::after{ background-position:25% 50%; }
+.lq-btn:active .lq-sheen::after{ background-position:50% 15%; --angle-2:-15deg; }
+.lq-btn>span{ position:relative; z-index:4; display:inline-flex; align-items:center; gap:9px; white-space:nowrap; }
+
+/* 主 CTA 着色变体 (青绿辉光叠加在玻璃上) */
+.lq-btn.accent{ color:#04241f; text-shadow:none;
+  background:linear-gradient(180deg, oklch(from #6ff0db l c h / 92%), oklch(from #2fcab2 l c h / 92%));
+  box-shadow:inset 0 .125em .125em rgba(255,255,255,.5), inset 0 -.18em .2em rgba(0,60,50,.25),
+    0 16px 32px -14px rgba(79,230,206,.7);}
+.lq-btn.accent::after{ background:conic-gradient(from var(--angle-1) at 50% 50%, rgba(255,255,255,.7) 0%, transparent 6% 40%, rgba(255,255,255,.6) 50%, transparent 60% 95%, rgba(255,255,255,.7) 100%), linear-gradient(180deg, rgba(255,255,255,.2), rgba(255,255,255,.2)); }
+
+/* ── 玻璃输入框 (pill) ── */
+.lq-field{
+  display:flex; align-items:center; gap:10px; width:100%;
+  padding:5px 5px 5px 18px; min-height:54px;
+}
+.lq-field svg.lead{ color:oklch(from var(--lg-fg) l c h / 75%); flex-shrink:0; z-index:4; position:relative; }
+.lq-field input{
+  position:relative; z-index:4; flex:1; min-width:0; height:44px;
+  border:none; outline:none; background:none;
+  font-family:var(--font-sans); font-size:15px;
+  color:oklch(from var(--lg-fg) l c h / 95%); caret-color:var(--teal);
+}
+.lq-field input::placeholder{ color:oklch(from var(--lg-fg) l c h / 45%); }
+.lq-field:focus-within::after{ --angle-1:-125deg; }
+.lq-field:focus-within .lq-sheen::after{ background-position:25% 50%; }
+/* 行内圆形动作按钮 (尾随箭头 / 显隐密码) */
+.lq-iconbtn{
+  position:relative; z-index:4; flex-shrink:0; width:42px; height:42px; border-radius:9999px; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  color:oklch(from var(--lg-fg) l c h / 80%);
+  background:linear-gradient(180deg, oklch(from var(--lg-fg) l c h / 10%), oklch(from var(--lg-fg) l c h / 4%));
+  box-shadow:inset 0 1px 1px oklch(from var(--lg-fg) l c h / 12%);
+  transition:transform .2s var(--lg-ease), color .2s, background .2s;
+}
+.lq-iconbtn:hover{ transform:scale(1.07); color:var(--lg-fg); }
+.lq-iconbtn.ghost{ background:none; box-shadow:none; }
+
+@media (hover:none) and (pointer:coarse){
+  .lq::after{ --angle-1:-75deg; }
+  .lq-btn .lq-sheen::after,.lq-field .lq-sheen::after{ --angle-2:-45deg; }
+}
+@media (prefers-reduced-motion:reduce){
+  .lq,.lq::after,.lq-btn .lq-sheen::after,.lq-field .lq-sheen::after{ transition:none; }
+}

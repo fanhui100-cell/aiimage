@@ -9,7 +9,10 @@ import {
 } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
+import './landing.css'
+import './lexi-glass.css'
 import { siteConfig } from '@/config/site'
+import { THEME_BOOT_SCRIPT } from '@/lib/theme-mode'
 
 /* ── UI sans (保留) ── */
 const spaceGrotesk = Space_Grotesk({
@@ -74,6 +77,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="zh-CN" className={fontVars}>
+      <head>
+        {/* 无闪烁：hydration 前按持久化偏好应用 日光/夜间 */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
+      </head>
       <body>
         {children}
         <Toaster
