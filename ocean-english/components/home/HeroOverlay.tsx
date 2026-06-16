@@ -8,6 +8,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
+import { ShinyText } from '@/components/ui/motion/ShinyText'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 
 const HERO_NODES = [
@@ -97,7 +98,10 @@ export function HeroOverlay({ navigate }: { navigate: (go: string) => void }) {
       </div>
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 35%, transparent 52%, rgba(4,7,12,0.7) 100%)', pointerEvents: 'none', zIndex: 5 }} />
       <div style={{ position: 'absolute', bottom: 'clamp(22px,6%,36px)', left: 'clamp(20px,4vw,32px)', zIndex: 10, maxWidth: 'min(560px, calc(100% - 40px))' }}>
-        <h1 style={{ margin: 0, fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.4vw,36px)', lineHeight: 1.2, letterSpacing: '0.02em', color: '#f3f7f8', textShadow: '0 0 40px rgba(79,230,206,0.18)', whiteSpace: 'nowrap' }}>万词成海，自有光</h1>
+        {/* 界面优化2·P9：标题流光（暗色 hero → 浅色基底 + teal 高光，不串色） */}
+        <h1 style={{ margin: 0, fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.4vw,36px)', lineHeight: 1.2, letterSpacing: '0.02em', color: '#f3f7f8', textShadow: '0 0 40px rgba(79,230,206,0.18)', whiteSpace: 'nowrap' }}>
+          <ShinyText baseColor="#f3f7f8" shineColor="var(--teal)">万词成海，自有光</ShinyText>
+        </h1>
         <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 'clamp(13px,1.5vw,16px)', color: 'var(--teal)', opacity: 0.92 }}>An ocean of words, lit from within.</p>
         <p style={{ margin: '6px 0 0', fontSize: 'clamp(12px,1.3vw,13.5px)', color: 'rgba(234,243,246,0.62)', lineHeight: 1.55 }}>AI 驱动的深海英语学习系统 — 词汇、星图、阅读、记忆，一起生长。先定个目标，我们为你编排每天该走的路。</p>
         <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>

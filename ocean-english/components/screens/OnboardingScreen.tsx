@@ -8,6 +8,8 @@ import { levelToBand } from '@/lib/levels'
 import { useNavigate } from '@/hooks/useNavigate'
 import { buildVocabCard } from '@/lib/analytics/report'
 import { VocabEstimateCard } from './VocabEstimateCard'
+import { ShinyText } from '@/components/ui/motion/ShinyText'
+import { WordRotate } from '@/components/ui/motion/WordRotate'
 import './onboarding.css'
 
 // ════════ DATA ════════
@@ -217,7 +219,8 @@ export function OnboardingScreen() {
       case 'goal':
         return <div className="fade-up">
           <p className="eyebrow">Step 1 of 4 · 目标</p>
-          <h2 className="h2">你想去哪？</h2>
+          {/* 界面优化2·P9：标题轮播词（米白·teal-ink），呼应「目标=终点星系」 */}
+          <h2 className="h2">你想去 <WordRotate words={['四级', '六级', '考研', '雅思', '托福', 'SAT', '自由生长']} />？</h2>
           <p className="sub">选择目标考试 / 阶段，我们按需配置词库与成长路径。</p>
           <div className="axis-note">
             <span className="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 8v4l2.5 2.5" /></svg></span>
@@ -338,7 +341,8 @@ export function OnboardingScreen() {
 
     return <div className="fade-up">
       <p className="eyebrow">为你定制 · 测试完成</p>
-      <h2 className="h2">这是你的成长方案</h2>
+      {/* 界面优化2·P9：里程碑标题流光（米白·gold-ink 默认色） */}
+      <h2 className="h2"><ShinyText>这是你的成长方案</ShinyText></h2>
       <div className="res-card"><div className="zh">{def.zh}</div><div className="meta">能力档 Level {s.level} · {def.cefr}</div><div className="wl">该档词库</div><div className="wn">{def.wordCount.toLocaleString()} 词</div></div>
 
       {/* D3：词汇量反馈卡（界面优化17）— 用 CAT 估算 s.vocabEst；目标考试给差距 */}

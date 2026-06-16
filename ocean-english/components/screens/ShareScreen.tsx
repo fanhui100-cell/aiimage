@@ -6,10 +6,12 @@
    全部数值来自 lexiStore + report/achievements 派生，绝不造假。
    ============================================================================ */
 
-import { useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useLexiStore } from '@/store/lexiStore'
 import { buildVocabCard } from '@/lib/analytics/report'
 import { buildAchievements } from '@/lib/analytics/achievements'
+import { BorderBeam } from '@/components/ui/motion/BorderBeam'
+import { Button } from '@/components/ui/Button'
 import './screen-kit.css'
 import './share.css'
 
@@ -65,7 +67,7 @@ export function ShareScreen() {
   const [msg, setMsg] = useState('')
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
-  const CONTENTS = useMemo<Record<'today' | 'vocab' | 'week', Content>>(() => {
+  const CONTENTS: Record<'today' | 'vocab' | 'week', Content> = (() => {
     const today = new Date().toISOString().slice(0, 10)
     const isToday = daily.date === today
     const c = counts()
@@ -113,7 +115,7 @@ export function ShareScreen() {
         cells: [[`${wDays}/7`, '打卡天数'], [String(wRev), '本周复习'], [String(mastered), '累计掌握'], [`${xp.toLocaleString()}`, '总 XP']],
       },
     }
-  }, [words, streakData, daily, history, xp, profile, counts])
+  })()
 
   const t = THEMES.find(x => x.id === theme)!
   const c = CONTENTS[content]
@@ -206,6 +208,8 @@ export function ShareScreen() {
         <div className="sh-layout">
           {/* 卡面预览 */}
           <div className="sh-stage">
+            {/* 界面优化2·P3：战绩卡流光描边（米白默认色 teal-ink/gold-ink，圆角对齐 .sh-card 的 26px） */}
+            <BorderBeam radius={26}>
             <div className="sh-card">
               <div className="bg" style={{ background: t.bg }} />
               <div className="glow" />
@@ -232,6 +236,7 @@ export function ShareScreen() {
                 </div>
               </div>
             </div>
+            </BorderBeam>
           </div>
 
           {/* 控制面板 */}
@@ -256,7 +261,8 @@ export function ShareScreen() {
               </div>
             </div>
             <div className="sh-actions">
-              <button className="btn btn-primary" onClick={save}>保存图片</button>
+              {/* 界面优化2·P8：唯一主 CTA 用微光按钮（flex:1 对齐原 .btn 布局） */}
+              <Button variant="shimmer" onClick={save} style={{ flex: 1 }}>保存图片</Button>
               <button className="btn btn-ghost" onClick={share}>分享 →</button>
             </div>
             <div className="sh-msg">{msg}</div>

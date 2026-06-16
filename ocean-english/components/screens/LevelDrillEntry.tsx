@@ -6,6 +6,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
+import { Button } from '@/components/ui/Button'
 import './drill.css'
 
 const fmt = (n: number) => n.toLocaleString('en-US')
@@ -128,7 +129,8 @@ export function DrillEntryScreen() {
 
         <div className="dk-startbar">
           <div className="dk-summary">{summary}</div>
-          <button className="dr-btn dr-btn-primary" disabled={!ready} onClick={start}>开始专练 →</button>
+          {/* 界面优化2·P8：唯一主 CTA 用微光按钮 */}
+          <Button variant="shimmer" disabled={!ready} onClick={start}>开始专练 →</Button>
         </div>
         <p className="dr-sub" style={{ marginTop: 14, fontSize: 12 }}>开始后复用现有「练习 / 听力 / 模考」答题屏，题源锁定为你选的等级 + 题型；错词照常回流「今日」复习。</p>
       </div>
