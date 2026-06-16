@@ -1,0 +1,79 @@
+/* ════════════════════════════════════════════════════════════════════════
+   界面优化3 · 登录「沉浸全玻璃」外壳（1:1 自 登录-沉浸全玻璃.html）
+   逻辑沿用 AuthClient；外观为米白渐变 + 柔青绿光晕 + 液态玻璃输入/按钮。
+   恒为日光：在 .imm 上把会随夜间翻转的令牌锁回浅色值，避免登录页变暗（不动全局主题）。
+   全部选择器限定在 .imm 之下，避免与其它页面类名冲突。
+   ════════════════════════════════════════════════════════════════════════ */
+
+.imm{
+  /* 强制日光：锁回浅色令牌（即便全局是 data-theme=night） */
+  --ink:#14191e; --ink-sub:#4a5a66; --ink-muted:#8a97a2;
+  --line:rgba(20,30,40,.10); --line-strong:rgba(20,30,40,.16);
+  --teal-ink:#0e8c7a; --rose-ink:#bf4a30; --teal:#4fe6ce;
+  --paper:#f2efe9; --card:#fbf9f4; --card-2:#ffffff; --teal-bg:rgba(14,140,122,.08);
+  --lg-fg:#16201d; --lg-bg:#ffffff;
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;
+  background:
+    radial-gradient(60% 52% at 50% -12%, rgba(120,214,201,.32), transparent 70%),
+    radial-gradient(48% 44% at 85% 6%, rgba(190,231,214,.40), transparent 72%),
+    radial-gradient(64% 60% at 6% 106%, rgba(196,220,226,.34), transparent 74%),
+    linear-gradient(168deg,#f3f6ef 0%,#e9f0ea 52%,#e1eae3 100%);
+}
+.imm .tint{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.imm .tint b{position:absolute;border-radius:50%;filter:blur(100px);}
+.imm .tint .g1{width:46vw;height:34vw;left:50%;top:-16vw;transform:translateX(-50%);background:#7fd9cf;opacity:.30;}
+.imm .tint .g2{width:30vw;height:24vw;left:-6vw;bottom:-12vw;background:#a9e3cf;opacity:.34;}
+.imm .tint .g3{width:28vw;height:22vw;right:-7vw;top:28%;background:#bfe0e8;opacity:.26;}
+.imm .grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.045;background-image:radial-gradient(rgba(20,30,40,1) 1px,transparent 1px);background-size:23px 23px;-webkit-mask:radial-gradient(ellipse 86% 78% at 50% 40%,#000,transparent 80%);mask:radial-gradient(ellipse 86% 78% at 50% 40%,#000,transparent 80%);}
+.imm .vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 72% 66% at 50% 44%,rgba(249,247,241,.5) 0%,transparent 50%);}
+
+/* 漂移 */
+@keyframes immDriftA{to{transform:translate(-30px,20px) scale(1.12);}}
+@keyframes immDriftB{to{transform:translate(26px,-16px) scale(1.1);}}
+.imm .drift-a{animation:immDriftA 22s ease-in-out infinite alternate;}
+.imm .drift-b{animation:immDriftB 28s ease-in-out infinite alternate;}
+@media(prefers-reduced-motion:reduce){.imm .drift-a,.imm .drift-b{animation:none;}}
+
+.imm .imm-top{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,4vw,32px);z-index:20;}
+.imm .imm-brand{display:flex;flex-direction:row;align-items:center;gap:10px;line-height:1.06;text-decoration:none;}
+.imm .imm-brand .mk{display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal-ink);filter:drop-shadow(0 2px 6px rgba(14,140,122,.3));}
+.imm .imm-brand .wm{display:flex;flex-direction:column;line-height:1.06;}
+.imm .imm-brand .z{font-family:var(--font-serif);font-size:19px;color:var(--ink);}
+.imm .imm-brand .z em{font-style:italic;color:var(--teal-ink);}
+.imm .imm-brand .e{font-family:var(--font-serif-zh);font-weight:500;font-size:11px;letter-spacing:.34em;color:var(--ink-sub);margin-top:1px;}
+
+.imm .imm-col{position:relative;z-index:5;width:min(390px,92vw);display:flex;flex-direction:column;align-items:center;text-align:center;}
+.imm .imm-mark{width:66px;height:66px;display:flex;align-items:center;justify-content:center;color:var(--teal-ink);margin-bottom:20px;filter:drop-shadow(0 6px 18px rgba(14,140,122,.4));}
+.imm .imm-h{font-family:var(--font-serif-zh);font-weight:600;font-size:clamp(28px,4vw,36px);color:var(--ink);margin:0 0 6px;letter-spacing:.01em;}
+.imm .imm-sub{font-family:var(--font-news);font-style:italic;font-size:15px;color:var(--teal-ink);margin:0 0 30px;}
+
+.imm .tabs{display:flex;gap:4px;padding:4px;border-radius:999px;margin:0 0 20px;width:100%;background:rgba(255,255,255,.5);border:1px solid var(--line);backdrop-filter:blur(8px);}
+.imm .tabs button{flex:1;padding:10px;border:none;background:none;color:var(--ink-muted);font-weight:600;font-size:13.5px;border-radius:999px;cursor:pointer;transition:all .2s;font-family:var(--font-sans);}
+.imm .tabs button.on{color:#06231d;background:linear-gradient(180deg,#6ff0db,#34d8c0);box-shadow:0 8px 18px -10px rgba(79,230,206,.6);}
+
+.imm .form{width:100%;display:flex;flex-direction:column;gap:14px;}
+.imm .field-wrap{position:relative;}
+.imm .row{display:flex;align-items:center;justify-content:space-between;margin:6px 4px 4px;}
+.imm .chk{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-sub);cursor:pointer;background:none;border:none;font-family:var(--font-sans);}
+.imm .chk .box{width:17px;height:17px;border-radius:6px;border:1.5px solid var(--line-strong);background:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;color:transparent;transition:all .15s;}
+.imm .chk.on .box{background:var(--teal-ink);border-color:var(--teal-ink);color:#fff;}
+.imm .lnk{font-size:12.5px;color:var(--teal-ink);cursor:pointer;background:none;border:none;font-family:var(--font-sans);font-weight:600;}
+.imm .divider{display:flex;align-items:center;gap:12px;margin:18px 0 4px;}
+.imm .divider i{flex:1;height:1px;background:var(--line);}
+.imm .divider span{font-family:var(--font-mono);font-size:10px;color:var(--ink-muted);letter-spacing:.08em;}
+.imm .social{display:flex;gap:12px;}
+.imm .social .lq-btn{flex:1;font-size:13.5px;padding:13px 16px;}
+.imm .guest{margin-top:18px;}
+.imm .guest button{background:none;border:none;font-size:13px;color:var(--ink-sub);cursor:pointer;font-family:var(--font-sans);}
+.imm .guest button:hover{color:var(--teal-ink);}
+.imm .legal{margin-top:14px;font-size:11px;color:var(--ink-muted);line-height:1.6;}
+.imm .legal a{color:var(--teal-ink);}
+.imm .err{width:100%;font-size:12.5px;color:var(--rose-ink);background:rgba(191,74,48,.08);border:1px solid rgba(191,74,48,.2);border-radius:10px;padding:9px 12px;text-align:left;}
+
+.imm .uname-hint{font-size:11.5px;margin:7px 4px 0;text-align:left;color:var(--ink-muted);transition:color .2s;}
+.imm .uname-hint.ok{color:var(--teal-ink);}
+.imm .uname-hint.taken{color:var(--rose-ink);}
+.imm .uname-hint.checking{color:var(--ink-muted);}
+
+/* toast */
+.imm .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);z-index:60;background:rgba(20,25,30,.92);color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;box-shadow:0 12px 30px -12px rgba(0,0,0,.5);}
