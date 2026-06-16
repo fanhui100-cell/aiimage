@@ -1,729 +1,514 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
-import Link from 'next/link'
+/* ════════════════════════════════════════════════════════════════════════
+   WordDetailClient — 词汇详情「学习中枢 Hub」重设计（界面优化13，1:1 移植 app.jsx）
+   Hero（随状态 CTA）+ 学习中枢 Hub（6 spoke 实时态 + 宇宙/词图缩略）+ 右栏双布局
+   （标签页 / 一屏锚点）+ 相关词条。状态/进度/复习时间接 lexiStore + SRS；6 状态色
+   取自 STATE_META.light。导航（Navbar/MobileTabBar）由 AppShell 提供，本屏不再实现。
+   ════════════════════════════════════════════════════════════════════════ */
+
+import { useState, useEffect, useRef, useMemo, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
-import { SaveWordButton } from '@/components/learning/SaveWordButton'
-import { PronunciationButton } from '@/components/pronunciation/PronunciationButton'
-import { ExampleSentencePlayer } from '@/components/pronunciation/ExampleSentencePlayer'
-import { AccentSelector } from '@/components/pronunciation/AccentSelector'
-import { readAccentPreference } from '@/lib/pronunciation/pronunciation-client'
+import Link from 'next/link'
 import { useLexiStore } from '@/store/lexiStore'
-import { STATE_META } from '@/lib/state-meta'
-import { useMotivationStore } from '@/store/useMotivationStore'
+import { STATE_META, type WordState } from '@/lib/state-meta'
+import { speakSmart } from '@/lib/pronunciation/word-audio'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
-import type { Accent } from '@/lib/pronunciation/pronunciation-types'
+import './word-detail.css'
 
-// ── Shared styles ──────────────────────────────────────────────────────────
-
-const card: React.CSSProperties = {
-  background: 'var(--card)',
-  border: '1px solid var(--line)',
-  borderRadius: 'var(--r-card)',
-  padding: '20px 24px',
-  marginBottom: '16px',
-  boxShadow: 'var(--card-shadow-sm)',
+// ── helpers ──────────────────────────────────────────────────────────────
+const speak = (t: string, accent: 'US' | 'UK' = 'US') => { void speakSmart(t, accent === 'UK' ? 'uk' : 'us') }
+function hl(sentence: string, word: string): ReactNode[] {
+  if (!sentence) return []
+  const re = new RegExp('\\b(' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\w*)\\b', 'ig')
+  const parts: ReactNode[] = []; let last = 0; let m: RegExpExecArray | null; let k = 0
+  while ((m = re.exec(sentence))) { parts.push(sentence.slice(last, m.index)); parts.push(<b key={k++}>{m[0]}</b>); last = m.index + m[0].length }
+  parts.push(sentence.slice(last))
+  return parts
 }
-
-const sectionHead: React.CSSProperties = {
-  fontSize: '11px',
-  letterSpacing: '0.16em',
-  textTransform: 'uppercase',
-  color: 'var(--teal-ink)',
-  opacity: 0.8,
-  fontFamily: 'var(--font-mono)',
-  marginBottom: '12px',
+const PATHS: Record<string, string> = {
+  learn: '<path d="M12 5.5C10.5 4 8 3.5 4 4v14c4-.5 6.5 0 8 1.5M12 5.5C13.5 4 16 3.5 20 4v14c-4-.5-6.5 0-8 1.5M12 5.5v14"/>',
+  practice: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.7" fill="currentColor"/>',
+  review: '<path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/>',
+  universe: '<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"/>',
+  graph: '<circle cx="6" cy="7" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="17" cy="18" r="2.4"/><circle cx="12" cy="12" r="2.8"/><path d="M9.5 11 8 8.5M14.4 11 16 8M13.5 14l2.3 2.3"/>',
+  ai: '<path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6.3 6.3 4 4M18 18l2 2M17.7 6.3 20 4M6 18l-2 2"/><circle cx="12" cy="12" r="4"/>',
+  speak: '<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>',
+  star: '<path d="M12 2.5l2.9 6.3 6.6.6-5 4.4 1.5 6.5L12 17l-5.5 3.3 1.5-6.5-5-4.4 6.6-.6z"/>',
+  bolt: '<path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
 }
-
-const exampleBlock: React.CSSProperties = {
-  background: 'var(--teal-bg)',
-  borderLeft: '3px solid rgba(14,140,122,0.4)',
-  padding: '10px 14px',
-  borderRadius: '0 6px 6px 0',
-  marginTop: '8px',
-}
-
-// ── Sub-components ─────────────────────────────────────────────────────────
-
-function Badge({
-  label,
-  color = '#0E8C7A',
-  bg,
-  borderColor,
-}: {
-  label: string
-  color?: string
-  bg?: string
-  borderColor?: string
-}) {
-  const resolvedBg = bg ?? (color.startsWith('var(') ? 'var(--teal-bg)' : `${color}18`)
-  const resolvedBorder = borderColor ?? (color.startsWith('var(') ? 'rgba(14,140,122,0.2)' : `${color}32`)
+const Ico = ({ d, s = 18, c = 'currentColor' }: { d: string; s?: number; c?: string }) => (
+  <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke={c} strokeWidth={1.9} strokeLinecap="round" strokeLinejoin="round" dangerouslySetInnerHTML={{ __html: d }} />
+)
+const Dots = ({ level }: { level: number }) => (
+  <span style={{ display: 'inline-flex', gap: 3 }}>
+    {[1, 2, 3, 4, 5].map(i => <i key={i} style={{ width: 6, height: 6, borderRadius: '50%', background: i <= level ? 'var(--gold-ink)' : 'var(--line-strong)' }} />)}
+  </span>
+)
+function Ring({ pct, color, size = 38, sw = 4, children }: { pct: number; color: string; size?: number; sw?: number; children?: ReactNode }) {
+  const r = (size - sw) / 2, C = 2 * Math.PI * r, off = C * (1 - pct / 100)
   return (
-    <span
-      style={{
-        fontSize: '11px',
-        padding: '2px 8px',
-        borderRadius: '4px',
-        background: resolvedBg,
-        color,
-        border: `1px solid ${resolvedBorder}`,
-        fontFamily: 'var(--font-mono)',
-        whiteSpace: 'nowrap' as const,
-      }}
-    >
-      {label}
+    <span style={{ position: 'relative', width: size, height: size, display: 'inline-flex', flexShrink: 0 }}>
+      <svg width={size} height={size}>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--line)" strokeWidth={sw} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={sw} strokeLinecap="round" strokeDasharray={C} strokeDashoffset={off} transform={`rotate(-90 ${size / 2} ${size / 2})`} style={{ transition: 'stroke-dashoffset .5s var(--ease)' }} />
+      </svg>
+      <span style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{children}</span>
     </span>
   )
 }
+const Badge = ({ children, color = 'var(--ink-sub)', mono }: { children: ReactNode; color?: string; mono?: boolean }) => (
+  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: mono ? 10.5 : 11.5, fontWeight: 700, fontFamily: mono ? 'var(--font-mono)' : 'var(--font-sans)', padding: '3px 10px', borderRadius: 'var(--r-pill)', whiteSpace: 'nowrap', color, background: `color-mix(in srgb, ${color} 11%, transparent)`, border: `1px solid color-mix(in srgb, ${color} 30%, transparent)` }}>
+    {children}
+  </span>
+)
 
-function WordTag({ label }: { label: string }) {
+// mini galaxy / graph thumbnails
+function MiniGalaxy({ accent }: { accent: string }) {
+  const dots = useMemo(() => Array.from({ length: 22 }, () => ({ x: 6 + Math.random() * 88, y: 6 + Math.random() * 88, r: Math.random() * 1.4 + 0.6, o: Math.random() * 0.5 + 0.25 })), [])
   return (
-    <Link
-      href={`/word/${label}`}
-      style={{
-        padding: '4px 10px',
-        borderRadius: '5px',
-        fontSize: '13px',
-        textDecoration: 'none',
-        display: 'inline-block',
-        background: 'var(--teal-bg)',
-        color: 'var(--teal-ink)',
-        border: '1px solid rgba(14,140,122,0.25)',
-      }}
-    >
-      {label}
-    </Link>
+    <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%', display: 'block' }}>
+      <defs><radialGradient id="wd-mg" cx="58%" cy="42%" r="60%"><stop offset="0%" stopColor={accent} stopOpacity="0.5" /><stop offset="60%" stopColor={accent} stopOpacity="0.06" /><stop offset="100%" stopColor="transparent" /></radialGradient></defs>
+      <rect width="100" height="100" fill="#0b1530" />
+      <ellipse cx="58" cy="42" rx="46" ry="20" fill="url(#wd-mg)" transform="rotate(-18 58 42)" />
+      {dots.map((d, i) => <circle key={i} cx={d.x} cy={d.y} r={d.r} fill="#dbeaff" opacity={d.o} />)}
+      <circle cx="58" cy="42" r="4.2" fill={accent} />
+      <circle cx="58" cy="42" r="8" fill="none" stroke={accent} strokeWidth="1" opacity="0.5" />
+    </svg>
+  )
+}
+function MiniGraph({ synonyms, antonyms, accent }: { synonyms: string[]; antonyms: string[]; accent: string }) {
+  const nodes = [
+    ...synonyms.slice(0, 3).map((w, i) => ({ w, kind: 'syn' as const, a: -0.55 + i * 0.42 })),
+    ...antonyms.slice(0, 2).map((w, i) => ({ w, kind: 'ant' as const, a: 2.5 + i * 0.5 })),
+  ]
+  const cx = 50, cy = 50, R = 34
+  return (
+    <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%', display: 'block' }}>
+      <rect width="100" height="100" fill="#0c1424" />
+      {nodes.map((nd, i) => {
+        const x = cx + Math.cos(nd.a) * R, y = cy + Math.sin(nd.a) * R
+        const col = nd.kind === 'ant' ? '#ff8fa8' : '#7ef9ff'
+        return <g key={i}><line x1={cx} y1={cy} x2={x} y2={y} stroke={col} strokeWidth="0.7" opacity="0.35" /><circle cx={x} cy={y} r="3" fill={col} opacity="0.9" /></g>
+      })}
+      <circle cx={cx} cy={cy} r="6.5" fill={accent} />
+      <circle cx={cx} cy={cy} r="10" fill="none" stroke={accent} strokeWidth="1" opacity="0.5" />
+    </svg>
   )
 }
 
-function AntonymTag({ label }: { label: string }) {
-  return (
-    <Link
-      href={`/word/${label}`}
-      style={{
-        padding: '4px 10px',
-        borderRadius: '5px',
-        fontSize: '13px',
-        textDecoration: 'none',
-        display: 'inline-block',
-        background: 'rgba(191,74,48,0.07)',
-        color: 'var(--rose-ink)',
-        border: '1px solid rgba(191,74,48,0.2)',
-      }}
-    >
-      {label}
-    </Link>
-  )
+// ── learn-state derivation（接 SRS / quizHistory）────────────────────────────
+type LearnState = { progress: number; accuracy: number | null; reviewIn: string | null; streak: number; primary: string; primaryKind: 'add' | 'learn' | 'review' | 'weak' | 'practice' }
+const CTA_BY_STATE: Record<string, { primary: string; primaryKind: LearnState['primaryKind'] }> = {
+  unknown: { primary: '加入学习', primaryKind: 'add' },
+  recommended: { primary: '加入学习', primaryKind: 'add' },
+  learning: { primary: '继续学', primaryKind: 'learn' },
+  review: { primary: '立即复习', primaryKind: 'review' },
+  weak: { primary: '强化练习', primaryKind: 'weak' },
+  mastered: { primary: '再巩固一次', primaryKind: 'practice' },
+  locked: { primary: '加入学习', primaryKind: 'add' },
+}
+function reviewLabel(ts: number | undefined): string | null {
+  if (ts == null) return null
+  const now = Date.now(), dayMs = 86_400_000
+  if (ts <= now) return '已到期'
+  const startTomorrow = new Date(new Date().setHours(0, 0, 0, 0)).getTime() + dayMs
+  if (ts < startTomorrow) return '今天到期'
+  return `${Math.ceil((ts - now) / dayMs)} 天后`
+}
+function progressFor(state: WordState, e?: { interval?: number; streak?: number }): number {
+  if (state === 'mastered') return 100
+  if (state === 'unknown' || state === 'recommended' || state === 'locked') return 0
+  const interval = e?.interval ?? 0, streak = e?.streak ?? 0
+  if (state === 'weak') return Math.min(45, 25 + streak * 8)
+  if (state === 'review') return Math.min(92, 50 + interval * 4)
+  return Math.min(80, 30 + streak * 12)   // learning
 }
 
-function renderAIContent(content: string) {
-  return content.split('\n').map((line, i) => (
-    <p key={i} style={{ margin: '0 0 6px', fontSize: '13px', color: 'var(--ink)', lineHeight: 1.7 }}>
-      {line.split('**').map((part, j) =>
-        j % 2 === 1 ? (
-          <strong key={j} style={{ color: 'var(--teal-ink)' }}>{part}</strong>
-        ) : (
-          part
-        ),
-      )}
-    </p>
-  ))
+// ── view-word mapping ──────────────────────────────────────────────────────
+function aiNoteOf(word: DictionaryWord, defZh: string, pos: string, syn: string[], coll: string[]): string {
+  const scene = word.sceneUsages?.[0]
+  if (scene?.sceneZh) return `${scene.sceneZh}${scene.exampleZh ? `　例：${scene.exampleZh}` : ''}`
+  if (word.nuance?.length) return word.nuance.slice(0, 2).map(n => `${n.member}：${n.nuanceZh}`).join('　')
+  return [
+    defZh && `${word.word}${pos ? ` ${pos}` : ''} — ${defZh}。`,
+    syn.length && `近义：${syn.slice(0, 3).join('、')}。`,
+    coll.length && `常见搭配：${coll.slice(0, 2).join('、')}。`,
+  ].filter(Boolean).join('') || `${word.word} 的用法解析将由 AI 按你的水平生成。`
 }
 
-// ── Difficulty dots ────────────────────────────────────────────────────────
-
-function DifficultyDots({ level }: { level: 1 | 2 | 3 | 4 | 5 }) {
-  return (
-    <span style={{ display: 'inline-flex', gap: '3px', verticalAlign: 'middle' }}>
-      {[1, 2, 3, 4, 5].map(n => (
-        <span
-          key={n}
-          style={{
-            width: '6px',
-            height: '6px',
-            borderRadius: '50%',
-            background: n <= level ? 'var(--teal-ink)' : 'rgba(14,140,122,0.15)',
-          }}
-        />
-      ))}
-    </span>
-  )
-}
-
-// ── Main component ─────────────────────────────────────────────────────────
-
-interface WordDetailClientProps {
-  word: DictionaryWord
-}
+interface WordDetailClientProps { word: DictionaryWord }
 
 export function WordDetailClient({ word }: WordDetailClientProps) {
-  const [showEvil, setShowEvil] = useState(false)
-  const [aiExplanation, setAiExplanation] = useState<string | null>(null)
-  const [aiLoading, setAiLoading] = useState(false)
-  const [aiError, setAiError] = useState<string | null>(null)
-  const [accent, setAccent] = useState<Accent>('auto')
-
-  // Init accent from localStorage after mount (avoids SSR mismatch)
-  useEffect(() => { setAccent(readAccentPreference()) }, [])
-
-  // Anti-spam: each word's pronunciation awards LexiStar at most once per page lifecycle
-  const hasAwardedPronunciationRef = useRef(false)
-
+  const router = useRouter()
   const ensureWord = useLexiStore(s => s.ensureWord)
   const recordActivity = useLexiStore(s => s.recordActivity)
-  const incXp = useLexiStore(s => s.incXp)
-  const userLevel = useLexiStore(s => s.profile.userLevel ?? null)
-  // B7-3：已入库 → 主按钮变状态显示 + 「移出」次级项
   const inStore = useLexiStore(s => s.words.find(w => w.id === word.id))
-  const { addLexiStar, recordPronunciationPlay } = useMotivationStore()
-  const router = useRouter()
+  const quizHistory = useLexiStore(s => s.quizHistory)
 
-  function handlePronunciationPlayed() {
-    if (hasAwardedPronunciationRef.current) return
-    hasAwardedPronunciationRef.current = true
-    try {
-      addLexiStar(2, 'pronunciation', word.id)
-      recordPronunciationPlay(word.id)
-    } catch {}
+  const [accent, setAccent] = useState<'US' | 'UK'>('US')
+  const [layout, setLayout] = useState<'tab' | 'anchor'>('anchor')
+  const [toast, setToast] = useState<string | null>(null)
+  const flash = (m: string) => { setToast(m); window.clearTimeout((window as unknown as { __wdtt?: number }).__wdtt); (window as unknown as { __wdtt?: number }).__wdtt = window.setTimeout(() => setToast(null), 2200) }
+
+  const state: WordState = inStore?.state ?? 'unknown'
+  const stMeta = STATE_META[state]
+  const inStudy = state !== 'unknown' && state !== 'recommended' && state !== 'locked'
+  const accentColor = 'var(--teal-ink)'
+
+  // view fields
+  const pos = word.partOfSpeech ?? word.definitions[0]?.partOfSpeech ?? ''
+  const defEn = word.definitions[0]?.definitionEn ?? ''
+  const defZh = word.definitions[0]?.definitionZh ?? ''
+  const exampleEn = word.examples[0]?.sentenceEn ?? ''
+  const exampleZh = word.examples[0]?.sentenceZh ?? ''
+  const synonyms = word.synonyms ?? []
+  const antonyms = word.antonyms ?? []
+  const collocations = (word.collocations ?? []).map(c => c.phrase).filter(Boolean)
+  const mnemonic = word.mnemonics?.find(m => m.style === 'standard')?.mnemonicZh
+    ?? word.mnemonics?.[0]?.mnemonicZh ?? word.mnemonics?.[0]?.mnemonicEn ?? ''
+  const etymology = word.etymology ? (word.etymology.explanationZh || word.etymology.explanationEn || word.etymology.roots || '') : ''
+  const themeTags = (word.themeTags?.length ? word.themeTags : word.domainTags) ?? []
+  const examTags = word.examTags ?? []
+  const aiNote = aiNoteOf(word, defZh, pos, synonyms, collocations)
+  const ipa = word.phoneticIpa ?? ''
+  // FIX1：一屏通览补全要素
+  const FORM_ZH: Record<string, string> = { plural: '复数', past: '过去式', pastParticiple: '过去分词', presentParticiple: '现在分词', third: '第三人称', comparative: '比较级', superlative: '最高级', gerund: '动名词' }
+  const formEntries = Object.entries(word.inflections ?? {}).filter(([, v]) => v)
+  const nuance = (word.nuance ?? []).filter(n => n.member && n.nuanceZh)
+  const allDefs = word.definitions ?? []
+  const allExamples = (word.examples ?? []).filter(e => e.sentenceEn)
+
+  // learn state
+  let tot = 0, cor = 0
+  for (const sess of quizHistory) for (const a of sess.attempts) if (a.wordId === word.id) { tot++; if (a.correct) cor++ }
+  const learn: LearnState = {
+    progress: progressFor(state, inStore),
+    accuracy: tot > 0 ? Math.round((cor / tot) * 100) : null,
+    reviewIn: reviewLabel(inStore?.nextReviewAt),
+    streak: inStore?.streak ?? 0,
+    ...CTA_BY_STATE[state],
   }
 
-  async function handleAIExplain() {
-    setAiLoading(true)
-    setAiError(null)
-    try {
-      const res = await fetch('/api/ai/word-explain', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ word: word.word, userLevel: userLevel ?? 'intermediate' }),
-      })
-      const data = (await res.json()) as { content?: string }
-      if (res.ok && data.content) {
-        setAiExplanation(data.content)
-      } else {
-        setAiError('AI 解释暂时不可用，请重试。')
-      }
-    } catch {
-      setAiError('无法连接 AI，请检查网络。')
-    } finally {
-      setAiLoading(false)
+  // navigation
+  const go = (where: string) => {
+    // 19.zip：跳地图/练习/对话时带 returnTo=当前单词页，闭环不断链（复用既有 returnTo 约定）
+    const back = encodeURIComponent(`/word/${word.id}`)
+    switch (where) {
+      case 'practice': return router.push(`/quiz?word=${encodeURIComponent(word.id)}&returnTo=${back}`)
+      case 'review': return router.push('/memory')
+      case 'universe': return router.push(`/lexiverse?word=${encodeURIComponent(word.id)}&returnTo=${back}`)
+      case 'graph': return router.push(`/lexigraph?word=${encodeURIComponent(word.id)}&returnTo=${back}`)
+      case 'chat': return router.push(`/chat?word=${encodeURIComponent(word.id)}&returnTo=${back}`)
+      case 'me': return router.push('/profile')
+      case 'words': return router.push('/dictionary')
+      default: return router.push(`/${where}`)
     }
   }
-
-  function handleAddToReview() {
-    // A4: 词典词经唯一入口进入统一状态机（已入库不重置进度）
-    ensureWord(word, 'lookup')
-    recordActivity('learned')
-    incXp(10)
+  const onAdd = () => { ensureWord(word, 'lookup'); recordActivity('learned'); flash('已加入学习 · 进入「学习中」，排入今日') }
+  const onPrimary = () => {
+    if (learn.primaryKind === 'review') return go('review')
+    if (learn.primaryKind === 'weak' || learn.primaryKind === 'practice') return go('practice')
+    if (learn.primaryKind === 'learn') return router.push('/learn')
+    onAdd()
+  }
+  const jump = (label: string) => {
+    if (label === '__graph') return go('graph')
+    router.push(`/word/${encodeURIComponent(label.toLowerCase().trim())}`)
   }
 
-  function handleQuizThis() {
-    router.push(`/quiz?word=${word.id}`)
-  }
+  // related strip
+  const [related, setRelated] = useState<{ slug: string; word: string; zh: string; state: WordState }[]>([])
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/dictionary/relations?word=${encodeURIComponent(word.id)}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(j => {
+        if (cancelled || !j?.data) return
+        const words = (j.data.words ?? {}) as Record<string, { word: string; zh: string }>
+        const rels = (j.data.relations ?? []) as { a: string; b: string }[]
+        const slugs = [...new Set(rels.flatMap(r => [r.a, r.b]).filter(s => s && s !== word.id))]
+        const lexi = useLexiStore.getState()
+        const out = slugs.slice(0, 8).map(slug => ({
+          slug, word: words[slug]?.word ?? slug, zh: (words[slug]?.zh ?? '').split('；')[0],
+          state: (lexi.words.find(w => w.id === slug)?.state ?? 'unknown') as WordState,
+        })).filter(x => x.word)
+        if (!out.length) {
+          // 兜底：用近义/反义词（无 zh）
+          const fb = [...synonyms, ...antonyms].slice(0, 6).map(w => ({ slug: w.toLowerCase(), word: w, zh: '', state: (lexi.words.find(e => e.id === w.toLowerCase())?.state ?? 'unknown') as WordState }))
+          setRelated(fb)
+        } else setRelated(out)
+      })
+      .catch(() => { /* no related */ })
+    return () => { cancelled = true }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [word.id])
 
-  // Derived values
-  const standardMnem = word.mnemonics.find(m => m.style === 'standard')
-  const evilMnem = word.mnemonics.find(m => m.style === 'evil')
-  const hasMnemonic = !!(standardMnem ?? evilMnem)
+  // ── sections ──────────────────────────────────────────────────────────────
+  const SecDef = (
+    <div className="sec">
+      {allDefs.map((d, i) => (
+        <div key={i} style={{ marginBottom: 10 }}>
+          {(d.partOfSpeech || pos) && <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--teal-ink)', marginRight: 8 }}>{d.partOfSpeech || pos}</span>}
+          {d.definitionZh && <span className="def-zh" style={{ fontSize: 15 }}>{d.definitionZh}</span>}
+          {d.definitionEn && <p className="def-en" style={{ margin: '2px 0 0' }}>{d.definitionEn}</p>}
+        </div>
+      ))}
+      {allExamples.map((ex, i) => (
+        <div className="example" key={i}>
+          <span className="ex-bar" />
+          <span>
+            <span className="ex-en">{hl(ex.sentenceEn, word.word)}</span>
+            {ex.sentenceZh && <span className="ex-zh">{ex.sentenceZh}</span>}
+            <button className="ex-play press" onClick={() => speak(ex.sentenceEn, accent)}><Ico d={PATHS.speak} s={13} c="var(--ink-muted)" /> 朗读例句</button>
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+  // 词形变化（取词条 inflections）
+  const SecForms = formEntries.length > 0 ? (
+    <div className="sec">
+      <div className="chips">
+        {formEntries.map(([k, v]) => (
+          <span key={k} className="coll-chip" style={{ display: 'inline-flex', gap: 6, alignItems: 'baseline' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--ink-muted)' }}>{FORM_ZH[k] ?? k}</span>
+            <b style={{ fontWeight: 600, color: 'var(--ink)' }}>{v}</b>
+          </span>
+        ))}
+      </div>
+    </div>
+  ) : null
+  // 同义辨析（synonyms + nuance 差异说明）
+  const SecSyn = (synonyms.length > 0 || nuance.length > 0) ? (
+    <div className="sec">
+      {synonyms.length > 0 && <div className="chips" style={{ marginBottom: nuance.length ? 12 : 0 }}>{synonyms.map(s => <button key={s} className="wchip press" onClick={() => jump(s)}>{s}</button>)}</div>}
+      {nuance.map((n, i) => (
+        <div key={i} style={{ display: 'flex', gap: 10, padding: '7px 0', borderTop: i ? '1px solid var(--line)' : 'none' }}>
+          <button className="wchip press" style={{ flexShrink: 0 }} onClick={() => jump(n.member)}>{n.member}</button>
+          <span style={{ fontSize: 12.5, color: 'var(--ink-sub)', lineHeight: 1.6 }}>{n.nuanceZh}</span>
+        </div>
+      ))}
+    </div>
+  ) : null
+  // 反义词
+  const SecAnt = antonyms.length > 0 ? (
+    <div className="sec">
+      <div className="chips">{antonyms.map(s => <button key={s} className="wchip neg press" onClick={() => jump(s)}>{s}</button>)}</div>
+    </div>
+  ) : null
+  // 派生词族：常见搭配 + 词图/词族入口（同/反义已拆为独立块）
+  const SecRel = (
+    <div className="sec">
+      {collocations.length > 0 && (
+        <div>
+          <div className="rel-label" style={{ color: 'var(--ink-sub)' }}>常见搭配 · Collocations</div>
+          <div className="chips">{collocations.map(s => <span key={s} className="coll-chip">{hl(s, word.word)}</span>)}</div>
+        </div>
+      )}
+      <button className="open-graph press" onClick={() => jump('__graph')} style={collocations.length ? { marginTop: 12 } : undefined}>
+        <Ico d={PATHS.graph} s={15} c="var(--teal-ink)" /> 在词汇关系图中展开 <Ico d={PATHS.arrow} s={14} c="var(--teal-ink)" />
+      </button>
+      {/* D17：词族串记入口（与 D9 词根页双向联动） */}
+      <button className="open-graph press" onClick={() => router.push(`/roots?word=${encodeURIComponent(word.id)}`)} style={{ marginTop: 8 }}>
+        <Ico d={PATHS.star} s={15} c="var(--gold-ink)" /> 词族串记 · 同根词一起记 <Ico d={PATHS.arrow} s={14} c="var(--gold-ink)" />
+      </button>
+    </div>
+  )
+  const SecEty = (
+    <div className="sec">
+      <div className="ety-card">
+        <div className="ety-line"><Ico d={PATHS.star} s={14} c="var(--violet-ink)" /> 词源 · Etymology</div>
+        <p className="ety-txt">{etymology || `${word.word} 的词源信息将逐步补全。`}</p>
+      </div>
+      {themeTags.length > 0 && <div className="theme-row">{themeTags.map(t => <span key={t} className="theme-chip">#{t}</span>)}</div>}
+    </div>
+  )
+  const SecAI = (
+    <div className="sec">
+      <div className="ai-card">
+        <div className="ai-card-head"><span className="ai-dot"><Ico d={PATHS.ai} s={13} c="#fff" /></span> AI 用法解析</div>
+        <p className="ai-card-txt">{aiNote}</p>
+        <button className="ai-more press" onClick={() => go('chat')}>继续向 AI 追问 →</button>
+      </div>
+    </div>
+  )
+  // FIX1：一屏通览全要素，缺数据的块整块隐藏（不留空壳）。顺序固定。
+  const SECTIONS: { id: string; label: string; node: ReactNode }[] = [
+    { id: 'def', label: '释义', node: SecDef },
+    ...(SecForms ? [{ id: 'forms', label: '词形变化', node: SecForms }] : []),
+    { id: 'rel', label: '派生词族', node: SecRel },
+    ...(SecSyn ? [{ id: 'syn', label: '同义辨析', node: SecSyn }] : []),
+    ...(SecAnt ? [{ id: 'ant', label: '反义词', node: SecAnt }] : []),
+    { id: 'ety', label: '词根·词源', node: SecEty },
+    { id: 'mem', label: '记忆法', node: <SecMemBlock mnemonic={mnemonic} word={word.word} /> },
+    { id: 'ai', label: 'AI 解析', node: SecAI },
+  ]
 
-  const cefrLabel = word.cefrLevel
-  const difficultyLevel = word.difficulty
-  const isOriginalSeed = word.sourceType === 'original'
+  const [tab, setTab] = useState('def')
+  useEffect(() => { setTab('def') }, [word.id])
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const jumpAnchor = (id: string) => { scrollRef.current?.querySelector('#wd-anc-' + id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }) }
 
   return (
-    <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '16px' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px' }}>
-
-        {/* Breadcrumb */}
-        <div style={{ marginBottom: '20px', fontSize: '13px' }}>
-          <Link href="/dictionary" style={{ color: 'var(--teal-ink)', textDecoration: 'none' }}>
-            词汇根系
-          </Link>
-          <span style={{ color: 'var(--ink-muted)', margin: '0 8px' }}>›</span>
+    <div className="theme-light wd-v2">
+      {/* Hero */}
+      <div className="hero fade">
+        <div className="crumbs">
+          <Link href="/dictionary" className="crumb-link">词汇根系</Link>
+          <span className="crumb-sep">›</span>
           <span style={{ color: 'var(--ink-sub)' }}>{word.word}</span>
         </div>
-
-        {/* ── HEADER ──────────────────────────────────────────────────── */}
-        <div style={{ marginBottom: '28px' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-            <div>
-              <h1 style={{ margin: '0 0 4px', fontSize: '42px', fontFamily: 'var(--font-serif)', fontWeight: 400, color: 'var(--ink)' }}>
-                {word.word}
-              </h1>
-
-              {/* IPA + Pronunciation + AccentSelector */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '10px' }}>
-                {word.phoneticIpa && (
-                  <span style={{ fontSize: '18px', color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)' }}>
-                    {word.phoneticIpa}
-                  </span>
-                )}
-                <PronunciationButton
-                  text={word.word}
-                  accent={accent}
-                  size="md"
-                  onPlayed={handlePronunciationPlayed}
-                />
-                <AccentSelector value={accent} onChange={setAccent} />
-                {/* F4：发音历史最佳分（浏览器识别评分，/pronunciation 练习写入） */}
-                {(inStore?.pronScore ?? 0) > 0 && (
-                  <span title="发音最佳分（识别比对评分）" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '11px', fontWeight: 700, fontFamily: 'var(--font-mono)', color: 'var(--teal-ink)', background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.25)', borderRadius: 99, padding: '2px 9px' }}>
-                    🎙 {inStore!.pronScore}
-                  </span>
-                )}
-              </div>
-
-              {/* Metadata badges */}
-              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' }}>
-                {word.partOfSpeech && (
-                  <Badge label={word.partOfSpeech} color="#8B5CF6" />
-                )}
-                {cefrLabel && (
-                  <Badge label={cefrLabel} color="#F97316" />
-                )}
-                {difficultyLevel && (
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--ink-muted)' }}>
-                    <DifficultyDots level={difficultyLevel} />
-                  </span>
-                )}
-                {word.isCore && <Badge label="核心词" color="#0E8C7A" bg="var(--teal-bg)" borderColor="rgba(14,140,122,0.25)" />}
-                {word.isExamWord && <Badge label="考试词" color="#B3781F" bg="rgba(179,120,31,0.1)" borderColor="rgba(179,120,31,0.3)" />}
-                {word.examTags.slice(0, 3).map(tag => (
-                  <Badge key={tag} label={tag} color="#0E8C7A" bg="var(--teal-bg)" borderColor="rgba(14,140,122,0.2)" />
-                ))}
-              </div>
+        <div className="hero-main">
+          <div>
+            <h1 className="word">{word.word}</h1>
+            <div className="ipa-row">
+              {ipa && <span className="ipa">{ipa}</span>}
+              <button className="play press" onClick={() => speak(word.word, accent)} title="朗读"><Ico d={PATHS.speak} s={15} c="var(--teal-ink)" /></button>
+              <span className="accent-seg">
+                <span className={accent === 'US' ? 'on' : ''} onClick={() => setAccent('US')}>US</span>
+                <span className={accent === 'UK' ? 'on' : ''} onClick={() => setAccent('UK')}>UK</span>
+              </span>
             </div>
-
-            {/* Action buttons（B7-3 收敛：主「加入学习」/次「考一考」/右上星标收藏） */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-end' }}>
-              <SaveWordButton wordId={word.id} word={word.word} compact />
-              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-                {inStore ? (
-                  <span style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '10px',
-                    padding: '10px 16px', borderRadius: 'var(--r-pill)',
-                    background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.3)',
-                    color: 'var(--teal-ink)', fontSize: '14px', fontWeight: 600,
-                  }}>
-                    已在学习 · {STATE_META[inStore.state].zh}
-                    <button
-                      onClick={() => useLexiStore.getState().removeWord(word.id)}
-                      style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px', color: 'var(--ink-muted)', padding: 0, fontFamily: 'var(--font-sans)' }}
-                    >
-                      移出
-                    </button>
-                  </span>
-                ) : (
-                  <button
-                    onClick={handleAddToReview}
-                    style={{
-                      padding: '10px 22px',
-                      borderRadius: 'var(--r-pill)',
-                      background: 'var(--teal-ink)',
-                      border: 'none',
-                      color: '#fff',
-                      fontSize: '14px',
-                      fontWeight: 700,
-                      cursor: 'pointer',
-                      boxShadow: '0 8px 20px -10px rgba(14,140,122,0.7)',
-                    }}
-                  >
-                    + 加入学习
-                  </button>
-                )}
-                <button
-                  onClick={handleQuizThis}
-                  style={{
-                    padding: '10px 20px',
-                    borderRadius: 'var(--r-pill)',
-                    background: 'var(--card)',
-                    border: '1px solid var(--line-strong)',
-                    color: 'var(--ink)',
-                    fontSize: '14px',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                  }}
-                >
-                  考一考
-                </button>
-              </div>
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-              <button
-                onClick={handleAIExplain}
-                disabled={aiLoading || !!aiExplanation}
-                style={{
-                  padding: '8px 14px',
-                  borderRadius: 'var(--r-pill)',
-                  background: aiExplanation ? 'rgba(139,92,246,0.06)' : 'rgba(139,92,246,0.1)',
-                  border: `1px solid ${aiExplanation ? 'rgba(139,92,246,0.3)' : 'rgba(139,92,246,0.5)'}`,
-                  color: aiExplanation ? 'rgba(139,92,246,0.5)' : '#8B5CF6',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  cursor: aiLoading || !!aiExplanation ? 'default' : 'pointer',
-                  opacity: aiLoading ? 0.7 : 1,
-                }}
-              >
-                {aiLoading ? 'AI 思考中…' : aiExplanation ? 'AI 已解释' : 'AI 解释'}
-              </button>
-              {inStore && (
-                <Link
-                  href="/knowledge"
-                  style={{
-                    padding: '8px 14px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
-                    background: 'var(--card)', border: '1px solid var(--line-strong)',
-                    color: 'var(--ink)', fontSize: '13px', fontWeight: 600,
-                  }}
-                >
-                  在知识库查看
-                </Link>
-              )}
-              <Link
-                href={`/lexiverse?word=${encodeURIComponent(word.id)}`}
-                style={{
-                  padding: '8px 14px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
-                  background: 'var(--card)', border: '1px solid var(--line-strong)',
-                  color: 'var(--ink)', fontSize: '13px', fontWeight: 600,
-                }}
-              >
-                在宇宙中查看 ✦
-              </Link>
-              <Link
-                href={`/chat?context=word&word=${encodeURIComponent(word.id)}`}
-                style={{
-                  padding: '8px 14px', borderRadius: 'var(--r-pill)', textDecoration: 'none',
-                  background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.25)',
-                  color: 'var(--teal-ink)', fontSize: '13px', fontWeight: 600,
-                }}
-              >
-                AI 导学 →
-              </Link>
-              <Link
-                href={`/lexigraph?word=${word.id}`}
-                style={{
-                  padding: '8px 14px',
-                  borderRadius: 'var(--r-pill)',
-                  background: 'var(--card)',
-                  border: '1px solid var(--line-strong)',
-                  color: 'var(--ink)',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  display: 'inline-block',
-                  fontFamily: 'var(--font-mono)',
-                  boxShadow: 'var(--card-shadow-sm)',
-                }}
-              >
-                ✦ 词汇星图
-              </Link>
-              </div>
+            <div className="meta-row">
+              {pos && <Badge color="var(--violet-ink)">{pos}</Badge>}
+              {word.cefrLevel && <Badge color="#c2700f">CEFR {word.cefrLevel}</Badge>}
+              <span className="diff-inline">难度 <Dots level={word.difficulty ?? 3} /></span>
+              {examTags.slice(0, 3).map(t => <Badge key={t} mono color="var(--teal-ink)">{t}</Badge>)}
             </div>
           </div>
-        </div>
-
-        {/* ── DEFINITIONS + EXAMPLES ─────────────────────────────────── */}
-        {word.definitions.length > 0 && (
-          <div style={card}>
-            <div style={sectionHead}>DEFINITIONS · 释义</div>
-            {word.definitions.map((def, i) => {
-              const example = word.examples[i]
-              return (
-                <div key={i} style={{ marginBottom: i < word.definitions.length - 1 ? '20px' : 0 }}>
-                  <Badge label={def.partOfSpeech} color="#8B5CF6" />
-                  <p style={{ margin: '8px 0 3px', fontSize: '15px', color: 'var(--ink)', lineHeight: 1.6 }}>
-                    {def.definitionEn}
-                  </p>
-                  {def.definitionZh && (
-                    <p style={{ margin: '0 0 8px', fontSize: '14px', color: 'var(--ink-sub)' }}>
-                      {def.definitionZh}
-                    </p>
-                  )}
-                  {example && (
-                    <div style={exampleBlock}>
-                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                        <div style={{ flex: 1 }}>
-                          <p style={{ margin: '0 0 3px', fontSize: '13px', color: 'var(--ink)', fontStyle: 'italic' }}>
-                            &ldquo;{example.sentenceEn}&rdquo;
-                          </p>
-                          {example.sentenceZh && (
-                            <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)' }}>
-                              {example.sentenceZh}
-                            </p>
-                          )}
-                        </div>
-                        <ExampleSentencePlayer sentence={example.sentenceEn} accent={accent} />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-
-            {/* Extra examples beyond definition count */}
-            {word.examples.slice(word.definitions.length).map((ex, i) => (
-              <div key={`extra-${i}`} style={{ ...exampleBlock, marginTop: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                  <div style={{ flex: 1 }}>
-                    <p style={{ margin: '0 0 3px', fontSize: '13px', color: 'var(--ink)', fontStyle: 'italic' }}>
-                      &ldquo;{ex.sentenceEn}&rdquo;
-                    </p>
-                    {ex.sentenceZh && (
-                      <p style={{ margin: 0, fontSize: '12px', color: 'var(--ink-sub)' }}>{ex.sentenceZh}</p>
-                    )}
-                  </div>
-                  <ExampleSentencePlayer sentence={ex.sentenceEn} accent={accent} />
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ── PHRASES（P2：词库注入的常用短语）──────────────────────── */}
-        {!!word.phrases?.length && (
-          <div style={card}>
-            <div style={sectionHead}>PHRASES · 常用短语</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {word.phrases.slice(0, 6).map((p, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)', fontFamily: 'var(--font-news)' }}>{p.phrase}</span>
-                  {p.translation && (
-                    <span style={{ fontSize: '13px', color: 'var(--ink-sub)' }}>{p.translation}</span>
-                  )}
-                </div>
-              ))}
+          <div className="hero-right">
+            <div className="state-row">
+              <span className="state-pill" style={{ ['--c' as string]: stMeta.light } as React.CSSProperties}>
+                <span className="state-dot" />{stMeta.zh}
+              </span>
+              <span className="state-sub">{inStudy ? (learn.reviewIn ? `下次复习 ${learn.reviewIn}` : '') : stMeta.desc}</span>
             </div>
+            {inStudy
+              ? <button className="cta press" onClick={onPrimary} style={{ ['--c' as string]: stMeta.light } as React.CSSProperties}>{learn.primary}</button>
+              : <button className="cta press" onClick={onAdd} style={{ ['--c' as string]: accentColor } as React.CSSProperties}>+ 加入学习</button>}
           </div>
-        )}
-
-        {/* ── MEMORY TRICKS ──────────────────────────────────────────── */}
-        {hasMnemonic && (
-          <div style={card}>
-            <div style={sectionHead}>MEMORY TRICKS · 记忆法</div>
-
-            {standardMnem && (
-              <div
-                style={{
-                  background: 'rgba(179,120,31,0.06)',
-                  border: '1px solid rgba(179,120,31,0.2)',
-                  borderRadius: '8px',
-                  padding: '14px',
-                  marginBottom: evilMnem ? '12px' : 0,
-                }}
-              >
-                <p style={{ margin: '0 0 4px', fontSize: '14px', color: 'var(--gold-ink)', lineHeight: 1.6 }}>
-                  {standardMnem.mnemonicEn}
-                </p>
-                {standardMnem.mnemonicZh && (
-                  <p style={{ margin: 0, fontSize: '13px', color: 'rgba(179,120,31,0.75)' }}>
-                    {standardMnem.mnemonicZh}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {evilMnem && (
-              <div>
-                <button
-                  onClick={() => setShowEvil(v => !v)}
-                  style={{
-                    background: 'none',
-                    border: '1px dashed rgba(191,74,48,0.3)',
-                    borderRadius: '6px',
-                    padding: '6px 12px',
-                    color: 'var(--rose-ink)',
-                    fontSize: '12px',
-                    cursor: 'pointer',
-                    fontFamily: 'var(--font-mono)',
-                    marginBottom: showEvil ? '10px' : 0,
-                    opacity: 0.8,
-                  }}
-                >
-                  {showEvil ? '隐藏' : '显示'} 邪修记忆法
-                </button>
-                {showEvil && (
-                  <div
-                    style={{
-                      background: 'rgba(191,74,48,0.05)',
-                      border: '1px solid rgba(191,74,48,0.18)',
-                      borderRadius: '8px',
-                      padding: '14px',
-                    }}
-                  >
-                    <p style={{ margin: '0 0 4px', fontSize: '14px', color: 'var(--rose-ink)', lineHeight: 1.6 }}>
-                      {evilMnem.mnemonicEn}
-                    </p>
-                    {evilMnem.mnemonicZh && (
-                      <p style={{ margin: 0, fontSize: '13px', color: 'rgba(191,74,48,0.7)' }}>
-                        {evilMnem.mnemonicZh}
-                      </p>
-                    )}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* ── SYNONYMS & ANTONYMS ────────────────────────────────────── */}
-        {(word.synonyms.length > 0 || word.antonyms.length > 0) && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
-            {word.synonyms.length > 0 && (
-              <div style={card}>
-                <div style={sectionHead}>SYNONYMS · 近义词</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                  {word.synonyms.map(s => <WordTag key={s} label={s} />)}
-                </div>
-              </div>
-            )}
-            {word.antonyms.length > 0 && (
-              <div style={card}>
-                <div style={sectionHead}>ANTONYMS · 反义词</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                  {word.antonyms.map(a => <AntonymTag key={a} label={a} />)}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-        {/* P5-A1：词形/近反义 → 词图展开（关系数据在 word_relations，
-            无旧版 synonyms 行的导入词也要可达，故该入口始终显示） */}
-        <div style={{ textAlign: 'right', marginBottom: '16px' }}>
-          <Link href={`/lexigraph?word=${word.id}`}
-            style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none', fontWeight: 600 }}>
-            在词图中展开 →
-          </Link>
-        </div>
-
-        {/* ── COLLOCATIONS ──────────────────────────────────────────── */}
-        {word.collocations.length > 0 && (
-          <div style={card}>
-            <div style={sectionHead}>COLLOCATIONS · 常用搭配</div>
-            {word.collocations.map((c, i) => (
-              <div key={i} style={{ marginBottom: i < word.collocations.length - 1 ? '14px' : 0 }}>
-                <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--teal-ink)', marginBottom: '4px', fontFamily: 'var(--font-mono)' }}>
-                  {c.phrase}
-                </div>
-                {c.exampleEn && (
-                  <div style={{ fontSize: '13px', color: 'var(--ink)', marginBottom: '2px' }}>{c.exampleEn}</div>
-                )}
-                {c.exampleZh && (
-                  <div style={{ fontSize: '12px', color: 'var(--ink-sub)' }}>{c.exampleZh}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ── SCENE USAGE ───────────────────────────────────────────── */}
-        {word.sceneUsages.length > 0 && (
-          <div style={card}>
-            <div style={sectionHead}>SCENE USAGE · 场景用法</div>
-            {word.sceneUsages.map((s, i) => (
-              <div key={i} style={{ marginBottom: i < word.sceneUsages.length - 1 ? '14px' : 0 }}>
-                <div
-                  style={{
-                    display: 'inline-block',
-                    fontSize: '11px',
-                    padding: '2px 8px',
-                    borderRadius: '4px',
-                    background: 'rgba(249,115,22,0.08)',
-                    color: '#F97316',
-                    border: '1px solid rgba(249,115,22,0.25)',
-                    marginBottom: '6px',
-                    fontFamily: 'var(--font-mono)',
-                  }}
-                >
-                  {s.sceneEn}{s.sceneZh ? ` · ${s.sceneZh}` : ''}
-                </div>
-                {s.exampleEn && (
-                  <div style={{ fontSize: '13px', color: 'var(--ink)', marginBottom: '3px', fontStyle: 'italic' }}>
-                    &ldquo;{s.exampleEn}&rdquo;
-                  </div>
-                )}
-                {s.exampleZh && (
-                  <div style={{ fontSize: '12px', color: 'var(--ink-sub)' }}>{s.exampleZh}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* ── ETYMOLOGY ─────────────────────────────────────────────── */}
-        {word.etymology && (
-          <div style={card}>
-            <div style={sectionHead}>ETYMOLOGY · 词源</div>
-            <div style={{ fontSize: '13px', color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)', marginBottom: '8px' }}>
-              {word.etymology.roots}
-            </div>
-            {word.etymology.explanationEn && word.etymology.explanationEn !== word.etymology.roots && (
-              <p style={{ margin: '0 0 4px', fontSize: '14px', color: 'var(--ink)', lineHeight: 1.6 }}>
-                {word.etymology.explanationEn}
-              </p>
-            )}
-            {word.etymology.explanationZh && (
-              <p style={{ margin: 0, fontSize: '13px', color: 'var(--ink-sub)' }}>
-                {word.etymology.explanationZh}
-              </p>
-            )}
-          </div>
-        )}
-
-        {/* ── AI EXPLANATION ────────────────────────────────────────── */}
-        {(aiLoading || aiError || aiExplanation) && (
-          <div
-            style={{
-              ...card,
-              borderColor: 'rgba(139,92,246,0.2)',
-              background: 'rgba(139,92,246,0.03)',
-            }}
-          >
-            <div style={{ ...sectionHead, color: 'rgba(139,92,246,0.8)', opacity: 1 }}>
-              AI EXPLANATION · AI 解释
-            </div>
-            {aiLoading && (
-              <div style={{ fontSize: '13px', color: 'var(--ink-sub)' }}>AI 正在思考…</div>
-            )}
-            {aiError && !aiLoading && (
-              <div>
-                <div style={{ fontSize: '13px', color: 'var(--rose-ink)', marginBottom: '12px' }}>
-                  {aiError}
-                </div>
-                <button
-                  onClick={handleAIExplain}
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: 'var(--r-pill)',
-                    background: 'rgba(139,92,246,0.1)',
-                    border: '1px solid rgba(139,92,246,0.35)',
-                    color: '#8B5CF6',
-                    fontSize: '12px',
-                    cursor: 'pointer',
-                  }}
-                >
-                  重试
-                </button>
-              </div>
-            )}
-            {aiExplanation && !aiLoading && (
-              <div>{renderAIContent(aiExplanation)}</div>
-            )}
-          </div>
-        )}
-
-        {/* ── SOURCE ATTRIBUTION ────────────────────────────────────── */}
-        {isOriginalSeed && (
-          <div style={{ marginBottom: '8px', padding: '10px 14px', borderRadius: '8px', background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.12)' }}>
-            <div style={{ fontSize: '10px', color: 'var(--ink-muted)', fontFamily: 'var(--font-mono)', lineHeight: 1.5 }}>
-              原创教育内容，非商业词典来源。仅供个人学习参考，AI 生成答案仅为学习建议。
-            </div>
-          </div>
-        )}
-
-        {/* Back link */}
-        <div style={{ marginTop: '24px' }}>
-          <Link href="/dictionary" style={{ fontSize: '13px', color: 'var(--teal-ink)', textDecoration: 'none' }}>
-            ← 返回词汇根系
-          </Link>
         </div>
       </div>
+
+      {/* body: hub + content */}
+      <div className="body-grid">
+        {/* Hub */}
+        <div className="hub fade">
+          <div className="hub-head">
+            <span className="hub-kicker">学习中枢 · Hub</span>
+            <span style={{ fontSize: 11, color: 'var(--ink-muted)' }}>所有模块联动</span>
+          </div>
+          {/* 学习状态 */}
+          <button className="spoke press" style={{ ['--c' as string]: stMeta.light } as React.CSSProperties} onClick={inStudy ? () => go('me') : onAdd}>
+            <span className="sp-ic">{inStudy
+              ? <Ring pct={learn.progress} color={stMeta.light} size={38} sw={4}><b style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: stMeta.light }}>{learn.progress}</b></Ring>
+              : <Ico d={PATHS.learn} s={17} c={stMeta.light} />}</span>
+            <span className="sp-body"><span className="sp-t">学习状态</span><span className="sp-s">{inStudy ? `${stMeta.zh} · ${stMeta.desc}` : stMeta.desc}</span></span>
+            <span className="sp-status">{!inStudy && <span className="go-chip" style={{ ['--c' as string]: accentColor } as React.CSSProperties}>加入 +</span>}</span>
+          </button>
+          {/* 练习 */}
+          <button className="spoke press" style={{ ['--c' as string]: 'var(--blue-ink)' } as React.CSSProperties} onClick={() => go('practice')}>
+            <span className="sp-ic"><Ico d={PATHS.practice} s={17} c="var(--blue-ink)" /></span>
+            <span className="sp-body"><span className="sp-t">练习 · 考一考</span><span className="sp-s">{learn.accuracy != null ? `历史正确率 ${learn.accuracy}% · 再练一组` : '还没练过，去测一测'}</span></span>
+            <span className="sp-status">{learn.accuracy != null ? <span className="acc">{learn.accuracy}%</span> : <Ico d={PATHS.arrow} s={16} c="var(--blue-ink)" />}</span>
+          </button>
+          {/* 复习 */}
+          <button className="spoke press" style={{ ['--c' as string]: STATE_META.review.light } as React.CSSProperties} onClick={() => go('review')}>
+            <span className="sp-ic"><Ico d={PATHS.review} s={17} c={STATE_META.review.light} /></span>
+            <span className="sp-body"><span className="sp-t">复习 · SRS</span><span className="sp-s">{learn.reviewIn ? (learn.reviewIn.includes('到期') ? '已到期，建议立即复习' : `下次复习 · ${learn.reviewIn}`) : '加入学习后排入复习'}</span></span>
+            <span className="sp-status">{learn.reviewIn ? <span className="rev-when" style={{ color: learn.reviewIn.includes('到期') ? STATE_META.review.light : 'var(--ink-muted)' }}>{learn.reviewIn}</span> : <Ico d={PATHS.arrow} s={16} c={STATE_META.review.light} />}</span>
+          </button>
+
+          <div className="hub-split"><span>在词汇地图中查看</span></div>
+          <div className="hub-maps">
+            <button className="map press" onClick={() => go('universe')}>
+              <span className="map-thumb"><MiniGalaxy accent={accentColor} /></span>
+              <span className="map-meta"><span className="map-t"><Ico d={PATHS.universe} s={14} c="var(--ink-sub)" /> 词汇宇宙</span><span className="map-s">{themeTags[0] ?? '词汇'} 星系 · 该词为亮星</span></span>
+            </button>
+            <button className="map press" onClick={() => go('graph')}>
+              <span className="map-thumb"><MiniGraph synonyms={synonyms} antonyms={antonyms} accent={accentColor} /></span>
+              <span className="map-meta"><span className="map-t"><Ico d={PATHS.graph} s={14} c="var(--ink-sub)" /> 词汇关系图</span><span className="map-s">{synonyms.length} 近义 · {antonyms.length} 反义</span></span>
+            </button>
+          </div>
+          <button className="ai-row press" onClick={() => go('chat')}>
+            <span className="ai-ic"><Ico d={PATHS.ai} s={16} c="var(--violet-ink)" /></span>
+            <span style={{ flex: 1, textAlign: 'left' }}><span className="ai-t">AI 导学</span><span className="ai-s">追问用法、辨析、造句</span></span>
+            <Ico d={PATHS.arrow} s={15} c="var(--violet-ink)" />
+          </button>
+        </div>
+
+        {/* Content（双布局：标签页 / 一屏锚点）*/}
+        <div className="content">
+          <div className="layout-toggle">
+            <button className={layout === 'tab' ? 'on' : ''} onClick={() => setLayout('tab')}>标签页</button>
+            <button className={layout === 'anchor' ? 'on' : ''} onClick={() => setLayout('anchor')}>一屏通览</button>
+          </div>
+          {layout === 'tab' ? (
+            <>
+              <div className="tabbar">
+                {SECTIONS.map(s => <button key={s.id} className={'tab press' + (s.id === tab ? ' on' : '')} onClick={() => setTab(s.id)}>{s.label}</button>)}
+              </div>
+              <div className="tab-panel fade" key={tab}>{SECTIONS.find(s => s.id === tab)?.node}</div>
+            </>
+          ) : (
+            <>
+              <div className="anchorbar">
+                {SECTIONS.map(s => <button key={s.id} className="anc-btn press" onClick={() => jumpAnchor(s.id)}>{s.label}</button>)}
+              </div>
+              <div className="scroll-sections" ref={scrollRef}>
+                {SECTIONS.map(s => (
+                  <div className="anc-block" id={'wd-anc-' + s.id} key={s.id}>
+                    <div className="anc-h">{s.label}</div>
+                    {s.node}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* 相关词条 */}
+      {related.length > 0 && (
+        <div className="related">
+          <div className="rel-strip-label">继续探索 · 相关词</div>
+          <div className="rel-strip">
+            {related.map(w => (
+              <Link key={w.slug} href={`/word/${encodeURIComponent(w.slug)}`} className="rel-word press">
+                <span className="rw-word">{w.word}</span>
+                <span className="rw-dot" style={{ background: STATE_META[w.state].light }} />
+                {w.zh && <span className="rw-zh">{w.zh}</span>}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {toast && <div className="toast">{toast}</div>}
+    </div>
+  )
+}
+
+// 记忆分区（含「邪修」折叠的本地状态）——单独组件以承载 useState
+function SecMemBlock({ mnemonic, word }: { mnemonic: string; word: string }) {
+  const [evil, setEvil] = useState(false)
+  return (
+    <div className="sec">
+      <div className="mem-card">
+        <div className="mem-tag">词根记忆</div>
+        <p className="mem-txt">{mnemonic || `把 ${word} 拆成熟悉的音节或词根，联想一个画面帮助记忆。`}</p>
+      </div>
+      <button className="evil-toggle press" onClick={() => setEvil(v => !v)}>
+        <Ico d={PATHS.bolt} s={14} c="var(--gold-ink)" /> {evil ? '收起邪修记忆法' : '试试「邪修」记忆法'}
+      </button>
+      {evil && (
+        <div className="mem-card evil fade">
+          <div className="mem-tag" style={{ color: 'var(--gold-ink)', background: 'var(--gold-bg)' }}>邪修 · 谐音联想</div>
+          <p className="mem-txt">把 <b>{word}</b> 拆成熟悉的音节，编一个夸张到忘不掉的画面 —— 越离谱越好记。（AI 会按你的母语生成）</p>
+        </div>
+      )}
     </div>
   )
 }
