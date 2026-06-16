@@ -38,10 +38,16 @@ export function RootsScreen() {
   const [openRoot, setOpenRoot] = useState<string | null>(null)
   const [members, setMembers] = useState<Member[] | null>(null)
   const [added, setAdded] = useState<Set<string>>(new Set())
-  // 界面优化2·P5：词根→派生词流光连线用的 refs（容器 / 词根 / 成员）
+  // 界面优化2·P5：词根→派生词流光连线用的 refs（容器 / 词根 / 前 6 个成员）
+  // 用固定命名 ref（不在 render 读 .current），满足 react-hooks/refs 规则
   const beamHostRef = useRef<HTMLDivElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
-  const memberRefs = useRef<React.RefObject<HTMLButtonElement | null>[]>([])
+  const m0 = useRef<HTMLButtonElement>(null)
+  const m1 = useRef<HTMLButtonElement>(null)
+  const m2 = useRef<HTMLButtonElement>(null)
+  const m3 = useRef<HTMLButtonElement>(null)
+  const m4 = useRef<HTMLButtonElement>(null)
+  const m5 = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -93,18 +99,21 @@ export function RootsScreen() {
   // ── 详情视图 ──
   if (openRoot) {
     const fam = fams.find(f => f.root === openRoot)
-    // 取前若干成员画「词根→派生词」连线（铺在内容之下，过多会乱，故限量）
+    // 取前若干成员画「词根→派生词」连线（铺在内容之下，过多会乱，故限量到 6）
     const beamCount = members ? Math.min(members.length, 6) : 0
-    for (let i = memberRefs.current.length; i < beamCount; i++) memberRefs.current[i] = { current: null }
     return (
       <div className="scr theme-light">
         <div className="wrap" style={{ maxWidth: 760 }}>
           <button className="rt-back" onClick={() => setOpenRoot(null)}>‹ 返回词族列表</button>
           <div ref={beamHostRef} style={{ position: 'relative' }}>
-            {/* 界面优化2·P5：词根→派生词流光连线（米白 teal-ink），置于内容之下；切词族时 key 含 openRoot 以重算 */}
-            {beamCount > 0 && memberRefs.current.slice(0, beamCount).map((mref, i) => (
-              <AnimatedBeam key={`${openRoot}-${i}`} containerRef={beamHostRef} fromRef={rootRef} toRef={mref} curvature={26} delay={i * 0.16} />
-            ))}
+            {/* 界面优化2·P5：词根→派生词流光连线（米白 teal-ink），置于内容之下；切词族时 key 含 openRoot 以重算。
+                显式逐条渲染（不对 ref 数组做 slice/map），满足 react-hooks/refs 规则 */}
+            {beamCount > 0 && <AnimatedBeam key={`${openRoot}-0`} containerRef={beamHostRef} fromRef={rootRef} toRef={m0} curvature={26} delay={0} />}
+            {beamCount > 1 && <AnimatedBeam key={`${openRoot}-1`} containerRef={beamHostRef} fromRef={rootRef} toRef={m1} curvature={26} delay={0.16} />}
+            {beamCount > 2 && <AnimatedBeam key={`${openRoot}-2`} containerRef={beamHostRef} fromRef={rootRef} toRef={m2} curvature={26} delay={0.32} />}
+            {beamCount > 3 && <AnimatedBeam key={`${openRoot}-3`} containerRef={beamHostRef} fromRef={rootRef} toRef={m3} curvature={26} delay={0.48} />}
+            {beamCount > 4 && <AnimatedBeam key={`${openRoot}-4`} containerRef={beamHostRef} fromRef={rootRef} toRef={m4} curvature={26} delay={0.64} />}
+            {beamCount > 5 && <AnimatedBeam key={`${openRoot}-5`} containerRef={beamHostRef} fromRef={rootRef} toRef={m5} curvature={26} delay={0.80} />}
             <div className="rt-hero" ref={rootRef}>
               <span className="rt-hero-root">{fam?.word ?? openRoot}</span>
               <div className="rt-hero-main">
@@ -123,7 +132,7 @@ export function RootsScreen() {
                 {members.map((m, i) => {
                   const on = added.has(m.slug)
                   return (
-                    <button key={m.slug} ref={i < beamCount ? memberRefs.current[i] : undefined} className="rt-mem" onClick={() => addMember(m)}>
+                    <button key={m.slug} ref={i === 0 ? m0 : i === 1 ? m1 : i === 2 ? m2 : i === 3 ? m3 : i === 4 ? m4 : i === 5 ? m5 : undefined} className="rt-mem" onClick={() => addMember(m)}>
                       <span className="rt-mem-w"><Hl word={m.word} root={fam?.word ?? openRoot} /></span>
                       <span className="rt-mem-ipa">{m.phon}</span>
                       <span className="rt-mem-zh">{m.zh}</span>
