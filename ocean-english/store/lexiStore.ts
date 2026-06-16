@@ -50,6 +50,8 @@ export interface WordEntry {
   ant?: string[]
   /** F4：发音历史最佳分（0-100，浏览器识别评分） */
   pronScore?: number
+  /** P3：跨维通过记录（'recognize'|'spell'|'listen'）；mastered + dims≥2 = 真·镀金 */
+  dims?: string[]
 }
 
 export interface Profile {
@@ -65,6 +67,12 @@ export interface Profile {
   onboardedAt?: number
   // P1-2：7 档等级（lib/levels.ts），band = min(level+1, 8) 派生保留兼容
   level?: number
+  // P0 onboarding v2：学习方式（驱动今日活动配比）+ 定级测评附带量（结果页/复测展示）
+  path?: 'full' | 'words' | 'reading' | 'exam'
+  vocabEst?: number
+  confidence?: '高' | '中' | '低'
+  // 界面优化1·阶段3：应试路线考试日期（YYYY-MM-DD），驱动今日「距考试 N 天」与每日量倒计时推荐
+  examDate?: string | null
 }
 
 // band → userLevel 派生默认值（spec A4-3）
@@ -232,6 +240,8 @@ interface LexiStoreState {
   words: WordEntry[]
   xp: number
   daily: DailyRecord
+  /** 今日侧路活动完成标记（阅读/真题/错题/考试进度等，按日重置） */
+  todayActivity: { date: string; done: string[] }
   history: DailyHistory
   streakData: StreakData
   goalToday: number
@@ -243,6 +253,43 @@ interface LexiStoreState {
   quizHistory: QuizSession[]
   // ── chat 切片（A7 平移自 learningStore）──
   chatMessages: ChatMessage[]
+}
+
+type PersistedWordEntry = Partial<WordEntry> & {
+  id: string
+  word?: string
+  due?: boolean
+}
+
+type PersistedLexiState = Omit<Partial<LexiStoreState>, 'words'> & {
+  words?: PersistedWordEntry[]
+  xp?: number
+}
+
+interface LegacyReviewWord {
+  wordId?: string
+  word?: string
+  interval?: number
+  ease?: number
+  repetitions?: number
+  nextReviewAt?: number
+}
+
+interface LegacyStudyProgress {
+  currentStreak?: number
+  longestStreak?: number
+  lastStudyDate?: string
+  totalXp?: number
+}
+
+interface LegacyLearningState {
+  reviewWords?: LegacyReviewWord[]
+  savedWords?: unknown[]
+  userLevel?: LearningLevel
+  studyProgress?: LegacyStudyProgress
+  wrongAnswers?: WrongAnswer[]
+  quizHistory?: QuizSession[]
+  chatMessages?: ChatMessage[]
 }
 
 interface LexiStoreActions {
@@ -270,6 +317,10 @@ interface LexiStoreActions {
   markLearning: (id: string) => void
   markCorrect: (id: string) => void
   markWrong: (id: string) => void
+  /** P3：记录某词在某维度（recognize/spell/listen）答对，用于跨维镀金 */
+  recordDimPass: (id: string, dim: string) => void
+  /** P3：当前档跨维掌握进度（gold = mastered 且 dims≥2）+ 是否够升档 */
+  getLevelUpProgress: () => { ready: boolean; rate: number; gold: number; total: number; level: number | null }
   reviewGrade: (id: string, g: ReviewGrade) => void
   relearn: (id: string) => void
   addToReview: (id: string) => void
@@ -288,6 +339,8 @@ interface LexiStoreActions {
   /** F1-3：补签 — 扣 50 XP 补昨日 history 缺口并重算 streak；不可补返回 false */
   repairStreak: () => boolean
   recordActivity: (kind: 'learned' | 'quizzed' | 'reviewed' | 'pronounced') => void
+  /** 标记今日某侧路活动完成（key 如 reading/article/pick/mock/wrong/progress），按日重置 */
+  markActivityDone: (key: string) => void
   setProfile: (p: Partial<Profile>) => void
   skipOnboarding: () => void
   toggleGoal: (exam: string) => void
@@ -350,6 +403,7 @@ export const useLexiStore = create<LexiStore>()(
       words: [],
       xp: 0,
       daily: { date: '', learned: 0, quizzed: 0, reviewed: 0 },
+      todayActivity: { date: '', done: [] },
       history: {},
       streakData: { current: 0, longest: 0, lastStudyDate: '' },
       goalToday: 12,
@@ -460,6 +514,26 @@ export const useLexiStore = create<LexiStore>()(
         return transition(s.words, s.log, id, 'weak', '答错回炉', { ...r, lastReviewedAt: Date.now() })
       }),
 
+      // P3：记录跨维通过（answered correct in a skill dimension）
+      recordDimPass: (id, dim) => set(s => {
+        const w = s.words.find(x => x.id === id)
+        if (!w || (w.dims ?? []).includes(dim)) return {}
+        return { words: s.words.map(x => x.id === id ? { ...x, dims: [...(x.dims ?? []), dim] } : x) }
+      }),
+
+      // P3：当前能力档的跨维掌握率（升档自适应依据）
+      getLevelUpProgress: () => {
+        const s = get()
+        const lv = s.profile.level ?? null
+        if (lv == null) return { ready: false, rate: 0, gold: 0, total: 0, level: null }
+        const atLevel = s.words.filter(w => w.state !== 'locked' && w.state !== 'unknown'
+          && (w.levels?.length ? w.levels.includes(lv) : (w.band ?? s.profile.band) === lv))
+        const total = atLevel.length
+        const gold = atLevel.filter(w => w.state === 'mastered' && (w.dims?.length ?? 0) >= 2).length
+        const rate = total ? Math.round((gold / total) * 100) : 0
+        return { ready: total >= 10 && rate >= 80 && lv < 7, rate, gold, total, level: lv }
+      },
+
       // 复习评分：四档统一入口，状态由结果派生
       reviewGrade: (id, g) => set(s => {
         const word = s.words.find(w => w.id === id)
@@ -525,12 +599,17 @@ export const useLexiStore = create<LexiStore>()(
         const newN = Math.max(1, Math.round((profile.dailyGoal || 12) * 0.4))
         try {
           const exam = mapExamKeyToTag(profile.targetExam)
-          const res = await fetch(
-            `/api/dictionary/recommend?band=${profile.band}&limit=${newN}` +
-            (profile.level != null ? `&level=${profile.level}` : '') +
-            (exam ? `&exam=${exam}` : '') +
-            `&exclude=${words.map(w => w.id).join(',')}`,
-          )
+          const res = await fetch('/api/dictionary/recommend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              band: profile.band,
+              limit: newN,
+              ...(profile.level != null ? { level: profile.level } : {}),
+              ...(exam ? { exam } : {}),
+              exclude: words.map(w => w.id),
+            }),
+          })
           if (!res.ok) throw new Error(`recommend ${res.status}`)
           const { data } = await res.json() as { data?: DictionaryWord[] }
           if (!Array.isArray(data) || data.length === 0) throw new Error('empty')
@@ -662,6 +741,13 @@ export const useLexiStore = create<LexiStore>()(
         return { daily: { ...d, [kind]: (d[kind] ?? 0) + 1 }, history, streakData }
       }),
 
+      markActivityDone: (key) => set(s => {
+        const today = new Date().toISOString().slice(0, 10)
+        const cur = s.todayActivity.date === today ? s.todayActivity : { date: today, done: [] as string[] }
+        if (cur.done.includes(key)) return { todayActivity: cur }
+        return { todayActivity: { date: today, done: [...cur.done, key] } }
+      }),
+
       setProfile: (p) => set(s => {
         // 只有带 band/level 的写入（= 完成定级）才标记 onboarded；
         // 「我的」页单独调整 dailyGoal 不应让未定级用户跳过引导（B9-3）
@@ -731,40 +817,42 @@ export const useLexiStore = create<LexiStore>()(
       // v2 → v3：吸收旧 learningStore（localStorage['lexiocean-learning']）本地数据
       // v3 → v4：种子词 id 重映射为词典 slug（w01 → unavoidable），学习进度保留
       // v4 → v5：平移 learningStore 的 practice/chat 切片（错题/测验史/聊天记录）
-      migrate: (persisted: any, from: number) => {
-        if (!persisted) return persisted
+      migrate: (persisted: unknown, from: number) => {
+        if (!persisted || typeof persisted !== 'object') return persisted
+        const state = persisted as PersistedLexiState
         if (from < 2) {
           const DAY = 86_400_000
-          if (Array.isArray(persisted.words)) {
-            persisted.words = persisted.words.map((w: any) => {
+          if (Array.isArray(state.words)) {
+            state.words = state.words.map((w) => {
               const nextReviewAt = w.nextReviewAt ?? (
                 w.due ? Date.now()
                 : w.state === 'review' ? Date.now() + (w.interval || 1) * DAY
                 : w.state === 'weak' ? Date.now() + DAY
                 : undefined
               )
-              const { due: _due, ...rest } = w
+              const rest = { ...w }
+              delete rest.due
               return { ...rest, nextReviewAt }
             })
           }
           // 假进度归零：fake 基线 xp=1240，扣掉后保留真实积累
-          persisted.xp = Math.max(0, (typeof persisted.xp === 'number' ? persisted.xp : 0) - 1240)
-          delete persisted.streak
-          delete persisted.studiedToday
-          persisted.daily = persisted.daily ?? { date: '', learned: 0, quizzed: 0, reviewed: 0 }
-          persisted.streakData = persisted.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
+          state.xp = Math.max(0, (typeof state.xp === 'number' ? state.xp : 0) - 1240)
+          delete (state as Record<string, unknown>).streak
+          delete (state as Record<string, unknown>).studiedToday
+          state.daily = state.daily ?? { date: '', learned: 0, quizzed: 0, reviewed: 0 }
+          state.streakData = state.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
         }
         if (from < 3) {
           try {
             const raw = typeof localStorage !== 'undefined'
               ? localStorage.getItem('lexiocean-learning') : null
-            const legacy = raw ? JSON.parse(raw)?.state : null
+            const legacy = raw ? (JSON.parse(raw)?.state as LegacyLearningState | undefined) : null
             if (legacy) {
-              const words: any[] = Array.isArray(persisted.words) ? persisted.words : []
+              const words: PersistedWordEntry[] = Array.isArray(state.words) ? state.words : []
               // reviewWords → 词条 SRS 字段（词不在库则建 stub，内容启动后补拉）
               for (const r of legacy.reviewWords ?? []) {
                 if (!r?.wordId) continue
-                let w = words.find((x: any) => x.id === r.wordId)
+                let w = words.find((x) => x.id === r.wordId)
                 if (!w) {
                   w = stubEntry(r.wordId, r.word ?? r.wordId, 'lookup', 'review')
                   words.push(w)
@@ -780,31 +868,31 @@ export const useLexiStore = create<LexiStore>()(
               // savedWords → WordEntry.saved
               for (const id of legacy.savedWords ?? []) {
                 if (typeof id !== 'string' || !id) continue
-                let w = words.find((x: any) => x.id === id)
+                let w = words.find((x) => x.id === id)
                 if (!w) {
                   w = stubEntry(id, id, 'lookup', 'learning')
                   words.push(w)
                 }
                 w.saved = true
               }
-              persisted.words = words
+              state.words = words
               // userLevel 并入 profile（已有显式值则不覆盖）
-              if (legacy.userLevel && persisted.profile && !persisted.profile.userLevel) {
-                persisted.profile.userLevel = legacy.userLevel
+              if (legacy.userLevel && state.profile && !state.profile.userLevel) {
+                state.profile.userLevel = legacy.userLevel
               }
               // streak / xp 取两边较大者
               const sp = legacy.studyProgress
               if (sp) {
-                const sd = persisted.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
-                persisted.streakData = {
+                const sd = state.streakData ?? { current: 0, longest: 0, lastStudyDate: '' }
+                state.streakData = {
                   current: Math.max(sd.current ?? 0, sp.currentStreak ?? 0),
                   longest: Math.max(sd.longest ?? 0, sp.longestStreak ?? 0),
                   lastStudyDate: (sd.lastStudyDate ?? '') > (sp.lastStudyDate ?? '')
                     ? sd.lastStudyDate
                     : (sp.lastStudyDate ?? ''),
                 }
-                persisted.xp = Math.max(
-                  typeof persisted.xp === 'number' ? persisted.xp : 0,
+                state.xp = Math.max(
+                  typeof state.xp === 'number' ? state.xp : 0,
                   sp.totalXp ?? 0,
                 )
               }
@@ -818,28 +906,28 @@ export const useLexiStore = create<LexiStore>()(
           try {
             const raw = typeof localStorage !== 'undefined'
               ? localStorage.getItem('lexiocean-learning') : null
-            const legacy = raw ? JSON.parse(raw)?.state : null
+            const legacy = raw ? (JSON.parse(raw)?.state as LegacyLearningState | undefined) : null
             if (legacy) {
-              if (!Array.isArray(persisted.wrongAnswers) || persisted.wrongAnswers.length === 0) {
-                persisted.wrongAnswers = Array.isArray(legacy.wrongAnswers) ? legacy.wrongAnswers : []
+              if (!Array.isArray(state.wrongAnswers) || state.wrongAnswers.length === 0) {
+                state.wrongAnswers = Array.isArray(legacy.wrongAnswers) ? legacy.wrongAnswers : []
               }
-              if (!Array.isArray(persisted.quizHistory) || persisted.quizHistory.length === 0) {
-                persisted.quizHistory = Array.isArray(legacy.quizHistory) ? legacy.quizHistory : []
+              if (!Array.isArray(state.quizHistory) || state.quizHistory.length === 0) {
+                state.quizHistory = Array.isArray(legacy.quizHistory) ? legacy.quizHistory : []
               }
-              if (!Array.isArray(persisted.chatMessages) || persisted.chatMessages.length === 0) {
-                persisted.chatMessages = Array.isArray(legacy.chatMessages) ? legacy.chatMessages : []
+              if (!Array.isArray(state.chatMessages) || state.chatMessages.length === 0) {
+                state.chatMessages = Array.isArray(legacy.chatMessages) ? legacy.chatMessages : []
               }
             }
           } catch {
             // 旧数据损坏：跳过，不阻塞启动
           }
         }
-        if (from < 4 && Array.isArray(persisted.words)) {
+        if (from < 4 && Array.isArray(state.words)) {
           // 种子词 id → 词典 slug；slug 已存在则丢弃旧种子条目（保词典侧进度）
           const seen = new Set(
-            persisted.words.map((w: any) => w.id).filter((id: string) => !SEED_SLUG[id]),
+            state.words.map((w) => w.id).filter((id) => !SEED_SLUG[id]),
           )
-          persisted.words = persisted.words.flatMap((w: any) => {
+          state.words = state.words.flatMap((w) => {
             const slug = SEED_SLUG[w.id]
             if (!slug) return [w]
             if (seen.has(slug)) return []
@@ -847,13 +935,14 @@ export const useLexiStore = create<LexiStore>()(
             return [{ ...w, id: slug, source: w.source ?? 'seed' }]
           })
         }
-        return persisted
+        return state
       },
       // Only persist state fields, not action functions
       partialize: (s) => ({
         words: s.words,
         xp: s.xp,
         daily: s.daily,
+        todayActivity: s.todayActivity,
         history: s.history,
         streakData: s.streakData,
         goalToday: s.goalToday,
