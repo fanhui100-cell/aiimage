@@ -1,60 +1,33 @@
 'use client'
 
-import Link from 'next/link'
-import { SectionHeader } from '@/components/ui/SectionHeader'
+/* 界面优化2·P4：AINavigatorPanel 改用 AIPromptInput（米白·teal-ink 系）。
+   输入区直接收问题，onSend 路由到 /chat?ask=…，由 LexiPilot 接现有 /api/ai/chat 流式回答。
+   （原暗色玻璃 + 紫色链接面板已废弃，与全站米白主题对齐，不再串色。） */
 
-const QUICK_PROMPTS = [
-  { label: 'Explain a word', labelZh: '解释单词', href: '/chat' },
-  { label: 'Generate a quiz', labelZh: '生成练习题', href: '/chat' },
-  { label: 'Review my mistakes', labelZh: '分析错题', href: '/chat' },
-  { label: 'Make a study plan', labelZh: '制定计划', href: '/chat' },
-]
+import { useRouter } from 'next/navigation'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { AIPromptInput } from '@/components/ui/AIPromptInput'
 
 export function AINavigatorPanel() {
+  const router = useRouter()
   return (
     <div
       style={{
-        background: 'var(--glass-bg)',
-        border: '1px solid rgba(139,92,246,0.15)',
+        background: 'var(--card)',
+        border: '1px solid var(--line)',
         borderRadius: '12px',
         padding: '20px',
       }}
     >
-      <SectionHeader label="AI NAVIGATOR" labelZh="AI 导学" style={{ marginTop: 0, marginBottom: '4px' }} />
-      <p style={{ fontSize: '12px', color: 'rgba(155,191,202,0.5)', margin: '0 0 14px' }}>
-        Ask anything — words, grammar, strategies, quizzes.
-        <br />
-        <span style={{ fontSize: '11px' }}>提问词汇、语法、策略或练习题。</span>
+      <SectionHeader label="AI NAVIGATOR" labelZh="AI 领航" style={{ marginTop: 0, marginBottom: '4px' }} />
+      <p style={{ fontSize: '12px', color: 'var(--ink-sub)', margin: '0 0 14px', lineHeight: 1.55 }}>
+        提问词汇、语法、策略或练习题 —— 直接问，领航 LexiPilot 接管。
       </p>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '14px' }}>
-        {QUICK_PROMPTS.map(p => (
-          <Link
-            key={p.label}
-            href={p.href}
-            style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              padding: '8px 12px', borderRadius: '7px', textDecoration: 'none',
-              background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.12)',
-              transition: 'border-color 0.15s',
-            }}
-          >
-            <span style={{ fontSize: '12px', color: '#ECFBFF' }}>{p.label}</span>
-            <span style={{ fontSize: '11px', color: 'rgba(155,191,202,0.4)' }}>{p.labelZh}</span>
-          </Link>
-        ))}
-      </div>
-
-      <Link
-        href="/chat?context=study_goal"
-        style={{
-          display: 'block', textAlign: 'center', padding: '9px 16px', borderRadius: '8px',
-          textDecoration: 'none', fontWeight: 600, fontSize: '13px',
-          background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.35)', color: '#8B5CF6',
-        }}
-      >
-        Open AI Navigator / 打开 AI 导学 →
-      </Link>
+      <AIPromptInput
+        suggestions={['解释单词', '生成练习题', '分析错题', '制定计划']}
+        placeholder="问问领航员…"
+        onSend={(text) => router.push(`/chat?ask=${encodeURIComponent(text)}`)}
+      />
     </div>
   )
 }

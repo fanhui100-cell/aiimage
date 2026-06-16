@@ -1,95 +1,37 @@
 'use client'
 
+/* ════════════════════════════════════════════════════════════════════════
+   领航 LexiPilot（界面优化14 · 提示词1）—— 替换 AI Navigator / AI 导学中心
+   领航星头部 + 上下文胶囊 + AI/用户气泡（AI 可内嵌词卡 + 内联出题）+ 快捷动作条
+   + 输入 pill。真实 AI 走 /api/ai/chat；联动：加入学习 / 内联出题写回 SRS / 词图跳转。
+   ════════════════════════════════════════════════════════════════════════ */
+
 import { useState, useRef, useEffect, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { AppShell } from '@/components/layout/AppShell'
-import { useLexiStore } from '@/store/lexiStore'
+import { useLexiStore, type WordEntry, type DistractorOption } from '@/store/lexiStore'
 import { resolveNavigatorContext } from '@/lib/ai-navigator/ai-navigator-context'
-import { AINavigatorHeader } from '@/components/ai-navigator/AINavigatorHeader'
-import { AINavigatorContextPanel } from '@/components/ai-navigator/AINavigatorContextPanel'
-import { AINavigatorPromptShortcuts } from '@/components/ai-navigator/AINavigatorPromptShortcuts'
-import type { ChatMessage } from '@/types/study'
+import { PROMPT_SHORTCUTS, buildShortcutPrompt } from '@/lib/ai-navigator/ai-navigator-prompts'
 import type { AINavigatorContext } from '@/lib/ai-navigator/ai-navigator-types'
+import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
+import { speakSmart } from '@/lib/pronunciation/word-audio'
+import './lexipilot.css'
 
-// ── Message bubble ──────────────────────────────────────────────────────────
+const speak = (t: string) => { void speakSmart(t, 'us') }
+const Star = ({ s = 18 }: { s?: number }) => (
+  <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6.3 6.3 4 4M18 18l2 2M17.7 6.3 20 4M6 18l-2 2" /><circle cx="12" cy="12" r="4" /></svg>
+)
 
-function MessageBubble({ msg }: { msg: ChatMessage }) {
-  const isUser = msg.role === 'user'
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25 }}
-      style={{ display: 'flex', justifyContent: isUser ? 'flex-end' : 'flex-start', marginBottom: '12px' }}
-    >
-      {!isUser && (
-        <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(14,140,122,0.12)', border: '1px solid rgba(14,140,122,0.28)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', marginRight: '8px', flexShrink: 0, marginTop: '2px' }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        </div>
-      )}
-      <div
-        style={{
-          maxWidth: '75%',
-          padding: '12px 16px',
-          borderRadius: isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
-          background: isUser ? 'var(--teal-bg)' : 'var(--card)',
-          border: `1px solid ${isUser ? 'rgba(14,140,122,0.25)' : 'var(--line)'}`,
-          borderLeft: !isUser ? '2px solid rgba(14,140,122,0.3)' : undefined,
-          color: 'var(--ink)',
-          fontSize: '14px',
-          lineHeight: 1.7,
-          whiteSpace: 'pre-wrap',
-          boxShadow: 'var(--card-shadow-sm)',
-        }}
-      >
-        {msg.content.split('**').map((part, i) =>
-          i % 2 === 1 ? <strong key={i} style={{ color: 'var(--teal-ink)' }}>{part}</strong> : part,
-        )}
-      </div>
-    </motion.div>
-  )
+function ctxLabel(c: AINavigatorContext): string | null {
+  if (c.type === 'word' || c.type === 'lexigraph_word') return `词 · ${c.word}`
+  if (c.type === 'wrong_answer') return `错题 · ${c.word}`
+  if (c.type === 'study_goal') return '学习计划'
+  return null
 }
-
-// ── Empty state ──────────────────────────────────────────────────────────────
-
-function ChatEmptyState({ context }: { context: AINavigatorContext }) {
-  const greeting =
-    context.type === 'word' || context.type === 'lexigraph_word'
-      ? `一起来探索单词 "${context.word}" 吧。`
-      : context.type === 'wrong_answer'
-        ? `让我帮你理解这道错题。`
-        : context.type === 'study_goal'
-          ? `一起制定学习计划吧。`
-          : `提问任何英语相关的问题。`
-
-  const greetingEn =
-    context.type === 'word' || context.type === 'lexigraph_word'
-      ? `Let's explore "${context.word}" together.`
-      : context.type === 'wrong_answer'
-        ? `Let me help you understand this mistake.`
-        : context.type === 'study_goal'
-          ? `Let's plan your learning journey.`
-          : `Ask me anything about English.`
-
-  return (
-    <div style={{ textAlign: 'center', padding: '32px 0' }}>
-      <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--teal-ink)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-      <p style={{ color: 'var(--ink)', marginBottom: '6px', fontSize: '15px', fontFamily: 'var(--font-serif-zh)', fontWeight: 600 }}>{greeting}</p>
-      <p style={{ color: 'var(--ink-sub)', fontSize: '13px', fontFamily: 'var(--font-news)', fontStyle: 'italic' }}>{greetingEn}</p>
-      <p style={{ color: 'var(--ink-muted)', fontSize: '12px', marginTop: '16px' }}>
-        使用上方快捷按钮，或直接在下方输入问题。
-      </p>
-    </div>
-  )
-}
-
-// ── Inner page (reads search params) ────────────────────────────────────────
 
 function ChatInner() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const chatMessages = useLexiStore(s => s.chatMessages)
   const addChatMessage = useLexiStore(s => s.addChatMessage)
   const clearChat = useLexiStore(s => s.clearChat)
@@ -101,202 +43,233 @@ function ChatInner() {
 
   const [input, setInput] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [card, setCard] = useState<DictionaryWord | null>(null)
+  const [added, setAdded] = useState(false)
+  const [quiz, setQuiz] = useState<{ word: string; wordId: string; options: DistractorOption[]; picked: string | null } | null>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const context: AINavigatorContext = resolveNavigatorContext({
-    params: searchParams,
-    wrongAnswers,
-    totalXp,
-    currentStreak,
-    words,
-  })
+  const context = resolveNavigatorContext({ params: searchParams, wrongAnswers, totalXp, currentStreak, words })
+  // 词上下文：优先解析后的 context.word；也接受裸 ?word= / ?w=（词图/词详情跳来）
+  const bareWord = (searchParams.get('word') ?? searchParams.get('w'))?.trim() || null
+  const ctxWord = (context.type === 'word' || context.type === 'lexigraph_word' || context.type === 'wrong_answer') ? context.word : bareWord
 
+  useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [chatMessages, isTyping, quiz])
+
+  // 界面优化2·P4：外部（AINavigatorPanel 等）用 ?ask= 带问题进来 → 自动发一条，再清掉该参数避免重发
+  const askedRef = useRef(false)
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [chatMessages, isTyping])
+    const ask = searchParams.get('ask')?.trim()
+    if (!ask || askedRef.current) return
+    askedRef.current = true
+    void handleSend(ask)
+    const sp = new URLSearchParams(Array.from(searchParams.entries()))
+    sp.delete('ask')
+    router.replace(sp.toString() ? `/chat?${sp}` : '/chat')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
+
+  // 上下文词 → 拉词卡（领航开场介绍该词）
+  useEffect(() => {
+    setCard(null); setAdded(false); setQuiz(null)
+    if (!ctxWord) return
+    let cancelled = false
+    fetch(`/api/dictionary/word/${encodeURIComponent(ctxWord.toLowerCase())}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(j => { if (!cancelled && j?.data) setCard(j.data as DictionaryWord) })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [ctxWord])
 
   async function handleSend(text?: string) {
     const message = (text ?? input).trim()
     if (!message || isTyping) return
     setInput('')
-
-    const userMsg: ChatMessage = {
-      id: `u-${Date.now()}`,
-      role: 'user',
-      content: message,
-      timestamp: Date.now(),
-    }
-    addChatMessage(userMsg)
-
+    addChatMessage({ id: `u-${Date.now()}`, role: 'user', content: message, timestamp: Date.now() })
     setIsTyping(true)
     try {
-      // F3-3：真实学习上下文注入 — 今日包/薄弱词/最近错题/等级，
-      // 作为首条背景消息让 AI 基于真实数据答疑（无 mock 字段）
       const lexi = useLexiStore.getState()
       const today = lexi.getToday()
       const weak = lexi.getWeak().slice(0, 8).map(w => w.word)
       const recentWrong = lexi.wrongAnswers.slice(0, 5).map(w => `${w.word}(答错:${w.userAnswer})`)
       const lv = lexi.profile.level
-      const studyBrief = [
-        lv != null ? `学习者等级: L${lv}(${['', '初中', '高中', '四级', '六级', '考研', '托福', 'SAT'][lv] ?? ''})` : null,
-        today.all.length ? `今日包待学: ${today.all.slice(0, 10).map(w => w.word).join(', ')}` : null,
+      const brief = [
+        lv != null ? `学习者等级: L${lv}` : null,
+        today.all.length ? `今日包: ${today.all.slice(0, 10).map(w => w.word).join(', ')}` : null,
         weak.length ? `薄弱词: ${weak.join(', ')}` : null,
         recentWrong.length ? `最近错题: ${recentWrong.join('; ')}` : null,
       ].filter(Boolean).join('\n')
-
       const history: { role: string; content: string }[] = []
-      if (studyBrief) {
-        history.push({ role: 'user', content: `[学习背景，仅供参考，不必复述]\n${studyBrief}` })
-        history.push({ role: 'assistant', content: '好的，我会基于你的学习数据来回答。' })
-      }
+      if (brief) { history.push({ role: 'user', content: `[学习背景，仅供参考]\n${brief}` }); history.push({ role: 'assistant', content: '好的，我会基于你的学习数据来回答。' }) }
       history.push(...chatMessages.map(m => ({ role: m.role, content: m.content })))
       history.push({ role: 'user', content: message })
-
-      const res = await fetch('/api/ai/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: history,
-          context: { userLevel: userLevel ?? 'intermediate', language: 'bilingual' },
-        }),
-      })
-
+      const res = await fetch('/api/ai/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: history, context: { userLevel: userLevel ?? 'intermediate', language: 'bilingual' } }) })
       const data = (await res.json()) as { content?: string }
-      // F3-3：删 mock 兜底 — AI 不可用时诚实提示，不再返回预制假回复
-      const responseText = res.ok && data.content
-        ? data.content
-        : 'AI 服务暂时不可用，请稍后重试。（你的消息已保留在上方，重新发送即可）'
+      const responseText = res.ok && data.content ? data.content : 'AI 服务暂时不可用，请稍后重试。（你的消息已保留，重新发送即可）'
       addChatMessage({ id: `a-${Date.now()}`, role: 'assistant', content: responseText, timestamp: Date.now() })
     } catch {
       addChatMessage({ id: `a-${Date.now()}`, role: 'assistant', content: '无法连接 AI 服务，请检查网络后重试。', timestamp: Date.now() })
-    } finally {
-      setIsTyping(false)
+    } finally { setIsTyping(false) }
+  }
+
+  // 词卡动作
+  function addWord() {
+    if (!card) return
+    const lexi = useLexiStore.getState()
+    lexi.ensureWord(card, 'lookup'); lexi.recordActivity('learned'); setAdded(true)
+  }
+  function makeQuiz() {
+    if (!card) return
+    const lexi = useLexiStore.getState()
+    const zh = card.definitions?.[0]?.definitionZh ?? card.definitions?.[0]?.definitionEn ?? ''
+    const entry = (lexi.byId(card.id) ?? { id: card.id, word: card.word, zh, phon: card.phoneticIpa ?? '', pos: card.partOfSpeech ?? '', galaxy: '', state: 'recommended', streak: 0, ease: 2.5, interval: 0, addedAt: Date.now(), source: 'lookup' }) as WordEntry
+    const options = lexi.distractorsFor(entry)
+    if (options.length >= 2) setQuiz({ word: card.word, wordId: card.id, options, picked: null })
+  }
+  function answerQuiz(opt: DistractorOption) {
+    if (!quiz || quiz.picked) return
+    setQuiz({ ...quiz, picked: opt.id })
+    const lexi = useLexiStore.getState()
+    lexi.recordActivity('quizzed')
+    if (opt.correct) {
+      lexi.incXp(10); if (lexi.byId(quiz.wordId)) lexi.markCorrect(quiz.wordId)
+    } else {
+      if (lexi.byId(quiz.wordId)) lexi.markWrong(quiz.wordId)
+      const correct = quiz.options.find(o => o.correct)
+      lexi.addWrongAnswer({ wordId: quiz.wordId, word: quiz.word, question: `"${quiz.word}" 的意思是？`, userAnswer: opt.text, correctAnswer: correct?.text ?? '', explanation: '', timestamp: Date.now() })
     }
   }
 
-  function handleFill(text: string) {
-    setInput(text)
-    inputRef.current?.focus()
-    // Move cursor to end
-    setTimeout(() => {
-      const el = inputRef.current
-      if (el) el.setSelectionRange(el.value.length, el.value.length)
-    }, 0)
-  }
+  const shortcuts = PROMPT_SHORTCUTS.filter(s => !s.disabled && s.enabledFor.includes(context.type))
+  const cardZh = card?.definitions?.[0]?.definitionZh ?? ''
+  const cardEn = card?.definitions?.[0]?.definitionEn ?? ''
+  const cardEx = card?.examples?.[0]
 
   return (
-    <div className="theme-light" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '72px' }}>
-      {/* Header */}
-      <AINavigatorHeader
-        context={context}
-        onClear={clearChat}
-        hasMessages={chatMessages.length > 0}
-      />
+    <div className="lp-v2">
+      {/* 头部 */}
+      <div className="pilot-head">
+        <div className="pilot-avatar"><Star s={18} /></div>
+        <div className="pilot-id">
+          <div className="pilot-name">领航 <em>LexiPilot</em></div>
+          <div className="pilot-sub"><span className="pilot-live" /> 在线 · 你的单词宇宙副驾</div>
+        </div>
+        {chatMessages.length > 0 && (
+          <button className="head-btn" onClick={clearChat}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /></svg>
+            清空
+          </button>
+        )}
+      </div>
 
-      {/* Context panel */}
-      <AINavigatorContextPanel context={context} />
-
-      {/* Prompt shortcuts */}
-      <AINavigatorPromptShortcuts
-        context={context}
-        onSend={handleSend}
-        onFill={handleFill}
-        disabled={isTyping}
-      />
-
-      {/* Divider */}
-      {chatMessages.length > 0 && (
-        <div style={{ maxWidth: '800px', margin: '14px auto 0', padding: '0 24px', width: '100%', boxSizing: 'border-box' }}>
-          <div style={{ height: '1px', background: 'var(--line)' }} />
+      {/* 上下文胶囊 */}
+      {(ctxLabel(context) ?? (ctxWord ? `词 · ${ctxWord}` : null)) && (
+        <div className="ctx-bar">
+          <span className="ctx-chip">{ctxLabel(context) ?? `词 · ${ctxWord}`}
+            <button className="x" title="清除上下文" onClick={() => router.push('/chat')}>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+            </button>
+          </span>
         </div>
       )}
 
-      {/* Messages */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '16px 24px', maxWidth: '800px', width: '100%', margin: '0 auto', boxSizing: 'border-box' }}>
-        {chatMessages.length === 0 && <ChatEmptyState context={context} />}
-
-        <AnimatePresence initial={false}>
-          {chatMessages.map(msg => <MessageBubble key={msg.id} msg={msg} />)}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {isTyping && (
-            <motion.div
-              initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}
-            >
-              <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(14,140,122,0.12)', border: '1px solid rgba(14,140,122,0.28)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      {/* 消息区 */}
+      <div className="pilot-scroll">
+        <div className="thread">
+          {chatMessages.length === 0 && (
+            <div className="msg">
+              <div className="msg-av"><Star s={15} /></div>
+              <div className="bubble">
+                <div>{ctxWord ? `一起来探索单词 “${ctxWord}” 吧。` : '我是领航——问词义、辨近义、解词根，或让我出一道题。'}</div>
+                {card && (
+                  <div className="wordcard">
+                    <div className="wc-top">
+                      <span className="wc-word">{card.word}</span>
+                      {card.phoneticIpa && <span className="wc-phon">{card.phoneticIpa}</span>}
+                      <button className="wc-speak" onClick={() => speak(card.word)} title="朗读"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M15.5 8.5a5 5 0 0 1 0 7" /></svg></button>
+                    </div>
+                    <div className="wc-pos">
+                      {card.partOfSpeech && <span className="wc-tag">{card.partOfSpeech}</span>}
+                      {card.cefrLevel && <span className="wc-tag">CEFR {card.cefrLevel}</span>}
+                      {(card.examTags ?? []).slice(0, 2).map(t => <span key={t} className="wc-tag">{t}</span>)}
+                    </div>
+                    {(cardEn || cardZh) && <div className="wc-def">{cardEn}{cardEn && cardZh ? ' · ' : ''}<b style={{ color: 'var(--ink-sub)', fontWeight: 400 }}>{cardZh}</b></div>}
+                    {cardEx?.sentenceEn && <div className="wc-ex">{hl(cardEx.sentenceEn, card.word)}{cardEx.sentenceZh ? <span style={{ display: 'block', fontStyle: 'normal', color: 'var(--ink-muted)' }}>{cardEx.sentenceZh}</span> : null}</div>}
+                    <div className="wc-actions">
+                      <button className={`chip-btn ${added ? 'done' : 'solid'}`} onClick={addWord} disabled={added}>{added ? '✓ 已加入学习' : '+ 加入学习'}</button>
+                      <button className="chip-btn" onClick={makeQuiz}>出一道题</button>
+                      <button className="chip-btn" onClick={() => router.push(`/lexigraph?w=${encodeURIComponent(card.word)}`)}>看词图 →</button>
+                    </div>
+                    {quiz && (
+                      <div className="inq">
+                        <div className="inq-q">“{quiz.word}” 的意思是？</div>
+                        {quiz.options.map(o => {
+                          const cls = quiz.picked ? (o.correct ? 'correct' : (quiz.picked === o.id ? 'wrong' : '')) : ''
+                          return <button key={o.id} className={`inq-opt ${cls}`} disabled={!!quiz.picked} onClick={() => answerQuiz(o)}>{o.text}</button>
+                        })}
+                        {quiz.picked && <div className="inq-fb" style={{ color: quiz.options.find(o => o.id === quiz.picked)?.correct ? 'var(--teal-ink)' : 'var(--rose-ink)' }}>{quiz.options.find(o => o.id === quiz.picked)?.correct ? '✓ 答对了，已计入掌握' : '✗ 答错了，已存入错词本'}</div>}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
-              <div style={{ padding: '10px 16px', borderRadius: '16px 16px 16px 4px', background: 'var(--card)', border: '1px solid var(--line)', borderLeft: '2px solid rgba(14,140,122,0.3)', display: 'flex', alignItems: 'center', gap: '4px', boxShadow: 'var(--card-shadow-sm)' }}>
-                {[0, 0.15, 0.3].map((delay, i) => (
-                  <motion.span
-                    key={i}
-                    animate={{ opacity: [0.3, 1, 0.3] }}
-                    transition={{ repeat: Infinity, duration: 0.9, delay, ease: 'easeInOut' }}
-                    style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--teal-ink)', display: 'inline-block' }}
-                  />
-                ))}
-              </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-        <div ref={bottomRef} />
+
+          {chatMessages.map(m => (
+            <div key={m.id} className={`msg ${m.role === 'user' ? 'user' : ''}`}>
+              {m.role !== 'user' && <div className="msg-av"><Star s={15} /></div>}
+              <div className="bubble">{m.content.split('**').map((p, i) => i % 2 === 1 ? <b key={i}>{p}</b> : p)}</div>
+            </div>
+          ))}
+
+          {isTyping && <div className="typing"><span /><span /><span /></div>}
+          <div ref={bottomRef} />
+        </div>
       </div>
 
-      {/* Input */}
-      <div style={{ padding: '12px 24px 16px', borderTop: '1px solid var(--line)', background: 'var(--card-2)' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', gap: '10px' }}>
-          <input
-            ref={inputRef}
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && !e.shiftKey && handleSend()}
-            placeholder="提问单词、语法或考试相关问题..."
-            style={{
-              flex: 1, padding: '12px 16px',
-              background: 'var(--card)', border: '1px solid var(--line)',
-              borderRadius: '10px', color: 'var(--ink)', fontSize: '14px', outline: 'none',
-            }}
-            onFocus={e => (e.target.style.borderColor = 'rgba(14,140,122,0.5)')}
-            onBlur={e => (e.target.style.borderColor = 'var(--line)')}
-          />
-          <button
-            onClick={() => handleSend()}
-            disabled={!input.trim() || isTyping}
-            style={{
-              padding: '12px 20px', borderRadius: '10px',
-              background: 'var(--teal-bg)', border: '1px solid rgba(14,140,122,0.4)',
-              color: 'var(--teal-ink)', fontSize: '14px',
-              cursor: input.trim() && !isTyping ? 'pointer' : 'not-allowed',
-              opacity: input.trim() && !isTyping ? 1 : 0.5,
-              fontWeight: 600,
-            }}
-          >
-            发送 →
-          </button>
+      {/* 快捷动作 + 输入 */}
+      <div className="composer">
+        <div className="composer-inner">
+          <div className="quick-row">
+            {shortcuts.map(sc => (
+              <button key={sc.id} className="quick" disabled={isTyping}
+                onClick={() => {
+                  const p = buildShortcutPrompt(sc.id, context)
+                  if (!p) return
+                  if (sc.fillOnly) { setInput(p); inputRef.current?.focus() } else handleSend(p)
+                }}>
+                {sc.labelZh}
+              </button>
+            ))}
+          </div>
+          <div className="input-row">
+            <div className="input-pill">
+              <input ref={inputRef} value={input} onChange={e => setInput(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) handleSend() }}
+                placeholder="提问单词、语法或考试相关问题…" />
+            </div>
+            <button className="send-btn" disabled={!input.trim() || isTyping} onClick={() => handleSend()}>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   )
 }
 
-// ── Page (Suspense boundary for useSearchParams) ─────────────────────────────
+function hl(sentence: string, word: string): React.ReactNode[] {
+  const re = new RegExp('\\b(' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\w*)\\b', 'ig')
+  const out: React.ReactNode[] = []; let last = 0; let m: RegExpExecArray | null; let k = 0
+  while ((m = re.exec(sentence))) { out.push(sentence.slice(last, m.index)); out.push(<b key={k++}>{m[0]}</b>); last = m.index + m[0].length }
+  out.push(sentence.slice(last)); return out
+}
 
 export default function ChatPage() {
   return (
     <AppShell>
-      <Suspense
-        fallback={
-          <div className="theme-light" style={{ minHeight: '100vh', paddingTop: '72px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ color: 'var(--ink-sub)', fontSize: '13px' }}>加载中…</div>
-          </div>
-        }
-      >
+      <Suspense fallback={<div className="lp-v2" style={{ alignItems: 'center', justifyContent: 'center' }}><div style={{ color: 'var(--ink-sub)', fontSize: 13 }}>加载中…</div></div>}>
         <ChatInner />
       </Suspense>
     </AppShell>
