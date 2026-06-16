@@ -4,7 +4,9 @@
    令牌沿用 globals.css（随 [data-theme="night"] 自动明暗）；源文件重复 :root 已删。
    ════════════════════════════════════════════════════════════════════════ */
 
-.tbento{position:relative;min-height:100vh;}
+/* 关键：本页在 AppShell 内（其根容器为 --bg-deep 深色），必须自带纸面底色，
+   否则透出深色背景 → 日光态变黑、深色文字看不清。--paper 随主题自适应（日光米白 / 夜间暖深）。 */
+.tbento{position:relative;min-height:100vh;background:var(--paper);}
 
 /* 背景极光 */
 .tbento .bgaur{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.55;}
