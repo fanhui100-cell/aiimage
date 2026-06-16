@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { useLexiStore } from '@/store/lexiStore'
+import { SpotlightCard } from '@/components/ui/motion/SpotlightCard'
 
 interface MissionProgress {
   litCount: number
@@ -74,7 +75,8 @@ export function TodayMissionPanel({ progress }: Props) {
   const allDone = completedCount === MISSIONS.length
 
   return (
-    <div
+    <SpotlightCard
+      glow="rgba(14,140,122,0.14)"
       style={{
         background: 'var(--card)',
         border: '1px solid var(--line)',
@@ -152,6 +154,6 @@ export function TodayMissionPanel({ progress }: Props) {
           )
         })}
       </div>
-    </div>
+    </SpotlightCard>
   )
 }

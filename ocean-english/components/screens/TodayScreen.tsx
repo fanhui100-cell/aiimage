@@ -14,7 +14,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useLexiStore } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
-import { ProgressRing } from '@/components/screens/SharedUI'
+import { RingProgress } from '@/components/ui/motion/RingProgress'
 import './today-screen.css'
 
 type PathId = 'full' | 'words' | 'reading' | 'exam'
@@ -106,7 +106,6 @@ export function TodayScreen() {
   const setProfile = useLexiStore(s => s.setProfile)
   const words = useLexiStore(s => s.words)
   const todayPack = useLexiStore(s => s.todayPack)
-  const daily = useLexiStore(s => s.daily)
   const todayActivity = useLexiStore(s => s.todayActivity)
   const markActivityDone = useLexiStore(s => s.markActivityDone)
   const dueLen = useLexiStore(s => s.getDue().length)
@@ -148,10 +147,8 @@ export function TodayScreen() {
   const recKey = pathCfg.cards.some(c => c.key === rec.key) ? rec.key : pathCfg.cards[0].key
 
   const todayStr = new Date().toISOString().slice(0, 10)
-  const quizzedToday = daily.date === todayStr ? daily.quizzed : 0
   const packTotal = todayPack.recommendedIds.length
   const step1done = today.recommended.length === 0
-  const step2done = quizzedToday >= 5
   const step3done = dueLen === 0
   // 侧路活动（阅读/真题/错题/考试进度）的独立完成标记（按日）
   const sideDone = new Set(todayActivity?.date === todayStr ? todayActivity.done : [])
@@ -168,7 +165,9 @@ export function TodayScreen() {
   const cardDoneBase = (key: string): boolean => {
     if (SIDE_KEYS.has(key)) return sideDone.has(key)
     if (key === 'learn') return step1done
-    if (key === 'practice' || key === 'quiz') return step2done
+    // 练习/自测：必须真正做完一组练习（markActivityDone('practice')）才算完成，
+    // 不再用全局 quizzed≥5（会被 chat/听力/写作等其它答题流程顶满 → 进了就显示已完成的 bug）
+    if (key === 'practice' || key === 'quiz') return sideDone.has('practice')
     if (key === 'review') return step3done
     return false
   }
@@ -264,8 +263,10 @@ export function TodayScreen() {
             {/* 今日进度卡 */}
             <div className="prog">
               <div className="ring">
-                <ProgressRing pct={pct} size={62} stroke={5} color="var(--teal-ink)"
-                  label={<span className="lab"><b>{studied}</b><span>/{goal}</span></span>} />
+                {/* 界面优化2·P6：今日进度环改用 RingProgress（米白·入场填充）；中心保留 学习数/目标 */}
+                <RingProgress value={pct} size={62} stroke={5}>
+                  <span className="lab"><b>{studied}</b><span>/{goal}</span></span>
+                </RingProgress>
               </div>
               <div className="mid">
                 <div className="ttl">{allDone ? '今日目标已达成' : '继续今日学习'}</div>

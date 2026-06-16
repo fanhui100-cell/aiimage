@@ -10,6 +10,7 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useLexiStore } from '@/store/lexiStore'
 import { buildAchievements, type Badge } from '@/lib/analytics/achievements'
+import { SpotlightCard } from '@/components/ui/motion/SpotlightCard'
 import './screen-kit.css'
 import './achievements.css'
 
@@ -63,7 +64,7 @@ export function AchievementsScreen() {
       left: 20 + Math.random() * 60, bg: CONF_COLORS[k % CONF_COLORS.length],
       delay: Math.random() * 0.3, tx: Math.random() * 120 - 60,
     })),
-    [cele],
+    [],
   )
 
   return (
@@ -80,14 +81,14 @@ export function AchievementsScreen() {
         </div>
 
         {report.recent ? (
-          <div className="ac-recent">
+          <SpotlightCard className="ac-recent" glow="rgba(14,140,122,0.14)">
             <Medal b={report.recent} />
             <div className="t">
               <div className="k">最近解锁</div>
               <div className="n">{report.recent.nm}</div>
               <div className="d">{report.recent.d} · 继续保持，下一枚就在前方</div>
             </div>
-          </div>
+          </SpotlightCard>
         ) : (
           <div className="ac-recent">
             <div className="medal"><div className="ac-medal" style={{ background: 'var(--paper-2)' }}><span style={{ opacity: .5 }}>✦</span></div></div>

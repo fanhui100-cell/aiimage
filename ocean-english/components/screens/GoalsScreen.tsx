@@ -7,6 +7,7 @@
 
 import { useMemo, useState } from 'react'
 import { useLexiStore } from '@/store/lexiStore'
+import { RingProgress } from '@/components/ui/motion/RingProgress'
 import './screen-kit.css'
 import './goals.css'
 
@@ -94,8 +95,8 @@ export function GoalsScreen() {
 
         <div className="gl-hero">
           <div className="gl-main-ring">
-            <Ring size={120} stroke={9} pct={data.overall} color="var(--teal-ink)" />
-            <div className="center"><span className="pct">{data.overall}%</span><span className="lb">今日目标</span></div>
+            {/* 界面优化2·P6：今日目标主环改用 RingProgress（米白·入场填充+数字滚动） */}
+            <RingProgress value={data.overall} size={120} stroke={9} label="今日目标" />
           </div>
           <div className="gl-hero-txt">
             <div className="h">{data.overall >= 100 ? '今日目标已达成 ✦' : '离今日目标还差一点'}</div>
