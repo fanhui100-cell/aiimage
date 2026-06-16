@@ -9,9 +9,9 @@ import { PRIMARY_NAV, type PrimaryNavKey } from '@/lib/product-flow/nav'
 import { NumberRoll } from '@/components/ui/NumberRoll'
 
 /* 聚焦流路由 — 在这些页面隐藏底部 Tab，显示悬浮返回 */
-export const FOCUS_ROUTES = ['/quiz', '/exam', '/pronunciation', '/scan', '/chat', '/learn']
+export const FOCUS_ROUTES = ['/quiz', '/exam', '/pronunciation', '/scan', '/learn']
 /* chromeless 路由 — 不显示任何全局导航 */
-export const CHROMELESS_ROUTES = ['/onboarding', '/lexiverse', '/chat']
+export const CHROMELESS_ROUTES = ['/onboarding', '/lexiverse']
 
 /* B1：标准 5 tab 图标（按 nav key） */
 const TAB_ICONS: Record<PrimaryNavKey, React.ReactNode> = {
@@ -27,9 +27,9 @@ const TAB_ICONS: Record<PrimaryNavKey, React.ReactNode> = {
       <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
     </svg>
   ),
-  review: (
+  drill: (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M23 4v6h-6" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+      <circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="0.8" fill="currentColor" />
     </svg>
   ),
   cosmos: (
@@ -92,7 +92,7 @@ export function MobileTabBar() {
       {PRIMARY_NAV.map(tab => {
         const active = pathname === tab.href || pathname.startsWith(tab.href + '/')
         const color = active ? activeColor : inactiveColor
-        const badge = tab.key === 'review' ? reviewBadge : 0
+        const badge = tab.key === 'drill' ? reviewBadge : 0
         return (
           <Link
             key={tab.key}

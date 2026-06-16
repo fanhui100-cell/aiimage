@@ -8,6 +8,7 @@ import { StreakPopover, AccountPopover } from '@/components/layout/NavPopovers'
 import { isDarkRoute } from '@/lib/theme-route'
 import { useLexiStore } from '@/store/lexiStore'
 import { PRIMARY_NAV, TOOL_NAV } from '@/lib/product-flow/nav'
+import { ThemeToggle } from '@/components/layout/ThemeToggle'
 
 export function Navbar() {
   const pathname = usePathname()
@@ -69,7 +70,7 @@ export function Navbar() {
       >
         {PRIMARY_NAV.map(item => {
           const active = pathname === item.href || pathname.startsWith(item.href + '/')
-          const isReview = item.key === 'review'
+          const isDrill = item.key === 'drill'
           return (
             <Link
               key={item.key}
@@ -96,8 +97,8 @@ export function Navbar() {
               }}>
                 {item.zh}
               </span>
-              {/* 复习到期红点 */}
-              {isReview && dueCount > 0 && (
+              {/* 到期复习/错题红点（方案 A：移到专练） */}
+              {isDrill && dueCount > 0 && (
                 <span style={{
                   position: 'absolute',
                   top: 14,
@@ -114,8 +115,24 @@ export function Navbar() {
         <ToolsDropdown textColor={textColor} activeColor={activeColor} dark={dark} pathname={pathname} />
       </div>
 
-      {/* ── 右侧: streak popover + 账户 popover（F1-3）── */}
+      {/* ── 右侧: 全局搜索 + 主题切换 + streak popover + 账户 popover（F1-3）── */}
       <div className="flex items-center gap-3 shrink-0">
+        <Link
+          href="/search"
+          aria-label="全局搜索"
+          title="搜索 单词 / 文章 / 词族"
+          style={{
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            width: 34, height: 34, borderRadius: 999,
+            color: pathname === '/search' ? activeColor : textColor,
+            border: pathname === '/search' ? `1px solid ${activeColor}` : '1px solid transparent',
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </Link>
+        <ThemeToggle dark={dark} />
         {streak > 0 && <StreakPopover dark={dark} />}
         <AccountPopover dark={dark} />
       </div>
@@ -123,7 +140,7 @@ export function Navbar() {
   )
 }
 
-/** B1：桌面「工具」下拉（TOOL_NAV 6 项） */
+/** B1：桌面「工具」下拉（方案 A：TOOL_NAV 3 项） */
 function ToolsDropdown({ textColor, activeColor, dark, pathname }: {
   textColor: string; activeColor: string; dark: boolean; pathname: string
 }) {

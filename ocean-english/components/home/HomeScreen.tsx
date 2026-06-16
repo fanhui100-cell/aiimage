@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useMemo } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { NAVIGATE_MAP } from './BanyanHero'
 import { HomeHero } from './HomeHero'
@@ -10,9 +9,8 @@ import { useScanHistoryStore } from '@/store/useScanHistoryStore'
 import { useMotivationStore } from '@/store/useMotivationStore'
 import { levelDef } from '@/lib/levels'
 import { STATE_META, STATE_ORDER, type WordState } from '@/lib/state-meta'
-import { TOOL_NAV, type ToolNavKey } from '@/lib/product-flow/nav'
+import { TOOL_NAV } from '@/lib/product-flow/nav'
 import { NumberRoll } from '@/components/ui/NumberRoll'
-import { hexA } from '@/lib/utils'
 
 // ── Shared UI ──────────────────────────────────────────────────────────────
 
@@ -36,41 +34,23 @@ function ProgressRing({ value, size = 120, stroke = 9, color = 'var(--teal-ink)'
   )
 }
 
-function StatusLegend({ counts, onPick, compact }: {
-  counts: Record<string, number>; onPick?: (state: WordState) => void; compact?: boolean
-}) {
-  return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-      {STATE_ORDER.filter(s => s !== 'locked' || counts.locked).map(s => {
-        const m = STATE_META[s]
-        const n = counts[s] ?? 0
-        return (
-          <button key={s} onClick={() => onPick?.(s)}
-            className="btn-press"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 7,
-              padding: compact ? '5px 10px' : '7px 12px', borderRadius: 999, cursor: onPick ? 'pointer' : 'default',
-              background: 'var(--card)', border: '1px solid var(--line)', transition: 'all .15s', fontFamily: 'var(--font-sans)',
-            }}>
-            <span style={{ width: 9, height: 9, borderRadius: 999, background: m.light, boxShadow: `0 0 0 3px ${hexA(m.light, 0.16)}` }} />
-            <span style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--ink)' }}>{m.zh}</span>
-            <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--ink-muted)' }}>{n}</span>
-          </button>
-        )
-      })}
-    </div>
-  )
-}
-
 // ── Icon map（B2：仅保留工具条所需 6 个，按 TOOL_NAV key）───────────────────
 
-const TOOL_ICON: Record<ToolNavKey, (p?: { s?: number }) => React.ReactNode> = {
+const TOOL_ICON: Record<string, (p?: { s?: number }) => React.ReactNode> = {
   reading: p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M2 7l10-4 10 4-10 4z"/><path d="M6 9.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3V9.5"/></svg>,
   scan:    p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>,
   speak:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>,
   tutor:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>,
   exam:    p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M4 6h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M8 12h8M8 16h5"/></svg>,
   graph:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="17.5" r="2.4"/><path d="M8 7 16 16M16 8.6 13 15"/></svg>,
+  drill:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></svg>,
+  roots:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5V13M12 13l-6 6M12 13l6 6M12 13v6"/><circle cx="6" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>,
+  rank:    p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M5 4H3v2a3 3 0 0 0 3 3M19 4h2v2a3 3 0 0 1-3 3"/></svg>,
+  speaking: p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
+  listening: p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 16a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 16a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z"/></svg>,
+  writing: p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>,
+  groups:  p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+  report:  p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>,
   vault:   p => <svg width={p?.s??18} height={p?.s??18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v4H4zM4 8v12h16V8M9 12h6"/></svg>,
 }
 
@@ -297,17 +277,26 @@ function ForecastCard() {
 }
 
 /** F1-2：工具网格（卡片式 + 真实活性状态行，照设计稿） */
-const TOOL_DESC: Record<ToolNavKey, string> = {
-  reading: '边读边收生词', scan: '拍照提取生词', speak: '跟读评分练口语',
-  tutor: '基于你的数据答疑', exam: '限时全真测验', graph: '词形与关系图谱', vault: '我的学习档案馆',
+const TOOL_DESC: Record<string, string> = {
+  reading: '边读边收生词', drill: '按档刷该档新词', roots: '词根串记一族词', scan: '拍照提取生词', speak: '跟读评分练口语',
+  tutor: '基于你的数据答疑', exam: '限时全真测验', graph: '词形与关系图谱', report: '记忆矩阵与词汇量', rank: '周/总/连击排名',
+  speaking: 'AI 场景口语陪练', listening: '听音拼词练听力', writing: '用词造句 AI 批改', groups: '小组打卡互监督', vault: '我的学习档案馆',
 }
-const TOOL_TINT: Record<ToolNavKey, [string, string]> = {
+const TOOL_TINT: Record<string, [string, string]> = {
   reading: ['var(--teal-ink)', 'var(--teal-bg)'],
+  drill: ['var(--gold-ink)', 'rgba(179,120,31,.08)'],
+  roots: ['var(--teal-ink)', 'var(--teal-bg)'],
   scan: ['var(--blue-ink)', 'rgba(59,91,217,.08)'],
   speak: ['#d4477e', 'rgba(212,71,126,.07)'],
   tutor: ['#6d4bc4', 'rgba(109,75,196,.07)'],
   exam: ['var(--gold-ink)', 'rgba(179,120,31,.08)'],
   graph: ['var(--teal-ink)', 'var(--teal-bg)'],
+  report: ['#3b5bd9', 'rgba(59,91,217,.08)'],
+  rank: ['var(--gold-ink)', 'rgba(179,120,31,.08)'],
+  speaking: ['#d4477e', 'rgba(212,71,126,.07)'],
+  listening: ['var(--teal-ink)', 'var(--teal-bg)'],
+  writing: ['#6d4bc4', 'rgba(109,75,196,.07)'],
+  groups: ['var(--blue-ink)', 'rgba(59,91,217,.08)'],
   vault: ['var(--ink-sub)', 'var(--paper-2)'],
 }
 
@@ -319,7 +308,7 @@ function ToolsGrid() {
 
   // 活性状态（全部真实数据；取不到的不显示该行）
   const hints = useMemo(() => {
-    const h: Partial<Record<ToolNavKey, { text: string; warn?: boolean }>> = {}
+    const h: Partial<Record<string, { text: string; warn?: boolean }>> = {}
     if (pronToday === 0) h.speak = { text: '今日未练', warn: true }
     else h.speak = { text: `今日已练 ${pronToday} 次` }
     const lastQuiz = quizHistory[0]
@@ -365,7 +354,7 @@ function ToolsGrid() {
 }
 
 /** B2-2：「继续上次」智能卡 — 优先级：未完成今日流程 → 最近扫描；无可继续项不渲染
- *  （偏离 spec：阅读页为建设中占位页、无进度数据，阅读级省略） */
+ *  （阅读页已真实化，但暂未记录「读到第几篇」的续读进度，故 ResumeCard 不含阅读级） */
 function ResumeCard() {
   const router = useRouter()
   const daily = useLexiStore(s => s.daily)
@@ -446,7 +435,7 @@ export function HomeScreen() {
       {/* F1：整页米白，深色画框卡与内容列同宽嵌入 · 大区块间 48px 统一节奏 */}
       <div style={{ maxWidth: 880, margin: '0 auto', padding: '24px clamp(20px,5vw,48px) 64px', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', gap: 48 }}>
         <HomeHero navigate={navigate} />
-        <HomeHeader />
+        {/* 方案 A：欢迎语统一由 Hero 覆盖层呈现，移除重复的 HomeHeader */}
         {profile.skipped && !profile.onboarded && (
           <button onClick={() => navigate('onboarding')} className="btn-press" style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, textAlign: 'left', cursor: 'pointer', background: 'var(--card-2)', border: '1px solid rgba(14,140,122,0.3)', borderRadius: 14, boxShadow: 'var(--card-shadow-sm)', padding: '13px 16px', marginTop: -24 }}>
             <span style={{ width: 34, height: 34, borderRadius: 10, background: 'var(--teal-bg)', color: 'var(--teal-ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>

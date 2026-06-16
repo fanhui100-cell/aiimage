@@ -14,7 +14,7 @@ const HERO_NODES = [
   { go: 'chat',     zh: 'AI 导学',  en: 'Guide',     x: '63%', y: '30%' },
   { go: 'words',    zh: '词库',     en: 'Words',     x: '79%', y: '20%' },
   { go: 'universe', zh: '词汇宇宙', en: 'Lexiverse', x: '83%', y: '54%' },
-  { go: 'review',   zh: '复习',     en: 'Review',    x: '67%', y: '70%' },
+  { go: 'drill',    zh: '专练',     en: 'Drill',     x: '67%', y: '70%' },
   { go: 'scan',     zh: '扫描',     en: 'Scan',      x: '48%', y: '44%' },
 ]
 

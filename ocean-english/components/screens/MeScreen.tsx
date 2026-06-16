@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useLexiStore } from '@/store/lexiStore'
 import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
-import { TOOL_NAV } from '@/lib/product-flow/nav'
+import { TOOL_NAV, MORE_NAV } from '@/lib/product-flow/nav'
 import { levelDef } from '@/lib/levels'
 import { WeeklyReportCard } from '@/components/me/WeeklyReportCard'
 import { ReminderSetting } from '@/components/me/ReminderSetting'
@@ -119,6 +119,24 @@ export function MeScreen() {
           ))}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 4 }}>
+          {/* D11：成就墙入口 */}
+          <Link href="/achievements" className="btn-press" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'radial-gradient(120% 130% at 0% 0%, rgba(179,120,31,.1), transparent 55%), var(--card)', border: '1px solid rgba(179,120,31,.22)', borderRadius: 16, padding: '16px 18px', textDecoration: 'none' }}>
+            <span style={{ fontSize: 26 }}>🏅</span>
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ display: 'block', fontFamily: 'var(--font-serif-zh)', fontSize: 15, fontWeight: 700, color: 'var(--ink)' }}>成就墙</span>
+              <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-sub)' }}>里程碑勋章 · 连续 / 词汇 / 技能</span>
+            </span>
+            <span style={{ color: 'var(--gold-ink)', fontFamily: 'var(--font-mono)', fontSize: 18 }}>›</span>
+          </Link>
+          {/* D14：战绩分享卡入口 */}
+          <Link href="/share" className="btn-press" style={{ display: 'flex', alignItems: 'center', gap: 14, background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 16, padding: '16px 18px', textDecoration: 'none' }}>
+            <span style={{ fontSize: 26 }}>📤</span>
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ display: 'block', fontFamily: 'var(--font-serif-zh)', fontSize: 15, fontWeight: 700, color: 'var(--ink)' }}>战绩分享卡</span>
+              <span style={{ display: 'block', fontSize: 12, color: 'var(--ink-sub)' }}>今日 / 词汇量 / 本周 · 一键生成竖图</span>
+            </span>
+            <span style={{ color: 'var(--teal-ink)', fontFamily: 'var(--font-mono)', fontSize: 18 }}>›</span>
+          </Link>
           {/* F6-B3：本周报告（上周聚合，周内无活动不渲染） */}
           <WeeklyReportCard />
           <StudyHeatmap />
@@ -188,6 +206,18 @@ export function MeScreen() {
           ))}
         </div>
 
+        {/* ④' 全部功能（方案 A：复习/试炼/发音/口语/听写/造句/词根/词图/报告/排行/小组/知识库 收纳于此，保持可达） */}
+        <SectionTitle zh="全部功能" en="All Tools" />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))', gap: 10 }}>
+          {MORE_NAV.map(t => (
+            <Link key={t.key} href={t.href} className="btn-press"
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2, padding: '13px 8px', borderRadius: 14, background: 'var(--card)', border: '1px solid var(--line)', textDecoration: 'none', color: 'var(--ink-sub)', fontFamily: 'var(--font-sans)' }}>
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)' }}>{t.zh}</span>
+              <span style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--ink-muted)' }}>{t.en}</span>
+            </Link>
+          ))}
+        </div>
+
         {/* ⑤ 设置 */}
         <SectionTitle zh="设置" en="Settings" />
         <div style={{ background: 'var(--card)', borderRadius: 16, border: '1px solid var(--line)', overflow: 'hidden' }}>
@@ -197,6 +227,11 @@ export function MeScreen() {
           </div>
           {/* F6-B2：每日学习提醒 */}
           <ReminderSetting />
+          {/* D19：完整提醒设置入口 */}
+          <Link href="/reminders" className="btn-press" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 18px', borderBottom: '1px solid var(--line)', textDecoration: 'none' }}>
+            <span style={{ fontSize: 14, color: 'var(--ink)' }}>更多提醒设置</span>
+            <span style={{ fontSize: 12.5, color: 'var(--ink-sub)' }}>复习推送 · 小组打卡 · 重复日 · 免打扰 ›</span>
+          </Link>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 18px', borderBottom: '1px solid var(--line)' }}>
             <span style={{ fontSize: 14, color: 'var(--ink)' }}>学习伙伴 Lumi</span>
             <button onClick={toggleLumi} className="btn-press"

@@ -6,6 +6,7 @@ import { HeroOverlay } from './HeroOverlay'
 export const NAVIGATE_MAP: Record<string, string> = {
   today:         '/today',
   words:         '/dictionary',
+  drill:         '/drill',
   reading:       '/reading',
   quiz:          '/quiz',
   review:        '/memory',
@@ -159,7 +160,7 @@ function useBanyanCanvas(ref: React.RefObject<HTMLCanvasElement | null>, active:
       document.removeEventListener('visibilitychange', onVis)
       window.removeEventListener('resize', onResize)
     }
-  }, [active])
+  }, [active, ref])
 }
 
 // fix1：覆盖层抽至 HeroOverlay 共用；本组件保留 2D Canvas 作为

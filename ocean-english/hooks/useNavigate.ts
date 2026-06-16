@@ -6,6 +6,7 @@ export const NAVIGATE_MAP: Record<string, string> = {
   today:         '/today',
   learn:         '/learn',
   words:         '/dictionary',
+  drill:         '/drill',
   reading:       '/reading',
   review:        '/memory',
   quiz:          '/quiz',

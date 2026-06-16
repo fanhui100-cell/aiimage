@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
+import { useLexiStore } from '@/store/lexiStore'
 import './auth.css'
 
 type Tab = 'login' | 'signup'
@@ -50,7 +51,13 @@ export function AuthClient({ initialTab = 'login' }: { initialTab?: Tab }) {
   useEffect(() => () => { if (cdRef.current) clearInterval(cdRef.current); if (nameTimer.current) clearTimeout(nameTimer.current) }, [])
 
   const flash = (m: string) => { setToast(m); setTimeout(() => setToast(null), 2200) }
-  const finishAuth = () => { router.push('/today'); router.refresh() }
+  const finishAuth = () => {
+    // 方案 A：注册的新用户、或尚未定级的用户 → 先进定级；已定级的老用户 → 直接今日
+    const onboarded = useLexiStore.getState().profile.onboarded
+    const dest = (tab === 'signup' || !onboarded) ? '/onboarding' : '/today'
+    router.push(dest)
+    router.refresh()
+  }
 
   // 用户名实时查重（防抖 400ms，大小写不敏感）；无法校验时放行（DB 唯一索引兜底）
   function onNameChange(v: string) {
