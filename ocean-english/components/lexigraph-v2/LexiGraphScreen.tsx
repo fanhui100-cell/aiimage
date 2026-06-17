@@ -170,30 +170,6 @@ export function LexiGraphScreen() {
   const wordStateOf = useCallback((slug: string): string | null =>
     storeWords.find(w => w.id === slug)?.state ?? null, [storeWords])
 
-  /* ── 初始中心词：?word= > 最近学习词 > 演示词 ─────────────────────────────── */
-  useEffect(() => {
-    if (center) return
-    const q = searchParams.get('word')
-    const recent = [...storeWords].sort((a, b) => (b.addedAt ?? 0) - (a.addedAt ?? 0))[0]
-    setCenter(q?.toLowerCase() || recent?.id || 'accept')
-    if (typeof window !== 'undefined' && !localStorage.getItem(FIRST_VISIT_KEY)) setIntro(true)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
-
-  /* ── 中心词数据加载 + 建图（语义模式）────────────────────────────────────── */
-  useEffect(() => {
-    if (!center || mode !== 'semantic') return
-    let cancelled = false
-    loadCenterData(center).then(d => {
-      if (cancelled) return
-      setCenterData(d)
-      buildSemanticGraph(center, d)
-      setPanelOpen(true)
-    })
-    return () => { cancelled = true }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [center, mode])
-
   const buildSemanticGraph = useCallback((w: string, d: CenterData | null) => {
     const st = stateRef.current
     const old = Object.fromEntries(st.nodes.map(n => [n.key, n]))
@@ -229,6 +205,29 @@ export function LexiGraphScreen() {
     st.edges = edges
     st.anim = 0
   }, [wordStateOf])
+
+  /* ── 初始中心词：?word= > 最近学习词 > 演示词 ─────────────────────────────── */
+  useEffect(() => {
+    if (center) return
+    const q = searchParams.get('word')
+    const recent = [...storeWords].sort((a, b) => (b.addedAt ?? 0) - (a.addedAt ?? 0))[0]
+    setCenter(q?.toLowerCase() || recent?.id || 'accept')
+    if (typeof window !== 'undefined' && !localStorage.getItem(FIRST_VISIT_KEY)) setIntro(true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
+
+  /* ── 中心词数据加载 + 建图（语义模式）────────────────────────────────────── */
+  useEffect(() => {
+    if (!center || mode !== 'semantic') return
+    let cancelled = false
+    loadCenterData(center).then(d => {
+      if (cancelled) return
+      setCenterData(d)
+      buildSemanticGraph(center, d)
+      setPanelOpen(true)
+    })
+    return () => { cancelled = true }
+  }, [center, mode, buildSemanticGraph])
 
   /* ── 记忆图谱建图 ─────────────────────────────────────────────────────────── */
   const wrongPairs = useMemo(() => {
@@ -798,7 +797,7 @@ export function LexiGraphScreen() {
               <span style={{ ...actionPrimary, opacity: 0.65, cursor: 'default' }}>✓ {STATE_ZH[inStore.state] ?? '已在学习'}</span>
             )}
             <button onClick={() => router.push(`/quiz?word=${encodeURIComponent(center)}`)} style={actionGhost}>考一考</button>
-            <button onClick={() => router.push(`/word/${encodeURIComponent(center)}`)} style={actionGhost}>词详情页 →</button>
+            <button onClick={() => router.push(`/dictionary?word=${encodeURIComponent(center)}`)} style={actionGhost}>词详情页 →</button>
           </div>
         </aside>
       )}

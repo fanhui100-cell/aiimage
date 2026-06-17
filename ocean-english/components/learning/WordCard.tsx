@@ -42,7 +42,7 @@ export function WordCard({ word }: WordCardProps) {
 
   return (
     <Link
-      href={`/word/${word.id}`}
+      href={`/dictionary?word=${word.id}`}
       className="card-hover"
       style={{
         display: 'block',

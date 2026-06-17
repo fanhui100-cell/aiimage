@@ -72,13 +72,13 @@ export function RecentWordsPanel({ ledger, savedWords }: Props) {
               }}
             >
               <Link
-                href={`/word/${word}`}
+                href={`/dictionary?word=${word}`}
                 style={{ fontSize: '14px', fontWeight: 600, color: '#ECFBFF', textDecoration: 'none' }}
               >
                 {word}
               </Link>
               <div style={{ display: 'flex', gap: '8px' }}>
-                <Link href={`/word/${word}`} style={{ fontSize: '11px', color: 'rgba(155,191,202,0.45)', textDecoration: 'none' }}>
+                <Link href={`/dictionary?word=${word}`} style={{ fontSize: '11px', color: 'rgba(155,191,202,0.45)', textDecoration: 'none' }}>
                   Detail
                 </Link>
                 <Link href={`/lexigraph?word=${word}`} style={{ fontSize: '11px', color: 'rgba(126,249,255,0.5)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>

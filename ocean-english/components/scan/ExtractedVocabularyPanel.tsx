@@ -139,7 +139,7 @@ export function ExtractedVocabularyPanel({
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '3px', flexWrap: 'wrap' }}>
                   <Link
-                    href={`/word/${wordId(v.word)}`}
+                    href={`/dictionary?word=${wordId(v.word)}`}
                     style={{ fontSize: '15px', fontWeight: 700, color: 'var(--ink)', textDecoration: 'none' }}
                   >
                     {v.word}

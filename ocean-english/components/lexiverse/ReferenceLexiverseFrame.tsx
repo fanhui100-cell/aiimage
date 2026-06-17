@@ -245,7 +245,7 @@ export function ReferenceLexiverseFrame() {
           break
         }
         case 'lv:open-word': {
-          if (data.wordId) router.push(`/word/${encodeURIComponent(data.wordId)}`)
+          if (data.wordId) router.push(`/dictionary?word=${encodeURIComponent(data.wordId)}`)
           break
         }
         case 'lv:review-grade': {

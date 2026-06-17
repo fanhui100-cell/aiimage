@@ -159,7 +159,7 @@ function WordPopup({ slug, onClose }: { slug: string; onClose: () => void }) {
                 lexi.markActivityDone('pick')
                 setAdded(true)
               }}>{done ? <><Ico d={I.check} sz={14} /> {added ? '已加入学习' : '已在学习库'}</> : '+ 加入学习'}</button>
-              <a className="rd-pop-detail" href={`/word/${slug}`}>词详情 <Ico d={I.arrow} sz={16} /></a>
+              <a className="rd-pop-detail" href={`/dictionary?word=${slug}`}>词详情 <Ico d={I.arrow} sz={16} /></a>
             </div>
           </>
         ) : (

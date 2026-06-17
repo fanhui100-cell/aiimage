@@ -334,7 +334,7 @@ export function TodayBento() {
               <span className="lab">推荐单词</span>
               <div className="marquee"><div className="marquee-track" style={{ ['--mq' as string]: '34s' }}>
                 {[...recommend, ...recommend].map((w, i) => (
-                  <Link key={`${w.id}-${i}`} className="chip" href={`/word/${encodeURIComponent(w.word.toLowerCase())}`}><span className="w">{w.word}</span><span className="zh">{w.zh}</span></Link>
+                  <Link key={`${w.id}-${i}`} className="chip" href={`/dictionary?word=${encodeURIComponent(w.word.toLowerCase())}`}><span className="w">{w.word}</span><span className="zh">{w.zh}</span></Link>
                 ))}
               </div></div>
             </section>

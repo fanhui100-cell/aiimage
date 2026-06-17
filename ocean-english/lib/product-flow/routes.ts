@@ -7,7 +7,7 @@ export const routes = {
   home: '/',
   lexigraph: '/lexigraph',
   dictionary: '/dictionary',
-  word: (slug: string) => `/word/${slug}`,
+  word: (slug: string) => `/dictionary?word=${encodeURIComponent(slug)}`,
   review: '/memory',
   scan: '/scan',
   scanHistory: (id: string) => `/scan/history/${id}`,

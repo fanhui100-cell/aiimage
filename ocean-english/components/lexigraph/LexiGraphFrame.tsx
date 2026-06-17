@@ -78,7 +78,7 @@ export function LexiGraphFrame() {
           if (data.href && data.href.startsWith('/')) router.push(data.href)
           break
         case 'lv:open-word':
-          if (data.wordId) router.push(`/word/${encodeURIComponent(data.wordId)}`)
+          if (data.wordId) router.push(`/dictionary?word=${encodeURIComponent(data.wordId)}`)
           break
         case 'lv:review-grade': {
           if (!data.wordId || !data.grade) return

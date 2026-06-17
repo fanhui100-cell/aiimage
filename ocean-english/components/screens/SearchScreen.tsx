@@ -17,6 +17,15 @@ type Tab = 'all' | 'word' | 'article' | 'family'
 interface WordHit { id: string; word: string; zh: string; phon: string; pos: string }
 interface ArticleHit { id: string; title: string; titleZh?: string; level: number; minutes: number }
 interface FamilyHit { root: string; count: number }
+interface SearchWordRow {
+  id?: string
+  word?: string
+  definitions?: { definitionZh?: string | null }[]
+  phoneticIpa?: string | null
+  partOfSpeech?: string | null
+}
+interface RootRow { root?: string; members?: unknown[] }
+interface ReadingRow { id?: string; title?: string; titleZh?: string; level?: number; minutes?: number }
 
 const RECENT_KEY = 'lexi-recent-search'
 
@@ -86,15 +95,15 @@ export function SearchScreen() {
       const ql = term.toLowerCase()
       // 单词
       const wp = fetch(`/api/dictionary/search?q=${encodeURIComponent(term)}&limit=8`)
-        .then(r => r.json()).then(j => (j?.data ?? []).map((d: any): WordHit => ({
-          id: d.id, word: d.word, zh: d.definitions?.[0]?.definitionZh ?? '',
+        .then(r => r.json()).then(j => ((j?.data ?? []) as SearchWordRow[]).map((d): WordHit => ({
+          id: d.id ?? '', word: d.word ?? '', zh: d.definitions?.[0]?.definitionZh ?? '',
           phon: d.phoneticIpa ?? '', pos: d.partOfSpeech ?? '',
         }))).catch(() => [])
       // 词族（缓存全量）
       const fp = (async () => {
         if (!familiesRef.current) {
           familiesRef.current = await fetch('/api/roots').then(r => r.json())
-            .then(j => (j?.data ?? []).map((f: any) => ({ root: String(f.root ?? ''), members: (f.members ?? []).map((m: any) => String(m)) })))
+            .then(j => ((j?.data ?? []) as RootRow[]).map((f) => ({ root: String(f.root ?? ''), members: (f.members ?? []).map((m) => String(m)) })))
             .catch(() => [])
         }
         return (familiesRef.current ?? [])
@@ -107,8 +116,8 @@ export function SearchScreen() {
         if (!articlesRef.current) {
           const lvl = level ?? 4
           articlesRef.current = await fetch(`/api/reading?level=${lvl}`).then(r => r.json())
-            .then(j => (j?.data ?? []).map((a: any): ArticleHit => ({
-              id: a.id, title: a.title, titleZh: a.titleZh, level: a.level, minutes: a.minutes,
+            .then(j => ((j?.data ?? []) as ReadingRow[]).map((a): ArticleHit => ({
+              id: a.id ?? '', title: a.title ?? '', titleZh: a.titleZh, level: a.level ?? lvl, minutes: a.minutes ?? 0,
             }))).catch(() => [])
         }
         return (articlesRef.current ?? [])
@@ -180,7 +189,7 @@ export function SearchScreen() {
             {recentLearned.length > 0 ? (
               <div className="se-hot">
                 {recentLearned.map((w, i) => (
-                  <Link key={w.id} className="se-hotrow" href={`/word/${w.id}`}>
+                  <Link key={w.id} className="se-hotrow" href={`/dictionary?word=${w.id}`}>
                     <span className={`se-hotrk${i < 3 ? ' top' : ''}`}>{i + 1}</span>
                     <span className="se-hotw">{w.word}</span>
                     <span className="se-hotzh">{w.zh}</span>
@@ -211,7 +220,7 @@ export function SearchScreen() {
             ) : hasResults ? (
               <div className="se-res">
                 {showWords && wordHits.map(w => (
-                  <Link key={`w-${w.id}`} className="se-r" href={`/word/${w.id}`} onClick={() => pushRecent(q)}>
+                  <Link key={`w-${w.id}`} className="se-r" href={`/dictionary?word=${w.id}`} onClick={() => pushRecent(q)}>
                     <span className="se-r-ic" style={{ background: '#2a7fb822' }}>📘</span>
                     <span className="se-r-main">
                       <span className="se-r-t"><Highlight text={w.word} q={q} /></span>

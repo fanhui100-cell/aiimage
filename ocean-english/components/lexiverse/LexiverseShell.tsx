@@ -193,7 +193,7 @@ export function LexiverseShell() {
     if (!selectedPlanet) return
     const p = selectedPlanet
     switch (action) {
-      case 'open_word_detail':    router.push(`/word/${p.normalizedWord}`); break
+      case 'open_word_detail':    router.push(`/dictionary?word=${p.normalizedWord}`); break
       case 'open_lexigraph':      router.push(`/lexigraph?word=${p.normalizedWord}`); break
       case 'start_quiz':          router.push(`/quiz?mode=vocabulary-drill&word=${p.normalizedWord}&returnTo=${returnTo}`); break
       case 'ask_ai':              router.push(`/chat?context=word&word=${p.normalizedWord}&returnTo=${returnTo}`); break

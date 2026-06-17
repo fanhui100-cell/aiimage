@@ -103,7 +103,7 @@ export function WeeklyReportCard() {
           <div style={{ fontSize: 11, color: 'rgba(234,243,246,0.5)', marginBottom: 6 }}>上周最薄弱（点击直达）</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {report.weakest.map(w => (
-              <Link key={w.id} href={`/word/${encodeURIComponent(w.id)}`}
+              <Link key={w.id} href={`/dictionary?word=${encodeURIComponent(w.id)}`}
                 style={{ fontSize: 12.5, fontWeight: 600, color: '#ff6b9d', background: 'rgba(255,107,157,0.1)', border: '1px solid rgba(255,107,157,0.3)', borderRadius: 99, padding: '4px 12px', textDecoration: 'none' }}>
                 {w.word} ×{w.n}
               </Link>

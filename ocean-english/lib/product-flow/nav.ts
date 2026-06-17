@@ -33,7 +33,7 @@ export const MORE_NAV = [
   { key: 'report',    zh: '报告',   en: 'Report',      href: '/report' },
   { key: 'rank',      zh: '排行',   en: 'Leaderboard', href: '/leaderboard' },
   { key: 'groups',    zh: '小组',   en: 'Groups',      href: '/groups' },
-  { key: 'vault',     zh: '知识库', en: 'LexiVault',   href: '/knowledge' },
+  { key: 'vault',     zh: '知识库', en: 'LexiVault',   href: '/dictionary' },
 ] as const
 
 export type PrimaryNavKey = (typeof PRIMARY_NAV)[number]['key']

@@ -16,7 +16,7 @@ export function AINavigatorContextPanel({ context }: Props) {
     const fromHref =
       context.type === 'lexigraph_word'
         ? `/lexigraph?word=${encodeURIComponent(context.word)}`
-        : `/word/${encodeURIComponent(context.word)}`
+        : `/dictionary?word=${encodeURIComponent(context.word)}`
 
     return (
       <div
@@ -111,7 +111,7 @@ export function AINavigatorContextPanel({ context }: Props) {
               ← Back to Memory
             </Link>
             <Link
-              href={`/word/${encodeURIComponent(context.word)}`}
+              href={`/dictionary?word=${encodeURIComponent(context.word)}`}
               style={{
                 padding: '5px 12px', borderRadius: '6px', textDecoration: 'none',
                 fontSize: '11px', fontWeight: 600, color: 'rgba(155,191,202,0.6)',

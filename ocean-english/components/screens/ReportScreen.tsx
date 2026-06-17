@@ -93,6 +93,7 @@ function Matrix({ R, filter, onFilter }: { R: LearnReport; filter: WordState | n
   const gridX = [0, 7, 16, 35, 65, 100, 130]
   const gridY = [1.5, 2.0, 2.5, 3.0]
   const chips: WordState[] = ['mastered', 'review', 'learning', 'weak']
+  const tipParts = tip?.text.split(' · ') ?? []
   return (
     <div className="rp-matrix-wrap" ref={wrapRef}>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ display: 'block' }}>
@@ -112,11 +113,13 @@ function Matrix({ R, filter, onFilter }: { R: LearnReport; filter: WordState | n
                 if (wr) setTip({ text: `${m.word} · 间隔 ${m.interval}天 · 稳定 ${m.ease}${overdue ? ' · 已过期' : ''}`, left: dr.left - wr.left + dr.width / 2, top: dr.top - wr.top })
               }}
               onMouseLeave={() => setTip(null)}
-              onClick={() => router.push(`/word/${m.word}`)} />
+              onClick={() => router.push(`/dictionary?word=${m.word}`)} />
           )
         })}
       </svg>
-      <div className={`rp-tip${tip ? ' show' : ''}`} style={tip ? { left: tip.left, top: tip.top } : undefined} dangerouslySetInnerHTML={{ __html: tip ? `<b>${tip.text.split(' · ')[0]}</b> · ${tip.text.split(' · ').slice(1).join(' · ')}` : '' }} />
+      <div className={`rp-tip${tip ? ' show' : ''}`} style={tip ? { left: tip.left, top: tip.top } : undefined}>
+        {tip && <><b>{tipParts[0]}</b>{tipParts.length > 1 ? ` · ${tipParts.slice(1).join(' · ')}` : ''}</>}
+      </div>
       <div className="rp-axis-x">间隔天数（interval）→ 越右记得越久</div>
       <div className="rp-chips">
         {chips.map(k => <span key={k} className={`rp-chip click ${filter && filter !== k ? 'dim' : ''}`} onClick={() => onFilter(k)}><i style={{ background: COLOR(k) }} />{ZH(k)}</span>)}
