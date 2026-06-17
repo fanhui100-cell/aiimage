@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getDictionaryClient } from '@/lib/dictionary/dictionary-client'
+import { collectDictionarySearchResults } from '@/lib/dictionary/search-utils'
 import type { CefrLevel, ExamTag, WordLevel } from '@/lib/dictionary/dictionary-types'
 
 const VALID_LEVELS: WordLevel[] = ['beginner', 'elementary', 'intermediate', 'advanced', 'exam-prep']
@@ -47,25 +48,23 @@ export async function GET(request: NextRequest) {
   const cefr = VALID_CEFR.has(cefrRaw) ? (cefrRaw as CefrLevel) : undefined
   const exam = VALID_EXAM.has(examRaw) ? (examRaw as ExamTag) : undefined
 
-  if (cefr || exam) {
-    const pool = await getDictionaryClient().searchWords(q, { level, numericLevel, difficulty, limit: 500 })
-    const filtered = pool
-      .filter(w => !cefr || w.cefrLevel === cefr)
-      .filter(w => !exam || w.examTags.includes(exam))
-    return NextResponse.json({
-      ok: true,
-      query: q,
-      total: filtered.length,
-      data: filtered.slice(offset, offset + limit),
-    })
-  }
-
-  const results = await getDictionaryClient().searchWords(q, { level, numericLevel, difficulty, limit, offset })
+  const result = await collectDictionarySearchResults(getDictionaryClient(), {
+    query: q,
+    prefix: searchParams.get('prefix') || undefined,
+    level,
+    numericLevel,
+    difficulty,
+    cefr,
+    exam,
+    limit,
+    offset,
+  })
 
   return NextResponse.json({
     ok: true,
     query: q,
-    total: results.length,
-    data: results,
+    prefix: searchParams.get('prefix') || undefined,
+    total: result.total,
+    data: result.data,
   })
 }

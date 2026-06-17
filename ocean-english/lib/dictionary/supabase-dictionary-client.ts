@@ -309,7 +309,9 @@ class SupabaseDictionaryClient implements DictionaryClient {
           .order('difficulty', { ascending: true })
       }
 
-      if (q) req = req.ilike('normalized_word', `%${q}%`)
+      // 界面优化6·B：按字母浏览 —— prefix 走「以…开头」匹配（normalized_word ILIKE 'x%'）
+      if (options?.prefix) req = req.ilike('normalized_word', `${options.prefix.toLowerCase()}%`)
+      else if (q) req = req.ilike('normalized_word', `%${q}%`)
       if (options?.level) req = req.eq('level', options.level)
       if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
       if (options?.examTag) req = req.contains('tags', [options.examTag])
@@ -329,6 +331,9 @@ class SupabaseDictionaryClient implements DictionaryClient {
         req = req.gte('primary_level', options.minPrimaryLevel)
       }
 
+      // 唯一键兜底排序：上面各分支按非唯一列排序，range 翻页遇并列会跳行/重复，
+      // 导致「全量取词」(getAllDictionaryWords) 去重后只剩 ~21k。补 id 作末位唯一排序键，翻页稳定。
+      req = req.order('id', { ascending: true })
       const offset = options?.offset ?? 0
       const limit = options?.limit ?? 20
       req = req.range(offset, offset + limit - 1)

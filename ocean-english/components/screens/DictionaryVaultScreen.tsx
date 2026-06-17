@@ -466,12 +466,52 @@ function WordPalette({ words, onPick, onClose }: { words: WordEntry[]; onPick: (
   )
 }
 
-// ── 词库目录（LexiVault header + 搜索 + 智能文件夹 chips + 编号文件夹树 + 词行 + 复习托盘）──
+// ── 词库目录（LexiVault header + 搜索 + 智能文件夹 chips + 编号文件夹树 + 词行 + 复习托盘 + 全部词库浏览）──
 function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview }: { words: WordEntry[]; wrongSet: Set<string>; dictTotal: number; current: string; due: number; onPick: (id: string) => void; onReview: () => void }) {
+  const ensureWord = useLexiStore(s => s.ensureWord)
   const [filter, setFilter] = useState('all')
   const [kid, setKid] = useState<string | null>(null)
   const [openFolder, setOpenFolder] = useState<string | null>('vocab')
   const [query, setQuery] = useState('')
+  // 全部词库浏览（整本字典）：lib=null 时为「我的词」视图
+  const [lib, setLib] = useState<null | { mode: 'level' | 'letter'; level: number; letter: string }>(null)
+  const [libWords, setLibWords] = useState<DictionaryWord[]>([])
+  const [libTotal, setLibTotal] = useState(0)
+  const [libBusy, setLibBusy] = useState(false)
+  const [levelCounts, setLevelCounts] = useState<Record<number, number>>({})
+  const inLib = (dw: DictionaryWord) => words.some(w => w.id === dw.id || w.word.toLowerCase() === dw.word.toLowerCase())
+  const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+  // 按等级 7 档计数（进入浏览时取一次，best-effort）
+  useEffect(() => {
+    if (!lib || Object.keys(levelCounts).length) return
+    let cancelled = false
+    void Promise.all([1, 2, 3, 4, 5, 6, 7].map(l =>
+      fetch(`/api/dictionary/search?level=${l}&limit=1`).then(r => (r.ok ? r.json() : null)).then(j => [l, (j?.total as number) || 0] as [number, number]).catch(() => [l, 0] as [number, number])
+    )).then(pairs => { if (!cancelled) setLevelCounts(Object.fromEntries(pairs)) })
+    return () => { cancelled = true }
+  }, [lib, levelCounts])
+
+  // 列表拉取（等级/字母切换 → 复位首页）
+  const fetchLib = (append: boolean) => {
+    if (!lib) return
+    setLibBusy(true)
+    const offset = append ? libWords.length : 0
+    const url = lib.mode === 'level'
+      ? `/api/dictionary/search?level=${lib.level}&limit=50&offset=${offset}`
+      : `/api/dictionary/search?prefix=${encodeURIComponent(lib.letter)}&limit=50&offset=${offset}`
+    fetch(url).then(r => (r.ok ? r.json() : null)).then(j => {
+      const data = (j?.data as DictionaryWord[]) ?? []
+      setLibWords(prev => append ? [...prev, ...data] : data)
+      setLibTotal((j?.total as number) ?? 0)
+      setLibBusy(false)
+    }).catch(() => setLibBusy(false))
+  }
+  useEffect(() => { if (lib) fetchLib(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lib?.mode, lib?.level, lib?.letter])
+  const enterLib = () => { setLib(l => l ?? { mode: 'level', level: 3, letter: 'A' }); setKid(null); setFilter('all') }
+  const exitLib = (f: string, k: string | null) => { setLib(null); setFilter(f); setKid(k) }
 
   const FILTERS: { id: string; zh: string; q: (w: WordEntry) => boolean }[] = [
     { id: 'all', zh: '全部', q: () => true },
@@ -525,38 +565,68 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
       <div className="lvr-scroll">
         <div className="lv-searchbox">{I.search}<input value={query} onChange={e => setQuery(e.target.value)} placeholder="搜索我的词…" /></div>
         <div className="lvr-filters">
-          {FILTERS.map(f => { const c = words.filter(f.q).length; const on = filter === f.id && !kid; return <button key={f.id} className={`lv-fchip${on ? ' on' : ''}`} onClick={() => { setFilter(f.id); setKid(null) }}>{f.zh}{f.id !== 'all' ? ` · ${c}` : ''}</button> })}
+          {FILTERS.map(f => { const c = words.filter(f.q).length; const on = filter === f.id && !kid && !lib; return <button key={f.id} className={`lv-fchip${on ? ' on' : ''}`} onClick={() => exitLib(f.id, null)}>{f.zh}{f.id !== 'all' ? ` · ${c}` : ''}</button> })}
         </div>
         <div className="lvr-eyebrow"><span>智能文件夹 · 实时</span></div>
         <div>
           {FOLDERS.map(f => {
             const total = f.id === 'all' ? (dictTotal || words.length) : words.filter(f.q).length
             const open = openFolder === f.id
-            if (!f.kids) return (
-              <div className="lvr-folder" key={f.id}><button className={`lvr-fhead${filter === f.id && !kid ? ' sel' : ''}`} onClick={() => { setFilter(f.id); setKid(null) }}><span className="chev ghost">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button></div>
-            )
+            if (!f.kids) { const sel = f.id === 'all' ? !!lib : (filter === f.id && !kid && !lib); return (
+              <div className="lvr-folder" key={f.id}><button className={`lvr-fhead${sel ? ' sel' : ''}`} onClick={() => f.id === 'all' ? enterLib() : exitLib(f.id, null)}><span className="chev ghost">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button></div>
+            ) }
             return (
               <div className="lvr-folder" key={f.id}>
                 <button className={`lvr-fhead${open ? ' open' : ''}`} onClick={() => setOpenFolder(open ? null : f.id)}><span className="chev">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button>
-                {open && <div>{f.kids.map(k => { const c = words.filter(k.q).length; const kon = kid === k.zh; return <button key={k.zh} className={`lvr-kid${kon ? ' on' : ''}`} onClick={() => { setKid(k.zh); setFilter('vocab') }}><i style={{ background: c ? f.accent : 'var(--line-strong)' }} /><span>{k.zh}</span><em>{c}</em></button> })}</div>}
+                {open && <div>{f.kids.map(k => { const c = words.filter(k.q).length; const kon = kid === k.zh && !lib; return <button key={k.zh} className={`lvr-kid${kon ? ' on' : ''}`} onClick={() => exitLib('vocab', k.zh)}><i style={{ background: c ? f.accent : 'var(--line-strong)' }} /><span>{k.zh}</span><em>{c}</em></button> })}</div>}
               </div>
             )
           })}
         </div>
-        <div className="lvr-eyebrow"><span>{activeLabel} · {list.length}</span><span className="lvr-sort">风险 ↓</span></div>
-        <div className="lvr-list">
-          {list.length === 0 && <div className="lv-muted" style={{ padding: '14px 8px' }}>没有匹配的词</div>}
-          {list.map(w => {
-            const col = (STATE_META[w.state] ?? STATE_META.learning).light, r = riskOf(w), due2 = isDue(w)
-            return (
-              <button key={w.id} className={`lvr-wrow${w.word.toLowerCase() === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(w.word.toLowerCase())}>
-                <span className={`wdot${due2 ? ' due' : ''}`} style={{ background: col, color: col }} />
-                <span className="wmain"><span className="wl1"><span className="ww">{w.word}</span><span className="wphon">{w.phon || ''}</span></span><span className="wz">{w.zh}</span><span className="wmsbar"><i style={{ width: `${Math.round(masteryOf(w) * 100)}%`, background: col }} /></span></span>
-                <span className="wright"><span className="wrisk" style={{ color: riskColor(r) }}>{Math.round(r * 100)}%</span><span className={`wnext${due2 ? ' due' : ''}`}>{reviewLabel(w.nextReviewAt)}</span></span>
-              </button>
-            )
-          })}
-        </div>
+        {lib ? (
+          /* 全部词库 · 按等级 / 按字母 浏览整本词典 */
+          <>
+            <div className="lib-modebar">
+              <button className={lib.mode === 'level' ? 'on' : ''} onClick={() => setLib({ ...lib, mode: 'level' })}>按等级</button>
+              <button className={lib.mode === 'letter' ? 'on' : ''} onClick={() => setLib({ ...lib, mode: 'letter' })}>按字母</button>
+            </div>
+            {lib.mode === 'level' ? (
+              <div className="lib-index">{[1, 2, 3, 4, 5, 6, 7].map(l => <button key={l} className={`lib-ichip${lib.level === l ? ' on' : ''}`} style={{ minWidth: 'auto', padding: '5px 10px' }} onClick={() => setLib({ ...lib, level: l })}>{LEVEL_NAMES[l]} {levelCounts[l] ?? ''}</button>)}</div>
+            ) : (
+              <div className="lib-index">{ALPHA.map(c => <button key={c} className={`lib-ichip${lib.letter === c ? ' on' : ''}`} onClick={() => setLib({ ...lib, letter: c })}>{c}</button>)}</div>
+            )}
+            <div className="lib-group">
+              <div className="lib-ghead"><b>{lib.mode === 'level' ? LEVEL_NAMES[lib.level] : `字母 ${lib.letter}`}</b><span className="gn">{libTotal} 词</span></div>
+              {libWords.length === 0 && !libBusy && <div className="lv-muted" style={{ padding: '16px 8px' }}>暂无词条</div>}
+              {libWords.map(dw => { const zh = dw.definitions?.[0]?.definitionZh ?? ''; const lemma = dw.word.toLowerCase(); const has = inLib(dw); return (
+                <button key={dw.id} className={`lib-row${lemma === current ? ' on' : ''}`} onClick={() => onPick(lemma)}>
+                  <span className="wdot" style={{ background: 'var(--ink-muted)', width: 7, height: 7, borderRadius: '50%', flexShrink: 0 }} />
+                  <span className="lw">{dw.word}</span><span className="lz">{zh}</span>
+                  <span className="ltag">{LEVEL_NAMES[dw.primaryLevel ?? 0] || dw.cefrLevel || ''}</span>
+                  {has ? <span className="lin">✓ 已在库</span> : <span className="ladd" onClick={e => { e.stopPropagation(); ensureWord(dw, 'lookup') }}>+ 学</span>}
+                </button>
+              ) })}
+              {libWords.length < libTotal && <button className="lib-more" disabled={libBusy} onClick={() => fetchLib(true)}>{libBusy ? '加载中…' : `加载更多（${libWords.length}/${libTotal}）`}</button>}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="lvr-eyebrow"><span>{activeLabel} · {list.length}</span><span className="lvr-sort">风险 ↓</span></div>
+            <div className="lvr-list">
+              {list.length === 0 && <div className="lv-muted" style={{ padding: '14px 8px' }}>没有匹配的词</div>}
+              {list.map(w => {
+                const col = (STATE_META[w.state] ?? STATE_META.learning).light, r = riskOf(w), due2 = isDue(w)
+                return (
+                  <button key={w.id} className={`lvr-wrow${w.word.toLowerCase() === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(w.word.toLowerCase())}>
+                    <span className={`wdot${due2 ? ' due' : ''}`} style={{ background: col, color: col }} />
+                    <span className="wmain"><span className="wl1"><span className="ww">{w.word}</span><span className="wphon">{w.phon || ''}</span></span><span className="wz">{w.zh}</span><span className="wmsbar"><i style={{ width: `${Math.round(masteryOf(w) * 100)}%`, background: col }} /></span></span>
+                    <span className="wright"><span className="wrisk" style={{ color: riskColor(r) }}>{Math.round(r * 100)}%</span><span className={`wnext${due2 ? ' due' : ''}`}>{reviewLabel(w.nextReviewAt)}</span></span>
+                  </button>
+                )
+              })}
+            </div>
+          </>
+        )}
       </div>
       <div className={`review-tray${due === 0 ? ' empty' : ''}`}>
         <span className="rt-ic">{I.play}</span>

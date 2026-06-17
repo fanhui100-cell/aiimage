@@ -150,6 +150,8 @@ export interface DictionaryWord {
 
 export interface WordSearchOptions {
   level?: WordLevel
+  /** 界面优化6·B：按字母浏览 —— 以该前缀开头（normalized_word ILIKE 'x%'） */
+  prefix?: string
   /** P2：7 档等级（1-7），DB 侧按 ±1 档 overlaps 过滤（galaxy 浏览用） */
   numericLevel?: number
   /** P0：按本档原生词过滤（primary_level = 该档），选词推荐 / 单档刷词用 */
@@ -164,6 +166,8 @@ export interface WordSearchOptions {
   examTag?: ExamTag
   limit?: number
   offset?: number
+  /** Internal: override adapter timeout for known long-running bulk reads. */
+  adapterTimeoutMs?: number
 }
 
 export interface DictionaryClient {
