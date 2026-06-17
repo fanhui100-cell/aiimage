@@ -129,11 +129,22 @@ export function DictionaryVaultScreen() {
   const [note, setNoteState] = useState('')
   const [noteSaved, setNoteSaved] = useState(false)
   const [fav, setFav] = useState(false)
+  const [dictTotal, setDictTotal] = useState(0)
   const noteTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const flash = (m: string) => { setToast(m); setTimeout(() => setToast(null), 2000) }
 
   const entry = words.find(w => w.id === slug || w.word.toLowerCase() === slug)
   const wrongSet = useMemo(() => new Set(wrongAnswers.map(w => (w.word || '').toLowerCase())), [wrongAnswers])
+
+  // 全部词库真实总数（整本字典；best-effort，失败回退到本地库数）
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/dictionary/search?q=&limit=1')
+      .then(r => (r.ok ? r.json() : null))
+      .then(j => { if (!cancelled && typeof j?.total === 'number' && j.total > 0) setDictTotal(j.total) })
+      .catch(() => { /* 回退本地库数 */ })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -191,6 +202,7 @@ export function DictionaryVaultScreen() {
   const pos = word?.partOfSpeech ?? word?.definitions?.[0]?.partOfSpeech ?? ''
   const defZh = word?.definitions?.[0]?.definitionZh ?? ''
   const synonyms = word?.synonyms ?? []
+  const antonyms = word?.antonyms ?? []
   const collocations = (word?.collocations ?? []).map(c => c.phrase).filter(Boolean)
   const mnemonic = word?.mnemonics?.find(m => m.style === 'standard')?.mnemonicZh ?? word?.mnemonics?.[0]?.mnemonicZh ?? word?.mnemonics?.[0]?.mnemonicEn ?? ''
   const etymology = word?.etymology ? (word.etymology.explanationZh || word.etymology.explanationEn || word.etymology.roots || '') : ''
@@ -219,12 +231,16 @@ export function DictionaryVaultScreen() {
     return { entries: Object.entries(c).sort((a, b) => b[1] - a[1]), max }
   })()
 
-  const graphNodes = useMemo(() => {
-    const list: RelNode[] = [...rels].slice(0, 3)
+  // 词图节点：关系 API（带中文，含易混）+ 词条自身近义/反义 + 词形变化，最多 5 个
+  const graphNodes = (() => {
+    const list: RelNode[] = []
+    const seen = new Set<string>()
+    for (const r of rels) { const key = (r.id || r.label).toLowerCase(); if (!seen.has(key)) { seen.add(key); list.push(r) } }
+    for (const s of synonyms) { const id = s.toLowerCase(); if (!seen.has(id) && list.length < 4) { seen.add(id); list.push({ id, label: s, sub: '近义词', rel: 'syn' }) } }
+    for (const a of antonyms) { const id = a.toLowerCase(); if (!seen.has(id) && list.length < 4) { seen.add(id); list.push({ id, label: a, sub: '反义词', rel: 'ant' }) } }
     forms.slice(0, 2).forEach(f => list.push({ id: null, label: f[1], sub: f[0], rel: 'form' }))
     return list.slice(0, 5)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rels, slug, word])
+  })()
 
   const onAdd = () => { if (word) { ensureWord(word, 'lookup'); recordActivity('learned'); flash('已加入学习 · ' + wordStr) } }
   const onReview = () => { if (entry) { addToReview(entry.id); flash('已加入今日复习') } else onAdd() }
@@ -411,7 +427,7 @@ export function DictionaryVaultScreen() {
       {/* 词库目录抽屉 */}
       <div className={`lvault-scrim${drawer ? ' open' : ''}`} onClick={() => setDrawer(false)} />
       <aside className={`lvault-drawer${drawer ? ' open' : ''}`}>
-        <VaultRail words={words} wrongSet={wrongSet} current={slug} due={getDue().length + wrongAnswers.length} onPick={setCur} onReview={() => { router.push('/memory'); setDrawer(false) }} />
+        <VaultRail words={words} wrongSet={wrongSet} dictTotal={dictTotal} current={slug} due={getDue().length + wrongAnswers.length} onPick={setCur} onReview={() => { router.push('/memory'); setDrawer(false) }} />
       </aside>
 
       {/* 找词 · 词脊面板 */}
@@ -451,7 +467,7 @@ function WordPalette({ words, onPick, onClose }: { words: WordEntry[]; onPick: (
 }
 
 // ── 词库目录（LexiVault header + 搜索 + 智能文件夹 chips + 编号文件夹树 + 词行 + 复习托盘）──
-function VaultRail({ words, wrongSet, current, due, onPick, onReview }: { words: WordEntry[]; wrongSet: Set<string>; current: string; due: number; onPick: (id: string) => void; onReview: () => void }) {
+function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview }: { words: WordEntry[]; wrongSet: Set<string>; dictTotal: number; current: string; due: number; onPick: (id: string) => void; onReview: () => void }) {
   const [filter, setFilter] = useState('all')
   const [kid, setKid] = useState<string | null>(null)
   const [openFolder, setOpenFolder] = useState<string | null>('vocab')
@@ -471,7 +487,7 @@ function VaultRail({ words, wrongSet, current, due, onPick, onReview }: { words:
     vocab: [
       { zh: '学习中', q: w => w.state === 'learning' },
       { zh: '待复习', q: w => w.state === 'review' || isDue(w) },
-      { zh: '薄弱词', q: w => w.state === 'weak' || riskOf(w) > 0.6 },
+      { zh: '薄弱词', q: w => w.state === 'weak' },
       { zh: '已掌握', q: w => w.state === 'mastered' },
       { zh: '已收藏', q: w => isFav(w.id) || isFav(w.word.toLowerCase()) },
     ],
@@ -514,7 +530,7 @@ function VaultRail({ words, wrongSet, current, due, onPick, onReview }: { words:
         <div className="lvr-eyebrow"><span>智能文件夹 · 实时</span></div>
         <div>
           {FOLDERS.map(f => {
-            const total = words.filter(f.q).length
+            const total = f.id === 'all' ? (dictTotal || words.length) : words.filter(f.q).length
             const open = openFolder === f.id
             if (!f.kids) return (
               <div className="lvr-folder" key={f.id}><button className={`lvr-fhead${filter === f.id && !kid ? ' sel' : ''}`} onClick={() => { setFilter(f.id); setKid(null) }}><span className="chev ghost">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button></div>
