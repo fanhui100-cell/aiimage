@@ -17,7 +17,8 @@
 @media(prefers-reduced-motion:reduce){.lvault .aurora b{animation:none;}}
 
 /* 本页浮动工具条 */
-.lvault .pagebar{position:fixed;top:calc(var(--nav-h) + 12px);left:50%;transform:translateX(-50%);z-index:60;display:flex;gap:7px;padding:7px 8px;border-radius:999px;background:var(--card-2);border:1px solid var(--line);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);box-shadow:var(--shadow-rest);}
+/* z-index 40：低于全局 Navbar(z-50) 及其工具下拉，避免盖住下拉菜单；仍高于页面内容(z-2) */
+.lvault .pagebar{position:fixed;top:calc(var(--nav-h) + 12px);left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:7px;padding:7px 8px;border-radius:999px;background:var(--card-2);border:1px solid var(--line);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);box-shadow:var(--shadow-rest);}
 .lvault .pagebar .fb-btn{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 13px;border-radius:999px;border:1px solid transparent;background:none;color:var(--ink-sub);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:var(--font-sans);}
 .lvault .pagebar .fb-btn:hover{background:var(--teal-bg);color:var(--teal-ink);}
 .lvault .pagebar .fb-btn svg{width:15px;height:15px;}
