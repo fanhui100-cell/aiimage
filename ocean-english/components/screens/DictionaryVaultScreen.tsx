@@ -3,8 +3,8 @@
 /* ════════════════════════════════════════════════════════════════════════
    界面优化5 · 词库 LexiVault 合并页（1:1 自 词库.html）—— 词库 + 词详情 + 知识库 三合一
    · ?word=<slug> 定位该词；无参数按风险排序默认选第一个；切词 router.replace(scroll:false)
-   · 数据真实：词条富化 /api/dictionary/word + relations；学习态/SRS/遗忘曲线/记忆面板 接 lexiStore
-   · 顶栏由 AppShell 提供；本页含浮动工具条（找词⌘K / 词库目录抽屉）+ 底部放大坞
+   · 数据真实：词条 /api/dictionary/word + relations；学习态/SRS/遗忘曲线/记忆面板/出处 接 lexiStore
+   · 顶栏由 AppShell 提供；浮动工具条（找词→词脊面板 / 词库目录抽屉）+ 底部放大坞
    ════════════════════════════════════════════════════════════════════════ */
 
 import { useState, useEffect, useMemo, useRef, type ReactNode } from 'react'
@@ -12,15 +12,15 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { speakSmart } from '@/lib/pronunciation/word-audio'
-import { useCommandPalette } from '@/components/ui/motion/CommandPalette'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import './dictionary-vault.css'
 
 const DAY = 86_400_000
 const LEVEL_NAMES = ['', '初中', '高中', '四级', '六级', '考研', '托福', 'SAT']
 const speak = (t: string, accent: 'US' | 'UK' = 'US') => { void speakSmart(t, accent === 'UK' ? 'uk' : 'us') }
+const isFav = (id: string) => { try { return localStorage.getItem('lv-fav-' + id) === '1' } catch { return false } }
 
-// ── 真实 SRS 推导（艾宾浩斯 R=e^(−t/S)，S 由 interval×ease 派生；禁 mock 常量）──
+// ── 真实 SRS 推导（艾宾浩斯 R=e^(−t/S)）──
 function masteryOf(e?: WordEntry): number {
   if (!e) return 0.05
   if (e.state === 'mastered') return 1
@@ -37,11 +37,10 @@ function retentionOf(e?: WordEntry): number | null {
 }
 function riskOf(e?: WordEntry): number {
   const ms = masteryOf(e), R = retentionOf(e)
-  const timeRisk = R === null ? (1 - ms * 0.55) : (1 - R)
-  const fragility = (1 - ms) * 0.6
-  return Math.max(0.02, Math.min(0.99, Math.max(timeRisk, fragility)))
+  return Math.max(0.02, Math.min(0.99, Math.max(R === null ? (1 - ms * 0.55) : (1 - R), (1 - ms) * 0.6)))
 }
 function riskColor(r: number): string { return r > 0.6 ? 'var(--rose-ink)' : r > 0.4 ? 'var(--gold-ink)' : 'var(--teal-ink)' }
+function isDue(e?: WordEntry): boolean { return !!(e && e.nextReviewAt != null && e.nextReviewAt <= Date.now()) }
 function reviewLabel(ts?: number | null): string {
   if (ts == null) return '未排期'
   const now = Date.now()
@@ -49,8 +48,11 @@ function reviewLabel(ts?: number | null): string {
   const d = Math.ceil((ts - now) / DAY)
   return d === 1 ? '明天到期' : `${d} 天后`
 }
+const SOURCE_META: Record<string, { zh: string; accent: string }> = {
+  dictionary: { zh: '词典', accent: '#2f6db0' }, memory: { zh: '复习', accent: '#2f9bd6' },
+  wrong: { zh: '错题', accent: '#bf4a30' }, scan: { zh: '扫描', accent: '#b3781f' }, reading: { zh: '阅读', accent: '#6d4bc4' },
+}
 
-// 词形变化（优先真实 inflections，否则规则推导）
 const FORM_ZH: Record<string, string> = { plural: '复数', past: '过去式', pastParticiple: '过去分词', presentParticiple: '现在分词', third: '三单', comparative: '比较级', superlative: '最高级', gerund: '动名词' }
 function ruleForms(word: string, pos: string): [string, string][] {
   const b = word, p = (pos || '').toLowerCase()
@@ -87,6 +89,8 @@ const I = {
   link: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8" /></svg>,
   search: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>,
   grid: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>,
+  vault: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M9 4v16" /></svg>,
+  chev: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>,
   play: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3" /></svg>,
   review: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36" /><path d="M21 3v5h-5" /></svg>,
   quiz: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4h6v2H9z" /><path d="M8.5 13l2.2 2.2L15.5 11" /></svg>,
@@ -101,15 +105,13 @@ type RelNode = { id: string | null; label: string; sub: string; rel: 'syn' | 'an
 export function DictionaryVaultScreen() {
   const router = useRouter()
   const params = useSearchParams()
-  const cmd = useCommandPalette()
   const words = useLexiStore(s => s.words)
+  const wrongAnswers = useLexiStore(s => s.wrongAnswers)
   const ensureWord = useLexiStore(s => s.ensureWord)
   const recordActivity = useLexiStore(s => s.recordActivity)
   const addToReview = useLexiStore(s => s.addToReview)
   const getDue = useLexiStore(s => s.getDue)
-  const wrongCount = useLexiStore(s => s.wrongAnswers.length)
 
-  // 默认词：URL ?word= 优先；否则按风险排序取库内第一个
   const defaultSlug = useMemo(() => {
     const sorted = [...words].sort((a, b) => riskOf(b) - riskOf(a))
     return sorted[0]?.word?.toLowerCase() ?? 'serendipity'
@@ -121,6 +123,7 @@ export function DictionaryVaultScreen() {
   const [loading, setLoading] = useState(true)
   const [accent, setAccent] = useState<'US' | 'UK'>('US')
   const [drawer, setDrawer] = useState(false)
+  const [palette, setPalette] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
   const [rels, setRels] = useState<RelNode[]>([])
   const [note, setNoteState] = useState('')
@@ -130,8 +133,8 @@ export function DictionaryVaultScreen() {
   const flash = (m: string) => { setToast(m); setTimeout(() => setToast(null), 2000) }
 
   const entry = words.find(w => w.id === slug || w.word.toLowerCase() === slug)
+  const wrongSet = useMemo(() => new Set(wrongAnswers.map(w => (w.word || '').toLowerCase())), [wrongAnswers])
 
-  // 取词条富化
   useEffect(() => {
     let cancelled = false
     setLoading(true)
@@ -139,13 +142,12 @@ export function DictionaryVaultScreen() {
       .then(r => (r.ok ? r.json() : null))
       .then(j => { if (!cancelled) { setWord((j?.data as DictionaryWord) ?? null); setLoading(false) } })
       .catch(() => { if (!cancelled) { setWord(null); setLoading(false) } })
-    try { setFav(localStorage.getItem('lv-fav-' + slug) === '1') } catch { /* ignore */ }
+    setFav(isFav(slug))
     try { setNoteState(localStorage.getItem('lv-note-' + slug) || '') } catch { setNoteState('') }
     window.scrollTo({ top: 0, behavior: 'smooth' })
     return () => { cancelled = true }
   }, [slug])
 
-  // 关系（词图小视角 + 同反义兜底）
   useEffect(() => {
     let cancelled = false
     fetch(`/api/dictionary/relations?word=${encodeURIComponent(slug)}`)
@@ -167,7 +169,7 @@ export function DictionaryVaultScreen() {
     return () => { cancelled = true }
   }, [slug])
 
-  const setCur = (id: string) => { router.replace(`/dictionary?word=${encodeURIComponent(id.toLowerCase())}`, { scroll: false }); setDrawer(false) }
+  const setCur = (id: string) => { router.replace(`/dictionary?word=${encodeURIComponent(id.toLowerCase())}`, { scroll: false }); setDrawer(false); setPalette(false) }
   const jump = (label: string) => setCur(label.toLowerCase().trim())
 
   const onNote = (v: string) => {
@@ -179,7 +181,7 @@ export function DictionaryVaultScreen() {
   }
   const toggleFav = () => { const v = !fav; setFav(v); try { localStorage.setItem('lv-fav-' + slug, v ? '1' : '') } catch { /* ignore */ }; flash(v ? '已收藏' : '已取消收藏') }
 
-  // ── 派生视图字段 ──
+  // 派生视图字段
   const state: WordState = entry?.state ?? 'unknown'
   const stMeta = STATE_META[state]
   const inLib = state !== 'unknown' && state !== 'recommended' && state !== 'locked'
@@ -189,7 +191,6 @@ export function DictionaryVaultScreen() {
   const pos = word?.partOfSpeech ?? word?.definitions?.[0]?.partOfSpeech ?? ''
   const defZh = word?.definitions?.[0]?.definitionZh ?? ''
   const synonyms = word?.synonyms ?? []
-  const antonyms = word?.antonyms ?? []
   const collocations = (word?.collocations ?? []).map(c => c.phrase).filter(Boolean)
   const mnemonic = word?.mnemonics?.find(m => m.style === 'standard')?.mnemonicZh ?? word?.mnemonics?.[0]?.mnemonicZh ?? word?.mnemonics?.[0]?.mnemonicEn ?? ''
   const etymology = word?.etymology ? (word.etymology.explanationZh || word.etymology.explanationEn || word.etymology.roots || '') : ''
@@ -197,13 +198,27 @@ export function DictionaryVaultScreen() {
   const lvName = LEVEL_NAMES[word?.primaryLevel ?? 0] || ''
   const tags = [lvName, word?.cefrLevel ?? '', ...examTags.slice(0, 2)].filter(Boolean)
   const ex0 = (word?.examples ?? []).find(e => e.sentenceEn)
-  const formEntries: [string, string][] = word
-    ? (Object.entries(word.inflections ?? {}).filter(([, v]) => v) as [string, string][]).map(([k, v]) => [FORM_ZH[k] ?? k, v]) || []
-    : []
-  const forms = (formEntries.length ? formEntries : (word ? ruleForms(wordStr, pos) : []))
+  const formEntries = word ? (Object.entries(word.inflections ?? {}).filter(([, v]) => v) as [string, string][]).map(([k, v]) => [FORM_ZH[k] ?? k, v] as [string, string]) : []
+  const forms = formEntries.length ? formEntries : (word ? ruleForms(wordStr, pos) : [])
   const nuance = (word?.nuance ?? []).filter(n => n.member && n.nuanceZh)
 
-  // ── 词图小视角节点（关系 + 词形）──
+  // 出处（记忆面板热度 + 链接提及）—— 真实信号派生（直接计算，避免对可变 entry 做 memo）
+  const backlinks = (() => {
+    const out: { src: string; note: string }[] = []
+    out.push({ src: 'dictionary', note: fav ? '词典收藏 · 已收藏' : '词典词条 · 已收录' })
+    if (entry?.source === 'scan') out.push({ src: 'scan', note: '扫描导入' })
+    if (entry?.source === 'reading') out.push({ src: 'reading', note: '阅读收藏' })
+    if (entry?.nextReviewAt != null) out.push({ src: 'memory', note: `复习队列 · ${reviewLabel(entry.nextReviewAt)} · 第 ${entry.streak ?? 0} 次` })
+    if (wrongSet.has(slug)) out.push({ src: 'wrong', note: `错题本 · 「${wordStr}」` })
+    return out
+  })()
+  const heat = (() => {
+    const c: Record<string, number> = {}
+    backlinks.forEach(b => { c[b.src] = (c[b.src] || 0) + 1 })
+    const max = Math.max(1, ...Object.values(c))
+    return { entries: Object.entries(c).sort((a, b) => b[1] - a[1]), max }
+  })()
+
   const graphNodes = useMemo(() => {
     const list: RelNode[] = [...rels].slice(0, 3)
     forms.slice(0, 2).forEach(f => list.push({ id: null, label: f[1], sub: f[0], rel: 'form' }))
@@ -211,7 +226,6 @@ export function DictionaryVaultScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rels, slug, word])
 
-  // ── 动作 ──
   const onAdd = () => { if (word) { ensureWord(word, 'lookup'); recordActivity('learned'); flash('已加入学习 · ' + wordStr) } }
   const onReview = () => { if (entry) { addToReview(entry.id); flash('已加入今日复习') } else onAdd() }
   const dock = (k: string) => {
@@ -225,7 +239,6 @@ export function DictionaryVaultScreen() {
     }
   }
 
-  // 词图 SVG 几何
   const GW = 344, GH = 300, gcx = GW / 2, gcy = GH / 2, gR = Math.min(GW * 0.34, GH * 0.40)
   const RC: Record<string, string> = { syn: 'var(--teal-ink)', ant: 'var(--rose-ink)', confused: 'var(--gold-ink)', form: 'var(--gold-ink)' }
   const gpoints = graphNodes.map((n, i) => {
@@ -234,7 +247,6 @@ export function DictionaryVaultScreen() {
     return { n, x, y, mx: (gcx + x) / 2, my: (gcy + y) / 2, col: RC[n.rel] }
   })
 
-  // 遗忘曲线点（直接计算，避免对可变 entry 做 memo）
   const curve = (() => {
     const W = 300, H = 110, pad = 8, S = stabilityOf(entry)
     const span = Math.max(3, Math.min(60, Math.round(S * 2.2)))
@@ -259,9 +271,8 @@ export function DictionaryVaultScreen() {
     <div className="lvault">
       <div className="aurora"><b className="b1" /><b className="b2" /><b className="b3" /></div>
 
-      {/* 浮动工具条 */}
       <div className="pagebar">
-        <button className="fb-btn" onClick={cmd.open} title="找词 / 跳转">{I.search}找词<kbd>⌘K</kbd></button>
+        <button className="fb-btn" onClick={() => setPalette(true)} title="在本页词库中找词">{I.search}找词<kbd>⌘K</kbd></button>
         <button className="fb-btn" onClick={() => setDrawer(true)} title="词库目录">{I.grid}词库目录</button>
       </div>
 
@@ -283,14 +294,14 @@ export function DictionaryVaultScreen() {
           </div>
           <div className="hero-r">
             <div className="hero-ring">
-              <svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" strokeWidth="8" /><circle cx="60" cy="60" r="52" fill="none" stroke={stMeta.light} strokeWidth="8" strokeLinecap="round" strokeDasharray={2 * Math.PI * 52} strokeDashoffset={2 * Math.PI * 52 * (1 - ms / 100)} style={{ transition: 'stroke-dashoffset .6s var(--ease,cubic-bezier(.34,1.56,.64,1))' }} /></svg>
+              <svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" strokeWidth="8" /><circle cx="60" cy="60" r="52" fill="none" stroke={stMeta.light} strokeWidth="8" strokeLinecap="round" strokeDasharray={2 * Math.PI * 52} strokeDashoffset={2 * Math.PI * 52 * (1 - ms / 100)} style={{ transition: 'stroke-dashoffset .6s cubic-bezier(.34,1.56,.64,1)' }} /></svg>
               <div className="pct"><b>{ms}%</b><small>掌握度</small></div>
             </div>
             <button className="hero-cta" onClick={inLib ? onReview : onAdd}>{inLib ? '加入今日复习' : '加入学习库'}</button>
           </div>
         </div>
 
-        {/* 散布卡片 */}
+        {/* 散布卡片（顺序对齐原型：释义 / 词形 / 例句 / 词图 / 遗忘曲线 / 派生词族 / 同义辨析 / 记忆法 / 笔记 / 记忆面板 / 词源 / 链接提及 / AI） */}
         <div className="flow">
           {/* 释义 */}
           <div className="fcard glass">{FK('释义 · Definition')}
@@ -301,6 +312,9 @@ export function DictionaryVaultScreen() {
 
           {/* 词形变化 */}
           {forms.length > 0 && <div className="fcard glass">{FK('词形变化 · Forms')}<div className="lv-forms">{forms.map(([k, v]) => <span key={k}><i>{k}</i> {v}</span>)}</div></div>}
+
+          {/* 例句 */}
+          {ex0 && <div className="fcard glass example">{FK('例句 · In Context')}<div style={{ fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 18, lineHeight: 1.5, color: 'var(--ink)' }}>“{hl(ex0.sentenceEn, wordStr)}”{ex0.sentenceZh && <span style={{ display: 'block', fontStyle: 'normal', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--ink-muted)', marginTop: 8 }}>{ex0.sentenceZh}</span>}</div><button className="lv-exspeak" style={{ marginTop: 8 }} onClick={() => speak(ex0.sentenceEn, accent)}>{I.speak} 朗读例句</button></div>}
 
           {/* 词图小视角 */}
           <div className="fcard glass graph">{FK('词汇关系图 · LexiGraph', <span className="ex" onClick={() => dock('graph')}>展开完整词图 {I.arrow}</span>)}
@@ -326,9 +340,6 @@ export function DictionaryVaultScreen() {
             <div className="lv-muted" style={{ fontSize: 11.5, marginTop: 8 }}>保持率随时间衰减；复习一次曲线上提、间隔拉长。</div>
           </div>
 
-          {/* 例句 */}
-          {ex0 && <div className="fcard glass example">{FK('例句 · In Context')}<div style={{ fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 18, lineHeight: 1.5, color: 'var(--ink)' }}>“{hl(ex0.sentenceEn, wordStr)}”{ex0.sentenceZh && <span style={{ display: 'block', fontStyle: 'normal', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--ink-muted)', marginTop: 8 }}>{ex0.sentenceZh}</span>}</div></div>}
-
           {/* 派生词族 */}
           {(collocations.length > 0 || synonyms.length > 0) && <div className="fcard glass">{FK('派生词族 · Family')}
             {synonyms.length > 0 && <div className="lv-rels" style={{ marginBottom: collocations.length ? 10 : 0 }}>{synonyms.slice(0, 6).map(s => <button key={s} className="lv-wlink" onClick={() => jump(s)}>{I.link}{s}</button>)}</div>}
@@ -340,9 +351,6 @@ export function DictionaryVaultScreen() {
             <div className="lv-rels">{synonyms.slice(0, 6).map(s => <button key={s} className="lv-wlink" onClick={() => jump(s)}>{s}</button>)}</div>
             {nuance.length > 0 && <div className="lv-nuances">{nuance.map((n, i) => <div className="lv-nuance" key={i}><button className="lv-wlink" onClick={() => jump(n.member)}>{n.member}</button><span>{n.nuanceZh}</span></div>)}</div>}
           </div>}
-
-          {/* 反义词 */}
-          {antonyms.length > 0 && <div className="fcard glass">{FK('反义词 · Antonyms')}<div className="lv-rels">{antonyms.slice(0, 6).map(s => <button key={s} className="lv-wlink" style={{ ['--lc' as string]: 'var(--rose-ink)' }} onClick={() => jump(s)}>{s}</button>)}</div></div>}
 
           {/* 记忆法 */}
           <div className="fcard glass">{FK('记忆法 · Mnemonic')}<div className="lv-callout" style={{ borderColor: 'var(--gold-ink)', background: 'var(--gold-bg)' }}><span style={{ color: 'var(--gold-ink)', width: 14, flexShrink: 0 }}>{I.bolt}</span><div style={{ fontFamily: 'var(--font-sans)' }}><span className="lv-memtag">{etymology ? '词根记忆' : '联想记忆'}</span>{mnemonic || `把 ${wordStr} 拆成熟悉的音节或词根，联想一个画面帮助记忆。`}</div></div></div>
@@ -361,6 +369,12 @@ export function DictionaryVaultScreen() {
                 <div className="lv-memrow"><span>下次</span><b style={{ color: reviewLabel(entry?.nextReviewAt) === '已到期' ? 'var(--rose-ink)' : 'var(--ink)' }}>{reviewLabel(entry?.nextReviewAt)}</b></div>
               </div>
             </div>
+            <div className="lv-aside-h">出处热度 · 跨 {backlinks.length} 处</div>
+            <div className="lv-srcheat">
+              {heat.entries.map(([src, cnt]) => { const sm = SOURCE_META[src] ?? SOURCE_META.dictionary; return (
+                <div className="lv-srcrow" key={src}><span className="lv-srcbadge" style={{ color: sm.accent, borderColor: sm.accent }}>{sm.zh}</span><div className="lv-srcbar"><i style={{ width: `${cnt / heat.max * 100}%`, background: sm.accent }} /></div><b>{cnt}</b></div>
+              ) })}
+            </div>
             <div className="lv-aside-h">快捷</div>
             <div className="lv-asideacts">
               <button className="lv-act primary" onClick={onReview}>{I.play} 加入今日复习</button>
@@ -371,6 +385,14 @@ export function DictionaryVaultScreen() {
 
           {/* 词源 */}
           <div className="fcard glass">{FK('词根 · 词源')}<div className="lv-body"><span className="lv-root">{etymology ? '词源' : wordStr}</span> {etymology || `${wordStr} 的词源信息将逐步补全。`}</div></div>
+
+          {/* 链接提及 */}
+          <div className="fcard glass">{FK('链接提及 · Backlinks')}
+            {backlinks.map((b, i) => { const sm = SOURCE_META[b.src] ?? SOURCE_META.dictionary; return (
+              <div className="lv-mention" key={i}><span className="lv-srcbadge" style={{ color: sm.accent, borderColor: sm.accent }}>{sm.zh}</span><span>{b.note}</span></div>
+            ) })}
+            <div className="lv-cnt" style={{ marginTop: 6 }}>跨 {backlinks.length} 处</div>
+          </div>
 
           {/* AI 解析 */}
           <div className="fcard glass">{FK('AI 解析')}<div className="lv-body">{defZh ? `${wordStr}${pos ? ' ' + pos : ''} — ${defZh}。${synonyms.length ? `近义：${synonyms.slice(0, 3).join('、')}。` : ''}` : `${wordStr} 的用法解析将由 AI 按你的水平生成。`}</div><button className="lv-act" style={{ marginTop: 12 }} onClick={() => dock('pilot')}>{I.pilot} 继续向 AI 追问 {I.arrow}</button></div>
@@ -389,62 +411,142 @@ export function DictionaryVaultScreen() {
       {/* 词库目录抽屉 */}
       <div className={`lvault-scrim${drawer ? ' open' : ''}`} onClick={() => setDrawer(false)} />
       <aside className={`lvault-drawer${drawer ? ' open' : ''}`}>
-        <VaultRail words={words} current={slug} due={getDue().length} wrong={wrongCount} onPick={setCur} onReview={() => { router.push('/memory'); setDrawer(false) }} />
+        <VaultRail words={words} wrongSet={wrongSet} current={slug} due={getDue().length + wrongAnswers.length} onPick={setCur} onReview={() => { router.push('/memory'); setDrawer(false) }} />
       </aside>
+
+      {/* 找词 · 词脊面板 */}
+      {palette && <WordPalette words={words} onPick={setCur} onClose={() => setPalette(false)} />}
 
       {toast && <div className="lvault-toast" dangerouslySetInnerHTML={{ __html: toast }} />}
     </div>
   )
 }
 
-// ── 词库目录（智能文件夹 + 列表 + 复习托盘）──
-function VaultRail({ words, current, due, wrong, onPick, onReview }: { words: WordEntry[]; current: string; due: number; wrong: number; onPick: (id: string) => void; onReview: () => void }) {
-  const [folder, setFolder] = useState('all')
-  const FOLDERS: { id: string; zh: string; q: (w: WordEntry) => boolean }[] = [
-    { id: 'all', zh: '全部', q: () => true },
-    { id: 'due', zh: '到期复习', q: w => w.nextReviewAt != null && w.nextReviewAt <= Date.now() },
-    { id: 'weak', zh: '薄弱词', q: w => w.state === 'weak' || riskOf(w) > 0.6 },
-    { id: 'learning', zh: '学习中', q: w => w.state === 'learning' || w.state === 'review' },
-    { id: 'mastered', zh: '已掌握', q: w => w.state === 'mastered' },
-    { id: 'fav', zh: '收藏', q: w => { try { return localStorage.getItem('lv-fav-' + w.id) === '1' } catch { return false } } },
-  ]
+// ── 找词 · 词脊命令面板（本页词条搜索/跳转）──
+function WordPalette({ words, onPick, onClose }: { words: WordEntry[]; onPick: (id: string) => void; onClose: () => void }) {
+  const [q, setQ] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null)
+  useEffect(() => { const t = setTimeout(() => inputRef.current?.focus(), 40); const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }; window.addEventListener('keydown', k); return () => { clearTimeout(t); window.removeEventListener('keydown', k) } }, [onClose])
   const list = useMemo(() => {
-    const q = FOLDERS.find(f => f.id === folder)?.q ?? (() => true)
-    return words.filter(q).sort((a, b) => riskOf(b) - riskOf(a)).slice(0, 200)
+    const s = q.toLowerCase().trim()
+    const base = [...words].sort((a, b) => riskOf(b) - riskOf(a))
+    return (s ? base.filter(w => w.word.toLowerCase().includes(s) || (w.zh || '').includes(s)) : base).slice(0, 50)
+  }, [q, words])
+  return (
+    <div className="lvault-pal" onMouseDown={onClose}>
+      <div className="lvault-pal-box" onMouseDown={e => e.stopPropagation()}>
+        <div className="lvault-pal-input">{I.search}<input ref={inputRef} value={q} onChange={e => setQ(e.target.value)} placeholder="搜索词脊 / 跳转…" /><button className="lvault-pal-esc" onClick={onClose}>esc</button></div>
+        <div className="lvault-pal-list">
+          {list.length === 0 && <div className="lv-muted" style={{ padding: 24, textAlign: 'center' }}>没有匹配的词</div>}
+          {list.map(w => { const st = STATE_META[w.state] ?? STATE_META.learning; return (
+            <button key={w.id} className="lvault-pal-item" onClick={() => onPick(w.word.toLowerCase())}>
+              <span className="pal-w">{w.word}</span><span className="pal-zh">{w.zh}</span>
+              <span className="lv-chip" style={{ color: st.light, borderColor: st.light }}><i style={{ background: st.light }} />{st.zh}</span>
+            </button>
+          ) })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ── 词库目录（LexiVault header + 搜索 + 智能文件夹 chips + 编号文件夹树 + 词行 + 复习托盘）──
+function VaultRail({ words, wrongSet, current, due, onPick, onReview }: { words: WordEntry[]; wrongSet: Set<string>; current: string; due: number; onPick: (id: string) => void; onReview: () => void }) {
+  const [filter, setFilter] = useState('all')
+  const [kid, setKid] = useState<string | null>(null)
+  const [openFolder, setOpenFolder] = useState<string | null>('vocab')
+  const [query, setQuery] = useState('')
+
+  const FILTERS: { id: string; zh: string; q: (w: WordEntry) => boolean }[] = [
+    { id: 'all', zh: '全部', q: () => true },
+    { id: 'recommended', zh: '推荐', q: w => w.state === 'recommended' },
+    { id: 'learning', zh: '学习中', q: w => w.state === 'learning' },
+    { id: 'review', zh: '待复习', q: w => w.state === 'review' || isDue(w) },
+    { id: 'weak', zh: '薄弱', q: w => w.state === 'weak' },
+    { id: 'mastered', zh: '已掌握', q: w => w.state === 'mastered' },
+    { id: 'saved', zh: '已收藏', q: w => isFav(w.id) || isFav(w.word.toLowerCase()) },
+  ]
+  // 编号文件夹树（结构对齐原型；以真实可派生信号填充）
+  const KIDS: Record<string, { zh: string; q: (w: WordEntry) => boolean }[]> = {
+    vocab: [
+      { zh: '学习中', q: w => w.state === 'learning' },
+      { zh: '待复习', q: w => w.state === 'review' || isDue(w) },
+      { zh: '薄弱词', q: w => w.state === 'weak' || riskOf(w) > 0.6 },
+      { zh: '已掌握', q: w => w.state === 'mastered' },
+      { zh: '已收藏', q: w => isFav(w.id) || isFav(w.word.toLowerCase()) },
+    ],
+  }
+  const FOLDERS: { id: string; code: string; zh: string; accent: string; q: (w: WordEntry) => boolean; kids?: { zh: string; q: (w: WordEntry) => boolean }[] }[] = [
+    { id: 'all', code: '00', zh: '全部词库', accent: '#2f6db0', q: () => true },
+    { id: 'vocab', code: '01', zh: '词汇库', accent: '#0e8c7a', q: () => true, kids: KIDS.vocab },
+    { id: 'wrong', code: '02', zh: '错题本', accent: '#bf4a30', q: w => wrongSet.has(w.word.toLowerCase()) },
+    { id: 'reading', code: '03', zh: '阅读笔记', accent: '#6d4bc4', q: w => w.source === 'reading' },
+    { id: 'scan', code: '04', zh: '扫描导入', accent: '#b3781f', q: w => w.source === 'scan' },
+  ]
+
+  const activeQ = (() => {
+    if (kid) { const ks = KIDS.vocab.find(k => k.zh === kid); return ks?.q ?? (() => true) }
+    const fo = FOLDERS.find(f => f.id === filter && f.id !== 'all' && f.id !== 'vocab')
+    if (fo) return fo.q
+    return FILTERS.find(f => f.id === filter)?.q ?? (() => true)
+  })()
+  const list = useMemo(() => {
+    const s = query.toLowerCase().trim()
+    let l = words.filter(activeQ)
+    if (s) l = l.filter(w => w.word.toLowerCase().includes(s) || (w.zh || '').includes(s))
+    return l.sort((a, b) => riskOf(b) - riskOf(a)).slice(0, 200)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [words, folder])
+  }, [words, filter, kid, query])
+  const activeLabel = kid ?? (FOLDERS.find(f => f.id === filter)?.zh) ?? (FILTERS.find(f => f.id === filter)?.zh) ?? '全部'
 
   return (
-    <>
-      <div className="dr-head">
-        <p className="dr-title">词库目录 · My Vault</p>
-        <div className="lib-modebar">
-          {FOLDERS.slice(0, 3).map(f => <button key={f.id} className={folder === f.id ? 'on' : ''} onClick={() => setFolder(f.id)}>{f.zh}</button>)}
+    <div className="lvr">
+      <div className="lvr-vault">
+        <span className="lvr-mark">{I.vault}</span>
+        <div><div className="lvr-vname">LexiVault</div><div className="lvr-vsub">词库 · 知识库</div></div>
+        <span className="lvr-cnt">{words.length}</span>
+      </div>
+      <div className="lvr-scroll">
+        <div className="lv-searchbox">{I.search}<input value={query} onChange={e => setQuery(e.target.value)} placeholder="搜索我的词…" /></div>
+        <div className="lvr-filters">
+          {FILTERS.map(f => { const c = words.filter(f.q).length; const on = filter === f.id && !kid; return <button key={f.id} className={`lv-fchip${on ? ' on' : ''}`} onClick={() => { setFilter(f.id); setKid(null) }}>{f.zh}{f.id !== 'all' ? ` · ${c}` : ''}</button> })}
         </div>
-        <div className="lib-modebar" style={{ marginTop: 0 }}>
-          {FOLDERS.slice(3).map(f => <button key={f.id} className={folder === f.id ? 'on' : ''} onClick={() => setFolder(f.id)}>{f.zh}</button>)}
+        <div className="lvr-eyebrow"><span>智能文件夹 · 实时</span></div>
+        <div>
+          {FOLDERS.map(f => {
+            const total = words.filter(f.q).length
+            const open = openFolder === f.id
+            if (!f.kids) return (
+              <div className="lvr-folder" key={f.id}><button className={`lvr-fhead${filter === f.id && !kid ? ' sel' : ''}`} onClick={() => { setFilter(f.id); setKid(null) }}><span className="chev ghost">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button></div>
+            )
+            return (
+              <div className="lvr-folder" key={f.id}>
+                <button className={`lvr-fhead${open ? ' open' : ''}`} onClick={() => setOpenFolder(open ? null : f.id)}><span className="chev">{I.chev}</span><span className="lvr-fcode" style={{ color: f.accent }}>{f.code}</span><span className="lvr-fzh">{f.zh}</span><span className="lvr-fcnt">{total}</span></button>
+                {open && <div>{f.kids.map(k => { const c = words.filter(k.q).length; const kon = kid === k.zh; return <button key={k.zh} className={`lvr-kid${kon ? ' on' : ''}`} onClick={() => { setKid(k.zh); setFilter('vocab') }}><i style={{ background: c ? f.accent : 'var(--line-strong)' }} /><span>{k.zh}</span><em>{c}</em></button> })}</div>}
+              </div>
+            )
+          })}
+        </div>
+        <div className="lvr-eyebrow"><span>{activeLabel} · {list.length}</span><span className="lvr-sort">风险 ↓</span></div>
+        <div className="lvr-list">
+          {list.length === 0 && <div className="lv-muted" style={{ padding: '14px 8px' }}>没有匹配的词</div>}
+          {list.map(w => {
+            const col = (STATE_META[w.state] ?? STATE_META.learning).light, r = riskOf(w), due2 = isDue(w)
+            return (
+              <button key={w.id} className={`lvr-wrow${w.word.toLowerCase() === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(w.word.toLowerCase())}>
+                <span className={`wdot${due2 ? ' due' : ''}`} style={{ background: col, color: col }} />
+                <span className="wmain"><span className="wl1"><span className="ww">{w.word}</span><span className="wphon">{w.phon || ''}</span></span><span className="wz">{w.zh}</span><span className="wmsbar"><i style={{ width: `${Math.round(masteryOf(w) * 100)}%`, background: col }} /></span></span>
+                <span className="wright"><span className="wrisk" style={{ color: riskColor(r) }}>{Math.round(r * 100)}%</span><span className={`wnext${due2 ? ' due' : ''}`}>{reviewLabel(w.nextReviewAt)}</span></span>
+              </button>
+            )
+          })}
         </div>
       </div>
-      <div className="dr-scroll">
-        {list.length === 0 && <div className="lv-muted" style={{ padding: '20px 8px' }}>该分组暂无词条</div>}
-        {list.map(w => {
-          const st = STATE_META[w.state] ?? STATE_META.learning
-          const lemma = w.word.toLowerCase()
-          return (
-            <button key={w.id} className={`lv-wrow${lemma === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(lemma)}>
-              <span className="wdot" style={{ background: st.light }} />
-              <span className="ww">{w.word}</span>
-              <span className="wz">{w.zh}</span>
-              <span className="wr" style={{ color: riskColor(riskOf(w)) }}>{Math.round(riskOf(w) * 100)}%</span>
-            </button>
-          )
-        })}
+      <div className={`review-tray${due === 0 ? ' empty' : ''}`}>
+        <span className="rt-ic">{I.play}</span>
+        <span className="rt-txt"><span className="rt-n">{due} <small>词待复习</small></span></span>
+        <button className="rt-go" onClick={onReview}>开始复习</button>
       </div>
-      <div className={`review-tray${due + wrong === 0 ? ' empty' : ''}`}>
-        <span className="rt-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36" /><path d="M21 3v5h-5" /></svg></span>
-        <span className="rt-txt"><span className="rt-n">{due + wrong} <small>词待复习</small></span></span>
-        <button className="rt-go" onClick={onReview}>开始</button>
-      </div>
-    </>
+    </div>
   )
 }
