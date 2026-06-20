@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { AppShell } from '@/components/layout/AppShell'
 import { RootsScreen } from '@/components/screens/RootsScreen'
 
@@ -5,7 +6,9 @@ import { RootsScreen } from '@/components/screens/RootsScreen'
 export default function RootsPage() {
   return (
     <AppShell>
-      <RootsScreen />
+      <Suspense>
+        <RootsScreen />
+      </Suspense>
     </AppShell>
   )
 }

@@ -1,0 +1,265 @@
+{
+  "generatedAt": "2026-06-16T04:07:17.951Z",
+  "ecdict": true,
+  "galaxies": [
+    {
+      "id": "junior",
+      "zh": "初中",
+      "tag": "zk",
+      "local": {
+        "total": 1987,
+        "noIpa": 4,
+        "noZh": 0,
+        "noPos": 1,
+        "noExample": 5,
+        "noPhrases": 211,
+        "orphan": 1676,
+        "edges0": 76,
+        "edges1": 1537,
+        "edges2": 597,
+        "families": 149,
+        "famAvg": 2.087248322147651,
+        "starDist": [
+          0,
+          18,
+          53,
+          96,
+          357,
+          1463
+        ]
+      },
+      "ecdict": {
+        "matched": 1987,
+        "realFreq": 1933,
+        "hasExchange": 1576,
+        "ipaFillable": 1,
+        "zhFillable": 0,
+        "tagHit": 1563,
+        "starMismatch": 1803,
+        "starCompared": 1933
+      }
+    },
+    {
+      "id": "senior",
+      "zh": "高中",
+      "tag": "gk",
+      "local": {
+        "total": 3743,
+        "noIpa": 14,
+        "noZh": 0,
+        "noPos": 1,
+        "noExample": 28,
+        "noPhrases": 559,
+        "orphan": 2665,
+        "edges0": 302,
+        "edges1": 3179,
+        "edges2": 1123,
+        "families": 482,
+        "famAvg": 2.236514522821577,
+        "starDist": [
+          0,
+          106,
+          166,
+          383,
+          981,
+          2107
+        ]
+      },
+      "ecdict": {
+        "matched": 3743,
+        "realFreq": 3623,
+        "hasExchange": 3025,
+        "ipaFillable": 0,
+        "zhFillable": 0,
+        "tagHit": 3650,
+        "starMismatch": 3315,
+        "starCompared": 3623
+      }
+    },
+    {
+      "id": "cet4",
+      "zh": "四级",
+      "tag": "cet4",
+      "local": {
+        "total": 4544,
+        "noIpa": 1,
+        "noZh": 0,
+        "noPos": 0,
+        "noExample": 34,
+        "noPhrases": 799,
+        "orphan": 2875,
+        "edges0": 433,
+        "edges1": 4603,
+        "edges2": 1364,
+        "families": 702,
+        "famAvg": 2.3774928774928776,
+        "starDist": [
+          0,
+          82,
+          183,
+          539,
+          1510,
+          2230
+        ]
+      },
+      "ecdict": {
+        "matched": 4544,
+        "realFreq": 4462,
+        "hasExchange": 3691,
+        "ipaFillable": 0,
+        "zhFillable": 0,
+        "tagHit": 3394,
+        "starMismatch": 4180,
+        "starCompared": 4462
+      }
+    },
+    {
+      "id": "cet6",
+      "zh": "六级",
+      "tag": "cet6",
+      "local": {
+        "total": 3991,
+        "noIpa": 0,
+        "noZh": 0,
+        "noPos": 1,
+        "noExample": 61,
+        "noPhrases": 1079,
+        "orphan": 2747,
+        "edges0": 243,
+        "edges1": 2765,
+        "edges2": 1198,
+        "families": 556,
+        "famAvg": 2.237410071942446,
+        "starDist": [
+          0,
+          124,
+          450,
+          1028,
+          1411,
+          978
+        ]
+      },
+      "ecdict": {
+        "matched": 3991,
+        "realFreq": 3955,
+        "hasExchange": 3250,
+        "ipaFillable": 0,
+        "zhFillable": 0,
+        "tagHit": 3362,
+        "starMismatch": 3389,
+        "starCompared": 3955
+      }
+    },
+    {
+      "id": "kaoyan",
+      "zh": "考研",
+      "tag": "ky",
+      "local": {
+        "total": 5047,
+        "noIpa": 0,
+        "noZh": 0,
+        "noPos": 0,
+        "noExample": 45,
+        "noPhrases": 928,
+        "orphan": 3626,
+        "edges0": 329,
+        "edges1": 5216,
+        "edges2": 1515,
+        "families": 607,
+        "famAvg": 2.341021416803954,
+        "starDist": [
+          0,
+          93,
+          253,
+          914,
+          1858,
+          1929
+        ]
+      },
+      "ecdict": {
+        "matched": 5046,
+        "realFreq": 4957,
+        "hasExchange": 4340,
+        "ipaFillable": 0,
+        "zhFillable": 0,
+        "tagHit": 4484,
+        "starMismatch": 4637,
+        "starCompared": 4957
+      }
+    },
+    {
+      "id": "toefl",
+      "zh": "托福",
+      "tag": "toefl",
+      "local": {
+        "total": 10367,
+        "noIpa": 130,
+        "noZh": 0,
+        "noPos": 1,
+        "noExample": 809,
+        "noPhrases": 4309,
+        "orphan": 5854,
+        "edges0": 1284,
+        "edges1": 8849,
+        "edges2": 3111,
+        "families": 1762,
+        "famAvg": 2.5612939841089672,
+        "starDist": [
+          0,
+          1577,
+          1954,
+          2260,
+          2341,
+          2235
+        ]
+      },
+      "ecdict": {
+        "matched": 10357,
+        "realFreq": 9727,
+        "hasExchange": 7363,
+        "ipaFillable": 2,
+        "zhFillable": 0,
+        "tagHit": 5128,
+        "starMismatch": 6434,
+        "starCompared": 9727
+      }
+    },
+    {
+      "id": "sat",
+      "zh": "SAT",
+      "tag": null,
+      "local": {
+        "total": 4464,
+        "noIpa": 21,
+        "noZh": 0,
+        "noPos": 14,
+        "noExample": 467,
+        "noPhrases": 2630,
+        "orphan": 3421,
+        "edges0": 226,
+        "edges1": 2445,
+        "edges2": 706,
+        "families": 468,
+        "famAvg": 2.2286324786324787,
+        "starDist": [
+          0,
+          1267,
+          1201,
+          906,
+          671,
+          419
+        ]
+      },
+      "ecdict": {
+        "matched": 4455,
+        "realFreq": 4193,
+        "hasExchange": 2984,
+        "ipaFillable": 0,
+        "zhFillable": 0,
+        "tagHit": 0,
+        "starMismatch": 1872,
+        "starCompared": 4193
+      }
+    }
+  ]
+}

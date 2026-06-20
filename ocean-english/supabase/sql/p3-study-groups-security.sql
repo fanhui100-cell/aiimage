@@ -19,7 +19,16 @@ $$;
 REVOKE ALL ON FUNCTION public.is_group_member(uuid, uuid) FROM public;
 GRANT EXECUTE ON FUNCTION public.is_group_member(uuid, uuid) TO authenticated;
 
--- 2) 读策略：本人 / 公开组 / 自己拥有的组 / 自己所属的组
+-- 2) study_groups 读策略：公开组 / 自己拥有的组 / 自己所属的组。
+--    重要：不要在 policy 内直接 SELECT group_members，避免与 group_members_read 互相递归。
+DROP POLICY IF EXISTS "study_groups_read" ON study_groups;
+CREATE POLICY "study_groups_read" ON study_groups FOR SELECT USING (
+  is_public
+  OR owner_id = auth.uid()
+  OR public.is_group_member(study_groups.id, auth.uid())
+);
+
+-- 3) group_members 读策略：本人 / 公开组 / 自己拥有的组 / 自己所属的组
 DROP POLICY IF EXISTS "group_members_read" ON group_members;
 CREATE POLICY "group_members_read" ON group_members FOR SELECT USING (
   user_id = auth.uid()
@@ -31,7 +40,7 @@ CREATE POLICY "group_members_read" ON group_members FOR SELECT USING (
   OR public.is_group_member(group_members.group_id, auth.uid())
 );
 
--- 3) 直接自助加入仅限公开组 / 自己的组；私有组走下方 RPC（带邀请码校验）
+-- 4) 直接自助加入仅限公开组 / 自己的组；私有组走下方 RPC（带邀请码校验）
 DROP POLICY IF EXISTS "group_members_join_self" ON group_members;
 CREATE POLICY "group_members_join_self" ON group_members FOR INSERT WITH CHECK (
   user_id = auth.uid()
@@ -42,7 +51,7 @@ CREATE POLICY "group_members_join_self" ON group_members FOR INSERT WITH CHECK (
   )
 );
 
--- 4) 按 group_id 加入：公开组直接进；私有组需匹配邀请码（SECURITY DEFINER 绕过 INSERT 策略）
+-- 5) 按 group_id 加入：公开组直接进；私有组需匹配邀请码（SECURITY DEFINER 绕过 INSERT 策略）
 CREATE OR REPLACE FUNCTION public.join_group(gid uuid, code text DEFAULT NULL)
 RETURNS boolean
 LANGUAGE plpgsql SECURITY DEFINER SET search_path = public AS $$
@@ -52,7 +61,7 @@ BEGIN
   SELECT * INTO g FROM study_groups WHERE id = gid;
   IF NOT FOUND THEN RAISE EXCEPTION 'group_not_found'; END IF;
   IF (NOT g.is_public) AND g.owner_id <> uid
-     AND (code IS NULL OR g.invite_code IS NULL OR btrim(code) <> g.invite_code) THEN
+     AND (code IS NULL OR g.invite_code IS NULL OR upper(btrim(code)) <> upper(g.invite_code)) THEN
     RAISE EXCEPTION 'invite_required';
   END IF;
   INSERT INTO group_members (group_id, user_id) VALUES (gid, uid)
@@ -62,7 +71,7 @@ END; $$;
 REVOKE ALL ON FUNCTION public.join_group(uuid, text) FROM public;
 GRANT EXECUTE ON FUNCTION public.join_group(uuid, text) TO authenticated;
 
--- 5) 按邀请码加入：私有组不可被发现，只能凭码加入（SECURITY DEFINER 绕过 study_groups 读策略）
+-- 6) 按邀请码加入：私有组不可被发现，只能凭码加入（SECURITY DEFINER 绕过 study_groups 读策略）
 CREATE OR REPLACE FUNCTION public.join_group_by_code(code text)
 RETURNS uuid
 LANGUAGE plpgsql SECURITY DEFINER SET search_path = public AS $$
@@ -70,7 +79,7 @@ DECLARE g study_groups%ROWTYPE; uid uuid := auth.uid();
 BEGIN
   IF uid IS NULL THEN RAISE EXCEPTION 'not_authenticated'; END IF;
   IF code IS NULL OR btrim(code) = '' THEN RAISE EXCEPTION 'invite_required'; END IF;
-  SELECT * INTO g FROM study_groups WHERE invite_code = btrim(code);
+  SELECT * INTO g FROM study_groups WHERE upper(invite_code) = upper(btrim(code));
   IF NOT FOUND THEN RAISE EXCEPTION 'group_not_found'; END IF;
   INSERT INTO group_members (group_id, user_id) VALUES (g.id, uid)
     ON CONFLICT (group_id, user_id) DO NOTHING;

@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-06-20T15:17:34.389Z",
+  "schema": "not_applied",
+  "apply": false,
+  "provider": "azure",
+  "audioConfigMissing": [
+    "SUPABASE_AUDIO_BUCKET",
+    "AUDIO_TTS_API_KEY"
+  ],
+  "stimuliNeedingAudio": 0,
+  "byExam": {},
+  "byLevel": {},
+  "samples": [],
+  "note": "v2 未应用，无可生成项。"
+}

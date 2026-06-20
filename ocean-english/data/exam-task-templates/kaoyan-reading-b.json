@@ -1,0 +1,34 @@
+{
+  "templateId": "kaoyan-reading-b",
+  "examIds": ["kaoyan"],
+  "taskType": "para_match",
+  "skill": "reading",
+  "variants": ["para_match", "seven_select"],
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "写一篇约 500-600 词的全新原创长文（分 5-7 段，学术/社会题材），出 5 个陈述句，每句匹配到含该信息的段落；段落用强同义改写避免与陈述字面对应。输出 statements（5 句）、answers（5 个段落索引）、paras（段落数）。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 450,
+    "maxWords": 650,
+    "perStimulusItems": 5,
+    "topicDomains": ["学术", "社会", "科技", "人文", "经济"]
+  },
+  "itemCount": 5,
+  "optionCount": 7,
+  "answerSchema": {
+    "shape": "statements_answers",
+    "statements": 5,
+    "answerRange": "0-(paras-1)"
+  },
+  "subskills": ["paraphrase", "scanning", "info_matching", "gist"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "考研 Part B 仅阅读新题型；不得包含听力或口语任务",
+    "5 个陈述，匹配段落需强同义改写（避免字面对应）",
+    "答案落在合法段落区间 0..paras-1",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

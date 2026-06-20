@@ -9,7 +9,7 @@ import { PRIMARY_NAV, type PrimaryNavKey } from '@/lib/product-flow/nav'
 import { NumberRoll } from '@/components/ui/NumberRoll'
 
 /* 聚焦流路由 — 在这些页面隐藏底部 Tab，显示悬浮返回 */
-export const FOCUS_ROUTES = ['/quiz', '/exam', '/pronunciation', '/scan', '/learn']
+export const FOCUS_ROUTES = ['/quiz', '/pronunciation', '/scan', '/learn', '/drill']
 /* chromeless 路由 — 不显示任何全局导航 */
 export const CHROMELESS_ROUTES = ['/onboarding', '/lexiverse']
 

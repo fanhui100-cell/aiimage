@@ -1,11 +1,6 @@
-import { AppShell } from '@/components/layout/AppShell'
-import { ReportScreen } from '@/components/screens/ReportScreen'
+import { permanentRedirect } from 'next/navigation'
 
-// D2：学习报告 — 记忆矩阵 / 状态分布 / 跨维雷达 / 强度柱 / 热力图 / 个人遗忘曲线
-export default function ReportPage() {
-  return (
-    <AppShell>
-      <ReportScreen />
-    </AppShell>
-  )
+// 界面优化2·导航合并：报告已并入「我的 → 数据」。旧路由 308 永久重定向到对应 tab。
+export default function ReportRedirect() {
+  permanentRedirect('/profile?tab=data')
 }

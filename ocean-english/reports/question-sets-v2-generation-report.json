@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-06-20T17:13:36.384Z",
+  "template": "cet-banked-cloze",
+  "taskType": "banked_cloze",
+  "skill": "reading",
+  "examIds": [
+    "cet4",
+    "cet6"
+  ],
+  "level": 3,
+  "count": 2,
+  "itemCount": 10,
+  "optionCount": 15,
+  "answerSchema": {
+    "shape": "bank_answers",
+    "bank": 15,
+    "answers": 10,
+    "answerRange": "0-14",
+    "posTags": true
+  },
+  "subskills": [
+    "pos_consistency",
+    "collocation",
+    "context_coherence",
+    "word_form"
+  ],
+  "generationMode": "ai",
+  "copyrightPolicy": "original_only",
+  "apply": false,
+  "wrote": 0,
+  "note": "dry-run：未调用 DeepSeek、未写库。"
+}

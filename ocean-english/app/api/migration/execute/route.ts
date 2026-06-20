@@ -15,6 +15,12 @@ import type {
   MigrationSavedWord,
   LocalStudyProgress,
 } from '@/lib/migration/migration-types'
+import {
+  buildMigratedQuizAttemptRows,
+  type MigrationQuizAttemptPayload,
+} from '@/lib/migration/quiz-migration-utils'
+import type { QuestionAnswerLookupRow } from '@/lib/sync/quiz-history-utils'
+import { buildWrongAnswerRows } from '@/lib/sync/wrong-answer-utils'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 const MAX_RAW_TEXT_PREVIEW = 3000
@@ -73,18 +79,10 @@ async function migrateWrongAnswers(
   items: LocalWrongAnswer[],
 ): Promise<number> {
   if (items.length === 0) return 0
-  const rows = items.map(w => ({
-    user_id: userId,
-    word_id: w.wordId,
-    word: w.word,
-    question: w.question,
-    user_answer: w.userAnswer,
-    correct_answer: w.correctAnswer,
-    explanation: w.explanation ?? '',
-    source: 'quiz' as const,
-    occurred_at: new Date(w.timestamp).toISOString(),
-  }))
-  const { error } = await supabase.from('wrong_answers').insert(rows)
+  const rows = buildWrongAnswerRows(userId, items)
+  const { error } = await supabase
+    .from('wrong_answers')
+    .upsert(rows, { onConflict: 'user_id,dedupe_key', ignoreDuplicates: true })
   if (error) throw new Error(error.message)
   return rows.length
 }
@@ -126,17 +124,25 @@ async function migrateQuizSessions(
 
     if (sErr || !inserted) continue
 
-    const attemptRows = (Array.isArray(s.attempts) ? s.attempts : []).map(a => ({
-      session_id: inserted.id,
-      user_id: userId,
-      question_id: a.questionId ?? null,
-      word_id: a.wordId,
-      word: a.word,
-      user_answer: a.userAnswer,
-      correct_answer: a.userAnswer,   // local attempt doesn't store correct answer separately
-      is_correct: a.correct,
-      answered_at: new Date(a.timestamp).toISOString(),
-    }))
+    const attempts = (Array.isArray(s.attempts) ? s.attempts : []) as MigrationQuizAttemptPayload[]
+    const missingAnswerQuestionIds = [
+      ...new Set(
+        attempts
+          .filter((attempt) => !attempt.correctAnswer && attempt.questionId)
+          .map((attempt) => attempt.questionId as string),
+      ),
+    ]
+    let answerRows: QuestionAnswerLookupRow[] = []
+
+    if (missingAnswerQuestionIds.length > 0) {
+      const { data } = await supabase
+        .from('question_bank')
+        .select('id,answer,answer_text,choices')
+        .in('id', missingAnswerQuestionIds)
+      answerRows = (data ?? []) as QuestionAnswerLookupRow[]
+    }
+
+    const attemptRows = buildMigratedQuizAttemptRows(inserted.id, userId, attempts, answerRows)
 
     if (attemptRows.length > 0) {
       const { error: aErr } = await supabase.from('quiz_attempts').insert(attemptRows)

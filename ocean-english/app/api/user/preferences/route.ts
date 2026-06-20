@@ -1,6 +1,10 @@
 import { createClient } from '@/lib/supabase/server'
 import { isSupabaseConfigured } from '@/lib/supabase/client'
 import { NextResponse, type NextRequest } from 'next/server'
+import {
+  buildPreferencesUpsertRow,
+  type PreferencesPayload,
+} from '@/lib/sync/preferences-utils'
 
 const VALID_LEVELS = ['beginner','elementary','intermediate','advanced','exam-prep','free-explore'] as const
 
@@ -28,7 +32,7 @@ export async function PUT(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 })
 
-  let body: { level?: string; numericLevel?: number }
+  let body: PreferencesPayload
   try { body = await request.json() } catch { return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 }) }
 
   const level = body.level
@@ -42,14 +46,19 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ ok: false, error: 'invalid_numeric_level' }, { status: 400 })
   }
 
+  const { data: existing, error: existingError } = await supabase
+    .from('user_learning_preferences')
+    .select('level,numeric_level,daily_goal,ui_language')
+    .eq('user_id', user.id)
+    .maybeSingle()
+
+  if (existingError && existingError.code !== 'PGRST116') {
+    return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
+  }
+
   const { error } = await supabase
     .from('user_learning_preferences')
-    .upsert({
-      user_id: user.id,
-      level: level ?? null,
-      ...(numericLevel !== undefined ? { numeric_level: numericLevel } : {}),
-      updated_at: new Date().toISOString(),
-    }, { onConflict: 'user_id' })
+    .upsert(buildPreferencesUpsertRow(user.id, body, existing ?? null), { onConflict: 'user_id' })
 
   if (error) return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
   return NextResponse.json({ ok: true })

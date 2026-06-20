@@ -56,30 +56,6 @@ const TOOL_ICON: Record<string, (p?: { s?: number }) => React.ReactNode> = {
 
 // ── Sub-components ─────────────────────────────────────────────────────────
 
-function HomeHeader() {
-  const streak = useLexiStore(s => s.streakData.current)
-  const h = new Date().getHours()
-  const greet = h < 5 ? '夜深了，学一个就睡'
-    : h < 12 ? '早上好，先拿下今天的词'
-    : h < 18 ? '下午好，继续你的航行'
-    : '晚上好，收个尾再休息'
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-      <div>
-        <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--teal-ink)', opacity: 0.72 }}>欢迎回来 · Welcome back</p>
-        <h1 style={{ margin: '2px 0 0', fontFamily: 'var(--font-serif-zh)', fontWeight: 600, fontSize: 'clamp(24px,3.2vw,32px)', color: 'var(--ink)' }}>
-          {greet}
-        </h1>
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '8px 14px', borderRadius: 999, background: 'var(--card)', border: '1px solid var(--line)', flexShrink: 0 }}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-ink)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2c1 4 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3 .5 2 2 2.5 2 2.5C9 8 12 6 12 2z"/></svg>
-        <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 15, color: 'var(--ink)' }}>{streak}</span>
-        <span style={{ fontSize: 12, color: 'var(--ink-sub)' }}>天</span>
-      </div>
-    </div>
-  )
-}
-
 function MiniStat({ label, n, color }: { label: string; n: number; color: string }) {
   return (
     <div style={{ textAlign: 'center' }}>

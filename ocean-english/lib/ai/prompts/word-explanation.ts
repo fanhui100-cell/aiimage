@@ -20,7 +20,7 @@ export function buildWordExplanationMessages(req: WordExplanationRequest): AIMes
 
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's vocabulary analysis engine. Explain English words accurately and bilingually.
+    content: `You are Lexiverse's vocabulary analysis engine. Explain English words accurately and bilingually.
 
 ${depth}
 

@@ -11,6 +11,21 @@ import './speaking.css'
 
 interface Scene { id: string; nm: string; en: string; ic: string; bg: string; ds: string }
 interface Msg { role: 'user' | 'assistant'; content: string; feedbackZh?: string }
+interface SpeechRecognitionResultLike { transcript?: string }
+interface SpeechRecognitionEventLike {
+  results?: ArrayLike<ArrayLike<SpeechRecognitionResultLike>>
+}
+interface SpeechRecognitionLike {
+  lang: string
+  interimResults: boolean
+  maxAlternatives: number
+  onresult: ((event: SpeechRecognitionEventLike) => void) | null
+  onerror: (() => void) | null
+  onend: (() => void) | null
+  start: () => void
+  stop: () => void
+}
+type SpeechRecognitionCtor = new () => SpeechRecognitionLike
 
 const SCENES: Scene[] = [
   { id: 'cafe', nm: '咖啡馆点餐', en: 'Ordering coffee', ic: '☕', bg: '#c98a2e', ds: '练习点单、加料、结账的日常表达。' },
@@ -76,14 +91,16 @@ export function SpeakingScreen() {
   }
 
   function startRec() {
-    const SR = (window as unknown as { SpeechRecognition?: new () => unknown; webkitSpeechRecognition?: new () => unknown }).SpeechRecognition
-      || (window as unknown as { webkitSpeechRecognition?: new () => unknown }).webkitSpeechRecognition
+    const speechWindow = window as unknown as {
+      SpeechRecognition?: SpeechRecognitionCtor
+      webkitSpeechRecognition?: SpeechRecognitionCtor
+    }
+    const SR = speechWindow.SpeechRecognition || speechWindow.webkitSpeechRecognition
     if (!SR) { setMicHint('当前浏览器不支持语音识别，请打字'); setTimeout(() => setMicHint(null), 2200); return }
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const rec: any = new (SR as any)()
+      const rec = new SR()
       rec.lang = 'en-US'; rec.interimResults = false; rec.maxAlternatives = 1
-      rec.onresult = (e: any) => { const tr = e.results?.[0]?.[0]?.transcript; if (tr) void send(tr) }
+      rec.onresult = (e) => { const tr = e.results?.[0]?.[0]?.transcript; if (tr) void send(tr) }
       rec.onerror = () => { setRecording(false); setMicHint('没听清，再试一次或打字'); setTimeout(() => setMicHint(null), 2000) }
       rec.onend = () => setRecording(false)
       recRef.current = { stop: () => rec.stop() }

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "public/**",
+    // 设计交付/参照（HTML/JSX 原型）只作参考，不进运行时打包，不纳入 lint。
+    "docs/**",
   ]),
   // R3F animation patterns: Three.js objects are intentionally mutated per-frame.
   {
@@ -35,6 +37,16 @@ const eslintConfig = defineConfig([
       // Reading localStorage (external system) on mount is legitimate synchronization.
       // The rule is too strict for this well-established React pattern.
       "react-hooks/set-state-in-effect": "off",
+    },
+  },
+  // scripts/** 是一次性 CLI 工具（数据生成/审计/迁移，tsx 直跑），不进运行时打包；
+  // Supabase 动态查询结果用 any 是务实选择，放宽这两条以免污染 CI 主门禁。
+  {
+    files: ["scripts/**/*.ts"],
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "prefer-const": "off",
     },
   },
 ]);

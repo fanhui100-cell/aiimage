@@ -8,7 +8,7 @@ export function buildStudyPlanMessages(req: StudyPlanRequest): AIMessage[] {
 
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's study planner. Create a practical 4-week English learning plan.
+    content: `You are Lexiverse's study planner. Create a practical 4-week English learning plan.
 
 Respond in this bilingual format:
 **Study Plan / 学习计划** — ${level} level

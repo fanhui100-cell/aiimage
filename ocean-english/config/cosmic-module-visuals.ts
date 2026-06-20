@@ -21,7 +21,7 @@ export const cosmicModuleVisuals: CosmicModuleVisual[] = [
     color: '#8B5CF6',
     secondaryColor: '#C4B5FD',
     futureVisualDescription:
-      'AI Navigator sits at the gravitational center of the universe — rendered as a pulsing singularity whose pulse rate is driven by daily task completion rate from Zustand.',
+      '领航 LexiPilot sits at the gravitational center of the universe — rendered as a pulsing singularity whose pulse rate is driven by daily task completion rate from Zustand.',
   },
   {
     moduleId: 'vocabulary-roots',

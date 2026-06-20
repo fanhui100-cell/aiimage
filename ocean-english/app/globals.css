@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* =========================================================================
-   LexiOcean — "Abyssal Luminescence / 深海辉光" 设计系统
+   Lexiverse — "Abyssal Luminescence / 深海辉光" 设计系统
    深↔浅双环境:沉浸探索走深海暗色,日常学习/阅读走米白日光。
    - 单一主辉光(青绿),金色仅用于成就。
    - 向后兼容:保留旧 var 名(--bg-deep / --accent-blue / --glass-* / --particle-*),
@@ -31,6 +31,12 @@
   --rose: #ff8a72;             /* due / 告警(暗) */
   --rose-ink: #bf4a30;         /* (浅) */
   --blue-ink: #3b5bd9;         /* 学习中(浅色环境) */
+  --violet-ink: #6d4bc4;       /* 阅读 / 精读(浅) */
+  /* 角色色淡底（练习 / 今日卡用；与各 -ink 同色低透明） */
+  --gold-bg: rgba(179,120,31,0.10);
+  --rose-bg: rgba(191,74,48,0.09);
+  --blue-bg: rgba(59,91,217,0.08);
+  --violet-bg: rgba(109,75,196,0.10);
 
   /* ── 暗色文字 ── */
   --text-primary: #eef5f9;
@@ -211,9 +217,20 @@ html, body {
 
   --gold-ink:   #d4a24a;
   --rose-ink:   #e06055;
+  --blue-ink:   #7da0ff;
+  --violet-ink: #a98be6;
+
+  /* 角色色淡底（夜间提亮，避免浅底贴深卡） */
+  --teal-bg:    rgba(79,230,206,0.12);
+  --gold-bg:    rgba(212,162,74,0.14);
+  --rose-bg:    rgba(224,96,85,0.14);
+  --blue-bg:    rgba(125,160,255,0.14);
+  --violet-bg:  rgba(169,139,230,0.14);
 
   --card-shadow:    0 2px 12px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3);
   --card-shadow-sm: 0 1px 6px rgba(0,0,0,0.28);
+  --shadow-rest:  0 1px 2px rgba(0,0,0,.4), 0 4px 14px -8px rgba(0,0,0,.5);
+  --shadow-hover: 0 2px 4px rgba(0,0,0,.45), 0 12px 28px -12px rgba(0,0,0,.6);
 }
 
 /* ── §15.2 移动端底部 Tab 安全间距 ─────────────────────────────────────── */
@@ -518,3 +535,87 @@ body::before {
   height: 44px;
   transform: translate(-50%, -50%);
 }
+
+
+/* ===== 界面优化2·组件接入（globals.additions.css）===== */
+/* ============================================================================
+   组件接入补丁 · 追加到 app/globals.css 末尾
+   ----------------------------------------------------------------------------
+   · 沿用既有 §Bn 分段命名（B3 SpotlightCard / B7 ShinyText 已在库中）
+   · 颜色一律走 CSS 变量；结构 / 动画在此，主题色由 TSX 内联 style 按 dark 切换
+   · 每段都给 prefers-reduced-motion 兜底
+   ============================================================================ */
+
+/* ── §B7b Button「shimmer」变体（扫光主 CTA）─────────────────────────────── */
+.lx-btn--shimmer {
+  position: relative; overflow: hidden;
+  background: var(--teal-ink); color: #fff; border: none;
+  box-shadow: 0 12px 26px -14px rgba(14, 140, 122, 0.8);
+}
+.lx-btn--shimmer::after {
+  content: ''; position: absolute; top: 0; left: -60%; width: 48%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: skewX(-18deg); animation: btnSweep 2.8s ease-in-out infinite; pointer-events: none;
+}
+@keyframes btnSweep { 0% { left: -60%; } 55%, 100% { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { .lx-btn--shimmer::after { display: none; } }
+
+/* ── §B8 CommandPalette（⌘K）──────────────────────────────────────────────── */
+@keyframes cmdkFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cmdkPop  { from { opacity: 0; transform: translateY(-10px) scale(.99); } to { opacity: 1; transform: none; } }
+.cmdk-backdrop { animation: cmdkFade .16s ease; }
+.cmdk-panel    { animation: cmdkPop .2s cubic-bezier(.2,.8,.2,1); }
+.cmdk-list::-webkit-scrollbar { width: 8px; }
+.cmdk-list::-webkit-scrollbar-thumb { background: var(--teal-deep); border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { .cmdk-backdrop, .cmdk-panel { animation: none; } }
+
+/* ── §B9 BorderBeam（流光描边 · 克制使用：战绩 / 里程碑卡）─────────────────── */
+@property --beam-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.border-beam { position: relative; }
+.border-beam::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: var(--beam-w, 1.6px);
+  background: conic-gradient(from var(--beam-angle, 0deg), transparent 0deg,
+    var(--beam-c, var(--teal-ink)) 42deg, var(--beam-c2, var(--gold-ink)) 72deg, transparent 116deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: beamSpin var(--beam-speed, 4s) linear infinite; pointer-events: none;
+}
+@keyframes beamSpin { to { --beam-angle: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .border-beam::before { animation: none; opacity: .45; } }
+
+/* ── §B10 RingProgress（环形进度）────────────────────────────────────────── */
+.ring-fg { transition: stroke-dashoffset .7s cubic-bezier(.4,0,.2,1), stroke .3s; }
+@media (prefers-reduced-motion: reduce) { .ring-fg { transition: none; } }
+
+/* ── §B11 Marquee（词汇跑马灯）───────────────────────────────────────────── */
+.marquee { overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; width: max-content; gap: 12px; animation: marqueeMarch var(--mq-speed, 18s) linear infinite; }
+.marquee-track.is-reverse { animation-direction: reverse; }
+.marquee:hover .marquee-track.is-pausable { animation-play-state: paused; }
+@keyframes marqueeMarch { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* ── §B12 AnimatedBeam（节点连线 · 词根→派生词 / LexiGraph）───────────────── */
+.abeam-flow { stroke-dasharray: 6 10; animation: abeamDash 1s linear infinite; }
+@keyframes abeamDash { to { stroke-dashoffset: -32; } }
+@media (prefers-reduced-motion: reduce) { .abeam-flow { animation: none; stroke-dasharray: none; } }
+
+/* ── §B13 AIPromptInput（领航员输入条 · 米白）────────────────────────────── */
+@property --aip-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.aip-pill { position: relative; }
+.aip-pill::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.6px;
+  background: conic-gradient(from var(--aip-angle, 0deg), transparent, var(--teal-ink), transparent 50%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: aipRot 3.6s linear infinite; pointer-events: none; opacity: .6;
+}
+.aip-pill:focus-within::before { opacity: 1; }
+@keyframes aipRot { to { --aip-angle: 360deg; } }
+.aip-typing i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-muted); animation: aipEq .9s ease-in-out infinite; }
+.aip-typing i:nth-child(2) { animation-delay: .15s; }
+.aip-typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes aipEq { 0%, 100% { opacity: .3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) { .aip-pill::before, .aip-typing i { animation: none; } }

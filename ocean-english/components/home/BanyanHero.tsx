@@ -10,7 +10,7 @@ export const NAVIGATE_MAP: Record<string, string> = {
   reading:       '/reading',
   quiz:          '/quiz',
   review:        '/memory',
-  exam:          '/exam',
+  exam:          '/drill',
   pronunciation: '/pronunciation',
   scan:          '/scan',
   chat:          '/chat',

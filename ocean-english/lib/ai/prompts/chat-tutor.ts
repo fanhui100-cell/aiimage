@@ -18,7 +18,7 @@ export function buildChatTutorMessages(
 
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's AI English tutor — knowledgeable, encouraging, and precise.
+    content: `You are Lexiverse's AI English tutor — knowledgeable, encouraging, and precise.
 
 Student level: ${level}
 Instruction style: ${guidance}

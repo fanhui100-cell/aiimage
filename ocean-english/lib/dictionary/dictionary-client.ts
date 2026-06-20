@@ -25,11 +25,18 @@ import type { DictionaryClient, DictionaryWord, WordLevel, WordSearchOptions } f
 export type { DictionaryClient, DictionaryWord, WordSearchOptions } from './dictionary-types'
 
 const ADAPTER_TIMEOUT_MS = 2500
+const ALL_DICTIONARY_WORDS_PAGE_SIZE = 1000
+const ALL_DICTIONARY_WORDS_MAX_WORDS = 50000
+const ALL_DICTIONARY_WORDS_TIMEOUT_MS = 60_000
 
-function withAdapterTimeout<T>(promise: Promise<T>, fallback: T): Promise<T> {
+function withAdapterTimeout<T>(
+  promise: Promise<T>,
+  fallback: T,
+  timeoutMs = ADAPTER_TIMEOUT_MS,
+): Promise<T> {
   return Promise.race([
     promise.catch(() => fallback),
-    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ADAPTER_TIMEOUT_MS)),
+    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), timeoutMs)),
   ])
 }
 
@@ -55,7 +62,11 @@ class CompositeDictionaryClient implements DictionaryClient {
     // 无结果/未配置才回退 seed 链合并去重（保离线可用）。
     const live = this.adapters.find(a => a.isLive)
     if (live) {
-      const results = await withAdapterTimeout(live.searchWords(query, options), [])
+      const results = await withAdapterTimeout(
+        live.searchWords(query, options),
+        [],
+        options?.adapterTimeoutMs,
+      )
       if (results.length) return results
     }
     const seen = new Set<string>()
@@ -65,6 +76,7 @@ class CompositeDictionaryClient implements DictionaryClient {
       const results = await withAdapterTimeout(
         adapter.searchWords(query, { ...options, offset: 0, limit: undefined }),
         [],
+        options?.adapterTimeoutMs,
       )
       for (const w of results) {
         if (!seen.has(w.id)) {
@@ -102,6 +114,10 @@ class CompositeDictionaryClient implements DictionaryClient {
 
 let _client: CompositeDictionaryClient | null = null
 
+export function createDictionaryClientFromAdapters(adapters: DictionaryClient[]): DictionaryClient {
+  return new CompositeDictionaryClient(adapters)
+}
+
 /**
  * Returns the active DictionaryClient.
  *
@@ -127,10 +143,49 @@ export async function lookupWord(slug: string): Promise<DictionaryWord | null> {
 }
 
 /**
+ * Collect every word from a DictionaryClient by paging through searchWords.
+ * Supabase/PostgREST can cap a single range, so Lexiverse cannot rely on one
+ * oversized limit when building the full galaxy.
+ */
+export async function collectAllDictionaryWordsFromClient(
+  client: DictionaryClient,
+  pageSize = ALL_DICTIONARY_WORDS_PAGE_SIZE,
+  maxWords = ALL_DICTIONARY_WORDS_MAX_WORDS,
+  adapterTimeoutMs = ALL_DICTIONARY_WORDS_TIMEOUT_MS,
+): Promise<DictionaryWord[]> {
+  const safePageSize = Math.max(1, Math.floor(pageSize))
+  const safeMaxWords = Math.max(safePageSize, Math.floor(maxWords))
+  const seen = new Set<string>()
+  const words: DictionaryWord[] = []
+
+  for (let offset = 0; offset < safeMaxWords; offset += safePageSize) {
+    const batch = await client.searchWords('', {
+      offset,
+      limit: safePageSize,
+      adapterTimeoutMs,
+    })
+    if (!batch.length) break
+
+    let added = 0
+    for (const word of batch) {
+      if (!seen.has(word.id)) {
+        seen.add(word.id)
+        words.push(word)
+        added += 1
+      }
+    }
+
+    if (batch.length < safePageSize || added === 0 || words.length >= safeMaxWords) break
+  }
+
+  return words.slice(0, safeMaxWords)
+}
+
+/**
  * Return every word across all adapters (deduped by id).
  * Used by Lexiverse to build galaxy planet lists.
  * Client-side usage: call via useLexiverseDictionary hook (module-cached).
  */
 export async function getAllDictionaryWords(): Promise<DictionaryWord[]> {
-  return getDictionaryClient().searchWords('', { limit: 9999 })
+  return collectAllDictionaryWordsFromClient(getDictionaryClient())
 }

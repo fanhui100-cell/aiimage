@@ -13,7 +13,7 @@ export function buildDocumentAnalysisMessages(
 ): AIMessage[] {
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's document analysis engine for English learners.
+    content: `You are Lexiverse's document analysis engine for English learners.
 Your job: analyze English learning materials and extract structured study insights.
 
 Student level: ${userLevel}

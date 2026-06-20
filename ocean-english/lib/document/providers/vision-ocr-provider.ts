@@ -24,7 +24,7 @@ export class GeminiVisionOCRProvider implements OCRProvider {
   constructor() {
     this.apiKey = process.env.GEMINI_API_KEY ?? ''
     if (!this.apiKey) {
-      console.warn('[LexiOcean OCR] GEMINI_API_KEY is not set. Gemini Vision OCR will not function.')
+      console.warn('[Lexiverse OCR] GEMINI_API_KEY is not set. Gemini Vision OCR will not function.')
     }
   }
 
@@ -60,7 +60,7 @@ export class OpenAIVisionOCRProvider implements OCRProvider {
   constructor() {
     this.apiKey = process.env.OPENAI_API_KEY ?? ''
     if (!this.apiKey) {
-      console.warn('[LexiOcean OCR] OPENAI_API_KEY is not set. OpenAI Vision OCR will not function.')
+      console.warn('[Lexiverse OCR] OPENAI_API_KEY is not set. OpenAI Vision OCR will not function.')
     }
   }
 

@@ -73,24 +73,21 @@ export async function GET(req: NextRequest) {
   try {
     if (isSupabaseConfigured && (f.ringLevels?.length || f.examTags?.length || f.cefrLevels?.length)) {
       const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: false } })
-      const applyFilter = <T extends { in: (...a: never[]) => T; overlaps: (...a: never[]) => T }>(q0: T): T => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        let q: any = q0
-        if (f.ringLevels?.length) q = q.in('primary_level', f.ringLevels)
-        if (f.examTags?.length) q = q.overlaps('tags', f.examTags)
-        if (f.cefrLevels?.length) q = q.in('cefr_level', f.cefrLevels)
-        if (f.difficultyLevels?.length) q = q.in('difficulty', f.difficultyLevels)
-        return q
-      }
       // 总数（星区数动态计算）
-      const { count } = await applyFilter(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        db.from('dictionary_words').select('id', { count: 'exact', head: true }) as any)
+      let countQuery = db.from('dictionary_words').select('id', { count: 'exact', head: true })
+      if (f.ringLevels?.length) countQuery = countQuery.in('primary_level', f.ringLevels)
+      if (f.examTags?.length) countQuery = countQuery.overlaps('tags', f.examTags)
+      if (f.cefrLevels?.length) countQuery = countQuery.in('cefr_level', f.cefrLevels)
+      if (f.difficultyLevels?.length) countQuery = countQuery.in('difficulty', f.difficultyLevels)
+      const { count } = await countQuery
       total = count ?? 0
-      const { data, error } = await applyFilter(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        db.from('dictionary_words')
-          .select('id, word, part_of_speech, dictionary_definitions(definition_zh, definition_en, part_of_speech, order_index)') as any)
+      let dataQuery = db.from('dictionary_words')
+        .select('id, word, part_of_speech, dictionary_definitions(definition_zh, definition_en, part_of_speech, order_index)')
+      if (f.ringLevels?.length) dataQuery = dataQuery.in('primary_level', f.ringLevels)
+      if (f.examTags?.length) dataQuery = dataQuery.overlaps('tags', f.examTags)
+      if (f.cefrLevels?.length) dataQuery = dataQuery.in('cefr_level', f.cefrLevels)
+      if (f.difficultyLevels?.length) dataQuery = dataQuery.in('difficulty', f.difficultyLevels)
+      const { data, error } = await dataQuery
         .order('frequency_rank', { ascending: true, nullsFirst: false })
         .order('id', { ascending: true })
         .range(sector * POOL_CAP, sector * POOL_CAP + POOL_CAP - 1)

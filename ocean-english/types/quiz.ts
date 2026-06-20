@@ -22,6 +22,7 @@ export interface QuizAttempt {
   wordId: string
   word: string
   userAnswer: string
+  correctAnswer?: string
   correct: boolean
   timestamp: number
 }

@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-06-20T17:31:39.353Z",
+  "samples": {
+    "wordAttempts": 5,
+    "skillAttempts": 4
+  },
+  "planCards": [
+    {
+      "type": "word_review",
+      "minutes": 1,
+      "reason": "有 1 个词到达复习时间，按 SRS 节奏巩固以防遗忘。"
+    },
+    {
+      "type": "mistake_fix",
+      "minutes": 2,
+      "reason": "有 3 个薄弱点（主要错误：wrong_sense），针对性重练修复。"
+    },
+    {
+      "type": "exam_task",
+      "minutes": 12,
+      "reason": "「cet4」的 inference 掌握度偏低（31%，置信度 low），定向练习提分。"
+    },
+    {
+      "type": "new_words",
+      "minutes": 11,
+      "reason": "今日目标 20 词，复习占 1，再学 19 个新词。"
+    },
+    {
+      "type": "output",
+      "minutes": 12,
+      "reason": "结合目标考试「cet4」做一次写作/口语产出，并用 rubric 估分获取改进方向。"
+    }
+  ],
+  "skillStates": [
+    {
+      "examId": "cet4",
+      "skillKey": "inference",
+      "mastery": 0.30706249999999996,
+      "attempts": 3,
+      "correct": 0,
+      "confidence": "low",
+      "isEstimate": true
+    },
+    {
+      "examId": "cet4",
+      "skillKey": "listening",
+      "mastery": 0.575,
+      "attempts": 1,
+      "correct": 1,
+      "confidence": "insufficient",
+      "isEstimate": true
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "order invariant: chrono 0.6547 vs reverse 0.3453"
+  ],
+  "ok": true
+}

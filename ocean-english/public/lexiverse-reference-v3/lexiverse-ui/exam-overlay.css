@@ -1,0 +1,93 @@
+/* Lexiverse · Exam Routes overlay (bright Liquid Glass, self-contained, .ex- prefixed)
+   Layers exam UI on top of the dark Universe scene without touching its styles. */
+:root{
+  --ex-glass: linear-gradient(155deg, rgba(200,230,255,0.20), rgba(160,200,250,0.09) 62%, rgba(160,200,245,0.055));
+  --ex-glass-soft: linear-gradient(155deg, rgba(185,218,255,0.12), rgba(150,190,240,0.05));
+  --ex-border: rgba(190,228,255,0.30);
+  --ex-border-strong: rgba(190,228,255,0.5);
+  --ex-blur: blur(26px) saturate(1.5);
+  --ex-hi: inset 0 1px 0 rgba(255,255,255,0.4);
+  --ex-sh: 0 24px 70px rgba(2,8,26,0.55);
+  --ex-ink:#051421; --ex-text:#F2FAFF; --ex-dim:#9DB6CB; --ex-muted:#7791A8; --ex-cyan:#7EF9FF;
+  --ex-mono:'Space Mono', ui-monospace, monospace;
+}
+.ex-hide{ display:none !important; }
+
+/* launcher (top-center) */
+#ex-launch{ position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:30; display:flex; align-items:center; gap:9px;
+  padding:9px 18px; border-radius:999px; cursor:pointer; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px; color:var(--ex-text);
+  background:var(--ex-glass); border:1px solid var(--ex-border); box-shadow:var(--ex-hi), 0 12px 34px rgba(2,8,26,0.45);
+  -webkit-backdrop-filter:var(--ex-blur); backdrop-filter:var(--ex-blur); transition:transform .18s, box-shadow .18s, border-color .18s; }
+#ex-launch:hover{ transform:translateX(-50%) translateY(-2px); border-color:var(--ex-border-strong); box-shadow:var(--ex-hi), 0 16px 42px rgba(2,8,26,0.5), 0 0 22px rgba(126,249,255,0.25); }
+#ex-launch .ic{ width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;
+  background:linear-gradient(135deg,#BFF6FF,#7EF9FF 45%,#38BDF8); color:var(--ex-ink); }
+#ex-launch .cur{ font-family:var(--ex-mono); font-size:11px; color:var(--ex-cyan); }
+
+/* selector overlay */
+#ex-selector{ position:fixed; inset:0; z-index:60; display:none; align-items:flex-start; justify-content:center;
+  background:radial-gradient(1200px 800px at 50% -10%, rgba(20,40,80,0.5), rgba(4,6,14,0.78)); backdrop-filter:blur(8px); }
+#ex-selector.open{ display:flex; }
+.ex-sheet{ margin-top:8vh; width:min(940px, 92vw); border-radius:28px; padding:30px 32px 34px;
+  background:var(--ex-glass); border:1px solid var(--ex-border); box-shadow:var(--ex-hi), var(--ex-sh);
+  -webkit-backdrop-filter:var(--ex-blur); backdrop-filter:var(--ex-blur); position:relative; }
+.ex-sheet::before{ content:''; position:absolute; top:0; left:14%; right:14%; height:1px; background:linear-gradient(90deg,transparent,rgba(126,249,255,0.7),transparent); }
+.ex-sheet h2{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.02em; color:var(--ex-text); }
+.ex-sheet .sub{ font-size:13px; color:var(--ex-dim); margin-top:5px; }
+.ex-sheet .x{ position:absolute; top:22px; right:24px; width:36px;height:36px;border-radius:50%;border:1px solid var(--ex-border);
+  background:rgba(255,255,255,0.05); color:var(--ex-dim); cursor:pointer; font-size:15px; }
+.ex-sheet .x:hover{ color:var(--ex-cyan); border-color:var(--ex-border-strong); }
+.ex-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
+.ex-card{ text-align:left; padding:18px; border-radius:18px; cursor:pointer; color:var(--ex-text); position:relative;
+  background:var(--ex-glass-soft); border:1px solid var(--ex-border); transition:transform .18s, border-color .18s, box-shadow .18s; }
+.ex-card:hover{ transform:translateY(-3px); border-color:var(--ex-border-strong); box-shadow:0 0 22px color-mix(in srgb, var(--c) 32%, transparent); }
+.ex-card.is-active{ border-color:color-mix(in srgb,var(--c) 70%, transparent); box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 55%, transparent), 0 0 26px color-mix(in srgb,var(--c) 30%, transparent); }
+.ex-card.reserved{ opacity:.55; }
+.ex-card .top{ display:flex; align-items:center; gap:10px; }
+.ex-card .ring{ width:34px;height:34px;border-radius:50%; flex-shrink:0; border:2px solid var(--c); box-shadow:0 0 14px color-mix(in srgb,var(--c) 60%, transparent); position:relative; }
+.ex-card .ring::after{ content:''; position:absolute; inset:5px; border-radius:50%; background:color-mix(in srgb,var(--c) 35%, transparent); }
+.ex-card .nm{ font-weight:700; font-size:16px; }
+.ex-card .zh{ font-size:11px; color:var(--ex-dim); }
+.ex-card .res{ margin-left:auto; font-size:9px; font-family:var(--ex-mono); color:var(--ex-muted); border:1px solid var(--ex-border); padding:2px 7px; border-radius:999px; }
+.ex-card .blurb{ font-size:12px; color:var(--ex-dim); line-height:1.45; margin:12px 0 13px; min-height:34px; }
+.ex-card .stats{ display:flex; gap:14px; }
+.ex-card .stats .s b{ display:block; font-family:var(--ex-mono); font-size:15px; color:var(--c); }
+.ex-card .stats .s span{ font-size:9px; color:var(--ex-muted); }
+.ex-diffdots{ display:inline-flex; gap:3px; margin-left:auto; }
+.ex-diffdots i{ width:6px;height:6px;border-radius:50%; background:rgba(255,255,255,0.16); }
+.ex-diffdots i.on{ background:var(--c); box-shadow:0 0 6px var(--c); }
+
+/* exam-mode HUD (bottom-center) */
+#ex-hud{ position:fixed; bottom:16px; left:50%; transform:translateX(-50%); z-index:30; display:none; align-items:center; gap:18px;
+  padding:13px 20px; border-radius:20px; background:var(--ex-glass); border:1px solid var(--ex-border);
+  box-shadow:var(--ex-hi), var(--ex-sh); -webkit-backdrop-filter:var(--ex-blur); backdrop-filter:var(--ex-blur); }
+#ex-hud.open{ display:flex; }
+#ex-hud .route{ display:flex; align-items:center; gap:9px; padding-right:18px; border-right:1px solid var(--ex-border); }
+#ex-hud .route .ring{ width:24px;height:24px;border-radius:50%; border:2px solid var(--c); box-shadow:0 0 12px color-mix(in srgb,var(--c) 60%, transparent); }
+#ex-hud .route b{ font-size:15px; font-weight:700; color:var(--ex-text); }
+#ex-hud .route span{ font-size:10px; color:var(--ex-dim); font-family:var(--ex-mono); }
+#ex-hud .m{ text-align:center; }
+#ex-hud .m b{ display:block; font-family:var(--ex-mono); font-size:16px; }
+#ex-hud .m span{ font-size:9px; color:var(--ex-muted); }
+#ex-hud .exit{ margin-left:6px; padding:8px 14px; border-radius:999px; cursor:pointer; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px;
+  color:var(--ex-text); background:rgba(255,255,255,0.06); border:1px solid var(--ex-border); }
+#ex-hud .exit:hover{ color:var(--ex-cyan); border-color:var(--ex-border-strong); }
+
+/* coverage block injected into the galaxy detail panel */
+.ex-cov{ margin-top:18px; }
+.ex-cov .lab{ font-family:var(--ex-mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(126,249,255,0.65); margin-bottom:10px; }
+.ex-cov .row{ display:flex; align-items:center; gap:10px; padding:7px 0; }
+.ex-cov .row .nm{ font-size:12.5px; color:#cfe0ee; width:74px; flex-shrink:0; }
+.ex-cov .row .bar{ flex:1; height:6px; border-radius:6px; background:rgba(255,255,255,0.08); overflow:hidden; }
+.ex-cov .row .bar i{ display:block; height:100%; border-radius:6px; }
+.ex-cov .row .ct{ font-family:var(--ex-mono); font-size:12px; width:74px; text-align:right; }
+.ex-cov .row.forming .ct{ color:#7791A8; }
+.ex-cov .studybtns{ display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
+.ex-cov .studybtns button{ font-size:11.5px; padding:6px 12px; border-radius:999px; cursor:pointer; font-family:'Space Grotesk',sans-serif; font-weight:600;
+  color:var(--ex-ink); border:none; background:linear-gradient(135deg, color-mix(in srgb,var(--c) 60%, #fff), var(--c)); box-shadow:0 3px 12px color-mix(in srgb,var(--c) 35%, transparent); }
+.ex-cov .studybtns button:hover{ filter:brightness(1.08); }
+.ex-forming{ margin-top:14px; padding:14px 16px; border-radius:14px; background:rgba(255,160,110,0.08); border:1px solid rgba(255,160,110,0.28); }
+.ex-forming b{ display:block; font-size:13px; color:#FFC861; margin-bottom:5px; }
+.ex-forming p{ font-size:11.5px; color:#cdbfae; line-height:1.5; }
+
+@media (max-width:720px){ .ex-grid{ grid-template-columns:1fr 1fr; } #ex-hud{ flex-wrap:wrap; gap:10px; max-width:94vw; } }
+@media (max-width:480px){ .ex-grid{ grid-template-columns:1fr; } }

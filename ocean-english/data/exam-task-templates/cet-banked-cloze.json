@@ -1,0 +1,35 @@
+{
+  "templateId": "cet-banked-cloze",
+  "examIds": ["cet4", "cet6"],
+  "taskType": "banked_cloze",
+  "skill": "reading",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "写一篇约 250-280 词的全新原创短文，挖 10 个空（编号 1-10），给 15 个候选词（A-O，含 10 个答案词 + 5 个干扰词），覆盖名词/动词/形容词/副词，词形与空位语法一致；避免同一空两词皆可填。输出 bank（15 词）、answers（10 个 0-14 索引）、pos_tags。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 240,
+    "maxWords": 300,
+    "perStimulusItems": 10,
+    "topicDomains": ["社会", "科技", "教育", "文化", "经济", "健康"]
+  },
+  "itemCount": 10,
+  "optionCount": 15,
+  "answerSchema": {
+    "shape": "bank_answers",
+    "bank": 15,
+    "answers": 10,
+    "answerRange": "0-14",
+    "posTags": true
+  },
+  "subskills": ["pos_consistency", "collocation", "context_coherence", "word_form"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "恰好 15 个候选词、10 个空",
+    "10 个答案索引互不重复且落在 0-14",
+    "候选词形需与空位语法兼容；避免两词皆可填",
+    "不得出现退役题型（尤其 cet_cloze）"
+  ],
+  "copyrightPolicy": "original_only"
+}

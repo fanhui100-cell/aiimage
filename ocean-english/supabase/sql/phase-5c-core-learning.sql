@@ -165,8 +165,12 @@ CREATE TABLE IF NOT EXISTS wrong_answers (
   correct_answer TEXT NOT NULL,
   explanation    TEXT DEFAULT '',
   source         TEXT DEFAULT 'quiz' CHECK (source IN ('quiz','scan','exam')),
-  occurred_at    TIMESTAMPTZ DEFAULT NOW()
+  occurred_at    TIMESTAMPTZ DEFAULT NOW(),
+  dedupe_key     TEXT
 );
+
+ALTER TABLE wrong_answers
+  ADD COLUMN IF NOT EXISTS dedupe_key TEXT;
 
 ALTER TABLE wrong_answers ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "wrong_answers_own_data" ON wrong_answers;
@@ -244,7 +248,11 @@ CREATE INDEX IF NOT EXISTS idx_saved_words_user ON saved_words(user_id);
 CREATE INDEX IF NOT EXISTS idx_review_words_user ON review_words(user_id);
 CREATE INDEX IF NOT EXISTS idx_review_words_next ON review_words(user_id, next_review_at);
 CREATE INDEX IF NOT EXISTS idx_wrong_answers_user ON wrong_answers(user_id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_wrong_answers_user_dedupe
+  ON wrong_answers(user_id, dedupe_key);
 CREATE INDEX IF NOT EXISTS idx_quiz_sessions_user ON quiz_sessions(user_id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_quiz_sessions_user_client
+  ON quiz_sessions(user_id, client_id);
 CREATE INDEX IF NOT EXISTS idx_quiz_attempts_session ON quiz_attempts(session_id);
 
 -- ────────────────────────────────────────────────────────────

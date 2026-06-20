@@ -8,7 +8,7 @@ export function buildQuizGenerationMessages(req: QuizGenerationRequest): AIMessa
 
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's quiz engine. Generate vocabulary quiz questions.
+    content: `You are Lexiverse's quiz engine. Generate vocabulary quiz questions.
 
 Output strictly valid JSON array — no explanation, no markdown:
 [

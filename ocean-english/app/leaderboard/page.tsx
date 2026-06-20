@@ -1,11 +1,6 @@
-import { AppShell } from '@/components/layout/AppShell'
-import { LeaderboardScreen } from '@/components/screens/LeaderboardScreen'
+import { permanentRedirect } from 'next/navigation'
 
-// D5：排行榜 — 周/总/连击榜，复用 user_study_progress + leaderboard 视图
-export default function LeaderboardPage() {
-  return (
-    <AppShell>
-      <LeaderboardScreen />
-    </AppShell>
-  )
+// 界面优化2·导航合并：排行已并入「社区」。旧路由 308 永久重定向到对应 tab。
+export default function LeaderboardRedirect() {
+  permanentRedirect('/community?tab=rank')
 }

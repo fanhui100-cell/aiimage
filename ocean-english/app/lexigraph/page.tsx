@@ -1,15 +1,18 @@
 import { Suspense } from 'react'
-import { LexiGraphScreen } from '@/components/lexigraph-v2/LexiGraphScreen'
+import { AppShell } from '@/components/layout/AppShell'
+import { LexiGraphFrame } from '@/components/lexigraph/LexiGraphFrame'
 
-// 阶段4：LexiGraph 重做（照 design_handoff_final/prototypes/lexigraph-redesign）
-// 旧 React 版在 components/_legacy/lexigraph/ 可整体还原；
-// 静态成品 public/lexiverse-html/LexiGraph.html 仍保留为参考。
+// 界面优化10 / 任务A：LexiGraph 1:1 原型移植（public/lexigraph-reference/ + 桥联动）
+// 界面优化14 / 提示词4：外层补全站导航（AppShell 的 Navbar + MobileTabBar）；
+// 词图本体（iframe 内原型）不改，仅确保 iframe 不被顶栏遮挡。
 export const dynamic = 'force-dynamic'
 
 export default function LexiGraphPage() {
   return (
-    <Suspense>
-      <LexiGraphScreen />
-    </Suspense>
+    <AppShell>
+      <Suspense>
+        <LexiGraphFrame />
+      </Suspense>
+    </AppShell>
   )
 }

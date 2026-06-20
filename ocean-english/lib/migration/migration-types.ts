@@ -48,6 +48,7 @@ export interface LocalQuizAttempt {
   wordId: string
   word: string
   userAnswer: string
+  correctAnswer?: string
   correct: boolean
   timestamp: number  // ms epoch
 }

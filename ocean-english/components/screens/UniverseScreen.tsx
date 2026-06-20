@@ -2,7 +2,7 @@
 // UniverseScreen — 1:1 port of prototype/screen-universe.jsx
 // Chromeless iframe + postMessage sync + writeInject
 
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useLexiStore } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
 
@@ -18,7 +18,7 @@ export function UniverseScreen() {
   const cefr = bandCefr(profile.band)
 
   // Write inject to localStorage before iframe loads
-  function writeInject() {
+  const writeInject = useCallback(() => {
     try {
       const words = all()
       const inject = words.map(w => ({
@@ -28,11 +28,11 @@ export function UniverseScreen() {
       localStorage.setItem('__lexi_band', String(profile.band))
       localStorage.setItem('__lexi_goals', JSON.stringify(profile.goals ?? []))
     } catch {}
-  }
+  }, [all, profile.band, profile.goals])
 
   useEffect(() => {
     writeInject()
-  }, [])
+  }, [writeInject])
 
   // Listen for postMessages from iframe
   useEffect(() => {
@@ -62,7 +62,7 @@ export function UniverseScreen() {
     }
     window.addEventListener('message', onMessage)
     return () => window.removeEventListener('message', onMessage)
-  }, [])
+  }, [incXp, markCorrect, markLearning, navigate])
 
   const dueCount = getDue().length + getWeak().length
 

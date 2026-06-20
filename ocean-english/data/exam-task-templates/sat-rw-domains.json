@@ -1,0 +1,35 @@
+{
+  "templateId": "sat-rw-domains",
+  "examIds": ["sat"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "Digital SAT Reading & Writing 短文本单题：每题一段 25-150 词的全新原创短文本（或一对短双文本），四选一单题。覆盖四大 domain；Words in Context 必须依赖语境，不得用孤立同义词；Standard English Conventions 考句界/标点/动词/代词/平行。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 25,
+    "maxWords": 150,
+    "perStimulusItems": 1,
+    "topicDomains": ["literature", "history", "science", "social_science", "humanities", "data_graphic"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "single_choice", "choices": 4 },
+  "domains": [
+    { "domain": "information_and_ideas", "subskills": ["central_ideas_details", "command_of_evidence", "inference"] },
+    { "domain": "craft_and_structure", "subskills": ["words_in_context", "text_structure_purpose", "cross_text_connections"] },
+    { "domain": "expression_of_ideas", "subskills": ["transitions", "rhetorical_synthesis"] },
+    { "domain": "standard_english_conventions", "subskills": ["boundaries", "form_structure_sense"] }
+  ],
+  "subskills": ["central_ideas_details", "words_in_context", "transitions", "boundaries"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 College Board 真题",
+    "每题为短文本（25-150 词）单题，禁止长篇泛读 passage",
+    "Words in Context 必须依赖语境，非孤立同义词",
+    "必须覆盖四大 domain",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

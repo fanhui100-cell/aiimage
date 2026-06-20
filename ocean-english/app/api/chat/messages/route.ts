@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { isSupabaseConfigured } from '@/lib/supabase/client'
 import { NextResponse, type NextRequest } from 'next/server'
+import { resolveChatMessageCount } from '@/lib/sync/chat-message-utils'
 
 interface ChatMessagePayload {
   id: string
@@ -26,7 +27,7 @@ export async function POST(request: NextRequest) {
   // Verify this session belongs to the current user
   const { data: session } = await supabase
     .from('chat_sessions')
-    .select('id')
+    .select('id,message_count')
     .eq('id', body.sessionId)
     .eq('user_id', user.id)
     .single()
@@ -57,10 +58,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
   }
 
-  // Update session message count
+  const { count } = await supabase
+    .from('chat_messages')
+    .select('id', { count: 'exact', head: true })
+    .eq('session_id', body.sessionId)
+    .eq('user_id', user.id)
+  const messageCount = count ?? resolveChatMessageCount(session.message_count as number | null, rows.length)
+
   await supabase
     .from('chat_sessions')
-    .update({ message_count: rows.length, ended_at: new Date().toISOString() })
+    .update({ message_count: messageCount, ended_at: new Date().toISOString() })
     .eq('id', body.sessionId)
     .eq('user_id', user.id)
 

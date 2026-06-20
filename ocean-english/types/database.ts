@@ -94,6 +94,7 @@ export interface DbWrongAnswer {
   explanation: string
   source: 'quiz' | 'scan' | 'exam'
   occurred_at: string
+  dedupe_key: string | null
 }
 
 export interface DbQuizSession {

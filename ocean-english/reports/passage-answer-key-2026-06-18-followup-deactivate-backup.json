@@ -1,0 +1,222 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-1mjhbbr",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "counterproductive",
+        "anxiety",
+        "uncomfortable",
+        "increase",
+        "reduce",
+        "appreciate",
+        "valued",
+        "pressure",
+        "collect",
+        "release",
+        "memory",
+        "ignored",
+        "passive",
+        "underestimated",
+        "confident"
+      ],
+      "answers": [
+        13,
+        8,
+        7,
+        2,
+        4,
+        6,
+        0,
+        12,
+        10,
+        5
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-1o4kiy9",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "efficient",
+        "engaged",
+        "transform",
+        "reduce",
+        "completing",
+        "creative",
+        "quiet",
+        "stimulates",
+        "productive",
+        "improve",
+        "efficiently",
+        "adopting",
+        "suitable",
+        "relaxed",
+        "energetic"
+      ],
+      "answers": [
+        11,
+        9,
+        7,
+        10,
+        8,
+        5,
+        12,
+        14,
+        6,
+        2
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-4m4554",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "unreliable",
+        "dramatic",
+        "manageable",
+        "significant",
+        "attribute",
+        "pressure",
+        "give up",
+        "random",
+        "trivial",
+        "automated",
+        "integrate",
+        "effective",
+        "frustrated",
+        "expand",
+        "maintain"
+      ],
+      "answers": [
+        6,
+        11,
+        10,
+        8,
+        9,
+        5,
+        4,
+        0,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-i9oyl4",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "examine",
+        "rest",
+        "stimulation",
+        "avoided",
+        "complex",
+        "reap",
+        "uncomfortable",
+        "content",
+        "energy",
+        "negative",
+        "trivial",
+        "boredom",
+        "ignore",
+        "emptiness",
+        "positive"
+      ],
+      "answers": [
+        3,
+        14,
+        2,
+        0,
+        11,
+        10,
+        1,
+        5,
+        6,
+        13
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-12os50s",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Adherents often report feeling less anxious and more focused after cutting back on digital distractions.",
+        "Without regular online interaction, even close friends may drift apart due to a lack of timely communication.",
+        "Many people find it difficult to maintain a complete digital detox while still meeting work and family obligations.",
+        "This can create a subtle stigma against those who rely on digital tools for their livelihood or social connection.",
+        "Yet the benefits of disconnecting are not as straightforward as they seem.",
+        "Those who choose to disconnect may also face practical inconveniences, such as difficulty coordinating group activities.",
+        "The constant need to check one’s phone can be exhausting, but the alternative is not always liberating."
+      ],
+      "answers": [
+        4,
+        1,
+        5,
+        6,
+        3
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-m90dyp",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet the solution is not to abandon digital minimalism altogether.",
+        "The same individuals who once felt overwhelmed by notifications now feel invisible without them.",
+        "Many report that their offline relationships have actually deepened as a result.",
+        "Digital minimalism advocates often cite improved focus and mental well-being as key benefits.",
+        "This is because digital platforms have become the primary medium for coordinating social activities.",
+        "Instead, they should cultivate a balanced digital diet that aligns with their personal values.",
+        "Nevertheless, the pressure to stay connected remains strong in most professional environments."
+      ],
+      "answers": [
+        1,
+        4,
+        2,
+        0,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1m4on5x",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people struggle with the fear of being seen as selfish.",
+        "This skill is especially important in a world that constantly demands more of us.",
+        "To master the art of saying no, you can start by setting small boundaries.",
+        "In fact, a polite but firm refusal can actually strengthen respect between people.",
+        "However, learning to say no is an essential skill for maintaining mental health and personal boundaries.",
+        "By doing so, you not only respect yourself but also teach others how to treat you.",
+        "Instead, they often say yes just to avoid conflict."
+      ],
+      "answers": [
+        4,
+        6,
+        1,
+        5,
+        2
+      ]
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-06-20T17:19:50.920Z",
+  "status": "not_applied",
+  "errors": [],
+  "notes": [
+    "v2 not_applied：生成路径返回 v2_not_applied（优雅）"
+  ],
+  "ok": true
+}

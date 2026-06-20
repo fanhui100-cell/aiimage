@@ -98,12 +98,14 @@ export async function DELETE(request: NextRequest) {
   const action = searchParams.get('action')
 
   if (action === 'clear-all') {
-    // Delete ALL scan data for this user
-    const { error } = await supabase
-      .from('scan_documents')
-      .delete()
-      .eq('user_id', user.id)
-    if (error) return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
+    const [drafts, notes, documents] = await Promise.all([
+      supabase.from('quiz_drafts').delete().eq('user_id', user.id),
+      supabase.from('study_notes').delete().eq('user_id', user.id),
+      supabase.from('scan_documents').delete().eq('user_id', user.id),
+    ])
+    if (drafts.error || notes.error || documents.error) {
+      return NextResponse.json({ ok: false, error: 'db_error' }, { status: 500 })
+    }
     return NextResponse.json({ ok: true, action: 'cleared' })
   }
 

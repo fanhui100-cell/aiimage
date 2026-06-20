@@ -22,8 +22,10 @@ interface ReadingRow {
   theme_tags: string[] | null
 }
 
-const LIST_SELECT = 'normalized_word,audio_ref,theme_tags'
 const DETAIL_SELECT = 'id,normalized_word,audio_ref,prompt,prompt_zh,choices,answer,explanation_zh,theme_tags'
+// 列表内存缓存（按 level），TTL 5 分钟：列表只读轻量 reading_passages，再加缓存近乎秒开
+const listCache = new Map<string, { at: number; data: unknown }>()
+const LIST_TTL = 5 * 60_000
 
 // 常见功能词/高频词不作为可点生词（keyWords）
 const STOP = new Set([
@@ -65,21 +67,6 @@ function candidateTokens(passage: string): string[] {
 // 去掉选项文本里被烤进去的字母前缀（如 "D. xxx" / "A) xxx"）
 function cleanChoiceText(text: string): string {
   return text.replace(/^[A-Da-d][.)、]\s*/, '').trim()
-}
-
-// 分批查 dictionary_words，返回命中词 id → frequency_rank（PostgREST in() 限长，按 200 分批）
-async function dictFreq(
-  db: Awaited<ReturnType<typeof createClient>>,
-  tokens: string[],
-): Promise<Map<string, number | null>> {
-  const m = new Map<string, number | null>()
-  for (let i = 0; i < tokens.length; i += 200) {
-    const chunk = tokens.slice(i, i + 200)
-    if (!chunk.length) continue
-    const { data } = await db.from('dictionary_words').select('id,frequency_rank').in('id', chunk)
-    for (const r of (data ?? []) as { id: string; frequency_rank: number | null }[]) m.set(r.id, r.frequency_rank)
-  }
-  return m
 }
 
 async function buildDetail(db: Awaited<ReturnType<typeof createClient>>, id: string) {
@@ -148,61 +135,45 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ ok: true, data: detail })
     }
 
-    let q = db
-      .from('question_bank')
-      .select(LIST_SELECT)
-      .eq('type', 'reading_comprehension')
-      .eq('status', 'active')
-    if (level) q = q.contains('theme_tags', [`lv${level}`])
-
-    const { data, error } = await q.limit(3000)
-    if (error) return NextResponse.json({ ok: false, data: [] }, { status: 200 })
-
-    const rows = (data ?? []) as unknown as ReadingRow[]
-    const byPassage = new Map<string, { audio: string; level: number; count: number }>()
-    for (const r of rows) {
-      const pid = String(r.normalized_word ?? '')
-      if (!pid) continue
-      const cur = byPassage.get(pid)
-      if (cur) cur.count += 1
-      else byPassage.set(pid, { audio: String(r.audio_ref ?? ''), level: levelOf(r.theme_tags), count: 1 })
+    // ── 列表：只读轻量 reading_passages（无正文，keyWords 已预算）+ 5 分钟缓存 → 秒开 ──
+    const cacheKey = level || 'all'
+    const cached = listCache.get(cacheKey)
+    if (cached && Date.now() - cached.at < LIST_TTL) {
+      return NextResponse.json({ ok: true, data: cached.data })
     }
-
-    const ids = [...byPassage.keys()]
-    const rpMap = new Map<string, { title?: string; title_zh?: string; minutes?: number }>()
-    if (ids.length) {
-      const { data: rps } = await db.from('reading_passages').select('id,title,title_zh,minutes').in('id', ids)
-      for (const r of (rps ?? []) as { id: string; title?: string; title_zh?: string; minutes?: number }[]) rpMap.set(r.id, r)
+    const lvNum = level ? Number(level) : 0
+    // 1) 篇级元数据（id/title/level/minutes/key_words），分页取全量
+    type RP = { id: string; title: string | null; title_zh: string | null; level: number | null; minutes: number | null; key_words: string[] | null }
+    const passages: RP[] = []
+    for (let from = 0; ; from += 1000) {
+      let q = db.from('reading_passages').select('id,title,title_zh,level,minutes,key_words').eq('status', 'active').order('id', { ascending: true }).range(from, from + 999)
+      if (lvNum) q = q.eq('level', lvNum)
+      const { data, error } = await q
+      if (error) return NextResponse.json({ ok: false, data: [] }, { status: 200 })
+      const part = (data ?? []) as RP[]
+      passages.push(...part)
+      if (part.length < 1000) break
     }
-
-    // 每篇 keyWords（实词 ∩ 词典）：跨篇收 token → 分批查词典 → 回填，前端据此算生词率
-    const perPassageTokens = new Map<string, string[]>()
-    const allTokens = new Set<string>()
-    for (const [pid, v] of byPassage) {
-      const toks = candidateTokens(v.audio)
-      perPassageTokens.set(pid, toks)
-      for (const t of toks) allTokens.add(t)
+    // 2) 每篇题数：只取 normalized_word（无正文，轻量）
+    const qcount = new Map<string, number>()
+    for (let from = 0; ; from += 1000) {
+      let q = db.from('question_bank').select('normalized_word').eq('type', 'reading_comprehension').eq('status', 'active').order('id', { ascending: true }).range(from, from + 999)
+      if (lvNum) q = q.contains('theme_tags', [`lv${lvNum}`])
+      const { data } = await q
+      const part = (data ?? []) as { normalized_word: string | null }[]
+      for (const r of part) { const pid = String(r.normalized_word ?? ''); if (pid) qcount.set(pid, (qcount.get(pid) ?? 0) + 1) }
+      if (part.length < 1000) break
     }
-    const freqMap = await dictFreq(db, [...allTokens])
-    const RARE = 4000   // 词频排名 > 此值（或无频）视为偏难/可能生词 → 拉开各篇生词率
-    const list = [...byPassage.entries()].map(([pid, v]) => {
-      const rp = rpMap.get(pid)
-      const keyWords = (perPassageTokens.get(pid) ?? []).filter((t) => freqMap.has(t))
-      const rare = keyWords.filter((k) => { const f = freqMap.get(k); return f == null || f > RARE }).length
-      const difficulty = keyWords.length ? Math.round(rare / keyWords.length * 100) : 0
-      return {
-        id: pid,
-        title: rp?.title || deriveTitle(v.audio),
-        titleZh: rp?.title_zh || undefined,
-        level: v.level,
-        minutes: rp?.minutes ?? Math.max(1, Math.round(wordCount(v.audio) / 200)),
-        questionCount: v.count,
-        keyWords,
-        keyWordCount: keyWords.length,
-        difficulty,
-      }
-    })
+    // 3) 组装；difficulty 用「档位 + 生词密度」廉价代理（生词率 = difficulty × (1−已掌握)，前端再算）
+    const list = passages.map((p) => {
+      const kw = Array.isArray(p.key_words) ? p.key_words : []
+      const minutes = p.minutes ?? 1
+      const lvl = p.level ?? lvNum
+      const difficulty = Math.min(95, Math.max(8, lvl * 11 + Math.min(18, Math.round(kw.length / Math.max(1, minutes)))))
+      return { id: p.id, title: p.title || '', titleZh: p.title_zh || undefined, level: lvl, minutes, questionCount: qcount.get(p.id) ?? 3, keyWords: kw, keyWordCount: kw.length, difficulty }
+    }).filter((x) => x.questionCount > 0)
 
+    listCache.set(cacheKey, { at: Date.now(), data: list })
     return NextResponse.json({ ok: true, data: list })
   } catch {
     return NextResponse.json({ ok: false, data: [] }, { status: 200 })

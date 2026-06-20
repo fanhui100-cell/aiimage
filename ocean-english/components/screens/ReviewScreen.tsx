@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { useLexiStore, type WordEntry, type LogEntry } from '@/store/lexiStore'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 import { useNavigate } from '@/hooks/useNavigate'
-import { FlowBar, SoundBtn, PrimaryBtn, GhostBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, SoundBtn, PrimaryBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
 import { DailyRecapCard } from '@/components/study/DailyRecapCard'
 
 /** 相对时间：刚刚 / N 小时前 / N 天前 */
@@ -34,7 +34,7 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
   // 订阅 words：store 异步 hydrate 后队列需重算（否则 useMemo 只依赖 source 会停留在空队列）
   const words = useLexiStore(s => s.words)
 
-  const queue = useMemo<WordEntry[]>(() => {
+  const liveQueue = useMemo<WordEntry[]>(() => {
     if (source === 'due') return getDue()
     if (source === 'weak') return getWeak()
     const due = getDue()
@@ -42,6 +42,13 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
     return [...due, ...weak.filter(w => !due.find(d => d.id === w.id))]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [source, words])
+  // 会话开始即冻结队列：评分会改 store→words→队列实时重算，已评词从队列消失会让 idx 越界
+  // （current 变 undefined 崩溃）并跳过下一词。冻结后本轮只走这批词；store 仍按评分更新。
+  const [frozenQueue, setFrozenQueue] = useState<WordEntry[] | null>(null)
+  useEffect(() => {
+    if (!frozenQueue && liveQueue.length) setFrozenQueue(liveQueue)
+  }, [liveQueue, frozenQueue])
+  const queue = frozenQueue ?? liveQueue
 
   const [idx, setIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -112,7 +119,7 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
     )
   }
 
-  if (done) {
+  if (done || !current) {
     const pct = masteredPct()
     const recentLog = log.slice(0, 8)
     return (
@@ -225,7 +232,7 @@ export function ReviewScreen({ source = 'all' }: { source?: 'due' | 'weak' | 'al
             <div style={{ marginTop: 8, textAlign: 'center' }}>
               <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--ink)', fontFamily: 'var(--font-serif-zh)' }}>{current.zh}</div>
               {current.pos && <div style={{ fontSize: 12, color: 'var(--teal-ink)', fontWeight: 600, marginTop: 4, fontFamily: 'var(--font-mono)' }}>{current.pos}</div>}
-              {current.ex && <div style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 10, lineHeight: 1.6, fontStyle: 'italic' }}>"{current.ex}"</div>}
+              {current.ex && <div style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 10, lineHeight: 1.6, fontStyle: 'italic' }}>&ldquo;{current.ex}&rdquo;</div>}
             </div>
           )}
         </div>

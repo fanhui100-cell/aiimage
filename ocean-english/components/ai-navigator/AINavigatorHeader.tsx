@@ -32,8 +32,8 @@ export function AINavigatorHeader({ context, onClear, hasMessages }: Props) {
       <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', paddingBottom: '12px', gap: '12px' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <h1 style={{ margin: 0, fontSize: '20px', fontWeight: 700, color: '#ECFBFF', lineHeight: 1.2 }}>
-            AI Navigator{' '}
-            <span style={{ fontSize: '13px', color: '#9BBFCA', fontWeight: 400 }}>AI 导学中心</span>
+            领航{' '}
+            <span style={{ fontSize: '13px', color: '#9BBFCA', fontWeight: 400 }}>LexiPilot · AI 副驾</span>
           </h1>
           <p style={{ margin: '3px 0 0', fontSize: '11px', color: 'rgba(155,191,202,0.45)', fontFamily: 'var(--font-mono)' }}>
             Ask about words, sentences, mistakes, and study plans.

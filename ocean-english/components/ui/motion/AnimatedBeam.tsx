@@ -7,7 +7,7 @@
  * 传入容器 ref + from/to 两个元素 ref，自动算出曲线并铺一条流动虚线。
  * 颜色：米白面 --teal-ink；暗色面 --teal。reduced-motion 自动静止（见 §B12 CSS）。
  */
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface AnimatedBeamProps {
   containerRef: React.RefObject<HTMLElement | null>
@@ -22,7 +22,6 @@ interface AnimatedBeamProps {
 }
 
 export function AnimatedBeam({ containerRef, fromRef, toRef, dark = false, curvature = 36, reverse = false, delay = 0 }: AnimatedBeamProps) {
-  const id = useId().replace(/:/g, '')
   const [d, setD] = useState('')
   const [box, setBox] = useState({ w: 0, h: 0 })
 

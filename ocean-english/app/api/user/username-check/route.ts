@@ -7,6 +7,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { SUPABASE_URL } from '@/lib/supabase/client'
+import { checkRateLimit, getClientIP, rateLimitKey, RATE_LIMITS } from '@/lib/ai/ai-rate-limit'
 
 export const runtime = 'nodejs'
 
@@ -14,6 +15,10 @@ export const runtime = 'nodejs'
 const VALID = /^[A-Za-z0-9_一-龥]{2,20}$/
 
 export async function GET(req: NextRequest) {
+  // 轻量限流：公开端点用 service role 查 profiles，限流防用户名枚举（30 次/分/IP）
+  const allowed = await checkRateLimit(rateLimitKey('username-check', getClientIP(req)), RATE_LIMITS['username-check'])
+  if (!allowed) return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 })
+
   const name = (new URL(req.url).searchParams.get('name') ?? '').trim()
   if (!name) return NextResponse.json({ ok: true, available: false, reason: 'empty' })
   if (!VALID.test(name)) return NextResponse.json({ ok: true, available: false, reason: 'invalid' })

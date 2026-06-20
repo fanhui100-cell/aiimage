@@ -1,0 +1,32 @@
+{
+  "templateId": "toefl-four-skills",
+  "examIds": ["toefl"],
+  "taskType": "multi_skill",
+  "skill": "integrated",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 四技能需分项原创种子，不自动批量：Reading（Complete the Words / Read in Daily Life / Academic Passage）、Listening（Listen and Choose a Response / Conversation / Academic Talk，须音频）、Writing（Build a Sentence / Write an Email / Academic Discussion，部分需 rubric）、Speaking（Listen and Repeat / Take an Interview，须音频+rubric）。"
+  },
+  "skills": [
+    { "skill": "reading", "subtasks": ["complete_the_words", "read_daily_life", "reading_comprehension"], "itemCount": 50 },
+    { "skill": "listening", "subtasks": ["choose_a_response", "listening_comprehension"], "itemCount": 47, "requiresAudio": true },
+    { "skill": "writing", "subtasks": ["build_a_sentence", "email_writing", "academic_discussion"], "itemCount": 12, "requiresRubric": true },
+    { "skill": "speaking", "subtasks": ["listen_and_repeat", "interview_speaking"], "itemCount": 11, "requiresAudio": true, "requiresRubric": true }
+  ],
+  "stimulusRequirements": {
+    "kind": "mixed",
+    "notes": "阅读 academic passage；听力 conversation/talk 需音频脚本 + 稳定音频（Phase 9 管线）；口语/写作需 prompt + rubric"
+  },
+  "itemCount": 120,
+  "optionCount": 4,
+  "answerSchema": { "shape": "mixed_by_skill" },
+  "subskills": ["academic_reading", "conversation", "lecture", "email", "academic_discussion", "repeat", "interview"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 ETS 真题",
+    "必须覆盖 Reading / Listening / Writing / Speaking 四技能",
+    "Speaking 与部分 Writing 需 rubric + 音频，先人工种子，不自动批量",
+    "听力任务须有稳定 active 音频（Phase 9）才可 active",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

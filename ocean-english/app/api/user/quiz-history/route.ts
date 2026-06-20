@@ -1,15 +1,12 @@
 import { createClient } from '@/lib/supabase/server'
 import { isSupabaseConfigured } from '@/lib/supabase/client'
 import { NextResponse, type NextRequest } from 'next/server'
-
-interface QuizAttemptPayload {
-  questionId?: string
-  wordId: string
-  word: string
-  userAnswer: string
-  correct: boolean
-  timestamp: number
-}
+import {
+  applyQuestionBankCorrectAnswers,
+  buildQuizAttemptRows,
+  type QuestionAnswerLookupRow,
+  type QuizAttemptPayload,
+} from '@/lib/sync/quiz-history-utils'
 
 interface QuizSessionPayload {
   id: string
@@ -44,6 +41,21 @@ export async function POST(request: NextRequest) {
     quiz_type: 'vocabulary',
   }
 
+  const { data: existingSession, error: existingSessionError } = await supabase
+    .from('quiz_sessions')
+    .select('id')
+    .eq('user_id', user.id)
+    .eq('client_id', session.id)
+    .maybeSingle()
+
+  if (existingSessionError && existingSessionError.code !== 'PGRST116') {
+    return NextResponse.json({ ok: false, error: 'session_lookup_failed' }, { status: 500 })
+  }
+
+  if (existingSession?.id) {
+    return NextResponse.json({ ok: true, sessionId: existingSession.id, duplicate: true })
+  }
+
   const { data: insertedSession, error: sessionError } = await supabase
     .from('quiz_sessions')
     .insert(sessionRow)
@@ -51,20 +63,46 @@ export async function POST(request: NextRequest) {
     .single()
 
   if (sessionError || !insertedSession) {
+    const { data: duplicateSession } = await supabase
+      .from('quiz_sessions')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('client_id', session.id)
+      .maybeSingle()
+
+    if (duplicateSession?.id) {
+      return NextResponse.json({ ok: true, sessionId: duplicateSession.id, duplicate: true })
+    }
+
     return NextResponse.json({ ok: false, error: 'session_insert_failed' }, { status: 500 })
   }
 
-  const attempts = (session.attempts ?? []).map(a => ({
-    session_id: insertedSession.id,
-    user_id: user.id,
-    question_id: a.questionId ?? null,
-    word_id: a.wordId,
-    word: a.word,
-    user_answer: a.userAnswer,
-    correct_answer: a.userAnswer, // we don't store correct answer in the attempt payload
-    is_correct: a.correct,
-    answered_at: new Date(a.timestamp).toISOString(),
-  }))
+  let attemptPayloads = session.attempts ?? []
+  const missingAnswerQuestionIds = [
+    ...new Set(
+      attemptPayloads
+        .filter((attempt) => !attempt.correctAnswer && attempt.questionId)
+        .map((attempt) => attempt.questionId as string),
+    ),
+  ]
+
+  if (missingAnswerQuestionIds.length > 0) {
+    const { data: answerRows, error: answerRowsError } = await supabase
+      .from('question_bank')
+      .select('id,answer,answer_text,choices')
+      .in('id', missingAnswerQuestionIds)
+
+    if (answerRowsError) {
+      console.warn('[5C] question_bank answer lookup failed:', answerRowsError.message)
+    } else {
+      attemptPayloads = applyQuestionBankCorrectAnswers(
+        attemptPayloads,
+        (answerRows ?? []) as QuestionAnswerLookupRow[],
+      )
+    }
+  }
+
+  const attempts = buildQuizAttemptRows(insertedSession.id, user.id, attemptPayloads)
 
   if (attempts.length > 0) {
     const { error: attemptsError } = await supabase.from('quiz_attempts').insert(attempts)

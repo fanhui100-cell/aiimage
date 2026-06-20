@@ -13,15 +13,16 @@ import { NumberRoll } from '@/components/ui/NumberRoll'
 const MAX_WORDS = 5
 const BAR_COUNT = 32
 
-type CardState = 'idle' | 'recording' | 'scored'
-
 // ── Waveform ───────────────────────────────────────────────────
 function Waveform({ active, level = 0 }: { active: boolean; level?: number }) {
   // F4：真实麦克风音量驱动（level 0-1），滚动历史条
   const [bars, setBars] = useState<number[]>(Array(BAR_COUNT).fill(0.12))
   const levelRef = useRef(level)
-  levelRef.current = level
   const rafRef = useRef<number>(0)
+
+  useEffect(() => {
+    levelRef.current = level
+  }, [level])
 
   useEffect(() => {
     if (!active) {

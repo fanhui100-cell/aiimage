@@ -1,11 +1,6 @@
-import { AppShell } from '@/components/layout/AppShell'
-import { GroupsScreen } from '@/components/screens/GroupsScreen'
+import { permanentRedirect } from 'next/navigation'
 
-// D6：学习小组 — 我的/发现小组 + 创建，进 /groups/[id]
-export default function GroupsPage() {
-  return (
-    <AppShell>
-      <GroupsScreen />
-    </AppShell>
-  )
+// 界面优化2·导航合并：小组已并入「社区」。旧路由 308 永久重定向到对应 tab。
+export default function GroupsRedirect() {
+  permanentRedirect('/community?tab=groups')
 }

@@ -20,6 +20,7 @@ export function GroupDetailScreen() {
   const params = useParams<{ id: string }>()
   const id = params?.id
   const [ui, setUi] = useState<'loading' | 'ready' | 'error'>('loading')
+  const [errKind, setErrKind] = useState<'unauth' | 'notfound' | 'error'>('error')
   const [g, setG] = useState<Detail | null>(null)
   const [nonce, setNonce] = useState(0)
 
@@ -28,9 +29,14 @@ export function GroupDetailScreen() {
     let cancelled = false
     setUi('loading')
     fetch(`/api/groups/${id}`)
-      .then(r => (r.ok ? r.json() : null))
-      .then(j => { if (cancelled) return; if (!j?.ok || !j.data) { setUi('error'); return } setG(j.data as Detail); setUi('ready') })
-      .catch(() => { if (!cancelled) setUi('error') })
+      .then(async r => {
+        if (cancelled) return
+        if (r.ok) { const j = await r.json().catch(() => null); if (j?.ok && j.data) { setG(j.data as Detail); setUi('ready'); return } }
+        // 区分空态：未登录 / 小组不存在 / 其它错误（401/404/其它）
+        setErrKind(r.status === 401 || r.status === 503 ? 'unauth' : r.status === 404 ? 'notfound' : 'error')
+        setUi('error')
+      })
+      .catch(() => { if (!cancelled) { setErrKind('error'); setUi('error') } })
     return () => { cancelled = true }
   }, [id, nonce])
 
@@ -44,7 +50,12 @@ export function GroupDetailScreen() {
     return <div className="scr theme-light"><div className="wrap" style={{ maxWidth: 760 }}><button className="gp-back" onClick={() => router.push('/groups')}>‹ 返回小组列表</button><div className="skel" style={{ height: 110, borderRadius: 18, marginBottom: 18 }} /><div className="gp-wall">{Array.from({ length: 6 }).map((_, i) => <div key={i} className="skel" style={{ height: 58, borderRadius: 13 }} />)}</div></div></div>
   }
   if (ui === 'error' || !g) {
-    return <div className="scr theme-light"><div className="wrap" style={{ maxWidth: 760 }}><button className="gp-back" onClick={() => router.push('/groups')}>‹ 返回小组列表</button><div className="state error" style={{ marginTop: 24 }}><div className="state-icon"><Ico d={ALERT} /></div><div className="state-title">小组加载失败</div><div className="state-desc">可能未登录或网络出错。</div><div className="state-acts"><button className="btn btn-ink" onClick={() => setNonce(n => n + 1)}>重试</button><button className="btn btn-ghost" onClick={() => router.push('/groups')}>返回</button></div></div></div></div>
+    const E = {
+      unauth: { title: '请先登录', desc: '登录后才能查看小组详情与成员打卡。', acts: <><button className="btn btn-ink" onClick={() => router.push('/auth/login')}>去登录</button><button className="btn btn-ghost" onClick={() => router.push('/groups')}>返回</button></> },
+      notfound: { title: '这个小组不存在', desc: '它可能已被解散或删除；若是私有小组，需要邀请码或成员权限才能查看。', acts: <><button className="btn btn-ink" onClick={() => router.push('/groups')}>返回小组列表</button></> },
+      error: { title: '小组加载失败', desc: '网络开小差了，稍后重试。', acts: <><button className="btn btn-ink" onClick={() => setNonce(n => n + 1)}>重试</button><button className="btn btn-ghost" onClick={() => router.push('/groups')}>返回</button></> },
+    }[errKind]
+    return <div className="scr theme-light"><div className="wrap" style={{ maxWidth: 760 }}><button className="gp-back" onClick={() => router.push('/groups')}>‹ 返回小组列表</button><div className="state error" style={{ marginTop: 24 }}><div className="state-icon"><Ico d={ALERT} /></div><div className="state-title">{E.title}</div><div className="state-desc">{E.desc}</div><div className="state-acts">{E.acts}</div></div></div></div>
   }
 
   const doneN = g.members.filter(m => m.todayDone).length

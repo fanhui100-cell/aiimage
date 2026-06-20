@@ -33,7 +33,7 @@ export function checkReminderOnOpen() {
     if (todayActive) return
     const due = st.words.filter(w => w.nextReviewAt != null && w.nextReviewAt <= Date.now()).length
     if (!due) return
-    new Notification('词渊 LexiOcean', { body: `你有 ${due} 个词今天到期 — 5 分钟收个尾？`, tag: 'lexi-daily' })
+    new Notification('词渊 Lexiverse', { body: `你有 ${due} 个词今天到期 — 5 分钟收个尾？`, tag: 'lexi-daily' })
     localStorage.setItem(KEY + ':fired', today)
   } catch { /* noop */ }
 }

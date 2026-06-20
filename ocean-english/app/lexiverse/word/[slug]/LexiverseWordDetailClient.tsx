@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { useMemo } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-client'
 import { getConstellationById, getGalaxyById } from '@/config/lexiverse-galaxies'
 import { resolveLearningState } from '@/lib/lexiverse/lexiverse-learning-state'
@@ -11,6 +11,7 @@ import { useLexiverseDictionary } from '@/lib/lexiverse/useLexiverseDictionary'
 import { useLexiStore } from '@/store/lexiStore'
 import { LiquidActionButton, LiquidBadge, LiquidGlassCard, LiquidGlassPanel } from '@/components/lexiverse/liquid-ui'
 import { useLexiverseSlices } from '@/components/lexiverse/useLexiverseSlices'
+import { WordPracticeActions } from '@/components/lexiverse/WordPracticeActions'
 
 const STATE_COLOR = {
   mastered: '#7EF9FF',
@@ -28,6 +29,24 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
   const galaxyId = searchParams.get('galaxy')
   const returnTo = searchParams.get('returnTo') ?? (galaxyId ? `/lexiverse?galaxy=${galaxyId}` : '/lexiverse')
   const currentUrl = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
+  const router = useRouter()
+
+  // 本词题库探测（决定空池受控态）；不回退随机题
+  const [poolEmpty, setPoolEmpty] = useState(false)
+  useEffect(() => {
+    let alive = true
+    fetch(`/api/practice/session?mode=word&word=${encodeURIComponent(word.id)}&count=1`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (alive && j) setPoolEmpty(j.source === 'empty' || !(Array.isArray(j.items) && j.items.length > 0)) })
+      .catch(() => {})
+    return () => { alive = false }
+  }, [word.id])
+  // Esc / 关闭 → 回到星图（returnTo），与现有「Back · 返回」按钮等价
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') router.push(returnTo) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [router, returnTo])
 
   const slices = useLexiverseSlices()
   const { words } = useLexiverseDictionary()
@@ -68,7 +87,7 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
         <Link href="/lexiverse" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: '#ECFBFF' }}>
           <span style={{ width: 30, height: 30, borderRadius: 9, display: 'grid', placeItems: 'center', background: 'linear-gradient(135deg,#BFF6FF,#7EF9FF 45%,#38BDF8)', color: '#051421', fontWeight: 800 }}>L</span>
           <span>
-            <b style={{ display: 'block', fontSize: 14 }}>LexiOcean</b>
+            <b style={{ display: 'block', fontSize: 14 }}>Lexiverse</b>
             <i style={{ display: 'block', fontStyle: 'normal', fontSize: 10, color: '#9DB6CB', fontFamily: "'Space Mono', monospace" }}>Lexiverse · 词汇宇宙</i>
           </span>
         </Link>
@@ -104,23 +123,13 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
             </div>
           </section>
 
-          <div style={{ display: 'flex', gap: 9, flexWrap: 'wrap', marginTop: 26 }}>
-            <LiquidActionButton onClick={handleAddToReview} disabled={isInReview} accent="#FFA85A">
-              {isInReview ? 'In Review · 已加入复习' : 'Add to Review · 加入复习'}
-            </LiquidActionButton>
-            <Link href={`/quiz?mode=vocabulary-drill&word=${word.id}&returnTo=${encodeURIComponent(currentUrl)}`} style={{ textDecoration: 'none' }}>
-              <LiquidActionButton accent="#7EF9FF">Quiz this word · 练习</LiquidActionButton>
-            </Link>
-            <Link href={`/chat?context=word&word=${word.id}&returnTo=${encodeURIComponent(currentUrl)}`} style={{ textDecoration: 'none' }}>
-              <LiquidActionButton accent="#B79BFF">Ask AI · 问 AI</LiquidActionButton>
-            </Link>
-            <Link href={`/lexigraph?word=${word.id}`} style={{ textDecoration: 'none' }}>
-              <LiquidActionButton variant="secondary">Open in LexiGraph</LiquidActionButton>
-            </Link>
-            <Link href={`/dictionary?tab=explore`} style={{ textDecoration: 'none' }}>
-              <LiquidActionButton variant="secondary">Open Vocab Browser</LiquidActionButton>
-            </Link>
-          </div>
+          <WordPracticeActions
+            word={word}
+            returnTo={currentUrl}
+            poolEmpty={poolEmpty}
+            inToday={isInReview}
+            onAddToday={handleAddToReview}
+          />
 
           <Divider />
 
@@ -163,13 +172,14 @@ export function LexiverseWordDetailClient({ word }: { word: DictionaryWord }) {
 }
 
 function InfoGrid({ word, tags }: { word: DictionaryWord; tags: string[] }) {
+  // 仅单义词项（近义/反义）互链到对应词页；搭配是短语（如 make a decision，非词条 id → 会 404）→ 不互链；考试等级/主题/助记同理不互链
   const cells = [
-    { title: 'Synonyms · 近义词', items: word.synonyms, color: '#7EF9FF' },
-    { title: 'Antonyms · 反义词', items: word.antonyms, color: '#FF8FA8' },
-    { title: 'Collocations · 搭配', items: word.collocations.map((item) => item.phrase), color: '#6BE0A0' },
-    { title: 'Mnemonic · 助记', items: word.mnemonics.slice(0, 1).map((item) => item.mnemonicEn), color: '#B79BFF' },
-    { title: 'Exam & CEFR · 考试等级', items: [word.cefrLevel ?? '', ...word.examTags].filter(Boolean), color: '#FFD66B' },
-    { title: 'Themes · 主题领域', items: tags, color: '#9AD8FF' },
+    { title: 'Synonyms · 近义词', items: word.synonyms, color: '#7EF9FF', linkable: true },
+    { title: 'Antonyms · 反义词', items: word.antonyms, color: '#FF8FA8', linkable: true },
+    { title: 'Collocations · 搭配', items: word.collocations.map((item) => item.phrase), color: '#6BE0A0', linkable: false },
+    { title: 'Mnemonic · 助记', items: word.mnemonics.slice(0, 1).map((item) => item.mnemonicEn), color: '#B79BFF', linkable: false },
+    { title: 'Exam & CEFR · 考试等级', items: [word.cefrLevel ?? '', ...word.examTags].filter(Boolean), color: '#FFD66B', linkable: false },
+    { title: 'Themes · 主题领域', items: tags, color: '#9AD8FF', linkable: false },
   ]
 
   return (
@@ -178,13 +188,16 @@ function InfoGrid({ word, tags }: { word: DictionaryWord; tags: string[] }) {
         <LiquidGlassCard key={cell.title} style={{ minHeight: 118, background: 'rgba(255,255,255,0.035)' }}>
           <SectionTitle>{cell.title}</SectionTitle>
           <div style={{ display: 'flex', gap: 7, flexWrap: 'wrap' }}>
-            {cell.items.length > 0 ? cell.items.slice(0, 8).map((item) => (
-              <Link key={item} href={`/lexiverse/word/${encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))}`} style={{ textDecoration: 'none' }}>
+            {cell.items.length > 0 ? cell.items.slice(0, 8).map((item) => {
+              const chip = (
                 <span style={{ display: 'inline-flex', padding: '5px 9px', borderRadius: 8, border: `1px solid ${cell.color}44`, color: cell.color, background: `${cell.color}12`, fontSize: 12 }}>
                   {item}
                 </span>
-              </Link>
-            )) : <span style={{ color: '#6F8AA0', fontSize: 13 }}>No data yet</span>}
+              )
+              return cell.linkable
+                ? <Link key={item} href={`/lexiverse/word/${encodeURIComponent(item.toLowerCase().trim().replace(/\s+/g, '-'))}`} style={{ textDecoration: 'none' }}>{chip}</Link>
+                : <span key={item}>{chip}</span>
+            }) : <span style={{ color: '#6F8AA0', fontSize: 13 }}>No data yet</span>}
           </div>
         </LiquidGlassCard>
       ))}

@@ -14,7 +14,7 @@ export function makeAIError(
  */
 export function normalizeProviderError(err: unknown, provider: AIProviderName): AIError {
   // Log full details server-side only
-  console.error(`[LexiOcean AI][${provider}]`, err instanceof Error ? err.message : err)
+  console.error(`[Lexiverse AI][${provider}]`, err instanceof Error ? err.message : err)
 
   if (err instanceof Error) {
     if (err.message.includes('rate limit') || err.message.includes('429')) {

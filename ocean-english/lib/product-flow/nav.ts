@@ -20,20 +20,13 @@ export const TOOL_NAV = [
   { key: 'reading', zh: '阅读', en: 'Reading',   href: '/reading' },
 ] as const
 
-// 其余全部功能 —— 收进「我的」页「全部功能」区（保持可达）
+// 其余全部功能 —— 导航入口合并后仅剩「社区」+ 范围外两项
+// 复习→专练·智能复习；发音/口语→专练·口说家族；造句→专练·产出家族；听写→专练·听力家族；
+// 报告→我的·数据 tab；排行/小组/成就→社区页；知识库与「词库」重复已删。旧路由仍可直达（见各 page 的重定向）。
 export const MORE_NAV = [
-  { key: 'review',    zh: '复习',   en: 'Review',      href: '/memory' },
-  { key: 'exam',      zh: '试炼',   en: 'LexiTrial',   href: '/exam' },
-  { key: 'speak',     zh: '发音',   en: 'Speak',       href: '/pronunciation' },
-  { key: 'speaking',  zh: '口语',   en: 'Speaking',    href: '/speaking' },
-  { key: 'listening', zh: '听写',   en: 'Listening',   href: '/listening' },
-  { key: 'writing',   zh: '造句',   en: 'Writing',     href: '/writing' },
-  { key: 'roots',     zh: '词根',   en: 'Roots',       href: '/roots' },
-  { key: 'graph',     zh: '词图',   en: 'Graph',       href: '/lexigraph' },
-  { key: 'report',    zh: '报告',   en: 'Report',      href: '/report' },
-  { key: 'rank',      zh: '排行',   en: 'Leaderboard', href: '/leaderboard' },
-  { key: 'groups',    zh: '小组',   en: 'Groups',      href: '/groups' },
-  { key: 'vault',     zh: '知识库', en: 'LexiVault',   href: '/dictionary' },
+  { key: 'community', zh: '社区', en: 'Community', href: '/community' }, // 排行 + 小组 + 成就 合一
+  { key: 'roots',     zh: '词根', en: 'Roots',     href: '/roots' },     // 范围外，保留
+  { key: 'graph',     zh: '词图', en: 'Graph',     href: '/lexigraph' }, // 范围外，保留
 ] as const
 
 export type PrimaryNavKey = (typeof PRIMARY_NAV)[number]['key']

@@ -15,7 +15,7 @@ export const routes = {
   quiz: '/quiz',
   quizWord: (wordId: string) => `/quiz?word=${wordId}`,
   study: '/study',
-  exam: '/exam',
+  exam: '/drill',
   pronunciation: '/pronunciation',
   reading: '/reading',
   wrongAnswers: '/wrong-answers',

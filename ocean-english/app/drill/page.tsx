@@ -1,11 +1,11 @@
 import { AppShell } from '@/components/layout/AppShell'
-import { DrillEntryScreen } from '@/components/screens/LevelDrillEntry'
+import DrillScreen from '@/components/screens/drill/DrillScreen'
 
-// D4：按档专练入口 — 选一档单独刷该档高频新词（不改定级），跳 /learn?level=N&drill=1
+// 专练 /drill — 自由练 / 限时试炼 / 模拟考试，一个入口（合并原「试炼」）
 export default function DrillPage() {
   return (
     <AppShell>
-      <DrillEntryScreen />
+      <DrillScreen />
     </AppShell>
   )
 }

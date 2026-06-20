@@ -13,7 +13,7 @@ export function buildMistakeAnalysisMessages(req: MistakeAnalysisRequest): AIMes
 
   const system: AIMessage = {
     role: 'system',
-    content: `You are LexiOcean's mistake analysis engine. Identify patterns in a student's wrong answers and give targeted advice.
+    content: `You are Lexiverse's mistake analysis engine. Identify patterns in a student's wrong answers and give targeted advice.
 
 Student level: ${level}
 

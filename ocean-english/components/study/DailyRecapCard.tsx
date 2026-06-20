@@ -134,7 +134,7 @@ export function DailyRecapCard() {
               )}
             </div>
             <span style={{ fontFamily: 'var(--font-news)', fontStyle: 'italic', fontSize: 12, color: 'rgba(234,243,246,0.45)' }}>
-              LexiOcean · 万词成海，自有光
+              Lexiverse · 万词成海，自有光
             </span>
           </div>
         </div>

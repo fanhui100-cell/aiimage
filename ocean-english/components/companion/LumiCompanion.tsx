@@ -39,7 +39,6 @@ export function LumiCompanion() {
     if (gap >= 3 * DAY) {
       autoSay('好久不见。哪怕今天只学 3 分钟，也能让学习信号继续存在。')
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled])
 
   // ② streak 里程碑（7/30/100）③ 今日闭环完成
@@ -64,7 +63,6 @@ export function LumiCompanion() {
       }
     })
     return unsub
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled])
 
   if (disabled) return null

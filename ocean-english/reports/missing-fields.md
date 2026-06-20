@@ -1,5 +1,5 @@
 # LexiOcean Missing Fields Report
-> Generated: 2026-06-07T14:59:47.124Z  |  Unique words: 378
+> Generated: 2026-06-16T04:07:16.556Z  |  Unique words: 378
 
 ## Missing Chinese definition (0 / 378)
 

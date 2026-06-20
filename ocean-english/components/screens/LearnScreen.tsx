@@ -11,7 +11,7 @@ import { DrillSummary } from '@/components/screens/LevelDrillEntry'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
 import Link from 'next/link'
-import { FlowBar, SoundBtn, GhostBtn, PrimaryBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
+import { FlowBar, SoundBtn, PrimaryBtn, EmptyState, showStateToast, BackBtn } from '@/components/screens/SharedUI'
 
 // ── Flashcard（Demo10：真 3D rotateY 翻转，两面 backface-hidden）─
 const faceStyle: React.CSSProperties = {
@@ -72,7 +72,7 @@ function Flashcard({ word, flipped, onFlip }: { word: WordEntry; flipped: boolea
           {word.pos && <div style={{ fontSize: 12, color: m.light, fontWeight: 600, fontFamily: 'var(--font-mono)' }}>{word.pos}</div>}
           {word.ex && (
             <div style={{ fontSize: 13, color: 'var(--ink-sub)', marginTop: 8, lineHeight: 1.6, fontStyle: 'italic', maxWidth: 340 }}>
-              "{word.ex}"
+              &ldquo;{word.ex}&rdquo;
             </div>
           )}
           {word.exZh && (
@@ -118,7 +118,7 @@ export function LearnScreen() {
       return today.recommended.length > 0 ? today.recommended : getLearning()
     }
     return getLearning()
-  }, [isFlow, drill])
+  }, [isFlow, drill, getToday, getLearning])
 
   const [queue, setQueue] = useState<WordEntry[]>(() => initialList)
   const [idx, setIdx] = useState(0)
@@ -154,7 +154,6 @@ export function LearnScreen() {
       } catch { if (!cancelled) { setQueue([]); setDrillLoading(false) } }
     })()
     return () => { cancelled = true }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drill, drillLevel, reloadKey])
 
   const current = queue[idx]

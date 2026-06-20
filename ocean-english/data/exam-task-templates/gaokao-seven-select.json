@@ -1,0 +1,34 @@
+{
+  "templateId": "gaokao-seven-select",
+  "examIds": ["gaokao", "kaoyan"],
+  "taskType": "seven_select",
+  "skill": "reading",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "写一篇约 250-300 词的全新原创说明/议论短文，抽掉 5 个关键句留 5 个空（编号 1-5），另造 2 个干扰句，合计 7 个候选句（A-G）。每空唯一正确句；2 个干扰句须语义相关但放入任一空都不连贯。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 250,
+    "maxWords": 340,
+    "perStimulusItems": 5,
+    "topicDomains": ["科普", "教育", "社会", "环境", "文化", "心理"]
+  },
+  "itemCount": 5,
+  "optionCount": 7,
+  "answerSchema": {
+    "shape": "bank_answers",
+    "bank": 7,
+    "answers": 5,
+    "answerRange": "0-6"
+  },
+  "subskills": ["cohesion", "discourse_marker", "reference", "topic_sentence", "logical_flow"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "恰好 7 个候选句、5 个空",
+    "5 个答案索引互不重复且落在 0-6",
+    "2 个干扰句须似是而非（语义相关但不构成连贯）",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

@@ -1,0 +1,411 @@
+/* ════════════════════════════════════════════════════════════════════════
+   practice/session-builder.ts — 统一练习会话构建（Phase 4）
+
+   - source='auto'：v2 表存在且有 active 数据 → 用 v2；否则回退 v1 question_bank。
+   - source='v1' / 'v2'：强制对应来源。
+   - 绝不返回退役题型（antonym_choice / cet_cloze）。
+   - 空池：返回 { ok:true, source:'empty', items:[], warnings:[...] }，不报错。
+   v1 抽题复用 lib/question-bank/question-api-utils（不改 /api/questions）。
+   ════════════════════════════════════════════════════════════════════════ */
+import type { SupabaseClient } from '@supabase/supabase-js'
+import {
+  normalizeQuestionTypeForClient,
+  questionTypeAliases,
+} from '@/lib/question-bank/question-api-utils'
+import {
+  DEPRECATED_QUESTION_TYPES,
+  EXAM_TASK_TYPES,
+  isDeprecatedQuestionType,
+  isWordUniverseType,
+} from '@/lib/question-bank/question-type-taxonomy'
+import { EXAM_ID_TO_LEVEL, getExamSpec, normalizeExamId } from '@/lib/exam-specs'
+import type {
+  BuildPracticeSessionInput,
+  PracticeChoice,
+  PracticeItem,
+  PracticeSessionResponse,
+} from './session-types'
+
+const SEL_V1 = 'id,type,input_mode,word_id,normalized_word,prompt,prompt_zh,choices,answer,answer_text,hint,audio_ref,explanation_zh,exam_tags,theme_tags'
+const DEPRECATED_FILTER = `(${DEPRECATED_QUESTION_TYPES.join(',')})`
+const OBJECTIVE_SET = new Set<string>(EXAM_TASK_TYPES)
+
+type V1Row = Record<string, unknown> & {
+  id: string | number
+  type: string
+  input_mode?: string | null
+  word_id?: string | null
+  normalized_word?: string | null
+  prompt?: string | null
+  prompt_zh?: string | null
+  choices?: { id: string; text: string }[] | null
+  answer?: string | null
+  answer_text?: string | null
+  audio_ref?: string | null
+  explanation_zh?: string | null
+}
+
+function clamp(n: number, lo: number, hi: number): number {
+  return Math.max(lo, Math.min(Number.isFinite(n) ? Math.floor(n) : lo, hi))
+}
+
+function shuffle<T>(items: T[]): T[] {
+  for (let i = items.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[items[i], items[j]] = [items[j], items[i]]
+  }
+  return items
+}
+
+function newSessionId(seed?: string): string {
+  return seed ? `sess_${seed}` : `sess_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
+}
+
+/** 把请求题型展开为 DB 别名集合，剔除退役题型。 */
+function expandTypes(types: string[]): string[] {
+  const out = new Set<string>()
+  for (const t of types) {
+    if (isDeprecatedQuestionType(t)) continue
+    for (const alias of questionTypeAliases(t)) out.add(alias)
+  }
+  return [...out]
+}
+
+// ── v1 行 → PracticeItem ────────────────────────────────────────────────────
+function mapV1Row(row: V1Row): PracticeItem | null {
+  const dbType = row.type
+  const type = normalizeQuestionTypeForClient(dbType)
+  const inputMode = (row.input_mode as string) || 'choice'
+  const rawChoices = Array.isArray(row.choices) ? row.choices.filter((c) => c && c.id && c.text) : []
+  const choices: PracticeChoice[] = rawChoices.map((c) => ({ id: c.id, text: c.text }))
+  const isListen = inputMode === 'listen' || type === 'listening_comprehension'
+  const isReading = type === 'reading_comprehension'
+  const word = String(row.normalized_word ?? row.word_id ?? '')
+
+  const item: PracticeItem = {
+    id: `v1:${row.id}`,
+    legacyQuestionId: String(row.id),
+    type,
+    inputMode,
+    prompt: String(row.prompt ?? ''),
+    promptZh: row.prompt_zh ?? undefined,
+    choices: choices.length ? choices : undefined,
+    answer: row.answer ?? null,
+    answerText: row.answer_text ?? undefined,
+    // v1 阅读：passage 文本存在 audio_ref（与旧 PromptCard 一致），映射成 stimulus 供阅读 stem 显示
+    stimulus: isReading && row.audio_ref ? { kind: 'passage', textEn: String(row.audio_ref) } : undefined,
+    audio: isListen ? { url: row.audio_ref ?? undefined } : null,
+    targetWords: row.word_id ? [{ wordId: String(row.word_id), surface: word || undefined, role: 'tested_answer' }] : [],
+    subskills: [],
+    explanationZh: row.explanation_zh ?? undefined,
+  }
+  // 可作答性：有 ≥2 选项+answer（选择/听选）或有 answerText（拼写/听写）。
+  // 注意：listening MCQ 的 input_mode 可能是 'listen'，仍按选择题判定，不能因缺 answerText 丢弃。
+  const choiceValid = !!(item.choices && item.choices.length >= 2 && item.answer != null)
+  const spellValid = !!(item.answerText && item.answerText.length > 0)
+  if (!choiceValid && !spellValid) return null
+  return item
+}
+
+interface V1Filter {
+  word?: string
+  wordId?: string
+  types?: string[]   // 已展开（含别名、剔退役）
+  level?: number
+  exam?: string
+}
+
+async function fetchV1Pool(db: SupabaseClient, f: V1Filter, limit: number): Promise<V1Row[]> {
+  const base = () => {
+    let q = db.from('question_bank').select(SEL_V1).eq('status', 'active').eq('is_reviewed', true)
+    if (f.wordId) q = q.eq('word_id', f.wordId)
+    else if (f.word) q = q.eq('normalized_word', f.word)
+    if (f.types && f.types.length) q = f.types.length > 1 ? q.in('type', f.types) : q.eq('type', f.types[0])
+    else q = q.not('type', 'in', DEPRECATED_FILTER)
+    if (f.exam) q = q.contains('exam_tags', [f.exam])
+    if (f.level) q = q.contains('theme_tags', [`lv${f.level}`])
+    return q
+  }
+
+  const byWord = !!(f.word || f.wordId)
+  if (byWord) {
+    const { data } = await base().limit(limit * 4)
+    return shuffle(((data ?? []) as unknown as V1Row[]).slice()).slice(0, limit)
+  }
+
+  // 随机窗口：先数总量再随机偏移，避免每次只取 id 最小段
+  let cq = db.from('question_bank').select('id', { count: 'exact', head: true }).eq('status', 'active').eq('is_reviewed', true)
+  if (f.types && f.types.length) cq = f.types.length > 1 ? cq.in('type', f.types) : cq.eq('type', f.types[0])
+  else cq = cq.not('type', 'in', DEPRECATED_FILTER)
+  if (f.exam) cq = cq.contains('exam_tags', [f.exam])
+  if (f.level) cq = cq.contains('theme_tags', [`lv${f.level}`])
+  const { count } = await cq
+  const total = count ?? 0
+  if (!total) return []
+  const win = Math.min(limit * 8, 500)
+  const offset = total > win ? Math.floor(Math.random() * (total - win)) : 0
+  const { data } = await base().order('id', { ascending: true }).range(offset, offset + win - 1)
+  return shuffle(((data ?? []) as unknown as V1Row[]).slice()).slice(0, limit)
+}
+
+/** 从 examId 推断该档「v1 可用的客观考试题型」（用于 task 无 taskType 时）。 */
+function objectiveTypesForExam(examId: string): { level?: number; types: string[] } {
+  const id = normalizeExamId(examId)
+  if (!id) return { types: [] }
+  const spec = getExamSpec(id)
+  const level = EXAM_ID_TO_LEVEL[id]
+  if (!spec) return { level, types: [] }
+  const types = new Set<string>()
+  for (const sec of spec.sections) {
+    for (const t of sec.taskTypes) if (OBJECTIVE_SET.has(t) && !isDeprecatedQuestionType(t)) types.add(t)
+  }
+  return { level, types: [...types] }
+}
+
+async function buildFromV1(
+  db: SupabaseClient,
+  input: BuildPracticeSessionInput,
+  count: number,
+  warnings: string[],
+): Promise<PracticeItem[]> {
+  const normExam = input.examId ? normalizeExamId(input.examId) : null
+  const examLevel = normExam ? EXAM_ID_TO_LEVEL[normExam] : undefined
+
+  if (input.mode === 'word') {
+    if (!input.word && !input.wordId) {
+      warnings.push('missing_word')
+      return []
+    }
+    const rows = await fetchV1Pool(db, { word: input.word?.toLowerCase().trim(), wordId: input.wordId }, count)
+    return rows.map(mapV1Row).filter((x): x is PracticeItem => x !== null)
+  }
+
+  if (input.mode === 'task') {
+    const level = input.level ?? examLevel
+    let requested: string[] = []
+    if (input.taskType) requested = [input.taskType]
+    else if (input.examId) requested = objectiveTypesForExam(input.examId).types
+    if (!requested.length) {
+      warnings.push('missing_task_type')
+      return []
+    }
+    const expanded = expandTypes(requested)
+    if (!expanded.length) {
+      warnings.push('deprecated_type')
+      return []
+    }
+    if (input.taskType && !OBJECTIVE_SET.has(input.taskType) && !isWordUniverseType(input.taskType)) {
+      // 仅生产性任务（写作/翻译/口语等）v1 无题库；单词宇宙题型仍可按 type+level 抽
+      warnings.push('no_v1_pool_for_task')
+      return []
+    }
+    // 注意：question_bank.exam_tags 全库几乎为空，等级靠 theme_tags lvN（同 /api/mock-exam），故只按 level 过滤
+    const rows = await fetchV1Pool(db, { types: expanded, level }, count)
+    if (!rows.length) warnings.push('insufficient_pool')
+    return rows.map(mapV1Row).filter((x): x is PracticeItem => x !== null)
+  }
+
+  if (input.mode === 'section') {
+    const id = input.examId ? normalizeExamId(input.examId) : null
+    const spec = id ? getExamSpec(id) : null
+    const section = spec?.sections.find((s) => s.id === input.sectionId)
+    if (!spec || !section) {
+      warnings.push('unknown_section')
+      return []
+    }
+    const objective = section.taskTypes.filter((t) => OBJECTIVE_SET.has(t) && !isDeprecatedQuestionType(t))
+    if (!objective.length) {
+      warnings.push('no_v1_pool_for_section')
+      return []
+    }
+    const rows = await fetchV1Pool(db, { types: expandTypes(objective), level: EXAM_ID_TO_LEVEL[spec.id] }, count)
+    if (!rows.length) warnings.push('insufficient_pool')
+    return rows.map(mapV1Row).filter((x): x is PracticeItem => x !== null)
+  }
+
+  // mode === 'paper'
+  const id = input.examId ? normalizeExamId(input.examId) : null
+  const spec = id ? getExamSpec(id) : null
+  if (!spec) {
+    warnings.push('unknown_exam')
+    return []
+  }
+  warnings.push('v1_paper_approximation')
+  const out: PracticeItem[] = []
+  const TOTAL_CAP = 50
+  for (const section of spec.sections) {
+    if (out.length >= TOTAL_CAP) break
+    const objective = section.taskTypes.filter((t) => OBJECTIVE_SET.has(t) && !isDeprecatedQuestionType(t))
+    if (!objective.length) continue
+    const perSection = clamp(section.itemCount ?? 5, 1, 8)
+    const rows = await fetchV1Pool(db, { types: expandTypes(objective), level: EXAM_ID_TO_LEVEL[spec.id] }, perSection)
+    for (const r of rows.map(mapV1Row)) {
+      if (!r) continue
+      r.setId = section.id
+      out.push(r)
+      if (out.length >= TOTAL_CAP) break
+    }
+  }
+  if (!out.length) warnings.push('insufficient_pool')
+  return out
+}
+
+// ── v2 ──────────────────────────────────────────────────────────────────────
+async function v2Available(db: SupabaseClient): Promise<boolean> {
+  const { error } = await db.from('question_items').select('id').limit(1)
+  return !error
+}
+
+/**
+ * 从 v2 抽题。表不存在/无 active 数据时返回 []（调用方据此回退 v1）。
+ * v2 题库当前未填充（schema 默认未应用），该路径在数据就绪后生效。
+ */
+async function tryBuildFromV2(
+  db: SupabaseClient,
+  input: BuildPracticeSessionInput,
+  count: number,
+): Promise<PracticeItem[]> {
+  if (!(await v2Available(db))) return []
+
+  // 1) 选 active 题组（全局排除退役题型：迁移误把退役题设为 active 时的兜底）
+  let setsQ = db.from('question_sets').select('id, exam_id, section_id, task_type, stimulus_id, level')
+    .eq('status', 'active')
+    .not('task_type', 'in', DEPRECATED_FILTER)
+  if (input.examId) {
+    const norm = normalizeExamId(input.examId)
+    if (norm) setsQ = setsQ.eq('exam_id', norm)
+  }
+  if (input.sectionId) setsQ = setsQ.eq('section_id', input.sectionId)
+  if (input.taskType && !isDeprecatedQuestionType(input.taskType)) setsQ = setsQ.eq('task_type', input.taskType)
+  if (input.level) setsQ = setsQ.eq('level', input.level)
+  const { data: setsData, error: setsErr } = await setsQ.limit(200)
+  if (setsErr) return []
+  const sets = ((setsData ?? []) as { id: string; section_id: string | null; task_type: string; stimulus_id: string | null }[])
+    .filter((s) => !isDeprecatedQuestionType(s.task_type))   // post-filter 双保险
+  if (!sets.length) return []
+
+  const setIds = sets.map((s) => s.id)
+  const setById = new Map(sets.map((s) => [s.id, s]))
+
+  // 2) active 题目
+  const { data: itemsData } = await db
+    .from('question_items')
+    .select('id, question_set_id, input_mode, prompt, prompt_zh, choices, answer, explanation_zh, subskills')
+    .eq('status', 'active')
+    .in('question_set_id', setIds)
+    .limit(count * 4)
+  let items = (itemsData ?? []) as Record<string, unknown>[]
+
+  // word 模式：按 question_target_words 过滤到目标词
+  if (input.mode === 'word' && (input.wordId || input.word)) {
+    const itemIds = items.map((i) => String(i.id))
+    if (itemIds.length) {
+      let tw = db.from('question_target_words').select('question_item_id, word_id, surface, role, dimension').in('question_item_id', itemIds)
+      if (input.wordId) tw = tw.eq('word_id', input.wordId)
+      else if (input.word) tw = tw.ilike('surface', input.word.trim())
+      const { data: twData } = await tw
+      const keep = new Set((twData ?? []).map((r: { question_item_id: string }) => r.question_item_id))
+      items = items.filter((i) => keep.has(String(i.id)))
+    }
+  }
+  if (!items.length) return []
+
+  // 3) 目标词 + 材料 + 音频
+  const itemIds = items.map((i) => String(i.id))
+  const { data: twAll } = await db
+    .from('question_target_words')
+    .select('question_item_id, word_id, surface, role, sense_key, dimension')
+    .in('question_item_id', itemIds)
+  const twByItem = new Map<string, { word_id: string | null; surface: string | null; role: string; sense_key: string | null; dimension: string | null }[]>()
+  for (const r of (twAll ?? []) as { question_item_id: string; word_id: string | null; surface: string | null; role: string; sense_key: string | null; dimension: string | null }[]) {
+    const arr = twByItem.get(r.question_item_id) ?? []
+    arr.push(r)
+    twByItem.set(r.question_item_id, arr)
+  }
+
+  const stimulusIds = [...new Set(sets.map((s) => s.stimulus_id).filter((x): x is string => !!x))]
+  const stimById = new Map<string, { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }>()
+  // 仅取可播放字段：练习载荷绝不下发 transcript（答题后由 audio-asset-client review 模式拉）。
+  const audioByStim = new Map<string, { url: string }>()
+  if (stimulusIds.length) {
+    const { data: stims } = await db.from('stimuli').select('id, kind, title, text_en, text_zh').in('id', stimulusIds).eq('qa_status', 'active')
+    for (const s of (stims ?? []) as { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }[]) stimById.set(s.id, s)
+    const { data: auds } = await db.from('audio_assets').select('stimulus_id, url').in('stimulus_id', stimulusIds).eq('qa_status', 'active')
+    for (const a of (auds ?? []) as { stimulus_id: string; url: string }[]) audioByStim.set(a.stimulus_id, { url: a.url })
+  }
+
+  const built: PracticeItem[] = []
+  for (const it of items.slice(0, count)) {
+    const id = String(it.id)
+    const set = setById.get(String(it.question_set_id))
+    const stim = set?.stimulus_id ? stimById.get(set.stimulus_id) : undefined
+    const audio = set?.stimulus_id ? audioByStim.get(set.stimulus_id) : undefined
+    const choicesRaw = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
+    // 听力材料：text_en/text_zh 即原文(transcript)，练习态不下发（避免答前暴露）；阅读等保留材料文本。
+    const isListening = set?.task_type === 'listening_comprehension' || String(it.input_mode) === 'listen'
+    const stimulusOut = stim
+      ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
+      : undefined
+    built.push({
+      id: `v2:${id}`,
+      questionItemId: id,
+      setId: set?.id,
+      type: set?.task_type ?? 'unknown',
+      inputMode: String(it.input_mode ?? 'choice'),
+      prompt: String(it.prompt ?? ''),
+      promptZh: (it.prompt_zh as string) ?? undefined,
+      choices: choicesRaw.length ? choicesRaw.map((c) => ({ id: c.id, text: c.text })) : undefined,
+      answer: (it.answer as string | string[] | null) ?? null,
+      stimulus: stimulusOut,
+      audio: audio ? { url: audio.url } : null,
+      stimulusId: set?.stimulus_id ?? undefined,
+      targetWords: (twByItem.get(id) ?? []).map((t) => ({ wordId: t.word_id ?? undefined, surface: t.surface ?? undefined, role: t.role, senseKey: t.sense_key ?? undefined, dimension: t.dimension ?? undefined })),
+      subskills: Array.isArray(it.subskills) ? (it.subskills as string[]) : [],
+      explanationZh: (it.explanation_zh as string) ?? undefined,
+    })
+  }
+  return built
+}
+
+// ── 入口 ────────────────────────────────────────────────────────────────────
+export async function buildPracticeSession(
+  db: SupabaseClient,
+  input: BuildPracticeSessionInput,
+): Promise<PracticeSessionResponse> {
+  const sessionId = newSessionId(input.seed)
+  const count = clamp(input.count ?? 10, 1, 50)
+  const source = input.source ?? 'auto'
+  const warnings: string[] = []
+
+  // 硬拦截：退役题型一律空池，v1/v2/auto 都不再查询（Never return deprecated types）。
+  if (input.taskType && isDeprecatedQuestionType(input.taskType)) {
+    return { ok: true, source: 'empty', sessionId, mode: input.mode, items: [], warnings: ['deprecated_type'] }
+  }
+
+  let items: PracticeItem[] = []
+  let used: 'v1' | 'v2' | 'empty' = 'empty'
+
+  if (source === 'v2') {
+    items = await tryBuildFromV2(db, input, count).catch(() => [])
+    if (!items.length) warnings.push('v2_unavailable_or_empty')
+    used = items.length ? 'v2' : 'empty'
+  } else if (source === 'v1') {
+    items = await buildFromV1(db, input, count, warnings)
+    used = items.length ? 'v1' : 'empty'
+  } else {
+    // auto：v2 优先，空则回退 v1
+    items = await tryBuildFromV2(db, input, count).catch(() => [])
+    if (items.length) {
+      used = 'v2'
+    } else {
+      items = await buildFromV1(db, input, count, warnings)
+      used = items.length ? 'v1' : 'empty'
+    }
+  }
+
+  if (!items.length) {
+    if (!warnings.length) warnings.push('insufficient_pool')
+    return { ok: true, source: 'empty', sessionId, mode: input.mode, items: [], warnings }
+  }
+  return { ok: true, source: used, sessionId, mode: input.mode, items, warnings }
+}

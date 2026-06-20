@@ -85,13 +85,17 @@ export function ReviewHub() {
         </div>
       </div>
 
-      {/* B6-3：到期 tab 顶部复习预算行 */}
+      {/* B6-3：到期 tab 顶部复习预算行 + 题库强化入口（接 question_bank） */}
       {tab === 'due' && dueCount > 0 && (
-        <div style={{ maxWidth: 560, margin: '0 auto', padding: '12px 20px 0' }}>
+        <div style={{ maxWidth: 560, margin: '0 auto', padding: '12px 20px 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12.5, color: 'var(--ink-sub)', fontFamily: 'var(--font-mono)' }}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
             今日到期 {dueCount} · 预计 {estMinutes} 分钟{peakLabel ? ` · ${peakLabel}` : ''}
           </div>
+          <button onClick={() => router.push('/quiz?mode=vocabulary-drill')} className="btn-press"
+            style={{ flexShrink: 0, padding: '6px 13px', borderRadius: 999, border: '1px solid var(--line-strong)', background: 'var(--card)', cursor: 'pointer', fontSize: 12, fontWeight: 700, color: 'var(--teal-ink)', fontFamily: 'var(--font-sans)' }}>
+            题库强化练一组 →
+          </button>
         </div>
       )}
 

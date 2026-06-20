@@ -1,4 +1,5 @@
 import { strict as assert } from 'node:assert'
+import { readFileSync } from 'node:fs'
 
 import {
   getQuestionFetchWindow,
@@ -32,7 +33,10 @@ import {
   normalizeRecommendationExclude,
 } from '../lib/dictionary/recommendation'
 import { collectDictionarySearchResults } from '../lib/dictionary/search-utils'
-import { collectAllDictionaryWordsFromClient } from '../lib/dictionary/dictionary-client'
+import {
+  collectAllDictionaryWordsFromClient,
+  createDictionaryClientFromAdapters,
+} from '../lib/dictionary/dictionary-client'
 import type { DictionaryClient, DictionaryWord, WordSearchOptions } from '../lib/dictionary/dictionary-types'
 import { mapExamKeyToTag } from '../lib/dictionary/exam-tag-map'
 import { resolveAIProviderName } from '../lib/ai/ai-config'
@@ -72,16 +76,23 @@ function makeWord(index: number): DictionaryWord {
 }
 
 class PagingDictionaryClient implements DictionaryClient {
-  readonly isLive = true
   readonly calls: Array<{ offset: number; limit: number }> = []
 
-  constructor(private readonly words: DictionaryWord[]) {}
+  constructor(
+    private readonly words: DictionaryWord[],
+    readonly isLive = true,
+    private readonly delayMs = 0,
+  ) {}
 
   async lookupWord(slug: string): Promise<DictionaryWord | null> {
     return this.words.find((word) => word.id === slug) ?? null
   }
 
   async searchWords(_query: string, options?: WordSearchOptions): Promise<DictionaryWord[]> {
+    if (this.delayMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, this.delayMs))
+    }
+
     const offset = options?.offset ?? 0
     const limit = options?.limit ?? 20
 
@@ -115,6 +126,29 @@ async function testAllDictionaryWordsPaginatesPastApiPageLimit() {
       { offset: 2000, limit: 1000 },
     ],
   )
+}
+
+async function testAllDictionaryWordsUsesExtendedTimeoutForSlowLiveAdapter() {
+  const liveWords = Array.from({ length: 205 }, (_, index) => makeWord(index))
+  const seedWords = [makeWord(9000)]
+  const live = new PagingDictionaryClient(liveWords, true, 35)
+  const seed = new PagingDictionaryClient(seedWords, false)
+  const client = createDictionaryClientFromAdapters([live, seed])
+
+  const result = await collectAllDictionaryWordsFromClient(client, 100, 1000, 200)
+
+  assert.equal(result.length, 205)
+  assert.equal(result[0].id, 'word-0')
+  assert.equal(result.at(-1)?.id, 'word-204')
+  assert.deepEqual(
+    live.calls,
+    [
+      { offset: 0, limit: 100 },
+      { offset: 100, limit: 100 },
+      { offset: 200, limit: 100 },
+    ],
+  )
+  assert.deepEqual(seed.calls, [])
 }
 
 function testExamKeyMappingAcceptsNormalizedTagsAndSat() {
@@ -381,8 +415,35 @@ function testRealAiProvidersAreOptInUntilImplemented() {
   assert.ok(createAIClient('mock') instanceof MockProvider)
 }
 
+function source(path: string): string {
+  return readFileSync(path, 'utf8')
+}
+
+function testStudyGroupSecuritySqlAvoidsPolicyRecursion() {
+  const sql = source('supabase/sql/p3-study-groups-security.sql')
+
+  assert.match(sql, /DROP POLICY IF EXISTS "study_groups_read" ON study_groups/)
+  assert.match(sql, /public\.is_group_member\(study_groups\.id,\s*auth\.uid\(\)\)/)
+  assert.doesNotMatch(sql, /FROM group_members m\s+WHERE m\.group_id = study_groups\.id/)
+}
+
+function testInviteCodeInputAndRpcNormalizeCase() {
+  const groupsScreen = source('components/screens/GroupsScreen.tsx')
+  const sql = source('supabase/sql/p3-study-groups-security.sql')
+
+  assert.match(groupsScreen, /\.toUpperCase\(\)/)
+  assert.match(sql, /upper\(btrim\(code\)\)/)
+}
+
+function testReportTooltipDoesNotUseDangerousHtml() {
+  const reportScreen = source('components/screens/ReportScreen.tsx')
+
+  assert.doesNotMatch(reportScreen, /dangerouslySetInnerHTML/)
+}
+
 async function main() {
   await testAllDictionaryWordsPaginatesPastApiPageLimit()
+  await testAllDictionaryWordsUsesExtendedTimeoutForSlowLiveAdapter()
   testExamKeyMappingAcceptsNormalizedTagsAndSat()
   testQuestionApiUsesStableWindowsAndNormalizesTypes()
   testQuizHistoryRowsKeepCorrectAnswer()
@@ -395,6 +456,9 @@ async function main() {
   await testRecommendationPaginationAndPostExcludeSupport()
   await testDictionarySearchCollectsTrueFilteredTotal()
   testRealAiProvidersAreOptInUntilImplemented()
+  testStudyGroupSecuritySqlAvoidsPolicyRecursion()
+  testInviteCodeInputAndRpcNormalizeCase()
+  testReportTooltipDoesNotUseDangerousHtml()
 }
 
 main().catch((error) => {

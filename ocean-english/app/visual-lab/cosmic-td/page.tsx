@@ -12,8 +12,8 @@ const futurePlans = [
   {
     label: 'AI Core Star',
     labelZh: 'AI 核心恒星',
-    desc: 'AI Navigator rendered as the gravitational center — pulsing singularity driven by daily task completion.',
-    descZh: 'AI Navigator 渲染为宇宙引力中心，随每日任务完成度脉动。',
+    desc: '领航 LexiPilot rendered as the gravitational center — pulsing singularity driven by daily task completion.',
+    descZh: '领航 LexiPilot 渲染为宇宙引力中心，随每日任务完成度脉动。',
     icon: '⭐',
   },
   {
@@ -62,7 +62,7 @@ export default function CosmicTdLabPage() {
               marginBottom: '10px',
             }}
           >
-            LEXIOCEAN / VISUAL LAB
+            LEXIVERSE / VISUAL LAB
           </div>
           <h1
             style={{
@@ -188,7 +188,7 @@ export default function CosmicTdLabPage() {
               ← Back to Home / 返回首页
             </Link>
             <Link
-              href="/universe"
+              href="/lexiverse"
               style={{ fontSize: '13px', color: 'rgba(139,92,246,0.7)', textDecoration: 'none' }}
             >
               Go to Learning Universe / 进入学习宇宙 →

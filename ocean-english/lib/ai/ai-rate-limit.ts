@@ -26,6 +26,8 @@ export const RATE_LIMITS: Record<string, RateLimitConfig> = {
   // Phase 4A — document routes
   'document-extract': { windowMs: 60_000, max: 10 },
   'document-analysis': { windowMs: 60_000, max: 5 },
+  // 公开用 service role 查用户名 → 限流防枚举
+  'username-check': { windowMs: 60_000, max: 30 },
 }
 
 export function getClientIP(req: NextRequest): string {

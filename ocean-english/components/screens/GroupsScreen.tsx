@@ -51,7 +51,7 @@ export function GroupsScreen() {
     setCreating(false); setForm({ name: '', desc: '', isPublic: true }); setNonce(n => n + 1)
   }
   async function joinByCode() {
-    const c = code.trim()
+    const c = code.trim().toUpperCase()
     if (!c) return
     setJoinMsg('')
     try {

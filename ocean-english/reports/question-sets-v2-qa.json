@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-20T17:31:43.617Z",
+  "status": "not_applied",
+  "templates": [
+    "cet-banked-cloze",
+    "gaokao-grammar-fill",
+    "gaokao-seven-select",
+    "kaoyan-reading-b",
+    "sat-rw-domains",
+    "toefl-four-skills"
+  ],
+  "errors": [],
+  "notes": [
+    "v2 not_applied：跳过数据 QA"
+  ],
+  "ok": true
+}

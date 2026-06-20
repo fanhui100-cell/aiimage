@@ -1,57 +1,106 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getDictionaryClient } from '@/lib/dictionary/dictionary-client'
-import type { CefrLevel, ExamTag } from '@/lib/dictionary/dictionary-types'
+import {
+  collectRecommendedWords,
+  normalizeRecommendationExam,
+  normalizeRecommendationExclude,
+  type RecommendationExcludeInput,
+} from '@/lib/dictionary/recommendation'
 
-/**
- * GET /api/dictionary/recommend?band=6&exam=CET-6&exclude=a,b,c&limit=5
- *
- * Public endpoint — 今日包个性化推荐（spec A5-1）。
- * band → CEFR 窗口（band±1 对应的 CEFR 级），exam 命中优先，
- * 再按 frequencyRank 升序；exclude 排除已在学习库的词。
- */
-
-const BAND_CEFR: Record<number, CefrLevel> = {
-  1: 'A1', 2: 'A2', 3: 'B1', 4: 'B1', 5: 'B2', 6: 'B2', 7: 'C1', 8: 'C1',
+interface RecommendRequestBody {
+  band?: unknown
+  level?: unknown
+  exam?: unknown
+  limit?: unknown
+  exclude?: unknown
+  syllabus?: unknown
 }
 
-function bandToCefrWindow(band: number): CefrLevel[] {
-  const clamped = [band - 1, band, band + 1].map(b => Math.min(8, Math.max(1, b)))
-  return [...new Set(clamped.map(b => BAND_CEFR[b]))]
+function parseBool(value: unknown): boolean {
+  return value === true || value === 1 || value === '1' || value === 'true'
 }
 
-const VALID_EXAM_TAGS = new Set<string>([
-  'TOEFL', 'IELTS', 'CET-4', 'CET-6', 'KAOYAN', 'GAOKAO', 'SAT', 'GRE',
-])
+function parseNumber(value: unknown, fallback: number): number {
+  const parsed = Number(value ?? fallback)
+
+  return Number.isFinite(parsed) ? parsed : fallback
+}
+
+function parseLevel(value: unknown): number | null {
+  const parsed = Number(value)
+
+  return Number.isFinite(parsed) && parsed >= 1 && parsed <= 7 ? parsed : null
+}
+
+function parseLimit(value: unknown): number {
+  const parsed = parseNumber(value, 5)
+
+  return Math.min(50, Math.max(1, parsed))
+}
+
+function parseExclude(value: unknown): RecommendationExcludeInput {
+  if (typeof value === 'string') return value
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === 'string')
+  }
+
+  return null
+}
+
+async function respondWithRecommendations(params: {
+  band: unknown
+  level: unknown
+  exam: unknown
+  limit: unknown
+  exclude: unknown
+  syllabus: unknown
+}) {
+  const band = parseNumber(params.band, 5)
+  const level = parseLevel(params.level)
+  const exam = typeof params.exam === 'string' ? normalizeRecommendationExam(params.exam) : null
+  const limit = parseLimit(params.limit)
+  const exclude = normalizeRecommendationExclude(parseExclude(params.exclude))
+  const syllabus = parseBool(params.syllabus)
+  const data = await collectRecommendedWords(getDictionaryClient(), {
+    band,
+    level,
+    exam,
+    limit,
+    exclude,
+    syllabus,
+  })
+
+  return NextResponse.json({ ok: true, data })
+}
 
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams
-  const bandRaw = Number(sp.get('band') ?? 5)
-  const band = Number.isFinite(bandRaw) ? bandRaw : 5
-  // P1-2：7 档等级参数 — 词有 levels 标签时优先 level±1 匹配，无标签退回 CEFR 窗口
-  const levelRaw = Number(sp.get('level') ?? NaN)
-  const level = Number.isFinite(levelRaw) && levelRaw >= 1 && levelRaw <= 7 ? levelRaw : null
-  const examRaw = sp.get('exam')
-  const exam = examRaw && VALID_EXAM_TAGS.has(examRaw) ? (examRaw as ExamTag) : null
-  const exclude = new Set((sp.get('exclude') ?? '').split(',').filter(Boolean))
-  const limitRaw = Number(sp.get('limit') ?? 5)
-  const limit = Math.min(50, Math.max(1, Number.isFinite(limitRaw) ? limitRaw : 5))
+  const excludeValues = sp.getAll('exclude')
 
-  const cefrs = bandToCefrWindow(band)
-  const pool = await getDictionaryClient().searchWords('', { limit: 200 })
-  const picks = pool
-    .filter(w => !exclude.has(w.id))
-    .filter(w => {
-      if (level != null && w.levels?.length) {
-        return w.levels.some(l => Math.abs(l - level) <= 1)
-      }
-      return !w.cefrLevel || cefrs.includes(w.cefrLevel)
-    })
-    .sort((a, b) =>
-      // levels 精确命中 > exam 命中 > frequencyRank
-      Number(level != null && (b.levels?.includes(level) ? 1 : 0)) - Number(level != null && (a.levels?.includes(level) ? 1 : 0))
-      || Number(exam ? b.examTags.includes(exam) : 0) - Number(exam ? a.examTags.includes(exam) : 0)
-      || (a.frequencyRank ?? 9e9) - (b.frequencyRank ?? 9e9))
-    .slice(0, limit)
+  return respondWithRecommendations({
+    band: sp.get('band'),
+    level: sp.get('level'),
+    exam: sp.get('exam'),
+    limit: sp.get('limit'),
+    exclude: excludeValues.length > 1 ? excludeValues : sp.get('exclude'),
+    syllabus: sp.get('syllabus'),
+  })
+}
 
-  return NextResponse.json({ ok: true, data: picks })
+export async function POST(req: NextRequest) {
+  let body: RecommendRequestBody
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 })
+  }
+
+  return respondWithRecommendations({
+    band: body.band,
+    level: body.level,
+    exam: body.exam,
+    limit: body.limit,
+    exclude: body.exclude,
+    syllabus: body.syllabus,
+  })
 }

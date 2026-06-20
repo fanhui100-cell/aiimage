@@ -1,0 +1,641 @@
+{
+  "generatedAt": "2026-06-19T20:14:03.648Z",
+  "totalActiveReviewed": 165380,
+  "byLevel": {
+    "1": {
+      "level": 1,
+      "name": "??",
+      "total": 23454,
+      "types": {
+        "antonym_choice": 50,
+        "cloze_choice": 1888,
+        "cloze_passage": 173,
+        "cloze_spell": 1886,
+        "collocation_choice": 48,
+        "confusable_choice": 944,
+        "def_to_word": 1953,
+        "dictation_spell": 1982,
+        "en_to_zh": 1986,
+        "listen_to_meaning": 1982,
+        "listening_comprehension": 120,
+        "reading_comprehension": 1962,
+        "seven_select": 47,
+        "synonym_choice": 1642,
+        "synonym_substitute": 1287,
+        "word_form": 1569,
+        "zh_to_en": 1953,
+        "zh_to_word_spell": 1982
+      }
+    },
+    "2": {
+      "level": 2,
+      "name": "??/??",
+      "total": 22695,
+      "types": {
+        "antonym_choice": 45,
+        "cloze_choice": 1842,
+        "cloze_passage": 110,
+        "cloze_spell": 1839,
+        "collocation_choice": 48,
+        "confusable_choice": 336,
+        "def_to_word": 1920,
+        "dictation_spell": 1921,
+        "en_to_zh": 1924,
+        "grammar_fill": 219,
+        "listen_to_meaning": 1921,
+        "listening_comprehension": 360,
+        "reading_comprehension": 1980,
+        "seven_select": 60,
+        "synonym_choice": 1519,
+        "synonym_substitute": 1256,
+        "word_form": 1554,
+        "zh_to_en": 1920,
+        "zh_to_word_spell": 1921
+      }
+    },
+    "3": {
+      "level": 3,
+      "name": "CET-4",
+      "total": 20823,
+      "types": {
+        "antonym_choice": 52,
+        "banked_cloze": 110,
+        "cet_cloze": 82,
+        "cloze_choice": 1690,
+        "cloze_spell": 1690,
+        "collocation_choice": 48,
+        "confusable_choice": 265,
+        "def_to_word": 1754,
+        "dictation_spell": 1754,
+        "en_to_zh": 1754,
+        "listen_to_meaning": 1754,
+        "listening_comprehension": 359,
+        "para_match": 143,
+        "reading_comprehension": 1836,
+        "synonym_choice": 1493,
+        "synonym_substitute": 1176,
+        "word_form": 1355,
+        "zh_to_en": 1754,
+        "zh_to_word_spell": 1754
+      }
+    },
+    "4": {
+      "level": 4,
+      "name": "CET-6",
+      "total": 22056,
+      "types": {
+        "antonym_choice": 44,
+        "banked_cloze": 98,
+        "cet_cloze": 81,
+        "cloze_choice": 1809,
+        "cloze_spell": 1809,
+        "collocation_choice": 43,
+        "confusable_choice": 197,
+        "def_to_word": 1887,
+        "dictation_spell": 1887,
+        "en_to_zh": 1887,
+        "listen_to_meaning": 1887,
+        "listening_comprehension": 360,
+        "para_match": 148,
+        "reading_comprehension": 2037,
+        "synonym_choice": 1499,
+        "synonym_substitute": 1149,
+        "word_form": 1460,
+        "zh_to_en": 1887,
+        "zh_to_word_spell": 1887
+      }
+    },
+    "5": {
+      "level": 5,
+      "name": "??",
+      "total": 5048,
+      "types": {
+        "antonym_choice": 28,
+        "cet_cloze": 57,
+        "cloze_choice": 229,
+        "cloze_passage": 58,
+        "cloze_spell": 229,
+        "collocation_choice": 48,
+        "def_to_word": 238,
+        "dictation_spell": 237,
+        "en_to_zh": 239,
+        "listen_to_meaning": 237,
+        "listening_comprehension": 360,
+        "para_match": 146,
+        "reading_comprehension": 1857,
+        "seven_select": 54,
+        "synonym_choice": 196,
+        "synonym_substitute": 169,
+        "word_form": 191,
+        "zh_to_en": 238,
+        "zh_to_word_spell": 237
+      }
+    },
+    "6": {
+      "level": 6,
+      "name": "TOEFL",
+      "total": 49251,
+      "types": {
+        "antonym_choice": 43,
+        "cet_cloze": 56,
+        "cloze_choice": 4697,
+        "cloze_spell": 4696,
+        "collocation_choice": 48,
+        "confusable_choice": 551,
+        "def_to_word": 4800,
+        "dictation_spell": 4799,
+        "en_to_zh": 4798,
+        "listen_to_meaning": 4799,
+        "reading_comprehension": 1855,
+        "synonym_choice": 3018,
+        "synonym_substitute": 2691,
+        "word_form": 2801,
+        "zh_to_en": 4800,
+        "zh_to_word_spell": 4799
+      }
+    },
+    "7": {
+      "level": 7,
+      "name": "SAT",
+      "total": 22053,
+      "types": {
+        "antonym_choice": 39,
+        "cet_cloze": 58,
+        "cloze_choice": 1971,
+        "cloze_spell": 1951,
+        "collocation_choice": 47,
+        "confusable_choice": 53,
+        "def_to_word": 2015,
+        "dictation_spell": 2001,
+        "en_to_zh": 2023,
+        "listen_to_meaning": 2001,
+        "reading_comprehension": 1874,
+        "synonym_choice": 1546,
+        "synonym_substitute": 1344,
+        "word_form": 1114,
+        "zh_to_en": 2015,
+        "zh_to_word_spell": 2001
+      }
+    }
+  },
+  "matrix": {
+    "antonym_choice": [
+      0,
+      50,
+      45,
+      52,
+      44,
+      28,
+      43,
+      39
+    ],
+    "banked_cloze": [
+      0,
+      0,
+      0,
+      110,
+      98,
+      0,
+      0,
+      0
+    ],
+    "cet_cloze": [
+      0,
+      0,
+      0,
+      82,
+      81,
+      57,
+      56,
+      58
+    ],
+    "cloze_choice": [
+      0,
+      1888,
+      1842,
+      1690,
+      1809,
+      229,
+      4697,
+      1971
+    ],
+    "cloze_passage": [
+      0,
+      173,
+      110,
+      0,
+      0,
+      58,
+      0,
+      0
+    ],
+    "cloze_spell": [
+      0,
+      1886,
+      1839,
+      1690,
+      1809,
+      229,
+      4696,
+      1951
+    ],
+    "collocation_choice": [
+      0,
+      48,
+      48,
+      48,
+      43,
+      48,
+      48,
+      47
+    ],
+    "confusable_choice": [
+      0,
+      944,
+      336,
+      265,
+      197,
+      0,
+      551,
+      53
+    ],
+    "def_to_word": [
+      0,
+      1953,
+      1920,
+      1754,
+      1887,
+      238,
+      4800,
+      2015
+    ],
+    "dictation_spell": [
+      0,
+      1982,
+      1921,
+      1754,
+      1887,
+      237,
+      4799,
+      2001
+    ],
+    "en_to_zh": [
+      0,
+      1986,
+      1924,
+      1754,
+      1887,
+      239,
+      4798,
+      2023
+    ],
+    "grammar_fill": [
+      0,
+      0,
+      219,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "listen_to_meaning": [
+      0,
+      1982,
+      1921,
+      1754,
+      1887,
+      237,
+      4799,
+      2001
+    ],
+    "listening_comprehension": [
+      0,
+      120,
+      360,
+      359,
+      360,
+      360,
+      0,
+      0
+    ],
+    "para_match": [
+      0,
+      0,
+      0,
+      143,
+      148,
+      146,
+      0,
+      0
+    ],
+    "reading_comprehension": [
+      0,
+      1962,
+      1980,
+      1836,
+      2037,
+      1857,
+      1855,
+      1874
+    ],
+    "seven_select": [
+      0,
+      47,
+      60,
+      0,
+      0,
+      54,
+      0,
+      0
+    ],
+    "synonym_choice": [
+      0,
+      1642,
+      1519,
+      1493,
+      1499,
+      196,
+      3018,
+      1546
+    ],
+    "synonym_substitute": [
+      0,
+      1287,
+      1256,
+      1176,
+      1149,
+      169,
+      2691,
+      1344
+    ],
+    "word_form": [
+      0,
+      1569,
+      1554,
+      1355,
+      1460,
+      191,
+      2801,
+      1114
+    ],
+    "zh_to_en": [
+      0,
+      1953,
+      1920,
+      1754,
+      1887,
+      238,
+      4800,
+      2015
+    ],
+    "zh_to_word_spell": [
+      0,
+      1982,
+      1921,
+      1754,
+      1887,
+      237,
+      4799,
+      2001
+    ]
+  },
+  "byExam": {
+    "中考": 2384,
+    "SAT": 2017,
+    "TOEFL": 1999,
+    "CET-4": 2614,
+    "KAOYAN": 2607,
+    "高考": 2807,
+    "CET-6": 2805
+  },
+  "byInput": {
+    "choice": 95934,
+    "spell": 38725,
+    "listen": 30721
+  },
+  "sourceExamTop": [
+    [
+      "LexiOcean-CET6-Reading",
+      2037
+    ],
+    [
+      "LexiOcean-高考-Reading",
+      1980
+    ],
+    [
+      "LexiOcean-中考-Reading",
+      1962
+    ],
+    [
+      "LexiOcean-SAT-Reading",
+      1874
+    ],
+    [
+      "LexiOcean-KAOYAN-Reading",
+      1857
+    ],
+    [
+      "LexiOcean-TOEFL-Reading",
+      1855
+    ],
+    [
+      "LexiOcean-CET4-Reading",
+      1836
+    ],
+    [
+      "LexiOcean-CET6-Listening",
+      360
+    ],
+    [
+      "LexiOcean-KAOYAN-Listening",
+      360
+    ],
+    [
+      "LexiOcean-高考-Listening",
+      360
+    ],
+    [
+      "LexiOcean-CET4-Listening",
+      359
+    ],
+    [
+      "LexiOcean-高考-Grammar",
+      219
+    ],
+    [
+      "LexiOcean-中考-Cloze",
+      173
+    ],
+    [
+      "LexiOcean-CET6-ParaMatch",
+      148
+    ],
+    [
+      "LexiOcean-KAOYAN-ParaMatch",
+      146
+    ],
+    [
+      "LexiOcean-CET4-ParaMatch",
+      143
+    ],
+    [
+      "LexiOcean-中考-Listening",
+      120
+    ],
+    [
+      "LexiOcean-CET4-Banked",
+      110
+    ],
+    [
+      "LexiOcean-高考-Cloze",
+      110
+    ],
+    [
+      "LexiOcean-CET6-Banked",
+      98
+    ],
+    [
+      "LexiOcean-TOEFL-Vocab",
+      88
+    ],
+    [
+      "LexiOcean-SAT-Vocab",
+      85
+    ],
+    [
+      "LexiOcean-CET4-Vocab",
+      84
+    ],
+    [
+      "LexiOcean-中考-Vocab",
+      82
+    ],
+    [
+      "LexiOcean-CET4-Practice-A",
+      82
+    ],
+    [
+      "LexiOcean-CET6-Vocab",
+      81
+    ],
+    [
+      "LexiOcean-CET6-Practice-A",
+      81
+    ],
+    [
+      "LexiOcean-高考-Vocab",
+      78
+    ],
+    [
+      "LexiOcean-KAOYAN-Vocab",
+      75
+    ],
+    [
+      "LexiOcean-高考-SevenSelect",
+      60
+    ]
+  ],
+  "passageStats": {
+    "reading_comprehension": {
+      "rows": 13401,
+      "passages": 4471,
+      "avgRowsPerPassage": 3,
+      "levels": {
+        "1": 1962,
+        "2": 1980,
+        "3": 1836,
+        "4": 2037,
+        "5": 1857,
+        "6": 1855,
+        "7": 1874
+      }
+    },
+    "listening_comprehension": {
+      "rows": 1559,
+      "passages": 522,
+      "avgRowsPerPassage": 2.99,
+      "levels": {
+        "1": 120,
+        "2": 360,
+        "3": 359,
+        "4": 360,
+        "5": 360,
+        "6": 0,
+        "7": 0
+      }
+    },
+    "cloze_passage": {
+      "rows": 341,
+      "passages": 341,
+      "avgRowsPerPassage": 1,
+      "levels": {
+        "1": 173,
+        "2": 110,
+        "3": 0,
+        "4": 0,
+        "5": 58,
+        "6": 0,
+        "7": 0
+      }
+    },
+    "seven_select": {
+      "rows": 161,
+      "passages": 161,
+      "avgRowsPerPassage": 1,
+      "levels": {
+        "1": 47,
+        "2": 60,
+        "3": 0,
+        "4": 0,
+        "5": 54,
+        "6": 0,
+        "7": 0
+      }
+    },
+    "banked_cloze": {
+      "rows": 208,
+      "passages": 208,
+      "avgRowsPerPassage": 1,
+      "levels": {
+        "1": 0,
+        "2": 0,
+        "3": 110,
+        "4": 98,
+        "5": 0,
+        "6": 0,
+        "7": 0
+      }
+    },
+    "para_match": {
+      "rows": 437,
+      "passages": 437,
+      "avgRowsPerPassage": 1,
+      "levels": {
+        "1": 0,
+        "2": 0,
+        "3": 143,
+        "4": 148,
+        "5": 146,
+        "6": 0,
+        "7": 0
+      }
+    },
+    "grammar_fill": {
+      "rows": 219,
+      "passages": 219,
+      "avgRowsPerPassage": 1,
+      "levels": {
+        "1": 0,
+        "2": 219,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0
+      }
+    }
+  },
+  "structuralIssueCount": 0,
+  "structuralIssueSamples": []
+}

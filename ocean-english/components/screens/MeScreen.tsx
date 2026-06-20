@@ -5,6 +5,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
 import { STATE_META } from '@/lib/state-meta'
 import { useNavigate } from '@/hooks/useNavigate'
@@ -20,8 +21,10 @@ import { AccentSelector } from '@/components/pronunciation/AccentSelector'
 import { readAccentPreference, writeAccentPreference } from '@/lib/pronunciation/pronunciation-client'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 import type { Accent } from '@/lib/pronunciation/pronunciation-types'
+import { ReportScreen } from '@/components/screens/ReportScreen'
 
 const GOAL_OPTS = [8, 12, 16, 20]
+type MeTab = 'overview' | 'data' | 'settings'
 
 function SectionTitle({ zh, en }: { zh: string; en: string }) {
   return (
@@ -38,6 +41,10 @@ export function MeScreen() {
   const cmd = useCommandPalette()
   const { streakData, xp, masteredPct, counts, profile, bandCefr, setProfile } = useLexiStore()
   const streak = streakData.current
+  // 界面优化2·导航合并：概览 / 数据(原报告) / 设置；支持 ?tab= 深链（/report 308→/profile?tab=data）
+  const sp = useSearchParams()
+  const initialTab: MeTab = (['overview', 'data', 'settings'] as const).includes(sp.get('tab') as MeTab) ? (sp.get('tab') as MeTab) : 'overview'
+  const [tab, setTab] = useState<MeTab>(initialTab)
 
   const wordCounts = counts()
   const pct = masteredPct()
@@ -105,6 +112,20 @@ export function MeScreen() {
           )}
         </div>
 
+        {/* tab 组（界面优化2·导航合并）：概览 / 数据〔原报告〕/ 设置 */}
+        <div style={{ display: 'flex', gap: 6, padding: 4, margin: '18px 0 4px', borderRadius: 14, background: 'var(--card-2)', border: '1px solid var(--line)', maxWidth: 400 }}>
+          {([['overview', '概览'], ['data', '数据'], ['settings', '设置']] as [MeTab, string][]).map(([k, zh]) => {
+            const on = tab === k
+            return (
+              <button key={k} onClick={() => setTab(k)} className="btn-press"
+                style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, padding: '9px 8px', borderRadius: 10, border: 'none', cursor: 'pointer', background: on ? 'var(--card)' : 'transparent', boxShadow: on ? 'var(--card-shadow-sm)' : 'none', fontSize: 13.5, fontWeight: 700, fontFamily: 'var(--font-sans)', color: on ? 'var(--teal-ink)' : 'var(--ink-muted)' }}>
+                {zh}{k === 'data' && <span style={{ fontSize: 9.5, fontWeight: 700, color: 'var(--gold-ink)', background: 'var(--gold-bg)', border: '1px solid rgba(179,120,31,.3)', padding: '0 6px', borderRadius: 999 }}>报告</span>}
+              </button>
+            )
+          })}
+        </div>
+
+        {tab === 'overview' && (<>
         {/* ② 数据区 */}
         <SectionTitle zh="数据" en="Data" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 12 }}>
@@ -232,6 +253,20 @@ export function MeScreen() {
           ))}
         </div>
 
+        </>)}
+
+        {/* 数据 tab = 未改动的 ReportScreen（原「报告」并入此处） */}
+        {tab === 'data' && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ padding: '12px 16px', marginBottom: 4, display: 'flex', gap: 10, alignItems: 'center', background: 'var(--card-2)', border: '1px solid var(--line)', borderRadius: 14 }}>
+              <span style={{ fontSize: 9.5, fontWeight: 700, color: 'var(--gold-ink)', background: 'var(--gold-bg)', border: '1px solid rgba(179,120,31,.3)', padding: '1px 7px', borderRadius: 999, whiteSpace: 'nowrap' }}>原「报告」</span>
+              <span style={{ fontSize: 12.5, color: 'var(--ink-sub)' }}>独立入口退役，作为「我的 → 数据」一处权威分析中心。</span>
+            </div>
+            <ReportScreen />
+          </div>
+        )}
+
+        {tab === 'settings' && (<>
         {/* ⑤ 设置 */}
         <SectionTitle zh="设置" en="Settings" />
         <div style={{ background: 'var(--card)', borderRadius: 16, border: '1px solid var(--line)', overflow: 'hidden' }}>
@@ -257,6 +292,7 @@ export function MeScreen() {
             清除本机学习数据
           </button>
         </div>
+        </>)}
       </div>
     </div>
   )

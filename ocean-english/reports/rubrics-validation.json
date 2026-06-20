@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-06-20T17:31:36.147Z",
+  "rubrics": [
+    "zhongkao:writing",
+    "gaokao:writing",
+    "cet4:writing",
+    "cet4:translation",
+    "cet6:writing",
+    "cet6:translation",
+    "kaoyan:writing",
+    "kaoyan:translation",
+    "toefl:writing",
+    "toefl:speaking"
+  ],
+  "subjectiveSections": 12,
+  "errors": [],
+  "notes": [
+    "生产性 section 12 个 · rubric 10 个"
+  ],
+  "ok": true
+}

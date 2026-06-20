@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import { isDarkRoute } from '@/lib/theme-route'
+import { ThemeToggle } from '@/components/layout/ThemeToggle'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
 
@@ -271,10 +272,11 @@ function MenuContent({
       </Group>
 
       {/* 设置 */}
-      {/* TODO（暗色主题后置）：B11-2 决策删除 NightModeToggle——纸面色系做合格暗色版
-          需要整套 token 重调（纸纹理/阴影/状态色对比度），lexiverse 深色页已天然适配；
-          不留不工作的开关，待「暗色主题」立项后重做。 */}
       <Group label="设置 · Settings" sub={sub} border={panelBorder}>
+        <Row text={text} hoverBg={hoverBg}>
+          <span>外观主题</span>
+          <ThemeToggle dark={dark} compact />
+        </Row>
         <Row text={text} hoverBg={hoverBg}>
           <span>发音口音</span>
           <AccentSeg accent={accent} sub={sub} dark={dark} />
