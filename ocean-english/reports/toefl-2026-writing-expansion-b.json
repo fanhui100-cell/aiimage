@@ -1,0 +1,156 @@
+{
+  "window": "B",
+  "stage": "toefl-2026-expansion-b",
+  "generatedAtNote": "timestamps omitted intentionally; see git/commit metadata",
+  "userOverride": {
+    "planOriginalTarget": "40 new each -> total 50 each",
+    "appliedTarget": "50 new each -> total 60 each",
+    "reason": "User instruction: change quantity to 60 total per pool (50 new).",
+    "matrixDistribution": "50 distributed across 8 categories/domains as [7,7,6,6,6,6,6,6] (first two buckets get 7), per user 'distribute evenly across 8'.",
+    "fileRename": "Source files named toefl-email-50.productive.json / toefl-discussion-50.productive.json (was -40 in plan)."
+  },
+  "codexRework": {
+    "trigger": "Codex review flagged email #4 (index 3) and email #10 (index 9) as semantic duplicates: both 'part-time job causes section time conflict -> request to switch section -> ask procedure'.",
+    "action": "Kept email #4 (index 3, Psychology Friday discussion-section move, category 'course scheduling, absence, deadline, clarification'). Fully rewrote email #10 (index 9, category 'instructor, adviser, or teaching-assistant communication') into a different core problem with different communicative actions; matrix unchanged (7/7/6/6/6/6/6/6).",
+    "replaced": {
+      "index": 9,
+      "category": "instructor, adviser, or teaching-assistant communication",
+      "oldPrompt": "You are a student enrolled in the afternoon section of a writing course, but a new part-time job means you can no longer attend in the afternoon. There is also a morning section of the same course. Write an email to the course instructor, Professor Choi. In your email, explain your scheduling problem, request permission to move to the morning section, and ask what you need to do to make the change official.",
+      "oldLegacyId": "gen:productive:email_writing:set:claude:1fowteh",
+      "newPrompt": "You are a second-year university student who hopes to specialize in environmental data analysis. Next term you can take only one of two electives that both seem related to this goal: \"Geographic Information Systems\" or \"Statistics for Environmental Science.\" Because your academic adviser, Dr. Mensah, will approve your final course plan, you want her guidance before you decide. Write an email to Dr. Mensah. In your email, explain your specialization goal and why both electives appeal to you, ask which of the two would better support that goal and the reason for her recommendation, and ask whether choosing one of them now might limit other courses you may want to take in later terms.",
+      "newLegacyId": "gen:productive:email_writing:set:claude:jlyi0b"
+    },
+    "targetedDelete": {
+      "method": "Deleted ONLY the old record by exact legacy_id (gen:productive:email_writing:set:claude:1fowteh); deleted its 1 question_item then the question_set by set id; NO bulk delete by task_type.",
+      "preDeleteAssertions": "qa_flags.stage='toefl-2026-expansion-b' AND task_type='email_writing' AND status='draft' (all passed before deletion).",
+      "deletedSetId": "93fc055e-6e56-428b-ac0f-5784d7dc8136",
+      "deletedItemLegacyId": "gen:productive:email_writing:item:claude:1fowteh:0"
+    },
+    "reapply": { "emailPerFile": { "wrote": 1, "dup": 49 }, "discussionPerFile": { "wrote": 0, "dup": 50 }, "totalLine": { "wrote": 1, "dup": 99 } },
+    "idempotentReapply": { "emailPerFile": { "wrote": 0, "dup": 50 }, "totalLine": { "wrote": 0, "dup": 100 } },
+    "stageReverseCheckAfterRework": { "email_writing_stage_sets": 50, "academic_discussion_stage_sets": 50, "owned_draft": { "email_writing": 60, "academic_discussion": 60 } },
+    "semanticDedupRecheck": {
+      "method": "Adversarial semantic (meaning-level) review, not string matching: rewritten task vs the other 49 new emails and the 10 pilot emails; plus a full secondary scan across all 60.",
+      "index9Verdict": "DISTINCT — course-selection counseling (choose between two electives for a specialization goal + future-course implications); explicitly not a section-switch/schedule-conflict; checked clear against new#0, new#3, pilot#5, new#10, new#38.",
+      "withinNewEmails": "No same-core-problem duplicate pair among the 50 new emails.",
+      "newVsPilotFindingsForUserDecision": [
+        { "pair": "new#31 (library study-desk lights, ask when fixed) <-> pilot#3 (dorm heater broken, ask when repaired)", "severity": "strong", "note": "Same 'report a broken campus facility -> describe + impact + when-fixed' skeleton; differs mainly by object/recipient (object-swap). Recommend a follow-up single-record fix if strict pilot-distinctness is required." },
+        { "pair": "new#35 (ask professor to UPDATE an existing recommendation letter) <-> pilot#9 (ask professor for a NEW recommendation letter)", "severity": "borderline", "note": "Shared 'solicit rec letter + remind of work + cite deadline' skeleton; new#35's 'update an existing letter for a recent project' premise is a real variation. Lower priority." }
+      ]
+    }
+  },
+  "preconditions": {
+    "worktree": "D:/ai-worktrees/ocean-toefl-b (ocean-english)",
+    "branch": "qbank/toefl-writing",
+    "checkpointCommit": "d30f049",
+    "checkpointTag": "qbank-v2-pre-parallel-20260622",
+    "windowA": "D:/ai-worktrees/ocean-toefl-a (qbank/toefl-complete-words) @ d30f049 — same checkpoint, separate filesystem dir",
+    "envLocal": "present, untracked",
+    "baselineSnapshot": { "totalSets": 4878, "activeTotal": 0, "antonym_choice": 0, "cet_cloze": 0, "email_writing_draft": 10, "academic_discussion_draft": 10 },
+    "verifyToeflPilotPreWrite": "exit 0; 10 draft for each owned task type"
+  },
+  "sourceCounts": {
+    "email_writing": { "total": 50, "matrix": { "course scheduling, absence, deadline, clarification": 7, "instructor, adviser, or teaching-assistant communication": 7, "library, laboratory, tutoring, or academic support": 6, "group project, presentation, club, or campus event": 6, "housing, dining, transportation, or campus facilities": 6, "application, recommendation, internship, or research opportunity": 6, "registration, records, fees, identification, or student services": 6, "complaint, repair, accessibility, safety, or conflict resolution": 6 } },
+    "academic_discussion": { "total": 50, "matrix": { "education and learning": 7, "technology and society": 7, "environment and public policy": 6, "economics and work": 6, "health and psychology": 6, "cities, transport, and community": 6, "media, culture, and ethics": 6, "science, research, and innovation": 6 } }
+  },
+  "duplicateChecks": {
+    "normalizedExactWithinNew": "0 duplicates (verifier)",
+    "normalizedExactVsPilot": "0 duplicates (verifier loads both pilot files)",
+    "materialDuplicatesFoundInManualInspection": 4,
+    "repaired": [
+      { "type": "email_writing", "index": 7, "category": "instructor, adviser, or teaching-assistant communication", "reason": "Duplicated the overused 'sick -> missed class -> how to catch up' trope already present at email index 1 (Chemistry/flu). Replaced with: request to submit an assignment as a recorded presentation instead of a written report (Prof Alvarez)." },
+      { "type": "email_writing", "index": 30, "category": "housing, dining, transportation, or campus facilities", "reason": "'Booking system shows available but rejects' mechanic echoed the registration enrollment-error email (index 38) and the squatted study-room email (index 17). Replaced with: card-operated laundry machine took payment, frequently out of order (refund + repair)." },
+      { "type": "academic_discussion", "index": 16, "category": "environment and public policy", "reason": "'Right to repair / durability mandate' duplicated the technology-domain item at index 13 (Dr. Sorensen, device durability/e-waste). Replaced with a congestion-charge question (kept Dr. Cordova / Greta / Hassan)." },
+      { "type": "academic_discussion", "index": 33, "category": "cities, transport, and community", "reason": "'Car-free downtown zones' duplicated the environment-domain item at index 18 (Dr. Petrov, closing streets to cars). Replaced with short-term vacation-rental limits vs long-term housing (kept Dr. Quinteros / Pia / Rashid)." }
+    ],
+    "borderlineKept": [
+      "parks-vs-housing: Rahman (mandate green-space share in new downtown developments) vs Halloran (single city-owned lot: park or housing) — different policy instruments.",
+      "automation-retraining: Nguyen (who is responsible: companies vs individuals/govt) vs Montoya (government investment target: adult retraining vs school reform).",
+      "broken-lights: library study-desk lights (facilities) vs parking-garage stairwell lights (safety) — different context/recipient/actions.",
+      "section-move: psychology discussion-section reassignment (cat1) vs writing course section change (cat2) — different objects/reasons."
+    ]
+  },
+  "pipeline": {
+    "dryRun": { "tasks": 100, "dbWrites": 0 },
+    "firstApply": { "wrote": 100, "dup": 0, "skipped": 0, "allDraft": true, "rubricCoverage": "100/100" },
+    "idempotentReapply": { "wrote": 0, "dup": 100, "skipped": 0 }
+  },
+  "dbCounts": {
+    "stageSets": { "email_writing": 50, "academic_discussion": 50 },
+    "ownedDraft": { "email_writing": 60, "academic_discussion": 60 },
+    "ownedActive": { "email_writing": 0, "academic_discussion": 0 },
+    "perItem": "input_mode=free_text; choices=[]; answer.type=rubric_scored; answer.official=false; rubric_id nonempty == TOEFL writing rubric resolved from DB (exam_id=toefl, skill=writing); exactly 1 item per set",
+    "sourceToDb": "50/50 deterministic 1:1 payload match per type (prompt, prompt_zh, referencePoints, qa_flags.wordLimit, status=draft, level=6, task_type)"
+  },
+  "sampleLegacyIds": {
+    "email_writing": [
+      "gen:productive:email_writing:set:claude:1xmthay",
+      "gen:productive:email_writing:set:claude:lod9o6",
+      "gen:productive:email_writing:set:claude:31xwqd",
+      "gen:productive:email_writing:set:claude:1cwzka8",
+      "gen:productive:email_writing:set:claude:gn5yz8"
+    ],
+    "academic_discussion": [
+      "gen:productive:academic_discussion:set:claude:1albs4g",
+      "gen:productive:academic_discussion:set:claude:1dkqrga",
+      "gen:productive:academic_discussion:set:claude:812lfk",
+      "gen:productive:academic_discussion:set:claude:bs66a8",
+      "gen:productive:academic_discussion:set:claude:1x1282i"
+    ]
+  },
+  "validationCommands": [
+    { "cmd": "npx tsx scripts/verify-toefl-pilot.ts (pre-write)", "exit": 0, "note": "10 draft each owned type" },
+    { "cmd": "npx tsx scripts/qbank-v2-snapshot.ts (baseline)", "exit": 0 },
+    { "cmd": "npx tsx scripts/verify-toefl-writing-expansion.ts (source-only)", "exit": 0 },
+    { "cmd": "npx tsx scripts/import-authored-productive-tasks-v2.ts --stage=toefl-2026-expansion-b (dry-run)", "exit": 0 },
+    { "cmd": "npx tsx scripts/import-authored-productive-tasks-v2.ts --stage=toefl-2026-expansion-b --apply (first)", "exit": 0 },
+    { "cmd": "npx tsx scripts/import-authored-productive-tasks-v2.ts --stage=toefl-2026-expansion-b --apply (idempotency)", "exit": 0 },
+    { "cmd": "npx tsx scripts/verify-toefl-writing-expansion.ts --db", "exit": 0 },
+    { "cmd": "npm run qa:qsets-v2", "exit": 0 },
+    { "cmd": "npm run validate:qbank-v2", "exit": 0 },
+    { "cmd": "npm run validate:rubrics", "exit": 0 },
+    { "cmd": "npm run validate:question-types", "exit": 0 },
+    { "cmd": "npm run lint", "exit": 0 },
+    { "cmd": "npx tsc --noEmit", "exit": 0 },
+    { "cmd": "npx tsx scripts/qbank-v2-snapshot.ts (final)", "exit": 0 }
+  ],
+  "invariants": { "genActive": 0, "antonym_choice": 0, "cet_cloze": 0 },
+  "finalSnapshot": { "totalSets": 5038, "email_writing_draft": 60, "academic_discussion_draft": 60, "activeTotal": 0 },
+  "windowADrift": {
+    "observed": "complete_the_words 10 -> 70 (+60), totalSets 4878 -> 4938 before my apply",
+    "explanation": "Window A wrote 60 complete_the_words drafts to the SHARED Supabase DB. Fully explained, none touching owned writing types; active/deprecated remained 0.",
+    "discrepancyForUser": "Window A reached 70 total (=60 new) for complete_the_words, while Window B applied 60 total (=50 new) per the user's explicit answer. The two windows appear to have interpreted '60' differently (A: 60 new; B: total 60). Surfaced for reconciliation; Window B followed the explicit instruction."
+  },
+  "safety": {
+    "deepSeekOrExternalApi": "NONE — all 100 tasks authored directly by Claude.",
+    "copiedEtsContent": "NONE — original scenarios; pilot prompts included in dedup; near-canonical/overused scenarios identified and repaired.",
+    "modelAnswerOrOfficialScore": "NONE — answer.official=false; referencePoints are scoring guidance only; no model essays.",
+    "nonofficialGuidance": "Every wordLimit begins with the exact prefix 'Project guidance (not an official TOEFL requirement):'.",
+    "sharedFilesModified": "NONE of the forbidden shared/Window-A files were modified.",
+    "promotion": "NONE — all rows draft; no activation."
+  },
+  "changedFiles": {
+    "ownedNew": [
+      "scripts/verify-toefl-writing-expansion.ts",
+      "data/generated-question-sets/toefl-2026-expansion-b/toefl-email-50.productive.json",
+      "data/generated-question-sets/toefl-2026-expansion-b/toefl-discussion-50.productive.json",
+      "reports/toefl-2026-writing-expansion-b.md",
+      "reports/toefl-2026-writing-expansion-b.json"
+    ],
+    "importerGenerated": [
+      "reports/authored-productive-toefl-2026-expansion-b-dryrun-report.json",
+      "reports/authored-productive-toefl-2026-expansion-b-apply-report.json"
+    ],
+    "validatorRegenerated": [
+      "reports/question-bank-v2-validation.json",
+      "reports/question-sets-v2-qa.json",
+      "reports/rubrics-validation.json"
+    ]
+  },
+  "deferredToCentralIntegration": [
+    "scripts/verify-toefl-pilot.ts (still expects pre-integration 10-set pools; do not edit here — central updates after both windows)",
+    "reports/qbank-production-final-summary.md",
+    "reports/qbank-production-issue-ledger.*",
+    "answer-position normalization is N/A for productive tasks (no choice positions)"
+  ]
+}
