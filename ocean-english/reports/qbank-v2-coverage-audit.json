@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-22T17:01:32.905Z",
+  "generatedAt": "2026-06-22T20:17:42.619Z",
   "totals": {
-    "sets": 5038,
-    "items": 5904,
+    "sets": 5056,
+    "items": 5922,
     "activeSets": 0,
-    "draftSets": 5038,
+    "draftSets": 5056,
     "stimuliWithActiveAudio": 0
   },
   "expectedMatrix": {
@@ -40,17 +40,17 @@
         "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 48,
+        "draft": 50,
         "reviewed": 0,
         "active": 0,
         "rejected": 0,
         "retired": 0,
-        "items": 48,
-        "stimuli": 48,
+        "items": 50,
+        "stimuli": 50,
         "activeAudio": 0,
         "rubricItems": 0,
-        "sourceStages": 1,
-        "state": "THIN",
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
         "blockingReasons": []
       },
       {
@@ -460,17 +460,17 @@
         "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 34,
+        "draft": 50,
         "reviewed": 0,
         "active": 0,
         "rejected": 0,
         "retired": 0,
-        "items": 34,
-        "stimuli": 34,
+        "items": 50,
+        "stimuli": 50,
         "activeAudio": 0,
         "rubricItems": 0,
-        "sourceStages": 0,
-        "state": "THIN",
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
         "blockingReasons": []
       },
       {
@@ -1010,8 +1010,8 @@
     ],
     "stateCounts": {
       "MISSING": 7,
-      "THIN": 2,
-      "READY_DRAFT": 32,
+      "THIN": 0,
+      "READY_DRAFT": 34,
       "READY_ACTIVE": 0,
       "BLOCKED": 4
     },
@@ -1024,10 +1024,7 @@
       "toefl lv6 / speaking / listen_and_repeat — draft 0",
       "toefl lv6 / speaking / interview_speaking — draft 0"
     ],
-    "thin": [
-      "zhongkao lv1 / language_use / grammar_fill — draft 48 (<50)",
-      "cet6 lv4 / banked_cloze / banked_cloze — draft 34 (<50)"
-    ],
+    "thin": [],
     "blocked": [
       "cet4 lv3 / listening / listening_comprehension — draft 67 · audio_missing",
       "toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified",
@@ -1035,6 +1032,7 @@
       "toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready"
     ],
     "readyDraft": [
+      "zhongkao lv1 / grammar_fill — draft 50",
       "zhongkao lv1 / cloze_passage — draft 142",
       "zhongkao lv1 / reading_comprehension — draft 50",
       "zhongkao lv1 / applied_writing — draft 50",
@@ -1050,6 +1048,7 @@
       "cet4 lv3 / reading_comprehension — draft 67",
       "cet4 lv3 / translation_zh_en — draft 55",
       "cet6 lv4 / essay_writing — draft 50",
+      "cet6 lv4 / banked_cloze — draft 50",
       "cet6 lv4 / para_match — draft 57",
       "cet6 lv4 / reading_comprehension — draft 50",
       "cet6 lv4 / translation_zh_en — draft 51",
@@ -1228,15 +1227,15 @@
       "exam": "zhongkao",
       "level": 1,
       "taskType": "grammar_fill",
-      "totalSets": 48,
-      "draft": 48,
+      "totalSets": 50,
+      "draft": 50,
       "active": 0,
-      "items": 48,
-      "stimuli": 48,
+      "items": 50,
+      "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
-      "sourceStages": 1,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2027,15 +2026,15 @@
       "exam": "cet6",
       "level": 4,
       "taskType": "banked_cloze",
-      "totalSets": 34,
-      "draft": 34,
+      "totalSets": 50,
+      "draft": 50,
       "active": 0,
-      "items": 34,
-      "stimuli": 34,
+      "items": 50,
+      "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
-      "sourceStages": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]

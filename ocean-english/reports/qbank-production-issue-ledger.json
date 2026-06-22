@@ -372,6 +372,22 @@
       "continueDecision": "continued",
       "needsFixLater": false,
       "status": "fixed"
+    },
+    {
+      "id": "R5-nonaudio-expansion",
+      "stage": "R5",
+      "batch": "-",
+      "examId": "cet6,zhongkao",
+      "level": "4,1",
+      "taskType": "banked_cloze,grammar_fill",
+      "severity": "info",
+      "category": "content_quality",
+      "summary": "R5 非音频扩产：补满 2 个已确认 THIN 非音频格——cet6 banked_cloze 34→50(+16 新授 lv4)、zhongkao grammar_fill 48→50(+2 新授 lv1)。Claude 亲撰、draft、原创。新建 stage r5-cet6-banked-cloze / r5-zhongkao-grammar-fill。MISSING 全为音频(R7)、BLOCKED 维持(R4)、build_a_sentence 待 R3，均未生成。",
+      "evidence": "merge 形状校验通过(banked 16: passage≥245词/10空/bank15/answers10互异;grammar 2: 10 gblanks);dry-run parsed_ok 16/2 reject 0;apply wrote 16/2 dup 0;幂等 wrote 0 dup 16/2。语义抽检发现 16/16 banked 答案为平凡顺序[0..9]→确定性洗牌 bank+重映射答案(内容不变)、rule-12 精确删 16 旧 set+16 孤儿 stimulus、重导 16 洗牌版(幂等证毕)。verify-source-db-all-authored PASS(1322/1332 1:1)。coverage:两格均 READY_DRAFT 50。qa:qsets-v2/validate:qbank-v2/practice-session/papers EXIT 0。totalSets 5056、active 0、antonym/cet_cloze 0。banked_cloze/grammar_fill 非 a/b/c/d 选项题,不适用答案位归一化。",
+      "containment": "draft only;未 promote;无前端;新 stage 由 verify-source-db-all-authored 覆盖(代替逐 stage 验证器)。",
+      "continueDecision": "continued",
+      "needsFixLater": false,
+      "status": "fixed"
     }
   ]
 }

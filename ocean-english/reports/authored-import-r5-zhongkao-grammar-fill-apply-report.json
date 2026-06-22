@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T20:15:37.958Z",
+  "apply": true,
+  "stage": "r5-zhongkao-grammar-fill",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 2,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 2
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r5-zhongkao-grammar-fill\\zhongkao-grammar-fill-2.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 2
+    }
+  ]
+}

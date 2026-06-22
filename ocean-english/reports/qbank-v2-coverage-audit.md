@@ -1,15 +1,15 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-22T17:01:32.905Z
+Generated: 2026-06-22T20:17:42.619Z
 
-Totals: sets 5038 · items 5904 · active 0 · draft 5038
+Totals: sets 5056 · items 5922 · active 0 · draft 5056
 
-## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 7 · THIN 2 · READY_DRAFT 32 · READY_ACTIVE 0 · BLOCKED 4
+## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 7 · THIN 0 · READY_DRAFT 34 · READY_ACTIVE 0 · BLOCKED 4
 
 | exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |
 |---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
 | zhongkao | 1 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
-| zhongkao | 1 | language_use | grammar_fill | - | unknown | - | - | 48 | 0 | 0 | 48 | 48 | 0 | 0 | 1 | THIN | - |
+| zhongkao | 1 | language_use | grammar_fill | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | zhongkao | 1 | cloze | cloze_passage | - | unknown | - | - | 142 | 0 | 0 | 142 | 142 | 0 | 0 | 0 | READY_DRAFT | - |
 | zhongkao | 1 | reading | reading_comprehension | - | choice | - | - | 50 | 0 | 0 | 200 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | zhongkao | 1 | writing | applied_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
@@ -28,7 +28,7 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 | cet4 | 3 | translation | translation_zh_en | - | free_text | - | Y | 55 | 0 | 0 | 55 | 55 | 0 | 55 | 1 | READY_DRAFT | - |
 | cet6 | 4 | writing | essay_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
 | cet6 | 4 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
-| cet6 | 4 | banked_cloze | banked_cloze | - | unknown | - | - | 34 | 0 | 0 | 34 | 34 | 0 | 0 | 0 | THIN | - |
+| cet6 | 4 | banked_cloze | banked_cloze | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 1 | READY_DRAFT | - |
 | cet6 | 4 | long_match | para_match | - | unknown | - | - | 57 | 0 | 0 | 57 | 57 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet6 | 4 | careful_reading | reading_comprehension | - | choice | - | - | 50 | 0 | 0 | 200 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | cet6 | 4 | translation | translation_zh_en | - | free_text | - | Y | 51 | 0 | 0 | 51 | 51 | 0 | 51 | 1 | READY_DRAFT | - |
@@ -64,10 +64,8 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 - toefl lv6 / speaking / listen_and_repeat — draft 0
 - toefl lv6 / speaking / interview_speaking — draft 0
 
-### THIN (0 < draft < 50) — 2
+### THIN (0 < draft < 50) — 0
 
-- zhongkao lv1 / language_use / grammar_fill — draft 48 (<50)
-- cet6 lv4 / banked_cloze / banked_cloze — draft 34 (<50)
 
 ### BLOCKED — 4
 
@@ -76,8 +74,9 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 - toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified
 - toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready
 
-### READY_DRAFT (draft ≥ 50) — 32
+### READY_DRAFT (draft ≥ 50) — 34
 
+- zhongkao lv1 / grammar_fill — draft 50
 - zhongkao lv1 / cloze_passage — draft 142
 - zhongkao lv1 / reading_comprehension — draft 50
 - zhongkao lv1 / applied_writing — draft 50
@@ -93,6 +92,7 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 - cet4 lv3 / reading_comprehension — draft 67
 - cet4 lv3 / translation_zh_en — draft 55
 - cet6 lv4 / essay_writing — draft 50
+- cet6 lv4 / banked_cloze — draft 50
 - cet6 lv4 / para_match — draft 57
 - cet6 lv4 / reading_comprehension — draft 50
 - cet6 lv4 / translation_zh_en — draft 51
@@ -127,7 +127,7 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 | zhongkao | 1 | def_to_word | 18 | 18 | 0 | 18 | 0 | 0 | 0 | 18 | 0 | insufficient_active_pool |
 | zhongkao | 1 | dictation_spell | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
 | zhongkao | 1 | en_to_zh | 18 | 18 | 0 | 18 | 0 | 0 | 0 | 18 | 0 | insufficient_active_pool |
-| zhongkao | 1 | grammar_fill | 48 | 48 | 0 | 48 | 48 | 0 | 0 | 0 | 1 | insufficient_active_pool |
+| zhongkao | 1 | grammar_fill | 50 | 50 | 0 | 50 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | zhongkao | 1 | listen_to_meaning | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
 | zhongkao | 1 | reading_comprehension | 50 | 50 | 0 | 200 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | zhongkao | 1 | seven_select | 19 | 19 | 0 | 19 | 19 | 0 | 0 | 0 | 0 | insufficient_active_pool |
@@ -174,7 +174,7 @@ Totals: sets 5038 · items 5904 · active 0 · draft 5038
 | cet4 | 3 | word_form | 13 | 13 | 0 | 13 | 0 | 0 | 0 | 13 | 0 | insufficient_active_pool |
 | cet4 | 3 | zh_to_en | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
 | cet4 | 3 | zh_to_word_spell | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
-| cet6 | 4 | banked_cloze | 34 | 34 | 0 | 34 | 34 | 0 | 0 | 0 | 0 | insufficient_active_pool |
+| cet6 | 4 | banked_cloze | 50 | 50 | 0 | 50 | 50 | 0 | 0 | 0 | 1 | insufficient_active_pool |
 | cet6 | 4 | cloze_choice | 12 | 12 | 0 | 12 | 0 | 0 | 0 | 12 | 0 | insufficient_active_pool |
 | cet6 | 4 | cloze_spell | 12 | 12 | 0 | 12 | 0 | 0 | 0 | 12 | 0 | insufficient_active_pool |
 | cet6 | 4 | collocation_choice | 25 | 25 | 0 | 25 | 0 | 0 | 0 | 25 | 0 | insufficient_active_pool |
