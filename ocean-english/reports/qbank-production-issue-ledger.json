@@ -416,10 +416,10 @@
       "category": "schema_needed",
       "summary": "R9 事务化晋级 RPC（交付，未应用，停在 apply 闸口）。新增 supabase/sql/p5-question-bank-promotion-rpc.sql：函数 promote_question_sets_v2(p_set_ids uuid[])——仅接受显式 set UUID 数组（不按 type/level 谓词批量）；FOR UPDATE 锁定；逐 set 校验（draft；非退役 antonym_choice/cet_cloze；非 scoring_not_ready/official_spec_unverified；≥1 item 且全 draft 且 answer 非空；生产性 free_text/speak 必有 rubric_id；听力 listening_comprehension 或 item.input_mode=listen 必有 active 音频；stimulus FK 存在）；通过者同一事务内 items→active+set→active；任何意外 DB 错误整体回滚（不可能出现部分 active）；返回每 id {result,reason}（promoted/already_active/rejected）；对已 active 幂等。EXECUTE 仅 service_role（PUBLIC revoke）。改 scripts/promote-question-sets-v2.ts：--apply 改为调用该 RPC（dry-run 不变）。新增 scripts/validate-promotion-rpc.ts（--expect-not-applied 预检 + 默认对无效候选 scoring_not_ready 测拒绝且零状态变更）。",
       "evidence": "validate-promotion-rpc --expect-not-applied EXIT 0（RPC 尚未应用,符合预期）;promote dry-run(cet4 en_to_zh limit1) EXIT 0(candidates1/eligible1,未调 RPC);validate:qbank-v2(active0)/lint/tsc EXIT 0。SQL 未自动应用——等用户在 Supabase 应用后再跑 validate-promotion-rpc(默认)验证。无 promote、无 active、无 DB 写。",
-      "containment": "仅交付 SQL+校验器+改 promote 脚本;未应用 SQL、未晋级、active 仍 0。apply 闸口:用户应用 p5-question-bank-promotion-rpc.sql → 跑 validate-promotion-rpc.ts(默认) → R10 才实际晋级。",
-      "continueDecision": "blocked_on_user_apply",
+      "containment": "仅交付 SQL+校验器+改 promote 脚本;未应用 SQL、未晋级、active 仍 0。apply 闸口:用户应用 p5-question-bank-promotion-rpc.sql → 跑 validate-promotion-rpc.ts(默认) → R10 才实际晋级。 APPLIED+VALIDATED: 用户已在 Supabase 应用 p5-question-bank-promotion-rpc.sql；validate-promotion-rpc.ts(默认) PASS——无效候选(build_a_sentence/scoring_not_ready) 被拒且零状态变更,无晋级;snapshot active 仍 0。R10 可用该 RPC 做原子小批晋级(需逐项授权)。",
+      "continueDecision": "continued",
       "needsFixLater": true,
-      "status": "open"
+      "status": "fixed"
     }
   ]
 }
