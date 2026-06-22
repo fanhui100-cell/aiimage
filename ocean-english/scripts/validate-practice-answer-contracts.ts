@@ -5,8 +5,10 @@
    input mode submits against, BEFORE the renderers are wired to it. Pure fixtures, no DB, no UI:
      · choice        — exact match → full/zero
      · spell         — case/whitespace-insensitive match (looseEq)
-     · multi_blank   — per-position partial credit; exact / partial / empty-response / alternative-valid
+     · multi_blank   — per-position partial credit; exact / partial / empty-response / case-&-space-normalized
+                       (looseEq only: case/whitespace/number — NOT genuine alternative acceptable answers)
      · matching      — per-position partial credit (one-to-one)
+     · listen        — objective when it carries a choice key; needs-scoring when bare
      · free_text/speak — needs_manual_or_ai_scoring (never fabricates correct/incorrect)
      · empty answerKey on multi_blank/matching → needs_manual_or_ai_scoring (not a false 0)
 
@@ -42,7 +44,7 @@ function mk(inputMode: string, answerKey: unknown, choices?: Choice[]): PaperIte
   const it = mk('multi_blank', ['went', 'bluer', 'and'])
   ok(scoreItem(it, ['went', 'bluer', 'and'], 9).awarded === 9 && scoreItem(it, ['went', 'bluer', 'and'], 9).correct === true, 'multi_blank: all correct → full + correct')
   ok(Math.abs(scoreItem(it, ['went', 'WRONG', 'and'], 9).awarded - 6) < 1e-9 && scoreItem(it, ['went', 'WRONG', 'and'], 9).correct === false, 'multi_blank: 2/3 → partial, not correct')
-  ok(scoreItem(it, ['  WENT ', 'bluer', 'AND'], 9).awarded === 9, 'multi_blank: alternative-valid (case/space) → full')
+  ok(scoreItem(it, ['  WENT ', 'bluer', 'AND'], 9).awarded === 9, 'multi_blank: case/space-normalized (looseEq) → full')
   ok(scoreItem(it, [], 9).awarded === 0, 'multi_blank: empty response → 0')
   ok(scoreItem(it, ['went'], 9).awarded > 0 && scoreItem(it, ['went'], 9).awarded < 9, 'multi_blank: short response → partial')
 }
@@ -59,6 +61,15 @@ function mk(inputMode: string, answerKey: unknown, choices?: Choice[]): PaperIte
   ok(scoreItem(it, [2, 0, 1], 6).awarded === 6 && scoreItem(it, [2, 0, 1], 6).kind === 'matching', 'matching: all correct → full')
   ok(Math.abs(scoreItem(it, [2, 9, 1], 6).awarded - 4) < 1e-9, 'matching: 2/3 → partial')
 }
+// listen — objective when it carries a choice key; needs-scoring fallback when bare
+{
+  const withKey = mk('listen', 'b', [{ id: 'a', text: 'A' }, { id: 'b', text: 'B' }])
+  ok(scoreItem(withKey, 'b', 1).kind === 'objective' && scoreItem(withKey, 'b', 1).correct === true, 'listen+choices: exact correct → objective full')
+  ok(scoreItem(withKey, 'a', 1).awarded === 0 && scoreItem(withKey, 'a', 1).correct === false, 'listen+choices: wrong → 0')
+  const bare = mk('listen', null)
+  const s = scoreItem(bare, 'whatever', 3)
+  ok(s.kind === 'needs_manual_or_ai_scoring' && s.needsScoring === true && s.awarded === 0, 'listen (no choice key) → needs-scoring fallback (not a false 0-correct)')
+}
 // free_text / speak — always needs manual/AI, never fabricated correctness
 {
   for (const m of ['free_text', 'speak']) {
@@ -69,4 +80,4 @@ function mk(inputMode: string, answerKey: unknown, choices?: Choice[]): PaperIte
 }
 
 if (fails.length) { console.error(`✗ validate-practice-answer-contracts FAILED (${fails.length}):`); for (const f of fails) console.error(`  ✗ ${f}`); process.exit(1) }
-console.log('✓ validate-practice-answer-contracts PASSED — choice/spell/multi_blank/matching partial-credit + alternative-valid + free_text/speak no-fabrication contracts hold')
+console.log('✓ validate-practice-answer-contracts PASSED — choice/spell/multi_blank/matching partial-credit + case/space-normalized + listen(objective/bare) + free_text/speak no-fabrication contracts hold')

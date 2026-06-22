@@ -21,7 +21,8 @@ Primary TOEFL evidence: ETS official Blueprint/Specifications, captured locally 
 ## TOEFL iBT 2026 — confirmed / ranged / unverified
 
 ### CONFIRMED (official, fixed)
-- Scoring: 4 sections + total on a **1–6 scale** (2-year transition also maps to 0–120). Machine-scored = selected-response (exact match / predefined logic); AI-scored = constructed (writing/speaking) via NLP+ML.
+- Scoring **method** (from the Blueprint): machine-scored = selected-response (exact match / predefined logic); AI-scored = constructed (writing/speaking) via NLP+ML.
+- ⚠️ Score **scale** correction: the **1–6 per-section scale** (with the 2-year transition mapping to 0–120) is **NOT stated in this Blueprint capture** — the capture reports only **Raw Points (145 total)** + **CEFR (A1–C2)** and explicitly defers score reporting to *"Section III: Scoring and Score Reporting of the Technical Manual"*, which is **not** in the capture. The 1–6 scale is carried in `EXAM_SPECS` from the ETS *Test Content and Structure* page (a separate official source in the table above), not established by this Blueprint capture. Do not cite the Blueprint for the score scale.
 - Section item totals: **Reading 50**, **Listening 47**, **Writing 12**, **Speaking 11** — these match `EXAM_SPECS` exactly (no change needed).
 - Reading & Listening are **two-stage adaptive**; Writing & Speaking are **linear**.
 - **Listening recordings are played once** (no replay). *(Blueprint "Stimulus": "Recordings are played once …")* — gates R7 (replay rule).
@@ -35,11 +36,11 @@ Primary TOEFL evidence: ETS official Blueprint/Specifications, captured locally 
 - Listening sub-type item counts: **Listen and Choose a Response 15–19** (A1–B2), **Listen to a Conversation 10** (A2–C1), **Listen to an Announcement 6–10** (A2–C1), **Listen to an Academic Talk 8–16** (A2–C2).
 - Speaking: **Listen and Repeat 7**, **Take an Interview 4** (both A1–C2).
 - Audio length: brief utterances (≤6 stressed syllables) → extended monologic **≤250 words**; intermediate **35–100 words**.
-- `academic_reading` / general reading: section-level **items 5–15 per claim** (no per-passage fixed count).
+- `academic_reading` / general reading: the Blueprint gives a **per-task-type range of 5–15 items** (Read in Daily Life 5–15; Read an Academic Passage 5–15) — this is per task type, **not** "per claim". The top-level reading claim ("Read and comprehend information presented in a variety of formats") is a **fixed total of 20 items** spanning both task types; there is still **no per-passage fixed count**.
 
 ### UNVERIFIED — keep `official_spec_unverified=true`, content stays BLOCKED, exact missing fact recorded
 - **MCQ option count** (read_daily_life, academic_reading, and listening MCQ): the Blueprint only says "selected-response formats (e.g., multiple choice)" — it **never states a fixed number of options**. Missing fact: *options per MCQ item*.
-- **academic_reading items-per-passage**: only the section/claim range (5–15) is given; **per-passage item count is not specified**. Missing fact: *items per academic passage*.
+- **academic_reading items-per-passage**: only the per-task-type range (5–15) is given; **per-passage item count is not specified**. Missing fact: *items per academic passage*.
 - `build_a_sentence` **acceptable-arrangement scoring rule**: official is machine-scored, but ETS does not publish the equivalence/normalization logic for accepted permutations. Stays `scoring_not_ready` (resolution is R3, not a spec unblock).
 
 ### Decision (per plan §R4 rules)

@@ -403,7 +403,7 @@
       "bank": [
         "duration",
         "controversial",
-        "ignorant",
+        "reluctant",
         "abandon",
         "trivial",
         "rapidly",
@@ -429,7 +429,7 @@
         11,
         10
       ],
-      "explain_zh": "本篇围绕科技与隐私。空1需形容词controversial（有争议的）；空2被动collected（被收集）；空3动词enhance（提升服务）；空4undermine（削弱自主权）；空5名词accuracy（准确度）；空6unaware（未察觉的）；空7形容词comprehensive（全面的立法）；空8动词exploit（利用漏洞）；空9potential（潜在后果）；空10sustained（持续的合作）。干扰项abandon/trivial/ignorant/rapidly/duration在语境或词性上均不匹配。"
+      "explain_zh": "本篇围绕科技与隐私。空1需形容词controversial（有争议的）；空2被动collected（被收集）；空3动词enhance（提升服务）；空4undermine（削弱自主权）；空5名词accuracy（准确度）；空6unaware（未察觉的）；空7形容词comprehensive（全面的立法）；空8动词exploit（利用漏洞）；空9potential（潜在后果）；空10sustained（持续的合作）。干扰项abandon/trivial/reluctant/rapidly/duration在语境或词性上均不匹配。"
     },
     {
       "passage": "Over the past few decades, societies around the world have undergone profound (1)____ that few earlier generations could have imagined. Traditional family structures, once regarded as permanent and fixed, have gradually (2)____ to accommodate new economic and demographic realities. Widespread urbanization has drawn many millions of people away from rural villages, fundamentally (3)____ the rhythm of daily life and the customs that once governed it. As a direct result, communities that formerly relied on close personal ties and mutual support now find themselves increasingly (4)____, scattered across distant cities and unfamiliar neighbourhoods. Mounting economic pressures compel countless young people to migrate in search of better (5)____, leaving behind aging parents and steadily shrinking rural populations. Such dramatic shifts have created a noticeable (6)____ between generations, whose values, ambitions, and everyday expectations frequently diverge in striking ways. Modern technology has further (7)____ this transformation by radically reshaping how people communicate, socialise, and form lasting relationships. Some thoughtful observers view these developments with deep (8)____, fearing the steady erosion of cultural heritage and the loss of cherished traditions. Others, by contrast, regard continuous change as an inevitable and even (9)____ force that drives genuine progress and broadens human opportunity. Historians remind us that no society has ever remained truly static for long. Whatever one's particular perspective happens to be, it is abundantly clear that the overall pace of social transformation shows no sign of (10)____, and learning to adapt to it wisely and humanely remains one of the defining challenges of our turbulent modern era.",

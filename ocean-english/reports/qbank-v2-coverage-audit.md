@@ -1,6 +1,6 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-22T20:17:42.619Z
+Generated: 2026-06-22T23:40:55.278Z
 
 Totals: sets 5056 · items 5922 · active 0 · draft 5056
 

@@ -1,6 +1,6 @@
 /* R2 targeted repair (read-only unless --apply): re-sync 3 drifted productive stages to the
    (canonical) disk source. Rule-12 compliant — enumerates EXACT stale legacy_ids, asserts
-   status=draft + qa_flags.stage + task_type per row, deletes items→set→orphan stimulus.
+   status=draft + qa_flags.stage + task_type per row, deletes set (items cascade)→orphan stimulus.
    Does NOT prune by stage. After this runs, re-import the 3 stages with the productive importer.
    Usage: npx tsx scripts/repair-prod-drift-r2.ts [--apply] */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
@@ -63,8 +63,8 @@ async function main() {
       if ((s.qa_flags as { stage?: string } | null)?.stage !== stage) { console.error(`  ABORT ${s.legacy_id}: stage mismatch`); abort++; continue }
       if (s.task_type !== taskType) { console.error(`  ABORT ${s.legacy_id}: task_type=${s.task_type}≠${taskType}`); abort++; continue }
       if (!APPLY) continue
-      const di = await db.from('question_items').delete().eq('question_set_id', s.id)
-      if (di.error) { console.error(`  item delete failed ${s.legacy_id}: ${di.error.message}`); abort++; continue }
+      // question_items.question_set_id is ON DELETE CASCADE → deleting the set removes its items
+      // atomically (no two-step window that could leave a zero-item orphan set).
       const ds = await db.from('question_sets').delete().eq('id', s.id)
       if (ds.error) { console.error(`  set delete failed ${s.legacy_id}: ${ds.error.message}`); abort++; continue }
       deletedSets++

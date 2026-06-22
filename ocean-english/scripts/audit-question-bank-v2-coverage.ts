@@ -63,23 +63,31 @@ export function classifyCell(ctx: CellContext, c: CellCounts): { state: Coverage
   const key = `${ctx.exam}|${ctx.taskType}`
   if (SPEC_BLOCKED.has(key)) reasons.push(SPEC_BLOCKED.get(key) as string)
   if (SCORING_NOT_READY.has(ctx.taskType)) reasons.push('scoring_not_ready')
+
+  // pool = all non-terminal content (draft + reviewed + active). Promotion drains draft→active, so the
+  // readiness thresholds must count the WHOLE pool, not just draft (else a fully-promoted cell reads THIN).
+  const pool = c.draft + c.reviewed + c.active
+
   if (ctx.requiresAudio) {
+    // activeAudio = # of sets in this cell whose stimulus has an ACTIVE audio asset.
+    if (pool > 0 && c.activeAudio === 0) reasons.push('audio_missing')          // content but no active audio at all
+    else if (c.activeAudio < pool) reasons.push('audio_incomplete')             // SOME sets lack active audio (incl. partial draft audio)
     if (c.active > 0 && c.activeAudio < c.active) reasons.push('active_without_audio')
-    else if (c.activeAudio === 0 && (c.draft > 0 || c.active > 0)) reasons.push('audio_missing')
   }
   // rubric requirement applies to rubric-scored productive writing, not objective build_a_sentence
   if (ctx.requiresRubric && !SCORING_NOT_READY.has(ctx.taskType) && c.items > 0 && c.rubricItems < c.items) reasons.push('rubric_incomplete')
 
   // hard spec/scoring block dominates regardless of pool size
   if (reasons.includes('official_spec_unverified') || reasons.includes('scoring_not_ready')) return { state: 'BLOCKED', blockingReasons: reasons }
-  // no content yet
-  if (c.draft === 0 && c.active === 0) return { state: 'MISSING', blockingReasons: reasons }
-  // content present but a hard activation dependency unmet (e.g., listening draft w/o active audio)
-  if (reasons.includes('audio_missing') || reasons.includes('active_without_audio')) return { state: 'BLOCKED', blockingReasons: reasons }
-  // thin pool
-  if (c.draft < READY_THRESHOLD) return { state: 'THIN', blockingReasons: reasons }
-  // >= READY_THRESHOLD draft
-  if (c.active > 0 && !reasons.includes('rubric_incomplete')) return { state: 'READY_ACTIVE', blockingReasons: reasons }
+  // no content yet (counts reviewed too — a reviewed-only cell is NOT missing)
+  if (pool === 0) return { state: 'MISSING', blockingReasons: reasons }
+  // content present but a hard activation dependency unmet (audio not complete for an audio cell)
+  if (reasons.includes('audio_missing') || reasons.includes('audio_incomplete') || reasons.includes('active_without_audio')) return { state: 'BLOCKED', blockingReasons: reasons }
+  // a healthy ACTIVE pool with all deps met → READY_ACTIVE (reachable even after draft fully drains)
+  if (c.active >= MIN_ACTIVE_POOL && !reasons.includes('rubric_incomplete')) return { state: 'READY_ACTIVE', blockingReasons: reasons }
+  // thin pool (not enough total content to consider promoting)
+  if (pool < READY_THRESHOLD) return { state: 'THIN', blockingReasons: reasons }
+  // enough content; drafts ready to promote (or partially promoted but active pool still < MIN_ACTIVE_POOL)
   return { state: 'READY_DRAFT', blockingReasons: reasons }
 }
 
@@ -182,7 +190,7 @@ async function main() {
   const expected = buildExpectedRows(getCell)
   const byState = (st: CoverageState) => expected.filter((r) => r.state === st)
   const missing = byState('MISSING').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft 0`)
-  const thin = byState('THIN').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft} (<${READY_THRESHOLD})`)
+  const thin = byState('THIN').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — pool ${r.draft + r.reviewed + r.active} (draft ${r.draft}/rev ${r.reviewed}/active ${r.active}, <${READY_THRESHOLD})`)
   const blocked = byState('BLOCKED').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft} · ${r.blockingReasons.join(',')}`)
   const readyDraft = byState('READY_DRAFT').map((r) => `${r.exam} lv${r.level} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft}`)
   const readyActive = byState('READY_ACTIVE').map((r) => `${r.exam} lv${r.level} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — active ${r.active}`)

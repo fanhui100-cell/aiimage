@@ -53,6 +53,40 @@ const expect = (cond: boolean, msg: string) => { if (!cond) failures.push(msg) }
   expect(r.blockingReasons.includes('audio_missing'), `fixture3: expected audio_missing reason, got [${r.blockingReasons.join(',')}]`)
 }
 
+// ── Fixture 4: fully-promoted pool (draft drained to active) → READY_ACTIVE (regression: was misclassified THIN) ──
+{
+  const c = emptyCounts(); c.active = READY_THRESHOLD; c.draft = 0
+  const r = classifyCell({ exam: 'cet4', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, c)
+  expect(r.state === 'READY_ACTIVE', `fixture4: 0-draft/${READY_THRESHOLD}-active pool state=${r.state} (expect READY_ACTIVE, NOT THIN)`)
+  // a small active pool (>= MIN_ACTIVE_POOL=5) with no drafts is also READY_ACTIVE
+  const c2 = emptyCounts(); c2.active = 5
+  expect(classifyCell({ exam: 'cet4', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, c2).state === 'READY_ACTIVE', 'fixture4b: 5-active pool → READY_ACTIVE')
+}
+
+// ── Fixture 5: PARTIAL active audio on a draft listening pool → BLOCKED(audio_incomplete), not a silent READY_DRAFT ──
+{
+  const c = emptyCounts(); c.draft = 60; c.items = 180; c.activeAudio = 30 // some, but not all, sets have active audio
+  const r = classifyCell({ exam: 'cet4', taskType: 'listening_comprehension', requiresAudio: true, requiresRubric: false }, c)
+  expect(r.state === 'BLOCKED', `fixture5: partial-audio draft pool state=${r.state} (expect BLOCKED, not READY_DRAFT)`)
+  expect(r.blockingReasons.includes('audio_incomplete'), `fixture5: expected audio_incomplete, got [${r.blockingReasons.join(',')}]`)
+}
+
+// ── Fixture 6: 'reviewed' status counts as content (a reviewed-only pool is NOT MISSING) ──
+{
+  const big = emptyCounts(); big.reviewed = READY_THRESHOLD
+  expect(classifyCell({ exam: 'cet4', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, big).state === 'READY_DRAFT', 'fixture6: 50 reviewed/0 draft → READY_DRAFT (not MISSING)')
+  const small = emptyCounts(); small.reviewed = 10
+  expect(classifyCell({ exam: 'cet4', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, small).state === 'THIN', 'fixture6b: 10 reviewed → THIN (counts toward pool, not MISSING)')
+}
+
+// ── Fixture 7: rubric_incomplete on a productive cell blocks READY_ACTIVE ──
+{
+  const c = emptyCounts(); c.active = READY_THRESHOLD; c.items = 50; c.rubricItems = 40 // 10 items lack a rubric
+  const r = classifyCell({ exam: 'gaokao', taskType: 'essay_writing', requiresAudio: false, requiresRubric: true }, c)
+  expect(r.state !== 'READY_ACTIVE', `fixture7: rubric-incomplete active pool must NOT be READY_ACTIVE (got ${r.state})`)
+  expect(r.blockingReasons.includes('rubric_incomplete'), `fixture7: expected rubric_incomplete, got [${r.blockingReasons.join(',')}]`)
+}
+
 // ── Structure: one row per EXAM_SPECS task (SAT reading split per domain) ──
 {
   const rows = buildExpectedRows(() => emptyCounts())
@@ -100,4 +134,4 @@ if (failures.length) {
   for (const f of failures) console.error(`  ✗ ${f}`)
   process.exit(1)
 }
-console.log('✓ validate-coverage-audit PASSED — fixtures (MISSING / SAT-per-domain / listening-no-audio→BLOCKED) + structure + report cross-check')
+console.log('✓ validate-coverage-audit PASSED — fixtures (MISSING / SAT-per-domain / listening-no-audio→BLOCKED / READY_ACTIVE / partial-audio→BLOCKED / reviewed-counts / rubric-incomplete) + structure + report cross-check')

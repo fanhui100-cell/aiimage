@@ -21,7 +21,7 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
-import { shapeToItems, type ShapeTemplate, type DraftChoice } from '@/lib/exam-task-templates/shape'
+import { shapeToItems, type ShapeTemplate, type DraftChoice, type DraftItem } from '@/lib/exam-task-templates/shape'
 import { getExamSpec } from '@/lib/exam-specs'
 
 const ROOT = 'data/generated-question-sets'
@@ -55,6 +55,70 @@ function loadTpl(name: string): ObjTemplate | null {
   tplCache.set(name, t); return t
 }
 const toShape = (t: ObjTemplate): ShapeTemplate => ({ taskType: t.taskType, skill: t.skill, itemCount: t.itemCount, optionCount: t.optionCount, answerSchema: t.answerSchema, stimulusRequirements: t.stimulusRequirements })
+
+/** Permutation-robust per-item ANSWER comparison (src shaped item vs DB item). Returns a mismatch string or null.
+ *  Choice-bearing items were answer-position-normalized (banks/options may be permuted), so for index-based
+ *  answers we resolve to the keyed TEXT (invariant to permutation) rather than comparing raw indices. Covers:
+ *   · scalar string answer w/o choices (spell / complete_words) → exact;
+ *   · bank_answers / build_sentence (idx array into choices) → resolved answer WORDS in order;
+ *   · cloze_passage ([{options,answer}] per blank) → per-blank option multiset + resolved correct TEXT;
+ *   · gblanks ([{answer,acceptable,hint}]) → per-blank answer + acceptable deep-equal;
+ *   · para_match (matching, answer=paragraph idx) → (statement-text → paragraph-idx) mapping, order-invariant.
+ *  Single-choice (string answer WITH choices) is verified by the caller's resolve-by-text check → null here. */
+function answerDiff(e: DraftItem, aItem: ItemRow): string | null {
+  const ea = e.answer, aa = aItem.answer
+  const aChoices: DraftChoice[] = Array.isArray(aItem.choices) ? (aItem.choices as DraftChoice[]) : []
+  const J = (x: unknown) => JSON.stringify(x)
+
+  if (typeof ea === 'string' || typeof ea === 'number') {
+    if (e.choices.length === 0) { // spell / complete_words: scalar answer, no choices → exact
+      if (String(ea) !== String(aa)) return `answer mismatch (src "${String(ea)}" vs db "${String(aa)}")`
+    }
+    return null // scalar WITH choices → single-choice text check in caller
+  }
+  if (!Array.isArray(ea)) return null
+  if (!Array.isArray(aa)) return `answer type mismatch (src array vs db ${typeof aa})`
+  if (ea.length !== aa.length) return `answer length ${aa.length}≠${ea.length}`
+  if (ea.length === 0) return null
+
+  // cloze_passage: [{options:[...], answer:"<idx>"}]
+  if (typeof ea[0] === 'object' && ea[0] !== null && 'options' in (ea[0] as object)) {
+    for (let b = 0; b < ea.length; b++) {
+      const eb = ea[b] as { options?: unknown[]; answer?: unknown }
+      const ab = aa[b] as { options?: unknown[]; answer?: unknown }
+      const eOpts = (eb.options ?? []).map(String), aOpts = (ab?.options ?? []).map(String)
+      if (J([...eOpts].sort()) !== J([...aOpts].sort())) return `blank${b}: option-text multiset mismatch`
+      const eC = eOpts[Number(eb.answer)], aC = aOpts[Number(ab?.answer)]
+      if (eC !== aC) return `blank${b}: correct-option text mismatch (src "${eC}" vs db "${aC}")`
+    }
+    return null
+  }
+  // gblanks: [{answer, acceptable[], hint?}]
+  if (typeof ea[0] === 'object' && ea[0] !== null && 'answer' in (ea[0] as object)) {
+    for (let b = 0; b < ea.length; b++) {
+      const eb = ea[b] as Record<string, unknown>, ab = (aa[b] ?? {}) as Record<string, unknown>
+      if (String(eb.answer) !== String(ab.answer)) return `gblank${b}: answer mismatch (src "${String(eb.answer)}" vs db "${String(ab.answer)}")`
+      if (J(eb.acceptable ?? []) !== J(ab.acceptable ?? [])) return `gblank${b}: acceptable-list mismatch`
+    }
+    return null
+  }
+  // numeric index array
+  const eIdx = ea.map(Number), aIdx = aa.map(Number)
+  if (e.inputMode === 'matching' && e.choices.length && aChoices.length) {
+    // para_match: pair each statement with its paragraph index, sort by statement text (order-invariant)
+    const pairs = (cs: DraftChoice[], idx: number[]) => cs.map((c, k) => [String(c.text), idx[k]] as [string, number]).sort((x, y) => (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0))
+    if (J(pairs(e.choices, eIdx)) !== J(pairs(aChoices, aIdx))) return `para_match: statement→paragraph mapping mismatch`
+    return null
+  }
+  if (e.choices.length && aChoices.length) {
+    // bank_answers / build_sentence: resolve indices to keyed TEXT, compare in blank order
+    const eWords = eIdx.map((ix) => e.choices[ix]?.text), aWords = aIdx.map((ix) => aChoices[ix]?.text)
+    if (J(eWords) !== J(aWords)) return `resolved answer words mismatch (src ${J(eWords)} vs db ${J(aWords)})`
+    return null
+  }
+  if (J(eIdx) !== J(aIdx)) return `answer index array mismatch (src ${J(eIdx)} vs db ${J(aIdx)})`
+  return null
+}
 
 async function pageCol<T>(table: string, cols: string): Promise<T[]> {
   const out: T[] = []
@@ -167,8 +231,9 @@ async function main() {
           // NOTE: choice-bearing items were answer-position-normalized in a prior phase
           // (normalize-authored-answer-positions), which intentionally permutes choice order and
           // repositions the answer. Comparison is therefore permutation-invariant: prompt/input_mode/
-          // cardinality exact; choice-TEXT multiset equal; single-choice answer compared by resolved TEXT.
-          // Internal answer validity (answer∈choices, in-range, no-dup) is covered by qa:qsets-v2.
+          // cardinality exact; choice-TEXT multiset equal; single-choice answer compared by resolved TEXT;
+          // grouped/spell answer CONTENT compared via answerDiff() (resolved-text / per-blank, permutation-robust).
+          // Internal answer validity (answer∈choices, in-range, no-dup) is additionally covered by qa:qsets-v2.
           const sortTexts = (cs: DraftChoice[]) => cs.map((c) => String(c.text)).sort()
           for (let k = 0; k < exp.length; k++) {
             const e = exp[k], a = its[k]
@@ -185,6 +250,9 @@ async function main() {
               const dbT = aCh.find((c) => String(c.id) === String(a.answer))?.text
               if (srcT !== undefined && dbT !== undefined && srcT !== dbT) fail(`${stage}/${f}#${i}[${k}]: single-choice answer text mismatch (src "${srcT}" vs db "${dbT}")`)
             }
+            // grouped / spell answer content (bank_answers, cloze_passage, gblanks, build_sentence, para_match, complete_words)
+            const ad = answerDiff(e, a)
+            if (ad) fail(`${stage}/${f}#${i}[${k}]: ${ad}`)
           }
           totalMatched++
         }
@@ -212,7 +280,7 @@ async function main() {
   const cat = new Map<string, number>()
   for (const e of errors) {
     const stage = e.split('/')[0]
-    const reason = e.includes('source shape REJECT') ? 'source_shape_reject' : e.includes('no DB set') ? 'no_db_set(drift)' : e.includes('reverse:') ? 'reverse_orphan' : e.includes('multiset mismatch') ? 'choice_text_mismatch' : e.includes('answer text mismatch') ? 'answer_text_mismatch' : e.includes('prompt mismatch') ? 'prompt_mismatch' : 'other'
+    const reason = e.includes('source shape REJECT') ? 'source_shape_reject' : e.includes('no DB set') ? 'no_db_set(drift)' : e.includes('reverse:') ? 'reverse_orphan' : e.includes('multiset mismatch') ? 'choice_text_mismatch' : e.includes('answer text mismatch') ? 'answer_text_mismatch' : /resolved answer words|correct-option text|gblank\d+:|para_match:|answer index array|answer length|answer type mismatch|answer mismatch/.test(e) ? 'grouped_answer_mismatch' : e.includes('prompt mismatch') ? 'prompt_mismatch' : 'other'
     cat.set(`${stage} | ${reason}`, (cat.get(`${stage} | ${reason}`) ?? 0) + 1)
   }
   if (cat.size) { console.log('failure summary (stage | reason → count):'); for (const [k, v] of [...cat.entries()].sort((a, b) => b[1] - a[1])) console.log(`  ${k} → ${v}`) }

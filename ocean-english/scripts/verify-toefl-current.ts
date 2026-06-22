@@ -29,8 +29,9 @@ let childFailed = false
 for (const s of STEPS) {
   console.log(`\n=== [verify:toefl-current] ${s.name} ===`)
   const r = spawnSync('npx', s.args, { stdio: 'inherit', shell: true })
-  const code = r.status ?? (r.error ? 1 : 0)
-  if (code !== 0) { console.error(`  ✗ child "${s.name}" exited with code ${code}${r.error ? ` (${r.error.message})` : ''}`); childFailed = true }
+  // r.status is the exit code on normal exit; null means signal-kill or spawn error — both are FAILURES, never pass.
+  const code = r.status == null ? 1 : r.status
+  if (code !== 0) { console.error(`  ✗ child "${s.name}" failed (code ${code}${r.signal ? `, signal ${r.signal}` : ''}${r.error ? `, ${r.error.message}` : ''})`); childFailed = true }
 }
 
 type SetRow = { task_type: string; status: string; legacy_id: string | null }
@@ -58,9 +59,13 @@ async function assertAggregateCounts(): Promise<boolean> {
     ['complete_the_words draft', draftOf('complete_the_words'), 70],
     ['email_writing draft', draftOf('email_writing'), 60],
     ['academic_discussion draft', draftOf('academic_discussion'), 60],
+    // build_a_sentence has NO expansion verifier; it stays at the 10 pilot drafts. Bound it here so a
+    // stray/duplicate/re-imported draft (which the scoped pilot verifier no longer catches) is detected.
+    ['build_a_sentence draft', draftOf('build_a_sentence'), 10],
     ['complete_the_words active', activeOf('complete_the_words'), 0],
     ['email_writing active', activeOf('email_writing'), 0],
     ['academic_discussion active', activeOf('academic_discussion'), 0],
+    ['build_a_sentence active', activeOf('build_a_sentence'), 0],
   ]
   for (const [label, got, want] of checks) {
     const pass = got === want

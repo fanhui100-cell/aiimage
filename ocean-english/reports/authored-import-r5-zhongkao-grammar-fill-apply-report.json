@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-22T20:15:37.958Z",
+  "generatedAt": "2026-06-22T23:54:31.205Z",
   "apply": true,
   "stage": "r5-zhongkao-grammar-fill",
   "provider": "claude-authored",
   "totals": {
     "parsedOk": 2,
     "reject": 0,
-    "wrote": 0,
-    "dupSkip": 2
+    "wrote": 2,
+    "dupSkip": 0
   },
   "rejectsByReason": {},
   "files": [
@@ -17,8 +17,8 @@
       "level": 1,
       "parsedOk": 2,
       "reject": 0,
-      "wrote": 0,
-      "dupSkip": 2
+      "wrote": 2,
+      "dupSkip": 0
     }
   ]
 }

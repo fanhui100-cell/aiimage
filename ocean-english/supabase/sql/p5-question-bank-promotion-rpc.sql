@@ -11,7 +11,11 @@
 --       - set status = 'draft' (already 'active' → idempotent no-op 'already_active');
 --       - task_type not deprecated (antonym_choice / cet_cloze);
 --       - qa_flags.scoring_not_ready != true AND qa_flags.official_spec_unverified != true;
---       - >=1 item, every item status='draft', every item.answer not null;
+--       - >=1 item, every item status='draft', every item.answer present (not SQL NULL, not JSON null/'');
+--       - grouped task types (reading_comprehension/listening_comprehension/banked_cloze/seven_select/
+--         cloze_passage/grammar_fill/para_match) have a stimulus;
+--       - choice items: the keyed answer references an existing choice id;
+--       - multi_blank/matching items: answer is a non-empty array;
 --       - productive items (input_mode in free_text/speak) have rubric_id;
 --       - listening sets (task_type listening_comprehension OR any item input_mode='listen')
 --         have an ACTIVE audio asset on their stimulus;
@@ -56,6 +60,8 @@ begin
       set_id := v_id; result := 'rejected'; reason := 'not_found'; return next; continue;
     end if;
     if v_set.status = 'active' then
+      -- idempotent repair: if a prior partial failure left draft items under an active set, re-assert them
+      update question_items set status = 'active' where question_set_id = v_id and status <> 'active';
       set_id := v_id; result := 'already_active'; reason := 'idempotent'; return next; continue;
     end if;
     if v_set.status <> 'draft' then
@@ -70,6 +76,11 @@ begin
     if coalesce(v_set.qa_flags->>'official_spec_unverified', '') = 'true' then
       set_id := v_id; result := 'rejected'; reason := 'official_spec_unverified'; return next; continue;
     end if;
+    -- grouped task types must have a stimulus (passage/audio carrier); promoting one without is a broken item
+    if v_set.task_type in ('reading_comprehension', 'listening_comprehension', 'banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match')
+       and v_set.stimulus_id is null then
+      set_id := v_id; result := 'rejected'; reason := 'grouped_without_stimulus'; return next; continue;
+    end if;
 
     select count(*) into v_n from question_items where question_set_id = v_id;
     if v_n = 0 then
@@ -79,7 +90,9 @@ begin
     if v_bad > 0 then
       set_id := v_id; result := 'rejected'; reason := 'items_not_draft'; return next; continue;
     end if;
-    select count(*) into v_bad from question_items where question_set_id = v_id and answer is null;
+    -- answer must be present (column is NOT NULL, so also reject JSON null / empty-string answers)
+    select count(*) into v_bad from question_items
+      where question_set_id = v_id and (answer is null or answer = 'null'::jsonb or answer = '""'::jsonb);
     if v_bad > 0 then
       set_id := v_id; result := 'rejected'; reason := 'item_answer_null'; return next; continue;
     end if;
@@ -87,6 +100,20 @@ begin
       where question_set_id = v_id and input_mode in ('free_text', 'speak') and rubric_id is null;
     if v_bad > 0 then
       set_id := v_id; result := 'rejected'; reason := 'productive_without_rubric'; return next; continue;
+    end if;
+    -- choice items: the keyed answer must reference an existing choice id
+    select count(*) into v_bad from question_items qi
+      where qi.question_set_id = v_id and qi.input_mode = 'choice'
+        and not exists (select 1 from jsonb_array_elements(coalesce(qi.choices, '[]'::jsonb)) c where c->>'id' = (qi.answer #>> '{}'));
+    if v_bad > 0 then
+      set_id := v_id; result := 'rejected'; reason := 'choice_answer_not_in_choices'; return next; continue;
+    end if;
+    -- multi_blank / matching: answer must be a non-empty array
+    select count(*) into v_bad from question_items qi
+      where qi.question_set_id = v_id and qi.input_mode in ('multi_blank', 'matching')
+        and (jsonb_typeof(qi.answer) is distinct from 'array' or jsonb_array_length(qi.answer) = 0);
+    if v_bad > 0 then
+      set_id := v_id; result := 'rejected'; reason := 'multiblank_answer_empty'; return next; continue;
     end if;
 
     v_is_listening := v_set.task_type = 'listening_comprehension'
