@@ -356,6 +356,22 @@
       "continueDecision": "continued",
       "needsFixLater": true,
       "status": "fixed"
+    },
+    {
+      "id": "R4-spec-revalidation",
+      "stage": "R4",
+      "batch": "-",
+      "examId": "toefl,all",
+      "level": "6",
+      "taskType": "read_daily_life,reading_comprehension,build_a_sentence,listening,speaking",
+      "severity": "info",
+      "category": "spec_unverified",
+      "summary": "R4 官方格式核验（纯研究，无 DB/UI/模板改动）。依据 ETS iBT 2026 官方 Blueprint/Specifications（本地 .firecrawl/toefl-spec-2026.md）+ 各考试官方 sourceUrls。结论：read_daily_life 与 academic_reading(reading_comprehension·toefl) 维持 official_spec_unverified/BLOCKED——官方仅称 selected-response(e.g. multiple choice)、未给 MCQ 选项数；academic 每篇题数亦未给（仅 5-15/claim）。build_a_sentence 维持 scoring_not_ready（R3 解决）。新确认音频/口语官方规格供 R6/R7：听力 played once(不重听)、子类题量范围(Choose-a-Response 15-19 / Conversation 10 / Announcement 6-10 / Academic Talk 8-16；总 47)、Speaking(Listen-and-Repeat 7 / Interview 4)、音频长度(≤6 重音音节→≤250 词,中段 35-100)、口音 US/CA/AU/UK(AI+真人)。EXAM_SPECS 各段题量(R50/L47/W12/S11)与官方一致，无需改动。",
+      "evidence": "reports/exam-spec-revalidation-2026-06-23.md（confirmed/ranged/unverified 分列）。validate:exam-specs EXIT 0(7 exams)、validate:question-types EXIT 0(taxonomy ok)、qa:qsets-v2 EXIT 0、lint 0、tsc 0。R1 覆盖矩阵已将两 reading 型显示为 BLOCKED(official_spec_unverified)。",
+      "containment": "未解锁任何 blocked 题型（无凭假设解锁）；无 DB 写；无 spec/template/schema 改动。",
+      "continueDecision": "continued",
+      "needsFixLater": false,
+      "status": "fixed"
     }
   ]
 }
