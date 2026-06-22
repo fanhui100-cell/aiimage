@@ -4,15 +4,17 @@
    范围（official_spec_unverified 的 read_daily_life / academic_reading 已按 §3.4 停止删除）：
    客观包：complete_the_words、build_a_sentence；生产性包：email_writing、academic_discussion。
 
-   核心：复刻 importer 的确定性 hashId，对每个源记录算出 legacy_id，与 DB **逐条 1:1 比对** payload，
+   核心：复刻 importer 的确定性 hashId，对每个 pilot 源记录算出 legacy_id，与 DB **逐条 1:1 比对** payload，
    而非仅比数量。检查项：
-   1. source→DB 双向 1:1：每源记录恰对应一个 DB set（按确定性 legacy_id）；DB 中该包不得有源外的 set。
+   1. source→DB 前向 1:1：每条 pilot 源记录恰对应一个 DB draft set（按确定性 legacy_id）。
    2. 每个 set 恰好 1 个 item（item 缺失会被抓出）。
    3. 客观 item 逐字段比对 expected=shapeToItems(raw)：input_mode / prompt / choices / answer。
       · complete_the_words 断言 input_mode==='spell'；build_a_sentence 断言 'multi_blank' + qa_flags.scoring_not_ready。
    4. 生产性 item：input_mode==='free_text' + rubric_id 非空 + answer.official===false + prompt===源 prompt。
-   5. 每包恰好 10 draft / 0 active；已停题型 DB 数为 0。
-   6. 全局硬停：gen active=0；antonym_choice/cet_cloze=0。
+   5. 已停题型 DB 数为 0；全局硬停：gen active=0；antonym_choice/cet_cloze=0。
+   R0 历史范围修订：本校验器只负责 4 个 pilot 包各自的 10 条原始记录。扩产集（相同 template/task_type 的
+   +60/+50 套）由 verify-toefl-<stage>-expansion.ts 拥有；聚合计数（70/60/60、0 active）由 verify-toefl-current.ts
+   断言。故此处不再断言「每包恰好 10 draft」或「DB 中该包无源外 set」，避免与已集成的扩产冲突。
    用法：npx tsx scripts/verify-toefl-pilot.ts
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
@@ -90,14 +92,10 @@ async function main() {
       if (JSON.stringify(it.answer) !== JSON.stringify(exp.answer)) errors.push(`${o.template}: ${setLegacy} answer 不一致`)
       okCmp++
     }
-    // 双向：DB 中该 template 的 set 必须恰为源映射集合
-    const dbSetsOfTpl = sets.filter((s) => (s.qa_flags as { template?: string } | null)?.template === o.template)
-    const draft = dbSetsOfTpl.filter((s) => s.status === 'draft').length
-    const active = dbSetsOfTpl.filter((s) => s.status === 'active').length
-    for (const s of dbSetsOfTpl) if (s.legacy_id && !expectedLegacy.has(s.legacy_id)) errors.push(`${o.template}: DB 有源外 set ${s.legacy_id}`)
-    if (draft !== 10) errors.push(`${o.template}: draft=${draft}（须 10）`)
-    if (active !== 0) errors.push(`${o.template}: active=${active}（须 0）`)
-    console.log(`  ${o.template}: 源↔DB 逐条一致 ${okCmp}/${af.sets.length} · draft=${draft} active=${active}` + (o.scoringNotReady ? ' · scoring_not_ready' : ''))
+    // R0 历史范围修订：pilot 校验器只负责这 10 条 pilot 记录的源↔DB 映射（上方前向 1:1 已断言每条为 draft 且 payload 一致）。
+    // 扩产集（相同 template）由 verify-toefl-complete-words-expansion.ts 拥有；聚合数（70/60/60、0 active）由 verify-toefl-current.ts 断言。
+    // 因此不再断言「总数==10」或「无源外 set」，以免与已集成的扩产冲突。
+    console.log(`  ${o.template}: pilot 源↔DB 逐条一致 ${okCmp}/${af.sets.length} · pilot 期望 ${expectedLegacy.size}` + (o.scoringNotReady ? ' · scoring_not_ready' : ''))
   }
 
   // ── 生产性包：确定性逐条比对 ──
@@ -136,13 +134,8 @@ async function main() {
       if ((it.prompt_zh ?? null) !== (task.promptZh ?? null)) errors.push(`${p.taskType}: ${setLegacy} prompt_zh 与源不一致`)
       okCmp++
     }
-    const dbSetsOfTt = sets.filter((s) => s.task_type === p.taskType && (s.legacy_id ?? '').startsWith('gen:productive:'))
-    const draft = dbSetsOfTt.filter((s) => s.status === 'draft').length
-    const active = dbSetsOfTt.filter((s) => s.status === 'active').length
-    for (const s of dbSetsOfTt) if (s.legacy_id && !expectedLegacy.has(s.legacy_id)) errors.push(`${p.taskType}: DB 有源外 set ${s.legacy_id}`)
-    if (draft !== 10) errors.push(`${p.taskType}: draft=${draft}（须 10）`)
-    if (active !== 0) errors.push(`${p.taskType}: active=${active}（须 0）`)
-    console.log(`  ${p.taskType}(productive): 源↔DB 逐条一致 ${okCmp}/${af.tasks.length} · draft=${draft} active=${active}`)
+    // R0 历史范围修订：同上——pilot 校验器只负责这 10 条 pilot 记录；扩产集（+50）与聚合计数由其它校验器拥有。
+    console.log(`  ${p.taskType}(productive): pilot 源↔DB 逐条一致 ${okCmp}/${af.tasks.length} · pilot 期望 ${expectedLegacy.size}`)
   }
 
   // ── 已停题型断言 ──

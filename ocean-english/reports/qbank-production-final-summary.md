@@ -463,3 +463,17 @@ Final productive total = **506 sets** (cet4 trans 55, cet6 trans 51, the other 8
 draft. **R6-fix verification (real exit codes):** verify-productive (506, incl. consistency) / verify-authored / qa /
 validate×3 / audit / rubrics / question-types / data-quality / lint / tsc — all 0; totalSets 4838; active 0,
 antonym_choice 0, cet_cloze 0. Productive items are NOT answer-position-normalized (not multiple-choice). Awaiting Codex re-review.
+
+### R0 (2026-06-23) Central Integration
+
+Driver: docs/superpowers/plans/2026-06-23-question-bank-remaining-development-master-plan.md
+
+Integrated the two reviewed parallel TOEFL branches into iter5-f1 (checkpoint d30f049):
+- Window A qbank/toefl-complete-words da44ab5 -> cherry-pick **93fad7c** (complete_the_words +60).
+- Window B qbank/toefl-writing bc9a3c3 -> **502193e**, a1b92a4 -> **c4a6dfa** (email_writing +50, academic_discussion +50).
+
+Added scripts/verify-toefl-current.ts (read-only central orchestrator) + verify:toefl-current npm script: runs verify-toefl-pilot + both expansion verifiers (--db) + an aggregate count assertion. Scoped verify-toefl-pilot.ts to the 10 pilot records per package (dropped the now-incorrect total==10 / no-source-outside assertions; aggregates owned by the expansion verifiers + the central verifier).
+
+**Integrated DB counts:** complete_the_words **70** draft, email_writing **60** draft, academic_discussion **60** draft; all active **0**; antonym_choice **0**, cet_cloze **0**; totalSets 5038.
+
+**R0 verification — all real exit codes 0:** verify:toefl-current, qa:qsets-v2, validate:qbank-v2, validate:practice-session, validate:papers, validate:rubrics, validate:question-types, audit:qbank-v2-coverage, lint, tsc --noEmit. Coverage audit: EXPECTED 45 rows, MISSING 9, THIN 1. No promotion; unrelated dirty worktree preserved; paper-generator-validation.json restored (out of R0 scope). Awaiting Codex review before R1.

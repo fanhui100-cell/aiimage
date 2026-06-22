@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-22T10:32:52.583Z",
+  "generatedAt": "2026-06-22T16:44:09.804Z",
   "totals": {
-    "sets": 4878,
-    "items": 5744,
+    "sets": 5038,
+    "items": 5904,
     "activeSets": 0,
-    "draftSets": 4878,
+    "draftSets": 5038,
     "stimuliWithActiveAudio": 0
   },
   "expectedMatrix": {
@@ -358,8 +358,8 @@
         "domain": null,
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 10,
-        "state": "THIN"
+        "draftCount": 70,
+        "state": "ok"
       },
       {
         "exam": "toefl",
@@ -424,8 +424,8 @@
         "domain": null,
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 10,
-        "state": "THIN"
+        "draftCount": 60,
+        "state": "ok"
       },
       {
         "exam": "toefl",
@@ -435,8 +435,8 @@
         "domain": null,
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 10,
-        "state": "THIN"
+        "draftCount": 60,
+        "state": "ok"
       },
       {
         "exam": "toefl",
@@ -506,7 +506,7 @@
       }
     ],
     "missingCount": 9,
-    "thinCount": 4,
+    "thinCount": 1,
     "missing": [
       "zhongkao lv1 / listening / listening_comprehension — draft 0",
       "gaokao lv2 / listening / listening_comprehension — draft 0",
@@ -519,10 +519,7 @@
       "toefl lv6 / speaking / interview_speaking — draft 0"
     ],
     "thin": [
-      "toefl lv6 / reading / complete_the_words — draft 10 (<20)",
-      "toefl lv6 / writing / build_a_sentence — draft 10 (<20)",
-      "toefl lv6 / writing / email_writing — draft 10 (<20)",
-      "toefl lv6 / writing / academic_discussion — draft 10 (<20)"
+      "toefl lv6 / writing / build_a_sentence — draft 10 (<20)"
     ]
   },
   "actualGrid": [
@@ -2018,13 +2015,13 @@
       "exam": "toefl",
       "level": 6,
       "taskType": "academic_discussion",
-      "totalSets": 10,
-      "draft": 10,
+      "totalSets": 60,
+      "draft": 60,
       "active": 0,
-      "items": 10,
+      "items": 60,
       "stimuli": 0,
       "audioActive": 0,
-      "rubricItems": 10,
+      "rubricItems": 60,
       "targetWords": 0,
       "warnings": [
         "insufficient_active_pool"
@@ -2099,11 +2096,11 @@
       "exam": "toefl",
       "level": 6,
       "taskType": "complete_the_words",
-      "totalSets": 10,
-      "draft": 10,
+      "totalSets": 70,
+      "draft": 70,
       "active": 0,
-      "items": 10,
-      "stimuli": 10,
+      "items": 70,
+      "stimuli": 70,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
@@ -2163,13 +2160,13 @@
       "exam": "toefl",
       "level": 6,
       "taskType": "email_writing",
-      "totalSets": 10,
-      "draft": 10,
+      "totalSets": 60,
+      "draft": 60,
       "active": 0,
-      "items": 10,
+      "items": 60,
       "stimuli": 0,
       "audioActive": 0,
-      "rubricItems": 10,
+      "rubricItems": 60,
       "targetWords": 0,
       "warnings": [
         "insufficient_active_pool"

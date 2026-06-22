@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T11:03:12.733Z",
+  "generatedAt": "2026-06-22T16:42:36.080Z",
   "status": "applied",
   "templates": [
     "cet-banked-cloze",
@@ -27,8 +27,8 @@
   ],
   "errors": [],
   "notes": [
-    "篇幅校验：检查 608 个 gen set 的 stimulus 词数",
-    "数据 QA：gen draft sets 1144 · items 1744"
+    "篇幅校验：检查 668 个 gen set 的 stimulus 词数",
+    "数据 QA：gen draft sets 1304 · items 1904"
   ],
   "ok": true
 }

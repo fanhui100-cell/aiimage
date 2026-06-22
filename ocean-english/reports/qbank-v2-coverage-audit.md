@@ -1,10 +1,10 @@
 # v2 Question Bank Coverage Audit
 
-Generated: 2026-06-22T10:32:52.583Z
+Generated: 2026-06-22T16:44:09.804Z
 
-Totals: sets 4878 · items 5744 · active 0 · draft 4878
+Totals: sets 5038 · items 5904 · active 0 · draft 5038
 
-## A. EXPECTED coverage (from EXAM_SPECS) — MISSING 9 · THIN 4
+## A. EXPECTED coverage (from EXAM_SPECS) — MISSING 9 · THIN 1
 
 | exam | lv | section | taskType | domain | draft | state | audio | rubric |
 |---|---:|---|---|---|---:|---|---|---|
@@ -39,14 +39,14 @@ Totals: sets 4878 · items 5744 · active 0 · draft 4878
 | kaoyan | 5 | translation | translation_en_zh | - | 50 | ok | - | Y |
 | kaoyan | 5 | writing_small | applied_writing | - | 50 | ok | - | Y |
 | kaoyan | 5 | writing_large | essay_writing | - | 50 | ok | - | Y |
-| toefl | 6 | reading | complete_the_words | - | 10 | THIN | - | - |
+| toefl | 6 | reading | complete_the_words | - | 70 | ok | - | - |
 | toefl | 6 | reading | read_daily_life | - | 0 | MISSING | - | - |
 | toefl | 6 | reading | reading_comprehension | - | 0 | MISSING | - | - |
 | toefl | 6 | listening | choose_a_response | - | 0 | MISSING | Y | - |
 | toefl | 6 | listening | listening_comprehension | - | 0 | MISSING | Y | - |
 | toefl | 6 | writing | build_a_sentence | - | 10 | THIN | - | Y |
-| toefl | 6 | writing | email_writing | - | 10 | THIN | - | Y |
-| toefl | 6 | writing | academic_discussion | - | 10 | THIN | - | Y |
+| toefl | 6 | writing | email_writing | - | 60 | ok | - | Y |
+| toefl | 6 | writing | academic_discussion | - | 60 | ok | - | Y |
 | toefl | 6 | speaking | listen_and_repeat | - | 0 | MISSING | Y | Y |
 | toefl | 6 | speaking | interview_speaking | - | 0 | MISSING | Y | Y |
 | sat | 7 | information_and_ideas | reading_comprehension | Information and Ideas | 50 | ok | - | - |
@@ -66,12 +66,9 @@ Totals: sets 4878 · items 5744 · active 0 · draft 4878
 - toefl lv6 / speaking / listen_and_repeat — draft 0
 - toefl lv6 / speaking / interview_speaking — draft 0
 
-### THIN (0 < draft < threshold) — 4
+### THIN (0 < draft < threshold) — 1
 
-- toefl lv6 / reading / complete_the_words — draft 10 (<20)
 - toefl lv6 / writing / build_a_sentence — draft 10 (<20)
-- toefl lv6 / writing / email_writing — draft 10 (<20)
-- toefl lv6 / writing / academic_discussion — draft 10 (<20)
 
 ## B. ACTUAL grid (level × task_type)
 
@@ -170,16 +167,16 @@ Totals: sets 4878 · items 5744 · active 0 · draft 4878
 | kaoyan | 5 | word_form | 6 | 6 | 0 | 6 | 0 | 0 | 0 | 6 | insufficient_active_pool |
 | kaoyan | 5 | zh_to_en | 4 | 4 | 0 | 4 | 0 | 0 | 0 | 4 | insufficient_active_pool |
 | kaoyan | 5 | zh_to_word_spell | 4 | 4 | 0 | 4 | 0 | 0 | 0 | 4 | insufficient_active_pool |
-| toefl | 6 | academic_discussion | 10 | 10 | 0 | 10 | 0 | 0 | 10 | 0 | insufficient_active_pool |
+| toefl | 6 | academic_discussion | 60 | 60 | 0 | 60 | 0 | 0 | 60 | 0 | insufficient_active_pool |
 | toefl | 6 | build_a_sentence | 10 | 10 | 0 | 10 | 0 | 0 | 0 | 0 | insufficient_active_pool, productive_items_missing_rubric |
 | toefl | 6 | cloze_choice | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | insufficient_active_pool |
 | toefl | 6 | cloze_spell | 56 | 56 | 0 | 56 | 0 | 0 | 0 | 56 | insufficient_active_pool |
 | toefl | 6 | collocation_choice | 27 | 27 | 0 | 27 | 0 | 0 | 0 | 27 | insufficient_active_pool |
-| toefl | 6 | complete_the_words | 10 | 10 | 0 | 10 | 10 | 0 | 0 | 0 | insufficient_active_pool |
+| toefl | 6 | complete_the_words | 70 | 70 | 0 | 70 | 70 | 0 | 0 | 0 | insufficient_active_pool |
 | toefl | 6 | confusable_choice | 51 | 51 | 0 | 51 | 0 | 0 | 0 | 51 | insufficient_active_pool |
 | toefl | 6 | def_to_word | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | insufficient_active_pool |
 | toefl | 6 | dictation_spell | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | insufficient_active_pool |
-| toefl | 6 | email_writing | 10 | 10 | 0 | 10 | 0 | 0 | 10 | 0 | insufficient_active_pool |
+| toefl | 6 | email_writing | 60 | 60 | 0 | 60 | 0 | 0 | 60 | 0 | insufficient_active_pool |
 | toefl | 6 | en_to_zh | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | insufficient_active_pool |
 | toefl | 6 | listen_to_meaning | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | insufficient_active_pool |
 | toefl | 6 | synonym_choice | 45 | 45 | 0 | 45 | 0 | 0 | 0 | 45 | insufficient_active_pool |
