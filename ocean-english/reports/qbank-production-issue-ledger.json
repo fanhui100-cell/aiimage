@@ -324,6 +324,22 @@
       "continueDecision": "continued",
       "needsFixLater": false,
       "status": "fixed"
+    },
+    {
+      "id": "R1-coverage-matrix",
+      "stage": "R1",
+      "batch": "-",
+      "examId": "all",
+      "level": "-",
+      "taskType": "coverage",
+      "severity": "info",
+      "category": "qa_failed",
+      "summary": "R1 fresh canonical coverage matrix: rewrote audit-question-bank-v2-coverage.ts to a deterministic per-EXAM_SPECS matrix (45 rows; SAT reading split into 4 official domains) with full fields (required input mode, audio/rubric flags, draft/reviewed/active/rejected/retired, items, stimuli, activeAudio, rubricItems, sourceStages) and a 5-state machine MISSING/THIN/READY_DRAFT/READY_ACTIVE/BLOCKED + blockingReasons[]. Added scripts/validate-coverage-audit.ts (fixtures: zero-row=>MISSING; SAT per-domain not combined; listening draft+no-active-audio=>BLOCKED; +structure) and npm validate:coverage-audit. READY_DRAFT threshold = 50; audio cells cannot be READY_ACTIVE without active audio.",
+      "evidence": "New baseline (replaces stale historical missing/thin numbers; old entries retained): MISSING 7, THIN 2, BLOCKED 4, READY_DRAFT 32, READY_ACTIVE 0 of 45. MISSING=zhongkao/gaokao/cet6 listening_comprehension + toefl choose_a_response/listening_comprehension/listen_and_repeat/interview_speaking (draft 0). THIN=zhongkao grammar_fill 48, cet6 banked_cloze 34. BLOCKED=cet4 listening_comprehension 67(audio_missing), toefl read_daily_life + reading_comprehension(official_spec_unverified), toefl build_a_sentence 10(scoring_not_ready). audit:qbank-v2-coverage EXIT 0 (idempotent: two runs identical apart from timestamp); validate:coverage-audit, validate:exam-specs, validate:qbank-v2, lint, tsc --noEmit all EXIT 0.",
+      "containment": "read-only; no DB writes; R0 expansions visible (toefl complete_the_words 70 / email_writing 60 / academic_discussion 60 all READY_DRAFT).",
+      "continueDecision": "continued",
+      "needsFixLater": false,
+      "status": "fixed"
     }
   ]
 }

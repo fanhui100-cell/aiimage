@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T16:44:09.804Z",
+  "generatedAt": "2026-06-22T17:01:32.905Z",
   "totals": {
     "sets": 5038,
     "items": 5904,
@@ -15,10 +15,21 @@
         "section": "listening",
         "taskType": "listening_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "zhongkao",
@@ -26,10 +37,21 @@
         "section": "language_use",
         "taskType": "grammar_fill",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 48,
-        "state": "ok"
+        "draft": 48,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 48,
+        "stimuli": 48,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "THIN",
+        "blockingReasons": []
       },
       {
         "exam": "zhongkao",
@@ -37,10 +59,21 @@
         "section": "cloze",
         "taskType": "cloze_passage",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 142,
-        "state": "ok"
+        "draft": 142,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 142,
+        "stimuli": 142,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "zhongkao",
@@ -48,10 +81,21 @@
         "section": "reading",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "zhongkao",
@@ -59,10 +103,21 @@
         "section": "writing",
         "taskType": "applied_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -70,10 +125,21 @@
         "section": "listening",
         "taskType": "listening_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -81,10 +147,21 @@
         "section": "reading",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -92,10 +169,21 @@
         "section": "seven_select",
         "taskType": "seven_select",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -103,10 +191,21 @@
         "section": "cloze",
         "taskType": "cloze_passage",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -114,10 +213,21 @@
         "section": "grammar_fill",
         "taskType": "grammar_fill",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 200,
-        "state": "ok"
+        "draft": 200,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 200,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -125,10 +235,21 @@
         "section": "applied_writing",
         "taskType": "applied_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "gaokao",
@@ -136,10 +257,21 @@
         "section": "continuation_writing",
         "taskType": "continuation_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet4",
@@ -147,10 +279,21 @@
         "section": "writing",
         "taskType": "essay_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet4",
@@ -158,10 +301,23 @@
         "section": "listening",
         "taskType": "listening_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 67,
-        "state": "ok"
+        "draft": 67,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 67,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "audio_missing"
+        ]
       },
       {
         "exam": "cet4",
@@ -169,10 +325,21 @@
         "section": "banked_cloze",
         "taskType": "banked_cloze",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 166,
-        "state": "ok"
+        "draft": 166,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 166,
+        "stimuli": 166,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet4",
@@ -180,10 +347,21 @@
         "section": "long_match",
         "taskType": "para_match",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 143,
-        "state": "ok"
+        "draft": 143,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 143,
+        "stimuli": 143,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet4",
@@ -191,10 +369,21 @@
         "section": "careful_reading",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 67,
-        "state": "ok"
+        "draft": 67,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 67,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet4",
@@ -202,10 +391,21 @@
         "section": "translation",
         "taskType": "translation_zh_en",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 55,
-        "state": "ok"
+        "draft": 55,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 55,
+        "stimuli": 55,
+        "activeAudio": 0,
+        "rubricItems": 55,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -213,10 +413,21 @@
         "section": "writing",
         "taskType": "essay_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -224,10 +435,21 @@
         "section": "listening",
         "taskType": "listening_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -235,10 +457,21 @@
         "section": "banked_cloze",
         "taskType": "banked_cloze",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 34,
-        "state": "ok"
+        "draft": 34,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 34,
+        "stimuli": 34,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "THIN",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -246,10 +479,21 @@
         "section": "long_match",
         "taskType": "para_match",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 57,
-        "state": "ok"
+        "draft": 57,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 57,
+        "stimuli": 57,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -257,10 +501,21 @@
         "section": "careful_reading",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "cet6",
@@ -268,10 +523,21 @@
         "section": "translation",
         "taskType": "translation_zh_en",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 51,
-        "state": "ok"
+        "draft": 51,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 51,
+        "stimuli": 51,
+        "activeAudio": 0,
+        "rubricItems": 51,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -279,10 +545,21 @@
         "section": "use_of_english",
         "taskType": "cloze_passage",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 58,
-        "state": "ok"
+        "draft": 58,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 58,
+        "stimuli": 58,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -290,10 +567,21 @@
         "section": "reading_a",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 200,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -301,10 +589,21 @@
         "section": "reading_b",
         "taskType": "seven_select",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 181,
-        "state": "ok"
+        "draft": 181,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 181,
+        "stimuli": 181,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -312,10 +611,21 @@
         "section": "reading_b",
         "taskType": "para_match",
         "domain": null,
+        "requiredInputMode": "unknown",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -323,10 +633,21 @@
         "section": "translation",
         "taskType": "translation_en_zh",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -334,10 +655,21 @@
         "section": "writing_small",
         "taskType": "applied_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "kaoyan",
@@ -345,10 +677,21 @@
         "section": "writing_large",
         "taskType": "essay_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 50,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -356,10 +699,21 @@
         "section": "reading",
         "taskType": "complete_the_words",
         "domain": null,
+        "requiredInputMode": "spell",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 70,
-        "state": "ok"
+        "draft": 70,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 70,
+        "stimuli": 70,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -367,10 +721,23 @@
         "section": "reading",
         "taskType": "read_daily_life",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "official_spec_unverified"
+        ]
       },
       {
         "exam": "toefl",
@@ -378,10 +745,23 @@
         "section": "reading",
         "taskType": "reading_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "official_spec_unverified"
+        ]
       },
       {
         "exam": "toefl",
@@ -389,10 +769,21 @@
         "section": "listening",
         "taskType": "choose_a_response",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -400,10 +791,21 @@
         "section": "listening",
         "taskType": "listening_comprehension",
         "domain": null,
+        "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -411,10 +813,23 @@
         "section": "writing",
         "taskType": "build_a_sentence",
         "domain": null,
+        "requiredInputMode": "multi_blank",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 10,
-        "state": "THIN"
+        "draft": 10,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 10,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "scoring_not_ready"
+        ]
       },
       {
         "exam": "toefl",
@@ -422,10 +837,21 @@
         "section": "writing",
         "taskType": "email_writing",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 60,
-        "state": "ok"
+        "draft": 60,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 60,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 60,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -433,10 +859,21 @@
         "section": "writing",
         "taskType": "academic_discussion",
         "domain": null,
+        "requiredInputMode": "free_text",
         "requiresAudio": false,
         "requiresRubric": true,
-        "draftCount": 60,
-        "state": "ok"
+        "draft": 60,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 60,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 60,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -444,10 +881,21 @@
         "section": "speaking",
         "taskType": "listen_and_repeat",
         "domain": null,
+        "requiredInputMode": "speak",
         "requiresAudio": true,
         "requiresRubric": true,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "toefl",
@@ -455,10 +903,21 @@
         "section": "speaking",
         "taskType": "interview_speaking",
         "domain": null,
+        "requiredInputMode": "speak",
         "requiresAudio": true,
         "requiresRubric": true,
-        "draftCount": 0,
-        "state": "MISSING"
+        "draft": 0,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 0,
+        "stimuli": 0,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 0,
+        "state": "MISSING",
+        "blockingReasons": []
       },
       {
         "exam": "sat",
@@ -466,10 +925,21 @@
         "section": "information_and_ideas",
         "taskType": "reading_comprehension",
         "domain": "Information and Ideas",
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "sat",
@@ -477,10 +947,21 @@
         "section": "craft_and_structure",
         "taskType": "reading_comprehension",
         "domain": "Craft and Structure",
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "sat",
@@ -488,10 +969,21 @@
         "section": "expression_of_ideas",
         "taskType": "reading_comprehension",
         "domain": "Expression of Ideas",
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 2,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       },
       {
         "exam": "sat",
@@ -499,28 +991,84 @@
         "section": "standard_english_conventions",
         "taskType": "reading_comprehension",
         "domain": "Standard English Conventions",
+        "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draftCount": 50,
-        "state": "ok"
+        "draft": 50,
+        "reviewed": 0,
+        "active": 0,
+        "rejected": 0,
+        "retired": 0,
+        "items": 50,
+        "stimuli": 50,
+        "activeAudio": 0,
+        "rubricItems": 0,
+        "sourceStages": 1,
+        "state": "READY_DRAFT",
+        "blockingReasons": []
       }
     ],
-    "missingCount": 9,
-    "thinCount": 1,
+    "stateCounts": {
+      "MISSING": 7,
+      "THIN": 2,
+      "READY_DRAFT": 32,
+      "READY_ACTIVE": 0,
+      "BLOCKED": 4
+    },
     "missing": [
       "zhongkao lv1 / listening / listening_comprehension — draft 0",
       "gaokao lv2 / listening / listening_comprehension — draft 0",
       "cet6 lv4 / listening / listening_comprehension — draft 0",
-      "toefl lv6 / reading / read_daily_life — draft 0",
-      "toefl lv6 / reading / reading_comprehension — draft 0",
       "toefl lv6 / listening / choose_a_response — draft 0",
       "toefl lv6 / listening / listening_comprehension — draft 0",
       "toefl lv6 / speaking / listen_and_repeat — draft 0",
       "toefl lv6 / speaking / interview_speaking — draft 0"
     ],
     "thin": [
-      "toefl lv6 / writing / build_a_sentence — draft 10 (<20)"
-    ]
+      "zhongkao lv1 / language_use / grammar_fill — draft 48 (<50)",
+      "cet6 lv4 / banked_cloze / banked_cloze — draft 34 (<50)"
+    ],
+    "blocked": [
+      "cet4 lv3 / listening / listening_comprehension — draft 67 · audio_missing",
+      "toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified",
+      "toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified",
+      "toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready"
+    ],
+    "readyDraft": [
+      "zhongkao lv1 / cloze_passage — draft 142",
+      "zhongkao lv1 / reading_comprehension — draft 50",
+      "zhongkao lv1 / applied_writing — draft 50",
+      "gaokao lv2 / reading_comprehension — draft 50",
+      "gaokao lv2 / seven_select — draft 50",
+      "gaokao lv2 / cloze_passage — draft 50",
+      "gaokao lv2 / grammar_fill — draft 200",
+      "gaokao lv2 / applied_writing — draft 50",
+      "gaokao lv2 / continuation_writing — draft 50",
+      "cet4 lv3 / essay_writing — draft 50",
+      "cet4 lv3 / banked_cloze — draft 166",
+      "cet4 lv3 / para_match — draft 143",
+      "cet4 lv3 / reading_comprehension — draft 67",
+      "cet4 lv3 / translation_zh_en — draft 55",
+      "cet6 lv4 / essay_writing — draft 50",
+      "cet6 lv4 / para_match — draft 57",
+      "cet6 lv4 / reading_comprehension — draft 50",
+      "cet6 lv4 / translation_zh_en — draft 51",
+      "kaoyan lv5 / cloze_passage — draft 58",
+      "kaoyan lv5 / reading_comprehension — draft 50",
+      "kaoyan lv5 / seven_select — draft 181",
+      "kaoyan lv5 / para_match — draft 50",
+      "kaoyan lv5 / translation_en_zh — draft 50",
+      "kaoyan lv5 / applied_writing — draft 50",
+      "kaoyan lv5 / essay_writing — draft 50",
+      "toefl lv6 / complete_the_words — draft 70",
+      "toefl lv6 / email_writing — draft 60",
+      "toefl lv6 / academic_discussion — draft 60",
+      "sat lv7 / reading_comprehension [Information and Ideas] — draft 50",
+      "sat lv7 / reading_comprehension [Craft and Structure] — draft 50",
+      "sat lv7 / reading_comprehension [Expression of Ideas] — draft 50",
+      "sat lv7 / reading_comprehension [Standard English Conventions] — draft 50"
+    ],
+    "readyActive": []
   },
   "actualGrid": [
     {
@@ -535,6 +1083,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -551,6 +1100,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 16,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -567,6 +1117,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -583,6 +1134,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 15,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -599,6 +1151,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 21,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -615,6 +1168,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 70,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -631,6 +1185,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 18,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -647,6 +1202,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -663,6 +1219,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 18,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -679,6 +1236,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -695,6 +1253,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -711,6 +1270,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -727,6 +1287,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -743,6 +1304,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 20,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -759,6 +1321,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 18,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -775,6 +1338,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -791,6 +1355,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 18,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -807,6 +1372,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -823,6 +1389,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -839,6 +1406,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 41,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -855,6 +1423,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -871,6 +1440,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 41,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -887,6 +1457,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 31,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -903,6 +1474,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 46,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -919,6 +1491,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -935,6 +1508,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 38,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -951,6 +1525,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 39,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -967,6 +1542,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 38,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -983,6 +1559,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -999,6 +1576,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 39,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1015,6 +1593,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1031,6 +1610,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1047,6 +1627,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 44,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1063,6 +1644,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 42,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1079,6 +1661,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 51,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1095,6 +1678,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 38,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1111,6 +1695,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 39,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1127,6 +1712,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1143,6 +1729,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1159,6 +1746,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1175,6 +1763,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 33,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1191,6 +1780,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1207,6 +1797,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1223,6 +1814,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1239,6 +1831,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1255,6 +1848,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1271,6 +1865,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1287,6 +1882,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1303,6 +1899,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1319,6 +1916,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1335,6 +1933,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 19,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1351,6 +1950,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 23,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1367,6 +1967,7 @@
       "audioActive": 0,
       "rubricItems": 55,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1383,6 +1984,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 13,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1399,6 +2001,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1415,6 +2018,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 17,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1431,6 +2035,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1447,6 +2052,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 12,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1463,6 +2069,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 12,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1479,6 +2086,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 25,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1495,6 +2103,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 10,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1511,6 +2120,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 11,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1527,6 +2137,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 12,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1543,6 +2154,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 11,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1559,6 +2171,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1575,6 +2188,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 12,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1591,6 +2205,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1607,6 +2222,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1623,6 +2239,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 13,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1639,6 +2256,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 16,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1655,6 +2273,7 @@
       "audioActive": 0,
       "rubricItems": 51,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1671,6 +2290,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 13,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1687,6 +2307,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 11,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1703,6 +2324,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 12,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1719,6 +2341,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1735,6 +2358,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1751,6 +2375,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1767,6 +2392,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1783,6 +2409,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 32,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1799,6 +2426,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1815,6 +2443,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1831,6 +2460,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1847,6 +2477,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1863,6 +2494,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1879,6 +2511,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1895,6 +2528,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1911,6 +2545,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1927,6 +2562,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1943,6 +2579,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 3,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1959,6 +2596,7 @@
       "audioActive": 0,
       "rubricItems": 50,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1975,6 +2613,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 6,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -1991,6 +2630,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2007,6 +2647,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 4,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2023,6 +2664,7 @@
       "audioActive": 0,
       "rubricItems": 60,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2039,6 +2681,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 1,
       "warnings": [
         "insufficient_active_pool",
         "productive_items_missing_rubric"
@@ -2056,6 +2699,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 55,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2072,6 +2716,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 56,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2088,6 +2733,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 27,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2104,6 +2750,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2120,6 +2767,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 51,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2136,6 +2784,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2152,6 +2801,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2168,6 +2818,7 @@
       "audioActive": 0,
       "rubricItems": 60,
       "targetWords": 0,
+      "sourceStages": 2,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2184,6 +2835,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2200,6 +2852,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2216,6 +2869,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 45,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2232,6 +2886,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 50,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2248,6 +2903,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 50,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2264,6 +2920,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2280,6 +2937,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 54,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2296,6 +2954,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 55,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2312,6 +2971,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 55,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2328,6 +2988,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 31,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2344,6 +3005,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 19,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2360,6 +3022,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 58,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2376,6 +3039,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 57,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2392,6 +3056,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 58,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2408,6 +3073,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 57,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2424,6 +3090,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
+      "sourceStages": 5,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2440,6 +3107,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 55,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2456,6 +3124,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 48,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2472,6 +3141,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 50,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2488,6 +3158,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 58,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]
@@ -2504,6 +3175,7 @@
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 57,
+      "sourceStages": 0,
       "warnings": [
         "insufficient_active_pool"
       ]

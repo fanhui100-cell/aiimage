@@ -32,6 +32,7 @@
     "validate:data-quality": "npx tsx scripts/data-quality-gate.ts",
     "audit:vocab-levels": "npx tsx scripts/audit-vocabulary-levels.ts",
     "audit:qbank-v2-coverage": "npx tsx scripts/audit-question-bank-v2-coverage.ts",
+    "validate:coverage-audit": "npx tsx scripts/validate-coverage-audit.ts",
     "backfill:stimuli-words": "npx tsx scripts/backfill-stimuli-word-count.ts",
     "normalize:answer-positions": "npx tsx scripts/normalize-authored-answer-positions.ts",
     "report:coverage": "npx tsx scripts/coverage-report.ts",
