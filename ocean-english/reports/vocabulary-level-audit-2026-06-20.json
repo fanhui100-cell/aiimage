@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T20:57:01.419Z",
+  "generatedAt": "2026-06-22T20:31:58.566Z",
   "source": "dictionary_words + dictionary_* relation tables (read-only, service role)",
   "dbWrites": "none",
   "totalWords": 28602,
@@ -7,7 +7,7 @@
     "invalidLevelTag": 0,
     "duplicateLevelTag": 0,
     "primaryNotInLevels": 0,
-    "noLevelAtAll": 1
+    "noLevelAtAll": 0
   },
   "levels": [
     {
@@ -100,17 +100,17 @@
       "examId": "toefl",
       "label": "TOEFL",
       "targetSize": null,
-      "currentPrimaryLevelCount": 8038,
-      "currentLevelsIncludesCount": 13632,
-      "wordsWithDefinitions": 13632,
-      "wordsWithExamples": 10365,
-      "wordsWithMnemonics": 12863,
-      "wordsWithInflections": 7299,
-      "wordsWithEtymology": 12698,
+      "currentPrimaryLevelCount": 8039,
+      "currentLevelsIncludesCount": 13633,
+      "wordsWithDefinitions": 13633,
+      "wordsWithExamples": 10366,
+      "wordsWithMnemonics": 12864,
+      "wordsWithInflections": 7300,
+      "wordsWithEtymology": 12699,
       "wordsWithCollocations": 6098,
-      "wordsWithSynonyms": 7935,
-      "wordsWithAntonyms": 7290,
-      "recommendation": "无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 8038，远少于 levels includes 13632：训练务必按 levels includes，不能只看 primary_level"
+      "wordsWithSynonyms": 7936,
+      "wordsWithAntonyms": 7291,
+      "recommendation": "无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 8039，远少于 levels includes 13633：训练务必按 levels includes，不能只看 primary_level"
     },
     {
       "level": 7,
@@ -118,16 +118,16 @@
       "label": "SAT",
       "targetSize": null,
       "currentPrimaryLevelCount": 11625,
-      "currentLevelsIncludesCount": 14381,
-      "wordsWithDefinitions": 14381,
-      "wordsWithExamples": 4457,
-      "wordsWithMnemonics": 13039,
-      "wordsWithInflections": 2956,
-      "wordsWithEtymology": 12199,
+      "currentLevelsIncludesCount": 14382,
+      "wordsWithDefinitions": 14382,
+      "wordsWithExamples": 4458,
+      "wordsWithMnemonics": 13040,
+      "wordsWithInflections": 2957,
+      "wordsWithEtymology": 12200,
       "wordsWithCollocations": 1859,
-      "wordsWithSynonyms": 3649,
-      "wordsWithAntonyms": 3757,
-      "recommendation": "无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 11625，远少于 levels includes 14381：训练务必按 levels includes，不能只看 primary_level"
+      "wordsWithSynonyms": 3650,
+      "wordsWithAntonyms": 3758,
+      "recommendation": "无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 11625，远少于 levels includes 14382：训练务必按 levels includes，不能只看 primary_level"
     }
   ]
 }

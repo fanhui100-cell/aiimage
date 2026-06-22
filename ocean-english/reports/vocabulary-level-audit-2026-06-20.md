@@ -1,6 +1,6 @@
 # Vocabulary Level Audit — 2026-06-20
 
-> Generated: 2026-06-20T20:57:01.419Z
+> Generated: 2026-06-22T20:31:58.566Z
 > Source: dictionary_words + dictionary_* relation tables (read-only, service role).
 > **No DB writes were performed.**
 
@@ -17,8 +17,8 @@ Total words in `dictionary_words`: **28602**
 | 3 | cet4 | CET-4 | ~4500 | 1819 | 4609 | 100% | 99% | 96% | 80% | 93% | 82% | 86% | 73% |
 | 4 | cet6 | CET-6 | ~5500 | 2120 | 4243 | 100% | 94% | 96% | 76% | 96% | 69% | 81% | 74% |
 | 5 | kaoyan | 考研 | ~5500 | 1086 | 5896 | 100% | 86% | 95% | 73% | 93% | 70% | 75% | 62% |
-| 6 | toefl | TOEFL | curated | 8038 | 13632 | 100% | 76% | 94% | 54% | 93% | 45% | 58% | 53% |
-| 7 | sat | SAT | curated | 11625 | 14381 | 100% | 31% | 91% | 21% | 85% | 13% | 25% | 26% |
+| 6 | toefl | TOEFL | curated | 8039 | 13633 | 100% | 76% | 94% | 54% | 93% | 45% | 58% | 53% |
+| 7 | sat | SAT | curated | 11625 | 14382 | 100% | 31% | 91% | 21% | 85% | 13% | 25% | 26% |
 
 ## 2. Per-level recommendations
 
@@ -27,21 +27,21 @@ Total words in `dictionary_words`: **28602**
 - **lv3 CET-4 (cet4)** — levels includes 3 覆盖 4609，接近目标约 4500；primary_level=3 仅 1819，远少于 levels includes 4609：训练务必按 levels includes，不能只看 primary_level
 - **lv4 CET-6 (cet6)** — levels includes 4 覆盖 4243 < 目标约 5500，缺口约 1257，建议合法补标 levels（只增不覆盖）；primary_level=4 仅 2120，远少于 levels includes 4243：训练务必按 levels includes，不能只看 primary_level
 - **lv5 考研 (kaoyan)** — levels includes 5 覆盖 5896 已超目标约 5500，核查是否过宽；primary_level=5 仅 1086，远少于 levels includes 5896：训练务必按 levels includes，不能只看 primary_level
-- **lv6 TOEFL (toefl)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 8038，远少于 levels includes 13632：训练务必按 levels includes，不能只看 primary_level
-- **lv7 SAT (sat)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 11625，远少于 levels includes 14381：训练务必按 levels includes，不能只看 primary_level
+- **lv6 TOEFL (toefl)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 8039，远少于 levels includes 13633：训练务必按 levels includes，不能只看 primary_level
+- **lv7 SAT (sat)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 11625，远少于 levels includes 14382：训练务必按 levels includes，不能只看 primary_level
 
 ## 3. Key findings
 
 - **CET-6 direct coverage gap:** `levels includes 4` = 4243 vs target ~5500. Gap ≈ 1257; backfill `levels` to ~5500.
 - **Postgraduate (考研) logic:** `primary_level=5` = 1086 (looks small) but `levels includes 5` = 5896. Training/recommendation must use `levels includes 5`, not `primary_level=5`.
-- **`primary_level` vs `levels includes` mismatch:** lv2(1924→3743), lv3(1819→4609), lv4(2120→4243), lv5(1086→5896), lv6(8038→13632), lv7(11625→14381).
+- **`primary_level` vs `levels includes` mismatch:** lv2(1924→3743), lv3(1819→4609), lv4(2120→4243), lv5(1086→5896), lv6(8039→13633), lv7(11625→14382).
 
 ### Data integrity
 
 - Invalid level tags (outside 1-7): 0
 - Duplicate level tags within a word: 0
 - `primary_level` not present in `levels`: 0
-- Words with no level at all (primary null & levels empty): 1
+- Words with no level at all (primary null & levels empty): 0
 
 ## 4. Recommended import/backfill actions
 

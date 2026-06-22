@@ -388,6 +388,22 @@
       "continueDecision": "continued",
       "needsFixLater": false,
       "status": "fixed"
+    },
+    {
+      "id": "R8-vocab-repair",
+      "stage": "R8",
+      "batch": "-",
+      "examId": "cet6,all",
+      "level": "4",
+      "taskType": "vocabulary",
+      "severity": "info",
+      "category": "content_quality",
+      "summary": "R8 词库/词法修复（合法、无版权导入、无虚构）。修复唯一无等级词 nuanced→primary_level=6,levels=[6,7]（curated 学术 TOEFL+SAT，按 README curated 规则免许可证）；完整性现 非法0/重复0/primary∉levels 0/完全无等级 0。新增 scripts/validate-vocabulary-target-source.ts（导入前 provenance/license 闸门：source_name/url/license_note/exam_id/level/kind 必填，TOEFL/SAT 必 curated，无许可证不得导入；当前 0 个 list 文件，仅 README 约定）。",
+      "evidence": "CET-6 直接覆盖 4243/~5500 仍缺口——按 README 需 canonical CET-6 syllabus 授权词表方可回填,当前无授权来源 → 显式 blocked_by_missing_licensed_source（验收允许）。未抓取/导入任何版权商业词表;未虚构 antonym/collocation 提百分比。validate-vocabulary-target-source/audit:vocab-levels/validate:dictionary(warnings 0)/validate:data-quality(全过)/analyze:lexigraph/lint/tsc 全 EXIT 0。",
+      "containment": "仅 1 行 dictionary_words 等级修复（非 question_sets;无 active 影响）;其余为只读审计 + 新验证器。CET-6 缺口待授权词表（later phase）。",
+      "continueDecision": "continued",
+      "needsFixLater": true,
+      "status": "fixed"
     }
   ]
 }
