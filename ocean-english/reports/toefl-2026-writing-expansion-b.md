@@ -17,12 +17,23 @@ Codex review flagged **email #4 (index 3)** and **email #10 (index 9)** as seman
 
 **Re-apply / idempotency (per-file email line):** apply → `wrote 1 / dup 49`; idempotent rerun → `wrote 0 / dup 50` (total lines `wrote 1 / dup 99` then `wrote 0 / dup 100`, since the unchanged 50 discussions are all dup). DB verifier after rework: **email stage sets = 50** (old deleted, new added; no source-external set), owned draft **60/60**, active 0, antonym/cet_cloze 0.
 
-**Semantic dedup re-check (meaning-level, not string).** The rewritten task was reviewed against all 49 other new emails and the 10 pilot emails: **index 9 = DISTINCT** (course-selection counseling; explicitly not a section-switch). No same-core-problem pair exists among the 50 new emails. A full secondary scan surfaced **two NEW-vs-PILOT findings for your decision** (left unchanged here because this rework was scoped to the single #10 record with a `wrote 1` contract):
+**Semantic dedup re-check (meaning-level, not string).** The rewritten task was reviewed against all 49 other new emails and the 10 pilot emails: **index 9 = DISTINCT** (course-selection counseling; explicitly not a section-switch). No same-core-problem pair exists among the 50 new emails. A full secondary scan surfaced two NEW-vs-PILOT findings, both since adjudicated:
 
-1. **`new#31` (library study-desk lights → describe + impact + when fixed) ↔ `pilot#3` (dorm heater broken → describe + impact + when repaired)** — *strong*: same broken-facility skeleton, differing mainly by object/recipient (object-swap). **Recommended follow-up single-record fix** if strict distinctness from pilot is required.
-2. **`new#35` (ask to UPDATE an existing recommendation letter) ↔ `pilot#9` (ask for a NEW recommendation letter)** — *borderline*: shared rec-letter skeleton, but new#35's "update an existing letter for a recent project" premise is a genuine variation; lower priority.
+1. **`new#31` ↔ `pilot#3`** (broken-facility object-swap) — **RESOLVED in the P1 rework below.**
+2. **`new#35` (UPDATE an existing rec letter) ↔ `pilot#9` (NEW rec letter)** — **KEPT** per P2 review decision (update-vs-new is a sufficiently different task purpose).
 
-These two pilot overlaps were not part of the Codex #4/#10 finding; flagged here so you/Codex can decide whether a further single-record rework is warranted.
+## 0b. P1 review rework (second single-record fix)
+
+A follow-up review marked **`new#31` ↔ `pilot#3`** as a **P1 (merge-blocking)** strong duplicate: both were "a broken campus facility → describe + how it affects me → ask when it will be repaired/fixed," differing only by object/location (library study-desk lights vs dorm heater). The P2 rec-letter pair was confirmed acceptable and left unchanged.
+
+Fix (quantities/matrix unchanged, 60/60, `[7,7,6,6,6,6,6,6]`):
+- **Rewrote** email index 31 (category *housing, dining, transportation, or campus facilities*) into a non-repair-timeline scenario: *a student whose schedule changed now drives to campus and asks the Transportation & Parking Office to obtain a student parking permit — explain the new need, ask about eligibility/cost, and ask whether a temporary permit is available while on the waitlist.* No broken facility, no "when fixed."
+  - Old legacy_id: `gen:productive:email_writing:set:claude:5jxqgh`
+  - New legacy_id: `gen:productive:email_writing:set:claude:161a40t`
+- **Targeted delete (no bulk delete):** removed the old record by its exact legacy_id only — after asserting `qa_flags.stage='toefl-2026-expansion-b'`, `task_type='email_writing'`, `status='draft'` (all passed) — deleting its 1 `question_item` (`…:item:claude:5jxqgh:0`) then the `question_set` (`bbeac1b6-d62c-4878-92fa-a160cdc58c83`).
+- **Re-apply / idempotency (per-file email line):** apply → `wrote 1 / dup 49`; idempotent rerun → `wrote 0 / dup 50`.
+- **Semantic recheck:** index-31 = **DISTINCT** (parking-permit acquisition; not a broken-facility pattern; only parking/vehicle-permit prompt in either set; distinct from pilot#3 and all 60).
+- **Verification:** source verifier, DB verifier (email/discussion stage=50, owned **60/60** draft, active 0, antonym/cet_cloze 0, no source-external set), qa:qsets-v2, validate:qbank-v2, validate:rubrics, validate:question-types, lint, tsc --noEmit, snapshot — all **exit 0**.
 
 ## 1. Starting commit / worktree / status
 
@@ -136,7 +147,7 @@ Discussions use **50 distinct professor surnames + 100 distinct student given-na
 
 ## 9. Rejected / replaced prompts
 
-**5 tasks replaced total.** 4 during initial manual inspection (2 email, 2 discussion — reasons in §4 and JSON `duplicateChecks.repaired`), plus **1 in the Codex rework** (email index 9; see §0). All replacements re-passed source verification, the matrix check, dedup, and the strict DB check after apply.
+**6 tasks replaced total.** 4 during initial manual inspection (2 email, 2 discussion — reasons in §4 and JSON `duplicateChecks.repaired`), plus **1 in the Codex #4/#10 rework** (email index 9; see §0) and **1 in the P1 review rework** (email index 31; see §0b). All replacements re-passed source verification, the matrix check, dedup, and the strict DB check after apply.
 
 ## 10. Validation commands and exit codes
 

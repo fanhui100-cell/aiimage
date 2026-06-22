@@ -409,14 +409,14 @@
     },
     {
       "category": "housing, dining, transportation, or campus facilities",
-      "prompt": "You are a student who studies in the campus library most evenings. The lighting at several study desks on your floor has been flickering and some desks are completely dark, which makes reading uncomfortable. Write an email to the library facilities staff. In your email, describe the problem and where it is located, explain why it makes studying difficult, and ask when the lights are likely to be fixed.",
-      "promptZh": "给图书馆设施人员写邮件：你常在傍晚去图书馆学习，但你所在楼层有几张自习桌的灯一直闪烁、有些桌子完全没灯，看书很不舒服。描述问题及其位置、说明为何影响学习、并询问灯大概何时能修好。",
+      "prompt": "You are a student who has recently started driving to campus each day because your class schedule changed. You would like to obtain a student parking permit so that you can park legally near your department building. Write an email to the campus Transportation and Parking Office. In your email, explain your situation and why you now need to drive to campus, ask about the eligibility requirements and the cost of a student parking permit, and ask whether a temporary permit is available to use while you are waiting on the permit waitlist.",
+      "promptZh": "给校园交通与停车办公室写邮件：你因课表变动开始每天开车上学、需要办理学生停车证，说明你的情况与开车通勤的原因、询问办证的资格条件与费用、并询问在排队等候期间是否可以使用临时停车证。",
       "referencePoints": [
-        "称呼/语域：收件人是图书馆设施人员，应使用正式礼貌称呼，语气客气，问题陈述事实而不抱怨。",
-        "任务完成度：完成三个动作——描述问题及具体位置（楼层/桌子灯闪烁或无灯）、说明对学习的影响、询问预计维修时间，三项齐备。",
-        "组织连贯：先定位并描述问题，再说明影响，最后提出时间询问，信息有序、衔接清楚。",
-        "语法准确：现在进行/现在完成时描述持续问题恰当，地点状语与从句使用正确，疑问句结构无误。",
-        "词汇得体：准确使用 lighting/flicker/study desk/floor/repair/fixed 等设施类词汇，措辞具体且礼貌。"
+        "称呼/语域：使用得体的邮件称呼（如 Dear Transportation and Parking Office）与礼貌结尾署名，全程保持正式、客气的请求语气，无口语化或随意表达。",
+        "任务完成度：完整覆盖三项交际任务——说明开车通勤的情况与原因、询问办证资格与费用、询问等候期间能否使用临时停车证，信息具体且不遗漏。",
+        "组织连贯：有清晰的开头（说明来意）、主体（按任务分段或分点）、结尾，逻辑顺畅，使用恰当的衔接词与过渡，结构便于阅读。",
+        "语法准确：句式多样且基本无误，时态（现状用现在时、原因可用现在完成时）、疑问句构造、情态动词等使用正确，不影响理解。",
+        "词汇得体：恰当使用与停车/通勤相关的词汇（如 parking permit、eligibility、waitlist、temporary permit、commute），措辞精确、正式，无明显搭配或用词错误。"
       ],
       "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
     },

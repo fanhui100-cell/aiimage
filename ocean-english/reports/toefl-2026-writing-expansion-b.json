@@ -34,10 +34,33 @@
       "index9Verdict": "DISTINCT — course-selection counseling (choose between two electives for a specialization goal + future-course implications); explicitly not a section-switch/schedule-conflict; checked clear against new#0, new#3, pilot#5, new#10, new#38.",
       "withinNewEmails": "No same-core-problem duplicate pair among the 50 new emails.",
       "newVsPilotFindingsForUserDecision": [
-        { "pair": "new#31 (library study-desk lights, ask when fixed) <-> pilot#3 (dorm heater broken, ask when repaired)", "severity": "strong", "note": "Same 'report a broken campus facility -> describe + impact + when-fixed' skeleton; differs mainly by object/recipient (object-swap). Recommend a follow-up single-record fix if strict pilot-distinctness is required." },
-        { "pair": "new#35 (ask professor to UPDATE an existing recommendation letter) <-> pilot#9 (ask professor for a NEW recommendation letter)", "severity": "borderline", "note": "Shared 'solicit rec letter + remind of work + cite deadline' skeleton; new#35's 'update an existing letter for a recent project' premise is a real variation. Lower priority." }
+        { "pair": "new#31 (library study-desk lights, ask when fixed) <-> pilot#3 (dorm heater broken, ask when repaired)", "severity": "strong", "status": "RESOLVED in P1 rework (see p1Rework): index 31 rewritten to a parking-permit acquisition scenario.", "note": "Was the same 'report a broken campus facility -> describe + impact + when-fixed' object-swap skeleton." },
+        { "pair": "new#35 (ask professor to UPDATE an existing recommendation letter) <-> pilot#9 (ask professor for a NEW recommendation letter)", "severity": "borderline", "status": "KEPT per P2 review decision (sufficiently different task purpose: update vs new letter).", "note": "Shared 'solicit rec letter + remind of work + cite deadline' skeleton; the 'update an existing letter for a recent project' premise is a real variation." }
       ]
     }
+  },
+  "p1Rework": {
+    "trigger": "Independent review marked email new#31 <-> pilot#3 as a P1 (merge-blocking) strong duplicate: 'broken campus facility -> describe + impact -> ask when repaired/fixed', differing only by object/location (library study-desk lights vs dorm heater). P2 (rec-letter pair) was confirmed acceptable and kept unchanged.",
+    "action": "Rewrote email index 31 (category 'housing, dining, transportation, or campus facilities') into a non-repair-timeline scenario; quantities and matrix unchanged (60/60; 7/7/6/6/6/6/6/6).",
+    "replaced": {
+      "index": 31,
+      "category": "housing, dining, transportation, or campus facilities",
+      "oldPrompt": "You are a student who studies in the campus library most evenings. The lighting at several study desks on your floor has been flickering and some desks are completely dark, which makes reading uncomfortable. Write an email to the library facilities staff. In your email, describe the problem and where it is located, explain why it makes studying difficult, and ask when the lights are likely to be fixed.",
+      "oldLegacyId": "gen:productive:email_writing:set:claude:5jxqgh",
+      "newPrompt": "You are a student who has recently started driving to campus each day because your class schedule changed. You would like to obtain a student parking permit so that you can park legally near your department building. Write an email to the campus Transportation and Parking Office. In your email, explain your situation and why you now need to drive to campus, ask about the eligibility requirements and the cost of a student parking permit, and ask whether a temporary permit is available to use while you are waiting on the permit waitlist.",
+      "newLegacyId": "gen:productive:email_writing:set:claude:161a40t"
+    },
+    "targetedDelete": {
+      "method": "Deleted ONLY the old record by exact legacy_id (gen:productive:email_writing:set:claude:5jxqgh); deleted its 1 question_item then the question_set by set id; NO bulk delete by task_type.",
+      "preDeleteAssertions": "qa_flags.stage='toefl-2026-expansion-b' AND task_type='email_writing' AND status='draft' (all passed before deletion).",
+      "deletedSetId": "bbeac1b6-d62c-4878-92fa-a160cdc58c83",
+      "deletedItemLegacyId": "gen:productive:email_writing:item:claude:5jxqgh:0"
+    },
+    "reapply": { "emailPerFile": { "wrote": 1, "dup": 49 }, "totalLine": { "wrote": 1, "dup": 99 } },
+    "idempotentReapply": { "emailPerFile": { "wrote": 0, "dup": 50 }, "totalLine": { "wrote": 0, "dup": 100 } },
+    "semanticRecheck": "Index-31 verdict DISTINCT: parking-permit acquisition/inquiry; no broken-facility/repair-timeline elements; distinct from pilot#3 and all 60 (only parking/vehicle-permit prompt in either set).",
+    "verification": "Source verifier, DB verifier (email/discussion stage=50, owned=60 draft, active=0, antonym/cet_cloze=0; no source-external set), qa:qsets-v2, validate:qbank-v2, validate:rubrics, validate:question-types, lint, tsc --noEmit, snapshot — all exit 0.",
+    "p2Decision": "new#35 <-> pilot#9 rec-letter pair KEPT unchanged per review (update-vs-new is a sufficiently different task purpose)."
   },
   "preconditions": {
     "worktree": "D:/ai-worktrees/ocean-toefl-b (ocean-english)",
