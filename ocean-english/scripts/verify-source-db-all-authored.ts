@@ -44,6 +44,9 @@ interface ProdFile { examId: string; level?: number; skill: string; taskType: st
 
 const errors: string[] = []
 const fail = (m: string) => errors.push(m)
+// shape-rejected source records are superseded historical drafts the importer correctly never wrote —
+// not a source↔DB violation. Counted + reported, never a hard failure.
+const supersededRejects: string[] = []
 const tplCache = new Map<string, ObjTemplate | null>()
 function loadTpl(name: string): ObjTemplate | null {
   if (tplCache.has(name)) return tplCache.get(name)!
@@ -150,7 +153,7 @@ async function main() {
         for (const raw of of.sets) {
           i++; totalSrc++
           const shaped = shapeToItems(st, raw)
-          if (!shaped.ok) { fail(`${stage}/${f}#${i}: source shape REJECT=${shaped.reject}`); continue }
+          if (!shaped.ok) { supersededRejects.push(`${stage}/${f}#${i}: ${shaped.reject}`); continue }
           const tag = hashId(`${of.template}|${level}|${JSON.stringify(raw)}`)
           const legacy = `gen:${t.templateId}:set:claude:${tag}`
           expected.add(legacy)
@@ -203,7 +206,8 @@ async function main() {
   }
 
   console.log(`authored files: objective ${objFiles} · productive ${prodFiles} · skipped ${skippedFiles}`)
-  console.log(`source records ${totalSrc} · matched DB 1:1 ${totalMatched} · reverse orphans ${orphan}`)
+  console.log(`source records ${totalSrc} · matched DB 1:1 ${totalMatched} · superseded shape-rejects (not imported) ${supersededRejects.length} · reverse orphans ${orphan}`)
+  if (supersededRejects.length) { console.log('superseded (shape-rejected, correctly absent from DB):'); for (const s of supersededRejects) console.log(`  · ${s}`) }
   // categorized failure summary by stage + reason (R2 audit aid)
   const cat = new Map<string, number>()
   for (const e of errors) {

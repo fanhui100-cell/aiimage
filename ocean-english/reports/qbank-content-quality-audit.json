@@ -1,0 +1,666 @@
+{
+  "generatedAt": "2026-06-22T18:51:08.064Z",
+  "scope": {
+    "totalDraftSets": 5038,
+    "genAuthoredSets": 1304,
+    "migratedSets": 3734
+  },
+  "structuralStatus": "machine_passed (verify-source-db-all-authored.ts + qa:qsets-v2 + validate:qbank-v2 all exit 0)",
+  "machineSemantic": {
+    "duplicatePromptClusters": 45,
+    "duplicateClusters": [
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what is the main idea of the passage?",
+        "count": 82,
+        "stages": [
+          "(migrated)",
+          "packC"
+        ]
+      },
+      {
+        "taskType": "translation_zh_en",
+        "prompt": "translate the following chinese passage into english. keep it natural and at cet",
+        "count": 55,
+        "stages": [
+          "prod-cet4-trans"
+        ]
+      },
+      {
+        "taskType": "translation_zh_en",
+        "prompt": "translate the following passage into english. maintain a slightly formal registe",
+        "count": 51,
+        "stages": [
+          "prod-cet6-trans"
+        ]
+      },
+      {
+        "taskType": "translation_en_zh",
+        "prompt": "translate the following english passage into chinese. (note academic register)",
+        "count": 50,
+        "stages": [
+          "prod-ky-trans"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice completes the text so that it conforms to the conventions of standa",
+        "count": 50,
+        "stages": [
+          "sat-sec"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice completes the text with the most logical transition?",
+        "count": 25,
+        "stages": [
+          "g4",
+          "sat-expr"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice is best supported by the text?",
+        "count": 15,
+        "stages": [
+          "sat-info"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice best states the main idea of the text?",
+        "count": 13,
+        "stages": [
+          "sat-info",
+          "g4"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main topic of the passage?",
+        "count": 12,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of vertical farming?",
+        "count": 10,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "build_a_sentence",
+        "prompt": "arrange all the words and phrases below to form a correct, complete sentence.",
+        "count": 10,
+        "stages": [
+          "toefl-2026-pilot"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main idea of the passage?",
+        "count": 9,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main purpose of the library renovation?",
+        "count": 6,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what did the writer learn?",
+        "count": 6,
+        "stages": [
+          "packC"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of urban beekeeping?",
+        "count": 5,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the passage mainly about?",
+        "count": 5,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice best describes data presented in the text?",
+        "count": 5,
+        "stages": [
+          "sat-info"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of rooftop gardens?",
+        "count": 4,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what is the passage mainly about?",
+        "count": 4,
+        "stages": [
+          "gapfill",
+          "packC",
+          "packD"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of vertical farming from the passage?",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "according to the passage, how much water does vertical farming save compared to ",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main topic of the conversation?",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main idea of this passage?",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main purpose of the announcement?",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main purpose of this announcement?",
+        "count": 3,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "cloze_choice",
+        "prompt": "[blank] behaviour",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "cloze_spell",
+        "prompt": "[blank] behaviour",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "according to the passage, how much water does vertical farming save compared to ",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of digital nomads from the passage?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the critics' view in the passage?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the regulations mentioned in the passage?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the author’s attitude toward urban beekeeping?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "according to the passage, how much water does vertical farming save compared to ",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of urban beekeeping from the passage?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what can be inferred about the future of rooftop farming?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what can be inferred about the speaker?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what can be inferred about professor lee?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "where will the temporary reading room be located?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "listening_comprehension",
+        "prompt": "what is the main purpose of the passage?",
+        "count": 2,
+        "stages": [
+          "(migrated)"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what is the writer's main point?",
+        "count": 2,
+        "stages": [
+          "packD"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "where does the solution mainly lie?",
+        "count": 2,
+        "stages": [
+          "packD",
+          "packE"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "how did the writer feel afterwards?",
+        "count": 2,
+        "stages": [
+          "packC"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what did the writer finally do?",
+        "count": 2,
+        "stages": [
+          "packC"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "what is the main lesson of the passage?",
+        "count": 2,
+        "stages": [
+          "packC"
+        ]
+      },
+      {
+        "taskType": "reading_comprehension",
+        "prompt": "which choice best describes the overall structure of the text?",
+        "count": 2,
+        "stages": [
+          "sat-craft"
+        ]
+      }
+    ],
+    "withinItemDuplicateChoiceText": 0,
+    "unresolvedSingleChoiceAnswers": 0,
+    "checkedChoiceItems": 3910
+  },
+  "reviewStatus": {
+    "machine_passed": 1304,
+    "semantic_reviewed": 140,
+    "machine_passed_semantic_pending": 1164,
+    "not_yet_reviewed_migrated": 3734,
+    "note": "Semantic review is sampled/ongoing; 100% semantic review of any pool is required only before it becomes an R10 active-pilot candidate. Migrated word-universe content is not labeled reviewed."
+  },
+  "stageStatus": [
+    {
+      "stage": "toefl-2026-expansion-b",
+      "sets": 100,
+      "taskTypes": [
+        "academic_discussion",
+        "email_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": true,
+      "reviewStatus": "semantic_reviewed"
+    },
+    {
+      "stage": "adhoc",
+      "sets": 60,
+      "taskTypes": [
+        "complete_the_words"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-cet4-trans",
+      "sets": 55,
+      "taskTypes": [
+        "translation_zh_en"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-cet6-trans",
+      "sets": 51,
+      "taskTypes": [
+        "translation_zh_en"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "gaokao-7",
+      "sets": 50,
+      "taskTypes": [
+        "seven_select"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-gk-cont",
+      "sets": 50,
+      "taskTypes": [
+        "continuation_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-gk-aw",
+      "sets": 50,
+      "taskTypes": [
+        "applied_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-cet4-essay",
+      "sets": 50,
+      "taskTypes": [
+        "essay_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-cet6-essay",
+      "sets": 50,
+      "taskTypes": [
+        "essay_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packB",
+      "sets": 50,
+      "taskTypes": [
+        "cloze_passage"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packA",
+      "sets": 50,
+      "taskTypes": [
+        "para_match"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-ky-trans",
+      "sets": 50,
+      "taskTypes": [
+        "translation_en_zh"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "sat-sec",
+      "sets": 50,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-ky-aw",
+      "sets": 50,
+      "taskTypes": [
+        "applied_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-ky-essay",
+      "sets": 50,
+      "taskTypes": [
+        "essay_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "prod-zk-aw",
+      "sets": 50,
+      "taskTypes": [
+        "applied_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "sat-info",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "sat-craft",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "sat-expr",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packC",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packG",
+      "sets": 48,
+      "taskTypes": [
+        "grammar_fill"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packE",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packF",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "packD",
+      "sets": 48,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "toefl-2026-pilot",
+      "sets": 40,
+      "taskTypes": [
+        "academic_discussion",
+        "build_a_sentence",
+        "complete_the_words",
+        "email_writing"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": true,
+      "reviewStatus": "semantic_reviewed"
+    },
+    {
+      "stage": "gapfill",
+      "sets": 8,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    },
+    {
+      "stage": "g4",
+      "sets": 6,
+      "taskTypes": [
+        "reading_comprehension"
+      ],
+      "machinePassed": true,
+      "semanticReviewed": false,
+      "reviewStatus": "machine_passed_semantic_pending"
+    }
+  ]
+}

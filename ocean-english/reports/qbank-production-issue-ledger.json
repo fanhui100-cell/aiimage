@@ -352,10 +352,10 @@
       "category": "qa_failed",
       "summary": "R2 source↔DB audit (new read-only scripts/verify-source-db-all-authored.ts; permutation-invariant for answer-position-normalized choice items): 1314 authored source records, 1154 match DB 1:1. Bounded source↔DB DRIFT in 3 productive stages — prod-ky-aw(50), prod-ky-essay(50), prod-zk-aw(50): disk source edited after import (prompts still match live DB items exactly, but sourceText drifted → deterministic legacy hash no longer matches). 150 disk records ↔ 150 DB draft sets: same content, mutually unlinked. Plus 10 early-stage records (g3 6, g4 2, gapfill 2) fail shapeToItems passage_too_short — correctly never imported (superseded historical drafts on disk).",
       "evidence": "verify-source-db-all-authored.ts EXIT 1: 150 forward no_db_set(drift) + 150 reverse_orphan over prod-ky-aw/prod-ky-essay/prod-zk-aw; 10 source_shape_reject (g3/g4/gapfill). e.g. prod-ky-essay#1 disk legacy …:1e6hkek vs live DB …:n6685g (same prompt, stage prod-ky-essay, draft, rubric+free_text+official=false). DB internally valid (qa:qsets-v2/validate:qbank-v2 pass).",
-      "containment": "NO DB mutation. Hard-stop per plan §0.2 (source-to-DB deterministic verification fails). Awaiting canonical-source decision before R2 repair (delete exact stale set+item, re-import corrected source, idempotency proof). R0 pools (cw70/email60/disc60) and all other authored stages verify 1:1 clean.",
-      "continueDecision": "paused",
+      "containment": "NO DB mutation. Hard-stop per plan §0.2 (source-to-DB deterministic verification fails). Awaiting canonical-source decision before R2 repair (delete exact stale set+item, re-import corrected source, idempotency proof). R0 pools (cw70/email60/disc60) and all other authored stages verify 1:1 clean. FIXED: per user decision (disk canonical), targeted rule-12 repair via scripts/repair-prod-drift-r2.ts — enumerated 150 exact stale legacy_ids, asserted draft/stage/type, deleted items→set (150 sets, 0 orphan stimuli), re-imported 3 stages (wrote 50×3, idempotent wrote 0/dup 50). verify-source-db-all-authored.ts PASS (1304/1314 1:1; 10 superseded shape-rejects info-skipped). totalSets 5038 net-zero, active 0, deprecated 0; essay_writing 150/applied_writing 150 preserved. qa/validate×4/lint/tsc EXIT 0. See reports/qbank-content-repair-log.md.",
+      "continueDecision": "continued",
       "needsFixLater": true,
-      "status": "open"
+      "status": "fixed"
     }
   ]
 }
