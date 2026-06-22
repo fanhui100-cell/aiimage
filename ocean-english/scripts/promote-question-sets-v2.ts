@@ -89,28 +89,30 @@ async function main() {
   }
 
   let promoted = 0
+  let rpcResults: { set_id: string; result: string; reason: string }[] = []
   if (APPLY) {
-    // 顺序：先 items → active，再 set → active。若 set 失败则把 items 回滚 draft，
-    // 杜绝「active set + draft items」不一致（best-effort 回滚；真正原子化建议改 Postgres RPC，
-    // 见 ledger G8 follow-up）。先 items 的好处：若中途崩，残留至多是「active items + draft set」，
-    // 而组卷器只取 status=active 的 set，draft set 不会被取 → 不会被用户看到。
-    for (const s of eligible) {
-      const { error: e2 } = await db.from('question_items').update({ status: 'active' }).eq('question_set_id', s.id)
-      if (e2) { rejected.push({ id: s.id, legacy_id: s.legacy_id, reason: `item_update_failed:${e2.message}` }); continue }
-      const { error: e1 } = await db.from('question_sets').update({ status: 'active' }).eq('id', s.id)
-      if (e1) {
-        // 回滚：把刚置 active 的 items 退回 draft，保持 set/items 一致
-        const { error: rb } = await db.from('question_items').update({ status: 'draft' }).eq('question_set_id', s.id)
-        rejected.push({ id: s.id, legacy_id: s.legacy_id, reason: `set_update_failed${rb ? '_ROLLBACK_FAILED' : '_items_rolled_back'}:${e1.message}` })
-        continue
+    // R9: atomic server-side promotion via the PostgreSQL RPC `promote_question_sets_v2`
+    // (supabase/sql/p5-question-bank-promotion-rpc.sql), replacing the old best-effort client rollback.
+    // The RPC re-validates EVERY set authoritatively (draft / deprecated / scoring_not_ready /
+    // official_spec_unverified / items-draft / answer / productive-rubric / listening-active-audio /
+    // stimulus-FK) and flips set + items to active in ONE transaction; any unexpected DB error rolls
+    // back ALL changes (no partial active state possible). We pass ONLY explicit set UUIDs.
+    const ids = eligible.map((s) => s.id)
+    if (ids.length) {
+      const { data, error: rpcErr } = await db.rpc('promote_question_sets_v2', { p_set_ids: ids })
+      if (rpcErr) throw new Error(`promotion RPC failed (is supabase/sql/p5-question-bank-promotion-rpc.sql applied?): ${rpcErr.message}`)
+      rpcResults = (data ?? []) as { set_id: string; result: string; reason: string }[]
+      const byId = new Map(eligible.map((s) => [s.id, s.legacy_id]))
+      for (const r of rpcResults) {
+        if (r.result === 'promoted' || r.result === 'already_active') promoted++
+        else rejected.push({ id: r.set_id, legacy_id: byId.get(r.set_id) ?? null, reason: `rpc_${r.result}:${r.reason}` })
       }
-      promoted++
     }
   }
 
   const reasonCounts: Record<string, number> = {}
   for (const r of rejected) reasonCounts[r.reason] = (reasonCounts[r.reason] ?? 0) + 1
-  writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), apply: APPLY, filters: { exam: EXAM, level, task: TASK, limit: LIMIT }, candidates: sets.length, eligible: eligible.length, promoted, rejected: rejected.slice(0, 50), reasonCounts }, null, 2) + '\n', 'utf8')
+  writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), apply: APPLY, filters: { exam: EXAM, level, task: TASK, limit: LIMIT }, candidates: sets.length, eligible: eligible.length, promoted, rejected: rejected.slice(0, 50), reasonCounts, rpcResults: rpcResults.slice(0, 50) }, null, 2) + '\n', 'utf8')
   console.log(`promote ${APPLY ? 'APPLY' : 'DRY-RUN'} [exam=${EXAM ?? '-'} level=${level ?? '-'} task=${TASK ?? '-'} limit=${LIMIT}]`)
   console.log(`  candidates ${sets.length} · eligible ${eligible.length} · rejected ${rejected.length}` + (APPLY ? ` · promoted ${promoted}` : ''))
   if (Object.keys(reasonCounts).length) console.log(`  reject reasons: ${JSON.stringify(reasonCounts)}`)
