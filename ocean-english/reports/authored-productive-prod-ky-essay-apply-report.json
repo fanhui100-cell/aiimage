@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T05:14:26.499Z",
+  "apply": true,
+  "stage": "prod-ky-essay",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 50,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-ky-essay\\kaoyan-essay.productive.json",
+      "examId": "kaoyan",
+      "taskType": "essay_writing",
+      "level": 5,
+      "skill": "writing",
+      "tasks": 50,
+      "wrote": 0,
+      "dup": 50
+    }
+  ]
+}

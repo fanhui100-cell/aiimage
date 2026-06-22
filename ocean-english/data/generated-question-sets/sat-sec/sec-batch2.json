@@ -1,0 +1,111 @@
+{
+  "template": "sat-standard-english-conventions",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Standard English Conventions items, batch 2. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Along the narrow, wind-scoured coastal cliffs ______ a chain of seabird colonies so densely packed that researchers must photograph them from a small plane in order to count the crowded nests with any accuracy.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["lies", "lie", "lying", "to lie"],
+      "answer": "lies",
+      "domain": "Standard English Conventions",
+      "explain_zh": "倒装句真正主语是单数 a chain（of seabird colonies 为修饰），用单数 lies。"
+    },
+    {
+      "passage": "The volunteers who had given up an entire holiday weekend to repair the washed-out trail ______ finally rewarded with a view that stretched, ridge after ridge, all the way to the snow-covered peaks.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["were", ", were", "were,", "being"],
+      "answer": "were",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语 The volunteers 与谓语之间不应插入逗号，且主语为复数，用 were；being 为非谓语，无法作主句动词。"
+    },
+    {
+      "passage": "The chef's guiding philosophy turned out to be refreshingly simple ______ use only what is in season, waste as little as possible, and let each ingredient taste unmistakably like itself.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [":", ",", ";", "—,"],
+      "answer": ":",
+      "domain": "Standard English Conventions",
+      "explain_zh": "前为完整独立句，后接对该 philosophy 的解释性列举，用冒号引出；分号后须接独立句，逗号过弱。"
+    },
+    {
+      "passage": "The newly launched internship is built around three practical skills: gathering raw data in the field, writing summaries that nonspecialists can follow, and ______ the findings to audiences with no technical training whatsoever.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["presenting", "to present", "presentation of", "presented"],
+      "answer": "presenting",
+      "domain": "Standard English Conventions",
+      "explain_zh": "与 gathering、writing 构成动名词平行，用 presenting。"
+    },
+    {
+      "passage": "Each of the antique clocks that the retired watchmaker so patiently restored ______ a slightly different chime, a quirk that visitors wandering through the small gallery find oddly delightful.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["has", "have", "are having", "were"],
+      "answer": "has",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语 Each 为单数（of the clocks 为修饰），用单数 has。"
+    },
+    {
+      "passage": "Although she had rehearsed the difficult lecture more times than she could count, the very moment she stepped into the bright lights of the stage she ______ that the sharpest question would come from the youngest student present.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["realized", "realizes", "has realized", "will realize"],
+      "answer": "realized",
+      "domain": "Standard English Conventions",
+      "explain_zh": "全句为过去叙事（had rehearsed、stepped），主句动词须用一般过去时 realized。"
+    },
+    {
+      "passage": "Carved with extraordinary patience from a single block of pale, almost translucent limestone, ______ took the sculptor nearly three years and more broken chisels than she had ever expected to replace.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["the statue", "the sculptor", "carving it", "it slowly"],
+      "answer": "the statue",
+      "domain": "Standard English Conventions",
+      "explain_zh": "开头分词短语 Carved from limestone 须修饰其后主语，只有 the statue 是被雕刻的对象，其余造成悬垂修饰。"
+    },
+    {
+      "passage": "The original printing press ______ now sits behind a pane of glass in the small town museum, was operated entirely by hand for nearly sixty years before electricity ever reached the valley.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [", which", " which", ", that", " that"],
+      "answer": ", which",
+      "domain": "Standard English Conventions",
+      "explain_zh": "非限定性关系从句须用逗号加 which；that 不用于非限定从句，缺逗号则误为限定。"
+    },
+    {
+      "passage": "Engineers reported that the redesigned suspension bridge was not only noticeably sturdier than the original but also ______ to maintain, a difference expected to save the city millions over the coming decade.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["cheaper", "cheaply", "more cheap", "cheapest"],
+      "answer": "cheaper",
+      "domain": "Standard English Conventions",
+      "explain_zh": "not only X but also Y 须平行；X 为比较级 sturdier，Y 也须比较级 cheaper；more cheap 形式错误，cheaply 为副词，cheapest 为最高级。"
+    },
+    {
+      "passage": "The meticulous labeling of every specimen and the unfailing daily updating of the field journal ______ ultimately what allowed a second team, arriving years later, to reconstruct the entire expedition step by step.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["were", "was", "is", "has been"],
+      "answer": "were",
+      "domain": "Standard English Conventions",
+      "explain_zh": "由 and 连接的并列主语（labeling 与 updating）为复数，用 were。"
+    },
+    {
+      "passage": "The architect was widely praised both for the quiet elegance of her buildings and ______ the stubbornness with which she defended every public garden against the developers who wanted to pave them.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["for", "because of", "with", "due to"],
+      "answer": "for",
+      "domain": "Standard English Conventions",
+      "explain_zh": "both for X and for Y 须平行，须重复介词 for；其余选项破坏平行结构。"
+    },
+    {
+      "passage": "The first expedition turned back within sight of the icy summit ______ the second, better equipped and far more patient than the first, reached the very top just as the morning storm began to lift.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["; the", ", the", " the", ", and, the"],
+      "answer": "; the",
+      "domain": "Standard English Conventions",
+      "explain_zh": "两个独立句之间无并列连词，用分号连接；逗号造成 comma splice，无标点为 run-on，', and,' 标点冗余错误。"
+    },
+    {
+      "passage": "Every one of the hundreds of letters that the novelist mailed to her longtime editor ______ carefully dated, which is precisely why scholars can now trace the slow, hesitant evolution of her most celebrated book.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["was", "were", "are", "have been"],
+      "answer": "was",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语 Every one 为单数（of the letters 为修饰），用单数 was。"
+    }
+  ]
+}

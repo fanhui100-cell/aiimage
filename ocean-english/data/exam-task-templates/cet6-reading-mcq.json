@@ -1,0 +1,30 @@
+{
+  "templateId": "cet6-reading-mcq",
+  "examIds": ["cet6"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "CET-6 难度原创学术/社科短文（280-360 词）+ 4 道四选一理解题（细节/推断/主旨/词义/态度）。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 280,
+    "maxWords": 360,
+    "perStimulusItems": 4,
+    "topicDomains": ["社会", "科技", "教育", "文化", "环境", "经济", "心理", "健康"]
+  },
+  "itemCount": 4,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["detail", "inference", "main_idea", "vocab_in_context", "attitude", "purpose"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "篇幅 280-360 词，语言达 CET-6 难度（含学术/抽象词汇与较长句式）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "干扰项需合理、与文意相关但可排除",
+    "至少含 1 道词义在境（vocab_in_context）题",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

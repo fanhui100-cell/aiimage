@@ -1,0 +1,309 @@
+{
+  "examId": "cet4",
+  "level": 3,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should university students take a part-time job?' Type: opinion essay. State your own clear position in the first paragraph (thesis), then support it with at least two reasons and one concrete example, and end with a short conclusion. Audience: readers of a campus newspaper.",
+      "promptZh": "就“大学生是否应该做兼职工作”写一篇 120-180 词的观点短文，开篇明确立场，用至少两个理由和一个具体例子支持，结尾简短总结。",
+      "referencePoints": ["thesisFocus: take a clear stand on whether students should do part-time work", "requiredPoints: at least two distinct reasons plus one concrete example", "scoringFocus: logical paragraphing and linking words (firstly, moreover, in conclusion)", "scoringFocus: CET-4 level vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Living on campus or renting off campus?' Type: opinion essay. In your first paragraph make clear which option you prefer (thesis), then give two reasons and a brief personal example, and finish with a one-sentence conclusion. Audience: first-year students choosing where to live.",
+      "promptZh": "就“住校还是校外租房”写一篇 120-180 词的观点短文，明确你偏好的选项并用两个理由和一个简短的个人例子支持。",
+      "referencePoints": ["thesisFocus: state a clear preference for campus or off-campus living", "requiredPoints: two reasons and one brief personal example", "scoringFocus: coherent comparison and clear conclusion", "scoringFocus: appropriate connectives and CET-4 grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why are more young people choosing to study in the library rather than in their dorm?' Type: explain-a-phenomenon essay. Describe the trend briefly, then give two or three causes, and end by stating what this suggests about study habits. Audience: a general campus readership.",
+      "promptZh": "就“为什么越来越多年轻人选择去图书馆而非宿舍学习”写一篇 120-180 词的现象解释短文，描述现象并给出两三个原因。",
+      "referencePoints": ["thesisFocus: identify the trend of preferring the library for study", "requiredPoints: two or three plausible causes for the phenomenon", "scoringFocus: cause-and-effect organization with clear topic sentences", "scoringFocus: CET-4 level vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to make good use of your free time at university.' Type: suggestion essay. Briefly explain why free time matters, then offer two or three practical suggestions, each with a short reason. End with an encouraging closing sentence. Audience: new university students.",
+      "promptZh": "就“如何在大学里好好利用空闲时间”写一篇 120-180 词的建议短文，说明空闲时间的重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the value of using free time wisely", "requiredPoints: two or three practical suggestions, each with a reason", "scoringFocus: clear structure and parallel presentation of advice", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is online learning as effective as classroom learning?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, and add a short conclusion. Audience: students deciding between an online and an in-person course.",
+      "promptZh": "就“在线学习是否和课堂学习一样有效”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear position on the effectiveness of online learning", "requiredPoints: two reasons plus one supporting example", "scoringFocus: balanced argument with a firm conclusion", "scoringFocus: linking words and CET-4 grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many students keep checking their phones while studying?' Type: explain-a-phenomenon essay. Describe the behavior briefly, give two or three causes, and end with a sentence on how it affects learning. Audience: readers of a student wellbeing column.",
+      "promptZh": "就“为什么很多学生学习时不停地看手机”写一篇 120-180 词的现象解释短文，描述行为并分析原因。",
+      "referencePoints": ["thesisFocus: identify the habit of frequent phone-checking during study", "requiredPoints: two or three causes behind the behavior", "scoringFocus: logical cause analysis and a clear final comment on effects", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should universities make physical exercise a required course?' Type: opinion essay. Give your clear position first (thesis), support it with two reasons and one example, then conclude briefly. Audience: a university policy discussion forum.",
+      "promptZh": "就“大学是否应把体育锻炼设为必修课”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether exercise should be a required course", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure with a clear thesis and conclusion", "scoringFocus: CET-4 level vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to protect your eyes in the digital age.' Type: suggestion essay. Briefly note why eye health matters today, then offer two or three concrete suggestions with reasons, and close with a short reminder. Audience: students who spend long hours on screens.",
+      "promptZh": "就“数字时代如何保护视力”写一篇 120-180 词的建议短文，说明护眼的重要性并给出两三条具体建议。",
+      "referencePoints": ["thesisFocus: stress the importance of eye health in a screen-heavy life", "requiredPoints: two or three concrete suggestions, each with a reason", "scoringFocus: clear advice structure and useful linking words", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it better to read paper books or e-books?' Type: opinion essay. Take a clear side in the opening (thesis), give two reasons and one example, and add a brief conclusion. Audience: readers of a campus reading club newsletter.",
+      "promptZh": "就“读纸质书还是电子书更好”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: choose a clear side between paper books and e-books", "requiredPoints: two reasons plus one example", "scoringFocus: coherent comparison and firm conclusion", "scoringFocus: CET-4 grammar and connectives", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why are short videos so popular among college students?' Type: explain-a-phenomenon essay. Describe the trend, then give two or three reasons, and end with one sentence on its effect on daily life. Audience: a general youth-culture readership.",
+      "promptZh": "就“为什么短视频在大学生中如此流行”写一篇 120-180 词的现象解释短文，描述趋势并给出原因。",
+      "referencePoints": ["thesisFocus: identify the popularity of short videos among students", "requiredPoints: two or three reasons for the trend", "scoringFocus: clear cause structure and a closing comment on effects", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should we encourage volunteer work among university students?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: members of a student volunteer association.",
+      "promptZh": "就“是否应鼓励大学生参与志愿服务”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear position on encouraging student volunteering", "requiredPoints: two reasons and one example", "scoringFocus: persuasive organization and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to build good relationships with your roommates.' Type: suggestion essay. Briefly say why roommate relationships matter, then offer two or three practical suggestions with reasons, and close with an encouraging line. Audience: first-year students living in dormitories.",
+      "promptZh": "就“如何与室友建立良好关系”写一篇 120-180 词的建议短文，说明其重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: emphasize why good roommate relationships matter", "requiredPoints: two or three practical suggestions, each with a reason", "scoringFocus: organized advice with appropriate connectives", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Does keeping a daily plan help you study better?' Type: opinion essay. Make your view clear in the first paragraph (thesis), give two reasons and one example, and finish with a short conclusion. Audience: students who struggle with time management.",
+      "promptZh": "就“制定每日计划是否有助于更好地学习”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether daily planning improves study", "requiredPoints: two reasons plus one example", "scoringFocus: clear argument and conclusion on time management", "scoringFocus: CET-4 grammar and linking words", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many young people prefer ordering takeout to cooking?' Type: explain-a-phenomenon essay. Describe the habit, give two or three causes, and end with a sentence on its impact on health or budget. Audience: a lifestyle magazine readership.",
+      "promptZh": "就“为什么很多年轻人更愿意点外卖而不是自己做饭”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the preference for takeout over cooking", "requiredPoints: two or three causes behind the habit", "scoringFocus: cause analysis and a closing comment on impact", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to develop the habit of regular exercise.' Type: suggestion essay. Briefly note why regular exercise matters, then offer two or three doable suggestions with reasons, and end with a motivating sentence. Audience: students who rarely work out.",
+      "promptZh": "就“如何养成规律锻炼的习惯”写一篇 120-180 词的建议短文，说明锻炼的重要性并给出两三条可行建议。",
+      "referencePoints": ["thesisFocus: stress the value of regular exercise", "requiredPoints: two or three doable suggestions with reasons", "scoringFocus: clear advice structure and motivating tone", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should students be allowed to choose all their own courses?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a university curriculum committee newsletter.",
+      "promptZh": "就“是否应允许学生完全自由选课”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on full course-choice freedom", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure and clear conclusion", "scoringFocus: CET-4 vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why are second-hand markets becoming popular among students?' Type: explain-a-phenomenon essay. Describe the trend, give two or three causes, and end with one sentence on what it reflects about consumption. Audience: a campus economics blog.",
+      "promptZh": "就“为什么二手市场在学生中越来越受欢迎”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the rise of second-hand markets among students", "requiredPoints: two or three causes for the trend", "scoringFocus: clear cause structure and a reflective closing sentence", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is travelling a good way to learn?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a brief conclusion. Audience: readers of a student travel magazine.",
+      "promptZh": "就“旅行是否是一种好的学习方式”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether travelling is a good way to learn", "requiredPoints: two reasons plus one example", "scoringFocus: coherent argument and clear conclusion", "scoringFocus: CET-4 grammar and connectives", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to reduce stress before exams.' Type: suggestion essay. Briefly note why exam stress is common, then offer two or three practical suggestions with reasons, and close with a reassuring sentence. Audience: students preparing for final exams.",
+      "promptZh": "就“如何在考试前减轻压力”写一篇 120-180 词的建议短文，说明压力常见的原因并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: acknowledge that exam stress is common and manageable", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and a reassuring conclusion", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should mobile payment replace cash completely?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a general newspaper readership.",
+      "promptZh": "就“移动支付是否应完全取代现金”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear position on replacing cash with mobile payment", "requiredPoints: two reasons and one example", "scoringFocus: balanced argument with a firm conclusion", "scoringFocus: CET-4 vocabulary and grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many students enjoy joining campus clubs?' Type: explain-a-phenomenon essay. Describe the trend, give two or three reasons, and end with a sentence on its benefit to student life. Audience: a freshman orientation booklet.",
+      "promptZh": "就“为什么很多学生喜欢加入校园社团”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify why students enjoy joining campus clubs", "requiredPoints: two or three reasons for the trend", "scoringFocus: clear cause structure and a closing benefit statement", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it necessary to learn a second foreign language?' Type: opinion essay. State your view in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: students deciding whether to take an extra language course.",
+      "promptZh": "就“是否有必要学习第二外语”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether learning a second foreign language is necessary", "requiredPoints: two reasons plus one example", "scoringFocus: clear argument and conclusion", "scoringFocus: CET-4 grammar and linking words", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to make new friends at university.' Type: suggestion essay. Briefly say why making friends matters, then offer two or three practical suggestions with reasons, and close with an encouraging line. Audience: shy first-year students.",
+      "promptZh": "就“如何在大学交到新朋友”写一篇 120-180 词的建议短文，说明交友的重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: emphasize the value of making friends at university", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and an encouraging conclusion", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should universities ban single-use plastic on campus?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a campus environmental newsletter.",
+      "promptZh": "就“大学是否应在校园内禁用一次性塑料”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on banning single-use plastic on campus", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do more young people choose to live a minimalist lifestyle?' Type: explain-a-phenomenon essay. Describe the trend, give two or three causes, and end with one sentence on what it says about modern values. Audience: a general lifestyle readership.",
+      "promptZh": "就“为什么越来越多年轻人选择极简生活方式”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the trend toward a minimalist lifestyle", "requiredPoints: two or three causes for the trend", "scoringFocus: clear cause structure and a reflective closing sentence", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it good to share your daily life on social media?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: readers of a campus social media column.",
+      "promptZh": "就“在社交媒体上分享日常生活是否好”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether sharing daily life online is a good thing", "requiredPoints: two reasons plus one example", "scoringFocus: coherent argument and clear conclusion", "scoringFocus: CET-4 grammar and connectives", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to manage your money wisely as a student.' Type: suggestion essay. Briefly note why budgeting matters, then offer two or three practical suggestions with reasons, and close with a short reminder. Audience: students living on a monthly allowance.",
+      "promptZh": "就“作为学生如何明智地管理金钱”写一篇 120-180 词的建议短文，说明理财的重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the importance of managing money wisely", "requiredPoints: two or three practical budgeting suggestions with reasons", "scoringFocus: organized advice and useful linking words", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should students be encouraged to start their own business?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: an entrepreneurship club newsletter.",
+      "promptZh": "就“是否应鼓励学生自主创业”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear position on encouraging student entrepreneurship", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why are pet cafes becoming popular in cities?' Type: explain-a-phenomenon essay. Describe the trend, give two or three causes, and end with a sentence on what it reflects about urban life. Audience: a city lifestyle magazine.",
+      "promptZh": "就“为什么宠物咖啡馆在城市里越来越流行”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the rise of pet cafes in cities", "requiredPoints: two or three causes for the trend", "scoringFocus: clear cause structure and a reflective closing sentence", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is competition or cooperation more important in study?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: a student development workshop handout.",
+      "promptZh": "就“在学习中竞争还是合作更重要”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether competition or cooperation matters more in study", "requiredPoints: two reasons plus one example", "scoringFocus: clear comparison and firm conclusion", "scoringFocus: CET-4 grammar and linking words", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to make full use of the campus library.' Type: suggestion essay. Briefly note why the library is valuable, then offer two or three practical suggestions with reasons, and close with an encouraging sentence. Audience: students who rarely visit the library.",
+      "promptZh": "就“如何充分利用校园图书馆”写一篇 120-180 词的建议短文，说明图书馆的价值并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the value of the campus library", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and appropriate connectives", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should students keep a fixed sleep schedule?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: readers of a student health newsletter.",
+      "promptZh": "就“学生是否应保持固定的作息时间”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on keeping a fixed sleep schedule", "requiredPoints: two reasons and one example", "scoringFocus: persuasive organization and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many people enjoy growing plants at home?' Type: explain-a-phenomenon essay. Describe the trend, give two or three causes, and end with a sentence on its benefit to wellbeing. Audience: a general home-and-living readership.",
+      "promptZh": "就“为什么很多人喜欢在家里养植物”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the popularity of growing plants at home", "requiredPoints: two or three causes for the trend", "scoringFocus: clear cause structure and a closing wellbeing statement", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it worth joining a sports team at university?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: students deciding whether to try out for a team.",
+      "promptZh": "就“在大学加入运动队是否值得”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether joining a sports team is worthwhile", "requiredPoints: two reasons plus one example", "scoringFocus: coherent argument and clear conclusion", "scoringFocus: CET-4 grammar and connectives", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to balance study and entertainment.' Type: suggestion essay. Briefly note why balance matters, then offer two or three practical suggestions with reasons, and close with a short reminder. Audience: students who feel torn between work and fun.",
+      "promptZh": "就“如何平衡学习与娱乐”写一篇 120-180 词的建议短文，说明平衡的重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the importance of balancing study and entertainment", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and useful linking words", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should we rely on translation apps to learn English?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a language-learning forum.",
+      "promptZh": "就“学英语是否应依赖翻译软件”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear position on relying on translation apps", "requiredPoints: two reasons and one example", "scoringFocus: balanced argument with a firm conclusion", "scoringFocus: CET-4 vocabulary and grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many students set early-morning study goals but fail to keep them?' Type: explain-a-phenomenon essay. Describe the situation, give two or three causes, and end with a sentence on what might help. Audience: a student self-improvement blog.",
+      "promptZh": "就“为什么很多学生立下早起学习的目标却难以坚持”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the gap between early-study goals and follow-through", "requiredPoints: two or three causes for the failure to keep goals", "scoringFocus: clear cause analysis and a helpful closing suggestion", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it important to learn cooking before living alone?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: graduating students about to live independently.",
+      "promptZh": "就“独立生活前学会做饭是否重要”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: state whether learning to cook before living alone is important", "requiredPoints: two reasons plus one example", "scoringFocus: clear argument and conclusion", "scoringFocus: CET-4 grammar and linking words", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to deal with information overload online.' Type: suggestion essay. Briefly note why information overload is a problem, then offer two or three practical suggestions with reasons, and close with a short reminder. Audience: students who feel overwhelmed by online content.",
+      "promptZh": "就“如何应对网络信息过载”写一篇 120-180 词的建议短文，说明信息过载的问题并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: acknowledge information overload as a real problem", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and appropriate connectives", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should universities offer more practical courses than theoretical ones?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a higher-education discussion forum.",
+      "promptZh": "就“大学是否应开设更多实践课而非理论课”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on practical versus theoretical courses", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words explaining the phenomenon 'Why do many young people enjoy night running in cities?' Type: explain-a-phenomenon essay. Describe the trend, give two or three causes, and end with one sentence on what it reflects about urban lifestyles. Audience: a city sports magazine.",
+      "promptZh": "就“为什么很多年轻人喜欢在城市里夜跑”写一篇 120-180 词的现象解释短文，分析原因。",
+      "referencePoints": ["thesisFocus: identify the popularity of night running among young people", "requiredPoints: two or three causes for the trend", "scoringFocus: clear cause structure and a reflective closing sentence", "scoringFocus: CET-4 vocabulary and accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Is it better to study one subject deeply or learn many subjects widely?' Type: opinion essay. Make your view clear in the opening (thesis), give two reasons and one example, and finish with a short conclusion. Audience: students planning their major and electives.",
+      "promptZh": "就“深入钻研一门学科好，还是广泛学习多门学科好”写一篇 120-180 词的观点短文，明确观点并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: choose between deep study of one subject and broad study of many", "requiredPoints: two reasons plus one example", "scoringFocus: clear comparison and firm conclusion", "scoringFocus: CET-4 grammar and connectives", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to use online resources effectively for self-study.' Type: suggestion essay. Briefly note why online resources can help, then offer two or three practical suggestions with reasons, and close with an encouraging sentence. Audience: students who want to learn on their own.",
+      "promptZh": "就“如何有效利用网络资源进行自学”写一篇 120-180 词的建议短文，说明网络资源的作用并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the value of online resources for self-study", "requiredPoints: two or three practical suggestions with reasons", "scoringFocus: organized advice and useful linking words", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should people write thank-you messages by hand instead of by phone?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a general readership interested in social manners.",
+      "promptZh": "就“人们是否应手写感谢信而非用手机发消息”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on handwritten versus phone thank-you messages", "requiredPoints: two reasons and one example", "scoringFocus: persuasive structure and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words describing a simple chart in words on the topic 'Time university students spend on different daily activities.' Type: brief chart description. Imagine a pie chart showing that students spend about 40% of their day on study, 25% on rest and sleep, 20% on entertainment, and 15% on exercise. Describe the data in words (do not draw a chart), point out the most and least time-consuming activities, and add one sentence of brief comment. Audience: a student lifestyle report.",
+      "promptZh": "就“大学生在不同日常活动上花费的时间”用文字描述一个饼图（学习约 40%、休息睡眠 25%、娱乐 20%、运动 15%），指出最多与最少的项目并简短评论。",
+      "referencePoints": ["thesisFocus: open by introducing the chart topic and main data", "requiredPoints: describe the four figures in words and name the largest and smallest", "scoringFocus: accurate use of comparison and percentage language", "scoringFocus: one brief comment plus CET-4 grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words describing a simple chart in words on the topic 'Changes in students' reading habits over five years.' Type: brief chart description. Imagine a line trend in which paper-book reading dropped from 60% to 35% while e-book reading rose from 25% to 55% between 2020 and 2025. Describe the trends in words (do not draw a chart), highlight the opposite directions, and add one sentence of comment. Audience: a campus reading survey report.",
+      "promptZh": "就“五年间学生阅读习惯的变化”用文字描述一个趋势（纸质书阅读从 60% 降到 35%，电子书从 25% 升到 55%），指出相反趋势并简短评论。",
+      "referencePoints": ["thesisFocus: introduce the chart topic and time span", "requiredPoints: describe the falling and rising trends in words and contrast them", "scoringFocus: accurate trend language (increase, decline, by contrast)", "scoringFocus: one brief comment plus CET-4 grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words describing a simple chart in words on the topic 'How students prefer to commute to campus.' Type: brief chart description. Imagine a bar comparison showing that 45% of students walk, 30% ride a bike or e-bike, 15% take the bus, and 10% use other ways. Describe the figures in words (do not draw a chart), point out the most and least common choices, and add one sentence of comment. Audience: a campus transport survey report.",
+      "promptZh": "就“学生上学的通勤方式偏好”用文字描述一个柱状对比（步行 45%、骑车 30%、公交 15%、其他 10%），指出最常见与最少见的方式并简短评论。",
+      "referencePoints": ["thesisFocus: introduce the chart topic and the categories compared", "requiredPoints: describe the four figures in words and name the most and least common choices", "scoringFocus: accurate comparison and percentage language", "scoringFocus: one brief comment plus CET-4 grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words on the topic 'Should students put away their phones during family meals?' Type: opinion essay. State your position in the opening (thesis), support it with two reasons and one example, then conclude briefly. Audience: a family-life column readership.",
+      "promptZh": "就“家庭聚餐时学生是否应收起手机”写一篇 120-180 词的观点短文，明确立场并用两个理由和一个例子支持。",
+      "referencePoints": ["thesisFocus: take a clear stand on putting phones away at family meals", "requiredPoints: two reasons and one example", "scoringFocus: persuasive organization and a clear conclusion", "scoringFocus: CET-4 vocabulary and grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words giving suggestions on the topic 'How to protect the environment in daily campus life.' Type: suggestion essay. Briefly note why environmental protection matters, then offer two or three practical suggestions with reasons, and close with an encouraging sentence. Audience: students who want to live more greenly.",
+      "promptZh": "就“如何在日常校园生活中保护环境”写一篇 120-180 词的建议短文，说明环保的重要性并给出两三条实用建议。",
+      "referencePoints": ["thesisFocus: stress the importance of protecting the environment on campus", "requiredPoints: two or three practical green suggestions with reasons", "scoringFocus: organized advice and useful linking words", "scoringFocus: CET-4 vocabulary and mostly accurate grammar", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    },
+    {
+      "prompt": "Write a short essay of 120-180 words describing a simple chart in words on the topic 'Reasons students give for joining campus activities.' Type: brief chart description. Imagine a bar comparison showing that 40% join to make friends, 30% to gain practical skills, 20% to relax, and 10% for other reasons. Describe the figures in words (do not draw a chart), point out the leading and least common reasons, and add one sentence of comment. Audience: a student union survey report.",
+      "promptZh": "就“学生参加校园活动的原因”用文字描述一个柱状对比（交友 40%、获得实用技能 30%、放松 20%、其他 10%），指出最主要与最少见的原因并简短评论。",
+      "referencePoints": ["thesisFocus: introduce the chart topic and the reasons compared", "requiredPoints: describe the four figures in words and name the leading and least common reasons", "scoringFocus: accurate comparison and percentage language", "scoringFocus: one brief comment plus CET-4 grammar accuracy", "Reference points guide scoring only; they are not a model essay"],
+      "wordLimit": "120-180"
+    }
+  ]
+}

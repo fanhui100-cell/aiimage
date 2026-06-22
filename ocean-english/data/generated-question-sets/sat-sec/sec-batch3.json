@@ -1,0 +1,111 @@
+{
+  "template": "sat-standard-english-conventions",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Standard English Conventions items, batch 3. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Scientists ______ study the deep ocean often depend on remotely operated robots, because the crushing pressure found at such depths would flatten any human diver almost instantly.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["who", ", who", "which", "whom"],
+      "answer": "who",
+      "domain": "Standard English Conventions",
+      "explain_zh": "限定性关系从句修饰 Scientists，用 who 且不加逗号；加逗号变非限定改变语义，which 指物，whom 为宾格。"
+    },
+    {
+      "passage": "The museum has announced that, once the long-delayed renovation is finally complete, visitors ______ able to walk directly beneath the suspended whale skeleton for the first time in the building's history.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["will be", "were", "had been", "are being"],
+      "answer": "will be",
+      "domain": "Standard English Conventions",
+      "explain_zh": "once 引导的将来条件下，主句表将来动作，用 will be。"
+    },
+    {
+      "passage": "The small startup prided ______ on never once sending a marketing email, trusting instead that genuinely satisfied customers would quietly recommend the app to their friends and coworkers.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["itself", "themselves", "oneself", "its self"],
+      "answer": "itself",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语 The small startup 为单数，反身代词用 itself；themselves 为复数。"
+    },
+    {
+      "passage": "During the intense field season the interns were expected to collect water samples before dawn, label every bottle by midmorning, and ______ the day's results into the shared database each evening without fail.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["enter", "to enter", "entering", "entered"],
+      "answer": "enter",
+      "domain": "Standard English Conventions",
+      "explain_zh": "were expected to collect, label, and enter 共享 to，三个动词原形平行，用 enter。"
+    },
+    {
+      "passage": "The conference drew researchers from three strikingly different cities ______ Nairobi, Kenya; Lima, Peru; and Hanoi, Vietnam, each delegation bringing field data that existed nowhere else in the world.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [":", ";", ",", " including;"],
+      "answer": ":",
+      "domain": "Standard English Conventions",
+      "explain_zh": "前为独立句，后接以分号分隔的城市列表，用冒号引出整个列表；其余标点不当。"
+    },
+    {
+      "passage": "If either the two senior editors or the managing director ______ to approve the heavily revised manuscript by Friday, the publisher has promised to move the release date forward by a full month.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["agrees", "agree", "have agreed", "were agreeing"],
+      "answer": "agrees",
+      "domain": "Standard English Conventions",
+      "explain_zh": "either…or… 谓语遵循就近原则，与最近的单数主语 the managing director 一致，用 agrees。"
+    },
+    {
+      "passage": "Designed to survive temperatures that would instantly shatter ordinary glass, ______ has already sent back images from stretches of the desert that no camera had ever managed to reach before.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["the new lens", "engineers", "taking photographs", "it quickly"],
+      "answer": "the new lens",
+      "domain": "Standard English Conventions",
+      "explain_zh": "开头分词短语 Designed to survive… 须修饰其后主语，只有 the new lens 是被设计的对象，其余造成悬垂修饰。"
+    },
+    {
+      "passage": "The detective realized, far too late to matter, that the nervous witness ______ the crucial detail not out of simple forgetfulness but because someone had quietly warned her to stay silent.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["had omitted", "omits", "will omit", "omitting"],
+      "answer": "had omitted",
+      "domain": "Standard English Conventions",
+      "explain_zh": "动作发生在 realized 这一过去时点之前，用过去完成时 had omitted。"
+    },
+    {
+      "passage": "She is one of the few biologists who ______ consistently argued that the fungal networks threading beneath a forest floor deserve every bit as much protection as the towering trees rising above them.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["have", "has", "is", "was"],
+      "answer": "have",
+      "domain": "Standard English Conventions",
+      "explain_zh": "one of the few biologists who… 中 who 指代复数先行词 biologists，用复数 have argued。"
+    },
+    {
+      "passage": "After weeks of study the committee concluded that fully restoring the crumbling old theater would be both more expensive and ______ than simply building an entirely new hall on the vacant lot by the river.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["more complicated", "complicatedly", "complication", "most complicated"],
+      "answer": "more complicated",
+      "domain": "Standard English Conventions",
+      "explain_zh": "both more expensive and more complicated 须比较级平行；complicatedly 为副词，complication 为名词，most complicated 为最高级。"
+    },
+    {
+      "passage": "The prototype passed every laboratory test the engineers could possibly devise ______ however, it failed within minutes the very first time anyone tried to use it outdoors in a steady rain.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["; however,", ", however,", " however,", "; however"],
+      "answer": "; however,",
+      "domain": "Standard English Conventions",
+      "explain_zh": "however 为连接副词，连接两个独立句时前用分号、后用逗号：; however,；逗号造成 comma splice，缺逗号亦不规范。"
+    },
+    {
+      "passage": "The scientist ______ first proposed the idea was at first widely ignored, yet within a single generation her once-radical hypothesis had become the standard explanation taught in nearly every classroom.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["who", "whom", "which", "whose"],
+      "answer": "who",
+      "domain": "Standard English Conventions",
+      "explain_zh": "关系代词作从句主语（who first proposed），用主格 who；whom 为宾格，which 指物，whose 为所有格。"
+    },
+    {
+      "passage": "A number of long-abandoned coal mines scattered across the region ______ slowly filling with clear groundwater, creating eerie underground lakes that a handful of daring divers have only recently begun to explore.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["are", "is", "has been", "was"],
+      "answer": "are",
+      "domain": "Standard English Conventions",
+      "explain_zh": "a number of + 复数名词作主语视为复数，用 are（对比 the number of… 用单数）。"
+    }
+  ]
+}

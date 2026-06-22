@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-06-22T10:56:03.638Z",
+  "apply": false,
+  "filters": {
+    "exam": null,
+    "level": 6,
+    "task": "build_a_sentence",
+    "limit": 20
+  },
+  "candidates": 10,
+  "eligible": 0,
+  "promoted": 0,
+  "rejected": [
+    {
+      "id": "72166e39-a6f3-4410-a7a1-c578c2c6e3b3",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:1jsa8xn",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "059c73d8-f52d-4ad1-a8e1-f8d18029a405",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:p0ejgb",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "5bfca067-2d76-440e-ac92-b82650b5d290",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:59bt4l",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "17da7245-5d94-4235-a487-a9fe5b5e108e",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:2x8lvz",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "61c2cdab-ec88-4d89-bd33-17764dc5cc00",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:12w1h09",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "e7f11184-2cf7-4405-92c0-bce5265d71c2",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:iebtzf",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "bf579463-5d9e-49ff-b56c-20a1120de97a",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:1frp5u3",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "5d8e1c18-b622-4916-a9a3-4193a479080d",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:eny9in",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "45d6b6bc-265f-45d7-ad24-ffa66b50e80c",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:1q4ya0v",
+      "reason": "scoring_not_ready"
+    },
+    {
+      "id": "80997d43-188a-4bbe-be4c-8b3c00c123b4",
+      "legacy_id": "gen:toefl-build-a-sentence:set:claude:1u37htn",
+      "reason": "scoring_not_ready"
+    }
+  ],
+  "reasonCounts": {
+    "scoring_not_ready": 10
+  }
+}

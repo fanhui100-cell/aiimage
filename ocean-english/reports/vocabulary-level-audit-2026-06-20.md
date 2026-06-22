@@ -1,6 +1,6 @@
 # Vocabulary Level Audit — 2026-06-20
 
-> Generated: 2026-06-20T07:42:04.986Z
+> Generated: 2026-06-20T20:57:01.419Z
 > Source: dictionary_words + dictionary_* relation tables (read-only, service role).
 > **No DB writes were performed.**
 

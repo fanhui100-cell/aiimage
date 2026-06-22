@@ -1,0 +1,103 @@
+{
+  "template": "sat-expression-of-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Expression of Ideas items, batch 3. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "For decades the factory had dumped its untreated waste straight into the river without a second thought. ______, once strict new environmental laws finally took effect, it was forced to clean the water carefully before releasing any of it.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["However", "Therefore", "Likewise", "For example"],
+      "answer": "However",
+      "domain": "Expression of Ideas",
+      "explain_zh": "长期随意倾倒与被迫净化形成转折，用 However。其余表因果、并列或举例。"
+    },
+    {
+      "passage": "Penguins, despite being birds, cannot fly through the air at all. ______, they are superb swimmers, using their stiff, narrow wings as powerful flippers to shoot through the water in pursuit of fish.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Instead", "Therefore", "For example", "As a result"],
+      "answer": "Instead",
+      "domain": "Expression of Ideas",
+      "explain_zh": "不能飞，而是（替代地）善游，用 Instead 表替代。其余表因果或举例。"
+    },
+    {
+      "passage": "The small bakery insists on using only local flour, eggs, and butter from nearby farms. ______, its prices run noticeably higher than those of the large chains that buy cheaper ingredients in bulk.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["As a result", "However", "Nevertheless", "For instance"],
+      "answer": "As a result",
+      "domain": "Expression of Ideas",
+      "explain_zh": "用本地优质原料（因）导致价高（果），用 As a result。其余表转折或举例。"
+    },
+    {
+      "passage": "Critics had confidently expected the strange experimental novel to baffle and frustrate most ordinary readers. ______, it became a surprise bestseller, praised by audiences who had never finished an experimental book before.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Instead", "Therefore", "Likewise", "For example"],
+      "answer": "Instead",
+      "domain": "Expression of Ideas",
+      "explain_zh": "预期困惑、结果反而畅销，用 Instead 表与预期相反。其余表因果、并列或举例。"
+    },
+    {
+      "passage": "The first version of the vaccine had to be kept frozen at all times, which made it very hard to transport. ______, a newer version stays stable at room temperature, allowing it to reach remote villages that had been impossible to serve.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["By contrast", "Therefore", "For example", "As a result"],
+      "answer": "By contrast",
+      "domain": "Expression of Ideas",
+      "explain_zh": "旧版需冷冻与新版室温稳定形成对比，用 By contrast。其余表因果或举例。"
+    },
+    {
+      "passage": "The national survey gathered tens of thousands of responses from every single region of the country. ______, its conclusions are considered far more reliable than those of the small local polls that had come before it.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Consequently", "However", "For example", "In contrast"],
+      "answer": "Consequently",
+      "domain": "Expression of Ideas",
+      "explain_zh": "大样本（因）导致结论更可靠（果），用 Consequently。其余表转折或举例。"
+    },
+    {
+      "passage": "A student studying the early printing of books took the following notes:\n- Before printing, each book had to be copied out slowly by hand, taking months.\n- A single hand-copied book could cost as much as a small farm.\n- After the printing press, the same book could be made in days for a fraction of the price.",
+      "prompt": "The student wants to emphasize how the printing press changed the cost and speed of making books. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["What once took months and cost as much as a farm could, after the press, be done in days for far less.", "Before printing, every book had to be copied slowly and carefully by hand.", "A single hand-copied book could be astonishingly expensive to own.", "Books have been produced in many different ways over the centuries."],
+      "answer": "What once took months and cost as much as a farm could, after the press, be done in days for far less.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调成本与速度的转变，A 同时对比时间与价格的前后变化。B、C 只一面，D 泛述。"
+    },
+    {
+      "passage": "A student researching bees and farming took the following notes:\n- A single bee may visit up to a few thousand flowers in one day.\n- As bees gather nectar, they carry pollen from one flower to another.\n- Many fruit crops cannot produce any fruit at all without this pollination.",
+      "prompt": "The student wants to explain why bees are important to fruit farmers. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["By carrying pollen between flowers as they feed, bees make possible the fruit crops that cannot form without them.", "A single bee may visit a few thousand flowers in just one day.", "Bees gather sweet nectar from flowers to carry back to the hive.", "Bees are small flying insects that live together in large colonies."],
+      "answer": "By carrying pollen between flowers as they feed, bees make possible the fruit crops that cannot form without them.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释为何对果农重要，A 点出传粉使作物结果。B 讲数量，C 讲采蜜，D 无关。"
+    },
+    {
+      "passage": "A student studying a damaged coral reef took the following notes:\n- The reef had lost most of its color after a severe ocean heat wave.\n- Volunteers carefully planted thousands of fragments of healthy coral.\n- Five years later, fish and color had returned to much of the reef.",
+      "prompt": "The student wants to emphasize the success of the restoration effort. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Five years after volunteers planted thousands of coral fragments, fish and color had returned to much of the reef.", "The reef had lost most of its color after a severe ocean heat wave.", "Volunteers carefully planted thousands of healthy coral fragments on the reef.", "Coral reefs can be badly damaged by unusually warm ocean water."],
+      "answer": "Five years after volunteers planted thousands of coral fragments, fish and color had returned to much of the reef.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调修复成功，A 点出五年后鱼与色彩回归。B 是受损，C 是过程，D 泛述。"
+    },
+    {
+      "passage": "A student researching a prolific inventor took the following notes:\n- He filed more than a thousand patents over the course of his lifetime.\n- Many of his inventions failed, and some nearly ruined him financially.\n- A handful, however, went on to change daily life around the world.",
+      "prompt": "The student wants to give a balanced picture of the inventor's career. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Though many of his inventions failed and nearly ruined him, a few went on to change daily life worldwide.", "The inventor filed well over a thousand patents during his lifetime.", "Several of the inventor's projects nearly ruined him financially.", "A handful of his inventions changed daily life all over the world."],
+      "answer": "Though many of his inventions failed and nearly ruined him, a few went on to change daily life worldwide.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是平衡呈现，A 兼顾失败与少数巨大成功两面。B、C、D 各只一面。"
+    },
+    {
+      "passage": "A student studying volcanoes took the following notes:\n- Ash from a very large eruption can rise high into the upper atmosphere.\n- There it can spread around the whole globe and block some sunlight.\n- After one historic eruption, summers worldwide grew noticeably cooler.",
+      "prompt": "The student wants to explain how a single eruption can affect weather far away. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Ash from a large eruption can circle the globe and block sunlight, cooling summers even far from the volcano.", "Ash from a very large eruption can rise high into the upper atmosphere.", "After one historic eruption, summers around the world grew noticeably cooler.", "Volcanoes are found in many different parts of the world."],
+      "answer": "Ash from a large eruption can circle the globe and block sunlight, cooling summers even far from the volcano.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释如何影响远方天气，A 串起灰绕全球、遮光、致远方变冷的因果链。B 是局部，C 是结果无机制，D 无关。"
+    },
+    {
+      "passage": "A student researching a determined athlete took the following notes:\n- She broke her leg badly just a few months before the championship.\n- Doctors openly doubted she would be able to compete again that year.\n- She not only competed but won, setting a brand-new record.",
+      "prompt": "The student wants to emphasize how remarkable the athlete's comeback was. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Months after a broken leg that doctors thought would end her season, she returned to win and set a new record.", "The athlete broke her leg just a few months before the big championship.", "Doctors openly doubted she would be able to compete again that year.", "The athlete eventually set a brand-new record in her event."],
+      "answer": "Months after a broken leg that doctors thought would end her season, she returned to win and set a new record.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调复出之非凡，A 串起重伤、医生质疑、夺冠破纪录的完整反差。B、C、D 各只一面。"
+    }
+  ]
+}

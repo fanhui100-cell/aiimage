@@ -1,0 +1,96 @@
+{
+  "template": "sat-rw-domains",
+  "level": 7,
+  "_provenance": "Claude-authored original SAT-style short-passage single questions (DeepSeek not used). NOT real SAT items; draft only. Covers the 4 Digital RW domains; domain stored in qa_flags.domain + topic_tags.",
+  "sets": [
+    {
+      "domain": "Information and Ideas",
+      "passage": "The mimic octopus, found in the waters of Southeast Asia, is famous for an unusual talent. Rather than simply changing colour to blend into the seabed, it can reshape its body and alter its movements to imitate other animals entirely, including flatfish, sea snakes, and lionfish. Scientists believe it selects which animal to copy based on the specific threat it faces at a given moment.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": [
+        "The mimic octopus changes colour in order to hide against the seabed.",
+        "The mimic octopus can imitate several other animals and appears to choose its disguise to match the threat it faces.",
+        "The mimic octopus is the most dangerous predator in Southeast Asian waters.",
+        "Scientists have been unable to discover how the mimic octopus reshapes its body."
+      ],
+      "answer": "The mimic octopus can imitate several other animals and appears to choose its disguise to match the threat it faces.",
+      "explain_zh": "主旨题：全文强调它能模仿多种动物、并据威胁选择伪装对象。A 只是被否定的对比项；C/D 文中无据。"
+    },
+    {
+      "domain": "Information and Ideas",
+      "passage": "In a study of urban birds, researchers found that great tits living near busy roads sang at a higher pitch than those in quiet woodland. Low-pitched sounds are more easily drowned out by the rumble of traffic, whereas higher-pitched songs carry more clearly over such noise.",
+      "prompt": "Which choice most logically completes the text?\n\nThe researchers concluded that the higher-pitched songs of roadside birds most likely help them to",
+      "options": [
+        "be heard clearly by other birds despite the traffic noise.",
+        "attract mates that specifically prefer lower-pitched songs.",
+        "avoid being noticed by predators living in the woodland.",
+        "reduce the total amount of singing they need to do each day."
+      ],
+      "answer": "be heard clearly by other birds despite the traffic noise.",
+      "explain_zh": "推断题：高音不易被交通噪声盖过 → 帮助在噪声中被清楚听到。B 与文意相反；C/D 无据。"
+    },
+    {
+      "domain": "Craft and Structure",
+      "passage": "Maria's first novel was praised for its economical prose; she conveyed complex emotions in remarkably few words, never using a long sentence where a short one would do.",
+      "prompt": "As used in the text, \"economical\" most nearly means",
+      "options": ["inexpensive.", "concise.", "profitable.", "cautious."],
+      "answer": "concise.",
+      "explain_zh": "语境词义：economical prose 指用词精简（few words）→ concise。inexpensive/profitable 是钱义，cautious 不合语境。"
+    },
+    {
+      "domain": "Craft and Structure",
+      "passage": "Most histories of flight begin with the Wright brothers. Yet decades earlier, the German engineer Otto Lilienthal had already made over two thousand successful glides, carefully recording the data that later inventors would rely on. To credit the Wrights alone is to overlook the foundation on which their achievement was built.",
+      "prompt": "Which choice best describes the main purpose of the text?",
+      "options": [
+        "To argue that Lilienthal's contribution to flight deserves more recognition than it usually receives.",
+        "To explain in technical detail how Lilienthal's gliders were constructed.",
+        "To prove that the Wright brothers directly copied Lilienthal's designs.",
+        "To describe the dangers commonly faced by early glider pilots."
+      ],
+      "answer": "To argue that Lilienthal's contribution to flight deserves more recognition than it usually receives.",
+      "explain_zh": "目的题：文末点明'只归功于莱特兄弟是忽视了基础'，即主张李林塔尔应获更多认可。B/C/D 超出或偏离文意。"
+    },
+    {
+      "domain": "Expression of Ideas",
+      "passage": "Solar panels have become far cheaper over the past decade, and their efficiency continues to improve. ______ many homeowners still hesitate to install them, often because of the high upfront cost.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Nevertheless,", "Therefore,", "For example,", "Similarly,"],
+      "answer": "Nevertheless,",
+      "explain_zh": "转折：前句利好（更便宜、更高效），后句却'仍犹豫' → 用 Nevertheless 表让步转折。Therefore 因果、For example 举例、Similarly 类比均不合逻辑。"
+    },
+    {
+      "domain": "Expression of Ideas",
+      "passage": "While researching a presentation, a student took the following notes: (1) The Great Barrier Reef is the world's largest coral reef system. (2) It stretches over 2,300 kilometres. (3) It is home to more than 1,500 species of fish. (4) Rising sea temperatures have caused several mass bleaching events.",
+      "prompt": "The student wants to emphasize the biological diversity of the reef. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": [
+        "The Great Barrier Reef, which stretches over 2,300 kilometres, is the world's largest coral reef system.",
+        "Home to more than 1,500 species of fish, the Great Barrier Reef supports an extraordinary diversity of life.",
+        "Rising sea temperatures have caused several mass bleaching events on the Great Barrier Reef.",
+        "The Great Barrier Reef is the world's largest coral reef system, stretching over 2,300 kilometres."
+      ],
+      "answer": "Home to more than 1,500 species of fish, the Great Barrier Reef supports an extraordinary diversity of life.",
+      "explain_zh": "修辞综合：目标是强调'生物多样性' → 选用'1500+ 鱼类物种'的 B。A/D 强调规模，C 强调威胁，均不切目标。"
+    },
+    {
+      "domain": "Standard English Conventions",
+      "passage": "The library's rare books room contains a remarkable collection ______ it includes handwritten letters, antique maps, and a first edition printed in 1623.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        "collection, it includes",
+        "collection; it includes",
+        "collection it includes",
+        "collection, it includes,"
+      ],
+      "answer": "collection; it includes",
+      "explain_zh": "句界：前后均为独立分句，需分号连接。A 逗号粘连（comma splice），C 无标点（run-on），D 多余逗号。"
+    },
+    {
+      "domain": "Standard English Conventions",
+      "passage": "The museum's collection of ancient coins ______ displayed in a locked glass case near the main entrance.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["is", "are", "were", "have been"],
+      "answer": "is",
+      "explain_zh": "主谓一致：主语中心词是单数 collection（of ancient coins 为修饰），故用单数 is displayed。are/were/have been 均为复数，与单数主语不一致。"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T05:10:37.783Z",
+  "apply": true,
+  "stage": "prod-gk-cont",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 50,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-gk-cont\\gaokao-continuation.productive.json",
+      "examId": "gaokao",
+      "taskType": "continuation_writing",
+      "level": 2,
+      "skill": "writing",
+      "tasks": 50,
+      "wrote": 0,
+      "dup": 50
+    }
+  ]
+}

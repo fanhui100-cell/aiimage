@@ -1,0 +1,93 @@
+{
+  "template": "toefl-read-daily-life",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Notice: The swimming pool is closed for cleaning every Monday from 8 to 11 in the morning. During this time, members may use the gym or the outdoor track. The pool reopens at half past eleven.",
+      "questions": [
+        { "prompt": "When is the swimming pool closed?", "options": ["Every weekend", "Monday morning, from 8 to 11", "Every evening", "All day on Monday"], "answer": "B" },
+        { "prompt": "What can members do while the pool is closed?", "options": ["Use the gym or the outdoor track", "Swim in a different pool", "Get their money back", "Wait by the entrance"], "answer": "A" }
+      ],
+      "explain_zh": "公告类。关闭时段、替代设施可直接定位；干扰项与原文细节相关但不符。"
+    },
+    {
+      "passage": "Corner Café — Lunch Menu. Tomato soup with bread, five dollars. Grilled cheese sandwich, six dollars. Garden salad, four dollars. Fruit bowl, three dollars. Every lunch comes with a free cup of tea or coffee. Served from noon until three.",
+      "questions": [
+        { "prompt": "How much does the grilled cheese sandwich cost?", "options": ["Four dollars", "Five dollars", "Six dollars", "Three dollars"], "answer": "C" },
+        { "prompt": "What comes free with every lunch?", "options": ["A fruit bowl", "A cup of tea or coffee", "A garden salad", "Extra bread"], "answer": "B" },
+        { "prompt": "When is lunch served?", "options": ["All day long", "Only in the morning", "From noon until three", "After five o'clock"], "answer": "C" }
+      ],
+      "explain_zh": "菜单类。价格、赠品、供应时间均为字面定位题。"
+    },
+    {
+      "passage": "Hi Maria, thanks for offering to help with Saturday's move. We'll start loading the truck at nine, so could you come by eight forty-five? Wear comfortable shoes — there are lots of stairs. I'll bring coffee and snacks. See you then! Dan",
+      "questions": [
+        { "prompt": "What time does Dan ask Maria to arrive?", "options": ["At nine", "At eight forty-five", "At eight", "At ten"], "answer": "B" },
+        { "prompt": "Why does Dan mention comfortable shoes?", "options": ["It might rain", "The walk is long", "There are many stairs", "Shoes are required by rule"], "answer": "C" }
+      ],
+      "explain_zh": "私人邮件类。到达时间、提醒原因为细节/推断题。"
+    },
+    {
+      "passage": "Parking Garage — Level 2 Full. Please continue up the ramp to Level 3 or Level 4 for open spaces. The elevator to the mall stops on every level. Lost ticket fee: twenty dollars.",
+      "questions": [
+        { "prompt": "Why should drivers keep going up the ramp?", "options": ["The elevator is broken", "Levels 3 and 4 have open spaces", "Level 2 is closed for repairs", "Parking is free higher up"], "answer": "B" },
+        { "prompt": "What happens if a driver loses the ticket?", "options": ["Nothing happens", "They must call the mall", "They pay a twenty-dollar fee", "They lose their car"], "answer": "C" }
+      ],
+      "explain_zh": "标识类。指引原因、罚则为定位题，干扰项似是而非。"
+    },
+    {
+      "passage": "Just tried the new bakery on Elm Street! Their cinnamon rolls sell out by ten in the morning, so go early. The staff were super friendly and let me sample the bread. A little pricey, but worth it for a weekend treat.",
+      "questions": [
+        { "prompt": "What does the writer suggest readers do?", "options": ["Order online", "Go early in the morning", "Avoid the bakery", "Buy in large amounts"], "answer": "B" },
+        { "prompt": "What downside does the writer mention?", "options": ["Rude staff", "Long lines", "Slightly expensive", "Stale bread"], "answer": "C" },
+        { "prompt": "How does the writer feel about the bakery overall?", "options": ["It was worth visiting", "It was a waste of money", "It was boring", "It was closed"], "answer": "A" }
+      ],
+      "explain_zh": "社媒帖子类。建议、缺点、整体态度，含态度推断题。"
+    },
+    {
+      "passage": "Riverside Shuttle — Weekday Times. The first bus leaves Central Station at six in the morning. Buses run every twenty minutes until nine, then once an hour until six in the evening. Ride free with a student card.",
+      "questions": [
+        { "prompt": "How often do buses run before nine in the morning?", "options": ["Once an hour", "Every twenty minutes", "Every ten minutes", "Only twice"], "answer": "B" },
+        { "prompt": "Who can ride for free?", "options": ["Children under five", "Senior citizens", "Students with a card", "Anyone after six"], "answer": "C" },
+        { "prompt": "What happens to the service after nine in the morning?", "options": ["It stops completely", "It runs once an hour", "It runs every ten minutes", "It becomes free for all"], "answer": "B" }
+      ],
+      "explain_zh": "时刻表类。班次频率、免费对象、时段变化均可定位。"
+    },
+    {
+      "passage": "Cough Syrup — Directions. Adults: take two teaspoons every six hours. Do not take more than four doses in one day. Shake well before use. Keep out of reach of children. Store in a cool, dry place away from sunlight.",
+      "questions": [
+        { "prompt": "How often may an adult take the syrup?", "options": ["Every hour", "Every six hours", "Once a day", "Every two hours"], "answer": "B" },
+        { "prompt": "What is the most an adult should take in one day?", "options": ["Two doses", "Six doses", "Four doses", "Eight doses"], "answer": "C" },
+        { "prompt": "How should the syrup be stored?", "options": ["In a cool, dry place", "In direct sunlight", "In the freezer", "Next to a heater"], "answer": "A" }
+      ],
+      "explain_zh": "药品标签类。剂量、上限、储存方式为字面理解题。"
+    },
+    {
+      "passage": "Grand Opening — Pages Bookstore! This weekend only, all used books are half price. Buy three children's titles and get one free. A free bookmark comes with every purchase. We are open from nine to eight, Friday through Sunday. Bring this ad for a free coffee!",
+      "questions": [
+        { "prompt": "What is the weekend offer on used books?", "options": ["Buy one, get one", "Half price", "Completely free", "Ten percent off"], "answer": "B" },
+        { "prompt": "How can a customer get a free coffee?", "options": ["Buy three books", "Visit on Friday", "Bring this ad", "Join a club"], "answer": "C" },
+        { "prompt": "When is the store open?", "options": ["Only on Sunday", "Monday to Friday", "Friday through Sunday", "Twenty-four hours a day"], "answer": "C" }
+      ],
+      "explain_zh": "广告类。促销内容、赠品条件、营业时间为定位题。"
+    },
+    {
+      "passage": "Mom: Don't forget the dentist this afternoon. Me: I have practice until four thirty. Mom: I'll call and move it to five. Me: Thanks. Can you pick me up? Mom: Yes, I'll be waiting outside the gym at four forty-five.",
+      "questions": [
+        { "prompt": "Why can't the writer make the original appointment?", "options": ["A school trip", "Practice until four thirty", "Feeling sick", "A part-time job"], "answer": "B" },
+        { "prompt": "What does Mom do about the appointment?", "options": ["Cancels it", "Keeps the first time", "Moves it to five", "Finds a new dentist"], "answer": "C" },
+        { "prompt": "Where will Mom meet the writer?", "options": ["At home", "Outside the gym", "At the dentist", "At the school gate"], "answer": "B" }
+      ],
+      "explain_zh": "短信对话类。冲突原因、解决方案、碰面地点为细节题。"
+    },
+    {
+      "passage": "Library Reminder: Books are due two weeks after you borrow them. You may renew most items once online. A late return costs ten cents per day. Quiet study rooms can be booked at the front desk for up to two hours.",
+      "questions": [
+        { "prompt": "How long can you keep a borrowed book?", "options": ["One week", "Two weeks", "One month", "Three days"], "answer": "B" },
+        { "prompt": "What is the late return fee?", "options": ["Ten cents per day", "One dollar per day", "Nothing", "Twenty cents per day"], "answer": "A" },
+        { "prompt": "How can you book a quiet study room?", "options": ["Online only", "By phone", "At the front desk", "By email"], "answer": "C" }
+      ],
+      "explain_zh": "图书馆告示类。借期、滞纳金、预约方式为字面定位题。"
+    }
+  ]
+}

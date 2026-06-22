@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B10 (completes package B to 50). ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "One evening, on my way home, I noticed an elderly man standing at a busy crossroads, looking utterly (1)___. He turned in one direction, then another, clearly unsure which way to (2)___. Most people streamed past him, but something made me (3)___. I gently asked if he needed any (4)___. His eyes, I noticed, were filled with (5)___, and when he spoke, his words were slow and a little (6)___. He could not remember the name of his street, only that there was a tall (7)___ tree outside his house. My heart sank; it was not much to go (8)___. But I could not just leave him there alone in the growing (9)___. I stayed with him, spoke calmly, and called the local police, who promised to (10)___. While we waited, I learned that his name was Mr. Reed and that he had once been a (11)___. Eventually, a worried young woman — his granddaughter — arrived, having searched for him for (12)___. The relief and gratitude on both their faces was something I will never (13)___. It had cost me only an hour of my evening, yet to that family it had meant (14)___. I walked home that night thinking how easily I might have hurried past, like everyone else. Sometimes, the most important thing we can do is simply to (15)___ for someone who has lost their way.",
+      "blanks": [
+        { "options": ["happy", "lost", "proud", "calm"], "answer": "B" },
+        { "options": ["sell", "go", "sing", "eat"], "answer": "B" },
+        { "options": ["run", "stop", "laugh", "leave"], "answer": "B" },
+        { "options": ["money", "help", "food", "rest"], "answer": "B" },
+        { "options": ["joy", "confusion", "anger", "pride"], "answer": "B" },
+        { "options": ["clear", "unclear", "loud", "fast"], "answer": "B" },
+        { "options": ["young", "old", "cheap", "busy"], "answer": "B" },
+        { "options": ["on", "up", "out", "off"], "answer": "A" },
+        { "options": ["light", "darkness", "crowd", "noise"], "answer": "B" },
+        { "options": ["help", "leave", "pay", "sell"], "answer": "A" },
+        { "options": ["teacher", "thief", "stranger", "child"], "answer": "A" },
+        { "options": ["fun", "hours", "money", "sale"], "answer": "B" },
+        { "options": ["win", "forget", "sell", "pay"], "answer": "B" },
+        { "options": ["nothing", "everything", "little", "money"], "answer": "B" },
+        { "options": ["pay", "stop", "leave", "sell"], "answer": "B" }
+      ],
+      "explain_zh": "1lost茫然 2go该走哪条 3stop停下 4help帮助 5confusion困惑 6unclear不清晰 7old高大老树 8on凭借的线索 9darkness渐暗 10help承诺帮忙 11teacher曾是老师 12hours找了几小时 13forget难忘 14everything意义重大 15stop为人停下。"
+    },
+    {
+      "passage": "My younger brother, Leo, has always been a (1)___. He takes apart old radios, clocks and toys just to see how they (2)___. Our parents often sighed at the mess, but I secretly admired his endless (3)___. Last winter, our grandmother, who lives alone, kept forgetting to take her daily (4)___. We all worried, but Leo decided to do something about it. For weeks, he tinkered in the garage, and the rest of us had no idea what he was (5)___. He failed many times; his first few attempts simply did not (6)___. But he refused to give (7)___. Finally, he proudly showed us his invention: a simple box that lit up and played a cheerful tune at the exact (8)___ Grandma needed her medicine. It was made entirely from (9)___ parts he had collected. We were all (10)___. It was not fancy, but it (11)___ perfectly, and best of all, Grandma loved it. She never missed her medicine (12)___. What struck me most was not just Leo's cleverness, but his (13)___. He had seen a real problem and, instead of just worrying, had patiently worked to (14)___ it. He taught me that creativity is not only about clever ideas; it is about caring enough to turn those ideas into something that actually (15)___ someone's life.",
+      "blanks": [
+        { "options": ["maker", "dancer", "reader", "singer"], "answer": "A" },
+        { "options": ["sell", "work", "cost", "look"], "answer": "B" },
+        { "options": ["money", "curiosity", "noise", "sleep"], "answer": "B" },
+        { "options": ["walk", "medicine", "bus", "meal"], "answer": "B" },
+        { "options": ["selling", "making", "hiding", "buying"], "answer": "B" },
+        { "options": ["work", "help", "move", "last"], "answer": "A" },
+        { "options": ["up", "out", "over", "off"], "answer": "A" },
+        { "options": ["place", "time", "price", "day"], "answer": "B" },
+        { "options": ["new", "old", "clean", "gold"], "answer": "B" },
+        { "options": ["bored", "amazed", "angry", "tired"], "answer": "B" },
+        { "options": ["looked", "worked", "sold", "rang"], "answer": "B" },
+        { "options": ["again", "once", "twice", "more"], "answer": "A" },
+        { "options": ["money", "kindness", "anger", "fear"], "answer": "B" },
+        { "options": ["sell", "solve", "hide", "cause"], "answer": "B" },
+        { "options": ["ends", "improves", "sells", "copies"], "answer": "B" }
+      ],
+      "explain_zh": "1maker爱拆装的人 2work运转 3curiosity好奇心 4medicine吃药 5making在做什么 6work不灵 7up不放弃 8time准点 9old旧零件 10amazed惊叹 11worked运行良好 12again再没漏过 13kindness善心 14solve解决 15improves改善生活。"
+    },
+    {
+      "passage": "When I was younger, I could not bear (1)___. The slightest criticism of my work felt like a personal (2)___, and I would react with anger or hurt, defending myself instead of (3)___. This habit, I now see, held me back for (4)___. Convinced I was always right, I missed countless chances to (5)___. The change began with a wise art teacher. After I had angrily dismissed her suggestion about a painting, she said something I have never (6)___: 'A person who cannot hear criticism cannot (7)___.' Her calm words struck me deeply. I began, slowly and painfully, to practise listening to feedback without immediately (8)___ myself. It was incredibly hard; my first instinct was always to argue, but I forced myself instead to ask, 'Is there any (9)___ in what they say?' To my surprise, there usually (10)___. Most criticism, I discovered, was not an attack but a (11)___ — a chance to see a weakness I was blind to. The people who pointed out my mistakes were often doing me a (12)___, even when it stung. As I learned to welcome honest feedback rather than fear it, I improved far (13)___ than ever before. Today, I actively (14)___ criticism, knowing it is one of the fastest ways to grow. I learned that the goal is not to be thought perfect, but actually to get (15)___ — and that, almost always, requires the honest eyes of others.",
+      "blanks": [
+        { "options": ["noise", "criticism", "money", "heat"], "answer": "B" },
+        { "options": ["gift", "attack", "joke", "prize"], "answer": "B" },
+        { "options": ["selling", "listening", "sleeping", "paying"], "answer": "B" },
+        { "options": ["fun", "years", "sale", "once"], "answer": "B" },
+        { "options": ["sleep", "improve", "sell", "leave"], "answer": "B" },
+        { "options": ["sold", "forgotten", "won", "paid"], "answer": "B" },
+        { "options": ["sell", "grow", "sleep", "leave"], "answer": "B" },
+        { "options": ["selling", "defending", "helping", "hiding"], "answer": "B" },
+        { "options": ["noise", "truth", "money", "fun"], "answer": "B" },
+        { "options": ["was", "sold", "left", "paid"], "answer": "A" },
+        { "options": ["loss", "gift", "lie", "trick"], "answer": "B" },
+        { "options": ["harm", "favour", "trick", "loss"], "answer": "B" },
+        { "options": ["slower", "faster", "less", "worse"], "answer": "B" },
+        { "options": ["hide", "seek", "sell", "refuse"], "answer": "B" },
+        { "options": ["worse", "better", "older", "richer"], "answer": "B" }
+      ],
+      "explain_zh": "1criticism批评 2attack人身攻击 3listening而非倾听 4years拖累多年 5improve进步机会 6forgotten从未忘 7grow无法成长 8defending不急于辩护 9truth有无道理 10was通常确有 11gift礼物 12favour帮我忙 13faster进步更快 14seek主动寻求 15better变更好。"
+    },
+    {
+      "passage": "When my school paired me with a (1)___ in a distant country, I expected little more than a boring assignment. We were supposed to exchange letters in English to practise the (2)___. My first letter to Aisha was short and (3)___. But her reply was so warm and full of life that I found myself eagerly (4)___ the next. Over the following two years, we wrote dozens of letters. Through them, I came to know a daily life utterly (5)___ from my own: different food, different weather, different (6)___. At first, the differences were what struck me most. But the longer we wrote, the more I noticed how (7)___ we truly were. We laughed at the same silly things, worried about the same exams, and shared the same hopes for the (8)___. Aisha gently corrected my clumsy assumptions about her country, and I did the (9)___ for her about mine. Slowly, a real friendship grew across the thousands of miles between (10)___. The news, which had once shown me only frightening images of faraway places, now felt (11)___, because in one of those places lived my friend. When we finally met in person years later, it felt as though we had known each other all our (12)___. That simple school assignment taught me something no textbook could. It is easy to fear or misunderstand people we have never (13)___. But behind every distant border and unfamiliar custom are ordinary human beings, with the same fears and dreams as (14)___. The surest cure for prejudice, I learned, is simply to get to (15)___ one another.",
+      "blanks": [
+        { "options": ["penfriend", "teacher", "doctor", "driver"], "answer": "A" },
+        { "options": ["sport", "language", "game", "music"], "answer": "B" },
+        { "options": ["rude", "polite", "funny", "loud"], "answer": "B" },
+        { "options": ["selling", "awaiting", "hiding", "refusing"], "answer": "B" },
+        { "options": ["similar", "different", "free", "clear"], "answer": "B" },
+        { "options": ["money", "customs", "noise", "homework"], "answer": "B" },
+        { "options": ["different", "alike", "far", "rich"], "answer": "B" },
+        { "options": ["past", "future", "money", "school"], "answer": "B" },
+        { "options": ["same", "best", "most", "least"], "answer": "A" },
+        { "options": ["us", "them", "all", "others"], "answer": "A" },
+        { "options": ["boring", "personal", "strange", "false"], "answer": "B" },
+        { "options": ["days", "lives", "games", "books"], "answer": "B" },
+        { "options": ["sold", "met", "paid", "feared"], "answer": "B" },
+        { "options": ["ourselves", "money", "school", "others"], "answer": "A" },
+        { "options": ["sell", "know", "leave", "pay"], "answer": "B" }
+      ],
+      "explain_zh": "1penfriend笔友 2language语言 3polite拘谨客套 4awaiting急切等下一封 5different迥异 6customs风俗 7alike何其相似 8future未来 9same同样纠正 10us彼此之间 11personal变得切身 12lives一生 13met从未见过 14ourselves与我们一样 15know彼此了解。"
+    },
+    {
+      "passage": "For my grandmother's eightieth birthday, I wanted to give her something truly (1)___, not just bought from a shop. She had everything she needed, yet I knew she treasured things made with (2)___. So I decided to make her a bowl, by hand, in a pottery (3)___ I had never tried before. I had imagined it would be (4)___. It was not. My first lump of clay collapsed the moment the wheel began to (5)___. My second flew off completely. Again and again I (6)___, my hands covered in wet clay, my early bowls lopsided and (7)___. The teacher told me that pottery cannot be (8)___; it demands patience and a gentle touch. Slowly, over many weeks, my hands began to (9)___ the clay instead of fighting it. The bowl I finally made was far from (10)___ — its sides were uneven and its glaze a little patchy. By a shop's standards, it was clumsy. But every small (11)___ in it held a memory of the hours I had spent (12)___ it. When I gave it to my grandmother, she held it as if it were made of (13)___. She said she could feel the love in every (14)___, and that no perfect, shop-bought gift could ever mean as much. I learned that the value of a gift lies not in its price or its perfection, but in the time, effort and (15)___ we pour into it.",
+      "blanks": [
+        { "options": ["cheap", "special", "easy", "quick"], "answer": "B" },
+        { "options": ["money", "love", "speed", "skill"], "answer": "B" },
+        { "options": ["shop", "class", "book", "game"], "answer": "B" },
+        { "options": ["easy", "hard", "cheap", "boring"], "answer": "A" },
+        { "options": ["stop", "turn", "fall", "sing"], "answer": "B" },
+        { "options": ["won", "failed", "left", "slept"], "answer": "B" },
+        { "options": ["perfect", "ugly", "clean", "cheap"], "answer": "B" },
+        { "options": ["sold", "rushed", "seen", "bought"], "answer": "B" },
+        { "options": ["sell", "shape", "hide", "break"], "answer": "B" },
+        { "options": ["ready", "perfect", "cheap", "hot"], "answer": "B" },
+        { "options": ["gift", "flaw", "word", "coin"], "answer": "B" },
+        { "options": ["selling", "making", "hiding", "buying"], "answer": "B" },
+        { "options": ["clay", "gold", "glass", "paper"], "answer": "B" },
+        { "options": ["word", "mark", "coin", "page"], "answer": "B" },
+        { "options": ["money", "love", "speed", "skill"], "answer": "B" }
+      ],
+      "explain_zh": "1special特别 2love用爱做的 3class陶艺课 4easy以为容易 5turn转动 6failed屡屡失败 7ugly歪扭难看 8rushed急不得 9shape塑形 10perfect远非完美 11flaw每处瑕疵 12making制作的时光 13gold视若黄金 14mark每道痕迹 15love倾注的爱。"
+    }
+  ]
+}

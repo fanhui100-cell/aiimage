@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-06-20T17:19:50.920Z",
-  "status": "not_applied",
+  "generatedAt": "2026-06-22T10:32:39.162Z",
+  "status": "applied",
   "errors": [],
   "notes": [
-    "v2 not_applied：生成路径返回 v2_not_applied（优雅）"
+    "v2 applied：执行真实生成 + 确定性/退役/池不足校验",
+    "cet4 mini: insufficient_pool（受控）",
+    "cet4 full: insufficient_pool（受控）"
   ],
   "ok": true
 }

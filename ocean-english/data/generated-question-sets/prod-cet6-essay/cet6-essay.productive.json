@@ -1,0 +1,559 @@
+{
+  "examId": "cet6",
+  "level": 4,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should artificial intelligence be allowed to make decisions that affect human lives, such as in medicine or criminal justice? Develop a clear argument: acknowledge the efficiency and consistency AI can bring, then weigh these against concerns about accountability, bias, and the loss of human judgement, and reach a reasoned position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking automation to social consequences. Structure: an introduction with a clear thesis, two developed body paragraphs, and a conclusion that restates your stance. Audience: readers of a university opinion column who expect nuanced argument rather than slogans.",
+      "promptZh": "就「是否应允许人工智能在医疗、司法等关乎人命的领域做决策」写一篇 150-200 词议论文,权衡效率与问责、偏见、人类判断的丧失,并给出有理有据的立场。",
+      "referencePoints": [
+        "argument requirements: a clear thesis, at least one concession + rebuttal, cause-effect reasoning on automation and accountability",
+        "structure hints: intro with thesis + two developed body paragraphs + conclusion restating stance",
+        "scoring focus: depth of argument on ethics and responsibility, advanced vocabulary, varied syntax, coherence and cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: As cities grow ever larger, does urbanization improve quality of life or erode it? Develop a balanced argument: recognize the economic opportunities and services that cities concentrate, then weigh them against congestion, pollution, and the weakening of community ties, and arrive at a defensible conclusion. Argument requirements: at least one concession and one rebuttal; a clear cause-and-effect chain explaining how rapid growth produces social strain. Structure: introduction with a thesis, two body paragraphs each developing one side, and a conclusion. Audience: a panel reviewing urban-policy essays who value evidence-based reasoning over emotional appeals.",
+      "promptZh": "就「城市化究竟提升还是侵蚀生活质量」写一篇 150-200 词议论文,权衡机遇与拥堵、污染、社区纽带弱化,得出可辩护的结论。",
+      "referencePoints": [
+        "argument requirements: thesis on net effect of urbanization, concession + rebuttal, cause-effect chain on rapid growth and social strain",
+        "structure hints: intro + two body paragraphs (one per side) + conclusion",
+        "scoring focus: balanced reasoning, precise lexis for social and economic concepts, cohesive devices",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does equal access to quality education remain a realistic goal, or is educational inequality widening? Build an argument that examines the structural causes of unequal opportunity, considers whether technology and reform can close the gap, and reaches a position on what should take priority. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking family background to outcomes. Structure: an introduction stating your thesis, two body paragraphs analysing causes and possible remedies, and a conclusion. Audience: an education-policy forum that rewards analytical depth and discourages unsupported generalisations.",
+      "promptZh": "就「优质教育的平等机会是否仍现实,抑或教育不平等正在扩大」写一篇 150-200 词议论文,分析结构性成因并探讨技术与改革能否缩小差距。",
+      "referencePoints": [
+        "argument requirements: thesis on educational equity, concession + rebuttal, cause-effect linking background to outcomes",
+        "structure hints: intro + two body paragraphs (causes / remedies) + conclusion",
+        "scoring focus: analytical depth on social structures, formal academic vocabulary, logical progression",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should environmental protection take precedence over economic growth when the two conflict? Construct an argument that acknowledges the developmental needs of growing economies, then weighs them against the long-term costs of ecological damage, and defends a clear priority. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting present policy choices to future consequences. Structure: introduction with a thesis, two developed body paragraphs, and a conclusion proposing a balanced way forward. Audience: readers of an environmental-affairs magazine who expect arguments grounded in trade-offs rather than absolutes.",
+      "promptZh": "就「环境保护与经济增长冲突时是否应优先环保」写一篇 150-200 词议论文,权衡发展需求与生态长期代价,给出明确取舍。",
+      "referencePoints": [
+        "argument requirements: thesis on environment-vs-growth priority, concession + rebuttal, cause-effect on policy and future cost",
+        "structure hints: intro + two body paragraphs + conclusion proposing balance",
+        "scoring focus: reasoning about trade-offs, advanced lexis for sustainability, coherent argumentation",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Has social media strengthened public debate or coarsened it? Develop an argument that recognizes how platforms broaden participation, then weighs this against echo chambers, misinformation, and declining civility, before reaching a reasoned judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how platform design shapes discourse. Structure: an introduction with a clear thesis, two body paragraphs, and a conclusion. Audience: a media-studies readership that expects you to engage with both the democratic promise and the documented harms of online communication.",
+      "promptZh": "就「社交媒体究竟强化还是粗鄙化了公共辩论」写一篇 150-200 词议论文,权衡参与扩大与回音壁、虚假信息、礼仪下降,作出判断。",
+      "referencePoints": [
+        "argument requirements: thesis on social media's effect on debate, concession + rebuttal, cause-effect on platform design and discourse",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: critical evaluation of media effects, varied and precise vocabulary, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: As remote work becomes common, does it liberate employees or blur the line between work and life? Build an argument that credits the flexibility and autonomy remote work offers, then weighs this against isolation, overwork, and weakened collaboration, and reaches a clear conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning on how location-free work reshapes daily habits. Structure: introduction with a thesis, two developed body paragraphs, and a conclusion. Audience: a business readership interested in evidence-based views on the future of work rather than one-sided enthusiasm.",
+      "promptZh": "就「远程办公究竟解放员工还是模糊工作与生活的界限」写一篇 150-200 词议论文,权衡灵活自主与孤立、过劳、协作弱化。",
+      "referencePoints": [
+        "argument requirements: thesis on remote work's net effect, concession + rebuttal, cause-effect on habits and well-being",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: balanced workplace analysis, professional vocabulary, syntactic variety",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should governments fund the arts when resources are scarce? Develop an argument that acknowledges competing demands such as health and infrastructure, then defends or challenges the value of public support for culture, weighing tangible and intangible returns. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking cultural investment to social benefits. Structure: an introduction with a thesis, two body paragraphs, and a conclusion that states your priority. Audience: a cultural-policy debate where readers reward you for engaging seriously with the opportunity cost of every funding decision.",
+      "promptZh": "就「资源紧张时政府是否应资助艺术」写一篇 150-200 词议论文,权衡医疗、基建等竞争性需求与文化投资的有形无形回报。",
+      "referencePoints": [
+        "argument requirements: thesis on arts funding priority, concession + rebuttal, cause-effect on cultural investment and benefit",
+        "structure hints: intro + two body paragraphs + conclusion stating priority",
+        "scoring focus: reasoning about opportunity cost, sophisticated lexis, coherent structure",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does globalization benefit ordinary people or mainly serve large corporations? Construct an argument that recognizes the gains in trade, choice, and lower prices, then weighs them against job displacement and widening inequality, and arrives at a defensible position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting global markets to local consequences. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: an international-affairs readership that expects you to distinguish between aggregate prosperity and its uneven distribution.",
+      "promptZh": "就「全球化惠及普通人还是主要服务大企业」写一篇 150-200 词议论文,权衡贸易选择与就业冲击、不平等扩大。",
+      "referencePoints": [
+        "argument requirements: thesis on who benefits from globalization, concession + rebuttal, cause-effect on global markets and local effects",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: distinction between aggregate and distributional effects, economic vocabulary, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Do younger and older generations misunderstand each other, and can the gap be bridged? Develop an argument that explains the roots of generational tension over technology, values, and work, then considers whether dialogue and shared experience can reduce it, before reaching a conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how social change produces differing outlooks. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a sociology readership that values careful analysis of how each generation is shaped by its era.",
+      "promptZh": "就「代际之间是否相互误解,以及鸿沟能否弥合」写一篇 150-200 词议论文,分析在技术、价值观、工作上的代际张力及对话能否缓解。",
+      "referencePoints": [
+        "argument requirements: thesis on generational gap, concession + rebuttal, cause-effect on social change and outlook",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: sociological reasoning, nuanced vocabulary, coherent development",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does consumer culture make us happier or trap us in endless wanting? Build an argument that acknowledges the comfort, identity, and choice that consumption can provide, then weighs this against materialism, debt, and dissatisfaction, and reaches a reasoned stance. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking advertising and abundance to psychological effects. Structure: introduction with a thesis, two developed body paragraphs, and a conclusion. Audience: readers of a cultural-criticism column who expect you to interrogate, not merely condemn, the consumer society.",
+      "promptZh": "就「消费文化让我们更幸福还是陷入无尽欲望」写一篇 150-200 词议论文,权衡舒适与身份认同和物质主义、负债、不满。",
+      "referencePoints": [
+        "argument requirements: thesis on consumer culture and well-being, concession + rebuttal, cause-effect on abundance and psychology",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: critical reasoning on materialism, advanced lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should personal data be treated as private property that individuals fully control? Develop an argument that recognizes how data sharing powers convenient and personalized services, then weighs this against surveillance and the commodification of private life, and defends a clear position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting data collection to shifts in power. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing where the balance should lie. Audience: a technology-ethics readership that expects rigorous reasoning about rights and responsibilities.",
+      "promptZh": "就「个人数据是否应被视为个人完全掌控的私有财产」写一篇 150-200 词议论文,权衡个性化服务的便利与监控、隐私商品化。",
+      "referencePoints": [
+        "argument requirements: thesis on data ownership, concession + rebuttal, cause-effect on data collection and power",
+        "structure hints: intro + two body paragraphs + conclusion proposing balance",
+        "scoring focus: ethical reasoning on privacy, precise technical lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is automation a threat to employment or an engine of new opportunity? Construct an argument that concedes the real disruption automation causes for certain jobs, then weighs this against the new roles and productivity it creates, and reaches a measured conclusion about how societies should respond. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking technological change to labour-market shifts. Structure: introduction with a thesis, two body paragraphs, and a conclusion recommending a response. Audience: an economics readership that distrusts both alarmism and naive optimism.",
+      "promptZh": "就「自动化是就业威胁还是新机遇引擎」写一篇 150-200 词议论文,权衡岗位冲击与新角色、生产力提升,提出社会应对。",
+      "referencePoints": [
+        "argument requirements: thesis on automation and employment, concession + rebuttal, cause-effect on tech and labour markets",
+        "structure hints: intro + two body paragraphs + conclusion recommending response",
+        "scoring focus: measured economic reasoning, sophisticated vocabulary, logical flow",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should scientists pursue knowledge freely, or should some research be restricted for ethical reasons? Develop an argument that values the freedom of inquiry and its benefits, then weighs this against the dangers of certain technologies, and defends a principled boundary. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting unregulated research to potential harm. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing where limits should fall. Audience: a science-policy readership that expects you to balance intellectual liberty against precaution.",
+      "promptZh": "就「科学家应自由求知,还是某些研究应因伦理受限」写一篇 150-200 词议论文,权衡探索自由与某些技术的危险,划定原则边界。",
+      "referencePoints": [
+        "argument requirements: thesis on research freedom vs restriction, concession + rebuttal, cause-effect on unregulated research and harm",
+        "structure hints: intro + two body paragraphs + conclusion on where limits fall",
+        "scoring focus: principled ethical reasoning, formal vocabulary, coherent argument",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does an excessive focus on economic growth measured by GDP overlook what truly matters? Build an argument that acknowledges the usefulness of growth as a measure of prosperity, then weighs this against neglected dimensions such as well-being, equality, and the environment, and reaches a position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how the choice of metric shapes policy. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a public-policy forum that rewards you for questioning conventional measures of success.",
+      "promptZh": "就「以 GDP 衡量增长是否忽视了真正重要的东西」写一篇 150-200 词议论文,权衡增长指标的用处与福祉、平等、环境等被忽视维度。",
+      "referencePoints": [
+        "argument requirements: thesis on GDP and what matters, concession + rebuttal, cause-effect on metrics and policy",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning about measurement and value, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should higher education prioritize practical skills that lead to jobs, or the cultivation of independent thinking? Develop an argument that concedes the importance of employability in a competitive economy, then weighs this against the lasting value of critical thought and broad learning, and defends a clear emphasis. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking curriculum design to graduates' long-term prospects. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: an academic readership interested in the purpose of the university beyond immediate vocational return.",
+      "promptZh": "就「高等教育应优先就业技能还是培养独立思考」写一篇 150-200 词议论文,权衡就业能力与批判思维、通识学习的长远价值。",
+      "referencePoints": [
+        "argument requirements: thesis on aims of higher education, concession + rebuttal, cause-effect on curriculum and prospects",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on educational purpose, academic vocabulary, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Can individual lifestyle changes meaningfully address climate change, or is systemic reform the only real solution? Construct an argument that recognizes the value of personal responsibility, then weighs this against the scale of the problem and the need for collective and structural action, and reaches a position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting the level of action to its impact. Structure: introduction with a thesis, two body paragraphs, and a conclusion proposing how the two approaches relate. Audience: an environmental readership that expects you to confront the limits of individual virtue.",
+      "promptZh": "就「个人生活方式改变能否切实应对气候变化,还是只有系统改革才有效」写一篇 150-200 词议论文,权衡个人责任与集体结构性行动。",
+      "referencePoints": [
+        "argument requirements: thesis on individual vs systemic action, concession + rebuttal, cause-effect on scale of action and impact",
+        "structure hints: intro + two body paragraphs + conclusion relating the two",
+        "scoring focus: reasoning about scale and agency, precise lexis, coherent argument",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Has the abundance of information online made us better informed or more confused? Develop an argument that acknowledges the democratization of knowledge, then weighs this against information overload, misinformation, and shallow attention, and reaches a reasoned judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how easy access affects the way we think. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership concerned with digital literacy who expect you to weigh access against the skills needed to use it well.",
+      "promptZh": "就「网络信息的丰富让我们更明智还是更困惑」写一篇 150-200 词议论文,权衡知识普及与信息过载、虚假信息、浅层注意力。",
+      "referencePoints": [
+        "argument requirements: thesis on information abundance, concession + rebuttal, cause-effect on access and thinking",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on digital literacy, advanced vocabulary, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should advanced nations bear greater responsibility for global problems such as poverty and climate change? Build an argument that concedes the appeal of shared responsibility, then weighs this against the historical and material capacity of wealthier nations, and defends a clear principle of fairness. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking past development to present obligations. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: an international-ethics readership that expects rigorous reasoning about justice between nations rather than rhetorical blame.",
+      "promptZh": "就「发达国家是否应对贫困、气候变化等全球问题承担更大责任」写一篇 150-200 词议论文,权衡共同责任与发达国家的历史与能力。",
+      "referencePoints": [
+        "argument requirements: thesis on global responsibility, concession + rebuttal, cause-effect on past development and obligation",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning about fairness between nations, formal lexis, logical structure",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is it ethical to use genetic engineering to enhance human traits, not just to cure disease? Develop an argument that recognizes the appeal of preventing suffering and improving lives, then weighs this against fairness, consent, and unforeseen consequences, and defends a principled boundary. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting enhancement technologies to social inequality. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing where lines should be drawn. Audience: a bioethics readership that expects careful distinctions between therapy and enhancement.",
+      "promptZh": "就「用基因工程增强人类特征(而非仅治病)是否合乎伦理」写一篇 150-200 词议论文,权衡减轻痛苦与公平、知情同意、未知后果。",
+      "referencePoints": [
+        "argument requirements: thesis on genetic enhancement, concession + rebuttal, cause-effect on enhancement and inequality",
+        "structure hints: intro + two body paragraphs + conclusion on where lines fall",
+        "scoring focus: bioethical reasoning, precise vocabulary, coherent argument",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the pursuit of constant productivity come at the cost of creativity and rest? Construct an argument that credits the discipline and achievement that a productivity culture encourages, then weighs this against burnout and the conditions creativity needs, and reaches a measured conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking relentless busyness to diminishing returns. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in work and well-being who expect you to challenge the assumption that more output is always better.",
+      "promptZh": "就「不断追求高效是否以创造力与休息为代价」写一篇 150-200 词议论文,权衡自律成就与倦怠及创造力所需的条件。",
+      "referencePoints": [
+        "argument requirements: thesis on productivity vs creativity and rest, concession + rebuttal, cause-effect on busyness and returns",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on work and well-being, nuanced lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: As populations age in many countries, is this trend mainly a burden or also an opportunity? Develop an argument that acknowledges the pressures an ageing society places on pensions and healthcare, then weighs this against the experience, stability, and contributions of older people, and reaches a balanced position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking demographic change to economic and social outcomes. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a social-policy readership that expects you to move beyond a purely pessimistic framing.",
+      "promptZh": "就「人口老龄化主要是负担还是也是机遇」写一篇 150-200 词议论文,权衡养老与医疗压力同老年人的经验、稳定与贡献。",
+      "referencePoints": [
+        "argument requirements: thesis on ageing society, concession + rebuttal, cause-effect on demographics and outcomes",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: balanced demographic reasoning, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should freedom of expression have limits when speech causes harm? Construct an argument that defends the central importance of free expression, then weighs this against the damage caused by hate speech and incitement, and proposes where a reasonable boundary lies. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning connecting unrestricted speech to social consequences. Structure: introduction with a thesis, two body paragraphs, and a conclusion that defines your principle. Audience: a readership concerned with civil liberties who expect you to avoid both censorship and indifference to harm.",
+      "promptZh": "就「言论自由在造成伤害时是否应有限度」写一篇 150-200 词议论文,权衡言论自由的核心地位与仇恨言论、煽动的危害,划定合理边界。",
+      "referencePoints": [
+        "argument requirements: thesis on limits of free speech, concession + rebuttal, cause-effect on unrestricted speech and harm",
+        "structure hints: intro + two body paragraphs + conclusion defining principle",
+        "scoring focus: reasoning on liberty and harm, formal vocabulary, logical flow",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does living a screen-mediated life weaken our capacity for genuine human connection? Develop an argument that recognizes how digital tools keep people connected across distance, then weighs this against the erosion of attention, intimacy, and face-to-face skills, and reaches a reasoned judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking constant connectivity to changes in relationships. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in psychology and technology who expect a nuanced account rather than nostalgia.",
+      "promptZh": "就「以屏幕为中介的生活是否削弱了真实的人际联结」写一篇 150-200 词议论文,权衡远程联系与注意力、亲密感、面对面能力的侵蚀。",
+      "referencePoints": [
+        "argument requirements: thesis on screens and connection, concession + rebuttal, cause-effect on connectivity and relationships",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: psychological reasoning, precise lexis, coherent development",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should wealthy individuals have a moral obligation to give a substantial share of their fortune to those in need? Construct an argument that concedes the right of people to their lawfully earned wealth, then weighs this against the moral claims of extreme need and the social value of redistribution, and defends a clear position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking concentrated wealth to social outcomes. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: an ethics readership that expects you to engage seriously with both property rights and duties to others.",
+      "promptZh": "就「富人是否有道德义务将大部分财富捐助贫困者」写一篇 150-200 词议论文,权衡合法财产权与极端贫困的道德诉求和再分配的社会价值。",
+      "referencePoints": [
+        "argument requirements: thesis on obligation of the wealthy, concession + rebuttal, cause-effect on concentrated wealth and society",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: moral reasoning on rights and duties, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is the spread of a single global language an asset that unites people or a threat to cultural and linguistic diversity? Develop an argument that recognizes the practical benefits of a shared language for trade and understanding, then weighs this against the loss of minority languages and identities, and reaches a balanced position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking linguistic dominance to cultural change. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a cultural-affairs readership that expects respect for both communication and heritage.",
+      "promptZh": "就「单一全球语言的扩散是联结人类的资产还是对文化语言多样性的威胁」写一篇 150-200 词议论文,权衡沟通便利与少数语言、身份的消失。",
+      "referencePoints": [
+        "argument requirements: thesis on global language, concession + rebuttal, cause-effect on linguistic dominance and culture",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on culture and communication, sophisticated lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should the right to access the internet be regarded as a basic human right in the modern world? Construct an argument that acknowledges competing priorities and the practical limits on what can be guaranteed, then weighs this against how essential connectivity has become for education, work, and participation, and defends a clear stance. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking digital exclusion to disadvantage. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a rights-and-policy readership that expects careful reasoning about what counts as a fundamental entitlement.",
+      "promptZh": "就「在现代世界,上网权是否应被视为基本人权」写一篇 150-200 词议论文,权衡资源限制与连接对教育、工作、参与的必要性。",
+      "referencePoints": [
+        "argument requirements: thesis on internet as a right, concession + rebuttal, cause-effect on digital exclusion and disadvantage",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on rights and entitlements, formal vocabulary, logical structure",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does competition drive people to excel, or does it harm cooperation and well-being? Develop an argument that credits the motivation and improvement that competition can produce, then weighs this against stress, inequality, and the value of collaboration, and reaches a measured conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how competitive pressure shapes behaviour. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in education and the workplace who expect you to question the assumption that competition is always beneficial.",
+      "promptZh": "就「竞争是促人卓越还是有损合作与福祉」写一篇 150-200 词议论文,权衡激励改进与压力、不平等及合作的价值。",
+      "referencePoints": [
+        "argument requirements: thesis on competition's effects, concession + rebuttal, cause-effect on pressure and behaviour",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: balanced reasoning on motivation, advanced lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should preserving cultural heritage take priority over modern development in historic cities? Construct an argument that concedes the legitimate need for growth, housing, and modern infrastructure, then weighs this against the irreplaceable value of historic sites and identity, and defends a clear priority. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking unchecked development to cultural loss. Structure: introduction with a thesis, two body paragraphs, and a conclusion proposing how to reconcile the two. Audience: an urban-heritage readership that expects you to weigh progress against memory.",
+      "promptZh": "就「历史城市中保护文化遗产是否应优先于现代开发」写一篇 150-200 词议论文,权衡发展住房需求与历史遗址、身份的不可替代价值。",
+      "referencePoints": [
+        "argument requirements: thesis on heritage vs development, concession + rebuttal, cause-effect on development and cultural loss",
+        "structure hints: intro + two body paragraphs + conclusion reconciling the two",
+        "scoring focus: reasoning on heritage and progress, precise lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the rise of influencer culture distort young people's values and ambitions? Develop an argument that recognizes the opportunities and inspiration online creators can offer, then weighs this against unrealistic standards, materialism, and the pressure to perform, and reaches a reasoned judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking curated online lives to changing aspirations. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership concerned with youth and media who expect analysis rather than moral panic.",
+      "promptZh": "就「网红文化的兴起是否扭曲了年轻人的价值观与抱负」写一篇 150-200 词议论文,权衡机会启发与不切实际的标准、物质主义、表演压力。",
+      "referencePoints": [
+        "argument requirements: thesis on influencer culture, concession + rebuttal, cause-effect on curated lives and aspirations",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on youth and media, nuanced vocabulary, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should governments invest heavily in space exploration when pressing problems remain unsolved on Earth? Construct an argument that acknowledges the urgency of earthly needs, then weighs this against the scientific, technological, and inspirational returns of space programmes, and defends a clear position on priorities. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking investment choices to long-term benefit. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a science-and-policy readership that expects you to weigh visionary ambition against immediate human welfare.",
+      "promptZh": "就「地球难题未解时政府是否应重金投入太空探索」写一篇 150-200 词议论文,权衡地球紧迫需求与太空计划的科技与启发回报。",
+      "referencePoints": [
+        "argument requirements: thesis on space investment, concession + rebuttal, cause-effect on investment and long-term benefit",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning about priorities, advanced lexis, logical structure",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is anonymity online a safeguard for free expression or a shield for irresponsible behaviour? Develop an argument that recognizes how anonymity protects the vulnerable and dissenters, then weighs this against abuse, deception, and the erosion of accountability, and reaches a balanced judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the absence of identity to online conduct. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing where the balance should lie. Audience: a digital-society readership that expects you to weigh protection against responsibility.",
+      "promptZh": "就「网络匿名是言论自由的保障还是不负责行为的护盾」写一篇 150-200 词议论文,权衡保护弱者异见与滥用、欺骗、问责弱化。",
+      "referencePoints": [
+        "argument requirements: thesis on online anonymity, concession + rebuttal, cause-effect on anonymity and conduct",
+        "structure hints: intro + two body paragraphs + conclusion proposing balance",
+        "scoring focus: reasoning on accountability, precise lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the modern obsession with efficiency improve our lives or strip them of meaning? Construct an argument that credits the time and resources efficiency saves, then weighs this against the loss of slowness, depth, and human connection, and reaches a reasoned conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning explaining how optimizing everything reshapes daily experience. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a cultural-commentary readership that expects you to interrogate efficiency rather than simply praise it.",
+      "promptZh": "就「现代对效率的痴迷是改善生活还是抽空了意义」写一篇 150-200 词议论文,权衡节省时间资源与失去从容、深度、人际联结。",
+      "referencePoints": [
+        "argument requirements: thesis on efficiency and meaning, concession + rebuttal, cause-effect on optimization and experience",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reflective reasoning, sophisticated lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should developing countries follow the development path of wealthy nations, or seek a different model? Develop an argument that recognizes the proven results of established development strategies, then weighs this against their environmental and social costs and the case for alternative paths, and defends a clear view. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking development choices to long-term outcomes. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a development-studies readership that expects critical reasoning about imitation versus innovation.",
+      "promptZh": "就「发展中国家应沿袭发达国家的发展道路还是另辟模式」写一篇 150-200 词议论文,权衡成熟策略的成效与其环境社会代价及替代路径。",
+      "referencePoints": [
+        "argument requirements: thesis on development paths, concession + rebuttal, cause-effect on choices and outcomes",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on imitation vs innovation, formal lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is the growing reliance on digital payment and a cashless society a benefit or a hidden risk? Construct an argument that acknowledges the convenience, traceability, and efficiency of cashless systems, then weighs this against exclusion of the unbanked, surveillance, and fragility, and reaches a measured conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the disappearance of cash to social consequences. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in finance and society who expect you to weigh convenience against inclusion and resilience.",
+      "promptZh": "就「日益依赖电子支付的无现金社会是益处还是隐患」写一篇 150-200 词议论文,权衡便利可追溯与无银行账户者被排斥、监控、脆弱性。",
+      "referencePoints": [
+        "argument requirements: thesis on cashless society, concession + rebuttal, cause-effect on disappearing cash and society",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on inclusion and resilience, precise lexis, logical flow",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does tourism enrich the places people visit or gradually damage them? Develop an argument that recognizes the economic and cultural benefits tourism brings, then weighs this against overcrowding, environmental strain, and the commodification of local life, and reaches a balanced position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking mass tourism to changes in host communities. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing how tourism might be made more sustainable. Audience: a readership interested in travel and society who expect you to see beyond a purely positive view.",
+      "promptZh": "就「旅游业是丰富了目的地还是逐渐损害了它们」写一篇 150-200 词议论文,权衡经济文化收益与过度拥挤、环境压力、本地生活商品化。",
+      "referencePoints": [
+        "argument requirements: thesis on tourism's impact, concession + rebuttal, cause-effect on mass tourism and host communities",
+        "structure hints: intro + two body paragraphs + conclusion on sustainability",
+        "scoring focus: balanced reasoning, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should the use of animals in scientific research be permitted when it advances human health? Construct an argument that concedes the medical benefits such research has produced, then weighs this against the ethical claims of animal welfare and the rise of alternatives, and defends a principled position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking research practices to moral and scientific consequences. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a bioethics readership that expects you to take both human benefit and animal suffering seriously.",
+      "promptZh": "就「为增进人类健康是否应允许动物实验」写一篇 150-200 词议论文,权衡医学收益与动物福利的伦理诉求和替代方法的兴起。",
+      "referencePoints": [
+        "argument requirements: thesis on animal research, concession + rebuttal, cause-effect on practices and consequences",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: bioethical reasoning, formal vocabulary, coherent argument",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Has the gig economy given workers more freedom or stripped them of security? Develop an argument that credits the flexibility and independence gig work offers, then weighs this against the loss of stable income, benefits, and protection, and reaches a reasoned conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the shift to short-term work to changes in workers' lives. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing how the model might be improved. Audience: a labour-and-economy readership that expects you to weigh autonomy against vulnerability.",
+      "promptZh": "就「零工经济给了劳动者更多自由还是剥夺了保障」写一篇 150-200 词议论文,权衡灵活独立与稳定收入、福利、保护的丧失。",
+      "referencePoints": [
+        "argument requirements: thesis on gig economy, concession + rebuttal, cause-effect on short-term work and workers' lives",
+        "structure hints: intro + two body paragraphs + conclusion on improving the model",
+        "scoring focus: reasoning on autonomy vs security, precise lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is failure a necessary part of success, or are its costs often underestimated? Construct an argument that recognizes the lessons and resilience failure can foster, then weighs this against its real psychological and material costs and the privilege of being able to recover, and reaches a measured view. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking how failure is experienced to whether it benefits a person. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in personal development who expect you to question the simple slogan that failure is always good.",
+      "promptZh": "就「失败是成功的必要部分,还是其代价常被低估」写一篇 150-200 词议论文,权衡失败带来的教训韧性与其真实的心理物质代价。",
+      "referencePoints": [
+        "argument requirements: thesis on failure and success, concession + rebuttal, cause-effect on how failure is experienced and its value",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reflective reasoning, sophisticated lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should standardized testing remain the main basis for evaluating students, or does it measure too narrow a range of ability? Develop an argument that acknowledges the fairness and comparability tests provide, then weighs this against their tendency to neglect creativity, character, and unequal preparation, and defends a clear view. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking high-stakes testing to teaching and learning. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: an education-assessment readership that expects rigorous reasoning about what tests can and cannot capture.",
+      "promptZh": "就「标准化考试是否应继续作为评价学生的主要依据,还是衡量范围过窄」写一篇 150-200 词议论文,权衡公平可比性与对创造力、品格、不平等准备的忽视。",
+      "referencePoints": [
+        "argument requirements: thesis on standardized testing, concession + rebuttal, cause-effect on high-stakes testing and learning",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on assessment, academic vocabulary, logical flow",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the constant pursuit of economic self-interest undermine a sense of community and shared responsibility? Construct an argument that recognizes how self-interest drives effort and innovation, then weighs this against the neglect of collective goods and mutual obligation, and reaches a reasoned position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking individualism to the strength of social bonds. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in ethics and society who expect you to weigh personal ambition against the common good.",
+      "promptZh": "就「不断追求经济私利是否削弱了社区意识与共同责任」写一篇 150-200 词议论文,权衡私利驱动努力创新与对公共物品、相互义务的忽视。",
+      "referencePoints": [
+        "argument requirements: thesis on self-interest and community, concession + rebuttal, cause-effect on individualism and social bonds",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on the common good, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should public health sometimes take priority over individual freedom, as debates over vaccination and restrictions suggest? Develop an argument that defends the importance of personal liberty, then weighs this against the duty to protect others and the logic of collective action, and proposes where the balance should lie. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking individual choices to community-wide outcomes. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in ethics and policy who expect careful reasoning rather than reflexive positions.",
+      "promptZh": "就「公共卫生是否有时应优先于个人自由」写一篇 150-200 词议论文,权衡个人自由与保护他人的义务及集体行动的逻辑。",
+      "referencePoints": [
+        "argument requirements: thesis on public health vs freedom, concession + rebuttal, cause-effect on individual choice and community outcomes",
+        "structure hints: intro + two body paragraphs + conclusion proposing balance",
+        "scoring focus: reasoning on liberty and duty, formal lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is the modern emphasis on constant self-improvement empowering or a source of anxiety? Construct an argument that credits the growth and discipline a self-improvement culture can foster, then weighs this against perfectionism, comparison, and the feeling of never being enough, and reaches a measured conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the pressure to optimize the self to mental well-being. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in psychology and culture who expect you to question, not merely celebrate, the self-improvement ideal.",
+      "promptZh": "就「现代对持续自我提升的强调是赋能还是焦虑之源」写一篇 150-200 词议论文,权衡成长自律与完美主义、攀比、永不满足之感。",
+      "referencePoints": [
+        "argument requirements: thesis on self-improvement culture, concession + rebuttal, cause-effect on self-optimization and well-being",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reflective psychological reasoning, nuanced lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should artistic and creative work generated by artificial intelligence be valued in the same way as human-made art? Develop an argument that acknowledges the impressive output AI can now produce, then weighs this against questions of intention, authorship, and the human meaning of creativity, and defends a clear view. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the spread of machine creativity to how we value art. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: an arts-and-technology readership that expects you to engage with what makes art meaningful.",
+      "promptZh": "就「人工智能生成的创作是否应与人类艺术同等看待」写一篇 150-200 词议论文,权衡 AI 出色产出与意图、作者身份、创造力的人文意义。",
+      "referencePoints": [
+        "argument requirements: thesis on AI art, concession + rebuttal, cause-effect on machine creativity and how we value art",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on creativity and value, sophisticated lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does urban green space deserve protection even when land is needed for housing and development? Construct an argument that concedes the pressing demand for housing and economic use of land, then weighs this against the health, environmental, and social value of parks and green areas, and defends a clear priority. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the loss of green space to urban well-being. Structure: introduction with a thesis, two body paragraphs, and a conclusion proposing how the conflict might be resolved. Audience: an urban-planning readership that expects you to weigh livability against growth.",
+      "promptZh": "就「城市绿地在土地需用于住房开发时是否仍应受保护」写一篇 150-200 词议论文,权衡住房与土地经济利用的迫切需求与绿地的健康、环境、社会价值。",
+      "referencePoints": [
+        "argument requirements: thesis on green space vs development, concession + rebuttal, cause-effect on loss of green space and well-being",
+        "structure hints: intro + two body paragraphs + conclusion resolving conflict",
+        "scoring focus: reasoning on livability vs growth, precise lexis, logical flow",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is it justified to limit certain freedoms in order to protect national security? Develop an argument that recognizes the genuine need to keep citizens safe, then weighs this against the dangers of excessive surveillance and the erosion of civil liberties, and defends a principled boundary. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking security measures to their wider social effects. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing where limits should fall. Audience: a readership concerned with politics and rights who expect rigorous reasoning rather than fear-driven conclusions.",
+      "promptZh": "就「为保护国家安全而限制某些自由是否正当」写一篇 150-200 词议论文,权衡保障民众安全的真实需要与过度监控、公民自由侵蚀的危险。",
+      "referencePoints": [
+        "argument requirements: thesis on security vs freedom, concession + rebuttal, cause-effect on security measures and social effects",
+        "structure hints: intro + two body paragraphs + conclusion on where limits fall",
+        "scoring focus: reasoning on rights and security, formal vocabulary, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the dominance of English in science and academia advance global knowledge or marginalize other voices? Construct an argument that recognizes the efficiency of a shared scholarly language, then weighs this against the exclusion of non-English researchers and the loss of diverse perspectives, and reaches a balanced position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking linguistic dominance to whose ideas are heard. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: an academic readership that expects you to weigh practical communication against equity and intellectual diversity.",
+      "promptZh": "就「英语在科学与学术界的主导地位是推进全球知识还是边缘化他者」写一篇 150-200 词议论文,权衡共同学术语言的效率与非英语研究者被排斥、视角多样性的丧失。",
+      "referencePoints": [
+        "argument requirements: thesis on English in academia, concession + rebuttal, cause-effect on linguistic dominance and whose ideas are heard",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on equity and diversity, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should we be optimistic or cautious about the promise that technology will solve humanity's greatest problems? Develop an argument that credits technology's record of progress, then weighs this against the new problems it creates and the limits of technical solutions to social issues, and reaches a measured conclusion. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking faith in technical fixes to neglected human factors. Structure: an introduction with a thesis, two body paragraphs, and a conclusion. Audience: a thoughtful general readership that expects you to avoid both blind faith and despair about technology.",
+      "promptZh": "就「对技术能解决人类最大难题的承诺应乐观还是审慎」写一篇 150-200 词议论文,权衡技术进步记录与其制造的新问题及技术解决社会问题的局限。",
+      "referencePoints": [
+        "argument requirements: thesis on techno-optimism, concession + rebuttal, cause-effect on faith in technical fixes and neglected factors",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: balanced reasoning on technology, sophisticated lexis, varied syntax",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Is it fair to expect each generation to leave the world in a better state for the next? Construct an argument that recognizes the appeal of this duty of stewardship, then weighs this against the constraints each generation faces and the difficulty of judging what is truly better, and defends a clear view. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking present choices to future inheritance. Structure: introduction with a thesis, two body paragraphs, and a conclusion. Audience: a readership interested in ethics and the long term who expect you to reason carefully about intergenerational responsibility.",
+      "promptZh": "就「期待每一代人把世界留给下一代时变得更好是否公平」写一篇 150-200 词议论文,权衡守护责任的吸引力与各代面临的约束及何为更好的难判。",
+      "referencePoints": [
+        "argument requirements: thesis on intergenerational duty, concession + rebuttal, cause-effect on present choices and future inheritance",
+        "structure hints: intro + two body paragraphs + conclusion",
+        "scoring focus: reasoning on long-term responsibility, formal lexis, coherence",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Does the way news is now produced and consumed help citizens understand the world or distort their view of it? Develop an argument that recognizes the speed and reach of modern news, then weighs this against sensationalism, fragmentation, and commercial pressures, and reaches a reasoned judgement. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking the economics of attention to the quality of information. Structure: an introduction with a thesis, two body paragraphs, and a conclusion proposing what would improve public understanding. Audience: a media-literacy readership that expects analysis of how news shapes perception.",
+      "promptZh": "就「如今新闻的生产与消费方式是帮助公民理解世界还是扭曲了认知」写一篇 150-200 词议论文,权衡速度覆盖面与煽情化、碎片化、商业压力。",
+      "referencePoints": [
+        "argument requirements: thesis on modern news, concession + rebuttal, cause-effect on attention economics and information quality",
+        "structure hints: intro + two body paragraphs + conclusion on improving understanding",
+        "scoring focus: reasoning on media and perception, advanced lexis, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    },
+    {
+      "prompt": "Write an essay of 150-200 words on the topic: Should luxury and conspicuous consumption be discouraged in a society striving for sustainability and equality? Construct an argument that acknowledges how aspiration and spending can drive economic activity and reward effort, then weighs this against the environmental waste and social resentment that conspicuous excess can generate, and defends a clear position. Argument requirements: at least one concession and one rebuttal; cause-and-effect reasoning linking patterns of consumption to ecological and social outcomes. Structure: an introduction with a thesis, two developed body paragraphs, and a conclusion proposing how society should respond. Audience: a readership interested in economics and ethics who expect you to weigh individual choice against collective consequences rather than moralize.",
+      "promptZh": "就「在追求可持续与平等的社会中是否应抑制奢侈与炫耀性消费」写一篇 150-200 词议论文,权衡消费驱动经济、奖励努力与环境浪费、社会怨恨。",
+      "referencePoints": [
+        "argument requirements: thesis on conspicuous consumption, concession + rebuttal, cause-effect on consumption patterns and ecological/social outcomes",
+        "structure hints: intro + two developed body paragraphs + conclusion proposing response",
+        "scoring focus: reasoning on individual choice vs collective consequence, advanced lexis, varied syntax, cohesion",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "150-200"
+    }
+  ]
+}

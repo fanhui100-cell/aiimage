@@ -1,0 +1,30 @@
+{
+  "templateId": "sat-expression-of-ideas",
+  "examIds": ["sat"],
+  "taskType": "reading_comprehension",
+  "skill": "writing",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "Digital SAT R&W — Expression of Ideas。25-150 词的句群/学生笔记（notes）或短段落 + 1 道四选一，考 transitions / rhetorical synthesis / logical organization。让用户选最合适的过渡词或最能达成给定写作目的的句子。重表达目的、过渡与信息整合，不能写成普通阅读理解。Claude 亲撰，不抄真题，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 25,
+    "maxWords": 150,
+    "perStimulusItems": 1,
+    "topicDomains": ["science", "history", "social_science", "humanities", "student_notes"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "single_choice", "choices": 4, "domain": "Expression of Ideas" },
+  "subskills": ["transitions", "rhetorical_synthesis", "logical_organization"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 College Board 真题",
+    "短文本/笔记 25-150 词，单题四选一",
+    "考过渡词/修辞综合/逻辑组织，题干给明确写作目的",
+    "不得写成普通阅读理解；干扰项须似可而实不达目的",
+    "qa_flags.domain 必须为 expression_of_ideas",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

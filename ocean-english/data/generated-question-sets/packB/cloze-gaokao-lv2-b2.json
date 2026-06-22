@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B2. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic/collocation. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "My little sister Lily had wanted to ride a bicycle for months, so one Saturday I (1)___ to teach her. She was excited but also a little (2)___, gripping the handlebars far too tightly. At first, every attempt ended the same way: the bike wobbled, she lost her (3)___, and I caught her before she fell. After the tenth time, she sat on the grass and said she would never (4)___ it. I remembered how my father had taught me, so I tried his (5)___. Instead of telling her to be careful, I told her to look ahead at where she wanted to (6)___, not down at the ground. 'The bike goes,' I said, 'where your eyes go.' Something (7)___. The next time she pushed off, she kept her head up, and for a few wonderful seconds she was actually (8)___ on her own. Her face filled with pure (9)___. She fell again, of course, but now each fall only made her more (10)___ to try again. By sunset she was riding shaky circles around the park, laughing (11)___. Watching her, I understood that you cannot give someone (12)___; you can only help them find their own. The best thing I did was not to hold the bike but to change where she was (13)___. Sometimes the only thing between a person and success is (14)___ they choose to look. And once Lily looked forward, nothing could (15)___ her.",
+      "blanks": [
+        { "options": ["refused", "offered", "waited", "forgot"], "answer": "B" },
+        { "options": ["bored", "nervous", "angry", "proud"], "answer": "B" },
+        { "options": ["balance", "way", "voice", "temper"], "answer": "A" },
+        { "options": ["manage", "need", "like", "watch"], "answer": "A" },
+        { "options": ["bike", "method", "voice", "rule"], "answer": "B" },
+        { "options": ["sit", "go", "stop", "fall"], "answer": "B" },
+        { "options": ["broke", "changed", "waited", "ended"], "answer": "B" },
+        { "options": ["sitting", "riding", "falling", "standing"], "answer": "B" },
+        { "options": ["fear", "joy", "doubt", "anger"], "answer": "B" },
+        { "options": ["afraid", "determined", "tired", "unwilling"], "answer": "B" },
+        { "options": ["sadly", "happily", "quietly", "nervously"], "answer": "B" },
+        { "options": ["money", "balance", "time", "advice"], "answer": "B" },
+        { "options": ["sitting", "looking", "standing", "riding"], "answer": "B" },
+        { "options": ["when", "where", "what", "how"], "answer": "B" },
+        { "options": ["help", "stop", "follow", "teach"], "answer": "B" }
+      ],
+      "explain_zh": "1offered主动 2nervous紧张 3balance平衡 4manage学不会 5method方法 6go去向 7changed变化 8riding在骑 9joy喜悦 10determined更坚定 11happily开心 12balance(回扣)平衡 13looking看向 14where看向何处 15stop阻挡。"
+    },
+    {
+      "passage": "Last winter, while travelling alone in a foreign country, I got hopelessly (1)___. My phone had died, the streets all looked the same, and the few signs I could see were in a language I could not (2)___. As the sky grew dark, I began to feel truly (3)___. I had no idea how to get back to my hotel, and no one around seemed to speak my (4)___. Finally, gathering my courage, I (5)___ an elderly woman carrying groceries. Using my hands more than my words, I showed her the name of my hotel on a card. She studied it, then (6)___ warmly and signalled for me to follow. She walked with me for nearly twenty minutes, well out of her own (7)___, chatting cheerfully in words I could not understand but somehow found (8)___. When we reached the hotel, I tried to give her some money, but she firmly (9)___, pressing her hand to her heart instead. We shared no common (10)___, and I never even learned her name, yet her kindness to a frightened stranger was perfectly (11)___. Since then, whenever I see a lost or confused (12)___ in my own city, I remember her and stop to (13)___. Kindness, I have learned, needs no (14)___ translation. It is a language every human being already (15)___.",
+      "blanks": [
+        { "options": ["tired", "lost", "bored", "late"], "answer": "B" },
+        { "options": ["read", "write", "hear", "buy"], "answer": "A" },
+        { "options": ["happy", "scared", "proud", "calm"], "answer": "B" },
+        { "options": ["name", "language", "mind", "country"], "answer": "B" },
+        { "options": ["ignored", "approached", "followed", "called"], "answer": "B" },
+        { "options": ["cried", "smiled", "shouted", "frowned"], "answer": "B" },
+        { "options": ["home", "way", "shop", "time"], "answer": "B" },
+        { "options": ["comforting", "boring", "frightening", "annoying"], "answer": "A" },
+        { "options": ["agreed", "refused", "asked", "paid"], "answer": "B" },
+        { "options": ["language", "money", "home", "food"], "answer": "A" },
+        { "options": ["clear", "strange", "hidden", "wrong"], "answer": "A" },
+        { "options": ["friend", "stranger", "child", "driver"], "answer": "B" },
+        { "options": ["help", "stare", "rest", "leave"], "answer": "A" },
+        { "options": ["modern", "spoken", "perfect", "foreign"], "answer": "B" },
+        { "options": ["speaks", "forgets", "teaches", "buys"], "answer": "A" }
+      ],
+      "explain_zh": "1lost迷路 2read读不懂(标志) 3scared害怕 4language语言 5approached上前 6smiled微笑 7way绕路 8comforting莫名安心 9refused拒收 10language共同语言 11clear清晰可感 12stranger陌生人 13help帮忙 14spoken口头翻译 15speaks人人会说。"
+    },
+    {
+      "passage": "For three years I had practised the piano almost every day, dreaming of winning the city competition. When the day finally (1)___, I was sure I was ready. But as I sat down before the silent audience, my confidence suddenly (2)___. My fingers felt stiff and cold, and halfway through the piece my mind went completely (3)___: I had forgotten the notes. For one terrible moment I sat frozen, certain that all my work had been (4)___. Then I remembered what my teacher always said: 'Music is not about being perfect; it is about not (5)___.' So instead of stopping, I took a slow breath and kept (6)___, improvising softly until the real notes came back. Somehow, I reached the end. I did not win, or even come close, yet walking off the stage I felt strangely (7)___. I had faced my worst fear, made a public mistake, and (8)___ anyway. Afterwards my teacher hugged me. 'Today,' she said, 'you learned something far more (9)___ than any prize. You learned that a mistake is not the (10)___ of a performance.' She was right. The students who won have long since (11)___ their trophies somewhere, but I still carry the (12)___ of that stage with me. It taught me that courage is not the absence of (13)___, but the choice to continue (14)___ it. And that lesson, unlike a trophy, I will never (15)___.",
+      "blanks": [
+        { "options": ["ended", "arrived", "passed", "changed"], "answer": "B" },
+        { "options": ["grew", "vanished", "returned", "helped"], "answer": "B" },
+        { "options": ["wild", "blank", "clear", "bright"], "answer": "B" },
+        { "options": ["rewarded", "wasted", "noticed", "saved"], "answer": "B" },
+        { "options": ["trying", "stopping", "practising", "listening"], "answer": "B" },
+        { "options": ["playing", "crying", "waiting", "counting"], "answer": "A" },
+        { "options": ["angry", "proud", "bored", "jealous"], "answer": "B" },
+        { "options": ["left", "continued", "refused", "failed"], "answer": "B" },
+        { "options": ["boring", "valuable", "expensive", "difficult"], "answer": "B" },
+        { "options": ["start", "end", "point", "cause"], "answer": "B" },
+        { "options": ["sold", "put", "shown", "cleaned"], "answer": "B" },
+        { "options": ["fear", "memory", "sound", "prize"], "answer": "B" },
+        { "options": ["skill", "fear", "hope", "noise"], "answer": "B" },
+        { "options": ["despite", "without", "before", "beyond"], "answer": "A" },
+        { "options": ["win", "forget", "need", "find"], "answer": "B" }
+      ],
+      "explain_zh": "1arrived到来 2vanished消失 3blank空白 4wasted白费 5stopping不停下 6playing继续弹 7proud自豪 8continued仍完成 9valuable宝贵 10end终点 11put放置某处 12memory记忆 13fear恐惧 14despite不顾 15forget忘记。"
+    },
+    {
+      "passage": "When my grandfather gave me a tiny tree seedling for my tenth birthday, I was honestly a little (1)___. My friends had received toys; I had been given a stick with a few leaves. 'Plant it,' he said, 'and look after it. One day it will (2)___ you.' Doubtful but obedient, I planted the seedling and (3)___ it every day. For a long time nothing seemed to (4)___. While I grew taller and changed schools, the little tree rose only a few centimetres a year, and more than once I (5)___ interest and forgot to water it for weeks. Yet the tree (6)___. Slowly, almost too slowly to notice, it thickened and spread, until it was tall enough to give a patch of (7)___ on hot afternoons. My grandfather passed away when I was eighteen. That summer, grieving, I sat for hours beneath the tree, and for the first time I truly (8)___ his gift. He had not given me a toy to enjoy for a week, but a living lesson in (9)___: proof that the most worthwhile things grow (10)___, and reward those willing to (11)___. Today the tree is taller than the house, and birds nest in its (12)___. Whenever life asks me to wait for something that matters, I think of that seedling and the man who knew that some gifts are meant to be (13)___ slowly. The best things, he taught me without a single (14)___, are worth the (15)___.",
+      "blanks": [
+        { "options": ["excited", "disappointed", "proud", "afraid"], "answer": "B" },
+        { "options": ["reward", "follow", "leave", "cost"], "answer": "A" },
+        { "options": ["watered", "sold", "moved", "drew"], "answer": "A" },
+        { "options": ["happen", "stop", "end", "matter"], "answer": "A" },
+        { "options": ["lost", "found", "showed", "kept"], "answer": "A" },
+        { "options": ["died", "survived", "fell", "waited"], "answer": "B" },
+        { "options": ["light", "shade", "colour", "fruit"], "answer": "B" },
+        { "options": ["refused", "understood", "lost", "sold"], "answer": "B" },
+        { "options": ["patience", "science", "music", "history"], "answer": "A" },
+        { "options": ["quickly", "slowly", "wildly", "easily"], "answer": "B" },
+        { "options": ["wait", "pay", "leave", "fight"], "answer": "A" },
+        { "options": ["roots", "branches", "shadow", "trunk"], "answer": "B" },
+        { "options": ["enjoyed", "thrown", "bought", "hidden"], "answer": "A" },
+        { "options": ["gift", "word", "tree", "prize"], "answer": "B" },
+        { "options": ["money", "wait", "risk", "trouble"], "answer": "B" }
+      ],
+      "explain_zh": "1disappointed失望 2reward回报 3watered浇水 4happen发生 5lost失去兴趣 6survived活下来 7shade树荫 8understood读懂 9patience耐心 10slowly缓慢 11wait等待 12branches枝头 13enjoyed慢慢享受 14word一言未发 15wait值得等。"
+    },
+    {
+      "passage": "At first, I volunteered at the community centre only because my school (1)___ it. My task was to help elderly residents learn to use smartphones, and I expected to be thoroughly (2)___. My first student was a man in his eighties named Mr. Chen. He held the phone as if it might (3)___ at any moment, and our first lesson was slow and (4)___. He forgot each step almost as soon as I had shown it, and I had to (5)___ everything many times. I will admit that at first I felt (6)___. But as the weeks passed, something in me began to change. I noticed how hard Mr. Chen (7)___, how he wrote every instruction in a little notebook, and how much it (8)___ to him to reach his grandchildren far away. The day he managed, entirely on his own, to make his first video (9)___ to his granddaughter, his face shone with a happiness I will never (10)___. In that moment I understood that I was not really teaching him about (11)___; I was helping him stay close to the people he (12)___. By the end of the programme, Mr. Chen could do far more than I had expected, and I had gained far more than I had (13)___ to give. I had signed up to earn a few school (14)___; I left having learned what patience and connection truly (15)___.",
+      "blanks": [
+        { "options": ["banned", "required", "enjoyed", "ignored"], "answer": "B" },
+        { "options": ["bored", "paid", "praised", "afraid"], "answer": "A" },
+        { "options": ["ring", "break", "help", "grow"], "answer": "B" },
+        { "options": ["easy", "difficult", "funny", "short"], "answer": "B" },
+        { "options": ["repeat", "finish", "change", "hide"], "answer": "A" },
+        { "options": ["proud", "frustrated", "excited", "calm"], "answer": "B" },
+        { "options": ["tried", "slept", "complained", "left"], "answer": "A" },
+        { "options": ["meant", "cost", "helped", "said"], "answer": "A" },
+        { "options": ["game", "call", "photo", "song"], "answer": "B" },
+        { "options": ["win", "forget", "need", "reach"], "answer": "B" },
+        { "options": ["school", "phones", "reading", "music"], "answer": "B" },
+        { "options": ["met", "loved", "feared", "taught"], "answer": "B" },
+        { "options": ["refused", "expected", "promised", "tried"], "answer": "B" },
+        { "options": ["friends", "credits", "prizes", "lessons"], "answer": "B" },
+        { "options": ["mean", "cost", "need", "hide"], "answer": "A" }
+      ],
+      "explain_zh": "1required学校要求 2bored以为会无聊 3break怕弄坏 4difficult艰难 5repeat反复教 6frustrated受挫 7tried努力 8meant意义重大 9call视频通话 10forget难忘 11phones手机(其实) 12loved所爱之人 13expected超出预期 14credits学分 15mean真正含义。"
+    }
+  ]
+}

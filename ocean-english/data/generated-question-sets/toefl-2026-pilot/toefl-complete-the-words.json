@@ -1,0 +1,66 @@
+{
+  "template": "toefl-complete-the-words",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Many animals change their behavior when the seasons shift, traveling long distances to find food or warmer places. This yearly movement is called migration, and it helps species survive.",
+      "targetWord": "migration",
+      "maskedForm": "mig______",
+      "explain_zh": "上下文「yearly movement... helps species survive」指动物的季节性迁徙，唯一可补全为 migration。"
+    },
+    {
+      "passage": "In ancient Rome, large stone channels carried fresh water from distant mountains into the city. These structures, known as aqueducts, allowed crowded towns to grow far from rivers.",
+      "targetWord": "aqueducts",
+      "maskedForm": "aq_____ts",
+      "explain_zh": "上下文「stone channels carried fresh water from distant mountains」描述古罗马输水道，结构名为 aqueducts。"
+    },
+    {
+      "passage": "When too much money chases too few goods, prices across an economy tend to rise over time. Economists call this steady increase in prices inflation, and it reduces what each dollar can buy.",
+      "targetWord": "inflation",
+      "maskedForm": "inf______",
+      "explain_zh": "上下文「steady increase in prices... reduces what each dollar can buy」是通货膨胀的定义，补全为 inflation。"
+    },
+    {
+      "passage": "Modern phones keep information in tiny electronic circuits instead of on spinning disks. Because there are no moving parts, this type of storage is faster, quieter, and far more durable than older drives.",
+      "targetWord": "durable",
+      "maskedForm": "dur____",
+      "explain_zh": "上下文「no moving parts... faster, quieter, and far more ___ than older drives」强调更耐用，补全为 durable。"
+    },
+    {
+      "passage": "Rainforests hold an enormous variety of plants and animals, many found nowhere else on Earth. Scientists value this rich biodiversity because each species plays a role in keeping the whole system balanced.",
+      "targetWord": "biodiversity",
+      "maskedForm": "biodiv______",
+      "explain_zh": "上下文「enormous variety of plants and animals... each species plays a role」指生物多样性，补全为 biodiversity。"
+    },
+    {
+      "passage": "Doctors recommend regular exercise because it strengthens the heart and improves blood flow. Over time, physical activity can lower the risk of many serious diseases and help people live longer.",
+      "targetWord": "diseases",
+      "maskedForm": "dis_____",
+      "explain_zh": "上下文「lower the risk of many serious ___ and help people live longer」指疾病，补全为 diseases。"
+    },
+    {
+      "passage": "A symphony brings together many instruments, each playing its own part. The musician who guides them, setting the speed and balancing the sound, is the conductor of the orchestra.",
+      "targetWord": "conductor",
+      "maskedForm": "con______",
+      "explain_zh": "上下文「the musician who guides them, setting the speed and balancing the sound」指挥家，补全为 conductor。"
+    },
+    {
+      "passage": "Children learn their first language quickly, without formal lessons, simply by listening to those around them. Linguists study how the human brain makes this remarkable process of acquisition possible.",
+      "targetWord": "acquisition",
+      "maskedForm": "acqu_______",
+      "explain_zh": "上下文「Children learn their first language... process of ___」指语言习得，补全为 acquisition。"
+    },
+    {
+      "passage": "A star like our Sun produces energy by fusing hydrogen deep in its core. When a much larger star finally runs out of fuel, it can collapse and explode in a brilliant supernova.",
+      "targetWord": "supernova",
+      "maskedForm": "super____",
+      "explain_zh": "上下文「a much larger star... collapse and explode in a brilliant ___」指超新星爆发，补全为 supernova。"
+    },
+    {
+      "passage": "As more people move from the countryside into cities in search of work, towns expand rapidly and new neighborhoods appear. Geographers refer to this worldwide shift toward city living as urbanization.",
+      "targetWord": "urbanization",
+      "maskedForm": "urban_______",
+      "explain_zh": "上下文「shift toward city living」指城市化，补全为 urbanization。"
+    }
+  ]
+}

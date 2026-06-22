@@ -1,0 +1,56 @@
+{
+  "template": "toefl-build-a-sentence",
+  "level": 6,
+  "sets": [
+    {
+      "chunks": ["into two teams", "the players", "The coach", "divided"],
+      "answer": [2, 3, 1, 0],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The coach divided the players into two teams."
+    },
+    {
+      "chunks": ["with her old one", "compared", "My aunt", "the new phone"],
+      "answer": [2, 1, 3, 0],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：My aunt compared the new phone with her old one."
+    },
+    {
+      "chunks": ["of the deadline", "the students", "reminded", "The teacher"],
+      "answer": [3, 2, 1, 0],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The teacher reminded the students of the deadline."
+    },
+    {
+      "chunks": ["the guests", "with fresh towels", "The waiter", "provided"],
+      "answer": [2, 3, 0, 1],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The waiter provided the guests with fresh towels."
+    },
+    {
+      "chunks": ["to the old town", "The guide", "the tourists", "introduced"],
+      "answer": [1, 3, 2, 0],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The guide introduced the tourists to the old town."
+    },
+    {
+      "chunks": ["the delay", "to bad weather", "attributed", "The article"],
+      "answer": [3, 2, 0, 1],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The article attributed the delay to bad weather."
+    },
+    {
+      "chunks": ["the empty hall", "into a library", "The committee", "transformed"],
+      "answer": [2, 3, 0, 1],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The committee transformed the empty hall into a library."
+    },
+    {
+      "chunks": ["on their success", "the team", "The manager", "congratulated"],
+      "answer": [2, 3, 1, 0],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The manager congratulated the team on their success."
+    },
+    {
+      "chunks": ["the village", "with fresh milk", "supplied", "The farmer"],
+      "answer": [3, 2, 0, 1],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The farmer supplied the village with fresh milk."
+    },
+    {
+      "chunks": ["based", "on the evidence", "The judge", "her decision"],
+      "answer": [2, 0, 3, 1],
+      "explain_zh": "参考语序(canonical，非唯一合法解)：The judge based her decision on the evidence."
+    }
+  ]
+}

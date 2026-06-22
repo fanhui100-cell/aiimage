@@ -1,0 +1,107 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao reading, batch C2. Short simple passages (~130-160 words), 4 MCQs each (detail/main idea/inference/vocab). DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Last summer, twelve-year-old Anna learned an important lesson at the swimming pool. One hot afternoon, she saw a little boy fall into the deep water. The boy could not swim, and he began to wave his arms in fear. Anna was a good swimmer, but she remembered her teacher's words: never jump in to save someone unless you are trained. So instead of jumping in, she quickly threw the boy a floating ring and shouted for the lifeguard. The lifeguard ran over at once and pulled the boy out safely. Everyone said Anna was a hero, but Anna shook her head. 'I did not save him by being brave,' she said. 'I helped him by staying calm and thinking clearly.' Her story teaches us that in an emergency, a clear head is often more useful than a brave heart.",
+      "questions": [
+        { "prompt": "What did Anna see at the pool?", "options": ["A boy fall into the deep water.", "A dog swimming.", "Her teacher diving.", "A storm coming."], "answer": "A" },
+        { "prompt": "What did Anna do to help?", "options": ["She jumped in at once.", "She threw a floating ring and called the lifeguard.", "She ran away in fear.", "She did nothing."], "answer": "B" },
+        { "prompt": "Why didn't Anna jump into the water?", "options": ["She could not swim.", "She remembered not to jump in unless trained.", "The water was too cold.", "She was too tired."], "answer": "B" },
+        { "prompt": "What does Anna's story teach us?", "options": ["Always jump in to save people.", "In an emergency, a clear head is often more useful than a brave heart.", "Swimming is too dangerous.", "Never go to a swimming pool."], "answer": "B" }
+      ],
+      "explain_zh": "细节(A 男孩落入深水)、细节(B 抛救生圈并喊救生员)、细节(B 未受训不贸然下水)、主旨(B 冷静的头脑常比勇敢的心更有用)。"
+    },
+    {
+      "passage": "In our science class last week, we did an exciting experiment about plants. Our teacher, Miss Zhao, gave each group two small plants. We put one plant on the sunny windowsill and the other inside a dark cupboard. We gave both plants the same amount of water every day. After two weeks, we took them out to compare. The plant in the sunlight was green, strong and healthy. But the plant from the dark cupboard was thin, yellow and weak. The experiment showed us clearly that plants need sunlight to grow well. Miss Zhao explained that plants use sunlight to make their own food. I had read about this in books before, but seeing it with my own eyes made me understand it much better. Now I will never forget why plants need the sun.",
+      "questions": [
+        { "prompt": "How many plants did each group receive?", "options": ["One.", "Two.", "Three.", "Four."], "answer": "B" },
+        { "prompt": "Where did the students put the two plants?", "options": ["Both in the sunlight.", "One in sunlight and one in a dark cupboard.", "Both in water.", "Both outside in the rain."], "answer": "B" },
+        { "prompt": "What happened to the plant in the dark cupboard?", "options": ["It grew tall and green.", "It became thin, yellow and weak.", "It died on the first day.", "Nothing changed at all."], "answer": "B" },
+        { "prompt": "What did the experiment show?", "options": ["Plants need sunlight to grow well.", "Plants do not need any water.", "Cupboards are best for plants.", "Plants can speak."], "answer": "A" }
+      ],
+      "explain_zh": "细节(B 两株)、细节(B 一阳光一暗柜)、细节(B 暗处的瘦黄弱)、主旨(A 植物需阳光才长好)。"
+    },
+    {
+      "passage": "When David, a student from Australia, joined our class, he could not speak much Chinese. At first, he looked lonely and a little lost. Many of us wanted to help, but we were too shy to speak English. Then our monitor, Lily, had a good idea. She made a 'buddy plan': each week, a different student would help David. We took turns showing him around the school, eating lunch with him, and teaching him simple Chinese words. In return, David helped us practise our English. Soon, David was no longer lonely. He learned to use chopsticks, sang Chinese songs, and even joined our basketball team. Helping David was good for us too: our English improved, and we made a wonderful new friend. We learned that a small act of kindness can cross any language and bring people together.",
+      "questions": [
+        { "prompt": "Where is David from?", "options": ["China.", "Australia.", "America.", "Japan."], "answer": "B" },
+        { "prompt": "What was Lily's idea?", "options": ["To ignore David completely.", "A 'buddy plan' to take turns helping David.", "To send David back home.", "To give David money."], "answer": "B" },
+        { "prompt": "What did David do in return?", "options": ["He taught them maths.", "He helped them practise English.", "He cooked their lunch.", "He did nothing for them."], "answer": "B" },
+        { "prompt": "What did the class learn?", "options": ["That learning Chinese is impossible.", "That a small act of kindness can bring people together.", "That David did not like the class.", "That English is useless."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 来自澳大利亚)、细节(B 轮流帮助的'伙伴计划')、细节(B 他帮大家练英语)、主旨(B 小小善意能跨越语言、拉近彼此)。"
+    },
+    {
+      "passage": "Every morning before classes begin, our school comes alive with the sound of music and friendly voices. This is our school radio station, run entirely by students. It started two years ago with just three members. Now, more than twenty students work for it. They play music, share school news, read interesting stories, and even give weather reports. My favourite part is 'Student Stars', when they talk about a classmate who has done something kind or special. Working for the radio station is not easy. The members must arrive early, write their own programmes, and speak clearly in front of a microphone. But they say it is worth it. They have learned how to speak in public, work as a team, and serve their school. The radio station has become the cheerful heart of our school mornings.",
+      "questions": [
+        { "prompt": "Who runs the school radio station?", "options": ["The teachers.", "The students.", "The parents.", "The headmaster alone."], "answer": "B" },
+        { "prompt": "How many members does it have now?", "options": ["Three.", "Ten.", "More than twenty.", "One hundred."], "answer": "C" },
+        { "prompt": "What is the writer's favourite part?", "options": ["The weather report.", "'Student Stars', about a kind classmate.", "The morning music.", "The school news."], "answer": "B" },
+        { "prompt": "What have the radio members learned?", "options": ["How to cook meals.", "How to speak in public and work as a team.", "How to drive a car.", "Nothing useful at all."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 学生运营)、细节(C 二十多名成员)、细节(B 最爱'学生之星')、细节(B 学会公开演讲与团队协作)。"
+    },
+    {
+      "passage": "For my summer holiday project, I decided to grow a sunflower and keep a diary about it. On the first day, I planted a single small seed in a pot and put it on my balcony. For a whole week, nothing happened, and I almost gave up. Then, on day eight, a tiny green shoot appeared. I was so excited that I drew a picture of it. Every day after that, I watered it, measured it, and wrote down what I saw. The sunflower grew faster than I had expected. I noticed something strange and wonderful: its flower always turned to face the sun, following it from morning to evening. By the end of the summer, my sunflower was taller than me! Keeping the diary taught me to be patient and to look closely at the small wonders of nature that we usually walk past without noticing.",
+      "questions": [
+        { "prompt": "What did the writer decide to grow?", "options": ["A rose.", "A sunflower.", "A small tree.", "A vegetable."], "answer": "B" },
+        { "prompt": "When did the green shoot first appear?", "options": ["On day one.", "On day eight.", "After a whole month.", "It never appeared."], "answer": "B" },
+        { "prompt": "What strange thing did the writer notice?", "options": ["The flower changed colour.", "Its flower always turned to face the sun.", "It made a strange noise.", "It moved its own pot."], "answer": "B" },
+        { "prompt": "What did keeping the diary teach the writer?", "options": ["That gardening is useless.", "To be patient and notice the small wonders of nature.", "To stay indoors all summer.", "That sunflowers are boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 向日葵)、细节(B 第八天发芽)、细节(B 花朝向太阳)、主旨(B 学会耐心、留意自然的微小奇迹)。"
+    },
+    {
+      "passage": "In our neighbourhood, there is a clever new way to use old bikes. It is called the 'Bike Library'. People who have a bicycle they no longer need can give it to the Bike Library instead of throwing it away. Volunteers repair the old bikes and paint them bright yellow. Then anyone in the neighbourhood can borrow one for free when they need to go somewhere. The idea came from a man named Mr. Zhou, who hated seeing good bikes left to rust. 'A bike that is not used helps no one,' he said. The Bike Library has been a great success. It has given new life to over a hundred old bikes, helped people who cannot afford a car, and reduced pollution in our town. Best of all, it has shown everyone that one person's rubbish can become a gift to the whole community.",
+      "questions": [
+        { "prompt": "What is the 'Bike Library'?", "options": ["A place to buy new bikes.", "A way to repair and share old bikes for free.", "A library full of books.", "A bike repair shop that charges money."], "answer": "B" },
+        { "prompt": "What colour are the repaired bikes painted?", "options": ["Red.", "Bright yellow.", "Blue.", "Black."], "answer": "B" },
+        { "prompt": "Why did Mr. Zhou start the Bike Library?", "options": ["To make a lot of money.", "Because he hated seeing good bikes left to rust.", "To win a school prize.", "Because he had too many bikes."], "answer": "B" },
+        { "prompt": "What does the Bike Library show everyone?", "options": ["That old bikes are useless.", "That one person's rubbish can become a gift to the community.", "That everyone should buy a car.", "That bikes cause pollution."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 修好并免费共享旧车)、细节(B 漆成亮黄)、细节(B 不忍好车生锈)、主旨(B 一人的废物可成全社区的礼物)。"
+    },
+    {
+      "passage": "Our school has a small room called the Lost and Found. It is full of things that students have dropped or forgotten: gloves, water bottles, books, and even a single shoe! Mr. Brown, the kind old man who looks after it, knows every item. Last winter, I lost my favourite scarf, a gift from my grandmother. I was very sad and thought I would never see it again. My mother suggested I check the Lost and Found. To my great joy, Mr. Brown had kept it safe for two whole weeks. He smiled and said, 'I knew someone would come for it.' That day, I learned how much the Lost and Found really matters. Thanks to Mr. Brown's care, things that seem lost forever can find their way home. Now, whenever I find something that is not mine, I always take it straight to him.",
+      "questions": [
+        { "prompt": "What can be found in the Lost and Found?", "options": ["New school books for sale.", "Things students have dropped or forgotten.", "Food and drinks.", "Toys to buy."], "answer": "B" },
+        { "prompt": "What did the writer lose?", "options": ["A library book.", "A scarf, a gift from her grandmother.", "A glove.", "A pair of shoes."], "answer": "B" },
+        { "prompt": "How long had Mr. Brown kept the scarf?", "options": ["One day.", "Two whole weeks.", "A whole year.", "Only an hour."], "answer": "B" },
+        { "prompt": "What does the writer do now when she finds something?", "options": ["Keeps it for herself.", "Takes it straight to Mr. Brown.", "Throws it away.", "Sells it to others."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 学生遗失之物)、细节(B 奶奶送的围巾)、细节(B 保存了两周)、推断(B 把捡到的东西送去失物招领)。"
+    },
+    {
+      "passage": "For a long time, I thought housework was boring and not my job. My parents did everything: cooking, cleaning and washing. Then one week, my mother became ill and had to rest in bed. Suddenly, my father and I had to do all the housework ourselves. It was much harder than I had imagined! The kitchen got dirty so quickly, and folding clothes took forever. By the end of the week, I was exhausted. But I also felt proud. I had learned to cook simple meals, wash dishes, and keep my room tidy. Most importantly, I finally understood how much work my mother did every day without ever complaining. When she got better, I promised to help more around the house. Now I do my own washing and help cook dinner twice a week. Housework, I have learned, is a way of showing love for our family.",
+      "questions": [
+        { "prompt": "What did the writer think about housework at first?", "options": ["That it was fun and easy.", "That it was boring and not his job.", "That it was very important.", "That it was his favourite thing."], "answer": "B" },
+        { "prompt": "Why did the writer have to do housework?", "options": ["His mother became ill.", "He wanted to earn money.", "His school made him do it.", "It was for a competition."], "answer": "A" },
+        { "prompt": "What did the writer finally understand?", "options": ["That housework is very easy.", "How much his mother did every day.", "That he disliked his family.", "That cleaning is useless."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Children should never do housework.", "Housework is a way of showing love for our family.", "Parents should do everything.", "Cooking is impossible to learn."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 起初觉无聊、与己无关)、细节(A 妈妈生病)、细节(B 体会妈妈每日辛劳)、主旨(B 家务是对家人的爱)。"
+    },
+    {
+      "passage": "Last Sunday, I was a volunteer at the city marathon for the first time. My job, together with five classmates, was to give water to the runners. We had to wake up at five in the morning, which was very hard! At first, the work seemed simple, but when thousands of runners came rushing towards us, we became incredibly busy. We handed out cups of water as fast as we could, shouting words of encouragement: 'You can do it! Keep going!' Some runners were so tired that our cheers seemed to give them new energy. One old man even stopped to thank us with a big smile. By the afternoon, my arms ached and my voice was nearly gone. But I felt happier than I had in a long time. Helping those runners reach their goal, even in such a small way, made me feel that I was part of something big and wonderful.",
+      "questions": [
+        { "prompt": "What was the writer's job at the marathon?", "options": ["To run the whole marathon.", "To give water to the runners.", "To sell entrance tickets.", "To take photographs."], "answer": "B" },
+        { "prompt": "When did the volunteers have to wake up?", "options": ["At noon.", "At five in the morning.", "In the evening.", "At midnight."], "answer": "B" },
+        { "prompt": "What did the volunteers shout to the runners?", "options": ["Words of encouragement.", "Angry words.", "Nothing at all.", "Directions to go home."], "answer": "A" },
+        { "prompt": "How did the writer feel afterwards?", "options": ["Bored and angry.", "Happy, like part of something big and wonderful.", "Sad and lonely.", "Frightened."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 给跑者递水)、细节(B 清晨五点起床)、细节(A 喊鼓励的话)、推断(B 感到幸福、是大事的一部分)。"
+    },
+    {
+      "passage": "Behind our school, there used to be several stray cats living in the cold. They were thin, dirty and always hungry. A group of students, led by my friend Mei, decided to help them. With their teacher's permission, they built a small wooden shelter and filled it with warm blankets. Every day, the students take turns to bring food and clean water for the cats. They also raised money to take the sickest cats to the animal doctor. Slowly, the cats grew healthier and friendlier, and some have even found new homes with kind families. Mei says that caring for the cats has taught her group a lot about responsibility. 'They depend on us,' she says, 'so we cannot be lazy.' The little shelter, which the students proudly call 'Cat Home', is now a warm and happy place, all because a few young people chose to care.",
+      "questions": [
+        { "prompt": "What were the cats like at first?", "options": ["Fat and happy.", "Thin, dirty and hungry.", "Wild and dangerous.", "Sleeping all day."], "answer": "B" },
+        { "prompt": "What did the students build for the cats?", "options": ["A new classroom.", "A small wooden shelter with warm blankets.", "A swimming pool.", "A vegetable garden."], "answer": "B" },
+        { "prompt": "What did the students do for the sickest cats?", "options": ["Sent them far away.", "Raised money to take them to the animal doctor.", "Ignored them.", "Sold them for money."], "answer": "B" },
+        { "prompt": "What has caring for the cats taught Mei's group?", "options": ["That cats are useless.", "A lot about responsibility.", "To be lazy.", "To dislike animals."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 起初瘦脏饿)、细节(B 建木屋铺暖毯)、细节(B 筹钱带病猫看医生)、主旨(B 学到责任感)。"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T09:08:44.239Z",
+  "apply": false,
+  "stage": "packG",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packG\\grammar-fill-zhongkao-lv1-g1.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packG\\grammar-fill-zhongkao-lv1-g2.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packG\\grammar-fill-zhongkao-lv1-g3.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packG\\grammar-fill-zhongkao-lv1-g4.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packG\\grammar-fill-zhongkao-lv1-g5.json",
+      "template": "zhongkao-grammar-fill",
+      "level": 1,
+      "parsedOk": 8,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

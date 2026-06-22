@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T05:12:36.862Z",
+  "apply": true,
+  "stage": "prod-cet6-trans",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 51,
+    "wrote": 0,
+    "dup": 51,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-cet6-trans\\cet6-translation.productive.json",
+      "examId": "cet6",
+      "taskType": "translation_zh_en",
+      "level": 4,
+      "skill": "translation",
+      "tasks": 51,
+      "wrote": 0,
+      "dup": 51
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-21T17:55:21.903Z",
+  "apply": true,
+  "stage": "sat-expr",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\sat-expr\\expr-batch1.json",
+      "template": "sat-expression-of-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-expr\\expr-batch2.json",
+      "template": "sat-expression-of-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-expr\\expr-batch3.json",
+      "template": "sat-expression-of-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-expr\\expr-batch4.json",
+      "template": "sat-expression-of-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    }
+  ]
+}

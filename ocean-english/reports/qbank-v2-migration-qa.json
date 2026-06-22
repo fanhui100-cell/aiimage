@@ -1,21 +1,12 @@
 {
-  "generatedAt": "2026-06-20T17:14:13.826Z",
-  "status": "not_applied",
-  "missingTables": [
-    "exam_specs",
-    "exam_sections",
-    "task_templates",
-    "stimuli",
-    "audio_assets",
-    "rubrics",
-    "question_sets",
-    "question_items",
-    "question_target_words",
-    "paper_instances",
-    "paper_sections",
-    "paper_attempts",
-    "question_attempts",
-    "skill_states",
-    "daily_plan_items"
-  ]
+  "generatedAt": "2026-06-20T21:26:08.010Z",
+  "status": "applied",
+  "counts": {
+    "migratedSets": 3734,
+    "migratedItems": 4000,
+    "activeMigratedSets": 0,
+    "targetWordRefs": 640
+  },
+  "errors": [],
+  "ok": true
 }

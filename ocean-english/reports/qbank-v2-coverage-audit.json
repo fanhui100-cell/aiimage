@@ -1,0 +1,2641 @@
+{
+  "generatedAt": "2026-06-22T10:32:52.583Z",
+  "totals": {
+    "sets": 4878,
+    "items": 5744,
+    "activeSets": 0,
+    "draftSets": 4878,
+    "stimuliWithActiveAudio": 0
+  },
+  "expectedMatrix": {
+    "rows": [
+      {
+        "exam": "zhongkao",
+        "level": 1,
+        "section": "listening",
+        "taskType": "listening_comprehension",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "zhongkao",
+        "level": 1,
+        "section": "language_use",
+        "taskType": "grammar_fill",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 48,
+        "state": "ok"
+      },
+      {
+        "exam": "zhongkao",
+        "level": 1,
+        "section": "cloze",
+        "taskType": "cloze_passage",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 142,
+        "state": "ok"
+      },
+      {
+        "exam": "zhongkao",
+        "level": 1,
+        "section": "reading",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "zhongkao",
+        "level": 1,
+        "section": "writing",
+        "taskType": "applied_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "listening",
+        "taskType": "listening_comprehension",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "reading",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "seven_select",
+        "taskType": "seven_select",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "cloze",
+        "taskType": "cloze_passage",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "grammar_fill",
+        "taskType": "grammar_fill",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 200,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "applied_writing",
+        "taskType": "applied_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "gaokao",
+        "level": 2,
+        "section": "continuation_writing",
+        "taskType": "continuation_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "writing",
+        "taskType": "essay_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "listening",
+        "taskType": "listening_comprehension",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 67,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "banked_cloze",
+        "taskType": "banked_cloze",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 166,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "long_match",
+        "taskType": "para_match",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 143,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "careful_reading",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 67,
+        "state": "ok"
+      },
+      {
+        "exam": "cet4",
+        "level": 3,
+        "section": "translation",
+        "taskType": "translation_zh_en",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 55,
+        "state": "ok"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "writing",
+        "taskType": "essay_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "listening",
+        "taskType": "listening_comprehension",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "banked_cloze",
+        "taskType": "banked_cloze",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 34,
+        "state": "ok"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "long_match",
+        "taskType": "para_match",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 57,
+        "state": "ok"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "careful_reading",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "cet6",
+        "level": 4,
+        "section": "translation",
+        "taskType": "translation_zh_en",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 51,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "use_of_english",
+        "taskType": "cloze_passage",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 58,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "reading_a",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "reading_b",
+        "taskType": "seven_select",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 181,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "reading_b",
+        "taskType": "para_match",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "translation",
+        "taskType": "translation_en_zh",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "writing_small",
+        "taskType": "applied_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "kaoyan",
+        "level": 5,
+        "section": "writing_large",
+        "taskType": "essay_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "reading",
+        "taskType": "complete_the_words",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 10,
+        "state": "THIN"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "reading",
+        "taskType": "read_daily_life",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "reading",
+        "taskType": "reading_comprehension",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "listening",
+        "taskType": "choose_a_response",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "listening",
+        "taskType": "listening_comprehension",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": false,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "writing",
+        "taskType": "build_a_sentence",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 10,
+        "state": "THIN"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "writing",
+        "taskType": "email_writing",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 10,
+        "state": "THIN"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "writing",
+        "taskType": "academic_discussion",
+        "domain": null,
+        "requiresAudio": false,
+        "requiresRubric": true,
+        "draftCount": 10,
+        "state": "THIN"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "speaking",
+        "taskType": "listen_and_repeat",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": true,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "toefl",
+        "level": 6,
+        "section": "speaking",
+        "taskType": "interview_speaking",
+        "domain": null,
+        "requiresAudio": true,
+        "requiresRubric": true,
+        "draftCount": 0,
+        "state": "MISSING"
+      },
+      {
+        "exam": "sat",
+        "level": 7,
+        "section": "information_and_ideas",
+        "taskType": "reading_comprehension",
+        "domain": "Information and Ideas",
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "sat",
+        "level": 7,
+        "section": "craft_and_structure",
+        "taskType": "reading_comprehension",
+        "domain": "Craft and Structure",
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "sat",
+        "level": 7,
+        "section": "expression_of_ideas",
+        "taskType": "reading_comprehension",
+        "domain": "Expression of Ideas",
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      },
+      {
+        "exam": "sat",
+        "level": 7,
+        "section": "standard_english_conventions",
+        "taskType": "reading_comprehension",
+        "domain": "Standard English Conventions",
+        "requiresAudio": false,
+        "requiresRubric": false,
+        "draftCount": 50,
+        "state": "ok"
+      }
+    ],
+    "missingCount": 9,
+    "thinCount": 4,
+    "missing": [
+      "zhongkao lv1 / listening / listening_comprehension — draft 0",
+      "gaokao lv2 / listening / listening_comprehension — draft 0",
+      "cet6 lv4 / listening / listening_comprehension — draft 0",
+      "toefl lv6 / reading / read_daily_life — draft 0",
+      "toefl lv6 / reading / reading_comprehension — draft 0",
+      "toefl lv6 / listening / choose_a_response — draft 0",
+      "toefl lv6 / listening / listening_comprehension — draft 0",
+      "toefl lv6 / speaking / listen_and_repeat — draft 0",
+      "toefl lv6 / speaking / interview_speaking — draft 0"
+    ],
+    "thin": [
+      "toefl lv6 / reading / complete_the_words — draft 10 (<20)",
+      "toefl lv6 / writing / build_a_sentence — draft 10 (<20)",
+      "toefl lv6 / writing / email_writing — draft 10 (<20)",
+      "toefl lv6 / writing / academic_discussion — draft 10 (<20)"
+    ]
+  },
+  "actualGrid": [
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "applied_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "cloze_choice",
+      "totalSets": 16,
+      "draft": 16,
+      "active": 0,
+      "items": 16,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 16,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "cloze_passage",
+      "totalSets": 142,
+      "draft": 142,
+      "active": 0,
+      "items": 142,
+      "stimuli": 142,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "cloze_spell",
+      "totalSets": 15,
+      "draft": 15,
+      "active": 0,
+      "items": 15,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 15,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "collocation_choice",
+      "totalSets": 21,
+      "draft": 21,
+      "active": 0,
+      "items": 21,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 21,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "confusable_choice",
+      "totalSets": 70,
+      "draft": 70,
+      "active": 0,
+      "items": 70,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 70,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "def_to_word",
+      "totalSets": 18,
+      "draft": 18,
+      "active": 0,
+      "items": 18,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 18,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "dictation_spell",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "en_to_zh",
+      "totalSets": 18,
+      "draft": 18,
+      "active": 0,
+      "items": 18,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 18,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "grammar_fill",
+      "totalSets": 48,
+      "draft": 48,
+      "active": 0,
+      "items": 48,
+      "stimuli": 48,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "listen_to_meaning",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "reading_comprehension",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 200,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "seven_select",
+      "totalSets": 19,
+      "draft": 19,
+      "active": 0,
+      "items": 19,
+      "stimuli": 19,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "synonym_choice",
+      "totalSets": 20,
+      "draft": 20,
+      "active": 0,
+      "items": 20,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 20,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "synonym_substitute",
+      "totalSets": 18,
+      "draft": 18,
+      "active": 0,
+      "items": 18,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 18,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "word_form",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "zh_to_en",
+      "totalSets": 18,
+      "draft": 18,
+      "active": 0,
+      "items": 18,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 18,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "zhongkao",
+      "level": 1,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "applied_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "cloze_choice",
+      "totalSets": 41,
+      "draft": 41,
+      "active": 0,
+      "items": 41,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 41,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "cloze_passage",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "cloze_spell",
+      "totalSets": 41,
+      "draft": 41,
+      "active": 0,
+      "items": 41,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 41,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "collocation_choice",
+      "totalSets": 31,
+      "draft": 31,
+      "active": 0,
+      "items": 31,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 31,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "confusable_choice",
+      "totalSets": 46,
+      "draft": 46,
+      "active": 0,
+      "items": 46,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 46,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "continuation_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "def_to_word",
+      "totalSets": 38,
+      "draft": 38,
+      "active": 0,
+      "items": 38,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 38,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "dictation_spell",
+      "totalSets": 39,
+      "draft": 39,
+      "active": 0,
+      "items": 39,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 39,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "en_to_zh",
+      "totalSets": 38,
+      "draft": 38,
+      "active": 0,
+      "items": 38,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 38,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "grammar_fill",
+      "totalSets": 200,
+      "draft": 200,
+      "active": 0,
+      "items": 200,
+      "stimuli": 200,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "listen_to_meaning",
+      "totalSets": 39,
+      "draft": 39,
+      "active": 0,
+      "items": 39,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 39,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "reading_comprehension",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 200,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "seven_select",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "synonym_choice",
+      "totalSets": 44,
+      "draft": 44,
+      "active": 0,
+      "items": 44,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 44,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "synonym_substitute",
+      "totalSets": 42,
+      "draft": 42,
+      "active": 0,
+      "items": 42,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 42,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "word_form",
+      "totalSets": 51,
+      "draft": 51,
+      "active": 0,
+      "items": 51,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 51,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "zh_to_en",
+      "totalSets": 38,
+      "draft": 38,
+      "active": 0,
+      "items": 38,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 38,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "gaokao",
+      "level": 2,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 39,
+      "draft": 39,
+      "active": 0,
+      "items": 39,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 39,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "banked_cloze",
+      "totalSets": 166,
+      "draft": 166,
+      "active": 0,
+      "items": 166,
+      "stimuli": 166,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "cloze_choice",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "cloze_spell",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "collocation_choice",
+      "totalSets": 33,
+      "draft": 33,
+      "active": 0,
+      "items": 33,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 33,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "confusable_choice",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "def_to_word",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "dictation_spell",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "en_to_zh",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "essay_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "listen_to_meaning",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "listening_comprehension",
+      "totalSets": 67,
+      "draft": 67,
+      "active": 0,
+      "items": 200,
+      "stimuli": 67,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "para_match",
+      "totalSets": 143,
+      "draft": 143,
+      "active": 0,
+      "items": 143,
+      "stimuli": 143,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "reading_comprehension",
+      "totalSets": 67,
+      "draft": 67,
+      "active": 0,
+      "items": 200,
+      "stimuli": 67,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "synonym_choice",
+      "totalSets": 19,
+      "draft": 19,
+      "active": 0,
+      "items": 19,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 19,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "synonym_substitute",
+      "totalSets": 23,
+      "draft": 23,
+      "active": 0,
+      "items": 23,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 23,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "translation_zh_en",
+      "totalSets": 55,
+      "draft": 55,
+      "active": 0,
+      "items": 55,
+      "stimuli": 55,
+      "audioActive": 0,
+      "rubricItems": 55,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "word_form",
+      "totalSets": 13,
+      "draft": 13,
+      "active": 0,
+      "items": 13,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 13,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "zh_to_en",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet4",
+      "level": 3,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 17,
+      "draft": 17,
+      "active": 0,
+      "items": 17,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 17,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "banked_cloze",
+      "totalSets": 34,
+      "draft": 34,
+      "active": 0,
+      "items": 34,
+      "stimuli": 34,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "cloze_choice",
+      "totalSets": 12,
+      "draft": 12,
+      "active": 0,
+      "items": 12,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 12,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "cloze_spell",
+      "totalSets": 12,
+      "draft": 12,
+      "active": 0,
+      "items": 12,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 12,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "collocation_choice",
+      "totalSets": 25,
+      "draft": 25,
+      "active": 0,
+      "items": 25,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 25,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "confusable_choice",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 10,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "def_to_word",
+      "totalSets": 11,
+      "draft": 11,
+      "active": 0,
+      "items": 11,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 11,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "dictation_spell",
+      "totalSets": 12,
+      "draft": 12,
+      "active": 0,
+      "items": 12,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 12,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "en_to_zh",
+      "totalSets": 11,
+      "draft": 11,
+      "active": 0,
+      "items": 11,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 11,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "essay_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "listen_to_meaning",
+      "totalSets": 12,
+      "draft": 12,
+      "active": 0,
+      "items": 12,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 12,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "para_match",
+      "totalSets": 57,
+      "draft": 57,
+      "active": 0,
+      "items": 57,
+      "stimuli": 57,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "reading_comprehension",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 200,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "synonym_choice",
+      "totalSets": 13,
+      "draft": 13,
+      "active": 0,
+      "items": 13,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 13,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "synonym_substitute",
+      "totalSets": 16,
+      "draft": 16,
+      "active": 0,
+      "items": 16,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 16,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "translation_zh_en",
+      "totalSets": 51,
+      "draft": 51,
+      "active": 0,
+      "items": 51,
+      "stimuli": 51,
+      "audioActive": 0,
+      "rubricItems": 51,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "word_form",
+      "totalSets": 13,
+      "draft": 13,
+      "active": 0,
+      "items": 13,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 13,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "zh_to_en",
+      "totalSets": 11,
+      "draft": 11,
+      "active": 0,
+      "items": 11,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 11,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "cet6",
+      "level": 4,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 12,
+      "draft": 12,
+      "active": 0,
+      "items": 12,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 12,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "applied_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "cloze_choice",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "cloze_passage",
+      "totalSets": 58,
+      "draft": 58,
+      "active": 0,
+      "items": 58,
+      "stimuli": 58,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "cloze_spell",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "collocation_choice",
+      "totalSets": 32,
+      "draft": 32,
+      "active": 0,
+      "items": 32,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 32,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "def_to_word",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "dictation_spell",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "en_to_zh",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "essay_writing",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "listen_to_meaning",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "para_match",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "reading_comprehension",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 200,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "seven_select",
+      "totalSets": 181,
+      "draft": 181,
+      "active": 0,
+      "items": 181,
+      "stimuli": 181,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "synonym_choice",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "synonym_substitute",
+      "totalSets": 3,
+      "draft": 3,
+      "active": 0,
+      "items": 3,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 3,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "translation_en_zh",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 50,
+      "audioActive": 0,
+      "rubricItems": 50,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "word_form",
+      "totalSets": 6,
+      "draft": 6,
+      "active": 0,
+      "items": 6,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 6,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "zh_to_en",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "kaoyan",
+      "level": 5,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 4,
+      "draft": 4,
+      "active": 0,
+      "items": 4,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 4,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "academic_discussion",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 10,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "build_a_sentence",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool",
+        "productive_items_missing_rubric"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "cloze_choice",
+      "totalSets": 55,
+      "draft": 55,
+      "active": 0,
+      "items": 55,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 55,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "cloze_spell",
+      "totalSets": 56,
+      "draft": 56,
+      "active": 0,
+      "items": 56,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 56,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "collocation_choice",
+      "totalSets": 27,
+      "draft": 27,
+      "active": 0,
+      "items": 27,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 27,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "complete_the_words",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 10,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "confusable_choice",
+      "totalSets": 51,
+      "draft": 51,
+      "active": 0,
+      "items": 51,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 51,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "def_to_word",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "dictation_spell",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "email_writing",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 10,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "en_to_zh",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "listen_to_meaning",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "synonym_choice",
+      "totalSets": 45,
+      "draft": 45,
+      "active": 0,
+      "items": 45,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 45,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "synonym_substitute",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 50,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "word_form",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 50,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "zh_to_en",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 54,
+      "draft": 54,
+      "active": 0,
+      "items": 54,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 54,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "cloze_choice",
+      "totalSets": 55,
+      "draft": 55,
+      "active": 0,
+      "items": 55,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 55,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "cloze_spell",
+      "totalSets": 55,
+      "draft": 55,
+      "active": 0,
+      "items": 55,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 55,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "collocation_choice",
+      "totalSets": 31,
+      "draft": 31,
+      "active": 0,
+      "items": 31,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 31,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "confusable_choice",
+      "totalSets": 19,
+      "draft": 19,
+      "active": 0,
+      "items": 19,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 19,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "def_to_word",
+      "totalSets": 58,
+      "draft": 58,
+      "active": 0,
+      "items": 58,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 58,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "dictation_spell",
+      "totalSets": 57,
+      "draft": 57,
+      "active": 0,
+      "items": 57,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 57,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "en_to_zh",
+      "totalSets": 58,
+      "draft": 58,
+      "active": 0,
+      "items": 58,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 58,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "listen_to_meaning",
+      "totalSets": 57,
+      "draft": 57,
+      "active": 0,
+      "items": 57,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 57,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "reading_comprehension",
+      "totalSets": 200,
+      "draft": 200,
+      "active": 0,
+      "items": 200,
+      "stimuli": 200,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 0,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "synonym_choice",
+      "totalSets": 55,
+      "draft": 55,
+      "active": 0,
+      "items": 55,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 55,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "synonym_substitute",
+      "totalSets": 48,
+      "draft": 48,
+      "active": 0,
+      "items": 48,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 48,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "word_form",
+      "totalSets": 50,
+      "draft": 50,
+      "active": 0,
+      "items": 50,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 50,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "zh_to_en",
+      "totalSets": 58,
+      "draft": 58,
+      "active": 0,
+      "items": 58,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 58,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "sat",
+      "level": 7,
+      "taskType": "zh_to_word_spell",
+      "totalSets": 57,
+      "draft": 57,
+      "active": 0,
+      "items": 57,
+      "stimuli": 0,
+      "audioActive": 0,
+      "rubricItems": 0,
+      "targetWords": 57,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    }
+  ],
+  "warnings": [
+    "lv1 applied_writing: insufficient_active_pool",
+    "lv1 cloze_choice: insufficient_active_pool",
+    "lv1 cloze_passage: insufficient_active_pool",
+    "lv1 cloze_spell: insufficient_active_pool",
+    "lv1 collocation_choice: insufficient_active_pool",
+    "lv1 confusable_choice: insufficient_active_pool",
+    "lv1 def_to_word: insufficient_active_pool",
+    "lv1 dictation_spell: insufficient_active_pool",
+    "lv1 en_to_zh: insufficient_active_pool",
+    "lv1 grammar_fill: insufficient_active_pool",
+    "lv1 listen_to_meaning: insufficient_active_pool",
+    "lv1 reading_comprehension: insufficient_active_pool",
+    "lv1 seven_select: insufficient_active_pool",
+    "lv1 synonym_choice: insufficient_active_pool",
+    "lv1 synonym_substitute: insufficient_active_pool",
+    "lv1 word_form: insufficient_active_pool",
+    "lv1 zh_to_en: insufficient_active_pool",
+    "lv1 zh_to_word_spell: insufficient_active_pool",
+    "lv2 applied_writing: insufficient_active_pool",
+    "lv2 cloze_choice: insufficient_active_pool",
+    "lv2 cloze_passage: insufficient_active_pool",
+    "lv2 cloze_spell: insufficient_active_pool",
+    "lv2 collocation_choice: insufficient_active_pool",
+    "lv2 confusable_choice: insufficient_active_pool",
+    "lv2 continuation_writing: insufficient_active_pool",
+    "lv2 def_to_word: insufficient_active_pool",
+    "lv2 dictation_spell: insufficient_active_pool",
+    "lv2 en_to_zh: insufficient_active_pool",
+    "lv2 grammar_fill: insufficient_active_pool",
+    "lv2 listen_to_meaning: insufficient_active_pool",
+    "lv2 reading_comprehension: insufficient_active_pool",
+    "lv2 seven_select: insufficient_active_pool",
+    "lv2 synonym_choice: insufficient_active_pool",
+    "lv2 synonym_substitute: insufficient_active_pool",
+    "lv2 word_form: insufficient_active_pool",
+    "lv2 zh_to_en: insufficient_active_pool",
+    "lv2 zh_to_word_spell: insufficient_active_pool",
+    "lv3 banked_cloze: insufficient_active_pool",
+    "lv3 cloze_choice: insufficient_active_pool",
+    "lv3 cloze_spell: insufficient_active_pool",
+    "lv3 collocation_choice: insufficient_active_pool",
+    "lv3 confusable_choice: insufficient_active_pool",
+    "lv3 def_to_word: insufficient_active_pool",
+    "lv3 dictation_spell: insufficient_active_pool",
+    "lv3 en_to_zh: insufficient_active_pool",
+    "lv3 essay_writing: insufficient_active_pool",
+    "lv3 listen_to_meaning: insufficient_active_pool",
+    "lv3 listening_comprehension: insufficient_active_pool",
+    "lv3 para_match: insufficient_active_pool",
+    "lv3 reading_comprehension: insufficient_active_pool",
+    "lv3 synonym_choice: insufficient_active_pool",
+    "lv3 synonym_substitute: insufficient_active_pool",
+    "lv3 translation_zh_en: insufficient_active_pool",
+    "lv3 word_form: insufficient_active_pool",
+    "lv3 zh_to_en: insufficient_active_pool",
+    "lv3 zh_to_word_spell: insufficient_active_pool",
+    "lv4 banked_cloze: insufficient_active_pool",
+    "lv4 cloze_choice: insufficient_active_pool",
+    "lv4 cloze_spell: insufficient_active_pool",
+    "lv4 collocation_choice: insufficient_active_pool",
+    "lv4 confusable_choice: insufficient_active_pool",
+    "lv4 def_to_word: insufficient_active_pool",
+    "lv4 dictation_spell: insufficient_active_pool",
+    "lv4 en_to_zh: insufficient_active_pool",
+    "lv4 essay_writing: insufficient_active_pool",
+    "lv4 listen_to_meaning: insufficient_active_pool",
+    "lv4 para_match: insufficient_active_pool",
+    "lv4 reading_comprehension: insufficient_active_pool",
+    "lv4 synonym_choice: insufficient_active_pool",
+    "lv4 synonym_substitute: insufficient_active_pool",
+    "lv4 translation_zh_en: insufficient_active_pool",
+    "lv4 word_form: insufficient_active_pool",
+    "lv4 zh_to_en: insufficient_active_pool",
+    "lv4 zh_to_word_spell: insufficient_active_pool",
+    "lv5 applied_writing: insufficient_active_pool",
+    "lv5 cloze_choice: insufficient_active_pool",
+    "lv5 cloze_passage: insufficient_active_pool",
+    "lv5 cloze_spell: insufficient_active_pool",
+    "lv5 collocation_choice: insufficient_active_pool",
+    "lv5 def_to_word: insufficient_active_pool",
+    "lv5 dictation_spell: insufficient_active_pool",
+    "lv5 en_to_zh: insufficient_active_pool",
+    "lv5 essay_writing: insufficient_active_pool",
+    "lv5 listen_to_meaning: insufficient_active_pool",
+    "lv5 para_match: insufficient_active_pool",
+    "lv5 reading_comprehension: insufficient_active_pool",
+    "lv5 seven_select: insufficient_active_pool",
+    "lv5 synonym_choice: insufficient_active_pool",
+    "lv5 synonym_substitute: insufficient_active_pool",
+    "lv5 translation_en_zh: insufficient_active_pool",
+    "lv5 word_form: insufficient_active_pool",
+    "lv5 zh_to_en: insufficient_active_pool",
+    "lv5 zh_to_word_spell: insufficient_active_pool",
+    "lv6 academic_discussion: insufficient_active_pool",
+    "lv6 build_a_sentence: insufficient_active_pool, productive_items_missing_rubric",
+    "lv6 cloze_choice: insufficient_active_pool",
+    "lv6 cloze_spell: insufficient_active_pool",
+    "lv6 collocation_choice: insufficient_active_pool",
+    "lv6 complete_the_words: insufficient_active_pool",
+    "lv6 confusable_choice: insufficient_active_pool",
+    "lv6 def_to_word: insufficient_active_pool",
+    "lv6 dictation_spell: insufficient_active_pool",
+    "lv6 email_writing: insufficient_active_pool",
+    "lv6 en_to_zh: insufficient_active_pool",
+    "lv6 listen_to_meaning: insufficient_active_pool",
+    "lv6 synonym_choice: insufficient_active_pool",
+    "lv6 synonym_substitute: insufficient_active_pool",
+    "lv6 word_form: insufficient_active_pool",
+    "lv6 zh_to_en: insufficient_active_pool",
+    "lv6 zh_to_word_spell: insufficient_active_pool",
+    "lv7 cloze_choice: insufficient_active_pool",
+    "lv7 cloze_spell: insufficient_active_pool",
+    "lv7 collocation_choice: insufficient_active_pool",
+    "lv7 confusable_choice: insufficient_active_pool",
+    "lv7 def_to_word: insufficient_active_pool",
+    "lv7 dictation_spell: insufficient_active_pool",
+    "lv7 en_to_zh: insufficient_active_pool",
+    "lv7 listen_to_meaning: insufficient_active_pool",
+    "lv7 reading_comprehension: insufficient_active_pool",
+    "lv7 synonym_choice: insufficient_active_pool",
+    "lv7 synonym_substitute: insufficient_active_pool",
+    "lv7 word_form: insufficient_active_pool",
+    "lv7 zh_to_en: insufficient_active_pool",
+    "lv7 zh_to_word_spell: insufficient_active_pool"
+  ]
+}

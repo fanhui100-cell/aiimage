@@ -1,0 +1,39 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Gaokao 语法填空 style: 10 blanks per passage testing tense/voice, non-finite verbs, relatives, articles, prepositions, comparatives, derivation, connectors.",
+  "sets": [
+    {
+      "passage": "Last summer, I had a chance (1)____ (learn) Chinese calligraphy in a small studio near my home. On the first day, my teacher, an elderly man (2)____ had practised the art for fifty years, showed me how to hold the brush. (3)____ (hold) the brush correctly was much harder than I had expected, and the lines I drew looked even (4)____ (bad) than a child's. However, my teacher was very (5)____ (patience). He told me that calligraphy was not only about beautiful characters (6)____ also about a calm mind. Every afternoon I practised for two hours, and gradually my strokes became (7)____ (steady) and more confident. By the end of August, I (8)____ (complete) my first real work, (9)____ single character meaning 'peace'. That experience taught me a valuable lesson: real skill grows slowly. Now, (10)____ I feel impatient, I think of the brush and breathe deeply.",
+      "gblanks": [
+        { "answer": "to learn", "acceptable": ["to learn"], "hint": "chance + to do" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "relative pronoun for a person" },
+        { "answer": "Holding", "acceptable": ["Holding"], "hint": "gerund as subject" },
+        { "answer": "worse", "acceptable": ["worse"], "hint": "comparative of bad" },
+        { "answer": "patient", "acceptable": ["patient"], "hint": "patience -> adjective" },
+        { "answer": "but", "acceptable": ["but"], "hint": "not only ... but also" },
+        { "answer": "steadier", "acceptable": ["steadier", "more steady"], "hint": "comparative of steady" },
+        { "answer": "had completed", "acceptable": ["had completed", "completed"], "hint": "past narrative / past perfect" },
+        { "answer": "a", "acceptable": ["a"], "hint": "indefinite article before 'single'" },
+        { "answer": "whenever", "acceptable": ["whenever", "when"], "hint": "time conjunction" }
+      ],
+      "explain_zh": "(1) chance to do 固定搭配；(2) 先行词 man 指人用 who/that；(3) 动名词作主语 Holding；(4) bad 比较级 worse；(5) patience→形容词 patient；(6) not only...but also；(7) steady 比较级 steadier；(8) by the end of August 过去叙述用过去完成 had completed；(9) single 前用不定冠词 a；(10) 时间状语从句 whenever。"
+    },
+    {
+      "passage": "The small village of Lijiawan sits beside a river (1)____ runs down from the green mountains. For hundreds of years, the villagers had to cross the water on an old wooden bridge, (2)____ (build) by their ancestors. Although it was narrow, the bridge connected them to the markets (3)____ the other side. In 2019, a heavy flood washed the bridge away, and the loss was (4)____ (true) a disaster for everyone. Without it, farmers found it (5)____ (possible) to sell their vegetables. Then something moving happened. Young people who had left for the cities decided (6)____ (return) home to help. Together with the older villagers, they spent three months (7)____ (rebuild) a stronger stone bridge. When it was finally finished, everyone gathered to celebrate (8)____ great joy. Today the new bridge stands (9)____ (proud) over the river, reminding the villagers that difficulties can be overcome (10)____ they work as one.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "relative pronoun for a thing" },
+        { "answer": "built", "acceptable": ["built"], "hint": "past participle, passive postmodifier" },
+        { "answer": "on", "acceptable": ["on"], "hint": "on the other side" },
+        { "answer": "truly", "acceptable": ["truly"], "hint": "true -> adverb" },
+        { "answer": "impossible", "acceptable": ["impossible"], "hint": "possible -> negative form" },
+        { "answer": "to return", "acceptable": ["to return"], "hint": "decide + to do" },
+        { "answer": "rebuilding", "acceptable": ["rebuilding"], "hint": "spend time + doing" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with great joy" },
+        { "answer": "proudly", "acceptable": ["proudly"], "hint": "proud -> adverb of manner" },
+        { "answer": "if", "acceptable": ["if", "when", "as long as"], "hint": "conditional conjunction" }
+      ],
+      "explain_zh": "(1) 先行词 river 指物用 which/that；(2) 过去分词作后置定语 built；(3) on the other side；(4) true→副词 truly；(5) found it impossible to do；(6) decide to do；(7) spend time doing；(8) with great joy；(9) stand + 副词 proudly；(10) 条件状语从句 if/as long as。"
+    }
+  ]
+}

@@ -1,17 +1,34 @@
 {
-  "generatedAt": "2026-06-20T17:31:43.617Z",
-  "status": "not_applied",
+  "generatedAt": "2026-06-22T11:03:12.733Z",
+  "status": "applied",
   "templates": [
     "cet-banked-cloze",
+    "cet6-reading-mcq",
+    "gaokao-cloze-passage",
     "gaokao-grammar-fill",
+    "gaokao-reading-mcq",
     "gaokao-seven-select",
     "kaoyan-reading-b",
+    "kaoyan-reading-mcq",
+    "reading-comprehension-mcq",
+    "sat-craft-and-structure",
+    "sat-expression-of-ideas",
+    "sat-information-and-ideas",
     "sat-rw-domains",
-    "toefl-four-skills"
+    "sat-standard-english-conventions",
+    "toefl-academic-discussion",
+    "toefl-academic-reading",
+    "toefl-build-a-sentence",
+    "toefl-complete-the-words",
+    "toefl-email-writing",
+    "toefl-four-skills",
+    "toefl-read-daily-life",
+    "zhongkao-grammar-fill"
   ],
   "errors": [],
   "notes": [
-    "v2 not_applied：跳过数据 QA"
+    "篇幅校验：检查 608 个 gen set 的 stimulus 词数",
+    "数据 QA：gen draft sets 1144 · items 1744"
   ],
   "ok": true
 }

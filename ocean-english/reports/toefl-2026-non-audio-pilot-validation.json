@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-06-22",
+  "task": "TOEFL iBT 2026 non-audio question-type pilot",
+  "branch": "iter5-f1",
+  "reviewRound": "post-Codex-review-fix round 2 (P1x3 + P2x3, then P1 build_sentence + P2 verifier re-fixed)",
+  "mode": "draft-only (no promote, no commit, no DeepSeek, no audio)",
+  "provider": "claude-authored",
+  "specSource": "ETS official TOEFL iBT Test Blueprint and Specifications Document 2026 (PDF)",
+  "specCheckReport": "reports/toefl-2026-non-audio-spec-check.md",
+  "keptPackages": [
+    { "id": "A", "taskType": "complete_the_words", "template": "toefl-complete-the-words", "shape": "complete_words (new)", "pipeline": "objective importer", "sets": 10, "items": 10, "status": "draft", "active": 0 },
+    { "id": "D", "taskType": "build_a_sentence", "template": "toefl-build-a-sentence", "shape": "build_sentence (new)", "pipeline": "objective importer", "sets": 10, "items": 10, "status": "draft", "active": 0, "scoring_not_ready": "10/10", "answerSemantics": "canonical/reference order (NOT sole legal answer; argument PPs can front)" },
+    { "id": "E", "taskType": "email_writing", "template": "toefl-email-writing (doc only)", "shape": "free_text + rubric", "pipeline": "productive importer", "sets": 10, "items": 10, "status": "draft", "active": 0, "rubricCoverage": "10/10", "freeText": "10/10", "officialFalse": "10/10" },
+    { "id": "F", "taskType": "academic_discussion", "template": "toefl-academic-discussion (doc only)", "shape": "free_text + rubric", "pipeline": "productive importer", "sets": 10, "items": 10, "status": "draft", "active": 0, "rubricCoverage": "10/10", "freeText": "10/10", "officialFalse": "10/10" }
+  ],
+  "stoppedPackages": [
+    { "id": "B", "taskType": "read_daily_life", "reason": "official_spec_unverified", "detail": "ETS Blueprint does not give Reading MCQ option count (only 'selected-response, e.g. multiple choice'). 2/3-item sets confirmed but option count not. Per exec doc 3.4, type stopped.", "action": "10 draft sets deleted; source moved to data/generated-question-sets/toefl-2026-pilot-blocked/" },
+    { "id": "C", "taskType": "reading_comprehension (toefl academic)", "reason": "official_spec_unverified", "detail": "Option count not given; questions-per-passage not given (only items 5-15 per claim). 3-4 per passage was an assumption. Per exec doc 3.4, type stopped.", "action": "10 draft sets deleted; source moved to blocked/" }
+  ],
+  "reviewFixes": {
+    "P1-1_stop_unverified_reading_types": "read_daily_life + academic_reading stopped per exec doc 3.4 (option count / questions-per-passage unconfirmed in ETS Blueprint). 20 draft sets / 67 items / 20 stimuli deleted via scripts/remove-blocked-templates.ts; source preserved in blocked dir + README.",
+    "P1-2_promote_guard": "promote-question-sets-v2.ts now hard-rejects qa_flags.scoring_not_ready or official_spec_unverified. Verified: promote --task=build_a_sentence dry-run -> candidates 10, eligible 0, rejected 10 (scoring_not_ready).",
+    "P1-3_build_sentence_answer_semantics": "Round-2 re-fix: subcategorized PP complements do NOT prevent fronting (argument PPs can topicalize, e.g. 'On their success, the manager congratulated the team'). Chasing absolute uniqueness by rewriting is not viable. Instead: answer is now defined as canonical/reference order (NOT the sole legal answer); the 'unique order solved 10/10' claim is removed from all reports; shape comment + template promptHintZh/qualityRules + per-set explain_zh reworded to 'canonical/参考语序, 非唯一合法解'. Containment stays scoring_not_ready=true + promote hard-reject. Unlock later via acceptable-permutation-set or confirmed ETS scoring rules.",
+    "P2-4_materialType": "Resolved by P1-1: read_daily_life stopped/removed, so the unenforced materialType whitelist no longer applies. (To be enforced if the type is restored after official spec confirmation.)",
+    "P2-5_verifier_deterministic": "Round-2 re-fix: previous verifier only compared counts (source-valid == DB-draft), so 10 stale rows + 10 new source rows would pass. Rewritten to replicate the importer's deterministic hashId, derive each source record's legacy_id, and compare 1:1 against DB payload (input_mode / prompt / choices / answer); asserts exactly 1 item per set, complete_words input_mode==='spell', productive free_text+rubric_id+official=false+prompt match, and bidirectional mapping (no DB set outside the source-derived legacy_id set). All 4 packages: 源↔DB 逐条一致 10/10.",
+    "P2-6_word_count_phrasing": "Email/Discussion wordLimit reworded to 'Project guidance (not an official TOEFL requirement): ...'. 20 sets deleted + reimported with new wordLimit (wrote 20 / dup 0)."
+  },
+  "totals": {
+    "toeflKeptSets": 40,
+    "toeflKeptItems": 40,
+    "toeflStoppedSets": 0,
+    "dbTotalSets": 4878,
+    "dbDraftSets": 4878,
+    "dbActiveSets": 0
+  },
+  "idempotency": {
+    "objectiveRerun": "complete_the_words dup-skip 10; build_a_sentence wrote 10 after targeted delete of old 10",
+    "productiveRerun": "email/discussion wrote 20 after targeted delete of old 20 (wordLimit update)"
+  },
+  "answerPositionNormalize": {
+    "note": "After stopping the 2 reading MCQ types, the TOEFL pilot has no choice items (complete_the_words=spell, build_a_sentence=multi_blank). Bank choice items dropped 1067->1000; normalize dry-run shows BEFORE==AFTER identical (a228/b258/c263/d251) -> still converged, no re-apply needed."
+  },
+  "validation": {
+    "verify-productive-tasks": 0,
+    "verify-authored-lengths": 0,
+    "verify-toefl-pilot": 0,
+    "qa:qsets-v2": 0,
+    "validate:qbank-v2": 0,
+    "validate:practice-session": 0,
+    "validate:papers": 0,
+    "audit:qbank-v2-coverage": 0,
+    "validate:rubrics": 0,
+    "validate:question-types": 0,
+    "validate:data-quality": 0,
+    "lint": 0,
+    "tsc": 0,
+    "promote-guard-test (build_a_sentence)": "candidates 10 -> eligible 0 -> rejected 10 (scoring_not_ready)"
+  },
+  "hardStopInvariants": { "genActiveSets": 0, "antonym_choice": 0, "cet_cloze": 0 },
+  "coverage": {
+    "missing": 9,
+    "thin": 4,
+    "note": "4 kept TOEFL non-audio types are THIN (10 each, pilot). 9 MISSING = 7 audio-gated (listening/speaking) + 2 stopped TOEFL reading types (read_daily_life, academic_reading) now back to MISSING pending official spec confirmation."
+  },
+  "scope": { "promoted": false, "committed": false, "scaledTo50": false, "audioTypes": "not attempted", "handoff": "Codex re-review" }
+}

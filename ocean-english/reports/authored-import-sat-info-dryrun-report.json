@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-21T17:34:11.398Z",
+  "apply": false,
+  "stage": "sat-info",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\sat-info\\info-batch1.json",
+      "template": "sat-information-and-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-info\\info-batch2.json",
+      "template": "sat-information-and-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-info\\info-batch3.json",
+      "template": "sat-information-and-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-info\\info-batch4.json",
+      "template": "sat-information-and-ideas",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

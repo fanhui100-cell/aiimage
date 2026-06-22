@@ -1,0 +1,103 @@
+{
+  "template": "sat-expression-of-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Expression of Ideas items, batch 4. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The town sits in a deep valley ringed on every side by steep mountains. ______, it receives far less rainfall than the coast just thirty miles away, where the clouds drop most of their moisture before ever crossing the peaks.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["As a result", "However", "For example", "Nevertheless"],
+      "answer": "As a result",
+      "domain": "Expression of Ideas",
+      "explain_zh": "群山环绕（因）导致降雨稀少（果），用 As a result。其余表转折或举例。"
+    },
+    {
+      "passage": "For a long time scholars assumed the ancient script would never be read again, its meaning lost forever. ______, a single bilingual tablet eventually gave them the key they needed to begin decoding it.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["However", "Therefore", "Likewise", "For example"],
+      "answer": "However",
+      "domain": "Expression of Ideas",
+      "explain_zh": "原以为永不可读，后竟得解，为转折，用 However。其余表因果、并列或举例。"
+    },
+    {
+      "passage": "The young startup spent almost nothing on advertising during its first two years. ______, it relied entirely on word of mouth, trusting that happy customers would bring in their friends and neighbors.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Instead", "Therefore", "Similarly", "As a result"],
+      "answer": "Instead",
+      "domain": "Expression of Ideas",
+      "explain_zh": "不打广告，而是（替代地）靠口碑，用 Instead。其余表因果或并列。"
+    },
+    {
+      "passage": "The two researchers had somehow reached completely opposite conclusions from the very same set of data. ______, they agreed to repeat the entire experiment together, hoping to find where their methods had quietly diverged.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Therefore", "However", "For example", "In contrast"],
+      "answer": "Therefore",
+      "domain": "Expression of Ideas",
+      "explain_zh": "结论相反（因）促使他们一起重做实验（果/对策），用 Therefore。其余表转折或举例。"
+    },
+    {
+      "passage": "Most cactuses store the water they need inside their thick, fleshy stems. ______, the desert rose stores its water in a swollen base that looks almost like a carefully sculpted clay pot.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Similarly", "However", "Therefore", "Nevertheless"],
+      "answer": "Similarly",
+      "domain": "Expression of Ideas",
+      "explain_zh": "仙人掌储水于茎，沙漠玫瑰同样储水（于基部），为并列类比，用 Similarly。其余表转折或因果。"
+    },
+    {
+      "passage": "The grand old bridge was originally meant to last fifty years at the very most. ______, more than a century later it still carries heavy traffic across the deep gorge every single day.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Yet", "Therefore", "For example", "As a result"],
+      "answer": "Yet",
+      "domain": "Expression of Ideas",
+      "explain_zh": "设计寿命五十年与百年后仍在使用形成对比，用 Yet。其余表因果或举例。"
+    },
+    {
+      "passage": "A student studying spider silk took the following notes:\n- For its weight, spider silk is stronger than steel.\n- It is also remarkably stretchy, able to absorb sudden shocks without snapping.\n- Engineers hope to copy it for use in lightweight cables and safety gear.",
+      "prompt": "The student wants to explain why engineers are interested in spider silk. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Engineers are drawn to spider silk because, for its weight, it is both stronger than steel and remarkably stretchy.", "For its weight, spider silk is even stronger than ordinary steel.", "Spider silk can stretch and absorb sudden shocks without snapping.", "Spiders use their silk to build webs and to catch their prey."],
+      "answer": "Engineers are drawn to spider silk because, for its weight, it is both stronger than steel and remarkably stretchy.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释为何工程师感兴趣，A 兼顾强度与韧性两大特性。B、C 只一面，D 无关。"
+    },
+    {
+      "passage": "A student researching a river cleanup took the following notes:\n- The river had once been so polluted that no fish could survive in it.\n- Over fifteen years, factories were required to treat their waste.\n- Today, anglers catch fish in the same river their parents had given up on.",
+      "prompt": "The student wants to emphasize the extent of the river's recovery. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["A river once too polluted for any fish now yields catches to anglers whose parents had given up on it.", "The river had once been far too polluted for any fish to survive in.", "Over fifteen years, local factories were required to treat their waste.", "Rivers can become badly polluted when waste is dumped into them."],
+      "answer": "A river once too polluted for any fish now yields catches to anglers whose parents had given up on it.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调恢复之大，A 用从无鱼到可垂钓的前后对比。B 是旧况，C 是手段，D 泛述。"
+    },
+    {
+      "passage": "A student studying emperor penguins took the following notes:\n- They huddle together in tight groups through the long polar winter.\n- Birds on the cold outer edge slowly rotate inward to warmer spots.\n- In this way the whole group shares warmth and survives temperatures far below freezing.",
+      "prompt": "The student wants to explain how huddling helps the penguins survive. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["By huddling and slowly rotating so each bird takes a turn inside, the penguins share warmth and survive brutal cold.", "Emperor penguins huddle together in tight groups all winter long.", "Birds on the outer edge slowly move toward the warmer center.", "Emperor penguins live in one of the coldest places on the whole Earth."],
+      "answer": "By huddling and slowly rotating so each bird takes a turn inside, the penguins share warmth and survive brutal cold.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释挤抱如何助生存，A 串起轮换、共享暖、挺过严寒的完整机制。B、C 是部分，D 无关。"
+    },
+    {
+      "passage": "A student researching streetlights took the following notes:\n- A town replaced its old orange streetlights with bright white LED lights.\n- Energy use for street lighting then dropped by more than half.\n- But some residents complained the new light felt harsh and made sleep harder.",
+      "prompt": "The student wants to give a balanced account of the switch to LED streetlights. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["The LED lights cut energy use by more than half, though some residents found the harsh light hard to sleep under.", "The town replaced its old orange streetlights with bright white LED lights.", "Energy use for the town's street lighting dropped by more than half.", "Some residents complained that the new light simply felt too harsh."],
+      "answer": "The LED lights cut energy use by more than half, though some residents found the harsh light hard to sleep under.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是平衡呈现，A 兼顾节能与居民不适两面。B、C、D 各只一面。"
+    },
+    {
+      "passage": "A student researching a desert festival took the following notes:\n- The festival began as a small gathering of just a few dozen friends.\n- Today it draws tens of thousands of visitors from all around the world.\n- Yet it still bans money entirely: everything inside must be given, never sold.",
+      "prompt": "The student wants to emphasize what makes the festival unusual despite its enormous growth. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Though it now draws tens of thousands, the festival still bans money, requiring that everything be given rather than sold.", "The festival began as a small gathering of just a few dozen close friends.", "Today the festival draws tens of thousands of visitors from worldwide.", "The desert festival has clearly grown a great deal over the years."],
+      "answer": "Though it now draws tens of thousands, the festival still bans money, requiring that everything be given rather than sold.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调壮大后仍不寻常之处，A 兼顾规模与禁用金钱。B 是起源，C 是规模，D 泛述。"
+    },
+    {
+      "passage": "A student researching an endangered language took the following notes:\n- Only a few dozen elderly people still speak the language fluently.\n- A young teacher has begun recording them and turning their words into lessons.\n- Children in the village are now learning words their grandparents had feared were lost.",
+      "prompt": "The student wants to emphasize the hopeful effort to save the language. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["As a teacher records the last fluent elders, village children are again learning words their grandparents feared were lost.", "Only a few dozen elderly people can still speak the language fluently.", "A young teacher has begun recording the few remaining fluent speakers.", "The endangered language has very few fluent speakers left today."],
+      "answer": "As a teacher records the last fluent elders, village children are again learning words their grandparents feared were lost.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调充满希望的拯救努力，A 兼顾记录长者与孩子重学。B、D 强调濒危（消极），C 只一面。"
+    }
+  ]
+}

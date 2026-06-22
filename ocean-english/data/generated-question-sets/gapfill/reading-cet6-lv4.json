@@ -1,0 +1,27 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 4,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). CET-6-level careful reading, 4 MCQs each (detail/inference/attitude/main idea).",
+  "sets": [
+    {
+      "passage": "Economists have long assumed that giving people more choices makes them better off. Recent research, however, suggests that beyond a certain point, additional options can actually reduce satisfaction. In one well-known study, shoppers offered a display of twenty-four jams were far less likely to make a purchase than those shown only six. Faced with an overwhelming array, many simply walked away, unable to decide. Psychologists call this phenomenon 'choice overload'. The difficulty, they argue, is not laziness but the mental cost of comparison: each extra option demands more attention and raises the fear of making the wrong decision. Crucially, the effect is strongest when the choices are complex and the chooser lacks clear preferences. This does not mean that variety is bad. Rather, it suggests that well-designed systems should help people narrow their options — through sensible defaults or expert recommendations — instead of burdening them with endless alternatives. In a world that increasingly equates freedom with the sheer number of choices on offer, that is a quietly radical idea.",
+      "questions": [
+        { "prompt": "What does the jam study suggest about choice?", "options": ["More options always increase sales.", "Too many options can discourage people from choosing at all.", "Shoppers prefer expensive products.", "Variety has no effect on behaviour."], "answer": "B" },
+        { "prompt": "According to psychologists, why does choice overload occur?", "options": ["People are naturally lazy.", "Comparing many options carries a real mental cost.", "Shoppers cannot read product labels.", "There are too few products available."], "answer": "B" },
+        { "prompt": "When is the effect of choice overload strongest?", "options": ["When choices are simple and familiar.", "When the chooser has strong preferences.", "When choices are complex and preferences are unclear.", "When only two options are offered."], "answer": "C" },
+        { "prompt": "What does the author suggest well-designed systems should do?", "options": ["Offer as many options as possible.", "Remove all choices from users.", "Help people narrow their options sensibly.", "Raise prices to limit demand."], "answer": "C" }
+      ],
+      "explain_zh": "细节(B：选项过多反而让人不选)、细节(B：比较的心理成本)、细节(C：选项复杂且偏好不清时最强)、推断(C：帮助人合理收窄选项)。"
+    },
+    {
+      "passage": "The idea that cities are bad for mental health has a long history, but the evidence is more complicated than the cliché suggests. A large study following residents across several countries found that what matters is not whether people live in a city, but whether they can easily reach green space. Those living within a short walk of parks, gardens or tree-lined streets reported markedly lower levels of stress and anxiety than otherwise similar neighbours without such access. The benefits did not depend on how often people actually exercised outdoors; simply knowing that nature was nearby appeared to help. Researchers offer several explanations. Green spaces may encourage social contact, dampen noise, and provide a visual rest from the relentless stimulation of urban life. Whatever the mechanism, the policy implication is clear. As the world's population grows ever more urban, planners who treat parks as optional luxuries may be making a costly mistake. Green space, the authors conclude, should be regarded not as decoration but as basic public-health infrastructure.",
+      "questions": [
+        { "prompt": "What did the large study find to be most important for mental health?", "options": ["Whether people live in a city or the countryside.", "Whether people can easily reach green space.", "How much money people earn.", "How large people's homes are."], "answer": "B" },
+        { "prompt": "What is surprising about the benefits of green space?", "options": ["They depended on daily outdoor exercise.", "They appeared even without frequent outdoor exercise.", "They were limited to rural residents.", "They only affected younger people."], "answer": "B" },
+        { "prompt": "Which is NOT given as a reason green spaces help?", "options": ["They may encourage social contact.", "They can reduce noise.", "They guarantee higher incomes.", "They offer a visual rest from urban stimulation."], "answer": "C" },
+        { "prompt": "What do the authors conclude about green space?", "options": ["It is an optional luxury for wealthy cities.", "It should be treated as basic public-health infrastructure.", "It matters only in small towns.", "It has little effect on health."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B：能否便捷到达绿地)、推断(B：即使不常户外锻炼也有益)、细节排除(C：保证更高收入非原因)、主旨(B：绿地应视为基础公共卫生设施)。"
+    }
+  ]
+}

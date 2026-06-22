@@ -1,0 +1,103 @@
+{
+  "template": "sat-information-and-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Information and Ideas items, batch 2. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Coral reefs cover less than one percent of the ocean floor, yet they shelter nearly a quarter of all known marine species. Scientists sometimes call them the rainforests of the sea, not only for this astonishing diversity but because, like rainforests, they are now disappearing far faster than most people realize.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Coral reefs support remarkable biodiversity but are vanishing rapidly.", "Coral reefs cover most of the ocean floor.", "Rainforests and coral reefs face exactly the same threats.", "Marine species prefer reefs to every other habitat."],
+      "answer": "Coral reefs support remarkable biodiversity but are vanishing rapidly.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨为珊瑚礁生物多样性惊人却在快速消失。B 与不足百分之一矛盾，C 过度（exactly same），D 文未说偏好。"
+    },
+    {
+      "passage": "The old clockmaker refused to teach his methods to anyone, insisting that some things could only be learned by ruining a hundred clocks of your own. When he died, his cluttered workshop was found full of half-disassembled timepieces, each one labeled with a date and a single word: wrong.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The clockmaker believed that mistakes were an essential part of learning his craft.", "The clockmaker never made any mistakes of his own.", "The clockmaker had successfully trained several apprentices.", "The clockmaker preferred buying clocks to making them."],
+      "answer": "The clockmaker believed that mistakes were an essential part of learning his craft.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：坚持要毁百只钟才能学，且自留标着 wrong 的钟，说明视错误为学习必经。B 与自留错钟矛盾，C 与拒教矛盾，D 与满室在制钟矛盾。"
+    },
+    {
+      "passage": "Honeybees communicate the location of food through a movement that researchers call the waggle dance. The direction of the dance, measured relative to the sun, indicates the direction of the flowers, while the duration of each waggle signals just how far away those flowers lie.",
+      "prompt": "According to the text, what does the duration of each waggle indicate?",
+      "options": ["The distance to the flowers.", "The direction of the flowers.", "The current position of the sun.", "The number of flowers available."],
+      "answer": "The distance to the flowers.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说 duration signals how far away（距离）。B 由舞蹈方向表示，C、D 文中未提。"
+    },
+    {
+      "passage": "An archaeologist proposes that a recently buried settlement was once a busy trading hub rather than an isolated farming village. She is now searching for clear physical evidence that goods from distant regions once passed regularly through the site.",
+      "prompt": "Which find would most directly support her proposal?",
+      "options": ["Pottery and shells originating from regions hundreds of miles away.", "The remains of several small grain fields beside the houses.", "A single short road leading only to the nearest river.", "Tools made entirely from stone quarried nearby."],
+      "answer": "Pottery and shells originating from regions hundreds of miles away.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持贸易枢纽最直接的是来自远方的货物。B、D 暗示自给自足，C 单一短路不足以支持广泛贸易。"
+    },
+    {
+      "passage": "For years the museum displayed the small painting as the work of an unknown student. Then a conservator, carefully cleaning the darkened canvas, uncovered a faint signature in one corner that matched, stroke for stroke, the master's own hand. The label was quietly changed the very next week.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The discovery of the signature led the museum to reconsider who painted the work.", "The painting was ultimately confirmed to be a forgery.", "The conservator accidentally damaged the painting while cleaning it.", "The museum had always known the master painted it."],
+      "answer": "The discovery of the signature led the museum to reconsider who painted the work.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：发现与大师笔迹相符的签名后改了标签，即重新认定作者。B 与是真迹相反，C 文未提损坏，D 与曾标 unknown student 矛盾。"
+    },
+    {
+      "passage": "A small town tracked its water use over a single dry summer. In June, before any restrictions, households used an average of 400 liters a day. After the town introduced tiered pricing in July, average use fell to 280 liters, and by August it had dropped further to just 230 liters.",
+      "prompt": "Which choice best describes data presented in the text?",
+      "options": ["Average household water use declined steadily after pricing changes were introduced.", "Water use rose sharply over the course of the summer.", "The pricing system had no measurable effect on water use.", "Households used the least water in June."],
+      "answer": "Average household water use declined steadily after pricing changes were introduced.",
+      "domain": "Information and Ideas",
+      "explain_zh": "数据：400→280→230，定价后持续下降。B 与文相反，C 与下降矛盾，D 错（6 月用水最多）。"
+    },
+    {
+      "passage": "The novelist wrote her entire first book on scraps of paper during her daily commute, never once imagining that anyone would read it. Decades later, those same scraps, carefully preserved behind glass, draw crowds who come to see where a beloved story began on the backs of bus tickets and grocery lists.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["A book written casually on scraps of paper later became widely celebrated.", "The novelist always expected her first book to be famous.", "Bus tickets make better writing paper than ordinary notebooks.", "The novelist refused to let anyone see her early drafts."],
+      "answer": "A book written casually on scraps of paper later became widely celebrated.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：随手写在纸片上的书后来声名远扬。B 与 never imagining 矛盾，C 荒谬且无关，D 与人群参观矛盾。"
+    },
+    {
+      "passage": "Whenever the power failed at the remote research station, the scientists noticed something strange: within minutes, the readings from their most sensitive instrument grew far steadier than usual. Only later did they realize that the building's own generator had been the source of a faint vibration disturbing it all along.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The generator had unintentionally been interfering with the instrument's readings.", "The instrument worked best while the generator was running.", "The power failures permanently damaged the instrument.", "The scientists had deliberately switched the generator off."],
+      "answer": "The generator had unintentionally been interfering with the instrument's readings.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：停电时读数更稳，说明发电机的振动一直在干扰。B 与之相反，C 错（更稳非损坏），D 与 power failed 矛盾。"
+    },
+    {
+      "passage": "The desert plant survives the long drought by a clever trick: it opens the tiny pores in its thick leaves only at night, when the air is cool and damp, taking in the carbon dioxide it needs and storing it carefully until daylight, when sunlight finally allows it to make food.",
+      "prompt": "According to the text, why does the plant open its pores at night?",
+      "options": ["To take in carbon dioxide while the air is cool and damp.", "To release the sunlight it has stored during the day.", "To stay warm during the cold desert nights.", "To make food faster than it could during the day."],
+      "answer": "To take in carbon dioxide while the air is cool and damp.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说夜间凉湿时开孔吸入 CO2。B 荒谬，C 文未提保暖，D 错（白天才造食）。"
+    },
+    {
+      "passage": "A researcher claims that crows can recognize individual human faces and will hold grudges against people who once threatened them. To test this idea convincingly, she must rule out the simpler possibility that the birds are merely reacting to a person's clothing or to a particular location.",
+      "prompt": "Which experimental result would most strongly support the researcher's claim?",
+      "options": ["Crows scolded one specific person even when that person wore different clothes in a new place.", "Crows avoided a particular bench no matter who happened to sit on it.", "Crows reacted the same way to everyone wearing a certain hat.", "Crows gathered wherever food had previously been left for them."],
+      "answer": "Crows scolded one specific person even when that person wore different clothes in a new place.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持认脸记仇须排除衣着与地点，故换衣换地仍针对此人最有力。B、C、D 分别是地点、衣着、食物反应，无法支持认脸。"
+    },
+    {
+      "passage": "The diary's final entry, written the night before the expedition set out, lists every item the explorer planned to carry into the mountains. Beside the word compass, in noticeably darker ink and a hurried hand, someone has at some point added two small words: forgot it.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The note about the compass was probably added after the list was first written.", "The explorer decided on purpose not to bring a compass.", "The diary was written entirely within a single evening.", "The expedition was canceled before it could begin."],
+      "answer": "The note about the compass was probably added after the list was first written.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：darker ink 与 later added 说明是后来补加。B 与 forgot 矛盾，C 与 later added 矛盾，D 文未提取消。"
+    },
+    {
+      "passage": "Early maps of the open ocean often left vast areas blank or filled them with imagined monsters. Far from being mere decoration, these blank spaces were honest admissions of ignorance, marking the exact boundary between what sailors knew and what they could only fear. To later explorers, an empty map was less a warning than an invitation.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["The blank spaces on early ocean maps reflected the limits of knowledge and invited further exploration.", "Early mapmakers genuinely believed that sea monsters existed.", "Empty maps were considered worthless by later explorers.", "Sailors preferred maps decorated with imaginary creatures."],
+      "answer": "The blank spaces on early ocean maps reflected the limits of knowledge and invited further exploration.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：空白标示知识边界，对后来的探险者是一种邀请。B 过度（imagined），C 与 invitation 相反，D 文未说偏好。"
+    }
+  ]
+}

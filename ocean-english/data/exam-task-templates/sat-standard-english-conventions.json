@@ -1,0 +1,30 @@
+{
+  "templateId": "sat-standard-english-conventions",
+  "examIds": ["sat"],
+  "taskType": "reading_comprehension",
+  "skill": "writing",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "Digital SAT R&W — Standard English Conventions。一个句子或短段落（25-150 词）带一个 blank，后接 1 道四选一，考 boundaries（句界/标点）、form-structure-sense（动词时态/主谓一致/代词/修饰语/平行结构）。4 个选项仅一个在语法/标点/表达上正确，其余为常见语法错误。不能写成词义题。Claude 亲撰，不抄真题，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 25,
+    "maxWords": 150,
+    "perStimulusItems": 1,
+    "topicDomains": ["science", "history", "social_science", "humanities", "culture"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "single_choice", "choices": 4, "domain": "Standard English Conventions" },
+  "subskills": ["boundaries", "form_structure_sense", "verb_tense", "subject_verb_agreement", "pronoun", "modifier", "parallelism", "punctuation"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 College Board 真题",
+    "文本 25-150 词、含一个 blank，单题四选一",
+    "考句界/标点/动词时态/主谓一致/代词/修饰语/平行；仅一个选项语法标点正确",
+    "其余 3 选项须为常见且似是而非的语法错误；不得写成词义题",
+    "qa_flags.domain 必须为 standard_english_conventions",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

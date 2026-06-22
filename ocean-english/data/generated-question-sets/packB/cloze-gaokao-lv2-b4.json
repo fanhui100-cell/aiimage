@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B4. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "I used to be the kind of person who hated any form of exercise. So when my doctor suggested I start running, I almost (1)___. But my health was poor, and I knew I had to make a (2)___. The first morning was a (3)___: after barely two minutes I was gasping for breath and ready to (4)___. Everything in me wanted to go back to bed, yet I forced myself to keep (5)___, just to the next tree, then the next. The following days were not much (6)___. My legs ached, the mornings were dark and cold, and progress felt painfully (7)___. Many times I asked myself why I even (8)___. But I made one simple rule: no matter how slow, I would not (9)___ a single morning. Slowly, almost without noticing, things began to (10)___. One day I ran for ten minutes without stopping; another day, the hill that had once (11)___ me felt easy. My body grew stronger, but the real change was in my (12)___: I had proved I could do something hard. Two years later, I (13)___ my first half-marathon. Crossing that finish line, exhausted and overjoyed, I thought back to that first miserable morning. The lesson was (14)___: big achievements are simply small efforts, repeated. And the hardest step is always the (15)___ one.",
+      "blanks": [
+        { "options": ["agreed", "refused", "laughed", "cried"], "answer": "B" },
+        { "options": ["change", "joke", "wish", "noise"], "answer": "A" },
+        { "options": ["success", "disaster", "joke", "habit"], "answer": "B" },
+        { "options": ["quit", "sing", "jump", "eat"], "answer": "A" },
+        { "options": ["going", "sleeping", "talking", "eating"], "answer": "A" },
+        { "options": ["worse", "easier", "longer", "colder"], "answer": "B" },
+        { "options": ["fast", "slow", "clear", "easy"], "answer": "B" },
+        { "options": ["bothered", "slept", "won", "left"], "answer": "A" },
+        { "options": ["enjoy", "miss", "count", "watch"], "answer": "B" },
+        { "options": ["change", "end", "stop", "fall"], "answer": "A" },
+        { "options": ["helped", "defeated", "followed", "missed"], "answer": "B" },
+        { "options": ["legs", "mind", "shoes", "voice"], "answer": "B" },
+        { "options": ["watched", "completed", "lost", "missed"], "answer": "B" },
+        { "options": ["strange", "simple", "sad", "wrong"], "answer": "B" },
+        { "options": ["last", "first", "longest", "next"], "answer": "B" }
+      ],
+      "explain_zh": "1refused差点拒绝 2change做出改变 3disaster灾难 4quit想放弃 5going继续跑 6easier没轻松多少 7slow缓慢 8bothered何苦 9miss不缺一晨 10change开始变化 11defeated曾击垮 12mind心态 13completed跑完 14simple简单 15first第一步最难。"
+    },
+    {
+      "passage": "In the corner of my grandfather's garage stood an old bicycle, rusty and (1)___, that no one had ridden for thirty years. One summer, he asked if I would help him (2)___ it, and though I knew nothing about machines, I agreed. We spent weeks on it. He taught me to clean each (3)___, oil the chain and tighten every bolt. The work was slow and our hands were always (4)___, but I loved his stories as we worked. The bicycle, it turned out, had been his very (5)___, bought with his first wages, and he had ridden it to meet my grandmother on their first (6)___. As we rebuilt it, he seemed to grow younger, his eyes (7)___ with memories. When at last it was finished, gleaming and (8)___ again, my grandfather climbed on and rode slowly around the yard, laughing like a boy. It was one of the happiest moments I had ever (9)___ him. He passed away the following winter. The bicycle now stands in my own home, and I keep it perfectly (10)___. To others it may look like just an old machine, but to me it holds something (11)___. Whenever I polish it, I remember not only my grandfather but the (12)___ he gave me that summer: that the things we repair with our own hands, and the time we (13)___ with the people we love, are never truly (14)___. Some treasures, he taught me, are measured not in money but in (15)___.",
+      "blanks": [
+        { "options": ["new", "broken", "clean", "bright"], "answer": "B" },
+        { "options": ["sell", "fix", "hide", "throw"], "answer": "B" },
+        { "options": ["part", "word", "page", "seat"], "answer": "A" },
+        { "options": ["clean", "dirty", "empty", "cold"], "answer": "B" },
+        { "options": ["last", "first", "only", "new"], "answer": "B" },
+        { "options": ["day", "date", "trip", "class"], "answer": "B" },
+        { "options": ["shining", "closing", "falling", "turning"], "answer": "A" },
+        { "options": ["old", "new", "broken", "empty"], "answer": "B" },
+        { "options": ["heard", "seen", "told", "made"], "answer": "B" },
+        { "options": ["hidden", "clean", "empty", "closed"], "answer": "B" },
+        { "options": ["heavy", "precious", "strange", "useless"], "answer": "B" },
+        { "options": ["bike", "lesson", "money", "job"], "answer": "B" },
+        { "options": ["spend", "waste", "lose", "sell"], "answer": "A" },
+        { "options": ["lost", "clean", "ready", "free"], "answer": "A" },
+        { "options": ["speed", "love", "size", "gold"], "answer": "B" }
+      ],
+      "explain_zh": "1broken破旧 2fix修理 3part部件 4dirty弄脏 5first第一辆 6date约会 7shining眼睛发亮 8new焕然一新 9seen见他最开心 10clean保持干净 11precious珍贵 12lesson教诲 13spend共度 14lost不会失去 15love以爱衡量。"
+    },
+    {
+      "passage": "On my way home from school, I found a (1)___ lying on the pavement. Inside was a thick bundle of cash, more money than I had ever (2)___ at once, along with some cards and a photo of a smiling family. For a moment, I will be honest, I was (3)___: that money could buy so many things I had always wanted. No one had seen me pick it up; no one would ever (4)___. But as I looked at the photo, I imagined how the owner must be (5)___ right now, perhaps having lost money they badly needed. I knew at once what I had to (6)___. Using a card inside, I managed to find a phone (7)___ and called. An hour later, an anxious middle-aged man hurried to meet me. When I handed him the wallet, untouched, his face flooded with (8)___. He explained that the money was for his mother's (9)___ operation, and that losing it had felt like the end of the world. He tried to give me a large (10)___ as thanks, but I (11)___; helping him was reward enough. Walking home with empty pockets but a full (12)___, I felt richer than any amount of money could have made me. I had been (13)___ to keep it, and no one would have known. But I would have (14)___, and that, I realised, was the only thing that mattered. Being honest when no one is watching, I learned that day, is the truest (15)___ of who we really are.",
+      "blanks": [
+        { "options": ["book", "wallet", "phone", "key"], "answer": "B" },
+        { "options": ["spent", "seen", "lost", "saved"], "answer": "B" },
+        { "options": ["bored", "tempted", "afraid", "tired"], "answer": "B" },
+        { "options": ["know", "help", "come", "care"], "answer": "A" },
+        { "options": ["sleeping", "worrying", "laughing", "resting"], "answer": "B" },
+        { "options": ["do", "say", "buy", "hide"], "answer": "A" },
+        { "options": ["shop", "number", "box", "line"], "answer": "B" },
+        { "options": ["anger", "relief", "doubt", "fear"], "answer": "B" },
+        { "options": ["easy", "urgent", "cheap", "old"], "answer": "B" },
+        { "options": ["reward", "bill", "box", "order"], "answer": "A" },
+        { "options": ["agreed", "refused", "paid", "waited"], "answer": "B" },
+        { "options": ["bag", "heart", "head", "hand"], "answer": "B" },
+        { "options": ["forced", "tempted", "asked", "paid"], "answer": "B" },
+        { "options": ["known", "paid", "left", "won"], "answer": "A" },
+        { "options": ["story", "measure", "gift", "habit"], "answer": "B" }
+      ],
+      "explain_zh": "1wallet钱包 2seen见过这么多钱 3tempted动心 4know不会有人知道 5worrying焦急 6do该做 7number电话号码 8relief如释重负 9urgent紧急手术 10reward酬谢 11refused婉拒 12heart内心充实 13tempted曾受诱惑 14known自己会知道 15measure真正的检验。"
+    },
+    {
+      "passage": "One windy autumn morning, I found a small bird lying on our doorstep, one wing bent at a strange (1)___. It must have flown into a window. My first thought was that there was nothing I could (2)___, but I could not simply leave it to (3)___. Gently, I lifted the trembling bird into a shoebox lined with soft (4)___, and placed it somewhere warm and quiet. I looked up how to care for an injured bird and followed every instruction (5)___, feeding it tiny amounts of food and keeping it away from noise. For days the bird barely moved, and I was sure it would not (6)___. But slowly, it grew stronger. It began to eat on its own, then to (7)___ its wings, and finally to hop around the box, watching me with bright, (8)___ eyes. The morning I knew it was ready, I carried the box into the garden and opened the (9)___. For a moment the bird hesitated. Then, with a sudden burst of energy, it (10)___ into the sky and was gone. I felt a strange mix of (11)___ and loss. I had grown fond of the little creature, yet setting it (12)___ was the whole point. Caring for that bird taught me something I have never (13)___: that to truly love something sometimes means helping it (14)___ you. The empty shoebox made me a little sad, but watching that bird disappear into the open sky was one of the most (15)___ things I have ever done.",
+      "blanks": [
+        { "options": ["angle", "time", "place", "sound"], "answer": "A" },
+        { "options": ["do", "say", "see", "buy"], "answer": "A" },
+        { "options": ["sleep", "die", "fly", "rest"], "answer": "B" },
+        { "options": ["stones", "cloth", "glass", "wood"], "answer": "B" },
+        { "options": ["quickly", "carefully", "proudly", "loudly"], "answer": "B" },
+        { "options": ["survive", "leave", "eat", "sing"], "answer": "A" },
+        { "options": ["hide", "stretch", "break", "sell"], "answer": "B" },
+        { "options": ["sleepy", "lively", "sad", "empty"], "answer": "B" },
+        { "options": ["door", "lid", "window", "gate"], "answer": "B" },
+        { "options": ["fell", "rose", "looked", "waited"], "answer": "B" },
+        { "options": ["fear", "joy", "anger", "doubt"], "answer": "B" },
+        { "options": ["free", "down", "up", "aside"], "answer": "A" },
+        { "options": ["forgotten", "needed", "found", "said"], "answer": "A" },
+        { "options": ["follow", "leave", "find", "copy"], "answer": "B" },
+        { "options": ["boring", "rewarding", "difficult", "recent"], "answer": "B" }
+      ],
+      "explain_zh": "1angle奇怪角度 2do无能为力 3die任其死 4cloth软布 5carefully仔细 6survive活不下来 7stretch舒展翅膀 8lively灵动的眼 9lid盒盖 10rose飞上天 11joy喜悦 12free放飞 13forgotten从未忘 14leave离开你 15rewarding最有意义。"
+    },
+    {
+      "passage": "I discovered the little second-hand bookshop by (1)___, ducking in one rainy afternoon merely to escape the downpour. I had never been much of a (2)___; books, to me, were just things we were forced to study at school. The shop was small and crowded, its shelves (3)___ from floor to ceiling with old volumes, and it smelled of dust and paper. To pass the time, I picked up a worn novel at (4)___ and began to read. To my surprise, I could not put it (5)___. The story pulled me in completely, and when I finally looked up, an hour had (6)___ without my noticing. The kind old owner let me sit and read for as long as I (7)___. I returned the next day, and the day after that. Within weeks, that dusty little shop had become my favourite (8)___ in the whole city. Through its books I travelled to distant countries, lived a hundred different (9)___, and met ideas that slowly began to (10)___ the way I saw the world. Reading, which I had always found (11)___, had become my greatest joy. Looking back, I am amazed that a single rainy afternoon could so completely (12)___ me. If I had not stepped in to escape the rain, I might never have discovered how much a book could (13)___. That little shop did far more than sell me stories: it (14)___ me a reader, and in doing so, it quietly made my whole world (15)___.",
+      "blanks": [
+        { "options": ["accident", "heart", "plan", "force"], "answer": "A" },
+        { "options": ["writer", "reader", "student", "traveller"], "answer": "B" },
+        { "options": ["cleaned", "packed", "sold", "empty"], "answer": "B" },
+        { "options": ["once", "random", "home", "school"], "answer": "B" },
+        { "options": ["down", "off", "away", "back"], "answer": "A" },
+        { "options": ["passed", "stopped", "waited", "returned"], "answer": "A" },
+        { "options": ["paid", "wished", "slept", "left"], "answer": "B" },
+        { "options": ["book", "place", "street", "class"], "answer": "B" },
+        { "options": ["days", "lives", "books", "games"], "answer": "B" },
+        { "options": ["change", "end", "copy", "hide"], "answer": "A" },
+        { "options": ["easy", "boring", "useful", "funny"], "answer": "B" },
+        { "options": ["change", "follow", "leave", "teach"], "answer": "A" },
+        { "options": ["cost", "offer", "weigh", "sell"], "answer": "B" },
+        { "options": ["called", "made", "found", "taught"], "answer": "B" },
+        { "options": ["smaller", "bigger", "darker", "quieter"], "answer": "B" }
+      ],
+      "explain_zh": "1accident偶然 2reader爱读书者 3packed塞满 4at random随手 5down放不下 6passed过去了 7wished想读多久 8place最爱之地 9lives一百种人生 10change改变看世界方式 11boring曾觉枯燥 12change彻底改变 13offer能给予 14made使我成为读者 15bigger世界更大。"
+    }
+  ]
+}

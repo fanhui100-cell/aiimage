@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-21T15:48:44.894Z",
+  "apply": true,
+  "stage": "gapfill",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 2,
+    "reject": 0,
+    "wrote": 2,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data/generated-question-sets/gapfill/reading-gaokao-lv2.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 2,
+      "dupSkip": 0
+    }
+  ]
+}

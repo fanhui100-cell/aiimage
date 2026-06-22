@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T10:01:14.317Z",
+  "apply": false,
+  "stage": null,
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 10,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data/generated-question-sets/toefl-2026-pilot/toefl-build-a-sentence.json",
+      "template": "toefl-build-a-sentence",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

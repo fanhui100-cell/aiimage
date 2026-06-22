@@ -9,7 +9,7 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
-import { shapeToItems, type ShapeTemplate } from '@/lib/exam-task-templates/shape'
+import { shapeToItems, countWords, type ShapeTemplate } from '@/lib/exam-task-templates/shape'
 
 const env = existsSync('.env.local') ? readFileSync('.env.local', 'utf8') : ''
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
@@ -52,6 +52,31 @@ function shapeFixtureTests() {
   const bank: ShapeTemplate = { taskType: 'banked_cloze', itemCount: 10, optionCount: 15, answerSchema: { shape: 'bank_answers' } }
   push(shapeToItems(bank, { passage: 'p', bank: Array.from({ length: 15 }, (_, i) => `w${i}`), answers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }).ok === true, 'fixture: 合法 banked_cloze 应通过')
   push(shapeToItems(bank, { passage: 'p', bank: Array.from({ length: 12 }, (_, i) => `w${i}`), answers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }).ok === false, 'fixture: banked bank≠15 应被拒')
+  // complete_words（TOEFL）：maskedForm/targetWord 一致性、目标词须在短文中、唯一恢复
+  const cw: ShapeTemplate = { taskType: 'complete_the_words', itemCount: 1, optionCount: 0, answerSchema: { shape: 'complete_words' } }
+  const cwValid = { passage: 'Many animals change their behavior when the seasons shift and food becomes scarce.', targetWord: 'behavior', maskedForm: 'beh_____' }
+  push(shapeToItems(cw, cwValid).ok === true, 'fixture: 合法 complete_words 应通过')
+  push(shapeToItems(cw, { ...cwValid, maskedForm: 'beh____' }).ok === false, 'fixture: maskedForm 长度≠targetWord 应被拒')
+  push(shapeToItems(cw, { ...cwValid, maskedForm: 'bxh_____' }).ok === false, 'fixture: 已显示字母不匹配 应被拒')
+  push(shapeToItems(cw, { ...cwValid, maskedForm: 'behavior' }).ok === false, 'fixture: 无缺失字母 应被拒')
+  push(shapeToItems(cw, { ...cwValid, maskedForm: '________' }).ok === false, 'fixture: 全部缺失 应被拒')
+  push(shapeToItems(cw, { ...cwValid, targetWord: 'ecosystem', maskedForm: 'eco______' }).ok === false, 'fixture: 目标词不在短文中 应被拒')
+  push(shapeToItems(cw, { ...cwValid, passage: 'short', maskedForm: 'beh_____' }).ok === false, 'fixture: 短文过短(<15词) 应被拒')
+  // 目标词在短文中所有整词出现都替换为 maskedForm，prompt 不残留未遮盖副本
+  const cwOut = shapeToItems(cw, cwValid)
+  push(cwOut.ok === true && !/\bbehavior\b/i.test(cwOut.result.items[0].prompt) && cwOut.result.items[0].prompt.includes('beh_____'), 'fixture: complete_words prompt 须遮盖目标词、保留 maskedForm')
+  // build_sentence（TOEFL）：chunks 互异、answer 为全排列、prompt 不泄露成句
+  const bs: ShapeTemplate = { taskType: 'build_a_sentence', itemCount: 1, optionCount: 0, answerSchema: { shape: 'build_sentence' } }
+  const bsValid = { chunks: ['of frog', 'Scientists', 'in the rainforest', 'have discovered', 'a new species'], answer: [1, 3, 4, 0, 2] }
+  const bsOut = shapeToItems(bs, bsValid)
+  push(bsOut.ok === true, 'fixture: 合法 build_sentence 应通过')
+  push(bsOut.ok === true && bsOut.result.meta.scoringNotReady === true, 'fixture: build_sentence 须标 scoringNotReady')
+  push(shapeToItems(bs, { ...bsValid, chunks: ['only', 'two'] }).ok === false, 'fixture: chunks<3 应被拒')
+  push(shapeToItems(bs, { ...bsValid, answer: [1, 3, 4, 0] }).ok === false, 'fixture: answer 长度≠chunks 应被拒')
+  push(shapeToItems(bs, { ...bsValid, answer: [1, 3, 4, 0, 0] }).ok === false, 'fixture: answer 非全排列(重复) 应被拒')
+  push(shapeToItems(bs, { ...bsValid, answer: [1, 3, 4, 0, 9] }).ok === false, 'fixture: answer 越界 应被拒')
+  push(shapeToItems(bs, { chunks: ['the', 'the', 'cat', 'sat'], answer: [0, 2, 3, 1] }).ok === false, 'fixture: chunks 不互异 应被拒')
+  push(shapeToItems(bs, { ...bsValid, prompt: 'Scientists have discovered a new species of frog in the rainforest' }).ok === false, 'fixture: prompt 泄露成句 应被拒')
 }
 
 // ── A) 模板 QA ──────────────────────────────────────────────────────────────
@@ -75,13 +100,14 @@ function templateQa(templates: Template[]) {
       push(t.optionCount === 0, `${id}: grammar_fill 为自由填空，optionCount 应为 0`)
     }
 
-    // SAT：短 RW 单题（非长泛读），四 domain
+    // SAT：短 RW 单题（非长泛读）；每个模板至少声明一个 domain，全部 SAT 模板合起来覆盖四大（见循环后全局检查）
     if (t.examIds.includes('sat')) {
       const maxWords = Number((t.stimulusRequirements as { maxWords?: number })?.maxWords ?? 9999)
       const perItems = Number((t.stimulusRequirements as { perStimulusItems?: number })?.perStimulusItems ?? 99)
       push(maxWords <= 200, `${id}: SAT 题须短文本（maxWords≤200），当前 ${maxWords}`)
       push(perItems === 1, `${id}: SAT 须每短文本单题（perStimulusItems=1）`)
-      push((t.domains?.length ?? 0) === 4, `${id}: SAT 须覆盖 4 大 domain`)
+      const declaredDomain = (t.domains?.length ?? 0) >= 1 || (sch as { domain?: string }).domain != null
+      push(declaredDomain, `${id}: SAT 模板须声明 domain（domains[] 或 answerSchema.domain）`)
     }
 
     // 考研：无听力/口语
@@ -91,29 +117,74 @@ function templateQa(templates: Template[]) {
       push(!(t.skills ?? []).some((s) => s.skill === 'listening' || s.skill === 'speaking'), `${id}: 考研模板 skills 不得含听力/口语`)
     }
 
-    // TOEFL：覆盖四技能
-    if (t.examIds.includes('toefl')) {
+    // TOEFL：综合型模板（声明 skills[]）须覆盖四技能；单题型模板（如 toefl-complete-the-words）只管一个 task，不强制
+    if (t.examIds.includes('toefl') && (t.skills?.length ?? 0) > 0) {
       const sk = new Set((t.skills ?? []).map((s) => s.skill))
-      for (const need of ['reading', 'listening', 'writing', 'speaking']) push(sk.has(need), `${id}: TOEFL 模板缺技能 ${need}`)
+      for (const need of ['reading', 'listening', 'writing', 'speaking']) push(sk.has(need), `${id}: TOEFL 综合模板缺技能 ${need}`)
     }
   }
+  // SAT 全局：所有 SAT 模板合起来须覆盖四大 domain（拆分为 4 个 domain 专用模板后，单模板各管一个）
+  const SAT_REQUIRED = ['information_and_ideas', 'craft_and_structure', 'expression_of_ideas', 'standard_english_conventions']
+  const satCovered = new Set<string>()
+  for (const t of templates) {
+    if (!t.examIds.includes('sat')) continue
+    for (const d of t.domains ?? []) satCovered.add(d.domain)
+    const sd = (t.answerSchema as { domain?: string })?.domain
+    if (sd) satCovered.add(sd)
+  }
+  for (const need of SAT_REQUIRED) push(satCovered.has(need), `SAT 模板集合缺 domain: ${need}`)
 }
 
 // ── B) 数据 QA（v2 应用时）──────────────────────────────────────────────────
 async function tableExists(db: SupabaseClient, t: string): Promise<boolean> { const { error } = await db.from(t).select('*').limit(1); return !error }
 
-type SetRow = { id: string; legacy_id: string | null; task_type: string; status: string; qa_flags: Record<string, unknown> | null }
+type SetRow = { id: string; legacy_id: string | null; task_type: string; status: string; qa_flags: Record<string, unknown> | null; stimulus_id: string | null }
 type ItemRow = { id: string; question_set_id: string; input_mode: string; choices: unknown; answer: unknown; status: string }
 
 async function dataQa(db: SupabaseClient): Promise<boolean> {
   if (!(await tableExists(db, 'question_sets'))) { notes.push('v2 not_applied：跳过数据 QA'); return false }
-  // 仅查本管线生成的 draft（legacy_id 前缀 gen:）
-  const { data: setsData } = await db.from('question_sets').select('id, legacy_id, task_type, status, qa_flags').like('legacy_id', 'gen:%').limit(2000)
-  const sets = (setsData ?? []) as SetRow[]
+  // 仅查本管线生成的 draft（legacy_id 前缀 gen:）——分页拉取，避开 PostgREST max-rows=1000 截断（否则只抽样前 1000 个，新 set 可能漏检）
+  const sets: SetRow[] = []
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await db.from('question_sets').select('id, legacy_id, task_type, status, qa_flags, stimulus_id').like('legacy_id', 'gen:%').range(from, from + 999)
+    if (error) { notes.push(`数据 QA sets 拉取错误: ${error.message}`); break }
+    const rows = (data ?? []) as SetRow[]
+    sets.push(...rows)
+    if (rows.length < 1000) break
+  }
   if (!sets.length) { notes.push('v2 applied 但无 gen: draft sets（尚未 --apply 生成）'); return true }
+
+  // ── 篇幅强制校验：按 qa_flags.template 对应模板的 minWords/maxWords，校验 stimulus 词数 ──
+  const tplWordReq = new Map<string, { minWords?: number; maxWords?: number }>()
+  for (const t of loadTemplates()) tplWordReq.set(t.templateId, (t.stimulusRequirements ?? {}) as { minWords?: number; maxWords?: number })
+  const stimIds = sets.map((s) => s.stimulus_id).filter((x): x is string => !!x)
+  const stimMap = new Map<string, { word_count: number | null; text_en: string | null }>()
+  for (let i = 0; i < stimIds.length; i += 200) {
+    const { data: stimData } = await db.from('stimuli').select('id, word_count, text_en').in('id', stimIds.slice(i, i + 200))
+    for (const s of (stimData ?? []) as { id: string; word_count: number | null; text_en: string | null }[]) stimMap.set(s.id, { word_count: s.word_count, text_en: s.text_en })
+  }
+  let wordChecked = 0
+  for (const s of sets) {
+    const tplId = (s.qa_flags as { template?: string } | null)?.template
+    const req = tplId ? tplWordReq.get(tplId) : undefined
+    if (!req || (req.minWords == null && req.maxWords == null) || !s.stimulus_id) continue
+    const stim = stimMap.get(s.stimulus_id)
+    if (!stim) continue
+    const wc = stim.word_count != null ? stim.word_count : (stim.text_en ? countWords(stim.text_en) : null)
+    if (wc == null) continue
+    wordChecked++
+    push(req.minWords == null || wc >= Number(req.minWords), `set ${s.legacy_id} stimulus 过短 ${wc}<${req.minWords}（模板 ${tplId}）`)
+    push(req.maxWords == null || wc <= Number(req.maxWords), `set ${s.legacy_id} stimulus 过长 ${wc}>${req.maxWords}（模板 ${tplId}）`)
+  }
+  notes.push(`篇幅校验：检查 ${wordChecked} 个 gen set 的 stimulus 词数`)
   const byId = new Map(sets.map((s) => [s.id, s]))
-  const { data: itemsData } = await db.from('question_items').select('id, question_set_id, input_mode, choices, answer, status').in('question_set_id', sets.map((s) => s.id)).limit(8000)
-  const items = (itemsData ?? []) as ItemRow[]
+  // 分批 .in()（每 100 个 set id）——避免一次传入数千 id 超出 URL 长度导致静默返回空、items QA 被跳过
+  const allSetIds = sets.map((s) => s.id)
+  const items: ItemRow[] = []
+  for (let i = 0; i < allSetIds.length; i += 100) {
+    const { data: itemsData } = await db.from('question_items').select('id, question_set_id, input_mode, choices, answer, status').in('question_set_id', allSetIds.slice(i, i + 100)).limit(8000)
+    if (itemsData) items.push(...(itemsData as ItemRow[]))
+  }
 
   for (const it of items) {
     const set = byId.get(it.question_set_id)

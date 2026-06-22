@@ -1,0 +1,68 @@
+{
+  "examId": "toefl",
+  "level": 6,
+  "skill": "writing",
+  "taskType": "academic_discussion",
+  "tasks": [
+    {
+      "prompt": "Your professor is teaching a class on higher education. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Owens: Some universities require students to take a number of courses outside their major, in subjects such as art, science, or history. Do you think this requirement is a good use of students' time? Why or why not?\n\nMarco: I think it is valuable. Studying different subjects helps students think in new ways and discover interests they did not know they had.\n\nLina: I disagree. Students have limited time and money, so they should focus on the field they came to study rather than spreading themselves thin.",
+      "promptZh": "学术讨论：大学是否应要求学生修读本专业以外的课程？回应教授提问并就 Marco/Lina 的不同观点表达己见。",
+      "referencePoints": ["明确表明自己的立场（支持、反对或折中）", "给出具体理由或例子支撑观点", "回应至少一位同学（Marco 或 Lina）的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on urban planning. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Reyes: When city budgets are limited, should governments invest more in public transportation, such as buses and trains, or in building and widening roads for cars?\n\nSofia: Public transportation should come first. It moves more people, reduces traffic, and pollutes less for each passenger.\n\nDaniel: I see it differently. Many people depend on cars, especially outside city centers, so better roads serve more residents directly.",
+      "promptZh": "学术讨论：预算有限时，城市应优先投资公共交通还是道路？回应教授并就 Sofia/Daniel 的观点表态。",
+      "referencePoints": ["明确表明优先公共交通还是道路（或折中）", "给出具体理由或例子支撑", "回应 Sofia 或 Daniel 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on the future of work. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Kim: Many companies now let employees choose to work from home. Should companies make remote work a permanent option for all employees who want it?\n\nHana: Yes. Remote work saves commuting time and lets people balance work and family more easily.\n\nTom: I'm not convinced. Working together in person builds trust and makes teamwork and training easier.",
+      "promptZh": "学术讨论：公司是否应让愿意的员工永久远程办公？回应教授并就 Hana/Tom 的观点表态。",
+      "referencePoints": ["明确表明支持、反对或有条件支持远程办公", "给出具体理由或例子支撑", "回应 Hana 或 Tom 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on media and society. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Patel: Digital technology lets us message almost anyone instantly. Overall, do you think it makes people more connected or less connected to those around them?\n\nAisha: More connected. I can keep in touch with family and friends who live far away every single day.\n\nLeo: I'd argue the opposite. People often stare at their phones instead of talking to the people sitting right next to them.",
+      "promptZh": "学术讨论：数字技术让人更连接还是更疏离？回应教授并就 Aisha/Leo 的观点表态。",
+      "referencePoints": ["明确表明更连接、更疏离或视情况而定", "给出具体理由或例子支撑", "回应 Aisha 或 Leo 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on public policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Novak: Space programs are expensive. Should governments continue to fund space exploration while serious problems, such as poverty and disease, remain unsolved on Earth?\n\nPriya: We should keep funding it. Space research leads to new technologies and knowledge that end up benefiting everyone.\n\nCarlos: I think the money would do more good if it were spent first on urgent needs here at home.",
+      "promptZh": "学术讨论：地球问题未解时是否仍应资助太空探索？回应教授并就 Priya/Carlos 的观点表态。",
+      "referencePoints": ["明确表明继续资助、优先地球问题或折中", "给出具体理由或例子支撑", "回应 Priya 或 Carlos 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on psychology. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Bauer: People often say we learn more from our failures than from our successes. Do you agree that failure teaches us more than success does?\n\nMei: I agree. Failure forces us to examine what went wrong and to change our approach.\n\nJonah: I'm not so sure. Success also teaches us, by showing which methods actually work and are worth repeating.",
+      "promptZh": "学术讨论：失败是否比成功教给我们更多？回应教授并就 Mei/Jonah 的观点表态。",
+      "referencePoints": ["明确表明失败教得更多、成功也重要或两者皆是", "给出具体理由或例子支撑", "回应 Mei 或 Jonah 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on education technology. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Flores: Some schools want to replace printed textbooks with tablets and laptops. Do you think this change is a good idea?\n\nNina: Yes. Digital devices are lighter, can be updated easily, and give students access to many resources at once.\n\nOmar: I have doubts. Screens can distract students, and not everyone has a reliable device or internet at home.",
+      "promptZh": "学术讨论：学校是否应以平板/笔记本取代纸质教材？回应教授并就 Nina/Omar 的观点表态。",
+      "referencePoints": ["明确表明支持、反对或有条件支持", "给出具体理由或例子支撑", "回应 Nina 或 Omar 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on law and ethics. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Schmidt: When users post harmful or false information online, should the social media company itself be held responsible for that content?\n\nYuki: Yes. These companies design the systems that spread posts so widely, so they should be accountable for the harm.\n\nBen: I disagree. Companies cannot check every post, and holding them responsible could push them to silence too many voices.",
+      "promptZh": "学术讨论：社媒平台是否应为用户发布的有害/虚假内容负责？回应教授并就 Yuki/Ben 的观点表态。",
+      "referencePoints": ["明确表明平台应担责、不应担责或有限担责", "给出具体理由或例子支撑", "回应 Yuki 或 Ben 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on environmental policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Adeyemi: Countries often face a choice between encouraging economic growth and protecting the environment. When the two conflict, which should be the higher priority?\n\nRavi: Economic growth should come first. It creates jobs and lifts people out of poverty, which improves lives right now.\n\nElena: I'd put the environment first. Without clean air, water, and a stable climate, long-term prosperity is impossible.",
+      "promptZh": "学术讨论：经济增长与环境保护冲突时何者优先？回应教授并就 Ravi/Elena 的观点表态。",
+      "referencePoints": ["明确表明优先增长、优先环境或寻求平衡", "给出具体理由或例子支撑", "回应 Ravi 或 Elena 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "prompt": "Your professor is teaching a class on architecture and history. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Costa: As cities grow, they sometimes must decide whether to preserve old historical buildings or replace them with modern ones. Which do you think is usually the better choice?\n\nGrace: I favor preserving them. Historic buildings connect people to their past and give a city its unique character.\n\nSam: I'd lean toward replacing some of them. Modern buildings can house more people and use energy far more efficiently.",
+      "promptZh": "学术讨论：城市发展中应保留历史建筑还是以现代建筑取代？回应教授并就 Grace/Sam 的观点表态。",
+      "referencePoints": ["明确表明倾向保留、取代或个案权衡", "给出具体理由或例子支撑", "回应 Grace 或 Sam 的论点", "使用多样的学术词汇与连接词", "写成连贯段落，至少约 100 词"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    }
+  ]
+}

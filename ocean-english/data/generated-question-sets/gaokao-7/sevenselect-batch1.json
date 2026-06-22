@@ -1,0 +1,49 @@
+{
+  "template": "gaokao-seven-select",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao seven-select (7 choose 5) passages. 100% original, not copied from any real exam. DeepSeek not used. Each passage 250-340 words with 5 numbered blanks; 7 full-sentence options (5 correct + 2 distractors); answers map blanks 1-5 to bank indices, unique and within 0-6.",
+  "sets": [
+    {
+      "passage": "Learning to manage your time well is one of the most useful skills any student can possibly develop, and yet, oddly enough, it is rarely taught directly in any classroom. (1)______ Without a clear sense of what truly matters on a given day, you may easily spend whole hours on small, comfortable tasks while the genuinely important ones quietly pile up in the background and slowly begin to feel completely overwhelming. A good first step, as many experienced students will readily agree, is simply to make a short written list at the very start of each morning. (2)______ Writing these tasks down on paper frees your mind from the constant, tiring effort of trying to remember everything at once, and it lets you finally see the shape of the whole day at a single glance. Once your list is ready and sitting in front of you, try hard to rank the tasks by their real importance rather than by how quick or pleasant they happen to be. (3)______ It is always tempting to begin with the small, easy, satisfying jobs, but the hardest task on the entire page is very often the single one that matters most of all. Rest, perhaps surprisingly, matters very nearly as much as steady effort does. (4)______ Careful studies have repeatedly shown that short, regular breaks actually help a tired brain hold on to whatever it has just learned, so stepping away from your crowded desk for a few minutes is not laziness but a genuinely sensible strategy. Finally, try to take one quiet moment to review the whole day honestly before you go to sleep. (5)______ Over many weeks and months, these small, honest reflections gradually teach you how you truly spend your limited hours.",
+      "bank": [
+        "Buying an expensive new planner, many students wrongly believe, will somehow solve all of these problems at once.",
+        "The real secret, however, is that managing time well begins not with working harder but with choosing wisely.",
+        "Decide honestly which jobs will make the biggest difference, and force yourself to do those first.",
+        "Getting a full eight hours of sleep is, without doubt, the single most important thing anyone can ever do.",
+        "On it, write down everything you hope to accomplish, from the largest project down to the smallest errand.",
+        "Ask yourself plainly which tasks went well and which were quietly left undone.",
+        "Resting is not a reward you are allowed to enjoy only after every single thing is finished."
+      ],
+      "answers": [1, 4, 2, 6, 5],
+      "explain_zh": "空1选B（总起：管理时间在于明智取舍）；空2选E（在清单上写下所有任务）；空3选C（先做最重要的）；空4选G（休息并非完成后才配享有）；空5选F（自问哪些做好哪些落下）。干扰句A、D语义相关但放入任一空都不连贯。"
+    },
+    {
+      "passage": "Learning a foreign language as an adult is very often described as a frustrating, slow, almost impossible task, but this gloomy and discouraging picture is, fortunately, largely a myth. (1)______ Young children may pick up new accents a little more easily, yet adult learners bring real patience, hard-won discipline, and a genuine understanding of grammar that very young children simply do not yet possess. One of the most common mistakes, made by beginners almost everywhere, is to focus almost entirely on memorizing long lists of isolated, disconnected words. (2)______ A single word learned inside a real, living sentence, firmly tied to a situation you can clearly picture in your mind, tends to stay in the memory far longer than the very same word copied a hundred times from a bare vocabulary list. Speaking from the very first day, however clumsily and however many mistakes you happen to make, is another excellent habit well worth building as early as you possibly can. (3)______ Most nervous learners stay completely silent for far too long, quietly waiting for some perfect moment of total readiness that, in plain truth, never quite seems to arrive. It also helps absolutely enormously to surround yourself with the new language in small, natural, genuinely enjoyable ways. (4)______ A single favorite song, a simple comic strip, or a short daily video can often teach you far more about how real people actually speak than a thick, serious grammar textbook ever possibly could. Above all, try hard to treat your many inevitable mistakes as useful signposts rather than as shameful, embarrassing failures. (5)______ Every small error that you make and then carefully correct quietly marks the exact spot where your understanding is just about to grow a little bit deeper.",
+      "bank": [
+        "Vocabulary, the research consistently suggests, is best absorbed in context rather than in lonely isolation.",
+        "Grammar rules should always be memorized completely before a learner dares to speak a single word.",
+        "Entertainment in the new language can turn out to be a surprisingly powerful and patient teacher.",
+        "In reality, grown-up learners enjoy several genuine advantages that are very easy to overlook.",
+        "Hiring expensive private tutors is the only reliable way for anyone to make any real progress.",
+        "Each correction is not a defeat but a small, precise lesson quietly pointing the way forward.",
+        "The sooner you dare to make your mistakes out loud, the sooner your speech becomes natural."
+      ],
+      "answers": [3, 0, 6, 2, 5],
+      "explain_zh": "空1选D（成人其实有被忽视的优势）；空2选A（词汇应在语境中习得）；空3选G（越早开口出错越快自然）；空4选C（娱乐是强大的老师）；空5选F（每次纠错都是前进的一课）。干扰句B、E（绝对化的语法先行、必须请家教）放入任一空都不连贯。"
+    },
+    {
+      "passage": "In the endless rush to build ever taller towers and ever wider, busier roads, a great many fast-growing cities have quietly forgotten the simple but profound value of open green space. (1)______ A genuinely well-designed public park is far, far more than an empty patch of grass left over by accident between two buildings; it is, in a real sense, a kind of shared living room for an entire crowded neighborhood. Parks offer a number of fairly obvious and immediate benefits to the human body. (2)______ People who happen to live near accessible green space consistently tend to walk a good deal more, sit a good deal less, and recover noticeably faster from the small daily stresses that crowded city life keeps relentlessly piling upon them. The benefits to the restless human mind, though admittedly much harder to measure precisely, may in the end matter every single bit as much. (3)______ Even a single brief walk beneath a cool canopy of tall trees has been clearly shown to calm the racing, circling thoughts that so often crowd a tired and badly overworked brain. Green spaces also quietly and patiently knit scattered, busy communities together over time. (4)______ Complete strangers who would otherwise never once meet behind their locked apartment doors slowly come to nod warmly at one another across a noisy playground, a worn chessboard, or a shared row of leafy vegetable plots. None of this, it must honestly be said, ever quite happens entirely by accident. (5)______ A truly beloved park survives only when a city deliberately chooses, again and again and again, to protect it from the constant, grinding pressure to pave it over for something that promises a faster and easier profit.",
+      "bank": [
+        "Contact with nature, however brief, appears to ease the strain of crowded urban living.",
+        "Yet such spaces are quietly among the most important features a city can ever offer its residents.",
+        "Tall office towers are usually far more profitable than any public garden could ever hope to be.",
+        "Good parks are almost always the result of deliberate and often genuinely difficult decisions.",
+        "Regular movement, after all, comes most easily in places that are simply pleasant to move through.",
+        "Most city residents would gladly trade away their parks in exchange for a little more parking.",
+        "They create rare and easy chances for very different people to share the very same ground."
+      ],
+      "answers": [1, 4, 0, 6, 3],
+      "explain_zh": "空1选B（总起：绿地是城市最重要的设施之一）；空2选E（规律运动在宜人之地最易发生）；空3选A（接触自然缓解都市压力）；空4选G（为不同人创造共处机会）；空5选D（好公园源于审慎而艰难的决定）。干扰句C、F（高楼更赚钱、居民愿用公园换车位）放入任一空都与文意不连贯。"
+    }
+  ]
+}

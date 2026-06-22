@@ -1,0 +1,30 @@
+{
+  "templateId": "sat-craft-and-structure",
+  "examIds": ["sat"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "Digital SAT R&W — Craft and Structure。25-150 词原创短文本 + 1 道四选一，考 words in context / text structure & purpose / cross-text connection。Words in Context 必须依赖语境判断（非孤立同义词），4 选项均可有词典义但仅一个符合上下文；若为双文本题，两段短文本都须原创且短。Claude 亲撰，不抄真题，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 25,
+    "maxWords": 150,
+    "perStimulusItems": 1,
+    "topicDomains": ["literature", "history", "science", "social_science", "humanities"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "single_choice", "choices": 4, "domain": "Craft and Structure" },
+  "subskills": ["words_in_context", "text_structure_purpose", "cross_text_connections"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 College Board 真题",
+    "短文本 25-150 词，单题四选一",
+    "Words in Context 必须依赖语境，非孤立同义词；选项均有词典义但仅一个合上下文",
+    "双文本题两段都须原创且短",
+    "qa_flags.domain 必须为 craft_and_structure",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

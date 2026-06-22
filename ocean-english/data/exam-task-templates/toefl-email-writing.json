@@ -1,0 +1,23 @@
+{
+  "templateId": "toefl-email-writing",
+  "examIds": ["toefl"],
+  "taskType": "email_writing",
+  "skill": "writing",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Writing · Write an Email。情境邮件提示：交代 sender/recipient 关系、situation、communicative purpose 与需涵盖的要点；Academic Navigational 语境。考生写多句邮件，AI/rubric 评分（max 5），input_mode=free_text，走 productive importer。answer 为非官方 rubric_scored 占位（official:false）+ referencePoints；不提供范文/唯一答案。Claude 亲撰，不抄真题、不调 DeepSeek。注：productive importer 直接按 examId/skill/taskType 读取 *.productive.json，本 template 仅作规格记录、不被 shape 消费。"
+  },
+  "stimulusRequirements": { "kind": "none", "perStimulusItems": 1 },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "free_text_rubric", "rubric": true, "maxScore": 5 },
+  "subskills": ["writing", "email", "register", "communicative_purpose"],
+  "qualityRules": [
+    "100% 原创情境提示，禁止抄袭 ETS 真题",
+    "明确 sender/recipient 关系、情境、交际目的与要点",
+    "input_mode=free_text，rubric 100% 覆盖（toefl/writing），max 5",
+    "answer 为非官方 rubric_scored 占位（official:false）+ referencePoints，无范文/唯一答案",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

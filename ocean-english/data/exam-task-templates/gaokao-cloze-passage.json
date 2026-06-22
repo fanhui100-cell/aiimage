@@ -1,0 +1,29 @@
+{
+  "templateId": "gaokao-cloze-passage",
+  "examIds": ["gaokao"],
+  "taskType": "cloze_passage",
+  "skill": "integrated",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "高考完形：一篇 200-260 词夹叙夹议/记叙短文，挖 15 空，每空 4 选项、唯一正确，考语境词义/逻辑衔接/动名形副辨析。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 200,
+    "maxWords": 280,
+    "perStimulusItems": 15,
+    "topicDomains": ["成长", "亲情", "助人", "坚持", "校园", "环保"]
+  },
+  "itemCount": 15,
+  "optionCount": 4,
+  "answerSchema": { "shape": "cloze_passage", "blanks": 15, "optionCount": 4 },
+  "subskills": ["vocab_in_context", "logical_cohesion", "word_discrimination"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "恰好 15 空，每空 4 选项，唯一正确",
+    "干扰项同词性、合语法、靠语境/逻辑排除",
+    "难度为高考，不要 CET/考研化",
+    "不得出现退役题型（尤其 cet_cloze）"
+  ],
+  "copyrightPolicy": "original_only"
+}

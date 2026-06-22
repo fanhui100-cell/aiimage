@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-22T09:18:31.232Z",
+  "apply": false,
+  "stage": "toefl-2026-pilot",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 20,
+    "wrote": 0,
+    "dup": 0,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\toefl-2026-pilot\\toefl-discussion.productive.json",
+      "examId": "toefl",
+      "taskType": "academic_discussion",
+      "level": 6,
+      "skill": "writing",
+      "tasks": 10,
+      "wrote": 10,
+      "dup": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\toefl-2026-pilot\\toefl-email.productive.json",
+      "examId": "toefl",
+      "taskType": "email_writing",
+      "level": 6,
+      "skill": "writing",
+      "tasks": 10,
+      "wrote": 10,
+      "dup": 0
+    }
+  ]
+}

@@ -20,7 +20,8 @@
     "shape": "bank_answers",
     "bank": 7,
     "answers": 5,
-    "answerRange": "0-6"
+    "answerRange": "0-6",
+    "requireSentenceOptions": true
   },
   "subskills": ["cohesion", "discourse_marker", "reference", "topic_sentence", "logical_flow"],
   "qualityRules": [

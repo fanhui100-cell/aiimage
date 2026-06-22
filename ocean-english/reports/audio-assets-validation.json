@@ -1,23 +1,16 @@
 {
-  "generatedAt": "2026-06-20T17:19:54.528Z",
-  "status": "not_applied",
-  "missingTables": [
-    "exam_specs",
-    "exam_sections",
-    "task_templates",
-    "stimuli",
-    "audio_assets",
-    "rubrics",
-    "question_sets",
-    "question_items",
-    "question_target_words",
-    "paper_instances",
-    "paper_sections",
-    "paper_attempts",
-    "question_attempts",
-    "skill_states",
-    "daily_plan_items"
-  ],
+  "generatedAt": "2026-06-20T21:21:03.756Z",
+  "status": "applied",
+  "counts": {
+    "listeningSets": 467,
+    "activeListeningSets": 0,
+    "draftListeningWithoutAudio": 467,
+    "audioRows": 0,
+    "activeAudioRows": 0
+  },
+  "clientTranscriptContract": "enforced",
+  "practicePayloadContract": "enforced",
   "livePayloadChecked": false,
-  "contractErrors": []
+  "errors": [],
+  "ok": true
 }

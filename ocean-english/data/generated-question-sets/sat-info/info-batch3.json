@@ -1,0 +1,103 @@
+{
+  "template": "sat-information-and-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Information and Ideas items, batch 3. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The invention of cheap, reliable refrigeration did far more than keep food cold. It quietly reshaped entire cities, allowing people to live far from the farms and markets that fed them, and letting fish caught in one ocean appear, days later, on plates a whole continent away. A simple cold box had redrawn the map of how the world ate.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Refrigeration transformed not just food storage but where people lived and how food traveled.", "Refrigeration was mainly useful for keeping fish fresh.", "Cities grew steadily smaller after refrigeration was invented.", "People stopped relying on farms once refrigeration appeared."],
+      "answer": "Refrigeration transformed not just food storage but where people lived and how food traveled.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：制冷不仅改变储存，还改变居住地与食物流通。B 以偏概全，C 与文相反，D 过度（farms 仍存在）。"
+    },
+    {
+      "passage": "The composer's last symphony ends not with the usual triumphant chords but with a single quiet note that simply fades into silence. Critics at the premiere were baffled, but the composer, asked to explain himself, only said that he had at last learned how little really needed to be said.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The composer intended the quiet ending as a deliberate artistic choice.", "The composer ran out of time to finish the symphony properly.", "The audience demanded that the ending be rewritten.", "The composer later regretted ending the symphony so quietly."],
+      "answer": "The composer intended the quiet ending as a deliberate artistic choice.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：他解释说终于学会少说，说明安静收尾是有意为之。B、C、D 文中均无依据且与他的解释相悖。"
+    },
+    {
+      "passage": "Unlike most spiders, which spin a brand-new web each day, the long-lived golden orb spider repairs and reuses the very same web for weeks on end. To keep it strong, the spider eats its own damaged threads, recycling the silk inside its body to spin fresh strands exactly where they are needed most.",
+      "prompt": "According to the text, how does the golden orb spider maintain its web?",
+      "options": ["By eating damaged threads and reusing the recycled silk.", "By building a completely new web every day.", "By abandoning the web as soon as it is damaged.", "By coating the entire web in a protective layer."],
+      "answer": "By eating damaged threads and reusing the recycled silk.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说它吃掉受损丝线、回收体内重纺。B 与 unlike most spiders 矛盾，C、D 文中未提。"
+    },
+    {
+      "passage": "A geographer suspects that a now-dry valley was once home to a large, long-lasting lake. She is searching for evidence that water stood there calmly for a long period, rather than merely rushing through briefly during occasional violent floods.",
+      "prompt": "Which find would most directly support her idea?",
+      "options": ["Thick layers of fine sediment of the kind that settles only in still, standing water.", "Deep channels cut rapidly by fast-moving water.", "Scattered boulders carried far from where they formed.", "A thin crust of salt left behind by a single brief flood."],
+      "answer": "Thick layers of fine sediment of the kind that settles only in still, standing water.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持长期静水湖最直接的是细沉积（只在静水沉积）。B、C 指向急流，D 仅是单次洪水。"
+    },
+    {
+      "passage": "The town's only bookstore closed years ago, yet every spring a folding table still appears on the very same corner, stacked with secondhand novels and a hand-lettered sign reading take one, leave one. No one quite remembers who first started it, and no one has ever taken it down.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The book exchange continues even though no single person clearly maintains it.", "The original bookstore has secretly reopened on the corner.", "The town has banned the sale of secondhand books.", "Residents dislike the book table and want it removed."],
+      "answer": "The book exchange continues even though no single person clearly maintains it.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：无人记得谁发起、也无人撤走，说明在无人专管下延续。B、C、D 文中均无依据。"
+    },
+    {
+      "passage": "Researchers compared two nearly identical orchards. In the first, where wildflowers were allowed to grow freely between the trees, 90 percent of the apple blossoms were successfully pollinated. In the second, kept deliberately bare of any flowers, only 55 percent of the blossoms were pollinated.",
+      "prompt": "Which choice best describes data presented in the text?",
+      "options": ["Allowing wildflowers to grow was associated with much higher pollination of apple blossoms.", "The bare orchard produced more pollinated blossoms than the other.", "Wildflowers had no measurable effect on pollination.", "Both orchards pollinated nearly all of their blossoms."],
+      "answer": "Allowing wildflowers to grow was associated with much higher pollination of apple blossoms.",
+      "domain": "Information and Ideas",
+      "explain_zh": "数据：有花 90% 对无花 55%。B 与数据相反，C 与差距矛盾，D 错（55% 并非几乎全部）。"
+    },
+    {
+      "passage": "A language does not die all at once. It fades as the last fluent speakers grow old, as children choose instead the tongues of school and television, and as words for local plants, tools, and weather slip quietly out of use. Each lost word, linguists warn, carries with it a small, unrepeatable way of seeing the world.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Languages disappear gradually, and each loss erases a unique way of understanding the world.", "Languages die suddenly the moment their last speaker dies.", "Television is solely responsible for the loss of languages.", "Only words for plants and tools are ever truly lost."],
+      "answer": "Languages disappear gradually, and each loss erases a unique way of understanding the world.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：语言渐亡，每个消失的词都抹去独特的世界观。B 与渐亡矛盾，C 以偏概全，D 缩小范围。"
+    },
+    {
+      "passage": "The marathon runner kept a chart on her wall marking every training run for two full years. The chart shows a steady upward climb, broken only by one flat stretch of about three weeks where no runs appear at all. Beside that single gap, she has written nothing but the word ankle.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The runner most likely paused her training because of an ankle injury.", "The runner stopped running for good after those two years.", "The runner actually trained hardest during the three-week gap.", "The chart records races she entered rather than training runs."],
+      "answer": "The runner most likely paused her training because of an ankle injury.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：空档旁只写 ankle，暗示因脚踝受伤暂停。B、C 与空档矛盾，D 与 training run 矛盾。"
+    },
+    {
+      "passage": "Volcanic islands often follow a predictable life. Born in fiery eruptions, they rise steep and bare from the sea. Over thousands of years, wind and rain wear them down, coral grows in a ring around their shrinking shores, and at last the original island sinks entirely, leaving only a circular reef enclosing a quiet lagoon.",
+      "prompt": "According to the text, what remains after a volcanic island finally sinks?",
+      "options": ["A circular reef enclosing a lagoon.", "A steep, bare peak still rising from the sea.", "A wide field of fresh volcanic rock.", "Nothing visible above the water at all."],
+      "answer": "A circular reef enclosing a lagoon.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说最后只剩环形礁围着潟湖。B 是初期形态，C、D 与文末描述不符。"
+    },
+    {
+      "passage": "A nutritionist argues that a traditional village diet, rich in beans and whole grains, was healthier than the modern processed diet that gradually replaced it. To support this, she wants evidence comparing the long-term health of people who followed each of the two diets.",
+      "prompt": "Which find would most directly support her argument?",
+      "options": ["Older residents who kept to the traditional diet show lower rates of certain chronic diseases.", "The traditional diet was generally cheaper to prepare than the modern one.", "Most villagers now say they prefer the taste of processed foods.", "Beans and grains can be stored for unusually long periods."],
+      "answer": "Older residents who kept to the traditional diet show lower rates of certain chronic diseases.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持更健康最直接的是长期健康对比（慢性病更少）。B 谈成本，C 谈口味，D 谈储存，均不证健康。"
+    },
+    {
+      "passage": "The museum's most popular exhibit is an ordinary-looking wooden chair set behind a velvet rope. Visitors often walk straight past it, puzzled, until they pause to read the small card explaining that a famous treaty, one that ended a long and bitter war, was signed by someone sitting in exactly that chair.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The chair draws interest because of the historical event linked to it, not its appearance.", "The chair is prized for its unusual and beautiful design.", "Visitors are forbidden from reading the card beside the chair.", "The chair was specially built for the treaty signing."],
+      "answer": "The chair draws interest because of the historical event linked to it, not its appearance.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：椅子外表普通，读了说明卡（历史事件）才引人。B 与 ordinary-looking 矛盾，C 与读卡矛盾，D 文未提。"
+    },
+    {
+      "passage": "For centuries sailors believed the albatross brought good luck, and killing one was thought to doom a ship. Modern biologists, studying the bird's astonishing ability to glide thousands of miles without once flapping, have found their own reasons for awe. Superstition and science, it seems, can arrive by very different roads at the same sense of wonder.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Both old superstition and modern science have found reasons to marvel at the albatross.", "Sailors were right that the albatross has supernatural powers.", "Scientists have proven that killing an albatross is dangerous.", "Superstition and science always reach exactly the same conclusions."],
+      "answer": "Both old superstition and modern science have found reasons to marvel at the albatross.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：迷信与科学殊途同归于惊叹。B、C 过度坐实，D 用 always 以偏概全。"
+    }
+  ]
+}

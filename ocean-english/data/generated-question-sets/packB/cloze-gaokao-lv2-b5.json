@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B5. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Our school had never won the regional science competition, so when our team of four was chosen to (1)___, no one expected much. We were not the cleverest students, but we shared one quality: we refused to (2)___ up. Our project was a small water-cleaning device. For weeks we worked after class, and almost nothing went (3)___: our first model leaked, the second broke, and the third simply did not (4)___. Tempers grew short, and one evening we nearly (5)___ over whose fault it was. That argument taught us an important (6)___. We realised that blaming each other was (7)___ our energy. From then on, instead of asking 'who broke it', we asked 'how can we (8)___ it'. This simple change in attitude quietly turned a group of arguing classmates into real partners who trusted one another. Slowly, the device began to work. On competition day, we were terribly (9)___: other teams had fancier equipment and more confident (10)___. When our turn came, our hands shook, but the device worked (11)___. We did not win first prize, but we came in third, the best result our school had ever (12)___. More than the prize, I valued what the experience had (13)___ me. I learned that success rarely comes from being the smartest, but from refusing to (14)___ when things go wrong, and from working together instead of falling (15)___.",
+      "blanks": [
+        { "options": ["win", "compete", "watch", "leave"], "answer": "B" },
+        { "options": ["give", "look", "stand", "grow"], "answer": "A" },
+        { "options": ["right", "far", "wrong", "long"], "answer": "A" },
+        { "options": ["work", "help", "move", "last"], "answer": "A" },
+        { "options": ["laughed", "fought", "agreed", "left"], "answer": "B" },
+        { "options": ["lesson", "game", "rule", "word"], "answer": "A" },
+        { "options": ["saving", "wasting", "giving", "finding"], "answer": "B" },
+        { "options": ["sell", "fix", "hide", "buy"], "answer": "B" },
+        { "options": ["bored", "nervous", "proud", "calm"], "answer": "B" },
+        { "options": ["teachers", "teams", "parents", "judges"], "answer": "B" },
+        { "options": ["badly", "perfectly", "slowly", "quietly"], "answer": "B" },
+        { "options": ["lost", "achieved", "missed", "watched"], "answer": "B" },
+        { "options": ["cost", "taught", "sold", "shown"], "answer": "B" },
+        { "options": ["quit", "win", "rest", "learn"], "answer": "A" },
+        { "options": ["down", "apart", "over", "asleep"], "answer": "B" }
+      ],
+      "explain_zh": "1compete参赛 2give up放弃 3right没一样顺 4work不运转 5fought差点吵翻 6lesson教训 7wasting浪费精力 8fix修好 9nervous紧张 10teams队伍 11perfectly完美运行 12achieved取得最好成绩 13taught教会 14quit放弃 15apart分崩离析。"
+    },
+    {
+      "passage": "When Sara joined our class halfway through the year, she clearly felt completely (1)___. She sat alone at lunch, spoke to no one, and kept her eyes fixed on her (2)___. I recognised that look, because two years earlier, as a new student myself, I had felt exactly the (3)___. I remembered how painful those first weeks had been, and how a single friendly classmate had (4)___ everything for me. So one lunchtime, I gathered my courage and simply sat down (5)___ her. At first she seemed surprised, even (6)___, but I just smiled and asked an ordinary question about our homework. Slowly, she began to (7)___. Over the next weeks, I introduced her to my friends, showed her around the school, and made sure she was never left (8)___. Bit by bit, the quiet, anxious girl began to (9)___. She laughed more, joined our games, and her marks, freed from loneliness, even began to (10)___. By the end of term, no one would have guessed she had once been the lonely new (11)___ in the corner. Helping Sara cost me almost (12)___ — just a little kindness and a few minutes of my time. Yet it may have been the most (13)___ thing I did all year. I had simply passed on the kindness once shown to (14)___. And I learned that often the person who looks like they want to be left alone is the one most desperately hoping someone will (15)___.",
+      "blanks": [
+        { "options": ["proud", "lost", "happy", "ready"], "answer": "B" },
+        { "options": ["phone", "plate", "friends", "window"], "answer": "B" },
+        { "options": ["same", "best", "worst", "most"], "answer": "A" },
+        { "options": ["ruined", "changed", "cost", "repeated"], "answer": "B" },
+        { "options": ["behind", "beside", "without", "before"], "answer": "B" },
+        { "options": ["excited", "nervous", "proud", "angry"], "answer": "B" },
+        { "options": ["relax", "leave", "cry", "refuse"], "answer": "A" },
+        { "options": ["out", "home", "behind", "over"], "answer": "A" },
+        { "options": ["change", "leave", "fail", "cry"], "answer": "A" },
+        { "options": ["fall", "rise", "stop", "wait"], "answer": "B" },
+        { "options": ["teacher", "student", "friend", "child"], "answer": "B" },
+        { "options": ["everything", "nothing", "something", "all"], "answer": "B" },
+        { "options": ["boring", "important", "difficult", "expensive"], "answer": "B" },
+        { "options": ["me", "her", "them", "all"], "answer": "A" },
+        { "options": ["leave", "care", "win", "pay"], "answer": "B" }
+      ],
+      "explain_zh": "1lost无助 2plate盯着餐盘 3same一模一样 4changed改变一切 5beside坐在旁边 6nervous紧张 7relax放松 8out不被冷落 9change改变 10rise成绩上升 11student新生 12nothing几乎没代价 13important最有意义 14me曾被善待的我 15care有人在乎。"
+    },
+    {
+      "passage": "Three years ago, I decided to teach myself a new (1)___. Everyone said it was too hard to learn without a teacher, but I was (2)___ to try. The early months were (3)___: the grammar made no sense, the sounds felt impossible, and I forgot new words almost as fast as I (4)___ them. More than once I felt like a complete (5)___. What kept me going was a simple change in (6)___. Instead of aiming to be perfect, I aimed only to practise a little every single (7)___, even just ten minutes. Some days those ten minutes were all I could manage, but I never let a single day slip past without them. I labelled objects around my house, watched films in the language, and was not afraid to make (8)___. Each mistake, I told myself, was a step (9)___, not back. Slowly, the impossible began to feel (10)___. One day, watching a film, I suddenly realised I had understood a whole scene without reading the (11)___. Months later, I held my first real (12)___ with a native speaker, clumsy but genuine, and the pride I felt was enormous. Learning that language taught me that the (13)___ to learning almost anything is not talent but patient, daily (14)___. Talent may help you start fast, but it is consistency that carries you to the (15)___.",
+      "blanks": [
+        { "options": ["game", "language", "sport", "machine"], "answer": "B" },
+        { "options": ["afraid", "determined", "unwilling", "sad"], "answer": "B" },
+        { "options": ["easy", "hard", "short", "fun"], "answer": "B" },
+        { "options": ["sold", "learned", "lost", "wrote"], "answer": "B" },
+        { "options": ["success", "failure", "stranger", "winner"], "answer": "B" },
+        { "options": ["weather", "attitude", "money", "place"], "answer": "B" },
+        { "options": ["week", "day", "hour", "month"], "answer": "B" },
+        { "options": ["money", "mistakes", "friends", "noise"], "answer": "B" },
+        { "options": ["forward", "down", "aside", "away"], "answer": "A" },
+        { "options": ["strange", "possible", "boring", "wrong"], "answer": "B" },
+        { "options": ["book", "subtitles", "news", "sign"], "answer": "B" },
+        { "options": ["lesson", "conversation", "game", "letter"], "answer": "B" },
+        { "options": ["door", "key", "end", "start"], "answer": "B" },
+        { "options": ["luck", "effort", "money", "sleep"], "answer": "B" },
+        { "options": ["start", "end", "side", "door"], "answer": "B" }
+      ],
+      "explain_zh": "1language语言 2determined决心 3hard艰难 4learned刚记就忘 5failure失败者 6attitude心态 7day每天 8mistakes犯错 9forward前进一步 10possible变得可能 11subtitles字幕 12conversation对话 13key关键 14effort每日努力 15end抵达终点。"
+    },
+    {
+      "passage": "On a summer holiday in the mountains, I confidently set off alone on a trail, certain I did not need a (1)___. I had walked there once before, after all. But an hour in, the path (2)___ into several smaller ones, and I took the wrong (3)___. By the time I realised my mistake, I was completely (4)___, surrounded by silent trees, with no idea which way was (5)___. My phone had no (6)___. As the afternoon light began to fade, panic rose in my chest. I wanted to run, but I forced myself to stop and (7)___ calmly. I remembered some advice I had once read: if lost, stay (8)___, and try to retrace your steps. So instead of rushing deeper into the forest, I slowly walked (9)___ the way I had come, checking for anything I (10)___. It was slow and frightening, but at last I spotted a broken branch I remembered, then the main path, and finally the trail I (11)___. By the time I reached safety, the sun had nearly set. That afternoon taught me a (12)___ I will never forget. My confidence had made me (13)___, and my carelessness had nearly cost me dearly. Since then, I never set out on any journey without (14)___. And whenever I feel lost, in the mountains or in life, I remember to stop, stay calm, and think before I (15)___.",
+      "blanks": [
+        { "options": ["friend", "map", "coat", "phone"], "answer": "B" },
+        { "options": ["grew", "split", "ended", "turned"], "answer": "B" },
+        { "options": ["one", "place", "time", "day"], "answer": "A" },
+        { "options": ["tired", "lost", "calm", "ready"], "answer": "B" },
+        { "options": ["right", "long", "clear", "open"], "answer": "A" },
+        { "options": ["signal", "money", "sound", "light"], "answer": "A" },
+        { "options": ["run", "think", "sleep", "shout"], "answer": "B" },
+        { "options": ["still", "away", "up", "out"], "answer": "A" },
+        { "options": ["back", "past", "around", "along"], "answer": "A" },
+        { "options": ["sold", "recognised", "lost", "feared"], "answer": "B" },
+        { "options": ["sold", "needed", "feared", "hated"], "answer": "B" },
+        { "options": ["game", "lesson", "word", "trick"], "answer": "B" },
+        { "options": ["careful", "careless", "brave", "tired"], "answer": "B" },
+        { "options": ["preparing", "eating", "resting", "paying"], "answer": "A" },
+        { "options": ["act", "sleep", "leave", "pay"], "answer": "A" }
+      ],
+      "explain_zh": "1map地图 2split分叉 3one走错一条 4lost迷路 5right哪条对 6signal没信号 7think冷静思考 8still原地不动 9back原路返回 10recognised认得 11needed要找的路 12lesson教训 13careless大意 14preparing不做准备 15act三思后行。"
+    },
+    {
+      "passage": "Ever since I was a child, I had loved (1)___ photographs. For years it was simply a private hobby; I took pictures only for my own (2)___. Then one day my grandmother asked me to take a proper portrait of her, saying she had no nice photo of herself to (3)___ behind. The joy on her face when she saw the picture (4)___ me deeply, and it made me wonder whether my hobby could be of (5)___ to others. So I began offering free portraits to elderly people in my neighbourhood, many of whom had not had a photograph taken in (6)___. The project grew quickly. I visited care homes and community centres, listening to people's stories as I (7)___ them. For many, it was the first time in years that anyone had truly (8)___ them. An old man wept when I gave him a portrait to send to the grandchildren he rarely (9)___. A shy woman stood a little (10)___ after seeing herself look so dignified. I had thought I was simply giving people (11)___, but I was really giving them something deeper: the feeling of being (12)___ and valued. My little hobby had become a way to (13)___ joy and dignity to people who were too often overlooked. I learned that a passion becomes far more (14)___ when it is shared, and that the surest way to multiply our own happiness is to use whatever gift we have to (15)___ someone else.",
+      "blanks": [
+        { "options": ["taking", "selling", "buying", "hiding"], "answer": "A" },
+        { "options": ["money", "pleasure", "work", "study"], "answer": "B" },
+        { "options": ["throw", "leave", "buy", "keep"], "answer": "B" },
+        { "options": ["bored", "moved", "frightened", "tired"], "answer": "B" },
+        { "options": ["use", "cost", "trouble", "harm"], "answer": "A" },
+        { "options": ["days", "years", "minutes", "class"], "answer": "B" },
+        { "options": ["paid", "photographed", "sold", "left"], "answer": "B" },
+        { "options": ["paid", "noticed", "sold", "blamed"], "answer": "B" },
+        { "options": ["liked", "saw", "helped", "taught"], "answer": "B" },
+        { "options": ["lower", "taller", "closer", "further"], "answer": "B" },
+        { "options": ["money", "photos", "advice", "food"], "answer": "B" },
+        { "options": ["paid", "seen", "sold", "followed"], "answer": "B" },
+        { "options": ["sell", "bring", "hide", "owe"], "answer": "B" },
+        { "options": ["boring", "meaningful", "expensive", "difficult"], "answer": "B" },
+        { "options": ["help", "beat", "follow", "copy"], "answer": "A" }
+      ],
+      "explain_zh": "1taking拍照 2pleasure自娱 3leave留念 4moved打动 5use有用 6years多年 7photographed拍摄 8noticed被关注 9saw很少见到 10taller挺直了些 11photos照片 12seen被看见 13bring带来 14meaningful更有意义 15help帮助他人。"
+    }
+  ]
+}

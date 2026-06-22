@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T15:48:32.741Z",
+  "apply": true,
+  "stage": "packD",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packD\\reading-gaokao-lv2-d1.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packD\\reading-gaokao-lv2-d2.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packD\\reading-gaokao-lv2-d3.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packD\\reading-gaokao-lv2-d4.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packD\\reading-gaokao-lv2-d5.json",
+      "template": "gaokao-reading-mcq",
+      "level": 2,
+      "parsedOk": 8,
+      "reject": 0,
+      "wrote": 8,
+      "dupSkip": 0
+    }
+  ]
+}

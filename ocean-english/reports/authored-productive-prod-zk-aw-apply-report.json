@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-06-22T05:09:40.808Z",
+  "apply": true,
+  "stage": "prod-zk-aw",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 50,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-zk-aw\\zhongkao-applied-writing-2.productive.json",
+      "examId": "zhongkao",
+      "taskType": "applied_writing",
+      "level": 1,
+      "skill": "writing",
+      "tasks": 45,
+      "wrote": 0,
+      "dup": 45
+    },
+    {
+      "file": "data\\generated-question-sets\\prod-zk-aw\\zhongkao-applied-writing.productive.json",
+      "examId": "zhongkao",
+      "taskType": "applied_writing",
+      "level": 1,
+      "skill": "writing",
+      "tasks": 5,
+      "wrote": 0,
+      "dup": 5
+    }
+  ]
+}

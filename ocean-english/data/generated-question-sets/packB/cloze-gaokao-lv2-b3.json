@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B3. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "I had always been terrified of speaking in public. So when my teacher asked me to give a speech at the school assembly, my first instinct was to (1)___. The thought of hundreds of eyes on me made my heart (2)___. For a week I considered every possible (3)___ to avoid it, but each time I remembered my teacher's quiet confidence that I (4)___ do it. I did not want to let her down, so at last I (5)___ to try. I prepared harder than ever, practising in front of the mirror until I knew every word by (6)___. Still, on the morning of the speech, my hands would not stop (7)___. When my name was called, I walked to the stage on legs that felt like water. For the first few sentences my voice (8)___. But then I looked up and saw my teacher in the front row, smiling and (9)___ slightly, and somehow my fear began to (10)___. By the end I was speaking clearly, even (11)___ the audience to listen, and when I finished, the applause felt (12)___. That day did not magically cure my shyness, but it (13)___ something: I learned that courage is not waiting until you feel (14)___, but acting while you are still afraid. Ever since, whenever fear tells me I cannot, I remember that stage and do it (15)___.",
+      "blanks": [
+        { "options": ["agree", "refuse", "laugh", "sleep"], "answer": "B" },
+        { "options": ["stop", "race", "rest", "sink"], "answer": "B" },
+        { "options": ["chance", "excuse", "answer", "plan"], "answer": "B" },
+        { "options": ["could", "should", "must", "might"], "answer": "A" },
+        { "options": ["refused", "decided", "forgot", "failed"], "answer": "B" },
+        { "options": ["heart", "hand", "chance", "ear"], "answer": "A" },
+        { "options": ["shaking", "writing", "waving", "clapping"], "answer": "A" },
+        { "options": ["rose", "trembled", "returned", "stopped"], "answer": "B" },
+        { "options": ["nodding", "leaving", "sleeping", "standing"], "answer": "A" },
+        { "options": ["grow", "fade", "return", "spread"], "answer": "B" },
+        { "options": ["forcing", "inviting", "ordering", "begging"], "answer": "B" },
+        { "options": ["strange", "wonderful", "boring", "cruel"], "answer": "B" },
+        { "options": ["changed", "ruined", "repeated", "hid"], "answer": "A" },
+        { "options": ["tired", "ready", "sad", "angry"], "answer": "B" },
+        { "options": ["again", "anyway", "slowly", "alone"], "answer": "B" }
+      ],
+      "explain_zh": "1refuse想拒绝 2race心狂跳 3excuse借口 4could相信我能 5decided决定试 6by heart熟记 7shaking发抖 8trembled声音抖 9nodding点头 10fade消退 11inviting邀请倾听 12wonderful美妙 13changed改变了 14ready觉得准备好 15anyway照做。"
+    },
+    {
+      "passage": "The empty lot at the end of our street had been (1)___ for years, full of weeds and rubbish. Most neighbours simply (2)___ it as they passed. Then old Mrs. Park decided to do something about it. One spring morning, she began clearing the rubbish (3)___. At first the neighbours thought she was strange, but slowly, one by one, they came out to (4)___. My father brought tools, the children pulled weeds, and someone donated (5)___. Within a few months, the ugly lot had been (6)___ into a small community garden. Rows of vegetables and flowers grew where rubbish had once (7)___. But the garden produced something even more valuable than food. People who had lived side by side for years, barely (8)___, now met every weekend to plant, water and talk. Neighbours became (9)___, and the garden gave us a reason to come (10)___. Mrs. Park often said the soil was not the only thing that had grown (11)___. A street of strangers had quietly become a (12)___. When she passed away, the whole neighbourhood gathered in the garden to remember her. Standing among her flowers, I understood that her real gift was not the (13)___ itself, but what it had taught us: that one person, with patience and a little (14)___, can change a whole community. The garden still blooms today, and with it, the friendships she helped (15)___.",
+      "blanks": [
+        { "options": ["neglected", "cleaned", "sold", "built"], "answer": "A" },
+        { "options": ["ignored", "entered", "cleaned", "bought"], "answer": "A" },
+        { "options": ["alone", "loudly", "badly", "twice"], "answer": "A" },
+        { "options": ["watch", "help", "leave", "rest"], "answer": "B" },
+        { "options": ["tickets", "seeds", "toys", "clothes"], "answer": "B" },
+        { "options": ["divided", "transformed", "sold", "moved"], "answer": "B" },
+        { "options": ["sat", "grown", "sold", "left"], "answer": "A" },
+        { "options": ["speaking", "working", "eating", "sleeping"], "answer": "A" },
+        { "options": ["strangers", "friends", "rivals", "customers"], "answer": "B" },
+        { "options": ["back", "together", "early", "alone"], "answer": "B" },
+        { "options": ["there", "wild", "tall", "fast"], "answer": "A" },
+        { "options": ["market", "community", "garden", "school"], "answer": "B" },
+        { "options": ["garden", "food", "money", "house"], "answer": "A" },
+        { "options": ["money", "hope", "luck", "power"], "answer": "B" },
+        { "options": ["grow", "end", "hide", "sell"], "answer": "A" }
+      ],
+      "explain_zh": "1neglected荒废 2ignored无视 3alone独自 4help帮忙 5seeds种子 6transformed变成 7sat曾堆放 8speaking几乎不来往 9friends朋友 10together聚一起 11there在那生长 12community社区 13garden花园本身 14hope一点希望 15grow让友谊生长。"
+    },
+    {
+      "passage": "Mia and I had been best friends since we were six. So when we (1)___ over something small in our final year of school, neither of us imagined it would last. But pride is a (2)___ thing: days of silence became weeks, and weeks became months. Each of us waited for the other to (3)___ first. I missed her terribly, yet every time I thought of calling, my (4)___ stopped me; I told myself she should be the one to (5)___. Then, near the end of the year, I heard that Mia was (6)___ moving to another city after graduation, and a sudden fear struck me: soon we might be (7)___ forever, still not speaking. That evening, I finally swallowed my pride and (8)___ her a long message. I said I was sorry, and that our friendship (9)___ more to me than being right. For an agonising hour there was no (10)___. Then my phone lit up: 'I've been waiting for this,' she wrote, 'for months.' We met the next day and talked for hours, and the long silence melted as if it had never (11)___. Looking back, I am almost (12)___ to think how close we came to losing years of friendship over foolish pride. I learned that saying sorry is not a sign of (13)___ but of courage, and that the people we love matter far more than being (14)___. Now, whenever pride tempts me to stay silent, I remember those wasted months and reach out (15)___.",
+      "blanks": [
+        { "options": ["laughed", "argued", "agreed", "met"], "answer": "B" },
+        { "options": ["kind", "dangerous", "useful", "simple"], "answer": "B" },
+        { "options": ["leave", "speak", "win", "forget"], "answer": "B" },
+        { "options": ["phone", "pride", "friend", "fear"], "answer": "B" },
+        { "options": ["win", "apologise", "leave", "decide"], "answer": "B" },
+        { "options": ["possibly", "hardly", "never", "once"], "answer": "A" },
+        { "options": ["joined", "separated", "helped", "found"], "answer": "B" },
+        { "options": ["sent", "read", "deleted", "showed"], "answer": "A" },
+        { "options": ["meant", "cost", "said", "gave"], "answer": "A" },
+        { "options": ["reply", "money", "hope", "noise"], "answer": "A" },
+        { "options": ["happened", "ended", "helped", "mattered"], "answer": "A" },
+        { "options": ["proud", "frightened", "glad", "ready"], "answer": "B" },
+        { "options": ["strength", "weakness", "kindness", "courage"], "answer": "B" },
+        { "options": ["kind", "right", "happy", "busy"], "answer": "B" },
+        { "options": ["again", "first", "slowly", "loudly"], "answer": "B" }
+      ],
+      "explain_zh": "1argued争吵 2dangerous危险的 3speak先开口 4pride骄傲 5apologise道歉 6possibly可能 7separated分开 8sent发了 9meant意义更大 10reply回复 11happened从未发生 12frightened后怕 13weakness软弱 14right一味正确 15first先伸手。"
+    },
+    {
+      "passage": "It was pouring with rain when I left the library, and of course I had forgotten my (1)___. I stood under the entrance, watching the water fall and (2)___ how I would get home without being soaked. A girl from my class, whom I barely (3)___, came up beside me holding a single small umbrella. Without hesitating, she offered to (4)___ it with me and walk me to the bus stop. We squeezed under the tiny umbrella, both of us getting half (5)___ anyway, and laughed about it the whole way. At the stop she handed me the umbrella and said I could (6)___ it the next day. Then she ran off into the rain to catch her own bus, now completely (7)___. Her small kindness stayed with me far longer than the (8)___ did. We became good friends after that day, and I often think how a (9)___ gesture from a near-stranger had begun it all. Months later, I saw another student standing alone in the rain, looking (10)___. Remembering that day, I did not (11)___. I offered to share my umbrella and walk with her, and she thanked me in (12)___, just as I once had. It struck me then that kindness (13)___. The girl who shared her umbrella with me had, without knowing it, taught me to do the (14)___ for someone else. And so a single small umbrella, shared on a rainy day, had quietly (15)___ on.",
+      "blanks": [
+        { "options": ["bag", "umbrella", "key", "book"], "answer": "B" },
+        { "options": ["knowing", "wondering", "saying", "hoping"], "answer": "B" },
+        { "options": ["knew", "liked", "saw", "trusted"], "answer": "A" },
+        { "options": ["sell", "share", "throw", "buy"], "answer": "B" },
+        { "options": ["asleep", "wet", "lost", "free"], "answer": "B" },
+        { "options": ["keep", "return", "buy", "clean"], "answer": "B" },
+        { "options": ["dry", "soaked", "lost", "free"], "answer": "B" },
+        { "options": ["rain", "bus", "bag", "class"], "answer": "A" },
+        { "options": ["strange", "small", "rude", "costly"], "answer": "B" },
+        { "options": ["happy", "helpless", "angry", "proud"], "answer": "B" },
+        { "options": ["hesitate", "move", "speak", "smile"], "answer": "A" },
+        { "options": ["anger", "surprise", "silence", "return"], "answer": "B" },
+        { "options": ["spreads", "ends", "fades", "costs"], "answer": "A" },
+        { "options": ["best", "same", "least", "most"], "answer": "B" },
+        { "options": ["travelled", "ended", "dried", "failed"], "answer": "A" }
+      ],
+      "explain_zh": "1umbrella伞 2wondering琢磨 3knew几乎不认识 4share合用 5wet淋湿 6return归还 7soaked湿透 8rain雨 9small小小的善举 10helpless无助 11hesitate没犹豫 12surprise惊讶 13spreads传递 14same同样的事 15travelled传下去。"
+    },
+    {
+      "passage": "For my mother's birthday, I wanted to do something (1)___ instead of just buying a present. She had cooked for our family every single day for as long as I could remember, so I decided to (2)___ the favour and make her a special dinner. There was just one problem: I could barely (3)___ an egg. I spent two days secretly watching cooking videos and (4)___ down recipes. On the morning of her birthday, while she was out, I (5)___ the kitchen and began. It did not go (6)___: I burned the first dish completely, and the kitchen soon looked like a (7)___ had hit it. More than once I wanted to give up and simply order food, but I kept (8)___ of how much my mother's cooking meant to me, and carried on. By evening, against all odds, I had managed to prepare three simple dishes. They were far from (9)___ — the rice a little hard, the soup a little salty — but they were made with (10)___. When my mother came home and saw the table, her eyes filled with (11)___. She said it was the best birthday meal she had ever (12)___, and I do not think she was only being (13)___. As we ate my imperfect dinner together, I finally understood the daily love hidden in every meal she had ever (14)___ for us. The dishes were flawed, but the (15)___ behind them was not.",
+      "blanks": [
+        { "options": ["cheap", "special", "easy", "quick"], "answer": "B" },
+        { "options": ["return", "refuse", "forget", "buy"], "answer": "A" },
+        { "options": ["buy", "boil", "sell", "draw"], "answer": "B" },
+        { "options": ["writing", "putting", "cutting", "turning"], "answer": "A" },
+        { "options": ["cleaned", "entered", "left", "sold"], "answer": "B" },
+        { "options": ["well", "far", "long", "wrong"], "answer": "A" },
+        { "options": ["storm", "guest", "light", "song"], "answer": "A" },
+        { "options": ["thinking", "hearing", "telling", "asking"], "answer": "A" },
+        { "options": ["ready", "perfect", "hot", "cheap"], "answer": "B" },
+        { "options": ["money", "love", "speed", "skill"], "answer": "B" },
+        { "options": ["fear", "tears", "anger", "doubt"], "answer": "B" },
+        { "options": ["had", "sold", "missed", "lost"], "answer": "A" },
+        { "options": ["honest", "polite", "strict", "quiet"], "answer": "B" },
+        { "options": ["bought", "cooked", "sold", "found"], "answer": "B" },
+        { "options": ["skill", "love", "money", "recipe"], "answer": "B" }
+      ],
+      "explain_zh": "1special特别 2return回报 3boil煮(蛋) 4writing记下 5entered走进 6well不顺利 7storm像风暴 8thinking想着 9perfect远非完美 10love用爱做 11tears泪水 12had吃过 13polite客气 14cooked做过 15love爱。"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Zhongkao-level 语法填空 (gblanks shape, 10 blanks): simple tense, plurals, articles, prepositions, comparatives/superlatives, non-finite, connectors. Level tagged 1.",
+  "sets": [
+    {
+      "passage": "My name is Daniel, and I (1)____ (live) in a small town with my family. Every morning, my sister and I (2)____ (walk) to school together, and it takes us about twenty (3)____ (minute). Our school is not big, but it has (4)____ beautiful garden. In spring, the flowers there are even (5)____ (colourful) than the ones in the park. My favourite subject is science, (6)____ I find experiments exciting. Last week, our teacher (7)____ (show) us how plants drink water. It was (8)____ interesting that the whole class clapped. After school, I often help my mother (9)____ (cook) dinner. I really think my town is a wonderful place (10)____ (grow) up.",
+      "gblanks": [
+        { "answer": "live", "acceptable": ["live"], "hint": "simple present, subject I" },
+        { "answer": "walk", "acceptable": ["walk"], "hint": "simple present, subject we" },
+        { "answer": "minutes", "acceptable": ["minutes"], "hint": "plural after twenty" },
+        { "answer": "a", "acceptable": ["a"], "hint": "indefinite article" },
+        { "answer": "more colourful", "acceptable": ["more colourful", "more colorful"], "hint": "comparative of colourful" },
+        { "answer": "because", "acceptable": ["because"], "hint": "reason conjunction" },
+        { "answer": "showed", "acceptable": ["showed"], "hint": "past tense (last week)" },
+        { "answer": "so", "acceptable": ["so"], "hint": "so ... that" },
+        { "answer": "cook", "acceptable": ["cook", "to cook"], "hint": "help sb (to) do" },
+        { "answer": "to grow", "acceptable": ["to grow"], "hint": "a place to do sth" }
+      ],
+      "explain_zh": "(1) 一般现在 live；(2) we walk；(3) twenty minutes 复数；(4) a beautiful garden；(5) colourful 比较级 more colourful；(6) 原因 because；(7) last week 过去 showed；(8) so...that；(9) help sb (to) do → cook；(10) a place to grow up。"
+    },
+    {
+      "passage": "Last Sunday, my friends and I (1)____ (visit) a science museum in the city. We (2)____ (be) very excited because it was our first time there. The museum was much (3)____ (big) than I had imagined, and there were hundreds of (4)____ (machine) that we could touch and try. My favourite one taught us how (5)____ (make) electricity by riding a bike: when you pedalled faster, the light became (6)____ (bright). I also learned a lot (7)____ space and stars, and a kind guide answered all (8)____ questions patiently. We stayed there (9)____ four hours and did not want to leave. It was one of the (10)____ (good) days of my whole holiday.",
+      "gblanks": [
+        { "answer": "visited", "acceptable": ["visited"], "hint": "past tense (last Sunday)" },
+        { "answer": "were", "acceptable": ["were"], "hint": "past tense of be, subject we" },
+        { "answer": "bigger", "acceptable": ["bigger"], "hint": "comparative of big" },
+        { "answer": "machines", "acceptable": ["machines"], "hint": "plural after hundreds of" },
+        { "answer": "to make", "acceptable": ["to make"], "hint": "how + to do" },
+        { "answer": "brighter", "acceptable": ["brighter"], "hint": "comparative of bright" },
+        { "answer": "about", "acceptable": ["about"], "hint": "learn a lot about" },
+        { "answer": "our", "acceptable": ["our"], "hint": "possessive, all our questions" },
+        { "answer": "for", "acceptable": ["for"], "hint": "for + duration" },
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" }
+      ],
+      "explain_zh": "(1) 过去 visited；(2) we were；(3) big 比较级 bigger；(4) hundreds of machines 复数；(5) how to make；(6) bright 比较级 brighter；(7) learn a lot about；(8) all our questions；(9) for four hours；(10) one of the best days 最高级。"
+    }
+  ]
+}

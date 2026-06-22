@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B7. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "When a new student named Tom joined our class, the first thing everyone noticed was his (1)___. He used a wheelchair, and at first some classmates did not know how to (2)___ around him. A few, ashamed to admit it, even quietly (3)___ him, unsure of what to say. I felt the same awkwardness, until one day I simply sat down beside him and started (4)___. To my surprise, Tom was funny, clever and full of (5)___. Within minutes I had forgotten all about the wheelchair and was simply talking to a new (6)___. As we grew closer, I began to notice the small daily (7)___ he faced that the rest of us never thought about: doorways too narrow, steps with no ramp, tables too high. So a few of us decided to (8)___. We spoke to the school, and over the next term several ramps were (9)___ and a heavy door was made automatic. The changes helped Tom, but they quietly helped (10)___ too, from the cleaner with her trolley to a teacher on crutches. Through Tom, I learned a lesson I have never (11)___: that a person is never defined by what their body cannot (12)___. The barriers that had made his life hard were not in him but in the world around him, and those barriers could be (13)___. Tom is now one of my closest friends. He taught me that true (14)___ is not pity, but simply treating someone as the equal they have always (15)___.",
+      "blanks": [
+        { "options": ["smile", "wheelchair", "bag", "voice"], "answer": "B" },
+        { "options": ["act", "win", "sell", "eat"], "answer": "A" },
+        { "options": ["helped", "avoided", "followed", "liked"], "answer": "B" },
+        { "options": ["talking", "running", "crying", "leaving"], "answer": "A" },
+        { "options": ["fear", "life", "anger", "doubt"], "answer": "B" },
+        { "options": ["enemy", "friend", "stranger", "rival"], "answer": "B" },
+        { "options": ["joys", "challenges", "games", "lessons"], "answer": "B" },
+        { "options": ["act", "leave", "wait", "rest"], "answer": "A" },
+        { "options": ["sold", "built", "hidden", "removed"], "answer": "B" },
+        { "options": ["others", "himself", "nobody", "Tom"], "answer": "A" },
+        { "options": ["forgotten", "needed", "sold", "found"], "answer": "A" },
+        { "options": ["do", "sell", "hide", "buy"], "answer": "A" },
+        { "options": ["sold", "removed", "ignored", "hidden"], "answer": "B" },
+        { "options": ["fear", "kindness", "skill", "pity"], "answer": "B" },
+        { "options": ["been", "sold", "left", "found"], "answer": "A" }
+      ],
+      "explain_zh": "1wheelchair轮椅 2act相处 3avoided回避 4talking攀谈 5life充满活力 6friend朋友 7challenges困难 8act行动 9built修建坡道 10others也帮到别人 11forgotten从未忘 12do身体做不到 13removed可被消除 14kindness善意 15been本就平等。"
+    },
+    {
+      "passage": "One afternoon, while playing football in the street, I kicked the ball far too hard and sent it crashing through our neighbour Mr. Grey's (1)___. The sound of breaking glass made my heart (2)___. My first instinct was to (3)___: no one had seen me, and I could simply walk away and pretend it had been someone (4)___. For a long, guilty minute I stood frozen, the ball lying among the broken glass on his lawn. Then I thought of how my parents had always taught me to be (5)___, especially when it was hard. So, with a dry mouth and shaking hands, I walked to Mr. Grey's door and (6)___ the bell. When he answered, I forced myself to look him in the eye and (7)___ what I had done. I expected him to be (8)___. Instead, his stern face slowly softened into a small smile. He told me that the window could easily be (9)___, but that honesty like mine was much (10)___ to find. He even refused to let my parents pay for all of it, saying my courage in owning up was worth a (11)___. I offered to do jobs in his garden to make up for the (12)___, and over that summer, the grumpy old neighbour I had always feared became an unlikely (13)___. Looking back, I am so glad I did not run away. That broken window taught me that admitting a mistake is far harder than (14)___ it, but that honesty, in the end, costs us far less than the (15)___ we would otherwise carry.",
+      "blanks": [
+        { "options": ["door", "window", "garden", "car"], "answer": "B" },
+        { "options": ["sing", "sink", "rest", "grow"], "answer": "B" },
+        { "options": ["run", "laugh", "help", "play"], "answer": "A" },
+        { "options": ["else", "kind", "old", "new"], "answer": "A" },
+        { "options": ["honest", "quiet", "quick", "busy"], "answer": "A" },
+        { "options": ["rang", "hid", "broke", "sold"], "answer": "A" },
+        { "options": ["sold", "admitted", "forgot", "hid"], "answer": "B" },
+        { "options": ["glad", "angry", "calm", "proud"], "answer": "B" },
+        { "options": ["sold", "replaced", "hidden", "lost"], "answer": "B" },
+        { "options": ["easier", "harder", "cheaper", "quicker"], "answer": "B" },
+        { "options": ["lot", "little", "bit", "penny"], "answer": "A" },
+        { "options": ["game", "damage", "noise", "joke"], "answer": "B" },
+        { "options": ["enemy", "friend", "rival", "stranger"], "answer": "B" },
+        { "options": ["hiding", "buying", "selling", "winning"], "answer": "A" },
+        { "options": ["money", "guilt", "ball", "glass"], "answer": "B" }
+      ],
+      "explain_zh": "1window窗户 2sink心一沉 3run想逃 4else别人 5honest诚实 6rang按门铃 7admitted承认 8angry以为会生气 9replaced可更换 10harder更难得 11lot值很多 12damage损坏 13friend朋友 14hiding隐瞒 15guilt愧疚。"
+    },
+    {
+      "passage": "As a child, I was convinced I had no (1)___ for art. My drawings were clumsy, and whenever I tried to paint what I saw, the result looked nothing like (2)___. So I gave up, telling myself that art was a gift you were either born with or (3)___. Years later, bored one rainy weekend, I picked up a pencil and, with no expectations, began to (4)___ the cup on my desk. It was, predictably, a (5)___. But something about the quiet focus of it pleased me, so I tried (6)___. I bought a cheap sketchbook and made myself draw one small thing every (7)___. My early drawings were still poor, but I noticed I was looking at the world more (8)___ than before, truly seeing the shape of a leaf or the way light fell on a (9)___. Slowly, very slowly, my hand learned to follow my eye. After a year of daily practice, I flipped back to my first clumsy sketches and could hardly believe the (10)___. What I had once thought was a fixed lack of talent had simply been a lack of (11)___. I would never be a great artist, but I had proved that the ability to draw was not a magic (12)___ I lacked, but a skill anyone could slowly (13)___. So much of what we dismiss as 'natural talent', I now believe, is really the invisible result of patient (14)___. And the only true difference between those who can and those who cannot is often simply whether or not they (15)___.",
+      "blanks": [
+        { "options": ["talent", "money", "time", "friend"], "answer": "A" },
+        { "options": ["reality", "money", "school", "home"], "answer": "A" },
+        { "options": ["not", "more", "less", "again"], "answer": "A" },
+        { "options": ["sell", "draw", "hide", "break"], "answer": "B" },
+        { "options": ["success", "mess", "gift", "joke"], "answer": "B" },
+        { "options": ["again", "once", "hard", "late"], "answer": "A" },
+        { "options": ["week", "day", "month", "year"], "answer": "B" },
+        { "options": ["quickly", "carefully", "proudly", "sadly"], "answer": "B" },
+        { "options": ["wall", "book", "song", "name"], "answer": "A" },
+        { "options": ["noise", "difference", "cost", "loss"], "answer": "B" },
+        { "options": ["money", "practice", "sleep", "luck"], "answer": "B" },
+        { "options": ["gift", "box", "word", "door"], "answer": "A" },
+        { "options": ["sell", "learn", "lose", "hide"], "answer": "B" },
+        { "options": ["luck", "practice", "money", "sleep"], "answer": "B" },
+        { "options": ["begin", "pay", "win", "leave"], "answer": "A" }
+      ],
+      "explain_zh": "1talent天赋 2reality像实物 3not或没有 4draw画 5mess一团糟 6again再试 7day每天 8carefully更仔细 9wall墙面 10difference差别 11practice练习 12gift魔法天赋 13learn习得 14practice练习 15begin是否开始。"
+    },
+    {
+      "passage": "As part of a school programme, I was sent, rather (1)___, to spend an afternoon each week at a local care home. I expected it to be (2)___ and a little depressing. Instead, it became the highlight of my (3)___. There I was paired with Mr. Alvarez, a man of ninety with a sharp mind and a (4)___ sense of humour. We were separated by more than seventy years, yet we became unlikely (5)___. Every week, over cups of weak tea, he told me stories of a world I had only read about in (6)___: of long sea voyages, of cities that no longer existed, of a life crowded with adventure and (7)___. In return, I taught him to send messages to his great-grandchildren on a tablet, and we laughed endlessly at his typing (8)___. What surprised me most was how much I (9)___ from these afternoons. In a culture that worships youth, I had unthinkingly assumed that the old had little to (10)___ me. Mr. Alvarez gently proved me (11)___. His stories gave me a longer view of life, and his calm in the face of age and loss taught me more about (12)___ than any lesson at school. When he passed away, I grieved as if I had lost a member of my own (13)___. But I was left with a (14)___: that wisdom and friendship know no age, and that we lose a great deal when we shut the old away and stop (15)___ to them.",
+      "blanks": [
+        { "options": ["happily", "unwillingly", "quickly", "proudly"], "answer": "B" },
+        { "options": ["exciting", "boring", "easy", "short"], "answer": "B" },
+        { "options": ["day", "week", "class", "home"], "answer": "B" },
+        { "options": ["great", "small", "poor", "lost"], "answer": "A" },
+        { "options": ["enemies", "friends", "rivals", "strangers"], "answer": "B" },
+        { "options": ["books", "games", "songs", "news"], "answer": "A" },
+        { "options": ["loss", "money", "noise", "school"], "answer": "A" },
+        { "options": ["speed", "mistakes", "money", "lessons"], "answer": "B" },
+        { "options": ["sold", "gained", "lost", "hid"], "answer": "B" },
+        { "options": ["sell", "teach", "cost", "owe"], "answer": "B" },
+        { "options": ["right", "wrong", "busy", "ready"], "answer": "B" },
+        { "options": ["money", "life", "science", "sport"], "answer": "B" },
+        { "options": ["class", "family", "team", "town"], "answer": "B" },
+        { "options": ["lesson", "bill", "prize", "game"], "answer": "A" },
+        { "options": ["talking", "listening", "selling", "writing"], "answer": "B" }
+      ],
+      "explain_zh": "1unwillingly不情愿 2boring以为无聊 3week每周亮点 4great极佳幽默感 5friends朋友 6books书里读到 7loss冒险与失去 8mistakes打字错误 9gained收获 10teach可教我 11wrong证明我错 12life人生 13family家人 14lesson教益 15listening停止倾听。"
+    },
+    {
+      "passage": "My uncle is what most people would call a (1)___. His workshop is piled high with broken chairs, rusty tools and bits of metal that anyone else would throw (2)___. As a boy, I thought it was all just (3)___. Then one summer, he showed me what he actually (4)___ with it. From a heap of scrap, his hands could shape a beautiful lamp, a clever toy, or a small metal bird so lifelike it seemed about to (5)___ away. 'Nothing is really (6)___,' he told me, 'only waiting to become something else.' He offered to teach me, and I spent that summer at his side, learning to (7)___ value where others saw only junk. It was harder than it looked: my first attempts were (8)___, and more than once I wanted to give up. But slowly I began to see the world through his (9)___. A cracked teapot became a flowerpot; an old ladder became a (10)___. I learned that creativity is not about having expensive (11)___, but about seeing (12)___ in what others ignore. That lesson reached far beyond his workshop. I began to look at problems, and even at difficult people, differently, asking not 'what is wrong with this?' but 'what could this (13)___?' My uncle never became rich or famous, but he was one of the most genuinely (14)___ people I have ever known. He had mastered a rare and quiet art: the art of finding (15)___ in what the world had thrown away.",
+      "blanks": [
+        { "options": ["collector", "doctor", "teacher", "driver"], "answer": "A" },
+        { "options": ["away", "up", "over", "off"], "answer": "A" },
+        { "options": ["rubbish", "gold", "art", "food"], "answer": "A" },
+        { "options": ["did", "sold", "lost", "hid"], "answer": "A" },
+        { "options": ["run", "fly", "walk", "swim"], "answer": "B" },
+        { "options": ["clean", "useless", "heavy", "old"], "answer": "B" },
+        { "options": ["sell", "see", "hide", "buy"], "answer": "B" },
+        { "options": ["perfect", "terrible", "cheap", "easy"], "answer": "B" },
+        { "options": ["eyes", "hands", "words", "shop"], "answer": "A" },
+        { "options": ["bookshelf", "lamp", "bird", "chair"], "answer": "A" },
+        { "options": ["clothes", "materials", "friends", "lessons"], "answer": "B" },
+        { "options": ["trouble", "possibility", "danger", "noise"], "answer": "B" },
+        { "options": ["cost", "become", "sell", "break"], "answer": "B" },
+        { "options": ["rich", "creative", "busy", "famous"], "answer": "B" },
+        { "options": ["value", "trouble", "money", "noise"], "answer": "A" }
+      ],
+      "explain_zh": "1collector收藏狂 2away扔掉 3rubbish垃圾 4did用它做的 5fly像要飞走 6useless没有真正无用 7see看出价值 8terrible很糟 9eyes他的眼光 10bookshelf书架 11materials昂贵材料 12possibility可能性 13become能变成什么 14creative富创造力 15value发现价值。"
+    }
+  ]
+}

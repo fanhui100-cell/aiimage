@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-22T10:26:14.797Z",
+  "apply": true,
+  "stage": "toefl-2026-pilot",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 10,
+    "dupSkip": 10
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\toefl-2026-pilot\\toefl-build-a-sentence.json",
+      "template": "toefl-build-a-sentence",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\toefl-2026-pilot\\toefl-complete-the-words.json",
+      "template": "toefl-complete-the-words",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    }
+  ]
+}

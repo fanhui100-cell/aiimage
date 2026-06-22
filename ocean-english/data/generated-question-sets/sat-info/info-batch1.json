@@ -1,0 +1,103 @@
+{
+  "template": "sat-information-and-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Information and Ideas items, batch 1. 100% original, not copied from College Board. DeepSeek not used. Each 25-150 word text + 1 four-option question; exactly one answer supported by the text.",
+  "sets": [
+    {
+      "passage": "For most of the twentieth century, biologists assumed that trees in a forest competed quietly but relentlessly for light, water, and soil. Recent research tells a more surprising story. Through vast underground networks of fungi, older trees appear to share sugars with struggling seedlings, sometimes even favoring their own offspring. The forest, in this view, behaves less like a battlefield than like a community bound together beneath the soil.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["New research suggests that trees cooperate through underground fungal networks rather than only competing.", "Biologists in the twentieth century understood forests better than today's researchers do.", "Fungi are the most important organisms in any forest ecosystem.", "Tree seedlings cannot survive without sugars donated by older trees."],
+      "answer": "New research suggests that trees cooperate through underground fungal networks rather than only competing.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨为树木通过真菌网络合作（颠覆纯竞争观）。B 与文相反，C 过度拔高，D 绝对化（文中为 sometimes/appear）。"
+    },
+    {
+      "passage": "The lighthouse keeper's logbook, kept faithfully for thirty years, records the weather every single day but mentions visitors only four times. On each of those four dates, the handwriting grows noticeably larger and the entries run unusually long, crowded with detail about conversations that lasted late into the night.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The keeper found visits rare and memorable enough to record at unusual length.", "The keeper disliked visitors and tried to avoid mentioning them.", "The lighthouse received visitors nearly every week.", "The keeper stopped recording the weather whenever guests arrived."],
+      "answer": "The keeper found visits rare and memorable enough to record at unusual length.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：三十年仅四次、字大记长，说明访客罕见且印象深刻。B 与记得详细矛盾，C 与仅四次矛盾，D 与每天记天气矛盾。"
+    },
+    {
+      "passage": "Marine biologist Dr. Reyes claims that the damaged reef is finally recovering. She points to one striking fact as her strongest evidence: the number of juvenile fish counted last spring was the highest recorded in two decades, a sign, she argues, that breeding has resumed at healthy levels.",
+      "prompt": "Which finding, if true, would most directly support Dr. Reyes's claim that the reef is recovering?",
+      "options": ["Surveys this year again recorded unusually large numbers of juvenile fish across the reef.", "Water temperatures near the reef have risen slightly over the past decade.", "Tourists report that the reef looks more colorful than it did before.", "A separate reef studied nearby has continued to decline."],
+      "answer": "Surveys this year again recorded unusually large numbers of juvenile fish across the reef.",
+      "domain": "Information and Ideas",
+      "explain_zh": "最直接支持恢复的是幼鱼数量持续偏高（繁殖恢复）。B 为负面/无关，C 主观印象，D 为别处的礁。"
+    },
+    {
+      "passage": "The first practical sewing machine, patented in 1846, could produce 250 stitches per minute, far faster than the five or six stitches a skilled tailor could manage by hand. Yet many tailors initially resisted the device, fearing that it would eliminate their trade entirely.",
+      "prompt": "According to the text, why did many tailors initially resist the sewing machine?",
+      "options": ["They worried it would destroy their livelihood.", "They found it slower than sewing by hand.", "They could not afford to buy the machine.", "They believed its stitches were weaker."],
+      "answer": "They worried it would destroy their livelihood.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文中明说 fearing it would eliminate their trade。B 与更快矛盾，C、D 文中未提。"
+    },
+    {
+      "passage": "A survey of commuters in a midsized city found that, among those who lived within two miles of a train station, 68 percent took the train to work at least three days a week. Among those living more than five miles away, that figure dropped to just 12 percent, even though nearly all of them owned a car.",
+      "prompt": "Which choice best describes data presented in the text?",
+      "options": ["Commuters living closer to a station were far more likely to take the train regularly.", "Most commuters in the city took the train regardless of distance.", "Car ownership was higher among those living near the station.", "Distance from a station had little effect on commuting choices."],
+      "answer": "Commuters living closer to a station were far more likely to take the train regularly.",
+      "domain": "Information and Ideas",
+      "explain_zh": "数据：近站 68% 对远站 12%，近站更常坐火车。B 错（远站仅 12%），C 文未比较车主比例方向，D 与数据相反。"
+    },
+    {
+      "passage": "When the printing press arrived in Europe, many scholars feared that cheap, abundant books would make people lazy and forgetful, no longer bothering to memorize anything. Centuries later, similar fears greeted the pocket calculator, and later still, the search engine. Each new tool, critics warned, would weaken the very minds it was meant to serve.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["New information technologies have repeatedly provoked fears that they would weaken human thinking.", "The printing press was more harmful to memory than the calculator.", "Scholars have always opposed the spread of books.", "Search engines have finally proven these old fears correct."],
+      "answer": "New information technologies have repeatedly provoked fears that they would weaken human thinking.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨为每种新技术都反复引发削弱思维的担忧。B 文未比较程度，C 过度，D 文未下此定论。"
+    },
+    {
+      "passage": "Every painting in the retrospective was arranged by date except one: an unfinished portrait placed alone at the very end of the final room, long after the artist's last dated work. A small card beside it gave no title, only a question mark where the year should have been.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The date when the unfinished portrait was painted is uncertain.", "The portrait was the artist's earliest known work.", "The curators considered the portrait the least important piece.", "The artist deliberately refused to date the portrait."],
+      "answer": "The date when the unfinished portrait was painted is uncertain.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：以问号代年份说明创作时间不确定。B 与放在最后、晚于最后注明日期作矛盾，C 与单独压轴的安排相反，D 属过度推断。"
+    },
+    {
+      "passage": "The naturalist spent two years observing a single colony of weaver ants. She noted that when a leaf needed folding, dozens of ants would line up along its edge and pull in unison, while still others held larvae whose sticky silk was squeezed out and used to glue the curled leaf in place.",
+      "prompt": "According to the text, how were the folded leaves held in place?",
+      "options": ["With sticky silk produced by ant larvae.", "By adult ants continuously pulling on the edges.", "With a sticky substance from the leaves themselves.", "By the sheer weight of dozens of adult ants."],
+      "answer": "With sticky silk produced by ant larvae.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说 larvae 的 sticky silk 被用来 glue 叶片。B 是折叠动作而非固定，C、D 文中未提。"
+    },
+    {
+      "passage": "A historian argues that a certain medieval town was far wealthier than its modest stone ruins would suggest. To strengthen this claim, she has said she would most value evidence about the everyday goods that ordinary residents, not just the rich, could actually afford.",
+      "prompt": "Which discovery, if made, would most directly support the historian's argument?",
+      "options": ["Excavations reveal imported glass and costly spices in ordinary households.", "The town's defensive walls were built from cheap local stone.", "Very few written records from the town have survived.", "A neighboring town was known to have been extremely poor."],
+      "answer": "Excavations reveal imported glass and costly spices in ordinary households.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持更富有最直接的是普通家庭也用得起进口奢侈品。B 反而暗示节俭，C 与财富无直接关系，D 是别处的情况。"
+    },
+    {
+      "passage": "The little bakery on the corner never advertises and displays no sign at all, yet a line forms outside its door before sunrise every single morning. Newcomers to the neighborhood always ask how to find it; longtime residents simply smile and say they just followed the smell.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The bakery's reputation spreads without any formal advertising.", "The bakery is struggling to attract enough customers.", "The bakery has only recently opened in the neighborhood.", "Longtime residents resent newcomers asking for directions."],
+      "answer": "The bakery's reputation spreads without any formal advertising.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：无广告无招牌却天天排队，说明靠口碑与气味传播。B 与排队矛盾，C 与老住户熟知矛盾，D 与微笑相反。"
+    },
+    {
+      "passage": "In a study of reading habits, researchers found that students who read for pleasure about twenty minutes a day encountered roughly 1.8 million words a year. Those who read only two minutes a day encountered about 180,000 words, a tenfold difference that the researchers linked to noticeable gaps in vocabulary by year's end.",
+      "prompt": "Which choice best describes data presented in the text?",
+      "options": ["A small daily difference in reading time was associated with a large yearly gap in words encountered.", "Students who read for pleasure performed worse on vocabulary measures.", "Reading two minutes a day exposed students to essentially no new words.", "Most students in the study read for at least twenty minutes a day."],
+      "answer": "A small daily difference in reading time was associated with a large yearly gap in words encountered.",
+      "domain": "Information and Ideas",
+      "explain_zh": "数据：20 分钟约 180 万词、2 分钟约 18 万词，十倍差距。B 与文相反，C 错（仍有 18 万词），D 文未说多数。"
+    },
+    {
+      "passage": "The river that once powered dozens of mills now runs quietly past their empty brick shells. But the same current that turned the great wooden wheels has been harnessed once more, this time spinning turbines that light the very town the mills first built. The water works on; only its purpose has changed.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["The river still serves the town, though its use has shifted from mills to electricity.", "The town has been abandoned ever since the mills closed.", "Hydroelectric power is far more efficient than the old water mills.", "The river is no longer of any real use to the town."],
+      "answer": "The river still serves the town, though its use has shifted from mills to electricity.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：河流持续服务小镇，用途由磨坊转为发电。B 与点亮小镇矛盾，C 文未比较效率，D 与文相反。"
+    }
+  ]
+}

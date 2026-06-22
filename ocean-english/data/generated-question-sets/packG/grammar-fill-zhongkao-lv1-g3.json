@@ -1,0 +1,167 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao-level 语法填空 (gblanks shape, 10 blanks each), batch G3. Topics distinct from G1-G2; points rotate over tense/preposition/article/pronoun/comparative-superlative/word-form/connector/subject-verb agreement/non-finite. Dialogue single-quoted. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Every weekend, I join a group of students (1)____ help old people in our town. We visit a home for the elderly, (2)____ many kind grandparents live. We talk with them, read newspapers, and sometimes (3)____ (sing) songs together. One old lady told me that our visits made her (4)____ (happy) than ever. She said young people today are (5)____ (help) and warm-hearted. Last Sunday, I taught an old man how (6)____ (use) a smartphone. He learned quickly and thanked me again and (7)____. Helping others is one of the (8)____ (good) feelings in the world. I believe that a small act of kindness can (9)____ (change) someone's whole day. We should all care (10)____ the people around us.",
+      "gblanks": [
+        { "answer": "to", "acceptable": ["to"], "hint": "infinitive of purpose" },
+        { "answer": "where", "acceptable": ["where"], "hint": "relative, place" },
+        { "answer": "sing", "acceptable": ["sing"], "hint": "parallel with talk, read" },
+        { "answer": "happier", "acceptable": ["happier"], "hint": "comparative of happy" },
+        { "answer": "helpful", "acceptable": ["helpful"], "hint": "adjective form" },
+        { "answer": "to use", "acceptable": ["to use"], "hint": "how + to do" },
+        { "answer": "again", "acceptable": ["again"], "hint": "again and again" },
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" },
+        { "answer": "change", "acceptable": ["change"], "hint": "can + base verb" },
+        { "answer": "about", "acceptable": ["about", "for"], "hint": "care about/for" }
+      ],
+      "explain_zh": "(1) to help 目的；(2) where 指地点；(3) sing 与并列动词；(4) happier 比较级；(5) helpful 形容词；(6) how to use；(7) again and again；(8) the best 最高级；(9) can change 原形；(10) care about/for。"
+    },
+    {
+      "passage": "Mr Brown is the (1)____ (interesting) English teacher I have ever had. He always makes his lessons full (2)____ fun. Instead of just reading the book, he often (3)____ (tell) us funny stories in English. Because of him, I have fallen in love (4)____ this language. He says that making mistakes (5)____ (be) a normal part of learning. 'Never be afraid to speak,' he tells us (6)____ (warm). Last year, my English was poor, but now I can speak much (7)____ (fluent). He has helped me (8)____ (believe) in myself. I really hope I (9)____ become a teacher like him in the future. A good teacher can change a student's life (10)____ ever.",
+      "gblanks": [
+        { "answer": "most interesting", "acceptable": ["most interesting"], "hint": "superlative" },
+        { "answer": "of", "acceptable": ["of"], "hint": "full of" },
+        { "answer": "tells", "acceptable": ["tells"], "hint": "he tells, subject-verb" },
+        { "answer": "with", "acceptable": ["with"], "hint": "fall in love with" },
+        { "answer": "is", "acceptable": ["is"], "hint": "making mistakes is, gerund subject" },
+        { "answer": "warmly", "acceptable": ["warmly"], "hint": "adverb form" },
+        { "answer": "more fluently", "acceptable": ["more fluently"], "hint": "comparative adverb" },
+        { "answer": "believe", "acceptable": ["believe", "to believe"], "hint": "help sb (to) do" },
+        { "answer": "will", "acceptable": ["will", "can"], "hint": "future, in the future" },
+        { "answer": "for", "acceptable": ["for"], "hint": "for ever" }
+      ],
+      "explain_zh": "(1) the most interesting 最高级；(2) full of；(3) he tells 主谓一致；(4) fall in love with；(5) making mistakes is 动名词主语；(6) warmly 副词；(7) more fluently 比较级副词；(8) help me (to) believe；(9) 将来 will；(10) for ever。"
+    },
+    {
+      "passage": "The Spring Festival is the most important festival (1)____ Chinese people. It usually comes (2)____ January or February. Before the festival, every family cleans the house and (3)____ (put) up red decorations. On New Year's Eve, all the family members get together (4)____ a big dinner. Children love this festival because they can (5)____ (receive) lucky money. The streets are much (6)____ (lively) than usual, full of lights and laughter. People say 'Happy New Year' to (7)____ (each) other. Last year, I watched the fireworks with my cousins, and they were (8)____ beautiful that we shouted with joy. The festival reminds us how important family (9)____ (be). I am already looking forward (10)____ the next one.",
+      "gblanks": [
+        { "answer": "for", "acceptable": ["for", "to"], "hint": "important for/to sb" },
+        { "answer": "in", "acceptable": ["in"], "hint": "in + month" },
+        { "answer": "puts", "acceptable": ["puts"], "hint": "every family puts, subject-verb" },
+        { "answer": "for", "acceptable": ["for"], "hint": "get together for" },
+        { "answer": "receive", "acceptable": ["receive", "get"], "hint": "can + base verb" },
+        { "answer": "livelier", "acceptable": ["livelier", "more lively"], "hint": "comparative of lively" },
+        { "answer": "each", "acceptable": ["each"], "hint": "each other, no change" },
+        { "answer": "so", "acceptable": ["so"], "hint": "so ... that" },
+        { "answer": "is", "acceptable": ["is"], "hint": "how important family is" },
+        { "answer": "to", "acceptable": ["to"], "hint": "look forward to" }
+      ],
+      "explain_zh": "(1) important for/to；(2) in + 月；(3) every family puts 主谓一致；(4) get together for；(5) can receive 原形；(6) livelier 比较级；(7) each other；(8) so...that；(9) how important family is；(10) look forward to。"
+    },
+    {
+      "passage": "Last summer, I took a long trip by train (1)____ my parents. It was the first time that I (2)____ (travel) such a long distance. The train moved fast, and the fields outside the window looked (3)____ (beautiful). I sat by the window and watched the scenery for (4)____ (hour). A kind old man sitting next to me shared his food (5)____ me. We talked about many things, and the journey did not feel long (6)____ all. When we finally arrived, I was tired but (7)____ (excite). My mother said it was the (8)____ (long) journey of my life so far. I learned that travelling helps us see (9)____ (much) of the world. I will never forget that (10)____ (wonder) trip.",
+      "gblanks": [
+        { "answer": "with", "acceptable": ["with"], "hint": "with my parents" },
+        { "answer": "had travelled", "acceptable": ["had travelled", "had traveled"], "hint": "past perfect, the first time that ..." },
+        { "answer": "beautiful", "acceptable": ["beautiful"], "hint": "adjective, no change" },
+        { "answer": "hours", "acceptable": ["hours"], "hint": "plural after for" },
+        { "answer": "with", "acceptable": ["with"], "hint": "share ... with" },
+        { "answer": "at", "acceptable": ["at"], "hint": "not ... at all" },
+        { "answer": "excited", "acceptable": ["excited"], "hint": "adjective describing feeling" },
+        { "answer": "longest", "acceptable": ["longest"], "hint": "superlative of long" },
+        { "answer": "more", "acceptable": ["more"], "hint": "see more of the world" },
+        { "answer": "wonderful", "acceptable": ["wonderful"], "hint": "adjective form" }
+      ],
+      "explain_zh": "(1) with my parents；(2) the first time that 用过去完成 had travelled；(3) looked beautiful 形容词；(4) for hours 复数；(5) share with；(6) not...at all；(7) excited 感受形容词；(8) the longest 最高级；(9) see more；(10) wonderful 形容词。"
+    },
+    {
+      "passage": "The mobile phone is one of the most useful (1)____ (invention) in modern life. With a phone, we can talk to friends (2)____ live far away. We can also use it (3)____ (search) for information in seconds. However, using a phone too much (4)____ (be) bad for our eyes and health. Some students play games (5)____ (instead) of studying, and their grades drop. My parents always tell me that I should use my phone (6)____ (wise). I think the phone itself is neither good (7)____ bad; it depends on how we use it. Yesterday I left my phone at home, and I felt (8)____ (free) without it. We must learn to be the masters of our phones, (9)____ their servants. Only then can technology truly make our lives (10)____ (good).",
+      "gblanks": [
+        { "answer": "inventions", "acceptable": ["inventions"], "hint": "plural after one of the" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "relative, friends" },
+        { "answer": "to search", "acceptable": ["to search"], "hint": "use it to do" },
+        { "answer": "is", "acceptable": ["is"], "hint": "using ... too much is, gerund subject" },
+        { "answer": "instead", "acceptable": ["instead"], "hint": "instead of, no change" },
+        { "answer": "wisely", "acceptable": ["wisely"], "hint": "adverb form" },
+        { "answer": "nor", "acceptable": ["nor"], "hint": "neither ... nor" },
+        { "answer": "freer", "acceptable": ["freer", "more free"], "hint": "comparative of free" },
+        { "answer": "not", "acceptable": ["not"], "hint": "..., not their servants" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good" }
+      ],
+      "explain_zh": "(1) one of the inventions 复数；(2) who/that 指人；(3) use it to search；(4) using...is 动名词主语；(5) instead of；(6) wisely 副词；(7) neither...nor；(8) freer 比较级；(9) ..., not...；(10) better 比较级。"
+    },
+    {
+      "passage": "When people ask me about my dream, I always say I want (1)____ (be) a doctor. Doctors are great because they help sick people (2)____ (get) better. My aunt is a doctor, and she is the (3)____ (busy) person in our family. She often works late, (4)____ she never complains. She says that saving a life is the (5)____ (happy) thing in the world. To become a doctor, I know I (6)____ study very hard. Science is the subject (7)____ I need to learn well. Sometimes the road ahead seems difficult, (8)____ I will not give up. My aunt tells me that where there is a will, there (9)____ (be) a way. I am sure my dream will come true (10)____ I keep working hard.",
+      "gblanks": [
+        { "answer": "to be", "acceptable": ["to be", "to become"], "hint": "want to do" },
+        { "answer": "get", "acceptable": ["get", "to get"], "hint": "help sb (to) do" },
+        { "answer": "busiest", "acceptable": ["busiest"], "hint": "superlative of busy" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "happiest", "acceptable": ["happiest"], "hint": "superlative of happy" },
+        { "answer": "must", "acceptable": ["must", "have to"], "hint": "modal, necessity" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "relative, the subject" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "is", "acceptable": ["is"], "hint": "there is a way, subject-verb" },
+        { "answer": "if", "acceptable": ["if", "as long as"], "hint": "conditional connector" }
+      ],
+      "explain_zh": "(1) want to be；(2) help sb (to) get；(3) the busiest 最高级；(4) 转折 but；(5) the happiest 最高级；(6) must/have to 情态；(7) that/which 指物；(8) 转折 but；(9) there is a way 主谓一致；(10) 条件 if。"
+    },
+    {
+      "passage": "Two years ago, I could not swim at all, and I was afraid of deep water. My father decided (1)____ (teach) me during the summer holiday. On the first day, I held the side of the pool (2)____ (tight). 'Relax, and trust the water,' my father said (3)____ a smile. Little by little, I learned (4)____ (float) on my back. The more I practised, the (5)____ (confident) I became. By the end of August, I could swim (6)____ (good) than some of my classmates. Now swimming is my (7)____ (favourite) sport. It keeps me healthy and (8)____ (strong). My father says that everyone is born brave; we just need (9)____ (face) our fears. I am so thankful (10)____ his patience and love.",
+      "gblanks": [
+        { "answer": "to teach", "acceptable": ["to teach"], "hint": "decide to do" },
+        { "answer": "tightly", "acceptable": ["tightly"], "hint": "adverb form" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with a smile" },
+        { "answer": "to float", "acceptable": ["to float"], "hint": "learn to do" },
+        { "answer": "more confident", "acceptable": ["more confident"], "hint": "the more ... the more" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of well" },
+        { "answer": "favourite", "acceptable": ["favourite", "favorite"], "hint": "adjective, no change" },
+        { "answer": "strong", "acceptable": ["strong"], "hint": "healthy and strong, adjective" },
+        { "answer": "to face", "acceptable": ["to face"], "hint": "need to do" },
+        { "answer": "for", "acceptable": ["for"], "hint": "thankful for" }
+      ],
+      "explain_zh": "(1) decide to teach；(2) tightly 副词；(3) with a smile；(4) learn to float；(5) the more...the more confident；(6) swim better 比较级；(7) favourite 形容词；(8) strong 形容词；(9) need to face；(10) thankful for。"
+    },
+    {
+      "passage": "My mother works hard every day, so I often help (1)____ (she) with the housework. On weekends, I clean my room and wash (2)____ (I) own clothes. Last Saturday, I cooked breakfast for the (3)____ (one) time, and my parents were surprised. I also learned (4)____ (water) the plants on the balcony. My mother says that doing housework (5)____ (make) us more independent. At first, sweeping the floor was (6)____ (tiring) than I thought. But now I can do it (7)____ (quick) and well. I feel proud (8)____ I help my family. A clean home makes everyone (9)____ (comfortable). I believe children should learn to share the housework (10)____ their parents.",
+      "gblanks": [
+        { "answer": "her", "acceptable": ["her"], "hint": "object pronoun, help her" },
+        { "answer": "my", "acceptable": ["my"], "hint": "possessive, my own clothes" },
+        { "answer": "first", "acceptable": ["first"], "hint": "the first time, ordinal" },
+        { "answer": "to water", "acceptable": ["to water"], "hint": "learn to do" },
+        { "answer": "makes", "acceptable": ["makes"], "hint": "doing housework makes, gerund subject" },
+        { "answer": "more tiring", "acceptable": ["more tiring"], "hint": "comparative" },
+        { "answer": "quickly", "acceptable": ["quickly"], "hint": "adverb form" },
+        { "answer": "when", "acceptable": ["when", "that"], "hint": "proud when/that" },
+        { "answer": "comfortable", "acceptable": ["comfortable"], "hint": "adjective, make sb + adj" },
+        { "answer": "with", "acceptable": ["with"], "hint": "share ... with" }
+      ],
+      "explain_zh": "(1) help her 宾格；(2) my own clothes 物主；(3) the first time 序数；(4) learn to water；(5) doing housework makes 动名词主语；(6) more tiring 比较级；(7) quickly 副词；(8) proud when/that；(9) make everyone comfortable 形容词；(10) share with。"
+    },
+    {
+      "passage": "Last Friday afternoon, our class had an exciting basketball match (1)____ Class Three. From the very start, both teams played (2)____ (hard). The score went up quickly, and the crowd cheered (3)____ (loud). Our captain, who is the (4)____ (tall) boy in our class, scored many points. In the last minute, the two teams (5)____ (have) the same score. Then my best friend threw the ball, and it went (6)____ the basket. Everyone jumped up and shouted (7)____ joy. We won the game (8)____ just two points! It was the (9)____ (excited) match I had ever watched. That afternoon taught us that teamwork (10)____ (be) the key to success.",
+      "gblanks": [
+        { "answer": "against", "acceptable": ["against", "with"], "hint": "play against" },
+        { "answer": "hard", "acceptable": ["hard"], "hint": "adverb, no change" },
+        { "answer": "loudly", "acceptable": ["loudly"], "hint": "adverb form" },
+        { "answer": "tallest", "acceptable": ["tallest"], "hint": "superlative of tall" },
+        { "answer": "had", "acceptable": ["had"], "hint": "past tense" },
+        { "answer": "into", "acceptable": ["into"], "hint": "into the basket" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with joy" },
+        { "answer": "by", "acceptable": ["by"], "hint": "win by + margin" },
+        { "answer": "most exciting", "acceptable": ["most exciting"], "hint": "superlative, describing match" },
+        { "answer": "is", "acceptable": ["is"], "hint": "teamwork is, subject-verb" }
+      ],
+      "explain_zh": "(1) play against；(2) hard 副词；(3) loudly 副词；(4) the tallest 最高级；(5) had 过去；(6) into the basket；(7) with joy；(8) win by；(9) the most exciting match 最高级；(10) teamwork is 主谓一致。"
+    },
+    {
+      "passage": "Animals are our friends, and we should do our best (1)____ (protect) them. Sadly, many wild animals are in (2)____ (danger) because people destroy their homes. Some kinds of animals have already (3)____ (disappear) from the earth forever. If we cut down too many trees, where (4)____ the birds live? Last month, our school held an activity (5)____ (teach) us about wildlife. We learned that every animal (6)____ (play) an important role in nature. The panda is one of the (7)____ (rare) animals in the world, and China works hard to save it. I think protecting animals is (8)____ important as protecting ourselves. We should never buy things (9)____ (make) from wild animals. Let us live (10)____ (peaceful) with all living things.",
+      "gblanks": [
+        { "answer": "to protect", "acceptable": ["to protect"], "hint": "do one's best to do" },
+        { "answer": "danger", "acceptable": ["danger"], "hint": "in danger, uncountable" },
+        { "answer": "disappeared", "acceptable": ["disappeared"], "hint": "present perfect, have already ..." },
+        { "answer": "will", "acceptable": ["will"], "hint": "future in if-result clause" },
+        { "answer": "to teach", "acceptable": ["to teach"], "hint": "purpose, to do" },
+        { "answer": "plays", "acceptable": ["plays"], "hint": "every animal plays, subject-verb" },
+        { "answer": "rarest", "acceptable": ["rarest"], "hint": "superlative of rare" },
+        { "answer": "as", "acceptable": ["as"], "hint": "as ... as" },
+        { "answer": "made", "acceptable": ["made"], "hint": "past participle, things made from" },
+        { "answer": "peacefully", "acceptable": ["peacefully"], "hint": "adverb form" }
+      ],
+      "explain_zh": "(1) do one's best to protect；(2) in danger 不可数；(3) have disappeared 现在完成；(4) where will the birds live 将来；(5) to teach 目的；(6) every animal plays 主谓一致；(7) the rarest 最高级；(8) as...as；(9) things made from 过去分词；(10) peacefully 副词。"
+    }
+  ]
+}

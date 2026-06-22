@@ -433,7 +433,8 @@ export function DictionaryVaultScreen() {
       {/* 找词 · 词脊面板 */}
       {palette && <WordPalette words={words} onPick={setCur} onClose={() => setPalette(false)} />}
 
-      {toast && <div className="lvault-toast" dangerouslySetInnerHTML={{ __html: toast }} />}
+      {/* 纯 React 文本渲染（toast 均为纯文案），移除 dangerouslySetInnerHTML 的 XSS 隐患 */}
+      {toast && <div className="lvault-toast">{toast}</div>}
     </div>
   )
 }

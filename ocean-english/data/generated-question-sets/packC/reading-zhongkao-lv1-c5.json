@@ -1,0 +1,87 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao reading, batch C5 (completes package C to 50). Short simple passages (~130-160 words), 4 MCQs each. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "My uncle is a swimming coach, and last summer he asked me to help him teach a group of young children. I felt very grown-up and excited. But I soon learned that teaching is much harder than I had thought. Some children were so afraid of the water that they cried. One little boy, named Bao, refused even to put his face in. I remembered how afraid I had once been, so I did not push him. Instead, I sat with him in the shallow water and played simple games. Day by day, he grew braver. The morning Bao finally swam a few metres by himself, his face shone with joy, and I felt prouder than I ever had of my own swimming. Helping those children taught me that patience and kindness can do what force never can. To help someone overcome a fear, you must first understand it.",
+      "questions": [
+        { "prompt": "What does the writer's uncle do?", "options": ["He is a teacher.", "He is a swimming coach.", "He is a doctor.", "He is a driver."], "answer": "B" },
+        { "prompt": "What was Bao afraid of?", "options": ["The other children.", "The water.", "The coach.", "The sun."], "answer": "B" },
+        { "prompt": "How did the writer help Bao?", "options": ["He pushed him into the water.", "He sat with him and played simple games.", "He shouted at him.", "He sent him home."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Teaching is very easy.", "Patience and kindness can do what force cannot.", "Children are too much trouble.", "Swimming is dangerous."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 游泳教练)、细节(B 怕水)、细节(B 陪他在浅水玩游戏)、主旨(B 耐心善意能做到强迫做不到的事)。"
+    },
+    {
+      "passage": "My grandfather loves birds, and last spring he took me to a wetland park to watch them. I thought it would be boring just to look at birds, but he gave me a pair of binoculars and a small notebook. To my surprise, the park was full of life. We saw birds of so many colours and sizes, some swimming, some flying, some hiding in the reeds. My grandfather knew the name of every one. He taught me to stay quiet and still, because birds are easily frightened. Slowly, I began to see what he sees. I wrote down each bird we found and even drew some of them. By the end of the day, my notebook was full, and I had discovered a whole world I had never noticed before. Now bird-watching is my favourite hobby. It has taught me that nature rewards those who are patient enough to look closely.",
+      "questions": [
+        { "prompt": "Where did the grandfather take the writer?", "options": ["A zoo.", "A wetland park.", "A farm.", "A museum."], "answer": "B" },
+        { "prompt": "What did the grandfather give the writer?", "options": ["A camera.", "Binoculars and a notebook.", "Some food.", "A pet bird."], "answer": "B" },
+        { "prompt": "Why must you stay quiet when watching birds?", "options": ["It is a park rule.", "Because birds are easily frightened.", "To have a rest.", "To hear music."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Birds are boring.", "Nature rewards those patient enough to look closely.", "Parks are too crowded.", "Grandfathers are strict."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 湿地公园)、细节(B 望远镜与笔记本)、细节(B 鸟易受惊故要安静)、主旨(B 自然回报愿意细看的耐心者)。"
+    },
+    {
+      "passage": "Maths had always been easy for me, but for my friend Jia, it was a nightmare. No matter how hard she tried, she could not understand it, and her low marks made her feel stupid and sad. One day, I offered to help her study after school. At first, I just gave her the answers, but that did not really help. So I changed my way. Instead of telling her the answers, I helped her find them herself, step by step. It took a lot of patience, and progress was slow. But slowly, Jia began to understand. The day she passed a maths test for the first time, she was so happy that she cried. Helping Jia taught me something important too. I learned that explaining things to others actually made my own understanding deeper. By teaching, I had learned even more myself. The best way to truly master something, it seems, is to share it.",
+      "questions": [
+        { "prompt": "What subject was hard for Jia?", "options": ["English.", "Maths.", "Sport.", "Music."], "answer": "B" },
+        { "prompt": "How did the writer change his way of helping?", "options": ["He gave her even more answers.", "He helped her find the answers herself, step by step.", "He stopped helping her.", "He did her homework for her."], "answer": "B" },
+        { "prompt": "How did Jia feel when she passed the test?", "options": ["Angry.", "So happy that she cried.", "Bored.", "Worried."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["That maths is impossible.", "That teaching others deepens your own understanding.", "That helping is a waste of time.", "That Jia is lazy."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 数学)、细节(B 引导她逐步自己找答案)、细节(B 通过时高兴得哭)、主旨(B 教别人能加深自己的理解)。"
+    },
+    {
+      "passage": "The first time I stepped onto an ice rink, I fell down almost at once. The ice was hard and cold, and my legs felt like they belonged to someone else. All around me, other skaters glided smoothly, while I clung to the wall in fear. I felt like giving up and going home. But my friend, who had skated for years, would not let me. 'Everyone falls at first,' she said. 'The skaters you admire all started exactly where you are now.' So I kept trying. I fell again and again, but each time I got up. Little by little, I learned to balance, then to glide, and finally to skate without holding the wall. By the end of the day, I was laughing as I moved across the ice. Learning to skate taught me that the difference between those who can and those who cannot is often simply the willingness to keep getting up.",
+      "questions": [
+        { "prompt": "What happened the first time the writer skated?", "options": ["He skated very well.", "He fell down almost at once.", "He went straight home.", "He won a race."], "answer": "B" },
+        { "prompt": "What did the writer's friend say?", "options": ["That he should give up.", "That everyone falls at first.", "That skating is easy.", "That he should go home."], "answer": "B" },
+        { "prompt": "What did the writer do each time he fell?", "options": ["He cried.", "He got up again.", "He left the rink.", "He gave up."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Skating is too dangerous.", "The difference is the willingness to keep getting up.", "Friends are unkind.", "Ice is too cold to enjoy."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 一上场就摔)、细节(B 人人起初都会摔)、细节(B 每次都爬起来)、主旨(B 区别常在于愿不愿一再站起)。"
+    },
+    {
+      "passage": "My father is good with his hands, and our garage is full of his tools. For years, I had no interest in them. Then one rainy weekend, with nothing else to do, I asked him to teach me to make something. He smiled and handed me a piece of wood, and we decided to make a simple bird house. It was harder than it looked. I measured wrong, hit my thumb with the hammer, and got splinters in my fingers. Many times I wanted to quit. But my father was patient, showing me each step. After a whole day of careful work, we finally finished. When I hung the little bird house in our garden and, weeks later, a family of birds moved in, I felt a pride I had never known. Making something with my own hands taught me the deep satisfaction of patient work, and brought my father and me closer than ever.",
+      "questions": [
+        { "prompt": "What did they decide to make?", "options": ["A chair.", "A bird house.", "A table.", "A boat."], "answer": "B" },
+        { "prompt": "Was the work easy?", "options": ["Yes, very easy.", "No, it was harder than it looked.", "It was finished quickly.", "They gave up halfway."], "answer": "B" },
+        { "prompt": "What moved into the bird house weeks later?", "options": ["Some insects.", "A family of birds.", "A cat.", "Nothing at all."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Woodwork is useless.", "The satisfaction of patient work, and growing closer to his father.", "Fathers are too strict.", "Birds are noisy."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 做鸟屋)、细节(B 比看起来难)、细节(B 一家鸟住了进来)、主旨(B 耐心劳作的满足感与父子更亲近)。"
+    },
+    {
+      "passage": "At the end of the school year, our class had a problem: what to do with all our old textbooks and storybooks. Most students wanted to throw them away. But our monitor, Lin, had a better idea. 'Why not sell them to younger students,' she said, 'and give the money to charity?' Everyone liked the plan. We cleaned our old books, set fair, low prices, and held a sale in the playground. Younger students were happy to buy good books cheaply, and we were happy to see our old books used again instead of wasted. By the end of the day, we had sold almost every book and raised over five hundred yuan. We gave all the money to a charity that helps children in poor areas go to school. Lin's simple idea had done three good things at once: it saved books, helped young students, and supported children in need. It showed me how one clever, kind idea can help so many people.",
+      "questions": [
+        { "prompt": "What was the class's problem?", "options": ["They had no money.", "What to do with their old books.", "A broken classroom.", "Too few students."], "answer": "B" },
+        { "prompt": "What was Lin's idea?", "options": ["To throw the books away.", "To sell them to younger students and give the money to charity.", "To burn the books.", "To keep all the books."], "answer": "B" },
+        { "prompt": "What did they do with the money?", "options": ["They kept it.", "They gave it to a charity for poor children.", "They bought new books.", "They had a party."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Old books are useless.", "One clever, kind idea can help many people.", "Selling books is too hard.", "Charity is a waste of money."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 旧书怎么处理)、细节(B 卖给低年级、捐做慈善)、细节(B 善款捐给贫困儿童)、主旨(B 一个聪明善良的点子能帮许多人)。"
+    },
+    {
+      "passage": "For my birthday, my parents gave me a camera, and it changed the way I see my hometown. Before, I thought my small town was boring, with nothing worth looking at. But with a camera in my hand, I began to notice things I had walked past a thousand times: the morning light on an old bridge, the wrinkled smile of the man who sells noodles, the colours of the market. I started a project to photograph the daily life of my town. The more photos I took, the more beauty I found. I even held a small exhibition at school, and many people were surprised to see how lovely our ordinary town could look. Photography taught me an important lesson: beauty is not only found in famous, faraway places. It is all around us, every day, waiting for someone to take the time to truly look.",
+      "questions": [
+        { "prompt": "What did the writer get for his birthday?", "options": ["A book.", "A camera.", "A bike.", "A phone."], "answer": "B" },
+        { "prompt": "What did he think of his town before?", "options": ["Beautiful.", "Boring.", "Famous.", "Dangerous."], "answer": "B" },
+        { "prompt": "What did he do with his photos?", "options": ["Sold them.", "Held a small exhibition at school.", "Deleted them.", "Hid them away."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Only famous places are beautiful.", "Beauty is all around us, waiting to be noticed.", "Cameras are too expensive.", "Small towns are boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 相机)、细节(B 曾觉得家乡无聊)、细节(B 在校办小型影展)、主旨(B 美就在身边、待人用心去看)。"
+    },
+    {
+      "passage": "I used to be very shy and afraid of speaking in public. So when my teacher asked me to join the school debate team, my first answer was no. But she gently encouraged me to try, saying it was a chance to grow. Nervously, I agreed. The first weeks were hard. My voice shook, and I forgot my points. But the team practised together every day, and slowly I improved. I learned to research my topic, organise my ideas, and listen carefully to the other side. At our first real debate, my heart was pounding, but I managed to speak clearly and even answered a difficult question well. We did not win, but my teacher said she was proud of how far I had come. Joining the debate team changed me. I am no longer afraid to share my opinions. I learned that confidence is not something we are born with; it is something we build, one brave step at a time.",
+      "questions": [
+        { "prompt": "What was the writer like before joining the team?", "options": ["Very confident.", "Shy and afraid of speaking in public.", "Loud and rude.", "Lazy."], "answer": "B" },
+        { "prompt": "What did joining the team teach the writer to do?", "options": ["Nothing at all.", "Research a topic, organise ideas and listen carefully.", "Only sing songs.", "Only memorise speeches."], "answer": "B" },
+        { "prompt": "Did the team win the first debate?", "options": ["Yes, easily.", "No, but the teacher was proud of his progress.", "The debate was cancelled.", "He left the team."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Some people are simply born confident.", "Confidence is built, one brave step at a time.", "Debating is useless.", "Shy people can never change."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 害羞、怕公开发言)、细节(B 学会查资料、理思路、倾听)、细节(B 没赢但老师为其进步骄傲)、主旨(B 自信是一步步建立起来的)。"
+    }
+  ]
+}

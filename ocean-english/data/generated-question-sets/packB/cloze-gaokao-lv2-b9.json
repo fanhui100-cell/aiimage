@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B9. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The summer I turned fifteen, I decided to start my own small (1)___: selling homemade lemonade at the local market. I imagined easy money and instant (2)___. Reality, of course, had other plans. On my first morning, I had badly misjudged the (3)___, mixing the lemonade far too sour, and my few customers walked away with (4)___ faces. I had also forgotten that people needed (5)___, and lost several sales because I had nothing to give them their drinks in. By noon, I had sold almost (6)___ and was ready to give up. But my grandmother, who had lent me the money, encouraged me to (7)___ from each mistake instead of quitting. So the next day, I adjusted my (8)___, brought proper cups, and added a cheerful sign. Sales slowly began to (9)___. Over the following weeks, I learned to listen to my customers, to (10)___ my prices fairly, and to keep going on slow days. By the end of the summer, my little stall was actually making a small (11)___. The money was modest, but what I had truly gained was far more (12)___. I had learned how a business really works, how to recover from (13)___, and how much patience real success demands. Most of all, I learned that almost everyone who (14)___ in the end has first failed, often many times. The secret was not avoiding mistakes, but refusing to let them (15)___ me.",
+      "blanks": [
+        { "options": ["business", "school", "game", "trip"], "answer": "A" },
+        { "options": ["failure", "success", "trouble", "sleep"], "answer": "B" },
+        { "options": ["weather", "recipe", "price", "road"], "answer": "B" },
+        { "options": ["happy", "sour", "proud", "calm"], "answer": "B" },
+        { "options": ["cups", "money", "chairs", "maps"], "answer": "A" },
+        { "options": ["everything", "nothing", "something", "all"], "answer": "B" },
+        { "options": ["sell", "learn", "hide", "run"], "answer": "B" },
+        { "options": ["recipe", "bag", "sign", "clock"], "answer": "A" },
+        { "options": ["fall", "rise", "stop", "wait"], "answer": "B" },
+        { "options": ["hide", "set", "lose", "forget"], "answer": "B" },
+        { "options": ["loss", "profit", "noise", "trip"], "answer": "B" },
+        { "options": ["boring", "valuable", "cheap", "heavy"], "answer": "B" },
+        { "options": ["success", "failure", "sleep", "noise"], "answer": "B" },
+        { "options": ["fails", "succeeds", "leaves", "sleeps"], "answer": "B" },
+        { "options": ["help", "stop", "follow", "teach"], "answer": "B" }
+      ],
+      "explain_zh": "1business生意 2success成功 3recipe配方 4sour又酸又不悦的脸 5cups杯子 6nothing几乎没卖出 7learn从错误中学 8recipe调整配方 9rise上升 10set定价 11profit利润 12valuable更宝贵 13failure从失败恢复 14succeeds成功者 15stop让其击垮。"
+    },
+    {
+      "passage": "There was a boy in our class named Sam whom others liked to (1)___. He was quiet and a little different, and a small group seemed to enjoy making his life (2)___. For a long time, I did nothing. I told myself it was not my (3)___, and that speaking up would only turn their attention on (4)___. Like most of the class, I simply looked (5)___ when the teasing began. But one day, I saw Sam sitting alone at lunch, his eyes red, trying hard not to (6)___, and something in me finally (7)___. I realised that my silence was not neutral; by saying nothing, I was quietly taking the bullies' (8)___. So, with my heart pounding, I walked over and simply sat down (9)___ him. It was such a small act, but it felt enormous. The next day I did it again, and soon one or two others (10)___ us. Slowly, Sam was no longer (11)___. The bullies, robbed of an audience, gradually lost (12)___. Sam and I became real friends, and he later told me that my sitting with him that day had meant more than I could ever (13)___. I learned that the opposite of bullying is not always grand (14)___; often it is just ordinary people refusing to stay silent. Looking away is easy, but it makes us part of the problem. Sometimes all it takes to change everything is the courage to (15)___ beside someone who has been left alone.",
+      "blanks": [
+        { "options": ["help", "tease", "praise", "follow"], "answer": "B" },
+        { "options": ["easy", "miserable", "happy", "busy"], "answer": "B" },
+        { "options": ["business", "home", "game", "money"], "answer": "A" },
+        { "options": ["me", "him", "them", "all"], "answer": "A" },
+        { "options": ["up", "away", "back", "out"], "answer": "B" },
+        { "options": ["cry", "laugh", "sleep", "run"], "answer": "A" },
+        { "options": ["broke", "won", "left", "grew"], "answer": "A" },
+        { "options": ["money", "side", "seat", "name"], "answer": "B" },
+        { "options": ["behind", "beside", "without", "before"], "answer": "B" },
+        { "options": ["joined", "left", "sold", "feared"], "answer": "A" },
+        { "options": ["proud", "alone", "busy", "ready"], "answer": "B" },
+        { "options": ["money", "interest", "hope", "weight"], "answer": "B" },
+        { "options": ["sell", "imagine", "pay", "hide"], "answer": "B" },
+        { "options": ["money", "gestures", "lies", "noise"], "answer": "B" },
+        { "options": ["stand", "sleep", "leave", "pay"], "answer": "A" }
+      ],
+      "explain_zh": "1tease取笑 2miserable难堪 3business与我无关 4me注意转向我 5away看向别处 6cry忍住不哭 7broke内心崩了 8side站到霸凌者一边 9beside坐在旁边 10joined加入 11alone不再孤单 12interest失去兴趣 13imagine难以想象 14gestures宏大举动 15stand站到身边。"
+    },
+    {
+      "passage": "For two years, I carried a heavy (1)___ against my closest friend, Leo. He had betrayed a secret I had trusted him with, and the hurt had turned into a cold, hard (2)___. We stopped speaking. Whenever his name came up, I felt the old (3)___ rise again. I told myself I was right to stay (4)___, that he did not deserve my forgiveness. And perhaps he did not. But what I slowly came to realise was that my anger was hurting (5)___ far more than it was hurting him. I carried it everywhere, a constant weight on my (6)___. It poisoned my happy moments and disturbed my (7)___ at night. One day, exhausted by it, I understood that forgiving Leo was not really about (8)___ what he had done, or even about him at all. It was about setting (9)___ free. So I wrote to him. I did not pretend the hurt had not been (10)___, but I told him I no longer wished to carry the anger. To my surprise, he replied with a long, genuine (11)___. We did not instantly become best friends again, and some trust, once broken, is hard to fully (12)___. But the moment I let go of the resentment, I felt as if a great stone had been (13)___ from my chest. I learned that forgiveness is not a gift we give to those who hurt us; far more often, it is a gift we give (14)___. To forgive is simply to stop letting the past (15)___ the present.",
+      "blanks": [
+        { "options": ["bag", "grudge", "box", "gift"], "answer": "B" },
+        { "options": ["joy", "anger", "hope", "smile"], "answer": "B" },
+        { "options": ["joy", "hurt", "peace", "pride"], "answer": "B" },
+        { "options": ["calm", "angry", "silent", "kind"], "answer": "B" },
+        { "options": ["me", "him", "them", "all"], "answer": "A" },
+        { "options": ["bag", "heart", "hand", "desk"], "answer": "B" },
+        { "options": ["sleep", "work", "game", "meal"], "answer": "A" },
+        { "options": ["selling", "excusing", "winning", "hiding"], "answer": "B" },
+        { "options": ["myself", "him", "them", "all"], "answer": "A" },
+        { "options": ["real", "easy", "cheap", "funny"], "answer": "A" },
+        { "options": ["story", "apology", "bill", "joke"], "answer": "B" },
+        { "options": ["sell", "rebuild", "hide", "forget"], "answer": "B" },
+        { "options": ["sold", "lifted", "bought", "hidden"], "answer": "B" },
+        { "options": ["ourselves", "away", "back", "up"], "answer": "A" },
+        { "options": ["help", "control", "follow", "teach"], "answer": "B" }
+      ],
+      "explain_zh": "1grudge怨恨 2anger愤怒 3hurt旧痛 4angry怄气 5me伤的是自己 6heart心上重负 7sleep夜里睡眠 8excusing不是原谅其行为 9myself放过自己 10real伤是真实的 11apology道歉 12rebuild难以重建 13lifted被搬走 14ourselves给自己的礼物 15control别让过去支配现在。"
+    },
+    {
+      "passage": "Every year on a cold March morning, our whole town gathers on the bare hillside above the river to plant (1)___. The tradition began twenty years ago, after a terrible flood, when people realised that the bare slopes could no longer hold the (2)___. So they decided to act. The first year, only a few dozen people came, and the tiny saplings looked (3)___ on the vast, empty hill. Many doubted the effort would make any (4)___. But the volunteers returned, year after year, each spring planting a few thousand more (5)___ trees. Slowly, the hillside began to (6)___. What had been bare brown earth turned, season by season, into a spreading green (7)___. The roots gripped the soil, and when the heavy rains came, the land no longer washed (8)___ as it once had. Birds and insects returned to the new woodland, and the river below ran (9)___ than it had in living memory. Today, walking beneath those tall trees, it is hard to believe the hill was once (10)___. The forest stands as living proof of what a community can (11)___ when it works together patiently over many (12)___. None of the original planters will ever see the woodland reach its full (13)___; many have already passed away. Yet they planted anyway, for children they would never (14)___. They understood a simple, powerful truth: that the best time to plant a tree is always (15)___.",
+      "blanks": [
+        { "options": ["flowers", "trees", "food", "signs"], "answer": "B" },
+        { "options": ["water", "soil", "air", "light"], "answer": "B" },
+        { "options": ["huge", "tiny", "bright", "heavy"], "answer": "B" },
+        { "options": ["noise", "difference", "money", "sound"], "answer": "B" },
+        { "options": ["old", "young", "dead", "tall"], "answer": "B" },
+        { "options": ["change", "end", "fall", "sell"], "answer": "A" },
+        { "options": ["river", "forest", "road", "wall"], "answer": "B" },
+        { "options": ["up", "away", "over", "off"], "answer": "B" },
+        { "options": ["dirtier", "clearer", "faster", "lower"], "answer": "B" },
+        { "options": ["green", "bare", "full", "tall"], "answer": "B" },
+        { "options": ["lose", "achieve", "sell", "hide"], "answer": "B" },
+        { "options": ["days", "years", "minutes", "miles"], "answer": "B" },
+        { "options": ["height", "price", "speed", "noise"], "answer": "A" },
+        { "options": ["sell", "meet", "pay", "fear"], "answer": "B" },
+        { "options": ["later", "now", "yesterday", "never"], "answer": "B" }
+      ],
+      "explain_zh": "1trees植树 2soil固土 3tiny渺小 4difference有用 5young幼树 6change改变 7forest绿色森林 8away不再冲走 9clearer更清澈 10bare曾光秃 11achieve成就 12years许多年 13height完全长成 14meet永远见不到的孩子 15now就是现在。"
+    },
+    {
+      "passage": "When our old dog, Max, fell seriously (1)___, the vet gently warned us that his recovery would be long and far from (2)___. For weeks, Max could barely walk, and caring for him became a daily (3)___. He needed medicine four times a day, help to stand, and constant (4)___. It was exhausting, and there were nights when, watching him struggle, I secretly (5)___ whether we were doing the right thing. But Max had been part of our family for twelve years, through every joy and (6)___, and we could not simply give up on (7)___. So we took turns sitting with him, hand-feeding him when he would not (8)___, and carrying him gently into the garden. Progress was painfully (9)___. Some days he seemed a little stronger; others, he slipped (10)___ again, and our hearts sank. We learned to celebrate the smallest (11)___ — a wagging tail, a few steps taken alone. Slowly, against the vet's careful expectations, Max began to (12)___. Months later, he was trotting around the garden again, grey-faced but (13)___. Those difficult weeks taught me what love really (14)___. It is easy to love someone when it costs us nothing, but real love shows itself in the patient, unglamorous work of caring for another when they cannot care for (15)___. Max taught me that some duties, however hard, are simply part of loving at all.",
+      "blanks": [
+        { "options": ["asleep", "ill", "quiet", "old"], "answer": "B" },
+        { "options": ["certain", "cheap", "clean", "fast"], "answer": "A" },
+        { "options": ["joy", "struggle", "game", "trip"], "answer": "B" },
+        { "options": ["noise", "care", "money", "food"], "answer": "B" },
+        { "options": ["knew", "wondered", "hoped", "sold"], "answer": "B" },
+        { "options": ["sorrow", "money", "game", "noise"], "answer": "A" },
+        { "options": ["him", "us", "it", "all"], "answer": "A" },
+        { "options": ["sleep", "eat", "leave", "run"], "answer": "B" },
+        { "options": ["fast", "slow", "clear", "easy"], "answer": "B" },
+        { "options": ["up", "back", "away", "off"], "answer": "B" },
+        { "options": ["loss", "victory", "noise", "trouble"], "answer": "B" },
+        { "options": ["leave", "recover", "fall", "sleep"], "answer": "B" },
+        { "options": ["sad", "alive", "lost", "gone"], "answer": "B" },
+        { "options": ["sells", "means", "hides", "costs"], "answer": "B" },
+        { "options": ["themselves", "money", "us", "others"], "answer": "A" }
+      ],
+      "explain_zh": "1ill病重 2certain远非确定 3struggle艰难 4care照料 5wondered暗自怀疑 6sorrow悲喜与共 7him不能放弃它 8eat不肯吃 9slow缓慢 10back退步 11victory最小的胜利 12recover好转 13alive灰白却活着 14means爱意味着什么 15themselves无法照顾自己。"
+    }
+  ]
+}

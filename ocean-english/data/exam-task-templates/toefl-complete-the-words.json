@@ -1,0 +1,30 @@
+{
+  "templateId": "toefl-complete-the-words",
+  "examIds": ["toefl"],
+  "taskType": "complete_the_words",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Reading · Complete the Words。15-50 词原创学术语境短文（与 Reading 难度梯度一致），文中含一个目标词；提供 targetWord（完整词）与 maskedForm（部分字母 + '_' 占缺失字母，长度等于 targetWord，已显示字母须与 targetWord 一致，至少缺 1 个字母）。目标词须在短文中真实出现且可由上下文唯一恢复。机器评分（exact match），无选项、无 rubric。Claude 亲撰，不抄真题、不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 15,
+    "maxWords": 55,
+    "perStimulusItems": 1,
+    "topicDomains": ["science", "history", "social_science", "humanities", "technology", "environment", "health", "arts"]
+  },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "complete_words" },
+  "subskills": ["word_form", "lexical_knowledge", "reading_comprehension"],
+  "qualityRules": [
+    "100% 原创学术语境短文，禁止抄袭 ETS 真题",
+    "短文 15-55 词，学术难度（B1-C1+），与 Reading 文本梯度一致",
+    "每 set 恰好 1 个目标词，maskedForm 长度等于 targetWord，已显示字母与 targetWord 完全一致",
+    "至少缺 1 个字母、不得全缺；目标词须在短文中真实出现并可由上下文唯一恢复",
+    "机器评分（exact match），无选项、无 rubric",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

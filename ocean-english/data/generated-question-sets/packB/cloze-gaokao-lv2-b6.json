@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B6. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Our class wanted to raise money for a children's hospital, so we decided to hold a charity (1)___. At first the idea seemed simple, but organising it proved far more (2)___ than we had imagined. We had to find things to sell, set fair (3)___, and persuade busy people to come. Some classmates lost interest when the work grew hard, but a small group of us refused to (4)___. We spent our weekends baking cakes, making posters and collecting donated (5)___ from families across the neighbourhood. On the day itself, I was secretly (6)___ that no one would turn up. To my (7)___, the playground slowly filled with people. Parents bought our slightly burnt cakes, children played our homemade games, and the coins in our donation box steadily (8)___. By the end of the afternoon, we had raised far more money than we had ever (9)___ possible. But the day gave us something beyond the (10)___. Strangers had come together for a common (11)___, and our whole class felt a new sense of (12)___ in what we had achieved. When we handed the money to the hospital, a nurse told us how many sick children it would (13)___. In that moment, every tiring weekend felt completely (14)___. I learned that real change does not require great power or wealth; it only needs ordinary people willing to (15)___ together for something good.",
+      "blanks": [
+        { "options": ["sale", "game", "trip", "match"], "answer": "A" },
+        { "options": ["easy", "difficult", "boring", "cheap"], "answer": "B" },
+        { "options": ["rules", "prices", "dates", "seats"], "answer": "B" },
+        { "options": ["help", "quit", "wait", "share"], "answer": "B" },
+        { "options": ["money", "goods", "ideas", "friends"], "answer": "B" },
+        { "options": ["glad", "afraid", "proud", "sure"], "answer": "B" },
+        { "options": ["delight", "anger", "regret", "sorrow"], "answer": "A" },
+        { "options": ["fell", "rose", "stopped", "waited"], "answer": "B" },
+        { "options": ["made", "thought", "sold", "lost"], "answer": "B" },
+        { "options": ["money", "game", "school", "noise"], "answer": "A" },
+        { "options": ["meal", "cause", "game", "road"], "answer": "B" },
+        { "options": ["fear", "pride", "loss", "doubt"], "answer": "B" },
+        { "options": ["cost", "help", "sell", "leave"], "answer": "B" },
+        { "options": ["useless", "worthwhile", "boring", "wrong"], "answer": "B" },
+        { "options": ["work", "fight", "wait", "rest"], "answer": "A" }
+      ],
+      "explain_zh": "1sale义卖 2difficult更难 3prices定价 4quit放弃 5goods捐物 6afraid担心 7delight令我高兴 8rose不断增多 9thought超出预想 10money钱之外 11cause共同目标 12pride自豪 13help帮助 14worthwhile值得 15work齐心。"
+    },
+    {
+      "passage": "One busy afternoon at the train station, I noticed a little boy standing alone, his face wet with (1)___. He could not have been more than five years old, and it was clear he had become (2)___ from his parents in the crowd. Most people hurried past, too (3)___ to notice or unwilling to get involved. I knelt down to his (4)___ and gently asked what was wrong. Between sobs, he told me he could not find his (5)___. I knew I had to help, but I also did not want to (6)___ him further by rushing him. So I spoke softly, told him my name, and promised that we would find his family (7)___. I took him by the hand and led him to a station (8)___, where the staff made an announcement over the loudspeakers. Those few minutes of waiting felt endless, and the boy gripped my hand (9)___. Then, across the hall, a frantic woman came (10)___ towards us, and the boy's face lit up with pure (11)___. He ran into his mother's arms, and she thanked me again and again, tears streaming down her (12)___. It was such a small thing I had done, yet seeing that family reunited filled me with a deep (13)___. I realised that helping others rarely requires special skills or (14)___; most often, it simply requires us to stop, to notice, and to (15)___ when someone is in need.",
+      "blanks": [
+        { "options": ["rain", "tears", "sweat", "dust"], "answer": "B" },
+        { "options": ["joined", "separated", "helped", "free"], "answer": "B" },
+        { "options": ["busy", "happy", "tired", "kind"], "answer": "A" },
+        { "options": ["level", "home", "seat", "side"], "answer": "A" },
+        { "options": ["bag", "parents", "ticket", "toy"], "answer": "B" },
+        { "options": ["help", "frighten", "leave", "follow"], "answer": "B" },
+        { "options": ["soon", "alone", "badly", "late"], "answer": "A" },
+        { "options": ["office", "train", "shop", "gate"], "answer": "A" },
+        { "options": ["loosely", "tightly", "slowly", "once"], "answer": "B" },
+        { "options": ["walking", "running", "looking", "waiting"], "answer": "B" },
+        { "options": ["fear", "joy", "anger", "doubt"], "answer": "B" },
+        { "options": ["face", "hand", "hair", "back"], "answer": "A" },
+        { "options": ["fear", "joy", "regret", "doubt"], "answer": "B" },
+        { "options": ["strength", "luck", "money", "time"], "answer": "A" },
+        { "options": ["act", "leave", "sleep", "pay"], "answer": "A" }
+      ],
+      "explain_zh": "1tears泪水 2separated走散 3busy太忙 4level蹲到他高度 5parents父母 6frighten吓到 7soon很快找到 8office车站办公室 9tightly紧紧 10running跑来 11joy喜悦 12face脸颊 13joy满足 14strength技能或力气 15act行动。"
+    },
+    {
+      "passage": "When I was thirteen, my aunt gave me a plain notebook and suggested I keep a (1)___. I thought it was a boring idea and almost did not (2)___. But to be polite, I wrote a few lines that night, and a few more the next, and without quite meaning to, I had begun a habit that would (3)___ my life. At first my entries were dull lists of what I had (4)___ each day. But slowly, the notebook became a place where I could be completely (5)___, writing thoughts I would never have spoken aloud. On hard days, putting my worries into words somehow made them feel (6)___. On happy days, writing helped me hold on to moments that would otherwise have been (7)___. Over the years, the single notebook grew into a shelf of them. Reading old entries, I could watch myself (8)___, and see how problems that once seemed huge had quietly been (9)___. Writing every day also slowly made me a better (10)___; words came more easily, and I began to enjoy (11)___ ideas clearly. In time, that childhood habit grew into a real (12)___ to become a writer. I do not know if I will ever publish a book, but I do know that the daily act of writing has made me more (13)___ of my own life and feelings. What had seemed a boring (14)___ from my aunt turned out to be one of the most valuable gifts I have ever (15)___.",
+      "blanks": [
+        { "options": ["secret", "diary", "pet", "promise"], "answer": "B" },
+        { "options": ["bother", "sleep", "leave", "win"], "answer": "A" },
+        { "options": ["change", "end", "copy", "waste"], "answer": "A" },
+        { "options": ["sold", "done", "lost", "seen"], "answer": "B" },
+        { "options": ["honest", "silent", "busy", "quick"], "answer": "A" },
+        { "options": ["bigger", "smaller", "stranger", "worse"], "answer": "B" },
+        { "options": ["saved", "forgotten", "sold", "repeated"], "answer": "B" },
+        { "options": ["grow", "leave", "fall", "sleep"], "answer": "A" },
+        { "options": ["lost", "solved", "sold", "hidden"], "answer": "B" },
+        { "options": ["reader", "writer", "student", "speaker"], "answer": "B" },
+        { "options": ["hiding", "expressing", "selling", "forgetting"], "answer": "B" },
+        { "options": ["fear", "dream", "order", "habit"], "answer": "B" },
+        { "options": ["afraid", "aware", "tired", "proud"], "answer": "B" },
+        { "options": ["lesson", "gift", "game", "trip"], "answer": "B" },
+        { "options": ["sold", "received", "lost", "refused"], "answer": "B" }
+      ],
+      "explain_zh": "1diary日记 2bother懒得写 3change改变 4done做过 5honest坦诚 6smaller变小 7forgotten被遗忘 8grow看自己成长 9solved被解决 10writer更会写 11expressing表达 12dream梦想 13aware更觉察 14gift礼物 15received收到。"
+    },
+    {
+      "passage": "For my sixteenth birthday, instead of asking for a new phone or expensive clothes, I made an unusual (1)___: to give up single-use plastic for a whole month. My friends thought I was a little (2)___, but the idea had taken hold of me after I saw photographs of a beach buried in plastic (3)___. The first days were surprisingly (4)___. Plastic, I quickly discovered, was absolutely everywhere — wrapped around my food, my drinks, even my toothbrush. I had to (5)___ my whole routine. I carried a cloth bag and a metal bottle, refused plastic straws, and learned to (6)___ shops that sold loose fruit and vegetables. Some shopkeepers looked at me strangely; a few were genuinely (7)___ and helpful. It was not always (8)___, and once or twice I slipped up and accepted a plastic bag out of habit. But each small (9)___ taught me something. By the end of the month, I had thrown away only a fraction of the rubbish I (10)___ would. More importantly, my eyes had been (11)___. I now noticed plastic everywhere, and could no longer pretend the problem did not (12)___ me. The experiment did not save the planet, of course, but it (13)___ me, and quietly influenced my family and friends, several of whom began making small changes of their (14)___. I learned that one person's choices may seem tiny, but they are never truly (15)___, for habits, like ripples, spread outward to touch others.",
+      "blanks": [
+        { "options": ["mistake", "decision", "noise", "friend"], "answer": "B" },
+        { "options": ["kind", "strange", "rich", "busy"], "answer": "B" },
+        { "options": ["flowers", "waste", "toys", "sand"], "answer": "B" },
+        { "options": ["easy", "hard", "short", "fun"], "answer": "B" },
+        { "options": ["sell", "change", "hide", "copy"], "answer": "B" },
+        { "options": ["avoid", "find", "close", "leave"], "answer": "B" },
+        { "options": ["angry", "interested", "bored", "tired"], "answer": "B" },
+        { "options": ["easy", "clear", "free", "fair"], "answer": "A" },
+        { "options": ["success", "failure", "prize", "gift"], "answer": "B" },
+        { "options": ["never", "normally", "hardly", "once"], "answer": "B" },
+        { "options": ["closed", "opened", "sold", "hidden"], "answer": "B" },
+        { "options": ["help", "concern", "follow", "leave"], "answer": "B" },
+        { "options": ["lost", "changed", "sold", "left"], "answer": "B" },
+        { "options": ["own", "home", "way", "friend"], "answer": "A" },
+        { "options": ["clear", "meaningless", "honest", "ready"], "answer": "B" }
+      ],
+      "explain_zh": "1decision决定 2strange奇怪 3waste塑料垃圾 4hard出乎意料地难 5change改变作息 6find寻找 7interested感兴趣 8easy并不总容易 9failure小失误 10normally平常 11opened被打开 12concern与己无关 13changed改变了我 14own他们自己的 15meaningless毫无意义。"
+    },
+    {
+      "passage": "I was never a confident child. Convinced that I was simply not (1)___ enough, I stayed silent in class and avoided every challenge for fear of (2)___. Then, in my final year of primary school, I met a teacher who (3)___ everything. Mr. Lin did not seem to notice the labels others had put on me. When I gave a clumsy answer, he did not (4)___; instead, he found something in it worth (5)___. One day, he read aloud a short story I had written, telling the whole class it showed real (6)___. I was astonished, for no one had ever praised my work before. For the first time, I began to wonder whether I might actually be (7)___ at something. That single comment slowly (8)___ how I saw myself. Encouraged, I started to raise my hand, to enter competitions, to (9)___ things I would once have run from. Each small success built a little more (10)___, until the frightened, silent child had quietly (11)___ into someone new. Years later, I wrote to Mr. Lin to thank him. He replied that he had only told me the (12)___ — that the talent had been mine all along. But I knew the (13)___ was his: he had given me something far more valuable than knowledge, the (14)___ to believe in myself. A good teacher, I learned, does not merely fill our heads with facts; the very best ones change the way we (15)___ ourselves.",
+      "blanks": [
+        { "options": ["old", "clever", "rich", "tall"], "answer": "B" },
+        { "options": ["winning", "failing", "leaving", "speaking"], "answer": "B" },
+        { "options": ["ruined", "changed", "repeated", "sold"], "answer": "B" },
+        { "options": ["laugh", "help", "speak", "smile"], "answer": "A" },
+        { "options": ["hiding", "praising", "selling", "forgetting"], "answer": "B" },
+        { "options": ["talent", "fear", "anger", "trouble"], "answer": "A" },
+        { "options": ["bad", "good", "busy", "tired"], "answer": "B" },
+        { "options": ["ended", "changed", "hid", "copied"], "answer": "B" },
+        { "options": ["try", "sell", "leave", "hide"], "answer": "A" },
+        { "options": ["fear", "confidence", "money", "doubt"], "answer": "B" },
+        { "options": ["fallen", "grown", "left", "failed"], "answer": "B" },
+        { "options": ["story", "truth", "news", "rule"], "answer": "B" },
+        { "options": ["fault", "credit", "money", "trouble"], "answer": "B" },
+        { "options": ["chance", "courage", "money", "time"], "answer": "B" },
+        { "options": ["see", "sell", "leave", "feed"], "answer": "A" }
+      ],
+      "explain_zh": "1clever不够聪明 2failing怕失败 3changed改变一切 4laugh没嘲笑 5praising值得称赞 6talent真才华 7good在某事上行 8changed改变自我认知 9try尝试 10confidence自信 11grown成长为 12truth实话 13credit功劳 14courage勇气 15see看待自己。"
+    }
+  ]
+}
