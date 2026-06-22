@@ -420,6 +420,38 @@
       "continueDecision": "continued",
       "needsFixLater": true,
       "status": "fixed"
+    },
+    {
+      "id": "R3-scaffolding-partial",
+      "stage": "R3",
+      "batch": "-",
+      "examId": "all",
+      "level": "-",
+      "taskType": "renderers",
+      "severity": "info",
+      "category": "frontend_needed",
+      "summary": "R3（部分，前端闸口）：交付 R3 前端设计 brief（4 个渲染器 MultiBlank/Matching/BuildSentence/FreeText 的 input+review 态、交互、无障碍、移动端，沿用 .pr-v2）供用户产出设计稿；并完成与设计无关的评分契约校验器 scripts/validate-practice-answer-contracts.ts，锁定 lib/papers/scoring.ts scoreItem 契约（choice/spell 精确;multi_blank/matching 按位部分给分+大小写空白等价+空键→needs scoring;free_text/speak→needs_manual_or_ai 不伪造对错）。渲染器视觉(.tsx)+PracticeRunner 接线+BuildSentenceRenderer 新建+CSS 待用户设计稿（gated）。",
+      "evidence": "validate-practice-answer-contracts PASS;tsc/lint EXIT 0。MultiBlankRenderer/MatchingRenderer 当前为「建设中」占位;BuildSentenceRenderer 未建。",
+      "containment": "未编辑任何 components/** 视觉;无 DB 写;无 active。",
+      "continueDecision": "blocked_on_frontend_design",
+      "needsFixLater": true,
+      "status": "open"
+    },
+    {
+      "id": "R3-answerkey-leak",
+      "stage": "R3",
+      "batch": "-",
+      "examId": "all",
+      "level": "-",
+      "taskType": "security",
+      "severity": "major",
+      "category": "frontend_needed",
+      "summary": "安全发现（R3 设计输入）：当前练习会话载荷 PracticeItem.answer（lib/practice/session-builder 下发 answer:row.answer）把答案键下发到客户端 pre-submit。R3 契约要求 active/考试内容的答案键不得出现在提交前客户端载荷。注：transcript 已受保护（session-builder 注明练习载荷绝不下发 transcript，提交后由 audio-asset-client review 拉取）——仅 answer 字段是泄露点。",
+      "evidence": "lib/practice/session-types.ts PracticeItem.answer?:string|string[]|null;session-builder 第 93/358 行 answer:row.answer??null。",
+      "containment": "属架构/设计决策（单词练习即时客户端反馈 vs 考试服务端权威无泄露），随 R3 设计稿一并定夺;未改动。R10 转 active 前必须解决考试型内容的此项。",
+      "continueDecision": "blocked_on_frontend_design",
+      "needsFixLater": true,
+      "status": "open"
     }
   ]
 }
