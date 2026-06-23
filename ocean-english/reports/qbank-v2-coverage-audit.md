@@ -1,10 +1,10 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-23T13:57:12.598Z
+Generated: 2026-06-23T14:12:48.947Z
 
-Totals: sets 5092 · items 6030 · active 0 · draft 5092
+Totals: sets 5092 · items 6030 · active 67 · draft 5025
 
-## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 3 · READY_DRAFT 35 · READY_ACTIVE 0 · BLOCKED 3
+## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 3 · READY_DRAFT 34 · READY_ACTIVE 1 · BLOCKED 3
 
 | exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |
 |---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
@@ -21,7 +21,7 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 | gaokao | 2 | applied_writing | applied_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
 | gaokao | 2 | continuation_writing | continuation_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 50 | 0 | 50 | 1 | READY_DRAFT | - |
 | cet4 | 3 | writing | essay_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
-| cet4 | 3 | listening | listening_comprehension | - | choice | Y | - | 67 | 0 | 0 | 200 | 67 | 67 | 0 | 0 | READY_DRAFT | - |
+| cet4 | 3 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 67 | 200 | 67 | 67 | 0 | 0 | READY_ACTIVE | - |
 | cet4 | 3 | banked_cloze | banked_cloze | - | unknown | - | - | 166 | 0 | 0 | 166 | 166 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | long_match | para_match | - | unknown | - | - | 143 | 0 | 0 | 143 | 143 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | careful_reading | reading_comprehension | - | choice | - | - | 67 | 0 | 0 | 200 | 67 | 0 | 0 | 0 | READY_DRAFT | - |
@@ -73,7 +73,7 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 - toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified
 - toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready
 
-### READY_DRAFT (draft ≥ 50) — 35
+### READY_DRAFT (draft ≥ 50) — 34
 
 - zhongkao lv1 / grammar_fill — draft 50
 - zhongkao lv1 / cloze_passage — draft 142
@@ -86,7 +86,6 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 - gaokao lv2 / applied_writing — draft 50
 - gaokao lv2 / continuation_writing — draft 50
 - cet4 lv3 / essay_writing — draft 50
-- cet4 lv3 / listening_comprehension — draft 67
 - cet4 lv3 / banked_cloze — draft 166
 - cet4 lv3 / para_match — draft 143
 - cet4 lv3 / reading_comprehension — draft 67
@@ -111,8 +110,9 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 - sat lv7 / reading_comprehension [Expression of Ideas] — draft 50
 - sat lv7 / reading_comprehension [Standard English Conventions] — draft 50
 
-### READY_ACTIVE — 0
+### READY_ACTIVE — 1
 
+- cet4 lv3 / listening_comprehension — active 67
 
 ## B. ACTUAL grid (level × task_type; includes word-universe types)
 
@@ -167,7 +167,7 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 | cet4 | 3 | en_to_zh | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
 | cet4 | 3 | essay_writing | 50 | 50 | 0 | 50 | 0 | 0 | 50 | 0 | 1 | insufficient_active_pool |
 | cet4 | 3 | listen_to_meaning | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
-| cet4 | 3 | listening_comprehension | 67 | 67 | 0 | 200 | 67 | 67 | 0 | 0 | 0 | insufficient_active_pool |
+| cet4 | 3 | listening_comprehension | 67 | 0 | 67 | 200 | 67 | 67 | 0 | 0 | 0 | - |
 | cet4 | 3 | para_match | 143 | 143 | 0 | 143 | 143 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | cet4 | 3 | reading_comprehension | 67 | 67 | 0 | 200 | 67 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | cet4 | 3 | synonym_choice | 19 | 19 | 0 | 19 | 0 | 0 | 0 | 19 | 0 | insufficient_active_pool |
@@ -246,7 +246,7 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 | sat | 7 | zh_to_en | 58 | 58 | 0 | 58 | 0 | 0 | 0 | 58 | 0 | insufficient_active_pool |
 | sat | 7 | zh_to_word_spell | 57 | 57 | 0 | 57 | 0 | 0 | 0 | 57 | 0 | insufficient_active_pool |
 
-## C. Active-pool warnings (127)
+## C. Active-pool warnings (126)
 
 - lv1 applied_writing: insufficient_active_pool
 - lv1 cloze_choice: insufficient_active_pool
@@ -297,7 +297,6 @@ Totals: sets 5092 · items 6030 · active 0 · draft 5092
 - lv3 en_to_zh: insufficient_active_pool
 - lv3 essay_writing: insufficient_active_pool
 - lv3 listen_to_meaning: insufficient_active_pool
-- lv3 listening_comprehension: insufficient_active_pool
 - lv3 para_match: insufficient_active_pool
 - lv3 reading_comprehension: insufficient_active_pool
 - lv3 synonym_choice: insufficient_active_pool

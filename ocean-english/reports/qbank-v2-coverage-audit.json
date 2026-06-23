@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T13:57:12.598Z",
+  "generatedAt": "2026-06-23T14:12:48.947Z",
   "totals": {
     "sets": 5092,
     "items": 6030,
-    "activeSets": 0,
-    "draftSets": 5092,
+    "activeSets": 67,
+    "draftSets": 5025,
     "stimuliWithActiveAudio": 103
   },
   "expectedMatrix": {
@@ -304,9 +304,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draft": 67,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 67,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -314,7 +314,7 @@
         "activeAudio": 67,
         "rubricItems": 0,
         "sourceStages": 0,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -1009,8 +1009,8 @@
     "stateCounts": {
       "MISSING": 4,
       "THIN": 3,
-      "READY_DRAFT": 35,
-      "READY_ACTIVE": 0,
+      "READY_DRAFT": 34,
+      "READY_ACTIVE": 1,
       "BLOCKED": 3
     },
     "missing": [
@@ -1041,7 +1041,6 @@
       "gaokao lv2 / applied_writing — draft 50",
       "gaokao lv2 / continuation_writing — draft 50",
       "cet4 lv3 / essay_writing — draft 50",
-      "cet4 lv3 / listening_comprehension — draft 67",
       "cet4 lv3 / banked_cloze — draft 166",
       "cet4 lv3 / para_match — draft 143",
       "cet4 lv3 / reading_comprehension — draft 67",
@@ -1066,7 +1065,9 @@
       "sat lv7 / reading_comprehension [Expression of Ideas] — draft 50",
       "sat lv7 / reading_comprehension [Standard English Conventions] — draft 50"
     ],
-    "readyActive": []
+    "readyActive": [
+      "cet4 lv3 / listening_comprehension — active 67"
+    ]
   },
   "actualGrid": [
     {
@@ -1907,17 +1908,15 @@
       "level": 3,
       "taskType": "listening_comprehension",
       "totalSets": 67,
-      "draft": 67,
-      "active": 0,
+      "draft": 0,
+      "active": 67,
       "items": 200,
       "stimuli": 67,
       "audioActive": 67,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 0,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "cet4",
@@ -3280,7 +3279,6 @@
     "lv3 en_to_zh: insufficient_active_pool",
     "lv3 essay_writing: insufficient_active_pool",
     "lv3 listen_to_meaning: insufficient_active_pool",
-    "lv3 listening_comprehension: insufficient_active_pool",
     "lv3 para_match: insufficient_active_pool",
     "lv3 reading_comprehension: insufficient_active_pool",
     "lv3 synonym_choice: insufficient_active_pool",
