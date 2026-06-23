@@ -1,0 +1,106 @@
+{
+  "template": "toefl-interview-speaking",
+  "level": 6,
+  "sets": [
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Some people prefer to plan every detail of a trip in advance, while others like to travel spontaneously. Which approach do you prefer, and why?",
+      "referencePoints": [
+        "Planning ahead reduces stress and ensures you don't miss key sights",
+        "Spontaneity allows for unexpected discoveries and flexibility",
+        "Personal example of a past trip that went well or badly",
+        "Connection to your general personality or budget"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Think about a skill you taught yourself outside of school. What was it, and what made the learning process rewarding or difficult for you?",
+      "referencePoints": [
+        "Name the specific skill, such as cooking, coding, or an instrument",
+        "Motivation for choosing to learn it on your own",
+        "Challenges faced without a formal teacher",
+        "Sense of accomplishment or how you now use the skill"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "If you could change one small thing about your daily routine to improve your life, what would it be, and how do you think it would help you?",
+      "referencePoints": [
+        "Identify a specific habit, like sleep, screen time, or exercise",
+        "Explain the current problem it causes",
+        "Describe the expected benefit of changing it",
+        "Realistic plan for making the change stick"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Describe a person who has influenced the way you think about your future. What did they say or do that left such a strong impression on you?",
+      "referencePoints": [
+        "Identify the person and your relationship to them",
+        "A specific piece of advice or action they took",
+        "How it shifted your goals or values",
+        "A decision you later made because of them"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Some students enjoy working in groups, while others do their best work alone. In what situations do you prefer each, and why?",
+      "referencePoints": [
+        "Benefits of groups, like shared ideas and motivation",
+        "Benefits of solo work, like focus and control over pace",
+        "A task type that suits each style",
+        "Personal experience that shaped your preference"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Imagine you suddenly had a completely free weekend with no obligations. How would you choose to spend it, and what would make it feel worthwhile to you?",
+      "referencePoints": [
+        "Specific activities you would do, restful or active",
+        "Whether you would spend it alone or with others",
+        "What 'worthwhile' means to you personally",
+        "How it would recharge you for the week ahead"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Many people say technology has changed how we keep in touch with friends. Do you think these changes have mostly helped or hurt your friendships? Explain.",
+      "referencePoints": [
+        "Easier to stay connected across distance",
+        "Risk of shallow or less meaningful contact",
+        "A specific example from your own friendships",
+        "Balance between online and in-person interaction"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Tell me about a time you changed your mind about something important. What caused you to see the situation differently?",
+      "referencePoints": [
+        "The original opinion or belief you held",
+        "The event, conversation, or information that challenged it",
+        "How your view shifted as a result",
+        "What the experience taught you about open-mindedness"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "Some people believe it is better to be honest even when it is uncomfortable, while others value keeping the peace. Which matters more to you, and why?",
+      "referencePoints": [
+        "Value of honesty for trust and real relationships",
+        "Value of tact in protecting people's feelings",
+        "A situation where you had to choose between them",
+        "How you try to balance the two in practice"
+      ]
+    },
+    {
+      "prompt": "Listen to the question, then give your spoken answer.",
+      "script": "If you were given the chance to live in another country for one year, would you take it? Describe what would excite you most and what might worry you.",
+      "referencePoints": [
+        "Excitement about new culture, food, or language",
+        "Worries such as homesickness or a language barrier",
+        "What you hope to gain from the experience",
+        "Whether the benefits outweigh the challenges for you"
+      ]
+    }
+  ]
+}

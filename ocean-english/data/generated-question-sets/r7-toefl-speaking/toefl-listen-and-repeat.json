@@ -1,0 +1,46 @@
+{
+  "template": "toefl-listen-and-repeat",
+  "level": 6,
+  "sets": [
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "Even though the forecast predicted heavy rain, we decided to hike up to the lookout point anyway."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "My roommate insists that studying late at night helps her remember vocabulary far better than morning sessions."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "The new exhibit at the science museum lets visitors design their own bridges and test how much weight they hold."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "Before booking the flight, I compared three websites to make sure I was getting the cheapest fare available."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "Our professor encouraged us to question every assumption rather than accept the textbook's explanation without thinking."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "After working remotely for two years, he finally admitted that he missed chatting with colleagues in person."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "If you want the bread to rise properly, you really have to let the dough sit somewhere warm overnight."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "The committee postponed the decision because several members felt they needed more data before voting."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "Honestly, I think the smaller coastal towns are far more relaxing than the crowded tourist cities everyone recommends."
+    },
+    {
+      "prompt": "Listen to the sentence, then repeat it exactly.",
+      "script": "She spent the entire weekend reorganizing her notes so that reviewing for the exam would feel less overwhelming."
+    }
+  ]
+}
