@@ -99,8 +99,10 @@ async function writeDraftSet(db: SupabaseClient, t: Template, level: number, sta
   if (explainZh) qaFlags.explainZh = explainZh
   if (domain) qaFlags.domain = domain
   const topicTags = domain ? [domain, ...t.subskills.slice(0, 3)] : t.subskills.slice(0, 4)
+  // exam_id 必须落库：会话/试卷 builder 按 exam_id 过滤（normalizeExamId），缺失则 exam-scoped 检索拿不到此组。
+  const examId = getExamSpec(t.examIds[0])?.id ?? null
   const { data: setData, error: setErr } = await db.from('question_sets').insert({
-    legacy_id: `gen:${t.templateId}:set:claude:${tag}`, stimulus_id: stimulusId, level, task_type: t.taskType,
+    legacy_id: `gen:${t.templateId}:set:claude:${tag}`, stimulus_id: stimulusId, exam_id: examId, level, task_type: t.taskType,
     topic_tags: topicTags, status: 'draft', qa_flags: qaFlags,
   }).select('id').single()
   if (setErr) { console.error(`  set insert: ${setErr.message}`); return false }
