@@ -26,13 +26,16 @@ create unique index if not exists uniq_v2_audio_checksum
   on audio_assets (checksum)
   where checksum is not null;
 
--- Safety: an asset may only be 'active' once it carries human-review evidence.
--- (Enforced as a CHECK so a stray direct UPDATE cannot bypass the review gate.)
+-- Safety: an asset may only be 'active' once it carries human-review evidence AND is actually playable
+-- (has a storage_path). 'active' therefore means reviewed + playable, matching the p5 promotion intent.
+-- (Enforced as a CHECK so a stray direct UPDATE cannot bypass the review/playable gate.)
+-- NOTE: this guard keys on the constraint NAME only — safe for first apply (0 rows). If the predicate
+-- ever changes, drop-and-recreate inside this block so re-application picks up the new rule.
 do $$
 begin
   if not exists (select 1 from pg_constraint where conname = 'audio_active_requires_review') then
     alter table audio_assets
       add constraint audio_active_requires_review
-      check (qa_status <> 'active' or (reviewed_by is not null and reviewed_at is not null));
+      check (qa_status <> 'active' or (reviewed_by is not null and reviewed_at is not null and storage_path is not null));
   end if;
 end $$;

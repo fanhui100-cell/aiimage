@@ -14,7 +14,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { QBANK_V2_QA_STATUSES, QBANK_V2_TABLES } from '@/lib/question-bank-v2/schema'
 import { AUDIO_PRACTICE_COLUMNS, AUDIO_REVIEW_COLUMNS, isPlayableAudioUrl } from '@/lib/audio/audio-asset-client'
 
-const env = readFileSync('.env.local', 'utf8')
+const env = (() => { try { return readFileSync('.env.local', 'utf8') } catch { return '' } })() // degrade to not_applied if absent
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const SUPABASE_URL = readEnv('NEXT_PUBLIC_SUPABASE_URL')
 const SERVICE_ROLE = readEnv('SUPABASE_SERVICE_ROLE_KEY')
@@ -59,18 +59,20 @@ function checkPracticePayloadContract(errors: string[]) {
     const m = types.match(/audio\?:\s*\{[^}]*\}/)
     if (m && /transcript/.test(m[0])) errors.push('PracticeItem.audio 类型仍含 transcript（练习载荷会下发原文）')
   } catch { /* 文件缺失则跳过 */ }
-  for (const f of ['lib/practice/session-builder.ts', 'lib/audio/audio-asset-client.ts']) {
-    try {
-      const src = readFileSync(f, 'utf8')
-      // each audio_assets query block (select … through the next ; or maybeSingle/limit) must scope to active + not select transcript in practice
-      const blocks = src.match(/from\('audio_assets'\)[\s\S]{0,400}?(?:maybeSingle\(\)|limit\([^)]*\)|\.in\([^)]*\)\s*\.eq\([^)]*\))/g) ?? []
-      for (const b of blocks) {
-        if (!/qa_status'?\s*,\s*'active'|'active'/.test(b)) errors.push(`${f} 有未限定 qa_status='active' 的 audio_assets 查询（可能下发 machine_checked）`)
-      }
-      // session-builder practice select must not carry transcript
-      const sels = src.match(/from\('audio_assets'\)\s*\.select\(([^)]*)\)/g) ?? []
-      for (const s of sels) if (/transcript/.test(s)) errors.push(`${f} audio_assets.select 仍含 transcript（练习载荷会下发原文）`)
-    } catch { /* 跳过 */ }
+  // every server serve-path that reads audio_assets must (a) scope to qa_status='active' via a real .eq
+  // call, and (b) not select transcript as a literal. Comments are stripped so 'active' in prose / 'inactive'
+  // substrings can't satisfy the check; URLs (https://) are preserved.
+  const SERVE_FILES = ['lib/practice/session-builder.ts', 'lib/audio/audio-asset-client.ts', 'lib/papers/paper-generator.ts']
+  for (const f of SERVE_FILES) {
+    let src: string
+    try { src = readFileSync(f, 'utf8') } catch { continue }
+    const code = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:])\/\/.*$/gm, '$1') // strip block + line comments (keep https://)
+    for (const m of code.matchAll(/from\(\s*['"]audio_assets['"]\s*\)/g)) {
+      const win = code.slice(m.index ?? 0, (m.index ?? 0) + 500)
+      if (!/\.eq\(\s*['"]qa_status['"]\s*,\s*['"]active['"]\s*\)/.test(win)) errors.push(`${f}: audio_assets 查询未限定 qa_status='active'（可能下发 machine_checked/未审音频）`)
+      const sel = win.match(/\.select\(([^)]*)\)/)
+      if (sel && /transcript/.test(sel[1])) errors.push(`${f}: audio_assets.select 字面量含 transcript（练习载荷会下发原文）`)
+    }
   }
 }
 

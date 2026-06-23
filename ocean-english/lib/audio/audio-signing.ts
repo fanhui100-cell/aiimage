@@ -8,6 +8,10 @@
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 
+// hard runtime guard: this module reads SUPABASE_SERVICE_ROLE_KEY and must never run in a browser bundle.
+// (the repo has no `server-only` package; this throws if accidentally imported into client code.)
+if (typeof window !== 'undefined') throw new Error('audio-signing is server-only; do not import from a client component')
+
 let _admin: SupabaseClient | null = null
 function admin(): SupabaseClient | null {
   if (_admin) return _admin

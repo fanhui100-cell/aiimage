@@ -24,7 +24,7 @@ import { assignVoice } from '@/lib/audio/voice-pools'
 import { computeChecksum, deterministicStoragePath, countWords, verifySynthOutput, type SynthSettings } from '@/lib/audio/checksum'
 import { synthesizeAzure, AZURE_MP3_FORMAT, type AzureCreds } from '@/lib/audio/providers/azure'
 
-const env = readFileSync('.env.local', 'utf8')
+const env = (() => { try { return readFileSync('.env.local', 'utf8') } catch { return '' } })() // degrade to not_applied if absent
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const SUPABASE_URL = readEnv('NEXT_PUBLIC_SUPABASE_URL')
 const SERVICE_ROLE = readEnv('SUPABASE_SERVICE_ROLE_KEY')
@@ -228,11 +228,12 @@ async function main() {
     if (vErr) { failed++; failures.push(`${p.stimulusId}: bad output (${vErr})`); continue }
 
     // upload (private bucket, no upsert → duplicate path errors instead of silently overwriting)
+    let didUpload = false
     const up = await db.storage.from(AUDIO_BUCKET).upload(storagePath, out.bytes, { contentType: 'audio/mpeg', upsert: false })
     if (up.error) {
       // already-uploaded object for this checksum is fine (idempotent); other errors fail
       if (!/exists|duplicate/i.test(up.error.message)) { failed++; failures.push(`${p.stimulusId}: upload failed (${up.error.message})`); continue }
-    } else uploaded++
+    } else { uploaded++; didUpload = true }
 
     const { error: insErr } = await db.from('audio_assets').insert({
       stimulus_id: p.stimulusId,
@@ -248,8 +249,9 @@ async function main() {
       qa_status: 'machine_checked',     // NEVER active here
     })
     if (insErr) {
-      // compensating delete: remove the object we just uploaded so no dangling file remains
-      if (uploaded > 0) await db.storage.from(AUDIO_BUCKET).remove([storagePath]).catch(() => {})
+      // compensating delete: ONLY remove an object THIS iteration freshly uploaded (never a pre-existing
+      // object that another row may reference). Keyed on the per-iteration flag, not the run-wide counter.
+      if (didUpload) await db.storage.from(AUDIO_BUCKET).remove([storagePath]).catch(() => {})
       // a UNIQUE(checksum) race → treat as skip, not failure
       if (/duplicate|unique/i.test(insErr.message)) { skipped++; continue }
       failed++; failures.push(`${p.stimulusId}: insert failed (${insErr.message})`); continue

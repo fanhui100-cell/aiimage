@@ -16,7 +16,7 @@
 import { createClient } from '@supabase/supabase-js'
 import { readFileSync } from 'node:fs'
 
-const env = readFileSync('.env.local', 'utf8')
+const env = (() => { try { return readFileSync('.env.local', 'utf8') } catch { return '' } })()
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const db = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), readEnv('SUPABASE_SERVICE_ROLE_KEY'))
 const BUCKET = readEnv('SUPABASE_AUDIO_BUCKET')

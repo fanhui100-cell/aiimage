@@ -14,6 +14,7 @@
    ════════════════════════════════════════════════════════════════════════ */
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { getExamSpec, type ExamSectionSpec } from '@/lib/exam-specs'
+import { signAudioPath } from '@/lib/audio/audio-signing'
 import {
   DEPRECATED_QUESTION_TYPES,
   isDeprecatedQuestionType,
@@ -97,9 +98,13 @@ async function fetchActiveAudioUrls(db: SupabaseClient, stimulusIds: string[]): 
   for (let i = 0; i < stimulusIds.length; i += 200) {
     const chunk = stimulusIds.slice(i, i + 200)
     if (!chunk.length) break
-    const { data } = await db.from('audio_assets').select('stimulus_id, url, qa_status').in('stimulus_id', chunk).eq('qa_status', 'active')
-    for (const a of (data ?? []) as { stimulus_id: string | null; url: string | null }[]) {
-      if (a.stimulus_id && a.url && !out.has(a.stimulus_id)) out.set(a.stimulus_id, a.url)
+    const { data } = await db.from('audio_assets').select('stimulus_id, url, storage_path, qa_status').in('stimulus_id', chunk).eq('qa_status', 'active')
+    for (const a of (data ?? []) as { stimulus_id: string | null; url: string | null; storage_path: string | null }[]) {
+      if (!a.stimulus_id || out.has(a.stimulus_id)) continue
+      // private bucket: sign the object path server-side; fall back to a legacy public url only
+      const signedUrl = await signAudioPath(a.storage_path ?? a.url)
+      const playable = signedUrl ?? ((a.url && (/^(https?:)?\/\//.test(a.url) || a.url.startsWith('/'))) ? a.url : null)
+      if (playable) out.set(a.stimulus_id, playable)
     }
   }
   return out

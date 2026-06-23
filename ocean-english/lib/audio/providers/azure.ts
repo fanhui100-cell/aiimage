@@ -21,12 +21,14 @@ function escapeXml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;')
 }
 
-/** Build SSML: named voice carries the accent (en-CA-ClaraNeural = Canadian); prosody sets pace. */
+/** Build SSML: named voice carries the accent (en-CA-ClaraNeural = Canadian); prosody sets pace.
+ *  All interpolated attrs are escaped (defensive against future data-driven voices/accents/rates). */
 export function buildSsml(req: AzureSynthRequest): string {
-  const lang = req.accent || 'en-US'
-  const rate = req.rate && req.rate !== '0%' ? ` rate='${req.rate}'` : ''
+  const lang = escapeXml(req.accent || 'en-US')
+  const voice = escapeXml(req.voiceShortName)
+  const rate = req.rate && req.rate !== '0%' ? ` rate='${escapeXml(req.rate)}'` : ''
   const inner = rate ? `<prosody${rate}>${escapeXml(req.text)}</prosody>` : escapeXml(req.text)
-  return `<speak version='1.0' xml:lang='${lang}'><voice name='${req.voiceShortName}'>${inner}</voice></speak>`
+  return `<speak version='1.0' xml:lang='${lang}'><voice name='${voice}'>${inner}</voice></speak>`
 }
 
 /** Synthesize one clip. Throws on non-200 (message excludes the key). */
@@ -51,5 +53,7 @@ export async function synthesizeAzure(req: AzureSynthRequest, creds: AzureCreds)
     throw new Error(`azure tts ${res.status} ${res.statusText}${detail ? ': ' + detail.slice(0, 300) : ''}`)
   }
   const buf = new Uint8Array(await res.arrayBuffer())
-  return { bytes: buf, mimeType: 'audio/mpeg', durationMs: mp3DurationMs(buf.byteLength) }
+  // use Azure's actual content-type (not a hardcoded assumption) so verifySynthOutput is a real MIME check
+  const mimeType = (res.headers.get('content-type') || 'audio/mpeg').split(';')[0].trim()
+  return { bytes: buf, mimeType, durationMs: mp3DurationMs(buf.byteLength) }
 }
