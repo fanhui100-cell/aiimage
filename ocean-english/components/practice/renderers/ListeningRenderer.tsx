@@ -1,6 +1,8 @@
 'use client'
 /* ListeningRenderer — 听力 stem：AudioPlayer（有稳定音频用真实播放，否则 TTS 兜底）+ 题干。
-   transcript 绝不随练习载荷下发；仅答题后（locked）经 audio-asset-client review 模式按需拉取后显示。
+   transcript 绝不随练习载荷下发。p7 起 transcript 列已对 anon/authenticated 列级 REVOKE，
+   故下方 review 模式客户端查询恒返回 null（安全降级，不泄露）；答题后的 transcript 将由
+   「提交回合的 session review 载荷」服务端(service_role)下发（R3/R11 接线），届时改读 item.review。
    实际作答（choice/spell）由 PracticeRunner 在下方按 inputMode 路由。 */
 import { useEffect, useState } from 'react'
 import type { PracticeItem } from '../practice-types'

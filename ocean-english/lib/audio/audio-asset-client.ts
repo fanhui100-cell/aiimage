@@ -15,6 +15,9 @@ export type AudioFetchMode = 'practice' | 'review'
 
 /** 列契约（validate-audio-assets 据此断言练习模式不含 transcript）。 */
 export const AUDIO_PRACTICE_COLUMNS = 'id, stimulus_id, url, duration_ms, accent, voice_id, provider, checksum, qa_status'
+// review 模式列含 transcript，但 p7 起 transcript 列已对 anon/authenticated 列级 REVOKE：
+// 客户端用本模块（anon/SSR 键）查 transcript 会被 RLS 拒 → fetchOne 静默返回 null。
+// 复审 transcript 由「提交回合的 session review 载荷」服务端(service_role)下发（R3/R11），不再走客户端直查。
 export const AUDIO_REVIEW_COLUMNS = `${AUDIO_PRACTICE_COLUMNS}, transcript`
 
 export interface AudioAssetMeta {

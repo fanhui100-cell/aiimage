@@ -23,8 +23,10 @@ function admin(): SupabaseClient | null {
 }
 const bucket = () => process.env.SUPABASE_AUDIO_BUCKET || ''
 
-/** Mint a short-lived signed URL for a private-bucket object path. Returns null if unavailable. */
-export async function signAudioPath(path: string | null | undefined, ttlSeconds = 3600): Promise<string | null> {
+/** Mint a signed URL for a private-bucket object path. Returns null if unavailable.
+ *  Default TTL 6h so a long practice/paper session (mounted once at build time) won't see the
+ *  audio URL expire mid-session; the bucket stays private and the token is still time-bounded. */
+export async function signAudioPath(path: string | null | undefined, ttlSeconds = 21600): Promise<string | null> {
   const a = admin()
   const b = bucket()
   if (!a || !b || !path) return null
