@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-23T16:44:42.562Z",
+  "generatedAt": "2026-06-23T17:50:41.953Z",
   "totals": {
-    "sets": 5152,
-    "items": 6170,
-    "activeSets": 134,
-    "draftSets": 5018,
-    "stimuliWithActiveAudio": 103
+    "sets": 5233,
+    "items": 6413,
+    "activeSets": 691,
+    "draftSets": 4542,
+    "stimuliWithActiveAudio": 224
   },
   "expectedMatrix": {
     "rows": [
@@ -18,20 +18,18 @@
         "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draft": 52,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 52,
         "rejected": 0,
         "retired": 0,
         "items": 156,
         "stimuli": 52,
-        "activeAudio": 12,
+        "activeAudio": 52,
         "rubricItems": 0,
         "sourceStages": 1,
-        "state": "BLOCKED",
-        "blockingReasons": [
-          "audio_incomplete"
-        ]
+        "state": "READY_ACTIVE",
+        "blockingReasons": []
       },
       {
         "exam": "zhongkao",
@@ -86,9 +84,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -96,7 +94,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -130,17 +128,17 @@
         "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draft": 12,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 53,
         "rejected": 0,
         "retired": 0,
-        "items": 36,
-        "stimuli": 12,
-        "activeAudio": 12,
+        "items": 159,
+        "stimuli": 53,
+        "activeAudio": 53,
         "rubricItems": 0,
         "sourceStages": 1,
-        "state": "THIN",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -152,9 +150,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -162,7 +160,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -438,17 +436,17 @@
         "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draft": 12,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 52,
         "rejected": 0,
         "retired": 0,
-        "items": 36,
-        "stimuli": 12,
-        "activeAudio": 12,
+        "items": 156,
+        "stimuli": 52,
+        "activeAudio": 52,
         "rubricItems": 0,
         "sourceStages": 1,
-        "state": "THIN",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -504,9 +502,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -514,7 +512,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -570,9 +568,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -580,7 +578,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -932,9 +930,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 50,
@@ -942,7 +940,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -954,9 +952,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 50,
@@ -964,7 +962,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -976,9 +974,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 50,
@@ -986,7 +984,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 2,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -998,9 +996,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 50,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 50,
         "rejected": 0,
         "retired": 0,
         "items": 50,
@@ -1008,27 +1006,23 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 1,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       }
     ],
     "stateCounts": {
       "MISSING": 2,
-      "THIN": 2,
-      "READY_DRAFT": 33,
-      "READY_ACTIVE": 2,
-      "BLOCKED": 6
+      "THIN": 0,
+      "READY_DRAFT": 25,
+      "READY_ACTIVE": 13,
+      "BLOCKED": 5
     },
     "missing": [
       "toefl lv6 / listening / choose_a_response — draft 0",
       "toefl lv6 / listening / listening_comprehension — draft 0"
     ],
-    "thin": [
-      "gaokao lv2 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)",
-      "cet6 lv4 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)"
-    ],
+    "thin": [],
     "blocked": [
-      "zhongkao lv1 / listening / listening_comprehension — draft 52 · audio_incomplete",
       "toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified",
       "toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified",
       "toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready",
@@ -1038,9 +1032,7 @@
     "readyDraft": [
       "zhongkao lv1 / grammar_fill — draft 50",
       "zhongkao lv1 / cloze_passage — draft 142",
-      "zhongkao lv1 / reading_comprehension — draft 50",
       "zhongkao lv1 / applied_writing — draft 50",
-      "gaokao lv2 / reading_comprehension — draft 50",
       "gaokao lv2 / seven_select — draft 50",
       "gaokao lv2 / cloze_passage — draft 50",
       "gaokao lv2 / grammar_fill — draft 200",
@@ -1053,10 +1045,8 @@
       "cet6 lv4 / essay_writing — draft 50",
       "cet6 lv4 / banked_cloze — draft 50",
       "cet6 lv4 / para_match — draft 57",
-      "cet6 lv4 / reading_comprehension — draft 50",
       "cet6 lv4 / translation_zh_en — draft 51",
       "kaoyan lv5 / cloze_passage — draft 58",
-      "kaoyan lv5 / reading_comprehension — draft 50",
       "kaoyan lv5 / seven_select — draft 181",
       "kaoyan lv5 / para_match — draft 50",
       "kaoyan lv5 / translation_en_zh — draft 50",
@@ -1064,15 +1054,22 @@
       "kaoyan lv5 / essay_writing — draft 50",
       "toefl lv6 / complete_the_words — draft 70",
       "toefl lv6 / email_writing — draft 60",
-      "toefl lv6 / academic_discussion — draft 60",
-      "sat lv7 / reading_comprehension [Information and Ideas] — draft 50",
-      "sat lv7 / reading_comprehension [Craft and Structure] — draft 50",
-      "sat lv7 / reading_comprehension [Expression of Ideas] — draft 50",
-      "sat lv7 / reading_comprehension [Standard English Conventions] — draft 50"
+      "toefl lv6 / academic_discussion — draft 60"
     ],
     "readyActive": [
+      "zhongkao lv1 / listening_comprehension — active 52",
+      "zhongkao lv1 / reading_comprehension — active 50",
+      "gaokao lv2 / listening_comprehension — active 53",
+      "gaokao lv2 / reading_comprehension — active 50",
       "cet4 lv3 / listening_comprehension — active 67",
-      "cet4 lv3 / reading_comprehension — active 67"
+      "cet4 lv3 / reading_comprehension — active 67",
+      "cet6 lv4 / listening_comprehension — active 52",
+      "cet6 lv4 / reading_comprehension — active 50",
+      "kaoyan lv5 / reading_comprehension — active 50",
+      "sat lv7 / reading_comprehension [Information and Ideas] — active 50",
+      "sat lv7 / reading_comprehension [Craft and Structure] — active 50",
+      "sat lv7 / reading_comprehension [Expression of Ideas] — active 50",
+      "sat lv7 / reading_comprehension [Standard English Conventions] — active 50"
     ]
   },
   "actualGrid": [
@@ -1268,34 +1265,30 @@
       "level": 1,
       "taskType": "listening_comprehension",
       "totalSets": 52,
-      "draft": 52,
-      "active": 0,
+      "draft": 0,
+      "active": 52,
       "items": 156,
       "stimuli": 52,
-      "audioActive": 12,
+      "audioActive": 52,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 1,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "zhongkao",
       "level": 1,
       "taskType": "reading_comprehension",
       "totalSets": 50,
-      "draft": 50,
-      "active": 0,
+      "draft": 0,
+      "active": 50,
       "items": 200,
       "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 2,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "zhongkao",
@@ -1607,35 +1600,31 @@
       "exam": "gaokao",
       "level": 2,
       "taskType": "listening_comprehension",
-      "totalSets": 12,
-      "draft": 12,
-      "active": 0,
-      "items": 36,
-      "stimuli": 12,
-      "audioActive": 12,
+      "totalSets": 53,
+      "draft": 0,
+      "active": 53,
+      "items": 159,
+      "stimuli": 53,
+      "audioActive": 53,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 1,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "gaokao",
       "level": 2,
       "taskType": "reading_comprehension",
       "totalSets": 50,
-      "draft": 50,
-      "active": 0,
+      "draft": 0,
+      "active": 50,
       "items": 200,
       "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 2,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "gaokao",
@@ -2232,18 +2221,16 @@
       "exam": "cet6",
       "level": 4,
       "taskType": "listening_comprehension",
-      "totalSets": 12,
-      "draft": 12,
-      "active": 0,
-      "items": 36,
-      "stimuli": 12,
-      "audioActive": 12,
+      "totalSets": 52,
+      "draft": 0,
+      "active": 52,
+      "items": 156,
+      "stimuli": 52,
+      "audioActive": 52,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 1,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "cet6",
@@ -2267,17 +2254,15 @@
       "level": 4,
       "taskType": "reading_comprehension",
       "totalSets": 50,
-      "draft": 50,
-      "active": 0,
+      "draft": 0,
+      "active": 50,
       "items": 200,
       "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 2,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "cet6",
@@ -2573,17 +2558,15 @@
       "level": 5,
       "taskType": "reading_comprehension",
       "totalSets": 50,
-      "draft": 50,
-      "active": 0,
+      "draft": 0,
+      "active": 50,
       "items": 200,
       "stimuli": 50,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 2,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "kaoyan",
@@ -3169,17 +3152,15 @@
       "level": 7,
       "taskType": "reading_comprehension",
       "totalSets": 200,
-      "draft": 200,
-      "active": 0,
+      "draft": 0,
+      "active": 200,
       "items": 200,
       "stimuli": 200,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 5,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "sat",
@@ -3279,8 +3260,6 @@
     "lv1 en_to_zh: insufficient_active_pool",
     "lv1 grammar_fill: insufficient_active_pool",
     "lv1 listen_to_meaning: insufficient_active_pool",
-    "lv1 listening_comprehension: insufficient_active_pool",
-    "lv1 reading_comprehension: insufficient_active_pool",
     "lv1 seven_select: insufficient_active_pool",
     "lv1 synonym_choice: insufficient_active_pool",
     "lv1 synonym_substitute: insufficient_active_pool",
@@ -3299,8 +3278,6 @@
     "lv2 en_to_zh: insufficient_active_pool",
     "lv2 grammar_fill: insufficient_active_pool",
     "lv2 listen_to_meaning: insufficient_active_pool",
-    "lv2 listening_comprehension: insufficient_active_pool",
-    "lv2 reading_comprehension: insufficient_active_pool",
     "lv2 seven_select: insufficient_active_pool",
     "lv2 synonym_choice: insufficient_active_pool",
     "lv2 synonym_substitute: insufficient_active_pool",
@@ -3334,9 +3311,7 @@
     "lv4 en_to_zh: insufficient_active_pool",
     "lv4 essay_writing: insufficient_active_pool",
     "lv4 listen_to_meaning: insufficient_active_pool",
-    "lv4 listening_comprehension: insufficient_active_pool",
     "lv4 para_match: insufficient_active_pool",
-    "lv4 reading_comprehension: insufficient_active_pool",
     "lv4 synonym_choice: insufficient_active_pool",
     "lv4 synonym_substitute: insufficient_active_pool",
     "lv4 translation_zh_en: insufficient_active_pool",
@@ -3354,7 +3329,6 @@
     "lv5 essay_writing: insufficient_active_pool",
     "lv5 listen_to_meaning: insufficient_active_pool",
     "lv5 para_match: insufficient_active_pool",
-    "lv5 reading_comprehension: insufficient_active_pool",
     "lv5 seven_select: insufficient_active_pool",
     "lv5 synonym_choice: insufficient_active_pool",
     "lv5 synonym_substitute: insufficient_active_pool",
@@ -3389,7 +3363,6 @@
     "lv7 dictation_spell: insufficient_active_pool",
     "lv7 en_to_zh: insufficient_active_pool",
     "lv7 listen_to_meaning: insufficient_active_pool",
-    "lv7 reading_comprehension: insufficient_active_pool",
     "lv7 synonym_choice: insufficient_active_pool",
     "lv7 synonym_substitute: insufficient_active_pool",
     "lv7 word_form: insufficient_active_pool",
