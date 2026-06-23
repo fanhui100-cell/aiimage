@@ -19,9 +19,10 @@ import { ListeningRenderer } from './renderers/ListeningRenderer'
 import { FreeTextRenderer } from './renderers/FreeTextRenderer'
 import { MultiBlankRenderer } from './renderers/MultiBlankRenderer'
 import { MatchingRenderer } from './renderers/MatchingRenderer'
+import { BuildSentenceRenderer } from './renderers/BuildSentenceRenderer'
 import {
   ASK_OF, DIM_OF, freshQState, freshRunnerSession, isDeprecatedSafe,
-  type PracticeItem, type PracticeRunnerProps, type PracticeSessionResponse,
+  type PracticeItem, type PracticeItemView, type PracticeRunnerProps, type PracticeSessionResponse,
   type QState, type RecordAttemptInput, type RecordAttemptResponse, type RunnerSession, type SessionStatus,
 } from './practice-types'
 
@@ -32,10 +33,10 @@ const LABEL_OF: Record<string, string> = {
   reading_comprehension: '阅读理解', synonym_substitute: '同义替换', collocation_choice: '搭配',
 }
 
-type AnswerMode = 'choice' | 'spell' | 'free_text' | 'multi_blank' | 'matching'
+type AnswerMode = 'choice' | 'spell' | 'free_text' | 'multi_blank' | 'matching' | 'build_sentence'
 function answerMode(item: PracticeItem): AnswerMode {
   const m = item.inputMode
-  if (m === 'multi_blank' || m === 'matching' || m === 'free_text') return m
+  if (m === 'multi_blank' || m === 'matching' || m === 'free_text' || m === 'build_sentence') return m
   if (m === 'spell') return 'spell'
   const hasChoices = !!(item.choices && item.choices.length >= 2)
   if (m === 'listen') return hasChoices ? 'choice' : 'spell'
@@ -66,6 +67,11 @@ export function PracticeRunner(props: PracticeRunnerProps) {
   const [qs, setQs] = useState<QState>(freshQState)
   const [spellInput, setSpellInput] = useState('')
   const [freeText, setFreeText] = useState('')
+  // multi_blank / matching / build_sentence 作答态 + 可提交标志（renderer 经 onChange/onCanSubmit 回填）
+  const [canSubmit, setCanSubmit] = useState(false)
+  const [blankState, setBlankState] = useState<Record<number, string>>({})
+  const [matchState, setMatchState] = useState<Record<string, string>>({})
+  const [buildState, setBuildState] = useState<string[]>([])
   const sRef = useRef(S)
   useEffect(() => { sRef.current = S })
   const spellRef = useRef<HTMLInputElement | null>(null)
@@ -104,6 +110,7 @@ export function PracticeRunner(props: PracticeRunnerProps) {
     sRef.current = init
     lockRef.current = false
     setS(init); setQs(freshQState()); setSpellInput(''); setFreeText('')
+    setCanSubmit(false); setBlankState({}); setMatchState({}); setBuildState([])
   }, [sessionKey])
 
   const total = items.length
@@ -207,6 +214,7 @@ export function PracticeRunner(props: PracticeRunnerProps) {
     sRef.current = next
     lockRef.current = false
     setS(next); setQs(freshQState()); setSpellInput(''); setFreeText('')
+    setCanSubmit(false); setBlankState({}); setMatchState({}); setBuildState([])
   }, [items.length, finishNow])
 
   const answerChoice = useCallback((optId: string) => {
@@ -247,9 +255,26 @@ export function PracticeRunner(props: PracticeRunnerProps) {
     const item = items[sRef.current.idx]
     if (!item) return
     lockRef.current = true
-    setQs((p) => ({ ...p, submitted: true, locked: true }))
+    const review = (item as { review?: QState['review'] }).review ?? null
+    setQs((p) => ({ ...p, submitted: true, locked: true, review }))
     postAttempt(item, freeText, undefined)   // 不判分
   }, [items, freeText, postAttempt])
+
+  // multi_blank / matching / build_sentence：提交把作答上行 → 拿回 review → 置 locked + 写 review。
+  // build_sentence 为开放排序 → scoringNotReady：不判分、不加分、不计连击。
+  const submitStructured = useCallback(() => {
+    if (lockRef.current) return
+    const item = items[sRef.current.idx]
+    if (!item) return
+    const am = answerMode(item)
+    if (am !== 'multi_blank' && am !== 'matching' && am !== 'build_sentence') return
+    lockRef.current = true
+    const answer = am === 'multi_blank' ? blankState : am === 'matching' ? matchState : buildState
+    // review 仅在提交回合进入 state（提交前 qs.review 恒为 null；正解只来自此处）
+    const review = (item as { review?: QState['review'] }).review ?? null
+    setQs((p) => ({ ...p, locked: true, submitted: true, review }))
+    postAttempt(item, answer, undefined)   // multi_blank/matching 的逐空/逐对判定在 renderer 侧据 review 计算；build_sentence 不判分
+  }, [items, blankState, matchState, buildState, postAttempt])
 
   const restart = useCallback(() => setSeed((s) => s + 1), [])
   const leave = useCallback(() => router.push(props.returnTo ?? '/today'), [router, props.returnTo])
@@ -359,8 +384,10 @@ export function PracticeRunner(props: PracticeRunnerProps) {
   // ── 答题页 ──
   if (!current) return <PracticeFrame><div className="qbody" /></PracticeFrame>
   const item = current
+  const view = item as PracticeItemView
   const am = answerMode(item)
-  const isPlaceholder = am === 'multi_blank' || am === 'matching'
+  // 自渲染复审的结构题型：题体 + 复审都由 renderer 负责，runner 跳过 StemCard / 通用 .feedback
+  const selfRendered = am === 'multi_blank' || am === 'matching' || am === 'build_sentence' || am === 'free_text'
   const pbarPct = total ? (S.idx / total) * 100 : 0
 
   return (
@@ -385,8 +412,14 @@ export function PracticeRunner(props: PracticeRunnerProps) {
       <div className="qbody fade-up" key={item.id}>
         <p className="eyebrow"><span className="tag">{LABEL_OF[item.type] ?? item.type}</span></p>
 
-        {isPlaceholder ? (
-          am === 'multi_blank' ? <MultiBlankRenderer /> : <MatchingRenderer />
+        {am === 'multi_blank' ? (
+          <MultiBlankRenderer body={view.clozeBody} submitted={qs.locked} review={qs.review} onCanSubmit={setCanSubmit} onChange={setBlankState} />
+        ) : am === 'matching' ? (
+          <MatchingRenderer body={view.matchBody} submitted={qs.locked} review={qs.review?.matching ?? null} onCanSubmit={setCanSubmit} onChange={setMatchState} />
+        ) : am === 'build_sentence' ? (
+          <BuildSentenceRenderer body={view.buildBody} submitted={qs.locked} review={qs.review?.build ?? null} onCanSubmit={setCanSubmit} />
+        ) : am === 'free_text' ? (
+          <FreeTextRenderer item={view} value={freeText} submitted={qs.submitted} review={qs.review?.freeText ?? null} onChange={setFreeText} />
         ) : (
           <>
             <StemCard item={item} locked={qs.locked} />
@@ -396,11 +429,9 @@ export function PracticeRunner(props: PracticeRunnerProps) {
             {am === 'spell' && (
               <SpellRenderer item={item} phase={qs.spellPhase} diffAns={qs.spellDiffAns} value={spellInput} correctAnswer={item.answerText ?? ''} locked={qs.locked} inputRef={spellRef} onChange={setSpellInput} onSubmit={submitSpell} />
             )}
-            {am === 'free_text' && (
-              <FreeTextRenderer value={freeText} submitted={qs.submitted} onChange={setFreeText} />
-            )}
 
-            {qs.locked && am !== 'free_text' && (
+            {/* 通用 .feedback：仅 choice/spell；multi_blank/matching/build_sentence/free_text 自渲染复审，跳过 */}
+            {qs.locked && !selfRendered && (
               <div className={`feedback show ${qs.correct ? 'ok' : 'no'}`} role="status">
                 <div className="fb-head">{qs.correct ? <><OkMark /> 答对了 · 连击 +1</> : <><NoMark /> 答错了</>}</div>
                 {(item.explanationZh || item.targetWords[0]?.surface) && (
@@ -416,8 +447,10 @@ export function PracticeRunner(props: PracticeRunnerProps) {
       </div>
 
       <div className="qfoot">
-        {isPlaceholder ? (
-          <button className="cta ghost press" onClick={nextQuestion}>跳过 →</button>
+        {am === 'multi_blank' || am === 'matching' || am === 'build_sentence' ? (
+          !qs.locked
+            ? <button className="cta press" onClick={submitStructured} disabled={!canSubmit}>提交</button>
+            : <button className="cta press" onClick={nextQuestion}>{S.idx >= total - 1 ? '查看结算 →' : '下一题 →'}</button>
         ) : am === 'free_text' ? (
           !qs.submitted
             ? <button className="cta press" onClick={submitFree} disabled={!freeText.trim()}>提交</button>

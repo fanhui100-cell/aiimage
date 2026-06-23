@@ -7,6 +7,10 @@ import type {
 } from '@/lib/practice/session-types'
 import type { QuizAttempt } from '@/types/quiz'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
+import type { ClozeBody, MultiBlankReview } from './renderers/MultiBlankRenderer'
+import type { MatchingBody, MatchingReview } from './renderers/MatchingRenderer'
+import type { BuildSentenceBody, BuildSentenceReview } from './renderers/BuildSentenceRenderer'
+import type { FreeTextReview } from './renderers/FreeTextRenderer'
 
 /** 前端退役题型双保险（后端默认已不下发）。 */
 export function isDeprecatedSafe(type: string): boolean {
@@ -20,6 +24,25 @@ export type {
   RecordAttemptResponse,
 }
 export type { QuizAttempt }
+
+/* ── 渲染层题体扩展（提交前只含题面，绝不含答案；正解只来自 review） ──
+   后端 session-builder 就绪后按 inputMode 填充对应 body；当前可缺省 → 受控空态。 */
+export type PracticeItemView = PracticeItem & {
+  clozeBody?: ClozeBody | null
+  matchBody?: MatchingBody | null
+  buildBody?: BuildSentenceBody | null
+  /** free_text 字数指引（非强制） */
+  wordMin?: number
+  wordMax?: number
+  guide?: string
+}
+
+/** 提交回合下发的批改（按题型；提交前必为 null/undefined）。各 renderer 只取自己那支。 */
+export type PracticeReview = MultiBlankReview & {
+  matching?: MatchingReview | null
+  build?: BuildSentenceReview | null
+  freeText?: FreeTextReview | null
+}
 
 export type PracticeRunnerMode = 'word' | 'task' | 'section' | 'paper'
 
@@ -60,13 +83,15 @@ export interface QState {
   spellDiffAns: string
   comboBump: boolean
   submitted: boolean   // free_text
+  /** 提交回合下发的批改（multi_blank/matching/build_sentence/free_text 自渲染复审用）。 */
+  review: PracticeReview | null
 }
 
 export const freshRunnerSession = (): RunnerSession => ({
   step: 'play', idx: 0, score: 0, xp: 0, combo: 0, maxCombo: 0, results: [], startedAt: Date.now(), completedAt: 0,
 })
 export const freshQState = (): QState => ({
-  locked: false, picked: null, correct: null, spellTried: false, spellPhase: '', spellDiffAns: '', comboBump: false, submitted: false,
+  locked: false, picked: null, correct: null, spellTried: false, spellPhase: '', spellDiffAns: '', comboBump: false, submitted: false, review: null,
 })
 
 /** 题型 → 技能维度（认/拼/听），用于 lexiStore.recordDimPass */
