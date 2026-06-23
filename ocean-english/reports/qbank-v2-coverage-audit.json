@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T14:12:48.947Z",
+  "generatedAt": "2026-06-23T16:44:42.562Z",
   "totals": {
-    "sets": 5092,
-    "items": 6030,
-    "activeSets": 67,
-    "draftSets": 5025,
+    "sets": 5152,
+    "items": 6170,
+    "activeSets": 134,
+    "draftSets": 5018,
     "stimuliWithActiveAudio": 103
   },
   "expectedMatrix": {
@@ -18,18 +18,20 @@
         "requiredInputMode": "choice",
         "requiresAudio": true,
         "requiresRubric": false,
-        "draft": 12,
+        "draft": 52,
         "reviewed": 0,
         "active": 0,
         "rejected": 0,
         "retired": 0,
-        "items": 36,
-        "stimuli": 12,
+        "items": 156,
+        "stimuli": 52,
         "activeAudio": 12,
         "rubricItems": 0,
         "sourceStages": 1,
-        "state": "THIN",
-        "blockingReasons": []
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "audio_incomplete"
+        ]
       },
       {
         "exam": "zhongkao",
@@ -370,9 +372,9 @@
         "requiredInputMode": "choice",
         "requiresAudio": false,
         "requiresRubric": false,
-        "draft": 67,
+        "draft": 0,
         "reviewed": 0,
-        "active": 0,
+        "active": 67,
         "rejected": 0,
         "retired": 0,
         "items": 200,
@@ -380,7 +382,7 @@
         "activeAudio": 0,
         "rubricItems": 0,
         "sourceStages": 0,
-        "state": "READY_DRAFT",
+        "state": "READY_ACTIVE",
         "blockingReasons": []
       },
       {
@@ -882,18 +884,20 @@
         "requiredInputMode": "speak",
         "requiresAudio": true,
         "requiresRubric": true,
-        "draft": 0,
+        "draft": 10,
         "reviewed": 0,
         "active": 0,
         "rejected": 0,
         "retired": 0,
-        "items": 0,
-        "stimuli": 0,
+        "items": 10,
+        "stimuli": 10,
         "activeAudio": 0,
-        "rubricItems": 0,
-        "sourceStages": 0,
-        "state": "MISSING",
-        "blockingReasons": []
+        "rubricItems": 10,
+        "sourceStages": 1,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "audio_missing"
+        ]
       },
       {
         "exam": "toefl",
@@ -904,18 +908,20 @@
         "requiredInputMode": "speak",
         "requiresAudio": true,
         "requiresRubric": true,
-        "draft": 0,
+        "draft": 10,
         "reviewed": 0,
         "active": 0,
         "rejected": 0,
         "retired": 0,
-        "items": 0,
-        "stimuli": 0,
+        "items": 10,
+        "stimuli": 10,
         "activeAudio": 0,
-        "rubricItems": 0,
-        "sourceStages": 0,
-        "state": "MISSING",
-        "blockingReasons": []
+        "rubricItems": 10,
+        "sourceStages": 1,
+        "state": "BLOCKED",
+        "blockingReasons": [
+          "audio_missing"
+        ]
       },
       {
         "exam": "sat",
@@ -1007,27 +1013,27 @@
       }
     ],
     "stateCounts": {
-      "MISSING": 4,
-      "THIN": 3,
-      "READY_DRAFT": 34,
-      "READY_ACTIVE": 1,
-      "BLOCKED": 3
+      "MISSING": 2,
+      "THIN": 2,
+      "READY_DRAFT": 33,
+      "READY_ACTIVE": 2,
+      "BLOCKED": 6
     },
     "missing": [
       "toefl lv6 / listening / choose_a_response — draft 0",
-      "toefl lv6 / listening / listening_comprehension — draft 0",
-      "toefl lv6 / speaking / listen_and_repeat — draft 0",
-      "toefl lv6 / speaking / interview_speaking — draft 0"
+      "toefl lv6 / listening / listening_comprehension — draft 0"
     ],
     "thin": [
-      "zhongkao lv1 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)",
       "gaokao lv2 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)",
       "cet6 lv4 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)"
     ],
     "blocked": [
+      "zhongkao lv1 / listening / listening_comprehension — draft 52 · audio_incomplete",
       "toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified",
       "toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified",
-      "toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready"
+      "toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready",
+      "toefl lv6 / speaking / listen_and_repeat — draft 10 · audio_missing",
+      "toefl lv6 / speaking / interview_speaking — draft 10 · audio_missing"
     ],
     "readyDraft": [
       "zhongkao lv1 / grammar_fill — draft 50",
@@ -1043,7 +1049,6 @@
       "cet4 lv3 / essay_writing — draft 50",
       "cet4 lv3 / banked_cloze — draft 166",
       "cet4 lv3 / para_match — draft 143",
-      "cet4 lv3 / reading_comprehension — draft 67",
       "cet4 lv3 / translation_zh_en — draft 55",
       "cet6 lv4 / essay_writing — draft 50",
       "cet6 lv4 / banked_cloze — draft 50",
@@ -1066,7 +1071,8 @@
       "sat lv7 / reading_comprehension [Standard English Conventions] — draft 50"
     ],
     "readyActive": [
-      "cet4 lv3 / listening_comprehension — active 67"
+      "cet4 lv3 / listening_comprehension — active 67",
+      "cet4 lv3 / reading_comprehension — active 67"
     ]
   },
   "actualGrid": [
@@ -1261,11 +1267,11 @@
       "exam": "zhongkao",
       "level": 1,
       "taskType": "listening_comprehension",
-      "totalSets": 12,
-      "draft": 12,
+      "totalSets": 52,
+      "draft": 52,
       "active": 0,
-      "items": 36,
-      "stimuli": 12,
+      "items": 156,
+      "stimuli": 52,
       "audioActive": 12,
       "rubricItems": 0,
       "targetWords": 0,
@@ -1940,17 +1946,15 @@
       "level": 3,
       "taskType": "reading_comprehension",
       "totalSets": 67,
-      "draft": 67,
-      "active": 0,
+      "draft": 0,
+      "active": 67,
       "items": 200,
       "stimuli": 67,
       "audioActive": 0,
       "rubricItems": 0,
       "targetWords": 0,
       "sourceStages": 0,
-      "warnings": [
-        "insufficient_active_pool"
-      ]
+      "warnings": []
     },
     {
       "exam": "cet4",
@@ -2891,6 +2895,40 @@
     {
       "exam": "toefl",
       "level": 6,
+      "taskType": "interview_speaking",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 10,
+      "audioActive": 0,
+      "rubricItems": 10,
+      "targetWords": 0,
+      "sourceStages": 1,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
+      "taskType": "listen_and_repeat",
+      "totalSets": 10,
+      "draft": 10,
+      "active": 0,
+      "items": 10,
+      "stimuli": 10,
+      "audioActive": 0,
+      "rubricItems": 10,
+      "targetWords": 0,
+      "sourceStages": 1,
+      "warnings": [
+        "insufficient_active_pool"
+      ]
+    },
+    {
+      "exam": "toefl",
+      "level": 6,
       "taskType": "listen_to_meaning",
       "totalSets": 54,
       "draft": 54,
@@ -3280,7 +3318,6 @@
     "lv3 essay_writing: insufficient_active_pool",
     "lv3 listen_to_meaning: insufficient_active_pool",
     "lv3 para_match: insufficient_active_pool",
-    "lv3 reading_comprehension: insufficient_active_pool",
     "lv3 synonym_choice: insufficient_active_pool",
     "lv3 synonym_substitute: insufficient_active_pool",
     "lv3 translation_zh_en: insufficient_active_pool",
@@ -3336,6 +3373,8 @@
     "lv6 dictation_spell: insufficient_active_pool",
     "lv6 email_writing: insufficient_active_pool",
     "lv6 en_to_zh: insufficient_active_pool",
+    "lv6 interview_speaking: insufficient_active_pool",
+    "lv6 listen_and_repeat: insufficient_active_pool",
     "lv6 listen_to_meaning: insufficient_active_pool",
     "lv6 synonym_choice: insufficient_active_pool",
     "lv6 synonym_substitute: insufficient_active_pool",

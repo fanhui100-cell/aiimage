@@ -1,250 +1,265 @@
 {
-  "generatedAt": "2026-06-23T14:12:23.953Z",
+  "generatedAt": "2026-06-23T16:43:32.663Z",
   "apply": true,
   "filters": {
     "exam": "cet4",
     "level": 3,
-    "task": "listening_comprehension",
+    "task": "reading_comprehension",
     "limit": 70
   },
-  "candidates": 47,
-  "eligible": 47,
-  "promoted": 47,
+  "candidates": 67,
+  "eligible": 67,
+  "promoted": 67,
   "rejected": [],
   "reasonCounts": {},
   "rpcResults": [
     {
-      "set_id": "250d5b45-bea7-4d9a-ba5e-91b9460ee347",
+      "set_id": "4bb5540a-f12c-4dbb-805a-511b83270653",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "65353b54-cff4-4e27-975f-de6d798eee28",
+      "set_id": "3e2366e2-ccfb-4ebc-9f19-73ca0d4f1394",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "6209b5b4-3dd9-43b3-b0a3-fa7ebc5259a9",
+      "set_id": "0a29a90f-8e44-44a1-8902-7ed853fe06ac",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "87594737-d8bd-4294-ad76-c6ac16f7a4ba",
+      "set_id": "331a7c60-f6a5-4ab8-949d-843ecad546a8",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "372f2159-21df-4426-ad2a-3e598a0813ce",
+      "set_id": "a1f019a4-370a-49dd-b1eb-e04932cfe24a",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "a723978f-be18-4325-8805-d754ed56952b",
+      "set_id": "7698503f-0523-4cd8-bb9c-9a24cb9d4c08",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "f851001a-e71c-4ba9-b0b5-88fc7580996e",
+      "set_id": "2c48d7fd-9cd2-4174-a92b-be274f4f9e6f",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "e46f55dd-afb5-4ef0-89a2-9fd6a5ce1a53",
+      "set_id": "6df3af44-cce1-49cc-b9d2-fed7cee8ce41",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "36b1307e-cf55-4f09-b07c-3263f4d938b6",
+      "set_id": "2895a89c-a780-42a8-9c8a-2ecaa0c07f4c",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "82225f34-c224-409d-8a46-bd47e96d2efa",
+      "set_id": "ab3bdd48-e8b9-4883-af52-bd9ce98ca70c",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "d5dcee18-f398-476b-b6b2-696d72d81116",
+      "set_id": "454e58e3-f754-4177-84b3-87b6346584cc",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "9421d728-2c56-478f-9a00-2a1b4ea07280",
+      "set_id": "67b9dbdf-d3d5-4bfe-95e7-b4e0dbb78e86",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "ef293de1-2e47-43e0-9669-2f7323b91d6d",
+      "set_id": "e24b52bb-9984-4637-80bd-1e665463175d",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "2a47a332-bf1d-4a26-8b55-c95736947c87",
+      "set_id": "be1f6745-99e9-4fd9-ad50-0b5e0733b925",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "a59f03e6-6ded-4593-b1bd-f89162443ee8",
+      "set_id": "a0f01888-c7f6-4ceb-9fc1-40304f2ab2e6",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "6b970730-fdd1-4376-8a5e-055094262e40",
+      "set_id": "dde3b595-2a0d-408a-a5e6-dbc8437b5cb0",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "08e86bfd-3213-40a3-bad5-717476b28d91",
+      "set_id": "df11a7de-2dde-49ac-ab14-953af24035ec",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "fc9ab257-cbd0-48bb-8ef9-b5b88e7f8984",
+      "set_id": "3de9ca81-3e76-422b-94ac-4610225bdb4d",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "01912d50-ddf5-4cd4-9d20-434a3502246e",
+      "set_id": "dc53ec14-8dbd-4ecf-a793-12ddfeb3ac72",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "3a482b86-33bc-4ab7-acb5-4ee0d341cc28",
+      "set_id": "80a2c6f0-63bb-4bac-8e1b-6383cb57a1f9",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "5da31f32-08a1-404b-8135-b1122228f7e7",
+      "set_id": "65840a16-1c07-4d91-8f46-eee81cd3b4f6",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "c571a5df-ae7f-4af7-b46a-f67dcdffe367",
+      "set_id": "5197ae68-5f41-489c-b0b1-472736016385",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "3259b57a-ef5c-408a-89cd-3d1ab0665df3",
+      "set_id": "7da6b9c4-c025-4ed8-af25-907919e80583",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "cd6d7623-39af-403f-a8ec-cf6c6a5755ea",
+      "set_id": "9c7d687b-5319-4f18-8643-a3ef24224299",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "bfc1379f-6ddc-4082-b846-132384b65e7b",
+      "set_id": "c52e4b49-21cb-4ff8-a224-75ffc7561036",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "c57fc221-6153-4b30-9445-f44c06411e9e",
+      "set_id": "5e6b5898-ef19-4ea4-860d-c93d0fe831ff",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "d3486aed-706f-4657-87b2-f0b864a02350",
+      "set_id": "54530744-d6cf-4c40-9d1c-78591c8d5f6f",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "1aff029d-5a4f-4dd6-b939-d60ea5a12ac4",
+      "set_id": "c92e2414-819e-4726-b64f-27f5016d7a48",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "8345d723-a612-4ba9-8fa1-15d09c92f354",
+      "set_id": "8a949569-bd89-4112-8189-7a25657f8dff",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "e1aee59e-d629-4964-956e-446e54e1d0d0",
+      "set_id": "7f41e04e-77b9-41e9-ada8-fa189e84c840",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "f026c0ec-0e07-4432-af21-2751389141f2",
+      "set_id": "821302cd-0d57-4e5f-8ba7-19a6d4d32b1e",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "ba5649cf-dc65-43b5-ab66-b3ad3fd9fdcd",
+      "set_id": "cec887c7-0d79-4cd4-a155-10f1c8662aa6",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "838a1ae3-c9c4-40da-9247-79749a0e40ee",
+      "set_id": "698d5103-5590-43dd-bab0-721416819d87",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "405a1af0-08b8-42ac-9a09-0ecf11a92260",
+      "set_id": "55e68f44-b0bb-4595-be79-b61264f27988",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "dd73223e-18f7-4421-8fe6-cdea20d84e5a",
+      "set_id": "39c5bb67-42d5-43a8-8873-9133c531568e",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "329e9cea-cef3-4c47-9111-82863eea584b",
+      "set_id": "04f91f16-b5da-4c6b-b5c6-138bef83cc1a",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "ec91c653-be77-4748-a1ef-60ac61b1f777",
+      "set_id": "46c44e2b-612a-478d-a835-bf11f0710c87",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "3e5195e0-a04f-4994-8989-42e61e0d57b5",
+      "set_id": "2b58618b-6272-4067-9bc4-4914b4127e7d",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "d9b028d1-e35c-4055-9293-45af1e69e7d0",
+      "set_id": "a893b01d-f34f-4d80-b5de-64bd7ee63fb3",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "b52d5a70-2527-4dbb-9a02-f55194ad6526",
+      "set_id": "c7dc6725-c5f6-4030-b314-5a1282ef6f6f",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "4ac8e80e-7b3d-4be1-b8c5-57a5622119ef",
+      "set_id": "cae38d21-b41c-4fa1-8641-6369ff5b0f56",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "a0debf95-4f9a-4413-ab20-34a40adc7106",
+      "set_id": "f1183e8f-e040-4352-83db-6accbcd2cae4",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "931061ca-9b4f-4b7b-a44d-4cd6170318aa",
+      "set_id": "2c80513e-622b-43f0-98fd-5b7d6e7b4c2c",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "5abd05b1-db41-40fd-a721-8a97e0d20b07",
+      "set_id": "7d9656e0-97d3-4300-8655-7d1e5a2a7889",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "69c5024b-abbe-45ba-afca-38efbe8051ae",
+      "set_id": "2b734688-8463-4a02-9aef-ec4bfc755a82",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "480c9b56-9e74-43e6-9f1d-e57aaa191ada",
+      "set_id": "60d284ca-923a-43bc-bf61-1bc29cf1f55c",
       "result": "promoted",
       "reason": "ok"
     },
     {
-      "set_id": "920318ea-6b7d-42e2-b88e-fd391f547f5b",
+      "set_id": "3b8abe59-6a58-4eab-b53a-5958c871495a",
+      "result": "promoted",
+      "reason": "ok"
+    },
+    {
+      "set_id": "5e279ee8-8e22-49db-b359-788d5863eaab",
+      "result": "promoted",
+      "reason": "ok"
+    },
+    {
+      "set_id": "1b8e59eb-ac17-4a9c-87ff-de2ca85d99a2",
+      "result": "promoted",
+      "reason": "ok"
+    },
+    {
+      "set_id": "6433bb05-1f04-4bba-ae0e-e3743a2976d3",
       "result": "promoted",
       "reason": "ok"
     }
