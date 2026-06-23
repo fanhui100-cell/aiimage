@@ -18,6 +18,8 @@
     "qa:qbank-v2-migration": "npx tsx scripts/qa-question-bank-v2-migration.ts",
     "generate:audio-assets": "npx tsx scripts/generate-audio-assets.ts",
     "validate:audio-assets": "npx tsx scripts/validate-audio-assets.ts",
+    "review:audio-assets": "npx tsx scripts/review-audio-assets.ts",
+    "validate:audio-pipeline": "npx tsx scripts/validate-audio-pipeline.ts",
     "validate:papers": "npx tsx scripts/validate-paper-generator.ts",
     "generate:qsets-v2": "npx tsx scripts/generate-question-sets-v2.ts",
     "qa:qsets-v2": "npx tsx scripts/qa-question-sets-v2.ts",

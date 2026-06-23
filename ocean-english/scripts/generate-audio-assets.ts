@@ -1,20 +1,28 @@
 /* ════════════════════════════════════════════════════════════════════════
-   generate-audio-assets.ts — 听力稳定音频生成管线（Phase 9，默认 dry-run）
+   generate-audio-assets.ts — 听力稳定音频生成管线（R6，默认 dry-run）
+
+   Provider: Azure AI Speech Neural TTS (免费档 F0, 0.5M 字符/月)。口音=命名声本身
+   (en-CA-ClaraNeural 即加拿大音)。输出 mp3。私有桶 qbank-audio。
 
    安全契约：
-   - 默认 dry-run：只读 v2 listening 材料，列出「缺稳定音频」的清单，不合成、不上传、不写库。
-   - 仅 --apply 才合成音频、写 Supabase Storage、插 audio_assets 行。
+   - 默认 dry-run：列出「缺稳定音频」的材料，并预估字符数/文件数/音频分钟/成本（vs 免费档），不合成/不写。
+   - 仅 --apply 才合成→校验产物→上传私有桶→插 audio_assets（qa_status=machine_checked，绝不 active）。
+   - 幂等：按 (transcript+voice+accent+provider+format+rate) checksum 跳过已存在（DB 还有 UNIQUE(checksum)）。
+   - 失败补偿：先 upload 成功再 insert；insert 失败则删除刚上传的对象，绝不留悬挂行/孤儿文件。
+   - 每类(exam)首批最多 20 条（decision #8）。
+   - 缺配置（SUPABASE_AUDIO_BUCKET / AZURE_SPEECH_KEY / AZURE_SPEECH_REGION）：--apply 拒绝退出 1。
+   - API key 仅内存使用，绝不写报告/日志。
    - v2 表未建：dry-run 报 not_applied 退出 0；--apply 拒绝退出 1。
-   - 缺存储/Provider 配置（SUPABASE_AUDIO_BUCKET / AUDIO_TTS_API_KEY）：--apply 拒绝退出 1。
-   - 新音频行 qa_status 默认 machine_checked，绝不 active（上架须经人工/校验）。
-   - 不动词级发音/TTS 兜底；不批量重生成内容。
 
    用法：
-     npx tsx scripts/generate-audio-assets.ts [--apply] [--limit=N] [--exam=cet4] \
-       [--task=listening_comprehension] [--provider=azure]
+     npx tsx scripts/generate-audio-assets.ts --exam=cet4 --task=listening_comprehension          # dry-run + 成本预览
+     npx tsx scripts/generate-audio-assets.ts --exam=cet4 --task=listening_comprehension --limit=5 --apply
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
+import { assignVoice } from '@/lib/audio/voice-pools'
+import { computeChecksum, deterministicStoragePath, countWords, verifySynthOutput, type SynthSettings } from '@/lib/audio/checksum'
+import { synthesizeAzure, AZURE_MP3_FORMAT, type AzureCreds } from '@/lib/audio/providers/azure'
 
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
@@ -31,18 +39,21 @@ const APPLY = process.argv.includes('--apply')
 const LIMIT = (() => { const n = Number(argValue('--limit')); return Number.isFinite(n) && n > 0 ? Math.floor(n) : null })()
 const EXAM = (argValue('--exam') || '').trim()
 const TASK = (argValue('--task') || 'listening_comprehension').trim()
-const PROVIDER = (argValue('--provider') || readEnv('AUDIO_TTS_PROVIDER') || 'azure').trim()
+const PROVIDER = 'azure'
+const MAX_PER_CELL = 20                                   // decision #8: first batch ≤20 per exam-cell
+const FREE_TIER_CHARS = 500_000                           // Azure F0: 0.5M chars/month free
+const RATE_USD_PER_1M = 15                                // Azure Neural Std beyond free tier
+const MAX_CHARS = (() => { const n = Number(argValue('--max-chars')); return Number.isFinite(n) && n > 0 ? Math.floor(n) : FREE_TIER_CHARS })()
 
-// 写入目标 + 依赖表
 const NEEDED_TABLES = ['question_sets', 'stimuli', 'audio_assets'] as const
-
-// 音频生成所需配置（缺任一 → --apply 拒绝）
 const AUDIO_BUCKET = readEnv('SUPABASE_AUDIO_BUCKET')
-const TTS_API_KEY = readEnv('AUDIO_TTS_API_KEY')
+const AZURE_KEY = readEnv('AZURE_SPEECH_KEY')
+const AZURE_REGION = readEnv('AZURE_SPEECH_REGION')
 function audioConfigMissing(): string[] {
   const m: string[] = []
   if (!AUDIO_BUCKET) m.push('SUPABASE_AUDIO_BUCKET')
-  if (!TTS_API_KEY) m.push('AUDIO_TTS_API_KEY')
+  if (!AZURE_KEY) m.push('AZURE_SPEECH_KEY')
+  if (!AZURE_REGION) m.push('AZURE_SPEECH_REGION')
   return m
 }
 
@@ -58,13 +69,18 @@ interface Plan {
   stimulusId: string
   level: number | null
   examIds: string[]
-  hasTranscriptSource: boolean
+  transcript: string | null
   setStatuses: string[]
 }
 
 function writeReport(payload: Record<string, unknown>) {
+  // NOTE: never include any API key in the report.
   writeFileSync(REPORT_JSON, JSON.stringify({ generatedAt: new Date().toISOString(), ...payload }, null, 2) + '\n', 'utf8')
 }
+
+// rough audio minutes from words (≈150 wpm; slower exam pace inflates a bit)
+const estMinutes = (words: number) => words / 140
+const estCostUsd = (chars: number) => (Math.max(0, chars) / 1_000_000) * RATE_USD_PER_1M
 
 async function main() {
   if (!SUPABASE_URL || !SERVICE_ROLE) {
@@ -74,7 +90,6 @@ async function main() {
   }
   const db = createClient(SUPABASE_URL, SERVICE_ROLE)
 
-  // 1) 探测 v2 表
   const present: string[] = []
   const missing: string[] = []
   for (const t of NEEDED_TABLES) (await tableExists(db, t) ? present : missing).push(t)
@@ -83,33 +98,25 @@ async function main() {
   const cfgMissing = audioConfigMissing()
   if (APPLY && schema !== 'applied') {
     console.error(`generate-audio: --apply 被拒绝 —— v2 表未完整建立（${schema}）。missing: ${missing.join(', ') || 'none'}`)
-    console.error('请先在 Supabase SQL Editor 执行 supabase/sql/p4-question-bank-v2.sql。')
     process.exit(1)
   }
   if (APPLY && cfgMissing.length) {
-    console.error(`generate-audio: --apply 被拒绝 —— 缺音频配置: ${cfgMissing.join(', ')}（存储桶 + TTS Provider 密钥）。`)
-    process.exit(1)
-  }
-  // 即便 schema/配置齐备，当前也未接入真实 TTS 合成 + Storage 上传 + audio_assets 写入。
-  // 硬拒绝 --apply（exit 1），避免「成功退出但写 0」误导后续流程。实现合成/上传/写行后再放开。
-  if (APPLY) {
-    console.error('generate-audio: --apply 暂不可用 —— 尚未接入真实 TTS Provider 合成 / Supabase Storage 上传 / audio_assets 写入；本脚本当前仅为 dry-run 规划器。')
-    console.error('启用步骤：实现 synthesize()+storage.upload()+audio_assets.insert(qa_status=machine_checked) 后，再放开本拦截。')
+    console.error(`generate-audio: --apply 被拒绝 —— 缺配置: ${cfgMissing.join(', ')}（私有桶 + Azure Speech key/region）。`)
     process.exit(1)
   }
 
   if (schema === 'not_applied') {
-    console.log('generate-audio: v2 表尚未应用（not_applied），无 listening 材料可处理')
-    writeReport({ schema, apply: false, provider: PROVIDER, audioConfigMissing: cfgMissing, stimuliNeedingAudio: 0, byExam: {}, byLevel: {}, samples: [], note: 'v2 未应用，无可生成项。' })
+    console.log('generate-audio: v2 表尚未应用（not_applied）')
+    writeReport({ schema, apply: false, provider: PROVIDER, audioConfigMissing: cfgMissing, stimuliNeedingAudio: 0, samples: [] })
     process.exit(0)
   }
   if (schema === 'partial_applied') {
     console.error('generate-audio: v2 schema 半应用（partial_applied）')
-    writeReport({ schema, apply: false, provider: PROVIDER, audioConfigMissing: cfgMissing, missingTables: missing, stimuliNeedingAudio: 0, samples: [] })
+    writeReport({ schema, apply: false, provider: PROVIDER, missingTables: missing, stimuliNeedingAudio: 0, samples: [] })
     process.exit(1)
   }
 
-  // 2) 取 listening 题组 → 材料
+  // 1) listening 题组 → 材料
   const sets: SetRow[] = []
   for (let from = 0; ; from += 1000) {
     let q = db.from('question_sets').select('id, exam_id, level, task_type, stimulus_id, status').eq('task_type', TASK).range(from, from + 999)
@@ -122,7 +129,7 @@ async function main() {
   }
   const stimulusIds = [...new Set(sets.map((s) => s.stimulus_id).filter((x): x is string => !!x))]
 
-  // 3) 已有 active 音频的材料（排除）
+  // 2) 已有任意音频行的材料（按 checksum 幂等，但这里先排除「已有 active 音频」的材料）
   const withActiveAudio = new Set<string>()
   for (let i = 0; i < stimulusIds.length; i += 200) {
     const chunk = stimulusIds.slice(i, i + 200)
@@ -131,7 +138,7 @@ async function main() {
     for (const a of (data ?? []) as { stimulus_id: string | null }[]) if (a.stimulus_id) withActiveAudio.add(a.stimulus_id)
   }
 
-  // 4) 材料元数据
+  // 3) 材料元数据（transcript = text_en）
   const stimById = new Map<string, StimRow>()
   for (let i = 0; i < stimulusIds.length; i += 200) {
     const chunk = stimulusIds.slice(i, i + 200)
@@ -140,7 +147,7 @@ async function main() {
     for (const s of (data ?? []) as StimRow[]) stimById.set(s.id, s)
   }
 
-  // 5) 组装「缺音频」计划（按材料去重；记录引用它的考试 / set 状态）
+  // 4) 「缺音频」计划（按材料去重）
   const planByStim = new Map<string, Plan>()
   for (const set of sets) {
     if (!set.stimulus_id || withActiveAudio.has(set.stimulus_id)) continue
@@ -148,39 +155,120 @@ async function main() {
     if (!stim) continue
     const p = planByStim.get(set.stimulus_id) ?? {
       stimulusId: set.stimulus_id, level: stim.level ?? set.level,
-      examIds: [], hasTranscriptSource: !!(stim.text_en && stim.text_en.trim()), setStatuses: [],
+      examIds: [], transcript: stim.text_en && stim.text_en.trim() ? stim.text_en : null, setStatuses: [],
     }
     if (set.exam_id && !p.examIds.includes(set.exam_id)) p.examIds.push(set.exam_id)
     p.setStatuses.push(set.status)
     planByStim.set(set.stimulus_id, p)
   }
-  let plans = [...planByStim.values()]
+  // per-cell cap (decision #8): ≤20 per exam-cell; then global --limit
+  const perExamCount = new Map<string, number>()
+  let plans: Plan[] = []
+  for (const p of [...planByStim.values()]) {
+    const key = (EXAM || p.examIds[0] || '(none)')
+    const n = perExamCount.get(key) ?? 0
+    if (n >= MAX_PER_CELL) continue
+    perExamCount.set(key, n + 1)
+    plans.push(p)
+  }
   if (LIMIT) plans = plans.slice(0, LIMIT)
 
-  const byExam: Record<string, number> = {}
+  const synthPlans = plans.filter((p) => p.transcript)
+  const noTranscript = plans.length - synthPlans.length
+  const totalChars = synthPlans.reduce((a, p) => a + (p.transcript ? p.transcript.length : 0), 0)
+  const totalWords = synthPlans.reduce((a, p) => a + countWords(p.transcript ?? ''), 0)
   const byLevel: Record<string, number> = {}
-  for (const p of plans) {
-    for (const e of p.examIds.length ? p.examIds : ['(none)']) byExam[e] = (byExam[e] ?? 0) + 1
-    const lk = p.level == null ? '(none)' : `lv${p.level}`
-    byLevel[lk] = (byLevel[lk] ?? 0) + 1
+  for (const p of plans) { const lk = p.level == null ? '(none)' : `lv${p.level}`; byLevel[lk] = (byLevel[lk] ?? 0) + 1 }
+
+  // ── DRY-RUN：预估 + 退出（绝不写）──
+  if (!APPLY) {
+    writeReport({
+      schema, apply: false, provider: PROVIDER, task: TASK, exam: EXAM || null,
+      audioConfigMissing: cfgMissing,
+      stimuliNeedingAudio: plans.length, synthesizable: synthPlans.length, noTranscript,
+      estimate: { plannedFiles: synthPlans.length, totalChars, freeTierChars: FREE_TIER_CHARS, withinFreeTier: totalChars <= FREE_TIER_CHARS, estMinutes: Math.round(estMinutes(totalWords)), estCostUsdBeyondFree: Number(estCostUsd(totalChars - FREE_TIER_CHARS).toFixed(2)) },
+      byLevel,
+      samples: synthPlans.slice(0, 20).map((p) => ({ stimulusId: p.stimulusId, level: p.level, examIds: p.examIds, chars: p.transcript?.length ?? 0 })),
+      note: 'dry-run：仅规划 + 成本预估；--apply 才合成/上传/写 machine_checked。',
+    })
+    console.log(`generate-audio: schema=${schema} apply=false provider=${PROVIDER} task=${TASK}${EXAM ? ' exam=' + EXAM : ''}`)
+    console.log(`  缺音频材料 ${plans.length}（可合成 ${synthPlans.length}，无原文 ${noTranscript}）· byLevel ${JSON.stringify(byLevel)}`)
+    console.log(`  预估：文件 ${synthPlans.length} · 字符 ${totalChars}（免费档 ${FREE_TIER_CHARS}/月，${totalChars <= FREE_TIER_CHARS ? '在额度内' : '超额'}）· ~${Math.round(estMinutes(totalWords))} 分钟 · 超额成本 $${estCostUsd(totalChars - FREE_TIER_CHARS).toFixed(2)}`)
+    console.log(`  报告：${REPORT_JSON}`)
+    process.exit(0)
   }
 
-  // 仅 dry-run 抵达此处（--apply 已在上方被硬拒绝）。只产出「缺稳定音频」规划，绝不写库。
-  writeReport({
-    schema, apply: false, provider: PROVIDER, task: TASK, exam: EXAM || null,
-    audioConfigMissing: cfgMissing,
-    stimuliNeedingAudio: plans.length,
-    withTranscriptSource: plans.filter((p) => p.hasTranscriptSource).length,
-    byExam, byLevel,
-    samples: plans.slice(0, 20).map((p) => ({ stimulusId: p.stimulusId, level: p.level, examIds: p.examIds, hasTranscriptSource: p.hasTranscriptSource })),
-    note: 'dry-run：仅规划缺稳定音频的材料；--apply 当前被硬拒绝（未接入真实合成/上传/写入）。',
-  })
+  // ── APPLY：合成→校验→上传(私有)→插 machine_checked（绝不 active）──
+  if (totalChars > MAX_CHARS) {
+    console.error(`generate-audio: --apply 被拒绝 —— 预计字符 ${totalChars} 超过上限 ${MAX_CHARS}（免费档 0.5M/月）。用 --limit 缩小或 --max-chars 调整。`)
+    process.exit(1)
+  }
+  const creds: AzureCreds = { key: AZURE_KEY, region: AZURE_REGION }
+  let synthesized = 0, skipped = 0, uploaded = 0, inserted = 0, failed = 0
+  const failures: string[] = []
 
-  console.log(`generate-audio: schema=${schema} apply=false provider=${PROVIDER} task=${TASK}${EXAM ? ' exam=' + EXAM : ''}`)
-  console.log(`  缺稳定音频材料 ${plans.length}（有原文 ${plans.filter((p) => p.hasTranscriptSource).length}）· byLevel ${JSON.stringify(byLevel)}`)
-  console.log('  dry-run：未写库。--apply 当前被硬拒绝（管线未接入真实合成/上传/写入）。')
+  for (const p of synthPlans) {
+    const transcript = p.transcript as string
+    const pick = assignVoice(EXAM || p.examIds[0] || null, p.stimulusId)
+    const settings: SynthSettings = { provider: PROVIDER, voiceShortName: pick.voiceShortName, accent: pick.accent, outputFormat: AZURE_MP3_FORMAT, rate: pick.rate }
+    const checksum = computeChecksum(transcript, settings)
+
+    // 幂等：checksum 已存在则跳过
+    const { data: existing } = await db.from('audio_assets').select('id').eq('checksum', checksum).limit(1)
+    if (existing && existing.length) { skipped++; continue }
+
+    const storagePath = deterministicStoragePath(settings, checksum)
+    let out
+    try {
+      out = await synthesizeAzure({ text: transcript, voiceShortName: pick.voiceShortName, accent: pick.accent, rate: pick.rate }, creds)
+      synthesized++
+    } catch (e) { failed++; failures.push(`${p.stimulusId}: synth failed (${(e as Error).message})`); continue }
+
+    const vErr = verifySynthOutput(out)
+    if (vErr) { failed++; failures.push(`${p.stimulusId}: bad output (${vErr})`); continue }
+
+    // upload (private bucket, no upsert → duplicate path errors instead of silently overwriting)
+    const up = await db.storage.from(AUDIO_BUCKET).upload(storagePath, out.bytes, { contentType: 'audio/mpeg', upsert: false })
+    if (up.error) {
+      // already-uploaded object for this checksum is fine (idempotent); other errors fail
+      if (!/exists|duplicate/i.test(up.error.message)) { failed++; failures.push(`${p.stimulusId}: upload failed (${up.error.message})`); continue }
+    } else uploaded++
+
+    const { error: insErr } = await db.from('audio_assets').insert({
+      stimulus_id: p.stimulusId,
+      url: storagePath,                 // private bucket: stored value is the object PATH (served via signed URL)
+      storage_path: storagePath,
+      transcript,                       // DB must store transcript; never in practice payload
+      duration_ms: out.durationMs,
+      accent: pick.accent,
+      voice_id: pick.voiceShortName,
+      provider: PROVIDER,
+      checksum,
+      synth_instructions: JSON.stringify({ ...settings, rate: pick.rate }),
+      qa_status: 'machine_checked',     // NEVER active here
+    })
+    if (insErr) {
+      // compensating delete: remove the object we just uploaded so no dangling file remains
+      if (uploaded > 0) await db.storage.from(AUDIO_BUCKET).remove([storagePath]).catch(() => {})
+      // a UNIQUE(checksum) race → treat as skip, not failure
+      if (/duplicate|unique/i.test(insErr.message)) { skipped++; continue }
+      failed++; failures.push(`${p.stimulusId}: insert failed (${insErr.message})`); continue
+    }
+    inserted++
+  }
+
+  writeReport({
+    schema, apply: true, provider: PROVIDER, task: TASK, exam: EXAM || null,
+    counts: { plannedSynthesizable: synthPlans.length, synthesized, skippedExisting: skipped, uploaded, inserted, failed },
+    totalChars, qaStatus: 'machine_checked', neverActive: true,
+    failures: failures.slice(0, 50),
+    note: 'apply：所有新行 machine_checked，绝不 active；幂等按 checksum 跳过；失败补偿删除。',
+  })
+  console.log(`generate-audio APPLY: task=${TASK}${EXAM ? ' exam=' + EXAM : ''} provider=${PROVIDER}`)
+  console.log(`  synthesizable ${synthPlans.length} · synthesized ${synthesized} · skipped(existing) ${skipped} · uploaded ${uploaded} · inserted ${inserted}(machine_checked) · failed ${failed}`)
+  if (failures.length) for (const f of failures.slice(0, 20)) console.error(`  ✗ ${f}`)
   console.log(`  报告：${REPORT_JSON}`)
-  process.exit(0)
+  process.exit(failed > 0 && inserted === 0 ? 1 : 0)
 }
 
 main().catch((e) => {

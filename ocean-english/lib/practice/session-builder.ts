@@ -19,6 +19,7 @@ import {
   isWordUniverseType,
 } from '@/lib/question-bank/question-type-taxonomy'
 import { EXAM_ID_TO_LEVEL, getExamSpec, normalizeExamId } from '@/lib/exam-specs'
+import { signAudioPath } from '@/lib/audio/audio-signing'
 import type {
   BuildPracticeSessionInput,
   PracticeChoice,
@@ -326,12 +327,18 @@ async function tryBuildFromV2(
   const stimulusIds = [...new Set(sets.map((s) => s.stimulus_id).filter((x): x is string => !!x))]
   const stimById = new Map<string, { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }>()
   // 仅取可播放字段：练习载荷绝不下发 transcript（答题后由 audio-asset-client review 模式拉）。
+  // 私有桶：DB 存的是对象路径(storage_path)，此处服务端现签短时 URL 下发，绝不下发公开 URL/路径。
   const audioByStim = new Map<string, { url: string }>()
   if (stimulusIds.length) {
     const { data: stims } = await db.from('stimuli').select('id, kind, title, text_en, text_zh').in('id', stimulusIds).eq('qa_status', 'active')
     for (const s of (stims ?? []) as { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }[]) stimById.set(s.id, s)
-    const { data: auds } = await db.from('audio_assets').select('stimulus_id, url').in('stimulus_id', stimulusIds).eq('qa_status', 'active')
-    for (const a of (auds ?? []) as { stimulus_id: string; url: string }[]) audioByStim.set(a.stimulus_id, { url: a.url })
+    const { data: auds } = await db.from('audio_assets').select('stimulus_id, url, storage_path').in('stimulus_id', stimulusIds).eq('qa_status', 'active')
+    for (const a of (auds ?? []) as { stimulus_id: string; url: string; storage_path: string | null }[]) {
+      const path = a.storage_path ?? a.url
+      const signedUrl = await signAudioPath(path)                              // 私有桶 → 短时签名 https
+      if (signedUrl) audioByStim.set(a.stimulus_id, { url: signedUrl })
+      else if (/^(https?:)?\/\//.test(a.url) || a.url?.startsWith('/')) audioByStim.set(a.stimulus_id, { url: a.url }) // 历史公开 URL 兜底
+    }
   }
 
   const built: PracticeItem[] = []

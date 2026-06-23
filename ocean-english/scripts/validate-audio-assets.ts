@@ -44,7 +44,7 @@ async function pageCol<T>(db: SupabaseClient, table: string, cols: string): Prom
 
 type SetRow = { id: string; task_type: string; stimulus_id: string | null; status: string }
 type ItemRow = { id: string; question_set_id: string; input_mode: string; status: string }
-type AudioRow = { id: string; stimulus_id: string | null; url: string | null; transcript: string | null; duration_ms: number | null; checksum: string | null; provider: string | null; qa_status: string }
+type AudioRow = { id: string; stimulus_id: string | null; url: string | null; storage_path: string | null; transcript: string | null; duration_ms: number | null; checksum: string | null; provider: string | null; qa_status: string; reviewed_by: string | null; reviewed_at: string | null }
 
 function checkClientTranscriptContract(errors: string[]) {
   // 练习模式列绝不含 transcript；复习模式才含。守住「答题前不暴露原文」。
@@ -59,11 +59,19 @@ function checkPracticePayloadContract(errors: string[]) {
     const m = types.match(/audio\?:\s*\{[^}]*\}/)
     if (m && /transcript/.test(m[0])) errors.push('PracticeItem.audio 类型仍含 transcript（练习载荷会下发原文）')
   } catch { /* 文件缺失则跳过 */ }
-  try {
-    const sb = readFileSync('lib/practice/session-builder.ts', 'utf8')
-    const sels = sb.match(/from\('audio_assets'\)\s*\.select\(([^)]*)\)/g) ?? []
-    for (const s of sels) if (/transcript/.test(s)) errors.push('session-builder audio_assets.select 仍含 transcript（练习载荷会下发原文）')
-  } catch { /* 跳过 */ }
+  for (const f of ['lib/practice/session-builder.ts', 'lib/audio/audio-asset-client.ts']) {
+    try {
+      const src = readFileSync(f, 'utf8')
+      // each audio_assets query block (select … through the next ; or maybeSingle/limit) must scope to active + not select transcript in practice
+      const blocks = src.match(/from\('audio_assets'\)[\s\S]{0,400}?(?:maybeSingle\(\)|limit\([^)]*\)|\.in\([^)]*\)\s*\.eq\([^)]*\))/g) ?? []
+      for (const b of blocks) {
+        if (!/qa_status'?\s*,\s*'active'|'active'/.test(b)) errors.push(`${f} 有未限定 qa_status='active' 的 audio_assets 查询（可能下发 machine_checked）`)
+      }
+      // session-builder practice select must not carry transcript
+      const sels = src.match(/from\('audio_assets'\)\s*\.select\(([^)]*)\)/g) ?? []
+      for (const s of sels) if (/transcript/.test(s)) errors.push(`${f} audio_assets.select 仍含 transcript（练习载荷会下发原文）`)
+    } catch { /* 跳过 */ }
+  }
 }
 
 /** 可选 API 级断言：BASE 可达时，校验真实 practice payload 不含 audio.transcript。 */
@@ -116,7 +124,7 @@ async function main() {
 
   const sets = await pageCol<SetRow>(db, 'question_sets', 'id, task_type, stimulus_id, status')
   const items = await pageCol<ItemRow>(db, 'question_items', 'id, question_set_id, input_mode, status')
-  const audio = await pageCol<AudioRow>(db, 'audio_assets', 'id, stimulus_id, url, transcript, duration_ms, checksum, provider, qa_status')
+  const audio = await pageCol<AudioRow>(db, 'audio_assets', 'id, stimulus_id, url, storage_path, transcript, duration_ms, checksum, provider, qa_status, reviewed_by, reviewed_at')
 
   const listenSetIds = new Set(items.filter((i) => i.input_mode === 'listen').map((i) => i.question_set_id))
   const isListening = (s: SetRow) => s.task_type === 'listening_comprehension' || listenSetIds.has(s.id)
@@ -136,12 +144,21 @@ async function main() {
   // 2) 有音频行处校验 url/transcript/duration/checksum/provider 形状 + qa_status 枚举
   const QA = new Set<string>(QBANK_V2_QA_STATUSES)
   for (const a of audio) {
-    if (!a.url || !isPlayableAudioUrl(a.url)) errors.push(`audio_asset ${a.id} url 非法或非可播放: ${a.url ?? 'null'}`)
+    // private-bucket model: stored value is the object PATH (served via short-lived SIGNED url).
+    // Playability is verified on the SIGNED url at serve time (live-payload check), not on the stored path.
+    if (a.storage_path) {
+      if (!a.storage_path.trim()) errors.push(`audio_asset ${a.id} storage_path 空`)
+      if (!a.url || !a.url.trim()) errors.push(`audio_asset ${a.id} url 缺失`)
+    } else if (!a.url || !isPlayableAudioUrl(a.url)) {
+      errors.push(`audio_asset ${a.id} url 非法或非可播放且无 storage_path: ${a.url ?? 'null'}`)
+    }
     if (!a.transcript || !a.transcript.trim()) errors.push(`audio_asset ${a.id} transcript 缺失（DB 必须存原文）`)
     if (a.duration_ms != null && (!Number.isInteger(a.duration_ms) || a.duration_ms <= 0)) errors.push(`audio_asset ${a.id} duration_ms 非正整数: ${a.duration_ms}`)
     if (!a.checksum || !a.checksum.trim()) errors.push(`audio_asset ${a.id} checksum 缺失`)
     if (!a.provider || !a.provider.trim()) errors.push(`audio_asset ${a.id} provider 缺失`)
     if (!QA.has(a.qa_status)) errors.push(`audio_asset ${a.id} qa_status 非法: ${a.qa_status}`)
+    // review gate (decision #10): an asset may only be active with human-review evidence.
+    if (a.qa_status === 'active' && (!a.reviewed_by || !a.reviewed_at)) errors.push(`audio_asset ${a.id} 为 active 但缺人工听审记录(reviewed_by/at)`)
   }
 
   const summary = {

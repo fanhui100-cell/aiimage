@@ -1,15 +1,150 @@
 {
-  "generatedAt": "2026-06-20T15:17:34.389Z",
-  "schema": "not_applied",
+  "generatedAt": "2026-06-23T06:11:52.281Z",
+  "schema": "applied",
   "apply": false,
   "provider": "azure",
+  "task": "listening_comprehension",
+  "exam": null,
   "audioConfigMissing": [
     "SUPABASE_AUDIO_BUCKET",
-    "AUDIO_TTS_API_KEY"
+    "AZURE_SPEECH_KEY",
+    "AZURE_SPEECH_REGION"
   ],
-  "stimuliNeedingAudio": 0,
-  "byExam": {},
-  "byLevel": {},
-  "samples": [],
-  "note": "v2 未应用，无可生成项。"
+  "stimuliNeedingAudio": 20,
+  "synthesizable": 20,
+  "noTranscript": 0,
+  "estimate": {
+    "plannedFiles": 20,
+    "totalChars": 9398,
+    "freeTierChars": 500000,
+    "withinFreeTier": true,
+    "estMinutes": 11,
+    "estCostUsdBeyondFree": 0
+  },
+  "byLevel": {
+    "lv3": 20
+  },
+  "samples": [
+    {
+      "stimulusId": "ea4e3b12-06fa-42b3-8cbf-09fa03b5f1aa",
+      "level": 3,
+      "examIds": [],
+      "chars": 475
+    },
+    {
+      "stimulusId": "9d102b47-d9d6-417b-9baf-f3a51f0e3235",
+      "level": 3,
+      "examIds": [],
+      "chars": 416
+    },
+    {
+      "stimulusId": "686c176f-c1a0-4584-980c-d76da4321490",
+      "level": 3,
+      "examIds": [],
+      "chars": 423
+    },
+    {
+      "stimulusId": "61e72a53-f938-4432-acd7-2147e978ddb4",
+      "level": 3,
+      "examIds": [],
+      "chars": 547
+    },
+    {
+      "stimulusId": "ef877f2a-40a2-4212-b460-e0abc1722092",
+      "level": 3,
+      "examIds": [],
+      "chars": 447
+    },
+    {
+      "stimulusId": "be95feb1-3233-4976-bd7f-80a9a21f3334",
+      "level": 3,
+      "examIds": [],
+      "chars": 477
+    },
+    {
+      "stimulusId": "82792218-242d-42af-b3c3-4c433ad606a7",
+      "level": 3,
+      "examIds": [],
+      "chars": 554
+    },
+    {
+      "stimulusId": "4e538fbc-f09a-416a-90b4-6a639feafac5",
+      "level": 3,
+      "examIds": [],
+      "chars": 436
+    },
+    {
+      "stimulusId": "246978da-3a36-4b21-8b19-e9bdb5c85f58",
+      "level": 3,
+      "examIds": [],
+      "chars": 482
+    },
+    {
+      "stimulusId": "c2cc2546-4f2b-4d1c-8a0f-7950a89f5506",
+      "level": 3,
+      "examIds": [],
+      "chars": 542
+    },
+    {
+      "stimulusId": "61a062a2-3897-45f9-b403-164a6abbf1a3",
+      "level": 3,
+      "examIds": [],
+      "chars": 448
+    },
+    {
+      "stimulusId": "ef82d825-c3d5-414e-ad79-9a4ecc6be619",
+      "level": 3,
+      "examIds": [],
+      "chars": 439
+    },
+    {
+      "stimulusId": "0add4516-57f1-407f-aad7-71ad6d17ec08",
+      "level": 3,
+      "examIds": [],
+      "chars": 435
+    },
+    {
+      "stimulusId": "dc46f414-c4f8-4ad0-91bf-82b10408240c",
+      "level": 3,
+      "examIds": [],
+      "chars": 449
+    },
+    {
+      "stimulusId": "14c699ad-a550-4046-8f88-5f7a8bedd2fc",
+      "level": 3,
+      "examIds": [],
+      "chars": 531
+    },
+    {
+      "stimulusId": "5cdb1e18-7502-44f6-abf1-c20054e0f506",
+      "level": 3,
+      "examIds": [],
+      "chars": 501
+    },
+    {
+      "stimulusId": "54c5c1a5-dc2b-40ff-ace8-7954da121d55",
+      "level": 3,
+      "examIds": [],
+      "chars": 413
+    },
+    {
+      "stimulusId": "4e7a063d-9175-4dc7-a77f-1f3e8c6c5037",
+      "level": 3,
+      "examIds": [],
+      "chars": 476
+    },
+    {
+      "stimulusId": "a3be7711-9b01-4a3e-ab35-913b55a8697a",
+      "level": 3,
+      "examIds": [],
+      "chars": 410
+    },
+    {
+      "stimulusId": "6a27f58c-1fa8-409c-8824-5af8b59098b8",
+      "level": 3,
+      "examIds": [],
+      "chars": 497
+    }
+  ],
+  "note": "dry-run：仅规划 + 成本预估；--apply 才合成/上传/写 machine_checked。"
 }
