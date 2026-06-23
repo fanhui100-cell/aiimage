@@ -40,7 +40,7 @@ const LIMIT = (() => { const n = Number(argValue('--limit')); return Number.isFi
 const EXAM = (argValue('--exam') || '').trim()
 const TASK = (argValue('--task') || 'listening_comprehension').trim()
 const PROVIDER = 'azure'
-const MAX_PER_CELL = 20                                   // decision #8: first batch ≤20 per exam-cell
+const MAX_PER_CELL = (() => { const n = Number(argValue('--cap')); return Number.isFinite(n) && n > 0 ? Math.floor(n) : 20 })() // decision #8: first batch ≤20; --cap raises it for a human-validated cell
 const FREE_TIER_CHARS = 500_000                           // Azure F0: 0.5M chars/month free
 const RATE_USD_PER_1M = 15                                // Azure Neural Std beyond free tier
 const MAX_CHARS = (() => { const n = Number(argValue('--max-chars')); return Number.isFinite(n) && n > 0 ? Math.floor(n) : FREE_TIER_CHARS })()
