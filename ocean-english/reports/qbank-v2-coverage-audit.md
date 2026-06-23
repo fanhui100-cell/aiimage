@@ -1,19 +1,19 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-22T23:40:55.278Z
+Generated: 2026-06-23T13:57:12.598Z
 
-Totals: sets 5056 · items 5922 · active 0 · draft 5056
+Totals: sets 5092 · items 6030 · active 0 · draft 5092
 
-## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 7 · THIN 0 · READY_DRAFT 34 · READY_ACTIVE 0 · BLOCKED 4
+## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 3 · READY_DRAFT 35 · READY_ACTIVE 0 · BLOCKED 3
 
 | exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |
 |---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
-| zhongkao | 1 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| zhongkao | 1 | listening | listening_comprehension | - | choice | Y | - | 12 | 0 | 0 | 36 | 12 | 12 | 0 | 1 | THIN | - |
 | zhongkao | 1 | language_use | grammar_fill | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | zhongkao | 1 | cloze | cloze_passage | - | unknown | - | - | 142 | 0 | 0 | 142 | 142 | 0 | 0 | 0 | READY_DRAFT | - |
 | zhongkao | 1 | reading | reading_comprehension | - | choice | - | - | 50 | 0 | 0 | 200 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | zhongkao | 1 | writing | applied_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
-| gaokao | 2 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| gaokao | 2 | listening | listening_comprehension | - | choice | Y | - | 12 | 0 | 0 | 36 | 12 | 12 | 0 | 1 | THIN | - |
 | gaokao | 2 | reading | reading_comprehension | - | choice | - | - | 50 | 0 | 0 | 200 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | gaokao | 2 | seven_select | seven_select | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 1 | READY_DRAFT | - |
 | gaokao | 2 | cloze | cloze_passage | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 1 | READY_DRAFT | - |
@@ -21,13 +21,13 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | gaokao | 2 | applied_writing | applied_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
 | gaokao | 2 | continuation_writing | continuation_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 50 | 0 | 50 | 1 | READY_DRAFT | - |
 | cet4 | 3 | writing | essay_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
-| cet4 | 3 | listening | listening_comprehension | - | choice | Y | - | 67 | 0 | 0 | 200 | 67 | 0 | 0 | 0 | BLOCKED | audio_missing |
+| cet4 | 3 | listening | listening_comprehension | - | choice | Y | - | 67 | 0 | 0 | 200 | 67 | 67 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | banked_cloze | banked_cloze | - | unknown | - | - | 166 | 0 | 0 | 166 | 166 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | long_match | para_match | - | unknown | - | - | 143 | 0 | 0 | 143 | 143 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | careful_reading | reading_comprehension | - | choice | - | - | 67 | 0 | 0 | 200 | 67 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet4 | 3 | translation | translation_zh_en | - | free_text | - | Y | 55 | 0 | 0 | 55 | 55 | 0 | 55 | 1 | READY_DRAFT | - |
 | cet6 | 4 | writing | essay_writing | - | free_text | - | Y | 50 | 0 | 0 | 50 | 0 | 0 | 50 | 1 | READY_DRAFT | - |
-| cet6 | 4 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| cet6 | 4 | listening | listening_comprehension | - | choice | Y | - | 12 | 0 | 0 | 36 | 12 | 12 | 0 | 1 | THIN | - |
 | cet6 | 4 | banked_cloze | banked_cloze | - | unknown | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 1 | READY_DRAFT | - |
 | cet6 | 4 | long_match | para_match | - | unknown | - | - | 57 | 0 | 0 | 57 | 57 | 0 | 0 | 0 | READY_DRAFT | - |
 | cet6 | 4 | careful_reading | reading_comprehension | - | choice | - | - | 50 | 0 | 0 | 200 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
@@ -54,27 +54,26 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | sat | 7 | expression_of_ideas | reading_comprehension | Expression of Ideas | choice | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 2 | READY_DRAFT | - |
 | sat | 7 | standard_english_conventions | reading_comprehension | Standard English Conventions | choice | - | - | 50 | 0 | 0 | 50 | 50 | 0 | 0 | 1 | READY_DRAFT | - |
 
-### MISSING (draft 0) — 7
+### MISSING (draft 0) — 4
 
-- zhongkao lv1 / listening / listening_comprehension — draft 0
-- gaokao lv2 / listening / listening_comprehension — draft 0
-- cet6 lv4 / listening / listening_comprehension — draft 0
 - toefl lv6 / listening / choose_a_response — draft 0
 - toefl lv6 / listening / listening_comprehension — draft 0
 - toefl lv6 / speaking / listen_and_repeat — draft 0
 - toefl lv6 / speaking / interview_speaking — draft 0
 
-### THIN (0 < draft < 50) — 0
+### THIN (0 < draft < 50) — 3
 
+- zhongkao lv1 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)
+- gaokao lv2 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)
+- cet6 lv4 / listening / listening_comprehension — pool 12 (draft 12/rev 0/active 0, <50)
 
-### BLOCKED — 4
+### BLOCKED — 3
 
-- cet4 lv3 / listening / listening_comprehension — draft 67 · audio_missing
 - toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified
 - toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified
 - toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready
 
-### READY_DRAFT (draft ≥ 50) — 34
+### READY_DRAFT (draft ≥ 50) — 35
 
 - zhongkao lv1 / grammar_fill — draft 50
 - zhongkao lv1 / cloze_passage — draft 142
@@ -87,6 +86,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 - gaokao lv2 / applied_writing — draft 50
 - gaokao lv2 / continuation_writing — draft 50
 - cet4 lv3 / essay_writing — draft 50
+- cet4 lv3 / listening_comprehension — draft 67
 - cet4 lv3 / banked_cloze — draft 166
 - cet4 lv3 / para_match — draft 143
 - cet4 lv3 / reading_comprehension — draft 67
@@ -129,6 +129,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | zhongkao | 1 | en_to_zh | 18 | 18 | 0 | 18 | 0 | 0 | 0 | 18 | 0 | insufficient_active_pool |
 | zhongkao | 1 | grammar_fill | 50 | 50 | 0 | 50 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | zhongkao | 1 | listen_to_meaning | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
+| zhongkao | 1 | listening_comprehension | 12 | 12 | 0 | 36 | 12 | 12 | 0 | 0 | 1 | insufficient_active_pool |
 | zhongkao | 1 | reading_comprehension | 50 | 50 | 0 | 200 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | zhongkao | 1 | seven_select | 19 | 19 | 0 | 19 | 19 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | zhongkao | 1 | synonym_choice | 20 | 20 | 0 | 20 | 0 | 0 | 0 | 20 | 0 | insufficient_active_pool |
@@ -148,6 +149,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | gaokao | 2 | en_to_zh | 38 | 38 | 0 | 38 | 0 | 0 | 0 | 38 | 0 | insufficient_active_pool |
 | gaokao | 2 | grammar_fill | 200 | 200 | 0 | 200 | 200 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | gaokao | 2 | listen_to_meaning | 39 | 39 | 0 | 39 | 0 | 0 | 0 | 39 | 0 | insufficient_active_pool |
+| gaokao | 2 | listening_comprehension | 12 | 12 | 0 | 36 | 12 | 12 | 0 | 0 | 1 | insufficient_active_pool |
 | gaokao | 2 | reading_comprehension | 50 | 50 | 0 | 200 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | gaokao | 2 | seven_select | 50 | 50 | 0 | 50 | 50 | 0 | 0 | 0 | 1 | insufficient_active_pool |
 | gaokao | 2 | synonym_choice | 44 | 44 | 0 | 44 | 0 | 0 | 0 | 44 | 0 | insufficient_active_pool |
@@ -165,7 +167,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | cet4 | 3 | en_to_zh | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
 | cet4 | 3 | essay_writing | 50 | 50 | 0 | 50 | 0 | 0 | 50 | 0 | 1 | insufficient_active_pool |
 | cet4 | 3 | listen_to_meaning | 17 | 17 | 0 | 17 | 0 | 0 | 0 | 17 | 0 | insufficient_active_pool |
-| cet4 | 3 | listening_comprehension | 67 | 67 | 0 | 200 | 67 | 0 | 0 | 0 | 0 | insufficient_active_pool |
+| cet4 | 3 | listening_comprehension | 67 | 67 | 0 | 200 | 67 | 67 | 0 | 0 | 0 | insufficient_active_pool |
 | cet4 | 3 | para_match | 143 | 143 | 0 | 143 | 143 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | cet4 | 3 | reading_comprehension | 67 | 67 | 0 | 200 | 67 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | cet4 | 3 | synonym_choice | 19 | 19 | 0 | 19 | 0 | 0 | 0 | 19 | 0 | insufficient_active_pool |
@@ -184,6 +186,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | cet6 | 4 | en_to_zh | 11 | 11 | 0 | 11 | 0 | 0 | 0 | 11 | 0 | insufficient_active_pool |
 | cet6 | 4 | essay_writing | 50 | 50 | 0 | 50 | 0 | 0 | 50 | 0 | 1 | insufficient_active_pool |
 | cet6 | 4 | listen_to_meaning | 12 | 12 | 0 | 12 | 0 | 0 | 0 | 12 | 0 | insufficient_active_pool |
+| cet6 | 4 | listening_comprehension | 12 | 12 | 0 | 36 | 12 | 12 | 0 | 0 | 1 | insufficient_active_pool |
 | cet6 | 4 | para_match | 57 | 57 | 0 | 57 | 57 | 0 | 0 | 0 | 0 | insufficient_active_pool |
 | cet6 | 4 | reading_comprehension | 50 | 50 | 0 | 200 | 50 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | cet6 | 4 | synonym_choice | 13 | 13 | 0 | 13 | 0 | 0 | 0 | 13 | 0 | insufficient_active_pool |
@@ -243,7 +246,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 | sat | 7 | zh_to_en | 58 | 58 | 0 | 58 | 0 | 0 | 0 | 58 | 0 | insufficient_active_pool |
 | sat | 7 | zh_to_word_spell | 57 | 57 | 0 | 57 | 0 | 0 | 0 | 57 | 0 | insufficient_active_pool |
 
-## C. Active-pool warnings (124)
+## C. Active-pool warnings (127)
 
 - lv1 applied_writing: insufficient_active_pool
 - lv1 cloze_choice: insufficient_active_pool
@@ -256,6 +259,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 - lv1 en_to_zh: insufficient_active_pool
 - lv1 grammar_fill: insufficient_active_pool
 - lv1 listen_to_meaning: insufficient_active_pool
+- lv1 listening_comprehension: insufficient_active_pool
 - lv1 reading_comprehension: insufficient_active_pool
 - lv1 seven_select: insufficient_active_pool
 - lv1 synonym_choice: insufficient_active_pool
@@ -275,6 +279,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 - lv2 en_to_zh: insufficient_active_pool
 - lv2 grammar_fill: insufficient_active_pool
 - lv2 listen_to_meaning: insufficient_active_pool
+- lv2 listening_comprehension: insufficient_active_pool
 - lv2 reading_comprehension: insufficient_active_pool
 - lv2 seven_select: insufficient_active_pool
 - lv2 synonym_choice: insufficient_active_pool
@@ -311,6 +316,7 @@ Totals: sets 5056 · items 5922 · active 0 · draft 5056
 - lv4 en_to_zh: insufficient_active_pool
 - lv4 essay_writing: insufficient_active_pool
 - lv4 listen_to_meaning: insufficient_active_pool
+- lv4 listening_comprehension: insufficient_active_pool
 - lv4 para_match: insufficient_active_pool
 - lv4 reading_comprehension: insufficient_active_pool
 - lv4 synonym_choice: insufficient_active_pool

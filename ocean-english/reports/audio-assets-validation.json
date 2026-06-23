@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-20T21:21:03.756Z",
+  "generatedAt": "2026-06-23T13:56:39.704Z",
   "status": "applied",
   "counts": {
-    "listeningSets": 467,
+    "listeningSets": 503,
     "activeListeningSets": 0,
-    "draftListeningWithoutAudio": 467,
-    "audioRows": 0,
-    "activeAudioRows": 0
+    "draftListeningWithoutAudio": 400,
+    "audioRows": 103,
+    "activeAudioRows": 103
   },
   "clientTranscriptContract": "enforced",
   "practicePayloadContract": "enforced",
