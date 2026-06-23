@@ -1,0 +1,1446 @@
+{
+  "template": "zhongkao-listening-mcq",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Hi Daniel, are you joining the school sports meet next Friday? Yes, Ms. Lee! I want to run the eight-hundred-meter race. Wow, that's a long one. I usually run the one-hundred-meter, but this year I'd like to try something harder. Good for you. Have you been training? Yes, I run around the park every morning before breakfast. That's about two kilometers. That's great practice. Just remember to drink water and rest well the night before. I will. I really hope I can finish in the top three this time.",
+      "questions": [
+        {
+          "prompt": "Which race does Daniel want to run this year?",
+          "options": [
+            "The 100-meter race",
+            "The 800-meter race",
+            "The 200-meter race",
+            "The 400-meter race"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When does Daniel train?",
+          "options": [
+            "After dinner",
+            "At noon",
+            "Every morning before breakfast",
+            "On weekends only"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we learn about Daniel from the talk?",
+          "options": [
+            "He is afraid of the race",
+            "He wants to challenge himself",
+            "He has never run before",
+            "He plans to skip the sports meet"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：Daniel说想跑八百米（B）。细节题：他每天早饭前在公园跑步（C）。推断题：今年想尝试更难的项目，说明他想挑战自己（B）。"
+    },
+    {
+      "passage": "Good morning, everyone. This is your PE teacher with an announcement about the school sports meet. As you know, it was planned for this Saturday. However, the weather report says it will rain heavily all day Saturday. So we have decided to move the sports meet to next Monday afternoon. Please tell your parents about the change. Bring your sports shoes and your team T-shirts. The first event will be the long jump at two o'clock. Let's all do our best and have fun. Thank you.",
+      "questions": [
+        {
+          "prompt": "Why is the sports meet changed to another day?",
+          "options": [
+            "The teacher is sick",
+            "It will rain heavily on Saturday",
+            "The playground is broken",
+            "Too few students signed up"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which event will start first?",
+          "options": [
+            "The long jump",
+            "The relay race",
+            "The high jump",
+            "The 800-meter race"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the main purpose of this announcement?",
+          "options": [
+            "To teach students how to jump",
+            "To tell students the new time and what to bring",
+            "To introduce a new PE teacher",
+            "To report the weather for the week"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：因周六大雨而改期（B）。细节题：第一个项目是跳远，两点开始（A）。主旨题：通知的目的是告知新时间和需带物品（B）。"
+    },
+    {
+      "passage": "Excuse me, I'd like to keep this book a little longer. May I renew it? Sure. Let me check your card. Okay, the book is about Chinese history. You borrowed it two weeks ago, and it is due tomorrow. Yes, I haven't finished reading it yet. No problem. I can renew it for one more week. So the new due date is next Thursday. Great, thank you so much. You're welcome. Just remember, you can only renew it once. After that, you must return it. I understand. I'll finish it by then.",
+      "questions": [
+        {
+          "prompt": "What does the reader want to do?",
+          "options": [
+            "Borrow a new book",
+            "Renew the book to keep it longer",
+            "Return a lost book",
+            "Pay a fine"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When is the new due date?",
+          "options": [
+            "Tomorrow",
+            "This Thursday",
+            "Next Thursday",
+            "In two weeks"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we infer from the talk?",
+          "options": [
+            "The reader can renew the book many times",
+            "The reader must return the book after one more week",
+            "The book is about science",
+            "The reader has already finished the book"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：读者想续借书以便多看几天（B）。细节题：新到期日是下周四（C）。推断题：只能续借一次，所以一周后必须归还（B）。"
+    },
+    {
+      "passage": "Hello, I'm looking for a book about how plants grow. Can you help me? Of course. Books about plants are in the science section on the second floor. Oh, I see. Is there a lift? Yes, the lift is just behind you, next to the reading room. Thank you. By the way, how many books can I borrow at one time? Students can borrow up to five books for two weeks. That's enough for me. And please keep the books clean. If a book is damaged, you may have to pay for it. Okay, I'll be careful.",
+      "questions": [
+        {
+          "prompt": "Where can the student find books about plants?",
+          "options": [
+            "In the reading room",
+            "In the science section on the second floor",
+            "Near the front door",
+            "On the first floor"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How many books can a student borrow at one time?",
+          "options": [
+            "Two books",
+            "Three books",
+            "Five books",
+            "Ten books"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the librarian remind the student to do?",
+          "options": [
+            "Return books in one day",
+            "Keep the books clean",
+            "Read only in the library",
+            "Pay before borrowing"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：植物类书在二楼科学区（B）。细节题：一次最多借五本（C）。细节题：管理员提醒保持书本干净（B）。"
+    },
+    {
+      "passage": "Attention, please. This is a lost-and-found notice. A blue school bag was found this afternoon near the basketball court. Inside the bag, there is an English textbook, a pencil case, and a pair of glasses. If this bag is yours, please come to the school office before five o'clock today. You will need to tell us your name and what color your pencil case is. The office is on the first floor, next to the gate. Please come quickly, because the owner may need the glasses. Thank you for listening.",
+      "questions": [
+        {
+          "prompt": "Where was the bag found?",
+          "options": [
+            "In the library",
+            "Near the basketball court",
+            "In the classroom",
+            "At the school gate"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is NOT inside the bag?",
+          "options": [
+            "An English textbook",
+            "A pencil case",
+            "A pair of glasses",
+            "A water bottle"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the speaker ask the owner to come quickly?",
+          "options": [
+            "The office will close forever",
+            "The owner may need the glasses",
+            "The bag is very dirty",
+            "The textbook is missing"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：书包在篮球场附近被发现（B）。细节题：包里有课本、文具盒、眼镜，没有水瓶（D）。推断/细节题：因为失主可能需要眼镜，所以请尽快来（B）。"
+    },
+    {
+      "passage": "Hi, is this the lost-and-found desk? Yes, it is. How can I help you? I lost my watch this morning. I think I left it in the music room. What does your watch look like? It's a small silver watch with a black band. My grandfather gave it to me, so it's really important to me. Let me check the box. Hmm, we have two watches here. One is silver, and one is gold. Oh, the silver one must be mine! Please look carefully. Is there anything special on it? Yes, there are three little stars on the back. You're right. This one is yours. Here you are.",
+      "questions": [
+        {
+          "prompt": "Where did the student leave the watch?",
+          "options": [
+            "In the music room",
+            "In the gym",
+            "On the bus",
+            "At home"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How does the student prove the watch is hers?",
+          "options": [
+            "By showing a photo",
+            "By saying there are three stars on the back",
+            "By telling the price",
+            "By showing a receipt"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why is the watch important to the student?",
+          "options": [
+            "It is made of gold",
+            "It was a gift from her grandfather",
+            "It is very expensive",
+            "It can play music"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：手表落在音乐室（A）。细节题：靠背面三颗星证明是自己的（B）。细节题：手表是爷爷送的礼物，所以重要（B）。"
+    },
+    {
+      "passage": "Hey Sophie, this Saturday is my birthday. Can you come to my party? I'd love to! Happy early birthday, Tom. Thank you. The party starts at three in the afternoon at my house. We'll have a big chocolate cake and play some games in the garden. That sounds fun. Should I bring anything? You don't need to bring a present, but maybe bring your camera. We want lots of photos. No problem. I'll be there at three. Oh, and please wear comfortable shoes, because we will dance too. Great, see you on Saturday!",
+      "questions": [
+        {
+          "prompt": "What time does the party start?",
+          "options": [
+            "At two o'clock",
+            "At three o'clock",
+            "At four o'clock",
+            "At five o'clock"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Tom ask Sophie to bring?",
+          "options": [
+            "A present",
+            "A cake",
+            "Her camera",
+            "Some food"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why should Sophie wear comfortable shoes?",
+          "options": [
+            "Because they will dance",
+            "Because they will run a race",
+            "Because the floor is wet",
+            "Because they will walk to school"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：派对下午三点开始（B）。细节题：Tom让Sophie带相机（C）。推断/细节题：因为要跳舞，所以穿舒适的鞋（A）。"
+    },
+    {
+      "passage": "Listen, everyone. Tomorrow is Grandma's seventieth birthday, and we want to give her a surprise. Here is the plan. Dad will take Grandma out for a walk at four o'clock. While they are out, we will decorate the living room with balloons and flowers. Lily, please make the fruit salad, because Grandma loves fruit. I will hide the gift, a warm red scarf, under the table. When Grandma comes back, please keep quiet until I turn on the lights. Then we all shout 'Happy Birthday!' together. Let's make this the best birthday ever for her.",
+      "questions": [
+        {
+          "prompt": "What is the gift for Grandma?",
+          "options": [
+            "A fruit salad",
+            "A warm red scarf",
+            "Some balloons",
+            "A bunch of flowers"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is Lily asked to do?",
+          "options": [
+            "Take Grandma for a walk",
+            "Hide the gift",
+            "Make the fruit salad",
+            "Turn on the lights"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the main idea of this talk?",
+          "options": [
+            "Planning a surprise birthday party for Grandma",
+            "Teaching how to make fruit salad",
+            "Asking Grandma to go shopping",
+            "Buying balloons for a shop"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：礼物是一条暖和的红围巾（B）。细节题：Lily被安排做水果沙拉（C）。主旨题：全文在计划给奶奶的惊喜生日派对（A）。"
+    },
+    {
+      "passage": "Good morning, class. Let me tell you about some changes in our timetable this term. On Monday, we will have math in the first class, not English. English will now be on Tuesday morning. We are also adding a new subject called art. Art class will be every Thursday afternoon, and you should bring your own colored pencils. PE will stay the same, on Friday afternoon. Please write these changes in your notebook. If you have any questions about the new timetable, come and ask me after class. Let's have a wonderful term together.",
+      "questions": [
+        {
+          "prompt": "What is the first class on Monday now?",
+          "options": [
+            "English",
+            "Math",
+            "Art",
+            "PE"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should students bring to the art class?",
+          "options": [
+            "Their own colored pencils",
+            "A football",
+            "An English book",
+            "A music player"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we learn from the talk?",
+          "options": [
+            "PE has moved to Monday",
+            "Art is a new subject this term",
+            "English is on Monday morning",
+            "There is no math this term"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：周一第一节现在是数学（B）。细节题：上美术课要带自己的彩色铅笔（A）。推断/细节题：美术是本学期新增的科目（B）。"
+    },
+    {
+      "passage": "Emma, do you know what classes we have this afternoon? Let me see the timetable. After lunch, we have history first, and then geography. Oh good, I love history. Me too. But I forgot my geography book at home again. Don't worry, you can share mine. Thanks! By the way, when do we have the science test? It's tomorrow morning, the second class. We'd better study tonight. You're right. Let's go to the library after school and review together. Good idea. I really don't want to fail this time.",
+      "questions": [
+        {
+          "prompt": "What is the first class this afternoon?",
+          "options": [
+            "History",
+            "Geography",
+            "Science",
+            "Math"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "When is the science test?",
+          "options": [
+            "This afternoon",
+            "Tonight",
+            "Tomorrow morning",
+            "Next week"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What will the two students do after school?",
+          "options": [
+            "Go home to rest",
+            "Go to the library to review together",
+            "Play sports",
+            "Buy a new geography book"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：下午第一节是历史（A）。细节题：科学测验在明天上午（C）。细节题：放学后两人要去图书馆一起复习（B）。"
+    },
+    {
+      "passage": "Hi, Tom. This is Coach Lee. I'm calling about Saturday's soccer practice. I'm sorry, but we have to cancel it because the rain will make the field too wet to play. Don't worry — we will train next Monday at four o'clock instead. Please remember to bring your water bottle and your new shoes. Also, could you tell your friend Jack about this change? I can't reach his phone. Thank you, and see you on Monday!",
+      "questions": [
+        {
+          "prompt": "Why is Saturday's practice canceled?",
+          "options": [
+            "Because the coach is sick",
+            "Because the field will be too wet from rain",
+            "Because there are not enough players",
+            "Because the shoes are broken"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When will the team train instead?",
+          "options": [
+            "Next Monday at four o'clock",
+            "Next Sunday morning",
+            "This Saturday afternoon",
+            "Next Friday at five o'clock"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does Coach Lee ask Tom to do for Jack?",
+          "options": [
+            "Lend Jack some shoes",
+            "Pick Jack up on Monday",
+            "Tell Jack about the change",
+            "Call the coach back"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：教练因下雨导致场地太湿而取消周六训练，故选B。第二题明确说改到下周一四点，选A。推断/细节题：教练联系不上Jack，请Tom转告这个变动，选C。"
+    },
+    {
+      "passage": "Anna says, \"Hi, Ben! Are you free this weekend? I'm going to be a volunteer at the city library. They need people to read stories to little kids.\" Ben answers, \"That sounds fun! But I'm not very good at reading aloud.\" Anna says, \"Don't worry. You can help me put books back on the shelves instead. We start at nine in the morning and finish at noon.\" Ben replies, \"Okay, I'd love to come. Should I bring anything?\" Anna says, \"Just wear comfortable shoes. We'll be walking a lot!\"",
+      "questions": [
+        {
+          "prompt": "Where will Anna volunteer this weekend?",
+          "options": [
+            "At a hospital",
+            "At the city library",
+            "At a school",
+            "At a park"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will Ben do at the library?",
+          "options": [
+            "Read stories to children",
+            "Clean the windows",
+            "Put books back on the shelves",
+            "Sell tickets"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does Anna suggest Ben should bring or wear?",
+          "options": [
+            "A warm coat",
+            "Comfortable shoes",
+            "Some snacks",
+            "A favorite book"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：Anna要去市图书馆做志愿者，选B。Ben不擅长朗读，改为帮忙把书放回书架，选C。结尾Anna让他穿舒适的鞋，因为要走很多路，选B。"
+    },
+    {
+      "passage": "Hello, Mrs. Green. This is Lucy from next door. You asked me to take care of your cat, Coco, while you are away. I just want to tell you that Coco is doing great. I feed her twice a day, in the morning and in the evening. She loves the fish food best. Yesterday she didn't want to eat much, so I was a little worried. But today she ate everything and played with her toy mouse. Please don't worry and enjoy your trip. See you next week!",
+      "questions": [
+        {
+          "prompt": "What is Lucy doing for Mrs. Green?",
+          "options": [
+            "Watering her plants",
+            "Cleaning her house",
+            "Taking care of her cat",
+            "Walking her dog"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How often does Lucy feed Coco?",
+          "options": [
+            "Once a day",
+            "Twice a day",
+            "Three times a day",
+            "Only in the evening"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why was Lucy worried yesterday?",
+          "options": [
+            "Coco didn't want to eat much",
+            "Coco ran away from home",
+            "Coco broke her toy",
+            "Coco was sleeping all day"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "主旨/细节题：Lucy在帮邻居照顾猫Coco，选C。她一天喂两次（早晚），选B。昨天Lucy担心是因为Coco不太想吃东西，选A。"
+    },
+    {
+      "passage": "Good morning, everyone! Welcome to our Beach Cleanup Day. Thank you all for coming so early. Today our job is to pick up the rubbish on the beach and keep it clean for the sea animals. Each of you will get a pair of gloves and a big bag. Please put plastic bottles in the blue bag and other rubbish in the black bag. Remember, do not touch any broken glass with your hands. If you find some, just call a teacher. We will work for two hours and then have a free lunch together. Let's make our beach beautiful again!",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the activity?",
+          "options": [
+            "To swim in the sea",
+            "To clean up rubbish on the beach",
+            "To build sandcastles",
+            "To watch sea animals"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where should people put plastic bottles?",
+          "options": [
+            "In the black bag",
+            "In the blue bag",
+            "In the rubbish bin",
+            "In their pockets"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should people do if they find broken glass?",
+          "options": [
+            "Pick it up with their hands",
+            "Put it in the blue bag",
+            "Call a teacher",
+            "Leave the beach"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "主旨题：活动目的是清理海滩垃圾，保护海洋动物，选B。细节题：塑料瓶放进蓝色袋子，选B。遇到碎玻璃不要用手碰，要叫老师，选C。"
+    },
+    {
+      "passage": "Attention, please! This is an important message from the school office. Starting next week, the school library will open one hour earlier, at seven thirty in the morning. This will give students more time to read and study before classes begin. The library will still close at five in the afternoon. Also, we have just received many new science books, and they are now on the second floor. If you want to borrow them, please show your student card. Thank you for listening, and have a wonderful day!",
+      "questions": [
+        {
+          "prompt": "What time will the library open next week?",
+          "options": [
+            "At seven o'clock",
+            "At seven thirty",
+            "At eight o'clock",
+            "At five o'clock"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main news in this announcement?",
+          "options": [
+            "The library will change its opening time and has new books",
+            "The school will have a holiday",
+            "Students must return all books",
+            "The library will close down"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What do students need to borrow the new science books?",
+          "options": [
+            "Some money",
+            "A teacher's letter",
+            "Their student card",
+            "A library map"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：下周图书馆提前到早上七点半开门，选B。主旨题：通知主要讲图书馆开放时间变更并到了新书，选A。借新科学书需出示学生卡，选C。"
+    },
+    {
+      "passage": "Hello, this is a message for Mr. Brown from Sunshine Dental Clinic. We are calling about your son David's appointment. It was for this Thursday at three o'clock, but the dentist will be away that day. Could David come on Friday at the same time instead? If Friday works for you, you don't need to call back. But if it doesn't, please call us at 555-0182 before Wednesday. Please also remind David not to eat sweets before his visit. Thank you very much.",
+      "questions": [
+        {
+          "prompt": "Why is the clinic calling Mr. Brown?",
+          "options": [
+            "To say David is late",
+            "To change David's appointment day",
+            "To ask for money",
+            "To cancel the visit forever"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When does the clinic want David to come now?",
+          "options": [
+            "Thursday at three o'clock",
+            "Wednesday morning",
+            "Friday at three o'clock",
+            "Friday at five o'clock"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What should Mr. Brown do if Friday does NOT work?",
+          "options": [
+            "Just come on Thursday",
+            "Call the clinic before Wednesday",
+            "Send an email",
+            "Do nothing"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "主旨题：诊所打电话是要改约看牙的日子，选B。原本周四三点，因牙医不在，改到周五同一时间，选C。如果周五不行，需在周三前回电，选B。"
+    },
+    {
+      "passage": "Mr. Wang says, \"Class, next Saturday we are going to visit the old people's home as volunteers. I hope each of you can prepare a short show.\" Mary asks, \"Can I sing a song? I love singing.\" Mr. Wang answers, \"That's a great idea, Mary. The old people will be happy to hear it.\" Then Peter says, \"I'm too shy to perform. Can I do something else?\" Mr. Wang says, \"Of course, Peter. You can help us bring tea and fruit to them, and chat with them. That's just as important.\"",
+      "questions": [
+        {
+          "prompt": "Where will the class go as volunteers?",
+          "options": [
+            "To a hospital",
+            "To an old people's home",
+            "To a kindergarten",
+            "To a farm"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Mary want to do for the old people?",
+          "options": [
+            "Sing a song",
+            "Tell a story",
+            "Dance",
+            "Draw pictures"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we learn about Peter?",
+          "options": [
+            "He loves singing on stage",
+            "He feels shy about performing",
+            "He doesn't want to go",
+            "He will play the piano"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：全班要去敬老院做志愿者，选B。Mary想唱歌，选A。推断题：Peter说自己太害羞不敢表演，可知他对上台表演感到害羞，选B。"
+    },
+    {
+      "passage": "Emma says, \"Dad, look! Our new puppy is so cute. What should we call him?\" Dad answers, \"How about Lucky? He looks like a lucky little dog.\" Emma says, \"I love that name! Can I take him for a walk now?\" Dad replies, \"Not yet, Emma. He's still too young and small. First, we need to take him to the animal doctor next week. After that, he can go outside safely.\" Emma asks, \"Okay. Can I at least give him some water?\" Dad smiles and says, \"Yes, that's a good way to start taking care of him.\"",
+      "questions": [
+        {
+          "prompt": "What name do they choose for the puppy?",
+          "options": [
+            "Coco",
+            "Lucky",
+            "Happy",
+            "Max"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why can't Emma take the puppy for a walk now?",
+          "options": [
+            "It is raining",
+            "The puppy is too young and small",
+            "Emma is busy",
+            "The puppy is sleeping"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will they do with the puppy next week?",
+          "options": [
+            "Take him to the animal doctor",
+            "Give him a bath",
+            "Take him for a long run",
+            "Buy him new toys"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：他们给小狗取名Lucky，选B。Emma现在不能遛狗，因为小狗太小太年幼，选B。下周要带小狗去看兽医（动物医生），选A。"
+    },
+    {
+      "passage": "Hello, friends! Spring is here, and it's time for our school Tree Planting Day. This Friday afternoon, all students in Grade Nine will plant young trees on the hill behind the school. Trees give us fresh air and a home for birds, so this is good for everyone. Please wear old clothes because you may get dirty. The school will give you the small trees and tools, so you don't need to bring your own. Let's work together to make our school greener. We can't wait to see the trees grow tall with you!",
+      "questions": [
+        {
+          "prompt": "When will the Tree Planting Day take place?",
+          "options": [
+            "This Friday afternoon",
+            "This Saturday morning",
+            "Next Monday",
+            "This Friday evening"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why is planting trees good, according to the speaker?",
+          "options": [
+            "It makes money for the school",
+            "It gives fresh air and a home for birds",
+            "It is a kind of sport",
+            "It helps students get high marks"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should students prepare by themselves?",
+          "options": [
+            "Small trees",
+            "Tools",
+            "Old clothes",
+            "Water bottles"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：种树日在本周五下午，选A。讲话者说种树能带来新鲜空气并为鸟儿提供家，选B。学校提供树苗和工具，学生只需自备旧衣服，选C。"
+    },
+    {
+      "passage": "Good afternoon, students! This is your sports teacher with news about our school sports meeting. It will be held this Wednesday on the playground, starting at nine in the morning. The weather report says it may be very hot, so please bring a hat and plenty of water. Students who join the running races should come to the gate by eight thirty. Parents are welcome to watch and cheer for us. If it rains, the sports meeting will be moved to next Wednesday. Let's all do our best and have fun!",
+      "questions": [
+        {
+          "prompt": "What time does the sports meeting start?",
+          "options": [
+            "At eight thirty",
+            "At nine in the morning",
+            "At ten in the morning",
+            "In the afternoon"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why should students bring a hat and water?",
+          "options": [
+            "Because it will be very cold",
+            "Because it will be very hot",
+            "Because it will rain",
+            "Because the race is long"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will happen if it rains on Wednesday?",
+          "options": [
+            "The meeting will be canceled forever",
+            "The meeting will start later that day",
+            "The meeting will be moved to next Wednesday",
+            "Only running races will be held"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：运动会本周三早上九点开始，选B。因为天气会很热，所以要带帽子和水，选B。推断/细节题：如果下雨，运动会改到下周三，选C。"
+    },
+    {
+      "passage": "Hey, do you want to see the new space movie this Saturday? I heard it's really exciting. Sure, I'd love to! What time does it start? There are two shows. One is at two in the afternoon, and the other is at seven in the evening. Let's take the afternoon one. I have to be home for dinner by six thirty. Okay, the afternoon show works for me too. Tickets are forty yuan each. I'll buy them online tonight so we don't have to wait in line.",
+      "questions": [
+        {
+          "prompt": "What kind of movie are the two friends planning to see?",
+          "options": [
+            "A space movie",
+            "A love story",
+            "A cartoon",
+            "A history film"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which show will they choose?",
+          "options": [
+            "The seven o'clock evening show",
+            "The two o'clock afternoon show",
+            "A morning show",
+            "A late-night show"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker prefer the earlier show?",
+          "options": [
+            "The tickets are cheaper then",
+            "The evening show is sold out",
+            "He needs to be home for dinner",
+            "He has homework in the evening"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：明确说要看 space movie（太空电影），故选A。细节题：因为要六点半前回家吃饭，所以选下午两点场，选B。推断题：说话人说必须六点半前回家吃晚饭，故选下午场，原因是C。"
+    },
+    {
+      "passage": "Excuse me, does this bus go to the City Library? No, this is bus number five. It goes to the train station. You need bus number twelve for the library. Oh, thank you. Where can I catch bus twelve? Just cross the street and wait at the stop in front of the bank. It comes every ten minutes. Great. How many stops is it to the library? About four stops. It takes around fifteen minutes. You're welcome. Have a nice day!",
+      "questions": [
+        {
+          "prompt": "Where does the traveler want to go?",
+          "options": [
+            "The train station",
+            "The bank",
+            "The City Library",
+            "The bus company"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Which bus should the traveler take?",
+          "options": [
+            "Bus number five",
+            "Bus number twelve",
+            "Bus number four",
+            "Bus number ten"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can we learn about bus number twelve?",
+          "options": [
+            "It comes every ten minutes",
+            "It stops at the train station",
+            "It only runs in the morning",
+            "It is free for students"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：旅客想去 City Library（市图书馆），选C。细节题：去图书馆要坐12路车，选B。推断/细节题：对话说12路车每十分钟来一趟，故选A。"
+    },
+    {
+      "passage": "Mom, I finished my homework. Can I help you with anything? That's so kind of you, Tom. Could you please wash the dishes after dinner? Sure, no problem. Anything else? Well, the floor is a little dirty. Maybe you could sweep the living room too. Okay, I'll do the dishes first and then sweep the floor. Thank you, dear. You're growing up so fast. When you finish, you can watch your favorite show. That sounds great, Mom!",
+      "questions": [
+        {
+          "prompt": "What does Tom offer to do first?",
+          "options": [
+            "Sweep the floor",
+            "Cook dinner",
+            "Wash the dishes",
+            "Do his homework"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the main idea of this conversation?",
+          "options": [
+            "Tom helps his mother with housework",
+            "Tom is too busy to help",
+            "Tom wants more pocket money",
+            "Tom is cleaning his bedroom"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What will Tom probably do after the chores?",
+          "options": [
+            "Go to bed",
+            "Watch his favorite show",
+            "Go outside to play",
+            "Start more homework"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：Tom 说先洗碗再扫地，第一件事是洗碗，选C。主旨题：整段讲 Tom 帮妈妈做家务，选A。推断题：妈妈说做完可以看喜欢的节目，故选B。"
+    },
+    {
+      "passage": "What are you going to do this summer vacation, Lucy? I'm going to visit my grandparents in the countryside. I can't wait! How long will you stay there? About three weeks. They have a big garden and even some chickens. That sounds fun. Will you do anything else? Yes, my grandpa promised to teach me how to fish. And in the evenings, we'll watch the stars. They're so bright there. I'm a little jealous! Maybe I'll join you next year.",
+      "questions": [
+        {
+          "prompt": "Where will Lucy spend her summer vacation?",
+          "options": [
+            "At a beach",
+            "In a big city",
+            "At her grandparents' home in the countryside",
+            "At a summer camp"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What new skill will Lucy learn during the vacation?",
+          "options": [
+            "How to fish",
+            "How to cook",
+            "How to swim",
+            "How to ride a horse"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How does Lucy feel about her summer plan?",
+          "options": [
+            "Worried",
+            "Excited",
+            "Bored",
+            "Afraid"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：Lucy 要去乡下爷爷奶奶家，选C。细节题：爷爷答应教她钓鱼，选A。推断题：她说 can't wait（迫不及待），表现出兴奋，选B。"
+    },
+    {
+      "passage": "Attention, please, everyone. Next Friday afternoon, our class will hold a reading party in the school hall. Each student should bring one favorite book to share with others. You can talk about why you like it and read a short part aloud. There will be a small prize for the best speaker. Please write your name on the sign-up sheet by Wednesday so we know how many students will join. Let's make it a fun afternoon together. Thank you!",
+      "questions": [
+        {
+          "prompt": "What event is being announced?",
+          "options": [
+            "A sports meeting",
+            "A reading party",
+            "A music show",
+            "A school trip"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should each student bring to the event?",
+          "options": [
+            "A favorite book",
+            "Some food",
+            "A music CD",
+            "A drawing"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What must students do by Wednesday?",
+          "options": [
+            "Buy a ticket",
+            "Finish a book report",
+            "Sign up their names",
+            "Choose a prize"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "主旨题：通知关于班级读书会（reading party），选B。细节题：每人要带一本最喜欢的书，选A。细节题：周三前要在报名表上写名字，选C。"
+    },
+    {
+      "passage": "I really enjoyed the movie last night. The story about the brave little dog made me cry. Me too! I didn't expect the ending at all. I thought the dog would get lost forever. But it found its way home. That part was so touching. Yeah. My favorite scene was when it helped the old man cross the river. The pictures were beautiful too. Should we tell our classmates to watch it? Definitely. I think everyone in our class would love this film.",
+      "questions": [
+        {
+          "prompt": "What was the movie mainly about?",
+          "options": [
+            "A brave little dog",
+            "A tall mountain",
+            "A famous singer",
+            "A big city"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How did the speakers feel about the ending?",
+          "options": [
+            "Bored",
+            "Surprised",
+            "Angry",
+            "Sleepy"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will the two speakers probably do next?",
+          "options": [
+            "Watch the movie again tonight",
+            "Forget about the film",
+            "Recommend the film to classmates",
+            "Write a letter to the director"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "主旨题：电影讲一只勇敢的小狗，选A。推断题：说 didn't expect the ending（没想到结局），表示惊讶，选B。推断题：他们决定推荐给同学，选C。"
+    },
+    {
+      "passage": "Oh no, I think we got on the wrong subway line. Really? This is Line Two. We wanted Line Three, didn't we? Yes. We should have changed trains at the last station. Don't worry. Let's get off at the next stop and go back one station. Then we can change to Line Three there. Okay. How much time do we have? The movie starts at three, and it's only one thirty now. Good, we still have enough time. Let's hurry.",
+      "questions": [
+        {
+          "prompt": "What problem do the two people have?",
+          "options": [
+            "They lost their tickets",
+            "They took the wrong subway line",
+            "They missed the last train",
+            "They forgot their money"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What do they decide to do?",
+          "options": [
+            "Take a taxi instead",
+            "Wait for a friend",
+            "Get off and change to Line Three",
+            "Go home"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we learn from the conversation?",
+          "options": [
+            "They will still arrive in time for the movie",
+            "The movie has already started",
+            "They will miss the movie",
+            "The subway is closed"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：他们上错了地铁线（坐了2号线，本想坐3号线），选B。细节题：决定下车再换乘3号线，选C。推断题：现在1:30，电影3点开始，时间够，选A。"
+    },
+    {
+      "passage": "Dad, it's Saturday morning. What jobs can I do today? Good morning, Lily. Your mom and I are cleaning the kitchen. Could you take care of the garden? Sure. What do you need me to do out there? Please water the flowers and pull out the weeds. The watering can is by the door. No problem. Should I feed the cat too? Yes, please. Her food is in the box on the shelf. Thanks, Lily. After lunch, we'll all go to the park together.",
+      "questions": [
+        {
+          "prompt": "What is Lily asked to take care of?",
+          "options": [
+            "The kitchen",
+            "The garden",
+            "The bedroom",
+            "The car"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which task is NOT mentioned for Lily to do?",
+          "options": [
+            "Water the flowers",
+            "Pull out the weeds",
+            "Feed the cat",
+            "Wash the windows"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What will the family do after lunch?",
+          "options": [
+            "Clean the kitchen again",
+            "Go to the park together",
+            "Watch a movie",
+            "Visit grandparents"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：Lily 被叫去照料花园（garden），选B。细节题：浇花、拔草、喂猫都提到了，没提擦窗户，选D。细节题：午饭后全家一起去公园，选B。"
+    },
+    {
+      "passage": "Class, before the summer holiday starts, I want to share some ideas. Summer is a great time to learn something new. Some of you may want to take a swimming class, while others may enjoy reading books at the library. Remember to spend time outside and exercise every day. Try not to look at your phone for too long. Also, please finish your summer homework little by little, not all in the last week. Have a safe and happy holiday, everyone!",
+      "questions": [
+        {
+          "prompt": "Who is most likely giving this talk?",
+          "options": [
+            "A doctor",
+            "A teacher",
+            "A bus driver",
+            "A shop owner"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main idea of the talk?",
+          "options": [
+            "Advice for spending the summer holiday well",
+            "How to swim safely",
+            "Rules for using the library",
+            "How to buy a new phone"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the speaker suggest about summer homework?",
+          "options": [
+            "Skip it",
+            "Do it all in the last week",
+            "Finish it little by little",
+            "Ask a friend to do it"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "推断题：称呼 Class 并谈假期安排，最可能是老师，选B。主旨题：整段是关于如何过好暑假的建议，选A。细节题：建议作业一点一点做，选C。"
+    },
+    {
+      "passage": "Did you hear about the class trip next month? Yes! We're going to the science museum. I'm so excited. Me too. I love the part about robots and space. Do you know how we'll get there? The teacher said we'll take a school bus. We need to be at school by eight in the morning. Should we bring our own lunch? Yes, and a bottle of water. The museum is far, so the trip will take the whole day. I can't wait. Let's sit together on the bus!",
+      "questions": [
+        {
+          "prompt": "Where is the class going on the trip?",
+          "options": [
+            "A science museum",
+            "A zoo",
+            "A farm",
+            "A beach"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How will the class get to the place?",
+          "options": [
+            "By subway",
+            "By school bus",
+            "By bike",
+            "On foot"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should the students bring?",
+          "options": [
+            "A camera and a map",
+            "Their own lunch and water",
+            "A football",
+            "Some books"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：班级要去科技馆（science museum），选A。细节题：乘校车前往，选B。细节题：要自带午饭和一瓶水，选B。"
+    },
+    {
+      "passage": "Good evening, Happy Garden Restaurant. May I take your order? Yes, I'd like one large beef noodle soup and two spring rolls, please. Sure. Would you like anything to drink? A cup of green tea would be nice. No problem. Your address is 25 Park Road, right? Yes, that's correct. Okay, your food will arrive in about thirty minutes. Could you pay in cash when it comes? Of course. Thank you very much. See you soon.",
+      "questions": [
+        {
+          "prompt": "What main dish does the customer order?",
+          "options": [
+            "Beef noodle soup",
+            "Chicken rice",
+            "Fish and chips",
+            "Vegetable salad"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How long will the customer wait for the food?",
+          "options": [
+            "About ten minutes",
+            "About twenty minutes",
+            "About thirty minutes",
+            "About one hour"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How will the customer most likely pay for the order?",
+          "options": [
+            "By credit card",
+            "In cash",
+            "By phone app",
+            "With a coupon"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：顾客点的主菜是 beef noodle soup，选A。细节题：餐厅说食物约30分钟送到，选C。推断题：餐厅问能否到时付现金（pay in cash），顾客答应，故最可能用现金支付，选B。"
+    },
+    {
+      "passage": "Hi, you don't look well today. What's wrong? I have a bad headache, and I feel a little hot. Let me check your temperature. Hmm, it's a bit high. Did you sleep well last night? Not really. I stayed up late finishing my homework. That's probably why. You should drink more water and have a good rest. Can I still join the afternoon PE class? No, you'd better go home and rest. I'll call your mom now.",
+      "questions": [
+        {
+          "prompt": "What is the student's main problem?",
+          "options": [
+            "A broken arm",
+            "A bad headache and feeling hot",
+            "A toothache",
+            "A stomachache"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the student feel unwell, according to the nurse?",
+          "options": [
+            "Because of staying up late",
+            "Because of eating too much",
+            "Because of running too fast",
+            "Because of the cold weather"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What will the student probably do next?",
+          "options": [
+            "Join the PE class",
+            "Take a math test",
+            "Go home and rest",
+            "Play on the playground"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：学生说头痛且感觉发热，选B。主旨/因果题：护士指出熬夜（stayed up late）是原因，选A。推断题：护士说最好回家休息并打电话给妈妈，故学生接下来会回家休息，选C。"
+    },
+    {
+      "passage": "Hey Tom, have you decided which club to join this term? I'm not sure yet. I like both the music club and the basketball club. Well, you play the guitar really well. Maybe the music club is better for you. But the basketball club meets on Friday afternoons, and that's my favorite time. The music club also meets on Friday, so you can only choose one. Really? Then I'll go with music. I want to learn to play in a band.",
+      "questions": [
+        {
+          "prompt": "Which two clubs is Tom thinking about?",
+          "options": [
+            "Music and basketball",
+            "Art and dance",
+            "Reading and chess",
+            "Football and swimming"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why can Tom join only one of the clubs?",
+          "options": [
+            "They cost too much money",
+            "They meet at the same time",
+            "They are both full",
+            "They are too far away"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which club does Tom finally choose?",
+          "options": [
+            "The basketball club",
+            "The art club",
+            "The music club",
+            "The chess club"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：Tom 在音乐社和篮球社之间犹豫，选A。细节题：两个社团都在周五（same time），所以只能选一个，选B。细节题：Tom 最后说选音乐，想在乐队里演奏，选C。"
+    },
+    {
+      "passage": "Listen, everyone. We use too much water and power at home. From today, let's try to save more. Please turn off the lights when you leave a room. Also, don't let the water run while you brush your teeth. Dad, can we still watch TV at night? Of course, but turn it off before you go to bed. And Mom, I'll use my old paper to draw on. Great idea. If we all help, we can save money and protect the earth.",
+      "questions": [
+        {
+          "prompt": "What does the speaker ask the family to do when leaving a room?",
+          "options": [
+            "Close the window",
+            "Turn off the lights",
+            "Lock the door",
+            "Open the TV"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main idea of the talk?",
+          "options": [
+            "How to watch more TV",
+            "How to do homework",
+            "How to save water and power at home",
+            "How to clean the house"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we learn about watching TV at night?",
+          "options": [
+            "It is not allowed at all",
+            "It is allowed but the TV must be turned off before bed",
+            "It must be watched all night",
+            "It is only for the parents"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：离开房间要关灯（turn off the lights），选B。主旨题：全文讲在家节水节电，选C。推断题：可以晚上看电视，但睡前要关掉，选B。"
+    },
+    {
+      "passage": "Hi Lucy, are you free this Saturday? I'd love to see the new animal movie with you. That sounds fun! What time does it start? It begins at two o'clock in the afternoon. Let's meet a bit earlier. How about meeting at the cinema gate at half past one? Okay, but I don't know the way. Don't worry, I'll send you a map. Great. Should I buy the tickets online first? Yes, please. See you on Saturday!",
+      "questions": [
+        {
+          "prompt": "What do the friends plan to do on Saturday?",
+          "options": [
+            "See a new animal movie",
+            "Go to a concert",
+            "Visit the zoo",
+            "Have a picnic"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Where will they meet?",
+          "options": [
+            "At the bus stop",
+            "At the cinema gate",
+            "At the school gate",
+            "At Lucy's home"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will Lucy probably do before Saturday?",
+          "options": [
+            "Draw a map",
+            "Buy the movie tickets online",
+            "Cook dinner",
+            "Borrow a book"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：他们打算去看新的动物电影，选A。细节题：约在电影院门口（cinema gate）见面，选B。推断题：对方让 Lucy 先在网上买票，Lucy 答应，故她会买票，选B。"
+    },
+    {
+      "passage": "Hello, this is City Pizza. How can I help you? Hi, I ordered a large pizza on your app twenty minutes ago, but I haven't got it yet. May I have your order number? Sure, it's 3-0-7. Let me check. Oh, I'm sorry. Our delivery man took the wrong road. Your pizza will be there in ten minutes. That's fine. Can you make it a little warm? Yes, we'll heat it again before sending it. And the drink is free this time, to say sorry.",
+      "questions": [
+        {
+          "prompt": "Why does the customer call the restaurant?",
+          "options": [
+            "The pizza has not arrived yet",
+            "The pizza is too big",
+            "He wants to change his order",
+            "The app does not work"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why was the pizza late?",
+          "options": [
+            "The shop was closed",
+            "The delivery man took the wrong road",
+            "There was no pizza left",
+            "The customer gave a wrong address"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will the customer get for free this time?",
+          "options": [
+            "A drink",
+            "Another pizza",
+            "A bag of fries",
+            "A coupon for next time"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：顾客打电话是因为披萨还没送到（haven't got it yet），选A。细节题：迟到原因是送餐员走错路，选B。细节题：作为道歉，这次饮料免费（drink is free），选A。"
+    },
+    {
+      "passage": "Nurse, I hurt my knee when I fell down on the playground. Let me see. Oh, there's a small cut, but it's not serious. Does it hurt a lot? Just a little when I walk. Don't worry. I'll clean it and put a bandage on it. Thank you. Can I go back to class now? Yes, but please don't run for the rest of the day. Be more careful next time. I will. The floor was wet after the rain.",
+      "questions": [
+        {
+          "prompt": "What happened to the student?",
+          "options": [
+            "Hurt a knee after falling down",
+            "Caught a cold",
+            "Burned a hand",
+            "Lost a tooth"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How serious is the injury?",
+          "options": [
+            "Very serious",
+            "Not serious, just a small cut",
+            "Needs an operation",
+            "The leg is broken"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the student probably fall down?",
+          "options": [
+            "The floor was wet after the rain",
+            "He was pushed by a friend",
+            "He was running too fast in class",
+            "His shoes were too big"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：学生在操场摔倒伤了膝盖，选A。细节题：护士说只是小伤口、不严重（not serious），选B。推断题：学生说雨后地板很湿（floor was wet），故摔倒最可能因地滑，选A。"
+    },
+    {
+      "passage": "Anna, the school has a new cooking club this year. Are you going to join it? I'm thinking about it, but I'm a little shy. Don't be! You love making cakes, remember? You make the best ones in our class. Maybe, but I worry I won't make new friends there. That's the best part. You can cook and chat with others at the same time. You're right. I'll sign up tomorrow morning. Good. I'll go with you.",
+      "questions": [
+        {
+          "prompt": "What new club is the school offering?",
+          "options": [
+            "A cooking club",
+            "A drawing club",
+            "A singing club",
+            "A running club"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does Anna feel unsure about joining at first?",
+          "options": [
+            "She is a little shy",
+            "She cannot cook at all",
+            "The club costs too much",
+            "She has no free time"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we learn about Anna's cooking?",
+          "options": [
+            "She makes the best cakes in her class",
+            "She has never made a cake",
+            "She only cooks at restaurants",
+            "She hates making cakes"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：学校新开了烹饪社（cooking club），选A。细节题：Anna 一开始犹豫是因为有点害羞（shy），选A。推断/细节题：朋友说 Anna 做的蛋糕是班上最好的，选A。"
+    },
+    {
+      "passage": "Good morning, students. This is the school radio. This week is Save Water Week. Water is very important, but many of us waste it every day. After washing your hands, please turn off the tap quickly. When you see a tap dripping, tell a teacher right away. You can also use the water from washing vegetables to water the plants. Small things make a big difference. Let's all work together to protect our water. Thank you for listening.",
+      "questions": [
+        {
+          "prompt": "What is this week at the school?",
+          "options": [
+            "Sports Week",
+            "Save Water Week",
+            "Reading Week",
+            "Music Week"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should students do when they see a tap dripping?",
+          "options": [
+            "Tell a teacher right away",
+            "Fix it by themselves",
+            "Just walk away",
+            "Take a photo of it"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the main purpose of this radio talk?",
+          "options": [
+            "To ask students to save water",
+            "To introduce a new teacher",
+            "To talk about a sports game",
+            "To sell water bottles"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：本周是节水周（Save Water Week），选B。细节题：看到水龙头滴水要马上告诉老师，选A。主旨题：广播的目的是号召学生节约用水，选A。"
+    },
+    {
+      "passage": "Hi Ben, it's Mary. About our plan to go to the park tomorrow, I just heard it's going to rain all day. Oh no, really? Yes. So maybe we shouldn't go outside. How about going to the library instead? That sounds good. We can read and finish our science project together. Perfect. Let's meet at the library at nine in the morning. Okay. Should I bring my laptop? Yes, please bring it. We'll need it for the project. See you then!",
+      "questions": [
+        {
+          "prompt": "Why do the friends change their original plan?",
+          "options": [
+            "It is going to rain all day",
+            "The park is closed",
+            "Ben is ill",
+            "They have no money"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Where will they go instead?",
+          "options": [
+            "To the cinema",
+            "To the library",
+            "To a restaurant",
+            "To the gym"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will the friends most likely do when they meet?",
+          "options": [
+            "Watch a film",
+            "Play basketball",
+            "Work on their science project",
+            "Go shopping"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：因为明天要下一整天雨（rain all day）所以改计划，选A。细节题：改去图书馆（library），选B。推断题：他们带电脑一起完成科学项目，故见面后会做科学作业，选C。"
+    }
+  ]
+}

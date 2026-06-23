@@ -1,0 +1,1482 @@
+{
+  "template": "gaokao-listening-mcq",
+  "level": 2,
+  "sets": [
+    {
+      "passage": "Hi, are you here to sign up for the weekend reading program? Yes, I saw the poster in the hall. I love books, but I've never volunteered before. That's totally fine. Most of our helpers start with no experience. On Saturdays you'd read picture books to children aged five to eight, and then help them pick titles to take home. How many hours would I give each week? Just two hours, from nine to eleven. We also ask volunteers to stay for a short meeting afterward to share how the session went. That sounds manageable. One more thing — do I need any training? Yes, there's a one-hour session next Friday evening. It covers how to keep young readers interested. Great, count me in.",
+      "questions": [
+        {
+          "prompt": "What will the new volunteer mainly do on Saturdays?",
+          "options": [
+            "Repair damaged books",
+            "Read picture books to children",
+            "Organize the meeting room",
+            "Design new posters"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How long is each Saturday reading session?",
+          "options": [
+            "One hour",
+            "Two hours",
+            "Three hours",
+            "Half a day"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can we learn about the volunteer?",
+          "options": [
+            "She has volunteered many times before",
+            "She dislikes attending meetings",
+            "She is willing to take the training",
+            "She works at the library full-time"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题1:对话提到周六给5到8岁孩子读绘本并帮他们选书。细节题2:时间是九点到十一点,共两小时。推断题3:她说\"Great, count me in\"表示愿意参加周五的培训,且自称从未做过志愿者,排除A。"
+    },
+    {
+      "passage": "So, what did you think of today's debate on banning phones in class? Honestly, I was surprised. The team arguing for the ban gave really strong examples about how notifications break concentration. I expected the other side to win, though. Me too. But their main point was weak — they kept saying phones help with research, yet they never explained why students couldn't just use the school computers instead. Right. And the judges clearly valued evidence over opinion. Did you notice how the winning team cited an actual classroom study? Yes, that data made the difference. I'm thinking of joining the club next term. You should. After watching that, I realized arguing well isn't about speaking loudly — it's about backing up every claim. Exactly what I learned today.",
+      "questions": [
+        {
+          "prompt": "What was the debate about?",
+          "options": [
+            "Whether to buy new school computers",
+            "Whether to ban phones in class",
+            "Whether to start a debate club",
+            "Whether to allow longer breaks"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the team supporting the ban win?",
+          "options": [
+            "They spoke the loudest",
+            "They had more members",
+            "They cited an actual classroom study",
+            "They finished their speech early"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What did the speakers learn from the debate?",
+          "options": [
+            "Phones should never be used at school",
+            "Good arguing means backing up claims with evidence",
+            "Judges prefer personal opinions",
+            "Research can only be done on phones"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题1:辩论主题是是否在课堂禁手机。细节题2:获胜方引用了真实的课堂研究,judges valued evidence。推断/主旨题3:结尾说\"arguing well isn't about speaking loudly — it's about backing up every claim\",即用证据支撑观点。"
+    },
+    {
+      "passage": "Excuse me, do you have a minute for a short survey on how students travel to school? Sure, go ahead. Great. First, how do you usually get here? I cycle most days. It's about twenty minutes, and it keeps me fit. Interesting. Did you ever take the bus? I used to, but it was always crowded and often late, so I switched last spring. And on rainy days? Then my mum drives me. I don't enjoy it because of the traffic, but I have no choice. Last question — what would make you cycle even more often? Honestly, safer bike lanes. Some roads near school have none, and that worries my parents. Thank you, that's really helpful for our report.",
+      "questions": [
+        {
+          "prompt": "How does the student usually travel to school?",
+          "options": [
+            "By bus",
+            "By bike",
+            "By car",
+            "On foot"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the student stop taking the bus?",
+          "options": [
+            "It was too expensive",
+            "It was crowded and often late",
+            "It stopped running",
+            "The route changed"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the student think would help most?",
+          "options": [
+            "More parking spaces",
+            "Cheaper bus tickets",
+            "Safer bike lanes",
+            "A later start time"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题1:学生说\"I cycle most days\",骑车上学。细节题2:坐公交因为拥挤又常迟到所以换了方式。细节题3:他希望有更安全的自行车道。"
+    },
+    {
+      "passage": "Good evening, everyone. Thirty years ago, I stood at the edge of Antarctica with a single goal: to study how its ice was changing. People often ask whether I was afraid of the cold. The truth is, the cold was never my biggest challenge. What tested me most was patience. Some experiments took months before they showed any result, and there were weeks when storms kept us trapped inside the station. But I learned something there that no classroom ever taught me: nature does not rush, and neither should science. Today, the data my team collected is helping scientists predict changes far beyond the poles. So if you take one idea home tonight, let it be this — great discoveries are rarely about speed. They are about staying curious long after others have given up.",
+      "questions": [
+        {
+          "prompt": "What was the speaker's main goal in Antarctica?",
+          "options": [
+            "To set a speed record",
+            "To study how the ice was changing",
+            "To build a research station",
+            "To train new explorers"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did the speaker find most challenging?",
+          "options": [
+            "The extreme cold",
+            "The lack of food",
+            "Being patient",
+            "Working alone"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the main message of the speech?",
+          "options": [
+            "Antarctica is too dangerous to explore",
+            "Discoveries come from lasting curiosity, not speed",
+            "Scientists should avoid bad weather",
+            "Classroom learning is useless"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题1:目标是研究南极冰的变化。细节题2:他说最大的考验是耐心(patience),而非寒冷。主旨题3:结尾强调伟大发现靠持久的好奇心而非速度。"
+    },
+    {
+      "passage": "Thanks for coming to our beach clean-up briefing. Before we head out, let me run through a few things. We'll split into three groups. The first will collect plastic bottles near the parking area, the second will focus on the rocky section where small pieces of trash get stuck, and the third will record what we find for our pollution report. Please wear the gloves we handed out, and never pick up anything sharp with bare hands. If you see broken glass, call a leader instead. We'll work until noon, then meet back here for lunch, which the city has kindly provided. Oh, and remember — the goal isn't just a cleaner beach today. It's the photos and data that we'll share online to encourage others to join next month.",
+      "questions": [
+        {
+          "prompt": "What will the third group do?",
+          "options": [
+            "Collect plastic bottles",
+            "Clean the rocky section",
+            "Record what is found",
+            "Prepare lunch"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What should volunteers do if they find broken glass?",
+          "options": [
+            "Pick it up quickly",
+            "Leave the beach",
+            "Call a leader",
+            "Put it in their pocket"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the speaker, what is the deeper purpose of the event?",
+          "options": [
+            "To win a city prize",
+            "To encourage others to join future clean-ups",
+            "To sell the collected plastic",
+            "To test new cleaning tools"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题1:第三组负责记录发现的垃圾用于报告。细节题2:遇到碎玻璃要叫负责人,不要徒手捡。推断/主旨题3:结尾说目的是分享照片和数据,鼓励更多人参加。"
+    },
+    {
+      "passage": "Our debate is tomorrow and we're arguing that final exams should be replaced by projects. Are we ready? Almost. I've got the point about how projects test real skills better than memorizing facts. Good. But the other team will say exams are fairer because everyone faces the same questions. How do we answer that? We admit it, then turn it around — projects can be graded with clear rubrics, so they're fair too, and they prepare us for real work. Smart. Should we mention stress? Yes, but carefully. If we say exams cause too much stress, they'll claim deadlines for projects are stressful too. So let's keep our strongest argument first: projects show what students can actually do. Agreed. Lead with strength, save the stress point for later.",
+      "questions": [
+        {
+          "prompt": "What position is the team arguing for?",
+          "options": [
+            "Making exams harder",
+            "Replacing final exams with projects",
+            "Removing all grading",
+            "Adding more exams"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How do they plan to answer the fairness argument?",
+          "options": [
+            "By ignoring it",
+            "By saying exams are unfair",
+            "By saying projects can use clear rubrics",
+            "By changing the topic"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is their debate strategy?",
+          "options": [
+            "Start with the stress point",
+            "Lead with their strongest argument",
+            "Speak as fast as possible",
+            "Avoid mentioning real work"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题1:他们主张用项目取代期末考试。细节题2:用清晰的评分标准(rubrics)回应公平性质疑。推断/策略题3:结尾说\"Lead with strength\",先抛最强论点,压力论点放后面。"
+    },
+    {
+      "passage": "Thanks for joining our research on teenage sleep. Could you tell me roughly when you go to bed on school nights? Usually around midnight, sometimes later. And when do you wake up? Six thirty, for the early bus. So that's about six and a half hours. Do you feel rested? Not really. By afternoon I'm always yawning in class. What keeps you up so late? Mostly homework, but I'll admit I scroll on my phone afterward to relax. Have you tried changing that? I set a rule to put the phone away by eleven, but I keep breaking it. Last question — what do you think would actually help? If teachers gave less homework on weekdays, I could finish earlier and sleep more. The phone is a habit, but the workload is the real cause.",
+      "questions": [
+        {
+          "prompt": "How many hours does the teenager sleep on school nights?",
+          "options": [
+            "About five hours",
+            "About six and a half hours",
+            "About eight hours",
+            "About nine hours"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the teenager admit doing before sleep?",
+          "options": [
+            "Exercising",
+            "Reading novels",
+            "Scrolling on the phone",
+            "Watching films with family"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the teenager believe is the real cause of poor sleep?",
+          "options": [
+            "The early bus",
+            "The phone habit",
+            "The heavy homework load",
+            "Noisy neighbors"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题1:午夜睡六点半起,约六个半小时。细节题2:他承认睡前刷手机放松。推断题3:他最后说手机是习惯,但作业量才是真正的原因(the real cause)。"
+    },
+    {
+      "passage": "Hello, young writers. People assume that authors are born with brilliant ideas. I'm here to tell you that's a myth. When I wrote my first story, I borrowed an idea from something boring — my walk to school. I simply asked, what if the old tree on my street could remember everything it had seen? That single question became a whole book. The lesson is that ideas don't fall from the sky; you build them by being curious about ordinary things. I also want you to know that my first three stories were rejected by publishers. I almost quit. But each rejection taught me how to make the next one better. So when you write, don't wait for a perfect idea. Start with a small question about your everyday life, and never let a 'no' be the end of your story.",
+      "questions": [
+        {
+          "prompt": "Where did the author get the idea for her first book?",
+          "options": [
+            "From a dream",
+            "From her walk to school",
+            "From a famous novel",
+            "From a publisher"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happened to her first three stories?",
+          "options": [
+            "They won prizes",
+            "They were rejected by publishers",
+            "They were turned into films",
+            "They were lost"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main advice to young writers?",
+          "options": [
+            "Wait for a perfect idea before writing",
+            "Only write about famous people",
+            "Be curious about ordinary things and never give up",
+            "Avoid asking questions"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题1:灵感来自她上学路上的那棵老树。细节题2:她前三个故事被出版社拒绝。主旨题3:核心建议是对平凡事物保持好奇、不因被拒而放弃。"
+    },
+    {
+      "passage": "Hi, I'm calling about volunteering at the Sunny Days care home. We'd love your help. May I ask what you'd enjoy doing most? I'm good at music. I thought I could play the piano for the residents. That's wonderful — many of them love old songs. Could you also chat with them afterward? Some just want someone to listen. Of course, I'd be happy to. When are visits? We schedule them on Sunday afternoons, but I should mention one thing: consistency matters more than skill here. The residents look forward to seeing the same faces each week. So we ask volunteers to commit for at least three months. I understand. I can promise that. Then welcome aboard. Bring your music next Sunday, and remember, sometimes just being there means more than any performance.",
+      "questions": [
+        {
+          "prompt": "What does the volunteer offer to do?",
+          "options": [
+            "Cook meals",
+            "Play the piano",
+            "Clean the rooms",
+            "Drive residents around"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the care home ask of volunteers?",
+          "options": [
+            "To pay a small fee",
+            "To bring their own instruments only",
+            "To commit for at least three months",
+            "To visit every day"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the coordinator suggest matters most?",
+          "options": [
+            "Musical talent",
+            "Being there regularly for the residents",
+            "Visiting many homes",
+            "Performing perfectly"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题1:志愿者提出为老人弹钢琴。细节题2:要求至少坚持三个月。推断/主旨题3:协调员说consistency比技能更重要,陪伴本身比表演更有意义。"
+    },
+    {
+      "passage": "Thank you for inviting me. As a bridge engineer, I've spent twenty years learning that our greatest teacher is failure. Early in my career, I helped design a small footbridge that wobbled the moment crowds walked across it. We had calculated the weight perfectly, but we forgot how people move together — their steps can add up like waves. The bridge was safe, yet it scared everyone, so we had to close and redesign it. That embarrassing mistake changed how I work. Now, before any design is approved, I imagine every way it could go wrong. Some call me overly cautious. I call it respect for the people who will trust my work with their lives. So to the students here tonight: don't fear mistakes. Study them closely. A failure you understand is worth more than a success you can't explain.",
+      "questions": [
+        {
+          "prompt": "What problem did the early footbridge have?",
+          "options": [
+            "It was too narrow",
+            "It wobbled when crowds crossed it",
+            "It could not hold any weight",
+            "It was too expensive"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How does the engineer work now before approving a design?",
+          "options": [
+            "He copies older bridges",
+            "He imagines every way it could go wrong",
+            "He builds it as fast as possible",
+            "He avoids testing it"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's attitude toward mistakes?",
+          "options": [
+            "They should be hidden",
+            "They are best avoided entirely",
+            "They should be studied as valuable lessons",
+            "They prove an engineer is unskilled"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题1:那座人行桥在人群通过时晃动。细节题2:现在他在批准设计前会设想所有可能出错的方式。态度/主旨题3:他认为不要怕错误,要仔细研究,理解透的失败胜过解释不清的成功。"
+    },
+    {
+      "passage": "Welcome to TechWave. So you wanted to try our new wireless earbuds? Yes, I read they have really good noise cancelling. That's right. The active noise cancelling blocks out most background sound, so they're great for studying in a noisy library or on a busy bus. How long does the battery last? You get about eight hours on a single charge, and the case gives you three more full charges. That's impressive. My old pair only lasted four hours. Would you like to test them? Sure. Wow, I can barely hear the music playing in the store now. Exactly. And if you press the left bud twice, it switches to transparency mode so you can hear people talking to you. That's perfect for when I'm crossing the street. I think I'll take them. Great choice. They come with a one-year warranty too.",
+      "questions": [
+        {
+          "prompt": "Why does the active noise cancelling appeal to the customer?",
+          "options": [
+            "It makes the earbuds cheaper.",
+            "It helps with studying in noisy places.",
+            "It improves the sound of phone calls.",
+            "It extends the battery life."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How is the new battery compared with the customer's old earbuds?",
+          "options": [
+            "It lasts twice as long.",
+            "It lasts one hour longer.",
+            "It lasts four hours less.",
+            "It lasts exactly the same."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the purpose of transparency mode?",
+          "options": [
+            "To charge the earbuds faster.",
+            "To increase the music volume.",
+            "To let the user hear surrounding voices.",
+            "To extend the warranty period."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：顾客看重降噪可在嘈杂环境学习；新耳机八小时是旧的四小时两倍；通透模式让人听见周围说话声。"
+    },
+    {
+      "passage": "Hi, I'm thinking about buying this fitness watch, but I'm not sure if it's worth it. Of course. This model tracks your heart rate all day and even measures how well you sleep at night. Does it count steps too? Yes, and it reminds you to stand up if you've been sitting too long. I work at a desk all day, so that could really help me. Many of our customers say the standing reminder is their favorite feature. What about the price? It's a bit higher than the basic model, but it also has built-in GPS, so you don't need to carry your phone when you go running. Hmm, I do run every morning. Then this one suits you better. Can I return it if I don't like it? Yes, you have thirty days to return it for a full refund. Okay, I'll give it a try.",
+      "questions": [
+        {
+          "prompt": "What does the customer think might be most useful for him?",
+          "options": [
+            "The sleep tracking.",
+            "The standing reminder.",
+            "The thirty-day return.",
+            "The heart-rate sensor."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why is the built-in GPS suitable for the customer?",
+          "options": [
+            "He runs every morning.",
+            "He travels by car often.",
+            "He forgets his phone easily.",
+            "He hikes on weekends."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we infer about the customer's final decision?",
+          "options": [
+            "He refuses to buy anything.",
+            "He buys the basic model instead.",
+            "He decides to purchase this watch.",
+            "He needs to ask his family first."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：久坐者认为起立提醒最有用；GPS适合每天晨跑；最后说\"I'll give it a try\"表明决定购买。"
+    },
+    {
+      "passage": "Good afternoon, everyone, and thank you for joining today's product launch. Today I'm excited to introduce our newest device, the smart translation pen. Simply scan any line of printed text, and within one second the pen reads it aloud in your chosen language. It currently supports more than forty languages. Students love it because it helps them read foreign textbooks without flipping through a dictionary. Travelers find it handy for restaurant menus and street signs abroad. Unlike phone apps, the pen works completely offline, so you never need an internet connection. It's also light enough to fit in your pocket. The pen will go on sale next Monday at a price lower than most people expect. Pre-orders open tonight on our website, and the first thousand buyers will receive a free protective case. We believe this little pen will change the way people learn languages.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the talk?",
+          "options": [
+            "To teach a foreign language.",
+            "To introduce a new translation pen.",
+            "To advertise a travel agency.",
+            "To explain how dictionaries work."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What advantage does the pen have over phone apps?",
+          "options": [
+            "It supports more languages.",
+            "It is much cheaper to make.",
+            "It works without the internet.",
+            "It can take photographs."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What will the first thousand buyers get?",
+          "options": [
+            "A free protective case.",
+            "A discount of half price.",
+            "An extra battery.",
+            "A free language course."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "主旨题：发布会介绍翻译笔；细节题：与手机应用相比可离线使用；前一千名买家获赠保护套。"
+    },
+    {
+      "passage": "Hi, did you hear about the new recycling program starting next week at our school? No, what's it about? Each classroom will get three separate bins, one for paper, one for plastic, and one for food waste. That sounds like a lot of bins. It is, but the student council says it will cut the amount of rubbish we send to the landfill by half. Wow, half? That's a big difference. Right. And the food waste won't be thrown away. It'll be turned into compost for the school garden. So our vegetables will grow from our own leftovers? Exactly. They're also asking each class to choose two volunteers to remind everyone to sort their trash correctly. I'd like to be one of them. Good idea. The first class with the best recycling record this month wins a free trip to the science museum. Then we'd better start now.",
+      "questions": [
+        {
+          "prompt": "How many kinds of bins will each classroom receive?",
+          "options": [
+            "Two.",
+            "Three.",
+            "Four.",
+            "Five."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will happen to the food waste?",
+          "options": [
+            "It will be sold to farmers.",
+            "It will be sent to the landfill.",
+            "It will become compost for the garden.",
+            "It will be burned for energy."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we infer about the speakers' attitude toward the program?",
+          "options": [
+            "They think it is a waste of time.",
+            "They are supportive and willing to help.",
+            "They are worried it will fail.",
+            "They feel it is too expensive."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：每间教室三个垃圾桶；厨余变成花园堆肥；态度题：一人愿当志愿者且说\"start now\"，表明支持积极。"
+    },
+    {
+      "passage": "Thank you all for coming out this Saturday morning to help clean our local beach. Before we start, let me share a few quick rules. First, please wear the gloves we handed out, and don't pick up anything sharp like broken glass with your bare hands. If you find something dangerous, just call one of the team leaders in the orange vests. Second, we've placed blue bags for plastic and green bags for other rubbish. Sorting it now saves us hours later. Last month, a group like yours collected over two hundred kilograms of waste in just three hours, and most of it was plastic bottles. That's why we always remind people to bring their own water bottle instead. At noon, we'll meet back here for a free lunch and group photo. Remember, every small action protects the sea animals that depend on this coast. Let's make today count.",
+      "questions": [
+        {
+          "prompt": "What should volunteers do if they find something sharp?",
+          "options": [
+            "Pick it up quickly.",
+            "Put it in the green bag.",
+            "Call a team leader in an orange vest.",
+            "Leave the beach immediately."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What made up most of the waste collected last month?",
+          "options": [
+            "Glass bottles.",
+            "Plastic bottles.",
+            "Food packaging.",
+            "Fishing nets."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main message the speaker wants to deliver?",
+          "options": [
+            "The beach is too dirty to visit.",
+            "Small actions help protect sea animals.",
+            "Volunteers should work faster.",
+            "Plastic bags are useful for shopping."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：发现尖锐物应叫穿橙背心的组长；上月垃圾多为塑料瓶；主旨：每个小行动都能保护海洋动物。"
+    },
+    {
+      "passage": "Good evening, listeners, and welcome back to City Green Radio. This week our city launched a brand-new bike-sharing plan to cut down on air pollution. Officials say that cars are the biggest source of the dirty air we breathe every day. With the new plan, you can pick up a bike at any of the three hundred stations across town, ride it wherever you need, and leave it at another station. The first thirty minutes are completely free, which is great for short trips to school or the shops. Early results are encouraging. In the first week alone, riders made over fifty thousand trips, and traffic on the main roads dropped noticeably. The city hopes that if more people choose bikes over cars, the air will become much cleaner within a year. So next time the weather is nice, why not leave the car at home and enjoy a healthy ride?",
+      "questions": [
+        {
+          "prompt": "According to officials, what is the biggest source of air pollution?",
+          "options": [
+            "Factories.",
+            "Cars.",
+            "Burning rubbish.",
+            "Construction dust."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is free under the new bike-sharing plan?",
+          "options": [
+            "The first thirty minutes.",
+            "The whole first day.",
+            "Trips taken at night.",
+            "Rides to the airport."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the speaker encourage listeners to do?",
+          "options": [
+            "Buy more cars.",
+            "Stay at home on nice days.",
+            "Ride bikes instead of driving.",
+            "Build more roads."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：官员称汽车是空气污染最大来源；前30分钟免费；主旨/建议：鼓励听众用骑行代替开车。"
+    },
+    {
+      "passage": "Hi, I'm an exchange student from China, and I'm a little confused about choosing my courses here. No problem, that's what I'm here for. How many courses do most students take each term? Usually four, but as an exchange student you only need to take three to keep your full-time status. Oh, that's good news. I was worried about the workload. Take your time to adjust. Now, do you have a subject you're most interested in? I'd love to improve my English writing, but I'm also curious about American history. Then I'd suggest one writing course and one history course, plus something lighter for your third. Like what? Many international students enjoy the photography class. It's fun and helps you make friends. That sounds perfect. By the way, when is the deadline to change courses? You have two weeks after classes begin to make any changes. Great, thank you so much for your help.",
+      "questions": [
+        {
+          "prompt": "How many courses does the exchange student need to take?",
+          "options": [
+            "Two.",
+            "Three.",
+            "Four.",
+            "Five."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the advisor recommend the photography class?",
+          "options": [
+            "It is required for graduation.",
+            "It improves writing skills.",
+            "It is fun and helps make friends.",
+            "It teaches American history."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How long does the student have to change courses?",
+          "options": [
+            "One week.",
+            "Two weeks.",
+            "Three weeks.",
+            "One month."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：交换生只需选三门课；推荐摄影课因有趣且能交友；开课后有两周时间改选课程。"
+    },
+    {
+      "passage": "So, how has your first week with your host family been? It's been wonderful, much better than I expected. Really? A lot of students feel homesick at first. I did on the very first night, but my host mother cooked a dish from my home country to make me feel welcome. That's so thoughtful. Yes, she had searched online for the recipe. Now we cook together every weekend. Do you have any trouble communicating? At the beginning, yes. I spoke too fast and they couldn't understand my accent. But they were very patient and asked me to slow down. That's a great way to improve. Exactly. My speaking has already gotten better. And the best part? They take me hiking on Sundays. I've seen more of this country in one week than I imagined. It sounds like you've found a second family. I really have. I'm so glad I decided to study abroad.",
+      "questions": [
+        {
+          "prompt": "What did the host mother do to make the student feel welcome?",
+          "options": [
+            "She bought the student a gift.",
+            "She cooked a dish from the student's country.",
+            "She took the student shopping.",
+            "She invited the student's friends over."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What communication problem did the student have at first?",
+          "options": [
+            "The student knew too few words.",
+            "The family spoke another language.",
+            "The student spoke too fast to be understood.",
+            "The student was too shy to talk."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How does the student feel about studying abroad?",
+          "options": [
+            "Regretful and lonely.",
+            "Happy and grateful.",
+            "Bored and tired.",
+            "Nervous and unsure."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：寄宿母亲做家乡菜表示欢迎；起初学生说话太快别人听不懂；态度题：学生说很高兴决定出国，感到幸福感激。"
+    },
+    {
+      "passage": "Hello, and welcome to the international student office. Today I want to tell you about our language partner program. The idea is simple. We match each international student with a local student who wants to learn your language. You meet once a week, usually for an hour, and spend half the time speaking English and half speaking your own language. This way, both of you improve at the same time. Many students tell us this is the fastest way to feel comfortable in a new place. You're not just practicing grammar, you're making a real friend who can show you around the city. Last year, over ninety percent of students who joined said they would do it again. To sign up, just fill out the form on our website and tell us your hobbies, so we can match you with someone similar. Spaces fill up fast, so don't wait too long to apply.",
+      "questions": [
+        {
+          "prompt": "How do partners usually split their meeting time?",
+          "options": [
+            "All in English.",
+            "All in the student's own language.",
+            "Half in each language.",
+            "Mostly on grammar exercises."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What information should students include when signing up?",
+          "options": [
+            "Their hobbies.",
+            "Their exam scores.",
+            "Their home address.",
+            "Their phone number."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the main benefit the speaker emphasizes?",
+          "options": [
+            "Earning extra money.",
+            "Improving and making real friends.",
+            "Getting better exam grades.",
+            "Finding a part-time job."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：见面一半时间说英语一半说母语；报名需写兴趣爱好以便匹配；主旨：既提高语言又结交真朋友。"
+    },
+    {
+      "passage": "How was your weekend at the community farm? Honestly, it was harder than I thought, but I loved every minute. What did you actually do there? On the first day, we planted rows of tomatoes and learned how to water them properly. Did you only do planting? No, the most interesting part was feeding the chickens and collecting their eggs. I never knew how much work a farm needs every single day. So would you go back? Definitely. The farmer taught us that food doesn't just appear in the supermarket. Someone has to grow it with a lot of care. That's a good lesson. It really changed how I think about wasting food now. I'll finish everything on my plate from now on. Maybe I should join next time too. You should. They need more volunteers, and you get to take home fresh vegetables every week.",
+      "questions": [
+        {
+          "prompt": "What did the student find most interesting at the farm?",
+          "options": [
+            "Planting tomatoes.",
+            "Watering the plants.",
+            "Feeding chickens and collecting eggs.",
+            "Driving the tractor."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What lesson did the student learn from the experience?",
+          "options": [
+            "Farming is an easy job.",
+            "Food takes care and work to grow.",
+            "Supermarkets are too expensive.",
+            "Chickens are difficult to raise."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can we infer about the student's behavior after the trip?",
+          "options": [
+            "The student will waste less food.",
+            "The student will stop eating vegetables.",
+            "The student will buy a farm.",
+            "The student will quit volunteering."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：最有趣的是喂鸡捡蛋；明白食物需用心耕种；推断题：说\"从此光盘\"，表明今后会减少浪费食物。"
+    },
+    {
+      "passage": "Welcome back to Career Talk. Today I'm speaking with Daniel, a wildlife photographer. Daniel, how did you start? Honestly, by accident. I studied biology at university and just carried a cheap camera into the field. My first paid job came when a magazine bought a photo of a fox I took near my dorm. That's lucky! It was, but the real challenge is patience. Last winter I waited eleven days in a cold tent to photograph a single owl. Eleven days! What keeps you going? The animals don't follow a schedule, so I've learned to enjoy the waiting itself, not just the final shot. And the pay? It's unstable, I won't pretend otherwise. But I would never trade it for an office job.",
+      "questions": [
+        {
+          "prompt": "How did Daniel get his first paid job?",
+          "options": [
+            "A magazine bought his photo of a fox.",
+            "He won a university photography prize.",
+            "A biology professor recommended him.",
+            "He sold pictures of an owl."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does Daniel suggest is the hardest part of his work?",
+          "options": [
+            "Buying expensive equipment.",
+            "Being patient and waiting.",
+            "Studying biology.",
+            "Travelling to cold places."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is Daniel's attitude toward his career?",
+          "options": [
+            "He regrets not taking an office job.",
+            "He finds it boring but well paid.",
+            "He loves it despite the unstable income.",
+            "He plans to quit soon."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题，Daniel说杂志买了他拍的狐狸照片，故选A。第二题主旨/细节题，他强调最难的是耐心等待，选B。第三题态度题，他说收入不稳定但绝不换办公室工作，表明热爱，选C。"
+    },
+    {
+      "passage": "Thanks for joining us, Dr. Mei. You spend months at sea studying coral reefs. What surprises people most about your job? They imagine I'm always swimming with colourful fish. In reality, most of my day is spent recording data on a laptop and fixing broken equipment. The diving is maybe two hours. Does the work ever feel discouraging? Sometimes. We've watched reefs we love turn white and die from warming water. But last year we found one small reef recovering on its own, and that gave the whole team hope. So you stay optimistic? Cautiously. I tell my students that science isn't about giving up when things look bad. It's about gathering enough evidence to make people act before it's too late.",
+      "questions": [
+        {
+          "prompt": "What does Dr. Mei say takes up most of her working day?",
+          "options": [
+            "Swimming with fish.",
+            "Recording data and fixing equipment.",
+            "Teaching students.",
+            "Diving for two hours."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What gave Dr. Mei's team hope last year?",
+          "options": [
+            "New diving equipment.",
+            "More research funding.",
+            "A small reef recovering by itself.",
+            "Warmer ocean water."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is Dr. Mei's main message to her students?",
+          "options": [
+            "Science means never feeling discouraged.",
+            "Gather evidence and act before it is too late.",
+            "Diving is the most important skill.",
+            "Coral reefs cannot be saved."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题，她说大部分时间在记录数据和修设备，选B。第二题细节题，去年一小片珊瑚自我恢复带来希望，选C。第三题主旨题，她告诉学生要收集证据并及时行动，选B。"
+    },
+    {
+      "passage": "Today on Young Founders we have Lucas, who opened a bakery at just twenty-three. Lucas, was it scary leaving your bank job? Terrifying. My parents thought I'd lost my mind. I'd saved for two years, but the first three months I barely sold anything. How did things change? A customer posted a video of my cinnamon rolls online, and suddenly there was a line outside the door every morning. So social media saved you. Partly. But I think the real lesson is that I almost gave up the week before that video. If you're starting something, the hardest moment is usually right before it works. Any regrets? None. I'd rather fail at my own shop than succeed at a desk I hate.",
+      "questions": [
+        {
+          "prompt": "Why was Lucas's bakery struggling at first?",
+          "options": [
+            "His cinnamon rolls tasted bad.",
+            "He barely sold anything for three months.",
+            "His parents refused to help.",
+            "The shop was in a bad location."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Lucas say is the hardest moment when starting something?",
+          "options": [
+            "Right before success comes.",
+            "The very first day.",
+            "When you run out of savings.",
+            "When your parents disagree."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we infer about Lucas's view of his old bank job?",
+          "options": [
+            "He misses it deeply.",
+            "He found it satisfying.",
+            "He disliked it.",
+            "He was forced to leave it."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题，开业头三个月几乎没卖出东西，选B。第二题细节/主旨题，他说最难是成功来临前一刻，选A。第三题推断题，他说宁愿在自己店里失败也不愿在讨厌的办公桌前成功，可推断他不喜欢银行工作，选C。"
+    },
+    {
+      "passage": "Hi everyone, welcome to the Astronomy Club's first meeting of the term. I'm Priya, the club president. I know some of you joined expecting to look through telescopes every week, and we do that, but only on clear nights. On cloudy evenings we'll study star maps or watch space documentaries instead. Now, an important point: our biggest event is the November meteor shower trip. We'll camp overnight on the hill behind the science building. You'll need warm clothes and a sleeping bag, because it gets very cold. Telescopes are provided by the club, so don't worry if you can't afford one. Last thing: please don't bring bright phone screens during observation. Even a little light ruins everyone's view of the stars.",
+      "questions": [
+        {
+          "prompt": "What does the club do on cloudy evenings?",
+          "options": [
+            "Cancel all meetings.",
+            "Study star maps or watch documentaries.",
+            "Use telescopes indoors.",
+            "Plan the meteor shower trip."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What are members told to bring for the November trip?",
+          "options": [
+            "Their own telescopes.",
+            "Bright phone screens.",
+            "Warm clothes and a sleeping bag.",
+            "Star maps and documentaries."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does Priya ask members not to use bright phone screens?",
+          "options": [
+            "To save battery for photos.",
+            "Because light ruins the view of the stars.",
+            "To avoid disturbing campers asleep.",
+            "Because phones are banned on campus."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题，阴天看星图或纪录片，选B。第二题细节题，需带保暖衣物和睡袋，选C。第三题推断/细节题，亮屏会破坏大家观星，选B。"
+    },
+    {
+      "passage": "Excuse me, is this where I sign up for the debate team? Yes, come in. Have you debated before? Not really. I'm a bit shy, actually, and my friends say I'm crazy for trying. Honestly, half of our best speakers started exactly like you. Shyness isn't the problem; not preparing is. So I don't need to be a natural talker? Not at all. What we look for is someone who'll research a topic carefully and listen to the other side. We practise twice a week, and there's a friendly competition in December. Will I have to debate alone? No, always in a pair, so your teammate supports you. That sounds less frightening. Good. Put your name and email here, and I'll send you this week's topic.",
+      "questions": [
+        {
+          "prompt": "Why does the newcomer hesitate to join the team?",
+          "options": [
+            "The practice times are inconvenient.",
+            "She is shy and inexperienced.",
+            "Her friends are already members.",
+            "She dislikes research."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the team member, what matters most for a good debater?",
+          "options": [
+            "Being a naturally confident speaker.",
+            "Winning the December competition.",
+            "Preparing carefully and listening.",
+            "Debating without a partner."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How does the newcomer feel by the end of the conversation?",
+          "options": [
+            "More reassured.",
+            "Even more nervous.",
+            "Annoyed and bored.",
+            "Uninterested in joining."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题，她害羞且没经验，选B。第二题主旨题，关键是认真准备和倾听，选C。第三题态度题，她最后说听起来没那么可怕了，表明更安心，选A。"
+    },
+    {
+      "passage": "Alright, Green Earth Club, settle down. Last month our recycling bins collected over four hundred plastic bottles, which is great, but I have a worry. Half of them were still half full of drink, so the cleaning staff had to empty each one by hand. That's not fair to them. So here's the new rule: please pour out and rinse your bottle before recycling. Second, we're starting a 'bring your own cup' day every Friday. Students who bring a reusable cup to the canteen get a small discount on coffee. Finally, we need three volunteers to give a short talk to the first-year classes next week. You don't need to be an expert; you just need to care. Who's interested? Great, see me after the meeting.",
+      "questions": [
+        {
+          "prompt": "What problem did the club president raise about the recycled bottles?",
+          "options": [
+            "There were too few of them.",
+            "Many were still half full of drink.",
+            "They were the wrong type of plastic.",
+            "Students threw them on the floor."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What reward do students get on 'bring your own cup' day?",
+          "options": [
+            "A free reusable cup.",
+            "Extra club points.",
+            "A discount on coffee.",
+            "A talk by an expert."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the president say volunteers for the talk need?",
+          "options": [
+            "Expert knowledge of recycling.",
+            "Public-speaking experience.",
+            "To simply care about the issue.",
+            "A reusable cup."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题，许多瓶子还装着半瓶饮料，选B。第二题细节题，自带杯子可享咖啡折扣，选C。第三题细节题，志愿者只需有责任心，不必是专家，选C。"
+    },
+    {
+      "passage": "Good afternoon, festival-goers, and welcome to the Riverside Folk Music Festival. A few notes before the music begins. Our main stage opens at three with a band that plays traditional songs from the northern mountains using instruments many of you have never seen. Over by the old bridge, you'll find a workshop where local elders teach a dance that's over two hundred years old; everyone is welcome, no experience needed. Please remember this is a family event, so we ask that you keep the volume of your own devices down. Food stalls are along the east path, and yes, the famous honey cakes are back this year. Finally, if it rains, don't leave. We simply move everything into the big tent near the entrance. Enjoy the day!",
+      "questions": [
+        {
+          "prompt": "What is special about the band on the main stage?",
+          "options": [
+            "They sing in a foreign language.",
+            "They use unusual traditional instruments.",
+            "They perform a two-hundred-year-old dance.",
+            "They sell honey cakes."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker say will happen if it rains?",
+          "options": [
+            "The festival will be cancelled.",
+            "The music moves to the old bridge.",
+            "Everything moves into the big tent.",
+            "Food stalls will close early."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What kind of event does the speaker stress this is?",
+          "options": [
+            "A competition for musicians.",
+            "A family-friendly event.",
+            "A ticket-only concert.",
+            "A food festival."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题，乐队用罕见的传统乐器，选B。第二题细节题，下雨就把活动移进大帐篷，选C。第三题主旨题，发言者强调这是适合家庭的活动，选B。"
+    },
+    {
+      "passage": "Have you ever been to the museum's night tour? No, is it different from the daytime? Completely. They turn off most of the bright lights and give each visitor a small lantern. You walk through the ancient pottery hall almost in the dark. Doesn't that make it hard to see the objects? Surprisingly, no. The soft light makes the shadows on the old jars look alive, like the patterns are moving. And it's much quieter than the crowded daytime visits. How long does it last? About ninety minutes, with a guide who tells stories instead of just listing dates. I went last month and honestly felt like I'd travelled back in time. Then I have to try it. Just book early, because they only allow twenty people each night.",
+      "questions": [
+        {
+          "prompt": "What does each visitor receive on the night tour?",
+          "options": [
+            "A guidebook.",
+            "A small lantern.",
+            "A free pottery jar.",
+            "A list of dates."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How does the speaker describe the night tour compared with daytime visits?",
+          "options": [
+            "Brighter and busier.",
+            "Quieter and more atmospheric.",
+            "Shorter and cheaper.",
+            "Louder but more informative."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker advise booking early?",
+          "options": [
+            "The tour is often cancelled.",
+            "Tickets are very expensive.",
+            "Only twenty people are allowed each night.",
+            "The guide leaves at ninety minutes."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题，每位游客拿到一盏小灯笼，选B。第二题主旨题，夜游更安静更有氛围，选B。第三题细节题，每晚仅限二十人，故需早订，选C。"
+    },
+    {
+      "passage": "Hello, students. As exams approach, many of you tell me you're sleeping less to study more. Today I want to gently challenge that habit. When you skip sleep, your brain can't move what you learned into long-term memory, so those late hours often teach you almost nothing. Worse, tiredness makes small worries feel like huge problems. Here's a simple suggestion: stop studying thirty minutes before bed and do something calm, like reading a few pages of a story or listening to quiet music. Avoid your phone, because the screen light tricks your brain into staying awake. And if a worry keeps you up, write it on paper. Putting it outside your head often makes it shrink. Remember, rest isn't lazy. It's part of doing well.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what happens when students skip sleep to study?",
+          "options": [
+            "They remember more in the long term.",
+            "Their brain can't store what they learned.",
+            "They feel calmer the next day.",
+            "They worry about fewer things."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker suggest doing if a worry keeps you awake?",
+          "options": [
+            "Study harder until you feel tired.",
+            "Look at your phone for distraction.",
+            "Write the worry down on paper.",
+            "Listen to loud music."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the speaker's main message?",
+          "options": [
+            "Rest is a part of doing well.",
+            "Phones help students relax.",
+            "Late-night study is the key to success.",
+            "Worrying improves memory."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题，缺觉时大脑无法把所学存入长期记忆，选B。第二题细节题，烦恼睡不着就把它写在纸上，选C。第三题主旨题，核心是休息也是取得好成绩的一部分，选A。"
+    },
+    {
+      "passage": "Hey, you've seemed really down all week. Is something wrong? I don't know. I just feel like I'm failing at everything, even though nothing big has actually happened. That sounds exhausting. Have you talked to anyone? No. I keep thinking I should just handle it myself. Why's that? I guess I'm afraid people will think I'm weak. Can I be honest? When you helped me last year, I didn't think you were weak for needing me. I felt closer to you. Really? Of course. Asking for help isn't a weakness; it's how friends stay friends. Maybe I could talk to the school counsellor. That's a brave first step, and I'll go with you to the door if you want. Thanks. I already feel a little lighter just saying it out loud.",
+      "questions": [
+        {
+          "prompt": "Why has the friend been avoiding talking about her feelings?",
+          "options": [
+            "She thinks nothing is wrong.",
+            "She fears seeming weak.",
+            "She has no time to talk.",
+            "She already saw a counsellor."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker say about asking for help?",
+          "options": [
+            "It is a sign of weakness.",
+            "It should be a last resort.",
+            "It is how friends stay friends.",
+            "It usually makes things worse."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How does the friend feel at the end of the conversation?",
+          "options": [
+            "Slightly relieved.",
+            "More ashamed than before.",
+            "Angry at the speaker.",
+            "Completely cured."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题，她害怕别人觉得她软弱，选B。第二题细节/主旨题，对方说求助是朋友维系友谊的方式，选C。第三题态度题，她说光是说出来就觉得轻松一点，表明稍感释然，选A。"
+    },
+    {
+      "passage": "Hi, I'm Tom, a peer volunteer at the wellness centre. Today let's talk about something many students feel but rarely admit: the fear of speaking up in class. Maybe your heart races before you raise your hand, and afterwards you replay every word, sure you sounded silly. First, please know this is incredibly common. It doesn't mean anything is wrong with you. One trick that helped me was starting small: instead of answering a hard question, I'd just ask one short question I genuinely wondered about. Each small win made the next one easier. Also, remember that classmates are usually thinking about their own worries, not judging you. If the fear ever stops you from coming to school, please talk to a counsellor. Growth feels uncomfortable, but discomfort isn't danger.",
+      "questions": [
+        {
+          "prompt": "What fear does Tom focus on in his talk?",
+          "options": [
+            "The fear of failing exams.",
+            "The fear of speaking up in class.",
+            "The fear of being alone.",
+            "The fear of public performances."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What trick does Tom say helped him?",
+          "options": [
+            "Answering only the hardest questions.",
+            "Avoiding class until he felt ready.",
+            "Starting small by asking a short question.",
+            "Memorising his words in advance."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does Tom mean by saying 'discomfort isn't danger'?",
+          "options": [
+            "Feeling uneasy while growing is normal and safe.",
+            "Students should avoid anything uncomfortable.",
+            "Speaking in class is truly dangerous.",
+            "Counsellors cannot help with fear."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题，Tom聚焦于课堂发言的恐惧，选B。第二题细节题，他的诀窍是从问一个小问题开始循序渐进，选C。第三题推断题，“不适并非危险”意指成长中的不适是正常且安全的，选A。"
+    },
+    {
+      "passage": "Welcome aboard the morning ferry to Crystal Island. We'll be crossing the bay for about forty minutes, so please find a seat and keep your life jacket within reach. On your right, you'll soon notice the old lighthouse painted in red and white stripes. It still guides fishing boats home every night. When we reach the island, the bicycle rental shop is just beside the dock, and I'd really recommend riding rather than walking, because the coastal path stretches over ten kilometers. One last reminder: the last ferry back leaves at six sharp, so please don't lose track of time while you're exploring the beaches.",
+      "questions": [
+        {
+          "prompt": "How long does the ferry trip to Crystal Island take?",
+          "options": [
+            "About twenty minutes",
+            "About forty minutes",
+            "About one hour",
+            "About ten minutes"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker recommend doing on the island?",
+          "options": [
+            "Renting a bicycle",
+            "Walking along the beach",
+            "Climbing the lighthouse",
+            "Fishing with local boats"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker mention six o'clock?",
+          "options": [
+            "The rental shop closes then",
+            "The beaches get crowded then",
+            "It is when the last ferry departs",
+            "It is when the lighthouse turns on"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：渡轮约40分钟；推荐题：建议租自行车骑行，因为海岸路线长达十多公里；推断题：六点是末班渡轮发船时间，提醒游客别错过。"
+    },
+    {
+      "passage": "You won't believe what happened on our hiking trip last weekend. We planned to reach the mountain hut before dark, but halfway up the trail, thick fog rolled in and we could barely see ten steps ahead. At first I was a little nervous, but my friend Lisa stayed calm and reminded us to follow the wooden markers along the path. We slowed right down, checked each marker carefully, and finally arrived an hour later than planned. Honestly, sitting by the fire afterward, I felt proud of us. The fog turned a simple walk into the most memorable adventure I've had in years.",
+      "questions": [
+        {
+          "prompt": "What problem did the hikers face on the trail?",
+          "options": [
+            "They ran out of food",
+            "Thick fog blocked their view",
+            "They lost their map",
+            "A storm flooded the path"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How did they find their way in the fog?",
+          "options": [
+            "By using a phone signal",
+            "By following another group",
+            "By following the wooden markers",
+            "By waiting for the fog to clear"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How does the speaker feel about the trip now?",
+          "options": [
+            "Regretful and tired",
+            "Proud and satisfied",
+            "Frightened and angry",
+            "Bored and disappointed"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：徒步遇到浓雾遮挡视线；细节题：靠跟随木质路标找路；态度推断题：现在回想感到自豪和满足，把普通徒步变成难忘的冒险。"
+    },
+    {
+      "passage": "Excuse me, I booked a double room online for two nights, but the confirmation email says my room is on the fifth floor. Is there any chance I could move to a lower floor? My mother is traveling with me and she finds stairs difficult. Of course, sir, let me check. We do have a room on the second floor available, and it even faces the garden, which is quieter than the street side. There's no extra charge for the change. That's wonderful, thank you. And could you tell me what time breakfast is served? Breakfast runs from seven to nine thirty in the dining hall on the ground floor.",
+      "questions": [
+        {
+          "prompt": "Why does the guest want to change rooms?",
+          "options": [
+            "The room is too expensive",
+            "His mother finds stairs difficult",
+            "The room faces a noisy street",
+            "The booking was for one night only"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is special about the new room offered?",
+          "options": [
+            "It faces the quiet garden",
+            "It includes free breakfast",
+            "It has two extra beds",
+            "It is on the top floor"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "When does breakfast end?",
+          "options": [
+            "At seven o'clock",
+            "At nine o'clock",
+            "At nine thirty",
+            "At ten o'clock"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：因母亲爬楼梯困难想换低层房；细节题：新房间面朝安静的花园；细节题：早餐供应到九点半结束。"
+    },
+    {
+      "passage": "Good evening, sports fans, and welcome to the city marathon coverage. The weather is perfect tonight, cool and clear, ideal for setting records. As the runners pass the twenty-kilometer mark, a surprise leader has emerged. Twenty-two-year-old Daniel Cruz, running his very first marathon, has pulled ahead of the experienced champions. The crowd lining the streets is absolutely roaring. Behind him, last year's winner is keeping a steady pace, clearly saving energy for the final stretch. With twelve kilometers still to go, anything can happen. Will the newcomer hold his lead, or will experience win out in the end? Stay tuned as the race heats up.",
+      "questions": [
+        {
+          "prompt": "What is surprising about the current leader?",
+          "options": [
+            "He is the oldest runner",
+            "It is his first marathon",
+            "He won last year too",
+            "He started the race late"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is last year's winner doing now?",
+          "options": [
+            "Dropping out of the race",
+            "Leading the whole field",
+            "Saving energy for the finish",
+            "Stopping to rest"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the commentator suggest about the result?",
+          "options": [
+            "It is already decided",
+            "The newcomer will surely lose",
+            "The outcome is still uncertain",
+            "The race will be cancelled"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：领先者惊人之处是这是他的首场马拉松；细节题：去年冠军在保存体力冲刺；推断题：还有12公里，解说员暗示结果仍不确定。"
+    },
+    {
+      "passage": "Hey Coach, I wanted to talk to you about Saturday's basketball final. I know I missed three free throws in the last game, and I've been practicing them every morning since. Don't be too hard on yourself, Maya. Honestly, your defense has improved more than anyone's this season. For the final, I'm thinking of putting you in the starting lineup. Really? I won't let the team down, I promise. I believe you. Just remember, basketball is about the whole team, not one player's mistakes. Focus on passing and communication, and the points will come. Get a good night's sleep before the game, that matters more than extra practice now.",
+      "questions": [
+        {
+          "prompt": "What had Maya been worried about?",
+          "options": [
+            "Missing three free throws",
+            "Being too tired to play",
+            "Arguing with teammates",
+            "Forgetting the game schedule"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What decision does the coach announce?",
+          "options": [
+            "Maya will sit out the final",
+            "Maya will be in the starting lineup",
+            "Maya will become team captain",
+            "The final will be postponed"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the coach value most before the game?",
+          "options": [
+            "Extra free-throw practice",
+            "Watching old game videos",
+            "Getting a good night's sleep",
+            "Eating a big meal"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：Maya担心罚球失误；细节题：教练宣布让她进首发阵容；态度细节题：赛前教练最看重的是睡个好觉，胜过额外练习。"
+    },
+    {
+      "passage": "Attention all swimmers and spectators. Due to a problem with the pool heating system, the afternoon swimming competition will be delayed by one hour. We sincerely apologize for the inconvenience. The races will now begin at three o'clock instead of two. While you wait, the snack bar on the upper level will offer free hot drinks to all ticket holders. Coaches are kindly asked to keep their teams warm and ready in the changing rooms. We promise the water will be at the perfect temperature once the repair is complete. Thank you for your patience, and we look forward to an exciting afternoon of swimming.",
+      "questions": [
+        {
+          "prompt": "Why is the competition delayed?",
+          "options": [
+            "A swimmer was injured",
+            "The pool heating system failed",
+            "Too few athletes arrived",
+            "The water was too cold to drain"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What time will the races now begin?",
+          "options": [
+            "At one o'clock",
+            "At two o'clock",
+            "At three o'clock",
+            "At four o'clock"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is offered to ticket holders during the wait?",
+          "options": [
+            "Free hot drinks",
+            "A refund on tickets",
+            "Free swimming lessons",
+            "A guided pool tour"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "细节题：因泳池加热系统故障而延期；细节题：比赛改到三点开始；细节题：等待期间为持票者提供免费热饮。"
+    },
+    {
+      "passage": "So, have you decided what you want to study at university next year? I've been going back and forth for months. My parents hope I'll study law, but lately I keep thinking about environmental science. There's just something about protecting forests and rivers that excites me. That sounds like a real passion. Have you told your parents? Not yet. I'm a bit worried they'll be disappointed. But honestly, I'd rather spend four years studying something I truly care about than chase a career just to please others. You know what, I think you should be honest with them. In the end, it's your future, and your happiness matters more than anyone's expectations.",
+      "questions": [
+        {
+          "prompt": "What do the speaker's parents hope she will study?",
+          "options": [
+            "Environmental science",
+            "Law",
+            "Medicine",
+            "Engineering"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why is the speaker drawn to environmental science?",
+          "options": [
+            "It earns more money",
+            "Her friend recommended it",
+            "She loves protecting nature",
+            "It is easier to study"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the friend advise her to do?",
+          "options": [
+            "Follow her parents' wishes",
+            "Be honest with her parents",
+            "Delay university for a year",
+            "Study both subjects at once"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：父母希望她学法律；细节题：她热爱保护自然所以被环境科学吸引；细节题：朋友建议她对父母坦诚。"
+    },
+    {
+      "passage": "Ever since I was a child, I dreamed of becoming a pilot. I remember pressing my face against the airport window, watching planes climb into the clouds, wishing I were up there too. People told me it was an impossible dream, that I should choose something safer. But I never let go of it. This summer, I finally started flight training, and last week I flew solo for the very first time. My hands were shaking on the controls, yet the moment the wheels left the ground, I felt completely free. If there's one thing I've learned, it's this: a dream only fails when you stop believing in it.",
+      "questions": [
+        {
+          "prompt": "What did the speaker dream of becoming as a child?",
+          "options": [
+            "An astronaut",
+            "A pilot",
+            "An engineer",
+            "A flight attendant"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happened to the speaker last week?",
+          "options": [
+            "He flew solo for the first time",
+            "He passed his final exam",
+            "He visited an airport",
+            "He bought his own plane"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the main message of the talk?",
+          "options": [
+            "Flying is safer than people think",
+            "Childhood dreams are usually wrong",
+            "Never give up on your dream",
+            "Training takes a very long time"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：他儿时梦想成为飞行员；细节题：上周他第一次单飞；主旨题：核心信息是永不放弃梦想，只有停止相信梦想才会失败。"
+    },
+    {
+      "passage": "Grandpa, I've been thinking a lot about what to do after I graduate. Everyone keeps asking me, and I still don't have an answer. That's perfectly normal, dear. When I was your age, I changed my mind a dozen times before I became a teacher. Really? You always seemed so certain about everything. Not at all. The trick isn't knowing every step in advance. It's taking the first one, learning from it, and adjusting as you go. Try a few things, volunteer, take a part-time job. You'll discover what suits you. Don't pressure yourself to have the whole map. Just find the next road, and walk it.",
+      "questions": [
+        {
+          "prompt": "What is the granddaughter worried about?",
+          "options": [
+            "Failing her final exams",
+            "Not knowing what to do after graduation",
+            "Disappointing her grandfather",
+            "Finding a part-time job quickly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the grandfather reveal about his own past?",
+          "options": [
+            "He always wanted to be a teacher",
+            "He never went to university",
+            "He changed his mind many times",
+            "He regrets his career choice"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What advice does the grandfather give?",
+          "options": [
+            "Plan every step before starting",
+            "Take the first step and adjust along the way",
+            "Choose the highest-paying job",
+            "Wait until she feels fully certain"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "细节题：孙女担心毕业后不知道做什么；细节题：爷爷透露自己当年也多次改变主意；细节题：建议先迈出第一步并在过程中调整。"
+    },
+    {
+      "passage": "In today's media class, I want to talk about something we all do every day: scrolling through news on our phones. Have you ever noticed how a single event can be reported in completely different ways by different sources? One headline might call a protest peaceful, while another calls it chaotic. Neither is necessarily lying, but each chooses certain words and images. That's why I always encourage you to read more than one source before forming an opinion. Ask yourself who wrote it, and why. Being a smart reader today isn't about reading faster. It's about reading more carefully and questioning what you see.",
+      "questions": [
+        {
+          "prompt": "What does the teacher point out about news reports?",
+          "options": [
+            "They are usually completely false",
+            "The same event can be reported differently",
+            "Phones make news less reliable",
+            "Headlines are always accurate"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the teacher encourage students to do?",
+          "options": [
+            "Read only trusted headlines",
+            "Read more than one source",
+            "Avoid news on phones",
+            "Read the news faster"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main idea of the talk?",
+          "options": [
+            "Reading speed is the key skill",
+            "All media sources lie",
+            "Smart readers question what they see",
+            "Phones should be banned in class"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "细节题：老师指出同一事件会被不同来源以不同方式报道；细节题：鼓励学生在形成观点前多读几个来源；主旨题：核心是聪明的读者要仔细阅读并质疑所见。"
+    }
+  ]
+}
