@@ -152,6 +152,22 @@ export function shapeToItems(t: ShapeTemplate, raw: Record<string, unknown>): Sh
     return { ok: true, result: { stimulusText: passage, meta: {}, items } }
   }
 
+  if (shape === 'speak_prompt') {
+    // 口语任务（listen_and_repeat / interview_speaking）：script = 听到的口语提示（→ R6 合成音频，
+    // 作答前以音频呈现，不下发文字），item.input_mode='speak'，rubric 评分（rubric_id 由导入器按 exam/skill 绑）。
+    // 注意：script 存为 stimulusText（非 raw.passage），故模板 stimulusRequirements 不要设 min/max（顶层
+    // checkPassageWords 针对 raw.passage）；script 词数边界在此硬校验。
+    const prompt = String(raw.prompt ?? '').trim()
+    const script = String(raw.script ?? '').trim()
+    if (!prompt) return { ok: false, reject: 'prompt_empty' }
+    if (!script) return { ok: false, reject: 'script_empty' }
+    const sw = countWords(script)
+    if (sw < 3) return { ok: false, reject: `script_too_short:${sw}` }
+    if (sw > 90) return { ok: false, reject: `script_too_long:${sw}` }
+    const refs = Array.isArray(raw.referencePoints) ? (raw.referencePoints as unknown[]).map((x) => String(x)) : []
+    return { ok: true, result: { stimulusText: script, meta: {}, items: [{ inputMode: 'speak', prompt, promptZh: typeof raw.promptZh === 'string' ? raw.promptZh : null, choices: [], answer: { official: false, referencePoints: refs } }] } }
+  }
+
   if (shape === 'complete_words') {
     // TOEFL Complete the Words：语境中补全被部分遮盖的词。passage 存完整上下文（词数准确）；
     // maskedForm 用 '_' 表示缺失字母，其余位置必须与 targetWord 完全一致；targetWord 必须在 passage

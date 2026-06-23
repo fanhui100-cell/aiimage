@@ -82,7 +82,7 @@ async function setExists(db: SupabaseClient, legacyId: string): Promise<boolean>
   return !!(data && data.length)
 }
 
-async function writeDraftSet(db: SupabaseClient, t: Template, level: number, stage: string, tag: string, parsed: ShapeResult, explainZh: string | null, domain: string | null): Promise<boolean> {
+async function writeDraftSet(db: SupabaseClient, t: Template, level: number, stage: string, tag: string, parsed: ShapeResult, explainZh: string | null, domain: string | null, rubricId: string | null): Promise<boolean> {
   let stimulusId: string | null = null
   if (parsed.stimulusText) {
     const { data, error } = await db.from('stimuli').insert({
@@ -111,6 +111,7 @@ async function writeDraftSet(db: SupabaseClient, t: Template, level: number, sta
       legacy_id: `gen:${t.templateId}:item:claude:${tag}:${oi}`, question_set_id: setId, order_index: oi++,
       input_mode: it.inputMode, prompt: it.prompt, prompt_zh: it.promptZh, choices: it.choices, answer: it.answer,
       subskills: t.subskills, status: 'draft',
+      rubric_id: (it.inputMode === 'free_text' || it.inputMode === 'speak') ? rubricId : null, // productive/speak → rubric
     })
     if (error) { console.error(`  item insert: ${error.message}`); return false }
   }
@@ -187,6 +188,14 @@ async function main() {
     if (tplErr.length) { console.error(`✗ ${path}: 模板拒绝 ${tplErr.join(',')}`); continue }
     const level = af.level ?? getExamSpec(t.examIds[0])?.level ?? 3
     const st = toShapeTemplate(t)
+    // subjective skills (writing/translation/speaking) → resolve the exam/skill rubric to link on speak/free_text items
+    const SUBJECTIVE = new Set(['writing', 'translation', 'speaking'])
+    let rubricId: string | null = null
+    if (APPLY && db && SUBJECTIVE.has(t.skill)) {
+      const { data } = await db.from('rubrics').select('id').eq('exam_id', t.examIds[0]).eq('skill', t.skill).limit(1)
+      rubricId = data && data.length ? (data[0] as { id: string }).id : null
+      if (!rubricId) console.error(`  ⚠ no rubric for ${t.examIds[0]}/${t.skill} — speak/free_text items will have null rubric_id (promotion will reject)`)
+    }
 
     let ok = 0, reject = 0, dup = 0, wrote = 0
     let idx = 0
@@ -206,7 +215,7 @@ async function main() {
       const domain = typeof raw.domain === 'string' ? raw.domain : null
       if (APPLY && db) {
         if (await setExists(db, legacyId)) { dup++; totalDup++; continue }
-        const okWrite = await writeDraftSet(db, t, level, STAGE ?? 'adhoc', tag, outcome.result, explainZh, domain)
+        const okWrite = await writeDraftSet(db, t, level, STAGE ?? 'adhoc', tag, outcome.result, explainZh, domain, rubricId)
         if (okWrite) { wrote++; totalWrote++ } else { reject++; totalReject++ }
       }
     }

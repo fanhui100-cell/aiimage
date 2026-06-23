@@ -1,0 +1,24 @@
+{
+  "templateId": "toefl-listen-and-repeat",
+  "examIds": ["toefl"],
+  "taskType": "listen_and_repeat",
+  "skill": "speaking",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL 2026『听后复述』原创句子：一句自然、地道、可清晰朗读的英语句子（8-25 词，A1-C2 跨度的中段难度），考生听后逐字复述，rubric 评发音/流利/语调。Claude 亲撰，neutral US，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": { "kind": "speech" },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "speak_prompt" },
+  "subskills": ["pronunciation", "fluency", "intonation", "stress"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "script 为一句自然口语英语，8-25 词，可清晰朗读",
+    "句子自足、无需上下文即可复述",
+    "neutral US，适合 ~5-12 秒音频",
+    "input_mode=speak，rubric 评分（非客观判分）",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}
