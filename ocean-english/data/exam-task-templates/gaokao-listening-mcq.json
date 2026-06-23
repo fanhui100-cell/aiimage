@@ -1,0 +1,32 @@
+{
+  "templateId": "gaokao-listening-mcq",
+  "examIds": ["gaokao"],
+  "taskType": "listening_comprehension",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "高考难度原创听力 transcript（自然口语对话或独白，60-180 词，话题：校园/社会/科技/文化/环境/人际/职业规划）+ 3 道四选一理解题（细节/主旨/推断/态度）。语言为高考难度（比中考复杂，但仍口语自然）。须仅凭音频可答，答案唯一，干扰项合理。Claude 亲撰，neutral US，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "dialogue",
+    "minWords": 60,
+    "maxWords": 180,
+    "perStimulusItems": 3,
+    "topicDomains": ["校园", "社会", "科技", "文化", "环境", "人际", "职业规划", "健康"]
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi", "optionCount": 4 },
+  "subskills": ["detail", "main_idea", "inference", "attitude"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "transcript 为自然口语（对话或独白），60-180 词，高考难度（不要 CET/考研化）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "问题须能仅凭音频内容作答",
+    "干扰项需合理、与音频相关但可排除",
+    "3 题混合细节 + 主旨/推断/态度",
+    "适合朗读为 ~30-60 秒音频，neutral US",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

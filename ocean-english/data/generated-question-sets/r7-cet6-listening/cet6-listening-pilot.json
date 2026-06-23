@@ -1,0 +1,438 @@
+{
+  "template": "cet6-listening-mcq",
+  "level": 4,
+  "sets": [
+    {
+      "passage": "Good morning, everyone. Today I want to address a question that lies at the heart of cognitive science: why do we sleep? For decades, researchers assumed sleep simply restored physical energy. But mounting evidence suggests its primary function is consolidating memory. During the day, your brain encodes information in a fragile, temporary form. It's only during deep, slow-wave sleep that these fragile traces are transferred to long-term storage and stabilized. In one striking experiment, students who learned a list of vocabulary and then slept recalled significantly more words the next morning than peers who stayed awake an equal number of hours. What fascinates me most is that the brain appears selective. It doesn't preserve everything indiscriminately; it prioritizes information you've been told is important, or material tied to emotional significance. So the next time you're tempted to pull an all-nighter before an exam, remember: you may be sabotaging the very process that would have locked in what you studied. A modest night's rest could prove more valuable than those extra waking hours.",
+      "questions": [
+        {
+          "prompt": "What does the speaker identify as the primary function of sleep?",
+          "options": [
+            "Restoring the body's physical energy",
+            "Consolidating and stabilizing memories",
+            "Reducing emotional stress",
+            "Increasing the speed of encoding new information"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the experiment mentioned, students who slept after learning vocabulary",
+          "options": [
+            "recalled fewer words than those who stayed awake",
+            "recalled noticeably more words the next morning",
+            "remembered the same number of words as their peers",
+            "forgot the emotional content first"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about pulling an all-nighter before an exam?",
+          "options": [
+            "It is an effective way to maximize study time",
+            "It may undermine the brain's memory consolidation",
+            "It improves the brain's selective attention",
+            "It has no measurable effect on recall"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1. 讲座明确指出睡眠的主要功能是巩固和稳定记忆，而非仅恢复体力，选B。2. 实验显示睡过觉的学生第二天早晨回忆出的单词明显更多，选B。3. 由\"可能破坏锁定所学内容的过程\"可推断熬夜会削弱记忆巩固，选B。"
+    },
+    {
+      "passage": "So, Daniel, thanks for coming in. I wanted to go over your six-month review before things get busy. Honestly, your technical work has been excellent—the migration project came in ahead of schedule. Thank you, that means a lot. I put in long hours on it. I know you did, and that's actually part of what I want to discuss. You took on nearly everything yourself. The downside is that the rest of the team never learned how the new system works. So if you're out sick, we're stuck. I hadn't thought about it that way. I suppose I assumed handling it alone was faster. It is faster in the short run. But going forward, I'd like you to delegate more and document your process. Think of it as building redundancy, not giving up control. That makes sense. Should I start with the onboarding guide? Exactly. Begin there, and bring two junior staff into the next sprint. Your promotion case will be much stronger if you can show you've grown people, not just shipped code.",
+      "questions": [
+        {
+          "prompt": "What is the main concern the manager raises about Daniel's work?",
+          "options": [
+            "His technical skills are below expectations",
+            "He missed the project deadline",
+            "He worked alone, leaving the team unable to maintain the system",
+            "He refused to put in long hours"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the manager advise Daniel to do going forward?",
+          "options": [
+            "Take on even more projects independently",
+            "Delegate tasks and document his process",
+            "Focus solely on shipping code faster",
+            "Request a transfer to another team"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the manager suggest about Daniel's promotion?",
+          "options": [
+            "It is unlikely regardless of his performance",
+            "It depends only on completing projects early",
+            "It will be stronger if he develops other people",
+            "It has already been approved"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "1. 经理担心的是Daniel独自包揽工作，导致团队无人会维护新系统，选C。2. 经理建议他多授权并记录工作流程，选B。3. 经理指出若能证明培养了人才而非只交付代码，晋升理由会更充分，选C。"
+    },
+    {
+      "passage": "Imagine descending past a thousand meters into the ocean, where sunlight has utterly vanished and the pressure could crush a submarine. You might expect total darkness, yet this realm sparkles with living light. Scientists estimate that the majority of deep-sea creatures produce their own glow through a process called bioluminescence. It works through a chemical reaction: a molecule called luciferin combines with oxygen, releasing energy as light rather than heat. Why bother glowing in the dark? The reasons are remarkably diverse. Some species flash to startle or distract predators, buying a precious second to escape. Others dangle a glowing lure to attract unsuspecting prey straight into their jaws. Still others use specific light patterns as a private signal to find mates in the vast emptiness. What's particularly clever is that this light is almost entirely blue-green—the wavelength that travels farthest through seawater. Evolution, it seems, has fine-tuned these creatures to the optical properties of their environment. The deep sea is not a barren void; it is, in fact, the largest illuminated habitat on the planet.",
+      "questions": [
+        {
+          "prompt": "How is bioluminescent light produced, according to the talk?",
+          "options": [
+            "By absorbing residual sunlight",
+            "Through a chemical reaction releasing energy as light",
+            "By generating heat that turns into light",
+            "Through electrical discharge from nerves"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which of the following is NOT mentioned as a use of bioluminescence?",
+          "options": [
+            "Startling or distracting predators",
+            "Luring prey closer",
+            "Signaling to attract mates",
+            "Regulating body temperature"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why is the emitted light mostly blue-green?",
+          "options": [
+            "Because that wavelength travels farthest through seawater",
+            "Because blue-green requires the least energy to produce",
+            "Because predators cannot detect that color",
+            "Because it is the only color luciferin can produce"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "1. 生物发光通过荧光素与氧反应、以光而非热的形式释放能量，选B。2. 文中提到吓退捕食者、引诱猎物、求偶信号，未提调节体温，选D。3. 蓝绿光在海水中传播最远，故进化选择此波长，选A。"
+    },
+    {
+      "passage": "Hey, you look stressed—everything okay? Not really. The deadline to declare my major is Friday, and I'm completely torn. Between what and what? Economics and environmental science. My parents keep pushing economics because they think it's more practical for jobs. But honestly, the environmental courses are the only ones I look forward to. That's a tough spot. Have you talked to the career office? I did. The advisor said something that surprised me—she said employers care less about the exact major than about the skills you can demonstrate. So a strong environmental science graduate with data and analytical skills can compete for plenty of business roles. Really? I assumed the major locked you in. Apparently not as much as people think. She also pointed out that you tend to perform better in subjects you actually enjoy, which boosts your grades and your record. So you're saying I should follow my interest? I'm saying the gap between the two paths is smaller than your parents fear. Choose what genuinely engages you, and pick up a couple of economics electives to keep doors open.",
+      "questions": [
+        {
+          "prompt": "Why is the student feeling stressed?",
+          "options": [
+            "She failed an economics exam",
+            "She must decide her major by Friday and feels torn",
+            "Her parents refuse to pay her tuition",
+            "She missed the deadline to apply to the career office"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did the career advisor emphasize to the student?",
+          "options": [
+            "The exact major matters more than demonstrable skills",
+            "Employers value demonstrable skills over the exact major",
+            "Environmental science offers no business careers",
+            "Students should always follow their parents' advice"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the friend's overall recommendation?",
+          "options": [
+            "Choose economics to satisfy her parents",
+            "Choose the subject she enjoys and add some economics electives",
+            "Postpone declaring a major until next year",
+            "Drop both majors and explore other fields"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1. 学生压力源于周五前必须决定专业且难以取舍，选B。2. 职业顾问强调雇主更看重可展示的技能而非具体专业，选B。3. 朋友建议选自己真正感兴趣的专业，同时辅修几门经济学课程以保留选择，选B。"
+    },
+    {
+      "passage": "Have you ever noticed that a city feels noticeably hotter than the surrounding countryside, especially at night? This phenomenon has a name: the urban heat island effect. The explanation lies largely in the materials we build with. Asphalt and concrete absorb solar radiation throughout the day and release it slowly after sunset, so cities stay warm long after rural areas have cooled. Add to this the heat pouring out of air conditioners, vehicles, and factories, and the temperature difference can reach several degrees. The consequences are far from trivial. During heat waves, this extra warmth strains power grids as everyone runs cooling at once, and it can turn an uncomfortable day into a genuine health hazard for the elderly. Fortunately, the remedies are surprisingly low-tech. Planting trees provides shade and cools the air through evaporation. Painting rooftops white reflects sunlight instead of trapping it. Some cities are even replacing dark pavement with lighter, reflective surfaces. None of these alone is a silver bullet, but together they can meaningfully lower urban temperatures and, crucially, save lives during extreme heat.",
+      "questions": [
+        {
+          "prompt": "What primarily causes the urban heat island effect?",
+          "options": [
+            "Building materials that absorb and slowly release heat",
+            "A lack of rainfall in cities",
+            "Higher altitude of urban centers",
+            "Cooler temperatures in the surrounding countryside"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is one consequence of the effect mentioned in the talk?",
+          "options": [
+            "It lowers electricity demand in summer",
+            "It strains power grids and endangers the elderly during heat waves",
+            "It increases rainfall over cities",
+            "It cools rural areas more quickly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's attitude toward the proposed remedies?",
+          "options": [
+            "They are too expensive to implement",
+            "A single remedy can completely solve the problem",
+            "Combined, they can meaningfully help despite no single fix being enough",
+            "They are ineffective and largely symbolic"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "1. 城市热岛主要由吸热并缓慢释放热量的建筑材料造成，选A。2. 后果之一是热浪期间加重电网负荷并危及老年人健康，选B。3. 说话人认为没有单一万能方案，但多种措施结合能切实降温救命，选C。"
+    },
+    {
+      "passage": "When we picture the great intellectual movements of the past, we tend to imagine universities or royal courts. Yet historians increasingly point to a humbler venue: the seventeenth-century coffee house. When coffee arrived in Europe, it offered an alternative to alcohol, which until then had been the everyday drink. Instead of dulling the mind, this new beverage sharpened it. Coffee houses sprang up across London and quickly became hubs of conversation where, for the price of a single cup, anyone could sit, read the latest pamphlets, and debate with strangers. Crucially, these spaces blurred social rank. A merchant might argue economics with a poet, and a scientist might test ideas before a skeptical crowd. Some establishments became so associated with particular trades that they evolved into formal institutions—one famous London coffee house, frequented by ship owners and insurers, gradually transformed into a major insurance market that still bears its founder's name. So while the coffee itself was stimulating, the real legacy of these houses was social: they created a space where information circulated freely and ideas were judged on merit rather than on the speaker's title.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what did coffee replace as the everyday drink?",
+          "options": [
+            "Tea",
+            "Alcohol",
+            "Water",
+            "Milk"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker identify as the real legacy of coffee houses?",
+          "options": [
+            "The stimulating effect of caffeine on individuals",
+            "The decline of universities and royal courts",
+            "A social space where information circulated and ideas were judged on merit",
+            "The invention of modern banking"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can be inferred about social rank in the coffee houses?",
+          "options": [
+            "It strictly determined where people could sit",
+            "It mattered less, allowing people of different ranks to debate as equals",
+            "Only the wealthy could afford to enter",
+            "Scientists were excluded from the discussions"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1. 咖啡取代了此前作为日常饮品的酒精，选B。2. 说话人认为咖啡馆真正的遗产是社会性的——信息自由流通、以见解优劣而非头衔评判，选C。3. 由\"模糊社会等级\"\"商人与诗人辩论\"可推断等级在此变得次要，不同阶层可平等辩论，选B。"
+    },
+    {
+      "passage": "Have you noticed how many of our neighbors are living alone these days? I came across a report yesterday that really got me thinking. Apparently, nearly a third of urban households now consist of just one person. That's striking. I suppose it reflects greater independence, but the report argued it also points to growing social isolation, especially among the elderly. The thing is, when people live alone, small emergencies can become genuine crises because there's nobody around to notice. The author proposed a rather clever solution: community check-in networks, where volunteers make brief daily calls to vulnerable residents. It sounds simple, but pilot programs in several cities cut emergency hospital visits by almost twenty percent. What struck me most, though, was the claim that these calls benefited the volunteers too. Many of them reported feeling more connected and purposeful. So it isn't merely charity flowing one way. Honestly, I'd been skeptical of such schemes before, dismissing them as token gestures. But the evidence here is hard to ignore. Maybe loneliness isn't only a private misfortune; it might be something a community can actively address, if we're willing to invest the time.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what proportion of urban households now consist of a single person?",
+          "options": [
+            "About one fifth",
+            "Nearly one third",
+            "Roughly one half",
+            "Almost two thirds"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What was the measured effect of the pilot check-in programs?",
+          "options": [
+            "They reduced emergency hospital visits by about twenty percent",
+            "They eliminated loneliness among the elderly",
+            "They saved cities twenty percent in healthcare spending overall",
+            "They recruited twenty percent more volunteers"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How has the speaker's attitude toward such community schemes changed?",
+          "options": [
+            "From enthusiasm to disappointment",
+            "From indifference to mild curiosity",
+            "From skepticism to cautious acceptance",
+            "From confusion to firm rejection"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为细节题：报告称近三分之一的城市家庭为独居，故选B。第2题为细节题：试点项目使急诊住院减少约20%，选A；其他选项混淆了百分比所指对象。第3题为态度题：说话人原本怀疑（skeptical），看到证据后转为谨慎接受（hard to ignore），故选C。"
+    },
+    {
+      "passage": "So, I hear the city's planning to convert the old textile mill into a museum. What do you make of it? Honestly, I'm thrilled. That building has been standing empty for fifteen years, and it's a genuine piece of our industrial heritage. Well, I'm not so sure it's worth the expense. The council's earmarked nearly eight million for the renovation. Couldn't that money do more good elsewhere? I take your point, but consider what we'd lose otherwise. Once these structures are demolished, the craftsmanship is gone forever. The proposal isn't just to preserve the shell, you know. They want to display the original looms and tell the workers' stories. Hmm, that does sound more meaningful than I assumed. I pictured another dusty exhibit nobody visits. Actually, the planners studied similar conversions abroad. In one case, the restored mill drew so many tourists it revitalized the whole district. So it could pay for itself eventually? That's the argument. I won't pretend it's guaranteed, but I'd rather we try than let the place crumble. Well, when you frame it as an investment in identity rather than mere nostalgia, I suppose I can get behind it.",
+      "questions": [
+        {
+          "prompt": "What does the city plan to do with the old textile mill?",
+          "options": [
+            "Demolish it to free up land",
+            "Convert it into a museum",
+            "Sell it to foreign investors",
+            "Turn it into a shopping district"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the woman initially object to the plan?",
+          "options": [
+            "She thought the building was unsafe",
+            "She doubted the eight-million cost was justified",
+            "She disliked industrial architecture",
+            "She wanted apartments built instead"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about the woman by the end of the conversation?",
+          "options": [
+            "She remains firmly opposed to the project",
+            "She has been persuaded to support it",
+            "She intends to apply for funding herself",
+            "She doubts any tourists will visit"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：市政府计划把旧纺织厂改造成博物馆，选B。第2题为细节题：女士最初反对是质疑近800万的费用是否值得，选B。第3题为推断题：结尾她说\"I can get behind it\"，表明被说服支持，选B。"
+    },
+    {
+      "passage": "Good afternoon. Today I want to challenge a common assumption about recycling. Most of us toss a bottle into the blue bin and feel we've done our bit for the planet. But the uncomfortable truth is that recycling sits at the bottom of the waste hierarchy, not the top. The principle we ought to prioritize is reduction, simply consuming less in the first place. Consider plastic. Globally, only about nine percent of all plastic ever produced has actually been recycled. The rest is incinerated, buried, or scattered across our oceans and soils. Why so little? Partly because many plastics degrade in quality each time they're processed, so a recycled bottle rarely becomes another bottle. It's downcycled into something cheaper, then discarded. This doesn't mean recycling is pointless; it remains far better than landfill. But it risks lulling us into complacency, the comforting belief that our consumption can continue unchecked as long as we sort our rubbish. The most powerful action, I'd argue, happens before purchase, when we ask whether we need the item at all. So the next time you reach for something disposable, pause. Refusing to consume is the form of environmentalism we've been most reluctant to embrace.",
+      "questions": [
+        {
+          "prompt": "What is the speaker's main point about recycling?",
+          "options": [
+            "Recycling should be banned because it is ineffective",
+            "Reducing consumption matters more than recycling",
+            "Landfill is preferable to recycling",
+            "Plastic bottles can be recycled endlessly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the speaker, roughly what share of all plastic ever produced has been recycled?",
+          "options": [
+            "About nine percent",
+            "About nineteen percent",
+            "About thirty percent",
+            "About half"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker warn that recycling can be misleading?",
+          "options": [
+            "It is more expensive than people realize",
+            "It may make people feel free to keep consuming as before",
+            "It produces toxic fumes when done at home",
+            "It is illegal in many countries"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为主旨题：演讲核心是减少消费比回收更重要，选B。第2题为细节题：仅约9%的塑料被真正回收，选A。第3题为推断题：回收会让人产生\"只要分类就能继续消费\"的麻痹感（complacency），选B。"
+    },
+    {
+      "passage": "You look exhausted. Still pulling those late nights to study? I have to. The exam's in two weeks, and I feel like I'm falling behind everyone. Hmm, can I be honest with you? You've said that every term, and you always end up near the top. I think you might be measuring yourself against an impossible standard. What do you mean? Well, there's this pattern psychologists call the impostor phenomenon. People who are genuinely capable convince themselves they're frauds, that their success is just luck, and they're terrified of being exposed. That's... uncomfortably accurate, actually. The trouble is, it pushes you to overwork, which wears you down and ironically makes you perform worse. So the fear creates the very failure it dreads. Exactly. And here's the counterintuitive part: rest isn't a reward you earn after success. It's a condition for it. Your brain consolidates what you've learned while you sleep. Skip that, and you're sabotaging the studying you stayed up for. I never thought of it that way. I suppose I've been treating exhaustion as proof I'm trying hard enough. That's a trap. Trying hard and harming yourself aren't the same thing. Maybe ease off tonight and see how tomorrow's revision goes.",
+      "questions": [
+        {
+          "prompt": "What psychological pattern does the friend describe?",
+          "options": [
+            "The impostor phenomenon",
+            "Seasonal mood disorder",
+            "Selective memory bias",
+            "The bystander effect"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the friend, why is sleep important for studying?",
+          "options": [
+            "It rewards students for hard work",
+            "The brain consolidates learning during sleep",
+            "It prevents physical illness before exams",
+            "It improves eyesight for reading"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about the student's belief before this conversation?",
+          "options": [
+            "The student enjoyed staying up late",
+            "The student equated exhaustion with sufficient effort",
+            "The student had already failed several exams",
+            "The student disliked the subject being studied"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：朋友描述的是\"冒充者现象\"(impostor phenomenon)，选A。第2题为细节题：睡眠时大脑巩固所学，选B。第3题为推断题：学生原把疲惫当作努力够了的证明（exhaustion as proof I'm trying hard enough），选B。"
+    },
+    {
+      "passage": "I've been reading about the gig economy, and I'm genuinely torn about it. On one hand, the flexibility sounds wonderful. You're your own boss, you set your own hours. But on the other? Right, that's the catch. A friend of mine drives for a delivery app, and she told me the freedom is partly an illusion. The platform's algorithm decides which jobs she sees, how much they pay, even when demand peaks. So she has to work whenever it tells her to, or earn almost nothing. Exactly. And because she's classified as an independent contractor rather than an employee, she gets no sick pay, no pension, no holiday leave. If she's ill, she simply doesn't earn. That seems like the worst of both worlds, the insecurity of self-employment without the protections of a regular job. That's precisely the criticism. Some economists argue these platforms have shifted all the risk onto workers while keeping the profits. Others insist the model genuinely helps people who couldn't otherwise find work. So who's right? Maybe both, to a degree. The point my friend made was that we shouldn't romanticize flexibility without asking who actually bears the cost when things go wrong.",
+      "questions": [
+        {
+          "prompt": "What is the woman's friend's main complaint about gig work?",
+          "options": [
+            "The pay is too high to be sustainable",
+            "The promised freedom is partly an illusion controlled by an algorithm",
+            "The hours are too rigidly fixed by a manager",
+            "The work requires expensive training"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the friend receive no sick pay or pension?",
+          "options": [
+            "She works only part time",
+            "She is classified as an independent contractor",
+            "She has not worked there long enough",
+            "She declined those benefits voluntarily"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What overall attitude toward the gig economy do the speakers convey?",
+          "options": [
+            "Unreserved enthusiasm",
+            "Total condemnation",
+            "Balanced ambivalence",
+            "Complete indifference"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为细节题：朋友抱怨自由是受算法控制的假象，选B。第2题为细节题：因被归类为独立承包人而无病假和养老金，选B。第3题为态度题：两人既看到灵活性又看到风险，态度矛盾平衡（torn / maybe both），选C。"
+    },
+    {
+      "passage": "Welcome, everyone. Before we tour the gallery, let me say a word about a debate that surrounds nearly every piece you'll see today. Many of these artifacts were acquired more than a century ago, often under colonial circumstances, and increasingly the countries of origin are requesting their return. This is what we call the repatriation debate. Now, the museum's traditional argument runs like this: here, the objects are preserved, studied by scholars, and viewed freely by millions. A universal museum, the reasoning goes, belongs to all of humanity. But critics counter that this logic conveniently ignores how the items left their homelands in the first place, frequently through plunder or coercion. For the source communities, these aren't merely exhibits; they're sacred objects, ancestral remains, pieces of a living identity. I'll be candid with you. My own view has shifted over the years. I used to defend the universal-museum position rather firmly. But after speaking with delegations who'd traveled thousands of miles just to glimpse what was taken from them, I find that abstract argument harder to sustain. As you walk through, I'd invite you not to settle the question, but to hold it open in your mind.",
+      "questions": [
+        {
+          "prompt": "What is the central topic of the guide's introduction?",
+          "options": [
+            "How to restore damaged artifacts",
+            "The repatriation debate over museum acquisitions",
+            "Ticket prices and visiting hours",
+            "The history of the museum building"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the traditional 'universal museum' argument the guide describes?",
+          "options": [
+            "That artifacts should be sold to the highest bidder",
+            "That keeping objects in one museum preserves and shares them with all humanity",
+            "That source countries lack any legal claim",
+            "That artifacts are too fragile to transport anywhere"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How has the guide's own position changed?",
+          "options": [
+            "From supporting repatriation to opposing it",
+            "From firmly defending the universal museum to finding it harder to sustain",
+            "From indifference to strong opposition to returns",
+            "It has not changed at all"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为主旨题：导览核心是文物归还争议（repatriation debate），选B。第2题为细节题：\"普世博物馆\"论点指集中保存并向全人类开放，选B。第3题为态度题：导览者从坚定捍卫普世论转为觉得该立场难以维系，选B。"
+    }
+  ]
+}
