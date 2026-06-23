@@ -1,0 +1,438 @@
+{
+  "template": "zhongkao-listening-mcq",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Hi Mr. Lee. I'm sorry I'm late for class. My bike got a flat tire this morning, so I had to walk to school. It took me almost forty minutes. Don't worry, Tom. I'm glad you came. Just take your seat quietly. We're reading page twelve now. After class, you can borrow Lucy's notes to copy what you missed. Thank you, Mr. Lee. I'll be more careful tomorrow and leave home earlier.",
+      "questions": [
+        {
+          "prompt": "Why was Tom late for class?",
+          "options": [
+            "He woke up late.",
+            "His bike had a flat tire.",
+            "He missed the bus.",
+            "He forgot his books."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the conversation mainly about?",
+          "options": [
+            "A student explaining why he is late.",
+            "A teacher giving a math test.",
+            "Two friends planning a trip.",
+            "A student buying a new bike."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we infer about Mr. Lee?",
+          "options": [
+            "He is angry and punishes Tom.",
+            "He is kind and understanding.",
+            "He does not like Tom.",
+            "He cancels the class."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：Tom说自己的自行车爆胎(flat tire)所以迟到，选B。第二题主旨题：整段对话是学生向老师解释迟到原因，选A。第三题推断题：老师说不用担心、让他安静坐下、还安排借笔记，说明老师善解人意，选B。"
+    },
+    {
+      "passage": "This is a picture of my family. There are four people in it. My father is a doctor, and he works at the hospital near our home. My mother is an English teacher, so she helps me with my homework every evening. My little sister is only five years old, and she loves drawing pictures of animals. On weekends, we often cook dinner together. I think I'm very lucky to have such a warm family.",
+      "questions": [
+        {
+          "prompt": "What does the speaker's mother do?",
+          "options": [
+            "She is a doctor.",
+            "She is an English teacher.",
+            "She is an artist.",
+            "She is a cook."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker mainly talking about?",
+          "options": [
+            "The speaker's family.",
+            "The speaker's school.",
+            "A weekend trip.",
+            "A favorite animal."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How does the speaker feel about the family?",
+          "options": [
+            "Bored.",
+            "Worried.",
+            "Happy and lucky.",
+            "Angry."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：原文说妈妈是英语老师(English teacher)，选B。第二题主旨题：整段在介绍说话人的家庭，选A。第三题推断题：末句说\"I'm very lucky to have such a warm family\"，说明感到幸福快乐，选C。"
+    },
+    {
+      "passage": "Excuse me, how much is this blue T-shirt? It's twenty dollars. Do you have it in a smaller size? This one is a little too big for me. Let me check. Yes, here is a medium one. Great. Can I try it on? Of course, the fitting room is over there. Hmm, it fits well. I'll take it. Can I pay by card? Sure, no problem. The card machine is right here.",
+      "questions": [
+        {
+          "prompt": "How much does the blue T-shirt cost?",
+          "options": [
+            "Twelve dollars.",
+            "Twenty dollars.",
+            "Thirty dollars.",
+            "Twenty-two dollars."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where does the conversation most likely take place?",
+          "options": [
+            "In a clothes shop.",
+            "In a restaurant.",
+            "At a school.",
+            "At a library."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How will the customer pay?",
+          "options": [
+            "By cash.",
+            "By card.",
+            "By phone.",
+            "By check."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：店员说\"It's twenty dollars\"，T恤20美元，选B。第二题主旨/场景题：试穿T恤、试衣间、付款，明显是在服装店，选A。第三题推断/细节题：顾客问\"Can I pay by card?\"且店员同意，说明用刷卡付款，选B。"
+    },
+    {
+      "passage": "Hey Anna, what are you going to do this weekend? I'm not sure yet. The weather report says it will rain on Saturday. Oh, that's too bad. I wanted to go hiking. Why don't we go to the new science museum instead? It's indoors, so the rain won't be a problem. That sounds fun! I've never been there. Let's meet at the bus stop at nine on Saturday morning. Perfect. See you then!",
+      "questions": [
+        {
+          "prompt": "What will the weather be like on Saturday?",
+          "options": [
+            "Sunny.",
+            "Windy.",
+            "Rainy.",
+            "Snowy."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What will the two friends finally do this weekend?",
+          "options": [
+            "Go hiking.",
+            "Visit a science museum.",
+            "Stay at home.",
+            "Watch a movie."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why do they change their plan?",
+          "options": [
+            "Because the museum is free.",
+            "Because of the rainy weather.",
+            "Because they are too tired.",
+            "Because the bus is late."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：原文说\"it will rain on Saturday\"，周六会下雨，选C。第二题主旨/结果题：因为下雨，他们决定改去室内的科学博物馆，选B。第三题推断题：本来想去徒步，但因为下雨(rain won't be a problem in museum)而改计划，选B。"
+    },
+    {
+      "passage": "Hi Mom, it's Lucy. I'm calling from the train station in Shanghai. My friend Anna and I just arrived this morning. The weather here is sunny, so we're going to the City Museum first, and then we'll have lunch near the river. Tomorrow we plan to take a boat trip. Don't worry, our hotel is clean and very close to the station. I'll send you some photos tonight. I miss you. See you on Sunday!",
+      "questions": [
+        {
+          "prompt": "Where is Lucy calling from?",
+          "options": [
+            "The airport",
+            "The train station",
+            "The hotel",
+            "The museum"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main purpose of Lucy's call?",
+          "options": [
+            "To ask her mom for money",
+            "To tell her mom about her trip",
+            "To book a hotel room",
+            "To complain about the weather"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can we learn about Lucy?",
+          "options": [
+            "She is traveling alone",
+            "She will go home on Saturday",
+            "She is enjoying her trip",
+            "She does not like her hotel"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题细节题：Lucy说\"I'm calling from the train station in Shanghai\"，所以是火车站，选B。第2题主旨题：她打电话告诉妈妈旅行情况（到达、计划、酒店等），选B。第3题推断题：她说天气晴朗、要去博物馆和坐船、酒店干净又方便、还想念妈妈并发照片，说明她旅行很愉快，选C；她和Anna同行（非独自），周日回家（非周六），喜欢酒店，故A、B、D错。"
+    },
+    {
+      "passage": "Good morning, everyone! Here is today's weather report. This morning it is cloudy and a little cold, so please wear a warm coat. In the afternoon, it will rain heavily, and the wind will be strong. Don't forget to take your umbrella when you go out. The good news is that tomorrow will be sunny and warm, perfect for playing outside. Have a nice day and stay dry!",
+      "questions": [
+        {
+          "prompt": "What will the weather be like this afternoon?",
+          "options": [
+            "Sunny and warm",
+            "Cloudy and cold",
+            "Rainy and windy",
+            "Snowy and cold"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the speaker mainly doing?",
+          "options": [
+            "Giving a weather report",
+            "Teaching a science class",
+            "Selling umbrellas",
+            "Telling a story"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker tell people to take an umbrella?",
+          "options": [
+            "Because it will be sunny",
+            "Because it will rain in the afternoon",
+            "Because it will snow",
+            "Because the sun is too strong"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题细节题：\"In the afternoon, it will rain heavily, and the wind will be strong\"，下午有雨有风，选C。第2题主旨题：开头\"Here is today's weather report\"，这是天气预报，选A。第3题推断题：因为下午会下雨，所以提醒带伞，选B；明天才晴暖，并非因晴天或下雪带伞，故其他选项错。"
+    },
+    {
+      "passage": "Doctor: Good morning. What's wrong with you? Patient: Good morning, doctor. I don't feel well. I have a bad headache and I feel very tired. Doctor: I see. Do you have a fever? Patient: Yes, a little. I also coughed all night. Doctor: It sounds like you have a cold. You should drink more hot water and take this medicine twice a day. And please stay in bed and rest for two days. Patient: OK, thank you, doctor.",
+      "questions": [
+        {
+          "prompt": "What is wrong with the patient?",
+          "options": [
+            "He has a toothache",
+            "He has a headache and a fever",
+            "He has a stomachache",
+            "He hurt his leg"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where does this conversation most likely take place?",
+          "options": [
+            "In a restaurant",
+            "At a school",
+            "In a hospital",
+            "At a train station"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What should the patient do according to the doctor?",
+          "options": [
+            "Eat more cold food",
+            "Run every morning",
+            "Rest and take the medicine",
+            "Go back to work today"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题细节题：病人说\"I have a bad headache\"且有点发烧（\"a fever... a little\"），选B。第2题推断题：医生与病人对话、问诊、开药，最可能发生在医院，选C。第3题细节题：医生建议\"take this medicine twice a day\"并\"stay in bed and rest for two days\"，即休息并吃药，选C；其他建议与原文相反。"
+    },
+    {
+      "passage": "Excuse me, sir. Could you tell me how to get to the post office? Sure. Go straight along this street and turn left at the second traffic lights. The post office is on your right, next to a small bookstore. It's about five minutes' walk. Oh, thank you very much! You're welcome. But the post office closes at six, so you'd better hurry. Don't worry, it's only four thirty now. Goodbye!",
+      "questions": [
+        {
+          "prompt": "Where should the woman turn left?",
+          "options": [
+            "At the first traffic lights",
+            "At the second traffic lights",
+            "At the bookstore",
+            "At the post office"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the woman trying to find?",
+          "options": [
+            "A bookstore",
+            "A hospital",
+            "The post office",
+            "A bus stop"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the man tell the woman to hurry?",
+          "options": [
+            "Because it is going to rain",
+            "Because the post office will close at six",
+            "Because the bus is coming",
+            "Because the bookstore is far away"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题细节题：男士说\"turn left at the second traffic lights\"，在第二个红绿灯左转，选B。第2题主旨题：女士开头问\"how to get to the post office\"，她要找邮局，选C。第3题推断题：男士说\"the post office closes at six, so you'd better hurry\"，因邮局六点关门所以让她快点，选B。"
+    },
+    {
+      "passage": "Hi Tom, what do you like to do after school? Well, I really love painting. I paint almost every weekend in my room. That sounds great! Do you draw people or animals? Mostly animals, like cats and birds. Last month I even painted a picture of my dog. Wow, can I see it sometime? Sure, I'll bring it to school on Friday. How about you, Lily? Oh, I prefer playing the guitar. Music makes me feel relaxed. Maybe we can show our hobbies to the class next week!",
+      "questions": [
+        {
+          "prompt": "What does Tom like to do after school?",
+          "options": [
+            "Playing the guitar",
+            "Painting",
+            "Walking his dog",
+            "Singing songs"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is this conversation mainly about?",
+          "options": [
+            "Their school subjects",
+            "Their weekend trips",
+            "Their hobbies",
+            "Their families"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we learn about Lily?",
+          "options": [
+            "She enjoys music.",
+            "She is afraid of dogs.",
+            "She cannot draw animals.",
+            "She hates the guitar."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第1题：Tom说\"I really love painting\"，所以选B绘画。第2题：两人一直在谈论各自的兴趣爱好（画画、弹吉他），主旨是hobbies，选C。第3题：Lily说\"Music makes me feel relaxed\"并喜欢弹吉他，可推断她喜欢音乐，选A。"
+    },
+    {
+      "passage": "I want to tell you about my best friend, Anna. We met three years ago when she sat next to me in class. At first I was shy, but Anna talked to me with a big smile, so we soon became good friends. She is always kind and ready to help. When I was sick last week, she brought my homework to my house and explained the hard math problems. She isn't very tall, but she runs fast and often wins races. I feel lucky to have such a wonderful friend.",
+      "questions": [
+        {
+          "prompt": "How did the speaker meet Anna?",
+          "options": [
+            "At a running race",
+            "In a math club",
+            "When Anna sat next to her in class",
+            "At Anna's house"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the speaker mainly talking about?",
+          "options": [
+            "Her favorite sport",
+            "Her best friend Anna",
+            "Her math homework",
+            "Her new school"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What kind of person is Anna?",
+          "options": [
+            "Helpful and kind",
+            "Lazy and shy",
+            "Rude and proud",
+            "Quiet and unfriendly"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第1题：说话人说\"We met three years ago when she sat next to me in class\"，选C。第2题：整段都在介绍最好的朋友Anna，主旨选B。第3题：Anna总是善良乐于助人，生病时帮忙送作业讲题，可推断她helpful and kind，选A。"
+    },
+    {
+      "passage": "Hey Mike, the Mid-Autumn Festival is coming next week. What will your family do? We'll have a big dinner together, and my grandma always makes mooncakes. I love the ones with egg yolk inside! That sounds delicious. My family will sit in the yard at night and watch the moon. The moon is so round and bright on that day. Do you give gifts too? Yes, we send mooncakes to our relatives. It's a time for families to be together. I really enjoy this festival because everyone feels happy and close.",
+      "questions": [
+        {
+          "prompt": "What does Mike's grandma always make?",
+          "options": [
+            "Dumplings",
+            "Mooncakes",
+            "Birthday cakes",
+            "Cookies"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What are the two speakers mainly talking about?",
+          "options": [
+            "A school trip",
+            "The Mid-Autumn Festival",
+            "Their grandparents",
+            "Their favorite food only"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker enjoy the festival?",
+          "options": [
+            "Because there is no school",
+            "Because families come together and feel happy",
+            "Because the weather is cool",
+            "Because he gets money"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题：Mike说\"my grandma always makes mooncakes\"，选B月饼。第2题：对话围绕中秋节展开，主旨选B。第3题：说话人说\"It's a time for families to be together\"和\"everyone feels happy and close\"，可推断他因家人团聚而喜欢这个节日，选B。"
+    },
+    {
+      "passage": "Good evening! Welcome to our restaurant. Are you ready to order? Yes, I'd like a beef burger and some French fries, please. Sure. Would you like anything to drink? Can I have a glass of orange juice? Of course. Would you like any dessert after your meal? Hmm, maybe some ice cream, please. Great choice. So that's one beef burger, French fries, an orange juice, and ice cream. Is that right? Yes, that's all. How long will it take? About fifteen minutes, sir. Thank you very much.",
+      "questions": [
+        {
+          "prompt": "What does the man want to drink?",
+          "options": [
+            "Coffee",
+            "Milk",
+            "Orange juice",
+            "Tea"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Where does this conversation most likely take place?",
+          "options": [
+            "In a library",
+            "In a restaurant",
+            "In a hospital",
+            "At a bus stop"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How long will the man probably wait for his food?",
+          "options": [
+            "About five minutes",
+            "About fifteen minutes",
+            "About fifty minutes",
+            "About one hour"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题：男士说\"Can I have a glass of orange juice?\"，选C橙汁。第2题：服务员说\"Welcome to our restaurant\"并点餐，场景是餐厅，选B。第3题：服务员回答\"About fifteen minutes\"，所以大约等15分钟，选B。"
+    }
+  ]
+}

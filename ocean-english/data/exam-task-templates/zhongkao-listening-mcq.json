@@ -1,0 +1,32 @@
+{
+  "templateId": "zhongkao-listening-mcq",
+  "examIds": ["zhongkao"],
+  "taskType": "listening_comprehension",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "中考难度原创听力 transcript（自然口语对话或短文，40-140 词，话题贴近初中生活：校园/家庭/购物/旅行/天气/健康/兴趣/朋友）+ 3 道四选一理解题（细节/主旨/推断）。须能仅凭音频作答，答案唯一，干扰项合理。Claude 亲撰，neutral US，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "dialogue",
+    "minWords": 40,
+    "maxWords": 140,
+    "perStimulusItems": 3,
+    "topicDomains": ["校园", "家庭", "购物", "旅行", "天气", "健康", "兴趣", "朋友"]
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi", "optionCount": 4 },
+  "subskills": ["detail", "main_idea", "inference", "gist"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "transcript 为自然口语（对话或短文），40-140 词，中考难度（不要 CET/高考化）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "问题须能仅凭音频内容作答，不依赖外部知识",
+    "干扰项需合理、与音频相关但可排除",
+    "3 题混合细节 + 主旨/推断",
+    "适合朗读为 ~20-40 秒音频，neutral US",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

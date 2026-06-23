@@ -132,6 +132,26 @@ export function shapeToItems(t: ShapeTemplate, raw: Record<string, unknown>): Sh
     return { ok: true, result: { stimulusText: passage, meta: {}, items } }
   }
 
+  if (shape === 'listening_multi') {
+    // 听力理解：一段口语 transcript（passage=要朗读的对话/短文）+ N 道 4 选 1。
+    // 与 reading_multi 同构，但 item.input_mode='listen'（transcript 经 R6 管线合成音频，答前不下发原文）。
+    const qs = Array.isArray(raw.questions) ? (raw.questions as Record<string, unknown>[]) : []
+    if (qs.length < 1 || qs.length > 10) return { ok: false, reject: 'questions_count' }
+    const items: DraftItem[] = []
+    for (const q of qs) {
+      const opts = Array.isArray(q.options) ? (q.options as unknown[]).map((x) => String(x)) : []
+      if (opts.length !== t.optionCount) return { ok: false, reject: 'options_count' }
+      const prompt = String(q.prompt ?? '').trim()
+      if (!prompt) return { ok: false, reject: 'prompt_empty' }
+      const raw_ans = String(q.answer ?? '').trim()
+      let ci = 'abcd'.indexOf(raw_ans.toLowerCase())
+      if (ci < 0 || ci >= opts.length) ci = opts.findIndex((o) => o.toLowerCase() === raw_ans.toLowerCase())
+      if (ci < 0) return { ok: false, reject: 'answer_not_in_options' }
+      items.push({ inputMode: 'listen', prompt, promptZh: null, choices: opts.map((text, i) => ({ id: 'abcd'[i], text })), answer: 'abcd'[ci] })
+    }
+    return { ok: true, result: { stimulusText: passage, meta: {}, items } }
+  }
+
   if (shape === 'complete_words') {
     // TOEFL Complete the Words：语境中补全被部分遮盖的词。passage 存完整上下文（词数准确）；
     // maskedForm 用 '_' 表示缺失字母，其余位置必须与 targetWord 完全一致；targetWord 必须在 passage
