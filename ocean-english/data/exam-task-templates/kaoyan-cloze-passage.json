@@ -1,0 +1,29 @@
+{
+  "templateId": "kaoyan-cloze-passage",
+  "examIds": ["kaoyan"],
+  "taskType": "cloze_passage",
+  "skill": "integrated",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "考研完形：一篇 240-320 词原创学术/社会议论短文，挖 20 空（编号 1-20），每空 4 选项、唯一正确，重考逻辑衔接/语境词义/搭配辨析（动名形副+连词介词）。难度为考研，比高考更抽象。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 240,
+    "maxWords": 340,
+    "perStimulusItems": 20,
+    "topicDomains": ["学术", "社会", "科技", "心理", "经济", "文化"]
+  },
+  "itemCount": 20,
+  "optionCount": 4,
+  "answerSchema": { "shape": "cloze_passage", "blanks": 20, "optionCount": 4 },
+  "subskills": ["logical_cohesion", "vocab_in_context", "word_discrimination", "discourse_marker"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "恰好 20 空，每空 4 选项，唯一正确",
+    "干扰项同词性、合语法、靠语境/逻辑排除",
+    "难度为考研，不要 CET 化或高考化",
+    "不得出现退役题型（尤其 cet_cloze）"
+  ],
+  "copyrightPolicy": "original_only"
+}

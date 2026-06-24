@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-24T16:22:44.771Z",
+  "apply": false,
+  "stage": "r13-cet6-banked-cloze",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 39,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-banked-cloze\\batchA.json",
+      "template": "cet-banked-cloze",
+      "level": 4,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-banked-cloze\\batchB.json",
+      "template": "cet-banked-cloze",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-banked-cloze\\batchC.json",
+      "template": "cet-banked-cloze",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-banked-cloze\\batchD.json",
+      "template": "cet-banked-cloze",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}
