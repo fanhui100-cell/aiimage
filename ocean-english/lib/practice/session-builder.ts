@@ -288,12 +288,20 @@ export function reconstructCloze(
   const bank = (taskType === 'banked_cloze' && choices.length) ? choices.map((c) => c.text) : undefined
   const ans = Array.isArray(answer) ? answer : []
   const key: Record<number, string> = {}
+  const acceptable: Record<number, string[]> = {}
   blankNums.forEach((n, i) => {
     const a = ans[i]
     if (taskType === 'banked_cloze') { const idx = typeof a === 'number' ? a : Number(a); key[n] = choices[idx]?.text ?? '' }
-    else key[n] = typeof a === 'string' ? a : String(a ?? '')
+    else if (a && typeof a === 'object' && 'answer' in (a as object)) {
+      // grammar_fill gblanks shape {answer, acceptable?, hint?}; 取主答案，acceptable 备选透传（渲染器支持后判分用）
+      key[n] = String((a as { answer: unknown }).answer ?? '')
+      const acc = (a as { acceptable?: unknown }).acceptable
+      if (Array.isArray(acc) && acc.length) acceptable[n] = acc.map((x) => String(x))
+    } else key[n] = typeof a === 'string' ? a : String(a ?? '')
   })
-  return { clozeBody: { segments, ...(bank ? { bank } : {}) }, review: { cloze: { key, explanationZh } } }
+  const cloze: { key: Record<number, string>; acceptable?: Record<number, string[]>; explanationZh: string } = { key, explanationZh }
+  if (Object.keys(acceptable).length) cloze.acceptable = acceptable
+  return { clozeBody: { segments, ...(bank ? { bank } : {}) }, review: { cloze } }
 }
 const CLOZE_RECONSTRUCT = new Set(['banked_cloze', 'grammar_fill'])
 

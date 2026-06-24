@@ -17,7 +17,7 @@ let failures = 0
 const check = (c: boolean, m: string) => { if (c) console.log('  ✓', m); else { console.log('  ✗', m); failures++ } }
 
 async function oneSet(taskType: string) {
-  const { data: sets } = await db.from('question_sets').select('id,stimulus_id,legacy_id').eq('task_type', taskType).limit(1)
+  const { data: sets } = await db.from('question_sets').select('id,stimulus_id,legacy_id').eq('task_type', taskType).like('legacy_id', 'gen:%').limit(1)
   if (!sets || !sets.length) { console.log(`  ⚠ ${taskType}: 无数据，跳过`); return }
   const s = sets[0]
   const { data: st } = await db.from('stimuli').select('text_en').eq('id', (s as { stimulus_id: string }).stimulus_id)
@@ -45,6 +45,8 @@ async function oneSet(taskType: string) {
     // 提示 (hint) 文本应保留在 segments 文本中（如 (surprising)）
     const text = r.clozeBody.segments.filter((x) => typeof x === 'string').join(' ')
     check(/\([a-zA-Z]/.test(text), 'grammar_fill: 提示 (hint) 文本保留在题面')
+    // 防 [object Object]：gblanks {answer,acceptable} 形状必须取 .answer 而非 stringify 整个对象
+    check(Object.values(r.review.cloze.key).every((v) => v !== '[object Object]' && /[a-zA-Z]/.test(v)), 'grammar_fill: key 为真实词（非 [object Object]）')
   }
   // 题面文本不应直接含正解（grammar 正解词不应出现在 segments 文本——除非巧合，仅 banked 跳过因 bank 必含）
 }
