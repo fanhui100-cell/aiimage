@@ -297,6 +297,74 @@ export function reconstructCloze(
 }
 const CLOZE_RECONSTRUCT = new Set(['banked_cloze', 'grammar_fill'])
 
+// ── cloze_passage：逐空四选（每空自带 4 选项）──────────────────────────────────
+// 存储：passage 含 (n)___ 标记；item.answer = [{answer: 选项序号字符串, options: [4 文本]}]（按空序）。
+const BLANK_UND = /\((\d+)\)_+/g
+export function reconstructPassageCloze(passage: string | null | undefined, answer: unknown, explanationZh: string):
+  { passageClozeBody: { segments: (string | { blank: number; options: { id: string; text: string }[] })[] }; review: { passageCloze: { key: Record<number, string>; explanationZh: string } } } | null {
+  if (!passage || !Array.isArray(answer)) return null
+  const segs: (string | { blank: number; options: { id: string; text: string }[] })[] = []
+  const nums: number[] = []
+  let last = 0, m: RegExpExecArray | null
+  BLANK_UND.lastIndex = 0
+  while ((m = BLANK_UND.exec(passage)) !== null) {
+    if (m.index > last) segs.push(passage.slice(last, m.index))
+    nums.push(Number(m[1])); segs.push({ blank: Number(m[1]), options: [] }); last = m.index + m[0].length
+  }
+  if (!nums.length || nums.length !== answer.length) return null
+  if (last < passage.length) segs.push(passage.slice(last))
+  const key: Record<number, string> = {}
+  let bi = 0
+  for (const seg of segs) {
+    if (typeof seg === 'object') {
+      const a = answer[bi] as { answer?: unknown; options?: unknown }
+      const opts = Array.isArray(a?.options) ? (a!.options as string[]) : []
+      seg.options = opts.map((t, i) => ({ id: String(i), text: String(t) }))
+      key[seg.blank] = String(a?.answer ?? '')
+      bi++
+    }
+  }
+  return { passageClozeBody: { segments: segs }, review: { passageCloze: { key, explanationZh } } }
+}
+
+// ── seven_select：七选五（5 空填 7 候选句，2 干扰）──────────────────────────────
+const GAP_MARK = /\((\d+)\)/g
+export function reconstructSevenSelect(passage: string | null | undefined, choices: { id: string; text: string }[], answer: unknown, explanationZh: string):
+  { sevenSelectBody: { segments: (string | { gap: number })[]; candidates: { id: string; text: string }[] }; review: { sevenSelect: { key: Record<number, string>; explanationZh: string } } } | null {
+  if (!passage || !Array.isArray(answer) || !choices.length) return null
+  const segs: (string | { gap: number })[] = []
+  const nums: number[] = []
+  let last = 0, m: RegExpExecArray | null
+  GAP_MARK.lastIndex = 0
+  while ((m = GAP_MARK.exec(passage)) !== null) {
+    if (m.index > last) segs.push(passage.slice(last, m.index))
+    nums.push(Number(m[1])); segs.push({ gap: Number(m[1]) }); last = m.index + m[0].length
+  }
+  if (!nums.length || nums.length !== answer.length) return null
+  if (last < passage.length) segs.push(passage.slice(last))
+  const key: Record<number, string> = {}
+  nums.forEach((n, i) => { const idx = typeof answer[i] === 'number' ? answer[i] as number : Number(answer[i]); key[n] = choices[idx]?.id ?? String(idx) })
+  return { sevenSelectBody: { segments: segs, candidates: choices.map((c) => ({ id: c.id, text: c.text })) }, review: { sevenSelect: { key, explanationZh } } }
+}
+
+// ── para_match：段落信息匹配（陈述→段落字母，多对一）──────────────────────────
+const PARA_MARK = /\[([A-Z])\]/g
+export function reconstructParaMatch(passage: string | null | undefined, choices: { id: string; text: string }[], answer: unknown, explanationZh: string):
+  { paraMatchBody: { paragraphs: { label: string; text: string }[]; statements: { id: string; text: string }[] }; review: { paraMatch: { key: Record<string, string>; explanationZh: string } } } | null {
+  if (!passage || !Array.isArray(answer) || !choices.length) return null
+  const paras: { label: string; text: string }[] = []
+  const marks: { label: string; idx: number; end: number }[] = []
+  let m: RegExpExecArray | null
+  PARA_MARK.lastIndex = 0
+  while ((m = PARA_MARK.exec(passage)) !== null) marks.push({ label: m[1], idx: m.index, end: m.index + m[0].length })
+  if (!marks.length) return null
+  marks.forEach((mk, i) => { const textEnd = i + 1 < marks.length ? marks[i + 1].idx : passage.length; paras.push({ label: mk.label, text: passage.slice(mk.end, textEnd).trim() }) })
+  if (answer.length !== choices.length) return null
+  const key: Record<string, string> = {}
+  choices.forEach((c, i) => { const pIdx = typeof answer[i] === 'number' ? answer[i] as number : Number(answer[i]); key[c.id] = paras[pIdx]?.label ?? String.fromCharCode(65 + pIdx) })
+  return { paraMatchBody: { paragraphs: paras, statements: choices.map((c) => ({ id: c.id, text: c.text })) }, review: { paraMatch: { key, explanationZh } } }
+}
+
 async function tryBuildFromV2(
   db: SupabaseClient,
   input: BuildPracticeSessionInput,
@@ -386,12 +454,15 @@ async function tryBuildFromV2(
     const choicesRaw = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
     // 听力材料：text_en/text_zh 即原文(transcript)，练习态不下发（避免答前暴露）；阅读等保留材料文本。
     const isListening = set?.task_type === 'listening_comprehension' || String(it.input_mode) === 'listen'
-    // 分组完形（banked_cloze/grammar_fill）：passage 重建为 clozeBody（即题面）→ stimulus 不再重复下发 passage。
+    // 分组阅读/完形型：passage 重建为题体（body 即题面）→ stimulus 不再重复下发 passage。
     const taskType = set?.task_type ?? 'unknown'
-    const cloze = CLOZE_RECONSTRUCT.has(taskType)
-      ? reconstructCloze(taskType, stim?.text_en, choicesRaw, it.answer, (it.explanation_zh as string) ?? '')
-      : null
-    const stimulusOut = stim && !cloze
+    const exZh = (it.explanation_zh as string) ?? ''
+    const cloze = CLOZE_RECONSTRUCT.has(taskType) ? reconstructCloze(taskType, stim?.text_en, choicesRaw, it.answer, exZh) : null
+    const pcloze = taskType === 'cloze_passage' ? reconstructPassageCloze(stim?.text_en, it.answer, exZh) : null
+    const seven = taskType === 'seven_select' ? reconstructSevenSelect(stim?.text_en, choicesRaw, it.answer, exZh) : null
+    const pmatch = taskType === 'para_match' ? reconstructParaMatch(stim?.text_en, choicesRaw, it.answer, exZh) : null
+    const grouped = cloze || pcloze || seven || pmatch
+    const stimulusOut = stim && !grouped
       ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
       : undefined
     built.push({
@@ -402,8 +473,8 @@ async function tryBuildFromV2(
       inputMode: String(it.input_mode ?? 'choice'),
       prompt: String(it.prompt ?? ''),
       promptZh: (it.prompt_zh as string) ?? undefined,
-      // cloze 题面在 clozeBody.segments；choices 是词库（banked），不作为 MCQ 选项下发。
-      choices: (!cloze && choicesRaw.length) ? choicesRaw.map((c) => ({ id: c.id, text: c.text })) : undefined,
+      // 分组型题面在各自 body；choices 是词库/候选/陈述，不作为通用 MCQ 选项下发。
+      choices: (!grouped && choicesRaw.length) ? choicesRaw.map((c) => ({ id: c.id, text: c.text })) : undefined,
       answer: (it.answer as string | string[] | null) ?? null,
       stimulus: stimulusOut,
       audio: audio ? { url: audio.url } : null,
@@ -412,6 +483,9 @@ async function tryBuildFromV2(
       subskills: Array.isArray(it.subskills) ? (it.subskills as string[]) : [],
       explanationZh: (it.explanation_zh as string) ?? undefined,
       ...(cloze ? { clozeBody: cloze.clozeBody, review: cloze.review } : {}),
+      ...(pcloze ? { passageClozeBody: pcloze.passageClozeBody, review: pcloze.review } : {}),
+      ...(seven ? { sevenSelectBody: seven.sevenSelectBody, review: seven.review } : {}),
+      ...(pmatch ? { paraMatchBody: pmatch.paraMatchBody, review: pmatch.review } : {}),
     })
   }
   return built

@@ -66,6 +66,10 @@ export interface PracticeItem {
   clozeBody?: unknown
   matchBody?: unknown
   buildBody?: unknown
+  /** 分组阅读型（待新渲染器）：逐空四选 / 七选五 / 段落匹配。 */
+  passageClozeBody?: unknown
+  sevenSelectBody?: unknown
+  paraMatchBody?: unknown
   /** 提交回合下发的批改（cloze/matching/build/freeText）；提交前 renderer 不读。 */
   review?: unknown
   wordMin?: number
