@@ -130,8 +130,14 @@ begin
       set_id := v_id; result := 'rejected'; reason := 'stimulus_fk_missing'; return next; continue;
     end if;
 
-    -- all invariants hold → promote items then set (atomic within this function transaction)
+    -- all invariants hold → promote items, stimulus, then set (atomic within this function transaction).
+    -- The stimulus MUST go active too: the session-builder fetches stimuli with qa_status='active', so
+    -- a draft stimulus under an active set means the served session has NO passage/material/audio
+    -- (stimulus payload + signed audio URL are dropped). Activate it to keep the set servable.
     update question_items set status = 'active' where question_set_id = v_id;
+    if v_set.stimulus_id is not null then
+      update stimuli set qa_status = 'active' where id = v_set.stimulus_id and qa_status <> 'active';
+    end if;
     update question_sets set status = 'active' where id = v_id;
     set_id := v_id; result := 'promoted'; reason := 'ok'; return next;
   end loop;
