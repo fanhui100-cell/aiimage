@@ -1,0 +1,207 @@
+{
+  "template": "gaokao-seven-select",
+  "level": 5,
+  "_provenance": "Claude-authored original Kaoyan (考研英语) seven-select (七选五/选句填空) sentence-insertion sets. 100% original, not copied from any real exam. DeepSeek not used. Each passage is academic/abstract (Kaoyan difficulty), 250-340 words with 5 numbered blanks; 7 full-sentence options (5 correct + 2 distractors); answers map blanks 1-5 to bank indices, distinct and within 0-6. Each correct sentence is uniquely fixed by reference/connective/lexical chain/topic-elaboration; the 2 distractors are topically related but fail every blank.",
+  "sets": [
+    {
+      "passage": "For many decades economists treated rising inequality as an unfortunate but largely harmless by-product of growth, a price well worth paying for a more dynamic, competitive, and innovative economy. (1)______ Recent scholarship, however, has steadily and methodically eroded this comfortable assumption, replacing it with a conclusion that is far less reassuring. When the gains of an expanding economy flow overwhelmingly to those who already sit at the very top, the broad consumer demand on which sustained growth quietly depends can begin to wither away at its base. (2)______ A household that must spend almost every additional dollar simply to survive injects far more vitality into the wider economy than an immense fortune that merely accumulates, untouched, in distant financial markets. The damage, moreover, is by no means confined to ledgers and balance sheets. Extreme disparities steadily corrode the shared sense that honest effort will be fairly rewarded, and that corrosion gradually undermines the legitimacy of the very institutions meant to bind a society together. (3)______ Citizens who come to suspect that the rules have been quietly rewritten in favor of the privileged few become understandably reluctant to trust, to cooperate, or to sacrifice for any common purpose. Mobility, the cherished promise that talent can rise regardless of birth, suffers perhaps most of all. (4)______ Where inherited wealth determines access to the best schools, the safest neighborhoods, and the most valuable connections, the sheer accident of one's parentage hardens into something disturbingly close to destiny. (5)______ The accumulating evidence now suggests, on the contrary, that beyond a certain threshold inequality is far less the engine of prosperity than a slow, silent, and corrosive drag upon it.",
+      "bank": [
+        "Trust, after all, is the invisible currency that allows complex modern societies to function at all.",
+        "Tax rates on the wealthy have fallen steadily across most advanced economies over the past four decades.",
+        "Such a view rested on the elegant idea that the rewards of the few would eventually trickle down to the many.",
+        "Charitable giving by the rich, generous as it sometimes is, can never substitute for genuine structural reform.",
+        "The poor, it turns out, are not merely passive victims but active and indispensable participants in demand.",
+        "Inequality, in short, can no longer be dismissed as a benign side effect of an otherwise healthy system.",
+        "Children born into disadvantage increasingly inherit not opportunity but the narrow limits of their parents."
+      ],
+      "answers": [
+        2,
+        4,
+        0,
+        6,
+        5
+      ],
+      "explain_zh": "空1选C（指代上句\"无害副产品\"观点，Such a view 承接\"涓滴\"逻辑）；空2选E（下句对比穷人花钱与富人囤积，E 引出穷人是需求的参与者）；空3选A（上句讲制度合法性被侵蚀，A\"信任是社会运转的隐形货币\"承上启下，下句讲公民不再信任）；空4选G（上句讲流动性受损最重，G 具体说明贫困子女继承的是限制，下句以\"出身决定命运\"呼应）；空5选F（结尾总结 In short，与下句 on the contrary 形成转折收束）。干扰句B（富人税率下降）虽相关但为孤立数据，放入任一空都破坏指代与衔接；D（慈善无法替代改革）观点正确但无上下文引线，置于任何空都断裂。"
+    },
+    {
+      "passage": "Why do some nations grow steadily rich while others, endowed with similar natural resources and equally hardworking populations, remain stubbornly trapped in poverty? For much of the twentieth century the favored answers pointed confidently to geography, to culture, or to sheer historical luck. (1)______ The truly decisive variable, this newer and more persuasive view contends, is the quality of a country's institutions, the formal rules and informal norms that quietly shape how ordinary people invest, trade, and cooperate. Consider, for a moment, two neighboring regions divided only by an arbitrary line on a map. (2)______ On one side of that border, secure property rights and impartial courts encourage farmers to plant, merchants to expand, and inventors to risk their hard-won savings on untried ideas. On the other, arbitrary seizure and rampant corruption teach everyone that effort is ultimately futile and that the safest course is to hide whatever little one happens to have. The stark contrast reveals a far deeper principle. (3)______ Where institutions are inclusive, drawing the broad population into both economic and political life, the incentive to create lasting value flourishes and spreads. Where they are extractive, deliberately designed to funnel wealth toward a narrow and entrenched elite, that same incentive steadily withers. (4)______ A regime that fears losing its grip will often suppress the very innovations that might enrich its people, because new prosperity tends to breed new and deeply inconvenient demands for a share of power. (5)______ Geography may indeed shape the soil and the climate, but it is the rules written by human hands that ultimately decide whether that soil yields abundance or bitter want.",
+      "bank": [
+        "Institutions, then, are not a mere backdrop to development but its very foundation and engine.",
+        "In recent decades, though, a growing body of research has shifted the emphasis decisively elsewhere.",
+        "Climate change now threatens to widen the gap between rich and poor nations still further.",
+        "The people on either side share the same language, the same climate, and very nearly the same ancestry.",
+        "Foreign aid, however well intentioned, has a long and discouraging record of failure across the developing world.",
+        "Crucially, those who hold power are rarely neutral about which kind of institution prevails.",
+        "Prosperity, it appears, depends less on what a society possesses than on the rules by which it governs itself."
+      ],
+      "answers": [
+        1,
+        3,
+        6,
+        5,
+        0
+      ],
+      "explain_zh": "空1选B（上句列举旧答案，B\"近几十年研究把重点决定性地转向别处\"引出下句\"制度\"这一新变量）；空2选D（下句对比边界两侧，D 先点明两侧族群语言气候几乎相同，凸显差异只来自制度）；空3选G（前文对比后\"揭示更深原理\"，G 概括\"繁荣取决于规则而非拥有物\"，下句以 inclusive/extractive 展开）；空4选F（下句解释掌权者会压制创新，F\"掌权者对制度类型从不中立\"为其铺垫）；空5选A（结尾承上启下，A\"制度是发展的根基与引擎\"，与末句\"规则决定丰歉\"呼应）。干扰句E（外援失败）与C（气候变暖扩大差距）话题相关但无指代或连接词承接，放入任一空都使链条断裂。"
+    },
+    {
+      "passage": "Some goods, by their very nature, stubbornly resist the ordinary logic of the marketplace. A single loaf of bread can be sold to one buyer and thereby denied to all the rest, but clean air, national defense, and basic scientific knowledge behave in a quite different and puzzling manner. (1)______ Once a lighthouse beams its steady warning across the dark harbor, every passing ship benefits equally, and no captain can plausibly be charged a fee at the door. This peculiar quality creates a stubborn and recurring problem for any society that chooses to rely on private incentives alone. (2)______ Each individual, reasoning quite sensibly from his own narrow interest, prefers to enjoy the benefit freely while letting someone else bear the cost, and so the good is chronically undersupplied or never produced at all. The classic remedy for this predicament is collective provision, usually arranged through the taxing power of the state. (3)______ By compelling everyone to contribute a fair and proportionate share, government can finance the roads, the research, and the public health systems that no single private citizen would ever trouble to build alone. Critics frequently object that such provision is wasteful and that competitive markets could surely supply almost everything more efficiently. (4)______ Yet the long historical record offers remarkably little comfort to this faith, for the goods in question are precisely those that markets have consistently and predictably failed to deliver. (5)______ A society that starves its commons in the name of narrow efficiency may discover, too late, that it has quietly impoverished the very foundation on which all private prosperity ultimately rests.",
+      "bank": [
+        "If no one can be excluded from enjoying a benefit, then few will volunteer to pay for it.",
+        "Private charities have occasionally stepped in to fund such goods where the state has withdrawn.",
+        "They insist that competition, left to itself, drives down prices and raises quality far better than any bureaucracy.",
+        "Most governments, it must be admitted, spend a considerable portion of their budgets quite badly.",
+        "Such things can be consumed by one person without in the least diminishing their availability to others.",
+        "Here the much-maligned institution of taxation reveals its genuine and underappreciated purpose.",
+        "Public goods, in the end, are less a drain on the economy than the shared bedrock that makes private gain possible."
+      ],
+      "answers": [
+        4,
+        0,
+        5,
+        2,
+        6
+      ],
+      "explain_zh": "空1选E（上句说清洁空气、国防等\"行为不同\"，E\"一人消费不减少他人可得\"定义非竞争性，下句以灯塔为例）；空2选A（下句讲人人想搭便车，A\"无法排除则少有人自愿付费\"点明搭便车难题）；空3选F（上句提到\"集体供给，多通过征税\"，F\"被诟病的税收在此显其真正用途\"承接，下句讲政府如何筹资）；空4选C（上句说批评者认为市场更高效，C 具体陈述其\"竞争优于官僚\"的主张，下句以 Yet 反驳）；空5选G（结尾 in the end 收束，G\"公共品是私利的共同基石\"与末句呼应）。干扰句D（政府花钱浪费）与B（私人慈善偶尔补位）话题相关但缺乏指代/连接衔接，放入任一空都断裂。"
+    },
+    {
+      "passage": "Globalization once seemed an unstoppable and almost entirely benevolent force, patiently knitting distant economies together into a single vast web of mutual prosperity. (1)______ Goods, capital, and ideas crossed once-forbidding borders with unprecedented ease, and hundreds of millions of people in the developing world climbed out of absolute poverty within the span of a single generation. Yet beneath these undeniably genuine triumphs ran quieter currents of dislocation that its early champions were far too slow to acknowledge. (2)______ When a long-established factory in a wealthy country closes because production has shifted to a cheaper shore, the aggregate gains to distant consumers may be perfectly real, but they offer cold comfort indeed to the worker whose livelihood and dignity have vanished almost overnight. The losers, it gradually turned out, were often densely concentrated in particular regions and trades, while the winners were widely dispersed and barely even aware of their own good fortune. (3)______ This profound asymmetry helps explain much of the political backlash that has unsettled so many established democracies in recent years. People who feel that an impersonal global system has quietly betrayed them are seldom soothed by abstract statistics showing that the world as a whole is somehow better off. (4)______ The remedy, most thoughtful observers now argue, is neither to halt integration outright nor to pretend its real costs away, but rather to share its considerable bounty far more deliberately and humanely. (5)______ Only by genuinely cushioning the dislocated and patiently retraining the displaced can a society hope to preserve the very openness from which its broader wealth ultimately flows.",
+      "bank": [
+        "Tourism, one of the more visible faces of globalization, collapsed almost overnight during the pandemic.",
+        "Concentrated pain, after all, mobilizes far more powerfully than diffuse and invisible gain.",
+        "Markets alone will not perform this work of compensation; deliberate public policy must do it.",
+        "For several decades the optimists could point to figures that seemed to vindicate their faith entirely.",
+        "Their resentment, however irrational it may appear to economists, is rooted in an entirely real experience of loss.",
+        "Every great economic transformation produces casualties as well as beneficiaries.",
+        "Tariffs on imported steel have risen sharply in several major economies over the past few years."
+      ],
+      "answers": [
+        3,
+        5,
+        1,
+        4,
+        2
+      ],
+      "explain_zh": "空1选D（上句称全球化曾似不可阻挡的善力，D\"几十年里乐观者能引用数据印证信念\"承接，下句举脱贫成就）；空2选F（上句转折\"暗流涌动\"，F\"每场经济变革都有受害者与受益者\"引出下句关闭工厂的例子）；空3选B（上句讲输家集中、赢家分散，B\"集中的痛苦比分散的收益更能动员\"解释，下句承\"这种不对称\"）；空4选E（上句讲被背叛者不被统计安慰，E\"他们的怨恨根植于真实的失落经历\"承接，下句给出补救）；空5选C（结尾，C\"仅靠市场无法补偿，须靠公共政策\"与末句\"缓冲与再培训\"呼应）。干扰句G（钢铁关税上升）与A（旅游业疫情骤停）话题相关但为孤立事实，无衔接引线，放入任一空都断裂。"
+    },
+    {
+      "passage": "For nearly a thousand years the university has endured as one of the most remarkably stable institutions in all of human history, quietly outlasting empires, revolutions, and entire economic orders that once seemed permanent. (1)______ Today, however, that long and hard-won stability is being severely tested by forces it was never originally designed to withstand. The cost of a degree has soared far beyond the comfortable reach of ordinary families, and graduates now increasingly question whether the expensive credential they purchased will ever truly repay its enormous and mounting price. (2)______ Online platforms now confidently promise to deliver polished lectures from the world's very finest scholars to anyone with a stable connection, seemingly threatening at last to render the physical campus altogether obsolete. Some eager prophets of disruption have therefore loudly announced the imminent and inevitable death of the traditional university. (3)______ A recorded lecture, however dazzling and brilliant, simply cannot replicate the slow, demanding, often uncomfortable work of being challenged by a skeptical professor or sharpened by a crowded roomful of disagreeing peers. What the living campus genuinely offers is not merely information, which has never been cheaper or more abundant than it is today, but the far rarer discipline of learning to think rigorously alongside others. (4)______ The genuine and pressing danger is not that technology will somehow abolish the university but that relentless financial pressure will quietly hollow out its deeper and older purpose. (5)______ An institution that survives by selling marketable skills alone, while quietly abandoning the patient cultivation of judgment and citizenship, may well keep its handsome buildings and yet lose its very soul.",
+      "bank": [
+        "This is something no algorithm has yet learned to provide.",
+        "Meanwhile, a torrent of cheap and accessible technology has begun to challenge its ancient monopoly on teaching.",
+        "Endowment funds at the wealthiest institutions have grown to truly staggering sizes in recent years.",
+        "Such predictions, however, mistake the transmission of facts for the far harder business of education.",
+        "Faculty salaries vary enormously from one academic discipline to another.",
+        "Generations of students have passed through its lecture halls in search of knowledge and a credential alike.",
+        "If universities forget what they are truly for, no rival will need to defeat them."
+      ],
+      "answers": [
+        5,
+        1,
+        3,
+        0,
+        6
+      ],
+      "explain_zh": "空1选F（上句讲大学千年稳定，F\"一代代学生为知识与文凭走过讲堂\"延续历史叙述，下句 Today however 转折）；空2选B（上句讲学位成本飙升与质疑，B\"与此同时廉价技术挑战其教学垄断\"承接 Meanwhile，下句讲在线平台）；空3选D（上句讲先知宣告传统大学之死，D\"这些预言把传递事实误认为教育\"反驳，下句以录播讲座为例）；空4选A（上句讲校园提供的是与人共学的思维训练，A\"这是算法尚无法提供之物\"承接 this，下句转向真正危险）；空5选G（结尾，G\"若大学忘记初心，无需对手便会败亡\"与末句\"留住建筑却失灵魂\"呼应）。干扰句C（顶尖院校捐赠基金庞大）与E（教师薪资因学科差异巨大）话题相关但为孤立数据，无衔接，放入任一空都断裂。"
+    },
+    {
+      "passage": "Ask any thoughtful person why a university truly exists and you will receive a surprising and bewildering variety of answers, many of them quietly and stubbornly at war with one another. (1)______ To the anxious parent and the career-minded student, its purpose is plainly and frankly practical: to secure the formal qualifications that reliably lead to a stable, respectable, and prosperous livelihood. This view is by no means foolish or ignoble, for education has always been, among many other things, a sturdy ladder of opportunity for the ambitious. (2)______ Yet to reduce the entire university to a mere vocational training depot is to mistake one of its useful functions for the whole of its mission. The older and nobler tradition firmly holds that its far deeper task is the slow formation of the mind itself, the patient cultivation of a capacity to reason carefully, to doubt honestly, and to weigh competing claims with genuine care. (3)______ Such a demanding education does not aim merely to fill the student with marketable facts but rather to awaken a lifelong habit of restless inquiry that no single narrow career could ever fully exhaust. There is, moreover, a vital civic dimension that the purely economic account of education neglects almost entirely. (4)______ A healthy democracy depends utterly upon citizens able to sift genuine evidence from clever propaganda and to deliberate together, in good faith, about a shared and fiercely contested future. (5)______ The wisest universities, then, firmly refuse to choose between these competing purposes, understanding that a graduate who can earn a comfortable living but cannot think freely has been only half educated.",
+      "bank": [
+        "University libraries have been steadily converting their collections from paper to digital formats.",
+        "To pursue any one of these ends to the exclusion of the others is to betray the institution's full promise.",
+        "Few would deny that a degree should open doors that would otherwise remain firmly shut.",
+        "Sports programs at large universities often generate substantial revenue and public attention.",
+        "The disagreement is not trivial, for what a university is for determines almost everything about how it is run.",
+        "The university, in this light, is not merely a servant of the economy but a guardian of the public reason.",
+        "On this account, the subject studied matters less than the quality of thinking it provokes."
+      ],
+      "answers": [
+        4,
+        2,
+        6,
+        5,
+        1
+      ],
+      "explain_zh": "空1选E（上句说答案多样且彼此冲突，E\"这种分歧并不琐碎，因为大学的目的决定其运作\"承接，下句给出第一种实用观）；空2选C（上句承认教育是机会的阶梯，C\"少有人否认文凭应打开本来紧闭的门\"延续此论，下句以 Yet 转折）；空3选G（上句讲深层任务是心智的塑造，G\"在此观点下，所学科目不如它激发的思维质量重要\"承接 this view，下句讲唤醒探究习惯）；空4选F（上句讲被忽视的公民维度，F\"大学是公共理性的守护者\"承接，下句讲民主需要会甄别证据的公民）；空5选B（结尾，B\"独取其一即背叛全部承诺\"与末句\"智慧的大学拒绝在诸目的间取舍\"呼应）。干扰句A（图书馆数字化）与D（体育项目创收）话题相关但无指代/连接衔接，放入任一空都断裂。"
+    },
+    {
+      "passage": "There is a persistent and deeply seductive belief that the market and morality occupy two entirely separate spheres, the one governed wholly by cold calculation, the other by warm and disinterested conscience. (1)______ In sober truth the two are intimately entangled at every single turn, for every voluntary exchange rests upon a quiet foundation of trust, honesty, and shared expectation that no written contract could ever fully specify. A merchant who routinely cheats his customers may indeed prosper for a season, but a marketplace in which such cheating became truly universal would swiftly collapse into mutual suspicion and total paralysis. (2)______ Markets, in other words, quietly consume the very moral capital they did not themselves create and cannot easily or quickly replenish. This curious dependence, once recognized, cuts in a genuinely troubling direction, since it implies that the boundaries of the market are not fixed by nature. (3)______ When everything from human blood to companionship to a stranger's kidney is openly offered for sale, the very act of pricing can subtly corrode the meaning of the thing being priced. A gift freely and lovingly given expresses a human bond that the identical object, once coldly purchased, can no longer convey. (4)______ One contemporary moral philosopher has built an entire body of work around precisely this unsettling intuition. The real question, therefore, is not whether markets are efficient, a matter on which they often excel quite remarkably, but whether some goods are degraded and cheapened by being treated as ordinary commodities at all. (5)______ A society wise enough to draw such delicate boundaries does not foolishly reject the market but firmly keeps it in its proper place, as a useful servant of human ends rather than their silent master.",
+      "bank": [
+        "On this comforting view, commerce is amoral, and the ethical questions begin only after the buying and selling are done.",
+        "Some things, the philosopher reminds us, are diminished rather than enhanced by being put up for sale.",
+        "Advertising budgets have expanded enormously since the rise of social media platforms.",
+        "Deciding which goods belong inside the market and which lie beyond it is among the deepest of moral tasks.",
+        "For there are certain goods whose character is altered, even spoiled, the moment they enter the realm of buying and selling.",
+        "Stock markets around the world experienced unusual volatility during the last financial quarter.",
+        "Honest dealing, then, is not a sentimental luxury but the very condition of a functioning economy."
+      ],
+      "answers": [
+        0,
+        6,
+        4,
+        1,
+        3
+      ],
+      "explain_zh": "空1选A（上句讲市场与道德分属两域的诱人信念，A\"在此安慰性观点下，商业无关道德\"具体化该信念，下句以 In truth 反驳）；空2选G（上句讲普遍欺骗会使市场崩溃，G\"诚信不是感伤的奢侈而是经济运转的条件\"承接 then，下句讲市场消耗道德资本）；空3选E（上句以 since 断言\"市场的边界并非由自然固定\"，E 以 For 解释其因：\"某些商品一进入买卖领域其性质就被改变甚至败坏\"，下句血液、陪伴、肾脏被出售\"腐蚀其意义\"正是\"一进入买卖即被改变\"的例证，故唯 E 可填；B 缺此 For 因果引线且空3附近无\"哲人\"指代，不合）；空4选B（下句明确点出\"一位当代道德哲学家围绕这一令人不安的直觉建立了全部著作\"，为 B 中\"the philosopher reminds us（哲人提醒我们）\"提供唯一先行指代，故唯 B 可填；E 无任何\"哲人\"指称，无法与下句衔接，下句再以 therefore 推进核心问题）；空5选D（结尾，D\"判定哪些商品属于市场是最深的道德任务\"与末句\"划清界限的社会让市场各得其位\"呼应）。干扰句F（股市波动）与C（广告预算扩张）话题相关但为孤立事实，无衔接引线，放入任一空都断裂。"
+    },
+    {
+      "passage": "For most of the modern era, a single authoritative number was widely thought to capture how well an entire nation was truly doing: its gross domestic product, the total market value of everything it managed to produce in a year. (1)______ The great appeal of this convenient measure lay in its apparent precision and its seeming objectivity, the very qualities that lend almost any hard statistic an unearned air of authority. Yet as the decades quietly passed, the deep cracks in this towering monument to quantification grew steadily impossible to ignore. (2)______ A country could log impressively rising output even while its rivers turned toxic, its ancient forests vanished, and its weary citizens grew lonelier and more anxious year by passing year. The measure perversely counted the heavy cost of cleaning up an oil spill as a clear gain, yet assigned no value whatever to a devoted parent caring for a child or a volunteer tending a shared public garden. (3)______ In direct response, economists and statisticians have labored hard to construct broader and more humane gauges of human flourishing, carefully weaving together health, education, leisure, and the quality of the natural environment. (4)______ Some hardened skeptics still protest that wellbeing is far too subjective and elusive ever to be measured at all. But the alternative, to keep blindly steering an entire civilization by a single crude and badly misleading dial, is surely the far greater folly. (5)______ A figure that quietly ignores everything we most deeply value will, in the long run, slowly lead us to value only what it happens to count.",
+      "bank": [
+        "The first official estimates of national income were compiled only in the twentieth century.",
+        "Inflation rates have fluctuated considerably across the world's major economies in recent decades.",
+        "In short, the figure measured activity tirelessly but said almost nothing about whether that activity made life better.",
+        "Few statistics have ever exercised so powerful a grip on the imagination of policymakers and the public alike.",
+        "What we choose to measure, after all, shapes what we choose to pursue.",
+        "It became increasingly clear that growth and genuine wellbeing could march in entirely opposite directions.",
+        "These richer indices remain imperfect, yet they capture dimensions of life that raw output ignores completely."
+      ],
+      "answers": [
+        3,
+        5,
+        2,
+        6,
+        4
+      ],
+      "explain_zh": "空1选D（上句讲 GDP 这单一数字曾被视为国运标尺，D\"少有统计数字如此牢牢攫住决策者与公众的想象\"承接，下句讲其精确客观的吸引力）；空2选F（上句讲裂痕难以忽视，F\"增长与真正福祉可能背道而驰\"引出下句产出上升而河流中毒的例子）；空3选C（上句讲清污算收益、育儿无价值，C\"简言之，该数字勤勉计量活动却几乎不说明生活是否更好\"总结，下句 In response 给出回应）；空4选G（上句讲学者构建更广的繁荣量表，G\"这些更丰富的指数仍不完美，却涵盖了被产出忽视的维度\"承接 these，下句讲怀疑者反对）；空5选E（结尾，E\"我们选择衡量什么塑造我们追求什么\"与末句\"无视所珍视之物的数字终将使我们只重视它所计之物\"呼应）。干扰句B（通胀率波动）与A（国民收入估算始于二十世纪）话题相关但为孤立事实，无衔接，放入任一空都断裂。"
+    },
+    {
+      "passage": "When public budgets tighten and genuinely hard choices loom, public funding for the arts is almost always among the very first expenditures to be loudly questioned. (1)______ Why, the strictly practical-minded ask with apparent reason, should scarce public resources flow to galleries and orchestras when overcrowded hospitals and underfunded schools stand in such evident and urgent need? The question deserves a serious and considered answer rather than a merely sentimental one. Art in public life is not some decorative luxury casually appended to a society once all its real and serious work is finally done. (2)______ A bright mural on a long-neglected wall, a free concert in a crowded summer square, a sculpture that compels a hurried commuter to pause for a moment, all of these quietly insist that there is far more to a shared human life than mere subsistence and exchange. They also create, moreover, a precious common ground that few other modern institutions can reliably supply. (3)______ Strangers who agree on almost nothing else can stand together before the same arresting painting, equally moved or provoked, and discover in that shared encounter a fragile but entirely genuine sense of belonging. Art also quietly performs a function that the powerful rarely welcome or encourage. (4)______ A biting satirical play or a defiant protest song can voice difficult truths that no cautious editorial dares to print, holding up a clear mirror to a society that would very often prefer not to look. (5)______ To starve the arts, then, is not merely to lose a few pleasant diversions but to impoverish the very imagination on which a genuinely free and self-aware people ultimately depends.",
+      "bank": [
+        "In an age of fragmented screens and private feeds, public art gathers people back into a single shared space.",
+        "It is a tempting target precisely because its benefits seem soft, intangible, and hard to defend in a spreadsheet.",
+        "The arts, in this deeper sense, are less an ornament of civilization than a condition of its health.",
+        "Many famous painters struggled in poverty throughout their working lives.",
+        "It is, rather, one of the few remaining places where a community can confront together what it means to be human.",
+        "By giving form to dissent, it challenges authority and keeps the conscience of a nation awake.",
+        "Ticket prices for major exhibitions have risen sharply at many institutions in recent years."
+      ],
+      "answers": [
+        1,
+        4,
+        0,
+        5,
+        2
+      ],
+      "explain_zh": "空1选B（上句讲艺术经费总最先被质疑，B\"它正因收益柔性无形、难在报表上辩护而成为诱人的削减目标\"承接 it，下句讲务实者的发问）；空2选E（上句讲艺术不是装饰性奢侈品，E\"它毋宁是社区共同直面何为人的少数场所之一\"以 rather 承接否定，下句举壁画、广场音乐会为例）；空3选A（上句讲艺术创造少有机构能提供的共同地带，A\"在碎片化屏幕的时代，公共艺术把人重新聚回同一空间\"承接，下句讲陌生人共立画前）；空4选F（上句讲艺术执行权力者不欢迎的功能，F\"它赋予异见以形式，挑战权威\"承接，下句以讽刺剧、反抗歌曲为例）；空5选C（结尾，C\"更深意义上艺术不是文明的点缀而是其健康的条件\"与末句\"饿死艺术即贫化自由民族赖以生存的想象力\"呼应）。干扰句G（展览票价上涨）与D（名画家一生贫困）话题相关但为孤立事实，无衔接引线，放入任一空都断裂。"
+    },
+    {
+      "passage": "The modern idea of progress, the comfortable conviction that humanity is moving steadily and inevitably toward a better future, is so deeply and invisibly woven into our thought that we very seldom pause to examine it at all. (1)______ For the ancient world, by sharp contrast, history was widely imagined instead as a recurring cycle of decline and renewal, a lost golden age forever receding into the distant past rather than beckoning brightly from somewhere ahead. The distinctly modern faith in progress was born only when science and commerce together began to deliver visible, tangible, cumulative improvements that earlier generations had never once dared to expect. (2)______ Each ingenious new instrument, each conquered disease, each fresh expansion of ordinary comfort seemed only to confirm that tomorrow would reliably surpass today. Yet this confident and flattering narrative has always quietly concealed difficult questions beneath its bright and polished surface. (3)______ Progress in one valued dimension, the philosophers gravely warn, may exact a heavy and largely unacknowledged price in another. The same industrial power that lifted millions out of grinding drudgery also darkened the skies and dangerously unsettled the climate, and the same dazzling technologies that connect the entire globe can just as easily surveil and divide it. (4)______ To believe in progress wholly uncritically is to risk mistaking mere acceleration for genuine improvement, restless motion for real meaning. (5)______ The mature and difficult alternative is neither naive optimism nor weary despair but a sober, patient, and deliberate effort to steer change toward ends we have actually chosen rather than merely stumbled into by accident.",
+      "bank": [
+        "Progress, then, is not a force that carries us forward but a direction we must consciously choose.",
+        "Several philosophers of the Enlightenment corresponded extensively with one another by letter.",
+        "Before long, what had begun as a hopeful observation hardened into an article of unquestioned faith.",
+        "Speed, in itself, tells us nothing about the worth of the destination toward which we are hurtling.",
+        "Average life expectancy has roughly doubled in many countries over the past two centuries.",
+        "Whose progress, exactly, and progress measured against what, and at whose expense?",
+        "Yet this assumption is far more recent and far stranger than its familiarity might suggest."
+      ],
+      "answers": [
+        6,
+        2,
+        5,
+        3,
+        0
+      ],
+      "explain_zh": "空1选G（上句讲进步观深植现代思想，G\"然而这一假设远比其熟悉感所暗示的更晚近、更奇特\"以 Yet 转折，下句以 by contrast 讲古代循环史观）；空2选C（上句讲进步信念源于科学商业带来的累积进步，C\"不久这一充满希望的观察便固化为不容置疑的信条\"承接，下句以 each 列举确证）；空3选F（上句讲自信叙事掩盖了难题，F\"究竟是谁的进步、以何为标尺、以谁为代价\"具体化这些难题，下句讲哲人警告代价）；空4选D（上句讲连接全球的技术也能监控分裂它，D\"速度本身丝毫不说明我们冲向的目的地的价值\"承接，下句讲将加速误认为改善）；空5选A（结尾，A\"进步不是载我们前行的力量而是须自觉选择的方向\"与末句\"成熟之道是有意引导变化\"呼应）。干扰句E（人均寿命翻倍）与B（启蒙哲人通信往来）话题相关但为孤立事实，无指代/连接衔接，放入任一空都断裂。"
+    }
+  ]
+}

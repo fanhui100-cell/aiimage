@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-24T17:07:53.856Z",
+  "apply": true,
+  "stage": "r13-kaoyan-seven-select",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 50,
+    "reject": 0,
+    "wrote": 50,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-seven-select\\batchA.json",
+      "template": "gaokao-seven-select",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-seven-select\\batchB.json",
+      "template": "gaokao-seven-select",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-seven-select\\batchC.json",
+      "template": "gaokao-seven-select",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-seven-select\\batchD.json",
+      "template": "gaokao-seven-select",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-seven-select\\batchE.json",
+      "template": "gaokao-seven-select",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    }
+  ]
+}

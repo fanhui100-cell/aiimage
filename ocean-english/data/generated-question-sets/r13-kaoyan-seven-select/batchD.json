@@ -1,0 +1,147 @@
+{
+  "template": "gaokao-seven-select",
+  "level": 5,
+  "_provenance": "Claude-authored original Kaoyan 七选五 (selecting sentences for gaps) sets. DeepSeek not used. Each passage: 250-340 words, 5 removed-sentence gaps; bank of 7 full sentences (5 correct + 2 distractors); answers = blank-order indices into bank. Kaoyan academic/abstract difficulty.",
+  "sets": [
+    {
+      "passage": "When a forest, reef or grassland is described as resilient, ecologists mean something far more precise than mere survival from one year to the next. (1)______ A system rich in species can lose several of them and still maintain its essential functions, because other organisms quietly take over the vacated roles before any visible damage spreads. This redundancy is not waste; it is insurance, the biological equivalent of keeping spare parts on hand. Consider what happens when a single dominant pollinator suddenly disappears. In a depleted habitat, the loss can be catastrophic, severing the delicate link between flowering plants and their reproduction. (2)______ The flowers are still visited, the seeds still set, and the disruption barely registers beyond the laboratory. Diversity, in this sense, is the raw material of recovery. Yet resilience is not infinite, and ecologists have learned to treat it with caution. (3)______ Once that point is crossed, the network of relationships unravels faster than it can possibly repair itself, and a lush wetland may collapse into bare mud almost overnight. Such abrupt shifts are notoriously difficult to reverse, since the precise conditions that once allowed the original community to flourish no longer exist anywhere nearby. This is why conservationists increasingly argue that protecting variety matters as much as protecting any single charismatic creature. (4)______ A landscape stripped of its less glamorous insects, fungi and microbes is brittle, however many tigers or pandas it still happens to contain. The lesson extends well beyond wild places and into the fields that feed us. (5)______ Monocultures of a single crop, like ecosystems of a single species, may be richly productive for a season but remain dangerously fragile over the longer term. Resilience, then, is less a property of individuals than of the intricate web that binds them together.",
+      "bank": [
+        "It refers to the capacity of an ecosystem to absorb disturbance and reorganise without slipping into a completely different state.",
+        "In a diverse community, however, a rival insect or bird simply expands its activity to fill the gap.",
+        "Every system has thresholds beyond which the accumulated stresses become impossible to absorb.",
+        "The health of an ecosystem often depends on the obscure organisms that no tourist ever travels to see.",
+        "Farmers who plant many varieties side by side enjoy a similar buffer against pests and bad weather.",
+        "Many endangered species are large mammals that attract generous funding from donors.",
+        "Coral reefs are among the most colourful habitats found anywhere on the planet."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 段首定义\"resilient\"指代什么→0 给出精确定义（capacity to absorb disturbance）。(2) 与前句\"depleted habitat 的灾难\"形成 however 对比，diverse community 中别的物种补位→1。(3) 承接\"resilience is not infinite\"并引出下句\"Once that point is crossed\"，需先出现 threshold 概念→2。(4) 承接\"保护多样性\"并引出下句\"obscure insects/fungi/microbes\"→3（依赖 obscure organisms 词汇链）。(5) 承接\"lesson extends beyond wild places\"并引出下句 monoculture 单一作物→4（农业类比）。干扰项 5（大型哺乳动物筹款）与 6（珊瑚礁色彩）虽相关，但 5 与\"obscure 不起眼生物\"主旨相反，6 只是孤立陈述，无法接续任何空格的逻辑链。"
+    },
+    {
+      "passage": "Adapting to a warming climate is often presented as a purely technical puzzle: build higher sea walls, breed drought-tolerant crops, install better warning systems and wait for the danger to recede. (1)______ Who pays for the wall, whose neighbourhood it protects, and whose is left exposed are fundamentally questions of power, not engineering. This is why two cities facing almost identical physical risks can end up with radically different fates. Adaptation, in practice, redistributes vulnerability at least as much as it reduces it. Consider a coastal defence that shields a wealthy district from the rising tide. (2)______ The water it holds back does not simply vanish; it is displaced toward poorer settlements downstream that lack the money and influence to defend themselves. Such trade-offs are rarely acknowledged in the relentlessly upbeat language of resilience planning. (3)______ Communities that are consulted early, and whose knowledge is treated as genuinely legitimate, tend to support measures that distant outsiders might instinctively resist. By contrast, schemes imposed from above frequently stall, not because the underlying science is wrong but because the people most affected were never once asked. (4)______ A relocation plan that ignores where families work, worship and bury their dead will be quietly sabotaged long before the first house is ever moved. None of this means that adaptation should be abandoned as hopeless. (5)______ It must instead be designed with an honest reckoning of who wins, who loses, and who actually decides. Treating the climate purely as a problem for engineers, while ignoring these uncomfortable questions of fairness, almost guarantees that the most exposed will be protected last.",
+      "bank": [
+        "Yet framing adaptation as engineering alone hides the fact that every defence is also a political choice.",
+        "What looks like protection from one vantage point can look like abandonment from another.",
+        "Crucially, the success of any scheme depends heavily on how decisions are made, and by whom.",
+        "Local knowledge, dismissed as anecdote, often turns out to be the difference between a workable plan and a wasted one.",
+        "It means that adaptation cannot be reduced to a list of structures to be built.",
+        "Engineers have made remarkable progress in forecasting storms over the past decade.",
+        "Sea walls are typically constructed from reinforced concrete and steel."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 段首铺垫\"纯技术清单\"，需 Yet 转折点出\"adaptation 也是政治选择\"→0。(2) 承接\"shields a wealthy district\"，下句解释\"water displaced toward poorer settlements\"，需\"一方保护=另一方被弃\"→1。(3) 承接\"trade-offs 少被承认\"并引出下句\"被早期咨询的社区\"→2（决策由谁做）。(4) 承接\"自上而下方案受阻\"，引出下句\"忽视家庭工作/信仰\"，需 local knowledge 主题句→3。(5) 承接\"不该放弃 adaptation\"并引出下句\"必须诚实核算谁赢谁输\"→4（不能简化为建筑清单）。干扰项 5（预报进步）与 6（海墙用钢筋混凝土）是技术细节，恰恰与本文\"超越纯工程\"的主旨相反，接任何空都会破坏政治视角的逻辑链。"
+    },
+    {
+      "passage": "If simply knowing what is good for us were enough, the world would be full of well-rested, well-exercised non-smokers with tidy finances. (1)______ The gap between intention and action is one of the most stubborn puzzles in all of psychology, and it is far wider than most of us care to admit. Part of the problem is that our brains were shaped over millennia for an environment utterly unlike the one we now inhabit. (2)______ A craving for sugar that once protected our hungry ancestors now drives us toward a glowing vending machine three times a day. Willpower, the supposed remedy for all this, turns out to be a frail and easily exhausted resource rather than a bottomless reserve. (3)______ After a long day of small refusals and minor temptations, the resolve that felt utterly unshakeable in the morning quietly evaporates. Even our best intentions can betray us in a subtler way. We routinely overestimate the rational, deliberate part of the mind and badly underestimate the silent force of habit and context. (4)______ Change the cue or the surrounding setting, and the behaviour often shifts on its own, with no heroic effort required of anyone. This is precisely why the most effective interventions rarely rely on lectures or raw willpower at all. (5)______ Making the healthy option the easy, default, obvious one accomplishes far more than any amount of moral exhortation. Behaviour change, in short, is less about wanting it badly enough than about quietly rearranging the world so that the better choice becomes the path of least resistance.",
+      "bank": [
+        "Instead, knowing and doing remain frustratingly far apart.",
+        "We are creatures built for scarcity, suddenly dropped into a landscape of abundance.",
+        "Each act of self-control seems to draw on the same limited pool of mental energy.",
+        "Much of what we do is triggered automatically by the situations we find ourselves in.",
+        "They redesign the environment so that good choices require less effort than bad ones.",
+        "Doctors have long recommended at least seven hours of sleep each night.",
+        "Smoking rates have fallen significantly in many wealthy countries."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"若知道有益就够了，世界会满是自律者\"，需 Instead 点出\"知与行相距甚远\"→0，并接下句\"gap between intention and action\"。(2) 承接\"大脑为另一种环境塑造\"并引出下句\"对糖的渴望\"，需\"为稀缺而生却落入丰裕\"→1。(3) 承接\"willpower 易耗竭\"并引出下句\"一天小拒绝后决心蒸发\"，需\"每次自控耗同一能量池\"→2。(4) 承接\"高估理性、低估习惯与情境\"并引出下句\"改变线索/环境行为自变\"→3（自动被情境触发）。(5) 承接\"有效干预不靠说教\"并引出下句\"让健康选项成默认\"，需\"重新设计环境\"→4。干扰项 5（医生建议睡七小时）与 6（吸烟率下降）是孤立事实，无指代/连接词可接续，且不构成因果链。"
+    },
+    {
+      "passage": "For most of recorded human history, sleep was widely regarded as a purely passive interval, a kind of convenient nightly switching-off of an otherwise busy and useful brain. (1)______ The sleeping brain is, in many respects, busier than the waking one, sweeping through repeating cycles of activity as carefully choreographed as any demanding waking task. During deep slow-wave sleep, for instance, the day's scattered experiences are replayed and consolidated, converting fragile short-term traces into durable long-term memory. (2)______ This is why a single night of poor sleep can leave yesterday's lesson stubbornly out of reach, no matter how diligently it was originally studied. Sleep also performs a kind of essential housekeeping that wakefulness simply cannot. (3)______ Channels between brain cells widen measurably during sleep, allowing fluid to flush out the metabolic waste that steadily accumulates while we are awake. Skip this nightly cleansing for long enough, and the accumulated debris slowly begins to take its toll. The costs of neglecting sleep, however, are remarkably easy to discount because they are both invisible and delayed. (4)______ We treat rest as the very first thing to sacrifice whenever time runs short, as though it were a guilty indulgence rather than a biological necessity. Yet the scientific evidence is by now unambiguous and steadily accumulating. (5)______ Far from being lost or wasted time, the hours we spend asleep are among the most quietly productive of our entire lives, patiently assembling the memories, the sound judgement and the robust health on which all of our waking hours ultimately depend.",
+      "bank": [
+        "Modern neuroscience has thoroughly overturned that comfortable assumption.",
+        "Without that overnight processing, much of what we learn simply fails to stick.",
+        "The brain even possesses a drainage system that operates chiefly while we slumber.",
+        "Unlike a missed meal, a missed night of sleep rarely announces itself with an obvious pang.",
+        "Chronic shortage erodes attention, mood, immunity and the ability to learn.",
+        "Many adults enjoy a strong cup of coffee shortly after waking.",
+        "Dreams have fascinated poets and philosophers for thousands of years."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"过去视睡眠为被动关机\"，需\"现代神经科学推翻该假设\"→0，并接下句\"睡眠中的大脑更忙\"。(2) 承接\"深睡中记忆巩固\"并引出下句\"睡不好昨日所学难以提取\"，需\"没有这种处理则学不牢\"→1。(3) 承接\"睡眠做清扫\"并引出下句\"脑细胞间通道变宽冲走废物\"，需\"大脑有排水系统主要在睡眠时工作\"→2。(4) 承接\"代价隐形且延迟易被忽视\"，需\"不像漏餐那样有明显饥饿感\"→3。(5) 承接\"证据明确累积\"并引出下句\"睡眠时间最有产出\"，需\"长期不足侵蚀注意/情绪/免疫/学习\"→4。干扰项 5（醒后喝咖啡）与 6（梦让诗人着迷）虽与睡眠相关，但无指代衔接，也不进入\"被动→主动\"或\"代价\"的论证链。"
+    },
+    {
+      "passage": "Ask why one neighbourhood is consistently sicker than another, and the easy, familiar answer points straight to personal choices: diet, exercise, the cigarette or the evening drink. (1)______ Long before any individual makes a single decision, the conditions into which they are born and the circumstances in which they are obliged to live are quietly shaping their odds. Researchers call these the social determinants of health, and their cumulative influence is profound and well documented. (2)______ A child raised amid insecure housing, polluted air and chronic financial stress accumulates disadvantages that no amount of later effort can ever fully erase. Consider the genuine puzzle that wealthier people are not merely a little healthier but live measurably and reliably longer. (3)______ It reflects instead a smooth gradient that runs all the way up the social ladder, in which each successive step toward greater security and control buys a few additional years of life. This troubling pattern helps explain why purely medical interventions, however sophisticated, so often disappoint. (4)______ A clinic can treat the immediate asthma attack but it cannot replace the damp, mouldy flat that triggered it, nor the low wage that keeps the family trapped there. The implication is deeply unsettling for any system that locates responsibility squarely and conveniently within the individual. (5)______ Until the underlying conditions that breed illness are themselves seriously addressed, urging people to simply choose a little better will remain, for a great many of them, hollow advice that they are in no real position to follow in the first place.",
+      "bank": [
+        "Yet a growing body of evidence suggests that the deeper causes lie well upstream of any single behaviour.",
+        "These forces operate quietly, accumulating across a lifetime rather than striking all at once.",
+        "This is not simply a matter of the poor lacking access to doctors.",
+        "Health is produced largely outside the hospital, in homes, schools and streets.",
+        "If illness is manufactured by circumstance, then the remedy must reach beyond personal advice.",
+        "Hospitals in many countries are facing severe shortages of trained nurses.",
+        "Regular exercise is widely recommended as a way to lower blood pressure."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"轻易归因于个人选择\"，需 Yet 转折\"更深层原因在 upstream\"→0，并接下句\"出生条件先于决定\"。(2) 承接\"social determinants 影响深远\"并引出下句\"自幼累积的劣势\"，需\"这些力量悄然累积一生\"→1。(3) 承接\"富人寿命更长之谜\"并引出下句\"贯穿社会阶梯的梯度\"，需\"不只是穷人缺医生\"→2（递进否定）。(4) 承接\"纯医疗干预常失望\"并引出下句\"诊所治哮喘却换不掉潮湿出租屋\"，需\"健康多产生于医院之外\"→3。(5) 承接\"对把责任归于个人的系统是 unsettling\"，需\"若疾病由环境制造则解药须超越个人建议\"→4，并接下句\"除非改变滋生疾病的条件\"。干扰项 5（护士短缺）与 6（运动降血压）虽涉医疗健康，但 6 恰恰回到被本文反驳的\"个人行为\"框架，5 是无关供给问题，均无法接续 upstream 论证链。"
+    },
+    {
+      "passage": "A modest patch of green in a dense, crowded city can look like a pure luxury, the very first thing to be sacrificed whenever land grows scarce and expensive. (1)______ Access to parks, street trees and even small pockets of vegetation turns out to be quietly entangled with how well ordinary city-dwellers think, feel and recover from illness. The evidence runs far deeper than the obvious, simple pleasure of a stroll among shady trees. (2)______ Hospital patients whose windows happened to face greenery, in one now-famous study, recovered noticeably faster and needed less pain relief than those left staring at a blank brick wall. Attention, too, appears to be replenished by natural settings in a way that crowded, noisy streets simply cannot match. (3)______ A short, unhurried walk in a park restores the very capacity for concentration that a long morning of screens and traffic steadily depletes. Crucially, these substantial benefits are not distributed anything like evenly across a typical city. (4)______ Affluent districts tend to be green and leafy, while poorer ones bake under bare concrete, so the very residents who would gain the most from green space are often precisely the ones with the least of it. This uncomfortable fact makes urban greenery a pressing question of fairness as well as of wellbeing. (5)______ A scattering of well-placed, genuinely accessible green spaces may do far more for a whole population's everyday mental health than a single spectacular flagship park sitting on the far edge of town that most ordinary people can never realistically reach.",
+      "bank": [
+        "Increasingly, however, planners are recognising that such spaces are closer to a necessity than a frill.",
+        "Mere visual contact with nature seems to measurably lower stress and blood pressure.",
+        "The mind, it appears, has a limited budget for effortful focus that nature helps to refill.",
+        "Where you live largely determines how much nature you can reach on foot.",
+        "Quality and proximity, the research suggests, matter more than sheer acreage.",
+        "Cities around the world are growing faster than at any time in history.",
+        "Gardening is a popular hobby among retired people in many suburbs."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"绿地看似奢侈品\"，需 however 转折\"规划者认其为必需\"→0，并接下句\"绿地与思考/情绪/康复相缠绕\"。(2) 承接\"证据比散步愉悦更深\"并引出下句\"病房朝绿者恢复更快\"，需\"仅视觉接触自然就降压减压\"→1。(3) 承接\"注意力被自然恢复\"并引出下句\"公园短步恢复专注\"，需\"心智专注预算有限、自然帮其回填\"→2。(4) 承接\"益处分布不均\"并引出下句\"富区多绿、穷区水泥\"，需\"住哪决定能走到多少自然\"→3。(5) 承接\"绿地是公平问题\"并引出下句\"分散可达的小绿地胜过一座到不了的大公园\"，需\"质量与就近比面积更重要\"→4。干扰项 5（城市快速增长）与 6（退休者园艺爱好）虽沾边城市/绿植，但均为孤立陈述，无指代与连接逻辑，接任何空都断链。"
+    },
+    {
+      "passage": "We like to imagine ourselves as the conscious authors of our own actions, deciding entirely afresh each morning exactly how we will behave. (1)______ A startling share of what we do each day is not really chosen at all but unfolds automatically, triggered by familiar cues and repeated until it runs without any supervision whatsoever. Psychologists describe a habit as a closed loop: a cue, a routine and a reward, welded together by sheer repetition into something the brain can execute almost effortlessly. (2)______ This quiet automation is, on balance, a genuine gift, since it frees the conscious mind for the novel problems that truly demand our attention. The trouble begins, of course, only when the routine we have automated is one we would now much rather be rid of. (3)______ The familiar cue still fires, the old craving still rises, and the unwanted behaviour reasserts itself before deliberate intention has any chance to intervene. This is precisely why simply resolving to stop a bad habit so reliably and predictably fails. A far more promising strategy works patiently with the loop rather than against it. (4)______ Keep the familiar cue and the satisfying reward exactly as they are, but quietly slot a healthier routine into the space between them, and the very machinery that once worked against you can be turned to your advantage. Even then, however, patience remains essential. (5)______ The neural pathways that encode a habit are laid down only slowly, and they fade equally slowly when a new and better pattern is rehearsed in their place.",
+      "bank": [
+        "In reality, the conscious decision plays a far smaller role than our self-image suggests.",
+        "Once a habit is formed, it survives even after the original motivation has faded.",
+        "Willpower alone is poorly suited to overriding a routine that has become automatic.",
+        "Rather than trying to erase the habit, the trick is to redirect it.",
+        "A new habit is built through repetition, not through a single act of resolve.",
+        "Many people make ambitious resolutions at the start of each new year.",
+        "The human brain contains roughly eighty-six billion neurons."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"自以为是行动的作者、每早重新决定\"，需 In reality 反差\"意识决定作用远小于自我形象\"→0，并接下句\"大量行为自动展开\"。(2) 承接\"习惯=线索-惯例-奖赏的回路\"并引出下句\"这种自动化是礼物\"，需\"习惯一旦形成、动机消失仍存续\"→1。(3) 承接\"想摆脱已自动化的惯例时麻烦来了\"并引出下句\"线索仍触发、渴望仍升起\"，需\"单靠意志力难以压制自动惯例\"→2。(4) 承接\"与回路合作而非对抗\"并引出下句\"保留线索与奖赏、换入更健康惯例\"，需\"不擦除而重定向\"→3。(5) 承接\"仍需耐心\"并引出下句\"神经通路缓慢形成也缓慢消退\"，需\"新习惯靠重复而非一次决心\"→4。干扰项 5（新年立志）与 6（大脑约860亿神经元）虽相关，但 5 描述的恰是被本文批评的\"一次性决心\"，6 是孤立数据，均无衔接逻辑可填。"
+    },
+    {
+      "passage": "Recycling enjoys a comfortable reputation as the simplest of all green virtues: sort your waste, rinse the jar, drop it in the right bin, and the planet is a little better off. (1)______ The reassuring image of an endless loop, in which today's bottle becomes tomorrow's bottle forever and ever, bears surprisingly little resemblance to what actually happens in practice. Most materials, it turns out, degrade noticeably each time they are reprocessed. (2)______ Paper fibres shorten and weaken with every single cycle, and most common plastics can be remade only into ever lower-grade products before they are discarded for good. Recycling, in other words, usually merely slows the journey to the landfill rather than genuinely preventing it. The underlying economics are equally awkward and unforgiving. (3)______ When the global price of new plastic falls, recycled material suddenly becomes a costly luxury that few manufacturers want, and warehouses quietly fill with bales that nobody will buy. There is a subtler psychological hazard lurking here too. (4)______ Convinced that their waste will be virtuously reborn, consumers buy rather more single-use goods than they otherwise might, and the supposed solution quietly fuels the very problem. None of this means that recycling is somehow worthless. (5)______ It belongs firmly at the bottom of a hierarchy whose far more powerful upper rungs are reducing what we consume and reusing what we already own. Treating it as the comfortable headline answer, rather than a genuine last resort, simply lets the far larger and more awkward questions of consumption go conveniently unasked.",
+      "bank": [
+        "Yet the process is far messier and far less circular than the cheerful symbol implies.",
+        "What emerges from the bin is rarely as good as what went in.",
+        "A recycled material must compete on cost with virgin material, and it frequently loses.",
+        "The very existence of recycling can encourage us to consume more, not less.",
+        "But it deserves a far humbler place than the one public enthusiasm assigns it.",
+        "The familiar three-arrow symbol was first designed in the early nineteen-seventies.",
+        "Glass is made principally from sand, soda ash and limestone."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"回收=最简单的环保美德\"，需 Yet 转折\"过程远不如那个标志暗示的循环\"→0，并接下句\"无尽循环的形象与现实不符\"。(2) 承接\"材料每次再加工都降解\"并引出下句\"纸纤维变短、塑料只能降级\"，需\"出桶的不如入桶的\"→1。(3) 承接\"经济同样尴尬\"并引出下句\"新塑料降价时回收料成奢侈\"，需\"回收料须与原生料拼成本且常败\"→2。(4) 承接\"更微妙的危害\"并引出下句\"以为会被美德重生而买更多一次性品\"，需\"回收的存在反而鼓励多消费\"→3。(5) 承接\"并非毫无价值\"并引出下句\"它处于层级底部、上层是 reduce/reuse\"，需\"它应有远更谦卑的位置\"→4。干扰项 5（三箭头标志1970年代设计）与 6（玻璃由沙/纯碱/石灰石制成）是无关史实与化学细节，无指代衔接，破坏\"回收被高估\"的论证链。"
+    },
+    {
+      "passage": "Feeding a crowded planet is often imagined as a simple race to grow ever more food, as if hunger were merely a problem of insufficient harvests waiting on better seeds. (1)______ The world already produces more than enough calories to nourish everyone alive; the real difficulty lies in how that vast bounty is grown, moved, divided and finally discarded. Seen this way, the global food system reveals itself as a sprawling web whose every single link quietly carries hidden costs. Consider, for a moment, the long journey of a single supermarket tomato. (2)______ It may travel thousands of miles in refrigerated trucks, lose much of its flavour to deliberately early picking, and arrive neatly wrapped in plastic that will outlast the meal by centuries. Much of what is produced, moreover, never reaches a human plate at all. (3)______ Roughly a third of all food is lost in the field, spoiled in storage or scraped uneaten from dinner plates, needlessly squandering the land, water and labour that produced it. The particular way we choose to eat compounds the strain still further. (4)______ Producing a single kilogram of beef demands far more land and water than the equivalent weight in beans or grain, so dietary habits ripple outward into distant forests and rivers. Sustainability, then, is plainly not a single tidy fix but a careful rebalancing of the whole chain. (5)______ Eating a little lower on the food chain, wasting noticeably less and shortening the distance between farm and fork may achieve more than any heroic increase in raw yield.",
+      "bank": [
+        "In fact, scarcity is rarely the real obstacle.",
+        "Behind its modest price lies a chain of choices with consequences few shoppers ever see.",
+        "Waste haunts the system at every stage from harvest to household.",
+        "What we choose to put on our plates has consequences that reach far beyond the table.",
+        "Small changes repeated by many people can shift the system more than a single breakthrough.",
+        "Tomatoes are technically classified as fruits rather than vegetables.",
+        "Many supermarkets now offer home delivery through smartphone applications."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"以为饥饿=收成不足\"，需 In fact 反差\"稀缺很少是真障碍\"→0，并接下句\"世界已产足够卡路里、难在分配\"。(2) 承接\"想想一颗超市番茄的旅程\"并引出下句\"冷链千里、塑料包装\"，需\"其低价背后是少有人见的选择链\"→1。(3) 承接\"许多产出从未上桌\"并引出下句\"约三分之一食物被损耗\"，需\"浪费贯穿从收获到家庭每一环\"→2。(4) 承接\"吃法加重压力\"并引出下句\"一公斤牛肉耗地耗水远超豆谷\"，需\"盘中所选影响远超餐桌\"→3。(5) 承接\"可持续是整链再平衡\"并引出下句\"少吃高耗、少浪费、缩短产地距离\"，需\"许多人的小改变胜过单一突破\"→4。干扰项 5（番茄是水果）与 6（超市手机配送）虽涉番茄/超市，但为孤立花絮，无指代与论证衔接，填入任一空均断链。"
+    },
+    {
+      "passage": "Public anxiety about risk often seems utterly baffling to the experts, who watch ordinary people fret endlessly over vanishingly rare dangers while calmly shrugging off far likelier ones. (1)______ The explanation is not that the public is simply irrational, but that human judgement runs on a logic of its own, one evolved for a world that had no statistics at all. We do not really weigh probabilities so much as feel them, and our feelings are remarkably easily swayed. (2)______ A single vivid disaster, replayed endlessly across our screens, can loom far larger in the mind than thousands of quiet, undramatic deaths that never once make the news. This is why a rare plane crash terrifies while the steady daily toll of road accidents barely registers at all. Control matters enormously too, often far more than the bare numbers would ever warrant. (3)______ A hazard we freely choose and command, like driving fast, feels broadly tolerable, while one imposed on us by distant others provokes far greater dread, even when it is objectively trivial. Trust then completes the picture. (4)______ When people genuinely doubt the institutions delivering the message, no quantity of reassuring data will calm them, and a heavy-handed attempt to do so may only deepen their suspicion. The lesson for anyone hoping to communicate risk well is therefore a deeply humbling one. (5)______ Acknowledging fear openly, explaining uncertainty honestly and patiently earning trust over time accomplish far more than simply reciting dry probabilities to an audience that is already deeply primed to distrust them.",
+      "bank": [
+        "Yet this apparent inconsistency follows patterns that are remarkably predictable.",
+        "How easily an example springs to mind shapes how dangerous it feels.",
+        "Whether we feel in charge of a danger profoundly colours how threatening it appears.",
+        "How a risk is perceived depends as much on its source as on its magnitude.",
+        "Facts alone rarely change minds when the messenger is not believed.",
+        "Statisticians use probability to express how likely an event is to occur.",
+        "Air travel has become considerably cheaper over the past few decades."
+      ],
+      "answers": [0, 1, 2, 3, 4],
+      "explain_zh": "(1) 承接\"公众恐惧让专家困惑\"，需 Yet 点出\"这种不一致其实可预测\"→0，并接下句\"非不理性、而是另一套逻辑\"。(2) 承接\"我们感受而非计算概率\"并引出下句\"一场生动灾难比无声死亡更显眼、空难 vs 车祸\"，需\"例子越易想起越觉危险\"→1（可得性启发）。(3) 承接\"控制感也重要\"并引出下句\"自选的驾驶可忍、被强加的更可怕\"，需\"是否掌控深染威胁感\"→2。(4) 承接\"信任补全图景\"并引出下句\"怀疑机构时数据无用\"，需\"信使不被信则事实难改观念\"→3（来源 vs 量级）。(5) 承接\"沟通风险的教训令人谦卑\"并引出下句\"承认恐惧、诚实解释不确定、赢得信任胜过背概率\"，需该总结句→4。干扰项 5（统计学家用概率）与 6（航空变便宜）虽与风险/飞行相关，但为孤立定义/事实，无指代与逻辑衔接，且 5 回到被本文反驳的\"纯概率\"视角，无法填任何空。"
+    }
+  ]
+}
