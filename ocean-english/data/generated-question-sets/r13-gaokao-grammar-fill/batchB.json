@@ -1,0 +1,166 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "sets": [
+    {
+      "passage": "When our school started a robotics club last term, I signed up immediately, though I knew (1)____ (little) about machines than most of my classmates. Our teacher, Mr. Lin, divided us into small teams and gave each team a robot (2)____ had to complete a simple maze. At first my team kept (3)____ (fail), because our wiring was a mess. Instead of (4)____ (give) up, we met every afternoon to test new ideas. Slowly we learned (5)____ to read the circuit diagrams. The moment our robot finally rolled (6)____ the finish line, the whole room burst into cheers. That experience taught me a valuable (7)____ (lesson): success comes from patience. I am now (8)____ (confidence) that, with teamwork, almost any problem can (9)____ (solve). Looking back, the club did far more than improve my technical skills; it also showed me the joy of (10)____ (build) something with my own hands and sharing it with friends who care. These days I still meet my old teammates after class, and we often plan new projects together over a cup of tea. Some of us hope to study engineering at university, while others simply enjoy the challenge of solving puzzles. Whatever path we choose, that small robot taught us a lesson we will never forget: real progress grows quietly from steady effort and honest cooperation.",
+      "gblanks": [
+        { "answer": "less", "acceptable": ["less"], "hint": "comparative of 'little'" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "failing", "acceptable": ["failing"], "hint": "gerund after 'keep'" },
+        { "answer": "giving", "acceptable": ["giving"], "hint": "gerund after preposition 'of'" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "across", "acceptable": ["across", "over"], "hint": "" },
+        { "answer": "lesson", "acceptable": ["lesson"], "hint": "noun, singular" },
+        { "answer": "confident", "acceptable": ["confident"], "hint": "adjective after 'am'" },
+        { "answer": "be solved", "acceptable": ["be solved"], "hint": "passive infinitive after modal" },
+        { "answer": "building", "acceptable": ["building"], "hint": "gerund after preposition 'of'" }
+      ],
+      "explain_zh": "(1) little 的比较级是 less，than 提示比较级。(2) 限制性定语从句，先行词 robot 作宾语，用 that/which。(3) keep doing 固定搭配，用动名词 failing。(4) instead of 后接动名词 giving。(5) learn how to do，疑问副词 how。(6) 越过终点线，用 across/over。(7) valuable 修饰名词，lesson 单数。(8) be 后接形容词 confident。(9) 情态动词 can 后接被动不定式 be solved。(10) of 后接动名词 building。"
+    },
+    {
+      "passage": "Near my hometown lies a small wetland (1)____ thousands of migrating birds rest each winter. Two years ago, developers planned to drain it, so a group of students, (2)____ (include) me, decided to act. We wrote letters to the local government and collected over a thousand signatures. The campaign was (3)____ (challenge), but we refused to be discouraged. One scientist, an old gentleman named Mr. Reed, kindly explained why the marsh was (4)____ (importance) to the whole region. With (5)____ help, our arguments became far more convincing. After months of effort, the government finally agreed (6)____ (protect) the area. Today the wetland (7)____ (manage) carefully by trained volunteers, and the bird population has grown steadily. Every spring I return there with my camera, (8)____ (amaze) by the beauty around me. The experience made me realise that ordinary people can make a real difference (9)____ they work together. Protecting nature, I now believe, is one of the (10)____ (great) responsibilities of our generation. I have since joined a local conservation group, and we now visit schools to teach younger children why wild places deserve our care and respect.",
+      "gblanks": [
+        { "answer": "where", "acceptable": ["where"], "hint": "" },
+        { "answer": "including", "acceptable": ["including"], "hint": "present participle as preposition" },
+        { "answer": "challenging", "acceptable": ["challenging"], "hint": "adjective ending -ing" },
+        { "answer": "important", "acceptable": ["important"], "hint": "adjective after 'was'" },
+        { "answer": "his", "acceptable": ["his"], "hint": "" },
+        { "answer": "to protect", "acceptable": ["to protect"], "hint": "infinitive after 'agree'" },
+        { "answer": "is managed", "acceptable": ["is managed"], "hint": "passive present, singular" },
+        { "answer": "amazed", "acceptable": ["amazed"], "hint": "past participle expressing feeling" },
+        { "answer": "if", "acceptable": ["if", "when"], "hint": "" },
+        { "answer": "greatest", "acceptable": ["greatest"], "hint": "superlative after 'the'" }
+      ],
+      "explain_zh": "(1) 限制性定语从句，先行词 wetland 作地点状语，用 where。(2) including 作介词，引出包括关系。(3) 描述事物特征用 -ing 形容词 challenging。(4) was 后接形容词 important。(5) 指代前文 Mr. Reed（an old gentleman，男性），物主代词 his。(6) agree to do，用不定式 to protect。(7) 主语 wetland 单数且被管理，一般现在时被动 is managed。(8) 表示人的感受用过去分词 amazed。(9) 条件状语，用 if/when。(10) the 后接最高级 greatest。"
+    },
+    {
+      "passage": "Every summer holiday I learn to cook traditional dishes with my grandmother, (1)____ kitchen always smells of ginger and garlic. She believes that cooking is an art (2)____ requires both patience and love. Last week she taught me (3)____ (make) handmade dumplings. \"Roll the wrapper thinner,\" she said, \"or the filling will fall out.\" My first attempts were far from (4)____ (perfection), yet she never laughed at me. Instead, she guided my hands (5)____ (gentle) until the folds looked neat. By noon we had made nearly a hundred dumplings, all (6)____ (arrange) in tidy rows on the wooden tray. While they were (7)____ (boil), Grandma told me stories about her own childhood. The meal that followed tasted (8)____ (good) than any restaurant food I had ever had. I realised that these recipes are more than instructions; they carry the (9)____ (memory) of a whole family. One day I hope (10)____ pass them on to my own grandchildren. Until then, I write each step down in a little notebook so that none of her wisdom is ever lost. Cooking with her has become my favourite part of every summer, far better than any holiday trip abroad. When I taste those warm dumplings, I taste the patience, the laughter, and the quiet love that fill our small kitchen year after year.",
+      "gblanks": [
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "to make", "acceptable": ["to make"], "hint": "infinitive in 'teach sb to do'" },
+        { "answer": "perfect", "acceptable": ["perfect"], "hint": "adjective after 'from'" },
+        { "answer": "gently", "acceptable": ["gently"], "hint": "adverb modifying verb" },
+        { "answer": "arranged", "acceptable": ["arranged"], "hint": "past participle as complement" },
+        { "answer": "boiling", "acceptable": ["boiling"], "hint": "present participle, progressive" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of 'good'" },
+        { "answer": "memories", "acceptable": ["memories"], "hint": "noun, plural" },
+        { "answer": "to", "acceptable": ["to"], "hint": "" }
+      ],
+      "explain_zh": "(1) 定语从句修饰 grandmother，表所属用 whose（whose kitchen）。(2) 限制性定语从句先行词 art 作主语，用 that/which。(3) teach sb to do，用不定式 to make。(4) far from 后接形容词 perfect。(5) 修饰动词 guided，用副词 gently。(6) 与主语 dumplings 构成被动关系作状语，用过去分词 arranged。(7) were boiling 过去进行时，用现在分词 boiling。(8) than 提示 good 的比较级 better。(9) carry 后接可数名词复数 memories。(10) hope to do，不定式符号 to。"
+    },
+    {
+      "passage": "Last month our class held a debate competition, and I was chosen (1)____ (lead) the affirmative team. Honestly, I had never spoken in public before, so the news made me (2)____ (nerve). For a whole week we gathered evidence and practised our arguments (3)____ (careful) after school. On the day of the contest, the hall was packed with students (4)____ were eager to watch. When the chairperson announced the topic, my heart (5)____ (beat) fast. Yet the moment I began to speak, my fear seemed (6)____ (disappear). Our opponents raised several sharp questions, but our preparation helped us respond with (7)____ (confide). In the end, the judges declared that our team had given the (8)____ (convince) performance of the afternoon. Winning was wonderful, but (9)____ really mattered was the courage I had found within myself. That experience taught me that careful preparation can turn nervousness (10)____ strength. Since that unforgettable afternoon, I have volunteered to speak whenever the chance appears, and each time my old fear grows a little weaker. My teammates and I still laugh about how tense we were before the first round began, and we now help younger students rehearse for their own debates with the same patience our coach once gave us.",
+      "gblanks": [
+        { "answer": "to lead", "acceptable": ["to lead"], "hint": "infinitive after 'be chosen'" },
+        { "answer": "nervous", "acceptable": ["nervous"], "hint": "adjective as object complement" },
+        { "answer": "carefully", "acceptable": ["carefully"], "hint": "adverb modifying verb" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "" },
+        { "answer": "beat", "acceptable": ["beat"], "hint": "past simple" },
+        { "answer": "to disappear", "acceptable": ["to disappear"], "hint": "infinitive after 'seem'" },
+        { "answer": "confidence", "acceptable": ["confidence"], "hint": "noun after preposition 'with'" },
+        { "answer": "most convincing", "acceptable": ["most convincing"], "hint": "superlative of long adjective" },
+        { "answer": "what", "acceptable": ["what"], "hint": "" },
+        { "answer": "into", "acceptable": ["into"], "hint": "" }
+      ],
+      "explain_zh": "(1) be chosen to do，用不定式 to lead。(2) make sb + 形容词，nervous 作宾补。(3) 修饰动词 practised，用副词 carefully。(4) 定语从句先行词 students 指人作主语，用 who/that。(5) 一般过去时，beat 过去式同形。(6) seem to do，用不定式 to disappear。(7) with 后接名词 confidence。(8) the 提示最高级，长形容词用 most convincing。(9) 主语从句缺主语，用 what。(10) turn A into B 把 A 变成 B，用介词 into。"
+    },
+    {
+      "passage": "Last year I spent three weeks living with a host family in Canada, an experience (1)____ completely changed my view of the world. At first I felt a little shy, for my spoken English was far from (2)____ (fluency). My host mother turned out to be the (3)____ (kind) person I had ever met, so I quickly relaxed. Every evening we sat around the table, (4)____ (share) stories from our different cultures. She always corrected my pronunciation very (5)____ (gentle), never making me feel embarrassed. On weekends the family took me to see lakes (6)____ water was clearer than any I had seen at home. By the end of my stay, I had become much more (7)____ (confidence) in conversation. With each passing day, our friendship grew (8)____ (deep) and more genuine. Saying goodbye was hard, and I could not stop (9)____ (cry) at the airport. That homestay not only improved my language but also taught me (10)____ to respect and appreciate other ways of life. We still send each other photographs and letters every few months, and my host mother often jokes that I now write better English than she does. One day I truly hope to invite the whole family to my own city, so that I can share my culture as warmly as they once shared theirs with me.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "fluent", "acceptable": ["fluent"], "hint": "adjective after 'from'" },
+        { "answer": "kindest", "acceptable": ["kindest"], "hint": "superlative after 'the'" },
+        { "answer": "sharing", "acceptable": ["sharing"], "hint": "present participle as adverbial" },
+        { "answer": "gently", "acceptable": ["gently"], "hint": "adverb modifying verb" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" },
+        { "answer": "confident", "acceptable": ["confident"], "hint": "adjective after 'more'" },
+        { "answer": "deeper", "acceptable": ["deeper"], "hint": "comparative of 'deep'" },
+        { "answer": "crying", "acceptable": ["crying"], "hint": "gerund after 'stop'" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" }
+      ],
+      "explain_zh": "(1) 限制性定语从句先行词 experience 作主语，用 that/which。(2) far from 后接形容词 fluent。(3) the...I had ever met 提示最高级 kindest。(4) 与主语构成主动关系作伴随状语，用现在分词 sharing。(5) 修饰动词 corrected，用副词 gently。(6) 定语从句修饰 lakes 表所属，用 whose（whose water）。(7) more 后接形容词 confident。(8) and more genuine 与并列结构提示比较级 deeper。(9) stop doing 表停止做某事，用动名词 crying。(10) learn how to do，用 how。"
+    },
+    {
+      "passage": "The old stone bridge in our town has stood for over two hundred years, and almost everyone (1)____ (know) its story. According to legend, it (2)____ (build) by a young craftsman who wanted to connect two villages separated by a wild river. Year after year, floods destroyed every wooden bridge people tried (3)____ (make). Determined to succeed, the craftsman studied the water for months before he began. His design was so clever (4)____ the bridge has survived countless storms. Local people are still proud (5)____ this remarkable structure today. Walking across it, you can see arches (6)____ shadows form perfect circles on the calm surface below. The bridge is now (7)____ (wide) known as a symbol of patience and skill. Tourists come from far away just (8)____ (admire) it. To me, the bridge is more than stone and mortar; it is a (9)____ (live) reminder that careful work, (10)____ done with heart, can last for centuries. On quiet evenings the older villagers still gather at one end of the bridge to share tea and old tales with their grandchildren. Photographers travel here at dawn to capture the mist that rises gently from the river, and painters often sit for hours trying to copy its graceful arches. Whenever I cross it on my way to school, I feel a deep respect for the unknown hands that shaped each careful stone so long ago.",
+      "gblanks": [
+        { "answer": "knows", "acceptable": ["knows"], "hint": "third-person singular present" },
+        { "answer": "was built", "acceptable": ["was built"], "hint": "past simple passive" },
+        { "answer": "to make", "acceptable": ["to make"], "hint": "infinitive after 'try'" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "of", "acceptable": ["of"], "hint": "" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" },
+        { "answer": "widely", "acceptable": ["widely"], "hint": "adverb modifying 'known'" },
+        { "answer": "to admire", "acceptable": ["to admire"], "hint": "infinitive of purpose" },
+        { "answer": "living", "acceptable": ["living"], "hint": "adjective 'living reminder'" },
+        { "answer": "when", "acceptable": ["when", "if"], "hint": "" }
+      ],
+      "explain_zh": "(1) 主语 everyone 视为单数，一般现在时用 knows。(2) 主语 it 是被建造的，过去时被动 was built。(3) try to do 设法做，用不定式 to make。(4) so...that 结果状语从句，用 that。(5) be proud of 固定搭配。(6) 定语从句修饰 arches 表所属，用 whose（whose shadows）。(7) 修饰过去分词 known，用副词 widely。(8) just to do 表目的，用不定式 to admire。(9) living reminder 活生生的提醒，用形容词 living。(10) 时间/条件状语从句省略，用 when/if。"
+    },
+    {
+      "passage": "Six months ago I decided to train for my first marathon, a goal that once seemed (1)____ (possible) to me. In the beginning I could barely run two kilometres without (2)____ (stop) to catch my breath. My coach told me (3)____ I should increase the distance very gradually. So every week I ran a little (4)____ (far) than before, recording my progress in a small notebook. There were mornings when the rain poured down and I wanted to stay in bed, but the thought of my goal kept me (5)____ (go). I also learned (6)____ important it is to rest and eat well. By spring my legs had grown noticeably (7)____ (strong). On race day, surrounded (8)____ thousands of cheering strangers, I felt unusually calm. Crossing the finish line after four hours was the (9)____ (proud) moment of my life. The marathon taught me that great achievements are simply many small efforts (10)____ (repeat) day after day. Now I keep that worn notebook on my desk as a reminder of how far steady habits can carry a person. Several of my friends, inspired by my story, have started running with me on weekend mornings along the quiet river path. Together we set new goals each season, and we have learned that encouraging one another makes even the hardest training feel lighter and far more enjoyable.",
+      "gblanks": [
+        { "answer": "impossible", "acceptable": ["impossible"], "hint": "adjective with negative prefix" },
+        { "answer": "stopping", "acceptable": ["stopping"], "hint": "gerund after preposition 'without'" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "farther", "acceptable": ["farther", "further"], "hint": "comparative of 'far'" },
+        { "answer": "going", "acceptable": ["going"], "hint": "present participle, 'keep sb doing'" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "stronger", "acceptable": ["stronger"], "hint": "comparative of 'strong'" },
+        { "answer": "by", "acceptable": ["by"], "hint": "" },
+        { "answer": "proudest", "acceptable": ["proudest"], "hint": "superlative after 'the'" },
+        { "answer": "repeated", "acceptable": ["repeated"], "hint": "past participle modifying noun" }
+      ],
+      "explain_zh": "(1) 语义为'不可能的'，用带否定前缀的形容词 impossible。(2) without 后接动名词 stopping。(3) tell sb that 引导宾语从句，用 that。(4) than 提示 far 的比较级 farther/further。(5) keep sb doing，用现在分词 going。(6) 宾语从句中 how 修饰 important 表程度。(7) grown 后接形容词比较级 stronger。(8) be surrounded by 被...围绕。(9) the 提示最高级 proudest。(10) efforts 与 repeat 是被动关系，用过去分词 repeated 作后置定语。"
+    },
+    {
+      "passage": "This spring I was lucky enough to get an internship at the city museum, where I spent two unforgettable months. My main task was (1)____ (help) visitors understand the ancient pottery on display. Before the museum opened each morning, I carefully checked that every label (2)____ (place) correctly beside its object. The curator, (3)____ knowledge amazed everyone, taught me how to handle fragile items. At first I was afraid of (4)____ (break) something priceless, but my hands soon grew steady. One afternoon a group of curious children asked me (5)____ the dynasty had collapsed, and I answered as clearly as I could. Explaining history to others made the past feel (6)____ (live) to me. I also learned (7)____ (organise) small exhibitions and write short descriptions. The work was (8)____ (tire), yet deeply rewarding. By the end of the internship, I had become far (9)____ (knowledgeable) about our local heritage. That experience finally convinced me (10)____ to study history at university. On my last day, the curator handed me a small thank-you card and told me that genuine curiosity matters far more than perfect knowledge. I have kept that card ever since, tucked inside my favourite notebook. Whenever my courses feel difficult, I read those few kind words again, and they remind me exactly why the stories of the past are still so worth protecting and sharing today.",
+      "gblanks": [
+        { "answer": "to help", "acceptable": ["to help"], "hint": "infinitive as predicative" },
+        { "answer": "was placed", "acceptable": ["was placed"], "hint": "past simple passive" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" },
+        { "answer": "breaking", "acceptable": ["breaking"], "hint": "gerund after preposition 'of'" },
+        { "answer": "why", "acceptable": ["why"], "hint": "" },
+        { "answer": "alive", "acceptable": ["alive"], "hint": "adjective after 'feel'" },
+        { "answer": "to organise", "acceptable": ["to organise", "to organize"], "hint": "infinitive after 'learn'" },
+        { "answer": "tiring", "acceptable": ["tiring"], "hint": "adjective ending -ing" },
+        { "answer": "more knowledgeable", "acceptable": ["more knowledgeable"], "hint": "comparative of long adjective" },
+        { "answer": "to", "acceptable": ["to"], "hint": "" }
+      ],
+      "explain_zh": "(1) 表语为不定式，task was to help。(2) 主语 label 被放置，过去时被动 was placed。(3) 定语从句修饰 curator 表所属，用 whose（whose knowledge）。(4) be afraid of 后接动名词 breaking。(5) 宾语从句表原因，用 why。(6) feel 后接形容词 alive。(7) learn to do，用不定式 to organise。(8) 描述事物特征用 -ing 形容词 tiring。(9) far 修饰比较级，长形容词用 more knowledgeable。(10) convince sb to do（此处省略 me 后接不定式），用 to。"
+    },
+    {
+      "passage": "My grandfather gave me his rusty old bicycle, and I made up my mind to repair it (1)____ (complete) by myself. The tyres were flat, the chain was broken, and the frame (2)____ (cover) with thick dust. I searched online for tutorials and learned (3)____ to take the wheels apart safely. It was a job (4)____ demanded far more patience than I had expected. Whenever a part refused to move, I had to stop and think (5)____ (careful) about the next step. My father offered to help, but I politely refused, determined to finish it (6)____ my own. After two long weekends, the bicycle finally looked almost (7)____ (use) again. The first ride down our street was one of the (8)____ (satisfy) feelings I have ever known. Now the old bike (9)____ (ride) every day, and it works better than some new ones. Repairing it taught me that patience and curiosity, (10)____ combined, can bring almost anything back to life. My grandfather was so moved that he told me stories about the long journeys he had once made on that very bicycle. Now, whenever a neighbour's bike breaks down, they knock on our door and ask for my help. I never charge them anything, because the quiet pleasure of fixing something old with my own hands is already reward enough for me.",
+      "gblanks": [
+        { "answer": "completely", "acceptable": ["completely"], "hint": "adverb modifying verb" },
+        { "answer": "was covered", "acceptable": ["was covered"], "hint": "past simple passive" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "carefully", "acceptable": ["carefully"], "hint": "adverb modifying verb" },
+        { "answer": "on", "acceptable": ["on"], "hint": "" },
+        { "answer": "usable", "acceptable": ["usable", "useable"], "hint": "adjective with suffix -able" },
+        { "answer": "most satisfying", "acceptable": ["most satisfying"], "hint": "superlative of long adjective" },
+        { "answer": "is ridden", "acceptable": ["is ridden"], "hint": "present simple passive" },
+        { "answer": "when", "acceptable": ["when", "if"], "hint": "" }
+      ],
+      "explain_zh": "(1) 修饰动词 repair，用副词 completely。(2) be covered with 被...覆盖，过去时被动 was covered。(3) learn how to do，用 how。(4) 限制性定语从句先行词 job 作主语，用 that/which。(5) think 后用副词 carefully。(6) on one's own 固定短语，用 on。(7) looked 后接形容词，'可用的'用 usable。(8) the 提示最高级，长形容词用 most satisfying。(9) 主语 bike 被骑，一般现在时被动 is ridden。(10) 状语从句省略，用 when/if（combined）。"
+    },
+    {
+      "passage": "Of all the festivals we celebrate, the Mid-Autumn Festival holds the (1)____ (warm) place in my heart. When I was a child, my whole family would gather in the courtyard to admire the full moon, (2)____ shone brightly above the rooftops. My grandmother always prepared mooncakes (3)____ (fill) with sweet lotus paste. I still remember (4)____ delicious they tasted under the silver light. After dinner, the adults told stories about Chang'e, the goddess (5)____ is said to live on the moon. Those evenings were among the (6)____ (peaceful) moments of my childhood. Now that I study far from home, I cannot help (7)____ (miss) those gatherings. Last autumn I finally returned, and the moment I stepped through the gate, tears (8)____ (fill) my eyes. Although the courtyard looked smaller than (9)____ (remember), the warmth had not changed at all. That reunion reminded me that home is not a place but the people (10)____ love stays with us forever. Since that night, I have promised myself never to miss another family gathering, however busy my studies may become. Every year I now bring my grandmother a box of mooncakes from the city, and we share them slowly beneath the same bright moon. In those gentle hours, the years between us seem to melt away, and once again I feel like the happy child who first learned the meaning of belonging.",
+      "gblanks": [
+        { "answer": "warmest", "acceptable": ["warmest"], "hint": "superlative after 'the'" },
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "filled", "acceptable": ["filled"], "hint": "past participle as postmodifier" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "" },
+        { "answer": "most peaceful", "acceptable": ["most peaceful"], "hint": "superlative of long adjective" },
+        { "answer": "missing", "acceptable": ["missing"], "hint": "gerund in 'cannot help doing'" },
+        { "answer": "filled", "acceptable": ["filled"], "hint": "past simple" },
+        { "answer": "remembered", "acceptable": ["remembered"], "hint": "past participle, 'than remembered'" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" }
+      ],
+      "explain_zh": "(1) the 提示最高级 warmest。(2) 非限制性定语从句（逗号），先行词 moon 作主语，用 which，不可用 that。(3) mooncakes 被馅料填充，过去分词 filled 作后置定语。(4) 宾语从句中 how 修饰 delicious 表程度。(5) 限制性定语从句先行词 goddess 指人作主语，用 who/that。(6) the 提示最高级，长形容词用 most peaceful。(7) cannot help doing 禁不住做，用动名词 missing。(8) 一般过去时，fill 过去式 filled。(9) than 后省略 it was，用过去分词 remembered。(10) 定语从句修饰 people 表所属，用 whose（whose love）。"
+    }
+  ]
+}

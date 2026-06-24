@@ -1,0 +1,166 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "sets": [
+    {
+      "passage": "Last weekend I joined a paper-cutting workshop held in our community centre. The teacher, (1)____ name was Mrs. Lin, had been practising this folk art for over forty years. She showed us several (2)____ (tradition) patterns and explained how each one carried a special meaning. At first I felt rather (3)____ (nervous) because the scissors kept slipping in my hands. \"Patience is the key,\" Mrs. Lin said (4)____ (gentle), guiding my fingers along the thin red paper. After half an hour, I finally cut out a butterfly, and it looked (5)____ (good) than I had expected. Everyone around me clapped, (6)____ made me feel proud. I learned that paper-cutting requires not only skill (7)____ also a calm heart. By the end of the afternoon, our works (8)____ (display) on the wall for visitors to admire. Mrs. Lin encouraged us (9)____ (keep) practising at home so that this beautiful art would not (10)____ (forget). I left the centre with a small red butterfly and a big dream in my heart. On my way home I decided to teach my younger sister this lovely craft as well, so that more children could enjoy the charm of our traditional folk art.",
+      "gblanks": [
+        { "answer": "whose", "acceptable": ["whose"], "hint": "非限制性定语从句，作定语表所属" },
+        { "answer": "traditional", "acceptable": ["traditional"], "hint": "形容词修饰名词 patterns" },
+        { "answer": "nervous", "acceptable": ["nervous"], "hint": "feel 后接形容词作表语" },
+        { "answer": "gently", "acceptable": ["gently"], "hint": "副词修饰动词 said" },
+        { "answer": "better", "acceptable": ["better"], "hint": "than 表明用比较级" },
+        { "answer": "which", "acceptable": ["which"], "hint": "非限制性定语从句，指代前面整句" },
+        { "answer": "but", "acceptable": ["but"], "hint": "not only ... but also 固定连词搭配" },
+        { "answer": "were displayed", "acceptable": ["were displayed"], "hint": "被动语态，作品被展示，主语复数过去时" },
+        { "answer": "to keep", "acceptable": ["to keep"], "hint": "encourage sb to do 不定式" },
+        { "answer": "be forgotten", "acceptable": ["be forgotten"], "hint": "would not 后接被动原形，艺术被遗忘" }
+      ],
+      "explain_zh": "(1) 非限制性定语从句，先行词 teacher 与 name 是所属关系，用 whose。(2) 形容词 traditional 修饰名词 patterns。(3) feel 系动词后用形容词 nervous 作表语。(4) 副词 gently 修饰动词 said。(5) than 提示用比较级 better。(6) 非限制性定语从句指代前面整件事，只能用 which，不能用 that。(7) not only ... but also 固定搭配，填 but。(8) 作品被展示，用被动语态，主语 works 复数，过去时 were displayed。(9) encourage sb to do sth，用不定式 to keep。(10) would not 后接动词原形，艺术被遗忘用被动 be forgotten。"
+    },
+    {
+      "passage": "On Arbor Day our class went to a bare hillside (1)____ (plant) young trees. The morning air was fresh, and everyone arrived (2)____ great excitement. Our teacher divided us into small groups and handed each group a shovel and several (3)____ (seedling). I worked together with my best friend, (4)____ dug the holes while I held the thin trunks straight. The soil was harder (5)____ we had imagined, so we had to dig more carefully. After planting, we poured water around the roots to help the trees (6)____ (grow). By noon, the once-empty slope (7)____ (cover) with rows of little green plants. Looking at (8)____ (we) own work, I suddenly understood why people call trees the lungs of the earth. The teacher told us (9)____ a single tree can absorb a large amount of carbon dioxide every year. I made a promise to come back in spring to see how (10)____ (high) our trees had grown. It was truly a meaningful day. On the bus ride back to school, everyone shared their feelings about the morning, and we all agreed that protecting the environment is a duty for each one of us. I felt tired but very happy, knowing that our small effort would benefit many people in the future.",
+      "gblanks": [
+        { "answer": "to plant", "acceptable": ["to plant"], "hint": "动词不定式表目的" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with 表伴随状态，with excitement" },
+        { "answer": "seedlings", "acceptable": ["seedlings"], "hint": "several 后接可数名词复数" },
+        { "answer": "who", "acceptable": ["who"], "hint": "非限制性定语从句指人作主语" },
+        { "answer": "than", "acceptable": ["than"], "hint": "harder 比较级后接 than" },
+        { "answer": "grow", "acceptable": ["grow"], "hint": "help sb (to) do，此处省略 to 用原形" },
+        { "answer": "was covered", "acceptable": ["was covered"], "hint": "be covered with 被动，主语单数过去时" },
+        { "answer": "our", "acceptable": ["our"], "hint": "形容词性物主代词修饰 own work" },
+        { "answer": "that", "acceptable": ["that"], "hint": "tell sb that 引导宾语从句" },
+        { "answer": "high", "acceptable": ["high"], "hint": "how 后接形容词原级构成感叹/疑问短语 how high" }
+      ],
+      "explain_zh": "(1) 去山坡的目的是植树，用不定式 to plant。(2) with great excitement 表伴随，固定用 with。(3) several 后接可数名词复数 seedlings。(4) 非限制性定语从句指人作主语，用 who。(5) harder 是比较级，后接 than。(6) help sb do，help 后可省略 to，用原形 grow。(7) be covered with 被动结构，主语 slope 单数，过去时 was covered。(8) own 前用形容词性物主代词 our。(9) tell sb that 引导宾语从句，连词 that。(10) how high 表程度，how 后接形容词原级 high。"
+    },
+    {
+      "passage": "There was once a misunderstanding between my classmate Tom and (1)____ (I). One afternoon I borrowed his bicycle without asking, (2)____ I was in a hurry to catch the bus. When he found his bike (3)____ (miss), he became very angry and thought I had taken it on purpose. For two days he refused (4)____ (speak) to me, which made me feel terrible. I realised that I should have told him (5)____ (early). Finally, I decided to write him a letter, in (6)____ I explained everything honestly and said sorry. The next morning Tom came to my desk with a (7)____ (friend) smile. \"I'm sorry too,\" he said. \"I shouldn't have lost my temper so (8)____ (quick).\" We both laughed, and our friendship became even (9)____ (strong) than before. From this experience I learned that honest communication is the best way (10)____ (solve) any misunderstanding. A small problem, if ignored, may grow into a big one. Since that day, Tom and I have promised to speak openly whenever something bothers us, instead of keeping our worries inside. We often laugh about that silly bicycle quarrel now, and our friendship feels much warmer than before. I am truly grateful that one honest letter saved a precious friendship that I might otherwise have lost forever.",
+      "gblanks": [
+        { "answer": "me", "acceptable": ["me"], "hint": "介词 between 后用宾格" },
+        { "answer": "because", "acceptable": ["because", "as", "since"], "hint": "引导原因状语从句" },
+        { "answer": "missing", "acceptable": ["missing"], "hint": "find sth doing，现在分词作宾补表状态" },
+        { "answer": "to speak", "acceptable": ["to speak"], "hint": "refuse to do 不定式" },
+        { "answer": "earlier", "acceptable": ["earlier"], "hint": "比较级，比当时更早" },
+        { "answer": "which", "acceptable": ["which"], "hint": "介词 in + which 引导非限制性定语从句" },
+        { "answer": "friendly", "acceptable": ["friendly"], "hint": "形容词修饰名词 smile" },
+        { "answer": "quickly", "acceptable": ["quickly"], "hint": "副词修饰动词 lost my temper" },
+        { "answer": "stronger", "acceptable": ["stronger"], "hint": "than 提示比较级" },
+        { "answer": "to solve", "acceptable": ["to solve"], "hint": "the best way to do 不定式作后置定语" }
+      ],
+      "explain_zh": "(1) 介词 between 后接宾格 me。(2) 引导原因状语从句，用 because（as/since 亦可）。(3) find sth doing，bike 处于 missing 状态，用现在分词。(4) refuse to do sth，用不定式。(5) 比当时更早，比较级 earlier。(6) in which 引导非限制性定语从句，先行词 letter。(7) 形容词 friendly 修饰名词 smile。(8) 副词 quickly 修饰动作。(9) than 提示比较级 stronger。(10) the best way to do sth，不定式作后置定语。"
+    },
+    {
+      "passage": "Last month our school welcomed a group of students from Australia on (1)____ exchange visit. I was lucky enough to be chosen as a host, so a boy called Jack stayed at my home for a week. On the first evening, my mother prepared a big dinner, (2)____ Jack enjoyed very much. He was surprised by the variety of Chinese dishes and kept (3)____ (ask) questions about how they were cooked. During the visit, we took him to see the Great Wall, (4)____ he had only read about in books. Standing on the ancient stones, Jack said it was the (5)____ (great) sight he had ever seen. We also taught each other simple phrases in (6)____ (we) own languages, which was great fun. Although our cultures are quite (7)____ (difference), we found we shared the same love for music and sports. When the week came to an end, both of us felt (8)____ (sad) to say goodbye. Jack promised that he (9)____ (write) to me as soon as he got home. The exchange visit opened my eyes and helped me make a friend (10)____ lived on the other side of the world.",
+      "gblanks": [
+        { "answer": "an", "acceptable": ["an"], "hint": "exchange 以元音音素开头，用 an" },
+        { "answer": "which", "acceptable": ["which"], "hint": "非限制性定语从句指物作宾语" },
+        { "answer": "asking", "acceptable": ["asking"], "hint": "keep doing 固定搭配" },
+        { "answer": "which", "acceptable": ["which"], "hint": "限制性定语从句，read about which 指物作宾语" },
+        { "answer": "greatest", "acceptable": ["greatest"], "hint": "the + 最高级 + ever 结构" },
+        { "answer": "our", "acceptable": ["our"], "hint": "形容词性物主代词修饰 own languages" },
+        { "answer": "different", "acceptable": ["different"], "hint": "are 系动词后接形容词作表语" },
+        { "answer": "sad", "acceptable": ["sad"], "hint": "feel 后接形容词作表语" },
+        { "answer": "would write", "acceptable": ["would write"], "hint": "过去将来时，promised 之后表将来" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "限制性定语从句指人作主语" }
+      ],
+      "explain_zh": "(1) exchange 以元音音素 /ɪ/ 开头，用 an。(2) 非限制性定语从句指物作 enjoyed 宾语，用 which，不能用 that。(3) keep doing sth，用动名词 asking。(4) 限制性定语从句，先行词 the Great Wall 作 read about 的宾语，用 which。(5) the greatest ... ever，形容词最高级。(6) own 前用物主代词 our。(7) are 后接形容词 different 作表语。(8) feel 后接形容词 sad。(9) promised 表过去，从句表将来，用过去将来时 would write。(10) 限制性定语从句指人作主语，用 who 或 that。"
+    },
+    {
+      "passage": "High in the south of our province stands a mountain (1)____ is famous for an ancient legend. People say that long ago a kind girl lived at the foot of the mountain. One year a terrible drought came, and the crops (2)____ (die) one after another. The girl walked for days to look for water, (3)____ (carry) only a small basket on her back. At last she found a hidden spring, but a cruel dragon guarded it (4)____ (careful). Bravely, she begged the dragon to share the water with the (5)____ (suffer) villagers. Moved by her kindness, the dragon agreed, and from that day the spring (6)____ (flow) freely down the mountain. To remember the brave girl, the local people built a small temple, (7)____ they still pray today. The legend has been passed down for (8)____ (century), and it teaches us that courage and kindness can move (9)____ even the hardest heart. Every spring, thousands of visitors climb the mountain (10)____ (hear) this touching story for themselves. They light incense at the temple and gaze at the clear spring, hoping that the spirit of the brave girl will bless their families with peace and good fortune.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "限制性定语从句指物作主语" },
+        { "answer": "died", "acceptable": ["died"], "hint": "一般过去时，叙述过去发生的事" },
+        { "answer": "carrying", "acceptable": ["carrying"], "hint": "现在分词作伴随状语" },
+        { "answer": "carefully", "acceptable": ["carefully"], "hint": "副词修饰动词 guarded" },
+        { "answer": "suffering", "acceptable": ["suffering"], "hint": "现在分词作定语，受苦的村民" },
+        { "answer": "flowed", "acceptable": ["flowed"], "hint": "一般过去时，from that day 提示" },
+        { "answer": "where", "acceptable": ["where"], "hint": "限制性定语从句，先行词 temple 表地点作状语" },
+        { "answer": "centuries", "acceptable": ["centuries"], "hint": "for + 时间段，名词复数" },
+        { "answer": "even", "acceptable": ["even"], "hint": "副词 even 加强语气，修饰 the hardest heart" },
+        { "answer": "to hear", "acceptable": ["to hear"], "hint": "不定式表目的" }
+      ],
+      "explain_zh": "(1) 限制性定语从句指物作主语，用 which 或 that。(2) 一般过去时叙述故事，died。(3) 现在分词 carrying 作伴随状语。(4) 副词 carefully 修饰动词 guarded。(5) 现在分词 suffering 作定语，意为受苦的村民。(6) from that day 提示一般过去时 flowed。(7) 先行词 temple 表地点，从句中作地点状语，用关系副词 where。(8) for centuries 持续若干世纪，名词复数。(9) 副词 even 加强语气，意为即使最坚硬的心。(10) 登山的目的是听故事，不定式 to hear 表目的。"
+    },
+    {
+      "passage": "This term I began (1)____ (learn) sign language, and it has completely changed the way I look at communication. My teacher is a deaf artist (2)____ expresses herself beautifully with her hands. At first the hand shapes seemed (3)____ (confuse), and I often mixed them up. \"Don't worry,\" my teacher signed (4)____ (patient), \"everyone makes mistakes at the beginning.\" Day by day, my fingers became (5)____ (flexible) than before, and I could form simple sentences. The (6)____ (excite) moment came when I had my first short \"conversation\" with a deaf classmate. We talked about our hobbies, and (7)____ of us needed to speak a single word. I realised that language is not only about sound (8)____ also about understanding. Learning sign language taught me to pay attention to (9)____ (other) feelings more carefully. Now I believe that with patience and practice, we can build a bridge between two silent worlds. I hope more people will join this class so (10)____ deaf people feel less lonely. Every week I practise new signs with my classmate, and we share funny stories using only our hands and smiling faces. This silent language has truly enriched my life in ways I never expected before.",
+      "gblanks": [
+        { "answer": "learning", "acceptable": ["learning", "to learn"], "hint": "begin doing/to do 均可" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "限制性定语从句指人作主语" },
+        { "answer": "confusing", "acceptable": ["confusing"], "hint": "现在分词形容词，令人困惑的" },
+        { "answer": "patiently", "acceptable": ["patiently"], "hint": "副词修饰动词 signed" },
+        { "answer": "more flexible", "acceptable": ["more flexible"], "hint": "多音节形容词比较级，than 提示" },
+        { "answer": "most exciting", "acceptable": ["most exciting"], "hint": "the + 最高级，令人兴奋的时刻" },
+        { "answer": "neither", "acceptable": ["neither"], "hint": "neither of us 两者都不" },
+        { "answer": "but", "acceptable": ["but"], "hint": "not only ... but also 固定搭配" },
+        { "answer": "others'", "acceptable": ["others'"], "hint": "名词所有格，他人的感受" },
+        { "answer": "that", "acceptable": ["that"], "hint": "so that 引导目的状语从句" }
+      ],
+      "explain_zh": "(1) begin 后接动名词或不定式均可，learning/to learn。(2) 限制性定语从句指人作主语，who 或 that。(3) confusing 现在分词作形容词，意为令人困惑的。(4) 副词 patiently 修饰动词 signed。(5) than 提示比较级，多音节用 more flexible。(6) the most exciting moment，最高级。(7) neither of us 表两者都不。(8) not only ... but also 固定搭配，填 but。(9) others' 名词复数所有格，意为他人的感受。(10) so that 引导目的状语从句，使聋人不那么孤独。"
+    },
+    {
+      "passage": "During the summer holiday I took (1)____ part-time job at a small bookshop near my home. My main task was to help customers find the books (2)____ they were looking for. The owner, an old man with white hair, taught me how (3)____ (arrange) the shelves neatly. On my first day I felt a little (4)____ (anxious), but he was so kind that I soon relaxed. One afternoon a little girl came in, (5)____ (search) for a story about brave knights. I spent half an hour helping her, and finally she left with a big smile, (6)____ made my whole day. I learned that good service is even (7)____ (important) than selling many books. By the end of the month, I (8)____ (sell) more than two hundred books and made several regular customers. The job not only earned me some pocket money (9)____ also taught me the value of patience. When I said goodbye, the owner gave me a beautiful notebook (10)____ (express) his thanks. I will always treasure that special summer. The little notebook still sits on my desk, and every time I open it I remember the kind old man and the happy hours I spent among the quiet shelves of his bookshop.",
+      "gblanks": [
+        { "answer": "a", "acceptable": ["a"], "hint": "part-time 以辅音音素开头，用 a" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "限制性定语从句指物作宾语" },
+        { "answer": "to arrange", "acceptable": ["to arrange"], "hint": "how + 不定式" },
+        { "answer": "anxious", "acceptable": ["anxious"], "hint": "feel 后接形容词作表语" },
+        { "answer": "searching", "acceptable": ["searching"], "hint": "现在分词作伴随状语" },
+        { "answer": "which", "acceptable": ["which"], "hint": "非限制性定语从句指代前面整句" },
+        { "answer": "more important", "acceptable": ["more important"], "hint": "多音节形容词比较级，than 提示" },
+        { "answer": "had sold", "acceptable": ["had sold"], "hint": "过去完成时，到月底之前已卖出" },
+        { "answer": "but", "acceptable": ["but"], "hint": "not only ... but also 固定搭配" },
+        { "answer": "to express", "acceptable": ["to express"], "hint": "不定式表目的" }
+      ],
+      "explain_zh": "(1) part-time 以辅音音素 /p/ 开头，用 a。(2) 限制性定语从句指物作 looking for 宾语，that 或 which。(3) how to do sth，疑问词加不定式。(4) feel 后接形容词 anxious。(5) 现在分词 searching 作伴随状语。(6) 非限制性定语从句指代前面整件事，用 which。(7) than 提示比较级，多音节用 more important。(8) 到月底之前已完成的动作，用过去完成时 had sold。(9) not only ... but also 固定搭配，填 but。(10) 送笔记本的目的是表达感谢，不定式 to express 表目的。"
+    },
+    {
+      "passage": "One cold winter evening I was waiting at the bus stop when an unexpected act of kindness warmed my heart. I had forgotten my wallet at school, so I had no money (1)____ (pay) for the ticket. Feeling helpless, I stood there, not knowing (2)____ to do. Just then a stranger, (3)____ was standing beside me, noticed my worried face. \"Take this,\" she said (4)____ (kind), handing me a few coins with a warm smile. I was so (5)____ (touch) that I could hardly say thank you. She told me that someone (6)____ helped her in the same way years ago, so she wanted to pass the kindness on. On the bus, I kept thinking about (7)____ (she) words. The small act seemed simple, but it had a (8)____ (power) effect on me. From that day, I decided to help others (9)____ I could, no matter how busy I was. Kindness, I have learned, is like a candle that lights (10)____ (it) and others at the same time. Now whenever I see someone in trouble, I remember that gentle stranger on the cold winter night, and I try my best to offer a helping hand without a moment of hesitation.",
+      "gblanks": [
+        { "answer": "to pay", "acceptable": ["to pay"], "hint": "不定式作后置定语修饰 money" },
+        { "answer": "what", "acceptable": ["what"], "hint": "what to do 疑问词加不定式作宾语" },
+        { "answer": "who", "acceptable": ["who"], "hint": "非限制性定语从句指人作主语" },
+        { "answer": "kindly", "acceptable": ["kindly"], "hint": "副词修饰动词 said" },
+        { "answer": "touched", "acceptable": ["touched"], "hint": "过去分词作表语，被感动的" },
+        { "answer": "had", "acceptable": ["had"], "hint": "过去完成时，years ago 提示在过去之前" },
+        { "answer": "her", "acceptable": ["her"], "hint": "形容词性物主代词修饰 words" },
+        { "answer": "powerful", "acceptable": ["powerful"], "hint": "形容词修饰名词 effect" },
+        { "answer": "whenever", "acceptable": ["whenever"], "hint": "引导时间状语从句，无论何时" },
+        { "answer": "itself", "acceptable": ["itself"], "hint": "反身代词，蜡烛照亮自己" }
+      ],
+      "explain_zh": "(1) 不定式 to pay 作后置定语修饰 money，意为买票的钱。(2) what to do，疑问词加不定式。(3) 非限制性定语从句指人作主语，用 who。(4) 副词 kindly 修饰动词 said。(5) be touched 被感动的，过去分词作表语。(6) years ago 提示在过去之前已发生，用过去完成时 had。(7) her 形容词性物主代词修饰 words。(8) 形容词 powerful 修饰名词 effect。(9) whenever 引导时间状语从句，意为无论何时。(10) itself 反身代词，蜡烛照亮自己。"
+    },
+    {
+      "passage": "Last term my brother and I decided to build a model rocket together for the school science fair. Neither of us had done anything like this before, so we started by reading a guidebook (1)____ explained the basic steps. Building the rocket turned out to be much (2)____ (hard) than we had imagined. We carefully cut the cardboard, glued the fins, and painted the body a bright (3)____ (red) colour. My little brother was responsible for the engine, (4)____ I worked on the parachute. After three weekends of (5)____ (patient) effort, our rocket was finally (6)____ (complete). On the day of the test, we carried it to an open field, our hearts (7)____ (beat) fast. When I pressed the button, the rocket shot into the sky (8)____ (sudden), and we cheered with joy. It flew higher than (9)____ other model on the field. That experience taught me that careful planning and teamwork are the keys (10)____ success. We are already planning to build a bigger one next year. My brother has even drawn a detailed design on paper, and our parents have promised to buy the materials we need for this exciting new adventure together.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "限制性定语从句指物作主语" },
+        { "answer": "harder", "acceptable": ["harder"], "hint": "than 提示比较级" },
+        { "answer": "red", "acceptable": ["red"], "hint": "形容词修饰名词 colour" },
+        { "answer": "while", "acceptable": ["while"], "hint": "连词 while 表两动作对比" },
+        { "answer": "patient", "acceptable": ["patient"], "hint": "形容词修饰名词 effort" },
+        { "answer": "complete", "acceptable": ["complete", "completed"], "hint": "be 后接形容词作表语，完成的" },
+        { "answer": "beating", "acceptable": ["beating"], "hint": "独立主格，hearts 与 beat 主动关系用现在分词" },
+        { "answer": "suddenly", "acceptable": ["suddenly"], "hint": "副词修饰动词 shot" },
+        { "answer": "any", "acceptable": ["any"], "hint": "比较级 than any other 表与同类比较" },
+        { "answer": "to", "acceptable": ["to"], "hint": "the key to sth 固定搭配介词 to" }
+      ],
+      "explain_zh": "(1) 限制性定语从句指物作主语，which 或 that。(2) than 提示比较级 harder。(3) 形容词 red 修饰名词 colour。(4) while 连词表两个动作的对比。(5) 形容词 patient 修饰名词 effort。(6) be 后接形容词 complete 作表语，意为完成的（completed 亦可作过去分词作表语）。(7) 独立主格结构，our hearts 与 beat 是主动关系，用现在分词 beating。(8) 副词 suddenly 修饰动词 shot。(9) than any other + 单数名词，与同类其他相比。(10) the key to success，固定搭配介词 to。"
+    },
+    {
+      "passage": "The night of the Lantern Festival is always the (1)____ (busy) time in our old town. As soon as the sky grew dark, thousands of colourful lanterns (2)____ (light) up along both sides of the river. My grandmother held my hand (3)____ we walked slowly through the crowded streets. Children ran here and there, (4)____ (carry) small paper lanterns shaped like rabbits and fish. The air was filled with the (5)____ (please) smell of sweet rice balls. \"Make a wish,\" Grandmother said (6)____ (soft), pointing at a glowing lantern floating up into the night sky. I closed my eyes and wished that my family would stay (7)____ (health) and happy forever. Near the bridge, an old artist was painting riddles on lanterns, (8)____ visitors tried hard to guess. The whole town seemed (9)____ (live) with light and laughter. I will never forget that magical evening, (10)____ filled my heart with warmth and hope for the coming year. On our way home, Grandmother told me old stories about how the festival was celebrated when she was a little girl, and her gentle voice made the night feel even more special. I held a glowing rabbit lantern close to my chest, and I quietly promised myself that I would bring my own children here one day to share the very same joy.",
+      "gblanks": [
+        { "answer": "busiest", "acceptable": ["busiest"], "hint": "the + 最高级，最忙碌的时刻" },
+        { "answer": "were lit", "acceptable": ["were lit", "were lighted"], "hint": "被动语态，灯笼被点亮，复数过去时" },
+        { "answer": "as", "acceptable": ["as", "while"], "hint": "引导时间状语从句，当……时" },
+        { "answer": "carrying", "acceptable": ["carrying"], "hint": "现在分词作伴随状语" },
+        { "answer": "pleasant", "acceptable": ["pleasant"], "hint": "形容词修饰名词 smell" },
+        { "answer": "softly", "acceptable": ["softly"], "hint": "副词修饰动词 said" },
+        { "answer": "healthy", "acceptable": ["healthy"], "hint": "stay 系动词后接形容词作表语" },
+        { "answer": "which", "acceptable": ["which"], "hint": "非限制性定语从句（逗号隔开）指物作 guess 宾语，只能用 which" },
+        { "answer": "alive", "acceptable": ["alive"], "hint": "seem 后接形容词作表语，充满生机的" },
+        { "answer": "which", "acceptable": ["which"], "hint": "非限制性定语从句指代前面 evening" }
+      ],
+      "explain_zh": "(1) the busiest time，形容词最高级。(2) 灯笼被点亮，用被动语态，主语 lanterns 复数，过去时 were lit（were lighted 亦可）。(3) 引导时间状语从句，用 as 或 while。(4) 现在分词 carrying 作伴随状语。(5) 形容词 pleasant 修饰名词 smell。(6) 副词 softly 修饰动词 said。(7) stay 系动词后接形容词 healthy 作表语。(8) 逗号隔开的非限制性定语从句，先行词 riddles 作 guess 宾语，只能用 which，不能用 that。(9) seem 后接形容词 alive 作表语，意为充满生机。(10) 非限制性定语从句指代前面 evening 作主语，用 which，不能用 that。"
+    }
+  ]
+}
