@@ -13,6 +13,7 @@
    ════════════════════════════════════════════════════════════════════════ */
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { normalizeExamId } from '@/lib/exam-specs'
+import { persistSkillStates } from '@/lib/learning-loop/skill-state-writer'
 import { scorePaper } from './scoring'
 import type { GeneratedPaper, ItemResponse, PaperItem, PaperScore, PaperSection } from './paper-types'
 
@@ -122,6 +123,11 @@ export async function submitPaper(
   if (rows.length) {
     const { error: qErr } = await db.from('question_attempts').insert(rows)
     if (qErr) warnings.push('question_attempts_insert_failed')
+    else {
+      // R12：提交后物化技能状态（供 daily-plan/diagnostics）；失败不影响判分结果
+      const sk = await persistSkillStates(db, userId)
+      if (!sk.written && sk.warnings.length) warnings.push('skill_states:' + sk.warnings[0])
+    }
   }
 
   await db.from('paper_instances').update({ status: 'submitted', submitted_at: new Date().toISOString() }).eq('id', instanceId)

@@ -28,6 +28,7 @@
     "promote:qsets-v2": "npx tsx scripts/promote-question-sets-v2.ts",
     "smoke:papers": "npx tsx scripts/check-paper-api-smoke.ts",
     "smoke:paper-e2e": "npx tsx scripts/smoke-paper-e2e.ts",
+    "smoke:learning-loop-e2e": "npx tsx scripts/smoke-learning-loop-e2e.ts",
     "validate:rubrics": "npx tsx scripts/validate-rubrics.ts",
     "verify:toefl-current": "npx tsx scripts/verify-toefl-current.ts",
     "validate:learning-loop": "npx tsx scripts/validate-learning-loop.ts",

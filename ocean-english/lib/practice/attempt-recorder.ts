@@ -9,6 +9,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import { normalizeExamId } from '@/lib/exam-specs'
 import { classifyError } from '@/lib/learning-loop/error-classifier'
 import { dimensionForAttempt } from '@/lib/learning-loop/word-mastery'
+import { persistSkillStates } from '@/lib/learning-loop/skill-state-writer'
 import type {
   RecordAttemptInput,
   RecordAttemptResponse,
@@ -101,6 +102,10 @@ export async function recordAttempt(
     warnings.push('attempt_insert_failed')
     return base
   }
+
+  // R12：物化服务端技能状态（供 daily-plan/diagnostics）；失败不影响作答记录
+  const sk = await persistSkillStates(db, userId)
+  if (!sk.written && sk.warnings.length && sk.warnings[0] !== 'no_attempts') warnings.push('skill_states:' + sk.warnings[0])
 
   return { ok: true, recorded: true, storage: 'v2', warnings, wordUpdates, skillUpdates }
 }
