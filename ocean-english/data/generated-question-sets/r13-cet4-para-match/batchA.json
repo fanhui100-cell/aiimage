@@ -1,0 +1,186 @@
+{
+  "template": "cet-para-match",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "[A] Online learning has grown rapidly over the past decade. Once limited to a few universities offering recorded lectures, it now reaches millions of people through phones, tablets, and laptops. Whether someone wants to master a new programming language or simply review school subjects, a course is usually only a few clicks away. This explosion of choice has reshaped how the world thinks about education.\n\n[B] One of the clearest advantages is freedom of time and place. A nurse working night shifts can study at dawn; a parent can take lessons after the children are asleep. Learners no longer need to live near a famous campus or rearrange their lives around a fixed timetable. For many, this flexibility is the difference between studying and giving up entirely.\n\n[C] Cost is another reason for its popularity. Traditional degrees often demand large fees, housing, and travel expenses. Many online programs charge far less, and a great number of high-quality lessons are completely free. As a result, knowledge that was once locked behind expensive gates is now within reach of people on modest budgets.\n\n[D] Yet the picture is not entirely bright. Studying alone in front of a screen can feel isolating. Without classmates sitting beside them or a teacher noticing a puzzled face, some students lose motivation and quietly drift away. The very independence that attracts people can also leave them feeling unsupported.\n\n[E] Distraction is a further danger. The same device that delivers the lesson also holds games, messages, and endless videos. A learner who means to spend an hour on grammar may find that half of it has vanished into social media. Staying focused requires a level of self-control that not everyone possesses.\n\n[F] Quality varies enormously as well. Anyone can upload a course, and not every instructor is qualified. A polished video may hide shallow or even incorrect content, and beginners often cannot tell the difference. Choosing wisely therefore demands careful checking of reviews and credentials.\n\n[G] Despite these risks, online learning is unlikely to fade. The wise approach is to treat it as a powerful tool rather than a perfect solution. Combined with discipline, honest self-assessment, and occasional human contact, it can open doors that no earlier generation of students ever imagined.",
+      "statements": [
+        "People with irregular schedules can fit study into whatever hours suit them.",
+        "A confident-looking presentation may conceal weak or mistaken material.",
+        "The future of digital education depends on pairing it with self-control and some personal interaction.",
+        "Many lessons available on the internet require no payment at all.",
+        "Learning without the company of others can weaken a student's drive to continue.",
+        "The number of available courses has transformed global attitudes toward education.",
+        "The tool used for studying also tempts learners with entertainment.",
+        "Freeing learners from settling close to a well-known college helps those unable to move house.",
+        "Judging a course well means examining feedback and the teacher's qualifications.",
+        "Education that was formerly reserved for the wealthy is now affordable to ordinary people."
+      ],
+      "answers": [1, 5, 6, 2, 3, 0, 4, 1, 5, 2],
+      "paras": 7,
+      "explain_zh": "句1→[B] 夜班护士等可在任意时段学习，对应时间与地点的自由。句2→[F] 精致视频可能掩盖肤浅或错误内容，对应质量参差。句3→[G] 未来需配合自律与人际接触。句4→[C] 大量优质课程完全免费。句5→[D] 独自对屏学习会削弱坚持的动力。句6→[A] 课程选择激增重塑了全世界对教育的看法。句7→[E] 同一设备也带来游戏、消息等娱乐诱惑。句8→[B] 不必住在校园附近，惠及无法搬迁者。句9→[F] 选课需查看评价与资历。句10→[C] 曾被昂贵门槛锁住的知识如今普通人也负担得起。"
+    },
+    {
+      "passage": "[A] Cities around the world are quietly turning greener. Faced with crowded streets, dirty air, and rising temperatures, planners are rethinking the grey concrete model that dominated the last century. The goal is no longer simply to build, but to build in a way that lets nature and people share the same space comfortably.\n\n[B] Parks and gardens lie at the heart of this change. Where a factory or car park once stood, many cities now plant trees, flowers, and grass. These green pockets cool the surrounding streets, give residents a place to relax, and offer birds and insects somewhere to live. Even small patches make a noticeable difference to daily life.\n\n[C] Rooftops are joining the effort too. Instead of bare tar and gravel, building owners are covering the tops of offices and homes with soil and plants. Such living roofs soak up rainwater, keep the rooms below cooler in summer, and turn unused surfaces into tiny meadows high above the traffic.\n\n[D] Transport is being reshaped as well. To cut the fumes from cars, councils are widening footpaths, adding protected cycle lanes, and improving buses and trains. When walking or pedalling feels safe and pleasant, fewer people reach for their keys, and the air grows cleaner for everyone.\n\n[E] Water deserves attention in any green city. Rather than rushing rain straight into drains, some districts now guide it into ponds and planted channels that filter it naturally. This reduces flooding after heavy storms and keeps rivers healthier by holding back the dirt that streets collect.\n\n[F] Citizens themselves play a vital role. Volunteers plant street trees, tend shared vegetable plots, and pressure officials to protect open land. A city becomes greener not only through grand projects but through thousands of ordinary people who care about the place where they live.\n\n[G] None of this happens overnight, and money is always tight. Yet the rewards are real: lower temperatures, cleaner lungs, and streets where children can play. Step by step, the modern city is learning that concrete and greenery need not be enemies.",
+      "statements": [
+        "Covering building tops with vegetation cools the floors underneath.",
+        "Channelling rainfall into ponds lessens damage from severe storms.",
+        "Encouraging safe walking and cycling reduces the use of private cars.",
+        "Old industrial sites are being replaced with spaces full of plants.",
+        "Ordinary residents help by caring for communal growing areas.",
+        "Designers now aim for places where people and nature coexist.",
+        "Despite limited budgets, the benefits to health and comfort are genuine.",
+        "Green roofs absorb water that would otherwise run off the building.",
+        "Small planted areas still improve everyday life noticeably.",
+        "Filtering water through plants helps keep rivers cleaner."
+      ],
+      "answers": [2, 4, 3, 1, 5, 0, 6, 2, 1, 4],
+      "paras": 7,
+      "explain_zh": "句1→[C] 屋顶植被使下方房间更凉。句2→[E] 把雨水引入水塘减少暴雨灾害。句3→[D] 鼓励安全步行骑行减少私家车使用。句4→[B] 工厂/停车场旧址改种植物。句5→[F] 普通居民照料共享菜地。句6→[A] 规划者追求人与自然共处的空间。句7→[G] 预算紧张但健康舒适的回报真实。句8→[C] 绿色屋顶吸收本会流走的雨水。句9→[B] 小片绿地仍明显改善日常生活。句10→[E] 通过植物过滤水有助保持河流洁净。"
+    },
+    {
+      "passage": "[A] A good night's sleep is one of the most powerful yet most neglected tools for health. Many people treat rest as wasted time, something to cut when life gets busy. Science tells a very different story: while the body lies still, the brain and organs carry out repairs that no medicine can replace.\n\n[B] Sleep does not happen in a single flat state. It moves through several stages, from light dozing to deep slumber and finally to the dreaming phase. Each stage has its own job, and a healthy night cycles through them again and again. Missing certain stages leaves a person tired even after many hours in bed.\n\n[C] Memory benefits greatly from these hours of rest. During the night, the brain sorts through the day's experiences, strengthening important connections and discarding useless ones. This is why students who sleep well after studying remember more than those who stay up cramming all night.\n\n[D] The body also uses sleep to defend itself. While we rest, the immune system produces substances that fight infection, and damaged cells are renewed. People who sleep too little tend to catch colds more easily and recover from illness more slowly than those who rest enough.\n\n[E] Modern habits, however, work against good sleep. Bright screens late at night confuse the brain's internal clock, making it think daylight has returned. Coffee taken in the afternoon and irregular bedtimes add to the trouble, leaving millions lying awake when they long to drift off.\n\n[F] Fortunately, small changes can help a great deal. Keeping a steady bedtime, dimming lights in the evening, and leaving phones outside the bedroom all signal to the body that rest is near. A cool, quiet, dark room makes falling asleep far easier than a warm, noisy one.\n\n[G] In the end, treating sleep as a priority rather than a luxury pays rich rewards. Sharper thinking, stronger defences, and steadier moods all flow from the simple act of closing one's eyes and letting the night do its quiet work.",
+      "statements": [
+        "Late-night bright lights mislead the body into sensing daytime.",
+        "Resting allows the body to repair itself in ways drugs cannot match.",
+        "The night is divided into distinct phases, each with a particular purpose.",
+        "During rest the body builds defences against infection.",
+        "Going to bed at the same time each night encourages easier sleep.",
+        "Sleeping after study helps people retain more than late cramming does.",
+        "Valuing sleep brings clearer thought and more stable emotions.",
+        "Skipping particular phases leaves one exhausted despite long hours abed.",
+        "A cool, silent, dark room eases the path to sleep.",
+        "Too little rest slows recovery from sickness."
+      ],
+      "answers": [4, 0, 1, 3, 5, 2, 6, 1, 5, 3],
+      "paras": 7,
+      "explain_zh": "句1→[E] 夜间亮屏让大脑误以为是白天。句2→[A] 休息时身体进行药物无法替代的修复。句3→[B] 睡眠分阶段，各有功能。句4→[D] 休息时免疫系统产生抗感染物质。句5→[F] 固定就寝时间利于入睡。句6→[C] 学习后睡觉比熬夜死记记得更牢。句7→[G] 重视睡眠带来更清晰思维与稳定情绪。句8→[B] 缺某些阶段即使久睡仍疲惫。句9→[F] 凉爽安静黑暗的房间更易入睡。句10→[D] 睡眠太少使病后康复更慢。"
+    },
+    {
+      "passage": "[A] The world of work is changing faster than at any time in living memory. Jobs that seemed secure for life can vanish within a few years, while roles nobody had heard of suddenly appear. Anyone planning a career today must accept that the ground beneath their feet will keep shifting.\n\n[B] Technology drives much of this upheaval. Machines and software now handle tasks once done by human hands, from sorting parcels to checking accounts. Rather than wiping out work entirely, however, this shift tends to change its nature, pushing people toward jobs that demand creativity and judgement.\n\n[C] The place of work itself is no longer fixed. Thanks to fast internet and shared online tools, many employees now perform their duties from home, a café, or another country. For companies this widens the pool of talent; for workers it can mean a better balance between earning a living and enjoying one.\n\n[D] At the same time, the idea of one job for life is fading. Younger workers in particular move between employers and even between whole industries, gathering varied skills along the way. Loyalty to a single firm has given way to loyalty to one's own growth and interests.\n\n[E] The rise of freelancing reflects this restlessness. Instead of a single salary, growing numbers earn through short projects for several clients at once. Such independence offers freedom but also uncertainty, since income can swing sharply from one month to the next.\n\n[F] All this change places a premium on learning. Skills that command high pay today may be ordinary tomorrow, so the most successful workers keep studying long after leaving school. The ability to learn quickly has become more valuable than any single piece of knowledge.\n\n[G] None of this means the future is bleak. For those willing to adapt, the new world of work offers chances earlier generations never had. The key is to stay curious, remain flexible, and treat each change as an opening rather than a threat.",
+      "statements": [
+        "Many people now carry out their duties far from any traditional office.",
+        "Earning through several short projects brings both liberty and instability.",
+        "Continuing to study after school matters more than mastering one fixed skill.",
+        "Automation reshapes jobs rather than destroying them, favouring creative roles.",
+        "Today's careers rest on constantly shifting ground.",
+        "Those who adapt will find opportunities unavailable to earlier generations.",
+        "Younger employees often switch not just firms but entire fields.",
+        "Devotion to a single company has been replaced by devotion to personal development.",
+        "Remote arrangements let firms recruit from a far wider group of people.",
+        "Quick learning now outweighs any single body of knowledge."
+      ],
+      "answers": [2, 4, 5, 1, 0, 6, 3, 3, 2, 5],
+      "paras": 7,
+      "explain_zh": "句1→[C] 许多人远离传统办公室工作。句2→[E] 自由职业带来自由也带来不稳定。句3→[F] 离校后持续学习比掌握单一技能更重要。句4→[B] 自动化改变而非消灭工作，偏向创造性岗位。句5→[A] 当今职业立足于不断变动的地面。句6→[G] 适应者将获得前人没有的机会。句7→[D] 年轻员工常更换行业而非仅换公司。句8→[D] 对单一公司的忠诚被对个人成长的忠诚取代。句9→[C] 远程使企业招募范围大大扩展。句10→[F] 快速学习胜过任何单一知识。"
+    },
+    {
+      "passage": "[A] The sharing economy has quietly become part of everyday life. Instead of buying and owning everything, people increasingly rent, borrow, or swap goods and services through their phones. A spare room, an idle car, or a free afternoon can now be turned into something useful for others and profitable for its owner.\n\n[B] At its core lies a simple idea: much of what we own sits unused. A drill is needed for minutes but kept for years; a car spends most of its life parked. By letting strangers make use of these idle resources, the sharing economy squeezes value out of things that would otherwise gather dust.\n\n[C] Technology made all this possible. Smartphones with maps, payment systems, and rating tools allow two strangers to trust each other enough to do business in seconds. Without these digital connections, matching a person who needs a ride with one willing to give it would be far too slow and risky.\n\n[D] For ordinary users the appeal is partly financial. A traveller can find a bed cheaper than a hotel, while a host earns extra money from an empty room. Sharing platforms let people stretch tight budgets and turn idle possessions into a modest second income.\n\n[E] There are wider benefits too. When many people share a few cars instead of each buying one, fewer vehicles are built and parked, easing pressure on crowded streets. In theory, sharing can mean less waste and a lighter burden on the planet's limited resources.\n\n[F] Yet the model raises hard questions. Workers who drive or deliver through apps often lack the security of a steady job, with no fixed wage or sick pay. Critics argue that behind the friendly language of sharing lies a tougher reality for those doing the work.\n\n[G] How societies handle these tensions will shape the years ahead. Sensible rules could protect both customers and workers while keeping the benefits alive. The sharing economy is neither a miracle nor a menace, but a powerful trend that demands thoughtful management.",
+      "statements": [
+        "Behind the pleasant word 'sharing' some workers face job insecurity.",
+        "People can spread their limited money further by renting from others.",
+        "Smartphone features let two strangers trust each other almost instantly.",
+        "Much of what individuals own spends most of its existence unused.",
+        "Wise regulation could safeguard workers and buyers while keeping the gains.",
+        "Renting and borrowing through apps has become an ordinary habit.",
+        "Sharing vehicles may reduce the total number that must be produced.",
+        "Hosts can turn an unoccupied room into a small extra income.",
+        "Digital matching makes connecting a rider and driver fast and safe.",
+        "Owning fewer cars could place less strain on the earth's finite supplies."
+      ],
+      "answers": [5, 3, 2, 1, 6, 0, 4, 3, 2, 4],
+      "paras": 7,
+      "explain_zh": "句1→[F] “分享”一词背后部分劳动者缺乏保障。句2→[D] 人们通过租用他人物品让有限金钱更经用。句3→[C] 智能手机功能让陌生人几乎瞬间互信。句4→[B] 个人所拥之物大多时间闲置。句5→[G] 明智监管可在保住收益的同时保护各方。句6→[A] 通过手机租借已成日常习惯。句7→[E] 共享车辆可减少须生产的车辆总数。句8→[D] 房东把空房变成小额额外收入。句9→[C] 数字匹配让司机与乘客连接又快又安全。句10→[E] 减少私家车可减轻对地球资源的负担。"
+    },
+    {
+      "passage": "[A] Every day, millions of people give their time, energy, and skills without asking for pay. They visit the lonely, clean up beaches, tutor children, and answer emergency calls. This widespread willingness to help, known as volunteering, raises an interesting question: why do people work hard for no money at all?\n\n[B] For many, the deepest reason is the wish to help others. Seeing a hungry person fed or a frightened child comforted brings a satisfaction that wages cannot buy. These volunteers feel a duty toward their fellow human beings, and meeting that duty gives their lives a sense of meaning.\n\n[C] Others are drawn by the company they find. Volunteering throws people together around a shared cause, and lasting friendships often grow from the experience. Someone who feels lonely after retirement or a move to a new town may discover a warm circle of companions through unpaid work.\n\n[D] Practical gains also play a part, especially for the young. A student hoping to become a nurse can learn at a hospital ward; a job-seeker can build skills and fill gaps in an empty résumé. Far from being purely selfless, volunteering can quietly advance a person's own future plans.\n\n[E] Some give simply because they once received. A family helped through a hard winter, or a patient nursed back to health, may later feel a strong urge to repay that kindness by helping strangers in turn. Gratitude becomes a quiet engine driving people to serve.\n\n[F] Belief can be a powerful motive as well. Many faiths and personal codes teach that caring for others is a basic duty. Guided by such values, believers and idealists alike treat volunteering not as a hobby but as a natural expression of who they are.\n\n[G] Whatever the reason, society gains enormously. Volunteers fill gaps that paid services cannot reach, knitting communities closer together. Understanding why they give helps organisations attract and keep these generous hands, on whom so many depend.",
+      "statements": [
+        "Some serve others as a way of repaying help they once got.",
+        "A nursing hopeful can gain real experience by working on a ward.",
+        "The simple desire to assist others provides a sense of purpose.",
+        "Religious and moral teachings push many toward caring for others.",
+        "Volunteers serve those whom commercial providers are unable to reach.",
+        "Shared causes bring people together and spark lasting friendships.",
+        "The puzzle is why anyone would labour without any payment.",
+        "Volunteering can quietly serve a person's own career ambitions.",
+        "Someone lonely after retirement may find companions through volunteering.",
+        "Gratitude can become a steady force pushing people to serve."
+      ],
+      "answers": [4, 3, 1, 5, 6, 2, 0, 3, 2, 4],
+      "paras": 7,
+      "explain_zh": "句1→[E] 有人因曾受助而以助人回报。句2→[D] 想当护士者可在病房获得真实经验。句3→[B] 单纯助人的愿望带来意义感。句4→[F] 宗教与道德教义促使许多人关怀他人。句5→[G] 志愿者触及付费服务无法覆盖的人。句6→[C] 共同事业让人相聚并结下持久友谊。句7→[A] 难题在于为何有人无偿劳动。句8→[D] 志愿活动可悄然服务个人职业抱负。句9→[C] 退休后孤独者可通过志愿找到同伴。句10→[E] 感恩成为推动服务的稳定力量。"
+    },
+    {
+      "passage": "[A] What we eat is set to change dramatically in the coming decades. A growing population, limited farmland, and a warming climate are forcing scientists, farmers, and cooks to rethink how the world feeds itself. The comfortable assumption that food will always be cheap and plentiful is being seriously challenged.\n\n[B] One pressing problem is the heavy cost of producing meat. Raising animals uses vast amounts of land, water, and grain, and releases gases that warm the planet. As more people grow rich enough to want meat daily, this pressure on the earth's resources is expected to climb sharply.\n\n[C] In response, researchers are developing meat grown in laboratories rather than on farms. By multiplying animal cells in special tanks, they hope to produce real meat without raising and slaughtering whole creatures. If costs fall far enough, such products could one day sit beside ordinary cuts in the shops.\n\n[D] Plants are being reconsidered as well. New burgers and sausages made entirely from beans, peas, and grains now imitate the taste and texture of meat closely enough to satisfy many eaters. For those uneasy about animals or the environment, these foods offer a familiar meal with a lighter footprint.\n\n[E] Insects, strange as it sounds to some, may also join the menu. Already eaten in many parts of the world, creatures such as crickets are rich in protein yet need little land or water to farm. Ground into flour, they can be hidden inside snacks that look and taste perfectly normal.\n\n[F] Technology is reshaping farming closer to home, too. Crops can now be grown in stacked trays inside city buildings, lit by lamps and fed by carefully measured water. Such indoor farms use little land, resist bad weather, and place fresh vegetables only steps from where people live.\n\n[G] None of these ideas alone will solve the challenge, and old habits change slowly. Yet together they suggest a future in which dinner looks rather different. Feeding billions without exhausting the planet will demand both clever science and an open mind at the table.",
+      "statements": [
+        "Crops can be cultivated on stacked shelves within urban buildings.",
+        "Producing meat consumes enormous quantities of land and water.",
+        "Crickets supply plentiful protein while needing very little farmland.",
+        "Real meat may be grown from cells without raising whole animals.",
+        "Feeding huge numbers without draining the earth needs both science and openness.",
+        "The belief that food will stay cheap and abundant is now in doubt.",
+        "Burgers made wholly from beans and grains can mimic meat convincingly.",
+        "Indoor farms shrug off poor weather and use very little land.",
+        "Insect flour can be concealed inside ordinary-looking snacks.",
+        "Rising demand for meat is expected to strain resources further."
+      ],
+      "answers": [5, 1, 4, 2, 6, 0, 3, 5, 4, 1],
+      "paras": 7,
+      "explain_zh": "句1→[F] 作物可在城市建筑内分层托盘种植。句2→[B] 生产肉类消耗大量土地与水。句3→[E] 蟋蟀提供大量蛋白却需极少农田。句4→[C] 真肉可由细胞培育而无须养整只动物。句5→[G] 养活众多人口须兼具科学与开放心态。句6→[A] 食物永远廉价充足的信念受到质疑。句7→[D] 全由豆类谷物制成的汉堡可逼真模仿肉。句8→[F] 室内农场不惧坏天气且用地极少。句9→[E] 昆虫粉可藏于看似普通的零食中。句10→[B] 对肉的需求上升预计将进一步消耗资源。"
+    },
+    {
+      "passage": "[A] Money worries trouble people in every country and every income group. Surprisingly, those who earn well sometimes struggle as much as those who earn little. The difference often lies not in how much comes in, but in how carefully it is managed once it arrives.\n\n[B] The first step toward control is knowing where the money goes. Many people are shocked when they finally write down their spending, discovering how much vanishes on small daily treats. Keeping track of every purchase, dull as it sounds, reveals patterns that can then be changed.\n\n[C] Setting aside savings is the next pillar. Wise advisers suggest paying yourself first, moving a portion of each pay-cheque into savings before the rest is spent. Even a small amount, saved steadily month after month, grows into a comforting cushion against sudden trouble.\n\n[D] Debt deserves special caution. Borrowing on a card may feel painless until the interest piles up and the balance refuses to shrink. Clearing the most expensive debts quickly, and avoiding new ones for things one cannot truly afford, frees money that would otherwise drain away.\n\n[E] An emergency fund offers real peace of mind. Life brings sudden costs, a broken phone, a medical bill, a lost job, and those without reserves often must borrow at high cost. A store of cash equal to a few months of expenses turns a crisis into a mere inconvenience.\n\n[F] Looking further ahead, putting money to work matters too. Cash left idle slowly loses value as prices rise, while sensible long-term investment can help savings grow. Starting early, even with modest sums, lets the quiet power of time multiply one's wealth.\n\n[G] Finally, good habits beat occasional heroics. Skipping one luxury changes little; spending a little less than one earns, year after year, changes everything. Managing money well is less about clever tricks than about steady, patient discipline.",
+      "statements": [
+        "Some high earners face money trouble just as severe as low earners.",
+        "Recording every purchase exposes spending patterns worth changing.",
+        "Steady restraint matters far more than dramatic one-off sacrifices.",
+        "Idle cash loses value as prices climb, while investment can grow savings.",
+        "A reserve covering several months of costs turns crises into minor problems.",
+        "Putting part of each pay-cheque aside before spending builds a cushion.",
+        "Paying off the costliest debts fast frees up money that would leak away.",
+        "Starting to invest while young allows the slow force of years to enlarge one's savings.",
+        "Putting purchases on credit seems harmless until the interest builds up.",
+        "Whether one copes well depends on management rather than income size."
+      ],
+      "answers": [0, 1, 6, 5, 4, 2, 3, 5, 3, 0],
+      "paras": 7,
+      "explain_zh": "句1→[A] 高收入者有时与低收入者同样困窘。句2→[B] 记录每笔开支揭示可改的消费模式。句3→[G] 持续的克制远胜偶尔的壮举。句4→[F] 闲置现金随物价贬值，投资可增值。句5→[E] 几个月支出的储备把危机化为小麻烦。句6→[C] 先存后花积累缓冲。句7→[D] 尽快还清最贵债务释放本会流失的钱。句8→[F] 尽早投资让时间放大财富。句9→[D] 刷卡借钱起初轻松直到利息累积。句10→[A] 应对好坏取决于管理而非收入多少。"
+    },
+    {
+      "passage": "[A] Learning a foreign language is often seen as a school chore or a holiday convenience. In truth, it offers far more than the ability to order coffee abroad. Mastering another tongue reshapes the mind, opens doors, and deepens one's understanding of both other people and oneself.\n\n[B] The mental benefits are striking. Juggling two languages exercises the brain much as physical training strengthens the body. Studies suggest that people who speak more than one language often concentrate better, switch between tasks more easily, and may even keep their minds sharp longer into old age.\n\n[C] A new language also unlocks a culture. Words carry jokes, songs, and ways of thinking that translation can never fully capture. A learner who reads a novel or watches a film in the original gains a richer, more honest picture of how another society sees the world.\n\n[D] In working life, the advantage is plain. Companies trading across borders prize staff who can speak directly with foreign customers and partners. A candidate who offers a second language often stands out, winning roles and salaries closed to those who speak only one.\n\n[E] Travel, too, is transformed. A visitor who can chat with locals, rather than pointing helplessly at a menu, sees a country from the inside. Small conversations open doors to hidden cafés, kind directions, and friendships that the average tourist never even glimpses.\n\n[F] Perhaps the deepest reward is a change in the self. Stepping into another language can feel like trying on a new personality, freer or more polite, and learners often report seeing their own habits and assumptions with fresh, surprised eyes.\n\n[G] None of these gifts arrives without effort, and progress can feel painfully slow. Yet those who persist rarely regret it. A second language is a key that, once earned, keeps unlocking rooms the learner did not know existed.",
+      "statements": [
+        "Travellers who converse with locals experience a country from within.",
+        "Handling two languages trains the brain as exercise trains the body.",
+        "Firms working internationally value employees who speak to clients directly.",
+        "A second tongue keeps opening unexpected opportunities once acquired.",
+        "Using a foreign tongue may resemble taking on a separate character.",
+        "Knowing a language reveals jokes and ideas translation cannot convey.",
+        "The skill goes well beyond merely ordering food while on holiday.",
+        "Learners frequently view their own ingrained beliefs as if seeing them anew.",
+        "A second language can open salaries denied to single-language speakers.",
+        "Bilingual people may stay mentally sharp later into old age."
+      ],
+      "answers": [4, 1, 3, 6, 5, 2, 0, 5, 3, 1],
+      "paras": 7,
+      "explain_zh": "句1→[E] 能与当地人交谈者从内部体验国家。句2→[B] 驾驭双语像锻炼训练大脑。句3→[D] 跨国企业看重能直接与客户交流的员工。句4→[G] 第二语言一旦掌握便不断开启新机会。句5→[F] 说另一种语言像换上不同性格。句6→[C] 掌握语言能领会翻译无法传达的笑话与思想。句7→[A] 这项技能远超度假时点餐。句8→[F] 学习者常以新奇目光看待自身假设。句9→[D] 第二语言可带来单语者无缘的薪资。句10→[B] 双语者可能更晚保持头脑敏锐。"
+    },
+    {
+      "passage": "[A] In a world of long working hours and endless screens, staying healthy can feel like one more impossible task. Yet good health does not require hours at the gym or expensive equipment. With a few small, repeated choices, even the busiest person can protect both body and mind.\n\n[B] Movement matters more than perfection. Someone who cannot spare an hour can still take the stairs, walk part of the way to work, or stretch between meetings. These scattered bursts of activity add up over a day, keeping muscles awake and the heart gently busy without any special plan.\n\n[C] Food choices count just as much, even under pressure. Grabbing fruit instead of crisps, or cooking a simple meal rather than ordering greasy takeaway, needs little extra time. Planning a few dishes in advance can spare a tired person both poor eating and the stress of last-minute decisions.\n\n[D] Sleep is often the first thing a busy person sacrifices, yet it may be the most precious of all. A tired brain works slowly, snaps easily, and craves sugar. Guarding a steady bedtime, even when work tempts one to stay up, repays itself the very next day in clearer thinking.\n\n[E] The mind needs care as much as the body. Constant pressure without pause wears a person down until small problems feel huge. Even brief moments of calm, a few slow breaths, a short walk outdoors, can lower tension and restore a sense of balance.\n\n[F] Human contact protects health too, though it is easily crowded out. A quick chat with a friend or a shared meal does more than pass the time; it eases loneliness and reminds a busy person that work is not the whole of life. Such bonds quietly guard against stress and low spirits.\n\n[G] In the end, health in a hectic life is built from habits, not heroics. No single salad or jog transforms anyone. It is the patient repetition of small, sensible choices, day after crowded day, that keeps a person well over the long run.",
+      "statements": [
+        "Brief calming pauses such as slow breaths can lower built-up tension.",
+        "Choosing fruit over crisps takes hardly any extra time.",
+        "Lasting wellbeing comes from repeated small choices, not single grand efforts.",
+        "Brief snatches of movement spread across the day build up over time.",
+        "A friendly chat eases loneliness and guards against low spirits.",
+        "Good health need not demand the gym or costly gear.",
+        "Protecting a regular bedtime rewards one with clearer thinking next day.",
+        "Climbing stairs or walking part-way keeps the heart gently active.",
+        "Planning meals ahead spares a weary person stressful last-minute decisions.",
+        "An exhausted mind thinks sluggishly and hungers for sweets."
+      ],
+      "answers": [4, 2, 6, 1, 5, 0, 3, 1, 2, 3],
+      "paras": 7,
+      "explain_zh": "句1→[E] 缓慢呼吸等短暂平静可降低累积的紧张。句2→[C] 选水果而非薯片几乎不费额外时间。句3→[G] 长久健康源于反复的小选择而非一次壮举。句4→[B] 零散的短时活动一天里累加。句5→[F] 友好交谈缓解孤独并防止情绪低落。句6→[A] 健康无须健身房或昂贵器材。句7→[D] 守住规律就寝次日以清晰思维回报。句8→[B] 爬楼或走一段路让心脏温和运动。句9→[C] 提前规划餐食免去疲惫者临时决定的压力。句10→[D] 疲惫的大脑运转缓慢且渴望糖分。"
+    }
+  ]
+}

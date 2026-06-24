@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-24T21:58:41.973Z",
+  "apply": false,
+  "stage": "r13-cet6-para-match",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 50,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-para-match\\batchA.json",
+      "template": "cet-para-match",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-para-match\\batchB.json",
+      "template": "cet-para-match",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-para-match\\batchC.json",
+      "template": "cet-para-match",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-para-match\\batchD.json",
+      "template": "cet-para-match",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet6-para-match\\batchE.json",
+      "template": "cet-para-match",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

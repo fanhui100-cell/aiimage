@@ -1,0 +1,296 @@
+{
+  "template": "cet-para-match",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "[A] Many people remember being told as children that reading was good for them, but few were told why. The truth is that reading purely for enjoyment, rather than for school or work, brings a surprising range of rewards that scientists are only now beginning to measure carefully.\n\n[B] One of the clearest findings is that voluntary reading expands the words a person knows. Readers meet language in rich contexts again and again, and gradually absorb the meaning of unfamiliar terms without ever opening a dictionary. Over the years this quiet process builds a vocabulary far larger than that of people who rarely read.\n\n[C] Reading also seems to calm the body. Researchers who measured heart rate and muscle tension found that just six minutes with an absorbing book lowered stress signals more quickly than listening to music or taking a walk. The mind becomes so occupied by the story that everyday worries fade into the background.\n\n[D] Stories do something else that is harder to see. When we follow a character through difficult choices, we silently practise imagining how another person feels. Novel readers, studies suggest, become better at sensing the emotions of those around them, a skill that helps friendships and teamwork alike.\n\n[E] There is a long-term benefit too. Keeping the brain active through regular reading appears to slow the decline in memory and thinking that often comes with age. People who read throughout their lives tend to stay mentally sharp for longer than those who do not.\n\n[F] Pleasure reading can even improve sleep, provided the book is printed rather than glowing on a screen. A short chapter before bed signals to the body that the day is ending, while the blue light of devices does the opposite and keeps us awake.\n\n[G] Perhaps the simplest reward is joy. A good book offers an escape into other lives and distant places at almost no cost, available to anyone with a library card. For this reason alone, the habit deserves a place in every busy life.",
+      "statements": [
+        "Reading on paper before bedtime can help a person fall asleep more easily.",
+        "Following fictional characters trains people to understand others' feelings.",
+        "Few adults can explain the reasons behind the advice they received as children.",
+        "Lifelong readers are likely to keep their thinking abilities into old age.",
+        "A brief period of reading reduced tension faster than music or walking did.",
+        "The enjoyment a book provides is available cheaply to almost everyone.",
+        "Readers learn new words naturally without consulting reference books.",
+        "Light from electronic screens tends to keep readers awake at night.",
+        "Story readers may grow more skilled at noticing the moods of people nearby.",
+        "Voluntary reading produces a much larger word stock over many years."
+      ],
+      "answers": [5, 3, 0, 4, 2, 6, 1, 5, 3, 1],
+      "paras": 7,
+      "explain_zh": [
+        "第1句对应[F]段：纸质书睡前阅读有助于更快入睡。",
+        "第2句对应[D]段：跟随小说人物训练人理解他人感受。",
+        "第3句对应[A]段：很少成年人能说清儿时被告知的原因。",
+        "第4句对应[E]段：终身阅读者更可能在老年保持思维能力。",
+        "第5句对应[C]段：短时间阅读比音乐或散步更快降低紧张。",
+        "第6句对应[G]段：书带来的乐趣几乎对所有人都廉价可得。",
+        "第7句对应[B]段：读者无需查工具书就能自然学会新词。",
+        "第8句对应[F]段：电子屏幕的光会让夜间阅读者保持清醒。",
+        "第9句对应[D]段：读故事的人可能更善于察觉周围人的情绪。",
+        "第10句对应[B]段：自愿阅读多年后形成更大的词汇量。"
+      ]
+    },
+    {
+      "passage": "[A] Not long ago, buying a pair of shoes meant walking from store to store on a busy afternoon. Today the same purchase can be made in seconds from a sofa. Technology has reshaped shopping so thoroughly that the experience would be unrecognisable to a customer from thirty years ago.\n\n[B] The most obvious change is the shift to the internet. Online platforms let people browse millions of products from anywhere, comparing prices across dozens of sellers before deciding. Distance no longer limits what a shopper can find or buy.\n\n[C] Behind the scenes, computers now study what each customer looks at and suggest items they are likely to want. These recommendation systems learn from past behaviour, so the longer a person uses a site, the more closely its suggestions match their taste.\n\n[D] Payment has changed just as dramatically. Where shoppers once counted out cash, many now simply tap a phone against a reader. The whole transaction finishes before a traditional wallet could even be opened, and receipts arrive instantly by message.\n\n[E] Delivery has speeded up too. In large cities, goods ordered in the morning can reach the door by evening, thanks to warehouses placed close to customers and routes planned by software. The wait that once accompanied any purchase has shrunk to hours.\n\n[F] Some companies now blend the digital and physical worlds. A shopper can point a phone at an empty corner of a room and see, on the screen, exactly how a sofa would look there before buying it. This removes much of the guesswork that used to lead to disappointing purchases.\n\n[G] Yet these conveniences come with concerns. Every click leaves a trace, and the data gathered about our habits is enormous. Critics warn that the price of effortless shopping may be a steady loss of privacy that most customers barely notice.\n\n[H] Small local shops, meanwhile, struggle to compete with giant online sellers. Many have survived only by offering something the screen cannot: friendly advice, the chance to touch goods, and a sense of belonging to a neighbourhood.",
+      "statements": [
+        "Software learns a user's preferences and offers increasingly fitting suggestions.",
+        "Buyers can now examine and compare goods from sellers regardless of location.",
+        "Independent neighbourhood stores endure by providing personal contact machines lack.",
+        "Customers may quietly give up privacy as the cost of easy purchasing.",
+        "A phone can show how furniture would appear in a real room before purchase.",
+        "Items bought in the morning may arrive at the home the same evening.",
+        "Tapping a phone completes a payment faster than opening a wallet would.",
+        "Modern shopping would seem completely strange to a buyer from decades past.",
+        "Vast amounts of information are collected through every action a shopper takes.",
+        "Warehouses near customers and computer-planned routes have shortened waiting times."
+      ],
+      "answers": [2, 1, 7, 6, 5, 4, 3, 0, 6, 4],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[C]段：软件学习用户偏好并给出越来越贴合的推荐。",
+        "第2句对应[B]段：买家可不受地域限制地浏览比较商品。",
+        "第3句对应[H]段：本地小店靠提供机器没有的人际接触存活。",
+        "第4句对应[G]段：顾客可能在不知不觉中以隐私换取便利。",
+        "第5句对应[F]段：手机可在购买前显示家具在真实房间的样子。",
+        "第6句对应[E]段：早上下单的商品可能当晚送达家门。",
+        "第7句对应[D]段：用手机轻触付款比打开钱包还快。",
+        "第8句对应[A]段：现代购物对几十年前的买家会显得完全陌生。",
+        "第9句对应[G]段：通过购物者的每个动作收集了大量信息。",
+        "第10句对应[E]段：靠近顾客的仓库和电脑规划的路线缩短了等待。"
+      ]
+    },
+    {
+      "passage": "[A] Water is so ordinary that we rarely think about it, yet clean water is one of the most precious resources on Earth. When it is missing, every part of daily life begins to fall apart, from cooking and washing to staying healthy.\n\n[B] The most urgent reason to value clean water is human health. Water carrying harmful germs causes diseases that kill hundreds of thousands of children every year. Where supplies are safe, many of these illnesses simply disappear.\n\n[C] Clean water is also tied to time and opportunity. In some regions, women and girls walk for hours each day to fetch it from distant sources. Those lost hours could otherwise be spent in school or earning a living, so a nearby tap changes whole futures.\n\n[D] Farming depends on it as well. Crops need reliable, uncontaminated water to grow, and animals need it to stay healthy. Without a steady supply, harvests fail and food shortages follow, threatening communities far beyond the fields.\n\n[E] Industry quietly consumes huge amounts of water too. Factories use it to cool machines, clean products and create everything from paper to medicine. A shortage can therefore slow an entire economy, not just a single household.\n\n[F] The natural world has its own needs. Rivers, lakes and wetlands support countless plants and creatures, and when these waters are polluted or drained, the living systems that depend on them collapse, sometimes beyond repair.\n\n[G] Despite its importance, fresh water is surprisingly scarce. Most of the planet's water is salty, and only a tiny fraction is both fresh and reachable. This thin slice must be shared among everyone and everything that lives.\n\n[H] Protecting this resource is something everyone can join. Simple acts, such as repairing leaks, using less in the garden and refusing to pour chemicals down the drain, add up across millions of homes to make a real difference.",
+      "statements": [
+        "Only a very small share of the world's water is fresh and within reach.",
+        "Manufacturing relies heavily on water for cooling, cleaning and production.",
+        "Contaminated water spreads diseases that take many young lives yearly.",
+        "Everyday habits at home, multiplied widely, can genuinely protect supplies.",
+        "We seldom consider water even though it is among the most valuable resources.",
+        "Pollution of rivers and wetlands can destroy the life systems they support.",
+        "Crops and livestock cannot survive without dependable, clean water.",
+        "Hours spent collecting distant water could instead go to school or work.",
+        "A lack of water can slow a whole economy, not merely one family.",
+        "When safe water is unavailable, ordinary tasks of daily life break down."
+      ],
+      "answers": [6, 4, 1, 7, 0, 5, 3, 2, 4, 0],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[G]段：世界上只有极小部分的水是淡水且可获取。",
+        "第2句对应[E]段：制造业大量依赖水用于冷却、清洗和生产。",
+        "第3句对应[B]段：受污染的水传播每年夺走许多幼儿生命的疾病。",
+        "第4句对应[H]段：家庭日常习惯被广泛叠加可真正保护水源。",
+        "第5句对应[A]段：尽管水极宝贵我们却很少考虑它。",
+        "第6句对应[F]段：河流湿地污染会摧毁其支撑的生命系统。",
+        "第7句对应[D]段：庄稼和牲畜离不开可靠清洁的水。",
+        "第8句对应[C]段：取远水耗费的时间本可用于上学或工作。",
+        "第9句对应[E]段：缺水会拖慢整个经济而非仅一个家庭。",
+        "第10句对应[A]段：没有安全水时日常生活任务会瓦解。"
+      ]
+    },
+    {
+      "passage": "[A] Self-confidence is often imagined as a gift that some lucky people are simply born with. In reality, it is far more like a muscle, something that grows stronger with steady use and weakens when it is neglected.\n\n[B] The foundation of confidence is competence. When we practise a skill until we can perform it well, belief in ourselves naturally follows. There is no shortcut here: doing the work is what earns the inner certainty that we can handle the task. Borrowed confidence, the kind that comes only from praise we have not yet earned, tends to crumble the moment we are tested, whereas confidence rooted in genuine ability stays firm under pressure.\n\n[C] How we speak to ourselves matters greatly as well. People who constantly criticise their own efforts wear away their self-belief, while those who treat themselves with the same kindness they would offer a friend tend to recover quickly from mistakes. The voice inside our heads can act as a harsh judge or a patient coach, and over years that running commentary shapes how willing we are to try difficult things at all.\n\n[D] Setting small, reachable goals is another powerful tool. Each little success leaves a trace of proof that we are capable, and these traces gather over time into a quiet, steady faith in our own abilities. A goal that is too large can frighten us into doing nothing, but a goal broken into modest steps invites us to begin, and beginning is usually the hardest part of any worthwhile effort.\n\n[E] Comparison, on the other hand, is a thief. Measuring ourselves against others, especially the polished images people present online, almost always leaves us feeling that we fall short, no matter how well we are actually doing.\n\n[F] The body plays a part too. Standing tall, breathing slowly and meeting others' eyes can change how we feel from the outside in. Studies show that adopting an open, upright posture before a stressful event lowers nervousness.\n\n[G] Finally, confidence grows through facing fear rather than avoiding it. Every time we do something that frightens us and survive, the fear loses a little of its grip, and we learn that we are braver than we believed. Avoidance, by contrast, teaches the opposite lesson, quietly convincing us that the world is more dangerous than it is and that we are weaker than we truly are.",
+      "statements": [
+        "Treating yourself kindly after errors helps you bounce back faster.",
+        "Doing something scary repeatedly weakens the hold that fear has on us.",
+        "An upright, open posture before a stressful moment can reduce anxiety.",
+        "Confidence resembles a muscle that strengthens with use rather than an inborn gift.",
+        "Judging ourselves against others' polished online images leaves us feeling inadequate.",
+        "Mastering a skill through practice naturally produces self-belief.",
+        "Small achievements accumulate into a calm, lasting trust in oneself.",
+        "Harsh self-criticism gradually erodes a person's belief in themselves.",
+        "Adjusting how the body is held can change feelings from the outside inward.",
+        "Reaching modest targets leaves evidence that we are truly capable."
+      ],
+      "answers": [2, 6, 5, 0, 4, 1, 3, 2, 5, 3],
+      "paras": 7,
+      "explain_zh": [
+        "第1句对应[C]段：犯错后善待自己能更快恢复。",
+        "第2句对应[G]段：反复做令人害怕的事会削弱恐惧的控制。",
+        "第3句对应[F]段：紧张时刻前挺直开放的姿势能减少焦虑。",
+        "第4句对应[A]段：自信像可锻炼增强的肌肉而非天赋。",
+        "第5句对应[E]段：与他人精修的网络形象比较让人觉得不足。",
+        "第6句对应[B]段：通过练习掌握技能自然产生自信。",
+        "第7句对应[D]段：小成就累积成平静持久的自我信任。",
+        "第8句对应[C]段：严厉的自我批评逐渐侵蚀自我信念。",
+        "第9句对应[F]段：调整身体姿态可由外而内改变感受。",
+        "第10句对应[D]段：达成小目标留下我们确实有能力的证据。"
+      ]
+    },
+    {
+      "passage": "[A] Wander through any lively city in the evening and your nose will lead you to it long before your eyes do: the smoke, sizzle and spice of street food. These humble stalls have a charm that grand restaurants often struggle to match.\n\n[B] Part of the appeal is the price. A satisfying meal from a cart usually costs a fraction of what a sit-down restaurant charges, which means almost anyone, from students to office workers, can afford to eat well on the move.\n\n[C] Street food is also a window into local culture. The dishes sold on a corner are rarely invented for tourists; they are the everyday foods that families have eaten for generations, offering visitors a taste of how people truly live.\n\n[D] There is theatre in it too. Watching a cook flip noodles in a flaming pan or fold a dumpling in seconds turns a simple purchase into a small performance, and the open kitchen lets customers see exactly how their meal is made.\n\n[E] Speed is another attraction. Because the food is prepared in advance or cooked in moments, a hungry passer-by can be eating within a minute, a convenience that suits the rushed rhythm of city life.\n\n[F] These stalls often knit a community together. Regulars greet the vendor by name, neighbours meet over shared benches, and the corner becomes a gathering place where news and gossip flow as freely as the food.\n\n[G] Concerns about cleanliness do exist, and they are not always unfair. Yet busy stalls with high turnover often serve food fresher than expected, since ingredients rarely sit around long enough to spoil.\n\n[H] For many travellers, finally, street food becomes the memory that lasts. Years later they may forget the museums they visited, but the flavour of a spicy skewer eaten on a crowded pavement stays sharp in the mind.",
+      "statements": [
+        "Busy stalls may serve fresher food because ingredients are used up quickly.",
+        "The low cost lets people of nearly every income eat well on the go.",
+        "Watching the cook prepare a dish turns buying a meal into a kind of show.",
+        "The aroma of street food reaches people before they can see the stalls.",
+        "Corner stalls can become social hubs where neighbours meet and chat.",
+        "These dishes reflect what locals genuinely eat, not food made for tourists.",
+        "A traveller may forget famous sights but vividly recall a street snack.",
+        "Food cooked quickly or in advance lets a hungry person eat within a minute.",
+        "Open-air cooking lets customers watch exactly how their food is prepared.",
+        "Street stalls have a charm that fancy restaurants often cannot equal."
+      ],
+      "answers": [6, 1, 3, 0, 5, 2, 7, 4, 3, 0],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[G]段：繁忙摊位食材消耗快因此可能更新鲜。",
+        "第2句对应[B]段：低价让几乎各种收入的人都能在路上吃好。",
+        "第3句对应[D]段：看厨师做菜把买饭变成一种表演。",
+        "第4句对应[A]段：街头食物的香味在人看到摊位前就先传来。",
+        "第5句对应[F]段：街角摊位成为邻里相聚闲聊的社交中心。",
+        "第6句对应[C]段：这些菜反映当地人真实饮食而非为游客做的。",
+        "第7句对应[H]段：旅行者可能忘记名胜却清晰记得街头小吃。",
+        "第8句对应[E]段：快速或预先做好的食物让饥饿者一分钟内吃上。",
+        "第9句对应[D]段：露天烹饪让顾客看清食物如何制作。",
+        "第10句对应[A]段：街头摊位有高档餐厅常无法企及的魅力。"
+      ]
+    },
+    {
+      "passage": "[A] Almost everyone knows that exercise is supposed to be good for them, yet the reasons go far beyond the obvious goal of losing weight. Movement shapes the body and mind in ways that touch nearly every part of a healthy life.\n\n[B] The heart benefits first. Regular activity strengthens this tireless muscle so that it pumps blood more efficiently, lowering the risk of the heart troubles that remain among the leading causes of early death worldwide.\n\n[C] Exercise is also a remarkable medicine for the mood. Physical effort releases natural chemicals in the brain that ease feelings of sadness and worry, which is why a brisk walk can lift a grey day more reliably than many people expect. Doctors increasingly suggest movement alongside other treatments for low spirits, and unlike some remedies it carries almost no harmful side effects, only the small cost of a little time and effort.\n\n[D] Sleep improves as well. People who move their bodies during the day tend to fall asleep faster and rest more deeply at night, perhaps because honest physical tiredness prepares the body for proper recovery. Even gentle daytime movement seems to settle a restless mind, so that the hours of darkness are spent in genuine rest rather than in lying awake turning over the worries of the day.\n\n[E] There is a benefit for the bones and muscles that becomes priceless with age. Weight-bearing activity keeps the skeleton dense and the muscles firm, helping older people stay steady on their feet and avoid dangerous falls.\n\n[F] The brain itself grows sharper. Studies link regular activity to better memory and clearer thinking, since exercise increases the flow of blood and oxygen to the very regions that handle learning.\n\n[G] Exercise can be social too. Joining a team or a class turns a private chore into shared fun, and the company of others makes people far more likely to keep the habit going week after week.\n\n[H] Best of all, none of this requires a gym. Climbing stairs, cycling to work or dancing in the kitchen all count, which means a healthier life is within reach of anyone willing to move a little more.",
+      "statements": [
+        "Everyday actions like taking stairs or dancing at home count as exercise.",
+        "Moving during the day helps people fall asleep faster and rest more deeply.",
+        "Activity boosts blood and oxygen to brain areas tied to learning.",
+        "Exercising with others makes people more likely to keep up the habit.",
+        "Physical effort releases brain chemicals that ease sadness and worry.",
+        "The reasons to exercise extend well beyond simply shedding weight.",
+        "Weight-bearing movement keeps bones dense and helps the elderly avoid falls.",
+        "Regular activity strengthens the heart so it pumps blood more efficiently.",
+        "A healthier life is available to anyone willing to move a bit more, without a gym.",
+        "Studies connect regular activity with sharper memory and clearer thought."
+      ],
+      "answers": [7, 3, 5, 6, 2, 0, 4, 1, 7, 5],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[H]段：爬楼、在家跳舞等日常动作也算运动。",
+        "第2句对应[D]段：白天运动帮助更快入睡且睡得更深。",
+        "第3句对应[F]段：运动增加流向学习相关脑区的血液和氧气。",
+        "第4句对应[G]段：与他人一起运动让人更可能坚持习惯。",
+        "第5句对应[C]段：体力活动释放缓解悲伤忧虑的脑内化学物质。",
+        "第6句对应[A]段：运动的理由远不止减重。",
+        "第7句对应[E]段：负重运动保持骨密度并帮助老人防跌倒。",
+        "第8句对应[B]段：规律运动强化心脏使其更高效泵血。",
+        "第9句对应[H]段：无需健身房愿多动一点的人都能更健康。",
+        "第10句对应[F]段：研究将规律运动与更敏锐记忆和清晰思维相连。"
+      ]
+    },
+    {
+      "passage": "[A] The smell of roasting beans and the hiss of steaming milk have become familiar in cities around the world. The coffee shop is far more than a place to buy a drink; over time it has grown into a small institution with a culture all its own.\n\n[B] Historically, these places were centres of conversation. Centuries ago, the first European coffee houses buzzed with debate about politics, science and art, earning a nickname as 'penny universities' because the price of a cup bought hours of stimulating talk.\n\n[C] Today they often serve as a halfway point between home and office. People who feel lonely working alone but distracted at a busy workplace find that the gentle background noise of a café helps them concentrate on their tasks. With a laptop and a single cup, a freelancer can borrow the feeling of a workplace for an afternoon, surrounded by strangers yet pleasantly free of the duties of a real office.\n\n[D] The coffee shop is also a stage for small rituals. Regular customers have their usual order and usual seat, and the brief, friendly exchange with a barista who remembers their name can be a quiet comfort in an otherwise anonymous city. These tiny daily habits, repeated morning after morning, give a shapeless week a reassuring rhythm, marking the start of each day with one small moment that feels entirely familiar.\n\n[E] For many, the appeal lies in the atmosphere rather than the drink. Soft chairs, warm lighting and the freedom to linger for hours over a single cup create a refuge where time seems to slow down.\n\n[F] These spaces have long supported creative work. Writers, students and artists have filled café tables for generations, and some famous books and ideas were first sketched on napkins amid the clatter of cups.\n\n[G] Yet the modern coffee shop faces criticism too. Some argue that the rise of laptops has turned lively social rooms into silent offices, where customers stare at screens and the old spirit of conversation has faded away.",
+      "statements": [
+        "Early European coffee houses were lively centres of intellectual debate.",
+        "The gentle noise of a café helps lonely home-workers focus on their work.",
+        "Some critics say laptops have turned chatty cafés into silent workspaces.",
+        "Soft seating and warm light make the café a refuge where time slows.",
+        "The coffee shop has become a small institution with its own culture.",
+        "Writers and artists have used café tables for creative work for generations.",
+        "A barista remembering a regular's name offers quiet comfort in a big city.",
+        "The cheap price of a cup once bought hours of stimulating conversation.",
+        "Many visitors are drawn by the atmosphere more than by the drink itself.",
+        "Cafés serve as a middle ground between working at home and at the office."
+      ],
+      "answers": [1, 2, 6, 4, 0, 5, 3, 1, 4, 2],
+      "paras": 7,
+      "explain_zh": [
+        "第1句对应[B]段：早期欧洲咖啡馆是热闹的思想辩论中心。",
+        "第2句对应[C]段：咖啡馆轻柔噪音帮孤单的居家工作者专注。",
+        "第3句对应[G]段：批评者称笔记本把健谈咖啡馆变成沉默办公室。",
+        "第4句对应[E]段：软座暖光让咖啡馆成为时间变慢的避难所。",
+        "第5句对应[A]段：咖啡馆已成为有自身文化的小型机构。",
+        "第6句对应[F]段：作家艺术家世代在咖啡桌进行创作。",
+        "第7句对应[D]段：咖啡师记住熟客名字在大城市带来安静慰藉。",
+        "第8句对应[B]段：一杯咖啡的低价曾换来数小时激发思考的谈话。",
+        "第9句对应[E]段：许多顾客被氛围而非饮品本身吸引。",
+        "第10句对应[C]段：咖啡馆是居家与办公之间的中间地带。"
+      ]
+    },
+    {
+      "passage": "[A] Few words carry as much fear as 'failure', yet history suggests that our mistakes may be among our greatest teachers. The trick lies not in avoiding failure altogether, which is impossible, but in learning to read the lessons it leaves behind.\n\n[B] The first lesson failure offers is honesty. A plan that collapses forces us to look clearly at what really happened, stripping away the comfortable stories we tell ourselves and showing where our assumptions were wrong.\n\n[C] Failure also reveals what we truly care about. The setbacks that sting the most point straight at the goals that matter, while the ones we shrug off show us, by contrast, which paths we can happily abandon. In this way a painful defeat works like a quiet compass, pointing past our stated ambitions toward the things we would fight to keep, even when we had never put those desires clearly into words.\n\n[D] There is a social benefit as well. People who admit their stumbles openly often seem more trustworthy than those who claim a flawless record, because honesty about weakness signals that a person can be believed about their strengths too. Listeners sense that someone willing to name a fault has little reason to exaggerate a triumph, and so an honest account of one defeat can quietly strengthen every later claim of success.\n\n[E] Many great achievements grew directly from earlier defeats. Inventors describe long chains of failed attempts before a breakthrough, and each dead end quietly narrowed the search until the right answer finally appeared.\n\n[F] Failure builds a kind of toughness as well. Once a person has survived a serious setback and recovered, future risks feel less terrifying, because they now have proof that disaster, even when it strikes, can be lived through.\n\n[G] Crucially, the lesson depends on response. A mistake repeated without thought teaches nothing, while the same mistake studied carefully becomes a step forward. What separates the two is the willingness to pause and ask why things went wrong.",
+      "statements": [
+        "Surviving a serious setback makes later risks feel less frightening.",
+        "A collapsed plan forces an honest look at what truly happened.",
+        "Openly admitting mistakes can make a person seem more trustworthy.",
+        "The point is not to avoid failure but to learn the lessons it leaves.",
+        "The setbacks that hurt most reveal which goals genuinely matter.",
+        "A mistake teaches nothing unless one pauses to ask why it occurred.",
+        "Many breakthroughs grew out of long chains of earlier failed attempts.",
+        "Failure strips away the comforting stories we tell ourselves.",
+        "Each dead end gradually narrowed the search toward the right answer.",
+        "Honesty about weakness makes people believe a person's claims of strength."
+      ],
+      "answers": [5, 1, 3, 0, 2, 6, 4, 1, 4, 3],
+      "paras": 7,
+      "explain_zh": [
+        "第1句对应[F]段：挺过严重挫折使日后的风险显得不那么可怕。",
+        "第2句对应[B]段：失败的计划迫使人诚实审视真实经过。",
+        "第3句对应[D]段：公开承认错误能让人显得更可信。",
+        "第4句对应[A]段：重点不是避免失败而是学到它留下的教训。",
+        "第5句对应[C]段：最刺痛的挫折揭示真正重要的目标。",
+        "第6句对应[G]段：除非停下追问原因否则错误不教人任何东西。",
+        "第7句对应[E]段：许多突破源自一长串先前的失败尝试。",
+        "第8句对应[B]段：失败剥去我们对自己讲述的安慰故事。",
+        "第9句对应[E]段：每条死路逐渐把搜索缩窄到正确答案。",
+        "第10句对应[D]段：对弱点的诚实让人相信此人对优点的说法。"
+      ]
+    },
+    {
+      "passage": "[A] A generation ago, the people we knew were mostly the people who lived near us. Now millions form their closest bonds with others they have never met in person, gathering in the vast and varied spaces of online communities.\n\n[B] The greatest strength of these groups is that they erase distance. Someone with a rare hobby or an unusual illness, who might be the only such person for miles around, can suddenly find thousands of others who understand them perfectly.\n\n[C] Online communities are also remarkable engines of shared knowledge. When one member asks a question, dozens may answer from their own experience, building over time a living library that no single expert could ever assemble alone. Because each reply is saved and searchable, a question answered once may go on to help thousands of strangers who arrive months or years later with exactly the same problem.\n\n[D] For people who feel shy in face-to-face settings, these spaces offer a gentler way to connect. Typing a message allows time to think and edit, so those who freeze in conversation can express themselves with surprising warmth and ease. Freed from the pressure of an immediate reply and the weight of an unfamiliar gaze, many quiet people discover a voice online that their friends in the physical world have never had the chance to hear.\n\n[E] Such groups can also turn talk into action. Members who first meet to chat often go on to raise money for a cause, organise local clean-ups, or support a struggling member, proving that digital ties can produce real-world results.\n\n[F] Yet these communities have a darker side. The same anonymity that frees the shy can embolden the cruel, and arguments can flare into hostility that would rarely survive a face-to-face meeting.\n\n[G] There is also the risk of the echo chamber. When a group gathers around a single belief, members may hear only opinions that agree with their own, and over time their views can drift toward extremes without their noticing.\n\n[H] Used wisely, however, these spaces remain a gift. For the housebound, the isolated and the simply curious, an online community can be a doorway to friendship and belonging that the physical world failed to provide.",
+      "statements": [
+        "When everyone shares one belief, members may only hear agreeing opinions.",
+        "Online groups let people with rare interests find others who understand them.",
+        "Members who meet to chat may go on to organise real-world action.",
+        "Anonymity that helps the shy can also embolden cruel behaviour.",
+        "For the isolated, these spaces can open a door to friendship the world denied.",
+        "Many people now form close bonds with people they have never met in person.",
+        "Typing gives shy people time to think, letting them express themselves warmly.",
+        "A member's question may draw dozens of answers built from experience.",
+        "Members' opinions can quietly drift toward extremes over time.",
+        "Many separate replies form a living library no single expert could build."
+      ],
+      "answers": [6, 1, 4, 5, 7, 0, 3, 2, 6, 2],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[G]段：当大家共持一种信念成员可能只听到附和意见。",
+        "第2句对应[B]段：网络群体让兴趣稀有者找到理解他们的人。",
+        "第3句对应[E]段：相聚闲聊的成员可能进而组织现实行动。",
+        "第4句对应[F]段：帮助害羞者的匿名也可能助长残酷行为。",
+        "第5句对应[H]段：对孤立者这些空间能打开现实未给予的友谊之门。",
+        "第6句对应[A]段：许多人如今与素未谋面的人结下密切关系。",
+        "第7句对应[D]段：打字给害羞者思考时间使其温暖地表达自己。",
+        "第8句对应[C]段：一名成员的提问可能引来数十条经验性回答。",
+        "第9句对应[G]段：成员观点会随时间悄悄滑向极端。",
+        "第10句对应[C]段：众多分散的回答形成单个专家无法建立的活图书馆。"
+      ]
+    },
+    {
+      "passage": "[A] For a long time, people spoke openly about a broken leg but whispered about a troubled mind. That silence is finally lifting, as more of us come to understand that caring for mental health deserves the same attention we give the body.\n\n[B] The first step is simply noticing. Just as we feel a fever or an ache, we can learn to recognise the early signals of a struggling mind, such as lasting sadness, constant worry or a loss of interest in things once enjoyed.\n\n[C] Talking helps more than many expect. Sharing a heavy feeling with a trusted friend rarely solves the problem at once, yet putting worries into words often shrinks them, making a burden that seemed unbearable feel manageable. Spoken aloud, a fear that loomed enormous in the dark of the mind frequently turns out to be smaller and clearer than it felt, and a listener need not offer advice for the simple act of being heard to bring relief.\n\n[D] Everyday habits matter too. Steady sleep, regular meals and time spent outdoors form a quiet foundation, and neglecting these basics can leave even a strong mind fragile and easily overwhelmed. None of these habits is dramatic, and perhaps for that reason they are easy to ignore when life grows busy, yet they work steadily in the background to keep the mind resilient when harder times eventually arrive.\n\n[E] Setting limits is another act of care. Learning to say no to demands that drain us, and to step back from screens and noise, protects the inner space that a healthy mind needs in order to rest and recover.\n\n[F] Connection guards against the slow harm of loneliness. Regular contact with others, even brief and ordinary, reminds us that we are not alone, and this sense of belonging acts as a cushion against life's hardest blows.\n\n[G] Sometimes, though, self-help is not enough, and reaching out to a professional is a sign of strength, not weakness. Just as we would not set a broken bone ourselves, serious distress deserves proper, trained support.\n\n[H] Finally, kindness toward ourselves underpins it all. Speaking to our own minds as gently as we would to a hurting friend allows us to recover from setbacks instead of punishing ourselves for being human.",
+      "statements": [
+        "Seeking professional help in serious distress is a sign of strength, not weakness.",
+        "Saying no to draining demands protects the space a mind needs to recover.",
+        "Putting worries into words often makes them feel smaller and manageable.",
+        "Regular contact with others cushions us against life's hardest blows.",
+        "People once spoke freely of physical injury but only whispered about the mind.",
+        "Treating one's own mind gently allows recovery instead of self-punishment.",
+        "We can learn to spot early warning signs of a struggling mind.",
+        "Neglecting sleep, meals and outdoor time can leave even a strong mind fragile.",
+        "A feeling of belonging reminds us we are not alone.",
+        "Caring for mental health deserves the same attention we give the body."
+      ],
+      "answers": [6, 4, 2, 5, 0, 7, 1, 3, 5, 0],
+      "paras": 8,
+      "explain_zh": [
+        "第1句对应[G]段：严重困扰时求助专业人士是坚强而非软弱的表现。",
+        "第2句对应[E]段：对耗竭性要求说不保护心灵恢复所需的空间。",
+        "第3句对应[C]段：把忧虑说出口常让其变小且可应对。",
+        "第4句对应[F]段：与他人规律联系缓冲生活最沉重的打击。",
+        "第5句对应[A]段：人们曾坦言身体伤却只低声谈心理。",
+        "第6句对应[H]段：温柔对待自己的心灵让人恢复而非自责。",
+        "第7句对应[B]段：我们能学会识别心灵挣扎的早期信号。",
+        "第8句对应[D]段：忽视睡眠饮食和户外时间会使强健的心灵也脆弱。",
+        "第9句对应[F]段：归属感提醒我们并不孤单。",
+        "第10句对应[A]段：照顾心理健康值得给予身体般的同等关注。"
+      ]
+    }
+  ]
+}

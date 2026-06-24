@@ -9,7 +9,7 @@
   },
   "stimulusRequirements": {
     "kind": "passage",
-    "minWords": 340,
+    "minWords": 300,
     "maxWords": 620,
     "perStimulusItems": 10,
     "topicDomains": ["社会", "科技", "教育", "文化", "经济", "健康", "环境"]
