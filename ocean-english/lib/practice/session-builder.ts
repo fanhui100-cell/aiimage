@@ -261,6 +261,42 @@ async function v2Available(db: SupabaseClient): Promise<boolean> {
  * 从 v2 抽题。表不存在/无 active 数据时返回 []（调用方据此回退 v1）。
  * v2 题库当前未填充（schema 默认未应用），该路径在数据就绪后生效。
  */
+// ── 分组完形重建（R3）──────────────────────────────────────────────────────────
+// banked_cloze / grammar_fill 存为「一道 multi_blank + 含 (n) 标记的 passage」。服务端按
+// 标记切段重建 ClozeBody（题面，无正解）+ review.cloze.key（正解,提交后才渲染）。复用既有
+// MultiBlankRenderer（banked=词库模式 bank；grammar_fill=自由输入,提示 (hint) 作为段内文本保留）。
+type ClozeTok = string | { blank: number }
+const BLANK_MARK = /\((\d+)\)_*/g  // (1) 或 (1)______；词中括号(如 (surprising))非数字 → 不匹配,保留为提示文本
+export function reconstructCloze(
+  taskType: string, passage: string | null | undefined,
+  choices: { id: string; text: string }[], answer: unknown,
+  explanationZh: string,
+): { clozeBody: { title?: string; ask?: string; segments: ClozeTok[]; bank?: string[] }; review: { cloze: { key: Record<number, string>; explanationZh: string } } } | null {
+  if (!passage) return null
+  const segments: ClozeTok[] = []
+  const blankNums: number[] = []
+  let last = 0, m: RegExpExecArray | null
+  BLANK_MARK.lastIndex = 0
+  while ((m = BLANK_MARK.exec(passage)) !== null) {
+    if (m.index > last) segments.push(passage.slice(last, m.index))
+    segments.push({ blank: Number(m[1]) })
+    blankNums.push(Number(m[1]))
+    last = m.index + m[0].length
+  }
+  if (!blankNums.length) return null
+  if (last < passage.length) segments.push(passage.slice(last))
+  const bank = (taskType === 'banked_cloze' && choices.length) ? choices.map((c) => c.text) : undefined
+  const ans = Array.isArray(answer) ? answer : []
+  const key: Record<number, string> = {}
+  blankNums.forEach((n, i) => {
+    const a = ans[i]
+    if (taskType === 'banked_cloze') { const idx = typeof a === 'number' ? a : Number(a); key[n] = choices[idx]?.text ?? '' }
+    else key[n] = typeof a === 'string' ? a : String(a ?? '')
+  })
+  return { clozeBody: { segments, ...(bank ? { bank } : {}) }, review: { cloze: { key, explanationZh } } }
+}
+const CLOZE_RECONSTRUCT = new Set(['banked_cloze', 'grammar_fill'])
+
 async function tryBuildFromV2(
   db: SupabaseClient,
   input: BuildPracticeSessionInput,
@@ -350,18 +386,24 @@ async function tryBuildFromV2(
     const choicesRaw = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
     // 听力材料：text_en/text_zh 即原文(transcript)，练习态不下发（避免答前暴露）；阅读等保留材料文本。
     const isListening = set?.task_type === 'listening_comprehension' || String(it.input_mode) === 'listen'
-    const stimulusOut = stim
+    // 分组完形（banked_cloze/grammar_fill）：passage 重建为 clozeBody（即题面）→ stimulus 不再重复下发 passage。
+    const taskType = set?.task_type ?? 'unknown'
+    const cloze = CLOZE_RECONSTRUCT.has(taskType)
+      ? reconstructCloze(taskType, stim?.text_en, choicesRaw, it.answer, (it.explanation_zh as string) ?? '')
+      : null
+    const stimulusOut = stim && !cloze
       ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
       : undefined
     built.push({
       id: `v2:${id}`,
       questionItemId: id,
       setId: set?.id,
-      type: set?.task_type ?? 'unknown',
+      type: taskType,
       inputMode: String(it.input_mode ?? 'choice'),
       prompt: String(it.prompt ?? ''),
       promptZh: (it.prompt_zh as string) ?? undefined,
-      choices: choicesRaw.length ? choicesRaw.map((c) => ({ id: c.id, text: c.text })) : undefined,
+      // cloze 题面在 clozeBody.segments；choices 是词库（banked），不作为 MCQ 选项下发。
+      choices: (!cloze && choicesRaw.length) ? choicesRaw.map((c) => ({ id: c.id, text: c.text })) : undefined,
       answer: (it.answer as string | string[] | null) ?? null,
       stimulus: stimulusOut,
       audio: audio ? { url: audio.url } : null,
@@ -369,6 +411,7 @@ async function tryBuildFromV2(
       targetWords: (twByItem.get(id) ?? []).map((t) => ({ wordId: t.word_id ?? undefined, surface: t.surface ?? undefined, role: t.role, senseKey: t.sense_key ?? undefined, dimension: t.dimension ?? undefined })),
       subskills: Array.isArray(it.subskills) ? (it.subskills as string[]) : [],
       explanationZh: (it.explanation_zh as string) ?? undefined,
+      ...(cloze ? { clozeBody: cloze.clozeBody, review: cloze.review } : {}),
     })
   }
   return built

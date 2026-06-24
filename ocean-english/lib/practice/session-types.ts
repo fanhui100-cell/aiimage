@@ -60,6 +60,17 @@ export interface PracticeItem {
   targetWords: PracticeTargetWord[]
   subskills: string[]
   explanationZh?: string
+  // ── 分组题型渲染体（R3 接线；服务端按 inputMode 重建，提交前不含正解；正解只在 review）──
+  // 精确形状见 components/practice/renderers/*（PracticeItemView 以兼容交集收窄）；此处用 unknown
+  // 避免 lib→components 反向依赖。session-builder 赋值结构化对象，runner 经 view 收窄消费。
+  clozeBody?: unknown
+  matchBody?: unknown
+  buildBody?: unknown
+  /** 提交回合下发的批改（cloze/matching/build/freeText）；提交前 renderer 不读。 */
+  review?: unknown
+  wordMin?: number
+  wordMax?: number
+  guide?: string
 }
 
 export interface PracticeSessionResponse {
