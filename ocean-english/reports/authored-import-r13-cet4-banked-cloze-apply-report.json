@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-06-24T14:59:17.582Z",
+  "apply": true,
+  "stage": "r13-cet4-banked-cloze",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 53,
+    "reject": 1,
+    "wrote": 53,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {
+    "passage_too_short:237<240": 1
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch1-tech.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch2-education.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 8,
+      "reject": 1,
+      "wrote": 8,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch3-health-env.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch4-society.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch5-economy-work.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-cet4-banked-cloze\\batch6-lifestyle.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 9,
+      "reject": 0,
+      "wrote": 9,
+      "dupSkip": 0
+    }
+  ]
+}

@@ -33,6 +33,7 @@ const EXAM = argValue('--exam')
 const LEVEL = argValue('--level')
 const TASK = argValue('--task')
 const LIMIT = Number(argValue('--limit') || '20')
+const GEN = process.argv.includes('--gen')   // 仅晋级 Claude 原创（legacy_id gen:%），排除 qb:%（DeepSeek 期）混居 draft
 
 const GROUPED = new Set(['reading_comprehension', 'listening_comprehension', 'banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match'])
 const examToLevel = new Map<string, number>(EXAM_SPECS.map((s) => [s.id, s.level]))
@@ -46,6 +47,7 @@ async function main() {
   let q = db.from('question_sets').select('id, legacy_id, task_type, level, status, stimulus_id, qa_flags').eq('status', 'draft')
   if (TASK) q = q.eq('task_type', TASK)
   if (level != null) q = q.eq('level', level)
+  if (GEN) q = q.like('legacy_id', 'gen:%')
   const { data: setsData, error } = await q.limit(LIMIT)
   if (error) throw new Error(error.message)
   const sets = (setsData ?? []) as SetRow[]

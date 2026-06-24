@@ -1,0 +1,303 @@
+{
+  "template": "cet-banked-cloze",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "Every year thousands of young people pack their bags and travel overseas in search of an education that promises to change their lives. The decision to study abroad is rarely (1)____ , for it often demands enormous savings and a willingness to leave familiar comforts behind. Yet those who take the leap frequently describe it as one of the most (2)____ choices they have ever made. Living in a foreign country forces students to (3)____ to customs, schedules, and social rules that differ sharply from their own. At first the experience can feel lonely, but gradually most learners (4)____ a deeper confidence in their own ability to solve problems. Beyond the classroom, daily life becomes a constant lesson, since even buying groceries may (5)____ a new language and unfamiliar manners. Employers tend to (6)____ such graduates highly, knowing that an international background often signals independence and flexibility. Universities, too, benefit from the (7)____ that overseas students bring, because a mix of cultures enriches every seminar and debate. Of course, the path is not without (8)____ ; homesickness, financial pressure, and academic stress can weigh heavily on anyone far from home. Some students struggle to (9)____ these difficulties and return earlier than planned. Still, the majority insist that the rewards outweigh the costs, and they speak with genuine (10)____ about the friendships and skills they gained. In an increasingly connected and competitive world, the courage to learn well beyond one's own familiar borders may be among the wisest and most lasting investments a thoughtful young person can ever choose to make.",
+      "bank": [
+        "rewarding",
+        "adapt",
+        "require",
+        "casual",
+        "develop",
+        "diversity",
+        "overcome",
+        "obstacles",
+        "value",
+        "gratitude",
+        "abandon",
+        "predict",
+        "relief",
+        "delicate",
+        "instant"
+      ],
+      "answers": [
+        3,
+        0,
+        1,
+        4,
+        2,
+        8,
+        5,
+        7,
+        6,
+        9
+      ],
+      "explain_zh": "本篇讨论出国留学的价值。(1)casual 形容词，作表语，指这个决定并非随意/轻率的。(2)rewarding 形容词修饰 choices，指最有回报的选择。(3)adapt 后接 to，与 customs 搭配，指适应风俗。(4)develop 动词，宾语为 confidence，培养信心。(5)require 动词，宾语为 a new language，需要新语言。(6)value 动词，value...highly 高度重视。(7)diversity 名词，指海外学生带来的多样性。(8)obstacles 名词，with 之后的宾语，指障碍。(9)overcome 动词，宾语 these difficulties，克服困难。(10)gratitude 名词，with genuine gratitude 怀着真诚的感激。干扰项：abandon（放弃，语义反）、predict（预测，与 difficulties 不搭）、relief（解脱，语境为感激而非解脱）、delicate（精致脆弱的，修饰 decision 语义不符）、instant（即时的，与决定语义不符）均无法填入任何空格。"
+    },
+    {
+      "passage": "Online learning platforms have transformed the way millions of people pursue knowledge, dismantling barriers that once kept education locked inside expensive institutions. With nothing more than a laptop and a steady connection, a student in a remote village can (1)____ the same lectures delivered to learners in major cities. This unprecedented (2)____ has opened doors for those whom traditional schools long ignored. The most popular platforms offer courses that are (3)____ , allowing learners to study at midnight or dawn according to their own rhythm. Such freedom suits busy adults who must (4)____ their studies with full-time jobs and family duties. Many sites also (5)____ progress through quizzes and badges, turning what might feel like a chore into a satisfying game. Critics, however, point to a stubborn problem: completion rates remain disappointingly (6)____ , because nobody is watching to ensure that enrolled students actually finish. Without the gentle pressure of a physical classroom, motivation can quietly (7)____ , and good intentions dissolve into abandoned tabs. To address this, designers now (8)____ live discussions and peer feedback, hoping that a sense of community will keep learners engaged. Affordable pricing further widens access, since many courses cost a tiny (9)____ of campus tuition. Skeptics still doubt whether a screen can ever fully replace a dedicated teacher who notices when a pupil is confused. Yet few would deny that these platforms have made learning far more (10)____ than previous generations could ever have imagined, steadily reshaping public expectations about who truly deserves the chance to study and grow.",
+      "bank": [
+        "access",
+        "accessibility",
+        "flexible",
+        "balance",
+        "track",
+        "low",
+        "fade",
+        "introduce",
+        "fraction",
+        "accessible",
+        "strict",
+        "ignore",
+        "expand",
+        "wooden",
+        "majority"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论在线学习平台。(1)access 动词，宾语为 lectures，获取讲座。(2)accessibility 名词，指可获取性/普及度。(3)flexible 形容词修饰 courses，灵活的。(4)balance 动词，把学习与工作平衡。(5)track 动词，跟踪进度。(6)low 形容词，completion rates remain low，完成率低。(7)fade 动词，motivation can fade，动力消退。(8)introduce 动词，引入直播讨论。(9)fraction 名词，a tiny fraction of tuition 学费的一小部分。(10)accessible 形容词，learning more accessible 更易获取。干扰项：strict（严格的，无空匹配）、ignore（忽视，与设计者引入社区语义反）、expand（扩张，与 motivation 不搭且 fade 已占位）、wooden（木制的，具体材料形容词，三个形容词空 flexible/low/accessible 均不可填）、majority（多数，名词，无空匹配）均不能填入。"
+    },
+    {
+      "passage": "In a world flooded with information, the ability to think critically has never been more essential. Every day we are (1)____ with headlines, advertisements, and confident opinions, many of which are designed to persuade rather than inform. A person who lacks critical thinking may (2)____ such claims without pausing to ask whether the evidence is sound. By contrast, a careful thinker learns to (3)____ the source, weighing motives and checking facts before forming a judgment. This habit does not come (4)____ ; it must be cultivated through practice and a genuine willingness to question one's own beliefs. Schools that emphasize memorization alone often (5)____ to develop this skill, producing students who can recite answers yet struggle to reason independently. The (6)____ of poor reasoning are visible everywhere, from financial scams to the rapid spread of false rumors online. When citizens cannot (7)____ reliable evidence from clever manipulation, democracy itself grows fragile. Fortunately, critical thinking can be taught through deliberate (8)____ , such as debating opposing viewpoints and examining how arguments are built. Teachers who pose open-ended questions encourage learners to explore (9)____ explanations rather than settle for the first that appears. Over time, this discipline produces adults who remain (10)____ in the face of pressure, capable of changing their minds when better evidence emerges yet refusing to be swayed by mere noise. Such individuals tend to make wiser personal decisions, resist deception more effectively, and contribute thoughtfully to the wider debates that shape their communities and societies. In an age of endless persuasion, such mental independence may well be the single most valuable habit that any thoughtful education can hope to offer its students.",
+      "bank": [
+        "bombarded",
+        "accept",
+        "question",
+        "easily",
+        "fail",
+        "consequences",
+        "distinguish",
+        "exercises",
+        "alternative",
+        "rational",
+        "encourage",
+        "rarely",
+        "benefits",
+        "emotional",
+        "ignore"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论批判性思维的重要性。(1)bombarded 过去分词，be bombarded with 被…轰炸/充斥。(2)accept 动词，宾语 claims，接受说法。(3)question 动词，宾语 the source，质疑来源。(4)easily 副词，does not come easily 来之不易。(5)fail 动词，fail to develop 未能培养。(6)consequences 名词，poor reasoning 的后果。(7)distinguish 动词，distinguish...from...区分。(8)exercises 名词，through deliberate exercises 通过刻意练习。(9)alternative 形容词修饰 explanations，替代性解释。(10)rational 形容词，remain rational 保持理性。干扰项：encourage（鼓励，无空匹配，且 encourage 已被原句使用）、rarely（很少，副词位置不合）、benefits（好处，与 poor reasoning 语义反）、emotional（情绪化的，与 remain ___ 处的理性语境反）、ignore（忽视，与 question/accept 已占位且语义重复）均不能填入。"
+    },
+    {
+      "passage": "The economy that today's graduates enter bears little resemblance to the stable world their grandparents knew. Industries rise and vanish within a single decade, and skills that once guaranteed lifelong employment can quickly become technologically (1)____ , superseded by automated systems within only a few short years. In this restless landscape, the old notion that education ends with a diploma has grown dangerously (2)____ , as quaint and out of step with reality as a dusty almanac. Workers who wish to remain employable must (3)____ to learn long after they leave school, treating knowledge as something to be continually renewed. Companies increasingly (4)____ employees who show curiosity and a readiness to retrain, recognizing that adaptability matters more than any single qualification. Automation, meanwhile, continues to (5)____ routine tasks, shifting demand toward roles that require creativity and human judgment. Those who refuse to (6)____ their abilities risk being left behind as machines absorb the predictable parts of their jobs. Governments have begun to fund programs that give adults a second (7)____ to acquire fresh expertise, from coding to caregiving. Yet the responsibility cannot rest on institutions alone; each individual must take (8)____ of personal growth, carving out time for study amid busy lives. The most resilient workers approach setbacks as opportunities to (9)____ rather than reasons for despair. Far from being a burden, this culture of continuous learning can prove deeply (10)____ , keeping the mind active and opening doors that would otherwise stay shut. In an age of relentless and unpredictable change, the simple willingness to keep on learning may well prove to be the single defining trait that separates those who genuinely thrive from those who merely manage to survive.",
+      "bank": [
+        "obsolete",
+        "outdated",
+        "continue",
+        "value",
+        "replace",
+        "update",
+        "chance",
+        "charge",
+        "grow",
+        "fulfilling",
+        "abandon",
+        "permanent",
+        "destroy",
+        "burden",
+        "wealthy"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论变化经济中的终身学习。(1)obsolete 形容词，become technologically obsolete 是固定搭配（被自动化系统取代），technologically outdated 不地道，故 (1) 唯填 obsolete。(2)outdated 形容词，grown dangerously outdated，并由 as quaint and out of step as a dusty almanac 强化“观念陈旧过时”之义；obsolete 强调被技术取代不适合修饰抽象 notion，且已占 (1)，故 (2) 唯填 outdated。(3)continue 动词，continue to learn 继续学习。(4)value 动词，公司看重员工。(5)replace 动词，automation replace routine tasks 取代常规任务。(6)update 动词，update their abilities 更新能力。(7)chance 名词，a second chance 第二次机会。(8)charge 名词，take charge of 掌管/负责。(9)grow 动词，opportunities to grow 成长机会。(10)fulfilling 形容词，prove fulfilling 充实有意义。干扰项：abandon（放弃，语义反）、permanent（永久的，与变化主题反）、destroy（摧毁，太强烈不合 update/replace 语境）、burden（负担，名词且与 fulfilling 处语义反）、wealthy（富有的，与 mind active 语境不符）均不能填入。注：obsolete 与 outdated 虽近义，但 (1) 处 technologically ___ 仅 obsolete 地道（technologically obsolete 固定搭配），(2) 处由 quaint/out of step/dusty almanac 语境锁定 outdated，二者各只匹配一空，不构成双解。"
+    },
+    {
+      "passage": "Long before the internet promised knowledge at everyone's fingertips, the public library stood as one of society's great equalizers. Funded by the community and open to all, it offered the poorest citizen the same (1)____ to books that the wealthy enjoyed. Even today, when search engines answer questions in seconds, libraries continue to play a (2)____ role that screens cannot fully replace. For families who cannot afford a home computer, the library provides a reliable broadband (3)____ to the internet, helping children complete homework and adults apply for jobs. Skilled librarians do far more than shelve volumes; they patiently (4)____ visitors through unfamiliar databases and help them tell trustworthy sources from misleading ones. In many neighborhoods the building has become a quiet (5)____ where the elderly find companionship and newcomers practice an unfamiliar language. Story hours (6)____ a love of reading in young children long before they enter school, planting seeds that may last a lifetime. Critics sometimes argue that such institutions have grown (7)____ in a digital age, but visitor numbers tell a different story. Rather than fading away, many libraries have chosen to (8)____ into vibrant cultural centers, adding maker spaces, recording studios, and community workshops to their traditional offerings. This willingness to (9)____ to the shifting habits of their readers has kept them relevant to generations raised on smartphones. Ultimately, a library is far more than a collection of paper; it is a (10)____ symbol of the belief that learning should belong to everyone, regardless of wealth or background. Few public services give back so much for so modest an investment.",
+      "bank": [
+        "access",
+        "vital",
+        "connection",
+        "guide",
+        "refuge",
+        "inspire",
+        "obsolete",
+        "evolve",
+        "adapt",
+        "powerful",
+        "deny",
+        "trivial",
+        "destination",
+        "restrict",
+        "fragile"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论公共图书馆的作用。(1)access 名词，access to books，接触书籍的机会。(2)vital 形容词，play a vital role 起重要作用。(3)connection 名词，a reliable broadband connection to the internet 可靠的宽带网络连接（broadband connection 为固定搭配；access 为不可数名词不可接 “a broadband access”，故 (3) 唯填 connection，与 (1) 的 access 不冲突）。(4)guide 动词，guide visitors through 引导访客。(5)refuge 名词，a quiet refuge 安静的避风港。(6)inspire 动词，inspire a love of reading 激发阅读热爱。(7)obsolete 形容词，grown obsolete 过时。(8)evolve 动词，chosen to evolve into vibrant cultural centers，evolve into 为固定搭配（adapt into 不地道），故 (8) 唯填 evolve。(9)adapt 动词，willingness to adapt to the shifting habits of their readers，adapt to 为固定搭配（evolve to the habits 不地道），故 (9) 唯填 adapt，二者各只匹配一空不构成双解。(10)powerful 形容词，a powerful symbol 有力的象征。干扰项：deny（否认，无空匹配）、trivial（琐碎的，与 vital 处语义反）、destination（目的地，与 refuge 处语境不如 refuge 贴切且 5 已定）、restrict（限制，与图书馆开放精神反）、fragile（脆弱的，与 powerful 处语义反）均不能填入。"
+    },
+    {
+      "passage": "Long before formal schools existed, knowledge passed from one generation to the next through the patient bond between master and learner. Mentorship and apprenticeship remain (1)____ today, offering a kind of education that textbooks alone can never provide. Under the guidance of an experienced mentor, a beginner can (2)____ skills that would take years to discover through trial and error. The relationship works because the senior partner is willing to (3)____ hard-won wisdom, including the small mistakes that rarely appear in manuals. In a traditional apprenticeship, the learner does not merely watch; he or she (4)____ in real work, gradually taking on tasks of increasing difficulty. This hands-on approach builds (5)____ that classroom lectures struggle to deliver, for true mastery lives in the hands as much as the head. A good mentor also offers honest (6)____ , pointing out weaknesses gently while encouraging genuine strengths. Such guidance can dramatically (7)____ a young person's progress, sparing them the discouragement of fumbling alone. Beyond technical skill, mentors often (8)____ as role models, shaping attitudes toward work, ethics, and perseverance. Many successful professionals credit a single influential figure who believed in their (9)____ when they themselves doubted it. As industries grow more complex, companies are rediscovering that pairing newcomers with veterans is a remarkably (10)____ way to transfer expertise. Far from being a dusty relic of the distant past, this ancient and trusted practice may be exactly what a fast-moving modern economy needs to preserve the deep, practical knowledge that no online course can ever fully capture.",
+      "bank": [
+        "relevant",
+        "acquire",
+        "share",
+        "participates",
+        "competence",
+        "feedback",
+        "accelerate",
+        "serve",
+        "potential",
+        "effective",
+        "obsolete",
+        "conceal",
+        "observes",
+        "wooden",
+        "delay"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论师徒制与学徒制。(1)relevant 形容词，remain relevant 仍然有现实意义。(2)acquire 动词，acquire skills 获得技能。(3)share 动词，share wisdom 分享智慧。(4)participates 第三人称单数动词，participates in real work 参与真实工作。(5)competence 名词，builds competence 培养能力。(6)feedback 名词，honest feedback 诚实反馈。(7)accelerate 动词，accelerate progress 加速进步。(8)serve 动词，serve as role models 充当榜样。(9)potential 名词，believed in their potential 相信潜力。(10)effective 形容词，a remarkably effective way 极有效的方法。干扰项：obsolete（过时的，与 relevant 处语义反）、conceal（隐瞒，与 share 语义反）、observes（观察，与 participates 处强调动手参与语义反）、wooden（木制的，具体形容词，名词空 competence/feedback/potential 及动词空均无法填入）、delay（拖延，与 accelerate 语义反）均不能填入。"
+    },
+    {
+      "passage": "Not so long ago, a quiet afternoon with a thick novel was a common pleasure, but reading habits have shifted dramatically in the digital age. Smartphones now compete relentlessly for the attention that books once (1)____ , and the average person checks a glowing screen hundreds of times a day. Many readers report that their (2)____ to focus on long passages has weakened, eroded by years of skimming short posts and rapid headlines. Instead of immersing themselves in a single story, they (3)____ restlessly between articles, videos, and notifications. Psychologists worry that this fragmented style of reading may (4)____ the deep concentration that complex texts demand. Yet the picture is not entirely (5)____ . Digital devices have also made an enormous library (6)____ to anyone with a phone, allowing readers to carry thousands of titles in a single pocket. Audiobooks let commuters (7)____ literature while their eyes are busy with the road, reaching people who never had time to sit and read. Some educators argue that the format matters less than the (8)____ ; what counts is whether a person continues to engage thoughtfully with ideas. To rebuild lost attention, many readers deliberately (9)____ distraction-free habits, setting aside screens for an hour of uninterrupted pages. Libraries and schools, too, work to (10)____ a culture of sustained reading among the young. The challenge of the digital age, then, is not to abandon screens but to ensure they enrich rather than replace the timeless joy of losing oneself in a good book.",
+      "bank": [
+        "commanded",
+        "ability",
+        "jump",
+        "undermine",
+        "gloomy",
+        "available",
+        "enjoy",
+        "habit",
+        "cultivate",
+        "promote",
+        "destroy",
+        "furniture",
+        "remain",
+        "cheerful",
+        "ignore"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论数字时代的阅读习惯。(1)commanded 过去式动词，books once commanded（赢得）的注意力。(2)ability 名词，ability to focus 专注的能力。(3)jump 动词，jump between articles 在文章间跳转。(4)undermine 动词，undermine concentration 削弱专注力。(5)gloomy 形容词，not entirely gloomy 并非全然悲观。(6)available 形容词，made a library available 让图书馆可获取。(7)enjoy 动词，enjoy literature 享受文学。(8)habit 名词，format matters less than the habit 习惯比形式更重要。(9)cultivate 动词，cultivate distraction-free habits 培养习惯。(10)promote 动词，promote a culture 推广文化。干扰项：destroy（摧毁，太强烈，undermine 已占 4 且 destroy 与 promote/cultivate 处不搭）、furniture（家具，具体名词，名词空 ability（their ___ to focus）/ habit（the ___）语义均荒谬，动词形容词空亦无法填入）、remain（保持，与各空语法不符）、cheerful（愉快的，修饰 picture 语义不如 gloomy 否定结构贴切）、ignore（忽视，与 promote/cultivate 语义反）均不能填入。"
+    },
+    {
+      "passage": "Each spring, employers across many industries voice the same complaint: fresh graduates arrive with diplomas yet lack the practical skills the workplace demands. This stubborn (1)____ between what schools teach and what jobs require has become a pressing concern for economies everywhere. Universities often (2)____ on theory, producing students who can analyze a problem on paper but freeze when asked to apply that knowledge under real pressure. Meanwhile, the abilities employers prize most, such as teamwork, communication, and problem-solving, are rarely (3)____ through traditional exams. As a result, many companies must (4)____ considerable time and money training newcomers in fundamentals the workplace assumed they already possessed. Some critics blame outdated curricula that have failed to keep (5)____ with rapidly changing technology. Others point to a culture that prizes grades over genuine (6)____ , rewarding students for memorizing rather than doing. To close the divide, forward-thinking schools now (7)____ internships and project-based learning into their programs, giving students a taste of real responsibility before graduation. Partnerships between colleges and local businesses can also (8)____ this gap, ensuring that what is taught actually matches what is needed. Students themselves bear some responsibility, too, and the wisest ones (9)____ opportunities to gain experience through part-time work and volunteering. When education and employment are properly (10)____ , young people step into their first jobs with confidence rather than confusion. Bridging this stubborn divide ultimately benefits everyone involved, for a workforce equipped with both solid knowledge and practical skill is surely the firmest foundation of a prosperous, resilient, and endlessly adaptable society.",
+      "bank": [
+        "gap",
+        "focus",
+        "tested",
+        "invest",
+        "pace",
+        "competence",
+        "integrate",
+        "bridge",
+        "seek",
+        "aligned",
+        "widen",
+        "ignore",
+        "theory",
+        "avoid",
+        "separated"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论学校与职场之间的技能鸿沟。(1)gap 名词，stubborn gap between 顽固的鸿沟。(2)focus 动词，focus on theory 侧重理论。(3)tested 过去分词，rarely tested 很少被考核。(4)invest 动词，invest time and money 投入时间金钱。(5)pace 名词，keep pace with 跟上步伐。(6)competence 名词，genuine competence 真正的能力。(7)integrate 动词，integrate internships into 把实习融入。(8)bridge 动词，bridge this gap 弥合鸿沟。(9)seek 动词，seek opportunities 寻求机会。(10)aligned 过去分词，properly aligned 妥善对接。干扰项：widen（拓宽，与 bridge 处弥合语义反）、ignore（忽视，与各空语义不符）、theory（理论，名词，focus on 后已用 theory 实义但此处空格需动词，theory 不可作 (2) 谓语）、avoid（避免，与 seek 语义反）、separated（分开的，与 aligned 处语义反）均不能填入。"
+    },
+    {
+      "passage": "Few accomplishments reshape a person's mind quite like mastering a second language. The journey demands patience, since real (1)____ comes only after countless hours of listening, speaking, and inevitable mistakes. Beginners must learn to (2)____ embarrassment, for stumbling over unfamiliar sounds is an unavoidable part of progress. Yet the rewards are profound and extend far beyond the practical (3)____ of ordering a meal or asking for directions abroad. Researchers have found that bilingual people often display sharper (4)____ , switching between tasks more nimbly than those who speak a single tongue. Learning another language also opens a window into a different culture, allowing students to (5)____ jokes, films, and traditions that translation alone would flatten. As learners grow more (6)____ , they discover that words carry feelings and histories no dictionary can fully capture. The process can be humbling, because it forces adults to (7)____ to the helpless position of a child sounding out new syllables. Travel becomes richer, too, since a few sincere phrases can (8)____ a warmth from locals that tourists rarely receive. In the job market, fluency in a second language can (9)____ doors that would otherwise stay firmly shut. Above all, the effort teaches a quiet (10)____ for other ways of seeing the world, dissolving the assumption that one's own perspective is the only natural one. In our deeply interconnected age, the slow and patient work of learning to speak with strangers in their own native words may well be among the most enriching and rewarding pursuits that a genuinely curious mind can ever choose.",
+      "bank": [
+        "fluency",
+        "tolerate",
+        "benefit",
+        "minds",
+        "appreciate",
+        "confident",
+        "return",
+        "earn",
+        "open",
+        "respect",
+        "furniture",
+        "obstacle",
+        "bodies",
+        "shy",
+        "close"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "本篇讨论学习第二语言。(1)fluency 名词，real fluency 真正的流利度。(2)tolerate 动词，tolerate embarrassment 容忍尴尬。(3)benefit 名词，practical benefit 实际益处。(4)minds 名词复数，sharper minds 更敏锐的头脑。(5)appreciate 动词，appreciate jokes, films 欣赏笑话电影。(6)confident 形容词，grow more confident 变得更自信。(7)return 动词，return to the position 回到（孩童般的）位置。(8)earn 动词，earn a warmth 赢得热情。(9)open 动词，open doors 打开大门。(10)respect 名词，a quiet respect for 对…的敬意。干扰项：furniture（家具，具体名词，动词空 learn to ___ embarrassment 需及物动词，furniture 不可作谓语；名词空 fluency/benefit/minds/respect 处语义均荒谬；形容词空亦不可）、obstacle（障碍，与 benefit 处语义反）、bodies（身体，与 sharper minds 处语境不符）、shy（害羞的，形容词与 grow more 处 confident 语义反）、close（关闭，与 open doors 语义反）均不能填入。"
+    }
+  ]
+}
