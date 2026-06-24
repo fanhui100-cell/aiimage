@@ -1,0 +1,1866 @@
+{
+  "template": "kaoyan-cloze-passage",
+  "level": 5,
+  "sets": [
+    {
+      "passage": "The automation of jobs is often described as a sudden wave, but in practice it (1)____ gradually, task by task. A machine rarely replaces an entire occupation at once; (2)____, it absorbs the most routine fragments of that occupation. Cashiers still exist, yet the scanning of barcodes is now (3)____ done by the customer. This pattern matters because it (4)____ how we should think about employment. If a job is a bundle of tasks, then automation does not so much eliminate work as (5)____ it. The question is no longer whether a robot can do everything a person does, but (6)____ which slices of the work can be profitably handed over. Economists who study this (7)____ have found that the tasks most vulnerable are those that are predictable and repetitive. Creative judgment, by (8)____, resists codification. A radiologist may lose the routine scanning of images to an algorithm while (9)____ the harder interpretive cases. Such a shift does not necessarily reduce the (10)____ for workers; it may instead raise the value of the uniquely human parts. (11)____, the transition is rarely painless. Workers whose skills (12)____ heavily on the automated tasks face real displacement, and retraining is slow and uneven. Policymakers therefore (13)____ a delicate balance: encouraging the productivity gains that machines bring while (14)____ those whom the change leaves behind. History offers some (15)____. Earlier waves of mechanization eventually created new categories of employment that nobody had (16)____. Yet there is no guarantee that the new jobs will appear quickly enough, or that they will be (17)____ to the people who lost the old ones. What seems (18)____ is that the boundary between human and machine labor will keep moving. The (19)____ for societies is to manage that movement so that its benefits are widely shared rather than (20)____ in a few hands.",
+      "blanks": [
+        {
+          "options": [
+            "unfolds",
+            "collapses",
+            "vanishes",
+            "retreats"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "therefore",
+            "instead",
+            "besides",
+            "otherwise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rarely",
+            "reluctantly",
+            "routinely",
+            "secretly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forgets",
+            "ignores",
+            "delays",
+            "reshapes"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "redistribute",
+            "destroy",
+            "celebrate",
+            "memorize"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rather",
+            "whether",
+            "though",
+            "unless"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "accident",
+            "rumor",
+            "phenomenon",
+            "holiday"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "chance",
+            "request",
+            "mistake",
+            "contrast"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "retaining",
+            "abandoning",
+            "doubting",
+            "hiding"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "danger",
+            "demand",
+            "penalty",
+            "delay"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Similarly",
+            "Consequently",
+            "Nevertheless",
+            "Thereby"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "objected",
+            "commented",
+            "insisted",
+            "relied"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "strike",
+            "forbid",
+            "deny",
+            "waste"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "abandoning",
+            "cushioning",
+            "ignoring",
+            "blaming"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "panic",
+            "warning",
+            "comfort",
+            "confusion"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbidden",
+            "rejected",
+            "repeated",
+            "anticipated"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "accessible",
+            "hostile",
+            "indifferent",
+            "opposed"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "doubtful",
+            "certain",
+            "impossible",
+            "secret"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "reward",
+            "souvenir",
+            "challenge",
+            "vacation"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "scattered",
+            "abandoned",
+            "wasted",
+            "concentrated"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)unfolds 逐步展开，与gradually呼应；其余三词意为消失/退缩，矛盾。(2)instead 表与前句转折对照。(3)routinely 现在惯常由顾客完成。(4)reshapes 重塑我们的思考方式。(5)redistribute 自动化是重新分配工作而非消灭。(6)whether 引导宾语从句，与no longer whether并列。(7)phenomenon 指这一现象。(8)by contrast 与前句对比。(9)retaining 保留较难的病例。(10)demand 对工人的需求。(11)Nevertheless 转折：过渡并不无痛。(12)relied on 固定搭配。(13)strike a balance 固定搭配，达成平衡。(14)cushioning 缓冲被淘汰者。(15)comfort 历史提供某些安慰。(16)anticipated 没人预料到的新岗位。(17)accessible 新岗位对失业者是否可及。(18)certain 确定的是边界会移动。(19)challenge 社会面临的挑战。(20)concentrated 利益被集中于少数人手中。"
+    },
+    {
+      "passage": "Why do some useful technologies fail to spread while inferior ones (1)____ everywhere? The naive assumption is that the best idea automatically (2)____, but history rarely cooperates with that view. A technology is not a free-floating invention; it is (3)____ in a web of habits, skills, and institutions. When a new tool requires users to abandon familiar (4)____, adoption slows, even if the tool is plainly superior. The typewriter keyboard we still use was not designed for speed, yet it (5)____ because too many people had already learned it. This is the logic of lock-in, and it (6)____ much of why progress is uneven. A second (7)____ is infrastructure. A brilliant device that depends on electricity is useless where the grid is (8)____. Diffusion thus follows not the map of good ideas but the map of (9)____ conditions. A third factor is trust. People adopt what their neighbors adopt, and a technology that lacks (10)____ endorsement may stall regardless of its merits. (11)____, the cost of switching often falls on individuals while the benefits accrue to society, creating a (12)____ that no single actor has an incentive to resolve. Understanding these barriers (13)____ the romantic story in which good inventions inevitably triumph. It suggests instead that diffusion is a social (14)____, shaped by who pays, who learns, and who is connected to whom. For those who design technologies, the (15)____ is clear: technical excellence is necessary but far from (16)____. A tool must fit the existing (17)____ of its users or supply a credible path for changing them. Reformers who (18)____ this lesson tend to blame users for irrationality, when the real obstacle is structural. The technologies that spread fastest are often not the cleverest but the ones that (19)____ least disruption to the lives they enter. Spread, in short, is less about the idea than about the (20)____ that surrounds it.",
+      "blanks": [
+        {
+          "options": [
+            "dominate",
+            "multiply",
+            "fade",
+            "shrink"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "disappears",
+            "wins",
+            "fails",
+            "hides"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "destroyed",
+            "isolated",
+            "embedded",
+            "forgotten"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "enemies",
+            "strangers",
+            "accidents",
+            "routines"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "persisted",
+            "vanished",
+            "collapsed",
+            "weakened"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hides",
+            "explains",
+            "denies",
+            "ignores"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "reward",
+            "holiday",
+            "barrier",
+            "rumor"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "abundant",
+            "cheap",
+            "modern",
+            "absent"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "enabling",
+            "forbidding",
+            "imaginary",
+            "useless"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "secret",
+            "social",
+            "random",
+            "foreign"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Otherwise",
+            "Nevertheless",
+            "Moreover",
+            "Instead"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "festival",
+            "fortune",
+            "souvenir",
+            "mismatch"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "complicates",
+            "confirms",
+            "repeats",
+            "praises"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "accident",
+            "process",
+            "secret",
+            "weapon"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "mystery",
+            "joke",
+            "lesson",
+            "rumor"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "harmful",
+            "optional",
+            "expensive",
+            "sufficient"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "habits",
+            "enemies",
+            "secrets",
+            "borders"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "welcome",
+            "miss",
+            "praise",
+            "repeat"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "demand",
+            "celebrate",
+            "impose",
+            "forbid"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "weather",
+            "rumor",
+            "luck",
+            "context"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)dominate 劣质技术却到处占主导。(2)wins 最佳想法自动胜出。(3)embedded in 嵌入于习惯网络中。(4)routines 放弃熟悉的常规。(5)persisted 键盘因学过的人多而留存。(6)explains 解释进步为何不均。(7)barrier 第二个障碍。(8)absent 电网缺失则无用。(9)social 跟随社会条件而非好点子地图，此处呼应后文trust/neighbors，但更广义指现实条件→social最贴合传播逻辑。(10)social 缺乏社会认可而停滞。(11)Moreover 递进补充第四点。(12)mismatch 成本与收益错配。(13)complicates 使浪漫故事复杂化。(14)process 传播是社会过程。(15)lesson 教训很清楚。(16)sufficient 卓越是必要但远非充分。(17)habits 须契合用户现有习惯。(18)miss 错过这一教训的改革者。(19)impose 强加最少干扰。(20)context 传播取决于周围语境。"
+    },
+    {
+      "passage": "The economics of attention begins with a simple observation: there are only so many hours in a day, and every screen competes for them. Unlike money, attention cannot be (1)____; once a minute is spent, it is gone. This (2)____ makes human focus one of the scarcest resources in the modern economy. Companies that once sold goods now increasingly sell (3)____ to our eyes and minds. Their business model depends not on charging us money but on (4)____ our time and reselling it to advertisers. To do so profitably, they must keep us engaged, and engagement is (5)____ measured in clicks, scrolls, and seconds. This creates a powerful (6)____ to design products that are hard to put down. Notifications, autoplay, and infinite feeds are not accidents; they are carefully (7)____ to exploit the way our brains respond to novelty. The result is an environment in which the (8)____ is not the user but the advertiser, while the user becomes the product being sold. Critics argue that this arrangement (9)____ our capacity for sustained thought. When every app is engineered to (10)____ our focus, deep concentration becomes a kind of (11)____ act. Defenders reply that attention has always been (12)____, and that newspapers and television did the same thing. Yet the new tools are far more (13)____, adapting in real time to each individual's weaknesses. (14)____ the older media could only guess at what would hold us, today's systems learn and (15)____ continuously. The policy questions this (16)____ are difficult. Should there be limits on how aggressively a design may pursue our attention? Can users meaningfully (17)____ when the choice architecture is built to undermine their resolve? Some propose treating attention as a resource deserving legal (18)____, much as we protect privacy. Whatever the remedy, the underlying (19)____ is unlikely to fade, because as long as attention is scarce and valuable, someone will work tirelessly to (20)____ it.",
+      "blanks": [
+        {
+          "options": [
+            "saved",
+            "spent",
+            "shared",
+            "stolen"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "mistake",
+            "scarcity",
+            "freedom",
+            "habit"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "weapons",
+            "houses",
+            "access",
+            "silence"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "wasting",
+            "destroying",
+            "ignoring",
+            "capturing"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "typically",
+            "rarely",
+            "secretly",
+            "reluctantly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "obstacle",
+            "incentive",
+            "penalty",
+            "accident"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forgotten",
+            "abandoned",
+            "designed",
+            "hidden"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "victim",
+            "stranger",
+            "machine",
+            "customer"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "erodes",
+            "strengthens",
+            "ignores",
+            "rewards"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "protect",
+            "fragment",
+            "deepen",
+            "respect"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "ordinary",
+            "automatic",
+            "rebellious",
+            "cheap"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "free",
+            "ignored",
+            "endless",
+            "monetized"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "precise",
+            "clumsy",
+            "honest",
+            "slow"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Because",
+            "Whereas",
+            "Unless",
+            "Therefore"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forget",
+            "rest",
+            "adapt",
+            "hesitate"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "solves",
+            "hides",
+            "answers",
+            "raises"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "consent",
+            "obey",
+            "panic",
+            "withdraw"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "punishment",
+            "protection",
+            "deletion",
+            "neglect"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "holiday",
+            "secret",
+            "pressure",
+            "reward"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "ignore",
+            "waste",
+            "forget",
+            "capture"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)saved 不像金钱可储蓄，注意力花掉即无。(2)scarcity 这种稀缺性使专注最稀缺。(3)access 出售对我们眼睛与心智的接触。(4)capturing 捕获时间转售给广告商。(5)typically 通常以点击衡量。(6)incentive 强大的设计诱因。(7)designed 精心设计而非偶然。(8)customer 真正客户是广告商。(9)erodes 侵蚀持续思考能力。(10)fragment 每个app都被设计来切碎我们的专注。(11)rebellious 深度专注成了反叛行为。(12)monetized 注意力一向被变现。(13)precise 新工具更精准。(14)Whereas 与旧媒体对比。(15)adapt 系统持续学习适应。(16)raises 引发难题。(17)consent 用户能否有意义地同意。(18)protection 应享法律保护。(19)pressure 底层压力不会消退。(20)capture 有人会不懈地捕获它。"
+    },
+    {
+      "passage": "Algorithms now (1)____ countless decisions that were once made by people: who sees a job advertisement, which neighborhood gets more police patrols, whose loan application is approved. Because these systems operate quietly, their social (2)____ is easy to overlook. Yet the choices they encode are not (3)____. An algorithm learns from historical data, and if that data reflects past injustice, the system may faithfully (4)____ the very patterns we hope to escape. Suppose a hiring model is trained on a company's previous hires. If the firm once favored a narrow group, the model will treat that group as the (5)____ of success and quietly penalize everyone else. The danger is that this bias wears the (6)____ of objectivity. Numbers feel neutral, and a decision delivered by software can seem beyond (7)____. People are therefore less likely to challenge it than they would a human judgment. This false sense of neutrality is (8)____ what makes algorithmic bias so insidious. A further problem is (9)____. When a bank refuses a loan, a person can ask why; when a complex model refuses, even its designers may struggle to (10)____ the reasoning. Without explanation, those harmed cannot effectively (11)____ the outcome. Some respond that algorithms, (12)____ their flaws, are still fairer than the prejudiced humans they replace, and that biases at least become (13)____ once they are written into code. There is truth in this: a visible bias can be measured and (14)____, whereas a hidden human prejudice cannot. (15)____, visibility is not the same as accountability. Detecting bias does little good if no one is (16)____ to fix it. The governance of these systems therefore requires more than better mathematics. It demands that we decide, as a society, which uses of automated decision-making are (17)____ at all, and that we build mechanisms allowing affected people to (18)____ and contest the results. The deeper lesson is that an algorithm is never a (19)____ mirror of the world. It is a choice about which patterns to (20)____ and which to ignore, and that choice is unavoidably human.",
+      "blanks": [
+        {
+          "options": [
+            "mediate",
+            "celebrate",
+            "forget",
+            "delay"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "holiday",
+            "influence",
+            "rumor",
+            "silence"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "expensive",
+            "loud",
+            "neutral",
+            "foreign"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forget",
+            "forbid",
+            "reward",
+            "reproduce"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "template",
+            "enemy",
+            "accident",
+            "punishment"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "weight",
+            "mask",
+            "price",
+            "noise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "applause",
+            "memory",
+            "dispute",
+            "repair"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "seldom",
+            "reluctantly",
+            "secretly",
+            "precisely"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "opacity",
+            "speed",
+            "beauty",
+            "cheapness"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hide",
+            "reconstruct",
+            "ignore",
+            "celebrate"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "welcome",
+            "repeat",
+            "challenge",
+            "praise"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "because of",
+            "instead of",
+            "thanks to",
+            "for all"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "explicit",
+            "invisible",
+            "useless",
+            "random"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hidden",
+            "corrected",
+            "ignored",
+            "repeated"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Thus",
+            "Yet",
+            "Hence"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbidden",
+            "afraid",
+            "unable",
+            "willing"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "acceptable",
+            "expensive",
+            "foreign",
+            "secret"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forget",
+            "understand",
+            "ignore",
+            "repeat"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "loud",
+            "broken",
+            "passive",
+            "foreign"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forget",
+            "destroy",
+            "hide",
+            "amplify"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)mediate 算法中介了无数决策。(2)influence 社会影响易被忽视。(3)neutral 编码的选择并非中立。(4)reproduce 忠实地复制旧的不公模式。(5)template 把该群体当成功的模板。(6)mask 偏见披着客观的外衣。(7)dispute 似乎不容质疑。(8)precisely 这正是其阴险之处。(9)opacity 进一步问题是不透明。(10)reconstruct 重建推理。(11)challenge 受害者无法有效质疑结果。(12)for all 尽管有缺陷(固定让步搭配)。(13)explicit 写入代码后偏见变得显性。(14)corrected 可见偏见可被纠正。(15)Yet 转折：可见不等于问责。(16)willing 没人愿意修复。(17)acceptable 哪些用途是可接受的。(18)understand 让受影响者理解并质疑。(19)passive 算法绝非被动镜子。(20)amplify 选择放大哪些模式。"
+    },
+    {
+      "passage": "The meaning of work has shifted profoundly over the past century, and the shift is far from (1)____. For most of human history, work was understood as a (2)____ to survival, an unpleasant necessity endured for the sake of food and shelter. The idea that a job should also provide purpose, identity, and fulfillment is (3)____ recent. Today many people expect their work to answer the question of who they are, not merely how they (4)____ their bills. This expectation has both liberating and troubling (5)____. On the positive side, it has pushed employers to care about meaning and pushed workers to seek roles that (6)____ their values. On the negative side, it (7)____ enormous pressure on the job to deliver something it may not be designed to provide. When a career fails to supply a sense of purpose, the disappointment can feel like a (8)____ failing rather than a structural one. Sociologists note that this new ideal is unevenly (9)____. A surgeon or an artist may readily find meaning in daily tasks, but a warehouse worker paid by the parcel is (10)____ told to find passion in labor that offers little room for it. The rhetoric of fulfillment can thus (11)____ poor conditions, encouraging people to accept low pay in (12)____ for the promise of purpose. (13)____, the boundary between work and the rest of life has blurred. When a job is a vocation rather than a mere exchange of hours for wages, the temptation to keep working never (14)____. Some welcome this as engagement; others experience it as a quiet form of (15)____ that erodes rest and relationships. What seems clear is that there is no single (16)____ definition of good work. For one person, meaning lies in autonomy; for another, in (17)____ with colleagues; for a third, simply in being paid enough to live with dignity. A mature view (18)____ that work can be a source of meaning without (19)____ that it must be, and that a decent society should let people find purpose in many places rather than (20)____ it all from a single job.",
+      "blanks": [
+        {
+          "options": [
+            "complete",
+            "ancient",
+            "useless",
+            "foreign"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reward",
+            "means",
+            "obstacle",
+            "secret"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "historically",
+            "physically",
+            "comparatively",
+            "secretly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forget",
+            "celebrate",
+            "hide",
+            "pay"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "implications",
+            "accidents",
+            "holidays",
+            "rumors"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "betray",
+            "reflect",
+            "forget",
+            "destroy"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "removes",
+            "forgets",
+            "places",
+            "hides"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "national",
+            "foreign",
+            "technical",
+            "personal"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "distributed",
+            "forgotten",
+            "celebrated",
+            "destroyed"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "seldom",
+            "nonetheless",
+            "secretly",
+            "reluctantly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "expose",
+            "celebrate",
+            "disguise",
+            "repeat"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "advance",
+            "public",
+            "secret",
+            "exchange"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Furthermore",
+            "Therefore",
+            "Otherwise",
+            "Instead"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "arrives",
+            "stops",
+            "begins",
+            "matters"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "leisure",
+            "reward",
+            "overwork",
+            "freedom"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "foreign",
+            "broken",
+            "cheap",
+            "universal"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "connection",
+            "conflict",
+            "silence",
+            "distance"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "denies",
+            "recognizes",
+            "forgets",
+            "forbids"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "doubting",
+            "forgetting",
+            "insisting",
+            "hiding"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "welcoming",
+            "ignoring",
+            "sharing",
+            "demanding"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)complete 这一转变远未完成。(2)means 工作曾被视为生存的手段。(3)comparatively 相对晚近。(4)pay 如何支付账单。(5)implications 既解放又令人不安的含义。(6)reflect 寻找契合价值观的岗位。(7)places 给工作施加巨大压力(place pressure on搭配)。(8)personal 失望像个人失败。(9)distributed 新理想分布不均。(10)nonetheless 仍被告知去找激情。(11)disguise 满足感修辞掩盖恶劣条件。(12)in exchange for 以换取(固定搭配)。(13)Furthermore 递进。(14)stops 想继续工作的诱惑从不停止。(15)overwork 一种安静的过劳。(16)universal 没有单一普适定义。(17)connection 与同事的联结。(18)recognizes 成熟观点承认工作可成意义来源。(19)insisting 而不坚持它必须如此。(20)demanding 而非要求一份工作提供一切。"
+    },
+    {
+      "passage": "The rise of remote collaboration has changed not only where people work but how they (1)____ together. For decades the office was treated as the natural (2)____ of teamwork, a place whose hallways generated the chance encounters that fuel new ideas. When teams scattered to their homes, many predicted that this informal exchange would (3)____ and that creativity would suffer. The reality has proved more (4)____. Some kinds of work flourished at a distance. Tasks requiring deep concentration benefited from the absence of constant (5)____, and workers reclaimed hours once lost to commuting. (6)____, the spontaneous conversations that spark unexpected connections turned out to be genuinely hard to (7)____ over video. A scheduled call is efficient, but it rarely (8)____ the unplanned moment when two people discover a shared problem by accident. Researchers studying communication patterns found that remote teams tend to become more (9)____, talking mostly within their existing groups rather than (10)____ out to others. This narrowing can make a team faster at familiar tasks while slowly (11)____ the cross-pollination that drives innovation. The lesson is not that remote work is good or bad but that it has a distinct (12)____. Organizations that simply moved their old habits online often felt that something was (13)____ without quite naming it. Those that thrived tended to redesign their practices (14)____, building in deliberate occasions for the loose, low-stakes contact that an office once supplied for free. This suggests that collaboration is not a single thing but a (15)____ of activities, each with its own ideal setting. Focused individual work may be best done alone; complex coordination may (16)____ the bandwidth of a shared room. The future of work is therefore unlikely to be purely remote or purely (17)____, but a thoughtful mixture that (18)____ each mode to the task at hand. Getting that mixture right is harder than choosing one extreme, because it requires leaders to understand what is actually (19)____ when people are together, rather than assuming that presence is valuable in (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "think",
+            "fall",
+            "travel",
+            "live"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "enemy",
+            "home",
+            "secret",
+            "holiday"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "multiply",
+            "strengthen",
+            "evaporate",
+            "return"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "simple",
+            "foreign",
+            "cheap",
+            "mixed"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "interruption",
+            "applause",
+            "reward",
+            "silence"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Yet",
+            "Thus",
+            "Hence"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbid",
+            "celebrate",
+            "reproduce",
+            "punish"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbids",
+            "forgets",
+            "wastes",
+            "generates"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "siloed",
+            "inclusive",
+            "generous",
+            "curious"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hiding",
+            "reaching",
+            "falling",
+            "giving"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "strengthening",
+            "celebrating",
+            "weakening",
+            "repeating"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "accident",
+            "holiday",
+            "rumor",
+            "profile"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "missing",
+            "growing",
+            "shining",
+            "winning"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "accidentally",
+            "deliberately",
+            "secretly",
+            "reluctantly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "mystery",
+            "secret",
+            "portfolio",
+            "weapon"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reward",
+            "forget",
+            "waste",
+            "demand"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "in-person",
+            "digital",
+            "foreign",
+            "expensive"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbids",
+            "matches",
+            "forgets",
+            "hides"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "wasted",
+            "forbidden",
+            "gained",
+            "hidden"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "secret",
+            "vain",
+            "public",
+            "itself"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)think 改变人们如何一起思考/协作。(2)home 办公室曾是团队协作的天然居所。(3)evaporate 非正式交流会蒸发消失。(4)mixed 现实更为复杂混合。(5)interruption 没有持续打扰。(6)Yet 转折：自发对话难复制。(7)reproduce 难以在视频中复制。(8)generates 很少产生意外时刻。(9)siloed 远程团队趋于孤岛化。(10)reaching out 向他人伸出(reach out搭配)。(11)weakening 慢慢削弱跨界融合。(12)profile 有独特的特征档案。(13)missing 感到缺了点什么。(14)deliberately 刻意重新设计。(15)portfolio 协作是一组活动的组合。(16)demand 复杂协调需要共享空间。(17)in-person 既非纯远程也非纯线下。(18)matches 把每种模式匹配到任务。(19)gained 在一起时真正获得了什么。(20)in itself 本身(in itself搭配)。"
+    },
+    {
+      "passage": "In an age that prizes specialization, the value of the generalist is easy to (1)____. We are taught that the path to success runs through ever-narrower expertise, and that the person who knows a little about many things will be (2)____ by the one who knows everything about a single field. There is real truth in this. Deep knowledge solves deep problems, and no patient wants a surgeon who (3)____ dabbles. Yet the picture is incomplete. The hardest challenges we face rarely (4)____ neatly within the borders of one discipline. A climate scientist who cannot communicate, or an engineer blind to ethics, may produce technically (5)____ work that fails in the world. This is where the generalist (6)____. Having grazed across many fields, the generalist is positioned to spot the (7)____ that specialists, each absorbed in their own domain, tend to miss. The generalist's strength is not depth but (8)____: the ability to translate between communities that would otherwise talk past one another. Research on creative breakthroughs lends (9)____ to this view. Many innovations arise not from drilling deeper into a single area but from (10)____ ideas borrowed from distant fields. The person who has read widely is more likely to notice that a solution from biology might (11)____ a problem in computing. Such cross-fertilization (12)____ a mind stocked with diverse material. None of this means that specialists are (13)____; the world plainly needs them. The argument is rather that a healthy system needs (14)____ kinds of minds and a way for them to work together. Organizations that hire only specialists may become brilliant at narrow tasks while losing the capacity to (15)____ how those tasks fit together. The danger of pure specialization is a kind of collective (16)____: many experts, each certain within a small frame, with no one able to see the whole. The generalist supplies the connective tissue, the (17)____ that lets specialized knowledge cohere into something useful. In a complex world, that role is not a (18)____ of seriousness but a serious role itself, and the failure to (19)____ it has costs that become (20)____ only when systems break down.",
+      "blanks": [
+        {
+          "options": [
+            "overlook",
+            "celebrate",
+            "measure",
+            "repeat"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rewarded",
+            "outpaced",
+            "praised",
+            "joined"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "expertly",
+            "rarely",
+            "merely",
+            "secretly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "celebrate",
+            "forget",
+            "hide",
+            "fall"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "impressive",
+            "worthless",
+            "cheap",
+            "foreign"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "disappears",
+            "excels",
+            "fails",
+            "hesitates"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rewards",
+            "borders",
+            "connections",
+            "silences"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "depth",
+            "speed",
+            "silence",
+            "breadth"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "support",
+            "doubt",
+            "harm",
+            "delay"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbidding",
+            "combining",
+            "hiding",
+            "destroying"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "illuminate",
+            "worsen"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbids",
+            "forgets",
+            "destroys",
+            "requires"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "expendable",
+            "necessary",
+            "foreign",
+            "cheap"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "identical",
+            "both",
+            "fewer",
+            "no"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forget",
+            "destroy",
+            "see",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "applause",
+            "holiday",
+            "reward",
+            "blindness"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "glue",
+            "enemy",
+            "weapon",
+            "border"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reward",
+            "lack",
+            "holiday",
+            "secret"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "value",
+            "waste"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "invisible",
+            "foreign",
+            "cheap",
+            "visible"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)overlook 通才价值易被忽视。(2)outpaced 被专才超越。(3)merely 没人想要仅仅浅尝的外科医生。(4)fall 难题很少恰好落在单一学科内(fall within搭配)。(5)impressive 技术上出色却在现实失败。(6)excels 这正是通才出彩之处。(7)connections 发现专才错过的联系。(8)breadth 通才的优势是广度而非深度。(9)support 研究为此观点提供支持(lend support搭配)。(10)combining 来自结合远域的想法。(11)illuminate 生物学方案可照亮计算难题。(12)requires 需要储备多元素材的头脑。(13)expendable 这不意味专才可有可无。(14)both 需要两种头脑。(15)see 失去看清如何拼合的能力。(16)blindness 集体性的盲点。(17)glue 通才提供黏合的胶。(18)lack 不是缺乏严肃性。(19)value 未能重视它。(20)visible 系统崩裂时才变得可见。"
+    },
+    {
+      "passage": "Optimization is one of the great triumphs of modern management, and also one of its (1)____ traps. To optimize is to make a system as efficient as possible at producing a chosen (2)____, squeezing out waste until every resource serves the goal. Done well, this is enormously powerful. (3)____, the very ruthlessness that makes optimization effective can become dangerous when the world (4)____. A supply chain tuned to the last cent, holding no spare inventory, runs beautifully until a single port closes and the whole network (5)____. The savings that looked like wisdom in calm times reveal themselves as fragility in a (6)____. The deeper issue is that optimization requires us to (7)____ in advance what matters, and then to sacrifice everything that does not serve it. This works only if our chosen measure truly (8)____ what we care about. But measures are crude, and what we can count is seldom the whole of what we (9)____. A school optimized for test scores may quietly (10)____ curiosity; a hospital optimized for throughput may erode the unhurried attention that healing sometimes (11)____. In each case the system grows efficient at the (12)____ target while neglecting the unmeasured goods that gave the target its point. There is also the problem of (13)____. A perfectly optimized system has no slack, and slack is precisely what allows a system to (14)____ shocks. The redundancy that looks wasteful is often the very thing that lets us recover when conditions (15)____ from the assumptions built into the design. Wise designers therefore (16)____ a degree of inefficiency on purpose, treating spare capacity not as waste but as (17)____ against an uncertain future. The lesson is not to abandon optimization but to (18)____ its limits. Before tuning a system to its theoretical peak, we should ask what the chosen metric leaves out and how badly things could go if our assumptions (19)____. Efficiency is a virtue, but pursued without (20)____, it becomes a quiet form of recklessness.",
+      "blanks": [
+        {
+          "options": [
+            "subtlest",
+            "safest",
+            "loudest",
+            "cheapest"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "accident",
+            "output",
+            "holiday",
+            "rumor"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Thus",
+            "Yet",
+            "Hence"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "sleeps",
+            "celebrates",
+            "repeats",
+            "shifts"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "stalls",
+            "thrives",
+            "expands",
+            "rests"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "holiday",
+            "crisis",
+            "reward",
+            "routine"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forget",
+            "celebrate",
+            "decide",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbids",
+            "forgets",
+            "wastes",
+            "captures"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "value",
+            "destroy",
+            "forget",
+            "hide"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reward",
+            "starve",
+            "celebrate",
+            "repeat"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbids",
+            "forgets",
+            "requires",
+            "wastes"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "foreign",
+            "secret",
+            "cheap",
+            "measured"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "resilience",
+            "abundance",
+            "applause",
+            "comfort"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbid",
+            "absorb",
+            "forget",
+            "celebrate"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "agree",
+            "benefit",
+            "depart",
+            "rest"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "waste",
+            "tolerate"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "insurance",
+            "punishment",
+            "holiday",
+            "rumor"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forget",
+            "respect",
+            "celebrate",
+            "hide"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "multiply",
+            "rest",
+            "fail",
+            "repeat"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reward",
+            "holiday",
+            "noise",
+            "judgment"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)subtlest 最微妙的陷阱。(2)output 在产出某一选定目标上高效。(3)Yet 转折。(4)shifts 当世界变动。(5)stalls 整个网络停摆。(6)crisis 危机中暴露脆弱。(7)decide 须事先决定何为重要。(8)captures 度量须真正捕获我们在乎之物。(9)value 我们所重视的。(10)starve 应试优化会饿死好奇心。(11)requires 治愈所需的从容关注(requires搭配)。(12)measured 在被度量的目标上高效。(13)resilience 韧性问题。(14)absorb 余量让系统吸收冲击。(15)depart 当条件偏离设计假设(depart from)。(16)tolerate 故意容忍一定低效。(17)insurance 把余量视为对未来的保险。(18)respect 尊重其局限。(19)fail 假设失效时。(20)judgment 没有判断力地追求即鲁莽。"
+    },
+    {
+      "passage": "The governance of data has become a defining political question, yet it remains poorly (1)____. Data is unlike the resources our laws were built to handle. It can be copied endlessly at almost no cost, used by many people at once, and (2)____ value precisely when it is combined with other data. A single record about one person seems (3)____; millions of such records, linked together, can reveal patterns that no individual ever (4)____ to share. This peculiar nature makes ownership a clumsy (5)____. To say that you own your data, as you might own a chair, captures little of how data actually behaves once it (6)____ into the wider economy. Much of the value, after all, arises not from any single contribution but from the (7)____ of many, which no individual can claim alone. For this reason, some argue that governing data well requires moving (8)____ the language of individual ownership toward a notion of collective stewardship. Under such a view, the key question is not who (9)____ a dataset but who is permitted to use it, for what purposes, and under what (10)____. This reframing matters because the harms of misused data are often (11)____ rather than individual. A leaked record may hurt one person, but a discriminatory model trained on aggregated data can quietly (12)____ an entire group. Protecting only the individual therefore (13)____ the larger danger. (14)____, treating data as a purely public resource ignores the genuine interest people have in controlling information about themselves. Good governance must (15)____ these competing claims, granting individuals meaningful say over their own records while recognizing that the social value and social risk of data (16)____ any single person. Achieving this balance is difficult, partly because the technology evolves faster than the law and partly because the firms that hold the most data have little (17)____ to surrender their advantage. What seems certain is that leaving these decisions entirely to the market will (18)____ outcomes that serve the powerful. The alternative is not to (19)____ data but to govern it with rules that reflect its strange, shared nature, treating it as the (20)____ infrastructure it has quietly become.",
+      "blanks": [
+        {
+          "options": [
+            "understood",
+            "celebrated",
+            "repeated",
+            "hidden"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "loses",
+            "gains",
+            "forbids",
+            "wastes"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "dangerous",
+            "expensive",
+            "harmless",
+            "foreign"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbade",
+            "celebrated",
+            "forgot",
+            "agreed"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "metaphor",
+            "reward",
+            "holiday",
+            "noise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "sleeps",
+            "flows",
+            "celebrates",
+            "rests"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "absence",
+            "silence",
+            "combination",
+            "holiday"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "toward",
+            "into",
+            "under",
+            "beyond"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "owns",
+            "forbids",
+            "forgets",
+            "wastes"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rewards",
+            "conditions",
+            "holidays",
+            "rumors"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "foreign",
+            "cheap",
+            "collective",
+            "secret"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reward",
+            "celebrate",
+            "repeat",
+            "harm"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "misses",
+            "solves",
+            "celebrates",
+            "repeats"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Conversely",
+            "Thus",
+            "Hence"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "balance",
+            "waste"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "celebrate",
+            "exceed"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "incentive",
+            "reward",
+            "holiday",
+            "rumor"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbid",
+            "reproduce",
+            "forget",
+            "celebrate"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "celebrate",
+            "repeat",
+            "abolish",
+            "share"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "foreign",
+            "cheap",
+            "broken",
+            "shared"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)understood 仍被理解得很差。(2)gains 与其他数据结合时获得价值。(3)harmless 单条记录看似无害。(4)agreed 没人同意分享的模式。(5)metaphor 所有权是笨拙的比喻。(6)flows 数据流入更广经济后。(7)combination 价值来自众多数据的组合。(8)beyond 超越个人所有权的语言(move beyond)。(9)owns 关键不在谁拥有。(10)conditions 在何种条件下。(11)collective 危害常是集体性的。(12)harm 可伤害整个群体。(13)misses 只保护个人会错失更大危险。(14)Conversely 反过来。(15)balance 平衡这些竞争性主张。(16)exceed 数据的社会价值超越任何个人。(17)incentive 持有数据的公司没有动机放弃优势。(18)reproduce 完全交给市场会复制有利于强者的结果。(19)abolish 替代方案不是废除数据。(20)shared 视其为已然成为的共享基础设施。"
+    },
+    {
+      "passage": "The future of cities will be shaped less by spectacular technology than by mundane choices about how people (1)____ space. For a century, many cities were built around the automobile, and the consequences are now (2)____ everywhere: sprawling distances, polluted air, and streets that (3)____ movement but discourage lingering. A growing number of planners argue that this model has reached its (4)____. The car promised freedom, yet a city designed entirely for driving can leave those without cars (5)____, and even drivers spend their lives in traffic the design itself (6)____. The emerging alternative is sometimes called the proximate city, in which the things people need daily are within a short (7)____ of where they live. The appeal is not merely environmental. When a neighborhood mixes homes, shops, and workplaces, the street fills with people at different hours, and that steady presence tends to make it both livelier and (8)____. Density, long treated as a problem to be (9)____, turns out to be an asset when it is paired with good design. Of course, density without (10)____ amenities simply produces crowding, and the difference between a vibrant district and an oppressive one lies in countless small decisions about light, green space, and the (11)____ of the street. There is also the hard question of who benefits. As neighborhoods become more desirable, they often become more expensive, and the very residents who (12)____ a place its character may be (13)____ out. A successful proximate city must therefore (14)____ affordability deliberately rather than (15)____ it will take care of itself. None of this requires waiting for some futuristic invention. The tools are largely (16)____: zoning that permits mixed uses, investment in walking and transit, and a willingness to (17)____ space away from cars. What is harder to summon is the political will, because every change (18)____ entrenched interests and familiar habits. The deepest lesson may be that a city is not a machine to be (19)____ but a living arrangement that reflects, in its streets, what its inhabitants have decided to (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "share",
+            "forbid",
+            "forget",
+            "waste"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hidden",
+            "visible",
+            "foreign",
+            "cheap"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "enable",
+            "celebrate"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "beginning",
+            "holiday",
+            "reward",
+            "limits"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "stranded",
+            "rewarded",
+            "celebrated",
+            "amused"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbids",
+            "creates",
+            "forgets",
+            "celebrates"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "flight",
+            "holiday",
+            "walk",
+            "rumor"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "emptier",
+            "cheaper",
+            "quieter",
+            "safer"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "avoided",
+            "rewarded",
+            "celebrated",
+            "repeated"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbidden",
+            "supporting",
+            "foreign",
+            "broken"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "enemy",
+            "border",
+            "character",
+            "weapon"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "waste",
+            "give"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "priced",
+            "rewarded",
+            "celebrated",
+            "repeated"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbid",
+            "protect",
+            "forget",
+            "waste"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbidding",
+            "celebrating",
+            "assuming",
+            "repeating"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "foreign",
+            "broken",
+            "secret",
+            "familiar"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "reclaim",
+            "forbid",
+            "forget",
+            "celebrate"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rewards",
+            "threatens",
+            "celebrates",
+            "repeats"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forbidden",
+            "celebrated",
+            "optimized",
+            "repeated"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbid",
+            "forget",
+            "waste",
+            "value"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)share 关于人们如何共享空间的选择。(2)visible 后果如今随处可见。(3)enable 街道使移动成为可能却不鼓励停留。(4)limits 该模式已达其极限。(5)stranded 没车者被困。(6)creates 设计本身制造的交通拥堵。(7)walk 步行短距离之内(short walk)。(8)safer 更有活力也更安全。(9)avoided 密度长被当作要避免的问题。(10)supporting 缺乏配套设施的密度只是拥挤。(11)character 街道的特性。(12)give 赋予一地其特色的居民(give a place character)。(13)priced 可能被价格挤出(priced out)。(14)protect 须刻意保护可负担性。(15)assuming 而非假设它会自行解决。(16)familiar 工具大多是熟悉的。(17)reclaim 把空间从汽车手中夺回。(18)threatens 每项改变都威胁既得利益。(19)optimized 城市不是被优化的机器。(20)value 反映居民决定珍视什么。"
+    }
+  ]
+}

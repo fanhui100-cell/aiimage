@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-24T21:30:00.746Z",
+  "apply": true,
+  "stage": "r13-kaoyan-cloze-passage",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 40,
+    "reject": 0,
+    "wrote": 40,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-cloze-passage\\batchA.json",
+      "template": "kaoyan-cloze-passage",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-cloze-passage\\batchB.json",
+      "template": "kaoyan-cloze-passage",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-cloze-passage\\batchC.json",
+      "template": "kaoyan-cloze-passage",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-kaoyan-cloze-passage\\batchE.json",
+      "template": "kaoyan-cloze-passage",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    }
+  ]
+}

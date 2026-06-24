@@ -1,0 +1,1146 @@
+{
+  "template": "zhongkao-cloze-passage",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Last summer I joined a group to help at an old people's home. It was my (1)____ day as a volunteer, and I felt a little nervous. I did not know what to (2)____. When I walked in, an old man named Mr. Lee gave me a big (3)____. He said, \"Welcome! We are so happy to see (4)____ people here.\" That made me feel better at once. My first job was to (5)____ the flowers in the garden. The water can was heavy, but I did not give up. After that, I (6)____ tea to everyone and listened to their old stories. Mr. Lee told me about his life when he was a (7)____ boy. His stories were so (8)____ that I forgot the time. Before I left, he held my hand and said \"thank you\" with a warm (9)____. At that moment, I felt really (10)____ to be there. I learned that helping others can also make (11)____ happy. I have already decided to go (12)____ next weekend.",
+      "blanks": [
+        {
+          "options": [
+            "first",
+            "last",
+            "only",
+            "free"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "buy",
+            "expect",
+            "eat",
+            "sell"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "box",
+            "letter",
+            "smile",
+            "key"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "old",
+            "lazy",
+            "busy",
+            "young"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "water",
+            "cut",
+            "buy",
+            "count"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "broke",
+            "served",
+            "lost",
+            "threw"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rich",
+            "famous",
+            "little",
+            "tall"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "boring",
+            "short",
+            "loud",
+            "interesting"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "smile",
+            "meal",
+            "phone",
+            "song"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "angry",
+            "glad",
+            "sad",
+            "tired"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "nobody",
+            "trees",
+            "myself",
+            "money"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "away",
+            "home",
+            "down",
+            "back"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)第一天当志愿者，用first。(2)不知道会发生什么，expect表示期待/预料。(3)给了一个大大的微笑smile，下文welcome呼应。(4)老人欢迎年轻人young。(5)给花园浇水water，下文水壶很重呼应。(6)给大家端茶served。(7)讲他小时候做小男孩little的经历。(8)故事很有趣interesting，所以忘了时间。(9)用温暖的微笑smile说谢谢。(10)那一刻感到很高兴glad在那里。(11)帮助别人也让自己myself开心。(12)已决定下周末再去back。"
+    },
+    {
+      "passage": "Last week I did something I will never forget. I was playing football with my friends near our school. I kicked the ball too (1)____, and it flew toward a house. Then I heard a loud sound. The ball had broken a (2)____! My friends ran away at once, but I (3)____ there. I knew it was my (4)____. An old woman came out and looked at the broken glass. I was very (5)____ and my face turned red. I walked to her and said, \"I am so sorry. I broke your window. I will (6)____ for it.\" The woman looked at me for a moment. Then she (7)____ kindly. \"Thank you for telling the (8)____,\" she said. \"Many children would just run away.\" She did not ask me for any (9)____. Instead, she invited me in for a glass of juice. I felt (10)____ because I had been honest. That day I learned an important (11)____: it is always better to be brave and tell the truth. Now I always try to be (12)____ with everyone.",
+      "blanks": [
+        {
+          "options": [
+            "hard",
+            "soft",
+            "slow",
+            "low"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "door",
+            "window",
+            "table",
+            "wall"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "jumped",
+            "slept",
+            "stayed",
+            "sang"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "job",
+            "turn",
+            "dream",
+            "fault"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "afraid",
+            "happy",
+            "proud",
+            "lucky"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "wait",
+            "pay",
+            "look",
+            "ask"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "cried",
+            "shouted",
+            "smiled",
+            "left"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "story",
+            "name",
+            "time",
+            "truth"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "money",
+            "food",
+            "help",
+            "book"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "sorry",
+            "relaxed",
+            "angry",
+            "bored"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "game",
+            "rule",
+            "lesson",
+            "song"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "quiet",
+            "famous",
+            "rich",
+            "honest"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)踢得太用力hard，所以球飞出去。(2)打破了一扇窗户window，呼应broken glass。(3)我留在那里stayed，朋友们跑了。(4)知道是我的错fault。(5)非常害怕afraid，脸都红了。(6)我会赔偿pay for it。(7)老人友善地微笑smiled。(8)谢谢你说出真相truth。(9)没有要任何钱money。(10)因为诚实而感到轻松relaxed。(11)学到重要的一课lesson。(12)对每个人都诚实honest。"
+    },
+    {
+      "passage": "Three months ago, my English teacher gave each of us a pen pal from England. My pen pal's (1)____ is Tom. We write letters to each other every (2)____. In his first letter, Tom told me about his school and his (3)____. He has a big dog and two cats. I told him about my (4)____ in China. I wrote about our food, our festivals, and my favorite (5)____, basketball. Writing letters helps me (6)____ my English a lot. At first, I made many (7)____, but Tom never laughed at me. He just helped me write (8)____ sentences. Sometimes we send each other small (9)____, like postcards or stickers. Last month, Tom sent me a photo of London. It looked so (10)____! In the photo, I could see a big river and many old buildings. I hope I can visit him there one (11)____ and walk around the city together. Having a pen pal from far away is a wonderful and easy way to learn about other cultures and to make a new (12)____ from another country.",
+      "blanks": [
+        {
+          "options": [
+            "name",
+            "age",
+            "color",
+            "size"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hour",
+            "month",
+            "minute",
+            "second"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "car",
+            "money",
+            "pets",
+            "homework"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "doctor",
+            "river",
+            "shoe",
+            "life"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "sport",
+            "food",
+            "color",
+            "season"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "sell",
+            "improve",
+            "forget",
+            "stop"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "friends",
+            "plans",
+            "mistakes",
+            "cakes"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "wrong",
+            "longer",
+            "louder",
+            "better"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "gifts",
+            "animals",
+            "buses",
+            "trees"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "dirty",
+            "beautiful",
+            "boring",
+            "sad"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "color",
+            "name",
+            "day",
+            "test"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "car",
+            "house",
+            "rule",
+            "friend"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)笔友的名字name是Tom。(2)每个月month写一次信。(3)讲他的宠物pets，下文有狗和猫。(4)告诉他我在中国的生活life。(5)我最喜欢的运动sport篮球。(6)写信帮助我提高improve英语。(7)起初犯很多错误mistakes，下文从不笑话我。(8)帮我写更好better的句子。(9)互相寄小礼物gifts，如明信片贴纸。(10)伦敦看起来很美beautiful。(11)希望有一天day去看他。(12)交一个来自别国的新朋友friend。"
+    },
+    {
+      "passage": "I always wanted to play the guitar, so on my birthday my parents bought me one. I was very (1)____ and could not wait to start. But playing the guitar was much (2)____ than I thought. On the first day, my fingers (3)____ a lot. The sounds I made were not music at all! I almost wanted to give (4)____. My father saw me and said, \"Don't worry. Everything is hard at the (5)____.\" So I decided to keep (6)____. Every day after school, I practiced for half an (7)____. Slowly, my fingers became stronger, and the sounds got (8)____. After two months, I could play a simple (9)____. My family clapped their hands when they heard it. I felt so (10)____ of myself. Now I understand that if you want to do something well, you must be (11)____ and never stop trying. These days I often play the guitar for my family after dinner, and they love to listen to me. On weekends, I even practice new songs with two of my classmates, and we plan to play together at our school show. The guitar has become my favorite (12)____, and music makes my life much happier.",
+      "blanks": [
+        {
+          "options": [
+            "excited",
+            "sad",
+            "tired",
+            "afraid"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "easier",
+            "harder",
+            "shorter",
+            "cheaper"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "grew",
+            "sang",
+            "hurt",
+            "flew"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "in",
+            "out",
+            "off",
+            "up"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "beginning",
+            "end",
+            "top",
+            "side"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "crying",
+            "trying",
+            "sleeping",
+            "running"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "year",
+            "week",
+            "hour",
+            "month"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "worse",
+            "louder",
+            "softer",
+            "better"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "song",
+            "letter",
+            "game",
+            "story"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "angry",
+            "proud",
+            "bored",
+            "sorry"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "lazy",
+            "quiet",
+            "patient",
+            "famous"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "food",
+            "color",
+            "rule",
+            "hobby"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)非常兴奋excited，等不及要开始。(2)比想象的难得多harder。(3)第一天手指很疼hurt。(4)几乎想放弃give up。(5)万事开头beginning难。(6)决定继续尝试trying。(7)每天练习半小时hour。(8)声音变得更好better。(9)能弹一首简单的歌song。(10)为自己感到骄傲proud。(11)必须有耐心patient，永不放弃。(12)吉他成了我最喜欢的爱好hobby。"
+    },
+    {
+      "passage": "On Saturday morning, our class went to the beach for a clean-up. The weather was sunny and (1)____. When we arrived, we were surprised to see so much (2)____ on the sand. There were plastic bottles, paper bags, and old shoes everywhere. Our teacher gave each of us a pair of (3)____ and a big bag. \"Let's make this beach (4)____ again,\" she said. We worked in small (5)____. My friends and I picked up bottles and put them in the bag. The sun was hot, and soon we all felt (6)____. But nobody wanted to (7)____. After three hours, the beach looked clean and (8)____. We had filled more than twenty (9)____ with rubbish. I felt very (10)____ of what we did. Our teacher told us that rubbish in the sea can (11)____ many fish and birds. On our way back to school, we talked about why people leave so much rubbish on the beach. We all agreed that everyone should learn to care about nature and keep public places clean. I also told my parents about our work, and they were very happy to hear about it. From that day on, I always put my rubbish in the (12)____ bin. We should all protect our beautiful earth.",
+      "blanks": [
+        {
+          "options": [
+            "warm",
+            "cold",
+            "wet",
+            "dark"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "water",
+            "rubbish",
+            "sand",
+            "food"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "shoes",
+            "glasses",
+            "gloves",
+            "books"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "dirty",
+            "small",
+            "dark",
+            "clean"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "groups",
+            "cars",
+            "rooms",
+            "boxes"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "happy",
+            "tired",
+            "cold",
+            "hungry"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "eat",
+            "sleep",
+            "stop",
+            "swim"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "dirty",
+            "ugly",
+            "empty",
+            "beautiful"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "bags",
+            "cups",
+            "cars",
+            "rooms"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "afraid",
+            "proud",
+            "sorry",
+            "angry"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "help",
+            "feed",
+            "harm",
+            "wash"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "food",
+            "water",
+            "sand",
+            "rubbish"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)天气晴朗温暖warm。(2)沙滩上有很多垃圾rubbish，下文有瓶子袋子鞋子。(3)给每人一副手套gloves。(4)让沙滩重新变干净clean。(5)分成小组groups工作。(6)太阳很热，很快都感到累tired。(7)没人想停下stop。(8)沙滩看起来又干净又美beautiful。(9)装满了二十多个袋子bags。(10)为我们做的事感到骄傲proud。(11)海里的垃圾会伤害harm鱼和鸟。(12)总把垃圾扔进垃圾rubbish桶。"
+    },
+    {
+      "passage": "My little brother Sam is eight years old. Last term, he had trouble with his (1)____, especially with numbers. He often felt (2)____ when he could not finish his maths homework. One evening, he came to me with tears in his (3)____. \"I can't do it,\" he said. So I decided to (4)____ him every day. After dinner, we sat at the table together. I taught him in a (5)____ way, using apples and oranges to show how numbers (6)____. We practiced for about twenty minutes each night, and I always tried to make the lessons fun and easy to follow. I never got angry, even when he made (7)____. Slowly, Sam began to (8)____ maths better. He stopped being afraid of it. At the end of the term, he got a much (9)____ score on his test. He ran home and gave me a big (10)____. \"Thank you for your help!\" he shouted. I felt very (11)____ to be a good big brother. Helping Sam taught me that (12)____ and kindness can solve many problems.",
+      "blanks": [
+        {
+          "options": [
+            "study",
+            "food",
+            "friends",
+            "sleep"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "happy",
+            "sad",
+            "proud",
+            "lucky"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hands",
+            "ears",
+            "eyes",
+            "shoes"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "leave",
+            "watch",
+            "stop",
+            "help"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "simple",
+            "loud",
+            "fast",
+            "strange"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "fly",
+            "work",
+            "sing",
+            "sleep"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "friends",
+            "cakes",
+            "mistakes",
+            "noises"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forget",
+            "hate",
+            "lose",
+            "understand"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "higher",
+            "worse",
+            "lower",
+            "smaller"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "book",
+            "hug",
+            "apple",
+            "box"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "sorry",
+            "angry",
+            "happy",
+            "tired"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "money",
+            "luck",
+            "speed",
+            "patience"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)学习study有困难，尤其是数字。(2)做不完作业时感到难过sad。(3)眼里eyes含着泪。(4)决定每天帮助help他。(5)用简单simple的方法教。(6)用苹果橘子展示数字怎么运作work/相加。(7)即使他犯错mistakes我也不生气。(8)Sam开始更好地理解understand数学。(9)考试得到高得多higher的分数。(10)给我一个大大的拥抱hug。(11)做个好哥哥感到很开心happy。(12)耐心patience和善意能解决许多问题。"
+    },
+    {
+      "passage": "Last Friday was Mr. Wang's last day at our school. He was moving to another (1)____. All of us were going to miss him very much, so we wanted to give him a surprise. We (2)____ a party in secret and asked everyone to keep it quiet. After lunch, some students kept Mr. Wang (3)____ in the office with questions while the rest of us quickly decorated the classroom. We hung colorful (4)____ on the walls and put a big chocolate cake on the front desk. When everything was (5)____, we asked Mr. Wang to come back. As soon as he opened the (6)____, we all shouted, \"Surprise!\" Mr. Wang was so (7)____ that he could not say a word for a moment. Then a big (8)____ appeared on his face. We sang songs together and gave him a card that everyone in our class had (9)____. We also shared the big cake and talked about all the happy days we had spent with him. Mr. Wang told us he would never (10)____ this special day. Some students even had tears in their eyes. We were sad to say (11)____ to such a kind and patient teacher. But we were also (12)____ that we had given him such a warm and wonderful memory to take to his new school.",
+      "blanks": [
+        {
+          "options": [
+            "city",
+            "book",
+            "shoe",
+            "song"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "bought",
+            "planned",
+            "ate",
+            "sold"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "asleep",
+            "angry",
+            "busy",
+            "hungry"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "shoes",
+            "cars",
+            "books",
+            "balloons"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "ready",
+            "broken",
+            "empty",
+            "dirty"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "window",
+            "door",
+            "box",
+            "letter"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "bored",
+            "tired",
+            "surprised",
+            "sleepy"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "noise",
+            "hole",
+            "stone",
+            "smile"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "signed",
+            "eaten",
+            "thrown",
+            "lost"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "enjoy",
+            "forget",
+            "watch",
+            "read"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hello",
+            "yes",
+            "goodbye",
+            "sorry"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "sad",
+            "angry",
+            "afraid",
+            "happy"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)他要搬到另一座城市city。(2)我们秘密策划planned一个聚会。(3)一些学生让王老师在办公室忙碌busy/拖住他。(4)墙上挂彩色气球balloons。(5)当一切准备好ready时。(6)他一打开门door。(7)他太惊讶surprised了，一时说不出话。(8)脸上露出大大的微笑smile。(9)给他一张大家都签名signed的卡片。(10)他永远不会忘记forget这特别的一天。(11)难过地向好老师说再见goodbye。(12)也很开心happy给了他美好回忆。"
+    },
+    {
+      "passage": "Last Sunday, my dad took me on a hiking trip in the mountains. We got up (1)____ in the morning and put on our walking shoes. The air was fresh and (2)____. At first, the path was easy, and we walked quickly. But soon the path became (3)____, and I started to feel tired. \"Dad, I can't walk any more,\" I said. My dad smiled and said, \"Take a short (4)____, and you will feel better.\" After a few minutes, I stood up and (5)____ walking. We saw many beautiful (6)____ along the way, such as tall trees and small flowers. We even heard birds (7)____ in the forest. When we finally reached the (8)____ of the mountain, I was so (9)____! I could see the whole town below us. My dad took a (10)____ of me to remember this happy moment. We sat down on a big rock, ate our sandwiches, and rested for a while in the fresh air. I felt very (11)____ because I did not give up halfway. This wonderful trip with my dad taught me that hard work and patience always bring a great (12)____.",
+      "blanks": [
+        {
+          "options": [
+            "early",
+            "late",
+            "slowly",
+            "quietly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "dirty",
+            "cool",
+            "hot",
+            "loud"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "wider",
+            "flatter",
+            "steeper",
+            "shorter"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "meal",
+            "look",
+            "walk",
+            "rest"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "continued",
+            "stopped",
+            "hated",
+            "forgot"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "cars",
+            "things",
+            "buildings",
+            "shops"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "crying",
+            "sleeping",
+            "singing",
+            "eating"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "bottom",
+            "side",
+            "foot",
+            "top"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "happy",
+            "sad",
+            "afraid",
+            "bored"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "letter",
+            "photo",
+            "box",
+            "key"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "sorry",
+            "tired",
+            "proud",
+            "angry"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "problem",
+            "danger",
+            "rule",
+            "reward"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)早上很早early起床。(2)空气清新凉爽cool。(3)很快路变得更陡steeper，所以累了。(4)休息rest一会儿就会好些。(5)几分钟后继续continued走。(6)沿途看到许多美丽的东西things，如树和花。(7)听到鸟在森林里唱歌singing。(8)终于到达山顶top。(9)非常开心happy，能看到整个小镇。(10)爸爸给我拍了张照片photo。(11)因为没放弃感到很骄傲proud。(12)努力总能带来好的回报reward。"
+    },
+    {
+      "passage": "This term, our class started a recycling (1)____ to protect the environment. Our teacher told us that we throw away too much (2)____ every day. So we decided to (3)____ paper, bottles, and cans instead of throwing them away. We put three big (4)____ in the corner of our classroom. Each box was for a different kind of (5)____. At first, some students forgot which box to use, but soon everyone (6)____ the rules. Every Friday, we (7)____ the boxes and took the things to a recycling center. The center gave us a little (8)____ for them. We used this money to buy young trees and (9)____ them in our school garden. After one month, our classroom was much (10)____ than before, and the young trees in the garden began to grow well. Other classes saw what we did and soon wanted to (11)____ us too. Now the whole school takes part in this activity every week. I am very (12)____ that even small actions can help save resources and make our world a cleaner and better place for everyone.",
+      "blanks": [
+        {
+          "options": [
+            "project",
+            "game",
+            "party",
+            "test"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "food",
+            "rubbish",
+            "money",
+            "water"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "buy",
+            "burn",
+            "recycle",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "cars",
+            "desks",
+            "doors",
+            "boxes"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "rubbish",
+            "food",
+            "color",
+            "season"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "broke",
+            "learned",
+            "lost",
+            "forgot"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "ate",
+            "sold",
+            "emptied",
+            "painted"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "book",
+            "gift",
+            "cake",
+            "money"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "planted",
+            "cut",
+            "ate",
+            "burned"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "dirtier",
+            "cleaner",
+            "smaller",
+            "darker"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "stop",
+            "leave",
+            "copy",
+            "hate"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "sorry",
+            "afraid",
+            "angry",
+            "glad"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)班级开始一个回收项目project。(2)每天扔掉太多垃圾rubbish。(3)决定回收recycle纸瓶罐而不是扔掉。(4)放三个大箱子boxes在角落。(5)每个箱子装不同种类的垃圾rubbish。(6)很快大家都学会learned了规则。(7)每周五倒空emptied箱子。(8)回收中心给一点钱money。(9)买树苗并种planted在花园。(10)教室比以前干净cleaner多了。(11)别的班也想效仿copy我们。(12)很高兴glad小行动也能让世界更好。"
+    },
+    {
+      "passage": "It was a very cold winter morning. The wind was strong, and snow covered the (1)____. I was waiting for the bus to go to school. Near the bus stop, I saw an old man standing (2)____. He was selling hot sweet potatoes, but there were no (3)____ around him. He looked very cold and (4)____. His old coat was too (5)____ for such cold weather. I had only a little money in my (6)____, but I decided to buy two sweet potatoes from him. \"Here you are,\" he said with a kind (7)____. The hot potato made my hands feel (8)____. Then I did something more. I took off my warm (9)____ and gave it to him. \"You need it more than I do,\" I said. The old man's eyes became (10)____. He thanked me again and again. I felt so (11)____ on my way to school, even though it was still cold. All the way to school, I kept thinking about the happy look on the old man's face. I told my best friend about it when I arrived, and she said she was proud of me. That day I learned that helping other people can also bring great joy to ourselves. A small (12)____ act can really warm a cold day.",
+      "blanks": [
+        {
+          "options": [
+            "ground",
+            "sky",
+            "wall",
+            "river"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "happily",
+            "alone",
+            "loudly",
+            "quickly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "trees",
+            "cars",
+            "customers",
+            "houses"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "hot",
+            "lazy",
+            "busy",
+            "hungry"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "thin",
+            "thick",
+            "new",
+            "long"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "book",
+            "bag",
+            "shoe",
+            "desk"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "noise",
+            "shout",
+            "smile",
+            "song"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "cold",
+            "wet",
+            "dirty",
+            "warm"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "scarf",
+            "shoes",
+            "hat",
+            "bag"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "dry",
+            "wet",
+            "dark",
+            "small"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "sad",
+            "angry",
+            "warm",
+            "afraid"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "bad",
+            "loud",
+            "fast",
+            "kind"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)雪覆盖了地面ground。(2)老人独自alone站着。(3)周围没有顾客customers。(4)看起来又冷又饿hungry。(5)旧外套对这么冷的天太薄thin。(6)口袋/包bag里只有一点钱。(7)他带着友善的微笑smile说。(8)热土豆让我的手感到暖warm。(9)摘下温暖的围巾scarf给他。(10)老人的眼睛湿润wet了。(11)上学路上感到很温暖warm，尽管还很冷。(12)小小的善kind举能温暖寒冷的一天。"
+    }
+  ]
+}

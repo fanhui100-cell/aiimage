@@ -1,0 +1,186 @@
+{
+  "template": "zhongkao-cloze-passage",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Last Friday our class went to the school library for the first time. We were all very (1)____ because we had never seen so many books before. The library was big and (2)____. There were thousands of books on the shelves. The teacher (3)____ us not to talk loudly inside. She said we should keep the room quiet so that everyone could read in (4)____. First, she showed us how to (5)____ a book on the computer. I typed the name of a book about animals, and the computer told me (6)____ it was. Then I walked to the right shelf and (7)____ it easily. I sat down at a small table and began to (8)____. The story was about a brave little dog. It was so interesting that I forgot the (9)____. When the bell rang, I was surprised. Before we left, the teacher helped us (10)____ a library card. With the card, we could (11)____ books and take them home. I was very happy because now I could read more good books. I think the library will become my favourite (12)____ in our school.",
+      "blanks": [
+        { "options": ["excited", "tired", "angry", "sad"], "answer": "A" },
+        { "options": ["dark", "dirty", "bright", "empty"], "answer": "C" },
+        { "options": ["allowed", "asked", "made", "let"], "answer": "B" },
+        { "options": ["noise", "peace", "trouble", "danger"], "answer": "B" },
+        { "options": ["buy", "write", "find", "draw"], "answer": "C" },
+        { "options": ["when", "why", "who", "where"], "answer": "D" },
+        { "options": ["lost", "broke", "found", "sold"], "answer": "C" },
+        { "options": ["sleep", "read", "run", "eat"], "answer": "B" },
+        { "options": ["money", "time", "name", "way"], "answer": "B" },
+        { "options": ["throw", "lose", "get", "break"], "answer": "C" },
+        { "options": ["borrow", "cook", "wash", "drive"], "answer": "A" },
+        { "options": ["river", "place", "animal", "color"], "answer": "B" }
+      ],
+      "explain_zh": "(1)第一次见到这么多书，应是兴奋excited，非tired/angry/sad。(2)有上千本书且能阅读，图书馆应明亮bright，非dark/dirty/empty。(3)老师'要求'我们不要大声说话用asked sb not to do，最自然。(4)保持安静以便在安静peace中阅读，noise/trouble/danger不合。(5)在电脑上'查找'书用find。(6)电脑告诉我书在'哪里'where。(7)在书架上'找到'了书found。(8)坐下开始'阅读'read。(9)故事太有趣忘了'时间'time。(10)老师帮我们'办/领取'借书证get a card。(11)有了卡可以'借'书borrow。(12)图书馆会成为我最喜欢的'地方'place。"
+    },
+    {
+      "passage": "On Tree Planting Day, our class planted trees on a small hill near the school. It was a sunny (1)____ in spring. The air was fresh and the birds were singing. Our teacher (2)____ us into six groups. Each group got two young trees and some simple (3)____, such as a shovel and a watering can. My friend Tom and I worked (4)____. First, we dug a deep hole in the soft (5)____. Then we carefully put a little tree into it. Tom held the tree (6)____ while I filled the hole with earth. After that, we (7)____ the tree with clean water. \"Trees need water to (8)____ tall and strong,\" the teacher told us. We worked hard, and soon our hands were (9)____. But nobody complained. By noon, we had planted twelve trees on the hill. We were tired but very (10)____. The teacher said the trees would make the air (11)____ and give us shade in summer. I looked at the little trees and made a (12)____ to come back and water them every month. I hope they will grow into a green forest one day.",
+      "blanks": [
+        { "options": ["night", "morning", "winter", "week"], "answer": "B" },
+        { "options": ["divided", "joined", "carried", "sent"], "answer": "A" },
+        { "options": ["books", "tools", "clothes", "toys"], "answer": "B" },
+        { "options": ["alone", "together", "slowly", "again"], "answer": "B" },
+        { "options": ["sky", "road", "wall", "ground"], "answer": "D" },
+        { "options": ["loudly", "straight", "quickly", "sadly"], "answer": "B" },
+        { "options": ["watered", "cut", "climbed", "moved"], "answer": "A" },
+        { "options": ["fall", "grow", "stop", "sleep"], "answer": "B" },
+        { "options": ["clean", "warm", "dirty", "soft"], "answer": "C" },
+        { "options": ["bored", "afraid", "proud", "hungry"], "answer": "C" },
+        { "options": ["worse", "fresher", "darker", "colder"], "answer": "B" },
+        { "options": ["mistake", "noise", "promise", "phone"], "answer": "C" }
+      ],
+      "explain_zh": "(1)春天种树，是阳光明媚的'早晨'morning。(2)老师把我们'分成'六组用divided into。(3)铲子和水壶是'工具'tools。(4)Tom和我'一起'工作together。(5)在松软的'土地/地里'ground挖洞。(6)Tom把树扶'直'straight。(7)用干净的水'浇'watered这棵树。(8)树需要水才能'长'grow得高大。(9)努力干活手变'脏'dirty了。(10)累但很'自豪'proud。(11)树会让空气更'清新'fresher。(12)我做了一个'承诺'promise每月来浇水。"
+    },
+    {
+      "passage": "Last Monday I learned an important lesson about homework. On Sunday evening, I was watching a fun TV show. My mother (1)____ me, \"Have you finished your homework?\" I said yes, but it was not (2)____. I still had some math problems to do. I thought I could finish them (3)____ in the morning. So I went to bed and forgot all about my (4)____. The next morning, I woke up (5)____ because my clock did not ring. I had no time to do the math. At school, the teacher (6)____ everyone to hand in the homework. My face turned (7)____ when I opened my empty notebook. The teacher looked at me and asked (8)____ I had not done it. I felt very sorry and told her the (9)____. She did not get angry. Instead, she said, \"You should never (10)____ your work until the last minute.\" Her words made me think a lot. From that day on, I always finish my homework as (11)____ as I come home. Now my mother is happy, and I never forget my work again. I think it was a useful (12)____ for me.",
+      "blanks": [
+        { "options": ["thanked", "asked", "helped", "answered"], "answer": "B" },
+        { "options": ["true", "easy", "free", "late"], "answer": "A" },
+        { "options": ["never", "yesterday", "early", "loudly"], "answer": "C" },
+        { "options": ["dinner", "homework", "friend", "show"], "answer": "B" },
+        { "options": ["late", "early", "happy", "slowly"], "answer": "A" },
+        { "options": ["allowed", "promised", "told", "thanked"], "answer": "C" },
+        { "options": ["red", "white", "green", "blue"], "answer": "A" },
+        { "options": ["when", "where", "how", "why"], "answer": "D" },
+        { "options": ["story", "lie", "truth", "joke"], "answer": "C" },
+        { "options": ["leave", "finish", "start", "check"], "answer": "A" },
+        { "options": ["soon", "long", "far", "much"], "answer": "A" },
+        { "options": ["game", "lesson", "trip", "gift"], "answer": "B" }
+      ],
+      "explain_zh": "(1)妈妈'问'我作业做完没有asked。(2)说了谎，其实不是'真的'true。(3)以为可以早上'早早地'early完成。(4)忘了'作业'homework这件事。(5)闹钟没响，'晚'late醒了。(6)老师'让/叫'大家交作业told sb to do。(7)打开空本子脸变'红'red(尴尬)。(8)老师问我'为什么'why没做why。(9)我告诉她'实话'truth，非lie/joke。(10)永远不要把工作'拖/留'leave到最后一刻。(11)一'回'到家就立刻完成as soon as。(12)这对我是有用的'一课/教训'lesson。"
+    },
+    {
+      "passage": "It snowed all night, and when I woke up, the whole world was (1)____. After breakfast, I put on my warm coat and went out for a (2)____. The streets were quiet, and the snow was soft under my (3)____. Each step made a nice sound. The trees by the road looked like they were wearing white (4)____. I breathed the cold air, and it made me feel (5)____ and awake. Soon I met my neighbour, an old man named Mr. Lee. He was (6)____ the snow in front of his door with a big shovel. \"Good morning!\" I said, and I offered to (7)____ him. Together we cleared a clean path in just twenty minutes. He smiled and (8)____ me a cup of hot tea. While we drank it, some children began to (9)____ a snowman in the park. Their happy voices filled the cold morning. I thought the snow had turned our small town into a beautiful (10)____. On my way home, I felt warm inside, even though the weather was so (11)____. A snowy morning, I decided, was the perfect time to be (12)____ to others.",
+      "blanks": [
+        { "options": ["green", "white", "dark", "wet"], "answer": "B" },
+        { "options": ["sleep", "meal", "walk", "swim"], "answer": "C" },
+        { "options": ["feet", "head", "hands", "eyes"], "answer": "A" },
+        { "options": ["shoes", "hats", "bags", "gloves"], "answer": "B" },
+        { "options": ["sleepy", "fresh", "hungry", "angry"], "answer": "B" },
+        { "options": ["buying", "eating", "clearing", "painting"], "answer": "C" },
+        { "options": ["help", "stop", "follow", "teach"], "answer": "A" },
+        { "options": ["sold", "threw", "offered", "lost"], "answer": "C" },
+        { "options": ["build", "break", "buy", "find"], "answer": "A" },
+        { "options": ["problem", "picture", "story", "trouble"], "answer": "B" },
+        { "options": ["warm", "cold", "sunny", "dry"], "answer": "B" },
+        { "options": ["rude", "lazy", "kind", "afraid"], "answer": "C" }
+      ],
+      "explain_zh": "(1)下了一夜雪，整个世界变'白'white了。(2)出门去'散步'walk。(3)雪在'脚'feet下很软。(4)树像穿着白'帽子'hats。(5)冷空气让我感到'清新/清醒'fresh。(6)Mr.Lee在用铲子'清扫'clearing门前的雪。(7)我主动提出'帮助'help他。(8)他'递/给'我一杯热茶offered。(9)孩子们开始'堆'build雪人。(10)雪把小镇变成美丽的'画/图画'picture。(11)尽管天气如此'寒冷'cold。(12)雪天是对别人'友善'kind的好时机。"
+    },
+    {
+      "passage": "One afternoon I was walking home from school when I saw a little girl crying near the bus stop. She looked about four years old and was all (1)____. I went over and asked her (2)____ was wrong. She said she had lost her (3)____ in the busy market. The poor girl could not (4)____ the way home and was very afraid. I felt sorry for her, so I decided to (5)____ her. First, I gave her a tissue and told her not to (6)____. Then I asked for her mother's phone (7)____, but she was too young to remember it. So I took her to a (8)____ police officer near the corner. The officer was very (9)____ and kind. He used his radio to ask for help. After about ten minutes, the girl's worried mother (10)____ running to the bus stop. She hugged her daughter tightly and (11)____ me again and again. I felt really (12)____ that I had helped them. On my way home, I understood that even a small act of kindness can make a big difference.",
+      "blanks": [
+        { "options": ["happy", "alone", "asleep", "busy"], "answer": "B" },
+        { "options": ["who", "where", "which", "what"], "answer": "D" },
+        { "options": ["bag", "dog", "mother", "book"], "answer": "C" },
+        { "options": ["see", "find", "build", "draw"], "answer": "B" },
+        { "options": ["leave", "stop", "help", "follow"], "answer": "C" },
+        { "options": ["cry", "laugh", "run", "shout"], "answer": "A" },
+        { "options": ["name", "number", "color", "shape"], "answer": "B" },
+        { "options": ["young", "nearby", "tired", "tall"], "answer": "B" },
+        { "options": ["lazy", "rude", "patient", "noisy"], "answer": "C" },
+        { "options": ["came", "fell", "slept", "ate"], "answer": "A" },
+        { "options": ["thanked", "blamed", "asked", "left"], "answer": "A" },
+        { "options": ["sad", "tired", "glad", "bored"], "answer": "C" }
+      ],
+      "explain_zh": "(1)小女孩独自一人all alone。(2)问她'什么'事出错了what was wrong。(3)她在市场里走丢了'妈妈'mother(下文母亲来接她，故非bag)。(4)找不到回家的'路'find the way。(5)我决定'帮助'help她。(6)告诉她不要'哭'cry。(7)问她妈妈的电话'号码'number。(8)带她去找'附近的'nearby警察。(9)警察很'耐心'patient又和善。(10)女孩着急的妈妈跑'来'came了。(11)妈妈一次次'感谢'thanked我。(12)我感到非常'高兴'glad。"
+    },
+    {
+      "passage": "Last weekend I went to my first cooking class with my mother. We wanted to learn how to make simple (1)____ at home. The teacher, Mrs. Wang, was a friendly woman who loved to cook. First, she asked us to wash our (2)____ carefully before we touched any food. Then she showed us how to make egg fried rice, which is (3)____ to make. She said, \"Cooking is not hard if you are (4)____ and follow each step.\" I broke two eggs into a bowl and (5)____ them well with chopsticks. My mother cut the green onions into small (6)____. Next, we heated some oil in the pan. When the oil was (7)____, I poured in the eggs. They cooked very fast! Then we added the cold rice and (8)____ everything together. The kitchen was soon full of a delicious (9)____. At last, we put the rice on a plate and (10)____ it. It was the best rice I had ever eaten, maybe because I made it (11)____. I was so proud of myself. From now on, I want to cook dinner for my family more (12)____. Cooking, I found, is really fun.",
+      "blanks": [
+        { "options": ["clothes", "dishes", "toys", "songs"], "answer": "B" },
+        { "options": ["hands", "feet", "hair", "eyes"], "answer": "A" },
+        { "options": ["hard", "easy", "boring", "dangerous"], "answer": "B" },
+        { "options": ["lazy", "afraid", "careful", "angry"], "answer": "C" },
+        { "options": ["mixed", "drank", "threw", "washed"], "answer": "A" },
+        { "options": ["boxes", "pieces", "cups", "bottles"], "answer": "B" },
+        { "options": ["cold", "wet", "hot", "dry"], "answer": "C" },
+        { "options": ["cut", "stirred", "broke", "counted"], "answer": "B" },
+        { "options": ["sound", "color", "smell", "light"], "answer": "C" },
+        { "options": ["tasted", "sold", "drew", "lost"], "answer": "A" },
+        { "options": ["myself", "yourself", "himself", "themselves"], "answer": "A" },
+        { "options": ["never", "often", "hardly", "seldom"], "answer": "B" }
+      ],
+      "explain_zh": "(1)学做简单的'饭菜'dishes。(2)摸食物前先洗'手'hands。(3)蛋炒饭'容易'easy做。(4)只要你'细心'careful就不难。(5)用筷子把蛋'搅拌'mixed好。(6)妈妈把葱切成小'块/段'pieces。(7)油'热'hot时倒入鸡蛋。(8)把所有东西'翻炒/搅'stirred在一起。(9)厨房满是美味的'香味'smell。(10)把饭装盘并'品尝'tasted。(11)因为是我'自己'myself做的。(12)我想'经常'often为家人做饭。"
+    },
+    {
+      "passage": "Our school held a friendly English-speaking competition last Thursday. Many students from different classes (1)____ part in it. I was a little (2)____ at first, because I had never spoken in front of so many people. My best friend Lily told me, \"Just be yourself and don't (3)____.\" Her words gave me courage. When my (4)____ came, I walked onto the stage and took a deep breath. I told a short story about my (5)____ dog, Lucky. I tried to speak clearly and (6)____. The students listened quietly and then gave me warm (7)____. After all the speeches, the teachers (8)____ the winners. To my surprise, I won the (9)____ prize! I was so happy that I almost cried. Lily ran over and (10)____ me. \"You did a great job!\" she said. But the most important thing was not the prize. The competition (11)____ me how to be brave and believe in myself. I also made some new (12)____ from other classes. Now I am no longer afraid of speaking English in public. I am looking forward to the next competition already.",
+      "blanks": [
+        { "options": ["took", "made", "gave", "had"], "answer": "A" },
+        { "options": ["happy", "nervous", "lazy", "hungry"], "answer": "B" },
+        { "options": ["worry", "smile", "study", "play"], "answer": "A" },
+        { "options": ["turn", "book", "lunch", "money"], "answer": "A" },
+        { "options": ["angry", "lovely", "broken", "empty"], "answer": "B" },
+        { "options": ["slowly", "confidently", "sadly", "quietly"], "answer": "B" },
+        { "options": ["food", "money", "homework", "applause"], "answer": "D" },
+        { "options": ["hid", "announced", "lost", "forgot"], "answer": "B" },
+        { "options": ["worst", "last", "first", "wrong"], "answer": "C" },
+        { "options": ["hugged", "blamed", "left", "pushed"], "answer": "A" },
+        { "options": ["asked", "taught", "bought", "sold"], "answer": "B" },
+        { "options": ["enemies", "problems", "friends", "mistakes"], "answer": "C" }
+      ],
+      "explain_zh": "(1)许多学生'参加'take part in。(2)起初有点'紧张'nervous。(3)别'担心'don't worry。(4)轮到我时'轮次/turn'came。(5)讲我'可爱的'lovely狗的故事。(6)努力说得清楚又'自信'confidently。(7)同学给我热烈的'掌声'applause。(8)老师'宣布'announced获奖者。(9)我赢了'第一'first名。(10)Lily跑来'拥抱'hugged我。(11)比赛'教会'taught我勇敢。(12)还交了新'朋友'friends。"
+    },
+    {
+      "passage": "Next week is Teachers' Day, and our class wanted to prepare a special (1)____ for Miss Green, our English teacher. She is kind and (2)____, and we all love her very much. At first, we did not know what to (3)____ her. Some students wanted to buy flowers, but they are too (4)____ and die quickly. Then Lucy had a great (5)____. \"Let's make a card by (6)____!\" she said. Everyone agreed at once. The next day, we (7)____ coloured paper, pens and glue to school. We drew beautiful pictures of flowers and the sun on the card. Each student wrote a few (8)____ words to thank Miss Green. I wrote, \"Thank you for always (9)____ us so patiently.\" We worked together for a whole afternoon. The card became more and more (10)____. On Teachers' Day, we gave the card to Miss Green as a surprise. She was so (11)____ that her eyes were full of tears. \"This is the best gift I have ever got,\" she said with a big smile. We were all happy because our (12)____ gift made our teacher feel loved.",
+      "blanks": [
+        { "options": ["test", "gift", "rule", "trip"], "answer": "B" },
+        { "options": ["lazy", "rude", "patient", "angry"], "answer": "C" },
+        { "options": ["give", "sell", "throw", "break"], "answer": "A" },
+        { "options": ["cheap", "expensive", "ugly", "small"], "answer": "B" },
+        { "options": ["problem", "idea", "question", "mistake"], "answer": "B" },
+        { "options": ["ourselves", "yourself", "himself", "itself"], "answer": "A" },
+        { "options": ["sold", "lost", "brought", "ate"], "answer": "C" },
+        { "options": ["loud", "kind", "wrong", "free"], "answer": "B" },
+        { "options": ["leaving", "punishing", "ignoring", "teaching"], "answer": "D" },
+        { "options": ["dirty", "beautiful", "boring", "empty"], "answer": "B" },
+        { "options": ["bored", "tired", "moved", "afraid"], "answer": "C" },
+        { "options": ["bought", "handmade", "broken", "stolen"], "answer": "B" }
+      ],
+      "explain_zh": "(1)给老师准备特别的'礼物'gift。(2)她和善又'耐心'patient。(3)不知该'送给'give老师什么。(4)鲜花太'贵'expensive且易枯。(5)Lucy有个好'主意'idea。(6)我们'自己'ourselves做卡片by ourselves。(7)第二天'带'brought彩纸笔胶水来。(8)每人写几句'友善/暖心'kind的话。(9)谢谢您一直'教'teaching我们。(10)卡片越来越'漂亮'beautiful。(11)她太'感动'moved以致热泪盈眶。(12)我们'手工'handmade的礼物让老师感到被爱。"
+    },
+    {
+      "passage": "This summer our school started a fun reading challenge. The goal was to read as many books as we (1)____ during the holiday. Each student got a small (2)____ to write down the title of every book we finished. At first, I thought reading would be (3)____, but I soon found it exciting. I started with a story about a boy who travelled around the (4)____ in a balloon. The book was so good that I could not (5)____ reading it. Every day after lunch, I sat under a big tree in our garden and (6)____ for two hours. Slowly, my list of books grew (7)____. My little sister saw me reading and wanted to join me, so I (8)____ her some easy picture books. By the end of August, I had read twenty books! That was a new (9)____ for me. When school began again, our teacher (10)____ the students who read the most. I got a beautiful bookmark as a (11)____. The reading challenge taught me that books can take us to many wonderful (12)____ without leaving home. Now reading has become my favourite hobby.",
+      "blanks": [
+        { "options": ["could", "should", "must", "need"], "answer": "A" },
+        { "options": ["box", "notebook", "ball", "bottle"], "answer": "B" },
+        { "options": ["boring", "easy", "cheap", "loud"], "answer": "A" },
+        { "options": ["school", "world", "room", "garden"], "answer": "B" },
+        { "options": ["start", "stop", "begin", "open"], "answer": "B" },
+        { "options": ["slept", "ran", "read", "ate"], "answer": "C" },
+        { "options": ["shorter", "longer", "smaller", "darker"], "answer": "B" },
+        { "options": ["lent", "sold", "threw", "lost"], "answer": "A" },
+        { "options": ["mistake", "problem", "record", "rule"], "answer": "C" },
+        { "options": ["punished", "praised", "blamed", "forgot"], "answer": "B" },
+        { "options": ["prize", "ticket", "bill", "menu"], "answer": "A" },
+        { "options": ["foods", "clothes", "games", "places"], "answer": "D" }
+      ],
+      "explain_zh": "(1)尽可能多读书as many as we could。(2)每人得一个小'本子'notebook记书名。(3)起初以为读书会'无聊'boring。(4)关于男孩乘气球环游'世界'world。(5)书太好停不下来can not stop doing。(6)在树下'读'read两小时。(7)书单慢慢变'长'longer。(8)我'借'lent给妹妹一些图画书。(9)这是我的新'纪录'record。(10)老师'表扬'praised读得最多的学生。(11)我得到书签作为'奖品'prize。(12)书能带我们去许多奇妙的'地方'places。"
+    },
+    {
+      "passage": "One rainy evening, I found a brown wallet on the ground near my home. I picked it (1)____ and looked inside. There was some (2)____, a bank card and a photo of a small boy. I knew the wallet must (3)____ to someone, and that person would be very worried. My first thought was to find the (4)____. Luckily, there was an ID card inside with a name and an (5)____ on it. So I decided to return the wallet to the right (6)____. I asked my father to go with me. We walked to a tall building not far (7)____ our home. When we knocked on the door, a worried man opened it. He was (8)____ to see his lost wallet in my hands. \"Thank you so much!\" he said. \"I thought I would never (9)____ it again.\" He wanted to give me some money as a (10)____, but I politely said no. \"I only did the (11)____ thing,\" I told him. My father looked at me and smiled (12)____. On the way home, I felt happier than ever. Being honest, I learned, is its own reward.",
+      "blanks": [
+        { "options": ["up", "out", "off", "in"], "answer": "A" },
+        { "options": ["water", "money", "food", "paper"], "answer": "B" },
+        { "options": ["belong", "look", "listen", "happen"], "answer": "A" },
+        { "options": ["winner", "owner", "teacher", "driver"], "answer": "B" },
+        { "options": ["age", "answer", "idea", "address"], "answer": "D" },
+        { "options": ["person", "place", "school", "shop"], "answer": "A" },
+        { "options": ["from", "to", "at", "with"], "answer": "A" },
+        { "options": ["sad", "angry", "surprised", "bored"], "answer": "C" },
+        { "options": ["lose", "see", "buy", "sell"], "answer": "B" },
+        { "options": ["reward", "ticket", "lesson", "problem"], "answer": "A" },
+        { "options": ["wrong", "right", "funny", "strange"], "answer": "B" },
+        { "options": ["sadly", "angrily", "proudly", "loudly"], "answer": "C" }
+      ],
+      "explain_zh": "(1)我把钱包'捡起来'picked it up。(2)里面有一些'钱'money。(3)钱包一定'属于'belong to某人。(4)第一个念头是找'失主'owner。(5)身份证上有名字和'地址'address。(6)把钱包还给正确的'人'person。(7)离我家不'远'not far from。(8)看到失而复得的钱包他很'惊讶'surprised。(9)以为再也'见'see不到它了。(10)他想给我钱作为'酬谢'reward。(11)我只是做了'对'right的事。(12)爸爸'自豪地'proudly笑了。"
+    }
+  ]
+}

@@ -93,6 +93,25 @@ export function shapeToItems(t: ShapeTemplate, raw: Record<string, unknown>): Sh
     return { ok: true, result: { stimulusText: passage, meta: { paras }, items: [{ inputMode: 'matching', prompt: passage, promptZh: null, choices: statements.map((text, i) => ({ id: String(i), text })), answer: answers }] } }
   }
 
+  if (shape === 'para_match_multi') {
+    // CET 段落信息匹配：N 句陈述（itemCount，通常 10）匹配到 [A]..标号段落；与考研 Part B 不同——
+    // 同一段落可被多句匹配（answers 允许重复），段落数可少于陈述数。passage 含 [A][B].. 顺序标号。
+    const statements = Array.isArray(raw.statements) ? (raw.statements as unknown[]).map((x) => String(x)) : []
+    const answers = Array.isArray(raw.answers) ? (raw.answers as unknown[]).map((x) => Number(x)) : []
+    const paras = Number(raw.paras)
+    if (statements.length !== t.itemCount) return { ok: false, reject: 'statements_count' }
+    if (answers.length !== t.itemCount) return { ok: false, reject: 'answers_count' }
+    if (!Number.isInteger(paras) || paras < 4 || paras > t.optionCount) return { ok: false, reject: 'paras_invalid' }
+    // 段落标号必须为顺序 [A][B]..（serve 端 reconstructParaMatch 按出现顺序定位，0-based 索引须对应 A,B,..）
+    const labels = [...passage.matchAll(/\[([A-Z])\]/g)].map((x) => x[1])
+    const expected = Array.from({ length: paras }, (_, i) => String.fromCharCode(65 + i))
+    if (labels.length !== paras || labels.some((l, i) => l !== expected[i])) return { ok: false, reject: `para_labels_mismatch:${labels.join('')}!=${expected.join('')}` }
+    if (!allInts(answers)) return { ok: false, reject: 'answers_not_int' }
+    if (answers.some((a) => a < 0 || a >= paras)) return { ok: false, reject: 'answer_out_of_range' }
+    // 重复允许（CET 段落匹配多对一），故不做 allDistinct 校验。
+    return { ok: true, result: { stimulusText: passage, meta: { paras }, items: [{ inputMode: 'matching', prompt: passage, promptZh: null, choices: statements.map((text, i) => ({ id: String(i), text })), answer: answers }] } }
+  }
+
   if (shape === 'cloze_passage') {
     // 整篇完形：passage + N 空，每空 4 选项、唯一正确。存储与迁移数据一致：
     // item.answer = [{ options:[4], answer:"<索引0-3>" }]，input_mode=multi_blank（评分 looseEq 解析索引）。

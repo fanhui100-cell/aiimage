@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-24T21:28:23.510Z",
+  "apply": false,
+  "stage": "r13-zhongkao-cloze-passage",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 50,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-zhongkao-cloze-passage\\batchA.json",
+      "template": "zhongkao-cloze-passage",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-zhongkao-cloze-passage\\batchB.json",
+      "template": "zhongkao-cloze-passage",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-zhongkao-cloze-passage\\batchC.json",
+      "template": "zhongkao-cloze-passage",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-zhongkao-cloze-passage\\batchD.json",
+      "template": "zhongkao-cloze-passage",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-zhongkao-cloze-passage\\batchE.json",
+      "template": "zhongkao-cloze-passage",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

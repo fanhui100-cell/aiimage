@@ -1,0 +1,186 @@
+{
+  "template": "zhongkao-cloze-passage",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Tom was a new student at Green Hill School. On his first morning, he felt very (1)____ because he did not know anyone. He walked into the classroom slowly and sat down near the (2)____. Soon a boy with a big smile came over and said, \"Hi, my name is Jack. (3)____ you new here?\" Tom nodded and felt a little better. Jack showed him where to put his bag and (4)____ him about the school rules. When the bell rang, the teacher asked Tom to (5)____ in front of the class. Tom told everyone his name and said he liked (6)____ football. Many students smiled at him kindly. During the lunch (7)____, Jack invited Tom to eat together. They talked about their favourite games and laughed a lot. Tom was happy that he had (8)____ a friend so quickly. In the afternoon, the class had an art lesson. Tom was good at (9)____ pictures, so he helped Jack finish his work. Jack thanked him and said, \"You are really (10)____ at art!\" After school, the two boys walked home (11)____. Tom thought that his new school was not scary at all. He could not (12)____ to come back the next day.",
+      "blanks": [
+        { "options": ["happy", "nervous", "sleepy", "angry"], "answer": "B" },
+        { "options": ["window", "ceiling", "river", "tree"], "answer": "A" },
+        { "options": ["Is", "Am", "Are", "Be"], "answer": "C" },
+        { "options": ["told", "asked", "sold", "made"], "answer": "A" },
+        { "options": ["sit", "stand", "sleep", "run"], "answer": "B" },
+        { "options": ["playing", "to playing", "play", "played"], "answer": "A" },
+        { "options": ["class", "break", "test", "homework"], "answer": "B" },
+        { "options": ["lost", "missed", "found", "left"], "answer": "C" },
+        { "options": ["drawing", "buying", "eating", "washing"], "answer": "A" },
+        { "options": ["bad", "good", "late", "free"], "answer": "B" },
+        { "options": ["together", "alone", "again", "slowly"], "answer": "A" },
+        { "options": ["want", "wait", "wish", "win"], "answer": "B" }
+      ],
+      "explain_zh": "(1)B nervous：第一天没认识的人，应该是紧张。(2)A window：教室里坐在窗边合理，ceiling(天花板)/river/tree不能坐在旁边，不通。(3)C Are：与you搭配用Are。(4)A told：告诉他校规用told sb about。(5)B stand：老师让他在全班面前站起来介绍。(6)A playing：like后接动名词playing football；to playing/play/played均不正确。(7)B break：午休时间Jack邀他一起吃饭。(8)C found：这么快交到朋友，found a friend。(9)A drawing：擅长画画，help画完作品。(10)B good：be good at art。(11)A together：两个男孩一起回家。(12)B wait：can't wait to do表示迫不及待。"
+    },
+    {
+      "passage": "Mrs. Green was an old woman who lived next to Lily's family. She lived (1)____ and her children worked far away. One winter morning, Lily looked out of the window and saw thick (2)____ on the ground. She remembered that Mrs. Green found it hard to (3)____ in such weather. Lily put on her coat and went to (4)____ the door of Mrs. Green's house. \"Good morning! Do you (5)____ any help today?\" she asked. The old woman smiled and said she needed someone to clean the snow in front of her (6)____. Lily took a shovel and worked (7)____ for half an hour. Her hands were cold, but she felt warm inside. After that, she helped Mrs. Green (8)____ some hot tea. They sat together and the old woman told her many (9)____ about the past. Lily listened (10)____ and laughed at the funny parts. Before Lily left, Mrs. Green gave her a small box of cookies as a (11)____. \"You are a very kind girl,\" she said. Lily felt proud that she could (12)____ her neighbour. She decided to visit Mrs. Green more often from that day.",
+      "blanks": [
+        { "options": ["alone", "happily", "loudly", "quickly"], "answer": "A" },
+        { "options": ["rain", "snow", "sand", "grass"], "answer": "B" },
+        { "options": ["sing", "read", "walk", "cook"], "answer": "C" },
+        { "options": ["close", "knock on", "open", "paint"], "answer": "B" },
+        { "options": ["need", "have", "give", "buy"], "answer": "A" },
+        { "options": ["school", "house", "shop", "park"], "answer": "B" },
+        { "options": ["hard", "late", "early", "alone"], "answer": "A" },
+        { "options": ["sell", "throw", "make", "break"], "answer": "C" },
+        { "options": ["stories", "songs", "lessons", "games"], "answer": "A" },
+        { "options": ["sadly", "carefully", "angrily", "quietly"], "answer": "B" },
+        { "options": ["problem", "gift", "rule", "joke"], "answer": "B" },
+        { "options": ["forget", "hurt", "help", "leave"], "answer": "C" }
+      ],
+      "explain_zh": "(1)A alone：独自居住，孩子在远方。(2)B snow：冬天早上地上厚厚的雪。(3)C walk：这种天气老人难以行走。(4)B knock on：去敲门。(5)A need：问是否需要帮助need help。(6)B house：清理她家门前的雪。(7)A hard：努力地铲了半小时。(8)C make：帮她泡/做热茶make tea。(9)A stories：老人讲过去的许多故事。(10)B carefully：认真地听。(11)B gift：饼干作为礼物。(12)C help：能帮助邻居感到自豪。"
+    },
+    {
+      "passage": "Last summer, my family decided to go (1)____ in the mountains for the weekend. We packed a big tent, some food and warm (2)____ into the car. The drive took about three hours, and the (3)____ outside the window was beautiful. When we arrived, Dad and I put up the (4)____ near a clear river. Mum got the food ready while my little brother ran around the (5)____ grass happily. In the afternoon, we went (6)____ along a small path and saw many wild flowers. I took lots of (7)____ with my new camera. At night, the sky was full of bright (8)____, and we could not see any in the city. We sat around a small (9)____ and Dad cooked sausages for everyone. They (10)____ really delicious. Before we slept, my brother was a little (11)____ of the dark, so I told him a happy story. The next morning, birds woke us up with their singing. It was the best trip of the year, and I really (12)____ those two days in nature.",
+      "blanks": [
+        { "options": ["shopping", "camping", "swimming", "running"], "answer": "B" },
+        { "options": ["clothes", "books", "toys", "phones"], "answer": "A" },
+        { "options": ["noise", "smell", "view", "price"], "answer": "C" },
+        { "options": ["tent", "house", "wall", "bridge"], "answer": "A" },
+        { "options": ["wet", "green", "dirty", "old"], "answer": "B" },
+        { "options": ["hiking", "driving", "flying", "sailing"], "answer": "A" },
+        { "options": ["money", "photos", "tests", "letters"], "answer": "B" },
+        { "options": ["clouds", "planes", "stars", "kites"], "answer": "C" },
+        { "options": ["fire", "table", "pool", "box"], "answer": "A" },
+        { "options": ["looked", "tasted", "sounded", "felt"], "answer": "B" },
+        { "options": ["proud", "sure", "afraid", "tired"], "answer": "C" },
+        { "options": ["forgot", "missed", "lost", "enjoyed"], "answer": "D" }
+      ],
+      "explain_zh": "(1)B camping：到山里露营。(2)A clothes：带保暖的衣物。(3)C view：窗外的景色很美。(4)A tent：在河边搭帐篷。(5)B green：在绿色的草地上奔跑。(6)A hiking：沿小路徒步go hiking。(7)B photos：用新相机拍照片。(8)C stars：夜空满是星星，城里看不到。(9)A fire：围着小火堆，爸爸烤香肠。(10)B tasted：香肠尝起来很美味。(11)C afraid：弟弟有点怕黑be afraid of。(12)D enjoyed：很享受大自然里的两天。"
+    },
+    {
+      "passage": "When I was eight years old, my father bought me a small red (1)____. I wanted to ride it like the older children, but I did not know (2)____. The first time I tried, I fell down and hurt my (3)____. It was a little painful, and I almost wanted to give (4)____. But my father said, \"Don't worry. Everyone falls at (5)____.\" He held the back of the seat and ran (6)____ me along the road. Day after day, we practised in the (7)____ near our home. Slowly, I learned how to keep my (8)____ and not fall. One afternoon, my father quietly let (9)____ of the seat without telling me. Suddenly I found that I was riding all by (10)____! I was so excited that I shouted, \"Look, Dad, I can do it!\" He smiled and felt very (11)____ of me. From that day on, I rode my bike to school every morning, rain or shine. My father told me that learning to ride a bike was a lot like learning anything new in life. I will never (12)____ the moment when I first rode without help.",
+      "blanks": [
+        { "options": ["bike", "book", "ball", "boat"], "answer": "A" },
+        { "options": ["why", "how", "who", "where"], "answer": "B" },
+        { "options": ["hair", "name", "knee", "pen"], "answer": "C" },
+        { "options": ["in", "up", "out", "back"], "answer": "B" },
+        { "options": ["first", "last", "night", "home"], "answer": "A" },
+        { "options": ["before", "without", "beside", "under"], "answer": "C" },
+        { "options": ["park", "kitchen", "shop", "office"], "answer": "A" },
+        { "options": ["money", "balance", "promise", "secret"], "answer": "B" },
+        { "options": ["go", "fall", "stay", "stand"], "answer": "A" },
+        { "options": ["himself", "herself", "myself", "yourself"], "answer": "C" },
+        { "options": ["tired", "afraid", "proud", "sorry"], "answer": "C" },
+        { "options": ["enjoy", "forget", "begin", "watch"], "answer": "B" }
+      ],
+      "explain_zh": "(1)A bike：爸爸买了一辆小红自行车。(2)B how：不知道怎么骑know how。(3)C knee：摔倒伤了膝盖。(4)B up：差点想放弃give up。(5)A first：每个人开始都会摔at first。(6)C beside：爸爸在旁边跟着跑run beside me。(7)A park：在家附近的公园练习。(8)B balance：学会保持平衡keep balance。(9)A go：悄悄松开座位let go of。(10)C myself：我在独自骑车by myself。(11)C proud：爸爸为我感到骄傲be proud of。(12)B forget：永远不会忘记那一刻never forget。"
+    },
+    {
+      "passage": "One sunny Saturday, my neighbour Mr. Black lost his little (1)____ named Coco. The poor dog ran away when the gate was left (2)____. Mr. Black looked everywhere but could not (3)____ it. He looked so sad that I decided to (4)____ him. My friend Mike and I made some posters with a (5)____ of Coco on them. We put the posters on trees and (6)____ in the street. Then we walked around the (7)____ and called Coco's name loudly. After two hours, we heard a soft (8)____ coming from behind a small shop. We went closer and (9)____ Coco hiding under some boxes. The dog was hungry and a little (10)____, but it was safe. We gave it some water and carried it home (11)____. Mr. Black was so happy that he almost cried. \"Thank you, children. You are real (12)____,\" he said. Coco jumped into his arms and licked his face over and over again. That day taught me that helping others can bring great joy, and that even small children can do something useful for the people around them. From then on, Mike and I often visited Mr. Black after school to play with Coco in his garden.",
+      "blanks": [
+        { "options": ["cat", "dog", "bird", "fish"], "answer": "B" },
+        { "options": ["open", "clean", "high", "new"], "answer": "A" },
+        { "options": ["find", "buy", "feed", "wash"], "answer": "A" },
+        { "options": ["stop", "leave", "help", "follow"], "answer": "C" },
+        { "options": ["picture", "letter", "price", "number"], "answer": "A" },
+        { "options": ["walls", "rivers", "clouds", "fields"], "answer": "A" },
+        { "options": ["school", "kitchen", "library", "neighbourhood"], "answer": "D" },
+        { "options": ["smell", "sound", "wind", "light"], "answer": "B" },
+        { "options": ["lost", "made", "found", "sold"], "answer": "C" },
+        { "options": ["happy", "scared", "proud", "lazy"], "answer": "B" },
+        { "options": ["sadly", "carefully", "loudly", "angrily"], "answer": "B" },
+        { "options": ["teachers", "doctors", "heroes", "drivers"], "answer": "C" }
+      ],
+      "explain_zh": "(1)B dog：邻居丢了小狗。(2)A open：门被开着，狗跑了。(3)A find：到处找却找不到。(4)C help：决定帮助他。(5)A picture：海报上有Coco的照片。(6)A walls：把海报贴在树和墙上。(7)D neighbourhood：在小区周围走着喊名字。(8)B sound：听到一阵轻微的声音。(9)C found：发现Coco躲在箱子下。(10)B scared：狗又饿又有点害怕。(11)B carefully：小心地把它抱回家。(12)C heroes：你们是真正的英雄。"
+    },
+    {
+      "passage": "Last Friday, our school held its yearly sports (1)____. All the students were very (2)____ and could not stop talking about it. The weather was fine, and the sun was (3)____ in the blue sky. I took part in the 100-metre (4)____, which was my favourite event. Before it started, my heart beat very (5)____. When the teacher said \"Go!\", I ran as (6)____ as I could. My classmates stood by the side and (7)____ for me loudly. I could hear them shouting my (8)____ again and again. In the end, I came (9)____ and won a gold medal. I was so happy that I almost jumped into the air. The teacher gave me the medal and said that all my morning practice had paid off. After the races, our class also won the (10)____ for the best team. Everyone hugged each other and shouted with great joy. We took many photos to (11)____ this special day, and our teacher promised to put them on the class wall. Everyone agreed that sports day was full of fun and (12)____. I am already looking forward to the next one, when I hope to run even faster.",
+      "blanks": [
+        { "options": ["lesson", "meeting", "day", "test"], "answer": "C" },
+        { "options": ["excited", "tired", "bored", "sleepy"], "answer": "A" },
+        { "options": ["bright", "dark", "cold", "wet"], "answer": "A" },
+        { "options": ["song", "race", "book", "game"], "answer": "B" },
+        { "options": ["slowly", "softly", "fast", "late"], "answer": "C" },
+        { "options": ["quietly", "fast", "early", "alone"], "answer": "B" },
+        { "options": ["waited", "looked", "cheered", "asked"], "answer": "C" },
+        { "options": ["name", "song", "price", "rule"], "answer": "A" },
+        { "options": ["last", "first", "late", "back"], "answer": "B" },
+        { "options": ["cup", "ball", "bag", "key"], "answer": "A" },
+        { "options": ["sell", "lose", "remember", "break"], "answer": "C" },
+        { "options": ["fear", "joy", "rain", "noise"], "answer": "B" }
+      ],
+      "explain_zh": "(1)C day：学校的运动会sports day。(2)A excited：学生们很兴奋。(3)A bright：太阳在蓝天上明亮地照着。(4)B race：参加百米赛跑。(5)C fast：开始前心跳得很快。(6)B fast：尽快地跑run as fast as。(7)C cheered：同学在旁边大声加油cheer for。(8)A name：听到他们喊我的名字。(9)B first：最终得了第一come first。(10)A cup：班级赢得最佳团队的奖杯。(11)C remember：拍照纪念这一天remember。(12)B joy：运动会充满乐趣和快乐joy。"
+    },
+    {
+      "passage": "Next Sunday is my mother's birthday, so my sister and I want to give her a big (1)____. We knew that Mum was always busy and never had time to (2)____. First, we got up very (3)____ in the morning while she was still sleeping. My sister cleaned the living room, and I (4)____ to make breakfast in the kitchen. I cooked some eggs and made a cup of hot (5)____ for her. We also bought a beautiful (6)____ of flowers from the shop near our home. Then we drew a card and (7)____ \"Happy Birthday, Mum!\" on it with colourful pens. When Mum woke up and walked (8)____ the kitchen, she was very surprised. \"Oh, what a lovely (9)____!\" she said with tears in her eyes. We sang a birthday song together and she felt so (10)____. Mum said it was the best birthday she had ever (11)____. My sister and I were glad that our hard work made her happy. We learned that a small act of love can (12)____ someone's whole day.",
+      "blanks": [
+        { "options": ["problem", "surprise", "question", "mistake"], "answer": "B" },
+        { "options": ["rest", "work", "study", "drive"], "answer": "A" },
+        { "options": ["late", "slowly", "early", "quietly"], "answer": "C" },
+        { "options": ["tried", "refused", "forgot", "failed"], "answer": "A" },
+        { "options": ["milk", "rice", "bread", "soup"], "answer": "A" },
+        { "options": ["box", "bunch", "piece", "glass"], "answer": "B" },
+        { "options": ["read", "sang", "wrote", "asked"], "answer": "C" },
+        { "options": ["into", "out of", "away from", "under"], "answer": "A" },
+        { "options": ["surprise", "problem", "noise", "rule"], "answer": "A" },
+        { "options": ["angry", "tired", "moved", "bored"], "answer": "C" },
+        { "options": ["had", "lost", "missed", "sold"], "answer": "A" },
+        { "options": ["break", "waste", "brighten", "spoil"], "answer": "C" }
+      ],
+      "explain_zh": "(1)B surprise：想给妈妈一个大惊喜give a surprise。(2)A rest：妈妈忙得没时间休息。(3)C early：趁她睡觉很早起床。(4)A tried：我尝试做早餐tried to。(5)A milk：做了一杯热牛奶。(6)B bunch：一束花a bunch of flowers。(7)C wrote：在卡片上写字wrote。(8)A into：走进厨房walk into。(9)A surprise：多么可爱的惊喜。(10)C moved：妈妈非常感动be moved。(11)A had：她过过的最好的生日had。(12)C brighten：小小的爱能照亮某人的一天brighten。"
+    },
+    {
+      "passage": "I used to be a very (1)____ boy and found it hard to talk to others. At school, I often sat by myself and did not have many (2)____. One day, a girl named Anna moved into the seat next to (3)____. She had just come from another city and looked a little (4)____ too. I thought maybe she also needed a friend, so I took a deep (5)____ and said hello. To my surprise, she smiled and we started to (6)____ about books. We found that we both (7)____ reading stories about animals. During the break, we shared our (8)____ and played games together. Day by day, we became good (9)____. Anna often helped me with my maths after class, and I helped her learn the way (10)____ school and remember the names of our teachers. On weekends, we sometimes met in the park to ride bikes and chat about our dreams. I felt much braver than (11)____, and I even began to speak up in class. Making a new friend changed my life in a good way. Now I know that everyone can find friendship if they are (12)____ enough to try.",
+      "blanks": [
+        { "options": ["loud", "shy", "tall", "rich"], "answer": "B" },
+        { "options": ["books", "friends", "pens", "rooms"], "answer": "B" },
+        { "options": ["him", "her", "me", "them"], "answer": "C" },
+        { "options": ["happy", "lonely", "angry", "lazy"], "answer": "B" },
+        { "options": ["look", "breath", "drink", "walk"], "answer": "B" },
+        { "options": ["fight", "cry", "talk", "sleep"], "answer": "C" },
+        { "options": ["hated", "loved", "stopped", "missed"], "answer": "B" },
+        { "options": ["snacks", "shoes", "desks", "buses"], "answer": "A" },
+        { "options": ["enemies", "strangers", "friends", "teachers"], "answer": "C" },
+        { "options": ["into", "to", "from", "over"], "answer": "B" },
+        { "options": ["after", "before", "soon", "later"], "answer": "B" },
+        { "options": ["weak", "brave", "tired", "quiet"], "answer": "B" }
+      ],
+      "explain_zh": "(1)B shy：曾经很害羞，难和别人说话。(2)B friends：没有很多朋友。(3)C me：女孩坐到我旁边next to me。(4)B lonely：她刚来也有点孤单。(5)B breath：深吸一口气take a deep breath。(6)C talk：开始聊起书talk about。(7)B loved：都喜欢看动物故事。(8)A snacks：休息时分享零食。(9)C friends：成了好朋友。(10)B to：去学校的路the way to school。(11)B before：比以前勇敢得多than before。(12)B brave：只要足够勇敢去尝试brave。"
+    },
+    {
+      "passage": "This term, our class started an exciting (1)____ in the school yard. We wanted to grow our own vegetables and (2)____. First, the teacher divided us into small (3)____, and each one took care of a piece of land. We used shovels to dig the (4)____ and made it soft. Then we put tiny (5)____ into the ground and covered them gently. Every morning before class, we (6)____ the plants with clean water. We also pulled out the (7)____ that took the soil's food. At first, nothing happened, and some students felt (8)____. But our teacher told us to be (9)____ and keep working. A few weeks later, small green (10)____ began to come out of the ground. We were all so happy to see them grow taller every day. In summer, we picked fresh tomatoes and (11)____ them with the whole school. Working in the garden taught us that good things need time and (12)____. It was the best project we had ever done together, and it brought our whole class much closer than before. Next term, our teacher says we will plant even more kinds of vegetables, and everyone is already looking forward to digging in the soil again.",
+      "blanks": [
+        { "options": ["project", "exam", "trip", "concert"], "answer": "A" },
+        { "options": ["cars", "flowers", "books", "phones"], "answer": "B" },
+        { "options": ["groups", "schools", "cities", "shops"], "answer": "A" },
+        { "options": ["water", "soil", "fire", "wood"], "answer": "B" },
+        { "options": ["stones", "seeds", "boxes", "toys"], "answer": "B" },
+        { "options": ["cut", "burned", "watered", "sold"], "answer": "C" },
+        { "options": ["weeds", "trees", "walls", "fruits"], "answer": "A" },
+        { "options": ["proud", "lucky", "sad", "free"], "answer": "C" },
+        { "options": ["lazy", "patient", "angry", "afraid"], "answer": "B" },
+        { "options": ["clouds", "leaves", "stars", "stones"], "answer": "B" },
+        { "options": ["lost", "hid", "shared", "threw"], "answer": "C" },
+        { "options": ["money", "care", "noise", "luck"], "answer": "B" }
+      ],
+      "explain_zh": "(1)A project：班级开始一个园艺项目project。(2)B flowers：想种蔬菜和花。(3)A groups：把我们分成小组groups。(4)B soil：挖土把土弄松soil。(5)B seeds：把小种子放进地里seeds。(6)C watered：每天早上给植物浇水watered。(7)A weeds：拔掉吸养分的杂草weeds。(8)C sad：起初没动静，有人难过。(9)B patient：老师让我们要有耐心patient。(10)B leaves：绿色的叶子开始长出。(11)C shared：把番茄和全校分享shared。(12)B care：好事需要时间和用心care。"
+    },
+    {
+      "passage": "It was a cold and (1)____ afternoon when school finished. The rain came down hard, and I had forgotten to bring my (2)____. I stood at the school gate and did not know what to (3)____. Just then, I saw a little girl crying near the (4)____. She was wet all over and looked very (5)____. I asked her what was wrong, and she said she could not find her (6)____. I felt sorry for her and decided to (7)____ her. I took off my coat and put it over her small (8)____ to keep her warm. Then I held her hand and we (9)____ for her mother together. After a while, a worried woman ran to us and (10)____ the girl tightly. She thanked me again and again for being so (11)____ to her daughter. Although my clothes were wet, my heart felt warm all the way home. On that rainy day, I learned that a small kindness can mean a (12)____ to someone in need. I told my parents the whole story over dinner, and they were very proud of me. Since then, I have always tried to help people when they are in trouble.",
+      "blanks": [
+        { "options": ["sunny", "rainy", "dry", "windy"], "answer": "B" },
+        { "options": ["umbrella", "pencil", "ruler", "ticket"], "answer": "A" },
+        { "options": ["eat", "do", "buy", "wear"], "answer": "B" },
+        { "options": ["gate", "river", "kitchen", "garden"], "answer": "A" },
+        { "options": ["happy", "angry", "scared", "proud"], "answer": "C" },
+        { "options": ["dog", "mother", "book", "teacher"], "answer": "B" },
+        { "options": ["leave", "help", "follow", "stop"], "answer": "B" },
+        { "options": ["shoulders", "hands", "feet", "ears"], "answer": "A" },
+        { "options": ["paid", "looked", "asked", "cooked"], "answer": "B" },
+        { "options": ["pushed", "hugged", "left", "sold"], "answer": "B" },
+        { "options": ["rude", "kind", "lazy", "busy"], "answer": "B" },
+        { "options": ["problem", "lot", "rest", "joke"], "answer": "B" }
+      ],
+      "explain_zh": "(1)B rainy：放学时又冷又下雨的下午。(2)A umbrella：忘了带伞。(3)B do：不知道该怎么办what to do。(4)A gate：在校门口看到小女孩哭。(5)C scared：浑身湿透看起来很害怕。(6)B mother：她找不到妈妈。(7)B help：决定帮助她。(8)A shoulders：把外套披在她肩上keep warm。(9)B looked：一起找她妈妈look for。(10)B hugged：妈妈紧紧抱住女孩hugged。(11)B kind：感谢我对她女儿这么友善kind。(12)B lot：小小善意对需要的人意义重大mean a lot。"
+    }
+  ]
+}
