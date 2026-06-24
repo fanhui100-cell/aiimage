@@ -12,10 +12,12 @@
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync } from 'node:fs'
+import { loadDotenv } from './load-dotenv'
 import { generatePaper, toClientPaper } from '@/lib/papers/paper-generator'
 import { submitPaper } from '@/lib/papers/submit-paper'
 import type { GeneratedPaper, ItemResponse } from '@/lib/papers/paper-types'
 
+loadDotenv() // signAudioPath 依赖 process.env（听力音频签名）
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const db = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), readEnv('SUPABASE_SERVICE_ROLE_KEY'))

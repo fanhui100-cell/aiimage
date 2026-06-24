@@ -11,11 +11,13 @@
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
+import { loadDotenv } from './load-dotenv'
 import { generatePaper, toClientPaper, v2Available } from '@/lib/papers/paper-generator'
 import { EXAM_SPECS } from '@/lib/exam-specs'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
 import type { GeneratedPaper } from '@/lib/papers/paper-types'
 
+loadDotenv() // signAudioPath 依赖 process.env（听力音频签名）
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const db = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), readEnv('SUPABASE_SERVICE_ROLE_KEY'))

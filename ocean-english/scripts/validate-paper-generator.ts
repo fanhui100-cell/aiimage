@@ -9,11 +9,13 @@
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
+import { loadDotenv } from './load-dotenv'
 import { generatePaper, toClientPaper, v2Available } from '@/lib/papers/paper-generator'
 import { scorePaper, scoreItem } from '@/lib/papers/scoring'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
 import type { GeneratedPaper, PaperItem, PaperSection } from '@/lib/papers/paper-types'
 
+loadDotenv() // signAudioPath 依赖 process.env（听力音频签名）
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
 const SUPABASE_URL = readEnv('NEXT_PUBLIC_SUPABASE_URL')
