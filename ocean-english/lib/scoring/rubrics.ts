@@ -67,6 +67,15 @@ export function getRubric(examId: string, skill: ScoringSkill): Rubric | null {
   return BY_KEY.get(`${examId}:${skill}`) ?? null
 }
 
+/** taskType → 评分技能（写作/翻译/口语）的单一真源：扫描 RUBRICS 的 taskTypes。
+ *  同一 taskType 在各档下技能一致，取首个命中即可；非生产性任务返回 null。
+ *  前端据此选 /api/scoring/{writing|translation|speaking} 端点（避免在客户端硬编码任务表漂移）。 */
+export function scoringSkillForTask(taskType: string): ScoringSkill | null {
+  if (!taskType) return null
+  const r = RUBRICS.find((x) => x.taskTypes.includes(taskType))
+  return r ? r.skill : null
+}
+
 const SUBJECTIVE_SKILLS = new Set<string>(['writing', 'translation', 'speaking'])
 
 /** 该 section 是否需要主观 rubric：技能为写作/翻译/口语 **且** 含生产性任务。

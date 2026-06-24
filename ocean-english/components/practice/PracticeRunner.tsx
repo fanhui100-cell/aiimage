@@ -16,7 +16,8 @@ import { OkMark, NoMark, clozeNodes } from './icons'
 import { ChoiceRenderer } from './renderers/ChoiceRenderer'
 import { SpellRenderer } from './renderers/SpellRenderer'
 import { ListeningRenderer } from './renderers/ListeningRenderer'
-import { FreeTextRenderer } from './renderers/FreeTextRenderer'
+import { FreeTextRenderer, type FreeTextEstimate, type FreeTextRubricLine } from './renderers/FreeTextRenderer'
+import { scoringSkillForTask } from '@/lib/scoring/rubrics'
 import { MultiBlankRenderer } from './renderers/MultiBlankRenderer'
 import { MatchingRenderer } from './renderers/MatchingRenderer'
 import { BuildSentenceRenderer } from './renderers/BuildSentenceRenderer'
@@ -58,6 +59,32 @@ function lev(a: string, b: string): number {
     d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + c)
   }
   return d[m][n]
+}
+
+// ── 产出型 AI 估分（free_text/speak）：按技能选端点；后端返回统一形状 ──
+const SCORING_PATH: Record<string, string> = {
+  writing: '/api/scoring/writing',
+  translation: '/api/scoring/translation',
+  speaking: '/api/scoring/speaking',
+}
+const PROVIDER_LABEL: Record<string, string> = { deepseek: 'DeepSeek', mock: '本地估算' }
+/** 后端 SubjectiveScore JSON → FreeTextEstimate（每维度归一为 0–100 进度值）。 */
+function toEstimate(j: Record<string, unknown>): FreeTextEstimate {
+  const provRaw = String(j.provider ?? 'AI')
+  const dims = Array.isArray(j.dimensions) ? j.dimensions : []
+  const rubric: FreeTextRubricLine[] = dims.map((d) => {
+    const o = (d && typeof d === 'object' ? d : {}) as Record<string, unknown>
+    const max = Number(o.max) || 0
+    const awarded = Number(o.awarded) || 0
+    return { name: String(o.labelZh ?? o.key ?? ''), v: max ? Math.max(0, Math.min(100, Math.round((awarded / max) * 100))) : 0 }
+  })
+  return {
+    provider: PROVIDER_LABEL[provRaw] ?? provRaw,
+    score: Number(j.overall) || 0,
+    outOf: Number(j.fullScore) || 0,
+    band: String(j.band ?? ''),
+    rubric,
+  }
 }
 
 export function PracticeRunner(props: PracticeRunnerProps) {
@@ -254,15 +281,41 @@ export function PracticeRunner(props: PracticeRunnerProps) {
     finishQuestion(false, item, val)
   }, [items, spellInput, qs.spellTried, finishQuestion])
 
+  // 产出型 AI 估分：提交后调对应评分端点 → 填 review.freeText（pending→done/error）。
+  // 守卫：异步返回时若已切题（item.id 不再是当前题）则丢弃，避免污染下一题的 qs。
+  // 估分非官方分（isEstimate）；R12 不变量：不伪造对错，仅给估分与改进方向。
+  const scoreFreeText = useCallback(async (item: PracticeItem, text: string) => {
+    const examId = props.examId
+    const taskType = props.taskType ?? item.type
+    const skill = scoringSkillForTask(taskType) ?? (item.inputMode === 'speak' ? 'speaking' : 'writing')
+    const isCurrent = () => items[sRef.current.idx]?.id === item.id
+    if (isCurrent()) setQs((p) => ({ ...p, review: { ...(p.review ?? {}), freeText: { phase: 'pending', provider: 'AI' } } }))
+    if (!examId || !text.trim()) {
+      if (isCurrent()) setQs((p) => ({ ...p, review: { ...(p.review ?? {}), freeText: { phase: 'error' } } }))
+      return
+    }
+    try {
+      const res = await fetch(SCORING_PATH[skill] ?? SCORING_PATH.writing, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ examId, taskType, level: props.level, text, sourceText: item.prompt }),
+      })
+      const j = (await res.json()) as Record<string, unknown>
+      if (!res.ok || !j.ok) throw new Error(String(j?.error ?? 'score_failed'))
+      if (isCurrent()) setQs((p) => ({ ...p, review: { ...(p.review ?? {}), freeText: { phase: 'done', estimate: toEstimate(j) } } }))
+    } catch {
+      if (isCurrent()) setQs((p) => ({ ...p, review: { ...(p.review ?? {}), freeText: { phase: 'error' } } }))
+    }
+  }, [items, props.examId, props.taskType, props.level])
+
   const submitFree = useCallback(() => {
     if (lockRef.current) return
     const item = items[sRef.current.idx]
     if (!item) return
     lockRef.current = true
-    const review = (item as { review?: QState['review'] }).review ?? null
-    setQs((p) => ({ ...p, submitted: true, locked: true, review }))
-    postAttempt(item, freeText, undefined)   // 不判分
-  }, [items, freeText, postAttempt])
+    setQs((p) => ({ ...p, submitted: true, locked: true, review: { freeText: { phase: 'pending', provider: 'AI' } } }))
+    postAttempt(item, freeText, undefined)   // 产出型不判分/不伪造对错（仅记录作答）
+    void scoreFreeText(item, freeText)        // 异步 AI 估分 → 回填 review.freeText
+  }, [items, freeText, postAttempt, scoreFreeText])
 
   // multi_blank / matching / build_sentence：提交把作答上行 → 拿回 review → 置 locked + 写 review。
   // build_sentence 为开放排序 → scoringNotReady：不判分、不加分、不计连击。
@@ -429,7 +482,7 @@ export function PracticeRunner(props: PracticeRunnerProps) {
         ) : am === 'build_sentence' ? (
           <BuildSentenceRenderer body={view.buildBody} submitted={qs.locked} review={qs.review?.build ?? null} onCanSubmit={setCanSubmit} />
         ) : am === 'free_text' ? (
-          <FreeTextRenderer item={view} value={freeText} submitted={qs.submitted} review={qs.review?.freeText ?? null} onChange={setFreeText} />
+          <FreeTextRenderer item={view} value={freeText} submitted={qs.submitted} review={qs.review?.freeText ?? null} onChange={setFreeText} onRetry={() => { void scoreFreeText(item, freeText) }} />
         ) : (
           <>
             <StemCard item={item} locked={qs.locked} />
