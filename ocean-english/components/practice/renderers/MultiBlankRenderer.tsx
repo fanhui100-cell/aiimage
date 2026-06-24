@@ -1,7 +1,10 @@
 'use client'
 /* MultiBlankRenderer — 多空填空（词库选词 / 自由输入双模式）。
    安全红线：提交前不渲染正解；正解/解析只来自 review.cloze（submitted=true 后下发），
-   逐空对错在收到 review 后于客户端计算用于着色，正解文本只来自 review。 */
+   逐空对错在收到 review 后于客户端计算用于着色，正解文本只来自 review。
+
+   ★ 本版扩展（向后兼容）：free 模式逐空判分支持 review.cloze.acceptable —— 每空多个
+     可接受答案。acceptable 缺省时行为与旧版完全一致（纯回归安全）。 */
 import { useEffect, useMemo, useState } from 'react'
 
 /** 段落 token：字符串=文本，{ blank: n }=第 n 空 */
@@ -19,8 +22,10 @@ export interface ClozeBody {
 
 /** 提交回合下发的批改（只在 submitted=true 后存在） */
 export interface ClozeReview {
-  /** 每空正解 */
+  /** 每空主正解（展示用 + 判分基准） */
   key: Record<number, string>
+  /** 每空额外可接受答案（判分用，可选；缺省时行为同旧版） */
+  acceptable?: Record<number, string[]>
   explanationZh: string
 }
 
@@ -32,7 +37,7 @@ export interface MultiBlankRendererProps {
   /** 题体（缺省 / 无 blank → 受控空态） */
   body?: ClozeBody | null
   submitted?: boolean
-  /** 提交回合下发；含 key/explanationZh，提交前必为 undefined */
+  /** 提交回合下发；含 key/acceptable/explanationZh，提交前必为 undefined */
   review?: MultiBlankReview | null
   /** 上报「是否填满可提交」 */
   onCanSubmit?: (canSubmit: boolean) => void
@@ -61,11 +66,19 @@ export function MultiBlankRenderer({
   useEffect(() => { onCanSubmit?.(allFilled) }, [allFilled, onCanSubmit])
   useEffect(() => { onChange?.(fills) }, [fills, onChange])
 
-  // 提交回合的正解（仅 submitted 后存在）
+  // 提交回合的正解 / 备选（仅 submitted 后存在；提交前必为空对象）
   const key = review?.cloze?.key ?? {}
-  const correctCount = submitted
-    ? blanks.filter(b => norm(fills[b]) === norm(key[b])).length
-    : 0
+  const acceptable = review?.cloze?.acceptable ?? {}
+
+  /** 逐空判分：主正解命中 或 命中任一可接受备选 → 正确。复用唯一 norm，不新造归一逻辑。 */
+  const isBlankCorrect = (b: number): boolean => {
+    const v = fills[b]
+    if (norm(v) === norm(key[b])) return true
+    const alts = acceptable[b]
+    return Array.isArray(alts) && alts.some(a => norm(a) === norm(v))
+  }
+
+  const correctCount = submitted ? blanks.filter(isBlankCorrect).length : 0
 
   // 受控空态：缺题体 / 无 blank → 不报错、不计分（沿用「建设中」语义）
   if (!body || blanks.length === 0) {
@@ -135,7 +148,7 @@ export function MultiBlankRenderer({
           if (typeof tk === 'string') return <span key={i}>{tk}</span>
           const b = tk.blank
           const val = fills[b] || ''
-          const ok = submitted && norm(val) === norm(key[b])
+          const ok = submitted && isBlankCorrect(b)
           const cls =
             'pr-blank' +
             (!val ? ' empty' : '') +
@@ -143,10 +156,19 @@ export function MultiBlankRenderer({
             (submitted ? (ok ? ' ok' : ' no') : '')
 
           if (submitted) {
+            // 展示正确答案仍以 key[b] 为主；备选可在 key 后用浅色小字括注（可选）
+            const alts = acceptable[b]
             return (
               <span key={i} className={cls}>
                 <span className="bn">{b}</span><span className="bv">{val || '—'}</span>
-                {!ok && <span className="pr-blank-fix">{key[b]}</span>}
+                {!ok && (
+                  <span className="pr-blank-fix">
+                    {key[b]}
+                    {Array.isArray(alts) && alts.length > 0 && (
+                      <span className="pr-alt">或 {alts.join(' / ')}</span>
+                    )}
+                  </span>
+                )}
               </span>
             )
           }
@@ -181,8 +203,12 @@ export function MultiBlankRenderer({
 
       {/* 复审：单一汇总（题干内已就地标注对错，这里只汇总分数 + 待订正 + 解析） */}
       {submitted && review?.cloze && (() => {
-        const wrong = blanks.filter(b => norm(fills[b]) !== norm(key[b]))
+        const wrong = blanks.filter(b => !isBlankCorrect(b))
         const allOk = wrong.length === 0
+        const altOf = (b: number) => {
+          const a = acceptable[b]
+          return Array.isArray(a) && a.length ? a : null
+        }
         return (
           <div className={'explain ' + (allOk ? 'ok' : 'no')} role="status" aria-live="polite">
             <div className="ex-head">{allOk ? '全部正确' : '本题判定'}
@@ -195,7 +221,10 @@ export function MultiBlankRenderer({
                     <span className="bn">{b}</span>
                     <span className="wrong">{fills[b] || '（空）'}</span>
                     <span className="arr">→</span>
-                    <span className="right">{key[b]}</span>
+                    <span className="right">
+                      {key[b]}
+                      {altOf(b) && <span className="pr-alt">或 {altOf(b)!.join(' / ')}</span>}
+                    </span>
                   </div>
                 ))}
               </div>

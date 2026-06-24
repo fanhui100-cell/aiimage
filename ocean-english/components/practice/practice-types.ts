@@ -10,6 +10,9 @@ import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxo
 import type { ClozeBody, MultiBlankReview } from './renderers/MultiBlankRenderer'
 import type { MatchingBody, MatchingReview } from './renderers/MatchingRenderer'
 import type { BuildSentenceBody, BuildSentenceReview } from './renderers/BuildSentenceRenderer'
+import type { PassageClozeBody, PassageClozeReview } from './renderers/PassageClozeRenderer'
+import type { SevenSelectBody, SevenSelectReview } from './renderers/SevenSelectRenderer'
+import type { ParaMatchBody, ParaMatchReview } from './renderers/ParaMatchRenderer'
 import type { FreeTextReview } from './renderers/FreeTextRenderer'
 
 /** 前端退役题型双保险（后端默认已不下发）。 */
@@ -31,6 +34,10 @@ export type PracticeItemView = PracticeItem & {
   clozeBody?: ClozeBody | null
   matchBody?: MatchingBody | null
   buildBody?: BuildSentenceBody | null
+  /** 分组阅读型（R3）：逐空四选 / 七选五 / 段落匹配 */
+  passageClozeBody?: PassageClozeBody | null
+  sevenSelectBody?: SevenSelectBody | null
+  paraMatchBody?: ParaMatchBody | null
   /** free_text 字数指引（非强制） */
   wordMin?: number
   wordMax?: number
@@ -42,6 +49,9 @@ export type PracticeReview = MultiBlankReview & {
   matching?: MatchingReview | null
   build?: BuildSentenceReview | null
   freeText?: FreeTextReview | null
+  passageCloze?: PassageClozeReview
+  sevenSelect?: SevenSelectReview
+  paraMatch?: ParaMatchReview
 }
 
 export type PracticeRunnerMode = 'word' | 'task' | 'section' | 'paper'

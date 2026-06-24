@@ -20,6 +20,9 @@ import { FreeTextRenderer } from './renderers/FreeTextRenderer'
 import { MultiBlankRenderer } from './renderers/MultiBlankRenderer'
 import { MatchingRenderer } from './renderers/MatchingRenderer'
 import { BuildSentenceRenderer } from './renderers/BuildSentenceRenderer'
+import { PassageClozeRenderer } from './renderers/PassageClozeRenderer'
+import { SevenSelectRenderer } from './renderers/SevenSelectRenderer'
+import { ParaMatchRenderer } from './renderers/ParaMatchRenderer'
 import {
   ASK_OF, DIM_OF, freshQState, freshRunnerSession, isDeprecatedSafe,
   type PracticeItem, type PracticeItemView, type PracticeRunnerProps, type PracticeSessionResponse,
@@ -31,6 +34,7 @@ const LABEL_OF: Record<string, string> = {
   zh_to_word_spell: '中文拼写', word_form: '词形变化', synonym_choice: '近义词', confusable_choice: '易混词',
   cloze_spell: '例句拼写', listen_to_meaning: '听音选义', dictation_spell: '听写', listening_comprehension: '听力理解',
   reading_comprehension: '阅读理解', synonym_substitute: '同义替换', collocation_choice: '搭配',
+  cloze_passage: '完形填空', seven_select: '七选五', para_match: '段落信息匹配', banked_cloze: '选词填空', grammar_fill: '语法填空',
 }
 
 type AnswerMode = 'choice' | 'spell' | 'free_text' | 'multi_blank' | 'matching' | 'build_sentence'
@@ -412,7 +416,13 @@ export function PracticeRunner(props: PracticeRunnerProps) {
       <div className="qbody fade-up" key={item.id}>
         <p className="eyebrow"><span className="tag">{LABEL_OF[item.type] ?? item.type}</span></p>
 
-        {am === 'multi_blank' ? (
+        {item.type === 'cloze_passage' ? (
+          <PassageClozeRenderer body={view.passageClozeBody} submitted={qs.locked} review={qs.review} onCanSubmit={setCanSubmit} onChange={setBlankState} />
+        ) : item.type === 'seven_select' ? (
+          <SevenSelectRenderer body={view.sevenSelectBody} submitted={qs.locked} review={qs.review} onCanSubmit={setCanSubmit} onChange={setBlankState} />
+        ) : item.type === 'para_match' ? (
+          <ParaMatchRenderer body={view.paraMatchBody} submitted={qs.locked} review={qs.review} onCanSubmit={setCanSubmit} onChange={setMatchState} />
+        ) : am === 'multi_blank' ? (
           <MultiBlankRenderer body={view.clozeBody} submitted={qs.locked} review={qs.review} onCanSubmit={setCanSubmit} onChange={setBlankState} />
         ) : am === 'matching' ? (
           <MatchingRenderer body={view.matchBody} submitted={qs.locked} review={qs.review?.matching ?? null} onCanSubmit={setCanSubmit} onChange={setMatchState} />
