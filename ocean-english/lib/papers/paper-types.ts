@@ -115,3 +115,18 @@ export interface PaperScore {
   scaled: number
   needsManualOrAi: boolean
 }
+
+// ── 提交（R11 服务端权威判分）──────────────────────────────────────────────────
+/** 客户端提交载荷：仅 questionItemId + 作答；答案键服务端从 question_items 取，绝不信任客户端。 */
+export interface PaperSubmissionRequest {
+  responses: ItemResponse[]
+}
+
+/** 提交结果：服务端判分 + 持久化的 paper_attempts 主键。 */
+export interface PaperSubmissionResponse {
+  ok: boolean
+  paperAttemptId?: string
+  score?: PaperScore
+  error?: string
+  warnings: string[]
+}

@@ -49,6 +49,16 @@ export async function POST(req: NextRequest) {
           score: { snapshot: clientPaper },
         }).select('id').single()
         paperInstanceId = (inst as { id: string } | null)?.id
+        // 归一化分区记录（R11）：每 section 落 set/item 主键、分值、序号（user_id 反范式化便于 RLS）。
+        if (paperInstanceId) {
+          const sectionRows = paper.sections.map((s, i) => ({
+            paper_instance_id: paperInstanceId, user_id: user.id, section_id: null, order_index: i,
+            question_set_ids: s.sets.map((x) => x.setId),
+            question_item_ids: s.items.map((x) => x.questionItemId),
+            points: s.points,
+          }))
+          if (sectionRows.length) await db.from('paper_sections').insert(sectionRows)
+        }
       }
     } catch { /* 持久化失败不影响出卷 */ }
 
