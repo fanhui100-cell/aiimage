@@ -249,11 +249,13 @@ async function main() {
       console.log(`  [DB] ${cfg.taskType}: 源↔DB 逐条一致 ${okCmp}/${nf.tasks.length} · stage set=${stageSets.length} · owned draft=${ownedDraft} active=${ownedActive}`)
     }
 
-    // 全局硬停不变量
+    // 全局硬停不变量。Post-R10：reading/listening 可 active；其余 gen 题型不应 active。
+    const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
     const genActive = sets.filter((s) => s.status === 'active').length
+    const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
     const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-    console.log(`全局：gen active=${genActive} · gen antonym/cet_cloze=${deprecated}`)
-    if (genActive !== 0) err(`gen active=${genActive}（须 0）`)
+    console.log(`全局：gen active=${genActive}（意外 active=${unexpectedActive}） · gen antonym/cet_cloze=${deprecated}`)
+    if (unexpectedActive !== 0) err(`unexpected gen active=${unexpectedActive}（须 0；reading/listening 除外）`)
     if (deprecated !== 0) err(`gen antonym/cet_cloze=${deprecated}（须 0）`)
   }
 

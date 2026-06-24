@@ -7,7 +7,8 @@
      3. scripts/verify-toefl-writing-expansion.ts --db          (Window B +50/+50, owns writing aggregate)
    then a final aggregate DB count assertion:
      complete_the_words draft = 70, email_writing draft = 60, academic_discussion draft = 60,
-     all three active = 0, plus global gen active = 0 and antonym_choice/cet_cloze = 0.
+     all three active = 0; post-R10 gen 意外 active = 0 (reading/listening 小批晋级除外) and
+     antonym_choice/cet_cloze = 0.
 
    This orchestrator NEVER writes DB rows. Any child non-zero exit OR any failed count
    assertion makes this process exit non-zero.
@@ -72,11 +73,14 @@ async function assertAggregateCounts(): Promise<boolean> {
     console.log(`  ${pass ? '✓' : '✗'} ${label} = ${got} (expect ${want})`)
     if (!pass) ok = false
   }
+  // Post-R10：reading/listening 小批晋级可 active；其余 gen 题型（含 TOEFL 草稿型/产出型）不应 active。
+  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
   const genActive = sets.filter((s) => s.status === 'active').length
+  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`  ${genActive === 0 ? '✓' : '✗'} gen active total = ${genActive} (expect 0)`)
+  console.log(`  ${unexpectedActive === 0 ? '✓' : '✗'} gen 意外 active = ${unexpectedActive} (expect 0; reading/listening 除外，当前 gen active=${genActive})`)
   console.log(`  ${deprecated === 0 ? '✓' : '✗'} antonym_choice + cet_cloze = ${deprecated} (expect 0)`)
-  if (genActive !== 0 || deprecated !== 0) ok = false
+  if (unexpectedActive !== 0 || deprecated !== 0) ok = false
   return ok
 }
 

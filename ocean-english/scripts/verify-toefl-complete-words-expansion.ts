@@ -303,11 +303,14 @@ async function runDbChecks(sc: SourceCheck) {
   if (cwActive !== 0) fail(`complete_the_words active=${cwActive} (must 0)`)
   console.log(`  complete_the_words: draft=${cwDraft} active=${cwActive} (pilot 10 + new ${newPresent})`)
 
-  // §7.13 global invariants.
+  // §7.13 global invariants. Post-R10: reading/listening 可 active（小批晋级）；其余 gen 题型
+  // （含 TOEFL 草稿型/产出型）不应 active。故断言「意外 active」（非 reading/listening）为 0，而非全 0。
+  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
   const genActive = sets.filter((s) => s.status === 'active').length
+  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`  global: gen active=${genActive} · antonym/cet_cloze=${deprecated}`)
-  if (genActive !== 0) fail(`gen active=${genActive} (must 0)`)
+  console.log(`  global: gen active=${genActive}（意外 active=${unexpectedActive}） · antonym/cet_cloze=${deprecated}`)
+  if (unexpectedActive !== 0) fail(`unexpected gen active=${unexpectedActive} (must 0; reading/listening 除外)`)
   if (deprecated !== 0) fail(`gen antonym/cet_cloze=${deprecated} (must 0)`)
 }
 

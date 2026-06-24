@@ -11,7 +11,7 @@
    3. 客观 item 逐字段比对 expected=shapeToItems(raw)：input_mode / prompt / choices / answer。
       · complete_the_words 断言 input_mode==='spell'；build_a_sentence 断言 'multi_blank' + qa_flags.scoring_not_ready。
    4. 生产性 item：input_mode==='free_text' + rubric_id 非空 + answer.official===false + prompt===源 prompt。
-   5. 已停题型 DB 数为 0；全局硬停：gen active=0；antonym_choice/cet_cloze=0。
+   5. 已停题型 DB 数为 0；全局硬停：gen 意外 active=0（reading/listening 小批晋级除外）；antonym_choice/cet_cloze=0。
    R0 历史范围修订：本校验器只负责 4 个 pilot 包各自的 10 条原始记录。扩产集（相同 template/task_type 的
    +60/+50 套）由 verify-toefl-<stage>-expansion.ts 拥有；聚合计数（70/60/60、0 active）由 verify-toefl-current.ts
    断言。故此处不再断言「每包恰好 10 draft」或「DB 中该包无源外 set」，避免与已集成的扩产冲突。
@@ -145,11 +145,13 @@ async function main() {
     if (n !== 0) errors.push(`已停题型 ${tpl} 仍有 ${n} 个 set`)
   }
 
-  // ── 全局硬停 ──
+  // ── 全局硬停 ── Post-R10：reading/listening 可 active；其余 gen 题型不应 active。
+  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
   const genActive = sets.filter((s) => s.status === 'active').length
+  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`全局：gen active=${genActive} · gen antonym/cet_cloze=${deprecated}`)
-  if (genActive !== 0) errors.push(`gen active=${genActive}`)
+  console.log(`全局：gen active=${genActive}（意外 active=${unexpectedActive}） · gen antonym/cet_cloze=${deprecated}`)
+  if (unexpectedActive !== 0) errors.push(`unexpected gen active=${unexpectedActive}（reading/listening 除外）`)
   if (deprecated !== 0) errors.push(`gen antonym/cet_cloze=${deprecated}`)
 
   if (errors.length) { console.error('\n校验失败：'); for (const e of errors) console.error(`  ✗ ${e}`); process.exitCode = 1 }
