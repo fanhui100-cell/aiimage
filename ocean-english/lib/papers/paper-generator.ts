@@ -150,6 +150,36 @@ function mapItem(it: ItemRow, targetWordIds: string[]): PaperItem {
   }
 }
 
+/** 段落匹配可选目标数：优先数 passage 内 [A][B].. 顺序标号（para_match_multi），否则按答案区间兜底。 */
+function paraCount(textEn: string | undefined, answer: unknown): number {
+  const labels = textEn ? [...textEn.matchAll(/\[([A-Z])\]/g)].length : 0
+  if (labels >= 2) return labels
+  const ans = Array.isArray(answer) ? (answer as unknown[]).map(Number).filter((n) => Number.isFinite(n)) : []
+  const maxA = ans.length ? Math.max(...ans) : 0
+  return Math.max(ans.length, maxA + 1, 2)
+}
+
+/** 从 answerKey 计算「答案无关」的可渲染分组结构（空数/每空选项/匹配目标数）；answerKey 仍由 toClientPaper 剥离。 */
+function decorateRender(item: PaperItem, stimTextEn?: string): PaperItem {
+  const a = item.answerKey
+  if (item.inputMode === 'multi_blank') {
+    if (Array.isArray(a) && a.length > 0 && a.every((x) => x != null && typeof x === 'object' && 'options' in (x as object))) {
+      // cloze_passage：[{ options:[4], answer }] → 仅留每空选项（不含正确索引）
+      item.blanks = (a as { options?: unknown[] }[]).map((b) => ({
+        options: (Array.isArray(b.options) ? b.options : []).map((t, i) => ({ id: String(i), text: String(t) })),
+      }))
+      item.blankCount = item.blanks.length
+    } else if (Array.isArray(a)) {
+      // banked_cloze / seven_select（共享 choices 词库/句库）或 grammar_fill（无 choices，自由填）
+      item.blankCount = a.length
+    }
+  } else if (item.inputMode === 'matching') {
+    item.blankCount = Array.isArray(a) ? a.length : (item.choices?.length ?? 0)
+    item.matchTargets = paraCount(stimTextEn, a)
+  }
+  return item
+}
+
 // ── 抽一个客观题型 ────────────────────────────────────────────────────────────
 async function drawTask(
   db: SupabaseClient, taskType: string, level: number, target: number, rnd: () => number,
@@ -198,13 +228,41 @@ async function drawTask(
     for (const it of items) {
       const wids = tw.get(it.id) ?? []
       for (const w of wids) usedWord.set(w, (usedWord.get(w) ?? 0) + 1)
-      outItems.push(mapItem(it, wids))
+      outItems.push(decorateRender(mapItem(it, wids), stim?.text_en ?? undefined))
       if (grouped && outItems.length >= target) break
     }
   }
 
   const short = grouped ? outItems.length < target : wholeTask ? outSets.length < 1 : outItems.length < target
   return { sets: outSets, items: outItems, short }
+}
+
+// ── 抽一个产出型 prompt ───────────────────────────────────────────────────────
+// 写作/翻译/口语：整卷主观区放 1 个真实题面（让用户能作答），仍标 subjective + needs_manual_or_ai_scoring，
+// 评分恒走 AI/人工（scoreSection 对 subjective 区短路、不做客观比对、不计入客观分），绝不伪造对错。
+async function drawProductive(
+  db: SupabaseClient, candidates: string[], level: number, rnd: () => number, usedStimuli: Set<string>,
+): Promise<{ taskType: string; sets: PaperSetRef[]; items: PaperItem[] } | null> {
+  for (const t of candidates) {
+    if (isDeprecatedQuestionType(t)) continue
+    const sets = await fetchActiveSets(db, t, level)
+    if (!sets.length) continue
+    const ordered = seededShuffle(sets, rnd)
+    const stimById = await fetchStimuli(db, [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))])
+    for (const s of ordered) {
+      if (s.stimulus_id && usedStimuli.has(s.stimulus_id)) continue            // 同卷不重复 stimulus
+      const items = await fetchActiveItems(db, s.id)
+      if (!items.length) continue
+      if (s.stimulus_id) usedStimuli.add(s.stimulus_id)
+      const stim = s.stimulus_id ? stimById.get(s.stimulus_id) : undefined
+      // 产出型材料即题面提示（非 transcript，非样卷答案）；客户端视图仍由 toClientPaper 剥 answerKey。
+      const stimulus = stim ? { kind: stim.kind, title: stim.title ?? undefined, textEn: stim.text_en ?? undefined } : undefined
+      const item = mapItem(items[0], [])
+      item.answerKey = null                                                     // 主观区无客观答案键（参考答案绝不前泄）
+      return { taskType: t, sets: [{ setId: s.id, taskType: t, stimulusId: s.stimulus_id ?? undefined, stimulus }], items: [item] }
+    }
+  }
+  return null
 }
 
 // ── 装配一个 section ─────────────────────────────────────────────────────────
@@ -220,7 +278,15 @@ async function buildSection(
   }
 
   if (isSubjectiveSection(sec)) {
-    return { ...base, subjective: true, scoring: 'needs_manual_or_ai_scoring', taskType: sec.taskTypes[0] ?? null, placeholder: { reason: 'needs_manual_or_ai_scoring', taskTypes: sec.taskTypes } }
+    // 主观区：抽 1 个真实产出型题面（写作/翻译/口语）让用户作答；无 active 内容才退回纯 placeholder。
+    const drawn = await drawProductive(db, sec.taskTypes.filter((t) => !isDeprecatedQuestionType(t)), level, rnd, usedStimuli)
+    return {
+      ...base, subjective: true, scoring: 'needs_manual_or_ai_scoring',
+      taskType: drawn?.taskType ?? sec.taskTypes[0] ?? null,
+      sets: drawn?.sets ?? [], items: drawn?.items ?? [],
+      placeholder: { reason: 'needs_manual_or_ai_scoring', taskTypes: sec.taskTypes },
+      warnings: drawn ? [] : ['insufficient_pool'],
+    }
   }
 
   const target = targetCount(sec, mode)

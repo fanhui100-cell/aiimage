@@ -43,6 +43,13 @@ export interface PaperItem {
   /** 标准答案：仅服务端持久化/评分用；POST /api/papers 的客户端视图会剥离。 */
   answerKey?: unknown
   targetWordIds?: string[]
+  // ── 客户端可渲染的「答案无关」分组结构（R11b；由 generator 从 answer 计算，answerKey 仍剥离）──
+  /** multi_blank（banked_cloze/seven_select/grammar_fill）/matching 的空（题）数。 */
+  blankCount?: number
+  /** cloze_passage：每空 4 选项（仅选项文本，不含正确索引）。 */
+  blanks?: { options: PaperChoice[] }[]
+  /** matching（para_match）：可匹配目标（段落 A..N）数。 */
+  matchTargets?: number
 }
 
 export interface PaperSection {

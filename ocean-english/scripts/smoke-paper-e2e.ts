@@ -28,7 +28,12 @@ function check(cond: boolean, msg: string) {
   else { console.log('  ✗', msg); failures++ }
 }
 
-/** 用快照重建一份「客户端视图」的卷（含 item/answerKey 来自原 paper，便于构造作答）。 */
+/** 把多空/匹配 answerKey 归一为「逐空正确值」数组（与 scoring.ts blankAnswers 同口径）。 */
+function blankAnswers(key: unknown): unknown[] {
+  if (!Array.isArray(key)) return []
+  return key.map((k) => (k && typeof k === 'object' && 'answer' in (k as object)) ? (k as { answer: unknown }).answer : k)
+}
+/** 客观题（string 键=choice/listen/spell；array 键=multi_blank/matching）构造全对/全错作答。 */
 function buildResponses(paper: GeneratedPaper, kind: 'correct' | 'wrong'): ItemResponse[] {
   const out: ItemResponse[] = []
   for (const s of paper.sections) {
@@ -40,6 +45,9 @@ function buildResponses(paper: GeneratedPaper, kind: 'correct' | 'wrong'): ItemR
           const other = (it.choices ?? []).map((c) => c.id).find((cid) => cid !== it.answerKey) ?? '__wrong__'
           out.push({ questionItemId: it.questionItemId, answer: other })
         }
+      } else if (Array.isArray(it.answerKey)) {
+        const correct = blankAnswers(it.answerKey)
+        out.push({ questionItemId: it.questionItemId, answer: kind === 'correct' ? correct.map((v) => (v == null ? '' : v)) : correct.map(() => '__wrong__') })
       }
     }
   }
@@ -77,7 +85,7 @@ async function main() {
     if (g.paper && objMax > 0 && objN > 0) { paper = g.paper; console.log(`  · 选用 ${ex} full（objectiveMax=${objMax}）`); break }
   }
   if (!paper) { console.log('  ✗ 无可用考试（客观区有题且分值>0）'); failures++; return }
-  const objItems = paper.sections.filter((s) => !s.subjective).flatMap((s) => s.items).filter((it) => typeof it.answerKey === 'string')
+  const objItems = paper.sections.filter((s) => !s.subjective).flatMap((s) => s.items).filter((it) => typeof it.answerKey === 'string' || Array.isArray(it.answerKey))
   check(objItems.length > 0, `full 卷有客观题可判分（实际 ${objItems.length}）`)
   const hasSubjective = paper.sections.some((s) => s.subjective)
 
