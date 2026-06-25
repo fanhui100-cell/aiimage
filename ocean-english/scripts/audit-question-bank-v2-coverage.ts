@@ -208,7 +208,9 @@ async function main() {
     const warn: string[] = []
     if (c.active < MIN_ACTIVE_POOL) warn.push('insufficient_active_pool')
     if (LISTENING.has(taskType) && c.active > 0 && c.activeAudio < c.active) warn.push('active_listening_without_audio')
-    if (PRODUCTIVE.has(taskType) && c.rubricItems < c.items) warn.push('productive_items_missing_rubric')
+    // rubric 仅适用于 rubric 评分的产出型写作；build_a_sentence 是客观排序题(multi_blank, scoring_not_ready)、非 rubric 评分，
+    // 须与 canonical 矩阵分类器(classifyCell 的 !SCORING_NOT_READY 排除)一致，否则同一题型两处呈现冲突(噪声)。
+    if (PRODUCTIVE.has(taskType) && !SCORING_NOT_READY.has(taskType) && c.rubricItems < c.items) warn.push('productive_items_missing_rubric')
     if (warn.length) warnings.push(`lv${level} ${taskType}: ${warn.join(', ')}`)
     rows.push({ exam, level, taskType, totalSets, draft: c.draft, active: c.active, items: c.items, stimuli: c.stimuli, audioActive: c.activeAudio, rubricItems: c.rubricItems, targetWords: c.targetWords, sourceStages: c.sourceStages, warnings: warn })
   }

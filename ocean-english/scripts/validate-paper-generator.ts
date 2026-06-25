@@ -87,6 +87,30 @@ function clientPaperContractTests() {
   ok(client.sections[0].items.every((i) => !('answerKey' in i)), 'client: items 已剥 answerKey')
 }
 
+// ── 确定性比较：剥离每次现签的时变 token，避免把「签名 token 不同」误判为「卷不同」──────────
+// Supabase createSignedUrl 返回 …/object/sign/<bucket>/<path>?token=<jwt>，jwt 含 iat/exp 故每次调用都变；
+// 同一对象的 path（?前）稳定。归一化只去掉 ?token=… 时变段，仍逐字段比较（含稳定音频对象路径），不弱化。
+function normalizePaper(paper: GeneratedPaper | null): unknown {
+  if (!paper) return paper
+  const clone = JSON.parse(JSON.stringify(paper)) as GeneratedPaper
+  for (const s of clone.sections) {
+    for (const set of s.sets) {
+      const u = set.stimulus?.audioUrl
+      if (typeof u === 'string') set.stimulus!.audioUrl = u.split('?')[0]
+    }
+  }
+  return clone
+}
+/** set/item 选择签名：直接证明「真实 set/item 选择不变」，与 stimulus/签名无关。 */
+function selectionSignature(paper: GeneratedPaper | null): string {
+  if (!paper) return 'null'
+  return JSON.stringify(paper.sections.map((s) => ({
+    sec: s.sectionId, task: s.taskType,
+    sets: s.sets.map((x) => x.setId),
+    items: s.items.map((x) => x.questionItemId),
+  })))
+}
+
 // ── 生成的卷不得含退役题型 ────────────────────────────────────────────────────
 function assertNoDeprecated(paper: GeneratedPaper, label: string) {
   for (const s of paper.sections) {
@@ -138,10 +162,15 @@ async function dbChecks(db: SupabaseClient) {
   const ky = await generatePaper(db, { examId: 'kaoyan', mode: 'section', sectionId: 'reading_a', seed: 'ky-sec' })
   if (ky.paper) assertNoDeprecated(ky.paper, 'kaoyan section')
   else notes.push(`kaoyan section: warnings=${ky.warnings.join(',')}`)
-  // 确定性：同 seed 同卷
+  // 确定性：同 seed 同卷。听力 stimulus.audioUrl 是每次现签的短时签名（token 时变），
+  // 故先比 set/item 选择签名（证明真实选择不变），再比归一化卷（剥时变 token、保留稳定音频对象路径后逐字段一致）。
   const d1 = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'determinism' })
   const d2 = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'determinism' })
-  ok(JSON.stringify(d1.paper) === JSON.stringify(d2.paper), 'applied: 同 seed 同卷')
+  ok(selectionSignature(d1.paper) === selectionSignature(d2.paper), 'applied: 同 seed → set/item 选择完全一致')
+  ok(JSON.stringify(normalizePaper(d1.paper)) === JSON.stringify(normalizePaper(d2.paper)), 'applied: 同 seed 同卷（归一化时变签名 token 后逐字段一致）')
+  // 同时确认 d1/d2 原始卷的差异确实只来自签名 token（若原始已相等，说明该卷无听力签名 URL）。
+  const rawIdentical = JSON.stringify(d1.paper) === JSON.stringify(d2.paper)
+  notes.push(rawIdentical ? '确定性：原始卷即逐字节相等（本卷无时变签名 URL）' : '确定性：原始卷仅签名 token 不同，归一化后一致（set/item 选择确定）')
   return { applied: true }
 }
 

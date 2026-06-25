@@ -117,12 +117,15 @@ const expect = (cond: boolean, msg: string) => { if (!cond) failures.push(msg) }
       const required = ['exam', 'level', 'section', 'taskType', 'domain', 'requiredInputMode', 'requiresAudio', 'requiresRubric', 'draft', 'reviewed', 'active', 'rejected', 'retired', 'items', 'stimuli', 'activeAudio', 'rubricItems', 'sourceStages', 'state', 'blockingReasons']
       const offender = mrows.find((r) => required.some((f) => !(f in r)))
       expect(!offender, `report: every matrix row has required fields (offender: ${offender ? JSON.stringify(offender).slice(0, 120) : 'none'})`)
+      // R0 expansions visible — counted as draft+active so the assertion survives R10 promotion
+      // (complete_the_words/email_writing/academic_discussion were promoted draft→active in R10; intent is "present", not "still draft").
+      const present = (r: Record<string, unknown> | undefined) => ((r?.draft as number) ?? 0) + ((r?.active as number) ?? 0)
       const cw = mrows.find((r) => r.exam === 'toefl' && r.taskType === 'complete_the_words')
-      expect(!!cw && (cw.draft as number) >= 70, `report: toefl complete_the_words draft=${cw?.draft} (expect >=70 from R0)`)
+      expect(!!cw && present(cw) >= 70, `report: toefl complete_the_words draft+active=${present(cw)} (expect >=70 from R0; R10 promoted to active)`)
       const em = mrows.find((r) => r.exam === 'toefl' && r.taskType === 'email_writing')
       const ad = mrows.find((r) => r.exam === 'toefl' && r.taskType === 'academic_discussion')
-      expect(!!em && (em.draft as number) >= 60, `report: toefl email_writing draft=${em?.draft} (expect >=60 from R0)`)
-      expect(!!ad && (ad.draft as number) >= 60, `report: toefl academic_discussion draft=${ad?.draft} (expect >=60 from R0)`)
+      expect(!!em && present(em) >= 60, `report: toefl email_writing draft+active=${present(em)} (expect >=60 from R0; R10 promoted to active)`)
+      expect(!!ad && present(ad) >= 60, `report: toefl academic_discussion draft+active=${present(ad)} (expect >=60 from R0; R10 promoted to active)`)
     }
   } else {
     console.log('  (report not yet generated — run `npm run audit:qbank-v2-coverage` first for the report cross-check)')

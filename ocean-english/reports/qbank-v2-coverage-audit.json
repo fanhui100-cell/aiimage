@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T07:51:35.392Z",
+  "generatedAt": "2026-06-25T11:32:02.986Z",
   "totals": {
     "sets": 5623,
     "items": 6803,
@@ -2671,8 +2671,7 @@
       "targetWords": 0,
       "sourceStages": 1,
       "warnings": [
-        "insufficient_active_pool",
-        "productive_items_missing_rubric"
+        "insufficient_active_pool"
       ]
     },
     {
@@ -3263,7 +3262,7 @@
     "lv5 word_form: insufficient_active_pool",
     "lv5 zh_to_en: insufficient_active_pool",
     "lv5 zh_to_word_spell: insufficient_active_pool",
-    "lv6 build_a_sentence: insufficient_active_pool, productive_items_missing_rubric",
+    "lv6 build_a_sentence: insufficient_active_pool",
     "lv6 cloze_choice: insufficient_active_pool",
     "lv6 cloze_spell: insufficient_active_pool",
     "lv6 collocation_choice: insufficient_active_pool",

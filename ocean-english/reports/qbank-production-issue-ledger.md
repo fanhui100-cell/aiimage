@@ -23,18 +23,29 @@ Companion machine record: `reports/qbank-production-issue-ledger.json`.
 
 ## Open / unresolved
 
-_Coverage after gapfill batch 1: MISSING **20** (was 25), THIN **15** (was 10). 5 reading/grammar cells cleared (zhongkao reading+grammar_fill, gaokao reading, cet6 reading, kaoyan reading_a) — now thin pools, need expansion to ≥20._
+> **CURRENT STATE — refreshed 2026-06-25.** The earlier open list below this note was a pre-R10 snapshot ("everything draft", "no audio credentials", "MISSING 20 / THIN 15") and is **superseded** by the R10–R14 + R11/R12-frontend rows further down. Authoritative status: `reports/release-readiness-2026-06-23.md` + `reports/qbank-v2-coverage-audit.md` (live DB). Net: **active 1993 sets / 3173 items; 38/45 canonical cells ACTIVE_READY; deprecated 0.** Six exams (zhongkao/gaokao/cet4/cet6/kaoyan/SAT) fully active. **Non-TOEFL listening has active audio** (`audio-assets-validation.json` activeAudioRows=224). No release-blocking validation gaps as of 2026-06-25 (`validate:papers` ok=true after determinism-check fix; all validators/smokes green; `next build` 0).
 
-No **blocking** issues. Open major/minor (all need external input, design, or user approval — none auto-fixable):
+**Remaining open — all TOEFL (lv6) or external/non-blocking:**
 
-- **G8-deferred** (major): user chose to keep everything draft; promotion to active awaits human content review. Tool ready.
-- **G6-audio-missing** (major): no audio credentials → listening/speaking stay draft, can't promote.
-- **G11-cet6-vocab** (major): CET-6 ~1257 words short of target; needs a licensed CET-6 wordlist (no fabrication).
-- **G4-toefl-special** (major): **部分解决（2026-06-22 TOEFL 非音频试产）** —— complete_the_words/read_daily_life 已建 template+shape 并各产 10 draft；仅 choose_a_response（听力，音频阻塞）未做。
-- **G4-reading-multilevel** (major): reading thin outside cet4; needs a multi-item reading authored shape + ongoing authoring.
-- **G5-toefl-productive** (minor): **部分解决（2026-06-22）** —— TOEFL writing 三型 build_a_sentence/email_writing/academic_discussion 各产 10 draft（build_a_sentence 标 scoring_not_ready）；speaking 两型仍被音频阻塞。
-- **G1C-vps-flaky** (minor): practice-session validator flaky on advanced words lacking word-universe coverage (→ G11).
-- **G12-followups** (minor): legacy /api/mock-exam perf eval deferred; reports not cleaned; worktree not committed (no user request).
+- **TOEFL reading** `read_daily_life` / `reading_comprehension` — BLOCKED `official_spec_unverified` (ETS 2026 MCQ option/item counts unpublished). Needs authoritative ETS source or owner-authorized ranged spec.
+- **TOEFL listening** `choose_a_response` / `listening_comprehension` — MISSING (0 content). Needs spec + original script/question authoring + audio.
+- **TOEFL speaking** `listen_and_repeat` / `interview_speaking` — BLOCKED `audio_missing` + **`speak` renderer/recording/privacy not implemented** (PracticeRunner AnswerMode has no `speak`; `score-speaking` is transcript-only `audio_scoring_not_ready`). active=0 so no leak; all four prerequisites needed before unlock.
+- **TOEFL** `build_a_sentence` — BLOCKED `scoring_not_ready` (equivalence/ordering scoring unimplemented; promote RPC hard-rejects). Renderer `BuildSentenceRenderer` exists but shows reference order without grading.
+- **G11-cet6-vocab** (external): CET-6 ~1257 words short of target; needs a licensed CET-6 wordlist (no fabrication).
+- **AI/Vision providers** (external/infra, non-blocking): anthropic/openai/gemini + vision-OCR providers are `notImplemented` stubs; `ai-client` falls back to deterministic mock (productive AI scoring honestly flagged `isEstimate`). Needs provider+credentials+cost authorization to wire real APIs.
+- **worktree cleanup** (destructive, deferred): `D:/ai-worktrees/ocean-toefl-a` + `ocean-toefl-b` + 2 branches still present; awaits user confirmation of integration before `git worktree remove`.
+- **E2E suite** (test-maintenance, 2026-06-25): 7 v1-loop specs `test.fixme` with documented reasons (see `reports/e2e-stale-audit-2026-06-25.md`); 3 surfaced product decisions (lexigraph red-edge feature orphaned; `/today` no longer auto-builds today-pack; `/quiz` word-mode needs question-bank-backed fixture).
+
+<details><summary>Superseded pre-R10 open list (historical)</summary>
+
+- **G8-deferred** (major): user chose to keep everything draft; promotion awaits human review. → RESOLVED: R10 promoted 1993 active.
+- **G6-audio-missing** (major): no audio credentials → listening/speaking stay draft. → RESOLVED (non-TOEFL): owner-authorized activation; 224 active audio rows. TOEFL speaking audio still blocked.
+- **G11-cet6-vocab** (major): see current list above (still open).
+- **G4-toefl-special / G4-reading-multilevel / G5-toefl-productive** (major/minor): reading expanded + promoted (R10, 400 reading active); TOEFL items remain as in current list above.
+- **G1C-vps-flaky** (minor): practice-session validator variance on advanced words lacking word-universe coverage.
+- **G12-followups** (minor): legacy /api/mock-exam superseded by /api/papers (R11); reports refreshed 2026-06-25; worktree still uncommitted.
+
+</details>
 
 ## Codex review round 1 (2026-06-21) — findings + actions
 

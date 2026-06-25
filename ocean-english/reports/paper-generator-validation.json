@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-06-22T10:32:39.162Z",
+  "generatedAt": "2026-06-25T11:40:29.793Z",
   "status": "applied",
   "errors": [],
   "notes": [
     "v2 applied：执行真实生成 + 确定性/退役/池不足校验",
-    "cet4 mini: insufficient_pool（受控）",
-    "cet4 full: insufficient_pool（受控）"
+    "确定性：原始卷仅签名 token 不同，归一化后一致（set/item 选择确定）"
   ],
   "ok": true
 }

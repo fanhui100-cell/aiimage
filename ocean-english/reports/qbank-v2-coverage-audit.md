@@ -1,6 +1,6 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-25T07:51:35.392Z
+Generated: 2026-06-25T11:32:02.986Z
 
 Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 
@@ -215,7 +215,7 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 | kaoyan | 5 | zh_to_en | 4 | 4 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | insufficient_active_pool |
 | kaoyan | 5 | zh_to_word_spell | 4 | 4 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | insufficient_active_pool |
 | toefl | 6 | academic_discussion | 60 | 0 | 60 | 60 | 0 | 0 | 60 | 0 | 2 | - |
-| toefl | 6 | build_a_sentence | 10 | 10 | 0 | 10 | 0 | 0 | 0 | 0 | 1 | insufficient_active_pool, productive_items_missing_rubric |
+| toefl | 6 | build_a_sentence | 10 | 10 | 0 | 10 | 0 | 0 | 0 | 0 | 1 | insufficient_active_pool |
 | toefl | 6 | cloze_choice | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | 0 | insufficient_active_pool |
 | toefl | 6 | cloze_spell | 56 | 56 | 0 | 56 | 0 | 0 | 0 | 56 | 0 | insufficient_active_pool |
 | toefl | 6 | collocation_choice | 27 | 27 | 0 | 27 | 0 | 0 | 0 | 27 | 0 | insufficient_active_pool |
@@ -315,7 +315,7 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 - lv5 word_form: insufficient_active_pool
 - lv5 zh_to_en: insufficient_active_pool
 - lv5 zh_to_word_spell: insufficient_active_pool
-- lv6 build_a_sentence: insufficient_active_pool, productive_items_missing_rubric
+- lv6 build_a_sentence: insufficient_active_pool
 - lv6 cloze_choice: insufficient_active_pool
 - lv6 cloze_spell: insufficient_active_pool
 - lv6 collocation_choice: insufficient_active_pool
