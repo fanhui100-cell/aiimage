@@ -67,6 +67,9 @@ export function TodayBento() {
   const [displayName, setDisplayName] = useState('学习者')
   const rootRef = useRef<HTMLDivElement>(null)
   useEffect(() => { const t = setTimeout(() => setMounted(true), 60); return () => clearTimeout(t) }, [])
+  // 挂载时按需生成今日包（buildTodayPack 当天已建则跳过，幂等）——与 HomeScreen/旧 TodayScreen 同源。
+  // /today 是底栏主入口，直接进入(非经首页)也应在新的一天重建今日包，避免显示昨日/空包（界面优化4 迁移时遗漏）。
+  useEffect(() => { void useLexiStore.getState().buildTodayPack() }, [])
   // 用户名存于 Supabase（user_metadata / profiles），本地 store 无此字段 → 客户端 best-effort 取
   useEffect(() => {
     if (!isSupabaseConfigured) return

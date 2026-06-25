@@ -34,7 +34,7 @@ Companion machine record: `reports/qbank-production-issue-ledger.json`.
 - **G11-cet6-vocab** (external): CET-6 ~1257 words short of target; needs a licensed CET-6 wordlist (no fabrication).
 - **AI/Vision providers** (external/infra, non-blocking): anthropic/openai/gemini + vision-OCR providers are `notImplemented` stubs; `ai-client` falls back to deterministic mock (productive AI scoring honestly flagged `isEstimate`). Needs provider+credentials+cost authorization to wire real APIs.
 - **worktree cleanup** (destructive, deferred): `D:/ai-worktrees/ocean-toefl-a` + `ocean-toefl-b` + 2 branches still present; awaits user confirmation of integration before `git worktree remove`.
-- **E2E suite** (test-maintenance, 2026-06-25): 7 v1-loop specs `test.fixme` with documented reasons (see `reports/e2e-stale-audit-2026-06-25.md`); 3 surfaced product decisions (lexigraph red-edge feature orphaned; `/today` no longer auto-builds today-pack; `/quiz` word-mode needs question-bank-backed fixture).
+- **E2E suite** (test-maintenance, 2026-06-25): 3 of 8 stale v1-loop specs fixed (`:136`; `:72`+`:198` after restoring TodayBento's idempotent `buildTodayPack` mount effect); **5 remain `test.fixme`** with documented reasons (see `reports/e2e-stale-audit-2026-06-25.md`). Remaining product decision: lexigraph red-edge feature orphaned (`:161`) — restore or retire. Plus a `/quiz` word-mode question-bank fixture (`:106`) and v3-iframe rebuilds (`:45`/`:131`/`:195`).
 
 <details><summary>Superseded pre-R10 open list (historical)</summary>
 
