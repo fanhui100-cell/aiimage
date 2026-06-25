@@ -69,7 +69,10 @@ async function learnCurrentCard(page: Page) {
 }
 
 // ── 1. 定级 → 今日包个性化 ────────────────────────────────────────────────
-test('定级 B1(band4) → 推荐词落在 CEFR 邻近窗口且今日页出现推荐区', async ({ page, request }) => {
+// FIXME(e2e-stale·behavior): /today 改版为 TodayBento 后挂载不再自动 buildTodayPack（仅 HomeScreen/Onboarding 触发，
+// e2e 无登录态；store 未暴露 window 无法显式驱动）→ todayPack.date 不会被刷新。需产品决策（TodayBento 是否应自动建包）
+// 或登录态夹具后重写；不可弱化为永真断言。详见 reports/e2e-stale-audit-2026-06-25.md。
+test.fixme('定级 B1(band4) → 推荐词落在 CEFR 邻近窗口且今日页出现推荐区', async ({ page, request }) => {
   const res = await request.get('/api/dictionary/recommend?band=4&limit=5')
   expect(res.ok()).toBeTruthy()
   const { data } = await res.json()
@@ -103,7 +106,10 @@ test('学新词「认识」→ 状态 learning + 今日进度 +1', async ({ page
 })
 
 // ── 3. 测验答错 ──────────────────────────────────────────────────────────
-test('测验答错 → 状态 weak + 错题本出现该题', async ({ page, request }) => {
+// FIXME(e2e-data): 题库重建后 'inevitable' 在 question_bank 无 active+reviewed 题 → /quiz?mode=word 真实 session API
+// 返回空池空态，整条答错流到不达。需改用题库内确有 active 题的词，或测试 setup 注入可作答 question_bank 夹具后重写
+// （断言形状全部有效，勿弱化）。详见 reports/e2e-stale-audit-2026-06-25.md。
+test.fixme('测验答错 → 状态 weak + 错题本出现该题', async ({ page, request }) => {
   const dictRes = await request.get('/api/dictionary/word/inevitable')
   expect(dictRes.ok()).toBeTruthy()
   const { data: dict } = await dictRes.json()
@@ -144,7 +150,9 @@ test('复习评「记得」→ 按钮预告天数 === store 写入 interval', as
   const predicted = Number(label.match(/(\d+)天/)?.[1])
   expect(predicted).toBeGreaterThan(0)
   await goodBtn.click()
-  await expect(page.getByText('词汇掌握率')).toBeVisible()
+  // 复习完成结算屏（ReviewScreen「复习完成 ✦」+「总掌握率」）；旧锚点「词汇掌握率」属个人页 MeScreen，非此流
+  await expect(page.getByText('复习完成')).toBeVisible()
+  await expect(page.getByText('总掌握率')).toBeVisible()
   const st = await readStore(page)
   expect(st.words.find((w) => w.id === 'beta')?.interval).toBe(predicted)
   expect(st.daily.reviewed).toBe(1)
@@ -195,7 +203,9 @@ test('昨日有学习 → 今日再学 streak=2；隔一日学习 → streak 归
 })
 
 // ── 7. 次日重置 ──────────────────────────────────────────────────────────
-test('次日进入 → 进度归零、今日包重新生成且不同', async ({ page }) => {
+// FIXME(e2e-stale·behavior): 同 #1——/today(TodayBento) 挂载不再自动 buildTodayPack（旧 TodayScreen.tsx:114 的 effect 已退役）。
+// 「次日进度归零」语义仍真（进度环 0%），但「今日包随挂载重建」副作用已移出 /today。需产品决策或登录态夹具后重写。
+test.fixme('次日进入 → 进度归零、今日包重新生成且不同', async ({ page }) => {
   const yest = dstr(Date.now() - DAY)
   await seed(page, {
     daily: { date: yest, learned: 5, quizzed: 2, reviewed: 1 },

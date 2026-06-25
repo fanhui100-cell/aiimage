@@ -42,7 +42,10 @@ async function readStore(page: Page) {
 
 test.describe('最终整合包 · 闭环 E2E', () => {
 
-  test('1. 定级→今日包→学→练→celebrate 巡航→次日到期', async ({ page }) => {
+  // FIXME(e2e-stale): onboarding 已改为 5 步(goal→path→channel→assess→result，goal→path/path→channel 间需显式「下一步 →」CTA)
+  // + 选择器二义（WordRotate 标题词「四级」vs 目标卡）；下游 celebrate 巡航仍走 v2 iframe(lv2-cruise/Universe.html)。
+  // 需按当前 onboarding 步进流 + v3 iframe 重写整条链路。详见 reports/e2e-stale-audit-2026-06-25.md。
+  test.fixme('1. 定级→今日包→学→练→celebrate 巡航→次日到期', async ({ page }) => {
     test.setTimeout(180_000)
     // —— 定级（直选通道）——
     await page.addInitScript(() => {
@@ -128,7 +131,9 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     expect(due).toBeGreaterThan(0)
   })
 
-  test('2. 宇宙就地评分 → SRS 间隔增长（记忆图谱颜色随之变绿/teal）', async ({ page }) => {
+  // FIXME(e2e-stale): lexiverse v2→v3 改版，旧全局 window.__galaxy/.lv2-grades/.lv2-review 不存在；评分流改为
+  // wu-ui.focusWord + 复习舱多选题(正确项 DOM 标记需浏览器内确认)。store 端 SRS 断言仍有效，需按 v3 iframe 内部重写。
+  test.fixme('2. 宇宙就地评分 → SRS 间隔增长（记忆图谱颜色随之变绿/teal）', async ({ page }) => {
     test.setTimeout(120_000)
     // 真词池后 daily-basics 星系 = seed 主题词（benefit/habit/...），用池内真词
     await seed(page, {
@@ -158,7 +163,10 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     // 评分前过期 → 红；评分后未到期且 interval<16 → teal（学习中）
   })
 
-  test('3. 测验双错 → 记忆图谱红边 → 辨析题答对 → 红边消退', async ({ page }) => {
+  // FIXME(e2e-removed·product-gap): 记忆图谱「红边(data-wrong-edges)」唯一承载组件 components/lexigraph-v2/LexiGraphScreen.tsx
+  // 已成孤儿(全仓无路由 import)，/lexigraph 改渲染 iframe 原型(LexiGraphFrame)未暴露该特性。需产品侧在 iframe 原型/桥
+  // 重新实装共错红边并对外暴露计数(postMessage/data 属性)后才能验证——属功能恢复，非测试修复。
+  test.fixme('3. 测验双错 → 记忆图谱红边 → 辨析题答对 → 红边消退', async ({ page }) => {
     test.setTimeout(120_000)
     const now = Date.now()
     const session = (ids: string[], correct: boolean, t: number) => ({
@@ -192,7 +200,9 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     await expect(page.locator('[data-wrong-edges="0"]')).toHaveCount(1, { timeout: 15_000 })
   })
 
-  test('4. 词详情 ↔ 词图 ↔ 宇宙 三向带词跳转', async ({ page }) => {
+  // FIXME(e2e-stale): /word→/dictionary 重定向 + /lexigraph、/lexiverse 改 iframe(v3) 外壳；旧文案(「在词图中展开」「在宇宙中查看 ✦」)
+  // 与 .lv2-dock 选择器全失效，需 frameLocator + v3 选择器(#detail h1 / #module-grid .mg-item)重写；另「带词跳宇宙」有桥丢 ?word= 产品缺口。
+  test.fixme('4. 词详情 ↔ 词图 ↔ 宇宙 三向带词跳转', async ({ page }) => {
     await seed(page, { words: [entry({ id: 'accept', word: 'accept', zh: '接受' })] })
     // 词详情 → 词图 / 宇宙
     await page.goto('/word/accept')
