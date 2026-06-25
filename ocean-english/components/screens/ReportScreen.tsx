@@ -12,6 +12,8 @@ import { useLexiStore } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { buildReport, type LearnReport } from '@/lib/analytics/report'
 import { ForgettingCurve } from './ForgettingCurve'
+import { useV2Diagnostics } from '@/hooks/useV2Diagnostics'
+import { V2InsightsPanel } from './V2InsightsPanel'
 import './report.css'
 
 const fmt = (n: number) => n.toLocaleString('en-US')
@@ -193,6 +195,7 @@ export function ReportScreen() {
   const history = useLexiStore(s => s.history)
   const level = useLexiStore(s => s.profile.level ?? 5)
   const data = useMemo(() => buildReport({ words, history, level }), [words, history, level])
+  const v2 = useV2Diagnostics()
   const [filter, setFilter] = useState<WordState | null>(null)
   const onFilter = (k: WordState) => setFilter(f => (f === k ? null : k))
 
@@ -251,6 +254,9 @@ export function ReportScreen() {
         </div>
 
         <div className="rp-card"><div className="sec-head"><span className="sec-title">记忆矩阵</span><span className="sec-hint">每个点是一个词 · 越右记得越久，越上越稳</span></div><Matrix R={R} filter={filter} onFilter={onFilter} /></div>
+
+        {/* v2 服务端能力诊断（叠加层；仅登录 + 有真实作答时渲染，否则自动隐藏） */}
+        <V2InsightsPanel d={v2} />
 
         {/* ⬇⬇ 可选模块：个人遗忘曲线（删除本行 + ForgettingCurve.tsx 即可回退） ⬇⬇ */}
         <ForgettingCurve report={R} />

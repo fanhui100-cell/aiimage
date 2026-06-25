@@ -11,6 +11,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
+import { useV2DailyPlan, PLAN_CARD_TONE, type V2PlanCard } from '@/hooks/useV2DailyPlan'
 import { useNavigate } from '@/hooks/useNavigate'
 import { levelDef } from '@/lib/levels'
 import { speakSmart } from '@/lib/pronunciation/word-audio'
@@ -54,6 +55,8 @@ export function TodayBento() {
   const getTodayProgress = useLexiStore(s => s.getTodayProgress)
   const getToday = useLexiStore(s => s.getToday)
   const getDue = useLexiStore(s => s.getDue)
+  const getWeak = useLexiStore(s => s.getWeak)
+  const wrongAnswers = useLexiStore(s => s.wrongAnswers)
   const counts = useLexiStore(s => s.counts)
   const masteredPct = useLexiStore(s => s.masteredPct)
   const quizHistory = useLexiStore(s => s.quizHistory)
@@ -140,6 +143,19 @@ export function TodayBento() {
   // ── 推荐单词带（未学过）──
   const recommend = useMemo(() => words.filter(w => w.state === 'unknown' || w.state === 'recommended').slice(0, 12), [words])
 
+  // ── v2 服务端今日编排（叠加层；登录时 source==='v2'，否则纯客户端，仅 v2 时展示编排卡）──
+  const v2PlanInput = useMemo(() => ({
+    dueWords: getDue().map(w => ({ id: w.id, word: w.word })),
+    weakWords: getWeak().map(w => ({ id: w.id, word: w.word })),
+    recentMistakes: wrongAnswers.slice(0, 50).map(w => ({ wordId: w.wordId })),
+    goal: { dailyGoal: profile.dailyGoal || 0, goals: profile.goals ?? [] },
+    examTarget: typeof profile.targetExam === 'string' ? profile.targetExam : null,
+    mockPending: false,
+    // getDue/getWeak 是稳定 store 选择器引用，读当前 words；故 words 变化时需重算（eslint 检测不到此闭包依赖）
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [words, wrongAnswers, profile.dailyGoal, profile.goals, profile.targetExam, getDue, getWeak])
+  const v2Plan = useV2DailyPlan(v2PlanInput)
+
   // ── 路由（与 TodayScreen go() 同源）──
   const examTag = typeof profile.targetExam === 'string' ? profile.targetExam : ''
   const go = (key: string) => {
@@ -153,6 +169,23 @@ export function TodayBento() {
       case 'progress': return navigate('exam')
       case 'recap': return navigate('universe', { celebrate: 1 })
       default: return navigate('today')
+    }
+  }
+  // v2 计划卡 → 路由（exam_task 带 skillKey 直跳考试专项任务，其余复用 go()）
+  const goPlan = (c: V2PlanCard) => {
+    switch (c.type) {
+      case 'word_review': return go('review')
+      case 'new_words': return go('learn')
+      case 'mistake_fix': return go('wrong')
+      case 'mock_review': return go('mock')
+      case 'exam_task': {
+        const p = c.payload ?? {}
+        const examId = typeof p.examId === 'string' ? p.examId : ''
+        const skillKey = typeof p.skillKey === 'string' ? p.skillKey : ''
+        if (examId && skillKey) { router.push(`/quiz?mode=task&examId=${examId}&taskType=${skillKey}`); return }
+        return go('practice')
+      }
+      case 'output': default: return go('practice')
     }
   }
   const dailyGoal = profile.dailyGoal || goal
@@ -212,6 +245,26 @@ export function TodayBento() {
               <span><span className="d" style={{ background: 'var(--rose-ink)' }} />薄弱 <b>{weakCount}</b></span>
               {yAcc != null && <span><span className="d" style={{ background: 'var(--teal-ink)' }} />昨日正确率 <b>{yAcc}%</b></span>}
             </div>
+            {/* v2 服务端编排（仅登录 + 服务端有 skill_states 时；否则保留上方本地静态编排） */}
+            {v2Plan.source === 'v2' && v2Plan.cards.length > 0 && (
+              <div style={{ marginTop: 14, borderTop: '1px solid var(--line)', paddingTop: 12 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-muted)', letterSpacing: '.04em', marginBottom: 8 }}>服务端编排 · 按真实作答</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {v2Plan.cards.slice(0, 3).map((c, i) => (
+                    <button key={`${c.type}-${i}`} onClick={() => goPlan(c)} className="btn-press"
+                      style={{ display: 'flex', alignItems: 'center', gap: 9, textAlign: 'left', background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 11, padding: '8px 11px', cursor: 'pointer' }}>
+                      <span style={{ flexShrink: 0, width: 7, height: 7, borderRadius: 99, background: PLAN_CARD_TONE[c.type] }} />
+                      <span style={{ flex: 1, minWidth: 0 }}>
+                        <b style={{ fontSize: 12.5, color: 'var(--ink)', fontWeight: 700 }}>{c.titleZh}</b>
+                        <span style={{ display: 'block', fontSize: 11, color: 'var(--ink-sub)', lineHeight: 1.5, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c.reason}</span>
+                      </span>
+                      <span style={{ flexShrink: 0, fontSize: 11, fontFamily: 'var(--font-mono, monospace)', color: 'var(--ink-muted)' }}>{c.estimatedMinutes}分</span>
+                      <span style={{ flexShrink: 0, fontSize: 12, color: 'var(--teal-ink)', fontWeight: 700 }}>→</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           {/* today */}

@@ -6,6 +6,8 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
 import { ReviewScreen } from '@/components/screens/ReviewScreen'
 import { WrongAnswerList } from '@/components/screens/WrongAnswerList'
+import { useV2Diagnostics } from '@/hooks/useV2Diagnostics'
+import { V2WeakSkills } from '@/components/screens/V2InsightsPanel'
 
 type Tab = 'due' | 'weak' | 'wrong'
 
@@ -29,6 +31,7 @@ export function ReviewHub() {
   const weakCount = useLexiStore(s => s.getWeak().length)
   const wrongCount = useLexiStore(s => s.wrongAnswers.length)
   const counts: Record<Tab, number> = { due: dueCount, weak: weakCount, wrong: wrongCount }
+  const v2 = useV2Diagnostics()
 
   function go(t: Tab) {
     router.replace(t === 'due' ? '/memory' : `/memory?tab=${t}`)
@@ -101,7 +104,15 @@ export function ReviewHub() {
 
       {/* tab content */}
       {tab === 'due' && <ReviewScreen source="due" />}
-      {tab === 'weak' && <ReviewScreen source="weak" />}
+      {tab === 'weak' && (
+        <>
+          {/* v2 服务端能力诊断弱项（叠加层；仅登录 + 有真实作答时渲染，点「练」跳考试专项任务） */}
+          <div style={{ maxWidth: 560, margin: '0 auto', padding: '0 20px' }}>
+            <V2WeakSkills d={v2} onPractice={(s) => router.push(`/quiz?mode=task&examId=${s.examId}&taskType=${s.skillKey}`)} />
+          </div>
+          <ReviewScreen source="weak" />
+        </>
+      )}
       {tab === 'wrong' && (
         <div style={{ maxWidth: 560, margin: '0 auto', padding: '16px 20px 100px' }}>
           <WrongAnswerList />
