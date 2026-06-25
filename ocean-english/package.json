@@ -42,6 +42,7 @@
     "validate:coverage-audit": "npx tsx scripts/validate-coverage-audit.ts",
     "backfill:stimuli-words": "npx tsx scripts/backfill-stimuli-word-count.ts",
     "normalize:answer-positions": "npx tsx scripts/normalize-authored-answer-positions.ts",
+    "normalize:listening-answers": "npx tsx scripts/normalize-listening-answer-positions.ts",
     "report:coverage": "npx tsx scripts/coverage-report.ts",
     "dedupe:dictionary": "npx tsx scripts/deduplicate-seeds.ts"
   },
