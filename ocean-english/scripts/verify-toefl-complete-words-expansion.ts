@@ -267,13 +267,13 @@ async function runDbChecks(sc: SourceCheck) {
     const dbSet = byLegacy.get(e.legacyId)
     if (!dbSet) { fail(`#${e.index} expected set missing in DB (legacy ${e.legacyId})`); continue }
     if (dbSet.task_type !== 'complete_the_words') fail(`#${e.index} ${e.legacyId} task_type=${dbSet.task_type}`)
-    if (dbSet.status !== 'draft') fail(`#${e.index} ${e.legacyId} set status=${dbSet.status} (must draft)`)
+    if (dbSet.status !== 'draft' && dbSet.status !== 'active') fail(`#${e.index} ${e.legacyId} set status=${dbSet.status} (must draft or active)`)
     const items = await itemsOf(dbSet.id)
     if (items.length !== 1) { fail(`#${e.index} ${e.legacyId} item count=${items.length} (must 1)`); continue }
     const it = items[0]
     const exp = e.shaped.result.items[0]
     if (it.input_mode !== 'spell' || it.input_mode !== exp.inputMode) fail(`#${e.index} ${e.legacyId} input_mode=${it.input_mode} (must spell)`)
-    if (it.status !== 'draft') fail(`#${e.index} ${e.legacyId} item status=${it.status} (must draft)`)
+    if (it.status !== 'draft' && it.status !== 'active') fail(`#${e.index} ${e.legacyId} item status=${it.status} (must draft or active)`)
     if ((it.prompt ?? '') !== exp.prompt) fail(`#${e.index} ${e.legacyId} prompt mismatch vs shapeToItems`)
     const dbCh = Array.isArray(it.choices) ? (it.choices as DraftChoice[]) : []
     if (dbCh.length !== 0) fail(`#${e.index} ${e.legacyId} choices not empty (${dbCh.length})`)
@@ -299,18 +299,17 @@ async function runDbChecks(sc: SourceCheck) {
   }
   const newPresent = [...newLegacy].filter((l) => byLegacy.has(l)).length
   if (newPresent !== EXPECTED_TOTAL) fail(`reverse: ${newPresent}/${EXPECTED_TOTAL} new sets present in DB`)
-  if (cwDraft !== 70) fail(`complete_the_words draft total=${cwDraft} (must 70)`)
-  if (cwActive !== 0) fail(`complete_the_words active=${cwActive} (must 0)`)
-  console.log(`  complete_the_words: draft=${cwDraft} active=${cwActive} (pilot 10 + new ${newPresent})`)
+  // Post-R10（授权晋级全部 READY_DRAFT）：complete_the_words 已全晋 active（draft→0）。以 draft+active 总量锁规模。
+  if (cwDraft + cwActive !== 70) fail(`complete_the_words draft+active total=${cwDraft + cwActive} (must 70)`)
+  console.log(`  complete_the_words: draft=${cwDraft} active=${cwActive} (pilot 10 + new ${newPresent}；R10 已晋 active)`)
 
-  // §7.13 global invariants. Post-R10: reading/listening 可 active（小批晋级）；其余 gen 题型
-  // （含 TOEFL 草稿型/产出型）不应 active。故断言「意外 active」（非 reading/listening）为 0，而非全 0。
-  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
+  // §7.13 global invariants. Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
-  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
+  const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`  global: gen active=${genActive}（意外 active=${unexpectedActive}） · antonym/cet_cloze=${deprecated}`)
-  if (unexpectedActive !== 0) fail(`unexpected gen active=${unexpectedActive} (must 0; reading/listening 除外)`)
+  console.log(`  global: gen active=${genActive}（阻塞/退役 active=${blockedActive}） · antonym/cet_cloze=${deprecated}`)
+  if (blockedActive !== 0) fail(`blocked/deprecated gen active=${blockedActive} (must 0)`)
   if (deprecated !== 0) fail(`gen antonym/cet_cloze=${deprecated} (must 0)`)
 }
 

@@ -211,7 +211,7 @@ async function main() {
         const legacy = setLegacyFor(cfg.taskType, tagFor(cfg.taskType, t))
         const dbSet = byLegacy.get(legacy)
         if (!dbSet) { err(`${cfg.taskType}: 源 task 无对应 DB set（legacy ${legacy}）`); continue }
-        if (dbSet.status !== 'draft') err(`${cfg.taskType}: ${legacy} status=${dbSet.status}（须 draft）`)
+        if (dbSet.status !== 'draft' && dbSet.status !== 'active') err(`${cfg.taskType}: ${legacy} status=${dbSet.status}（须 draft 或 active）`)
         if (dbSet.task_type !== cfg.taskType) err(`${cfg.taskType}: ${legacy} task_type=${dbSet.task_type}`)
         if (dbSet.level !== LEVEL) err(`${cfg.taskType}: ${legacy} level=${dbSet.level}（须 ${LEVEL}）`)
         const qf = (dbSet.qa_flags ?? {}) as { wordLimit?: string | null; stage?: string }
@@ -237,25 +237,25 @@ async function main() {
       const stageSets = sets.filter((s) => s.task_type === cfg.taskType && ((s.qa_flags as { stage?: string } | null)?.stage === STAGE))
       for (const s of stageSets) if (s.legacy_id && !expectedNew.has(s.legacy_id)) err(`${cfg.taskType}: stage ${STAGE} 有源外 set ${s.legacy_id}`)
       if (stageSets.length !== NEW_TOTAL) err(`${cfg.taskType}: stage ${STAGE} set 数=${stageSets.length}（须 ${NEW_TOTAL}）`)
-      const stageDraft = stageSets.filter((s) => s.status === 'draft').length
-      if (stageDraft !== NEW_TOTAL) err(`${cfg.taskType}: stage ${STAGE} draft=${stageDraft}（须 ${NEW_TOTAL}）`)
+      // Post-R10：stage 集已晋 active（line 上方已锁总数=NEW_TOTAL 且无源外 set）。不再强求全 draft。
 
       // 本 type 全部 gen:productive set 恰 OWNED_TOTAL draft（pilot 10 + 扩产 NEW_TOTAL）
       const owned = sets.filter((s) => s.task_type === cfg.taskType && (s.legacy_id ?? '').startsWith('gen:productive:'))
       const ownedDraft = owned.filter((s) => s.status === 'draft').length
       const ownedActive = owned.filter((s) => s.status === 'active').length
-      if (ownedDraft !== OWNED_TOTAL) err(`${cfg.taskType}: gen:productive draft=${ownedDraft}（须 ${OWNED_TOTAL}）`)
-      if (ownedActive !== 0) err(`${cfg.taskType}: gen:productive active=${ownedActive}（须 0）`)
-      console.log(`  [DB] ${cfg.taskType}: 源↔DB 逐条一致 ${okCmp}/${nf.tasks.length} · stage set=${stageSets.length} · owned draft=${ownedDraft} active=${ownedActive}`)
+      // Post-R10（授权晋级全部 READY_DRAFT）：email_writing/academic_discussion 已全晋 active（draft→0）。
+      // 以 draft+active 总量锁规模（pilot 10 + 扩产 NEW_TOTAL）。
+      if (ownedDraft + ownedActive !== OWNED_TOTAL) err(`${cfg.taskType}: gen:productive draft+active=${ownedDraft + ownedActive}（须 ${OWNED_TOTAL}）`)
+      console.log(`  [DB] ${cfg.taskType}: 源↔DB 逐条一致 ${okCmp}/${nf.tasks.length} · stage set=${stageSets.length} · owned draft=${ownedDraft} active=${ownedActive}（R10 已晋 active）`)
     }
 
-    // 全局硬停不变量。Post-R10：reading/listening 可 active；其余 gen 题型不应 active。
-    const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
+    // 全局硬停不变量。Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
+    const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
     const genActive = sets.filter((s) => s.status === 'active').length
-    const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
+    const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
     const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-    console.log(`全局：gen active=${genActive}（意外 active=${unexpectedActive}） · gen antonym/cet_cloze=${deprecated}`)
-    if (unexpectedActive !== 0) err(`unexpected gen active=${unexpectedActive}（须 0；reading/listening 除外）`)
+    console.log(`全局：gen active=${genActive}（阻塞/退役 active=${blockedActive}） · gen antonym/cet_cloze=${deprecated}`)
+    if (blockedActive !== 0) err(`blocked/deprecated gen active=${blockedActive}（须 0）`)
     if (deprecated !== 0) err(`gen antonym/cet_cloze=${deprecated}（须 0）`)
   }
 

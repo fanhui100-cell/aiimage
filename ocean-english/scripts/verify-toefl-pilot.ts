@@ -79,7 +79,7 @@ async function main() {
       expectedLegacy.add(setLegacy)
       const dbSet = byLegacy.get(setLegacy)
       if (!dbSet) { errors.push(`${o.template}: 源记录无对应 DB set（legacy ${setLegacy}）`); continue }
-      if (dbSet.status !== 'draft') errors.push(`${o.template}: ${setLegacy} status=${dbSet.status}（须 draft）`)
+      if (dbSet.status !== 'draft' && dbSet.status !== 'active') errors.push(`${o.template}: ${setLegacy} status=${dbSet.status}（须 draft 或 active）`)
       if (o.scoringNotReady && (dbSet.qa_flags as { scoring_not_ready?: boolean } | null)?.scoring_not_ready !== true) errors.push(`${o.template}: ${setLegacy} 缺 scoring_not_ready`)
       const items = await itemsOf(dbSet.id)
       if (items.length !== out.result.items.length) { errors.push(`${o.template}: ${setLegacy} item 数 ${items.length}≠${out.result.items.length}`); continue }
@@ -117,7 +117,7 @@ async function main() {
       expectedLegacy.add(setLegacy)
       const dbSet = byLegacy.get(setLegacy)
       if (!dbSet) { errors.push(`${p.taskType}: 源 task 无对应 DB set（legacy ${setLegacy}）`); continue }
-      if (dbSet.status !== 'draft') errors.push(`${p.taskType}: ${setLegacy} status=${dbSet.status}（须 draft）`)
+      if (dbSet.status !== 'draft' && dbSet.status !== 'active') errors.push(`${p.taskType}: ${setLegacy} status=${dbSet.status}（须 draft 或 active）`)
       // set 级 payload：qa_flags.wordLimit 须与源一致
       const dbWordLimit = (dbSet.qa_flags as { wordLimit?: string | null } | null)?.wordLimit ?? null
       if (dbWordLimit !== (task.wordLimit ?? null)) errors.push(`${p.taskType}: ${setLegacy} qa_flags.wordLimit 与源不一致`)
@@ -145,13 +145,13 @@ async function main() {
     if (n !== 0) errors.push(`已停题型 ${tpl} 仍有 ${n} 个 set`)
   }
 
-  // ── 全局硬停 ── Post-R10：reading/listening 可 active；其余 gen 题型不应 active。
-  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
+  // ── 全局硬停 ── Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
-  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
+  const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`全局：gen active=${genActive}（意外 active=${unexpectedActive}） · gen antonym/cet_cloze=${deprecated}`)
-  if (unexpectedActive !== 0) errors.push(`unexpected gen active=${unexpectedActive}（reading/listening 除外）`)
+  console.log(`全局：gen active=${genActive}（阻塞/退役 active=${blockedActive}） · gen antonym/cet_cloze=${deprecated}`)
+  if (blockedActive !== 0) errors.push(`blocked/deprecated gen active=${blockedActive}（须 0）`)
   if (deprecated !== 0) errors.push(`gen antonym/cet_cloze=${deprecated}`)
 
   if (errors.length) { console.error('\n校验失败：'); for (const e of errors) console.error(`  ✗ ${e}`); process.exitCode = 1 }

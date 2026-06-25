@@ -31,6 +31,7 @@
     "smoke:learning-loop-e2e": "npx tsx scripts/smoke-learning-loop-e2e.ts",
     "smoke:active-serve": "npx tsx scripts/smoke-active-serve.ts",
     "smoke:grouped-cloze": "npx tsx scripts/smoke-grouped-cloze.ts",
+    "smoke:full-routes": "npx tsx scripts/smoke-full-product-routes.ts",
     "validate:rubrics": "npx tsx scripts/validate-rubrics.ts",
     "verify:toefl-current": "npx tsx scripts/verify-toefl-current.ts",
     "validate:learning-loop": "npx tsx scripts/validate-learning-loop.ts",

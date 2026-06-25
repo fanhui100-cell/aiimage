@@ -56,16 +56,18 @@ async function assertAggregateCounts(): Promise<boolean> {
   const activeOf = (t: string) => sets.filter((s) => s.task_type === t && s.status === 'active').length
 
   let ok = true
+  // Post-R10（用户授权"将剩余全部完成"）：complete_the_words/email_writing/academic_discussion 已晋 active
+  // （draft→0）；build_a_sentence 仍阻塞（scoring_not_ready，draft 10/active 0）。以 draft+active 总量锁内容规模。
+  const totalOf = (t: string) => draftOf(t) + activeOf(t)
   const checks: [string, number, number][] = [
-    ['complete_the_words draft', draftOf('complete_the_words'), 70],
-    ['email_writing draft', draftOf('email_writing'), 60],
-    ['academic_discussion draft', draftOf('academic_discussion'), 60],
-    // build_a_sentence has NO expansion verifier; it stays at the 10 pilot drafts. Bound it here so a
-    // stray/duplicate/re-imported draft (which the scoped pilot verifier no longer catches) is detected.
+    ['complete_the_words total(draft+active)', totalOf('complete_the_words'), 70],
+    ['email_writing total(draft+active)', totalOf('email_writing'), 60],
+    ['academic_discussion total(draft+active)', totalOf('academic_discussion'), 60],
+    // build_a_sentence has NO expansion verifier; it stays at the 10 pilot drafts, still blocked (0 active).
     ['build_a_sentence draft', draftOf('build_a_sentence'), 10],
-    ['complete_the_words active', activeOf('complete_the_words'), 0],
-    ['email_writing active', activeOf('email_writing'), 0],
-    ['academic_discussion active', activeOf('academic_discussion'), 0],
+    ['complete_the_words active', activeOf('complete_the_words'), 70],
+    ['email_writing active', activeOf('email_writing'), 60],
+    ['academic_discussion active', activeOf('academic_discussion'), 60],
     ['build_a_sentence active', activeOf('build_a_sentence'), 0],
   ]
   for (const [label, got, want] of checks) {
@@ -73,14 +75,16 @@ async function assertAggregateCounts(): Promise<boolean> {
     console.log(`  ${pass ? '✓' : '✗'} ${label} = ${got} (expect ${want})`)
     if (!pass) ok = false
   }
-  // Post-R10：reading/listening 小批晋级可 active；其余 gen 题型（含 TOEFL 草稿型/产出型）不应 active。
-  const ALLOWED_ACTIVE = new Set(['reading_comprehension', 'listening_comprehension'])
+  // Post-R10-full：大量题型已按授权晋级 active，白名单不再适用。改为「阻塞/退役题型必须 0 active」denylist
+  // 守卫（每次 R10 不必改）。阻塞型 = TOEFL build_a_sentence（scoring_not_ready）/阅读·听力（spec 未验或缺内容）
+  // /口语（音频缺）+ 退役 antonym_choice/cet_cloze。
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
-  const unexpectedActive = sets.filter((s) => s.status === 'active' && !ALLOWED_ACTIVE.has(s.task_type)).length
+  const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
-  console.log(`  ${unexpectedActive === 0 ? '✓' : '✗'} gen 意外 active = ${unexpectedActive} (expect 0; reading/listening 除外，当前 gen active=${genActive})`)
+  console.log(`  ${blockedActive === 0 ? '✓' : '✗'} 阻塞/退役题型 active = ${blockedActive} (expect 0；当前 gen active=${genActive})`)
   console.log(`  ${deprecated === 0 ? '✓' : '✗'} antonym_choice + cet_cloze = ${deprecated} (expect 0)`)
-  if (unexpectedActive !== 0 || deprecated !== 0) ok = false
+  if (blockedActive !== 0 || deprecated !== 0) ok = false
   return ok
 }
 
@@ -93,7 +97,7 @@ async function main() {
     console.error('\n✗ verify:toefl-current FAILED')
     process.exitCode = 1
   } else {
-    console.log('\n✓ verify:toefl-current PASSED — pilot + both expansions + aggregate 70/60/60 draft, 0 active, 0 deprecated')
+    console.log('\n✓ verify:toefl-current PASSED — pilot + both expansions + CW/email/discussion 70/60/60 active (R10), build_a_sentence/阅读/听力/口语 0 active (阻塞), 0 deprecated')
   }
 }
 main().catch((e) => { console.error('verify-toefl-current fatal', (e as Error)?.message ?? e); process.exitCode = 1 })
