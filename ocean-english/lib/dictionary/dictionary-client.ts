@@ -90,6 +90,16 @@ class CompositeDictionaryClient implements DictionaryClient {
     return limit !== undefined ? merged.slice(offset, offset + limit) : merged.slice(offset)
   }
 
+  async countWords(query: string, options?: WordSearchOptions): Promise<number | null> {
+    const live = this.adapters.find(a => a.isLive)
+    if (live?.countWords) {
+      // 单次 count:exact，放宽超时（默认 2.5s 对带过滤的 count 偶尔不够）
+      const n = await withAdapterTimeout(live.countWords(query, options), null, options?.adapterTimeoutMs ?? 8000)
+      if (n != null) return n
+    }
+    return null   // 不可用 → 调用方回退分页计数
+  }
+
   async getWordsByLevel(level: WordLevel, options?: WordSearchOptions): Promise<DictionaryWord[]> {
     return this.searchWords('', { ...options, level })
   }

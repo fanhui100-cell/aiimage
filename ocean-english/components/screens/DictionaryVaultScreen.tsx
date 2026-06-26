@@ -251,7 +251,7 @@ export function DictionaryVaultScreen() {
       case 'quiz': return router.push(`/quiz?word=${encodeURIComponent(slug)}&returnTo=${back}`)
       case 'graph': return router.push(`/lexigraph?word=${encodeURIComponent(slug)}&returnTo=${back}`)
       case 'pilot': return router.push(`/chat?word=${encodeURIComponent(slug)}&returnTo=${back}`)
-      case 'cosmos': return router.push(`/lexiverse?word=${encodeURIComponent(wordStr)}&returnTo=${back}`)
+      case 'cosmos': return router.push(`/lexiverse?word=${encodeURIComponent(slug)}&returnTo=${back}`)
     }
   }
 
@@ -488,7 +488,8 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
     if (!lib || Object.keys(levelCounts).length) return
     let cancelled = false
     void Promise.all([1, 2, 3, 4, 5, 6, 7].map(l =>
-      fetch(`/api/dictionary/search?level=${l}&limit=1`).then(r => (r.ok ? r.json() : null)).then(j => [l, (j?.total as number) || 0] as [number, number]).catch(() => [l, 0] as [number, number])
+      // 按等级 = 考试大纲全量（levels 含该档）；与列表同口径，精确 count
+      fetch(`/api/dictionary/search?syllabus=${l}&limit=1`).then(r => (r.ok ? r.json() : null)).then(j => [l, (j?.total as number) || 0] as [number, number]).catch(() => [l, 0] as [number, number])
     )).then(pairs => { if (!cancelled) setLevelCounts(Object.fromEntries(pairs)) })
     return () => { cancelled = true }
   }, [lib, levelCounts])
@@ -499,7 +500,7 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
     setLibBusy(true)
     const offset = append ? libWords.length : 0
     const url = lib.mode === 'level'
-      ? `/api/dictionary/search?level=${lib.level}&limit=50&offset=${offset}`
+      ? `/api/dictionary/search?syllabus=${lib.level}&limit=50&offset=${offset}`
       : `/api/dictionary/search?prefix=${encodeURIComponent(lib.letter)}&limit=50&offset=${offset}`
     fetch(url).then(r => (r.ok ? r.json() : null)).then(j => {
       const data = (j?.data as DictionaryWord[]) ?? []
@@ -603,7 +604,8 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
                 <button key={dw.id} className={`lib-row${lemma === current ? ' on' : ''}`} onClick={() => onPick(lemma)}>
                   <span className="wdot" style={{ background: 'var(--ink-muted)', width: 7, height: 7, borderRadius: '50%', flexShrink: 0 }} />
                   <span className="lw">{dw.word}</span><span className="lz">{zh}</span>
-                  <span className="ltag">{LEVEL_NAMES[dw.primaryLevel ?? 0] || dw.cefrLevel || ''}</span>
+                  {/* 按等级浏览：标签显示当前浏览档（大纲全量，避免把跨档基础词标成其 primary_level）；按字母浏览：显示词自身档 */}
+                  <span className="ltag">{lib.mode === 'level' ? LEVEL_NAMES[lib.level] : (LEVEL_NAMES[dw.primaryLevel ?? 0] || dw.cefrLevel || '')}</span>
                   {has ? <span className="lin">✓ 已在库</span> : <span className="ladd" onClick={e => { e.stopPropagation(); ensureWord(dw, 'lookup') }}>+ 学</span>}
                 </button>
               ) })}

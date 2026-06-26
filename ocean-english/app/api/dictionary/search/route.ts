@@ -36,6 +36,10 @@ export async function GET(request: NextRequest) {
   const numericLevelRaw = parseInt(levelRaw, 10)
   const numericLevel = Number.isInteger(numericLevelRaw) && numericLevelRaw >= 1 && numericLevelRaw <= 7
     ? numericLevelRaw : undefined
+  // 3.4：?syllabus=1-7 → 按考试大纲全量（levels 含该档）过滤；词库「按等级」浏览用，与 numericLevel(±1并集) 互斥
+  const syllabusRaw = parseInt(searchParams.get('syllabus') ?? '', 10)
+  const syllabusLevel = Number.isInteger(syllabusRaw) && syllabusRaw >= 1 && syllabusRaw <= 7
+    ? syllabusRaw : undefined
   const difficulty = (VALID_DIFFICULTY as readonly number[]).includes(diffRaw)
     ? (diffRaw as 1 | 2 | 3 | 4 | 5)
     : undefined
@@ -53,6 +57,7 @@ export async function GET(request: NextRequest) {
     prefix: searchParams.get('prefix') || undefined,
     level,
     numericLevel,
+    syllabusLevel,
     difficulty,
     cefr,
     exam,

@@ -286,6 +286,34 @@ class SupabaseDictionaryClient implements DictionaryClient {
     }
   }
 
+  /** 精确总数：单次 count:exact 请求（head:true 不取行），过滤链与 searchWords 一致。
+   *  避免「翻全表逐页累加 + 2.5s 每页超时」把总数截断成 500/1000 的整数倍。返回 null = 不可用（回退分页计数）。 */
+  async countWords(query: string, options?: WordSearchOptions): Promise<number | null> {
+    if (!isSupabaseConfigured) return null
+    try {
+      const q = query.toLowerCase().trim()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Supabase query builder chained type
+      let req: any = this.getDb().from('dictionary_words').select('id', { count: 'exact', head: true })
+      if (options?.prefix) req = req.ilike('normalized_word', `${options.prefix.toLowerCase()}%`)
+      else if (q) req = req.ilike('normalized_word', `%${q}%`)
+      if (options?.level) req = req.eq('level', options.level)
+      if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
+      if (options?.examTag) req = req.contains('tags', [options.examTag])
+      if (options?.syllabusLevel != null) req = req.contains('levels', [options.syllabusLevel])
+      else if (options?.primaryLevel != null) req = req.eq('primary_level', options.primaryLevel)
+      else if (options?.numericLevel != null) {
+        const l = options.numericLevel
+        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
+      }
+      if (options?.minPrimaryLevel != null) req = req.gte('primary_level', options.minPrimaryLevel)
+      const { count, error } = await req
+      if (error) return null
+      return count ?? null
+    } catch {
+      return null
+    }
+  }
+
   async searchWords(query: string, options?: WordSearchOptions): Promise<DictionaryWord[]> {
     if (!isSupabaseConfigured) return []
     try {
@@ -296,8 +324,9 @@ class SupabaseDictionaryClient implements DictionaryClient {
         .select(SEARCH_SELECT)
       // 真词修复：按 7 档浏览时该档词优先（primary_level 降序 → 纯高档词在前，
       // 多档高频基础词靠后），频率次序兜底；默认浏览维持原核心词优先
-      if (options?.orderBy === 'frequency') {
-        // P0：选词推荐 — 真词频高频优先（frequency_rank 升序，1 = 最高频）
+      if (options?.orderBy === 'frequency' || options?.syllabusLevel != null) {
+        // P0/3.4：选词推荐 + 按等级(大纲全量)浏览 — 真词频高频优先（frequency_rank 升序，1 = 最高频）。
+        // 注：syllabus 浏览绝不用 primary_level DESC（会把高档如托福词顶到考研列表最前），故走频率序。
         req = req.order('frequency_rank', { ascending: true, nullsFirst: false })
       } else if (options?.numericLevel != null) {
         req = req

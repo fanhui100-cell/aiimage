@@ -177,6 +177,10 @@ export interface DictionaryClient {
   /** Full-text search across word and definitions. */
   searchWords(query: string, options?: WordSearchOptions): Promise<DictionaryWord[]>
 
+  /** Exact total matching the same filters as searchWords (single count query).
+   *  Optional: only live (DB) clients implement it; returns null when unavailable. */
+  countWords?(query: string, options?: WordSearchOptions): Promise<number | null>
+
   /** Get words filtered by level and optionally difficulty. */
   getWordsByLevel(level: WordLevel, options?: WordSearchOptions): Promise<DictionaryWord[]>
 
