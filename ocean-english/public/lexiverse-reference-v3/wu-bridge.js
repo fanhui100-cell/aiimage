@@ -241,7 +241,9 @@
         }
         UI.applyExternalStates({ mastered, learned });
       } else if (d.type === 'lv:focus-word' && d.wordId) {
-        UI.focusWord(d.wordId);
+        // 命中 → 飞入该词星球；未命中（该词不在本星系真词表）→ 回报 parent 给可见提示，不再静默
+        const ok = UI.focusWord(d.wordId);
+        if (!ok) send({ type: 'lv:focus-miss', wordId: d.wordId });
       }
     });
 

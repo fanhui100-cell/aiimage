@@ -17,7 +17,7 @@ const RESULTS_KEY = 'rd-results-v1'
 interface ListItem {
   id: string; title: string; titleZh?: string; level: number; minutes: number
   questionCount: number; keyWords: string[]; keyWordCount: number
-  difficulty?: number   // 后端按词频稀有度算的难度底数（0-100），拉开各篇生词率
+  difficulty?: number   // 后端难度底数（0-100）。注：当前实为「等级×11 + 关键词密度」的难度档代理，非真实生词率；UI 标「难度」。
 }
 interface RQuestion {
   id: string; prompt: string; promptZh?: string
@@ -314,7 +314,7 @@ export function ReadingScreen() {
                 ? <>{MiniRingEl(r.pct)}<span className="rd-rate-lab">正确率 {r.correct}/{r.total}</span></>
                 : <>
                     <span className="rd-rate-num" style={{ color: rateColor(nr) }}>{nr}<small>%</small></span>
-                    <span className="rd-rate-lab">生词率</span>
+                    <span className="rd-rate-lab">难度</span>
                     <span className="rd-rate-bar"><i style={{ width: `${nr}%`, background: rateColor(nr) }} /></span>
                   </>}
             </span>
@@ -331,7 +331,7 @@ export function ReadingScreen() {
         <div className="rd-statbar">
           <div className="rd-stat"><span className="rd-stat-fig ink">{doneN}<small style={{ fontSize: 14, color: 'var(--ink-muted)' }}>/{total}</small></span><span className="rd-stat-lab">已完成精读</span></div>
           <button className="rd-stat rd-stat-btn" onClick={() => setLevel('review')}><span className="rd-stat-fig" style={{ color: reviewN ? 'var(--rose-ink)' : 'var(--ink-muted)' }}>{reviewN}</span><span className="rd-stat-lab">待复读·有错题{reviewN ? ' →' : ''}</span></button>
-          <div className="rd-stat"><span className="rd-stat-fig gold">{avgRate}%</span><span className="rd-stat-lab">平均生词率</span></div>
+          <div className="rd-stat"><span className="rd-stat-fig gold">{avgRate}%</span><span className="rd-stat-lab">平均难度</span></div>
         </div>
         <div className="rd-chips">
           {chips.map(([k, label]) => {

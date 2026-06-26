@@ -37,6 +37,7 @@ export function ReferenceLexiverseFrame() {
   // 加载页：宇宙/星系 iframe 初始化（three + 词表 + 场景）期间盖一层进度页，lv:ready 时淡出
   const [loadPhase, setLoadPhase] = useState<'loading' | 'fading' | 'done'>('loading')
   const [loadProgress, setLoadProgress] = useState(8)
+  const [focusMiss, setFocusMiss] = useState<string | null>(null)   // ?word= 该词不在本星系真词表时的可见提示
 
   const src = useMemo(() => {
     const file = galaxyId ? 'Lexiverse Galaxy.html' : 'Lexiverse Universe.html'
@@ -194,21 +195,38 @@ export function ReferenceLexiverseFrame() {
     win.postMessage({ type: 'lv:highlight', items }, window.location.origin)
   }, [searchParams, galaxyForWord])
 
-  // U1：?word= 外部定位 — 解析词所属星系并进入，再让星系页聚焦该词
+  // U1：?word= 外部定位 — 解析词所属「等级带星系」并进入，再让星系页聚焦该词飞入星球。
+  // 等级带星系装载该档完整真词表（dataFile，数千词），故只要进对档，focusWord 即能命中飞入。
+  // 词在 store（已入库）→ 用其 levels；未入库 → 取词典拿 levels/primaryLevel 推等级带，绝不再静默兜底到首星系。
   const focusWordRef = useRef<string | null>(null)
   useEffect(() => {
     const word = searchParams.get('word')
     if (!word) return
     focusWordRef.current = word
-    if (!galaxyId) {
-      const entry = useLexiStore.getState().words.find(w => w.id === word)
-      const gid = galaxyForWord(entry?.galaxy) ?? referenceGalaxies[0]?.id
-      if (gid) {
-        const sp = new URLSearchParams(searchParams.toString())
-        sp.set('galaxy', gid)
-        router.replace(`${pathname}?${sp.toString()}`)
-      }
+    if (galaxyId) return                    // 已在某星系：等 lv:ready 聚焦
+    if (!referenceGalaxies.length) return   // 目录未就绪：referenceGalaxies 更新后本 effect 重跑
+    let cancelled = false
+    const enter = (gid: string | null | undefined) => {
+      if (cancelled) return
+      const target = gid || referenceGalaxies[0]?.id
+      if (!target) return
+      const sp = new URLSearchParams(searchParams.toString())
+      sp.set('galaxy', target)
+      router.replace(`${pathname}?${sp.toString()}`)
     }
+    const entry = useLexiStore.getState().words.find(w => w.id === word)
+    const direct = galaxyForWord(entry?.galaxy, entry?.levels)
+    if (direct) { enter(direct); return }
+    // 未入库词：取词典 levels/primaryLevel → 等级带星系
+    fetch(`/api/dictionary/word/${encodeURIComponent(word)}`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(json => {
+        const dw = json?.data as { levels?: number[]; primaryLevel?: number } | undefined
+        const levels = dw?.levels?.length ? dw.levels : (dw?.primaryLevel ? [dw.primaryLevel] : undefined)
+        enter(galaxyForWord(undefined, levels))
+      })
+      .catch(() => enter(null))
+    return () => { cancelled = true }
   }, [searchParams, galaxyId, galaxyForWord, referenceGalaxies, router, pathname])
 
   useEffect(() => {
@@ -246,6 +264,12 @@ export function ReferenceLexiverseFrame() {
         }
         case 'lv:open-word': {
           if (data.wordId) router.push(`/dictionary?word=${encodeURIComponent(data.wordId)}`)
+          break
+        }
+        case 'lv:focus-miss': {
+          // ?word= 进对了星系但该词不在该档真词表 → 给可见提示，避免「点了没反应」
+          setFocusMiss(data.wordId ?? '该词')
+          window.setTimeout(() => setFocusMiss(null), 3600)
           break
         }
         case 'lv:review-grade': {
@@ -349,6 +373,19 @@ export function ReferenceLexiverseFrame() {
             backdropFilter: 'blur(8px)',
           }}
         >‹ 返回单词</button>
+      )}
+
+      {/* ?word= 该词不在本星系真词表时的可见提示（替代此前的静默无反应） */}
+      {focusMiss && (
+        <div
+          style={{
+            position: 'fixed', left: '50%', top: 74, transform: 'translateX(-50%)', zIndex: 60,
+            maxWidth: '86vw', padding: '9px 16px', borderRadius: 999,
+            background: 'rgba(255,210,120,.12)', border: '1px solid rgba(255,210,120,.4)',
+            color: '#FFD27A', fontSize: 13, fontWeight: 600, textAlign: 'center',
+            backdropFilter: 'blur(8px)',
+          }}
+        >「{focusMiss}」暂不在本星系词表 · 已带你到它所属星系</div>
       )}
 
       {loadPhase !== 'done' && (
