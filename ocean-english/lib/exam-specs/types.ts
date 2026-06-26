@@ -12,8 +12,8 @@
 
 import { EXAM_TASK_TYPES } from '@/lib/question-bank/question-type-taxonomy'
 
-export type ExamId = 'zhongkao' | 'gaokao' | 'cet4' | 'cet6' | 'kaoyan' | 'toefl' | 'sat'
-export type ExamLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7
+export type ExamId = 'zhongkao' | 'gaokao' | 'cet4' | 'cet6' | 'kaoyan' | 'toefl' | 'sat' | 'ielts'
+export type ExamLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 export type ExamSkill =
   | 'vocabulary'
   | 'grammar'
@@ -27,10 +27,11 @@ export type ExamSkill =
 /** 取题/组卷方式：single=单题；rows=按行取（单句/多空题组）；passages=按整篇取；paper=整卷 */
 export type QuestionGroupMode = 'single' | 'rows' | 'passages' | 'paper'
 
-export type ExamSpecStatus = 'draft' | 'active' | 'deprecated'
+/** coming_soon = 已建档但题库未做（如 IELTS）：UI 显示「建设中」、组卷直接拒、绝不回退别的题型。 */
+export type ExamSpecStatus = 'draft' | 'active' | 'deprecated' | 'coming_soon'
 
-/** 计分量表：raw=地区不一；150=高考；710=四六级；100=考研；6=TOEFL 2026(1-6)；200-800=SAT RW 单科(总分 400-1600) */
-export type ScoringScale = 'raw' | '150' | '710' | '100' | '1-6' | '200-800'
+/** 计分量表：raw=地区不一；150=高考；710=四六级；100=考研；6=TOEFL 2026(1-6)；200-800=SAT RW 单科(总分 400-1600)；1-9=IELTS */
+export type ScoringScale = 'raw' | '150' | '710' | '100' | '1-6' | '200-800' | '1-9'
 
 /** 客观题任务类型：直接复用 taxonomy 唯一真源（reading/listening/banked_cloze/...）。 */
 export const OBJECTIVE_TASK_TYPES = EXAM_TASK_TYPES

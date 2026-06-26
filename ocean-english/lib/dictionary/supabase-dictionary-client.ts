@@ -303,7 +303,7 @@ class SupabaseDictionaryClient implements DictionaryClient {
       else if (options?.primaryLevel != null) req = req.eq('primary_level', options.primaryLevel)
       else if (options?.numericLevel != null) {
         const l = options.numericLevel
-        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
+        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 8))
       }
       if (options?.minPrimaryLevel != null) req = req.gte('primary_level', options.minPrimaryLevel)
       const { count, error } = await req
@@ -353,7 +353,7 @@ class SupabaseDictionaryClient implements DictionaryClient {
         req = req.eq('primary_level', options.primaryLevel)
       } else if (options?.numericLevel != null) {
         const l = options.numericLevel
-        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 7))
+        req = req.overlaps('levels', [l - 1, l, l + 1].filter(x => x >= 1 && x <= 8))
       }
       // 3.4：syllabus 模式难度下限（与上面过滤 AND，跳过低档基础词）
       if (options?.minPrimaryLevel != null) {

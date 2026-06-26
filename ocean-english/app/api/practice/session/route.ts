@@ -20,8 +20,8 @@ function invalid(error: string) {
 function validate(input: BuildPracticeSessionInput): string | null {
   if (!MODES.includes(input.mode)) return 'invalid_mode'
   if (input.source && !SOURCES.includes(input.source)) return 'invalid_source'
-  // level 若提供必须是 1-7 整数（挡 NaN：否则 builder 的 if(level) 跳过过滤→跨等级抽题）
-  if (input.level != null && !(Number.isInteger(input.level) && input.level >= 1 && input.level <= 7)) return 'invalid_level'
+  // level 若提供必须是 1-8 整数（挡 NaN：否则 builder 的 if(level) 跳过过滤→跨等级抽题）
+  if (input.level != null && !(Number.isInteger(input.level) && input.level >= 1 && input.level <= 8)) return 'invalid_level'
   // count 若提供必须是正整数
   if (input.count != null && !(Number.isInteger(input.count) && input.count >= 1)) return 'invalid_count'
   if (input.mode === 'word' && !input.word && !input.wordId) return 'missing_word'

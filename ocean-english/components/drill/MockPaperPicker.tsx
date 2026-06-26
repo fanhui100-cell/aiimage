@@ -16,7 +16,7 @@ const VIOLET: CSSProperties = { ['--accent' as string]: 'var(--violet-ink)', ['-
 export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg: MockStartCfg) => void }) {
   const [examId, setExamId] = useState('cet4')
   const exam = getExamSpec(examId) ?? EXAM_SPECS[0]
-  const draft = exam.status === 'draft'
+  const draft = exam.status === 'draft' || exam.status === 'coming_soon'
   const totalQ = exam.sections.reduce((s, x) => s + x.itemCount, 0)
   const objSecs = exam.sections.filter((s) => s.taskTypes.some(isExamTaskType))
   const objPoints = objSecs.reduce((s, x) => s + (x.points || 0), 0)
@@ -29,8 +29,8 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
 
       <div className={`lx-exam-grid ${mob ? 'mob' : ''}`} style={{ marginTop: 18 }}>
         {EXAM_SPECS.map((e) => (
-          <button key={e.id} className={`lx-exam ${examId === e.id ? 'on' : ''} ${e.status === 'draft' ? 'soon' : ''}`} onClick={() => setExamId(e.id)}>
-            {e.status === 'draft' && <span className="lx-exam-soon">题库建设中</span>}
+          <button key={e.id} className={`lx-exam ${examId === e.id ? 'on' : ''} ${(e.status === 'draft' || e.status === 'coming_soon') ? 'soon' : ''}`} onClick={() => setExamId(e.id)}>
+            {(e.status === 'draft' || e.status === 'coming_soon') && <span className="lx-exam-soon">题库建设中</span>}
             <div className="lx-exam-zh">{e.labelZh}</div>
             <div className="lx-exam-en">{e.labelEn}</div>
             <div className="lx-exam-meta"><span><b>{e.totalMinutes}</b>′</span><span>满分 <b>{e.fullScore}</b></span></div>

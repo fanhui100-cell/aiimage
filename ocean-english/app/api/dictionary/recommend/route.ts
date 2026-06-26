@@ -29,7 +29,7 @@ function parseNumber(value: unknown, fallback: number): number {
 function parseLevel(value: unknown): number | null {
   const parsed = Number(value)
 
-  return Number.isFinite(parsed) && parsed >= 1 && parsed <= 7 ? parsed : null
+  return Number.isFinite(parsed) && parsed >= 1 && parsed <= 8 ? parsed : null  // 八档统一：上限 7→8（IELTS）
 }
 
 function parseLimit(value: unknown): number {

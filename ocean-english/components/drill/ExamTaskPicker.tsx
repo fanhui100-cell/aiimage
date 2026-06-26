@@ -63,8 +63,8 @@ function ExamStrip({ examId, onPick }: { examId: string; onPick: (id: string) =>
     <div className="lx-es-strip" role="tablist" aria-label="选择考试">
       {EXAM_SPECS.map((e) => (
         <button key={e.id} role="tab" aria-selected={examId === e.id}
-          className={`lx-es-exam ${examId === e.id ? 'on' : ''} ${e.status === 'draft' ? 'soon' : ''}`} onClick={() => onPick(e.id)}>
-          {e.status === 'draft' && <span className="esoon">题库建设中</span>}
+          className={`lx-es-exam ${examId === e.id ? 'on' : ''} ${(e.status === 'draft' || e.status === 'coming_soon') ? 'soon' : ''}`} onClick={() => onPick(e.id)}>
+          {(e.status === 'draft' || e.status === 'coming_soon') && <span className="esoon">题库建设中</span>}
           <div className="ezh">{e.labelZh}</div>
           <div className="een">{e.labelEn}</div>
           <div className="emeta"><span><b>{e.totalMinutes}</b>′</span><span>满分 <b>{e.fullScore}</b></span></div>
@@ -85,7 +85,7 @@ export function ExamTaskPicker({ mob }: { mob?: boolean }) {
   const router = useRouter()
   const [examId, setExamId] = useState('cet4')
   const exam = getExamSpec(examId) ?? EXAM_SPECS[0]
-  const draft = exam.status === 'draft'
+  const draft = exam.status === 'draft' || exam.status === 'coming_soon'
   const [openIds, setOpenIds] = useState<Set<string>>(() => new Set([exam.sections[0]?.id]))
   useEffect(() => {
     const s = getExamSpec(examId)?.sections[0]?.id

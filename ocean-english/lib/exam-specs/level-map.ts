@@ -13,6 +13,7 @@ export const LEVEL_TO_EXAM_ID: Record<ExamLevel, ExamId> = {
   5: 'kaoyan',
   6: 'toefl',
   7: 'sat',
+  8: 'ielts',
 }
 
 export const EXAM_ID_TO_LEVEL: Record<ExamId, ExamLevel> = {
@@ -23,6 +24,7 @@ export const EXAM_ID_TO_LEVEL: Record<ExamId, ExamLevel> = {
   kaoyan: 5,
   toefl: 6,
   sat: 7,
+  ielts: 8,
 }
 
 const DISPLAY_NAMES: Record<ExamId, string> = {
@@ -33,6 +35,7 @@ const DISPLAY_NAMES: Record<ExamId, string> = {
   kaoyan: '考研',
   toefl: 'TOEFL',
   sat: 'SAT',
+  ielts: '雅思',
 }
 
 // 输入别名 → canonical ExamId（含中文、常见写法、旧入口键）。键统一小写匹配。
@@ -44,9 +47,10 @@ const EXAM_ID_ALIASES: Record<string, ExamId> = {
   kaoyan: 'kaoyan', 考研: 'kaoyan', kaoyan1: 'kaoyan', kaoyan2: 'kaoyan', 'kaoyan-1': 'kaoyan', 'kaoyan-2': 'kaoyan',
   toefl: 'toefl', 托福: 'toefl', 'toefl-ibt': 'toefl', toefl_ibt: 'toefl',
   sat: 'sat', 'sat-digital': 'sat', sat_digital: 'sat',
+  ielts: 'ielts', 雅思: 'ielts', 'ielts-academic': 'ielts', ielts_academic: 'ielts',
 }
 
-/** 把任意常见写法归一到 7 档 canonical ExamId；无法识别返回 null。 */
+/** 把任意常见写法归一到 8 档 canonical ExamId；无法识别返回 null。 */
 export function normalizeExamId(input: string): ExamId | null {
   if (!input) return null
   const trimmed = input.trim()

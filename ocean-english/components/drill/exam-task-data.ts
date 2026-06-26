@@ -43,7 +43,7 @@ export interface TaskStateInfo { state: TaskState; count: number }
 
 /** task 三态：draft 档→build；生产性→plan；客观任务→有池 ok（带题量）/ 空池 build。 */
 export function deriveTaskState(exam: ExamSpec, task: string): TaskStateInfo {
-  if (exam.status === 'draft') return { state: 'build', count: 0 }
+  if (exam.status === 'draft' || exam.status === 'coming_soon') return { state: 'build', count: 0 }
   if (isProductiveTaskType(task)) return { state: 'plan', count: 0 }
   if (isExamTaskType(task)) {
     const cnt = typeCount(task, exam.id)

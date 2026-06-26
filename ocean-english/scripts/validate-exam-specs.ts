@@ -22,19 +22,19 @@ import { isDeprecatedQuestionType, isWordUniverseType } from '@/lib/question-ban
 const errors: string[] = []
 const allTaskTypes = new Set<string>(ALL_EXAM_TASK_TYPES)
 
-// 1) 恰好 7 档
-if (EXAM_SPECS.length !== 7) errors.push(`期望 7 档考试，实际 ${EXAM_SPECS.length}`)
+// 1) 恰好 8 档（八档统一：新增 ⑧雅思 IELTS）
+if (EXAM_SPECS.length !== 8) errors.push(`期望 8 档考试，实际 ${EXAM_SPECS.length}`)
 
 // 2) exam id 唯一
 const ids = EXAM_SPECS.map((s) => s.id)
 const dupIds = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))]
 if (dupIds.length) errors.push(`exam id 重复: ${dupIds.join(', ')}`)
 
-// 3) level 1-7 各恰好一次
+// 3) level 1-8 各恰好一次
 const levels = EXAM_SPECS.map((s) => s.level).sort((a, b) => a - b)
-const expectedLevels = [1, 2, 3, 4, 5, 6, 7]
-if (levels.length !== 7 || expectedLevels.some((v, i) => levels[i] !== v)) {
-  errors.push(`level 必须 1-7 各恰好一次，实际 [${levels.join(', ')}]`)
+const expectedLevels = [1, 2, 3, 4, 5, 6, 7, 8]
+if (levels.length !== 8 || expectedLevels.some((v, i) => levels[i] !== v)) {
+  errors.push(`level 必须 1-8 各恰好一次，实际 [${levels.join(', ')}]`)
 }
 
 for (const spec of EXAM_SPECS) {
@@ -92,12 +92,11 @@ if (!sat || sat.fullScore !== 800 || sat.scoringScale !== '200-800') {
   errors.push(`sat 分制应为 fullScore 800 + scoringScale '200-800'，实际 ${sat?.fullScore}/${sat?.scoringScale}`)
 }
 
-// 10) normalizeExamId 不得把 IELTS/GRE 误映射为 toefl/sat（它们不是 7 档别名）
-for (const wrong of ['ielts', 'gre']) {
-  if (normalizeExamId(wrong) !== null) {
-    errors.push(`normalizeExamId("${wrong}") 应返回 null（IELTS/GRE 不是 7 档考试别名）`)
-  }
+// 10) IELTS 是第 8 档：ielts/雅思 应归一到 'ielts'；GRE 仍非档（应 null）
+for (const ok of ['ielts', '雅思', 'ielts-academic']) {
+  if (normalizeExamId(ok) !== 'ielts') errors.push(`normalizeExamId("${ok}") 应归一为 'ielts'，实际 ${normalizeExamId(ok)}`)
 }
+if (normalizeExamId('gre') !== null) errors.push(`normalizeExamId("gre") 应返回 null（GRE 不在八档）`)
 
 console.log('exam-specs validation')
 console.log(`  specs: ${EXAM_SPECS.length}`)

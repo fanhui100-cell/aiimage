@@ -25,7 +25,7 @@ $$ LANGUAGE plpgsql;
 -- ────────────────────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS exam_specs (
   id            TEXT PRIMARY KEY,                       -- zhongkao / gaokao / cet4 ...
-  level         INT NOT NULL CHECK (level BETWEEN 1 AND 7),
+  level         INT NOT NULL CHECK (level BETWEEN 1 AND 8),
   name_zh       TEXT NOT NULL,
   name_en       TEXT NOT NULL,
   version       TEXT NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS stimuli (
   text_zh     TEXT,
   topic_tags  TEXT[] DEFAULT '{}',
   domain_tags TEXT[] DEFAULT '{}',
-  level       INT CHECK (level BETWEEN 1 AND 7),
+  level       INT CHECK (level BETWEEN 1 AND 8),
   word_count  INT,
   source_type TEXT NOT NULL DEFAULT 'original',
   source_note TEXT,
@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS question_sets (
   section_id       TEXT REFERENCES exam_sections(id) ON DELETE SET NULL,
   task_template_id TEXT REFERENCES task_templates(id) ON DELETE SET NULL,
   stimulus_id      UUID REFERENCES stimuli(id) ON DELETE SET NULL,
-  level            INT CHECK (level BETWEEN 1 AND 7),
+  level            INT CHECK (level BETWEEN 1 AND 8),
   task_type        TEXT NOT NULL,
   difficulty_band  INT CHECK (difficulty_band BETWEEN 1 AND 5),
   estimated_minutes NUMERIC,

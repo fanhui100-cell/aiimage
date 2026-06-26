@@ -62,7 +62,7 @@ CREATE INDEX IF NOT EXISTS idx_word_relations_type ON word_relations(type);
 -- ────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS grammar_points (
   id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  level           INT CHECK (level BETWEEN 1 AND 7),
+  level           INT CHECK (level BETWEEN 1 AND 8),
   title           TEXT NOT NULL,
   explanation_md  TEXT,
   examples        JSONB DEFAULT '[]',

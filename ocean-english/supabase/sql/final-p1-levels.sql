@@ -7,7 +7,7 @@
 
 ALTER TABLE user_learning_preferences
   ADD COLUMN IF NOT EXISTS numeric_level INT
-  CHECK (numeric_level BETWEEN 1 AND 7);
+  CHECK (numeric_level BETWEEN 1 AND 8);
 
 COMMENT ON COLUMN user_learning_preferences.numeric_level IS
-  '7 档等级：1初中 2高中 3四级 4六级 5考研 6托福 7SAT（lib/levels.ts）';
+  '8 档等级：1初中 2高中 3四级 4六级 5考研 6托福 7SAT 8雅思（lib/levels.ts）';

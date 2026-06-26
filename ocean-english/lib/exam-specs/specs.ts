@@ -187,6 +187,28 @@ export const EXAM_SPECS: ExamSpec[] = [
       { id: 'standard_english_conventions', labelZh: '标准英语规范', labelEn: 'Standard English Conventions', skill: 'grammar', taskTypes: ['reading_comprehension'], groupMode: 'single', itemCount: 14, points: 0, notes: 'Boundaries（句界/标点/run-on）、Form/Structure/Sense（动词/代词/修饰/平行/主谓一致）。' },
     ],
   },
+
+  // ── lv8 IELTS Academic（仅词库/学习档已建；整卷题库未做 → coming_soon，组卷/专项一律拒，UI 显示建设中） ──
+  {
+    id: 'ielts',
+    level: 8,
+    labelZh: '雅思',
+    labelEn: 'IELTS Academic',
+    version: 'ielts-academic-2026',
+    sourceUrls: [
+      'https://www.ielts.org/about-ielts/ielts-academic',
+    ],
+    totalMinutes: 165,
+    fullScore: 9,
+    scoringScale: '1-9',
+    status: 'coming_soon',
+    sections: [
+      { id: 'listening', labelZh: '听力 Listening', labelEn: 'Listening', skill: 'listening', taskTypes: ['listening_comprehension'], groupMode: 'rows', itemCount: 40, points: 0, requiresAudio: true, notes: '4 段（日常对话/独白 + 学术讨论/讲座），40 题。整卷题库待建（coming_soon）。' },
+      { id: 'reading', labelZh: '阅读 Reading', labelEn: 'Reading', skill: 'reading', taskTypes: ['reading_comprehension'], groupMode: 'passages', itemCount: 40, points: 0, notes: '3 篇学术长文，40 题（判断/匹配/填空/选择）。整卷题库待建。' },
+      { id: 'writing', labelZh: '写作 Writing', labelEn: 'Writing', skill: 'writing', taskTypes: ['essay_writing'], groupMode: 'single', itemCount: 2, points: 0, requiresRubric: true, notes: 'Task 1 图表描述 + Task 2 议论文。整卷题库待建。' },
+      { id: 'speaking', labelZh: '口语 Speaking', labelEn: 'Speaking', skill: 'speaking', taskTypes: ['interview_speaking'], groupMode: 'single', itemCount: 3, points: 0, requiresAudio: true, requiresRubric: true, notes: '3 部分面试。整卷题库待建。' },
+    ],
+  },
 ]
 
 export function getExamSpec(id: string): ExamSpec | null {

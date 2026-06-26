@@ -42,7 +42,7 @@ export async function PUT(request: NextRequest) {
   // P1-2：7 档数字等级（需先执行 supabase/sql/final-p1-levels.sql 加列）
   const numericLevel = body.numericLevel
   if (numericLevel !== undefined
-    && !(Number.isInteger(numericLevel) && numericLevel >= 1 && numericLevel <= 7)) {
+    && !(Number.isInteger(numericLevel) && numericLevel >= 1 && numericLevel <= 8)) {
     return NextResponse.json({ ok: false, error: 'invalid_numeric_level' }, { status: 400 })
   }
 
