@@ -33,15 +33,21 @@ export async function persistSkillStates(db: SupabaseClient, userId: string | nu
     .filter((r) => r.exam_id)
     .map((r) => ({ examId: r.exam_id as string, sectionId: r.section_id ?? undefined, taskType: r.task_type ?? undefined, subskills: r.subskills ?? undefined, isCorrect: r.is_correct === true }))
   const states = aggregateSkillStates(attempts)
+
+  // 全量重算替换：question_attempts 聚合是该 user skill_states 的完整真源。先删旧行再插新行——
+  // upsert 不删「已不在本次聚合集合内的 stale skill_key」，长期会让残留行的 attempts/confidence 失真
+  // 累积（曾致 learning-loop e2e 间歇失败：残留旧 skillKey 使 confidence 升出 insufficient）。
+  // skill_states 是可重建的物化缓存：delete→insert 非原子但失败下次作答即重建，风险可接受。
+  await db.from('skill_states').delete().eq('user_id', userId)
   if (!states.length) return { written: 0, warnings: ['no_attempts'] }
 
   const now = new Date().toISOString()
-  const upsertRows = states.map((s) => ({
+  const outRows = states.map((s) => ({
     user_id: userId, exam_id: s.examId, skill_key: s.skillKey,
     mastery: s.mastery, attempts: s.attempts, correct: s.correct,
     last_attempt_at: now, updated_at: now,
   }))
-  const { error } = await db.from('skill_states').upsert(upsertRows, { onConflict: 'user_id,exam_id,skill_key' })
-  if (error) return { written: 0, warnings: ['skill_states_upsert_failed'] }
-  return { written: upsertRows.length, warnings: [] }
+  const { error } = await db.from('skill_states').insert(outRows)
+  if (error) return { written: 0, warnings: ['skill_states_insert_failed'] }
+  return { written: outRows.length, warnings: [] }
 }

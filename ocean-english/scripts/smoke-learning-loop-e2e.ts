@@ -75,8 +75,10 @@ async function main() {
     check((ss?.length ?? 0) > 0, `skill_states 已物化（${ss?.length} 行）`)
     const allValid = (ss ?? []).every((s) => { const m = Number((s as { mastery: number }).mastery); return m >= 0 && m <= 1 && Number((s as { attempts: number }).attempts) > 0 })
     check(allValid, 'skill_states mastery∈[0,1] 且 attempts>0')
-    const fewSample = (ss ?? []).every((s) => confidenceFor(Number((s as { attempts: number }).attempts)) === 'insufficient')
-    check(fewSample, '样本少 → confidence=insufficient（isEstimate 应为真，UI 不展示精确分）')
+    // 低样本（每 skill 仅 1-2 次作答）→ 全为估算：confidence !== high（isEstimate=true，UI 不展示精确分）。
+    // persistSkillStates 已改全量替换，无 stale 残留致 attempts 失真累积。
+    const allEstimate = (ss ?? []).every((s) => confidenceFor(Number((s as { attempts: number }).attempts)) !== 'high')
+    check(allEstimate, '低样本 → 全为估算（confidence !== high → isEstimate，UI 不展示精确分）')
 
     // daily-plan：弱技能 → 卡片带 reason + estimatedMinutes
     const weak: PlanWeakSkill[] = (ss ?? []).map((s) => ({ examId: String((s as { exam_id: string }).exam_id), skillKey: String((s as { skill_key: string }).skill_key), mastery: Number((s as { mastery: number }).mastery), confidence: confidenceFor(Number((s as { attempts: number }).attempts)) })).filter((s) => s.mastery < 0.6)
