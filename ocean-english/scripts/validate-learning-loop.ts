@@ -11,6 +11,7 @@ import { attemptToWordUpdate, type WordAttempt } from '@/lib/learning-loop/word-
 import { aggregateSkillStates, weakSkills, updateSkillState, type SkillAttempt } from '@/lib/learning-loop/skill-state-updater'
 import { classifyError } from '@/lib/learning-loop/error-classifier'
 import { buildDailyPlan } from '@/lib/daily-plan/daily-plan-engine'
+import { skillKeyToTaskType } from '@/lib/practice/skill-task-map'
 
 const errors: string[] = []
 const notes: string[] = []
@@ -98,6 +99,15 @@ function main() {
   // 全对场景：不应漏（无错→无修复卡也合法，但到期词仍触发 word_review）
   const allCorrectPlan = buildDailyPlan({ dueWords: [{ id: 'd1', word: 'due' }], weakWords: [], weakSkills: [], recentMistakes: [], goal: { dailyGoal: 10 }, examTarget: 'cet4' })
   ok(allCorrectPlan.cards.some((c) => c.type === 'word_review'), '有到期词时应含 word_review')
+
+  // 5) skillKey → taskType 映射（P1-1 修复：弱项练习不再把 subskill 直当 taskType → 空池）
+  ok(skillKeyToTaskType('inference') === 'reading_comprehension', 'inference → reading_comprehension')
+  ok(skillKeyToTaskType('listening_inference') === 'listening_comprehension', 'listening_inference → listening_comprehension')
+  ok(skillKeyToTaskType('verb_tense') === 'grammar_fill', 'verb_tense → grammar_fill')
+  ok(skillKeyToTaskType('topic_sentence') === 'seven_select', 'topic_sentence → seven_select')
+  ok(skillKeyToTaskType('reading_comprehension') === 'reading_comprehension', '合法 task_type 直通')
+  ok(skillKeyToTaskType('writing') === undefined, '产出技能(writing) → undefined（caller 按 examId 抽混合，不空池）')
+  ok(skillKeyToTaskType('') === undefined, '空 skillKey → undefined')
 
   writeFileSync('reports/learning-loop-validation.json', JSON.stringify({
     generatedAt: new Date().toISOString(),

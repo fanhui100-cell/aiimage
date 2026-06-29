@@ -8,6 +8,7 @@ import { ReviewScreen } from '@/components/screens/ReviewScreen'
 import { WrongAnswerList } from '@/components/screens/WrongAnswerList'
 import { useV2Diagnostics } from '@/hooks/useV2Diagnostics'
 import { V2WeakSkills } from '@/components/screens/V2InsightsPanel'
+import { skillKeyToTaskType } from '@/lib/practice/skill-task-map'
 
 type Tab = 'due' | 'weak' | 'wrong'
 
@@ -108,7 +109,14 @@ export function ReviewHub() {
         <>
           {/* v2 服务端能力诊断弱项（叠加层；仅登录 + 有真实作答时渲染，点「练」跳考试专项任务） */}
           <div style={{ maxWidth: 560, margin: '0 auto', padding: '0 20px' }}>
-            <V2WeakSkills d={v2} onPractice={(s) => router.push(`/quiz?mode=task&examId=${s.examId}&taskType=${s.skillKey}`)} />
+            <V2WeakSkills d={v2} onPractice={(s) => {
+              // skillKey 是诊断维度（subskill），经映射得 task_type；映射不到则不传（session 按 examId 抽混合题）
+              const taskType = skillKeyToTaskType(s.skillKey)
+              const qs = new URLSearchParams({ mode: 'task', examId: s.examId })
+              if (taskType) qs.set('taskType', taskType)
+              if (s.skillKey) qs.set('skill', s.skillKey)
+              router.push(`/quiz?${qs.toString()}`)
+            }} />
           </div>
           <ReviewScreen source="weak" />
         </>

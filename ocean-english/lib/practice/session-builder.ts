@@ -380,48 +380,61 @@ async function tryBuildFromV2(
 ): Promise<PracticeItem[]> {
   if (!(await v2Available(db))) return []
 
-  // 1) 选 active 题组（全局排除退役题型：迁移误把退役题设为 active 时的兜底）
-  let setsQ = db.from('question_sets').select('id, exam_id, section_id, task_type, stimulus_id, level')
-    .eq('status', 'active')
-    .not('task_type', 'in', DEPRECATED_FILTER)
-  if (input.examId) {
-    const norm = normalizeExamId(input.examId)
-    if (norm) setsQ = setsQ.eq('exam_id', norm)
-  }
-  if (input.sectionId) setsQ = setsQ.eq('section_id', input.sectionId)
-  if (input.taskType && !isDeprecatedQuestionType(input.taskType)) setsQ = setsQ.eq('task_type', input.taskType)
-  if (input.level) setsQ = setsQ.eq('level', input.level)
-  const { data: setsData, error: setsErr } = await setsQ.limit(200)
-  if (setsErr) return []
-  const sets = ((setsData ?? []) as { id: string; section_id: string | null; task_type: string; stimulus_id: string | null }[])
-    .filter((s) => !isDeprecatedQuestionType(s.task_type))   // post-filter 双保险
-  if (!sets.length) return []
+  // 1)+2) 选 active 题组与题目。word 模式走 target-word-first（先按目标词查 question_target_words
+  //   得 item，再回查 active set），避免「先抽一批题再过滤目标词」导致的假空池（P1-6）；
+  //   其余模式 set-first（按 examId/sectionId/taskType/level 抽）。全程排除退役题型。
+  type SetRow = { id: string; section_id: string | null; task_type: string; stimulus_id: string | null }
+  const isWordMode = input.mode === 'word' && !!(input.wordId || input.word)
+  let sets: SetRow[] = []
+  let items: Record<string, unknown>[] = []
 
-  const setIds = sets.map((s) => s.id)
-  const setById = new Map(sets.map((s) => [s.id, s]))
-
-  // 2) active 题目
-  const { data: itemsData } = await db
-    .from('question_items')
-    .select('id, question_set_id, input_mode, prompt, prompt_zh, choices, answer, explanation_zh, subskills')
-    .eq('status', 'active')
-    .in('question_set_id', setIds)
-    .limit(count * 4)
-  let items = (itemsData ?? []) as Record<string, unknown>[]
-
-  // word 模式：按 question_target_words 过滤到目标词
-  if (input.mode === 'word' && (input.wordId || input.word)) {
-    const itemIds = items.map((i) => String(i.id))
-    if (itemIds.length) {
-      let tw = db.from('question_target_words').select('question_item_id, word_id, surface, role, dimension').in('question_item_id', itemIds)
-      if (input.wordId) tw = tw.eq('word_id', input.wordId)
-      else if (input.word) tw = tw.ilike('surface', input.word.trim())
-      const { data: twData } = await tw
-      const keep = new Set((twData ?? []).map((r: { question_item_id: string }) => r.question_item_id))
-      items = items.filter((i) => keep.has(String(i.id)))
-    }
+  if (isWordMode) {
+    // ① 先按目标词查命中的 item（target-word-first）
+    let tw = db.from('question_target_words').select('question_item_id')
+    if (input.wordId) tw = tw.eq('word_id', input.wordId)
+    else tw = tw.ilike('surface', (input.word ?? '').trim())
+    const { data: twData } = await tw.limit(count * 16)
+    const targetItemIds = [...new Set((twData ?? []).map((r: { question_item_id: string }) => String(r.question_item_id)))]
+    if (!targetItemIds.length) return []
+    // ② 这些 item 的 active 题目
+    const { data: itemsData } = await db.from('question_items')
+      .select('id, question_set_id, input_mode, prompt, prompt_zh, choices, answer, explanation_zh, subskills')
+      .eq('status', 'active').in('id', targetItemIds).limit(count * 4)
+    items = (itemsData ?? []) as Record<string, unknown>[]
+    if (!items.length) return []
+    // ③ 回查这些 item 所属 active set（排除退役题型；可选按 examId/level 收窄）
+    const wantSetIds = [...new Set(items.map((i) => String(i.question_set_id)))]
+    let setsQ = db.from('question_sets').select('id, section_id, task_type, stimulus_id')
+      .eq('status', 'active').in('id', wantSetIds).not('task_type', 'in', DEPRECATED_FILTER)
+    if (input.examId) { const norm = normalizeExamId(input.examId); if (norm) setsQ = setsQ.eq('exam_id', norm) }
+    if (input.level) setsQ = setsQ.eq('level', input.level)
+    const { data: setsData, error: setsErr } = await setsQ.limit(200)
+    if (setsErr) return []
+    sets = ((setsData ?? []) as SetRow[]).filter((s) => !isDeprecatedQuestionType(s.task_type))
+    if (!sets.length) return []
+    const activeSetIds = new Set(sets.map((s) => s.id))
+    items = items.filter((i) => activeSetIds.has(String(i.question_set_id)))
+    if (!items.length) return []
+  } else {
+    // set-first：按 examId/sectionId/taskType/level 抽 active 题组（taskType 缺省 → 该考试混合题）
+    let setsQ = db.from('question_sets').select('id, section_id, task_type, stimulus_id')
+      .eq('status', 'active').not('task_type', 'in', DEPRECATED_FILTER)
+    if (input.examId) { const norm = normalizeExamId(input.examId); if (norm) setsQ = setsQ.eq('exam_id', norm) }
+    if (input.sectionId) setsQ = setsQ.eq('section_id', input.sectionId)
+    if (input.taskType && !isDeprecatedQuestionType(input.taskType)) setsQ = setsQ.eq('task_type', input.taskType)
+    if (input.level) setsQ = setsQ.eq('level', input.level)
+    const { data: setsData, error: setsErr } = await setsQ.limit(200)
+    if (setsErr) return []
+    sets = ((setsData ?? []) as SetRow[]).filter((s) => !isDeprecatedQuestionType(s.task_type))
+    if (!sets.length) return []
+    const setIds = sets.map((s) => s.id)
+    const { data: itemsData } = await db.from('question_items')
+      .select('id, question_set_id, input_mode, prompt, prompt_zh, choices, answer, explanation_zh, subskills')
+      .eq('status', 'active').in('question_set_id', setIds).limit(count * 4)
+    items = (itemsData ?? []) as Record<string, unknown>[]
   }
   if (!items.length) return []
+  const setById = new Map(sets.map((s) => [s.id, s]))
 
   // 3) 目标词 + 材料 + 音频
   const itemIds = items.map((i) => String(i.id))

@@ -14,6 +14,7 @@ import { useLexiStore } from '@/store/lexiStore'
 import { useV2DailyPlan, PLAN_CARD_TONE, type V2PlanCard } from '@/hooks/useV2DailyPlan'
 import { useNavigate } from '@/hooks/useNavigate'
 import { levelDef, MAX_LEVEL } from '@/lib/levels'
+import { skillKeyToTaskType } from '@/lib/practice/skill-task-map'
 import { speakSmart } from '@/lib/pronunciation/word-audio'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 import { PATHS, PATH_KEYS, LEVEL_NAMES, daysToExam, type PathId, type ActCard } from '@/lib/today/today-paths'
@@ -186,7 +187,15 @@ export function TodayBento() {
         const p = c.payload ?? {}
         const examId = typeof p.examId === 'string' ? p.examId : ''
         const skillKey = typeof p.skillKey === 'string' ? p.skillKey : ''
-        if (examId && skillKey) { router.push(`/quiz?mode=task&examId=${examId}&taskType=${skillKey}`); return }
+        if (examId) {
+          // skillKey 是诊断维度（subskill），不是 task_type：经映射得题型；映射不到则不传 taskType
+          // （session 按 examId 抽混合题，避免空池）。skillKey 另作 subskill 提示透传。
+          const taskType = skillKeyToTaskType(skillKey)
+          const qs = new URLSearchParams({ mode: 'task', examId })
+          if (taskType) qs.set('taskType', taskType)
+          if (skillKey) qs.set('skill', skillKey)
+          router.push(`/quiz?${qs.toString()}`); return
+        }
         return go('practice')
       }
       case 'output': default: return go('practice')
