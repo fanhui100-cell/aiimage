@@ -77,8 +77,9 @@ export interface Profile {
 }
 
 // band → userLevel 派生默认值（spec A4-3）
+// 八档统一(persist v6，band=level 单维)：初中/高中=beginner；四级~考研=intermediate；托福/SAT/雅思=advanced
 export function bandToLevel(band: number): LearningLevel {
-  return band <= 3 ? 'beginner' : band <= 6 ? 'intermediate' : 'advanced'
+  return band <= 2 ? 'beginner' : band <= 5 ? 'intermediate' : 'advanced'
 }
 
 export interface LogEntry {
@@ -126,11 +127,8 @@ export interface WrongAnswer {
 // ─────────────────────────────────────────────────────────────
 export const SM2_INTERVALS = [1, 3, 7, 16, 35]
 
-// CEFR 单源对齐 lib/levels.ts（band = level+1 偏移，故 BAND_CEFR[level+1] = 该档 cefr；band 1 = level 0 → A1）。
-// 八档统一：消除与 LEVEL_CEFR 的副本冲突；band 维度本身随 persist v6 退役。
-export const BAND_CEFR: Record<number, string> = {
-  1: 'A1', ...Object.fromEntries(LEVELS.map(l => [l.level + 1, l.cefr])),
-}
+// CEFR 单源对齐 lib/levels.ts。八档统一(persist v6)：band 退役为 level 单维(band=level)，故 BAND_CEFR[level] = 该档 cefr。
+export const BAND_CEFR: Record<number, string> = Object.fromEntries(LEVELS.map(l => [l.level, l.cefr]))
 
 export const EXAM_BANDS = {
   GAOKAO: { zh: '高考', band: 4 },
@@ -762,9 +760,9 @@ export const useLexiStore = create<LexiStore>()(
           skipped: completing ? false : s.profile.skipped,
           ...(p.targetExam && (!s.profile.goals?.length) ? { goals: [p.targetExam] } : {}),
         }
-        // P1-2：带 level 未带 band 时派生 band = min(level+1, 8)
+        // 八档统一(band=level)：带 level 未带 band 时 band 直接 = level（band 维度退役为 level 别名，不再 +1 偏移）
         if (p.level !== undefined && p.band === undefined) {
-          profile.band = Math.min(p.level + 1, 8)
+          profile.band = p.level
         }
         // userLevel 未显式设置时由 band 派生
         if (!profile.userLevel) profile.userLevel = bandToLevel(profile.band)
@@ -815,11 +813,12 @@ export const useLexiStore = create<LexiStore>()(
     {
       name: 'lexi-store-v1',
       storage: createJSONStorage(() => localStorage),
-      version: 5,
+      version: 6,
       // v1 → v2：给存量词补时间戳调度字段，去掉假进度
       // v2 → v3：吸收旧 learningStore（localStorage['lexiocean-learning']）本地数据
       // v3 → v4：种子词 id 重映射为词典 slug（w01 → unavoidable），学习进度保留
       // v4 → v5：平移 learningStore 的 practice/chat 切片（错题/测验史/聊天记录）
+      // v5 → v6：八档统一 — band 退役为 level 单维(band=level，弃 level+1 偏移)；旧 IELTS 目标用户(1-7 档/无档) 迁入 level 8
       migrate: (persisted: unknown, from: number) => {
         if (!persisted || typeof persisted !== 'object') return persisted
         const state = persisted as PersistedLexiState
@@ -937,6 +936,21 @@ export const useLexiStore = create<LexiStore>()(
             seen.add(slug)
             return [{ ...w, id: slug, source: w.source ?? 'seed' }]
           })
+        }
+        if (from < 6) {
+          // 八档统一：band 退役为 level 单维。存量 profile.band 旧 = level+1 偏移 → 统一为 = level。
+          const p = state.profile
+          if (p && typeof p === 'object') {
+            // 反推 level：P1-2 后有 level 直接用；更旧只有 band(=旧 level+1) → level = band-1（clamp 1-7）
+            let level = typeof p.level === 'number'
+              ? p.level
+              : (typeof p.band === 'number' ? Math.max(1, Math.min(7, p.band - 1)) : undefined)
+            // 旧 IELTS 目标用户（旧体系无 level 8）→ 迁入雅思档 level 8
+            const wantsIelts = p.targetExam === 'IELTS'
+              || (Array.isArray(p.goals) && p.goals.includes('IELTS'))
+            if (wantsIelts && (level == null || (level >= 1 && level <= 7))) level = 8
+            if (level != null) { p.level = level; p.band = level }   // band = level 单维
+          }
         }
         return state
       },

@@ -1,14 +1,16 @@
 import type { CefrLevel, DictionaryClient, DictionaryWord, ExamTag } from './dictionary-types'
 
+// 八档统一(band=level 单维)：键 = level 1-8 → 该档 CEFR（雅思 B2-C1 在 CefrLevel 枚举内近似为 C1）。
+// 仅 level==null 的旧请求经 bandToCefrWindow 影响选词；有 level 时 isLevelMatch 用 levels±1 主导。
 const BAND_CEFR: Record<number, CefrLevel> = {
-  1: 'A1',
-  2: 'A2',
-  3: 'B1',
-  4: 'B1',
-  5: 'B2',
-  6: 'B2',
-  7: 'C1',
-  8: 'C1',
+  1: 'A2',   // 初中
+  2: 'B1',   // 高中
+  3: 'B1',   // 四级
+  4: 'B2',   // 六级
+  5: 'B2',   // 考研
+  6: 'C1',   // 托福
+  7: 'C1',   // SAT
+  8: 'C1',   // 雅思（B2-C1 近似）
 }
 
 const RECOMMENDATION_PAGE_SIZE = 200

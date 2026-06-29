@@ -25,9 +25,9 @@ if (!SUPABASE_URL || !SERVICE_ROLE) {
 }
 const db = createClient(SUPABASE_URL, SERVICE_ROLE)
 
-const LEVELS: ExamLevel[] = [1, 2, 3, 4, 5, 6, 7]
+const LEVELS: ExamLevel[] = [1, 2, 3, 4, 5, 6, 7, 8]
 
-// 目标词量口径（Phase 2 prompt）。toefl/sat 无固定官方词表 → size=null。
+// 目标词量口径（Phase 2 prompt）。toefl/sat/ielts 无固定官方词表 → size=null。
 const TARGET: Record<number, { size: number | null; note: string }> = {
   1: { size: 1900, note: '义务教育课标 2022 约 1600，扩展至约 1900' },
   2: { size: 3500, note: '高中课标 2017/2020 约 3000-3500' },
@@ -36,6 +36,7 @@ const TARGET: Record<number, { size: number | null; note: string }> = {
   5: { size: 5500, note: '考研大纲约 5500；须按 levels includes 5，不能只看 primary_level' },
   6: { size: null, note: 'TOEFL 无固定官方完整词表；按 curated 学术/任务词覆盖评估' },
   7: { size: null, note: 'SAT 无固定官方完整词表；按 curated high-utility RW 词覆盖评估' },
+  8: { size: null, note: '雅思（IELTS）无固定官方完整词表；按 ECDICT ielts tag + 学术高频覆盖评估' },
 }
 
 const RELATIONS = [
@@ -141,7 +142,7 @@ async function main() {
   let noLevelAtAll = 0
   for (const w of words) {
     const lv = Array.isArray(w.levels) ? w.levels : []
-    if (lv.some((n) => n < 1 || n > 7)) invalidLevelTag += 1
+    if (lv.some((n) => n < 1 || n > 8)) invalidLevelTag += 1
     if (new Set(lv).size !== lv.length) duplicateLevelTag += 1
     if (w.primary_level != null && !lv.includes(w.primary_level)) primaryNotInLevels += 1
     if (w.primary_level == null && lv.length === 0) noLevelAtAll += 1
@@ -256,7 +257,7 @@ function renderMarkdown(r: {
   lines.push('')
   lines.push('### Data integrity')
   lines.push('')
-  lines.push(`- Invalid level tags (outside 1-7): ${r.integrity.invalidLevelTag}`)
+  lines.push(`- Invalid level tags (outside 1-8): ${r.integrity.invalidLevelTag}`)
   lines.push(`- Duplicate level tags within a word: ${r.integrity.duplicateLevelTag}`)
   lines.push(`- \`primary_level\` not present in \`levels\`: ${r.integrity.primaryNotInLevels}`)
   lines.push(`- Words with no level at all (primary null & levels empty): ${r.integrity.noLevelAtAll}`)
@@ -273,7 +274,7 @@ function renderMarkdown(r: {
 
   lines.push('## 5. What must NOT be imported blindly')
   lines.push('')
-  lines.push('- Do **not** treat TOEFL/SAT as having a fixed official complete word list — use curated academic / high-utility coverage only.')
+  lines.push('- Do **not** treat TOEFL/SAT/IELTS as having a fixed official complete word list — use curated academic / high-utility coverage only.')
   lines.push('- Do **not** overwrite existing definitions, examples, mnemonics, synonyms, antonyms, etymology, or collocations — backfill is add-only.')
   lines.push('- Do **not** expand a level just to hit a number; respect syllabus boundaries (avoid over-wide `levels`).')
   lines.push('- Do **not** auto-generate synonyms/antonyms to fill coverage — missing is better than wrong relations.')
