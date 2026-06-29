@@ -156,7 +156,11 @@ async function dataQa(db: SupabaseClient): Promise<boolean> {
 
   // ── 篇幅强制校验：按 qa_flags.template 对应模板的 minWords/maxWords，校验 stimulus 词数 ──
   const tplWordReq = new Map<string, { minWords?: number; maxWords?: number }>()
-  for (const t of loadTemplates()) tplWordReq.set(t.templateId, (t.stimulusRequirements ?? {}) as { minWords?: number; maxWords?: number })
+  const tplShape = new Map<string, string>()   // template → answerSchema.shape（区分 para_match 一对一/多对一）
+  for (const t of loadTemplates()) {
+    tplWordReq.set(t.templateId, (t.stimulusRequirements ?? {}) as { minWords?: number; maxWords?: number })
+    tplShape.set(t.templateId, String((t.answerSchema as { shape?: string })?.shape ?? ''))
+  }
   const stimIds = sets.map((s) => s.stimulus_id).filter((x): x is string => !!x)
   const stimMap = new Map<string, { word_count: number | null; text_en: string | null }>()
   for (let i = 0; i < stimIds.length; i += 200) {
@@ -189,7 +193,10 @@ async function dataQa(db: SupabaseClient): Promise<boolean> {
   for (const it of items) {
     const set = byId.get(it.question_set_id)
     if (!set) continue
-    push(set.status !== 'active', `gen set ${set.id} 不应为 active（须 QA+批准）`)
+    // gen active 是合法的：唯一 active 路径是 promote_question_sets_v2 RPC（原子 re-validate 退役/scoring/
+    // spec/items/answer/rubric/audio/stimulus 后整事务提升 draft→active）。故不再把 gen active 判错；
+    // 仅当 set active 而 item 非 active（部分提升残留）才报错。
+    if (set.status === 'active') push(it.status === 'active', `gen active set ${set.id} 含非 active item ${it.id}（部分提升残留）`)
     const choices = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
     if (it.input_mode === 'choice') {
       const ids = choices.map((c) => String(c.id))
@@ -202,14 +209,19 @@ async function dataQa(db: SupabaseClient): Promise<boolean> {
       if (set.task_type === 'banked_cloze') { push(choices.length === 15 && Array.isArray(it.answer) && it.answer.length === 10, `banked_cloze item ${it.id} 应 15 选项/10 空`) }
       if (set.task_type === 'seven_select') { push(choices.length === 7 && Array.isArray(it.answer) && it.answer.length === 5, `seven_select item ${it.id} 应 7 选项/5 空`) }
       if (set.task_type === 'para_match') {
-        // 段落匹配：答案数 = statements 数；段落数 paras 取自 qa_flags；答案整数、落区间、互不重复
+        // 段落匹配：答案数 = statements 数；段落数 paras 取自 qa_flags；答案整数、落区间。
+        // 重复答案：考研 Part B（statements_answers）一对一→禁重复；CET 段落信息匹配（para_match_multi）
+        // 多对一→允许重复。按模板 answerSchema.shape 区分；模板标记缺失时用「答案数 > 段落数」鸽笼兜底识别多对一。
         const paras = Number((set.qa_flags ?? {}).paras ?? NaN)
         const ans = Array.isArray(it.answer) ? (it.answer as unknown[]).map((x) => Number(x)) : []
+        const tplId = (set.qa_flags as { template?: string } | null)?.template
+        const shape = tplId ? (tplShape.get(tplId) ?? '') : ''
+        const allowRepeat = shape === 'para_match_multi' || (Number.isInteger(paras) && ans.length > paras)
         push(choices.length >= 2, `para_match item ${it.id} statements < 2`)
         push(ans.length === choices.length, `para_match item ${it.id} 答案数(${ans.length})≠statements数(${choices.length})`)
         push(Number.isInteger(paras), `para_match set ${set.id} 缺 qa_flags.paras`)
         push(ans.every((a) => Number.isInteger(a) && a >= 0 && a < paras), `para_match item ${it.id} 答案越界 0..${paras - 1}`)
-        push(new Set(ans).size === ans.length, `para_match item ${it.id} 答案重复`)
+        if (!allowRepeat) push(new Set(ans).size === ans.length, `para_match item ${it.id} 答案重复（一对一题型）`)
       }
     }
   }
