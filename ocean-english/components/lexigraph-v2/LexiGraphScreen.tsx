@@ -44,7 +44,7 @@ interface CenterData {
   wordsMeta: Record<string, { zh: string; phon: string }>
 }
 
-const LV_ZH: Record<number, string> = { 1: '初中', 2: '高中', 3: '四级', 4: '六级', 5: '考研', 6: '托福', 7: 'SAT' }
+const LV_ZH: Record<number, string> = { 1: '初中', 2: '高中', 3: '四级', 4: '六级', 5: '考研', 6: '托福', 7: 'SAT', 8: '雅思' }
 const FIRST_VISIT_KEY = 'lexigraph-v2-intro-seen'
 
 /* ── 数据装配：dictionary + word_relations → 原型 D[w] 结构 ────────────────── */

@@ -1,7 +1,7 @@
 /* Lexiverse catalog · 重构版 — 每个类别 = 一个星系，星系大小 = 真实词量。
-   5 个星座区 × 16 星系：
-   · 等级带 (7) —— 初中→SAT 的主学习路径，金色轨道串联，词量来自真实词表
-   · 考试前沿 (3) —— 雅思 / GRE / 专四专八
+   5 个星座区 × 16 星系（八档统一：雅思从考试前沿迁入等级带）：
+   · 等级带 (8) —— 初中→雅思/SAT 的主学习路径，金色轨道按 cefrRank 串联，词量来自真实词表
+   · 考试前沿 (2) —— GRE / 专四专八
    · 技能域 (3) —— 口语高频 / 学术写作 AWL / 商务职场
    · 词源云 (2) —— 词根词缀 / 易混词阵
    · 私人星域 (1) —— 我的星云（收藏 + 错词，随学习生长）
@@ -9,8 +9,8 @@
          pathOrder 等级路径序号 · fixedPos 宇宙中的固定位置 */
 window.LexiverseCatalog = {
   CONSTELLATIONS: [
-    { id: 'level-belt',    title: 'Level Belt',    titleZh: '等级带',   centroid: { x: 0, y: 0, z: 0 },        color: '#7EF9FF', tagline: 'The main path — seven galaxies from Junior to SAT.',  taglineZh: '主学习路径 · 初中到 SAT 七座星系拾级而上。' },
-    { id: 'exam-frontier', title: 'Exam Frontier', titleZh: '考试前沿', centroid: { x: 0, y: 650, z: -1050 },  color: '#FFD66B', tagline: 'Beyond the belt — IELTS, GRE, TEM.',                  taglineZh: '等级带之外的进阶考试 · 雅思/GRE/专四专八。' },
+    { id: 'level-belt',    title: 'Level Belt',    titleZh: '等级带',   centroid: { x: 0, y: 0, z: 0 },        color: '#7EF9FF', tagline: 'The main path — eight galaxies from Junior to SAT.',  taglineZh: '主学习路径 · 初中到雅思/SAT 八座星系，按 CEFR 难度拾级而上。' },
+    { id: 'exam-frontier', title: 'Exam Frontier', titleZh: '考试前沿', centroid: { x: 0, y: 650, z: -1050 },  color: '#FFD66B', tagline: 'Beyond the belt — GRE, TEM.',                  taglineZh: '等级带之外的进阶考试 · GRE/专四专八。' },
     { id: 'skill-domain',  title: 'Skill Domain',  titleZh: '技能域',   centroid: { x: -1720, y: 150, z: -570 }, color: '#6BE0A0', tagline: 'Words by what you do — speaking, writing, business.', taglineZh: '按场景学 · 口语/学术写作/商务职场。' },
     { id: 'lexis-nebula',  title: 'Lexis Nebula',  titleZh: '词源云',   centroid: { x: 1700, y: -120, z: -700 }, color: '#C8B8FF', tagline: 'The structure of words — roots, affixes, confusables.', taglineZh: '词的内部结构 · 词根词缀/易混词阵。' },
     { id: 'personal',      title: 'My Field',      titleZh: '私人星域', centroid: { x: 0, y: -520, z: 900 },   color: '#FFA85A', tagline: 'A galaxy that grows as you learn.',                   taglineZh: '随你的学习生长的星系 · 收藏与错词。' },
@@ -32,17 +32,18 @@ window.LexiverseCatalog = {
     { id: 'kaoyan', constellationId: 'level-belt', pathOrder: 5, title: 'KaoYan',  titleZh: '考研星系', wordCount: 5047,  dataFile: 'data/words-kaoyan.js', wuVariant: 'nebula',
       description: 'The long voyage — postgraduate core.', descriptionZh: '漫长远航 · 考研核心。', sourceType: 'level', filter: { list: ['收录 5,047 词（源表 9,602 条）'] },
       fixedPos: { x: 710, y: 150, z: 200 },     colorTheme: '#9FA8FF', visualType: 'spiral' },
-    { id: 'toefl',  constellationId: 'level-belt', pathOrder: 6, title: 'TOEFL',   titleZh: '托福星系', wordCount: 10367, dataFile: 'data/words-toefl.js', wuVariant: 'nebula',
+    // 雅思（八档统一）：cefrRank 4.5(B2–C1) 插在考研与托福之间，pathOrder 6；从「考试前沿」迁入等级带
+    { id: 'ielts',  constellationId: 'level-belt', pathOrder: 6, title: 'IELTS',   titleZh: '雅思星系', wordCount: 5038,  dataFile: 'data/words-ielts.js', wuVariant: 'nebula',
+      description: 'Academic IELTS — between KaoYan and TOEFL (B2–C1).', descriptionZh: '雅思学术高频 · 难度在考研与托福之间（B2–C1）。', sourceType: 'level', filter: { list: ['收录 5,038 词（ECDICT ielts）'] },
+      fixedPos: { x: 1010, y: 205, z: 30 },     colorTheme: '#FFD66B', visualType: 'spiral' },
+    { id: 'toefl',  constellationId: 'level-belt', pathOrder: 7, title: 'TOEFL',   titleZh: '托福星系', wordCount: 10367, dataFile: 'data/words-toefl.js', wuVariant: 'nebula',
       description: 'The largest galaxy in the belt.', descriptionZh: '等级带中最大的星系。', sourceType: 'level', filter: { list: ['收录 10,367 词（源表 13,477 条）'] },
       fixedPos: { x: 1300, y: 250, z: -140 },   colorTheme: '#C39BFF', visualType: 'spiral' },
-    { id: 'sat',    constellationId: 'level-belt', pathOrder: 7, title: 'SAT',     titleZh: 'SAT 星系', wordCount: 4464,  dataFile: 'data/words-sat.js', wuVariant: 'nebula',
+    { id: 'sat',    constellationId: 'level-belt', pathOrder: 8, title: 'SAT',     titleZh: 'SAT 星系', wordCount: 4464,  dataFile: 'data/words-sat.js', wuVariant: 'nebula',
       description: 'The far frontier of the belt.', descriptionZh: '等级带的最远疆界。', sourceType: 'level', filter: { list: ['收录 4,464 词（源表 8,887 条）'] },
       fixedPos: { x: 1850, y: 350, z: 230 },    colorTheme: '#FF9BD2', visualType: 'spiral' },
 
-    // ── 考试前沿 Exam Frontier (3) ──
-    { id: 'ielts', constellationId: 'exam-frontier', title: 'IELTS', titleZh: '雅思星系', wordCount: 800, protoCount: 800, wuVariant: 'nebula',
-      description: 'Band 6.5–8.0 high-frequency field.', descriptionZh: '雅思 6.5–8.0 高频场。', sourceType: 'exam', filter: { list: ['IELTS 高频'] },
-      fixedPos: { x: -720, y: 610, z: -900 },  colorTheme: '#FFD66B', visualType: 'spiral' },
+    // ── 考试前沿 Exam Frontier (2) ──
     { id: 'gre',   constellationId: 'exam-frontier', title: 'GRE',   titleZh: 'GRE 星系', wordCount: 650, protoCount: 650, wuVariant: 'nebula',
       description: 'Rare, high-difficulty words in cold orbit.', descriptionZh: '稀有高难词的寒冷轨道。', sourceType: 'exam', filter: { list: ['GRE 核心'] },
       fixedPos: { x: 20, y: 730, z: -1320 },   colorTheme: '#F0B840', visualType: 'wireframe' },

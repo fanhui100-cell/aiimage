@@ -4,7 +4,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { lexiverseBasePath } from '@/config/lexiverse-build'
 import { useLexiStore } from '@/store/lexiStore'
+import { LEVELS, MAX_LEVEL } from '@/lib/levels'
 import type { ReviewGrade } from '@/lib/srs/schedule'
+
+// level (1-8) → 等级带星系 id（单源自 lib/levels.ts key，消除两处重复 belt 数组）；index = level，[0] 空哨兵
+const LEVEL_GALAXY = ['', ...LEVELS.map(l => l.key)]
 
 type ReferenceGalaxy = {
   id: string
@@ -118,10 +122,9 @@ export function ReferenceLexiverseFrame() {
   const galaxyForWord = useCallback((wordGalaxy: string | undefined, levels?: number[]): string | null => {
     if (wordGalaxy && referenceGalaxies.some(g => g.id === wordGalaxy)) return wordGalaxy
     if (levels?.length) {
-      // index = 等级号 (1-7) → 等级带星系
-      const belt = ['junior', 'junior', 'senior', 'cet4', 'cet6', 'kaoyan', 'toefl', 'sat']
-      const lv = Math.max(1, Math.min(7, Math.min(...levels)))
-      const id = belt[lv]
+      // index = 等级号 (1-8) → 等级带星系；聚焦取 min-level 星系（词在该星系也在场，见计划 §4.4）
+      const lv = Math.max(1, Math.min(MAX_LEVEL, Math.min(...levels)))
+      const id = LEVEL_GALAXY[lv]
       if (id && referenceGalaxies.some(g => g.id === id)) return id
     }
     return null
@@ -311,9 +314,8 @@ export function ReferenceLexiverseFrame() {
           // 宇宙默认进站：按用户 7 档等级/目标考试聚焦其星系（仅宇宙总览；无 level 则不动）
           if (!galaxyId) {
             const { profile } = useLexiStore.getState()
-            const belt = ['', 'junior', 'senior', 'cet4', 'cet6', 'kaoyan', 'toefl', 'sat']
             const lv = profile.level
-            const levelGalaxy = lv && lv >= 1 && lv <= 7 ? belt[lv] : null
+            const levelGalaxy = lv && lv >= 1 && lv <= MAX_LEVEL ? LEVEL_GALAXY[lv] : null
             const tmap: Record<string, string> = { CET4: 'cet4', CET6: 'cet6', KAOYAN: 'kaoyan', TOEFL: 'toefl', SAT: 'sat', IELTS: 'ielts', GAOKAO: 'senior' }
             const targetGalaxy = profile.targetExam ? (tmap[profile.targetExam] ?? null) : null
             if (levelGalaxy || targetGalaxy) {

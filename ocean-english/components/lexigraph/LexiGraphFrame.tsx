@@ -8,25 +8,30 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
+import { MAX_LEVEL } from '@/lib/levels'
 import type { ReviewGrade } from '@/lib/srs/schedule'
 
 const BASE = '/lexigraph-reference'
 
-// 七星系单包（slug 与 public/lexigraph-reference/data/words-{slug}-full.js 对应）
+// 八星系单包（slug 与 public/lexigraph-reference/data/words-{slug}-full.js 对应）
+// 八档统一：雅思按 cefrRank 插在考研与托福之间（与宇宙等级带 pathOrder 一致）
 const BELTS = [
   { slug: 'chuzhong', label: '初中' },
   { slug: 'gaozhong', label: '高中' },
   { slug: 'cet4', label: '四级' },
   { slug: 'cet6', label: '六级' },
   { slug: 'kaoyan', label: '考研' },
+  { slug: 'ielts', label: '雅思' },
   { slug: 'toefl', label: '托福' },
   { slug: 'sat', label: 'SAT' },
 ] as const
 
-// 用户当前档（lexiStore profile.level 1-8）→ 星系 slug，默认四级
+// 用户当前档（lexiStore profile.level 1-8）→ 星系 slug（slug 命名与 lib/levels key 略异：初中=chuzhong/高中=gaozhong），默认四级
+const LEVEL_SLUG: Record<number, string> = {
+  1: 'chuzhong', 2: 'gaozhong', 3: 'cet4', 4: 'cet6', 5: 'kaoyan', 6: 'toefl', 7: 'sat', 8: 'ielts',
+}
 function beltForLevel(level: number | undefined): string {
-  const idx = Math.min(7, Math.max(1, level ?? 3)) - 1
-  return BELTS[idx]?.slug ?? 'cet4'
+  return LEVEL_SLUG[Math.min(MAX_LEVEL, Math.max(1, level ?? 3))] ?? 'cet4'
 }
 
 export function LexiGraphFrame() {
