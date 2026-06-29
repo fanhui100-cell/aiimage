@@ -39,16 +39,21 @@ function checkItemShape(item: PracticeItem, ctx: string) {
 }
 
 async function main() {
-  // 取一个真实词做 word 会话
-  const { data: sample } = await db
-    .from('question_bank')
-    .select('normalized_word')
-    .eq('status', 'active')
-    .eq('is_reviewed', true)
-    .not('normalized_word', 'is', null)
-    .limit(1)
-  const sampleWord = (sample?.[0] as { normalized_word: string } | undefined)?.normalized_word
-  check(!!sampleWord, '无法从 question_bank 取到样本词')
+  // 取一个「确定有 active 题」的目标词做 word 会话：先取 active question_items，再查其
+  // question_target_words 的 surface（与 session-builder word mode 的 target-first 同口径）；
+  // 兜底退回 question_bank 第一个 active 词。全程 order 保证确定，避免随机抽到无题词致红绿不稳（P2-7）。
+  let sampleWord: string | undefined
+  const { data: actItems } = await db.from('question_items').select('id').eq('status', 'active').order('id').limit(100)
+  const actIds = (actItems ?? []).map((r) => (r as { id: string }).id)
+  if (actIds.length) {
+    const { data: tw } = await db.from('question_target_words').select('surface').in('question_item_id', actIds).not('surface', 'is', null).order('surface').limit(1)
+    sampleWord = (tw?.[0] as { surface: string } | undefined)?.surface
+  }
+  if (!sampleWord) {
+    const { data: sample } = await db.from('question_bank').select('normalized_word').eq('status', 'active').eq('is_reviewed', true).not('normalized_word', 'is', null).order('normalized_word').limit(1)
+    sampleWord = (sample?.[0] as { normalized_word: string } | undefined)?.normalized_word
+  }
+  check(!!sampleWord, '无法取到有题的样本词（v2 target words 与 v1 题库均空）')
 
   // 1) word 会话
   if (sampleWord) {

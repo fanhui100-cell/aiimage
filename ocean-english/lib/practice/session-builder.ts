@@ -486,6 +486,9 @@ async function tryBuildFromV2(
     const stimulusOut = stim && !grouped
       ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
       : undefined
+    // 【学习模式即时反馈，审计 P2-1】下发 answer / explanationZh / review(key)：客户端即时判分并显示解析，
+    // 是练习（非考试）的有意取舍。防作弊考试（限时/排行/正式分）必须走 /api/papers 服务端判分（已剥前置答案）；
+    // 普通 /api/practice/session 属「学习模式安全级」，不可作防作弊考试入口。
     built.push({
       id: `v2:${id}`,
       questionItemId: id,
