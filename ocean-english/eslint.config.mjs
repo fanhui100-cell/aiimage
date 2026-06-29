@@ -14,6 +14,10 @@ const eslintConfig = defineConfig([
     "public/**",
     // 设计交付/参照（HTML/JSX 原型）只作参考，不进运行时打包，不纳入 lint。
     "docs/**",
+    // stitch-export 是设计交付的页面源码副本（未跟踪、不进运行时打包），不纳入 lint。
+    "stitch-export/**",
+    // 一次性 CJS 数据脚本（require 工具，node/tsx 直跑，不进运行时打包），不纳入 lint。
+    "scripts/**/*.cjs",
   ]),
   // R3F animation patterns: Three.js objects are intentionally mutated per-frame.
   {

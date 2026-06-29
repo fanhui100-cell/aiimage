@@ -4,7 +4,7 @@
    可返回 + 可点进度条 + 跳过；path 写进 Profile；结果页成长路径/定制摘要/今日配比/每日量。 */
 import { useEffect, useState, type ReactNode } from 'react'
 import { useLexiStore, bandToLevel } from '@/store/lexiStore'
-import { levelToBand, LEVELS, levelDef, MAX_LEVEL, LEVEL_NAMES, PROBE_BANK, PROBE_VERIFY } from '@/lib/levels'
+import { LEVELS, levelDef, MAX_LEVEL, LEVEL_NAMES, PROBE_BANK, PROBE_VERIFY } from '@/lib/levels'
 import { useNavigate } from '@/hooks/useNavigate'
 import { buildVocabCard } from '@/lib/analytics/report'
 import { VocabEstimateCard } from './VocabEstimateCard'
@@ -183,8 +183,8 @@ export function OnboardingScreen() {
 
   const finish = () => {
     const goal = GOALS.find(g => g.id === s.goal) || GOALS[2]
-    const band = levelToBand(s.level)
-    setProfile({ targetExam: s.goal ?? goal.id, path: s.path ?? 'full', level: s.level, band, dailyGoal: s.dailyGoal, onboarded: true, userLevel: bandToLevel(band), vocabEst: s.vocabEst || undefined, confidence: s.channel === 'test' ? s.confidence : undefined, examDate: s.path === 'exam' ? (s.examDate || null) : null })
+    // 八档统一：band 退役为 level 单维，直接 band=level（不再用 levelToBand 旧 +1 偏移，避免新用户写脏 band）
+    setProfile({ targetExam: s.goal ?? goal.id, path: s.path ?? 'full', level: s.level, band: s.level, dailyGoal: s.dailyGoal, onboarded: true, userLevel: bandToLevel(s.level), vocabEst: s.vocabEst || undefined, confidence: s.channel === 'test' ? s.confidence : undefined, examDate: s.path === 'exam' ? (s.examDate || null) : null })
     void useLexiStore.getState().buildTodayPack()
     navigate('today', { flow: true })
   }

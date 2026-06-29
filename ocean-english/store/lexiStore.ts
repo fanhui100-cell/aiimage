@@ -10,7 +10,7 @@ import { type WordState, STATE_ORDER } from '@/lib/state-meta'
 import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
 import { toWordEntry } from '@/lib/dictionary/entry-adapter'
 import { mapExamKeyToTag } from '@/lib/dictionary/exam-tag-map'
-import { LEVELS, MAX_LEVEL } from '@/lib/levels'
+import { LEVELS, MAX_LEVEL, levelDef } from '@/lib/levels'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LearningLevel } from '@/types/learning'
 import type { QuizSession } from '@/types/quiz'
@@ -532,7 +532,11 @@ export const useLexiStore = create<LexiStore>()(
         const total = atLevel.length
         const gold = atLevel.filter(w => w.state === 'mastered' && (w.dims?.length ?? 0) >= 2).length
         const rate = total ? Math.round((gold / total) * 100) : 0
-        return { ready: total >= 10 && rate >= 80 && lv < MAX_LEVEL, rate, gold, total, level: lv }
+        // 升档只沿「基础梯」自动晋级（计划 §2.3）：仅当升入的下一档仍是 foundation 才 ready，
+        // 即 level 1→2→3→4（初中→高中→四级→六级）；考研/托福/SAT/雅思是目标档，不靠 mastery 自动跨入
+        // （尤其禁止 7 SAT → 8 IELTS：雅思按 cefrRank 并不更难，且是 coming_soon 目录档）。
+        const canAutoUp = lv < MAX_LEVEL && levelDef(lv + 1).track === 'foundation'
+        return { ready: total >= 10 && rate >= 80 && canAutoUp, rate, gold, total, level: lv }
       },
 
       // 复习评分：四档统一入口，状态由结果派生

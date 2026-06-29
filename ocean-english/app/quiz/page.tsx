@@ -23,7 +23,7 @@ const DRILL_TYPE_MAP: Record<string, string[]> = {
 // Phase 1 已修正 normalizeExamId，前端不得再把它们静默归到 TOEFL/SAT 档）
 const EXAM_TO_LEVEL: Record<string, number> = {
   '初中': 1, '高中': 2, GAOKAO: 2, 'CET-4': 3, CET4: 3, 'CET-6': 4, CET6: 4,
-  '考研': 5, KAOYAN: 5, TOEFL: 6, SAT: 7,
+  '考研': 5, KAOYAN: 5, TOEFL: 6, SAT: 7, IELTS: 8,   // 八档：IELTS→8（coming_soon 落空池显空态，不静默回退 CET4）
 }
 
 type SP = Record<string, string | string[] | undefined>
@@ -41,8 +41,8 @@ function mapToRunnerProps(sp: SP): PracticeRunnerProps | null {
   const returnTo = one(sp.returnTo)
   const examTag = one(sp.exam)
   const levelParam = one(sp.level)
-  const level = levelParam && /^[1-7]$/.test(levelParam) ? Number(levelParam) : undefined
-  // 未知 / IELTS / GRE → undefined（不静默归到 TOEFL/SAT）；最终回退默认 level=3（CET-4）
+  const level = levelParam && /^[1-8]$/.test(levelParam) ? Number(levelParam) : undefined   // 八档：接受 1-8（含雅思）
+  // 未知 / GRE → undefined；IELTS→8（落 level 8 空池显空态，不静默归到 CET-4）；最终回退默认 level=3（CET-4）
   const levelFromExam = examTag ? EXAM_TO_LEVEL[examTag] : undefined
 
   // legacy 专属：vs 辨析 / 昨日回顾 / 错题强化

@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS exam_specs (
   total_minutes INT,
   full_score    NUMERIC,
   scoring_scale TEXT,
-  status        TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('draft','active','deprecated')),
+  status        TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('draft','active','coming_soon','deprecated')),   -- 八档：加 coming_soon（雅思整卷未做，与 TS ExamSpecStatus 对齐）
   created_at    TIMESTAMPTZ DEFAULT NOW(),
   updated_at    TIMESTAMPTZ DEFAULT NOW()
 );
