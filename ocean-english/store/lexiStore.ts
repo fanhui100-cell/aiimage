@@ -527,8 +527,10 @@ export const useLexiStore = create<LexiStore>()(
         const s = get()
         const lv = s.profile.level ?? null
         if (lv == null) return { ready: false, rate: 0, gold: 0, total: 0, level: null }
+        // 严格按 levels∋lv（硬规则）；去掉词级 band 兜底——band=CEFR_BAND[cefr]（CEFR 粒度+旧偏移），
+        // 八档 band=level 后会错档（且无 band 词会因 profile.band===lv 误全计入当前档）。
         const atLevel = s.words.filter(w => w.state !== 'locked' && w.state !== 'unknown'
-          && (w.levels?.length ? w.levels.includes(lv) : (w.band ?? s.profile.band) === lv))
+          && !!w.levels?.includes(lv))
         const total = atLevel.length
         const gold = atLevel.filter(w => w.state === 'mastered' && (w.dims?.length ?? 0) >= 2).length
         const rate = total ? Math.round((gold / total) * 100) : 0

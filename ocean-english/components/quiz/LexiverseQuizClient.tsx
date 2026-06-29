@@ -64,7 +64,7 @@ const DRILL_TYPES: PType[] = ['en_to_zh', 'def_to_word', 'zh_to_word_spell', 'zh
 const EXAM_TO_LEVEL: Record<string, number> = {
   '初中': 1, '高中': 2, GAOKAO: 2,
   'CET-4': 3, CET4: 3, 'CET-6': 4, CET6: 4,
-  '考研': 5, KAOYAN: 5, TOEFL: 6, IELTS: 6, SAT: 7, GRE: 7,
+  '考研': 5, KAOYAN: 5, TOEFL: 6, SAT: 7, IELTS: 8,   // 八档：IELTS→8（修旧误映射到托福档 6；GRE 非八档已移除）
 }
 const SESSION_SIZE = 10
 // 专练 UI 题型 → question_bank 题型映射（无对应题型的退到最近的可用类型）

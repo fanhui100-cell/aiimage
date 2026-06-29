@@ -16,7 +16,7 @@ const db = createClient(g('NEXT_PUBLIC_SUPABASE_URL'), g('SUPABASE_SERVICE_ROLE_
 const DS = g('DEEPSEEK_API_KEY')
 const JUDGE_N = process.argv.includes('--judge') ? Number(process.argv[process.argv.indexOf('--judge') + 1] || 2) : 2
 
-const EXAM = ['', '中考', '高考', 'CET-4', 'CET-6', '考研', 'TOEFL', 'SAT']
+const EXAM = ['', '中考', '高考', 'CET-4', 'CET-6', '考研', 'TOEFL', 'SAT', '雅思']
 const PASSAGE_TYPES = ['listening_comprehension', 'reading_comprehension', 'cloze_passage', 'seven_select', 'banked_cloze', 'para_match', 'grammar_fill']
 const STOP = new Set('the a an and or but of to in on at for with as is are was were be been being it its this that these those he she they we you i his her their our your by from not no so if then than too very can will would should could may might must do does did have has had'.split(' '))
 
@@ -91,7 +91,7 @@ async function main() {
   // ① 客观难度随档位
   console.log('① 客观难度（每档抽样汇总；难词率/句长应随档位上升）')
   console.log('档位'.padEnd(8) + '难词率%'.padStart(9) + '平均词长'.padStart(10) + '平均句长'.padStart(10) + '样本词数'.padStart(10))
-  for (let lv = 1; lv <= 7; lv++) {
+  for (let lv = 1; lv <= 8; lv++) {
     const rows: { passage: string }[] = []
     for (const t of PASSAGE_TYPES) rows.push(...await sample(t, lv, 6))
     if (!rows.length) { console.log(EXAM[lv].padEnd(8) + '（无样本）'.padStart(9)); continue }
@@ -108,7 +108,7 @@ async function main() {
   const byType: Record<string, { pass: number; total: number; lvSum: number }> = {}
   for (const t of PASSAGE_TYPES) {
     byType[t] = { pass: 0, total: 0, lvSum: 0 }
-    for (let lv = 1; lv <= 7; lv++) {
+    for (let lv = 1; lv <= 8; lv++) {
       const rows = await sample(t, lv, JUDGE_N)
       for (const r of rows) {
         const v = await judge(EXAM[lv], t, r.passage, qaText(r, t))

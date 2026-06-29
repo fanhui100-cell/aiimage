@@ -145,10 +145,12 @@ export function buildVocabCard(level: number, masteredCount: number, target?: { 
 const LEVEL_TOTALS: Record<number, number> = Object.fromEntries(LEVELS.map(l => [l.level, l.wordCount]))
 export interface LevelDrillLevel { level: number; name: string; mastered: number; total: number }
 
-/** D4：各档已掌握/共词量（入口卡 + 会话小结用）。按 levels∋L（大纲全量），band 偏移仅作旧数据兜底 */
+/** D4：各档已掌握/共词量（入口卡 + 会话小结用）。严格按 levels∋L（大纲全量，硬规则）。
+   注：曾用 `w.band === n+1` 作 levels 缺失兜底，但词级 band=CEFR_BAND[cefr]（CEFR 粒度、旧 +1 偏移），
+   八档 band=level 后该兜底会错档；缺 levels 的词宁可不计也不错计，故移除。 */
 export function levelProgress(words: WordEntry[]): LevelDrillLevel[] {
   return LEVELS.map(({ level: n }) => {
-    const mastered = words.filter(w => w.state === 'mastered' && ((w.levels?.includes(n)) || w.band === n + 1)).length
+    const mastered = words.filter(w => w.state === 'mastered' && w.levels?.includes(n)).length
     return { level: n, name: LEVEL_NAMES[n], mastered, total: LEVEL_TOTALS[n] ?? 0 }
   })
 }

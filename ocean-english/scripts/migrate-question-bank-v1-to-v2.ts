@@ -119,7 +119,7 @@ function canonicalType(t: string): string {
 function levelFromTags(tags: string[] | null): number | null {
   for (const tag of tags ?? []) {
     const m = /^lv(\d+)$/.exec(tag)
-    if (m) { const n = Number(m[1]); if (n >= 1 && n <= 7) return n }
+    if (m) { const n = Number(m[1]); if (n >= 1 && n <= 8) return n }
   }
   return null
 }
