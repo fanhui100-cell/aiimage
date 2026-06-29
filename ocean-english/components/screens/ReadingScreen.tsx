@@ -9,15 +9,17 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useLexiStore } from '@/store/lexiStore'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
+import { LEVEL_NAMES, MAX_LEVEL } from '@/lib/levels'
 import './reading.css'
 
-const LV: Record<number, string> = { 1: '初中', 2: '高中', 3: '四级', 4: '六级', 5: '考研', 6: '托福', 7: 'SAT' }
+const LV = LEVEL_NAMES   // 单源（index = level，含第 8 档雅思）
+const LV_ALL = Array.from({ length: MAX_LEVEL }, (_, i) => i + 1)
 const RESULTS_KEY = 'rd-results-v1'
 
 interface ListItem {
   id: string; title: string; titleZh?: string; level: number; minutes: number
   questionCount: number; keyWords: string[]; keyWordCount: number
-  difficulty?: number   // 后端难度底数（0-100）。注：当前实为「等级×11 + 关键词密度」的难度档代理，非真实生词率；UI 标「难度」。
+  difficulty?: number   // 后端难度底数（0-100）。注：按 cefrRank（CEFR 难度）+ 关键词密度的难度档代理，非真实生词率；UI 标「难度」。
 }
 interface RQuestion {
   id: string; prompt: string; promptZh?: string
@@ -274,7 +276,7 @@ export function ReadingScreen() {
     const doneN = items.filter(a => isDone(a.id)).length
     const avgRate = total ? Math.round(items.reduce((s, a) => s + newRateOf(a), 0) / total) : 0
     const reviewN = reviewItems.length
-    const chips: ([('all' | number | 'review'), string])[] = [['all', '全部'], ...([1, 2, 3, 4, 5, 6, 7] as number[]).map(n => [n, LV[n]] as [number, string])]
+    const chips: ([('all' | number | 'review'), string])[] = [['all', '全部'], ...LV_ALL.map(n => [n, LV[n]] as [number, string])]
 
     let body: React.ReactNode
     if (listUi === 'loading') {

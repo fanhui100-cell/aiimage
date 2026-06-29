@@ -48,7 +48,8 @@ export function MeScreen() {
 
   const wordCounts = counts()
   const pct = masteredPct()
-  const cefr = bandCefr(profile.band)
+  // 八档：优先按 level 真源取 CEFR（雅思 level 8 = B2-C1，band 8 二义无法区分 SAT/雅思）；旧用户无 level 退 band
+  const cefr = profile.level ? levelDef(profile.level).cefr : bandCefr(profile.band)
 
   // ① 账户：真实 Supabase 用户
   const [email, setEmail] = useState<string | null>(null)

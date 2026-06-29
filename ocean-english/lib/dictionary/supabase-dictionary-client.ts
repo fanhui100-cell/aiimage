@@ -322,7 +322,7 @@ class SupabaseDictionaryClient implements DictionaryClient {
       let req: any = this.getDb()
         .from('dictionary_words')
         .select(SEARCH_SELECT)
-      // 真词修复：按 7 档浏览时该档词优先（primary_level 降序 → 纯高档词在前，
+      // 真词修复：按 8 档浏览时该档词优先（primary_level 降序 → 纯高档词在前，
       // 多档高频基础词靠后），频率次序兜底；默认浏览维持原核心词优先
       if (options?.orderBy === 'frequency' || options?.syllabusLevel != null) {
         // P0/3.4：选词推荐 + 按等级(大纲全量)浏览 — 真词频高频优先（frequency_rank 升序，1 = 最高频）。
@@ -344,7 +344,7 @@ class SupabaseDictionaryClient implements DictionaryClient {
       if (options?.level) req = req.eq('level', options.level)
       if (options?.difficulty) req = req.eq('difficulty', options.difficulty)
       if (options?.examTag) req = req.contains('tags', [options.examTag])
-      // P2：7 档 ±1 过滤（GIN overlaps；列未建时该查询报错 → catch 返回 []）
+      // P2：8 档 ±1 过滤（GIN overlaps；列未建时该查询报错 → catch 返回 []）
       // 3.4：syllabusLevel = 考试大纲全量（levels 含该档，如考研 5047 词）
       if (options?.syllabusLevel != null) {
         req = req.contains('levels', [options.syllabusLevel])

@@ -32,11 +32,11 @@ export async function GET(request: NextRequest) {
   const offsetRaw = parseInt(searchParams.get('offset') ?? '0', 10)
 
   const level = VALID_LEVELS.includes(levelRaw as WordLevel) ? (levelRaw as WordLevel) : undefined
-  // P2：level 传数字 1-7 时按 7 档 ±1 过滤（与 WordLevel 字符串共用参数名，按值区分）
+  // P2：level 传数字 1-8 时按 8 档 ±1 过滤（与 WordLevel 字符串共用参数名，按值区分）
   const numericLevelRaw = parseInt(levelRaw, 10)
   const numericLevel = Number.isInteger(numericLevelRaw) && numericLevelRaw >= 1 && numericLevelRaw <= 8
     ? numericLevelRaw : undefined
-  // 3.4：?syllabus=1-7 → 按考试大纲全量（levels 含该档）过滤；词库「按等级」浏览用，与 numericLevel(±1并集) 互斥
+  // 3.4：?syllabus=1-8 → 按考试大纲全量（levels 含该档）过滤；词库「按等级」浏览用，与 numericLevel(±1并集) 互斥
   const syllabusRaw = parseInt(searchParams.get('syllabus') ?? '', 10)
   const syllabusLevel = Number.isInteger(syllabusRaw) && syllabusRaw >= 1 && syllabusRaw <= 8
     ? syllabusRaw : undefined

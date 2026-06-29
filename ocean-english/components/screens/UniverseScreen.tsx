@@ -5,6 +5,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useLexiStore } from '@/store/lexiStore'
 import { useNavigate } from '@/hooks/useNavigate'
+import { levelDef } from '@/lib/levels'
 
 const UNIVERSE_SRC = '/lexiverse-embed/Lexiverse%20Universe.html'
 const GALAXY_SRC   = '/lexiverse-embed/Lexiverse%20Galaxy.html'
@@ -15,7 +16,8 @@ export function UniverseScreen() {
   const { markLearning, markCorrect, incXp, getDue, getWeak, profile, bandCefr, all } = useLexiStore()
 
   const [inGalaxy, setInGalaxy] = useState(false)
-  const cefr = bandCefr(profile.band)
+  // 八档：优先按 level 真源取 CEFR（雅思 level 8 = B2-C1）；旧用户无 level 退 band
+  const cefr = profile.level ? levelDef(profile.level).cefr : bandCefr(profile.band)
 
   // Write inject to localStorage before iframe loads
   const writeInject = useCallback(() => {

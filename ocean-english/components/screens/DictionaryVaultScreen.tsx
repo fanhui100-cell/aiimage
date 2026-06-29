@@ -13,10 +13,12 @@ import { useLexiStore, type WordEntry } from '@/store/lexiStore'
 import { STATE_META, type WordState } from '@/lib/state-meta'
 import { speakSmart } from '@/lib/pronunciation/word-audio'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
+import { LEVEL_NAMES, MAX_LEVEL } from '@/lib/levels'
 import './dictionary-vault.css'
 
 const DAY = 86_400_000
-const LEVEL_NAMES = ['', '初中', '高中', '四级', '六级', '考研', '托福', 'SAT']
+// LEVEL_NAMES / MAX_LEVEL 由 lib/levels.ts 单源派生（含第 8 档雅思）；按等级 chips/计数随数据自动扩
+const LEVELS_ALL = Array.from({ length: MAX_LEVEL }, (_, i) => i + 1)
 const speak = (t: string, accent: 'US' | 'UK' = 'US') => { void speakSmart(t, accent === 'UK' ? 'uk' : 'us') }
 const isFav = (id: string) => { try { return localStorage.getItem('lv-fav-' + id) === '1' } catch { return false } }
 
@@ -483,11 +485,11 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
   const inLib = (dw: DictionaryWord) => words.some(w => w.id === dw.id || w.word.toLowerCase() === dw.word.toLowerCase())
   const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
-  // 按等级 7 档计数（进入浏览时取一次，best-effort）
+  // 按等级 8 档计数（进入浏览时取一次，best-effort）
   useEffect(() => {
     if (!lib || Object.keys(levelCounts).length) return
     let cancelled = false
-    void Promise.all([1, 2, 3, 4, 5, 6, 7].map(l =>
+    void Promise.all(LEVELS_ALL.map(l =>
       // 按等级 = 考试大纲全量（levels 含该档）；与列表同口径，精确 count
       fetch(`/api/dictionary/search?syllabus=${l}&limit=1`).then(r => (r.ok ? r.json() : null)).then(j => [l, (j?.total as number) || 0] as [number, number]).catch(() => [l, 0] as [number, number])
     )).then(pairs => { if (!cancelled) setLevelCounts(Object.fromEntries(pairs)) })
@@ -593,7 +595,7 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
               <button className={lib.mode === 'letter' ? 'on' : ''} onClick={() => setLib({ ...lib, mode: 'letter' })}>按字母</button>
             </div>
             {lib.mode === 'level' ? (
-              <div className="lib-index">{[1, 2, 3, 4, 5, 6, 7].map(l => <button key={l} className={`lib-ichip${lib.level === l ? ' on' : ''}`} style={{ minWidth: 'auto', padding: '5px 10px' }} onClick={() => setLib({ ...lib, level: l })}>{LEVEL_NAMES[l]} {levelCounts[l] ?? ''}</button>)}</div>
+              <div className="lib-index">{LEVELS_ALL.map(l => <button key={l} className={`lib-ichip${lib.level === l ? ' on' : ''}`} style={{ minWidth: 'auto', padding: '5px 10px' }} onClick={() => setLib({ ...lib, level: l })}>{LEVEL_NAMES[l]} {levelCounts[l] ?? ''}</button>)}</div>
             ) : (
               <div className="lib-index">{ALPHA.map(c => <button key={c} className={`lib-ichip${lib.letter === c ? ' on' : ''}`} onClick={() => setLib({ ...lib, letter: c })}>{c}</button>)}</div>
             )}

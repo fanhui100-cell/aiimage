@@ -10,6 +10,7 @@ import { type WordState, STATE_ORDER } from '@/lib/state-meta'
 import { gradeSrs, previewIntervals, isMastered, GRADE_NOTE, type ReviewGrade } from '@/lib/srs/schedule'
 import { toWordEntry } from '@/lib/dictionary/entry-adapter'
 import { mapExamKeyToTag } from '@/lib/dictionary/exam-tag-map'
+import { LEVELS, MAX_LEVEL } from '@/lib/levels'
 import type { DictionaryWord } from '@/lib/dictionary/dictionary-types'
 import type { LearningLevel } from '@/types/learning'
 import type { QuizSession } from '@/types/quiz'
@@ -125,8 +126,10 @@ export interface WrongAnswer {
 // ─────────────────────────────────────────────────────────────
 export const SM2_INTERVALS = [1, 3, 7, 16, 35]
 
+// CEFR 单源对齐 lib/levels.ts（band = level+1 偏移，故 BAND_CEFR[level+1] = 该档 cefr；band 1 = level 0 → A1）。
+// 八档统一：消除与 LEVEL_CEFR 的副本冲突；band 维度本身随 persist v6 退役。
 export const BAND_CEFR: Record<number, string> = {
-  1: 'A1', 2: 'A2', 3: 'B1', 4: 'B1', 5: 'B2', 6: 'B2', 7: 'C1', 8: 'C1',
+  1: 'A1', ...Object.fromEntries(LEVELS.map(l => [l.level + 1, l.cefr])),
 }
 
 export const EXAM_BANDS = {
@@ -531,7 +534,7 @@ export const useLexiStore = create<LexiStore>()(
         const total = atLevel.length
         const gold = atLevel.filter(w => w.state === 'mastered' && (w.dims?.length ?? 0) >= 2).length
         const rate = total ? Math.round((gold / total) * 100) : 0
-        return { ready: total >= 10 && rate >= 80 && lv < 7, rate, gold, total, level: lv }
+        return { ready: total >= 10 && rate >= 80 && lv < MAX_LEVEL, rate, gold, total, level: lv }
       },
 
       // 复习评分：四档统一入口，状态由结果派生

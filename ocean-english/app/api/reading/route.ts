@@ -9,6 +9,7 @@
    ============================================================================ */
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { levelCefrRank } from '@/lib/levels'
 
 interface ReadingRow {
   id: string
@@ -164,12 +165,16 @@ export async function GET(req: NextRequest) {
       for (const r of part) { const pid = String(r.normalized_word ?? ''); if (pid) qcount.set(pid, (qcount.get(pid) ?? 0) + 1) }
       if (part.length < 1000) break
     }
-    // 3) 组装；difficulty 用「档位 + 生词密度」廉价代理（生词率 = difficulty × (1−已掌握)，前端再算）
+    // 3) 组装；difficulty 用「CEFR 难度 + 生词密度」廉价代理（生词率 = difficulty × (1−已掌握)，前端再算）
+    //    难度按 cefrRank（A2..C1）而非 level 号：雅思(L8, B2-C1) 不因 level=8 被谎报为最难，落在六级/托福之间。
+    //    线性标定保持旧量纲：rank2(A2)→11、rank4.5(雅思)→66、rank5(C1)→77；level 缺失(0)维持低基线。
     const list = passages.map((p) => {
       const kw = Array.isArray(p.key_words) ? p.key_words : []
       const minutes = p.minutes ?? 1
       const lvl = p.level ?? lvNum
-      const difficulty = Math.min(95, Math.max(8, lvl * 11 + Math.min(18, Math.round(kw.length / Math.max(1, minutes)))))
+      const rank = lvl >= 1 ? levelCefrRank(lvl) : 0
+      const cefrBase = rank ? Math.round((rank - 2) / 3 * 66 + 11) : 0
+      const difficulty = Math.min(95, Math.max(8, cefrBase + Math.min(18, Math.round(kw.length / Math.max(1, minutes)))))
       return { id: p.id, title: p.title || '', titleZh: p.title_zh || undefined, level: lvl, minutes, questionCount: qcount.get(p.id) ?? 3, keyWords: kw, keyWordCount: kw.length, difficulty }
     }).filter((x) => x.questionCount > 0)
 

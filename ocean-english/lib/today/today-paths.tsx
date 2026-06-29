@@ -46,7 +46,8 @@ export const PATHS: Record<PathId, { zh: string; cards: ActCard[] }> = {
   },
 }
 export const PATH_KEYS: PathId[] = ['full', 'words', 'reading', 'exam']
-export const LEVEL_NAMES = ['', '初中', '高中', '四级', '六级', '考研', '托福', 'SAT', '满级']
+// 八档统一：LEVEL_NAMES 改从 lib/levels.ts 单源 re-export（index 8 = 雅思，替代旧「满级」死值）
+export { LEVEL_NAMES } from '@/lib/levels'
 export const daysToExam = (d: string) => { const ms = new Date(d + 'T00:00:00').getTime() - Date.now(); return Math.max(0, Math.ceil(ms / 86_400_000)) }
 
 const ICON_PATHS: Record<IconName, React.ReactNode> = {

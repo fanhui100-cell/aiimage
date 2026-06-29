@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation'
 import { useLexiStore } from '@/store/lexiStore'
 import { useV2DailyPlan, PLAN_CARD_TONE, type V2PlanCard } from '@/hooks/useV2DailyPlan'
 import { useNavigate } from '@/hooks/useNavigate'
-import { levelDef } from '@/lib/levels'
+import { levelDef, MAX_LEVEL } from '@/lib/levels'
 import { speakSmart } from '@/lib/pronunciation/word-audio'
 import { createClient, isSupabaseConfigured } from '@/lib/supabase/client'
 import { PATHS, PATH_KEYS, LEVEL_NAMES, daysToExam, type PathId, type ActCard } from '@/lib/today/today-paths'
@@ -137,7 +137,8 @@ export function TodayBento() {
 
   // ── 每日一词 ──
   const wod = useMemo(() => {
-    const key = level <= 2 ? 'junior' : level <= 5 ? 'cet' : 'advanced'
+    // 八档：雅思(L8, B2-C1)按 cefrRank 与六级/考研同级，归中阶桶，不入 advanced 最难桶
+    const key = level <= 2 ? 'junior' : (level <= 5 || level === MAX_LEVEL) ? 'cet' : 'advanced'
     const pool = WOD[key]
     const doy = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / DAY)
     return pool[doy % pool.length]
