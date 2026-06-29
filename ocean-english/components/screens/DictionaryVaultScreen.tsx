@@ -210,7 +210,9 @@ export function DictionaryVaultScreen() {
   const etymology = word?.etymology ? (word.etymology.explanationZh || word.etymology.explanationEn || word.etymology.roots || '') : ''
   const examTags = word?.examTags ?? []
   const lvName = LEVEL_NAMES[word?.primaryLevel ?? 0] || ''
-  const tags = [lvName, word?.cefrLevel ?? '', ...examTags.slice(0, 2)].filter(Boolean)
+  // 去重（计划 §4.3）：档名与同名 examTag 会重复（SAT 档 lvName='SAT' 与 examTag 'SAT'；雅思档名与 IELTS 标签等），
+  // 既避免 hero-badges 的 React 重复 key 警告，也避免「SAT·SAT」「雅思·…·IELTS」冗余展示
+  const tags = [...new Set([lvName, word?.cefrLevel ?? '', ...examTags.slice(0, 2)])].filter(Boolean)
   const ex0 = (word?.examples ?? []).find(e => e.sentenceEn)
   const formEntries = word ? (Object.entries(word.inflections ?? {}).filter(([, v]) => v) as [string, string][]).map(([k, v]) => [FORM_ZH[k] ?? k, v] as [string, string]) : []
   const forms = formEntries.length ? formEntries : (word ? ruleForms(wordStr, pos) : [])
