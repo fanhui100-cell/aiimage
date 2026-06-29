@@ -304,8 +304,11 @@ async function buildSection(
 export async function generatePaper(db: SupabaseClient, input: GeneratePaperInput): Promise<{ paper: GeneratedPaper | null; warnings: string[] }> {
   const spec = getExamSpec(input.examId)
   if (!spec) return { paper: null, warnings: ['unknown_exam'] }
-  // coming_soon（如 IELTS）：整卷题库未做 → 直接拒，绝不组空卷、绝不回退别的题型
-  if (spec.status === 'coming_soon') return { paper: null, warnings: ['exam_coming_soon'] }
+  // 仅 active 考试对用户开放组卷：coming_soon（如 IELTS 整卷未做）+ draft（如托福/SAT 规格未定稿、
+  // 不对用户开放）均直接拒，绝不组空卷、绝不回退别的题型。
+  if (spec.status !== 'active') {
+    return { paper: null, warnings: [spec.status === 'coming_soon' ? 'exam_coming_soon' : 'exam_not_active'] }
+  }
   if (!(await v2Available(db))) return { paper: null, warnings: ['v2_not_applied'] }
 
   let sections = spec.sections

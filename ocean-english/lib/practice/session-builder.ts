@@ -527,6 +527,15 @@ export async function buildPracticeSession(
     return { ok: true, source: 'empty', sessionId, mode: input.mode, items: [], warnings: ['deprecated_type'] }
   }
 
+  // draft / coming_soon 考试不对用户开放（与 /papers 一致）：仅考试专项练习（mode='task' + examId）拦，
+  // 词宇宙练词（mode='word'，跨考试）不受影响。
+  if (input.mode === 'task' && input.examId) {
+    const spec = getExamSpec(normalizeExamId(input.examId) ?? input.examId)
+    if (spec && spec.status !== 'active') {
+      return { ok: true, source: 'empty', sessionId, mode: input.mode, items: [], warnings: [spec.status === 'coming_soon' ? 'exam_coming_soon' : 'exam_not_active'] }
+    }
+  }
+
   let items: PracticeItem[] = []
   let used: 'v1' | 'v2' | 'empty' = 'empty'
 
