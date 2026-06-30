@@ -101,13 +101,19 @@ async function fetchActiveAudioUrls(db: SupabaseClient, stimulusIds: string[]): 
     const chunk = stimulusIds.slice(i, i + 200)
     if (!chunk.length) break
     const { data } = await db.from('audio_assets').select('stimulus_id, url, storage_path, qa_status').in('stimulus_id', chunk).eq('qa_status', 'active')
+    // 每 stimulus 取首条 active 音频，去重
+    const rows: { stimulus_id: string; url: string | null; storage_path: string | null }[] = []
+    const seen = new Set<string>()
     for (const a of (data ?? []) as { stimulus_id: string | null; url: string | null; storage_path: string | null }[]) {
-      if (!a.stimulus_id || out.has(a.stimulus_id)) continue
-      // private bucket: sign the object path server-side; fall back to a legacy public url only
-      const signedUrl = await signAudioPath(a.storage_path ?? a.url)
-      const playable = signedUrl ?? ((a.url && (/^(https?:)?\/\//.test(a.url) || a.url.startsWith('/'))) ? a.url : null)
-      if (playable) out.set(a.stimulus_id, playable)
+      if (!a.stimulus_id || seen.has(a.stimulus_id) || out.has(a.stimulus_id)) continue
+      seen.add(a.stimulus_id); rows.push({ stimulus_id: a.stimulus_id, url: a.url, storage_path: a.storage_path })
     }
+    // private bucket：并行现签（原串行 await 逐个签名是整卷生成的主要耗时，多听力题/多次组卷时会拖到超时）
+    const signed = await Promise.all(rows.map((a) => signAudioPath(a.storage_path ?? a.url)))
+    rows.forEach((a, k) => {
+      const playable = signed[k] ?? ((a.url && (/^(https?:)?\/\//.test(a.url) || a.url.startsWith('/'))) ? a.url : null)
+      if (playable) out.set(a.stimulus_id, playable)
+    })
   }
   return out
 }

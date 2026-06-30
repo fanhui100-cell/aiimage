@@ -458,12 +458,13 @@ async function tryBuildFromV2(
     const { data: stims } = await db.from('stimuli').select('id, kind, title, text_en, text_zh').in('id', stimulusIds).eq('qa_status', 'active')
     for (const s of (stims ?? []) as { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }[]) stimById.set(s.id, s)
     const { data: auds } = await db.from('audio_assets').select('stimulus_id, url, storage_path').in('stimulus_id', stimulusIds).eq('qa_status', 'active')
-    for (const a of (auds ?? []) as { stimulus_id: string; url: string; storage_path: string | null }[]) {
-      const path = a.storage_path ?? a.url
-      const signedUrl = await signAudioPath(path)                              // 私有桶 → 短时签名 https
-      if (signedUrl) audioByStim.set(a.stimulus_id, { url: signedUrl })
+    const audRows = (auds ?? []) as { stimulus_id: string; url: string; storage_path: string | null }[]
+    // 私有桶 → 短时签名 https；并行现签（避免逐个 await 串行拖慢，与 paper-generator 一致）
+    const audSigned = await Promise.all(audRows.map((a) => signAudioPath(a.storage_path ?? a.url)))
+    audRows.forEach((a, k) => {
+      if (audSigned[k]) audioByStim.set(a.stimulus_id, { url: audSigned[k]! })
       else if (/^(https?:)?\/\//.test(a.url) || a.url?.startsWith('/')) audioByStim.set(a.stimulus_id, { url: a.url }) // 历史公开 URL 兜底
-    }
+    })
   }
 
   const built: PracticeItem[] = []
