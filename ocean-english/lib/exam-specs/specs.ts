@@ -155,7 +155,7 @@ export const EXAM_SPECS: ExamSpec[] = [
     totalMinutes: 120,
     fullScore: 6,
     scoringScale: '1-6',
-    status: 'draft',
+    status: 'active',
     sections: [
       { id: 'reading', labelZh: '阅读 Reading', labelEn: 'Reading', skill: 'reading', taskTypes: ['complete_the_words', 'read_daily_life', 'reading_comprehension'], groupMode: 'passages', itemCount: 50, points: 0, notes: 'Complete the Words / Read in Daily Life / Academic Passage；后者用 reading_comprehension，前两类待生产性任务支持。' },
       { id: 'listening', labelZh: '听力 Listening', labelEn: 'Listening', skill: 'listening', taskTypes: ['choose_a_response', 'listening_comprehension'], groupMode: 'rows', itemCount: 47, points: 0, requiresAudio: true, notes: 'Listen and Choose a Response / Conversation / Announcement / Academic Talk；后三类用 listening_comprehension 子类，choose_a_response 待支持。' },
@@ -179,7 +179,7 @@ export const EXAM_SPECS: ExamSpec[] = [
     totalMinutes: 64,
     fullScore: 800,
     scoringScale: '200-800',
-    status: 'draft',
+    status: 'active',
     sections: [
       { id: 'information_and_ideas', labelZh: '信息与观点', labelEn: 'Information and Ideas', skill: 'reading', taskTypes: ['reading_comprehension'], groupMode: 'single', itemCount: 14, points: 0, notes: 'Central Ideas/Details、Command of Evidence（文本+图表/数据）、Inference；25-150 词短文本单题。' },
       { id: 'craft_and_structure', labelZh: '表达技巧与结构', labelEn: 'Craft and Structure', skill: 'reading', taskTypes: ['reading_comprehension'], groupMode: 'single', itemCount: 15, points: 0, notes: 'Words in Context（语境词义，非孤立同义词）、Text Structure and Purpose、Cross-Text Connections。' },

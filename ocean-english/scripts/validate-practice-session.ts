@@ -85,6 +85,14 @@ async function main() {
   const dep2 = await buildPracticeSession(db, { mode: 'task', taskType: 'cet_cloze', level: 5, count: 6 })
   check(dep2.items.length === 0 && dep2.source === 'empty', 'cet_cloze 退役应返回空')
 
+  // 5) TOEFL/SAT 已开放（spec status=active，第二轮）：考试专项能出 active 题，不再 exam_not_active 空池
+  const satTask = await buildPracticeSession(db, { mode: 'task', examId: 'sat', taskType: 'reading_comprehension', level: 7, count: 4 })
+  check(satTask.items.length > 0, `task(sat reading_comprehension) 应有题（实际 ${satTask.items.length}，warnings=${satTask.warnings.join(',')}）`)
+  console.log(`  task(sat/reading_comprehension): source=${satTask.source} items=${satTask.items.length}`)
+  const toeflTask = await buildPracticeSession(db, { mode: 'task', examId: 'toefl', taskType: 'complete_the_words', level: 6, count: 4 })
+  check(toeflTask.items.length > 0, `task(toefl complete_the_words) 应有题（实际 ${toeflTask.items.length}，warnings=${toeflTask.warnings.join(',')}）`)
+  console.log(`  task(toefl/complete_the_words): source=${toeflTask.source} items=${toeflTask.items.length}`)
+
   console.log(`\npractice-session validation · 错误 ${errors.length}`)
   for (const e of errors) console.error(`ERROR ${e}`)
   if (errors.length > 0) process.exit(1)
