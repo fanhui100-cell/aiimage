@@ -16,7 +16,10 @@ const VIOLET: CSSProperties = { ['--accent' as string]: 'var(--violet-ink)', ['-
 export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg: MockStartCfg) => void }) {
   const [examId, setExamId] = useState('cet4')
   const exam = getExamSpec(examId) ?? EXAM_SPECS[0]
-  const draft = exam.status === 'draft' || exam.status === 'coming_soon'
+  // 整卷模考不可用：草稿/即将上线，或 active 但整卷未就绪（paperReady===false，如 TOEFL 缺客观题）。
+  // 专项练习（ExamTaskPicker → /quiz task）不受此限。
+  const blocked = exam.status === 'draft' || exam.status === 'coming_soon' || exam.paperReady === false
+  const paperUnready = exam.status === 'active' && exam.paperReady === false
   const totalQ = exam.sections.reduce((s, x) => s + x.itemCount, 0)
   const objSecs = exam.sections.filter((s) => s.taskTypes.some(isExamTaskType))
   const objPoints = objSecs.reduce((s, x) => s + (x.points || 0), 0)
@@ -29,8 +32,9 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
 
       <div className={`lx-exam-grid ${mob ? 'mob' : ''}`} style={{ marginTop: 18 }}>
         {EXAM_SPECS.map((e) => (
-          <button key={e.id} className={`lx-exam ${examId === e.id ? 'on' : ''} ${(e.status === 'draft' || e.status === 'coming_soon') ? 'soon' : ''}`} onClick={() => setExamId(e.id)}>
+          <button key={e.id} className={`lx-exam ${examId === e.id ? 'on' : ''} ${(e.status === 'draft' || e.status === 'coming_soon' || e.paperReady === false) ? 'soon' : ''}`} onClick={() => setExamId(e.id)}>
             {(e.status === 'draft' || e.status === 'coming_soon') && <span className="lx-exam-soon">题库建设中</span>}
+            {e.status === 'active' && e.paperReady === false && <span className="lx-exam-soon">模考建设中</span>}
             <div className="lx-exam-zh">{e.labelZh}</div>
             <div className="lx-exam-en">{e.labelEn}</div>
             <div className="lx-exam-meta"><span><b>{e.totalMinutes}</b>′</span><span>满分 <b>{e.fullScore}</b></span></div>
@@ -39,7 +43,7 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
       </div>
 
       <div className="lx-paper" key={examId} style={VIOLET}>
-        {draft && <div className="lx-soonbanner"><Ic name="pen" s={14} /><span><b>{exam.labelZh} 题库建设中</b> · 以下为规划结构草案；题库就绪后即可一键接入。</span></div>}
+        {blocked && <div className="lx-soonbanner"><Ic name="pen" s={14} /><span><b>{exam.labelZh} {paperUnready ? '整卷模考建设中' : '题库建设中'}</b> · {paperUnready ? '专项练习已可用（去「考试专项」）；整卷待补齐各区客观题。' : '以下为规划结构草案；题库就绪后即可一键接入。'}</span></div>}
         <div className="lx-paper-head">
           <div className="lx-paper-title">{exam.labelZh} · 模拟卷</div>
           <div className="lx-paper-sub">客观题整卷 · 共 {objSecs.length} 个区 · {totalQ} 小题</div>
@@ -73,8 +77,8 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
         <div className="lx-paper-skip"><Ic name="pen" s={13} />本卷只做客观题；写作 / 翻译 / 口语等主观题不计入。</div>
       </div>
 
-      {draft ? (
-        <button className="lx-cta" disabled style={{ width: '100%', justifyContent: 'center', marginTop: 18, ...VIOLET }}><Ic name="clock" s={16} />题库建设中 · 敬请期待</button>
+      {blocked ? (
+        <button className="lx-cta" disabled style={{ width: '100%', justifyContent: 'center', marginTop: 18, ...VIOLET }}><Ic name="clock" s={16} />{paperUnready ? '整卷模考建设中 · 专项练习可用' : '题库建设中 · 敬请期待'}</button>
       ) : (
         <button className="lx-cta" style={{ width: '100%', justifyContent: 'center', marginTop: 18, ...VIOLET }} onClick={() => onStart({ kind: 'mock', exam: exam.id, level: exam.id })}><Ic name="bolt" s={17} sw={2} />开始模拟考 · {exam.totalMinutes} 分钟</button>
       )}

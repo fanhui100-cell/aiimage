@@ -171,6 +171,20 @@ async function dbChecks(db: SupabaseClient) {
   // 同时确认 d1/d2 原始卷的差异确实只来自签名 token（若原始已相等，说明该卷无听力签名 URL）。
   const rawIdentical = JSON.stringify(d1.paper) === JSON.stringify(d2.paper)
   notes.push(rawIdentical ? '确定性：原始卷即逐字节相等（本卷无时变签名 URL）' : '确定性：原始卷仅签名 token 不同，归一化后一致（set/item 选择确定）')
+
+  // 第三轮审计：TOEFL 整卷未就绪（paperReady=false）→ 模考拒；专项 task 仍可练（见 validate:practice-session）
+  const toeflFull = await generatePaper(db, { examId: 'toefl', mode: 'full', seed: 'toefl-full' })
+  ok(toeflFull.paper === null && toeflFull.warnings.includes('paper_not_ready'), 'toefl full → paper_not_ready（整卷未就绪，模考禁、专项可练）')
+  // SAT Expression of Ideas 是 writing domain 但客观 MCQ：修 isSubjectiveSection 后该 section 应客观抽题（非主观 1 题）
+  const satFull = await generatePaper(db, { examId: 'sat', mode: 'full', seed: 'sat-full' })
+  if (satFull.paper) {
+    assertNoDeprecated(satFull.paper, 'sat full')
+    const expr = satFull.paper.sections.find((s) => s.sectionId === 'expression_of_ideas')
+    ok(!!expr && expr.subjective !== true, 'sat expression_of_ideas 应判客观（非 subjective）')
+    ok(!!expr && (expr.items?.length ?? 0) >= 2, `sat expression_of_ideas 应抽到多道客观题（实际 ${expr?.items?.length ?? 0}）`)
+  } else {
+    notes.push(`sat full: paper=null warnings=${satFull.warnings.join(',')}`)
+  }
   return { applied: true }
 }
 

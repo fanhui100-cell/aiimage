@@ -4,6 +4,7 @@
    纯展示：数据由 useV2Diagnostics 经 props 传入；样式用主题令牌内联，无需新增 CSS 文件。
    红线：confidence!=='high'（isEstimate）必标「估算·样本不足」，不展示精确分。 */
 import { CONFIDENCE_ZH, skillKeyZh, type V2Diagnostics, type V2SkillState } from '@/hooks/useV2Diagnostics'
+import { skillKeyToTaskType } from '@/lib/practice/skill-task-map'
 
 const pct = (m: number) => Math.round(m * 100)
 /** isEstimate 时给档位文案而非精确分（避免把估算当精确分）。 */
@@ -68,14 +69,21 @@ export function V2WeakSkills({ d, onPractice }: { d: V2Diagnostics; onPractice: 
     <div style={{ marginTop: 14 }}>
       <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', marginBottom: 8 }}>薄弱技能 · 基于真实作答</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        {d.weakSkills.slice(0, 6).map((s) => (
-          <button key={`${s.examId}:${s.skillKey}`} onClick={() => onPractice(s)} style={{ display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left', background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 12, padding: '9px 12px', cursor: 'pointer' }}>
-            <span style={{ flex: 1, fontSize: 13, color: 'var(--ink)', fontWeight: 600 }}>{s.examId} · {skillKeyZh(s.skillKey)}</span>
-            <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: 12, color: 'var(--rose-ink)' }}>{masteryLabel(s)}</span>
-            <ConfidenceBadge s={s} />
-            <span style={{ fontSize: 12, color: 'var(--teal-ink)', fontWeight: 700 }}>练 →</span>
-          </button>
-        ))}
+        {d.weakSkills.slice(0, 6).map((s) => {
+          // 仅「可映射客观题型」的弱项可定向练（跳 /quiz task）；写作/翻译/口语等产出型弱项无客观题型，
+          // 禁用并标「产出练习」，避免跳 mode=task 空 taskType 误抽客观题（如 essay_writing → 听力题）。
+          const objective = skillKeyToTaskType(s.skillKey, s.examId) != null
+          return (
+            <button key={`${s.examId}:${s.skillKey}`} onClick={objective ? () => onPractice(s) : undefined} disabled={!objective}
+              title={objective ? undefined : '写作/口语等产出练习入口建设中'}
+              style={{ display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left', background: 'var(--card)', border: '1px solid var(--line)', borderRadius: 12, padding: '9px 12px', cursor: objective ? 'pointer' : 'default', opacity: objective ? 1 : 0.65 }}>
+              <span style={{ flex: 1, fontSize: 13, color: 'var(--ink)', fontWeight: 600 }}>{s.examId} · {skillKeyZh(s.skillKey)}</span>
+              <span style={{ fontFamily: 'var(--font-mono, monospace)', fontSize: 12, color: 'var(--rose-ink)' }}>{masteryLabel(s)}</span>
+              <ConfidenceBadge s={s} />
+              <span style={{ fontSize: 12, color: objective ? 'var(--teal-ink)' : 'var(--ink-muted)', fontWeight: 700, whiteSpace: 'nowrap' }}>{objective ? '练 →' : '产出练习'}</span>
+            </button>
+          )
+        })}
       </div>
     </div>
   )

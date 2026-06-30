@@ -57,9 +57,11 @@ export async function v2Available(db: SupabaseClient): Promise<boolean> {
 
 // ── section 分类 ─────────────────────────────────────────────────────────────
 function isSubjectiveSection(sec: ExamSectionSpec): boolean {
+  // 主观判定：需 rubric 评分，或没有任何「客观考试题型」候选。
+  // 不按 skill==='writing'/'speaking' 一刀切——SAT Expression of Ideas 虽是 writing domain，但 taskTypes
+  // 是 reading_comprehension（MCQ 客观，无 requiresRubric），不应当主观处理（否则整卷只抽 1 题且误走 rubric）。
+  // 真正的写作/口语 section 均带 requiresRubric:true，仍由首条判为主观。
   if (sec.requiresRubric) return true
-  if (sec.skill === 'writing' || sec.skill === 'speaking') return true
-  // 没有任何「客观考试题型」候选 → 主观/生产性
   return !sec.taskTypes.some((t) => isExamTaskType(t) && !isDeprecatedQuestionType(t))
 }
 function scoringKindForTask(taskType: string): ScoreKind {
@@ -308,6 +310,11 @@ export async function generatePaper(db: SupabaseClient, input: GeneratePaperInpu
   // 不对用户开放）均直接拒，绝不组空卷、绝不回退别的题型。
   if (spec.status !== 'active') {
     return { paper: null, warnings: [spec.status === 'coming_soon' ? 'exam_coming_soon' : 'exam_not_active'] }
+  }
+  // 整卷模考（full/mini）需 paperReady：TOEFL 等整卷缺客观题（reading/listening/speaking）→ 不组残缺卷。
+  // 专项练习（mode='section' 或 /quiz task）不受此限——该考试已 active 的 section/task 仍可练。
+  if ((input.mode === 'full' || input.mode === 'mini') && spec.paperReady === false) {
+    return { paper: null, warnings: ['paper_not_ready'] }
   }
   if (!(await v2Available(db))) return { paper: null, warnings: ['v2_not_applied'] }
 

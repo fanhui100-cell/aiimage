@@ -95,4 +95,7 @@ export interface ExamSpec {
   scoringScale: ScoringScale
   sections: ExamSectionSpec[]
   status: ExamSpecStatus
+  /** 整卷模考是否就绪（full/mini）。undefined=就绪；false=专项 task 可练但整卷未完整（如 TOEFL 缺
+   *  reading/listening/speaking 客观题），模考入口禁用、generatePaper 整卷拒。仅影响整卷，不影响专项练习。 */
+  paperReady?: boolean
 }
