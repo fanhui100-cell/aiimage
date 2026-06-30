@@ -8,8 +8,10 @@
    有错误退出 1，否则 0。
 
    用法（审计建议拆分，避免「8 张远程整卷全跑完才算通过」）：
-     npm run validate:papers        → 本地契约(scoring+clientPaper) + 远程 smoke(cet4 mini + 听力 section，带超时)
-     npm run validate:papers:full   → 追加全量整卷压测(所有卷 + 确定性 + TOEFL/SAT 门控)，单独跑，不放普通门禁
+     npm run validate:papers        → 本地契约(scoring+clientPaper) + 远程 smoke(cet4 mini + 听力 section，带超时)。默认门禁。
+     npm run validate:papers:full   → 全量整卷压测(所有卷 + 确定性 + TOEFL/SAT 门控)。手动慢测/压测，不入门禁；
+                                       多卷多 section 累积大量远程 DB 往返，耗时受远程 DB/Storage 状态影响，可能超时——
+                                       一次通过不代表所有环境稳定。后续优化方向：fetchActiveItems/fetchTargetWords 批量取。
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -154,8 +156,8 @@ async function v2NotAppliedChecks(db: SupabaseClient) {
   const a = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
   const b = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
   ok(JSON.stringify(a) === JSON.stringify(b), 'not_applied: 同 seed 同结果')
-  // 未知考试受控
-  const u = await generatePaper(db, { examId: 'ielts', mode: 'full' })
+  // 未知考试受控（用真正不存在的 ID；IELTS 现为已知 exam·coming_soon，不能再当未知用例）
+  const u = await generatePaper(db, { examId: 'no_such_exam', mode: 'full' })
   ok(u.paper === null && u.warnings.includes('unknown_exam'), 'unknown_exam 受控')
 }
 
