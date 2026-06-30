@@ -1,0 +1,57 @@
+{
+  "task": "word-universe-first-promote",
+  "date": "2026-07-01",
+  "writesToDatabase": true,
+  "scope": "Claude 原创(gen:) word-universe draft → active 首批小批 promote",
+  "promotedTotal": 60,
+  "byType": {
+    "def_to_word": { "candidatePool": 40, "spotcheck": { "PASS": 39, "REVIEW": 1, "REJECT": 0 }, "selected": 20, "dryRun": { "candidates": 20, "eligible": 20, "rejected": 0 }, "promoted": 20 },
+    "synonym_choice": { "candidatePool": 40, "spotcheck": { "PASS": 37, "REVIEW": 3, "REJECT": 0 }, "selected": 20, "dryRun": { "candidates": 20, "eligible": 20, "rejected": 0 }, "promoted": 20 },
+    "confusable_choice": { "candidatePool": 40, "spotcheck": { "PASS": 38, "REVIEW": 2, "REJECT": 0 }, "selected": 20, "dryRun": { "candidates": 20, "eligible": 20, "rejected": 0 }, "promoted": 20 }
+  },
+  "reviewExcluded": {
+    "def_to_word": ["xeric (生僻专业生态词, word_id 不在库)"],
+    "synonym_choice": ["quaint→charming (语义偏松)", "unprecedented→unparalleled (语义偏移)", "xeric→arid (生僻)"],
+    "confusable_choice": ["veracious (生僻低频)", "xenon (整组生僻科学词 xenon/xylem/xeric/radon)"]
+  },
+  "activeCountChange": { "before": 1993, "after": 2053, "delta": 60 },
+  "wuPzDraftChange": { "beforeBackfill": 0, "afterBackfill": 120, "afterPromote": 60 },
+  "letterCoverage": "首批 60 全部 p–z（每型 20 跨 p,q,r,s,t,u,v,w,x,y,z 最缺字母）",
+  "guards": {
+    "mixedQbSource": false,
+    "mixedDeprecated": false,
+    "blockedFlag": false,
+    "nonActiveItemsUnderActiveSet": 0,
+    "answerNotInChoices": 0
+  },
+  "executionErrorFixed": {
+    "issue": "整理 confusable id 清单时误把 xenon 的 set_id(163ad43b) 当作 weather 写入，导致首批误 promote xenon(抽检 REVIEW)、漏 weather(PASS)",
+    "detectedBy": "spotcheck-wu-promote 抽到 confusable 'xenon'",
+    "fix": "SQL 将 xenon set+item 撤回 draft；promote 脚本补 apply weather(1704befb)",
+    "afterFix": "confusable active 20 严格等于人工 PASS 清单(含 weather 不含 xenon)；active 总数仍 2053；xenon 回 draft"
+  },
+  "representativeLegacyIds": [
+    "gen:def_to_word:set:claude:* (20)",
+    "gen:synonym_choice:set:claude:* (20)",
+    "gen:confusable_choice:set:claude:* (20)"
+  ],
+  "gates": {
+    "tsc": 0, "lint": 0, "validate:question-types": 0, "validate:data-quality": 0,
+    "qa:qsets-v2": 0, "validate:qbank-v2": 0, "validate:practice-session": 0,
+    "validate:papers": 0, "smoke:active-serve": 0, "audit:qbank-v2-coverage": 0,
+    "spotcheck-wu-promote": 0
+  },
+  "serveSpotcheck": {
+    "def_to_word": "buildPracticeSession(toefl) source=v2 items=5 · 无 stimulus 泄露 · 字段完整",
+    "synonym_choice": "source=v2 items=5 · 无 stimulus · 字段完整",
+    "confusable_choice": "source=v2 items=5 · 无 stimulus · 字段完整 · 修正后不再出现 xenon"
+  },
+  "residualIssues": [
+    "字母 k 仍无 word-universe 题（gen 与 qb 均 0）",
+    "a/b 仍为 qb(DeepSeek) 来源——本批未触及",
+    "xeric/veracious/xenon/quaint→charming/unprecedented→unparalleled 等 REVIEW 项仍在 draft，需返工或弃用",
+    "promote 脚本 --ids 依赖人工整理清单——本次发生一次 id 误读(已修)，建议下批用脚本直接按 (stage,type,word) 选 id 减少手抄风险"
+  ],
+  "recommendSecondBatch": "暂缓。先交 Codex 复审本批；通过后第二批可覆盖 c–o 字母 + 补 k，并改进 id 选取(按 word 程序化取 id 避免手抄误读)。",
+  "stopConditionsHit": "无硬阻断(无 qb 混入/无退役/无 answer 错/无多解/dry-run rejected 0/active 数正确/状态一致/门禁全过)；唯一执行偏差 xenon↔weather 已自查并修正。"
+}

@@ -34,6 +34,7 @@ const LEVEL = argValue('--level')
 const TASK = argValue('--task')
 const LIMIT = Number(argValue('--limit') || '20')
 const GEN = process.argv.includes('--gen')   // 仅晋级 Claude 原创（legacy_id gen:%），排除 qb:%（DeepSeek 期）混居 draft
+const IDS = argValue('--ids')                // 显式 set uuid 列表（逗号分隔）；用于人工审过的精确小批，避免按 task_type 宽泛一把抓
 
 const GROUPED = new Set(['reading_comprehension', 'listening_comprehension', 'banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match'])
 const examToLevel = new Map<string, number>(EXAM_SPECS.map((s) => [s.id, s.level]))
@@ -44,11 +45,17 @@ interface ItemRow { id: string; input_mode: string; choices: unknown; answer: un
 async function main() {
   let level = LEVEL ? Number(LEVEL) : (EXAM ? examToLevel.get(EXAM) ?? null : null)
 
+  const idList = IDS ? IDS.split(',').map((s) => s.trim()).filter(Boolean) : null
   let q = db.from('question_sets').select('id, legacy_id, task_type, level, status, stimulus_id, qa_flags').eq('status', 'draft')
-  if (TASK) q = q.eq('task_type', TASK)
-  if (level != null) q = q.eq('level', level)
-  if (GEN) q = q.like('legacy_id', 'gen:%')
-  const { data: setsData, error } = await q.limit(LIMIT)
+  if (idList && idList.length) {
+    // 显式 id 模式：只取人工审过的这批 set（仍要求 status=draft）；忽略 task/level/gen 宽泛过滤。
+    q = q.in('id', idList)
+  } else {
+    if (TASK) q = q.eq('task_type', TASK)
+    if (level != null) q = q.eq('level', level)
+    if (GEN) q = q.like('legacy_id', 'gen:%')
+  }
+  const { data: setsData, error } = await q.limit(idList && idList.length ? idList.length : LIMIT)
   if (error) throw new Error(error.message)
   const sets = (setsData ?? []) as SetRow[]
 
