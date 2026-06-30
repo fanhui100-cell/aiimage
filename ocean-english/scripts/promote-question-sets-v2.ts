@@ -35,6 +35,8 @@ const TASK = argValue('--task')
 const LIMIT = Number(argValue('--limit') || '20')
 const GEN = process.argv.includes('--gen')   // 仅晋级 Claude 原创（legacy_id gen:%），排除 qb:%（DeepSeek 期）混居 draft
 const IDS = argValue('--ids')                // 显式 set uuid 列表（逗号分隔）；用于人工审过的精确小批，避免按 task_type 宽泛一把抓
+const WORDS = argValue('--words')            // 逗号分隔目标词；配合 --stage(+--task) 程序化解析 set id（人传词、脚本转 id，杜绝手抄 UUID 误读）
+const STAGE_ARG = argValue('--stage')
 
 const GROUPED = new Set(['reading_comprehension', 'listening_comprehension', 'banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match'])
 const examToLevel = new Map<string, number>(EXAM_SPECS.map((s) => [s.id, s.level]))
@@ -42,10 +44,30 @@ const examToLevel = new Map<string, number>(EXAM_SPECS.map((s) => [s.id, s.level
 interface SetRow { id: string; legacy_id: string | null; task_type: string; level: number | null; status: string; stimulus_id: string | null; qa_flags: Record<string, unknown> | null }
 interface ItemRow { id: string; input_mode: string; choices: unknown; answer: unknown; rubric_id: string | null; status: string }
 
+// 程序化按 (stage, task_type, word) 解析 set id：join target_words.surface，避免手抄 UUID。
+async function resolveSetIds(stage: string, task: string | null, words: string[]): Promise<string[]> {
+  const want = new Set(words.map((w) => w.trim().toLowerCase()).filter(Boolean))
+  let q = db.from('question_sets').select('id, question_items(question_target_words(surface))').eq('status', 'draft').contains('qa_flags', { stage })
+  if (task) q = q.eq('task_type', task)
+  const { data, error } = await q
+  if (error) throw new Error(`resolveSetIds: ${error.message}`)
+  const ids: string[] = []
+  for (const s of (data ?? []) as { id: string; question_items: { question_target_words: { surface: string | null }[] }[] }[]) {
+    const surfaces = (s.question_items ?? []).flatMap((it) => (it.question_target_words ?? []).map((t) => (t.surface ?? '').toLowerCase()))
+    if (surfaces.some((sf) => want.has(sf))) ids.push(s.id)
+  }
+  return ids
+}
+
 async function main() {
   let level = LEVEL ? Number(LEVEL) : (EXAM ? examToLevel.get(EXAM) ?? null : null)
 
-  const idList = IDS ? IDS.split(',').map((s) => s.trim()).filter(Boolean) : null
+  let idList = IDS ? IDS.split(',').map((s) => s.trim()).filter(Boolean) : null
+  if (!idList && WORDS && STAGE_ARG) {
+    const wordList = WORDS.split(',').map((w) => w.trim()).filter(Boolean)
+    idList = await resolveSetIds(STAGE_ARG, TASK, wordList)
+    console.log(`  [words→ids] stage=${STAGE_ARG} task=${TASK ?? '-'} words=${wordList.length} → 解析 ${idList.length} set id`)
+  }
   let q = db.from('question_sets').select('id, legacy_id, task_type, level, status, stimulus_id, qa_flags').eq('status', 'draft')
   if (idList && idList.length) {
     // 显式 id 模式：只取人工审过的这批 set（仍要求 status=draft）；忽略 task/level/gen 宽泛过滤。

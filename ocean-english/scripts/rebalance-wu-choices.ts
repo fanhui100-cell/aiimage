@@ -25,6 +25,7 @@ const db: SupabaseClient = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), rea
 const argValue = (n: string) => { const h = process.argv.find((a) => a.startsWith(`${n}=`)); return h ? h.slice(n.length + 1) : null }
 const APPLY = process.argv.includes('--apply')
 const STAGE = argValue('--stage') ?? 'wu-pz-2026-07-01'
+const STATUS = argValue('--status') ?? 'draft' // 默认 draft；--status=active 可均衡已上线小批的答案位置（只改选项顺序，不改语义/状态）
 const LETTER_IDS = ['a', 'b', 'c', 'd']
 
 interface Choice { id: string; text: string }
@@ -43,7 +44,7 @@ async function main() {
   // 读 stage 下 draft 题（每 set 1 item）
   const { data: setsData, error } = await db.from('question_sets')
     .select('id, task_type, question_items(id, choices, answer)')
-    .eq('status', 'draft').contains('qa_flags', { stage: STAGE })
+    .eq('status', STATUS).contains('qa_flags', { stage: STAGE })
   if (error) throw new Error(error.message)
   const rows: Row[] = []
   for (const s of (setsData ?? []) as { id: string; task_type: string; question_items: { id: string; choices: Choice[]; answer: unknown }[] }[]) {
@@ -79,7 +80,7 @@ async function main() {
     }
   }
 
-  console.log(`rebalance ${APPLY ? 'APPLY' : 'DRY-RUN'} stage=${STAGE}: rows ${rows.length} · changed ${changed}`)
+  console.log(`rebalance ${APPLY ? 'APPLY' : 'DRY-RUN'} stage=${STAGE} status=${STATUS}: rows ${rows.length} · changed ${changed}`)
   for (const tt of byType.keys()) {
     const b = beforeDist[tt] ?? {}; const a = afterDist[tt] ?? {}
     const fmt = (d: Record<string, number>) => LETTER_IDS.map((l) => `${l.toUpperCase()}${d[l] ?? 0}`).join('/')
