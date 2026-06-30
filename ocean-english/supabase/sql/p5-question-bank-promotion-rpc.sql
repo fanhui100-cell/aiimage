@@ -126,6 +126,14 @@ begin
       end if;
     end if;
 
+    -- speaking items (input_mode='speak'): listen_and_repeat needs an audio source, interview_speaking needs an
+    -- ASR + scoring pipeline; a rubric alone does NOT make them servable. Reject by default unless the pipeline is
+    -- explicitly marked ready via qa_flags.speaking_ready='true'. Keeps parity with promote-question-sets-v2.ts.
+    if exists (select 1 from question_items where question_set_id = v_id and input_mode = 'speak')
+       and coalesce(v_set.qa_flags->>'speaking_ready', '') <> 'true' then
+      set_id := v_id; result := 'rejected'; reason := 'speaking_pipeline_not_ready'; return next; continue;
+    end if;
+
     if v_set.stimulus_id is not null and not exists (select 1 from stimuli where id = v_set.stimulus_id) then
       set_id := v_id; result := 'rejected'; reason := 'stimulus_fk_missing'; return next; continue;
     end if;

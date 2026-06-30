@@ -1,0 +1,111 @@
+{
+  "audit": "qbank-active-readiness",
+  "date": "2026-07-01",
+  "auditor": "Claude (read-only pre-promotion audit)",
+  "writesToDatabase": false,
+  "filesChanged": [
+    "reports/qbank-active-readiness-audit-2026-07-01.md (new)",
+    "reports/qbank-active-readiness-audit-2026-07-01.json (new)",
+    "reports/*.json refreshed as a side-effect of required validate/qa/audit commands (no DB writes)"
+  ],
+  "scriptsModified": "none",
+  "totals": {
+    "sets": 5623,
+    "draft": 3630,
+    "active": 1993,
+    "rejected": 0,
+    "activeItems": 3173
+  },
+  "stopConditions": {
+    "deprecatedTypeInActive": { "triggered": false, "value": 0, "note": "antonym_choice/cet_cloze count = 0 in both active and draft" },
+    "answerErrorInActive": { "triggered": false, "note": "para_match 'idx>=choices' (50) was a FALSE POSITIVE: para_match answer indexes paragraphs in the stimulus (7-9 paras), not the 5 choices; re-checked against paragraph count => 0 out of range" },
+    "promoteBypassesBlocked": { "triggered": false, "note": "promote script + RPC reject deprecated/scoring_not_ready/official_spec_unverified/grouped-without-stimulus/listening-without-active-audio/productive-without-rubric/answer-invalid; double validation (client + server RPC, single txn). BUT see P1 blind spot for input_mode='speak'." },
+    "qaMissedObviousBadItem": { "triggered": false, "note": "all gates exit 0; QA covers structure/length/contamination/deprecated but does NOT cover word-selection representativeness, complete_the_words material leak, or speak-audio gating (documented as P1/P2)." },
+    "listeningActiveMissingAudioOrLeaksTranscript": { "triggered": false, "note": "224/224 active listening sets have active audio, 0 null stimulus; client transcript isolation verified earlier by smoke:active-serve" },
+    "productiveImpersonatesOfficial": { "triggered": false, "note": "all 626 active productive items have rubric_id and answer.official=false; 0 official=true" },
+    "massHomogeneousOrReskin": { "triggered": "PARTIAL", "note": "dup_prompt ~= 0 (no reskins), BUT word-universe target words are 88% letter 'a' (P1 representativeness)" },
+    "needsSchemaFrontendRatelimitChange": { "triggered": false, "note": "P1 promote/RPC speak-audio gating fix would touch the RPC SQL; recorded as recommendation, NOT executed this phase" }
+  },
+  "grading": {
+    "A_READY_CANDIDATE": {
+      "count": 1200,
+      "breakdown": { "def_to_word": 200, "en_to_zh": 200, "zh_to_en": 200, "synonym_choice": 200, "synonym_substitute": 200, "confusable_choice": 200 },
+      "rationale": "word-universe single-answer vocab MCQs; answer-in-choices 100%, no duplicate option text, no audio dependency, no Chinese contamination, no deprecated, no blocked flag.",
+      "promoteConditions": [
+        "stratified sampling across letters (NOT all 'a') because target words are 88% 'a'",
+        "spot-check distractor quality before each small batch"
+      ]
+    },
+    "B_REVIEW_REQUIRED": {
+      "count": 2000,
+      "breakdown": {
+        "context_collocation_choice": { "cloze_choice": 200, "collocation_choice": 200, "reason": "prompt naturalness / distractor quality uneven (e.g. cloze_choice distractors wrong part-of-speech; collocation prompt 'him' too sparse)" },
+        "spell": { "cloze_spell": 200, "word_form": 200, "zh_to_word_spell": 200, "reason": "spell exact-match scoring; word_form / zh_to_word_spell may have multiple valid forms -> confirm equivalence-scoring contract before promote (multi-solution risk)" },
+        "passage": { "banked_cloze": 200, "para_match": 200, "seven_select": 200, "cloze_passage": 200, "grammar_fill": 200, "reason": "migrated_v1 source originality/copyright spot-check + semantic answer (paraphrase/matching) human review" }
+      }
+    },
+    "C_BLOCKED": {
+      "count": 430,
+      "breakdown": {
+        "audio_missing_listen": { "listen_to_meaning": 200, "dictation_spell": 200, "reason": "input_mode=listen but 0 active audio assets on stimulus" },
+        "audio_speaking_pipeline": { "listen_and_repeat": 10, "interview_speaking": 10, "reason": "input_mode=speak; listen_and_repeat has null stimulus (no audio source); speaking auto-scoring pipeline not verified" },
+        "scoring_not_ready": { "build_a_sentence": 10, "reason": "qa_flags.scoring_not_ready=true; only canonical answer, no equivalence-scoring contract" }
+      }
+    },
+    "D_DELETE_OR_REWORK": {
+      "count": 0,
+      "note": "no whole class warrants deletion; individual cases handled inside B review: cloze_choice 1 duplicate prompt, collocation_choice sparse prompts, some weak distractors. word_form/zh_to_word_spell multi-solution items may drop to D during review."
+    }
+  },
+  "hardChecksAllPassed": {
+    "draft_choice_answer_in_choices": "0 bad / 1600",
+    "draft_choice_duplicate_option_text": "0 / 1600",
+    "draft_index_array_out_of_range_banked_seven_paramatch": "0 / 600",
+    "draft_answer_null": "0",
+    "active_choice_answer_in_choices": "0 bad / 1200",
+    "active_objective_answer_null": "0",
+    "active_para_match_answer_within_paragraphs": "0 out of range (150 active, 7-9 paras)",
+    "active_listening_active_audio": "224 / 224",
+    "active_productive_rubric_and_official_false": "626 / 626",
+    "duplicate_prompt_reskins": "~0 (cloze_choice 1 only)",
+    "chinese_contamination_in_en_tasks": "0 (non-ASCII hits are by-design: word_form Chinese hints, synonym_substitute fullwidth quotes, cloze_choice/spell curly quotes)"
+  },
+  "sourceType": {
+    "active_stimuli": { "original_authored": 1439, "migrated_v1": 134 },
+    "draft_stimuli": { "migrated_v1": 1000, "original_authored": 20 }
+  },
+  "wordUniverseLetterSkew": {
+    "a": { "distinctWords": 358, "occurrences": 2316 },
+    "b": { "distinctWords": 118, "occurrences": 120 },
+    "c_to_o": "single to low-double digits each",
+    "p_to_z": 0,
+    "implication": "vocab pool imported from dictionary head (a-heavy), not frequency/syllabus balanced => representativeness P1"
+  },
+  "gateResults": {
+    "lint": "exit 0",
+    "validate:question-types": "errors 0; word universe types 13; deprecated antonym_choice/cet_cloze registered",
+    "validate:qbank-v2": "applied; active sets 1993 / items 3173; errors 0",
+    "qa:qsets-v2": "applied; templates 30; errors 0",
+    "audit:qbank-v2-coverage": "sets 5623 draft 3630 active 1993; EXPECTED MISSING 6 THIN 0 READY_ACTIVE 38 BLOCKED 5; ACTUAL active-pool warnings 94",
+    "validate:practice-session": "errors 0; deprecated rejected; toefl/sat task v2 served",
+    "validate:papers": "errors 0; cet4 mini 12.4s, listening section 11.8s (smoke gate)",
+    "validate:data-quality": "all pass; definition_en contamination 0/56602",
+    "validate:papers:full": "NOT run as a gate (manual slow/stress test only; may be affected by remote DB/Storage state)"
+  },
+  "problems": [
+    { "sev": "P1", "id": "vocab-letter-skew", "area": "word-universe draft (~2200)", "desc": "target words 88% letter 'a', none p-z; representativeness/homogeneity. Promote requires stratified cross-letter sampling; longer-term re-balance selection by frequency/syllabus." },
+    { "sev": "P1", "id": "complete_the_words-answer-leak", "area": "complete_the_words active (70)", "desc": "stimulus.text_en contains the full answer word (70/70) while prompt does not (0/70); input_mode=spell is treated as non-listening by session-builder, so stimulus text_en may be shipped to client => answer leak. Confirm render layer drops stimulus text for spell-with-stimulus." },
+    { "sev": "P1", "id": "promote-speak-audio-blindspot", "area": "promote-question-sets-v2.ts + p5 RPC", "desc": "audio gating keys on task_type=listening_comprehension OR input_mode='listen'; input_mode='speak' (listen_and_repeat needs audio, interview_speaking needs speaking-scoring pipeline) only checks rubric => could be promoted prematurely. Recommend explicit BLOCK or extend gating. Not triggered this phase (no promote)." },
+    { "sev": "P2", "id": "sat-no-domain", "area": "SAT reading_comprehension active (200)", "desc": "section_id all null; no 4-domain split, so per-domain organisation/sampling impossible. Add domain metadata for SAT R&W." },
+    { "sev": "P2", "id": "spell-multi-solution", "area": "word_form/zh_to_word_spell draft (400)", "desc": "exact-match spell scoring may reject valid alternate forms (learned/learnt) or alternate words for a Chinese gloss => multi-solution under single-answer scoring. Confirm equivalence contract or move offending items to D." },
+    { "sev": "P2", "id": "migrated-source-unverified", "area": "draft passage stimuli (~1000 migrated_v1)", "desc": "originality/copyright not verified; spot-check before promoting passage drafts." },
+    { "sev": "P3", "id": "official_spec_unverified-absent", "area": "qa_flags", "desc": "the spec mentions official_spec_unverified, but it does not exist as a qa_flag key in DB; promote script/RPC still defensively check it. audio_missing/paper_not_ready also are not qa_flags (derived). No action needed; documented for accuracy." }
+  ],
+  "recommendations": {
+    "firstPromoteSmallBatch": "After human spot-check passes, start with the structurally most-certain, already-active-validated objective vocab MCQs: def_to_word / synonym_choice / confusable_choice, ~20 per type, STRATIFIED across letters (not all 'a'), single exam at a time. Keep --apply gated and small.",
+    "humanReview": "cloze_choice/collocation_choice (naturalness/distractors); all passage drafts (migrated_v1 source + semantic answers); word_form/zh_to_word_spell (multi-solution).",
+    "needsMoreContent": "word-universe letters p-z (currently 0); SAT domain metadata; TOEFL audio for listen_to_meaning/dictation_spell/listen_and_repeat.",
+    "mustStayBlocked": "listen_to_meaning, dictation_spell, listen_and_repeat, interview_speaking, build_a_sentence (430 total) until audio/speaking-scoring pipelines exist."
+  },
+  "doNotProceedToPromote": true
+}

@@ -480,6 +480,10 @@ async function tryBuildFromV2(
     const choicesRaw = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
     // 听力材料：text_en/text_zh 即原文(transcript)，练习态不下发（避免答前暴露）；阅读等保留材料文本。
     const isListening = set?.task_type === 'listening_comprehension' || String(it.input_mode) === 'listen'
+    // 拼写型（spell）/ complete_the_words：stimulus 文本是含完整答案词的句子（prompt 已是挖空版自带题面），
+    //   整体不下发 stimulus，杜绝答案文本进入客户端 payload（审计 P1）。dictation_spell 是 input_mode='listen'
+    //   不在此列，其音频走听力分支不受影响。
+    const isSpellAnswerLeak = String(it.input_mode) === 'spell' || set?.task_type === 'complete_the_words'
     // 分组阅读/完形型：passage 重建为题体（body 即题面）→ stimulus 不再重复下发 passage。
     const taskType = set?.task_type ?? 'unknown'
     const exZh = (it.explanation_zh as string) ?? ''
@@ -488,7 +492,7 @@ async function tryBuildFromV2(
     const seven = taskType === 'seven_select' ? reconstructSevenSelect(stim?.text_en, choicesRaw, it.answer, exZh) : null
     const pmatch = taskType === 'para_match' ? reconstructParaMatch(stim?.text_en, choicesRaw, it.answer, exZh) : null
     const grouped = cloze || pcloze || seven || pmatch
-    const stimulusOut = stim && !grouped
+    const stimulusOut = stim && !grouped && !isSpellAnswerLeak
       ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
       : undefined
     // 【学习模式即时反馈，审计 P2-1】下发 answer / explanationZh / review(key)：客户端即时判分并显示解析，

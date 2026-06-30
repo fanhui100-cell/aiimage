@@ -64,7 +64,7 @@ async function main() {
     const items = (itemsData ?? []) as ItemRow[]
     let reason: string | null = null
 
-    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean }
+    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean; speaking_ready?: boolean }
     if (isDeprecatedQuestionType(s.task_type)) reason = 'deprecated_type'
     else if (flags.scoring_not_ready === true) reason = 'scoring_not_ready'
     else if (flags.official_spec_unverified === true) reason = 'official_spec_unverified'
@@ -73,6 +73,9 @@ async function main() {
     else {
       const isListening = s.task_type === 'listening_comprehension' || items.some((i) => i.input_mode === 'listen')
       if (isListening && (!s.stimulus_id || !activeAudioStim.has(s.stimulus_id))) reason = 'listening_without_active_audio'
+      // 口语题（input_mode='speak'，如 listen_and_repeat 需音频源 / interview_speaking 需 ASR+评分管线）：
+      //   仅检查 rubric 不足以保证就绪。默认拒绝，除非显式 qa_flags.speaking_ready=true（管线就绪后人工置位）。
+      else if (items.some((i) => i.input_mode === 'speak') && flags.speaking_ready !== true) reason = 'speaking_pipeline_not_ready'
       for (const it of items) {
         if (reason) break
         if (it.input_mode === 'free_text' || it.input_mode === 'speak') {

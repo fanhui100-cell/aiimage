@@ -92,6 +92,13 @@ async function main() {
   const toeflTask = await buildPracticeSession(db, { mode: 'task', examId: 'toefl', taskType: 'complete_the_words', level: 6, count: 4 })
   check(toeflTask.items.length > 0, `task(toefl complete_the_words) 应有题（实际 ${toeflTask.items.length}，warnings=${toeflTask.warnings.join(',')}）`)
   console.log(`  task(toefl/complete_the_words): source=${toeflTask.source} items=${toeflTask.items.length}`)
+  // 审计 P1：complete_the_words 的 stimulus 文本含完整答案词；session payload 绝不能把答案词下发到客户端。
+  for (const it of toeflTask.items) {
+    const ans = typeof it.answer === 'string' ? it.answer.toLowerCase().trim() : ''
+    const stimText = it.stimulus ? JSON.stringify(it.stimulus).toLowerCase() : ''
+    check(!it.stimulus, `complete_the_words 不应下发 stimulus（item ${it.questionItemId} 仍带 stimulus）`)
+    check(!ans || !stimText.includes(ans), `complete_the_words payload 的 stimulus 含完整答案词「${ans}」= 答案泄露（item ${it.questionItemId}）`)
+  }
 
   console.log(`\npractice-session validation · 错误 ${errors.length}`)
   for (const e of errors) console.error(`ERROR ${e}`)
