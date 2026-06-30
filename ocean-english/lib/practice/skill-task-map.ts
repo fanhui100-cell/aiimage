@@ -15,10 +15,14 @@
    ════════════════════════════════════════════════════════════════════════ */
 import { isExamTaskType, type ExamTaskType } from '@/lib/question-bank/question-type-taxonomy'
 
-export function skillKeyToTaskType(skillKey: string | null | undefined): ExamTaskType | undefined {
+export function skillKeyToTaskType(skillKey: string | null | undefined, examId?: string | null): ExamTaskType | undefined {
   if (!skillKey) return undefined
   const k = skillKey.toLowerCase()
   if (isExamTaskType(k)) return k as ExamTaskType
+  // SAT 是 Digital RW 短文本 MCQ：四大 domain（含 Standard English Conventions 的 boundaries/verb_tense/
+  // form_structure_sense/transitions 等）实际题型全是 reading_comprehension（见 exam-specs SAT sections），
+  // 不是独立 grammar_fill；故 SAT 下任何 subskill 都回 reading_comprehension，避免将来开放后误路由/空池。
+  if ((examId ?? '').toLowerCase() === 'sat') return 'reading_comprehension'
   // 听力专有（同名 inference/detail 等歧义项默认归阅读，故听力放最前按专有词命中）
   if (/listen|conversation|lecture/.test(k)) return 'listening_comprehension'
   if (/seven|topic_sentence|logical_flow|^cohesion$|reference/.test(k)) return 'seven_select'

@@ -108,6 +108,19 @@ function main() {
   ok(skillKeyToTaskType('reading_comprehension') === 'reading_comprehension', '合法 task_type 直通')
   ok(skillKeyToTaskType('writing') === undefined, '产出技能(writing) → undefined（caller 按 examId 抽混合，不空池）')
   ok(skillKeyToTaskType('') === undefined, '空 skillKey → undefined')
+  // SAT 全 RW MCQ：grammar/conventions 类 subskill 在 SAT 下回 reading_comprehension（非 grammar_fill）
+  ok(skillKeyToTaskType('boundaries', 'sat') === 'reading_comprehension', 'SAT boundaries → reading_comprehension')
+  ok(skillKeyToTaskType('verb_tense', 'sat') === 'reading_comprehension', 'SAT verb_tense → reading_comprehension（非 grammar_fill）')
+  ok(skillKeyToTaskType('transitions', 'sat') === 'reading_comprehension', 'SAT transitions → reading_comprehension')
+
+  // 6) productive-only 弱项 → 不生成 exam_task（避免误路由客观题，如 essay_writing → 听力题），由 output 卡覆盖
+  const prodPlan = buildDailyPlan({ dueWords: [], weakWords: [], weakSkills: [{ examId: 'cet4', skillKey: 'essay_writing', mastery: 0.3, confidence: 'low' }], recentMistakes: [], goal: { goals: ['writing'] }, examTarget: 'cet4' })
+  ok(!prodPlan.cards.some((c) => c.type === 'exam_task'), 'productive-only 弱项不应生成 exam_task 卡')
+  ok(prodPlan.cards.some((c) => c.type === 'output'), 'productive 弱项应生成 output 卡')
+  // 混合弱项（含客观 inference）→ exam_task 用客观项，taskType 非空
+  const mixPlan = buildDailyPlan({ dueWords: [], weakWords: [], weakSkills: [{ examId: 'cet4', skillKey: 'essay_writing', mastery: 0.2, confidence: 'low' }, { examId: 'cet4', skillKey: 'inference', mastery: 0.4, confidence: 'low' }], recentMistakes: [], goal: {}, examTarget: 'cet4' })
+  const examCard = mixPlan.cards.find((c) => c.type === 'exam_task')
+  ok(!!examCard && (examCard.payload as { skillKey?: string }).skillKey === 'inference', '混合弱项 exam_task 应选客观项(inference)，跳过 essay_writing')
 
   writeFileSync('reports/learning-loop-validation.json', JSON.stringify({
     generatedAt: new Date().toISOString(),

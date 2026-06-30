@@ -111,7 +111,7 @@ export function ReviewHub() {
           <div style={{ maxWidth: 560, margin: '0 auto', padding: '0 20px' }}>
             <V2WeakSkills d={v2} onPractice={(s) => {
               // skillKey 是诊断维度（subskill），经映射得 task_type；映射不到则不传（session 按 examId 抽混合题）
-              const taskType = skillKeyToTaskType(s.skillKey)
+              const taskType = skillKeyToTaskType(s.skillKey, s.examId)
               const qs = new URLSearchParams({ mode: 'task', examId: s.examId })
               if (taskType) qs.set('taskType', taskType)
               if (s.skillKey) qs.set('skill', s.skillKey)

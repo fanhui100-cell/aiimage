@@ -190,7 +190,7 @@ export function TodayBento() {
         if (examId) {
           // skillKey 是诊断维度（subskill），不是 task_type：经映射得题型；映射不到则不传 taskType
           // （session 按 examId 抽混合题，避免空池）。skillKey 另作 subskill 提示透传。
-          const taskType = skillKeyToTaskType(skillKey)
+          const taskType = skillKeyToTaskType(skillKey, examId)
           const qs = new URLSearchParams({ mode: 'task', examId })
           if (taskType) qs.set('taskType', taskType)
           if (skillKey) qs.set('skill', skillKey)

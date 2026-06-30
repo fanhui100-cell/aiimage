@@ -42,18 +42,17 @@ async function main() {
   // 取一个「确定有 active 题」的目标词做 word 会话：先取 active question_items，再查其
   // question_target_words 的 surface（与 session-builder word mode 的 target-first 同口径）；
   // 兜底退回 question_bank 第一个 active 词。全程 order 保证确定，避免随机抽到无题词致红绿不稳（P2-7）。
-  let sampleWord: string | undefined
-  const { data: actItems } = await db.from('question_items').select('id').eq('status', 'active').order('id').limit(100)
-  const actIds = (actItems ?? []).map((r) => (r as { id: string }).id)
-  if (actIds.length) {
-    const { data: tw } = await db.from('question_target_words').select('surface').in('question_item_id', actIds).not('surface', 'is', null).order('surface').limit(1)
-    sampleWord = (tw?.[0] as { surface: string } | undefined)?.surface
-  }
-  if (!sampleWord) {
-    const { data: sample } = await db.from('question_bank').select('normalized_word').eq('status', 'active').eq('is_reviewed', true).not('normalized_word', 'is', null).order('normalized_word').limit(1)
-    sampleWord = (sample?.[0] as { normalized_word: string } | undefined)?.normalized_word
-  }
-  check(!!sampleWord, '无法取到有题的样本词（v2 target words 与 v1 题库均空）')
+  // word 会话固定取一个真实词（≥4 字母纯字母，order 确定）验证「真实目标词可建 word 会话且有题」，
+  // 不用随机/单字母停用词，红绿稳定（P2-7）。
+  // ⚠ 范围说明：active v2 题库当前没有「真实词 + active set」的 question_target_words（实测 0 行——真实词
+  //   目标题多在 draft 档），故此 word 会话实际验证的是 v1 word fallback 链路（source 通常为 v1）；
+  //   待相应档位 v2 题库 promote 后，同一断言会自然覆盖 v2 word 链路。
+  const { data: sample } = await db.from('question_bank').select('normalized_word')
+    .eq('status', 'active').eq('is_reviewed', true).not('normalized_word', 'is', null)
+    .order('normalized_word').limit(500)
+  const realWords = [...new Set(((sample ?? []) as { normalized_word: string }[]).map((r) => r.normalized_word).filter((w) => /^[a-z]{4,}$/i.test(w)))].sort()
+  const sampleWord = realWords[0]
+  check(!!sampleWord, '无法从 question_bank 取到真实样本词（≥4 字母）')
 
   // 1) word 会话
   if (sampleWord) {

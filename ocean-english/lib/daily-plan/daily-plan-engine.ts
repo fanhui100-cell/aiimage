@@ -5,6 +5,7 @@
    输出卡片：word_review / new_words / exam_task / mistake_fix / output / mock_review。
    每张卡都带 reason（为什么推荐）+ estimatedMinutes。
    ════════════════════════════════════════════════════════════════════════ */
+import { skillKeyToTaskType } from '@/lib/practice/skill-task-map'
 
 export type CardType = 'word_review' | 'new_words' | 'exam_task' | 'mistake_fix' | 'output' | 'mock_review'
 
@@ -71,14 +72,17 @@ export function buildDailyPlan(input: DailyPlanInput): DailyPlan {
     })
   }
 
-  // 3) 考试任务（薄弱板块定向练）
-  if (exam && weakS.length) {
-    const s = weakS[0]
+  // 3) 考试任务（薄弱板块定向练）：仅对「能映射到客观考试题型」的弱项生成 exam_task。
+  //    写作/翻译/口语等产出型弱项（skillKeyToTaskType 返 undefined）不在此生成——否则跳 /quiz 抽到
+  //    混合客观题（如 essay_writing → 听力题），误路由；它们由 5) 产出练习卡覆盖。
+  const objectiveWeak = exam ? weakS.find((s) => skillKeyToTaskType(s.skillKey, exam) != null) : undefined
+  if (exam && objectiveWeak) {
+    const s = objectiveWeak
     cards.push({
       type: 'exam_task', titleZh: '薄弱板块专练', priority: 3,
       reason: `「${exam}」的 ${s.skillKey} 掌握度偏低（${Math.round(s.mastery * 100)}%，置信度 ${s.confidence}），定向练习提分。`,
       estimatedMinutes: 12,
-      payload: { examId: exam, skillKey: s.skillKey, allWeak: weakS.slice(0, 5) },
+      payload: { examId: exam, skillKey: s.skillKey, taskType: skillKeyToTaskType(s.skillKey, exam), allWeak: weakS.slice(0, 5) },
     })
   }
 
