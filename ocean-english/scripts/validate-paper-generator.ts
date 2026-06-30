@@ -5,7 +5,11 @@
    - v2 已应用 → 生成 CET4 mini/section/full + 一个 kaoyan section（池允许时）；
      校验同 seed 同卷、无退役题型、池不足受控告警。
    - scoring 纯函数单测始终运行（不依赖 DB）：客观精确 / 多空·匹配部分给分 / 主观待评分。
-   有错误退出 1，否则 0。用法：npm run validate:papers
+   有错误退出 1，否则 0。
+
+   用法（审计建议拆分，避免「8 张远程整卷全跑完才算通过」）：
+     npm run validate:papers        → 本地契约(scoring+clientPaper) + 远程 smoke(cet4 mini + 听力 section，带超时)
+     npm run validate:papers:full   → 追加全量整卷压测(所有卷 + 确定性 + TOEFL/SAT 门控)，单独跑，不放普通门禁
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -131,30 +135,70 @@ function assertClientListeningSafe(paper: GeneratedPaper, label: string) {
   }
 }
 
-async function dbChecks(db: SupabaseClient) {
-  const applied = await v2Available(db)
-  if (!applied) {
-    notes.push('v2 not_applied：生成路径返回 v2_not_applied（优雅）')
-    for (const m of ['full', 'mini', 'section'] as const) {
-      const { paper, warnings } = await generatePaper(db, { examId: 'cet4', mode: m, sectionId: m === 'section' ? 'careful_reading' : undefined })
-      ok(paper === null && warnings.includes('v2_not_applied'), `not_applied: cet4 ${m} → v2_not_applied 且不崩`)
-    }
-    // 同 seed 同卷（not_applied 下双 null → 恒等）
-    const a = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
-    const b = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
-    ok(JSON.stringify(a) === JSON.stringify(b), 'not_applied: 同 seed 同结果')
-    // 未知考试受控
-    const u = await generatePaper(db, { examId: 'ielts', mode: 'full' })
-    ok(u.paper === null && u.warnings.includes('unknown_exam'), 'unknown_exam 受控')
-    return { applied: false }
+// 明确超时：远程 smoke 不应无限等待外部状态（审计建议「带明确超时」）。
+function withTimeout<T>(p: Promise<T>, ms: number, label: string): Promise<T> {
+  return Promise.race([
+    p,
+    new Promise<T>((_, rej) => { const t = setTimeout(() => rej(new Error(`${label} 超时 ${(ms / 1000).toFixed(0)}s`)), ms); (t as { unref?: () => void }).unref?.() }),
+  ])
+}
+
+// v2 未应用：生成路径优雅返回 v2_not_applied（smoke 与 full 共用）。
+async function v2NotAppliedChecks(db: SupabaseClient) {
+  notes.push('v2 not_applied：生成路径返回 v2_not_applied（优雅）')
+  for (const m of ['full', 'mini', 'section'] as const) {
+    const { paper, warnings } = await generatePaper(db, { examId: 'cet4', mode: m, sectionId: m === 'section' ? 'careful_reading' : undefined })
+    ok(paper === null && warnings.includes('v2_not_applied'), `not_applied: cet4 ${m} → v2_not_applied 且不崩`)
   }
+  // 同 seed 同卷（not_applied 下双 null → 恒等）
+  const a = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
+  const b = await generatePaper(db, { examId: 'cet4', mode: 'full', seed: 'fixed' })
+  ok(JSON.stringify(a) === JSON.stringify(b), 'not_applied: 同 seed 同结果')
+  // 未知考试受控
+  const u = await generatePaper(db, { examId: 'ielts', mode: 'full' })
+  ok(u.paper === null && u.warnings.includes('unknown_exam'), 'unknown_exam 受控')
+}
+
+// 远程 smoke（默认门禁）：只跑 1 张 mini + 1 个听力 section，带明确超时；
+// 验证「修候选签名后听力不再 0 题」且单次生成在可接受时间内。整卷压测见 dbFull（--full）。
+async function dbSmoke(db: SupabaseClient) {
+  const applied = await v2Available(db)
+  if (!applied) { await v2NotAppliedChecks(db); return { applied: false } }
+  notes.push('v2 applied · smoke：cet4 mini + 听力 section（带 60s 超时）')
+  const timed = async <T>(label: string, p: Promise<T>): Promise<T> => {
+    const t0 = Date.now(); const r = await withTimeout(p, 60_000, label); notes.push(`⏱ ${label}: ${((Date.now() - t0) / 1000).toFixed(1)}s`); return r
+  }
+  const mini = await timed('cet4 mini', generatePaper(db, { examId: 'cet4', mode: 'mini', seed: 'smoke-mini' }))
+  if (mini.paper) { assertNoDeprecated(mini.paper, 'cet4 mini'); assertClientListeningSafe(mini.paper, 'cet4 mini') }
+  else notes.push(`cet4 mini: paper=null warnings=${mini.warnings.join(',')}`)
+  const lisSec = await timed('cet4 listening section', generatePaper(db, { examId: 'cet4', mode: 'section', sectionId: 'listening', seed: 'smoke-listening' }))
+  if (lisSec.paper) {
+    assertNoDeprecated(lisSec.paper, 'cet4 listening section'); assertClientListeningSafe(lisSec.paper, 'cet4 listening section')
+    const lis = lisSec.paper.sections.find((s) => s.taskType === 'listening_comprehension')
+    ok(!!lis && (lis.items?.length ?? 0) > 0, `cet4 听力 section 应抽到题（实际 ${lis?.items?.length ?? 0}；修候选签名后不应再 0 题）`)
+  } else notes.push(`cet4 listening section: paper=null warnings=${lisSec.warnings.join(',')}`)
+  return { applied: true }
+}
+
+// 全量整卷压测（--full）：所有卷 + 确定性 + 退役 + 池不足 + TOEFL/SAT 门控。不放普通门禁。
+async function dbFull(db: SupabaseClient) {
+  const applied = await v2Available(db)
+  if (!applied) { await v2NotAppliedChecks(db); return { applied: false } }
 
   notes.push('v2 applied：执行真实生成 + 确定性/退役/池不足校验')
-  // CET4 mini/section/full
+  // 阶段计时：每次 generatePaper 输出耗时，避免以后只看到「总超时」无法定位（审计建议）。
+  const timed = async <T>(label: string, p: Promise<T>): Promise<T> => {
+    const t0 = Date.now(); const r = await p; notes.push(`⏱ ${label}: ${((Date.now() - t0) / 1000).toFixed(1)}s`); return r
+  }
+  // CET4 mini/section/full（含听力 section 抽题校验：曾因对全部候选 stimulus 现签遇限流/失败，误判听力 0 题）
   for (const m of ['mini', 'full'] as const) {
-    const { paper, warnings } = await generatePaper(db, { examId: 'cet4', mode: m, seed: `cet4-${m}` })
-    if (paper) { assertNoDeprecated(paper, `cet4 ${m}`); assertClientListeningSafe(paper, `cet4 ${m}`); if (warnings.includes('insufficient_pool')) notes.push(`cet4 ${m}: insufficient_pool（受控）`) }
-    else notes.push(`cet4 ${m}: paper=null warnings=${warnings.join(',')}`)
+    const { paper, warnings } = await timed(`cet4 ${m}`, generatePaper(db, { examId: 'cet4', mode: m, seed: `cet4-${m}` }))
+    if (paper) {
+      assertNoDeprecated(paper, `cet4 ${m}`); assertClientListeningSafe(paper, `cet4 ${m}`)
+      const lis = paper.sections.find((s) => s.taskType === 'listening_comprehension')
+      if (lis) ok((lis.items?.length ?? 0) > 0, `cet4 ${m} 听力 section 应抽到题（实际 ${lis.items?.length ?? 0}；修候选签名后不应再 0 题）`)
+      if (warnings.includes('insufficient_pool')) notes.push(`cet4 ${m}: insufficient_pool（受控）`)
+    } else notes.push(`cet4 ${m}: paper=null warnings=${warnings.join(',')}`)
   }
   const sec = await generatePaper(db, { examId: 'cet4', mode: 'section', sectionId: 'careful_reading', seed: 'cet4-sec' })
   if (sec.paper) assertNoDeprecated(sec.paper, 'cet4 section')
@@ -197,8 +241,9 @@ async function main() {
     notes.push('缺 Supabase 凭据：跳过 DB 生成校验，仅跑 scoring 单测')
   } else {
     const db = createClient(SUPABASE_URL, SERVICE_ROLE)
+    const full = process.argv.includes('--full')
     try {
-      const r = await dbChecks(db)
+      const r = await (full ? dbFull(db) : dbSmoke(db))
       applied = r.applied
     } catch (e) {
       errors.push(`db checks fatal: ${(e as Error).message}`)

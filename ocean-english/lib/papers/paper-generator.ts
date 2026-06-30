@@ -117,6 +117,18 @@ async function fetchActiveAudioUrls(db: SupabaseClient, stimulusIds: string[]): 
   }
   return out
 }
+/** 听力可用门：仅查哪些 stimulus 有 active 音频（不现签）。签名留到抽中最终 set 后小批做——
+ *  避免对最多 400 个候选 stimulus 全部现签（远程往返昂贵；且候选签名失败/限流会误把听力判成 0 题）。 */
+async function fetchActiveAudioStimulusIds(db: SupabaseClient, stimulusIds: string[]): Promise<Set<string>> {
+  const out = new Set<string>()
+  for (let i = 0; i < stimulusIds.length; i += 200) {
+    const chunk = stimulusIds.slice(i, i + 200)
+    if (!chunk.length) break
+    const { data } = await db.from('audio_assets').select('stimulus_id').in('stimulus_id', chunk).eq('qa_status', 'active')
+    for (const a of (data ?? []) as { stimulus_id: string | null }[]) if (a.stimulus_id) out.add(a.stimulus_id)
+  }
+  return out
+}
 async function fetchStimuli(db: SupabaseClient, ids: string[]): Promise<Map<string, StimRow>> {
   const map = new Map<string, StimRow>()
   for (let i = 0; i < ids.length; i += 200) {
@@ -199,7 +211,8 @@ async function drawTask(
   const grouped = GROUPED_MULTI_ITEM.has(taskType)
   const wholeTask = SINGLE_WHOLE_TASK.has(taskType)
   const needAudio = taskType === 'listening_comprehension'
-  const audioUrls = needAudio ? await fetchActiveAudioUrls(db, sets.map((s) => s.stimulus_id).filter((x): x is string => !!x)) : null
+  // 听力可用门：先只查哪些候选有 active 音频（不现签）；现签留到抽中最终 set 后小批做（见循环后）。
+  const audioAvail = needAudio ? await fetchActiveAudioStimulusIds(db, sets.map((s) => s.stimulus_id).filter((x): x is string => !!x)) : null
 
   const ordered = seededShuffle(sets, rnd)
   const stimById = await fetchStimuli(db, [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))])
@@ -210,8 +223,8 @@ async function drawTask(
 
   for (const s of ordered) {
     if (reached()) break
-    if (s.stimulus_id && usedStimuli.has(s.stimulus_id)) continue                 // 同卷不重复 stimulus
-    if (needAudio && (!s.stimulus_id || !audioUrls!.has(s.stimulus_id))) continue // 听力无 active 音频 → 跳过，绝不顶替
+    if (s.stimulus_id && usedStimuli.has(s.stimulus_id)) continue                  // 同卷不重复 stimulus
+    if (needAudio && (!s.stimulus_id || !audioAvail!.has(s.stimulus_id))) continue // 听力无 active 音频 → 跳过，绝不顶替（用可用门，不现签）
 
     const items = await fetchActiveItems(db, s.id)
     if (!items.length) continue
@@ -225,11 +238,11 @@ async function drawTask(
 
     if (s.stimulus_id) usedStimuli.add(s.stimulus_id)
     const stim = s.stimulus_id ? stimById.get(s.stimulus_id) : undefined
-    const audioUrl = needAudio && s.stimulus_id ? audioUrls!.get(s.stimulus_id) : undefined
     // 听力：只带 audioUrl（原文=transcript 不前泄）；阅读等：带 textEn 材料（考试必读内容，非 transcript）。
+    // 听力 audioUrl 抽中后再小批现签回填（见循环后），避免对全部 400 候选现签。
     const stimulus = stim
       ? (needAudio
-          ? { kind: stim.kind, title: stim.title ?? undefined, audioUrl }
+          ? { kind: stim.kind, title: stim.title ?? undefined }
           : { kind: stim.kind, title: stim.title ?? undefined, textEn: stim.text_en ?? undefined })
       : undefined
     outSets.push({ setId: s.id, taskType, stimulusId: s.stimulus_id ?? undefined, stimulus })
@@ -238,6 +251,17 @@ async function drawTask(
       for (const w of wids) usedWord.set(w, (usedWord.get(w) ?? 0) + 1)
       outItems.push(decorateRender(mapItem(it, wids), stim?.text_en ?? undefined))
       if (grouped && outItems.length >= target) break
+    }
+  }
+
+  // 听力：只对最终抽中的 set 现签 audioUrl（通常 target ~几题，而非 400 候选），回填到 stimulus.audioUrl。
+  if (needAudio) {
+    const finalStimIds = [...new Set(outSets.map((s) => s.stimulusId).filter((x): x is string => !!x))]
+    if (finalStimIds.length) {
+      const signed = await fetchActiveAudioUrls(db, finalStimIds)
+      for (const os of outSets) {
+        if (os.stimulusId && os.stimulus) os.stimulus.audioUrl = signed.get(os.stimulusId)
+      }
     }
   }
 

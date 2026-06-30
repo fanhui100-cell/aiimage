@@ -1,10 +1,12 @@
 {
-  "generatedAt": "2026-06-25T11:40:29.793Z",
+  "generatedAt": "2026-06-30T16:12:00.095Z",
   "status": "applied",
   "errors": [],
   "notes": [
     "v2 applied：执行真实生成 + 确定性/退役/池不足校验",
-    "确定性：原始卷仅签名 token 不同，归一化后一致（set/item 选择确定）"
+    "⏱ cet4 mini: 18.1s",
+    "⏱ cet4 full: 56.5s",
+    "确定性：原始卷即逐字节相等（本卷无时变签名 URL）"
   ],
   "ok": true
 }

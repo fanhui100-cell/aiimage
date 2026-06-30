@@ -459,9 +459,13 @@ async function tryBuildFromV2(
     for (const s of (stims ?? []) as { id: string; kind: string; title: string | null; text_en: string | null; text_zh: string | null }[]) stimById.set(s.id, s)
     const { data: auds } = await db.from('audio_assets').select('stimulus_id, url, storage_path').in('stimulus_id', stimulusIds).eq('qa_status', 'active')
     const audRows = (auds ?? []) as { stimulus_id: string; url: string; storage_path: string | null }[]
+    // 一个 stimulus 可能有多条 active 音频行：先按 stimulus_id 去重（每 stimulus 取一条）再签，避免对同一 stimulus 重复现签。
+    const byStim = new Map<string, { stimulus_id: string; url: string; storage_path: string | null }>()
+    for (const a of audRows) if (a.stimulus_id && !byStim.has(a.stimulus_id)) byStim.set(a.stimulus_id, a)
+    const uniqAud = [...byStim.values()]
     // 私有桶 → 短时签名 https；并行现签（避免逐个 await 串行拖慢，与 paper-generator 一致）
-    const audSigned = await Promise.all(audRows.map((a) => signAudioPath(a.storage_path ?? a.url)))
-    audRows.forEach((a, k) => {
+    const audSigned = await Promise.all(uniqAud.map((a) => signAudioPath(a.storage_path ?? a.url)))
+    uniqAud.forEach((a, k) => {
       if (audSigned[k]) audioByStim.set(a.stimulus_id, { url: audSigned[k]! })
       else if (/^(https?:)?\/\//.test(a.url) || a.url?.startsWith('/')) audioByStim.set(a.stimulus_id, { url: a.url }) // 历史公开 URL 兜底
     })

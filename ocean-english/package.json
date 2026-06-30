@@ -21,6 +21,7 @@
     "review:audio-assets": "npx tsx scripts/review-audio-assets.ts",
     "validate:audio-pipeline": "npx tsx scripts/validate-audio-pipeline.ts",
     "validate:papers": "npx tsx scripts/validate-paper-generator.ts",
+    "validate:papers:full": "npx tsx scripts/validate-paper-generator.ts --full",
     "generate:qsets-v2": "npx tsx scripts/generate-question-sets-v2.ts",
     "qa:qsets-v2": "npx tsx scripts/qa-question-sets-v2.ts",
     "import:authored-qsets-v2": "npx tsx scripts/import-authored-question-sets-v2.ts",
