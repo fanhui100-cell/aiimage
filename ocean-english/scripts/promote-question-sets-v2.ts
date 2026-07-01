@@ -39,6 +39,11 @@ const WORDS = argValue('--words')            // 逗号分隔目标词；配合 -
 const STAGE_ARG = argValue('--stage')
 
 const GROUPED = new Set(['reading_comprehension', 'listening_comprehension', 'banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match'])
+// word-universe 三型来源硬门控：只允许 Claude 原创(gen:)上线，杜绝 qb:(DeepSeek 期) 误 promote。仅对这三型生效。
+const WORD_UNIVERSE = new Set(['def_to_word', 'synonym_choice', 'confusable_choice'])
+function isGenOriginal(legacyId: string | null, flags: { source?: string; authored?: string; provider?: string }): boolean {
+  return !!legacyId && legacyId.startsWith('gen:') && flags.source === 'original_authored' && flags.authored === 'claude' && flags.provider === 'claude-authored'
+}
 const examToLevel = new Map<string, number>(EXAM_SPECS.map((s) => [s.id, s.level]))
 
 interface SetRow { id: string; legacy_id: string | null; task_type: string; level: number | null; status: string; stimulus_id: string | null; qa_flags: Record<string, unknown> | null }
@@ -93,8 +98,9 @@ async function main() {
     const items = (itemsData ?? []) as ItemRow[]
     let reason: string | null = null
 
-    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean; speaking_ready?: boolean }
+    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean; speaking_ready?: boolean; source?: string; authored?: string; provider?: string }
     if (isDeprecatedQuestionType(s.task_type)) reason = 'deprecated_type'
+    else if (WORD_UNIVERSE.has(s.task_type) && !isGenOriginal(s.legacy_id, flags)) reason = 'word_universe_non_gen_source'
     else if (flags.scoring_not_ready === true) reason = 'scoring_not_ready'
     else if (flags.official_spec_unverified === true) reason = 'official_spec_unverified'
     else if (!items.length) reason = 'no_items'

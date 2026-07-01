@@ -13,6 +13,8 @@
     "validate:exam-specs": "npx tsx scripts/validate-exam-specs.ts",
     "validate:qbank-v2": "npx tsx scripts/validate-question-bank-v2.ts",
     "validate:practice-session": "npx tsx scripts/validate-practice-session.ts",
+    "validate:wu-promote-guards": "npx tsx scripts/validate-word-universe-promote-guards.ts",
+    "audit:wu-source": "npx tsx scripts/audit-word-universe-source-distribution.ts --status=active --fail-on-qb-active",
     "migrate:qbank-v2": "npx tsx scripts/migrate-question-bank-v1-to-v2.ts",
     "seed:qbank-v2-metadata": "npx tsx scripts/seed-question-bank-v2-metadata.ts",
     "qa:qbank-v2-migration": "npx tsx scripts/qa-question-bank-v2-migration.ts",

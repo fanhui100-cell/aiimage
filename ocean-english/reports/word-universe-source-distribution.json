@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-07-01T10:35:34.280Z",
+  "status": "active",
+  "total": 171,
+  "bySource": {
+    "gen": 171,
+    "qb": 0,
+    "migrated_v1": 0,
+    "other": 0
+  },
+  "byTaskType": {
+    "confusable_choice": {
+      "gen": 57,
+      "qb": 0,
+      "migrated_v1": 0,
+      "other": 0
+    },
+    "def_to_word": {
+      "gen": 57,
+      "qb": 0,
+      "migrated_v1": 0,
+      "other": 0
+    },
+    "synonym_choice": {
+      "gen": 57,
+      "qb": 0,
+      "migrated_v1": 0,
+      "other": 0
+    }
+  },
+  "byExam": {
+    "toefl": 171
+  },
+  "byLevel": {
+    "6": 171
+  },
+  "byLetter": {
+    "w": 6,
+    "p": 7,
+    "d": 7,
+    "i": 4,
+    "e": 6,
+    "n": 3,
+    "c": 7,
+    "f": 5,
+    "g": 3,
+    "l": 4,
+    "z": 5,
+    "h": 4,
+    "m": 3,
+    "o": 3,
+    "t": 6,
+    "r": 6,
+    "q": 5,
+    "u": 5,
+    "x": 3,
+    "v": 5,
+    "y": 6,
+    "s": 6,
+    "k": 19,
+    "b": 20,
+    "a": 21,
+    "j": 2
+  },
+  "activeBadProvenance": [],
+  "qbActiveSamples": []
+}
