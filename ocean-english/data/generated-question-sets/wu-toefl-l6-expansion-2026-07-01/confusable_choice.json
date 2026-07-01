@@ -1,9 +1,9 @@
 {
   "stage": "wu-toefl-l6-expansion-2026-07-01",
   "items": [
-    { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "eminent", "prompt": "杰出的，著名的", "choices": ["eminent", "imminent", "prominent", "permanent"], "answer": "eminent", "explainZh": "eminent 杰出的；imminent 即将来临的、prominent 突出的、permanent 永久的。" },
+    { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "eminent", "prompt": "杰出的，著名的", "choices": ["eminent", "imminent", "immanent", "permanent"], "answer": "eminent", "explainZh": "eminent 杰出著名的；imminent 即将来临的、immanent 内在固有的、permanent 永久的（均不表示『著名/杰出』，避免双答案）。" },
     { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "elicit", "prompt": "引出，探出（信息、反应）（动词）", "choices": ["elicit", "illicit", "explicit", "solicit"], "answer": "elicit", "explainZh": "elicit 引出；illicit 非法的、explicit 明确的、solicit 恳求。" },
-    { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "envelop", "prompt": "包围，笼罩（动词）", "choices": ["envelop", "envelope", "develop", "enclose"], "answer": "envelop", "explainZh": "envelop 包围（动词）；envelope 信封（名词）、develop 发展、enclose 围住/附上。" },
+    { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "envelop", "prompt": "包围，笼罩（动词）", "choices": ["envelop", "envelope", "develop", "envision"], "answer": "envelop", "explainZh": "envelop 包围/笼罩（动词）；envelope 信封（名词）、develop 发展、envision 设想（均不表示『包围』，避免双答案）。" },
     { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "cite", "prompt": "引用，引证；举例（动词）", "choices": ["cite", "site", "sight", "sit"], "answer": "cite", "explainZh": "cite 引用（与 site/sight 同音）；site 地点、sight 视力/景象、sit 坐。" },
     { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "compliment", "prompt": "赞美，恭维（名词/动词）", "choices": ["compliment", "complement", "competent", "complacent"], "answer": "compliment", "explainZh": "compliment 赞美；complement 补足物、competent 能干的、complacent 自满的。" },
     { "taskType": "confusable_choice", "examId": "toefl", "level": 6, "word": "canvas", "prompt": "帆布，画布（名词）", "choices": ["canvas", "canvass", "campus", "caucus"], "answer": "canvas", "explainZh": "canvas 帆布；canvass 游说/拉票、campus 校园、caucus 党团会议。" },
