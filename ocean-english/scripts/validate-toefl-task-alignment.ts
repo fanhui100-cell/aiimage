@@ -5,10 +5,10 @@
 
   It checks that exam-specs, authored templates, current pilot DB rows, and
   readiness blockers agree with the product contract:
-  - TOEFL专项可练, but full/mini mock exams remain paper_not_ready.
-  - Listening pilot rows are draft-only until reviewed audio exists.
-  - Reading specs are confirmed from the ETS 2026 specification document, but
-    TOEFL full/mini papers remain closed until enough reviewed active content exists.
+  - TOEFL专项可练, but full/mini mock exams remain paper_not_ready (paperReady=false).
+  - Listening 专项 (choose_a_response / listening_comprehension) pilot rows are active with reviewed audio.
+  - Reading 专项 (read_daily_life / reading_comprehension) promoted active 2026-07-04 (F2, owner-approved);
+    2 pilot academic REVIEW sets (weak-inference Q4) are held draft; full/mini papers stay closed.
   - Build/speaking tasks remain blocked by explicit reasons.
 */
 
@@ -32,8 +32,8 @@ type ExpectedTask = {
 
 const EXPECTED: ExpectedTask[] = [
   { sectionId: 'reading', taskType: 'complete_the_words', templateId: 'toefl-complete-the-words', shape: 'complete_words', itemCount: 1, optionCount: 0, readiness: 'active_ok' },
-  { sectionId: 'reading', taskType: 'read_daily_life', templateId: 'toefl-read-daily-life', shape: 'reading_multi', itemCount: 3, optionCount: 4, readiness: 'draft_ready' },
-  { sectionId: 'reading', taskType: 'reading_comprehension', templateId: 'toefl-academic-reading', shape: 'reading_multi', itemCount: 4, optionCount: 4, readiness: 'draft_ready' },
+  { sectionId: 'reading', taskType: 'read_daily_life', templateId: 'toefl-read-daily-life', shape: 'reading_multi', itemCount: 3, optionCount: 4, readiness: 'active_ok' },
+  { sectionId: 'reading', taskType: 'reading_comprehension', templateId: 'toefl-academic-reading', shape: 'reading_multi', itemCount: 4, optionCount: 4, readiness: 'active_ok' },
   { sectionId: 'listening', taskType: 'choose_a_response', templateId: 'toefl-choose-a-response', shape: 'listening_multi', itemCount: 1, optionCount: 4, readiness: 'audio_missing' },
   { sectionId: 'listening', taskType: 'listening_comprehension', templateId: 'toefl-listening-mcq', shape: 'listening_multi', itemCount: 3, optionCount: 4, readiness: 'audio_missing' },
   { sectionId: 'writing', taskType: 'build_a_sentence', templateId: 'toefl-build-a-sentence', shape: 'build_sentence', itemCount: 1, optionCount: 0, readiness: 'scoring_not_ready' },
@@ -174,11 +174,22 @@ async function validateDb() {
   const academicSets = readingSets.filter((set) => set.task_type === 'reading_comprehension')
   const readingItems = readingSets.flatMap((set) => asArray(set.question_items).map((item) => ({ ...(item as any), set })))
 
+  // TOEFL Reading 专项 promoted 2026-07-04 (F2, owner-approved): the 20 pilot sets are now mostly active.
+  // read_daily_life pilot: all 10 active. reading_comprehension pilot: 8 active + 2 held-back REVIEW draft
+  // (weak-inference Q4 on the plankton/desert academic sets, excluded from the promote manifest). Full/mini
+  // mock stays closed (paperReady=false). Item status must match its set status.
+  const READING_ACADEMIC_REVIEW_DRAFT = 2 // known pilot REVIEW sets deliberately kept draft
   ok(dailyLifeSets.length === 10, `DB ${READING_STAGE}: read_daily_life sets=${dailyLifeSets.length}, expected 10`)
   ok(academicSets.length === 10, `DB ${READING_STAGE}: reading_comprehension sets=${academicSets.length}, expected 10`)
   ok(readingItems.length === 64, `DB ${READING_STAGE}: items=${readingItems.length}, expected 64`)
+  const dailyActive = dailyLifeSets.filter((s) => s.status === 'active').length
+  const academicActive = academicSets.filter((s) => s.status === 'active').length
+  const academicDraft = academicSets.filter((s) => s.status === 'draft').length
+  ok(dailyActive === 10, `DB ${READING_STAGE}: read_daily_life active=${dailyActive}, expected 10 (promoted)`)
+  ok(academicActive === 10 - READING_ACADEMIC_REVIEW_DRAFT, `DB ${READING_STAGE}: reading_comprehension active=${academicActive}, expected ${10 - READING_ACADEMIC_REVIEW_DRAFT}`)
+  ok(academicDraft === READING_ACADEMIC_REVIEW_DRAFT, `DB ${READING_STAGE}: reading_comprehension draft(held REVIEW)=${academicDraft}, expected ${READING_ACADEMIC_REVIEW_DRAFT}`)
   for (const set of readingSets) {
-    ok(set.status === 'draft', `DB ${READING_STAGE}: set ${set.legacy_id ?? set.id} status=${set.status}, expected draft`)
+    ok(set.status === 'active' || set.status === 'draft', `DB ${READING_STAGE}: set ${set.legacy_id ?? set.id} status=${set.status}, expected active or draft`)
     const setItems = asArray(set.question_items)
     const expectedMin = set.task_type === 'read_daily_life' ? 2 : 4
     const expectedMax = set.task_type === 'read_daily_life' ? 3 : 4
@@ -187,7 +198,7 @@ async function validateDb() {
   for (const row of readingItems) {
     const choices = asArray(row.choices)
     const answer = String(row.answer ?? '').trim()
-    ok(row.status === 'draft', `DB ${READING_STAGE}: item ${row.id} status=${row.status}, expected draft`)
+    ok(row.status === row.set.status, `DB ${READING_STAGE}: item ${row.id} status=${row.status}, expected to match set status ${row.set.status}`)
     ok(row.input_mode === 'choice', `DB ${READING_STAGE}: item ${row.id} input_mode=${row.input_mode}, expected choice`)
     ok(choices.length === 4, `DB ${READING_STAGE}: item ${row.id} choices=${choices.length}, expected 4`)
     ok(choiceKeys(choices).includes(answer), `DB ${READING_STAGE}: item ${row.id} answer does not hit choice ids/text`)
@@ -264,7 +275,9 @@ async function main() {
 
   const blockerSummary = {
     paperReady: false,
-    specConfirmedDraftOnly: ['read_daily_life', 'reading_comprehension'],
+    // Reading 专项 promoted active 2026-07-04 (owner-approved); 2 pilot academic REVIEW sets held draft.
+    reviewedActive: ['read_daily_life', 'reading_comprehension', 'complete_the_words', 'email_writing', 'academic_discussion'],
+    readingAcademicReviewHeldDraft: 2,
     audioReviewedAndActive: ['choose_a_response', 'listening_comprehension'],
     scoringNotReady: ['build_a_sentence'],
     speakingPipelineNotReady: ['listen_and_repeat', 'interview_speaking'],

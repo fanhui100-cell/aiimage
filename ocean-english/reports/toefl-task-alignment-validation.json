@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T07:08:58.768Z",
+  "generatedAt": "2026-07-03T17:05:45.005Z",
   "ok": true,
   "errors": [],
   "warnings": [],
@@ -20,7 +20,7 @@
       "shape": "reading_multi",
       "itemCount": 3,
       "optionCount": 4,
-      "readiness": "draft_ready"
+      "readiness": "active_ok"
     },
     {
       "sectionId": "reading",
@@ -29,7 +29,7 @@
       "shape": "reading_multi",
       "itemCount": 4,
       "optionCount": 4,
-      "readiness": "draft_ready"
+      "readiness": "active_ok"
     },
     {
       "sectionId": "listening",
@@ -157,10 +157,14 @@
   },
   "blockerSummary": {
     "paperReady": false,
-    "specConfirmedDraftOnly": [
+    "reviewedActive": [
       "read_daily_life",
-      "reading_comprehension"
+      "reading_comprehension",
+      "complete_the_words",
+      "email_writing",
+      "academic_discussion"
     ],
+    "readingAcademicReviewHeldDraft": 2,
     "audioReviewedAndActive": [
       "choose_a_response",
       "listening_comprehension"

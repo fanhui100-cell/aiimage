@@ -35,6 +35,7 @@ const TASK = argValue('--task')
 const LIMIT = Number(argValue('--limit') || '20')
 const GEN = process.argv.includes('--gen')   // 仅晋级 Claude 原创（legacy_id gen:%），排除 qb:%（DeepSeek 期）混居 draft
 const IDS = argValue('--ids')                // 显式 set uuid 列表（逗号分隔）；用于人工审过的精确小批，避免按 task_type 宽泛一把抓
+const MANIFEST = argValue('--manifest')      // 精确清单文件（JSON，含 setIds:string[]）：与 --ids 等价但可审、避免超长命令行
 const WORDS = argValue('--words')            // 逗号分隔目标词；配合 --stage(+--task) 程序化解析 set id（人传词、脚本转 id，杜绝手抄 UUID 误读）
 const STAGE_ARG = argValue('--stage')
 
@@ -68,6 +69,13 @@ async function main() {
   let level = LEVEL ? Number(LEVEL) : (EXAM ? examToLevel.get(EXAM) ?? null : null)
 
   let idList = IDS ? IDS.split(',').map((s) => s.trim()).filter(Boolean) : null
+  if (!idList && MANIFEST) {
+    // 精确清单：读 JSON 的 setIds[]（人工审过的确切小批），等价于 --ids 但可审、避免超长命令行。
+    const m = JSON.parse(readFileSync(MANIFEST, 'utf8')) as { setIds?: unknown }
+    if (!Array.isArray(m.setIds) || !m.setIds.length) { console.error(`promote: --manifest ${MANIFEST} 缺少非空 setIds[]`); process.exit(1) }
+    idList = (m.setIds as unknown[]).map((s) => String(s).trim()).filter(Boolean)
+    console.log(`  [manifest] ${MANIFEST} → ${idList.length} set id`)
+  }
   if (!idList && WORDS && STAGE_ARG) {
     const wordList = WORDS.split(',').map((w) => w.trim()).filter(Boolean)
     idList = await resolveSetIds(STAGE_ARG, TASK, wordList)
