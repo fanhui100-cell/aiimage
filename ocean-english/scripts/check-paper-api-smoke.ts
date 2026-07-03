@@ -52,16 +52,20 @@ async function main() {
     for (const mode of ['mini', 'full'] as const) {
       const { paper, warnings } = await generatePaper(db, { examId: spec.id, mode, seed: `${spec.id}-${mode}` })
       const insufficient = warnings.includes('insufficient_pool')
+      // 受控拒绝（非错误兜底）：池不足 / 整卷未就绪(TOEFL paperReady=false) / 考试 coming_soon(IELTS) /
+      // 未激活 / 未知考试 / v2 未应用。这些都是 generatePaper 明确、可解释的拒绝，不是静默兜底。
+      const CONTROLLED_REFUSAL = ['insufficient_pool', 'paper_not_ready', 'exam_coming_soon', 'exam_not_active', 'unknown_exam', 'v2_not_applied']
+      const refused = warnings.some((w) => CONTROLLED_REFUSAL.includes(w))
       if (paper) checkPaper(`${spec.id} ${mode}`, paper)
-      // 验收：要么出卷，要么受控 insufficient_pool（二者必居其一，不能既无卷又无受控告警）
-      if (!paper && !insufficient) errors.push(`${spec.id} ${mode}: 既未出卷也无 insufficient_pool（疑似错误兜底）`)
-      rows.push({ exam: spec.id, mode, generated: !!paper, sections: paper?.sections.length ?? 0, insufficientPool: insufficient, warnings })
+      // 验收：要么出卷，要么受控拒绝（二者必居其一，不能既无卷又无任何受控告警）
+      if (!paper && !refused) errors.push(`${spec.id} ${mode}: 既未出卷也无受控拒绝告警（疑似错误兜底）`)
+      rows.push({ exam: spec.id, mode, generated: !!paper, sections: paper?.sections.length ?? 0, insufficientPool: insufficient, refusal: !paper ? warnings.filter((w) => CONTROLLED_REFUSAL.includes(w)) : [], warnings })
     }
   }
 
   writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), applied, rows, errors, ok: errors.length === 0 }, null, 2) + '\n', 'utf8')
   console.log(`smoke:papers · exams ${EXAM_SPECS.length} × {mini,full} · 错误 ${errors.length}`)
-  for (const r of rows) console.log(`  ${r.exam} ${r.mode}: ${r.insufficientPool ? `insufficient_pool (controlled, ${r.sections} section scaffolds, active pool empty)` : (r.generated ? `generated ${r.sections} sections from active pool` : 'NO PAPER / NO WARN')}`)
+  for (const r of rows) console.log(`  ${r.exam} ${r.mode}: ${r.generated ? `generated ${r.sections} sections from active pool` : `no paper — refusal: ${((r.refusal as string[]) ?? []).join(',') || 'NONE (suspected error fallback)'}`}`)
   for (const e of errors) console.error(`ERROR ${e}`)
   process.exitCode = errors.length ? 1 : 0
 }

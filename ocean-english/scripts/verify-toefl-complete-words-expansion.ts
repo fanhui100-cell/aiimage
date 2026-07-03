@@ -290,21 +290,29 @@ async function runDbChecks(sc: SourceCheck) {
     const plevel = paf.level ?? 6
     for (const r of paf.sets) pilotLegacy.add(setLegacyId(paf.template, plevel, r))
   }
+  // F2B (2026-07-03) added a THIRD complete_the_words batch (+30) via stage toefl-text-topup-2026-07-03,
+  // owned by verify-toefl-text-topup.ts. Those sets are legitimate; allow them in the reverse check and
+  // count them toward the pool total (pilot 10 + window-A 60 + F2B 30 = 100).
+  const F2B_STAGE = 'toefl-text-topup-2026-07-03'
+  const isF2B = (s: SetRow) => (s.qa_flags as { stage?: string } | null)?.stage === F2B_STAGE
   const newLegacy = new Set(sc.expected.map((e) => e.legacyId))
   const cwSets = sets.filter((s) => s.task_type === 'complete_the_words')
   const cwDraft = cwSets.filter((s) => s.status === 'draft').length
   const cwActive = cwSets.filter((s) => s.status === 'active').length
+  const f2bCw = cwSets.filter(isF2B).length
   for (const s of cwSets) {
+    if (isF2B(s)) continue // owned + verified by verify-toefl-text-topup.ts
     if (s.legacy_id && !newLegacy.has(s.legacy_id) && !pilotLegacy.has(s.legacy_id)) fail(`reverse: unexpected complete_the_words set ${s.legacy_id}`)
   }
   const newPresent = [...newLegacy].filter((l) => byLegacy.has(l)).length
   if (newPresent !== EXPECTED_TOTAL) fail(`reverse: ${newPresent}/${EXPECTED_TOTAL} new sets present in DB`)
-  // Post-R10（授权晋级全部 READY_DRAFT）：complete_the_words 已全晋 active（draft→0）。以 draft+active 总量锁规模。
-  if (cwDraft + cwActive !== 70) fail(`complete_the_words draft+active total=${cwDraft + cwActive} (must 70)`)
-  console.log(`  complete_the_words: draft=${cwDraft} active=${cwActive} (pilot 10 + new ${newPresent}；R10 已晋 active)`)
+  // Post-F2B（owner-approved 扩容+晋级）：complete_the_words 池 = pilot 10 + window-A 60 + F2B 30 = 100，全 active。
+  if (cwDraft + cwActive !== 100) fail(`complete_the_words draft+active total=${cwDraft + cwActive} (must 100)`)
+  console.log(`  complete_the_words: draft=${cwDraft} active=${cwActive} (pilot 10 + window-A ${newPresent} + F2B ${f2bCw}；owner-approved active)`)
 
-  // §7.13 global invariants. Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
-  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
+  // §7.13 global invariants. Blocked/deprecated denylist — 2026-07-04: read_daily_life + choose_a_response
+  // removed (both now legitimately active: reading promoted F2, listening pilot active since 2026-07-02).
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
   const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length

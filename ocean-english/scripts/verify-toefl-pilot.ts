@@ -35,7 +35,10 @@ const PRODUCTIVE = [
   { taskType: 'email_writing', source: 'toefl-email.productive.json' },
   { taskType: 'academic_discussion', source: 'toefl-discussion.productive.json' },
 ]
-const STOPPED_TEMPLATES = ['toefl-read-daily-life', 'toefl-academic-reading']
+// 2026-07-04: TOEFL Reading 专项 promoted active (F2, owner-approved) — no longer "stopped". The pilot
+// verifier tracks only the 4 original objective/productive pilot packages; reading is owned by
+// verify-toefl-reading-expansion.ts + the coverage audit. Leave empty.
+const STOPPED_TEMPLATES: string[] = []
 
 // 复刻 importer 的确定性 hashId（与 import-authored-*.ts 完全一致）
 function hashId(s: string): string { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) } return (h >>> 0).toString(36) }
@@ -145,8 +148,9 @@ async function main() {
     if (n !== 0) errors.push(`已停题型 ${tpl} 仍有 ${n} 个 set`)
   }
 
-  // ── 全局硬停 ── Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
-  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
+  // ── 全局硬停 ── 阻塞/退役题型必须 0 active。2026-07-04：read_daily_life + choose_a_response 移除
+  // （reading F2 晋级 active、listening pilot 2026-07-02 起 active，均合法）。
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
   const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length

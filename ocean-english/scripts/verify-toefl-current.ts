@@ -59,15 +59,17 @@ async function assertAggregateCounts(): Promise<boolean> {
   // Post-R10（用户授权"将剩余全部完成"）：complete_the_words/email_writing/academic_discussion 已晋 active
   // （draft→0）；build_a_sentence 仍阻塞（scoring_not_ready，draft 10/active 0）。以 draft+active 总量锁内容规模。
   const totalOf = (t: string) => draftOf(t) + activeOf(t)
+  // Post-F2B + promote (owner-approved 2026-07-04): each text task is now 100 (pilot 10 + earlier
+  // expansion + F2B top-up), all active. build_a_sentence stays 10 draft / 0 active (F4 option 4, blocked).
   const checks: [string, number, number][] = [
-    ['complete_the_words total(draft+active)', totalOf('complete_the_words'), 70],
-    ['email_writing total(draft+active)', totalOf('email_writing'), 60],
-    ['academic_discussion total(draft+active)', totalOf('academic_discussion'), 60],
+    ['complete_the_words total(draft+active)', totalOf('complete_the_words'), 100],
+    ['email_writing total(draft+active)', totalOf('email_writing'), 100],
+    ['academic_discussion total(draft+active)', totalOf('academic_discussion'), 100],
     // build_a_sentence has NO expansion verifier; it stays at the 10 pilot drafts, still blocked (0 active).
     ['build_a_sentence draft', draftOf('build_a_sentence'), 10],
-    ['complete_the_words active', activeOf('complete_the_words'), 70],
-    ['email_writing active', activeOf('email_writing'), 60],
-    ['academic_discussion active', activeOf('academic_discussion'), 60],
+    ['complete_the_words active', activeOf('complete_the_words'), 100],
+    ['email_writing active', activeOf('email_writing'), 100],
+    ['academic_discussion active', activeOf('academic_discussion'), 100],
     ['build_a_sentence active', activeOf('build_a_sentence'), 0],
   ]
   for (const [label, got, want] of checks) {
@@ -75,10 +77,11 @@ async function assertAggregateCounts(): Promise<boolean> {
     console.log(`  ${pass ? '✓' : '✗'} ${label} = ${got} (expect ${want})`)
     if (!pass) ok = false
   }
-  // Post-R10-full：大量题型已按授权晋级 active，白名单不再适用。改为「阻塞/退役题型必须 0 active」denylist
-  // 守卫（每次 R10 不必改）。阻塞型 = TOEFL build_a_sentence（scoring_not_ready）/阅读·听力（spec 未验或缺内容）
-  // /口语（音频缺）+ 退役 antonym_choice/cet_cloze。
-  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
+  // 阻塞/退役题型必须 0 active。2026-07-04：read_daily_life + choose_a_response 移除
+  // （reading 专项 F2 晋级 active、listening pilot 2026-07-02 起 active，均合法）。仍阻塞 =
+  // build_a_sentence（scoring_not_ready，F4 option 4）+ 口语两型（speaking_pipeline_not_ready，F5 defer）
+  // + 退役 antonym_choice/cet_cloze。
+  const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
   const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
   const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length
@@ -97,7 +100,7 @@ async function main() {
     console.error('\n✗ verify:toefl-current FAILED')
     process.exitCode = 1
   } else {
-    console.log('\n✓ verify:toefl-current PASSED — pilot + both expansions + CW/email/discussion 70/60/60 active (R10), build_a_sentence/阅读/听力/口语 0 active (阻塞), 0 deprecated')
+    console.log('\n✓ verify:toefl-current PASSED — pilot + both expansions + CW/email/discussion 100/100/100 active (F2B+promote), reading 专项 active, build_a_sentence/口语 0 active (阻塞), 0 deprecated')
   }
 }
 main().catch((e) => { console.error('verify-toefl-current fatal', (e as Error)?.message ?? e); process.exitCode = 1 })

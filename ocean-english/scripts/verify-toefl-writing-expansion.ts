@@ -34,7 +34,9 @@ const WORDLIMIT_PREFIX = 'Project guidance (not an official TOEFL requirement):'
 // 用户修订：每类新增 50（既有 pilot 10 → 合计各 60）。50 尽量均分到 8 类：前 2 类各 7，其余各 6。
 const MATRIX_TARGET = [7, 7, 6, 6, 6, 6, 6, 6] as const
 const NEW_TOTAL = MATRIX_TARGET.reduce((a, b) => a + b, 0) // 50
-const OWNED_TOTAL = NEW_TOTAL + 10 // pilot 10 → 60
+// pilot 10 + expansion-B 50 + F2B top-up 40 (stage toefl-text-topup-2026-07-03, owned by
+// verify-toefl-text-topup.ts) = 100 per productive type, all owner-approved active (2026-07-04).
+const OWNED_TOTAL = NEW_TOTAL + 10 + 40
 
 // 8 邮件分类矩阵（§5）与 8 学术讨论领域矩阵（§6），label 为源文件 `category` 取值；每类目标数见 MATRIX_TARGET
 const EMAIL_CATEGORIES = [
@@ -249,8 +251,9 @@ async function main() {
       console.log(`  [DB] ${cfg.taskType}: 源↔DB 逐条一致 ${okCmp}/${nf.tasks.length} · stage set=${stageSets.length} · owned draft=${ownedDraft} active=${ownedActive}（R10 已晋 active）`)
     }
 
-    // 全局硬停不变量。Post-R10-full：多题型已授权晋级 active，改为「阻塞/退役题型必须 0 active」denylist。
-    const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'read_daily_life', 'choose_a_response', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
+    // 全局硬停不变量。2026-07-04：read_daily_life + choose_a_response 从 denylist 移除
+    // （均已合法 active：reading F2 晋级、listening pilot 2026-07-02 起 active）。
+    const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
     const genActive = sets.filter((s) => s.status === 'active').length
     const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
     const deprecated = sets.filter((s) => s.task_type === 'antonym_choice' || s.task_type === 'cet_cloze').length

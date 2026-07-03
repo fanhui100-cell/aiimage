@@ -1,6 +1,6 @@
 # Vocabulary Level Audit — 2026-06-20
 
-> Generated: 2026-06-22T20:31:58.566Z
+> Generated: 2026-07-03T17:57:15.304Z
 > Source: dictionary_words + dictionary_* relation tables (read-only, service role).
 > **No DB writes were performed.**
 
@@ -12,33 +12,35 @@ Total words in `dictionary_words`: **28602**
 
 | lv | exam | label | target | primary | levels-incl | def | ex | mnem | infl | ety | collo | syn | ant |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | zhongkao | 中考 | ~1900 | 1989 | 1989 | 100% | 100% | 94% | 79% | 89% | 90% | 84% | 64% |
-| 2 | gaokao | 高考 | ~3500 | 1924 | 3743 | 100% | 100% | 94% | 80% | 91% | 86% | 83% | 67% |
-| 3 | cet4 | CET-4 | ~4500 | 1819 | 4609 | 100% | 99% | 96% | 80% | 93% | 82% | 86% | 73% |
-| 4 | cet6 | CET-6 | ~5500 | 2120 | 4243 | 100% | 94% | 96% | 76% | 96% | 69% | 81% | 74% |
-| 5 | kaoyan | 考研 | ~5500 | 1086 | 5896 | 100% | 86% | 95% | 73% | 93% | 70% | 75% | 62% |
-| 6 | toefl | TOEFL | curated | 8039 | 13633 | 100% | 76% | 94% | 54% | 93% | 45% | 58% | 53% |
-| 7 | sat | SAT | curated | 11625 | 14382 | 100% | 31% | 91% | 21% | 85% | 13% | 25% | 26% |
+| 1 | zhongkao | 中考 | ~1900 | 3312 | 3312 | 100% | 77% | 93% | 58% | 91% | 65% | 64% | 52% |
+| 2 | gaokao | 高考 | ~3500 | 2572 | 5696 | 100% | 78% | 93% | 59% | 92% | 63% | 64% | 54% |
+| 3 | cet4 | CET-4 | ~4500 | 2533 | 7427 | 100% | 77% | 94% | 59% | 94% | 61% | 65% | 58% |
+| 4 | cet6 | CET-6 | ~5500 | 2330 | 8531 | 100% | 77% | 94% | 60% | 95% | 57% | 65% | 59% |
+| 5 | kaoyan | 考研 | ~5500 | 884 | 8719 | 100% | 72% | 94% | 58% | 94% | 56% | 62% | 54% |
+| 6 | toefl | TOEFL | curated | 7570 | 16742 | 100% | 69% | 94% | 49% | 93% | 40% | 53% | 50% |
+| 7 | sat | SAT | curated | 9401 | 15322 | 100% | 32% | 91% | 21% | 86% | 14% | 26% | 28% |
+| 8 | ielts | 雅思 | curated | 0 | 6759 | 100% | 76% | 94% | 60% | 96% | 56% | 65% | 59% |
 
 ## 2. Per-level recommendations
 
-- **lv1 中考 (zhongkao)** — levels includes 1 覆盖 1989，接近目标约 1900
-- **lv2 高考 (gaokao)** — levels includes 2 覆盖 3743 已超目标约 3500，核查是否过宽；primary_level=2 仅 1924，远少于 levels includes 3743：训练务必按 levels includes，不能只看 primary_level
-- **lv3 CET-4 (cet4)** — levels includes 3 覆盖 4609，接近目标约 4500；primary_level=3 仅 1819，远少于 levels includes 4609：训练务必按 levels includes，不能只看 primary_level
-- **lv4 CET-6 (cet6)** — levels includes 4 覆盖 4243 < 目标约 5500，缺口约 1257，建议合法补标 levels（只增不覆盖）；primary_level=4 仅 2120，远少于 levels includes 4243：训练务必按 levels includes，不能只看 primary_level
-- **lv5 考研 (kaoyan)** — levels includes 5 覆盖 5896 已超目标约 5500，核查是否过宽；primary_level=5 仅 1086，远少于 levels includes 5896：训练务必按 levels includes，不能只看 primary_level
-- **lv6 TOEFL (toefl)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 8039，远少于 levels includes 13633：训练务必按 levels includes，不能只看 primary_level
-- **lv7 SAT (sat)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 11625，远少于 levels includes 14382：训练务必按 levels includes，不能只看 primary_level
+- **lv1 中考 (zhongkao)** — levels includes 1 覆盖 3312 已超目标约 1900，核查是否过宽
+- **lv2 高考 (gaokao)** — levels includes 2 覆盖 5696 已超目标约 3500，核查是否过宽；primary_level=2 仅 2572，远少于 levels includes 5696：训练务必按 levels includes，不能只看 primary_level
+- **lv3 CET-4 (cet4)** — levels includes 3 覆盖 7427 已超目标约 4500，核查是否过宽；primary_level=3 仅 2533，远少于 levels includes 7427：训练务必按 levels includes，不能只看 primary_level
+- **lv4 CET-6 (cet6)** — levels includes 4 覆盖 8531 已超目标约 5500，核查是否过宽；primary_level=4 仅 2330，远少于 levels includes 8531：训练务必按 levels includes，不能只看 primary_level
+- **lv5 考研 (kaoyan)** — levels includes 5 覆盖 8719 已超目标约 5500，核查是否过宽；primary_level=5 仅 884，远少于 levels includes 8719：训练务必按 levels includes，不能只看 primary_level
+- **lv6 TOEFL (toefl)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=6 仅 7570，远少于 levels includes 16742：训练务必按 levels includes，不能只看 primary_level
+- **lv7 SAT (sat)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=7 仅 9401，远少于 levels includes 15322：训练务必按 levels includes，不能只看 primary_level
+- **lv8 雅思 (ielts)** — 无固定官方完整词表，按 curated 高频/学术词覆盖评估，勿按大词表盲目扩量；primary_level=8 仅 0，远少于 levels includes 6759：训练务必按 levels includes，不能只看 primary_level
 
 ## 3. Key findings
 
-- **CET-6 direct coverage gap:** `levels includes 4` = 4243 vs target ~5500. Gap ≈ 1257; backfill `levels` to ~5500.
-- **Postgraduate (考研) logic:** `primary_level=5` = 1086 (looks small) but `levels includes 5` = 5896. Training/recommendation must use `levels includes 5`, not `primary_level=5`.
-- **`primary_level` vs `levels includes` mismatch:** lv2(1924→3743), lv3(1819→4609), lv4(2120→4243), lv5(1086→5896), lv6(8039→13633), lv7(11625→14382).
+- **CET-6 direct coverage gap:** `levels includes 4` = 8531 vs target ~5500. Within range.
+- **Postgraduate (考研) logic:** `primary_level=5` = 884 (looks small) but `levels includes 5` = 8719. Training/recommendation must use `levels includes 5`, not `primary_level=5`.
+- **`primary_level` vs `levels includes` mismatch:** lv2(2572→5696), lv3(2533→7427), lv4(2330→8531), lv5(884→8719), lv6(7570→16742), lv7(9401→15322), lv8(0→6759).
 
 ### Data integrity
 
-- Invalid level tags (outside 1-7): 0
+- Invalid level tags (outside 1-8): 0
 - Duplicate level tags within a word: 0
 - `primary_level` not present in `levels`: 0
 - Words with no level at all (primary null & levels empty): 0
@@ -53,7 +55,7 @@ Total words in `dictionary_words`: **28602**
 
 ## 5. What must NOT be imported blindly
 
-- Do **not** treat TOEFL/SAT as having a fixed official complete word list — use curated academic / high-utility coverage only.
+- Do **not** treat TOEFL/SAT/IELTS as having a fixed official complete word list — use curated academic / high-utility coverage only.
 - Do **not** overwrite existing definitions, examples, mnemonics, synonyms, antonyms, etymology, or collocations — backfill is add-only.
 - Do **not** expand a level just to hit a number; respect syllabus boundaries (avoid over-wide `levels`).
 - Do **not** auto-generate synonyms/antonyms to fill coverage — missing is better than wrong relations.

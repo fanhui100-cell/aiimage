@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T07:56:15.990Z",
+  "generatedAt": "2026-07-03T18:06:38.141Z",
   "applied": true,
   "rows": [
     {
@@ -7,139 +7,159 @@
       "mode": "mini",
       "generated": true,
       "sections": 4,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "zhongkao",
       "mode": "full",
       "generated": true,
       "sections": 5,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "gaokao",
       "mode": "mini",
       "generated": true,
       "sections": 5,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "gaokao",
       "mode": "full",
       "generated": true,
       "sections": 7,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "cet4",
       "mode": "mini",
       "generated": true,
       "sections": 4,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "cet4",
       "mode": "full",
       "generated": true,
       "sections": 6,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "cet6",
       "mode": "mini",
       "generated": true,
       "sections": 4,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "cet6",
       "mode": "full",
       "generated": true,
       "sections": 6,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "kaoyan",
       "mode": "mini",
       "generated": true,
       "sections": 3,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "kaoyan",
       "mode": "full",
       "generated": true,
       "sections": 6,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "toefl",
       "mode": "mini",
-      "generated": true,
-      "sections": 2,
-      "insufficientPool": true,
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "refusal": [
+        "paper_not_ready"
+      ],
       "warnings": [
-        "insufficient_pool"
+        "paper_not_ready"
       ]
     },
     {
       "exam": "toefl",
       "mode": "full",
-      "generated": true,
-      "sections": 4,
-      "insufficientPool": true,
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "refusal": [
+        "paper_not_ready"
+      ],
       "warnings": [
-        "insufficient_pool"
+        "paper_not_ready"
       ]
     },
     {
       "exam": "sat",
       "mode": "mini",
       "generated": true,
-      "sections": 3,
-      "insufficientPool": true,
-      "warnings": [
-        "insufficient_pool"
-      ]
+      "sections": 4,
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "sat",
       "mode": "full",
       "generated": true,
       "sections": 4,
-      "insufficientPool": true,
+      "insufficientPool": false,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "ielts",
+      "mode": "mini",
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "refusal": [
+        "exam_coming_soon"
+      ],
       "warnings": [
-        "insufficient_pool"
+        "exam_coming_soon"
+      ]
+    },
+    {
+      "exam": "ielts",
+      "mode": "full",
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "refusal": [
+        "exam_coming_soon"
+      ],
+      "warnings": [
+        "exam_coming_soon"
       ]
     }
   ],
