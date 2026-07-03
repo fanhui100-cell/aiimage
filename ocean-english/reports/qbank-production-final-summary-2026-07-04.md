@@ -88,6 +88,30 @@ counts. Updated (not gamed — they now match the approved state):
   → `spec_confirmed_project_practice_shape` / `PILOT_DRAFT`, self-healing to READY_DRAFT/READY_ACTIVE.
 - `promote-question-sets-v2.ts`: added reviewed `--manifest` flag.
 
+### 4b. Owner review response (2026-07-04, post-F9)
+
+The owner's review found 4 issues; all fixed in the review-response commit:
+- **P1 stage verifiers were false-red post-promote** (this section's original claim "verifier suite
+  maintained" was incomplete): `verify-toefl-reading-expansion.ts` + `verify-toefl-text-topup.ts` still
+  hard-required draft. Now **phase-aware** (`--db [--expect=active|draft]`, default `active` = the
+  approved contract): per-set status must equal the expected phase, items match set status, and exact
+  active counts asserted — Reading **100/98 (+2 held REVIEW draft)**, Text **100/100/100**. Both re-run
+  green. Fixing this exposed and fixed a real aggregation bug: the reading verifier's whole-bank query
+  lacked a `level=6` filter, so cross-exam `reading_comprehension` (cet4/SAT…, 465 active) leaked into
+  its totals — previously masked because only TOEFL had drafts.
+- **P1 dirty working tree**: the 2026-06-23→07-02 checkpoint leftovers (speak-boundary runtime code,
+  pilot source data, plans, reports, lexivault cleanup) are now committed with explicit provenance
+  (`0629711`). All F0–F9 validations ran with that code present, so the committed tree reproduces the
+  verified state; ocean-english is clean.
+- **P2 machine-local absolute path** in `build-toefl-reading-promote-manifest.ts`: scratchpad id-file
+  output removed (manifest JSON is the only durable artifact). Both manifest builders now also check
+  preconditions BEFORE writing, so a post-promote rerun exits 1 without overwriting the committed
+  historical manifests.
+- **P2 papers smoke over-wide refusal set**: now derives the single acceptable refusal per exam from
+  its spec (IELTS→`exam_coming_soon` only, TOEFL→`paper_not_ready` only, active exams must generate or
+  `insufficient_pool`); `unknown_exam`/`v2_not_applied` are errors; generating a paper for a
+  must-refuse exam is an error. Re-run green.
+
 ## 5. Project completeness (per plan's final rule)
 
 The plan says: *do not call the project complete while TOEFL full mock or IELTS remains

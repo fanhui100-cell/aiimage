@@ -52,14 +52,23 @@ async function main() {
     for (const mode of ['mini', 'full'] as const) {
       const { paper, warnings } = await generatePaper(db, { examId: spec.id, mode, seed: `${spec.id}-${mode}` })
       const insufficient = warnings.includes('insufficient_pool')
-      // 受控拒绝（非错误兜底）：池不足 / 整卷未就绪(TOEFL paperReady=false) / 考试 coming_soon(IELTS) /
-      // 未激活 / 未知考试 / v2 未应用。这些都是 generatePaper 明确、可解释的拒绝，不是静默兜底。
-      const CONTROLLED_REFUSAL = ['insufficient_pool', 'paper_not_ready', 'exam_coming_soon', 'exam_not_active', 'unknown_exam', 'v2_not_applied']
-      const refused = warnings.some((w) => CONTROLLED_REFUSAL.includes(w))
-      if (paper) checkPaper(`${spec.id} ${mode}`, paper)
-      // 验收：要么出卷，要么受控拒绝（二者必居其一，不能既无卷又无任何受控告警）
-      if (!paper && !refused) errors.push(`${spec.id} ${mode}: 既未出卷也无受控拒绝告警（疑似错误兜底）`)
-      rows.push({ exam: spec.id, mode, generated: !!paper, sections: paper?.sections.length ?? 0, insufficientPool: insufficient, refusal: !paper ? warnings.filter((w) => CONTROLLED_REFUSAL.includes(w)) : [], warnings })
+      // 按 spec 精确推导本 exam 唯一可接受的受控拒绝（不设宽泛白名单）：
+      //   coming_soon（IELTS）→ 只接受 exam_coming_soon；其它非 active → 只接受 exam_not_active；
+      //   active 但 paperReady=false（TOEFL）→ 只接受 paper_not_ready；
+      //   正常 active 考试 → 必须出卷，或受控 insufficient_pool。
+      // unknown_exam / v2_not_applied 在本 smoke（遍历 EXAM_SPECS、v2 已确认 applied）中一律算错误。
+      const expectedRefusal = spec.status === 'coming_soon' ? 'exam_coming_soon'
+        : spec.status !== 'active' ? 'exam_not_active'
+        : spec.paperReady === false ? 'paper_not_ready'
+        : 'insufficient_pool'
+      const mustRefuse = expectedRefusal !== 'insufficient_pool' // coming_soon / not_active / paperReady=false 绝不该出卷
+      if (paper) {
+        if (mustRefuse) errors.push(`${spec.id} ${mode}: 应受控拒绝（${expectedRefusal}）却生成了 paper`)
+        checkPaper(`${spec.id} ${mode}`, paper)
+      } else if (!warnings.includes(expectedRefusal)) {
+        errors.push(`${spec.id} ${mode}: 未出卷且缺期望受控拒绝 ${expectedRefusal}（got: ${warnings.join(',') || 'none'}）`)
+      }
+      rows.push({ exam: spec.id, mode, generated: !!paper, sections: paper?.sections.length ?? 0, insufficientPool: insufficient, expectedRefusal: !paper ? expectedRefusal : null, refusal: !paper ? warnings.filter((w) => w === expectedRefusal) : [], warnings })
     }
   }
 

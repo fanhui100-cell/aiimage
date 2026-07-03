@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T18:06:38.141Z",
+  "generatedAt": "2026-07-03T18:51:40.191Z",
   "applied": true,
   "rows": [
     {
@@ -8,6 +8,7 @@
       "generated": true,
       "sections": 4,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -17,6 +18,7 @@
       "generated": true,
       "sections": 5,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -26,6 +28,7 @@
       "generated": true,
       "sections": 5,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -35,6 +38,7 @@
       "generated": true,
       "sections": 7,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -44,6 +48,7 @@
       "generated": true,
       "sections": 4,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -53,6 +58,7 @@
       "generated": true,
       "sections": 6,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -62,6 +68,7 @@
       "generated": true,
       "sections": 4,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -71,6 +78,7 @@
       "generated": true,
       "sections": 6,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -80,6 +88,7 @@
       "generated": true,
       "sections": 3,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -89,6 +98,7 @@
       "generated": true,
       "sections": 6,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -98,6 +108,7 @@
       "generated": false,
       "sections": 0,
       "insufficientPool": false,
+      "expectedRefusal": "paper_not_ready",
       "refusal": [
         "paper_not_ready"
       ],
@@ -111,6 +122,7 @@
       "generated": false,
       "sections": 0,
       "insufficientPool": false,
+      "expectedRefusal": "paper_not_ready",
       "refusal": [
         "paper_not_ready"
       ],
@@ -124,6 +136,7 @@
       "generated": true,
       "sections": 4,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -133,6 +146,7 @@
       "generated": true,
       "sections": 4,
       "insufficientPool": false,
+      "expectedRefusal": null,
       "refusal": [],
       "warnings": []
     },
@@ -142,6 +156,7 @@
       "generated": false,
       "sections": 0,
       "insufficientPool": false,
+      "expectedRefusal": "exam_coming_soon",
       "refusal": [
         "exam_coming_soon"
       ],
@@ -155,6 +170,7 @@
       "generated": false,
       "sections": 0,
       "insufficientPool": false,
+      "expectedRefusal": "exam_coming_soon",
       "refusal": [
         "exam_coming_soon"
       ],

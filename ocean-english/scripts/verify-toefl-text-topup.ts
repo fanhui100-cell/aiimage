@@ -11,14 +11,16 @@
      - email/discussion 各 40 条：prompt 非空、referencePoints 恰 5、wordLimit 存在、批内 prompt 互异；
      - discussion 每条含教授提问 + 两名学生（两处 "\n\n" 分隔）。
 
-   --db（需凭据）:
-     - 三型 source→DB 前向 1:1（各自 importer 的确定性 legacy_id），均为 draft、stage 命中；
-     - 全库 draft/active 合计：complete_the_words 100（70 active + 30 draft）、
-       email_writing 100（60 active + 40 draft）、academic_discussion 100（60 active + 40 draft）；
-     - email/discussion 每 item：input_mode=free_text、rubric_id 非空、answer.official===false；
-     - 本 stage 反向无孤行；active(本 stage)=0；无退役题型。
+   --db（需凭据，phase-aware）:
+     - 三型 source→DB 前向 1:1（各自 importer 的确定性 legacy_id）、stage 命中；
+     - phase 由 --expect 指定（默认 active = 2026-07-04 owner 批准 promote 后的现契约）：
+       · --expect=active：本 stage 30/40/40 全部 active；全库各型 active=100、draft=0；
+       · --expect=draft（历史/promote 前重跑）：本 stage 全 draft；全库各型 active=70/60/60、draft=30/40/40；
+     - 全库 draft+active 恒 = 100/100/100；
+     - email/discussion 每 item：input_mode=free_text、rubric_id 非空、answer.official===false，
+       item 状态与 set 一致；本 stage 反向无孤行；无退役题型。
 
-   用法：npx tsx scripts/verify-toefl-text-topup.ts --source | --db
+   用法：npx tsx scripts/verify-toefl-text-topup.ts --source | --db [--expect=active|draft]
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, existsSync } from 'node:fs'
@@ -30,6 +32,8 @@ const TPLDIR = 'data/exam-task-templates'
 
 const MODE_SOURCE = process.argv.includes('--source')
 const MODE_DB = process.argv.includes('--db')
+// phase：默认 active（2026-07-04 owner 批准 promote 后的现契约）；--expect=draft 供历史重现。
+const EXPECT: 'active' | 'draft' = (process.argv.find((a) => a.startsWith('--expect='))?.slice(9) === 'draft') ? 'draft' : 'active'
 const errors: string[] = []
 const err = (m: string) => errors.push(m)
 function hashId(s: string): string { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) } return (h >>> 0).toString(36) }
@@ -109,10 +113,11 @@ async function verifyDb() {
   const stageSets = all.filter((s) => (s.qa_flags as { stage?: string } | null)?.stage === STAGE)
   const expected = new Set<string>()
 
+  // stageCount：本 stage 新增数；preActive：promote 前已 active 的存量（pilot+早期扩产）。
   const packs = [
-    { taskType: 'complete_the_words', ids: cwSourceLegacyIds(), totalDraft: 30, totalAll: 100, productive: false },
-    { taskType: 'email_writing', ids: prodSourceLegacyIds('toefl-email-writing-40.productive.json', 'email_writing', 40), totalDraft: 40, totalAll: 100, productive: true },
-    { taskType: 'academic_discussion', ids: prodSourceLegacyIds('toefl-discussion-40.productive.json', 'academic_discussion', 40), totalDraft: 40, totalAll: 100, productive: true },
+    { taskType: 'complete_the_words', ids: cwSourceLegacyIds(), stageCount: 30, preActive: 70, totalAll: 100, productive: false },
+    { taskType: 'email_writing', ids: prodSourceLegacyIds('toefl-email-writing-40.productive.json', 'email_writing', 40), stageCount: 40, preActive: 60, totalAll: 100, productive: true },
+    { taskType: 'academic_discussion', ids: prodSourceLegacyIds('toefl-discussion-40.productive.json', 'academic_discussion', 40), stageCount: 40, preActive: 60, totalAll: 100, productive: true },
   ]
   for (const p of packs) {
     let okFwd = 0
@@ -120,7 +125,8 @@ async function verifyDb() {
       expected.add(legacy)
       const s = byLegacy.get(legacy)
       if (!s) { err(`${p.taskType}: 源无对应 DB set（${legacy}）`); continue }
-      if (s.status !== 'draft') err(`${p.taskType}: ${legacy} status=${s.status}（须 draft）`)
+      // phase-aware：本 stage 110 条全部在 2026-07-04 promote 清单内 → expect=active 时须 active。
+      if (s.status !== EXPECT) err(`${p.taskType}: ${legacy} status=${s.status}（须 ${EXPECT}）`)
       if ((s.qa_flags as { stage?: string } | null)?.stage !== STAGE) err(`${p.taskType}: ${legacy} stage≠${STAGE}`)
       if (p.productive) {
         const { data: items } = await db.from('question_items').select('input_mode, rubric_id, answer, status').eq('question_set_id', s.id)
@@ -128,6 +134,7 @@ async function verifyDb() {
         if (its.length !== 1) err(`${p.taskType}: ${legacy} item 数 ${its.length}（须1）`)
         for (const it of its) {
           if (it.input_mode !== 'free_text') err(`${p.taskType}: ${legacy} input_mode=${it.input_mode}`)
+          if (it.status !== s.status) err(`${p.taskType}: ${legacy} item status=${it.status}（须与 set 一致 ${s.status}）`)
           if (!it.rubric_id) err(`${p.taskType}: ${legacy} rubric_id 空`)
           if ((it.answer as { official?: boolean } | null)?.official !== false) err(`${p.taskType}: ${legacy} answer.official≠false`)
         }
@@ -135,12 +142,16 @@ async function verifyDb() {
       okFwd++
     }
     const draftN = all.filter((s) => s.task_type === p.taskType && s.status === 'draft').length
-    const allN = all.filter((s) => s.task_type === p.taskType && (s.status === 'draft' || s.status === 'active')).length
-    if (draftN !== p.totalDraft) err(`${p.taskType}: 全库 draft ${draftN} ≠ ${p.totalDraft}`)
-    if (allN !== p.totalAll) err(`${p.taskType}: 全库 draft+active ${allN} ≠ ${p.totalAll}`)
+    const activeN = all.filter((s) => s.task_type === p.taskType && s.status === 'active').length
+    if (draftN + activeN !== p.totalAll) err(`${p.taskType}: 全库 draft+active ${draftN + activeN} ≠ ${p.totalAll}`)
+    const wantDraft = EXPECT === 'active' ? 0 : p.stageCount
+    const wantActive = EXPECT === 'active' ? p.totalAll : p.preActive
+    if (draftN !== wantDraft) err(`${p.taskType}: 全库 draft ${draftN} ≠ ${wantDraft}（expect=${EXPECT}）`)
+    if (activeN !== wantActive) err(`${p.taskType}: 全库 active ${activeN} ≠ ${wantActive}（expect=${EXPECT}）`)
     const activeStage = stageSets.filter((s) => s.task_type === p.taskType && s.status === 'active').length
-    if (activeStage !== 0) err(`${p.taskType}: 本 stage active=${activeStage}（须0）`)
-    console.log(`  [db] ${p.taskType}: 前向 ${okFwd}/${p.ids.length} · draft ${draftN}/${p.totalDraft} · draft+active ${allN}/${p.totalAll}`)
+    const wantStageActive = EXPECT === 'active' ? p.stageCount : 0
+    if (activeStage !== wantStageActive) err(`${p.taskType}: 本 stage active=${activeStage}（expect=${EXPECT} 须 ${wantStageActive}）`)
+    console.log(`  [db] ${p.taskType}: 前向 ${okFwd}/${p.ids.length} · 全库 active ${activeN}/${wantActive} · draft ${draftN}/${wantDraft}（expect=${EXPECT}）`)
   }
   // 反向：本 stage set 必属源集合
   let orphan = 0

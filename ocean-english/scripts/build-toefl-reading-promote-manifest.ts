@@ -7,9 +7,11 @@
        → 98 PASS。
    2 个 REVIEW 的 legacy_id 由 pilot 源文件确定性哈希复算（与 importer 同口径），杜绝手抄 UUID。
 
-   输出：
-     - reports/toefl-reading-promote-manifest-2026-07-03.json（含 198 个 set 的 id/legacy/task + 2 个排除项）
-     - scratchpad 侧 id 文件（rdl / rc 各一份逗号分隔），供 promote --ids 使用。
+   输出（唯一持久产物）：
+     - reports/toefl-reading-promote-manifest-2026-07-03.json（setIds[] 供 promote --manifest 消费，
+       + 198 个 set 的 id/legacy/task + 2 个排除项）
+   时效：本脚本是 promote 前的点位工具——前置条件是两型各 100 draft。promote（2026-07-04）后重跑
+   会因 draft 计数前置断言失败而退出 1（by design，防止覆盖历史清单）；已提交的 manifest JSON 即审计记录。
    用法：npx tsx scripts/build-toefl-reading-promote-manifest.ts
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient } from '@supabase/supabase-js'
@@ -21,7 +23,6 @@ const db = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), readEnv('SUPABASE_S
 
 const MANIFEST = 'reports/toefl-reading-promote-manifest-2026-07-03.json'
 const PILOT = 'data/generated-question-sets/toefl-reading-pilot-2026-07-02/toefl-academic-reading.json'
-const OUT_IDS_DIR = 'C:/Users/fanhu/AppData/Local/Temp/claude/d--ai-studio/3df9b227-9381-46e0-8434-dba77b3381f9/scratchpad'
 
 function hashId(s: string): string { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) } return (h >>> 0).toString(36) }
 
@@ -58,6 +59,11 @@ async function main() {
   if (excluded.length !== 2) errs.push(`排除的 REVIEW 命中 ${excluded.length} ≠ 2（legacy 复算或 pilot 顺序不符）`)
   if (rc.length !== 98) errs.push(`reading_comprehension 合格 ${rc.length} ≠ 98`)
 
+  console.log(`manifest: read_daily_life ${rdl.length} · reading_comprehension ${rc.length} (excluded ${excluded.length}) · total ${rdl.length + rc.length}`)
+  for (const e of excluded) console.log(`  excluded REVIEW: ${e.legacy_id}`)
+  // 前置断言不满足（如 promote 后 draft 已排空）→ 不写文件直接退出，绝不覆盖已提交的历史清单。
+  if (errs.length) { console.error('✗ ' + errs.join('; ')); process.exitCode = 1; return }
+
   const manifest = {
     generatedAt: new Date().toISOString(),
     phase: 'F2-promote',
@@ -70,12 +76,6 @@ async function main() {
     reading_comprehension: rc.map((s) => ({ id: s.id, legacy_id: s.legacy_id, task_type: 'reading_comprehension' })),
   }
   writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + '\n', 'utf8')
-  writeFileSync(`${OUT_IDS_DIR}/promote-ids-rdl.txt`, rdl.map((s) => s.id).join(','), 'utf8')
-  writeFileSync(`${OUT_IDS_DIR}/promote-ids-rc.txt`, rc.map((s) => s.id).join(','), 'utf8')
-
-  console.log(`manifest: read_daily_life ${rdl.length} · reading_comprehension ${rc.length} (excluded ${excluded.length}) · total ${manifest.total}`)
-  for (const e of excluded) console.log(`  excluded REVIEW: ${e.legacy_id}`)
-  if (errs.length) { console.error('✗ ' + errs.join('; ')); process.exitCode = 1 }
-  else console.log(`✓ 清单已写 ${MANIFEST}（198 = 100 rdl + 98 rc）`)
+  console.log(`✓ 清单已写 ${MANIFEST}（198 = 100 rdl + 98 rc）`)
 }
 main().catch((e) => { console.error('build-manifest fatal', e?.message ?? e); process.exitCode = 1 })

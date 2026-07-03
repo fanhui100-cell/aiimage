@@ -12,16 +12,18 @@
      - 无退役题型（antonym_choice / cet_cloze）；
      - 源内 legacy_id（确定性哈希）互不重复（无套间重复内容）。
 
-   --db（需 Supabase 凭据）:
-     - source→DB 前向 1:1：每条源套按确定性 legacy_id 恰对应一个 DB set，且为 draft；
+   --db（需 Supabase 凭据，phase-aware）:
+     - source→DB 前向 1:1：每条源套按确定性 legacy_id 恰对应一个 DB set；
      - DB→source 反向：本 stage（qa_flags.stage===STAGE）的每个 DB set 必属源集合（无 DB-outside-source）；
-     - read_daily_life 全库 draft 合计 = 100；reading_comprehension 全库 draft 合计 = 100；
-     - 本 stage 每个 set 的每个 item 恰 4 choices，answer 命中 choice id，且为 draft；
-     - 本 stage 无退役题型；无 active 泄漏（本 stage active=0）。
+     - phase 由 --expect 指定（默认 active = 2026-07-04 owner 批准 promote 后的现契约）：
+       · --expect=active：本 stage 全部 set/item 为 active；全库 read_daily_life active=100/draft=0，
+         reading_comprehension active=98/draft=2（2 个 pilot REVIEW 弱推断 Q4 被排除、保持 draft）；
+       · --expect=draft（历史/promote 前重跑）：本 stage 全 draft；全库 draft 各=100、active=0；
+     - 每 item 恰 4 choices，answer 命中 choice id，item 状态与 set 一致；无退役题型。
 
    用法：
      npx tsx scripts/verify-toefl-reading-expansion.ts --source
-     npx tsx scripts/verify-toefl-reading-expansion.ts --db
+     npx tsx scripts/verify-toefl-reading-expansion.ts --db [--expect=active|draft]
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, existsSync } from 'node:fs'
@@ -31,13 +33,17 @@ import { shapeToItems, type ShapeTemplate, type DraftChoice } from '@/lib/exam-t
 const STAGE = 'toefl-reading-expansion-2026-07-03'
 const DIR = `data/generated-question-sets/${STAGE}`
 const TPLDIR = 'data/exam-task-templates'
+// heldDraftWhenActive：--expect=active 时该 task 全库允许（且必须）保留的 draft 数。
+// reading_comprehension = 2：pilot REVIEW 弱推断 Q4（plankton/desert）被排除出 promote 清单、保持 draft。
 const PACKS = [
-  { template: 'toefl-read-daily-life', taskType: 'read_daily_life', source: 'toefl-read-daily-life-90.json', expectSets: 90, itemsRange: [2, 3] as [number, number], expectTotalDraft: 100 },
-  { template: 'toefl-academic-reading', taskType: 'reading_comprehension', source: 'toefl-academic-reading-90.json', expectSets: 90, itemsRange: [4, 4] as [number, number], expectTotalDraft: 100 },
+  { template: 'toefl-read-daily-life', taskType: 'read_daily_life', source: 'toefl-read-daily-life-90.json', expectSets: 90, itemsRange: [2, 3] as [number, number], poolTotal: 100, heldDraftWhenActive: 0 },
+  { template: 'toefl-academic-reading', taskType: 'reading_comprehension', source: 'toefl-academic-reading-90.json', expectSets: 90, itemsRange: [4, 4] as [number, number], poolTotal: 100, heldDraftWhenActive: 2 },
 ]
 
 const MODE_SOURCE = process.argv.includes('--source')
 const MODE_DB = process.argv.includes('--db')
+// phase：默认 active（2026-07-04 owner 批准 promote 后的现契约）；--expect=draft 供历史重现。
+const EXPECT: 'active' | 'draft' = (process.argv.find((a) => a.startsWith('--expect='))?.slice(9) === 'draft') ? 'draft' : 'active'
 
 // 复刻 importer 的确定性 hashId（与 import-authored-question-sets-v2.ts 完全一致）
 function hashId(s: string): string { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) } return (h >>> 0).toString(36) }
@@ -88,7 +94,9 @@ function sourceLegacyIds(pack: typeof PACKS[number]): { legacyId: string; itemCo
 async function pageSets(db: SupabaseClient): Promise<{ id: string; legacy_id: string | null; task_type: string; status: string; qa_flags: Record<string, unknown> | null }[]> {
   const rows: { id: string; legacy_id: string | null; task_type: string; status: string; qa_flags: Record<string, unknown> | null }[] = []
   for (let from = 0; ; from += 1000) {
-    const { data, error } = await db.from('question_sets').select('id, legacy_id, task_type, status, qa_flags').range(from, from + 999)
+    // 必须限定 level=6（TOEFL）：reading_comprehension 是跨考试共用 task_type（cet4/SAT 等有数百 active），
+    // 不过滤会把它们混入全库聚合断言（历史上 draft 聚合碰巧只有 TOEFL 有 draft 才没暴露）。
+    const { data, error } = await db.from('question_sets').select('id, legacy_id, task_type, status, qa_flags').eq('level', 6).in('task_type', PACKS.map((p) => p.taskType)).range(from, from + 999)
     if (error) throw new Error(error.message)
     const page = (data ?? []) as typeof rows
     rows.push(...page)
@@ -125,15 +133,16 @@ async function verifyDb() {
       expectedLegacy.add(legacyId)
       const dbSet = byLegacy.get(legacyId)
       if (!dbSet) { err(`${pack.template}: 源套无对应 DB set（legacy ${legacyId}）`); continue }
-      if (dbSet.status !== 'draft') err(`${pack.template}: ${legacyId} status=${dbSet.status}（须 draft）`)
+      // phase-aware：本 stage 90+90 全部在 2026-07-04 promote 清单内 → expect=active 时须 active。
+      if (dbSet.status !== EXPECT) err(`${pack.template}: ${legacyId} status=${dbSet.status}（须 ${EXPECT}）`)
       if ((dbSet.qa_flags as { stage?: string } | null)?.stage !== STAGE) err(`${pack.template}: ${legacyId} qa_flags.stage≠${STAGE}`)
-      // 每题 4 choices + answer 命中 + draft item
+      // 每题 4 choices + answer 命中 + item 状态与 set 一致
       const { data: items } = await db.from('question_items').select('input_mode, choices, answer, status').eq('question_set_id', dbSet.id)
       const its = (items ?? []) as { input_mode: string; choices: unknown; answer: unknown; status: string }[]
       const n = pack.itemsRange
       if (its.length < n[0] || its.length > n[1]) err(`${pack.template}: ${legacyId} DB item 数 ${its.length}（须 ${n[0]}-${n[1]}）`)
       for (const it of its) {
-        if (it.status !== 'draft') err(`${pack.template}: ${legacyId} item status=${it.status}（须 draft）`)
+        if (it.status !== dbSet.status) err(`${pack.template}: ${legacyId} item status=${it.status}（须与 set 一致 ${dbSet.status}）`)
         const ch = Array.isArray(it.choices) ? (it.choices as DraftChoice[]) : []
         if (ch.length !== 4) err(`${pack.template}: ${legacyId} item 选项数 ${ch.length}（须 4）`)
         const idset = ch.map((c) => String(c.id))
@@ -141,12 +150,18 @@ async function verifyDb() {
       }
       okFwd++
     }
-    // 全库 draft 合计（该 task_type 所有 stage：pilot 10 + 扩容 90 = 100）
+    // 全库聚合（该 task_type 所有 stage：pilot 10 + 扩容 90 = 100 池）
     const totalDraft = allSets.filter((s) => s.task_type === pack.taskType && s.status === 'draft').length
-    if (totalDraft !== pack.expectTotalDraft) err(`${pack.taskType}: 全库 draft 合计 ${totalDraft} ≠ ${pack.expectTotalDraft}`)
+    const totalActive = allSets.filter((s) => s.task_type === pack.taskType && s.status === 'active').length
+    if (totalDraft + totalActive !== pack.poolTotal) err(`${pack.taskType}: 全库 draft+active ${totalDraft + totalActive} ≠ ${pack.poolTotal}`)
+    const wantDraft = EXPECT === 'active' ? pack.heldDraftWhenActive : pack.poolTotal
+    const wantActive = pack.poolTotal - wantDraft
+    if (totalDraft !== wantDraft) err(`${pack.taskType}: 全库 draft ${totalDraft} ≠ ${wantDraft}（expect=${EXPECT}）`)
+    if (totalActive !== wantActive) err(`${pack.taskType}: 全库 active ${totalActive} ≠ ${wantActive}（expect=${EXPECT}）`)
     const activeThisStage = stageSets.filter((s) => s.task_type === pack.taskType && s.status === 'active').length
-    if (activeThisStage !== 0) err(`${pack.taskType}: 本 stage active=${activeThisStage}（F1 不得 promote，须 0）`)
-    console.log(`  [db] ${pack.template}: source→DB 前向 ${okFwd}/${ids.length} · 全库 draft ${totalDraft}/${pack.expectTotalDraft}`)
+    const wantStageActive = EXPECT === 'active' ? pack.expectSets : 0
+    if (activeThisStage !== wantStageActive) err(`${pack.taskType}: 本 stage active=${activeThisStage}（expect=${EXPECT} 须 ${wantStageActive}）`)
+    console.log(`  [db] ${pack.template}: source→DB 前向 ${okFwd}/${ids.length} · 全库 active ${totalActive}/${wantActive} · draft ${totalDraft}/${wantDraft}（expect=${EXPECT}）`)
   }
 
   // DB→source：本 stage 每个 set 必属源集合（无 DB-outside-source）

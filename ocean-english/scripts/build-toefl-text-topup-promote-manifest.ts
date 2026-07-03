@@ -35,6 +35,10 @@ async function main() {
     if (got !== n) errs.push(`${t} draft(stage) ${got} ≠ ${n}`)
   }
 
+  console.log(`manifest: ${Object.entries(byTask).map(([t, a]) => `${t} ${a.length}`).join(' · ')} · total ${mine.length}`)
+  // 前置断言不满足（如 promote 后 stage draft 已排空）→ 不写文件直接退出，绝不覆盖已提交的历史清单。
+  if (errs.length) { console.error('✗ ' + errs.join('; ')); process.exitCode = 1; return }
+
   const manifest = {
     generatedAt: new Date().toISOString(),
     phase: 'F2B-promote',
@@ -45,8 +49,6 @@ async function main() {
     byTask: Object.fromEntries(Object.entries(byTask).map(([t, arr]) => [t, arr.map((s) => ({ id: s.id, legacy_id: s.legacy_id }))])),
   }
   writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + '\n', 'utf8')
-  console.log(`manifest: ${Object.entries(byTask).map(([t, a]) => `${t} ${a.length}`).join(' · ')} · total ${mine.length}`)
-  if (errs.length) { console.error('✗ ' + errs.join('; ')); process.exitCode = 1 }
-  else console.log(`✓ 清单已写 ${MANIFEST}（110 = 30 + 40 + 40）`)
+  console.log(`✓ 清单已写 ${MANIFEST}（110 = 30 + 40 + 40）`)
 }
 main().catch((e) => { console.error('build-manifest fatal', e?.message ?? e); process.exitCode = 1 })
