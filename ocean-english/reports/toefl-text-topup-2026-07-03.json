@@ -1,0 +1,46 @@
+{
+  "phase": "F2B",
+  "date": "2026-07-03",
+  "stage": "toefl-text-topup-2026-07-03",
+  "provider": "claude-authored",
+  "deepseekUsed": false,
+  "counts": {
+    "complete_the_words": { "activeBefore": 70, "addedDraft": 30, "draftPlusActiveAfter": 100 },
+    "email_writing": { "activeBefore": 60, "addedDraft": 40, "draftPlusActiveAfter": 100 },
+    "academic_discussion": { "activeBefore": 60, "addedDraft": 40, "draftPlusActiveAfter": 100 }
+  },
+  "selfReview": [
+    { "taskType": "complete_the_words", "authored": 30, "pass": 30, "review": 0, "reject": 0, "importedDraft": 30, "promotedActive": 0, "note": "adversarial review 0 defects; targets distinct from existing 70; masks generated mechanically" },
+    { "taskType": "email_writing", "authored": 40, "pass": 40, "review": 0, "reject": 0, "importedDraft": 40, "promotedActive": 0 },
+    { "taskType": "academic_discussion", "authored": 40, "pass": 40, "review": 0, "reject": 0, "importedDraft": 40, "promotedActive": 0 }
+  ],
+  "importFlow": {
+    "complete_the_words": { "dryRun": 30, "apply1_wrote": 30, "apply2_wrote": 0, "apply2_dup": 30 },
+    "productive": { "dryRun": 80, "apply1_wrote": 80, "apply2_wrote": 0, "apply2_dup": 80 }
+  },
+  "dbWrites": { "stimuli": 30, "question_sets": 110, "question_items": 110, "allStatus": "draft", "activeChanges": 0 },
+  "verification": {
+    "source": { "exit": 0 },
+    "db": { "exit": 0, "forward": { "complete_the_words": "30/30", "email_writing": "40/40", "academic_discussion": "40/40" }, "draftPlusActive": { "complete_the_words": 100, "email_writing": 100, "academic_discussion": 100 }, "orphans": 0, "stageActive": 0 }
+  },
+  "commands": [
+    { "cmd": "verify-toefl-text-topup --source", "exit": 0 },
+    { "cmd": "import complete-the-words dry-run", "exit": 0 },
+    { "cmd": "import complete-the-words apply x2", "exit": 0 },
+    { "cmd": "import productive dry-run", "exit": 0 },
+    { "cmd": "import productive apply x2", "exit": 0 },
+    { "cmd": "verify-toefl-text-topup --db", "exit": 0 },
+    { "cmd": "qa:qsets-v2", "exit": 0 },
+    { "cmd": "validate:qbank-v2", "exit": 0 },
+    { "cmd": "validate:practice-session", "exit": 0 },
+    { "cmd": "validate:rubrics", "exit": 1, "note": "2 IELTS errors (ielts/writing, ielts/speaking) — pre-existing, out of F2B scope, IELTS coming-soon; not an F2B regression" },
+    { "cmd": "validate:toefl-task-alignment", "exit": 0 },
+    { "cmd": "lint", "exit": 0 },
+    { "cmd": "tsc --noEmit --incremental false", "exit": 0 }
+  ],
+  "activeTotals": { "activeSets": 2364, "antonym_choice": 0, "cet_cloze": 0 },
+  "paperReady": false,
+  "hardStops": [],
+  "preexistingConditions": ["validate:rubrics exit 1 due to missing ielts/writing and ielts/speaking rubrics (IELTS coming-soon, deferred to F7; not touched by F2B)"],
+  "nextPhase": "F3 TOEFL Listening expansion (audio-dependent; stops if generate:audio-assets lacks --stage or credentials)"
+}

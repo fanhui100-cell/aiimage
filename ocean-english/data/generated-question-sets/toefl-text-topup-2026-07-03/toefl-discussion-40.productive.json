@@ -1,0 +1,528 @@
+{
+  "examId": "toefl",
+  "level": 6,
+  "skill": "writing",
+  "taskType": "academic_discussion",
+  "tasks": [
+    {
+      "category": "community service",
+      "prompt": "Your professor is teaching a class on community service. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Alvarez: Some schools now require students to complete a set number of community-service hours before they can graduate. Do you think community service should be a graduation requirement, or should it remain something students choose freely? Explain your reasoning.\n\nMaya: I think it should be required. Requiring service exposes students to real social needs they would otherwise ignore and builds lifelong civic habits.\n\nTheo: I disagree. Forcing generosity turns it into a box-ticking chore and unfairly burdens students who already juggle part-time jobs.",
+      "promptZh": "教授问社区服务是否应成为毕业硬性要求；Maya 认为应强制以培养公民意识，Theo 认为强制会让善举流于形式并加重打工学生负担。",
+      "referencePoints": [
+        "立场明确：清楚表明支持或反对将社区服务设为毕业要求",
+        "理由与例证：用具体理由或例子支撑观点（如公民责任、时间负担）",
+        "回应同学：至少回应 Maya 或 Theo 的一个论点",
+        "组织连贯：结构清晰，观点之间有逻辑衔接",
+        "语法与学术词汇：句式准确，使用恰当的学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "grading systems",
+      "prompt": "Your professor is teaching a class on grading systems. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Bennett: In curved grading, your final grade depends partly on how your classmates perform rather than on a fixed standard. Is grading on a curve a fair way to evaluate students, or does it create unhealthy competition? Share your view.\n\nPriya: A curve is fair. It corrects for exams that are too hard or too easy and keeps standards consistent across sections.\n\nDaniel: I see it differently. A curve pits classmates against one another and punishes strong students who happen to be in a talented group.",
+      "promptZh": "教授问按曲线评分是否公平；Priya 认为曲线能校正难度、保持标准一致，Daniel 认为它制造恶性竞争并惩罚身处强班的学生。",
+      "referencePoints": [
+        "立场明确：明确支持或反对曲线评分",
+        "理由与例证：以公平性或竞争压力等具体理由支撑",
+        "回应同学：回应 Priya 或 Daniel 的观点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术性词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "work schedules",
+      "prompt": "Your professor is teaching a class on work schedules. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Chen: Several organizations have experimented with compressing the week into four longer days. Would a four-day week improve wellbeing and focus, or would the longer days simply exhaust people and reduce output? Defend your position.\n\nLeo: I support it. Fewer days cut commuting and burnout, and people concentrate better knowing they get a longer break.\n\nHana: I'm not convinced. Ten-hour days drain energy and hurt those who must arrange childcare or study around rigid long blocks.",
+      "promptZh": "教授问四天工作/上课制是否更好；Leo 认为减少通勤、提升专注，Hana 认为超长工作日令人疲惫且不利于需照顾家庭者。",
+      "referencePoints": [
+        "立场明确：明确支持或反对四天工作制",
+        "理由与例证：用效率、疲劳或家庭安排等理由支撑",
+        "回应同学：回应 Leo 或 Hana 的论点",
+        "组织连贯：观点组织清晰、过渡自然",
+        "语法与学术词汇：句子准确并使用恰当学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "tourism and culture",
+      "prompt": "Your professor is teaching a class on tourism and culture. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Delgado: Popular destinations attract millions of visitors, bringing income but also crowds and rising prices for residents. Should cities actively limit tourism to protect local culture, or does the economic benefit outweigh the disruption? Explain.\n\nSofia: Cities should limit it. Unchecked tourism prices locals out of their own neighborhoods and turns living communities into theme parks.\n\nMarco: I disagree. Tourism funds jobs, restaurants, and heritage sites that would otherwise decline, and openness enriches culture.",
+      "promptZh": "教授问城市是否应限制旅游以保护本地文化；Sofia 主张限制以防居民被挤出社区，Marco 认为旅游带来就业与文化交流，利大于弊。",
+      "referencePoints": [
+        "立场明确：明确支持或反对限制旅游",
+        "理由与例证：以居民生活或经济收益等理由支撑",
+        "回应同学：回应 Sofia 或 Marco 的观点",
+        "组织连贯：结构完整、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "bioethics",
+      "prompt": "Your professor is teaching a class on bioethics. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Egan: New tools make it possible to edit the genes of human embryos to remove inherited diseases. Should scientists be allowed to edit human embryos, or are the risks and ethical concerns too great? Give your reasoning.\n\nInes: I think it should be allowed, but carefully. Preventing devastating hereditary diseases could spare families enormous suffering.\n\nOmar: I oppose it. We cannot predict long-term effects, and editing embryos could deepen inequality between those who can and cannot afford it.",
+      "promptZh": "教授问是否应允许编辑人类胚胎基因；Ines 谨慎支持以预防遗传病，Omar 反对，担忧长期风险与加剧不平等。",
+      "referencePoints": [
+        "立场明确：明确支持或反对胚胎基因编辑",
+        "理由与例证：以医疗益处或伦理风险等理由支撑",
+        "回应同学：回应 Ines 或 Omar 的论点",
+        "组织连贯：论证层次清楚、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "remote collaboration",
+      "prompt": "Your professor is teaching a class on remote collaboration. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Fournier: Many teams now debate whether creative work is done better remotely or face-to-face. Do teams collaborate more effectively in person, or can remote work match and even exceed it? Support your view.\n\nRavi: In person is better. Spontaneous conversations and body language spark ideas that video calls flatten out.\n\nClara: I'd argue for remote. People focus without office distractions, and access to global talent outweighs the loss of hallway chat.",
+      "promptZh": "教授问团队协作面对面还是远程更有效；Ravi 认为面对面能激发灵感，Clara 认为远程更专注且可汇聚全球人才。",
+      "referencePoints": [
+        "立场明确：明确支持面对面或远程协作",
+        "理由与例证：以沟通效率或专注度等理由支撑",
+        "回应同学：回应 Ravi 或 Clara 的观点",
+        "组织连贯：结构清晰、过渡自然",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "college admissions",
+      "prompt": "Your professor is teaching a class on college admissions. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Grant: Some universities have dropped standardized entrance exams, while others insist they predict success. Should colleges require standardized tests for admission, or rely on other measures? Explain your stance.\n\nNadia: Colleges should keep them. A common test gives every applicant one comparable, objective benchmark regardless of their school.\n\nKofi: I'd drop them. The scores mostly reflect expensive coaching and family income, not a student's real potential.",
+      "promptZh": "教授问大学录取是否应要求标准化考试；Nadia 认为它提供客观统一标准，Kofi 认为分数主要反映家庭财力而非潜力。",
+      "referencePoints": [
+        "立场明确：明确支持或反对要求标准化考试",
+        "理由与例证：以客观性或公平性等理由支撑",
+        "回应同学：回应 Nadia 或 Kofi 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "urban wildlife",
+      "prompt": "Your professor is teaching a class on urban wildlife. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Haddad: Foxes, coyotes, and deer increasingly live inside city limits. Should cities take active steps to remove or control urban wildlife, or should residents learn to coexist with it? Share your reasoning.\n\nBela: We should coexist. Animals adapt to cities we built over their habitats, and heavy-handed removal disrupts the ecosystem.\n\nJonas: I think cities should control it. Wildlife in dense areas spreads disease and causes accidents, so cities have a duty to manage populations.",
+      "promptZh": "教授问城市应否主动控制野生动物；Bela 主张共存、反对粗暴清除，Jonas 认为密集区野生动物传播疾病、引发事故，城市应管理。",
+      "referencePoints": [
+        "立场明确：明确支持共存或主动控制",
+        "理由与例证：以生态平衡或公共安全等理由支撑",
+        "回应同学：回应 Bela 或 Jonas 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "gig economy",
+      "prompt": "Your professor is teaching a class on the gig economy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ibarra: Drivers and couriers on app platforms are usually treated as independent contractors, not employees. Should gig workers receive the same protections as employees, or would that undermine the flexibility that draws people to gig work? Defend your view.\n\nElena: They should be protected. People doing essential work deserve sick pay and a minimum wage, whatever label the app uses.\n\nSam: I disagree. Mandatory employment rules would raise costs and strip away the flexible hours workers actually value.",
+      "promptZh": "教授问零工是否应享有雇员保障；Elena 认为应有病假与最低工资，Sam 认为强制雇佣规则会推高成本并削弱灵活性。",
+      "referencePoints": [
+        "立场明确：明确支持或反对给予零工雇员保障",
+        "理由与例证：以劳工权益或灵活性等理由支撑",
+        "回应同学：回应 Elena 或 Sam 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "public art",
+      "prompt": "Your professor is teaching a class on public art. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Jung: City budgets often include money for murals, sculptures, and public installations. Should governments fund public art with taxpayer money, or should those funds go to more practical needs? Explain.\n\nFarah: Governments should fund it. Public art builds identity, draws visitors, and makes shared spaces feel human rather than purely functional.\n\nVictor: I'd rather they didn't. With limited budgets, money is better spent on roads, housing, and services people rely on daily.",
+      "promptZh": "教授问政府是否应用税款资助公共艺术；Farah 认为它塑造城市认同、吸引游客，Victor 认为有限预算应优先投向道路、住房等实用需求。",
+      "referencePoints": [
+        "立场明确：明确支持或反对政府资助公共艺术",
+        "理由与例证：以文化价值或财政优先级等理由支撑",
+        "回应同学：回应 Farah 或 Victor 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "university athletics",
+      "prompt": "Your professor is teaching a class on university athletics. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Kaur: Universities spend heavily on stadiums and sports programs that only some students use. Should universities prioritize funding athletics, or redirect that money toward academics? Give your position.\n\nTomas: I support athletics. Sports build school spirit, attract donations, and give many students discipline and scholarships.\n\nAisha: I'd redirect it. A university's core mission is education, and lavish sports budgets shortchange labs, libraries, and teaching.",
+      "promptZh": "教授问大学是否应优先资助体育；Tomas 认为体育凝聚校园、吸引捐款，Aisha 认为教育才是核心、豪华体育预算挤占学术资源。",
+      "referencePoints": [
+        "立场明确：明确支持优先体育或学术",
+        "理由与例证：以校园凝聚力或教育使命等理由支撑",
+        "回应同学：回应 Tomas 或 Aisha 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "food waste",
+      "prompt": "Your professor is teaching a class on food waste. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Lindqvist: Campus cafeterias throw away large amounts of uneaten food every day. Should cafeterias take strict measures like portion limits or fines to cut waste, or should they rely on educating diners? Explain your reasoning.\n\nMei: Strict measures work best. Only real limits, such as smaller default portions, change behavior fast enough to matter.\n\nDiego: I'd rely on education. Punishing diners feels heavy-handed; teaching people and donating surplus tackles the root cause without resentment.",
+      "promptZh": "教授问食堂应否用限量或罚款减少浪费；Mei 认为只有硬性限制才能快速见效，Diego 主张教育与捐赠更能从根源解决且不招致反感。",
+      "referencePoints": [
+        "立场明确：明确支持强制措施或教育引导",
+        "理由与例证：以行为改变或根源治理等理由支撑",
+        "回应同学：回应 Mei 或 Diego 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "dress codes",
+      "prompt": "Your professor is teaching a class on dress codes. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Moreau: Some schools and workplaces enforce detailed dress codes, while others let people wear what they like. Do dress codes create a fairer, more focused environment, or do they limit personal expression unnecessarily? Share your view.\n\nLucas: I support them. A shared standard reduces distraction and status competition over clothing and looks more professional.\n\nYara: I'm against them. Clothing is a form of identity, and rigid codes often police personal or cultural expression without real benefit.",
+      "promptZh": "教授问着装规定利弊；Lucas 认为它减少攀比、更专业，Yara 认为服装是身份表达，严格规定常无谓地压制个人与文化表达。",
+      "referencePoints": [
+        "立场明确：明确支持或反对着装规定",
+        "理由与例证：以专注度或个人表达等理由支撑",
+        "回应同学：回应 Lucas 或 Yara 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "exam formats",
+      "prompt": "Your professor is teaching a class on exam formats. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Novak: In open-book exams, students may consult their notes and texts during the test. Do open-book exams measure understanding better than closed-book ones, or do they let students avoid truly learning the material? Defend your stance.\n\nAna: Open-book exams are better. Real life lets you look things up, so testing how you apply information matters more than memorization.\n\nRuben: I think they're worse. Without pressure to internalize material, many students skim and never build the foundation they need later.",
+      "promptZh": "教授问开卷考试是否更能衡量理解；Ana 认为应用能力比记忆更重要，Ruben 认为缺少内化压力会让学生只浮于表面、基础薄弱。",
+      "referencePoints": [
+        "立场明确：明确支持开卷或闭卷考试",
+        "理由与例证：以应用能力或知识内化等理由支撑",
+        "回应同学：回应 Ana 或 Ruben 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "internships",
+      "prompt": "Your professor is teaching a class on internships. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Osei: Many valuable internships offer experience but no pay. Should companies be required to pay interns, or is unpaid experience a fair trade for the skills and connections gained? Explain.\n\nNina: Companies should pay. Unpaid internships lock out students who cannot afford to work for free and quietly favor the wealthy.\n\nPaulo: I disagree. Early experience and mentorship have real value, and forcing pay would make companies offer far fewer spots.",
+      "promptZh": "教授问是否应强制企业给实习生付薪；Nina 认为无薪实习排斥贫困学生、偏袒富人，Paulo 认为经验与指导本身有价值，强制付薪会减少岗位。",
+      "referencePoints": [
+        "立场明确：明确支持或反对强制实习付薪",
+        "理由与例证：以公平机会或岗位数量等理由支撑",
+        "回应同学：回应 Nina 或 Paulo 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "space exploration",
+      "prompt": "Your professor is teaching a class on space exploration. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Pryce: Governments spend billions on space programs while pressing problems remain on Earth. Is large-scale spending on space exploration justified, or should that money address needs at home first? Give your reasoning.\n\nSara: It's justified. Space research drives technology, inspires students, and helps us understand threats like asteroids and a changing climate.\n\nEthan: I don't think so. With poverty and healthcare underfunded, spending billions to reach other planets is a matter of misplaced priorities.",
+      "promptZh": "教授问巨额太空探索开支是否合理；Sara 认为它推动科技、启迪学生并帮助应对威胁，Ethan 认为在贫困与医疗资金不足下这是错置的优先级。",
+      "referencePoints": [
+        "立场明确：明确支持或反对大规模太空开支",
+        "理由与例证：以科技效益或民生优先等理由支撑",
+        "回应同学：回应 Sara 或 Ethan 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "consumer minimalism",
+      "prompt": "Your professor is teaching a class on consumer minimalism. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Quinn: Some argue that owning less leads to a happier, more sustainable life, while others see consumption as a driver of progress and joy. Is a minimalist lifestyle genuinely better, or is it an unrealistic ideal? Share your view.\n\nTara: It really is better. Buying less reduces waste and stress, and people often find they value experiences over accumulating things.\n\nKenji: I'm skeptical. Minimalism is a privilege of those who already have enough, and consumer spending sustains jobs and innovation.",
+      "promptZh": "教授问极简生活是否真的更好；Tara 认为少买减少浪费与压力、更重体验，Kenji 认为极简是有余者的特权，而消费支撑就业与创新。",
+      "referencePoints": [
+        "立场明确：明确支持或质疑极简生活方式",
+        "理由与例证：以可持续性或经济作用等理由支撑",
+        "回应同学：回应 Tara 或 Kenji 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "language requirement",
+      "prompt": "Your professor is teaching a class on foreign-language education policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Rossi: Many schools require every student to study a foreign language for several years. Should learning a second language be a graduation requirement for all students, or an optional choice? Defend your position.\n\nLea: It should be required. A second language builds cultural awareness and cognitive flexibility that benefit students far beyond the classroom.\n\nBruno: I'd make it optional. Forcing languages on uninterested students wastes hours they could spend on skills closer to their real goals.",
+      "promptZh": "教授问学外语是否应成为全体学生的毕业要求；Lea 认为它培养跨文化意识与思维灵活性，Bruno 主张选修，认为强制会浪费无兴趣学生的时间。",
+      "referencePoints": [
+        "立场明确：明确支持将外语设为必修或选修",
+        "理由与例证：以文化视野或个人目标等理由支撑",
+        "回应同学：回应 Lea 或 Bruno 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "zoos and animals",
+      "prompt": "Your professor is teaching a class on zoos and animal welfare. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Sasaki: Zoos say they protect endangered species and educate the public, while critics say keeping wild animals captive is wrong. Do the conservation benefits of zoos justify keeping animals in captivity, or not? Explain.\n\nGrace: The benefits justify it. Well-run zoos breed endangered species, fund fieldwork, and connect people to animals they will act to save.\n\nAli: I disagree. Confining intelligent animals for viewing causes real suffering, and conservation is better done in the wild.",
+      "promptZh": "教授问动物园的保育价值是否足以为圈养辩护；Grace 认为优质动物园繁育濒危物种、资助野外研究并唤起公众保护意识，Ali 认为圈养造成痛苦，保育应在野外进行。",
+      "referencePoints": [
+        "立场明确：明确支持或反对动物园圈养",
+        "理由与例证：以物种保育或动物福利等理由支撑",
+        "回应同学：回应 Grace 或 Ali 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "basic income",
+      "prompt": "Your professor is teaching a class on basic income. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Tan: Under a universal basic income, every citizen receives a regular payment with no conditions. Would a basic income strengthen society by reducing poverty, or would it discourage work and prove unaffordable? Give your stance.\n\nHugo: I support it. A guaranteed floor frees people to retrain, care for family, or take risks without fear of destitution.\n\nWei: I oppose it. It is enormously expensive and could weaken the incentive to work, straining the very system that funds it.",
+      "promptZh": "教授问全民基本收入是否能减贫强社会；Hugo 认为它给人再培训与冒险的底气，Wei 认为成本高昂且可能削弱工作动力、拖垮财政。",
+      "referencePoints": [
+        "立场明确：明确支持或反对全民基本收入",
+        "理由与例证：以减贫保障或财政成本等理由支撑",
+        "回应同学：回应 Hugo 或 Wei 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "civic participation",
+      "prompt": "Your professor is teaching a class on civic participation. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ustinov: In some countries, citizens are legally required to vote in elections. Should voting be made compulsory, or is choosing not to vote also a legitimate right? Share your reasoning.\n\nRosa: Voting should be compulsory. It produces results that reflect the whole population, not just the most motivated few.\n\nFelix: I disagree. Forcing reluctant, uninformed people to vote is its own problem, and the freedom to abstain matters too.",
+      "promptZh": "教授问投票是否应强制；Rosa 认为强制投票能反映全体民意，Felix 认为强迫无意愿、不了解情况者投票本身有问题，弃权也是权利。",
+      "referencePoints": [
+        "立场明确：明确支持或反对强制投票",
+        "理由与例证：以代表性或个人自由等理由支撑",
+        "回应同学：回应 Rosa 或 Felix 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "animal research ethics",
+      "prompt": "Your professor is teaching a class on animal research ethics. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Vega: New medicines are often tested on animals before humans. Is animal testing a justified step in developing life-saving treatments, or should we ban it in favor of alternatives? Explain your view.\n\nIris: It's justified for now. Animal studies catch dangers that computer models cannot, protecting human patients from harm.\n\nNoah: I'd ban it. Causing animals to suffer is unethical, and investment should shift toward accurate cell- and computer-based methods.",
+      "promptZh": "教授问动物实验是否合理；Iris 认为目前动物实验能发现模型无法预测的风险、保护患者，Noah 认为致动物受苦不道德，应转向细胞与计算机方法。",
+      "referencePoints": [
+        "立场明确：明确支持或反对动物实验",
+        "理由与例证：以医疗安全或伦理关切等理由支撑",
+        "回应同学：回应 Iris 或 Noah 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "school calendar",
+      "prompt": "Your professor is teaching a class on the school calendar. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Whitfield: Some districts replace the long summer break with shorter breaks spread across the year. Would year-round schooling help students learn better, or is a long summer break important? Defend your position.\n\nMila: I support year-round schooling. Long summers erase learning, and shorter, frequent breaks keep students fresh and reduce cramming.\n\nCaleb: I disagree. Extended breaks give room for rest, family, jobs, and camps that teach things school never could.",
+      "promptZh": "教授问全年制上学是否更利学习；Mila 认为长假造成知识遗忘、频繁短假更保持状态，Caleb 认为长假带来休息、家庭与营地等校外成长机会。",
+      "referencePoints": [
+        "立场明确：明确支持全年制或保留长暑假",
+        "理由与例证：以知识保持或休息成长等理由支撑",
+        "回应同学：回应 Mila 或 Caleb 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "homework",
+      "prompt": "Your professor is teaching a class on homework. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Xu: Teachers disagree about how much homework helps. Does homework meaningfully improve learning, or does it mostly add stress with little benefit? Share your stance.\n\nZoe: Homework helps. Practicing at home cements new skills and teaches students to manage time on their own.\n\nArjun: I'm doubtful. Piles of busywork tire students out and widen gaps between kids with and without support at home.",
+      "promptZh": "教授问家庭作业是否真的促进学习；Zoe 认为课后练习巩固技能、培养时间管理，Arjun 认为大量机械作业令人疲惫并加剧家庭条件差异带来的差距。",
+      "referencePoints": [
+        "立场明确：明确支持或质疑家庭作业的价值",
+        "理由与例证：以巩固学习或压力差距等理由支撑",
+        "回应同学：回应 Zoe 或 Arjun 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "financial education",
+      "prompt": "Your professor is teaching a class on financial education. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Yates: Many adults struggle with budgeting, debt, and saving. Should schools require a course in personal finance, or is that better learned at home and through experience? Explain.\n\nBianca: Schools should require it. Money skills affect everyone's life, yet many families cannot teach them, so schools should fill the gap.\n\nOscar: I'm skeptical. The curriculum is already crowded, and real financial habits are learned by doing, not from a classroom.",
+      "promptZh": "教授问学校是否应必修理财课；Bianca 认为理财关乎人人却常无人可教，学校应补位，Oscar 认为课程已过满、真正的财务习惯靠实践而非课堂。",
+      "referencePoints": [
+        "立场明确：明确支持或反对必修理财课",
+        "理由与例证：以普遍需求或课程负担等理由支撑",
+        "回应同学：回应 Bianca 或 Oscar 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "computer science curriculum",
+      "prompt": "Your professor is teaching a class on computer-science curriculum. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Zima: Some argue programming is now as fundamental as reading or math. Should coding be a required subject for all students, or should it stay an elective for those interested? Give your reasoning.\n\nDana: It should be required. Code shapes nearly every field, and basic programming teaches logical thinking useful far beyond computers.\n\nPavel: I'd keep it an elective. Not every student needs to code, and mandatory classes could crowd out other valuable subjects.",
+      "promptZh": "教授问编程是否应成为全体学生的必修科目；Dana 认为编程影响各行业并培养逻辑思维，Pavel 主张选修，认为并非人人需要且必修会挤占其他课程。",
+      "referencePoints": [
+        "立场明确：明确支持将编程设为必修或选修",
+        "理由与例证：以广泛应用或课程取舍等理由支撑",
+        "回应同学：回应 Dana 或 Pavel 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "arts vs STEM",
+      "prompt": "Your professor is teaching a class on arts and STEM funding. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ackerman: When school budgets are tight, arts programs are often cut before science and math. Should schools protect arts funding as much as STEM, or prioritize subjects tied to jobs? Defend your view.\n\nCamila: Schools should protect the arts. Creativity, empathy, and expression matter for a full education and even fuel innovation in STEM.\n\nReza: I'd prioritize STEM. With limited money, subjects that lead directly to employment and economic strength should come first.",
+      "promptZh": "教授问预算紧张时是否应同等保护艺术课程；Camila 认为艺术培养创造力与共情、也助力理工创新，Reza 主张优先与就业和经济直接相关的理工科目。",
+      "referencePoints": [
+        "立场明确：明确支持保护艺术或优先理工",
+        "理由与例证：以创造力培养或就业前景等理由支撑",
+        "回应同学：回应 Camila 或 Reza 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "gap year",
+      "prompt": "Your professor is teaching a class on the gap year. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Brar: Some students take a year off between high school and university to work or travel. Is a gap year a valuable experience, or does it risk losing academic momentum? Share your stance.\n\nLily: A gap year is valuable. Time to work or travel builds maturity and direction, so students arrive at university with real purpose.\n\nMilo: I see it as risky. Stepping away from study makes it hard to return, and many students never regain their academic footing.",
+      "promptZh": "教授问间隔年是否值得；Lily 认为工作或旅行能增强成熟度与方向感，Milo 认为脱离学习后难以回归、许多人无法重拾学业状态。",
+      "referencePoints": [
+        "立场明确：明确支持或反对间隔年",
+        "理由与例证：以成长方向或学业连续性等理由支撑",
+        "回应同学：回应 Lily 或 Milo 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "collaborative learning",
+      "prompt": "Your professor is teaching a class on collaborative learning. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Costa: Teachers often assign group projects to build teamwork, but students frequently complain about uneven effort. Do group projects prepare students better than individual work, or do their downsides outweigh the benefits? Explain.\n\nPetra: I support group projects. Collaboration mirrors real workplaces and teaches negotiation, delegation, and communication skills.\n\nHassan: I prefer individual work. Unequal effort and shared grades punish diligent students, and real learning gets lost in the logistics.",
+      "promptZh": "教授问小组项目是否比个人作业更能培养学生；Petra 认为协作贴近职场、锻炼沟通与分工，Hassan 偏好个人作业，认为付出不均和共评惩罚了勤奋者。",
+      "referencePoints": [
+        "立场明确：明确支持小组项目或个人作业",
+        "理由与例证：以团队技能或公平评分等理由支撑",
+        "回应同学：回应 Petra 或 Hassan 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "reading formats",
+      "prompt": "Your professor is teaching a class on reading formats. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Dubois: Schools increasingly consider replacing printed textbooks with digital ones. Are e-books a better choice for learning than printed books, or do printed books still hold real advantages? Give your reasoning.\n\nNora: E-books are better. They are cheaper over time, searchable, always updated, and far lighter than a bag full of textbooks.\n\nTariq: I'd keep print. Paper aids focus and memory, avoids screen fatigue, and does not depend on devices, batteries, or wifi.",
+      "promptZh": "教授问电子书是否比纸质书更利学习；Nora 认为电子书更便宜、可搜索、易更新且轻便，Tariq 认为纸质书有助专注与记忆、避免屏幕疲劳且不依赖设备。",
+      "referencePoints": [
+        "立场明确：明确支持电子书或纸质书",
+        "理由与例证：以成本便携或专注记忆等理由支撑",
+        "回应同学：回应 Nora 或 Tariq 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "plant-based dining",
+      "prompt": "Your professor is teaching a class on institutional dining and sustainability. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ellison: To cut environmental impact, some campuses are making cafeteria menus mostly plant-based by default. Should institutions promote plant-based meals by default, or should meat remain an equal, freely chosen option? Share your view.\n\nSana: I support plant-based defaults. Defaults shape choices, and shifting toward plant-based food meaningfully lowers emissions and water use.\n\nGabe: I disagree. People should choose their own diet, and pushing plant-based menus ignores nutrition needs and personal preference.",
+      "promptZh": "教授问食堂是否应默认以植物性餐为主；Sana 认为默认设置能引导选择、显著降低排放与耗水，Gabe 认为饮食应由个人自选，默认植物性餐忽视营养与偏好。",
+      "referencePoints": [
+        "立场明确：明确支持或反对默认植物性餐",
+        "理由与例证：以环境影响或个人选择等理由支撑",
+        "回应同学：回应 Sana 或 Gabe 的观点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "national parks access",
+      "prompt": "Your professor is teaching a class on national parks access. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Farooq: Popular national parks are so crowded that some now cap the number of daily visitors. Should parks limit visitor numbers to protect nature, or stay fully open to everyone? Defend your position.\n\nTalia: Parks should limit numbers. Overcrowding erodes trails and disturbs wildlife, so caps are the only way to preserve parks for the future.\n\nIan: I'd keep them open. Public lands belong to everyone, and restricting access unfairly favors those who can plan or pay ahead.",
+      "promptZh": "教授问国家公园是否应限流以保护自然；Talia 认为过度拥挤破坏步道、惊扰野生动物，限流才能保存公园，Ian 认为公共土地属于所有人，限流对无法提前规划或付费者不公。",
+      "referencePoints": [
+        "立场明确：明确支持或反对国家公园限流",
+        "理由与例证：以生态保护或公平使用等理由支撑",
+        "回应同学：回应 Talia 或 Ian 的观点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "public libraries",
+      "prompt": "Your professor is teaching a class on public libraries. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ghosh: With so much available online, some question whether cities should keep funding physical libraries. Are public libraries still worth significant public funding, or is the money better spent elsewhere? Explain your reasoning.\n\nFreya: They are worth it. Libraries offer free internet, learning space, and community help that many people have nowhere else to find.\n\nDerek: I'm skeptical. As resources move online, expensive buildings may be a luxury, and funds could serve more urgent needs.",
+      "promptZh": "教授问在信息网络化时代实体图书馆是否仍值得大量拨款；Freya 认为图书馆提供免费网络、学习空间与社区帮助，Derek 认为资源上网后昂贵建筑或成奢侈、资金应用于更急需之处。",
+      "referencePoints": [
+        "立场明确：明确支持或质疑资助实体图书馆",
+        "理由与例证：以社区服务或财政取舍等理由支撑",
+        "回应同学：回应 Freya 或 Derek 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cashless economy",
+      "prompt": "Your professor is teaching a class on the cashless economy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Holt: More shops now accept only cards and phones, refusing physical cash. Should societies move toward becoming fully cashless, or is keeping cash important? Give your stance.\n\nVera: I support going cashless. Digital payments are faster, safer to carry, and easier to track for taxes and budgeting.\n\nMalik: I oppose it. Going cashless excludes the elderly, the poor, and the unbanked, and erases the privacy that cash allows.",
+      "promptZh": "教授问社会是否应走向完全无现金；Vera 认为数字支付更快、更安全、便于记账，Malik 反对，认为无现金会排斥老人、穷人与无银行账户者并抹去现金带来的隐私。",
+      "referencePoints": [
+        "立场明确：明确支持或反对无现金社会",
+        "理由与例证：以便利安全或包容隐私等理由支撑",
+        "回应同学：回应 Vera 或 Malik 的观点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "tipping practices",
+      "prompt": "Your professor is teaching a class on tipping practices. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Imani: In some countries, tipping is expected, while in others it is built into wages. Should tipping be replaced by fair fixed wages, or does tipping reward good service? Share your view.\n\nCleo: I'd replace it. Tips make income unstable and pressure customers, so fair wages built into the price are more honest.\n\nRory: I'd keep it. Tipping directly rewards good service and gives motivated workers a chance to earn more than a flat wage.",
+      "promptZh": "教授问小费文化是否应被固定工资取代；Cleo 认为小费使收入不稳、给顾客压力，纳入价格的工资更诚实，Rory 认为小费直接奖励优质服务、让积极的员工挣得更多。",
+      "referencePoints": [
+        "立场明确：明确支持取消小费或保留小费",
+        "理由与例证：以收入稳定或激励服务等理由支撑",
+        "回应同学：回应 Cleo 或 Rory 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "fast fashion",
+      "prompt": "Your professor is teaching a class on fast fashion. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Keller: Fast fashion offers cheap, trendy clothes but generates enormous waste and pollution. Should consumers and governments actively discourage fast fashion, or is affordable clothing a benefit worth its costs? Explain.\n\nAmara: We should discourage it. The environmental and labor costs are severe, and a culture of disposable clothing is unsustainable.\n\nDylan: I'd defend it. Cheap clothing makes style accessible to people on low incomes, and the answer is better production, not guilt.",
+      "promptZh": "教授问是否应抑制快时尚；Amara 认为其环境与劳工代价严重、一次性穿衣文化不可持续，Dylan 认为廉价服装让低收入者也能追求时尚，出路在于改进生产而非道德指责。",
+      "referencePoints": [
+        "立场明确：明确支持或反对抑制快时尚",
+        "理由与例证：以环境劳工代价或可及性等理由支撑",
+        "回应同学：回应 Amara 或 Dylan 的论点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "physical education",
+      "prompt": "Your professor is teaching a class on physical education policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Larsson: As academic pressure grows, some schools reduce required physical education. Should PE remain a required part of the school day, or should that time go to academic subjects? Defend your position.\n\nJade: PE should stay required. Regular exercise supports health, focus, and mood, which in turn help students perform academically.\n\nSean: I'd reduce it. For students already active outside school, mandatory PE eats into time needed for core subjects.",
+      "promptZh": "教授问体育课是否应保持必修；Jade 认为规律运动促进健康、专注与情绪进而助益学业，Sean 认为对校外已活跃的学生而言必修体育会占用核心课程时间。",
+      "referencePoints": [
+        "立场明确：明确支持保留或削减必修体育",
+        "理由与例证：以健康益处或时间取舍等理由支撑",
+        "回应同学：回应 Jade 或 Sean 的论点",
+        "组织连贯：论证层次分明、衔接自然",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "study abroad",
+      "prompt": "Your professor is teaching a class on study abroad. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Mensah: Some universities want every student to spend a term studying in another country. Should study abroad be a required part of a degree, or remain optional? Give your reasoning.\n\nElif: It should be required. Living abroad builds independence, language skills, and cultural understanding no classroom can replicate.\n\nColin: I'd keep it optional. Study abroad is costly and disruptive, and forcing it burdens students with jobs, families, or tight budgets.",
+      "promptZh": "教授问出国交流是否应成为学位必修部分；Elif 认为海外生活培养独立、语言与文化理解，Colin 主张选修，认为出国费用高、干扰大，强制会加重有工作、家庭或预算紧张学生的负担。",
+      "referencePoints": [
+        "立场明确：明确支持将出国交流设为必修或选修",
+        "理由与例证：以能力培养或成本负担等理由支撑",
+        "回应同学：回应 Elif 或 Colin 的论点",
+        "组织连贯：结构清晰、逻辑连贯",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "homeschooling",
+      "prompt": "Your professor is teaching a class on homeschooling. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Nakamura: A growing number of families educate their children at home instead of sending them to school. Is homeschooling a sound alternative to traditional schooling, or does it deprive children of important experiences? Share your stance.\n\nRania: I think it's sound. Homeschooling can tailor learning to each child and shield them from a one-size-fits-all system.\n\nBen: I'm concerned. School offers social skills, diverse viewpoints, and oversight that home settings may struggle to provide.",
+      "promptZh": "教授问在家教育是否是学校教育的可靠替代；Rania 认为它能因材施教、避免统一模式，Ben 担忧在家教育难以提供学校的社交、多元视角与监督。",
+      "referencePoints": [
+        "立场明确：明确支持或质疑在家教育",
+        "理由与例证：以个性化教学或社交监督等理由支撑",
+        "回应同学：回应 Rania 或 Ben 的论点",
+        "组织连贯：论证连贯、层次清晰",
+        "语法与学术词汇：语法准确并使用学术词汇"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "youth sports",
+      "prompt": "Your professor is teaching a class on youth sports. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nProfessor Ocampo: Many young athletes now focus intensely on a single sport from an early age. Should children specialize early to reach elite levels, or play many sports for balanced development? Explain your view.\n\nMarta: They should play many. Early specialization causes injuries and burnout, while varied sports build broader skills and lasting enjoyment.\n\nAndre: I'd specialize. Reaching the top demands early, focused training, and delaying it puts serious athletes at a disadvantage.",
+      "promptZh": "教授问儿童是否应尽早专攻单一运动；Marta 认为早期专项化导致伤病与倦怠、多项运动更全面且更持久有趣，Andre 认为登顶需要早期专注训练，推迟会让有志运动员处于劣势。",
+      "referencePoints": [
+        "立场明确：明确支持多项运动或早期专项化",
+        "理由与例证：以伤病倦怠或精英训练等理由支撑",
+        "回应同学：回应 Marta 或 Andre 的论点",
+        "组织连贯：结构完整、逻辑清晰",
+        "语法与学术词汇：语法准确并使用学术表达"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    }
+  ]
+}
