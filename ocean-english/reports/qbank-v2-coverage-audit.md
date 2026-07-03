@@ -1,10 +1,10 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-07-03T07:06:41.350Z
+Generated: 2026-07-03T12:03:12.973Z
 
-Totals: sets 6047 · items 7291 · active 2364 · draft 3683
+Totals: sets 6227 · items 7877 · active 2364 · draft 3863
 
-## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 0 · PILOT_DRAFT 2 · READY_DRAFT 0 · READY_ACTIVE 40 · BLOCKED 3
+## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 0 · PILOT_DRAFT 0 · READY_DRAFT 2 · READY_ACTIVE 40 · BLOCKED 3
 
 | exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |
 |---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
@@ -40,8 +40,8 @@ Totals: sets 6047 · items 7291 · active 2364 · draft 3683
 | kaoyan | 5 | writing_small | applied_writing | - | free_text | - | Y | 0 | 0 | 50 | 50 | 0 | 0 | 50 | 1 | READY_ACTIVE | - |
 | kaoyan | 5 | writing_large | essay_writing | - | free_text | - | Y | 0 | 0 | 50 | 50 | 0 | 0 | 50 | 1 | READY_ACTIVE | - |
 | toefl | 6 | reading | complete_the_words | - | spell | - | - | 0 | 0 | 70 | 70 | 70 | 0 | 0 | 2 | READY_ACTIVE | - |
-| toefl | 6 | reading | read_daily_life | - | choice | - | - | 10 | 0 | 0 | 24 | 10 | 0 | 0 | 1 | PILOT_DRAFT | spec_confirmed_project_practice_shape,needs_90_more |
-| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 10 | 0 | 0 | 40 | 10 | 0 | 0 | 1 | PILOT_DRAFT | spec_confirmed_project_practice_shape,needs_90_more |
+| toefl | 6 | reading | read_daily_life | - | choice | - | - | 100 | 0 | 0 | 250 | 100 | 0 | 0 | 2 | READY_DRAFT | - |
+| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 100 | 0 | 0 | 400 | 100 | 0 | 0 | 2 | READY_DRAFT | - |
 | toefl | 6 | listening | choose_a_response | - | choice | Y | - | 0 | 0 | 10 | 10 | 10 | 10 | 0 | 1 | READY_ACTIVE | - |
 | toefl | 6 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 10 | 30 | 10 | 10 | 0 | 1 | READY_ACTIVE | - |
 | toefl | 6 | writing | build_a_sentence | - | multi_blank | - | Y | 10 | 0 | 0 | 10 | 0 | 0 | 0 | 1 | BLOCKED | scoring_not_ready |
@@ -68,10 +68,8 @@ Totals: sets 6047 · items 7291 · active 2364 · draft 3683
 ### THIN (0 < draft < 50) — 0
 
 
-### PILOT_DRAFT (spec-confirmed project practice shape, pool < 50; 4-option MCQ is the project practice format, not a claimed exact ETS UI) — 2
+### PILOT_DRAFT (spec-confirmed project practice shape, pool < 50; 4-option MCQ is the project practice format, not a claimed exact ETS UI) — 0
 
-- toefl lv6 / reading / read_daily_life — draft 10 · spec_confirmed_project_practice_shape,needs_90_more
-- toefl lv6 / reading / reading_comprehension — draft 10 · spec_confirmed_project_practice_shape,needs_90_more
 
 ### BLOCKED — 3
 
@@ -79,8 +77,10 @@ Totals: sets 6047 · items 7291 · active 2364 · draft 3683
 - toefl lv6 / speaking / listen_and_repeat — draft 10 · audio_missing
 - toefl lv6 / speaking / interview_speaking — draft 10 · audio_missing
 
-### READY_DRAFT (draft ≥ 50) — 0
+### READY_DRAFT (draft ≥ 50) — 2
 
+- toefl lv6 / read_daily_life — draft 100
+- toefl lv6 / reading_comprehension — draft 100
 
 ### READY_ACTIVE — 40
 
@@ -241,8 +241,8 @@ Totals: sets 6047 · items 7291 · active 2364 · draft 3683
 | toefl | 6 | listen_and_repeat | 10 | 10 | 0 | 10 | 10 | 0 | 10 | 0 | 1 | insufficient_active_pool |
 | toefl | 6 | listen_to_meaning | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
 | toefl | 6 | listening_comprehension | 10 | 0 | 10 | 30 | 10 | 10 | 0 | 0 | 1 | - |
-| toefl | 6 | read_daily_life | 10 | 10 | 0 | 24 | 10 | 0 | 0 | 0 | 1 | insufficient_active_pool |
-| toefl | 6 | reading_comprehension | 10 | 10 | 0 | 40 | 10 | 0 | 0 | 0 | 1 | insufficient_active_pool |
+| toefl | 6 | read_daily_life | 100 | 100 | 0 | 250 | 100 | 0 | 0 | 0 | 2 | insufficient_active_pool |
+| toefl | 6 | reading_comprehension | 100 | 100 | 0 | 400 | 100 | 0 | 0 | 0 | 2 | insufficient_active_pool |
 | toefl | 6 | synonym_choice | 143 | 56 | 87 | 143 | 0 | 0 | 0 | 143 | 3 | - |
 | toefl | 6 | synonym_substitute | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
 | toefl | 6 | word_form | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
