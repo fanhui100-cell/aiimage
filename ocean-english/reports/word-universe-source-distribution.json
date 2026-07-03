@@ -1,66 +1,68 @@
 {
-  "generatedAt": "2026-07-01T10:35:34.280Z",
+  "generatedAt": "2026-07-01T14:53:03.550Z",
   "status": "active",
-  "total": 171,
+  "total": 351,
   "bySource": {
-    "gen": 171,
+    "gen": 351,
     "qb": 0,
     "migrated_v1": 0,
     "other": 0
   },
   "byTaskType": {
     "confusable_choice": {
-      "gen": 57,
+      "gen": 117,
       "qb": 0,
       "migrated_v1": 0,
       "other": 0
     },
     "def_to_word": {
-      "gen": 57,
+      "gen": 117,
       "qb": 0,
       "migrated_v1": 0,
       "other": 0
     },
     "synonym_choice": {
-      "gen": 57,
+      "gen": 117,
       "qb": 0,
       "migrated_v1": 0,
       "other": 0
     }
   },
   "byExam": {
-    "toefl": 171
+    "sat": 90,
+    "toefl": 261
   },
   "byLevel": {
-    "6": 171
+    "6": 261,
+    "7": 90
   },
   "byLetter": {
-    "w": 6,
-    "p": 7,
-    "d": 7,
-    "i": 4,
-    "e": 6,
-    "n": 3,
-    "c": 7,
-    "f": 5,
-    "g": 3,
-    "l": 4,
+    "m": 15,
+    "d": 20,
+    "a": 40,
+    "i": 19,
+    "p": 22,
+    "c": 21,
+    "w": 9,
+    "t": 10,
+    "f": 11,
+    "s": 17,
+    "b": 21,
+    "e": 19,
+    "r": 12,
+    "u": 8,
+    "o": 8,
+    "v": 10,
+    "q": 8,
+    "l": 13,
+    "n": 8,
+    "g": 10,
     "z": 5,
-    "h": 4,
-    "m": 3,
-    "o": 3,
-    "t": 6,
-    "r": 6,
-    "q": 5,
-    "u": 5,
+    "h": 11,
     "x": 3,
-    "v": 5,
     "y": 6,
-    "s": 6,
     "k": 19,
-    "b": 20,
-    "a": 21,
-    "j": 2
+    "j": 6
   },
   "activeBadProvenance": [],
   "qbActiveSamples": []

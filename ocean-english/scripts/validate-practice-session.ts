@@ -11,7 +11,10 @@ import { createClient } from '@supabase/supabase-js'
 import { readFileSync } from 'node:fs'
 import { buildPracticeSession } from '@/lib/practice/session-builder'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
+import { loadDotenv } from './load-dotenv'
 import type { PracticeItem } from '@/lib/practice/session-types'
+
+loadDotenv()
 
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
@@ -98,6 +101,20 @@ async function main() {
     const stimText = it.stimulus ? JSON.stringify(it.stimulus).toLowerCase() : ''
     check(!it.stimulus, `complete_the_words 不应下发 stimulus（item ${it.questionItemId} 仍带 stimulus）`)
     check(!ans || !stimText.includes(ans), `complete_the_words payload 的 stimulus 含完整答案词「${ans}」= 答案泄露（item ${it.questionItemId}）`)
+  }
+
+  // 6) TOEFL listening active 专项：必须从 v2 出题、带 signed audio URL，且练习态不下发 transcript/textEn。
+  for (const taskType of ['choose_a_response', 'listening_comprehension']) {
+    const listenTask = await buildPracticeSession(db, { mode: 'task', examId: 'toefl', taskType, level: 6, count: 4 })
+    check(listenTask.source === 'v2', `task(toefl ${taskType}) 应走 v2 active 池，实际 source=${listenTask.source}`)
+    check(listenTask.items.length > 0, `task(toefl ${taskType}) 应有题（实际 ${listenTask.items.length}，warnings=${listenTask.warnings.join(',')}）`)
+    for (const it of listenTask.items) {
+      check(it.inputMode === 'listen', `task(toefl ${taskType}) item ${it.questionItemId} inputMode=${it.inputMode}，应为 listen`)
+      check(!!it.audio?.url, `task(toefl ${taskType}) item ${it.questionItemId} 缺 audio.url`)
+      check(!it.stimulus?.textEn && !it.stimulus?.textZh, `task(toefl ${taskType}) item ${it.questionItemId} 练习态不应下发 transcript/text`)
+      check(!JSON.stringify(it).toLowerCase().includes('transcript'), `task(toefl ${taskType}) item ${it.questionItemId} payload 泄露 transcript 字段`)
+    }
+    console.log(`  task(toefl/${taskType}): source=${listenTask.source} items=${listenTask.items.length} audio=${listenTask.items.filter((it) => !!it.audio?.url).length}`)
   }
 
   console.log(`\npractice-session validation · 错误 ${errors.length}`)

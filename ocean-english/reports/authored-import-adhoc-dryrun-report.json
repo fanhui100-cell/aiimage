@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-22T10:01:14.317Z",
+  "generatedAt": "2026-06-23T16:35:45.936Z",
   "apply": false,
   "stage": null,
   "provider": "claude-authored",
   "totals": {
-    "parsedOk": 10,
+    "parsedOk": 40,
     "reject": 0,
     "wrote": 0,
     "dupSkip": 0
@@ -12,10 +12,10 @@
   "rejectsByReason": {},
   "files": [
     {
-      "file": "data/generated-question-sets/toefl-2026-pilot/toefl-build-a-sentence.json",
-      "template": "toefl-build-a-sentence",
-      "level": 6,
-      "parsedOk": 10,
+      "file": "data/generated-question-sets/r7-zhongkao-listening/zhongkao-listening-expand.json",
+      "template": "zhongkao-listening-mcq",
+      "level": 1,
+      "parsedOk": 40,
       "reject": 0,
       "wrote": 0,
       "dupSkip": 0

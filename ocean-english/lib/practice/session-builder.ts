@@ -373,6 +373,35 @@ export function reconstructParaMatch(passage: string | null | undefined, choices
   return { paraMatchBody: { paragraphs: paras, statements: choices.map((c) => ({ id: c.id, text: c.text })) }, review: { paraMatch: { key, explanationZh } } }
 }
 
+export function reconstructBuildSentence(
+  prompt: string | null | undefined,
+  promptZh: string | null | undefined,
+  choices: { id: string; text: string }[],
+  answer: unknown,
+  explanationZh: string,
+): { buildBody: { ask?: string; zh: string; tokens: { id: string; t: string }[] }; review: { build: { canonical: string[]; explanationZh?: string } } } | null {
+  if (!Array.isArray(answer) || choices.length < 3) return null
+  const ids = choices.map((c) => c.id)
+  const answerIds = answer.map((x) => String(x))
+  if (answerIds.length !== ids.length) return null
+  if (new Set(answerIds).size !== answerIds.length) return null
+  if (answerIds.some((id) => !ids.includes(id))) return null
+  const byId = new Map(choices.map((c) => [c.id, c.text]))
+  return {
+    buildBody: {
+      ask: prompt || 'Arrange all chunks into a natural English sentence.',
+      zh: promptZh || prompt || 'Arrange all chunks into a natural English sentence.',
+      tokens: choices.map((c) => ({ id: c.id, t: c.text })),
+    },
+    review: {
+      build: {
+        canonical: answerIds.map((id) => byId.get(id) ?? id),
+        ...(explanationZh ? { explanationZh } : {}),
+      },
+    },
+  }
+}
+
 async function tryBuildFromV2(
   db: SupabaseClient,
   input: BuildPracticeSessionInput,
@@ -491,7 +520,10 @@ async function tryBuildFromV2(
     const pcloze = taskType === 'cloze_passage' ? reconstructPassageCloze(stim?.text_en, it.answer, exZh) : null
     const seven = taskType === 'seven_select' ? reconstructSevenSelect(stim?.text_en, choicesRaw, it.answer, exZh) : null
     const pmatch = taskType === 'para_match' ? reconstructParaMatch(stim?.text_en, choicesRaw, it.answer, exZh) : null
-    const grouped = cloze || pcloze || seven || pmatch
+    const build = taskType === 'build_a_sentence'
+      ? reconstructBuildSentence(String(it.prompt ?? ''), (it.prompt_zh as string) ?? null, choicesRaw, it.answer, exZh)
+      : null
+    const grouped = cloze || pcloze || seven || pmatch || build
     const stimulusOut = stim && !grouped && !isSpellAnswerLeak
       ? { kind: stim.kind, title: stim.title ?? undefined, textEn: isListening ? undefined : (stim.text_en ?? undefined), textZh: isListening ? undefined : (stim.text_zh ?? undefined), audioUrl: audio?.url }
       : undefined
@@ -503,7 +535,7 @@ async function tryBuildFromV2(
       questionItemId: id,
       setId: set?.id,
       type: taskType,
-      inputMode: String(it.input_mode ?? 'choice'),
+      inputMode: build ? 'build_sentence' : String(it.input_mode ?? 'choice'),
       prompt: String(it.prompt ?? ''),
       promptZh: (it.prompt_zh as string) ?? undefined,
       // 分组型题面在各自 body；choices 是词库/候选/陈述，不作为通用 MCQ 选项下发。
@@ -519,6 +551,7 @@ async function tryBuildFromV2(
       ...(pcloze ? { passageClozeBody: pcloze.passageClozeBody, review: pcloze.review } : {}),
       ...(seven ? { sevenSelectBody: seven.sevenSelectBody, review: seven.review } : {}),
       ...(pmatch ? { paraMatchBody: pmatch.paraMatchBody, review: pmatch.review } : {}),
+      ...(build ? { buildBody: build.buildBody, review: build.review } : {}),
     })
   }
   return built

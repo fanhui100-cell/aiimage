@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-07-02T14:15:14.895Z",
+  "apply": true,
+  "stage": "toefl-reading-pilot-2026-07-02",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 20
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\toefl-reading-pilot-2026-07-02\\toefl-academic-reading.json",
+      "template": "toefl-academic-reading",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\toefl-reading-pilot-2026-07-02\\toefl-read-daily-life.json",
+      "template": "toefl-read-daily-life",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "template": "toefl-read-daily-life",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Campus Bike Room Notice: Starting Monday, all bicycles left in the east storage room must display a current residence sticker. Unlabeled bicycles will be moved to the security office after Friday.",
+      "questions": [
+        {
+          "prompt": "What should students do before Friday?",
+          "options": ["Put a residence sticker on their bicycle", "Move every bicycle to the east room", "Pay a fee at the security office", "Stop using bicycles on campus"],
+          "answer": "Put a residence sticker on their bicycle"
+        },
+        {
+          "prompt": "What will happen to bicycles without labels?",
+          "options": ["They will be repaired by residence staff", "They will be moved to the security office", "They will be sold to new students", "They will remain in the east room all month"],
+          "answer": "They will be moved to the security office"
+        }
+      ],
+      "explain_zh": "通知要求东侧自行车房的自行车贴住宿标签；未贴标签的车周五后会被移到保安办公室。"
+    },
+    {
+      "passage": "Message from Mina: I left the lab early because the printer stopped working. Could you please email Professor Rao the final chart? The file is named soil-results-final.",
+      "questions": [
+        {
+          "prompt": "Why did Mina leave the lab early?",
+          "options": ["The professor canceled the meeting", "The printer stopped working", "The lab closed for cleaning", "The chart was already submitted"],
+          "answer": "The printer stopped working"
+        },
+        {
+          "prompt": "What does Mina ask the reader to send?",
+          "options": ["A final chart", "A cleaning schedule", "A printer receipt", "A meeting reminder"],
+          "answer": "A final chart"
+        }
+      ],
+      "explain_zh": "短信说明 Mina 因打印机故障提前离开，并请对方发送 final chart。"
+    },
+    {
+      "passage": "Library Workshop: Avoiding Plagiarism, Room 214, 3:00-3:45 p.m. Bring one paragraph from your current paper. Seats are limited to twenty students.",
+      "questions": [
+        {
+          "prompt": "What should students bring to the workshop?",
+          "options": ["A paragraph from their paper", "A printed library map", "A list of twenty sources", "A completed registration form"],
+          "answer": "A paragraph from their paper"
+        },
+        {
+          "prompt": "What is implied about the workshop?",
+          "options": ["It may fill up quickly", "It is only for graduate students", "It lasts all afternoon", "It takes place online"],
+          "answer": "It may fill up quickly"
+        },
+        {
+          "prompt": "What topic will the workshop cover?",
+          "options": ["Using sources honestly", "Finding campus jobs", "Designing a survey", "Repairing old books"],
+          "answer": "Using sources honestly"
+        }
+      ],
+      "explain_zh": "workshop 主题是避免抄袭，要求带当前论文的一段，并且名额有限。"
+    },
+    {
+      "passage": "Café Menu Update: The soup counter now closes at 2:30 p.m. on Fridays. Sandwiches, fruit cups, and bottled drinks remain available until 5:00 p.m.",
+      "questions": [
+        {
+          "prompt": "What changes on Fridays?",
+          "options": ["The soup counter closes earlier", "All food service ends at 2:30", "Bottled drinks are not sold", "Sandwiches are moved to another building"],
+          "answer": "The soup counter closes earlier"
+        },
+        {
+          "prompt": "Which item can students still buy after 2:30 p.m.?",
+          "options": ["A fruit cup", "Soup", "A breakfast plate", "Hot pasta"],
+          "answer": "A fruit cup"
+        }
+      ],
+      "explain_zh": "菜单更新只改变周五汤品柜台时间，三明治、水果杯和饮料仍供应到下午五点。"
+    },
+    {
+      "passage": "Course Site Alert: Tonight's biology quiz will open at 8:00 p.m. instead of 7:00 p.m. because several diagrams are being replaced with clearer versions.",
+      "questions": [
+        {
+          "prompt": "Why will the quiz open later?",
+          "options": ["Some diagrams are being improved", "The course site password changed", "The instructor added more questions", "Students requested a longer deadline"],
+          "answer": "Some diagrams are being improved"
+        },
+        {
+          "prompt": "When will the quiz open?",
+          "options": ["At 8:00 p.m.", "At 7:00 p.m.", "At midnight", "Tomorrow morning"],
+          "answer": "At 8:00 p.m."
+        }
+      ],
+      "explain_zh": "题目开放时间推迟到 8 点，原因是图表正在替换为更清晰版本。"
+    },
+    {
+      "passage": "Volunteer Schedule: The garden team meets behind the student center at 9:15. If it rains, meet inside the greenhouse instead. Gloves will be provided.",
+      "questions": [
+        {
+          "prompt": "Where should volunteers go if it rains?",
+          "options": ["Inside the greenhouse", "Behind the student center", "To the library steps", "To the dining hall"],
+          "answer": "Inside the greenhouse"
+        },
+        {
+          "prompt": "What will volunteers receive?",
+          "options": ["Gloves", "Bus passes", "Lunch tickets", "Plant samples"],
+          "answer": "Gloves"
+        },
+        {
+          "prompt": "What is the purpose of the message?",
+          "options": ["To explain where and when to meet", "To cancel a garden activity", "To sell greenhouse supplies", "To invite students to a lecture"],
+          "answer": "To explain where and when to meet"
+        }
+      ],
+      "explain_zh": "志愿者通知说明集合时间地点、雨天备用地点和提供手套。"
+    },
+    {
+      "passage": "Email from Housing: Your room-change request was received. You will get a decision after both roommates complete the online confirmation form.",
+      "questions": [
+        {
+          "prompt": "What must happen before a decision is made?",
+          "options": ["Both roommates must submit a form", "The student must visit the housing office", "A new room must be painted", "The student must pay a deposit"],
+          "answer": "Both roommates must submit a form"
+        },
+        {
+          "prompt": "What is the email mainly about?",
+          "options": ["The status of a room-change request", "A new housing fee", "A maintenance appointment", "The deadline for moving out"],
+          "answer": "The status of a room-change request"
+        }
+      ],
+      "explain_zh": "邮件确认换房申请已收到，但需要两位室友都完成确认表后才会有决定。"
+    },
+    {
+      "passage": "Museum Club Post: Saturday's visit has been moved to the city history museum because the art museum is installing a new lighting system. Tickets already purchased are still valid.",
+      "questions": [
+        {
+          "prompt": "Why was the destination changed?",
+          "options": ["The art museum is installing new lighting", "The city history museum offered free tickets", "The club bought the wrong tickets", "The bus schedule changed"],
+          "answer": "The art museum is installing new lighting"
+        },
+        {
+          "prompt": "What does the post say about tickets?",
+          "options": ["Purchased tickets can still be used", "All tickets must be refunded", "Students need to buy new tickets", "Tickets are no longer required"],
+          "answer": "Purchased tickets can still be used"
+        },
+        {
+          "prompt": "What is the post mainly doing?",
+          "options": ["Announcing a change in plans", "Reviewing a museum exhibit", "Recruiting new club officers", "Explaining how lighting systems work"],
+          "answer": "Announcing a change in plans"
+        }
+      ],
+      "explain_zh": "社团帖子通知参观地点变更，原因是美术馆安装灯光；已购票仍有效。"
+    },
+    {
+      "passage": "Bookstore Label: Used copies may contain notes in the margins. They can be returned within seven days only if the access code envelope is unopened.",
+      "questions": [
+        {
+          "prompt": "What might be found in used copies?",
+          "options": ["Notes in the margins", "A free notebook", "A signed letter", "Missing chapter titles"],
+          "answer": "Notes in the margins"
+        },
+        {
+          "prompt": "When can a used copy be returned?",
+          "options": ["When the access code envelope is unopened", "After the access code is used", "Only after the course ends", "Whenever the book has margin notes"],
+          "answer": "When the access code envelope is unopened"
+        }
+      ],
+      "explain_zh": "二手书可能有页边笔记；退货条件是七天内且 access code 信封未开。"
+    },
+    {
+      "passage": "Advisor Note: Please bring your degree checklist to Tuesday's appointment. We will compare it with next semester's course list before you register.",
+      "questions": [
+        {
+          "prompt": "What should the student bring?",
+          "options": ["A degree checklist", "A housing contract", "A library fine receipt", "A completed exam"],
+          "answer": "A degree checklist"
+        },
+        {
+          "prompt": "What will happen during the appointment?",
+          "options": ["The checklist will be compared with course options", "The student will take a placement test", "The advisor will collect tuition", "The student will move to a new dorm"],
+          "answer": "The checklist will be compared with course options"
+        },
+        {
+          "prompt": "Why is the appointment probably scheduled before registration?",
+          "options": ["To help the student choose appropriate courses", "To replace the registration system", "To cancel next semester's classes", "To check the student's library account"],
+          "answer": "To help the student choose appropriate courses"
+        }
+      ],
+      "explain_zh": "导师便条要求学生带 degree checklist，并在选课前与下学期课程列表对照。"
+    }
+  ]
+}

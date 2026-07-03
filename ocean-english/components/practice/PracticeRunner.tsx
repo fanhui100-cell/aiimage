@@ -18,6 +18,7 @@ import { SpellRenderer } from './renderers/SpellRenderer'
 import { ListeningRenderer } from './renderers/ListeningRenderer'
 import { FreeTextRenderer, type FreeTextEstimate, type FreeTextRubricLine } from './renderers/FreeTextRenderer'
 import { scoringSkillForTask } from '@/lib/scoring/rubrics'
+import { resolvePracticeAnswerMode, type PracticeAnswerMode } from '@/lib/practice/answer-mode'
 import { MultiBlankRenderer } from './renderers/MultiBlankRenderer'
 import { MatchingRenderer } from './renderers/MatchingRenderer'
 import { BuildSentenceRenderer } from './renderers/BuildSentenceRenderer'
@@ -38,14 +39,9 @@ const LABEL_OF: Record<string, string> = {
   cloze_passage: '完形填空', seven_select: '七选五', para_match: '段落信息匹配', banked_cloze: '选词填空', grammar_fill: '语法填空',
 }
 
-type AnswerMode = 'choice' | 'spell' | 'free_text' | 'multi_blank' | 'matching' | 'build_sentence'
+type AnswerMode = PracticeAnswerMode
 function answerMode(item: PracticeItem): AnswerMode {
-  const m = item.inputMode
-  if (m === 'multi_blank' || m === 'matching' || m === 'free_text' || m === 'build_sentence') return m
-  if (m === 'spell') return 'spell'
-  const hasChoices = !!(item.choices && item.choices.length >= 2)
-  if (m === 'listen') return hasChoices ? 'choice' : 'spell'
-  return hasChoices ? 'choice' : item.answerText ? 'spell' : 'choice'
+  return resolvePracticeAnswerMode(item)
 }
 
 // Levenshtein 距离（拼写一次容错用）

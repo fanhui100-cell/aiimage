@@ -1,0 +1,266 @@
+{
+  "template": "toefl-academic-reading",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "In coastal marshes, plants do more than provide food for insects and birds. Their roots trap fine sediment that would otherwise be carried away by tides. Over time, this trapped material raises the surface of the marsh. The process is slow, but it helps some wetlands keep pace with moderate sea-level rise. Researchers have found that marshes with diverse plant communities often build soil more effectively than marshes dominated by a single species. One explanation is that different roots occupy different depths, creating a thicker underground network. However, if tides become too deep or too frequent, young plants cannot establish themselves, and the marsh may begin to break apart despite earlier soil growth. This is why restoration projects often measure both plant survival and sediment accumulation rather than counting new plants alone.",
+      "questions": [
+        {
+          "prompt": "What is the passage mainly about?",
+          "options": ["How marsh plants help wetlands maintain their surface", "Why insects prefer diverse plant communities", "How tides remove all sediment from coastal areas", "Why single plant species always build soil fastest"],
+          "answer": "How marsh plants help wetlands maintain their surface"
+        },
+        {
+          "prompt": "According to the passage, what do plant roots do?",
+          "options": ["Trap fine sediment", "Increase the speed of tides", "Prevent all sea-level rise", "Carry birds' food underground"],
+          "answer": "Trap fine sediment"
+        },
+        {
+          "prompt": "Why might diverse marshes build soil more effectively?",
+          "options": ["Their roots form networks at different depths", "They receive no tidal water", "They contain fewer insects", "Their plants grow only on high ground"],
+          "answer": "Their roots form networks at different depths"
+        },
+        {
+          "prompt": "What can be inferred about very deep or frequent tides?",
+          "options": ["They can prevent new marsh plants from surviving", "They always make marshes more diverse", "They remove the need for sediment trapping", "They cause roots to grow above the surface"],
+          "answer": "They can prevent new marsh plants from surviving"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "Many ancient cities were not planned all at once. Instead, they expanded through small decisions made by families, merchants, and local officials. A market might begin near a river crossing because traders could meet travelers there. Houses then appeared around the market, followed by workshops, storage buildings, and roads. Archaeologists can sometimes identify this gradual growth by studying street patterns. A city designed by a central authority often has straight roads and regular blocks. A city that grew from repeated local choices may have curved streets, uneven building sizes, and neighborhoods arranged around older paths. These irregular patterns are not evidence of disorder; they can reveal how people adapted the city to trade, terrain, and social relationships. Such evidence helps researchers reconstruct everyday decision-making even when written records are rare or incomplete.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": ["Some ancient cities developed gradually through local choices", "All ancient cities were designed with regular blocks", "Archaeologists cannot learn from street patterns", "Markets usually appeared after roads were completed"],
+          "answer": "Some ancient cities developed gradually through local choices"
+        },
+        {
+          "prompt": "Why might a market begin near a river crossing?",
+          "options": ["Traders could meet travelers there", "Central officials required straight roads there", "Houses were forbidden in that area", "The river made storage buildings unnecessary"],
+          "answer": "Traders could meet travelers there"
+        },
+        {
+          "prompt": "What do curved streets and uneven blocks suggest?",
+          "options": ["Gradual adaptation to local needs", "A complete lack of human planning", "A city built only for religious ceremonies", "A city abandoned before people lived there"],
+          "answer": "Gradual adaptation to local needs"
+        },
+        {
+          "prompt": "The author mentions straight roads mainly to",
+          "options": ["contrast centrally planned cities with gradually grown cities", "argue that straight roads were impossible in ancient times", "show why markets always failed near rivers", "describe the only pattern archaeologists study"],
+          "answer": "contrast centrally planned cities with gradually grown cities"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "A seed bank is a facility that stores seeds under carefully controlled conditions. Low temperature and low moisture slow the chemical reactions that cause seeds to age. By preserving seeds, researchers protect genetic diversity that may be useful in the future. For example, a crop variety that is rarely planted today might contain resistance to a disease that becomes common later. Seed banks also support ecological restoration. If a damaged grassland needs to be replanted, stored seeds from local species can help rebuild a plant community similar to the original one. Still, seed banks are not perfect. Some tropical seeds cannot survive drying, and stored samples must be tested and replaced before they lose the ability to germinate. Managers therefore treat storage as an active scientific process, not simply as putting seeds on a shelf.",
+      "questions": [
+        {
+          "prompt": "What is the passage mainly about?",
+          "options": ["The purposes and limits of seed banks", "The fastest way to grow tropical crops", "The chemical reactions used to create new seeds", "The reasons farmers avoid genetic diversity"],
+          "answer": "The purposes and limits of seed banks"
+        },
+        {
+          "prompt": "Why are seeds kept in low temperature and low moisture?",
+          "options": ["To slow aging processes", "To make them larger", "To encourage immediate germination", "To remove genetic variation"],
+          "answer": "To slow aging processes"
+        },
+        {
+          "prompt": "How can a rarely planted crop variety be useful later?",
+          "options": ["It may resist a future disease", "It always produces more food", "It cannot be affected by climate", "It eliminates the need for restoration"],
+          "answer": "It may resist a future disease"
+        },
+        {
+          "prompt": "What limitation of seed banks is mentioned?",
+          "options": ["Some seeds cannot survive drying", "All stored seeds germinate too quickly", "Local species cannot be stored", "Seed banks only preserve flowers"],
+          "answer": "Some seeds cannot survive drying"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "When people learn a new motor skill, such as playing a short piano pattern, improvement often continues after practice ends. This delayed improvement is linked to memory consolidation, a process in which the brain stabilizes and reorganizes recently learned information. Sleep appears to support consolidation, but the effect depends on the task. Skills that require accurate sequences may benefit from sleep because the brain can strengthen the order of actions without new distractions. However, practice quality still matters. Repeating a movement carelessly may consolidate mistakes as well as correct actions. For this reason, teachers often recommend short, focused sessions rather than long sessions in which attention declines. The recommendation reflects a balance between repetition and accuracy, not a belief that practice alone is automatically beneficial.",
+      "questions": [
+        {
+          "prompt": "What is the main topic of the passage?",
+          "options": ["How motor skills can improve after practice through consolidation", "Why long practice sessions always produce the best results", "How piano teachers choose musical styles", "Why sleep replaces the need for practice"],
+          "answer": "How motor skills can improve after practice through consolidation"
+        },
+        {
+          "prompt": "What does memory consolidation do?",
+          "options": ["Stabilizes and reorganizes learned information", "Prevents people from remembering sequences", "Makes all practice errors disappear", "Reduces the need for focused attention"],
+          "answer": "Stabilizes and reorganizes learned information"
+        },
+        {
+          "prompt": "Why can careless repetition be harmful?",
+          "options": ["Mistakes may also be consolidated", "It makes sleep unnecessary", "It prevents any movement from being remembered", "It always strengthens attention"],
+          "answer": "Mistakes may also be consolidated"
+        },
+        {
+          "prompt": "What can be inferred about short, focused practice sessions?",
+          "options": ["They help learners avoid consolidating careless errors", "They are useful only for professional musicians", "They work because they eliminate the need for sleep", "They are less effective than distracted practice"],
+          "answer": "They help learners avoid consolidating careless errors"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "Urban trees can reduce summer heat, but their effects vary across a city. A single row of young trees may provide shade only during part of the day, while a mature canopy can cool streets for longer periods. The type of surface nearby also matters. Asphalt stores heat and releases it slowly, so a shaded asphalt street may still remain warmer than a shaded area with soil or grass. City planners therefore study both tree cover and ground materials when designing heat-reduction projects. In neighborhoods with limited space, planting fewer but larger-canopy species may sometimes be more effective than planting many small ornamental trees that produce little shade. The best design depends on how shade, pavement, and pedestrian movement interact across an entire block.",
+      "questions": [
+        {
+          "prompt": "What is the passage mainly about?",
+          "options": ["Factors that influence how trees cool urban areas", "Why ornamental trees grow faster than canopy trees", "How asphalt prevents all trees from growing", "Why cities should remove soil from streets"],
+          "answer": "Factors that influence how trees cool urban areas"
+        },
+        {
+          "prompt": "Why can asphalt streets remain warm?",
+          "options": ["Asphalt stores and slowly releases heat", "Asphalt creates more shade than soil", "Young trees cannot grow near asphalt", "Grass releases more heat than asphalt"],
+          "answer": "Asphalt stores and slowly releases heat"
+        },
+        {
+          "prompt": "What do city planners study besides tree cover?",
+          "options": ["Ground materials", "Bird migration routes", "The color of traffic signs", "The price of ornamental flowers"],
+          "answer": "Ground materials"
+        },
+        {
+          "prompt": "What is suggested for neighborhoods with limited space?",
+          "options": ["Use species with larger canopies", "Plant only small ornamental trees", "Avoid trees near all streets", "Replace all soil with asphalt"],
+          "answer": "Use species with larger canopies"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "Glass beads found at archaeological sites can reveal long-distance trade connections. Because different workshops used distinct mixtures of minerals, scientists can analyze the chemical composition of a bead and compare it with known production centers. If a bead found far inland matches glass made near a coast, it may indicate that goods traveled through exchange networks. Researchers must be cautious, however. A bead could have been traded many times, carried as a personal object, or reused long after it was made. Chemical evidence therefore identifies possible origins, but it does not by itself explain every step of the bead's journey. Archaeologists compare chemical results with burial context, settlement patterns, and other artifacts before making broader claims. This combined approach reduces the risk of turning one object into a complete but unsupported trade story.",
+      "questions": [
+        {
+          "prompt": "What can chemical analysis of glass beads help identify?",
+          "options": ["Possible production origins", "The exact person who owned each bead", "The complete route of every trade journey", "The age of all nearby buildings"],
+          "answer": "Possible production origins"
+        },
+        {
+          "prompt": "Why do workshops matter in the analysis?",
+          "options": ["They used distinct mineral mixtures", "They always wrote labels on beads", "They were all located far inland", "They never traded their products"],
+          "answer": "They used distinct mineral mixtures"
+        },
+        {
+          "prompt": "What does the author warn about?",
+          "options": ["Chemical evidence cannot show every step of an object's movement", "Glass beads cannot survive at archaeological sites", "Coastal workshops never made glass", "Trade networks avoided personal objects"],
+          "answer": "Chemical evidence cannot show every step of an object's movement"
+        },
+        {
+          "prompt": "The phrase \"by itself\" emphasizes that chemical evidence",
+          "options": ["needs to be combined with other information", "is always incorrect", "can identify modern owners", "removes the need for caution"],
+          "answer": "needs to be combined with other information"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "In some lakes, tiny organisms called plankton move up and down in the water each day. During the night, many rise toward the surface to feed on algae. During the day, they sink to deeper water, where they are less visible to fish. This pattern is known as vertical migration. It may seem inefficient because swimming uses energy, but the behavior can increase survival. Light levels, water temperature, and the presence of predators all influence how far the plankton move. When fish are absent, the organisms may remain closer to the surface even during daylight. The pattern shows how a simple daily movement can connect feeding opportunities with the risk of being eaten. Scientists can test this relationship by comparing lakes with different fish populations and light conditions.",
+      "questions": [
+        {
+          "prompt": "What is vertical migration?",
+          "options": ["Daily movement up and down in the water", "A permanent move from one lake to another", "The process by which algae become fish", "A change in water temperature caused by sunlight"],
+          "answer": "Daily movement up and down in the water"
+        },
+        {
+          "prompt": "Why do many plankton sink during the day?",
+          "options": ["To become less visible to fish", "To find more sunlight", "To avoid eating algae", "To leave the lake permanently"],
+          "answer": "To become less visible to fish"
+        },
+        {
+          "prompt": "What factor is mentioned as affecting how far plankton move?",
+          "options": ["The presence of predators", "The size of nearby trees", "The shape of the shoreline", "The age of the lake's rocks"],
+          "answer": "The presence of predators"
+        },
+        {
+          "prompt": "What can be inferred if fish are not present?",
+          "options": ["Plankton may stay nearer the surface in daylight", "Plankton will stop feeding at night", "Algae will disappear from the lake", "Water temperature will no longer matter"],
+          "answer": "Plankton may stay nearer the surface in daylight"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "The invention of movable type did not immediately make books cheap everywhere. Printing required skilled workers, presses, paper, ink, and a market large enough to cover costs. In regions where paper was expensive or literacy was limited, handwritten manuscripts continued to circulate alongside printed books. Printers also had to choose texts carefully. A religious text or schoolbook with steady demand was safer to print than a new poem that might attract only a few readers. Thus, printing technology changed communication gradually, shaped by materials, labor, and the needs of local communities. The technology was powerful, but its impact depended on the institutions and readers surrounding it. In this sense, printing was both a technical invention and a practical business decision.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": ["Printing spread gradually because economic and social conditions mattered", "Movable type instantly made all books inexpensive", "Handwritten manuscripts disappeared everywhere at once", "Printers preferred new poems over schoolbooks"],
+          "answer": "Printing spread gradually because economic and social conditions mattered"
+        },
+        {
+          "prompt": "Why might manuscripts continue to circulate?",
+          "options": ["Paper was expensive or literacy was limited", "Printing presses required no workers", "Printed books were illegal everywhere", "Religious texts could not be printed"],
+          "answer": "Paper was expensive or literacy was limited"
+        },
+        {
+          "prompt": "Why was a schoolbook safer to print than a new poem?",
+          "options": ["It had steadier demand", "It required no paper", "It was always shorter", "It could only be copied by hand"],
+          "answer": "It had steadier demand"
+        },
+        {
+          "prompt": "The passage uses the phrase \"alongside printed books\" to show that manuscripts",
+          "options": ["coexisted with printed materials", "were physically attached to books", "were never read by students", "were produced by printing presses"],
+          "answer": "coexisted with printed materials"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "Some desert animals avoid extreme heat not by tolerating it directly but by changing when they are active. A small mammal may spend the hottest hours in a burrow and search for food at night. This strategy reduces water loss because cooler air slows evaporation from the body. Yet night activity has trade-offs. Food may be harder to locate in darkness, and nocturnal predators may be more active. Biologists study these trade-offs to understand how animals respond to warming climates. If nights become warmer, species that depend on nighttime cooling may need to shift their behavior again. Their responses may differ by species, since diet, body size, and shelter availability all affect the costs of being active. For this reason, researchers avoid assuming that all desert species will react in the same way.",
+      "questions": [
+        {
+          "prompt": "What strategy is described in the passage?",
+          "options": ["Changing activity times to avoid heat", "Drinking seawater during the day", "Growing thicker fur in summer", "Living only in open sunlight"],
+          "answer": "Changing activity times to avoid heat"
+        },
+        {
+          "prompt": "How does night activity reduce water loss?",
+          "options": ["Cooler air slows evaporation", "Darkness creates more rain", "Burrows produce fresh water", "Food contains no moisture at night"],
+          "answer": "Cooler air slows evaporation"
+        },
+        {
+          "prompt": "What trade-off of night activity is mentioned?",
+          "options": ["Nocturnal predators may be more active", "All food becomes easier to find", "Animals cannot enter burrows", "The body loses heat too quickly"],
+          "answer": "Nocturnal predators may be more active"
+        },
+        {
+          "prompt": "What might happen if nights become warmer?",
+          "options": ["Some species may need to adjust their behavior again", "All desert animals will become active only at noon", "Evaporation will stop completely", "Predators will disappear from deserts"],
+          "answer": "Some species may need to adjust their behavior again"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    },
+    {
+      "passage": "Maps are often treated as neutral pictures of space, but every map involves choices. A mapmaker decides what area to show, which features to label, and how to represent distance. A subway map, for example, may distort actual geography so that station connections are easier to understand. This distortion is useful for riders, even though it would be misleading for measuring walking distance. Historical maps require similar caution. A map made for sailors may emphasize coastlines and harbors while ignoring inland roads. To interpret a map well, readers must ask what problem the map was designed to solve. This question helps explain why two accurate maps of the same place can look very different. The same landscape may be simplified differently for navigation, teaching, or political administration.",
+      "questions": [
+        {
+          "prompt": "What is the main point of the passage?",
+          "options": ["Maps reflect choices made for particular purposes", "All maps show distance with perfect accuracy", "Subway maps are useful for measuring walking routes", "Historical maps ignored coastlines"],
+          "answer": "Maps reflect choices made for particular purposes"
+        },
+        {
+          "prompt": "Why might a subway map distort geography?",
+          "options": ["To make station connections clearer", "To hide the names of stations", "To help sailors find harbors", "To measure exact walking distance"],
+          "answer": "To make station connections clearer"
+        },
+        {
+          "prompt": "What would a map for sailors likely emphasize?",
+          "options": ["Coastlines and harbors", "Inland classroom locations", "Subway transfer times", "The size of library shelves"],
+          "answer": "Coastlines and harbors"
+        },
+        {
+          "prompt": "What does the author suggest readers should consider?",
+          "options": ["The purpose the map was designed to serve", "Whether all maps should be avoided", "How to remove labels from maps", "Why geography never changes"],
+          "answer": "The purpose the map was designed to serve"
+        }
+      ],
+      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+    }
+  ]
+}

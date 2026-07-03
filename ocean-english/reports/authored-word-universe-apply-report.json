@@ -1,39 +1,53 @@
 {
-  "generatedAt": "2026-06-30T20:38:34.652Z",
+  "generatedAt": "2026-07-01T14:29:38.653Z",
   "apply": true,
-  "file": "data/generated-question-sets/wu-pz/confusable_choice.json",
-  "stage": "wu-pz-2026-07-01",
+  "file": "data/generated-question-sets/wu-sat-l7-pilot-2026-07-01/word-universe.json",
+  "stage": "wu-sat-l7-pilot-2026-07-01",
   "totals": {
-    "parsedOk": 40,
+    "parsedOk": 90,
     "reject": 0,
-    "wrote": 40,
-    "dupSkip": 0
+    "wrote": 0,
+    "dupSkip": 90
   },
   "rejectsByReason": {},
   "letterCoverage": {
-    "confusable_choice": {
-      "p": 3,
-      "q": 2,
-      "r": 2,
-      "s": 2,
-      "t": 2,
-      "u": 2,
-      "v": 2,
-      "w": 2,
-      "x": 2,
-      "y": 2,
-      "z": 2,
+    "def_to_word": {
+      "a": 12,
+      "b": 1,
       "c": 3,
+      "d": 4,
+      "e": 5,
+      "f": 3,
+      "i": 2
+    },
+    "synonym_choice": {
+      "a": 1,
+      "c": 1,
       "d": 3,
-      "e": 2,
-      "f": 2,
-      "g": 1,
-      "h": 1,
-      "i": 1,
-      "l": 1,
+      "e": 4,
+      "i": 3,
+      "l": 2,
       "m": 1,
       "n": 1,
-      "o": 1
+      "o": 1,
+      "p": 2,
+      "q": 1,
+      "r": 2,
+      "s": 4,
+      "u": 2,
+      "v": 2
+    },
+    "confusable_choice": {
+      "a": 6,
+      "c": 6,
+      "d": 3,
+      "i": 2,
+      "f": 1,
+      "p": 6,
+      "s": 1,
+      "m": 3,
+      "w": 1,
+      "t": 1
     }
   }
 }

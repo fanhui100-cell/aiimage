@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-07-02T13:36:54.535Z",
+  "checks": [
+    {
+      "taskType": "choose_a_response",
+      "source": "v2",
+      "items": 4,
+      "warnings": [],
+      "noAudio": 0,
+      "badTranscript": false,
+      "sample": [
+        {
+          "type": "choose_a_response",
+          "inputMode": "listen",
+          "hasAudio": true,
+          "hasStimulus": true,
+          "stimulusTextEn": null
+        }
+      ]
+    },
+    {
+      "taskType": "listening_comprehension",
+      "source": "v2",
+      "items": 4,
+      "warnings": [],
+      "noAudio": 0,
+      "badTranscript": false,
+      "sample": [
+        {
+          "type": "listening_comprehension",
+          "inputMode": "listen",
+          "hasAudio": true,
+          "hasStimulus": true,
+          "stimulusTextEn": null
+        }
+      ]
+    }
+  ]
+}
