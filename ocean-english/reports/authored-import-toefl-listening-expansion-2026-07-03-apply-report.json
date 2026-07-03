@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-07-03T13:37:40.820Z",
+  "apply": true,
+  "stage": "toefl-listening-expansion-2026-07-03",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 180,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 180
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\toefl-listening-expansion-2026-07-03\\toefl-choose-a-response-90.json",
+      "template": "toefl-choose-a-response",
+      "level": 6,
+      "parsedOk": 90,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 90
+    },
+    {
+      "file": "data\\generated-question-sets\\toefl-listening-expansion-2026-07-03\\toefl-listening-mcq-90.json",
+      "template": "toefl-listening-mcq",
+      "level": 6,
+      "parsedOk": 90,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 90
+    }
+  ]
+}

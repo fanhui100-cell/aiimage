@@ -1,0 +1,1446 @@
+{
+  "template": "toefl-choose-a-response",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "A student turns to a classmate after class and says, 'Hey, I had a doctor's appointment and missed Tuesday's lecture on cell division. I heard it was pretty dense. Would you mind if I borrowed your notes to copy them tonight? I'll give them right back to you tomorrow morning.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Sure, no problem — I'll bring them to the library at seven so you can copy them there.",
+            "Thanks so much for lending me yours; I'll return them tomorrow.",
+            "Honestly, you shouldn't skip lectures if you can't keep up.",
+            "That lecture hasn't happened yet, so there's nothing for you to copy."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "同学同意借出笔记并约定好归还时间，语气友好且直接回应了请求，因此最佳。"
+    },
+    {
+      "passage": "Three classmates are planning a group presentation. One of them says, 'Okay, so we still need to decide when to meet. I have practice on Monday and Wednesday evenings, but I'm totally free Thursday afternoon or anytime over the weekend. What works for the two of you?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Great, let's meet Monday evening then.",
+            "I don't think we need to meet at all.",
+            "Thursday afternoon works for me too — let's say two o'clock in the library.",
+            "Sorry, I already finished my part of the presentation."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "该回应选择了对方明确有空的周四并给出具体地点，直接解决了约见时间的问题。"
+    },
+    {
+      "passage": "A student stops by after class and says to the professor, 'Professor, I've been dealing with a family emergency this week and I'm worried I won't finish the essay by Friday. Would it be possible to have a couple of extra days? I can show you what I've written so far.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You'll need to email the department chair about that.",
+            "I'm sorry to hear that — let's say Monday, and just email me the draft when it's ready.",
+            "There's no essay due this term.",
+            "Then you'll just have to take a zero."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "教授表达理解并给出新的截止日期，既体谅又实际，是最合适的回应。"
+    },
+    {
+      "passage": "A student walks into a lecture hall, sees someone in the seat she usually takes, and pauses. The other student looks up and says, 'Oh, is this seat taken? I'm new to this section — I just transferred in today and wasn't really sure where people usually sit.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You can't sit there; that seat is assigned to me.",
+            "Sorry, class is cancelled today.",
+            "I transferred in years ago, actually.",
+            "No worries, sit wherever — welcome to the class! I'll grab the seat next to you."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "面对新转来的同学，欢迎对方并主动坐到旁边最为友好得体，其他选项无礼或前后矛盾。"
+    },
+    {
+      "passage": "Right before a math quiz, a student whispers to the person beside her, 'Oh no, I think I left my calculator back in my dorm. We're allowed to use one for this quiz, right? Is there any chance you brought a spare, or know someone who has an extra I could borrow?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Actually, I have two — here, take this one and give it back after class.",
+            "You really should be more organized about your supplies.",
+            "Calculators aren't allowed, so it doesn't matter.",
+            "Thanks, I'll borrow yours then."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "同学愿意把多余的计算器借出，直接又友善地解决了对方的燃眉之急。"
+    },
+    {
+      "passage": "Two students are talking after a tough chemistry lecture. One says, 'The midterm covers five whole chapters, and I always leave everything to the last night and panic. I was thinking we could split the material and quiz each other over the next two weeks. Want to try studying together?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No thanks, I don't even have a midterm in that class.",
+            "That sounds smart — let's meet twice a week and each take a couple of chapters.",
+            "Cramming the night before always works fine for me.",
+            "You should really stop leaving things to the last minute."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "该回应赞同一起复习并提出具体分工计划，正面呼应了对方的提议。"
+    },
+    {
+      "passage": "A professor makes an announcement at the end of class: 'Quick note before you go — next week's Thursday session has to move to Friday at ten, because the room is being used for an event. Same room, just a different day. Does that time cause a conflict for anyone here?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Great, so there's no class at all next week?",
+            "Why did you cancel Thursday's class permanently?",
+            "Friday at ten works for me, but I have a lab until ten-fifteen — could we start a little later?",
+            "I don't see why the room even matters to us."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生确认新时间大体可行并礼貌指出一个小冲突，是对通知最恰当的回应。"
+    },
+    {
+      "passage": "After a statistics lecture, a student catches up with a classmate in the hallway and says, 'I got completely lost when she started explaining standard deviation today. You seemed to follow it fine. Could you walk me through it sometime this week? Even fifteen minutes would really help me before the homework's due.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should have paid more attention in class.",
+            "I was totally lost too, so good luck with that.",
+            "Thanks, I'd love for you to explain it to me.",
+            "Sure — want to grab a table in the library after lunch tomorrow? I'll go over it with you."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "同学答应抽时间讲解并约好具体时间地点，直接满足了对方的求助。"
+    },
+    {
+      "passage": "A student approaches a classmate in the reading room and says quietly, 'You wrote your research paper on Arctic ecosystems last term, right? I'm just starting mine on the same topic. Could you recommend one or two books that were actually helpful? I don't even know where to begin looking.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Definitely — there's one by a marine biologist that saved me. I'll text you the title tonight.",
+            "I've never written anything on that topic.",
+            "You really should figure that out on your own.",
+            "Thanks, send me your reading list when you can."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "同学乐意推荐书目并承诺发送书名，正面且具体地回应了请求。"
+    },
+    {
+      "passage": "A student says to a classmate as they leave the building, 'A few of us are driving to the science fair downtown on Saturday morning. There's one seat left in my car. It leaves at eight from the north gate. Do you want to come along with us?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "I'd love to, but the fair was last weekend.",
+            "Yes, please — eight at the north gate works. Thanks for saving me a spot!",
+            "You should really leave earlier than eight.",
+            "Sorry, I don't have a car to offer anyone."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "该回应接受搭车邀请并复述时间地点表示感谢，最为贴切。"
+    },
+    {
+      "passage": "A student knocks on the lab coordinator's door and says, 'Hi, I need to book time on the 3D printer for my design project. The sign-up sheet online looks completely full for this week. Is there a waiting list, or any slots that open up if someone happens to cancel?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You'll have to buy your own printer, I'm afraid.",
+            "The lab doesn't actually have a 3D printer.",
+            "There is a waiting list — add your name here, and I'll email you the moment a slot frees up.",
+            "Thanks for booking a slot; see you then."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "协调员告知有候补名单并承诺有空位就通知，切实解决了对方的问题。"
+    },
+    {
+      "passage": "A student turns to her roommate in the evening and says, 'Hey, I've got a huge final exam at eight tomorrow morning and I really need to keep reviewing. Would you mind using headphones for your show tonight, or maybe watching it in the common room? I just need it quiet for a few hours.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should have started studying way earlier.",
+            "There's no exam tomorrow; it's the weekend.",
+            "Sure, could you turn your show down so I can study?",
+            "Of course — I'll grab my headphones, or just head to the common room. Good luck tomorrow!"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "室友爽快答应保持安静并祝考试顺利，最为体贴合适。"
+    },
+    {
+      "passage": "During a group meeting, one student says, 'For our history presentation we can pick any turning point from the last century. I was leaning toward the space race, but I'm open to anything. Does anyone feel strongly about a topic, or should I just go ahead and reserve the space race one?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "The space race sounds great to me — let's lock it in before another group takes it.",
+            "We can't do a presentation on history.",
+            "I already gave my presentation last week.",
+            "You shouldn't have picked a topic without asking us."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "该回应赞同选太空竞赛主题并提议尽快占题，积极推进了讨论。"
+    },
+    {
+      "passage": "A first-year student stops an older student outside the classroom and asks, 'Sorry to bother you — the bookstore is sold out of the textbook we need for this course, and it's expensive online. Do you know any cheaper way to get it, or whether the library keeps a copy on reserve?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should have bought it before it sold out.",
+            "Yeah, the library keeps two copies on reserve — you can borrow one for three hours at a time.",
+            "I've never taken this course.",
+            "Thanks, I was wondering the exact same thing."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学长告知图书馆有指定阅览的副本，直接回答了如何省钱获取课本。"
+    },
+    {
+      "passage": "A student says to the professor during office hours, 'I read your comments on my last paper, but I'm still not sure what you meant by strengthen the argument. Could you point to a specific paragraph where it's weak, so I know how to fix it for the revision?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "There's no revision allowed on that paper.",
+            "You should already know what that means.",
+            "Sure — look at your third paragraph; your claim has no evidence behind it. Add a source or two there.",
+            "Thanks for the feedback on my comments."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "教授指出具体段落的问题并给出修改方向，切实回应了学生的疑问。"
+    },
+    {
+      "passage": "A student who works at the campus recreation center says to a coworker, 'I just found out my sister's graduation is the same day as my Saturday shift. Is there any chance you could cover it for me? I'd be happy to take one of your weekday shifts in return.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should never book things on your work days.",
+            "Sorry, I don't actually work here.",
+            "Thanks for covering my shift this weekend.",
+            "Sure, I can take Saturday — and I'll take your Tuesday shift instead. Congrats to your sister!"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "同事答应替班并接受换班安排，还送上祝福，最为合适。"
+    },
+    {
+      "passage": "A student approaches a small group in the study lounge and says, 'Hi, I heard you all meet to go over the economics readings every week. I've been struggling on my own and would love to join. Is there room for one more, or is your group already as big as you want it?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Absolutely, the more the merrier — we meet Wednesdays at six, right here. Come join us.",
+            "We don't study economics.",
+            "You should just study by yourself like everyone else.",
+            "Thanks, can I join your group instead?"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "小组成员热情欢迎新人加入并告知时间地点，正面回应了请求。"
+    },
+    {
+      "passage": "A student in the computer lab turns to the person next to him and says, 'I've been trying to print my assignment for ten minutes and this printer just keeps flashing an error. It's due in class in twenty minutes. Do you know if there's another printer nearby that actually works?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should have printed it out last night.",
+            "Yeah, there's a working one on the second floor by the help desk — go now and you'll make it.",
+            "The assignment isn't due today.",
+            "Thanks, I'll use that printer too."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "该回应指出楼上有可用打印机并鼓励对方赶快去，及时解决了紧急问题。"
+    },
+    {
+      "passage": "A student stays after class and says to the instructor, 'I saw the sign-up for the museum field trip next Friday, but it overlaps with another class I have at noon. Would it be alright if I met the group at the museum instead of taking the bus with everyone from campus?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "There's no field trip planned this term.",
+            "You'll just have to skip your other class.",
+            "That's fine — just meet us at the front entrance by one, and text me when you arrive.",
+            "Thanks for driving everyone to the museum."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "老师同意学生自行前往并给出集合时间与联系方式，妥善处理了时间冲突。"
+    },
+    {
+      "passage": "In a writing workshop, a student hands her draft to a partner and says, 'This is really rough, and honestly the ending feels weak to me. Could you read it and tell me what's not working? Please be honest — I'd rather hear it now than get a bad grade later.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "It's perfect, don't change a single thing.",
+            "I don't have time to read anyone's work.",
+            "Thanks, could you look at mine first?",
+            "Okay — the ideas are strong, but you're right that the ending trails off. Try restating your main point there."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "搭档给出诚实而具体的反馈并指出结尾问题，正好符合对方希望听真话的要求。"
+    },
+    {
+      "passage": "A new student asks a classmate in the dining hall, 'I'm still confused about how the meal plan works. Does swiping my card once cover everything on this tray, or do they charge separately for the drink and dessert? I really don't want a surprise on my account.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "One swipe covers the whole tray here — drink and dessert included. No extra charge.",
+            "You should read the manual instead of asking me.",
+            "There isn't any meal plan at this school.",
+            "Thanks, I was wondering that myself."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "同学清楚说明刷一次卡即涵盖整盘餐食，直接解答了对方的疑问。"
+    },
+    {
+      "passage": "A student slips into a seat ten minutes into the lecture and whispers to a neighbor during a pause, 'Sorry, my bus was late. Did I miss anything important at the start? Did she assign the reading yet, or say anything about the quiz that's coming up next week?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should always catch an earlier bus.",
+            "Just the reading — chapters four and five by Monday. She hasn't mentioned the quiz yet.",
+            "There's no lecture today.",
+            "Thanks for telling me about the quiz."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "邻座简要告知错过的作业内容并说明测验尚未提及，准确回应了询问。"
+    },
+    {
+      "passage": "Two students are finalizing a joint presentation. One says, 'So we've got the intro, the two case studies, and the conclusion to divide up. I'm actually more comfortable speaking at the start than analyzing data. How do you want to split it? I'm happy to take whichever parts you'd rather not do.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Let's not split it — you should just do the whole thing.",
+            "We don't have a presentation to give.",
+            "Perfect — you take the intro, and I'll handle the case studies since I like working with data.",
+            "Thanks for doing all the analysis for me."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "该回应接受按各自擅长分工，正面回应了如何分配任务的问题。"
+    },
+    {
+      "passage": "A student visits a professor's office and says, 'I'm applying for a summer research program, and the application needs one letter of recommendation. You know my work from two of your seminars. Would you feel comfortable writing one for me? The deadline is the end of the month, so there's still time.'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You'll have to write it yourself, I'm afraid.",
+            "I don't remember you at all.",
+            "Thanks for offering to write me a letter.",
+            "I'd be glad to — send me the program details and your résumé, and I'll have it done well before the deadline."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "教授欣然答应写推荐信并索要材料，承诺按时完成，最为合适。"
+    },
+    {
+      "passage": "A student catches a classmate and says, 'Hey, I'm really sorry — I still have the tripod you lent me for the photography project. I meant to return it Monday but I've been sick all week. Do you need it back right now, or is it okay if I bring it tomorrow?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No rush at all — tomorrow's fine. Hope you feel better soon!",
+            "You should never have borrowed it in the first place.",
+            "I never lent you anything.",
+            "Thanks for lending me your tripod."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "同学表示不急、明天归还即可并关心其身体，最为体贴。"
+    },
+    {
+      "passage": "A student stops a classmate in the hallway and asks, 'Hey, isn't our seminar usually in room 204? I just walked past and there's a different class in there. Did they move us somewhere else this week, or am I completely mixed up about the day?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should really memorize your own schedule.",
+            "You're right, they moved us — we're in room 310 this week only. It's just down the hall.",
+            "We don't have a seminar together.",
+            "Thanks for telling me about the room change."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "同学确认教室临时更换并告知新房间位置，直接解答了对方的疑惑。"
+    },
+    {
+      "passage": "A student says to a teaching assistant after the lab, 'I'm currently in the Wednesday discussion section, but it clashes with a required course I just added. I noticed the Friday section still has open spots. Would it be possible to move me over, or do I need to fill out a form?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "There's only one section, so you can't switch.",
+            "You shouldn't have added another course.",
+            "The Friday section does have room — I can move you now, but you'll need to sign a quick form first.",
+            "Thanks for switching over to Wednesday."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "助教确认周五有名额、可帮忙调换但需先签表，切实回应了请求。"
+    },
+    {
+      "passage": "Before class, one student says to another, 'Did you finish the physics problem set? I got a really weird number for question five and I'm not sure I set it up right. Could we quickly compare our answers, so I can check whether I made a mistake before we hand it in?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You shouldn't ask other people for the answers.",
+            "There's no problem set due.",
+            "Thanks, I'll just copy yours.",
+            "Sure — I got a strange result on five too. Let's walk through our setups and see where they differ."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "该回应愿意一起核对思路、找出差异，恰当回应了对方核对答案的请求。"
+    },
+    {
+      "passage": "A student says to the librarian at the front desk, 'Hi, my group needs a quiet room to practice our presentation this Thursday evening. There are four of us. Can I reserve one of the study rooms in advance, or do we just show up and hope one's free?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, you can book one online up to a week ahead — I'll show you how, so Thursday's guaranteed.",
+            "You should just practice in your dorm.",
+            "We don't have any study rooms here.",
+            "Thanks for reserving the room for us."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "馆员告知可提前网上预约并愿意指导，确保周四有房间可用。"
+    },
+    {
+      "passage": "The instructor addresses the class: 'Before we start today, a quick heads-up — beginning next week, I'll be giving a short quiz at the start of every class to keep everyone current with the readings. They'll be brief, just five questions. Any questions about how this will work?'",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "So there won't be any more classes?",
+            "Will the quizzes count toward our final grade, or are they just to check we've done the reading?",
+            "Why are you cancelling all the readings?",
+            "Great, so we don't need to come to class anymore."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生就测验是否计入成绩提出相关的澄清问题，是对通知最恰当的回应。"
+    },
+    {
+      "passage": "Hi, I need to send an official copy of my transcript to a graduate school I'm applying to. The application deadline is next Friday, so I want to make sure it arrives on time. Could you tell me how to request one and how long processing usually takes?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Sure. You can submit the request online through the student portal, and official transcripts are usually processed within three business days.",
+            "Unfortunately, we don't keep any records for students who are still enrolled here.",
+            "You'll need to speak with your academic advisor about improving your grades first.",
+            "The library closes at nine tonight, so you'd better hurry over there."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生询问成绩单申请流程与处理时间，工作人员应说明可在线申请及三个工作日的处理周期。"
+    },
+    {
+      "passage": "I'm thinking about dropping my statistics class because the workload feels overwhelming this semester. But I'm worried it might affect my financial aid or delay my graduation. What would you recommend I do before I make a final decision?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Just stop attending the lectures; the professor will figure it out eventually.",
+            "Let's review your credit load and aid requirements together first, so we can be sure dropping won't set you back.",
+            "Statistics is required of everyone, so dropping it simply isn't allowed.",
+            "You should probably switch your major entirely instead."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生担心退课影响资助和毕业，顾问应先与其核对学分和资助要求再做决定。"
+    },
+    {
+      "passage": "I've reviewed your aid application, and it looks like we're still missing your parents' signed tax verification form. Until we receive it, we can't finalize your grant for the fall term. Do you know when you might be able to submit it?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Great, so my aid is completely set for the fall then.",
+            "I already paid my tuition in cash last week, so it's fine.",
+            "I can ask my parents to sign it tonight and upload it by tomorrow morning.",
+            "I don't have parents, so none of that really applies to me."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "资助办公室提示缺少家长签字的税务核验表，学生应回应会尽快让家长签字并上传。"
+    },
+    {
+      "passage": "I found a summer internship posting that looks perfect, but the application asks for a cover letter, and I've never written one before. I'm honestly not sure where to start or what employers expect. Could the career center help me with that?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, cover letters are outdated; nobody actually reads them anymore.",
+            "You should just copy one off the internet and change the name.",
+            "We only assist graduating seniors, not students looking for internships.",
+            "Absolutely. You can book a one-on-one session with an advisor who'll walk you through drafting and revising it."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生请求就业中心帮忙写求职信，工作人员应回应可预约一对一辅导协助起草修改。"
+    },
+    {
+      "passage": "My student portal login stopped working this morning. I've tried my usual password several times, but it keeps saying my account is locked. I have an assignment due at noon that I need to submit through the portal. Can you help me get back in quickly?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "I can reset your password right now if you verify your student ID number and answer your security question.",
+            "You'll probably have to buy a new laptop, I'm afraid.",
+            "Assignments are handled by your professor, so there's nothing we can do.",
+            "The portal was shut down permanently just last week."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生账户被锁需紧急交作业，IT人员应回应可在核验身份后立即重置密码。"
+    },
+    {
+      "passage": "Hi, I've had a sore throat and a low fever since yesterday, and it doesn't seem to be getting any better. I was hoping to see a doctor sometime today if that's possible. Do you have any openings this afternoon, or should I try somewhere else?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "We don't treat students here; you should try the pharmacy downtown.",
+            "We have a slot at three o'clock this afternoon. Would you like me to book you in?",
+            "You'll need to declare a major before we can see you.",
+            "The campus gym is open until ten if you'd like to exercise."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生希望当天看诊，健康中心工作人员应回应下午有空档并提出为其预约。"
+    },
+    {
+      "passage": "I think I lost my student ID card somewhere over the weekend, and I've looked everywhere for it. I use it to get into my dorm and the dining hall, so I really need a replacement. What's the process, and is there a fee involved?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You can't enter your dorm at all without a professor's written note.",
+            "Lost cards are never replaced; you'll have to wait until next year.",
+            "We can print a new one today for a fifteen-dollar fee. Just bring another form of photo ID.",
+            "You should report it to the city police department first."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生丢失校园卡想补办，工作人员应说明可当天补办、收费并需另带一份带照片证件。"
+    },
+    {
+      "passage": "I'm a sophomore now, and I still haven't declared a major. I enjoy both psychology and economics, but I can't decide which one to commit to. I'm worried I'll pick the wrong path and waste time. How should I go about making this choice?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Just flip a coin; honestly it doesn't matter much in the end.",
+            "You must choose economics, because it pays a lot more later.",
+            "It's far too late to change anything now, so stick with whatever you have.",
+            "Let's look at the courses you've enjoyed most and try an introductory class in each field before you commit."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生纠结选专业，顾问应回应可回顾其喜欢的课程并各修一门入门课再决定。"
+    },
+    {
+      "passage": "I just noticed a forty-dollar late fee on my account, but I'm pretty sure I paid my tuition before the deadline. I have the bank confirmation email showing the payment date. Could you look into whether this charge was added by mistake?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Of course. If you forward me that confirmation, I'll check the payment date and remove the fee if it was applied in error.",
+            "Late fees can never be reversed once they appear on your account.",
+            "Well, you should have picked a cheaper university in the first place.",
+            "We only handle library fines here, not anything to do with tuition."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生质疑滞纳费有误并有付款凭证，工作人员应回应核对付款日期并在确属误收时免除。"
+    },
+    {
+      "passage": "The advanced writing seminar I need is completely full, and I've been placed seventh on the waitlist. It's required for my minor, and I was really hoping to take it this term. Is there any chance a spot will open up, or what else can I do?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Waitlists don't exist in our system, so you must be mistaken about that.",
+            "Spots often open in the first week as students adjust their schedules. Keep attending, and I can also flag your case to the instructor.",
+            "You should probably just drop your minor entirely.",
+            "That seminar was cancelled a few years ago, actually."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生在候补名单靠后又必修该课，工作人员应回应开学初常有空位并可向任课老师反映。"
+    },
+    {
+      "passage": "I'm interested in spending next spring semester studying in a program abroad, but I'm not sure whether the credits I earn there will count toward my degree here. I don't want to fall behind. Could you explain how credit transfer works for study abroad?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Study abroad credits are worthless; you'd have to repeat all of it here.",
+            "You can't study abroad until after you've already graduated.",
+            "In most cases they transfer, but we'll review your program's courses with your department in advance to confirm each one counts.",
+            "Honestly, you should just take a vacation instead of studying abroad."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生询问海外交换学分能否转回，工作人员应说明多数可转但需事先与院系逐门确认。"
+    },
+    {
+      "passage": "Hi, I returned two books last week, but my account still shows them as overdue with a growing fine. I'm sure I dropped them in the return slot by the entrance. Now I'm blocked from checking out anything new. Can you help me sort this out?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Once a fine appears on an account, there's really nothing anyone can do.",
+            "You'll just have to pay for both books as though they were lost.",
+            "Returned books are always the borrower's responsibility, never ours.",
+            "Let me search the return-slot shelf and check the scan log. If the books turn up here, I'll clear the fine right away."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生称已还书却仍显示逾期罚款，馆员应回应会查看还书架和扫描记录并在找到后取消罚款。"
+    },
+    {
+      "passage": "I'm planning to graduate at the end of this spring, and someone mentioned I have to submit a formal graduation application. I had no idea that was a separate step. Has the deadline already passed, and what happens if I miss it?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "The deadline is actually next Monday, so you're still in time. Let me show you how to file the application through your portal.",
+            "There's really no such thing as a graduation application here.",
+            "You'll have to wait until next year no matter what you do.",
+            "Those applications are only for incoming freshmen, not graduating students."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生刚得知需单独提交毕业申请，工作人员应回应截止日为下周一并指导其在门户提交。"
+    },
+    {
+      "passage": "I want to enroll in the upper-level economics course this fall, but the system won't let me register because I haven't taken the intro prerequisite. I actually covered that material in a course at my previous school. Is there a way to waive the requirement?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Prerequisites can never be waived here under any circumstances.",
+            "Possibly. If you bring your transcript and the syllabus from that course, we can submit a waiver request to the department for review.",
+            "You'll need to retake all of your previous courses here before anything else.",
+            "Economics isn't even being offered this fall, so it doesn't matter."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生想凭原校课程免修先修要求，顾问应回应可凭成绩单与教学大纲向院系申请豁免。"
+    },
+    {
+      "passage": "I signed up for the full meal plan at the start of the year, but I've realized I rarely eat breakfast on campus and I'm wasting a lot of it. I'd like to switch to a smaller plan if that's allowed. Is it too late to change now?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Meal plans are locked in permanently once you've selected one.",
+            "You'd have to move out of the dorms before changing your plan.",
+            "You can downgrade during the open-adjustment window, which runs through this Friday. Let me show you the options.",
+            "Breakfast is mandatory for all campus residents, I'm afraid."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生想改小餐饮套餐，工作人员应回应可在本周五前的开放调整期内降级并介绍选项。"
+    },
+    {
+      "passage": "I'm really struggling with my organic chemistry course, especially the reaction mechanisms, and the midterm is in two weeks. A classmate said this center offers free tutoring. How do I sign up, and can I request someone who specializes in chemistry?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "We only tutor writing here, nothing else at all.",
+            "Tutoring costs fifty dollars an hour, so it's not free.",
+            "Honestly, you should just drop the course before the midterm.",
+            "You can book online and filter by subject. We have several chemistry tutors, so I'd suggest reserving a slot this week."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生想预约化学免费辅导，工作人员应回应可在线按科目预约并建议本周尽快订位。"
+    },
+    {
+      "passage": "I just started commuting to campus by car this semester, and I've been getting tickets because I don't have a parking permit. I didn't realize I needed one for the student lot. How do I apply for a permit, and how much does it cost?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You can apply through the parking portal with your license plate and student ID. A semester permit for the student lot is eighty dollars.",
+            "Students aren't permitted to drive to campus at all, actually.",
+            "Parking tickets can't really be avoided; everyone just gets them.",
+            "You'd basically have to sell your car in order to park here."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生因无停车证被罚想申请，工作人员应说明可凭车牌与学生证在门户申请及每学期收费。"
+    },
+    {
+      "passage": "My university email account seems to have stopped receiving messages since yesterday. My professors send assignments there, and I'm worried I'm missing important announcements. Other students say theirs are working fine. Could something be wrong with just my account?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Email isn't something we support here; ask your professors directly.",
+            "It's possible your mailbox is full or a filter is misconfigured. Let me log in with you and check your settings now.",
+            "The entire email system was deleted permanently, so nobody has access.",
+            "You should just make a personal account and stop using ours."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生反映仅自己邮箱收不到邮件，IT人员应回应可能是邮箱已满或过滤器设置错误并当场核查。"
+    },
+    {
+      "passage": "I'm reviewing your enrollment file, and it shows we still haven't received your immunization records yet. State policy requires them before you can register for next semester's classes. Do you have a copy from your doctor that you can send us?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Honestly, I don't really believe in registering for classes at all.",
+            "You should just make up the records for me so this is done.",
+            "Yes, my doctor's office can email them. I'll request the form today and have it sent over this week.",
+            "Immunizations have absolutely nothing to do with going to school."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "健康中心提示缺少免疫记录且影响注册，学生应回应会请医生本周发送记录。"
+    },
+    {
+      "passage": "I heard the university offers a merit scholarship for continuing students, and I think my grades might qualify. But I can't find the application anywhere on the website, and I'm afraid the deadline might be soon. Can you tell me how to apply and when it's due?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Scholarships here are only for new students, so don't bother applying.",
+            "There aren't any scholarships available at all this year.",
+            "You'd actually have to lower your grades in order to qualify.",
+            "The application is on the aid portal under Continuing Awards, and it's due at the end of this month. I'll send you the link."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生想申请在校生奖学金却找不到入口，工作人员应说明申请位置、月底截止并发送链接。"
+    },
+    {
+      "passage": "It's already week ten, and I'm failing my physics course pretty badly. I don't think I can pull my grade up in time. Someone said I could withdraw and get a W instead of a failing grade. Is that still an option this late in the term?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "The withdrawal deadline is this Friday, so you can still do it. Let's first discuss how a W would affect your transcript and full-time status.",
+            "Once you're failing, there's no way to withdraw; you're simply stuck.",
+            "You should just skip the final exam and hope for the best.",
+            "Physics withdrawals require the dean's personal signature every single time."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生问能否退课得W，顾问应回应本周五前仍可退并先说明对成绩单和全日制身份的影响。"
+    },
+    {
+      "passage": "Hi, I'd like to meet with my academic advisor to plan my courses for next year. I have classes every morning, so afternoons work best for me. Does she have any openings later this week, and do I need to prepare anything before the meeting?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Advisors don't take appointments; you can just show up whenever you like.",
+            "She has openings Thursday and Friday afternoon. I'll book you in, and it helps to bring a list of courses you're considering.",
+            "You'd have to rearrange your whole class schedule before she could see you.",
+            "Course planning is something you're expected to do entirely on your own."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生想预约下午与顾问选课，工作人员应回应周四周五下午有空并建议带上拟选课程清单。"
+    },
+    {
+      "passage": "I'm a new transfer student, and my acceptance letter says I need to take a math placement test before I can register for any math course. I already took calculus at my old college, though. Do I still have to sit the placement exam, or can it be waived?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Placement tests are really just for fun, so feel free to ignore it.",
+            "You'll never actually be allowed to take math courses here.",
+            "If your calculus grade transferred in, we can often waive it. Bring your transcript and I'll check with the math department.",
+            "You should retake calculus from the very beginning regardless."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "转学生问已修微积分能否免分级考试，顾问应回应若学分已转常可免并让其带成绩单核查。"
+    },
+    {
+      "passage": "I transferred here last month, and I'm not sure how many of my old credits actually counted toward my degree. My advising sheet looks confusing, and I want to make sure I'm not repeating courses I've already passed. Who can help me understand my transfer evaluation?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Transfer credits are never accepted at this university.",
+            "You'll basically have to start your degree completely over.",
+            "Credit questions aren't something we're able to help with at all.",
+            "The registrar handles that. Let's pull up your transfer evaluation together and go through which credits applied and which are still pending."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "转学生想弄清学分转换情况，工作人员应回应由注册处负责并一起查看转换评估。"
+    },
+    {
+      "passage": "Hi, I think I left my laptop in a study room in the library last night. It's a silver one in a black case, and it has all my thesis work on it. I'm really anxious about it. Has anyone turned in something like that to lost and found?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Let me check the lost-and-found log right now. Can you tell me which room and roughly what time you left?",
+            "We don't keep lost items; they get thrown out immediately.",
+            "You should just buy a new laptop and forget all about it.",
+            "Laptops aren't even allowed in the library in the first place."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生遗失笔记本电脑很焦急，工作人员应回应立即查失物登记并询问房间和大致时间。"
+    },
+    {
+      "passage": "I tried to print my research paper at the library, but the machine says I've run out of printing credits for the semester. I still have three more assignments to print this week. Is there any way to add more credits to my account?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Printing is completely free, so that machine must be lying to you.",
+            "Yes, you can add credits online or at the kiosk. Ten dollars gives you about two hundred more pages.",
+            "You'll just have to handwrite all your assignments from now on.",
+            "The printers are only for staff members, not for students."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生打印额度用尽还需打作业，工作人员应回应可在线或自助机充值并说明费用与页数。"
+    },
+    {
+      "passage": "My insurance company is asking for proof that I'm enrolled full-time this semester, otherwise they'll drop me from my family's plan. I need an official enrollment verification letter with the university seal. How can I get one, and how quickly can it be issued?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "We don't provide any documents to insurance companies whatsoever.",
+            "You'll have to ask each of your professors to write you a separate note.",
+            "You can request an official verification letter through the portal, and we can usually issue it the same day. Would you like a digital or printed copy?",
+            "Enrollment letters take at least six months to prepare here."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生急需在读证明信给保险公司，工作人员应回应可在门户申请、当天出具并询问电子或纸质版。"
+    },
+    {
+      "passage": "Lately I've been feeling really overwhelmed and anxious, and it's starting to affect my sleep and my studies. A friend suggested I talk to someone at the counseling center. I've never done this before, and I'm a little nervous. How do I make an appointment?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Counseling is only for serious emergencies, not everyday stress.",
+            "You should just try harder to relax on your own, honestly.",
+            "We're fully booked for the rest of the entire year, sorry.",
+            "I'm really glad you reached out. We offer confidential appointments, and I can schedule you with a counselor as early as tomorrow. Would that work?"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生紧张地首次求助心理咨询，工作人员应回应肯定其主动并提供保密预约、最快明天见面。"
+    },
+    {
+      "passage": "I was assigned an academic advisor at orientation, but our schedules never seem to line up, and I feel like my questions about my major aren't really being answered. I was wondering whether it's possible to switch to a different advisor who works in my department.",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, that's a fairly common request. I can reassign you to an advisor in your major field. Let me show you who's currently available.",
+            "Advisors are assigned permanently and can never be changed.",
+            "You'd have to change your major entirely just to get a new advisor.",
+            "Advisors don't actually handle questions about majors at all."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生想换到本院系顾问，工作人员应回应这是常见请求并可重新分配及展示可选顾问。"
+    },
+    {
+      "passage": "I'd like to take six courses next semester instead of the usual five, so I can graduate a term early. I know that's above the normal credit limit and needs special approval. My GPA is strong. What do I need to do to get permission for the overload?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Nobody is ever allowed to take more than five courses, no exceptions.",
+            "With your strong GPA, you're a good candidate. Submit an overload petition and I'll review your record and sign off if everything checks out.",
+            "You should really take fewer courses and just graduate later instead.",
+            "Overloads are only granted to students who are currently failing."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生成绩优异想超额修课提前毕业，顾问应回应其符合条件并说明提交超载申请后审核签批。"
+    },
+    {
+      "passage": "Welcome back. Let's see — this book was due last Thursday, so it's five days overdue. That comes to a one-dollar fine. Would you like to pay now with card or cash, or should I just add it to your student account?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "I'll pay with cash right now, thanks.",
+            "Yes, I'd like to reserve that title again.",
+            "Actually, I haven't borrowed anything this month.",
+            "The library closes at nine tonight, right?"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "书逾期需付罚款，对方问付款方式，最佳回应是当场付现金。"
+    },
+    {
+      "passage": "Excuse me, I think there's a mix-up. I booked this study room from two to four this afternoon — here's the confirmation on my phone. But it looks like you're already set up in here. Did you reserve it too?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "You should really return that book before it's overdue.",
+            "Oh, sorry — I booked it for tomorrow by mistake. I'll pack up and find another room.",
+            "No problem, the printer is just around the corner.",
+            "I don't think this building has any study rooms."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "两人预订同一自习室，最佳回应是承认自己订错日期并让出房间。"
+    },
+    {
+      "passage": "Front desk, how can I help? Okay, so the microwave in your dorm kitchen isn't turning on at all. Got it. I can send someone up to look at it. Are you around this afternoon between one and three, or would tomorrow morning work better for you?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, the elevator has been broken for weeks.",
+            "I'd like to check out this book, please.",
+            "This afternoon between one and three is perfect — I'll be in.",
+            "No, I've never used the microwave before."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "维修人员问下午还是明早上门，最佳回应是确认下午一到三点在。"
+    },
+    {
+      "passage": "Hey, sorry to bug you. I've got a big exam first thing tomorrow and I'm trying to get some sleep, but the music is coming through the wall pretty loudly. Do you think you could turn it down a bit?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Oh, of course — I didn't realize it was so loud. I'll put my headphones on.",
+            "Sure, I'll return your charger tomorrow.",
+            "The laundry room is on the second floor.",
+            "No, I haven't seen your keys anywhere."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "室友请求把音乐调小，最佳回应是道歉并戴上耳机。"
+    },
+    {
+      "passage": "Hi, how can I help you today? Oh no, you've lost your library card. Don't worry, that happens a lot. I can print a replacement right now — there's a small two-dollar fee for a new one. Do you have a photo ID with you so I can confirm your account?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "The book was actually due yesterday.",
+            "No, I'd prefer a room on the top floor.",
+            "Sure, I'll come back when the printer is fixed.",
+            "Yes, here's my student ID card."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "补办借书证需出示带照片证件，最佳回应是出示学生证。"
+    },
+    {
+      "passage": "So you'd like to request a room change because your current room faces the noisy main road. I understand. We do have a few quieter rooms opening up next month on the garden side. Just so I note it correctly — is noise the main reason, or are there other issues too?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Noise is really the main reason; the traffic keeps me up at night.",
+            "Yes, I'll pay the overdue fine now.",
+            "The study room is booked until four.",
+            "No, I don't need a replacement card."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "宿管确认换房主因是否为噪音，最佳回应是确认交通噪音影响睡眠。"
+    },
+    {
+      "passage": "Hi, thanks for calling the equipment desk. So you borrowed one of our loaner laptops and want to keep it a few more days to finish a project. The standard loan is three days, but I can extend it once if no one has reserved it. Let me check — there are no holds, so I can move your due date to Friday. Does that give you enough time?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, my library card was stolen last week.",
+            "Sure, please recall the book from the other reader.",
+            "The printer by the reference desk is jammed again.",
+            "Friday would be perfect — thanks so much for extending it."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "设备台可将笔记本借期延到周五，最佳回应是致谢并接受延期。"
+    },
+    {
+      "passage": "Hi, you look like you're having trouble with the printer. It says paper jam on the screen, right? That one's been temperamental all day. There's another printer that's working fine just around the corner by the reference desk. Want me to send your document there instead?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, my room faces the garden.",
+            "Sure, I'll pay the fine in cash.",
+            "Yes, please — that would be a big help.",
+            "Actually, I lost my library card last week."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "打印机卡纸，馆员提议改用另一台，最佳回应是感谢并同意。"
+    },
+    {
+      "passage": "Welcome to the residence hall. One thing to remember: quiet hours run from ten at night until eight in the morning on weekdays, so please keep noise down during those times. On weekends they start a bit later, at midnight. Does that make sense, or do you have any questions about it?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I already returned the library book.",
+            "Sure, I'll take the room on the third floor.",
+            "The printer by the desk is out of paper.",
+            "Yes, one question — do quiet hours apply in the common study lounge too?"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "宿管介绍安静时段并询问是否有疑问，最佳回应是提出关于公共自习室的问题。"
+    },
+    {
+      "passage": "Thanks for calling the library. So you'd like to keep the two books you borrowed for another week. Normally you can renew them yourself through the library website, but it looks like one of them has been requested by another reader, so that one can't be renewed. Would you like me to renew just the other book for you?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, please renew the one that's available.",
+            "No, I'd like to change my dorm room.",
+            "Sure, I'll pick up the package tomorrow.",
+            "The washing machine took my coins."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "一本书被他人预约无法续借，最佳回应是同意只续借另一本。"
+    },
+    {
+      "passage": "I'm afraid we don't have that particular title here at our branch, but the good news is another library in the network does. I can request it through interlibrary loan for you — it usually takes about a week to arrive, and we'll email you when it's ready. Would you like me to go ahead and order it?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "The dorm heater still isn't working.",
+            "Yes, please go ahead and order it.",
+            "No, quiet hours start at ten.",
+            "I'd like to pay my fine by card."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本馆无此书，馆员提议馆际互借，最佳回应是同意下单。"
+    },
+    {
+      "passage": "Hey, quick money thing about the apartment. The internet bill came in, and it's a bit higher than last month because of the faster plan we both agreed to. It works out to about eighteen dollars each for this cycle. Do you want to just send me your share tonight, or should I put it on the shared account we set up?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "I'll send you my eighteen tonight — that's easiest for me.",
+            "No, I already returned the library book.",
+            "Sure, four o'clock works for the repair.",
+            "The washing machine took my coins again."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "室友说明网费分摊并问付款方式，最佳回应是同意今晚转自己那一份。"
+    },
+    {
+      "passage": "I see — you'll be away next week when these books are due, and you're worried about late fees. That's no problem. I can extend the due date by two weeks so you won't be charged while you're traveling. Does two extra weeks give you enough time?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the microwave sparked when I turned it on.",
+            "Sure, I'll take the parcel now.",
+            "My roommate keeps borrowing my things.",
+            "Yes, two weeks is plenty — thank you so much."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "馆员提议延期两周以免旅行期间产生罚款，最佳回应是致谢并接受。"
+    },
+    {
+      "passage": "I'm sorry, but that title is our only copy and it's currently checked out until next week. What I can do is place a hold on it for you, so the moment it's returned it's set aside under your name, and we'll email you to come pick it up. Would you like me to put a hold on it?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the heater in my room is broken.",
+            "Yes, please place a hold — that would be great.",
+            "Sure, I'll pay the fine in cash.",
+            "I'd like the six-person study room, please."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "书已被借出，馆员提议预约留书并邮件通知，最佳回应是同意预约。"
+    },
+    {
+      "passage": "Sure, I can help you book a group study room. We have one that seats six free from three to five this afternoon, and a smaller one for four people free all evening. How many people are in your group, and which time works best?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I haven't lost my card.",
+            "There are five of us, so the bigger room from three to five would be great.",
+            "The heater in my room is broken.",
+            "Yes, I'll pay the two-dollar fine."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "馆员问小组人数和时间，最佳回应是说明五人并选大房间。"
+    },
+    {
+      "passage": "Just so you know before you settle in — the library is closing early tonight at six because of a staff training session, instead of the usual ten o'clock. That's in about twenty minutes. You're welcome to check out anything you need before then. Is there something I can help you find quickly?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, my radiator is cold.",
+            "I booked the room for six people.",
+            "Yes, could you help me find this book on the second floor?",
+            "Sure, I'll bring the spare key back soon."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "图书馆提前闭馆，馆员问是否需帮助找书，最佳回应是请其帮忙找二楼的书。"
+    },
+    {
+      "passage": "Hey, I've been looking everywhere for my blue umbrella. It was by the door yesterday and now it's gone. I saw it was raining this morning — did you happen to take it with you by any chance?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Oh, yes — I grabbed it in a hurry and forgot to ask. I'm really sorry, it's in my bag.",
+            "No, the study room is booked until five.",
+            "Sure, I'll pay the overdue fine tomorrow.",
+            "The library closes at six tonight."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "室友问是否拿了雨伞，最佳回应是承认并道歉。"
+    },
+    {
+      "passage": "You're saying the second washing machine took your coins but never started? Sorry about that. It's been unreliable lately. I can refund your money from the desk, or add a free wash credit to your laundry card. Which would you prefer?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, quiet hours start at ten.",
+            "A free wash credit would be great, thanks.",
+            "No, I haven't picked up my package.",
+            "Please renew my book for another week."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "洗衣机吞币，前台提议退款或免费洗衣券，最佳回应是选择免费洗衣券。"
+    },
+    {
+      "passage": "Let me check the catalogue for you. Yes, we do have that title, and it's currently on the shelf — not checked out. The call number is eight-two-three, and you'll find it upstairs in the literature section, second row on your left. Would you like me to write the number down for you?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the heater is working fine now.",
+            "I'd like to change to a single room.",
+            "Sure, I'll bring back the umbrella.",
+            "Yes, please — that would help me remember it."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "馆员提议把索书号写下来，最佳回应是接受以便记住。"
+    },
+    {
+      "passage": "Ah, I see the issue. This book actually belongs to the East Campus library, not this branch. It's not a big problem — I can accept it here and send it back to them in our internal mail, so you won't need to make a second trip. Is it alright if I take care of it that way?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, that would be perfect — thank you.",
+            "No, the washing machine ate my coins.",
+            "I'll take the six-person room, please.",
+            "Sure, add the fine to my account."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "书还错分馆，馆员提议内部转寄，最佳回应是致谢并同意。"
+    },
+    {
+      "passage": "Thanks for calling IT support. So the Wi-Fi in your dorm room keeps dropping every few minutes, but it's fine in the common room. Let's try a couple of things. First, could you tell me whether the little light on your wall socket is green or red right now?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, I'd like to renew the book.",
+            "Let me look... it's red at the moment.",
+            "No, quiet hours are fine with me.",
+            "The umbrella is in my bag, sorry."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "IT问墙上插座指示灯颜色，最佳回应是查看后回答是红灯。"
+    },
+    {
+      "passage": "So, your roommate moved out last week and you're now alone in the double room. You have two options: you can keep the room to yourself but pay the higher single-room rate, or we can assign a new roommate at your current rate. Which would you like to do?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "Yes, the fine is two dollars.",
+            "No, I returned it to the wrong branch.",
+            "I'd rather keep the current rate and have a new roommate.",
+            "Sure, the light is green now."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "室友搬走后可选付单人价或换新室友，最佳回应是选择保持原价并换新室友。"
+    },
+    {
+      "passage": "Hello, this is the library. I'm calling about the reference book you borrowed last month. A professor has requested it for a class, so we'd need it back a little earlier than your due date — ideally by this Friday. Would you be able to return it by then?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I'd prefer the single room.",
+            "Sure, please refund my coins.",
+            "Yes, I can drop it off on Friday morning.",
+            "The Wi-Fi keeps cutting out."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "教授预约了你借的书需提前归还，最佳回应是承诺周五归还。"
+    },
+    {
+      "passage": "Hey, can we talk about the kitchen for a sec? The dishes have been piling up in the sink all week, and I feel like I've been the only one washing them. Could we maybe set up a rota so we take turns doing them?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the book is due on Friday.",
+            "Sure, I'll take the single room.",
+            "The librarian recalled my book.",
+            "You're right, that's fair — let's split the days. I'll take the odd dates."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "室友提议轮流洗碗，最佳回应是同意并分担日期。"
+    },
+    {
+      "passage": "Front desk here, about the parcel you're expecting. The courier tried to deliver it this morning, but since no one was here to sign, they took it back to the depot. They'll attempt redelivery tomorrow between nine and noon. If you can't be around then, I can sign for it on your behalf and hold it here for you. What would you prefer?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I'd like a quieter room facing the garden.",
+            "Yes, the Wi-Fi light is red at the moment.",
+            "Could you sign for it and hold it here? I have class tomorrow morning.",
+            "Please assign me a new roommate this term."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "包裹将改日重投，前台可代签暂存，最佳回应是请其代签因明早有课。"
+    },
+    {
+      "passage": "Excuse me, I see your study room booking is due to end in ten minutes, and there's a group waiting to use it next. I'm afraid I can't extend your time today because it's fully booked, but there are open seats in the quiet reading area if you need to keep working. Would that work for you?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I'll pay the fine in cash.",
+            "The parcel arrived this morning.",
+            "Yes, the reading area is fine — I'll move there.",
+            "Sure, split the dishes with me."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "自习室已被约满无法延时，馆员提议去安静阅览区，最佳回应是同意转移。"
+    },
+    {
+      "passage": "We do offer lockers for students who want to store books and laptops between study sessions. They're free, but you'll need to sign up for one and bring your own padlock. We have a few left on the ground floor. Would you like me to assign one to you now?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the reading area is too quiet.",
+            "I'd like to extend my room booking.",
+            "Sure, I'll pay by card.",
+            "Yes, please — I'll bring a padlock tomorrow."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "馆员提议分配储物柜需自带锁，最佳回应是同意并明天带锁。"
+    },
+    {
+      "passage": "Regarding your move-in: the residence halls officially open on the fifth of September, but if you're arriving from overseas, we can arrange early move-in from the second for a small extra charge. When are you planning to arrive, and would you like the early option?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, I don't need a locker.",
+            "I land on the third, so yes, the early move-in would help.",
+            "The fine is four dollars fifty.",
+            "Sure, I'll move to the reading area."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "宿舍可付费提前入住，最佳回应是说明抵达日期并接受提前入住。"
+    },
+    {
+      "passage": "Hey, do you mind if my cousin stays on our couch this weekend? She's visiting the city for a job interview on Monday, and hotels downtown are really expensive. It would just be two nights, and she'd be out most of the day exploring. I'll make sure she doesn't get in your way at all. Would that be okay with you?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the tap is still dripping under the sink.",
+            "That's fine with me — two nights is no problem. I hope her interview goes well!",
+            "Sure, I'll reserve the locker on the ground floor.",
+            "The card reader at the desk is down again."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "室友问表亲能否周末借宿两晚，最佳回应是同意并祝其面试顺利。"
+    },
+    {
+      "passage": "Yes, you can read that e-book from home — you don't need to come in. Just log in to the library website with your student number and password, then click off-campus access. If it still asks for payment, that usually means you're not logged in properly. Does that make sense, or shall I write down the steps?",
+      "questions": [
+        {
+          "prompt": "What is the best response?",
+          "options": [
+            "No, the tap has stopped dripping.",
+            "I'll take the eight o'clock appointment.",
+            "Sure, I'll pay the extra charge for early move-in.",
+            "Could you write the steps down? I want to be sure I get it right."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "馆员问是否需要写下校外访问步骤，最佳回应是请其写下以确保正确。"
+    }
+  ]
+}
