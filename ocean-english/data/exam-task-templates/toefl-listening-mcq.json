@@ -1,0 +1,29 @@
+{
+  "templateId": "toefl-listening-mcq",
+  "examIds": ["toefl"],
+  "taskType": "listening_comprehension",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL 2026 Listening pilot. Original campus conversation, announcement, or academic mini-talk, 110-220 words, with three 4-option comprehension questions. No real ETS text. Draft only until audio is produced and reviewed."
+  },
+  "stimulusRequirements": {
+    "kind": "listening_passage",
+    "minWords": 110,
+    "maxWords": 220,
+    "perStimulusItems": 3,
+    "topicDomains": ["campus_conversation", "academic_talk", "service_encounter", "announcement", "seminar_discussion"]
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi", "optionCount": 4 },
+  "subskills": ["detail", "main_idea", "inference", "speaker_purpose", "attitude"],
+  "qualityRules": [
+    "100% original; use official TOEFL task style only as structure guidance.",
+    "Each set must include at least one detail question and one inference, purpose, or attitude question.",
+    "Questions must be answerable from the audio transcript alone.",
+    "Distractors must be semantically related but contradicted or unsupported by the passage.",
+    "Draft only until stable audio is generated and reviewed."
+  ],
+  "copyrightPolicy": "original_only"
+}

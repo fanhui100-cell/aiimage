@@ -6,7 +6,9 @@
       （SAT reading 按 4 个官方 domain 拆分），带完整字段 + 确定性 state：
         MISSING / THIN / READY_DRAFT / READY_ACTIVE / BLOCKED + blockingReasons[]。
       阈值：客观/生产性/ SAT-per-domain 均在 50 套达到 READY_DRAFT。
-      官方格式未确认的 TOEFL 题型（read_daily_life、学术阅读用的 reading_comprehension）显式为 BLOCKED，
+      TOEFL Reading（read_daily_life、学术阅读用的 reading_comprehension）为 spec 已确认的项目练习形态
+      （4 选项 MCQ 是项目练习格式，非声称的 ETS 官方 UI）：小样 pool < 阈值时显示 PILOT_DRAFT + needs_N_more，
+      不再用 official_spec_unverified 硬阻断（2026-07-03 F0 与 validate:toefl-task-alignment 对齐）；
       build_a_sentence 因 scoring_not_ready 为 BLOCKED；含音频题型在无 active 音频时不得 READY_ACTIVE。
    B) ACTUAL grid（level × task_type）：含全部题型（含单词宇宙迁移题，单独呈现、不混入考试段就绪度）。
 
@@ -39,16 +41,20 @@ export const INPUT_MODE_BY_TASK: Record<string, string> = {
   listen_and_repeat: 'speak', interview_speaking: 'speak',
 }
 
-// canonical cells blocked pending authoritative official-format confirmation (R4 resolves), keyed `${exam}|${taskType}`.
-// TOEFL read_daily_life + the TOEFL academic-reading variant (which uses reading_comprehension) are stopped.
-export const SPEC_BLOCKED = new Map<string, string>([
-  ['toefl|read_daily_life', 'official_spec_unverified'],
-  ['toefl|reading_comprehension', 'official_spec_unverified'],
+// canonical cells whose exam shape is confirmed as PROJECT PRACTICE FORMAT (the 4-option MCQ is our
+// documented practice shape, NOT a claimed exact ETS UI). Formerly hard-BLOCKED `official_spec_unverified`;
+// superseded 2026-07-03 (F0) by `spec_confirmed_project_practice_shape` to agree with
+// validate:toefl-task-alignment (readiness=draft_ready). Keyed `${exam}|${taskType}`.
+export const SPEC_CONFIRMED_PILOT = new Map<string, string>([
+  ['toefl|read_daily_life', 'spec_confirmed_project_practice_shape'],
+  ['toefl|reading_comprehension', 'spec_confirmed_project_practice_shape'],
 ])
+// master-plan F1 target per spec-confirmed pilot cell → drives the precise `needs_N_more` reason
+export const PILOT_TARGET = 100
 // types not yet deterministically scorable → cannot become active (R3 resolves).
 export const SCORING_NOT_READY = new Set(['build_a_sentence'])
 
-export type CoverageState = 'MISSING' | 'THIN' | 'READY_DRAFT' | 'READY_ACTIVE' | 'BLOCKED'
+export type CoverageState = 'MISSING' | 'THIN' | 'PILOT_DRAFT' | 'READY_DRAFT' | 'READY_ACTIVE' | 'BLOCKED'
 export interface CellCounts {
   draft: number; reviewed: number; active: number; rejected: number; retired: number
   items: number; stimuli: number; activeAudio: number; rubricItems: number; targetWords: number; sourceStages: number
@@ -56,12 +62,13 @@ export interface CellCounts {
 export interface CellContext { exam: string; taskType: string; requiresAudio: boolean; requiresRubric: boolean }
 export const emptyCounts = (): CellCounts => ({ draft: 0, reviewed: 0, active: 0, rejected: 0, retired: 0, items: 0, stimuli: 0, activeAudio: 0, rubricItems: 0, targetWords: 0, sourceStages: 0 })
 
-/** Deterministic state machine. Hard spec/scoring blocks dominate; audio cells cannot be READY_ACTIVE
- *  without active audio; a listening/speaking pool with draft but no active audio is BLOCKED. */
+/** Deterministic state machine. Hard scoring blocks dominate; audio cells cannot be READY_ACTIVE
+ *  without active audio; a listening/speaking pool with draft but no active audio is BLOCKED.
+ *  Spec-confirmed pilot cells (SPEC_CONFIRMED_PILOT) below READY_THRESHOLD read PILOT_DRAFT with
+ *  informational reasons (shape note + precise needs_N_more toward PILOT_TARGET), not BLOCKED. */
 export function classifyCell(ctx: CellContext, c: CellCounts): { state: CoverageState; blockingReasons: string[] } {
   const reasons: string[] = []
   const key = `${ctx.exam}|${ctx.taskType}`
-  if (SPEC_BLOCKED.has(key)) reasons.push(SPEC_BLOCKED.get(key) as string)
   if (SCORING_NOT_READY.has(ctx.taskType)) reasons.push('scoring_not_ready')
 
   // pool = all non-terminal content (draft + reviewed + active). Promotion drains draft→active, so the
@@ -77,14 +84,19 @@ export function classifyCell(ctx: CellContext, c: CellCounts): { state: Coverage
   // rubric requirement applies to rubric-scored productive writing, not objective build_a_sentence
   if (ctx.requiresRubric && !SCORING_NOT_READY.has(ctx.taskType) && c.items > 0 && c.rubricItems < c.items) reasons.push('rubric_incomplete')
 
-  // hard spec/scoring block dominates regardless of pool size
-  if (reasons.includes('official_spec_unverified') || reasons.includes('scoring_not_ready')) return { state: 'BLOCKED', blockingReasons: reasons }
+  // hard scoring block dominates regardless of pool size
+  if (reasons.includes('scoring_not_ready')) return { state: 'BLOCKED', blockingReasons: reasons }
   // no content yet (counts reviewed too — a reviewed-only cell is NOT missing)
   if (pool === 0) return { state: 'MISSING', blockingReasons: reasons }
   // content present but a hard activation dependency unmet (audio not complete for an audio cell)
   if (reasons.includes('audio_missing') || reasons.includes('audio_incomplete') || reasons.includes('active_without_audio')) return { state: 'BLOCKED', blockingReasons: reasons }
   // a healthy ACTIVE pool with all deps met → READY_ACTIVE (reachable even after draft fully drains)
   if (c.active >= MIN_ACTIVE_POOL && !reasons.includes('rubric_incomplete')) return { state: 'READY_ACTIVE', blockingReasons: reasons }
+  // spec-confirmed pilot below threshold → PILOT_DRAFT (draft-only pilot; reasons are informational,
+  // not blocking). Self-heals: once pool ≥ READY_THRESHOLD the ordinary READY_DRAFT branch applies.
+  if (SPEC_CONFIRMED_PILOT.has(key) && pool < READY_THRESHOLD) {
+    return { state: 'PILOT_DRAFT', blockingReasons: [...reasons, SPEC_CONFIRMED_PILOT.get(key) as string, `needs_${PILOT_TARGET - pool}_more`] }
+  }
   // thin pool (not enough total content to consider promoting)
   if (pool < READY_THRESHOLD) return { state: 'THIN', blockingReasons: reasons }
   // enough content; drafts ready to promote (or partially promoted but active pool still < MIN_ACTIVE_POOL)
@@ -192,9 +204,10 @@ async function main() {
   const missing = byState('MISSING').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft 0`)
   const thin = byState('THIN').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — pool ${r.draft + r.reviewed + r.active} (draft ${r.draft}/rev ${r.reviewed}/active ${r.active}, <${READY_THRESHOLD})`)
   const blocked = byState('BLOCKED').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft} · ${r.blockingReasons.join(',')}`)
+  const pilotDraft = byState('PILOT_DRAFT').map((r) => `${r.exam} lv${r.level} / ${r.section} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft} · ${r.blockingReasons.join(',')}`)
   const readyDraft = byState('READY_DRAFT').map((r) => `${r.exam} lv${r.level} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — draft ${r.draft}`)
   const readyActive = byState('READY_ACTIVE').map((r) => `${r.exam} lv${r.level} / ${r.taskType}${r.domain ? ` [${r.domain}]` : ''} — active ${r.active}`)
-  const stateCounts = { MISSING: missing.length, THIN: thin.length, READY_DRAFT: readyDraft.length, READY_ACTIVE: readyActive.length, BLOCKED: blocked.length }
+  const stateCounts = { MISSING: missing.length, THIN: thin.length, PILOT_DRAFT: pilotDraft.length, READY_DRAFT: readyDraft.length, READY_ACTIVE: readyActive.length, BLOCKED: blocked.length }
 
   // ── B) ACTUAL grid (level × task_type) — includes word-universe types ──
   const rows: Record<string, unknown>[] = []
@@ -218,7 +231,7 @@ async function main() {
   const summary = {
     generatedAt: new Date().toISOString(),
     totals: { sets: sets.length, items: items.length, activeSets: sets.filter((s) => s.status === 'active').length, draftSets: sets.filter((s) => s.status === 'draft').length, stimuliWithActiveAudio: activeAudioStim.size },
-    expectedMatrix: { rows: expected, stateCounts, missing, thin, blocked, readyDraft, readyActive },
+    expectedMatrix: { rows: expected, stateCounts, missing, thin, pilotDraft, blocked, readyDraft, readyActive },
     actualGrid: rows, warnings,
   }
   writeFileSync(OUT_JSON, JSON.stringify(summary, null, 2) + '\n', 'utf8')
@@ -226,7 +239,7 @@ async function main() {
   const md: string[] = []
   md.push('# v2 Question Bank Coverage Audit (R1 canonical matrix)', '', `Generated: ${summary.generatedAt}`, '')
   md.push(`Totals: sets ${summary.totals.sets} · items ${summary.totals.items} · active ${summary.totals.activeSets} · draft ${summary.totals.draftSets}`, '')
-  md.push(`## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING ${stateCounts.MISSING} · THIN ${stateCounts.THIN} · READY_DRAFT ${stateCounts.READY_DRAFT} · READY_ACTIVE ${stateCounts.READY_ACTIVE} · BLOCKED ${stateCounts.BLOCKED}`, '')
+  md.push(`## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING ${stateCounts.MISSING} · THIN ${stateCounts.THIN} · PILOT_DRAFT ${stateCounts.PILOT_DRAFT} · READY_DRAFT ${stateCounts.READY_DRAFT} · READY_ACTIVE ${stateCounts.READY_ACTIVE} · BLOCKED ${stateCounts.BLOCKED}`, '')
   md.push('| exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |')
   md.push('|---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|')
   for (const r of expected) {
@@ -235,6 +248,7 @@ async function main() {
   const list = (title: string, arr: string[]) => { md.push('', `### ${title} — ${arr.length}`, ''); for (const x of arr) md.push(`- ${x}`) }
   list('MISSING (draft 0)', missing)
   list('THIN (0 < draft < 50)', thin)
+  list(`PILOT_DRAFT (spec-confirmed project practice shape, pool < ${READY_THRESHOLD}; 4-option MCQ is the project practice format, not a claimed exact ETS UI)`, pilotDraft)
   list('BLOCKED', blocked)
   list('READY_DRAFT (draft ≥ 50)', readyDraft)
   list('READY_ACTIVE', readyActive)
@@ -249,7 +263,7 @@ async function main() {
   writeFileSync(OUT_MD, md.join('\n') + '\n', 'utf8')
 
   console.log(`audit-coverage: sets ${summary.totals.sets} · draft ${summary.totals.draftSets} · active ${summary.totals.activeSets}`)
-  console.log(`  EXPECTED matrix: ${expected.length} rows · MISSING ${stateCounts.MISSING} · THIN ${stateCounts.THIN} · READY_DRAFT ${stateCounts.READY_DRAFT} · READY_ACTIVE ${stateCounts.READY_ACTIVE} · BLOCKED ${stateCounts.BLOCKED}`)
+  console.log(`  EXPECTED matrix: ${expected.length} rows · MISSING ${stateCounts.MISSING} · THIN ${stateCounts.THIN} · PILOT_DRAFT ${stateCounts.PILOT_DRAFT} · READY_DRAFT ${stateCounts.READY_DRAFT} · READY_ACTIVE ${stateCounts.READY_ACTIVE} · BLOCKED ${stateCounts.BLOCKED}`)
   console.log(`  ACTUAL grid: ${rows.length} rows · active-pool warnings ${warnings.length}`)
   console.log(`  报告：${OUT_MD} / ${OUT_JSON}`)
 }

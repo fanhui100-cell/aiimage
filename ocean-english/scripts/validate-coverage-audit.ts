@@ -9,13 +9,15 @@
      2. SAT reading is counted per official domain (4 rows), not one combined pool;
      3. a listening pool with draft content but no active audio is BLOCKED, not READY_ACTIVE.
    Plus structure: every EXAM_SPECS task = exactly one matrix row (SAT reading split per domain);
-   stopped TOEFL tasks visible as BLOCKED; required fields present; R0 expansions visible.
+   spec-confirmed TOEFL Reading pilot cells classify PILOT_DRAFT (not BLOCKED/official_spec_unverified,
+   superseded 2026-07-03 F0) and self-heal to READY_DRAFT at threshold; build_a_sentence stays
+   BLOCKED(scoring_not_ready); required fields present; R0 expansions visible.
 
    Exit 1 on any failure. Usage: npx tsx scripts/validate-coverage-audit.ts
    ════════════════════════════════════════════════════════════════════════ */
 import { readFileSync, existsSync } from 'node:fs'
 import { EXAM_SPECS } from '@/lib/exam-specs'
-import { classifyCell, buildExpectedRows, emptyCounts, READY_THRESHOLD, type CellLookup } from './audit-question-bank-v2-coverage'
+import { classifyCell, buildExpectedRows, emptyCounts, READY_THRESHOLD, PILOT_TARGET, type CellLookup } from './audit-question-bank-v2-coverage'
 
 const failures: string[] = []
 const expect = (cond: boolean, msg: string) => { if (!cond) failures.push(msg) }
@@ -87,6 +89,27 @@ const expect = (cond: boolean, msg: string) => { if (!cond) failures.push(msg) }
   expect(r.blockingReasons.includes('rubric_incomplete'), `fixture7: expected rubric_incomplete, got [${r.blockingReasons.join(',')}]`)
 }
 
+// ── Fixture 8: spec-confirmed TOEFL Reading pilot → PILOT_DRAFT with precise reasons, NOT BLOCKED ──
+// (F0 2026-07-03: official_spec_unverified superseded by spec_confirmed_project_practice_shape;
+//  the 4-option MCQ is the project practice shape, not a claimed exact ETS UI.)
+{
+  const c = emptyCounts(); c.draft = 10; c.items = 24
+  const r = classifyCell({ exam: 'toefl', taskType: 'read_daily_life', requiresAudio: false, requiresRubric: false }, c)
+  expect(r.state === 'PILOT_DRAFT', `fixture8: toefl read_daily_life 10-draft pilot state=${r.state} (expect PILOT_DRAFT)`)
+  expect(r.blockingReasons.includes('spec_confirmed_project_practice_shape'), `fixture8: expected spec_confirmed_project_practice_shape, got [${r.blockingReasons.join(',')}]`)
+  expect(r.blockingReasons.includes(`needs_${PILOT_TARGET - 10}_more`), `fixture8: expected needs_${PILOT_TARGET - 10}_more, got [${r.blockingReasons.join(',')}]`)
+  expect(!r.blockingReasons.includes('official_spec_unverified'), 'fixture8: official_spec_unverified must no longer be emitted')
+  const trc = classifyCell({ exam: 'toefl', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, (() => { const x = emptyCounts(); x.draft = 10; x.items = 40; return x })())
+  expect(trc.state === 'PILOT_DRAFT', `fixture8b: toefl reading_comprehension 10-draft pilot state=${trc.state} (expect PILOT_DRAFT)`)
+  // self-heal: at READY_THRESHOLD+ the ordinary READY_DRAFT branch applies (post-F1 expansion to 100)
+  const full = emptyCounts(); full.draft = 100; full.items = 400
+  const rf = classifyCell({ exam: 'toefl', taskType: 'read_daily_life', requiresAudio: false, requiresRubric: false }, full)
+  expect(rf.state === 'READY_DRAFT', `fixture8c: pilot cell at 100 draft state=${rf.state} (expect READY_DRAFT self-heal)`)
+  // non-pilot thin cell is still THIN, proving PILOT_DRAFT is keyed, not a blanket rename
+  const thin = emptyCounts(); thin.draft = 10
+  expect(classifyCell({ exam: 'cet4', taskType: 'reading_comprehension', requiresAudio: false, requiresRubric: false }, thin).state === 'THIN', 'fixture8d: non-pilot 10-draft cell stays THIN')
+}
+
 // ── Structure: one row per EXAM_SPECS task (SAT reading split per domain) ──
 {
   const rows = buildExpectedRows(() => emptyCounts())
@@ -96,9 +119,9 @@ const expect = (cond: boolean, msg: string) => { if (!cond) failures.push(msg) }
 
   const rdl = rows.find((r) => r.exam === 'toefl' && r.taskType === 'read_daily_life')
   expect(!!rdl, 'structure: toefl read_daily_life row present (not omitted)')
-  expect(rdl?.state === 'BLOCKED', `structure: toefl read_daily_life state=${rdl?.state} (expect BLOCKED)`)
+  expect(rdl?.state === 'MISSING', `structure: toefl read_daily_life (empty counts) state=${rdl?.state} (expect MISSING — spec-confirmed pilot no longer hard-BLOCKED)`)
   const trc = rows.find((r) => r.exam === 'toefl' && r.taskType === 'reading_comprehension')
-  expect(trc?.state === 'BLOCKED', `structure: toefl reading_comprehension (academic) state=${trc?.state} (expect BLOCKED)`)
+  expect(trc?.state === 'MISSING', `structure: toefl reading_comprehension (academic, empty counts) state=${trc?.state} (expect MISSING)`)
   const bas = rows.find((r) => r.exam === 'toefl' && r.taskType === 'build_a_sentence')
   expect(bas?.state === 'BLOCKED' && bas.blockingReasons.includes('scoring_not_ready'), `structure: toefl build_a_sentence state=${bas?.state} reasons=[${bas?.blockingReasons.join(',')}] (expect BLOCKED/scoring_not_ready)`)
   // a non-blocked, non-audio exam reading_comprehension at another level must be MISSING with empty counts
@@ -137,4 +160,4 @@ if (failures.length) {
   for (const f of failures) console.error(`  ✗ ${f}`)
   process.exit(1)
 }
-console.log('✓ validate-coverage-audit PASSED — fixtures (MISSING / SAT-per-domain / listening-no-audio→BLOCKED / READY_ACTIVE / partial-audio→BLOCKED / reviewed-counts / rubric-incomplete) + structure + report cross-check')
+console.log('✓ validate-coverage-audit PASSED — fixtures (MISSING / SAT-per-domain / listening-no-audio→BLOCKED / READY_ACTIVE / partial-audio→BLOCKED / reviewed-counts / rubric-incomplete / toefl-reading-PILOT_DRAFT) + structure + report cross-check')

@@ -1,10 +1,10 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-06-25T11:32:02.986Z
+Generated: 2026-07-03T07:06:41.350Z
 
-Totals: sets 5623 · items 6803 · active 1993 · draft 3630
+Totals: sets 6047 · items 7291 · active 2364 · draft 3683
 
-## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 2 · THIN 0 · READY_DRAFT 0 · READY_ACTIVE 38 · BLOCKED 5
+## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 0 · PILOT_DRAFT 2 · READY_DRAFT 0 · READY_ACTIVE 40 · BLOCKED 3
 
 | exam | lv | section | taskType | domain | inMode | aud | rub | draft | rev | active | items | stim | actAudio | rubItems | stages | state | blockingReasons |
 |---|---:|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
@@ -40,10 +40,10 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 | kaoyan | 5 | writing_small | applied_writing | - | free_text | - | Y | 0 | 0 | 50 | 50 | 0 | 0 | 50 | 1 | READY_ACTIVE | - |
 | kaoyan | 5 | writing_large | essay_writing | - | free_text | - | Y | 0 | 0 | 50 | 50 | 0 | 0 | 50 | 1 | READY_ACTIVE | - |
 | toefl | 6 | reading | complete_the_words | - | spell | - | - | 0 | 0 | 70 | 70 | 70 | 0 | 0 | 2 | READY_ACTIVE | - |
-| toefl | 6 | reading | read_daily_life | - | choice | - | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | BLOCKED | official_spec_unverified |
-| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | BLOCKED | official_spec_unverified |
-| toefl | 6 | listening | choose_a_response | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
-| toefl | 6 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| toefl | 6 | reading | read_daily_life | - | choice | - | - | 10 | 0 | 0 | 24 | 10 | 0 | 0 | 1 | PILOT_DRAFT | spec_confirmed_project_practice_shape,needs_90_more |
+| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 10 | 0 | 0 | 40 | 10 | 0 | 0 | 1 | PILOT_DRAFT | spec_confirmed_project_practice_shape,needs_90_more |
+| toefl | 6 | listening | choose_a_response | - | choice | Y | - | 0 | 0 | 10 | 10 | 10 | 10 | 0 | 1 | READY_ACTIVE | - |
+| toefl | 6 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 10 | 30 | 10 | 10 | 0 | 1 | READY_ACTIVE | - |
 | toefl | 6 | writing | build_a_sentence | - | multi_blank | - | Y | 10 | 0 | 0 | 10 | 0 | 0 | 0 | 1 | BLOCKED | scoring_not_ready |
 | toefl | 6 | writing | email_writing | - | free_text | - | Y | 0 | 0 | 60 | 60 | 0 | 0 | 60 | 2 | READY_ACTIVE | - |
 | toefl | 6 | writing | academic_discussion | - | free_text | - | Y | 0 | 0 | 60 | 60 | 0 | 0 | 60 | 2 | READY_ACTIVE | - |
@@ -53,19 +53,28 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 | sat | 7 | craft_and_structure | reading_comprehension | Craft and Structure | choice | - | - | 0 | 0 | 50 | 50 | 50 | 0 | 0 | 2 | READY_ACTIVE | - |
 | sat | 7 | expression_of_ideas | reading_comprehension | Expression of Ideas | choice | - | - | 0 | 0 | 50 | 50 | 50 | 0 | 0 | 2 | READY_ACTIVE | - |
 | sat | 7 | standard_english_conventions | reading_comprehension | Standard English Conventions | choice | - | - | 0 | 0 | 50 | 50 | 50 | 0 | 0 | 1 | READY_ACTIVE | - |
+| ielts | 8 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| ielts | 8 | reading | reading_comprehension | - | choice | - | - | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| ielts | 8 | writing | essay_writing | - | free_text | - | Y | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
+| ielts | 8 | speaking | interview_speaking | - | speak | Y | Y | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | MISSING | - |
 
-### MISSING (draft 0) — 2
+### MISSING (draft 0) — 4
 
-- toefl lv6 / listening / choose_a_response — draft 0
-- toefl lv6 / listening / listening_comprehension — draft 0
+- ielts lv8 / listening / listening_comprehension — draft 0
+- ielts lv8 / reading / reading_comprehension — draft 0
+- ielts lv8 / writing / essay_writing — draft 0
+- ielts lv8 / speaking / interview_speaking — draft 0
 
 ### THIN (0 < draft < 50) — 0
 
 
-### BLOCKED — 5
+### PILOT_DRAFT (spec-confirmed project practice shape, pool < 50; 4-option MCQ is the project practice format, not a claimed exact ETS UI) — 2
 
-- toefl lv6 / reading / read_daily_life — draft 0 · official_spec_unverified
-- toefl lv6 / reading / reading_comprehension — draft 0 · official_spec_unverified
+- toefl lv6 / reading / read_daily_life — draft 10 · spec_confirmed_project_practice_shape,needs_90_more
+- toefl lv6 / reading / reading_comprehension — draft 10 · spec_confirmed_project_practice_shape,needs_90_more
+
+### BLOCKED — 3
+
 - toefl lv6 / writing / build_a_sentence — draft 10 · scoring_not_ready
 - toefl lv6 / speaking / listen_and_repeat — draft 10 · audio_missing
 - toefl lv6 / speaking / interview_speaking — draft 10 · audio_missing
@@ -73,7 +82,7 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 ### READY_DRAFT (draft ≥ 50) — 0
 
 
-### READY_ACTIVE — 38
+### READY_ACTIVE — 40
 
 - zhongkao lv1 / listening_comprehension — active 52
 - zhongkao lv1 / grammar_fill — active 50
@@ -107,6 +116,8 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 - kaoyan lv5 / applied_writing — active 50
 - kaoyan lv5 / essay_writing — active 50
 - toefl lv6 / complete_the_words — active 70
+- toefl lv6 / choose_a_response — active 10
+- toefl lv6 / listening_comprehension — active 10
 - toefl lv6 / email_writing — active 60
 - toefl lv6 / academic_discussion — active 60
 - sat lv7 / reading_comprehension [Information and Ideas] — active 50
@@ -216,19 +227,23 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 | kaoyan | 5 | zh_to_word_spell | 4 | 4 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | insufficient_active_pool |
 | toefl | 6 | academic_discussion | 60 | 0 | 60 | 60 | 0 | 0 | 60 | 0 | 2 | - |
 | toefl | 6 | build_a_sentence | 10 | 10 | 0 | 10 | 0 | 0 | 0 | 0 | 1 | insufficient_active_pool |
+| toefl | 6 | choose_a_response | 10 | 0 | 10 | 10 | 10 | 10 | 0 | 0 | 1 | - |
 | toefl | 6 | cloze_choice | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | 0 | insufficient_active_pool |
 | toefl | 6 | cloze_spell | 56 | 56 | 0 | 56 | 0 | 0 | 0 | 56 | 0 | insufficient_active_pool |
 | toefl | 6 | collocation_choice | 27 | 27 | 0 | 27 | 0 | 0 | 0 | 27 | 0 | insufficient_active_pool |
 | toefl | 6 | complete_the_words | 70 | 0 | 70 | 70 | 70 | 0 | 0 | 0 | 2 | - |
-| toefl | 6 | confusable_choice | 51 | 51 | 0 | 51 | 0 | 0 | 0 | 51 | 0 | insufficient_active_pool |
-| toefl | 6 | def_to_word | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
+| toefl | 6 | confusable_choice | 149 | 62 | 87 | 149 | 0 | 0 | 0 | 149 | 3 | - |
+| toefl | 6 | def_to_word | 152 | 65 | 87 | 152 | 0 | 0 | 0 | 152 | 3 | - |
 | toefl | 6 | dictation_spell | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
 | toefl | 6 | email_writing | 60 | 0 | 60 | 60 | 0 | 0 | 60 | 0 | 2 | - |
 | toefl | 6 | en_to_zh | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
 | toefl | 6 | interview_speaking | 10 | 10 | 0 | 10 | 10 | 0 | 10 | 0 | 1 | insufficient_active_pool |
 | toefl | 6 | listen_and_repeat | 10 | 10 | 0 | 10 | 10 | 0 | 10 | 0 | 1 | insufficient_active_pool |
 | toefl | 6 | listen_to_meaning | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
-| toefl | 6 | synonym_choice | 45 | 45 | 0 | 45 | 0 | 0 | 0 | 45 | 0 | insufficient_active_pool |
+| toefl | 6 | listening_comprehension | 10 | 0 | 10 | 30 | 10 | 10 | 0 | 0 | 1 | - |
+| toefl | 6 | read_daily_life | 10 | 10 | 0 | 24 | 10 | 0 | 0 | 0 | 1 | insufficient_active_pool |
+| toefl | 6 | reading_comprehension | 10 | 10 | 0 | 40 | 10 | 0 | 0 | 0 | 1 | insufficient_active_pool |
+| toefl | 6 | synonym_choice | 143 | 56 | 87 | 143 | 0 | 0 | 0 | 143 | 3 | - |
 | toefl | 6 | synonym_substitute | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
 | toefl | 6 | word_form | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
 | toefl | 6 | zh_to_en | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
@@ -236,19 +251,19 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 | sat | 7 | cloze_choice | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | 0 | insufficient_active_pool |
 | sat | 7 | cloze_spell | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | 0 | insufficient_active_pool |
 | sat | 7 | collocation_choice | 31 | 31 | 0 | 31 | 0 | 0 | 0 | 31 | 0 | insufficient_active_pool |
-| sat | 7 | confusable_choice | 19 | 19 | 0 | 19 | 0 | 0 | 0 | 19 | 0 | insufficient_active_pool |
-| sat | 7 | def_to_word | 58 | 58 | 0 | 58 | 0 | 0 | 0 | 58 | 0 | insufficient_active_pool |
+| sat | 7 | confusable_choice | 49 | 19 | 30 | 49 | 0 | 0 | 0 | 49 | 1 | - |
+| sat | 7 | def_to_word | 88 | 58 | 30 | 88 | 0 | 0 | 0 | 88 | 1 | - |
 | sat | 7 | dictation_spell | 57 | 57 | 0 | 57 | 0 | 0 | 0 | 57 | 0 | insufficient_active_pool |
 | sat | 7 | en_to_zh | 58 | 58 | 0 | 58 | 0 | 0 | 0 | 58 | 0 | insufficient_active_pool |
 | sat | 7 | listen_to_meaning | 57 | 57 | 0 | 57 | 0 | 0 | 0 | 57 | 0 | insufficient_active_pool |
 | sat | 7 | reading_comprehension | 200 | 0 | 200 | 200 | 200 | 0 | 0 | 0 | 5 | - |
-| sat | 7 | synonym_choice | 55 | 55 | 0 | 55 | 0 | 0 | 0 | 55 | 0 | insufficient_active_pool |
+| sat | 7 | synonym_choice | 85 | 55 | 30 | 85 | 0 | 0 | 0 | 85 | 1 | - |
 | sat | 7 | synonym_substitute | 48 | 48 | 0 | 48 | 0 | 0 | 0 | 48 | 0 | insufficient_active_pool |
 | sat | 7 | word_form | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
 | sat | 7 | zh_to_en | 58 | 58 | 0 | 58 | 0 | 0 | 0 | 58 | 0 | insufficient_active_pool |
 | sat | 7 | zh_to_word_spell | 57 | 57 | 0 | 57 | 0 | 0 | 0 | 57 | 0 | insufficient_active_pool |
 
-## C. Active-pool warnings (94)
+## C. Active-pool warnings (90)
 
 - lv1 cloze_choice: insufficient_active_pool
 - lv1 cloze_spell: insufficient_active_pool
@@ -319,14 +334,13 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 - lv6 cloze_choice: insufficient_active_pool
 - lv6 cloze_spell: insufficient_active_pool
 - lv6 collocation_choice: insufficient_active_pool
-- lv6 confusable_choice: insufficient_active_pool
-- lv6 def_to_word: insufficient_active_pool
 - lv6 dictation_spell: insufficient_active_pool
 - lv6 en_to_zh: insufficient_active_pool
 - lv6 interview_speaking: insufficient_active_pool
 - lv6 listen_and_repeat: insufficient_active_pool
 - lv6 listen_to_meaning: insufficient_active_pool
-- lv6 synonym_choice: insufficient_active_pool
+- lv6 read_daily_life: insufficient_active_pool
+- lv6 reading_comprehension: insufficient_active_pool
 - lv6 synonym_substitute: insufficient_active_pool
 - lv6 word_form: insufficient_active_pool
 - lv6 zh_to_en: insufficient_active_pool
@@ -334,12 +348,9 @@ Totals: sets 5623 · items 6803 · active 1993 · draft 3630
 - lv7 cloze_choice: insufficient_active_pool
 - lv7 cloze_spell: insufficient_active_pool
 - lv7 collocation_choice: insufficient_active_pool
-- lv7 confusable_choice: insufficient_active_pool
-- lv7 def_to_word: insufficient_active_pool
 - lv7 dictation_spell: insufficient_active_pool
 - lv7 en_to_zh: insufficient_active_pool
 - lv7 listen_to_meaning: insufficient_active_pool
-- lv7 synonym_choice: insufficient_active_pool
 - lv7 synonym_substitute: insufficient_active_pool
 - lv7 word_form: insufficient_active_pool
 - lv7 zh_to_en: insufficient_active_pool
