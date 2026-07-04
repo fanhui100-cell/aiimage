@@ -13,6 +13,7 @@ import { parseRubricDimensions } from '@/lib/scoring/score-engine'
 
 const OUT = 'reports/rubrics-validation.json'
 const errors: string[] = []
+const warnings: string[] = []
 const notes: string[] = []
 
 // ── AI 维度解析的严格性 fixture：未知 key / 缺维度 / 空 comment / NaN band 必须 → null ──
@@ -37,7 +38,13 @@ function main() {
       if (!sectionNeedsRubric(sec)) continue
       subjectiveSections++
       const r = getRubricForSection(spec.id, sec)
-      if (!r) errors.push(`${spec.id}/${sec.id} 缺 rubric（skill=${sec.skill}, tasks=${sec.taskTypes.join('/')}）`)
+      if (!r) {
+        // coming_soon（如 IELTS 整卷未做）：rubric 缺口降级为 warning——该考试组卷/专项一律受控拒
+        // （exam_coming_soon），永远走不到主观评分；绝不为 coming_soon 造假 rubric。active 考试缺 rubric 仍是错误。
+        const msg = `${spec.id}/${sec.id} 缺 rubric（skill=${sec.skill}, tasks=${sec.taskTypes.join('/')}）`
+        if (spec.status === 'coming_soon') warnings.push(`${msg} · status=coming_soon，组卷受控拒，非阻塞`)
+        else errors.push(msg)
+      }
     }
   }
 
@@ -64,9 +71,10 @@ function main() {
   }
 
   notes.push(`生产性 section ${subjectiveSections} 个 · rubric ${RUBRICS.length} 个`)
-  writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), rubrics: RUBRICS.map((r) => r.id), subjectiveSections, errors, notes, ok: errors.length === 0 }, null, 2) + '\n', 'utf8')
-  console.log(`validate-rubrics: rubric ${RUBRICS.length} · 生产性 section ${subjectiveSections} · 错误 ${errors.length}`)
+  writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), rubrics: RUBRICS.map((r) => r.id), subjectiveSections, errors, warnings, notes, ok: errors.length === 0 }, null, 2) + '\n', 'utf8')
+  console.log(`validate-rubrics: rubric ${RUBRICS.length} · 生产性 section ${subjectiveSections} · 错误 ${errors.length} · 警告 ${warnings.length}`)
   for (const n of notes) console.log(`  · ${n}`)
+  for (const w of warnings) console.warn(`WARN ${w}`)
   for (const e of errors) console.error(`ERROR ${e}`)
   process.exitCode = errors.length ? 1 : 0
 }
