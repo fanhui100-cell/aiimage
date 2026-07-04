@@ -5,7 +5,10 @@
 
   It checks that exam-specs, authored templates, current pilot DB rows, and
   readiness blockers agree with the product contract:
-  - TOEFL专项可练, but full/mini mock exams remain paper_not_ready (paperReady=false).
+  - TOEFL专项可练; TOEFL mock v1 (2026-07-05) is OPEN (paperReady=true) covering
+    reading + listening + writing. Speaking is excluded from papers
+    (section.excludeFromPaper=true, speaking_pipeline_not_ready) and build_a_sentence
+    is excluded from papers (scoring_not_ready) — the generator draws neither.
   - Listening 专项 (choose_a_response / listening_comprehension): pilot 20 + F3 180 = 100+100 active with
     reviewed audio (F3 audio owner-delegated sample-review + activation + promote, 2026-07-04).
   - Reading 专项 (read_daily_life / reading_comprehension) promoted active 2026-07-04 (F2, owner-approved);
@@ -98,9 +101,13 @@ function validateSpecAndTemplates() {
   if (!spec) return null
 
   ok(spec.status === 'active', `exam-specs: TOEFL status=${spec.status}, expected active for专项练习`)
-  ok(spec.paperReady === false, `exam-specs: TOEFL paperReady=${String(spec.paperReady)}, expected false until full mock is complete`)
+  ok(spec.paperReady === true, `exam-specs: TOEFL paperReady=${String(spec.paperReady)}, expected true (mock v1 open: reading+listening+writing)`)
 
   const sectionById = new Map(spec.sections.map((section) => [section.id, section]))
+  // 模考 v1：口语板块整卷排除（评分管线未就绪）；写作板块保留（email/academic_discussion）。
+  const speakingSection = sectionById.get('speaking')
+  ok(speakingSection?.excludeFromPaper === true, 'exam-specs: TOEFL speaking section must set excludeFromPaper=true (speaking excluded from mock v1)')
+  ok(speakingSection?.paperExcludedReason === 'speaking_pipeline_not_ready', `exam-specs: TOEFL speaking paperExcludedReason=${speakingSection?.paperExcludedReason}, expected speaking_pipeline_not_ready`)
   for (const expected of EXPECTED) {
     const section = sectionById.get(expected.sectionId)
     ok(!!section, `exam-specs: missing TOEFL section ${expected.sectionId}`)
@@ -280,12 +287,16 @@ async function main() {
   const dbSummary = await validateDb()
 
   const blockerSummary = {
-    paperReady: false,
+    // 模考 v1（2026-07-05）：paperReady=true，整卷含阅读+听力+写作。
+    paperReady: true,
+    mockV1: { open: true, sections: ['reading', 'listening', 'writing'], excludedFromPaper: ['speaking', 'build_a_sentence'] },
     // Reading 专项 promoted active 2026-07-04; Phase1 补 promote 2 条重写 Q4 → 无 held draft。
     reviewedActive: ['read_daily_life', 'reading_comprehension', 'complete_the_words', 'email_writing', 'academic_discussion'],
     readingAcademicReviewHeldDraft: 0,
     audioReviewedAndActive: ['choose_a_response', 'listening_comprehension'],
+    // build_a_sentence 判分未就绪 → 整卷排除（组卷器 PAPER_EXCLUDED_TASK_TYPES）。
     scoringNotReady: ['build_a_sentence'],
+    // 口语评分管线未就绪 → speaking section excludeFromPaper，整卷排除。
     speakingPipelineNotReady: ['listen_and_repeat', 'interview_speaking'],
   }
 

@@ -156,12 +156,14 @@ export const EXAM_SPECS: ExamSpec[] = [
     fullScore: 6,
     scoringScale: '1-6',
     status: 'active',
-    paperReady: false,   // 专项 task 可练；整卷缺 reading/listening/speaking 客观题，模考未就绪
+    // 模考 v1（2026-07-05）：阅读/听力/写作 active 池就绪 → 开整卷；口语评分管线未就绪、
+    // Build a Sentence 判分未就绪 → 均排除出整卷（见 speaking.excludeFromPaper 与组卷器 PAPER_EXCLUDED_TASK_TYPES）。
+    paperReady: true,
     sections: [
       { id: 'reading', labelZh: '阅读 Reading', labelEn: 'Reading', skill: 'reading', taskTypes: ['complete_the_words', 'read_daily_life', 'reading_comprehension'], groupMode: 'passages', itemCount: 50, points: 0, notes: 'Complete the Words / Read in Daily Life / Academic Passage；后者用 reading_comprehension，前两类待生产性任务支持。' },
       { id: 'listening', labelZh: '听力 Listening', labelEn: 'Listening', skill: 'listening', taskTypes: ['choose_a_response', 'listening_comprehension'], groupMode: 'rows', itemCount: 47, points: 0, requiresAudio: true, notes: 'Listen and Choose a Response / Conversation / Announcement / Academic Talk；后三类用 listening_comprehension 子类，choose_a_response 待支持。' },
-      { id: 'writing', labelZh: '写作 Writing', labelEn: 'Writing', skill: 'writing', taskTypes: ['build_a_sentence', 'email_writing', 'academic_discussion'], groupMode: 'single', itemCount: 12, points: 0, requiresRubric: true, notes: 'Build a Sentence / Write an Email / Write for an Academic Discussion。' },
-      { id: 'speaking', labelZh: '口语 Speaking', labelEn: 'Speaking', skill: 'speaking', taskTypes: ['listen_and_repeat', 'interview_speaking'], groupMode: 'single', itemCount: 11, points: 0, requiresAudio: true, requiresRubric: true, notes: 'Listen and Repeat / Take an Interview。需录音转写 + 评分。' },
+      { id: 'writing', labelZh: '写作 Writing', labelEn: 'Writing', skill: 'writing', taskTypes: ['build_a_sentence', 'email_writing', 'academic_discussion'], groupMode: 'single', itemCount: 12, points: 0, requiresRubric: true, notes: 'Build a Sentence（判分未就绪，组卷器排除）/ Write an Email / Write for an Academic Discussion。整卷仅抽 email_writing / academic_discussion。' },
+      { id: 'speaking', labelZh: '口语 Speaking', labelEn: 'Speaking', skill: 'speaking', taskTypes: ['listen_and_repeat', 'interview_speaking'], groupMode: 'single', itemCount: 11, points: 0, requiresAudio: true, requiresRubric: true, excludeFromPaper: true, paperExcludedReason: 'speaking_pipeline_not_ready', notes: 'Listen and Repeat / Take an Interview。需录音转写 + 评分；评分管线未就绪，模考 v1 排除该板块。' },
     ],
   },
 

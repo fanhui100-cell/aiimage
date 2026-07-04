@@ -33,6 +33,11 @@ const DEPRECATED_FILTER = `(${DEPRECATED_QUESTION_TYPES.join(',')})`
 const GROUPED_MULTI_ITEM = new Set(['reading_comprehension', 'listening_comprehension'])
 const SINGLE_WHOLE_TASK = new Set(['banked_cloze', 'seven_select', 'cloze_passage', 'grammar_fill', 'para_match'])
 const TARGET_WORD_CAP = 2
+/** 整卷（full/mini）刻意排除的任务类型：判分/管线未就绪，绝不进模考卷。
+ *  - build_a_sentence：可接受语序判分未就绪（TOEFL 模考 v1）。
+ *  - listen_and_repeat / interview_speaking：口语录音转写评分管线未就绪（speaking section 亦 excludeFromPaper）。
+ *  与 spec 的 section.excludeFromPaper 双重保险：即便某排除任务混进未排除 section，也不会被抽中。 */
+const PAPER_EXCLUDED_TASK_TYPES = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking'])
 
 // ── 确定性 RNG ───────────────────────────────────────────────────────────────
 function hashStr(s: string): number {
@@ -311,7 +316,8 @@ async function buildSection(
 
   if (isSubjectiveSection(sec)) {
     // 主观区：抽 1 个真实产出型题面（写作/翻译/口语）让用户作答；无 active 内容才退回纯 placeholder。
-    const drawn = await drawProductive(db, sec.taskTypes.filter((t) => !isDeprecatedQuestionType(t)), level, rnd, usedStimuli)
+    // 排除 PAPER_EXCLUDED_TASK_TYPES（如 build_a_sentence 判分未就绪）——绝不进模考卷。
+    const drawn = await drawProductive(db, sec.taskTypes.filter((t) => !isDeprecatedQuestionType(t) && !PAPER_EXCLUDED_TASK_TYPES.has(t)), level, rnd, usedStimuli)
     return {
       ...base, subjective: true, scoring: 'needs_manual_or_ai_scoring',
       taskType: drawn?.taskType ?? sec.taskTypes[0] ?? null,
@@ -322,7 +328,7 @@ async function buildSection(
   }
 
   const target = targetCount(sec, mode)
-  const candidates = sec.taskTypes.filter((t) => isExamTaskType(t) && !isDeprecatedQuestionType(t))
+  const candidates = sec.taskTypes.filter((t) => isExamTaskType(t) && !isDeprecatedQuestionType(t) && !PAPER_EXCLUDED_TASK_TYPES.has(t))
   for (const t of candidates) {
     const drawn = await drawTask(db, t, level, target, rnd, usedStimuli, usedWord)
     if (drawn.items.length) {
@@ -352,10 +358,16 @@ export async function generatePaper(db: SupabaseClient, input: GeneratePaperInpu
   if (input.mode === 'section') {
     const sec = spec.sections.find((s) => s.id === input.sectionId)
     if (!sec) return { paper: null, warnings: ['unknown_section'] }
+    // 刻意排除的 section（如 TOEFL 口语评分管线未就绪）：整卷/单区组卷一律拒，不组残缺区。
+    if (sec.excludeFromPaper) return { paper: null, warnings: ['section_excluded_from_paper'] }
     sections = [sec]
   } else if (input.mode === 'mini') {
-    sections = spec.sections.filter((s) => !isSubjectiveSection(s))   // mini=仅客观区、各区缩量
+    // mini=仅客观区、各区缩量；同时排除 excludeFromPaper 的 section。
+    sections = spec.sections.filter((s) => !isSubjectiveSection(s) && !s.excludeFromPaper)
     if (!sections.length) return { paper: null, warnings: ['no_objective_sections'] }
+  } else {
+    // full=全区，但跳过刻意排除的 section（如 TOEFL 口语），不抽题、不产生 insufficient_pool。
+    sections = spec.sections.filter((s) => !s.excludeFromPaper)
   }
 
   const seed = input.seed?.trim() || `${spec.id}-${input.mode}-${Date.now().toString(36)}`

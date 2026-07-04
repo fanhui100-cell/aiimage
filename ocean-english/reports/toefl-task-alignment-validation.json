@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T15:34:29.253Z",
+  "generatedAt": "2026-07-04T16:29:48.916Z",
   "ok": true,
   "errors": [],
   "warnings": [],
@@ -97,7 +97,7 @@
   ],
   "staticSummary": {
     "status": "active",
-    "paperReady": false,
+    "paperReady": true,
     "sections": [
       {
         "id": "reading",
@@ -156,7 +156,19 @@
     }
   },
   "blockerSummary": {
-    "paperReady": false,
+    "paperReady": true,
+    "mockV1": {
+      "open": true,
+      "sections": [
+        "reading",
+        "listening",
+        "writing"
+      ],
+      "excludedFromPaper": [
+        "speaking",
+        "build_a_sentence"
+      ]
+    },
     "reviewedActive": [
       "read_daily_life",
       "reading_comprehension",

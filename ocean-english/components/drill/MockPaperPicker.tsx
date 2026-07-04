@@ -20,8 +20,11 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
   // 专项练习（ExamTaskPicker → /quiz task）不受此限。
   const blocked = exam.status === 'draft' || exam.status === 'coming_soon' || exam.paperReady === false
   const paperUnready = exam.status === 'active' && exam.paperReady === false
-  const totalQ = exam.sections.reduce((s, x) => s + x.itemCount, 0)
-  const objSecs = exam.sections.filter((s) => s.taskTypes.some(isExamTaskType))
+  // 整卷刻意排除的板块（如 TOEFL 口语评分管线未就绪）不进模考卷，也不在此列出/计数。
+  const paperSections = exam.sections.filter((s) => !s.excludeFromPaper)
+  const excludedSections = exam.sections.filter((s) => s.excludeFromPaper)
+  const totalQ = paperSections.reduce((s, x) => s + x.itemCount, 0)
+  const objSecs = paperSections.filter((s) => s.taskTypes.some(isExamTaskType))
   const objPoints = objSecs.reduce((s, x) => s + (x.points || 0), 0)
 
   return (
@@ -53,8 +56,11 @@ export function MockPaperPicker({ mob, onStart }: { mob?: boolean; onStart: (cfg
             <div className="lx-paper-stat"><div className="n">{exam.fullScore}</div><div className="l">真卷满分</div></div>
           </div>
         </div>
+        {excludedSections.length > 0 && (
+          <div className="lx-paper-skip" style={{ color: 'var(--gold-ink)' }}><Ic name="pen" s={13} />TOEFL 模考 v1：包含阅读、听力、写作；{excludedSections.map((s) => s.labelZh).join('、')}建设中。</div>
+        )}
         <div className="lx-paper-body">
-          {exam.sections.map((sec, i) => {
+          {paperSections.map((sec, i) => {
             const tk = bestTask(exam, sec)
             const [zh] = taskLabel(tk)
             const st = deriveTaskState(exam, tk)

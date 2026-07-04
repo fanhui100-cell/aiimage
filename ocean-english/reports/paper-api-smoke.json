@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T18:51:40.191Z",
+  "generatedAt": "2026-07-04T16:34:51.096Z",
   "applied": true,
   "rows": [
     {
@@ -105,30 +105,22 @@
     {
       "exam": "toefl",
       "mode": "mini",
-      "generated": false,
-      "sections": 0,
+      "generated": true,
+      "sections": 2,
       "insufficientPool": false,
-      "expectedRefusal": "paper_not_ready",
-      "refusal": [
-        "paper_not_ready"
-      ],
-      "warnings": [
-        "paper_not_ready"
-      ]
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "toefl",
       "mode": "full",
-      "generated": false,
-      "sections": 0,
+      "generated": true,
+      "sections": 3,
       "insufficientPool": false,
-      "expectedRefusal": "paper_not_ready",
-      "refusal": [
-        "paper_not_ready"
-      ],
-      "warnings": [
-        "paper_not_ready"
-      ]
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
     },
     {
       "exam": "sat",

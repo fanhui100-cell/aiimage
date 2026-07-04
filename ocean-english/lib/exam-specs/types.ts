@@ -80,6 +80,11 @@ export interface ExamSectionSpec {
   timeLimitSec?: number
   requiresAudio?: boolean
   requiresRubric?: boolean
+  /** 整卷（full/mini）刻意排除该板块：如 TOEFL 口语评分管线未就绪，模考 v1 不含口语。
+   *  组卷器遇 excludeFromPaper 直接跳过该 section，不抽题、不产生 insufficient_pool。 */
+  excludeFromPaper?: boolean
+  /** excludeFromPaper 的原因（如 speaking_pipeline_not_ready），供报告/校验读取。 */
+  paperExcludedReason?: string
   notes?: string
 }
 

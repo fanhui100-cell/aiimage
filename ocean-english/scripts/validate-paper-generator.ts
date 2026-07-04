@@ -137,6 +137,35 @@ function assertClientListeningSafe(paper: GeneratedPaper, label: string) {
   }
 }
 
+// TOEFL 模考 v1 契约（2026-07-05）：full/mini 出卷；口语板块整卷排除、build_a_sentence 绝不进卷；
+// 客户端视图无 answerKey、听力无 transcript 且带 audioUrl。mini=阅读+听力（无写作/口语），full=阅读+听力+写作（无口语）。
+function assertToeflMockV1(paper: GeneratedPaper | null, mode: 'mini' | 'full') {
+  if (!paper) { errors.push(`toefl ${mode}: 应出卷（paperReady=true）却 paper=null`); return }
+  assertNoDeprecated(paper, `toefl ${mode}`)
+  assertClientListeningSafe(paper, `toefl ${mode}`)
+  const client = toClientPaper(paper)
+  const skills = new Set(client.sections.map((s) => s.skill))
+  const taskTypes = new Set(client.sections.map((s) => s.taskType))
+  // 口语板块整卷排除（both modes）
+  ok(!skills.has('speaking'), `toefl ${mode}: 整卷不得含 speaking 板块`)
+  ok(!client.sections.some((s) => s.sectionId === 'speaking'), `toefl ${mode}: 整卷不得含 speaking section`)
+  // build_a_sentence 及口语任务绝不进卷（section.taskType + 每个 set.taskType 双查）
+  for (const s of client.sections) {
+    for (const excl of ['build_a_sentence', 'listen_and_repeat', 'interview_speaking']) {
+      ok(s.taskType !== excl, `toefl ${mode}: section ${s.sectionId} 含排除任务 ${excl}`)
+      ok(!s.sets.some((set) => set.taskType === excl), `toefl ${mode}: section ${s.sectionId} 抽到排除任务 ${excl}`)
+    }
+  }
+  // 客户端每题必须无 answerKey
+  for (const s of client.sections) for (const it of s.items) ok(!('answerKey' in it), `toefl ${mode}: client item ${it.questionItemId} 仍含 answerKey`)
+  // 阅读+听力两 mode 都应有；写作仅 full 有、mini 无
+  ok(skills.has('reading'), `toefl ${mode}: 应含阅读板块`)
+  ok(skills.has('listening'), `toefl ${mode}: 应含听力板块`)
+  if (mode === 'full') ok(skills.has('writing'), 'toefl full: 应含写作板块')
+  else ok(!skills.has('writing'), 'toefl mini: 不应含写作板块（仅客观区）')
+  void taskTypes
+}
+
 // 明确超时：远程 smoke 不应无限等待外部状态（审计建议「带明确超时」）。
 function withTimeout<T>(p: Promise<T>, ms: number, label: string): Promise<T> {
   return Promise.race([
@@ -179,6 +208,11 @@ async function dbSmoke(db: SupabaseClient) {
     const lis = lisSec.paper.sections.find((s) => s.taskType === 'listening_comprehension')
     ok(!!lis && (lis.items?.length ?? 0) > 0, `cet4 听力 section 应抽到题（实际 ${lis?.items?.length ?? 0}；修候选签名后不应再 0 题）`)
   } else notes.push(`cet4 listening section: paper=null warnings=${lisSec.warnings.join(',')}`)
+  // TOEFL 模考 v1 门禁：默认 smoke 亦覆盖（paperReady=true 后 full/mini 须出卷，口语/build_a_sentence 排除）。
+  const toeflMini = await timed('toefl mini', generatePaper(db, { examId: 'toefl', mode: 'mini', seed: 'smoke-toefl-mini' }))
+  assertToeflMockV1(toeflMini.paper, 'mini')
+  const toeflFull = await timed('toefl full', generatePaper(db, { examId: 'toefl', mode: 'full', seed: 'smoke-toefl-full' }))
+  assertToeflMockV1(toeflFull.paper, 'full')
   return { applied: true }
 }
 
@@ -218,9 +252,11 @@ async function dbFull(db: SupabaseClient) {
   const rawIdentical = JSON.stringify(d1.paper) === JSON.stringify(d2.paper)
   notes.push(rawIdentical ? '确定性：原始卷即逐字节相等（本卷无时变签名 URL）' : '确定性：原始卷仅签名 token 不同，归一化后一致（set/item 选择确定）')
 
-  // 第三轮审计：TOEFL 整卷未就绪（paperReady=false）→ 模考拒；专项 task 仍可练（见 validate:practice-session）
-  const toeflFull = await generatePaper(db, { examId: 'toefl', mode: 'full', seed: 'toefl-full' })
-  ok(toeflFull.paper === null && toeflFull.warnings.includes('paper_not_ready'), 'toefl full → paper_not_ready（整卷未就绪，模考禁、专项可练）')
+  // TOEFL 模考 v1（2026-07-05）：paperReady=true → full/mini 出卷；口语 excludeFromPaper、build_a_sentence 判分未就绪均排除。
+  const toeflMini = await generatePaper(db, { examId: 'toefl', mode: 'mini', seed: 'toefl-mini' })
+  assertToeflMockV1(toeflMini.paper, 'mini')
+  const toeflFullPaper = await generatePaper(db, { examId: 'toefl', mode: 'full', seed: 'toefl-full' })
+  assertToeflMockV1(toeflFullPaper.paper, 'full')
   // SAT Expression of Ideas 是 writing domain 但客观 MCQ：修 isSubjectiveSection 后该 section 应客观抽题（非主观 1 题）
   const satFull = await generatePaper(db, { examId: 'sat', mode: 'full', seed: 'sat-full' })
   if (satFull.paper) {
