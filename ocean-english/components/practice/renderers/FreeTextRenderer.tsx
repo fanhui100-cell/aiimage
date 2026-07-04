@@ -98,7 +98,7 @@ export function FreeTextRenderer({
 
       {isSpeaking && (
         <div className="feedback show note" role="note" style={{ marginBottom: 10 }}>
-          <div className="fb-exp">口语练习当前按文字转写估分；录音不会上传或保存。请把你要说的话打字或粘贴到下方。</div>
+          <div className="fb-exp">口语练习当前按文字转写估分；录音不会上传或保存。本结果为练习估分，不是官方 TOEFL 分数。</div>
         </div>
       )}
 

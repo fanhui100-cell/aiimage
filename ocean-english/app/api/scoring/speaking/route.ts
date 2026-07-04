@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
 
   // 隐私边界（2026-07-05 Task 3）：显式拒绝任何音频载荷（不接收、不存储、不建 Storage 对象）。
   // 客户端若尝试上传 audio/recording/audioBase64/audioUrl → 受控 400，转写请求不受影响。
-  for (const k of ['audio', 'audioBase64', 'audioUrl', 'audioData', 'recording', 'recordingUrl']) {
+  for (const k of ['audio', 'audioBlob', 'audioBase64', 'audioUrl', 'audioData', 'file', 'recording', 'recordingUrl']) {
     if (body[k] != null && body[k] !== '') {
       return NextResponse.json({ ok: false, error: 'audio_upload_not_supported' }, { status: 400 })
     }

@@ -117,6 +117,19 @@ async function main() {
     console.log(`  task(toefl/${taskType}): source=${listenTask.source} items=${listenTask.items.length} audio=${listenTask.items.filter((it) => !!it.audio?.url).length}`)
   }
 
+  // 7) TOEFL speaking 转写-only 边界（2026-07-05 MVP）：口语 set 全 draft（0 active）→ 专项请求
+  //    必须受控空态（不回退别的题型、不抛错）；若未来有 active 口语题，payload 也绝不能带音频上传指示。
+  for (const taskType of ['listen_and_repeat', 'interview_speaking']) {
+    const speakTask = await buildPracticeSession(db, { mode: 'task', examId: 'toefl', taskType, level: 6, count: 4 })
+    check(speakTask.items.every((it) => it.type === taskType), `task(toefl ${taskType}) 不得回退到其它题型`)
+    for (const it of speakTask.items) {
+      check(it.inputMode === 'speak', `task(toefl ${taskType}) item inputMode=${it.inputMode}，应为 speak`)
+      const blob = JSON.stringify(it).toLowerCase()
+      check(!blob.includes('audioupload') && !blob.includes('audiostorage'), `task(toefl ${taskType}) payload 不应含音频上传/存储指示`)
+    }
+    console.log(`  task(toefl/${taskType} speaking): source=${speakTask.source} items=${speakTask.items.length}（受控${speakTask.items.length === 0 ? '空态' : '出题'}）warnings=[${speakTask.warnings.join(',')}]`)
+  }
+
   console.log(`\npractice-session validation · 错误 ${errors.length}`)
   for (const e of errors) console.error(`ERROR ${e}`)
   if (errors.length > 0) process.exit(1)
