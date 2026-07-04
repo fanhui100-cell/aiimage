@@ -10,6 +10,7 @@ import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
 import { shapeToItems, countWords, type ShapeTemplate } from '@/lib/exam-task-templates/shape'
+import { isBuildSentenceAnswer } from '@/lib/papers/scoring'
 
 const env = existsSync('.env.local') ? readFileSync('.env.local', 'utf8') : ''
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
@@ -77,6 +78,27 @@ function shapeFixtureTests() {
   push(shapeToItems(bs, { ...bsValid, answer: [1, 3, 4, 0, 9] }).ok === false, 'fixture: answer 越界 应被拒')
   push(shapeToItems(bs, { chunks: ['the', 'the', 'cat', 'sat'], answer: [0, 2, 3, 1] }).ok === false, 'fixture: chunks 不互异 应被拒')
   push(shapeToItems(bs, { ...bsValid, prompt: 'Scientists have discovered a new species of frog in the rainforest' }).ok === false, 'fixture: prompt 泄露成句 应被拒')
+  // build_sentence accepted-sequence 契约（2026-07-05 Task 2）：提供合法 acceptedSequences →
+  // answer 为 accepted_sequence_exact 对象、canonical 必含于集合、不再标 scoringNotReady；非法排列必拒。
+  const bsSeq = shapeToItems(bs, { ...bsValid, acceptedSequences: [[1, 3, 4, 0, 2], [2, 1, 3, 4, 0]] })
+  push(bsSeq.ok === true, 'fixture: 合法 acceptedSequences 应通过')
+  if (bsSeq.ok === true) {
+    const a = bsSeq.result.items[0].answer
+    push(isBuildSentenceAnswer(a), 'fixture: acceptedSequences → answer 须为 accepted_sequence_exact 契约对象')
+    push(bsSeq.result.meta.scoringNotReady !== true, 'fixture: 契约就绪时不得再标 scoringNotReady')
+    if (isBuildSentenceAnswer(a)) {
+      push(a.acceptedSequences.some((s) => s.join('|') === a.canonical.join('|')), 'fixture: canonical 须包含在 acceptedSequences 内')
+      push(a.official === false, 'fixture: build_sentence official 必须为 false')
+    }
+  }
+  const bsSeqNoCanon = shapeToItems(bs, { ...bsValid, acceptedSequences: [[2, 1, 3, 4, 0]] })
+  push(bsSeqNoCanon.ok === true && isBuildSentenceAnswer(bsSeqNoCanon.result.items[0].answer)
+    && (bsSeqNoCanon.result.items[0].answer as { acceptedSequences: string[][] }).acceptedSequences.length === 2,
+    'fixture: acceptedSequences 缺 canonical 时须自动补入')
+  push(shapeToItems(bs, { ...bsValid, acceptedSequences: [[1, 3, 4, 0]] }).ok === false, 'fixture: accepted 序列长度≠chunks 应被拒')
+  push(shapeToItems(bs, { ...bsValid, acceptedSequences: [[1, 3, 4, 0, 9]] }).ok === false, 'fixture: accepted 序列越界 应被拒')
+  push(shapeToItems(bs, { ...bsValid, acceptedSequences: [[1, 3, 4, 0, 0]] }).ok === false, 'fixture: accepted 序列非全排列 应被拒')
+  push(shapeToItems(bs, { ...bsValid, acceptedSequences: [] }).ok === false, 'fixture: acceptedSequences 空数组 应被拒')
 }
 
 // ── A) 模板 QA ──────────────────────────────────────────────────────────────
@@ -197,6 +219,19 @@ async function dataQa(db: SupabaseClient): Promise<boolean> {
     // spec/items/answer/rubric/audio/stimulus 后整事务提升 draft→active）。故不再把 gen active 判错；
     // 仅当 set active 而 item 非 active（部分提升残留）才报错。
     if (set.status === 'active') push(it.status === 'active', `gen active set ${set.id} 含非 active item ${it.id}（部分提升残留）`)
+    // build_a_sentence（2026-07-05 Task 2 边界）：active 行必须携带 accepted-sequence 判分契约
+    // （canonical 非空字符串数组、acceptedSequences≥1 且逐条与 canonical 等长、official:false），
+    // 且 qa_flags.scoring_not_ready 不得为 true。draft 行可为 legacy index 排列（scoring_not_ready）
+    // 或已带契约对象；契约对象非数组 answer，跳过下方通用 multi_blank 非空数组断言。
+    if (set.task_type === 'build_a_sentence') {
+      if (set.status === 'active') {
+        push(isBuildSentenceAnswer(it.answer), `build_a_sentence active item ${it.id} 缺合法 accepted-sequence 判分契约`)
+        push((set.qa_flags as { scoring_not_ready?: boolean } | null)?.scoring_not_ready !== true, `build_a_sentence active set ${set.id} 仍标 scoring_not_ready`)
+      } else {
+        push((Array.isArray(it.answer) && it.answer.length > 0) || isBuildSentenceAnswer(it.answer), `build_a_sentence draft item ${it.id} answer 形状非法（须 index 排列或判分契约对象）`)
+      }
+      continue
+    }
     const choices = Array.isArray(it.choices) ? (it.choices as { id: string; text: string }[]) : []
     if (it.input_mode === 'choice') {
       const ids = choices.map((c) => String(c.id))

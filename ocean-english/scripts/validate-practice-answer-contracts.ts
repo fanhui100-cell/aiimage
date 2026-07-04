@@ -105,6 +105,31 @@ function mk(inputMode: string, answerKey: unknown, choices?: Choice[]): PaperIte
     [0, 1, 1],
     '',
   ) === null, 'build_sentence: non-permutation answer is rejected')
+  // accepted-sequence 契约对象 answer（2026-07-05 Task 2）：canonical 直接来自契约文本
+  const contractBody = reconstructBuildSentence(
+    'Arrange all chunks into a natural sentence.',
+    null,
+    [
+      { id: '0', text: 'The library' },
+      { id: '1', text: 'opens' },
+      { id: '2', text: 'early' },
+    ],
+    { canonical: ['The library', 'opens', 'early'], acceptedSequences: [['The library', 'opens', 'early']], scoring: 'accepted_sequence_exact', official: false },
+    '',
+  )
+  ok(!!contractBody, 'build_sentence: accepted-sequence contract answer reconstructs into build body')
+  ok(contractBody?.review.build?.canonical.join(' ') === 'The library opens early', 'build_sentence: contract answer canonical carried to review')
+  ok(reconstructBuildSentence(
+    'Arrange.',
+    null,
+    [
+      { id: '0', text: 'The library' },
+      { id: '1', text: 'opens' },
+      { id: '2', text: 'early' },
+    ],
+    { canonical: ['The library', 'opens'], acceptedSequences: [], scoring: 'accepted_sequence_exact', official: false },
+    '',
+  ) === null, 'build_sentence: contract canonical length mismatch is rejected')
 }
 
 // answer-mode routing

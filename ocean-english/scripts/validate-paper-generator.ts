@@ -55,6 +55,21 @@ function scoringUnitTests() {
   // free_text → 待评分
   const ft = scoreItem(item({ inputMode: 'free_text', answerKey: null }), 'whatever', 10)
   ok(ft.kind === 'needs_manual_or_ai_scoring' && ft.needsScoring === true && ft.awarded === 0, 'scoring: free_text 待 AI/人工评分')
+  // build_sentence accepted-sequence（2026-07-05 Task 2）：命中任一可接受语序满分（含大小写/句末标点归一化）；未命中 0 分
+  const bsKey = {
+    canonical: ['Scientists', 'have discovered', 'a new species', 'of frog', 'in the rainforest.'],
+    acceptedSequences: [
+      ['Scientists', 'have discovered', 'a new species', 'of frog', 'in the rainforest.'],
+      ['In the rainforest', 'scientists', 'have discovered', 'a new species', 'of frog.'],
+    ],
+    scoring: 'accepted_sequence_exact', official: false,
+  }
+  const bs1 = scoreItem(item({ inputMode: 'multi_blank', answerKey: bsKey }), ['scientists', 'have  discovered', 'a new species', 'of frog', 'in the rainforest'], 10)
+  ok(bs1.kind === 'objective' && bs1.awarded === 10 && bs1.correct === true, 'scoring: build_sentence 命中 canonical（归一化大小写/多空格/句末标点）得满分')
+  const bs2 = scoreItem(item({ inputMode: 'multi_blank', answerKey: bsKey }), ['in the rainforest', 'scientists', 'have discovered', 'a new species', 'of frog'], 10)
+  ok(bs2.awarded === 10 && bs2.correct === true, 'scoring: build_sentence 命中替代可接受语序得满分')
+  const bs3 = scoreItem(item({ inputMode: 'multi_blank', answerKey: bsKey }), ['of frog', 'scientists', 'have discovered', 'a new species', 'in the rainforest'], 10)
+  ok(bs3.awarded === 0 && bs3.correct === false, 'scoring: build_sentence 未命中集合得 0（不做宽泛语法等价）')
 
   // 整卷：客观 section + 主观 section
   const paper: GeneratedPaper = {

@@ -230,6 +230,28 @@ export function shapeToItems(t: ShapeTemplate, raw: Record<string, unknown>): Sh
     const sentence = answer.map((i) => chunks[i]).join(' ')
     const prompt = String(raw.prompt ?? '').trim() || 'Arrange all the words and phrases below to form a correct, complete sentence.'
     if (prompt.toLowerCase().includes(sentence.toLowerCase())) return { ok: false, reject: 'prompt_leaks_answer' }
+    // 可接受语序契约（2026-07-05 Task 2 判分边界）：可选 raw.acceptedSequences = 1-4 个 index 排列
+    // （每个都须是 chunks 的合法全排列）。提供且全部合法 → answer 采用 accepted_sequence_exact 契约
+    // 对象（canonical + acceptedSequences 词块文本序列 + official:false），不再标 scoringNotReady；
+    // 未提供 → 维持旧行为（answer=index 排列 + scoringNotReady，draft + promote 硬拦截）。
+    const rawSeqs = Array.isArray(raw.acceptedSequences) ? (raw.acceptedSequences as unknown[]) : null
+    if (rawSeqs) {
+      if (rawSeqs.length < 1 || rawSeqs.length > 4) return { ok: false, reject: 'accepted_sequences_count' }
+      const toTokens = (idx: number[]) => idx.map((i) => chunks[i])
+      const seqs: string[][] = []
+      for (const sRaw of rawSeqs) {
+        const seq = Array.isArray(sRaw) ? (sRaw as unknown[]).map((x) => Number(x)) : []
+        if (seq.length !== chunks.length || !allInts(seq) || !allDistinct(seq) || seq.some((a) => a < 0 || a >= chunks.length)) {
+          return { ok: false, reject: 'accepted_sequence_invalid' }
+        }
+        seqs.push(toTokens(seq))
+      }
+      // canonical 必须在可接受集合内（判分只认集合，防 canonical 漏判）
+      const seqKey = (t: string[]) => t.join('').toLowerCase()
+      if (!seqs.some((s) => seqKey(s) === seqKey(toTokens(answer)))) seqs.unshift(toTokens(answer))
+      const bsAnswer = { canonical: toTokens(answer), acceptedSequences: seqs, scoring: 'accepted_sequence_exact', official: false }
+      return { ok: true, result: { stimulusText: null, meta: {}, items: [{ inputMode: 'multi_blank', prompt, promptZh: null, choices: chunks.map((text, i) => ({ id: String(i), text })), answer: bsAnswer }] } }
+    }
     return { ok: true, result: { stimulusText: null, meta: { scoringNotReady: true }, items: [{ inputMode: 'multi_blank', prompt, promptZh: null, choices: chunks.map((text, i) => ({ id: String(i), text })), answer }] } }
   }
 

@@ -210,7 +210,7 @@ export function BuildSentenceRenderer({
             </div>
           )}
           <div className="pr-noscore">
-            <Warn /> 本题为开放型排序，<b style={{ color: 'var(--ink)' }}>暂不自动判分</b>；参考语序仅供对照，符合语法的其它语序同样成立。
+            <Warn /> 按项目参考语序判分；部分等价表达可能需人工判断。参考语序非唯一正确答案，不代表官方 TOEFL 评分。
           </div>
           {review?.explanationZh && (
             <div className="pr-noscore" style={{ marginTop: 10 }}>{review.explanationZh}</div>

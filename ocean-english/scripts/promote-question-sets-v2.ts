@@ -21,6 +21,7 @@ import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
 import { EXAM_SPECS } from '@/lib/exam-specs'
+import { isBuildSentenceAnswer } from '@/lib/papers/scoring'
 
 const env = readFileSync('.env.local', 'utf8')
 const readEnv = (k: string) => (env.match(new RegExp('^' + k + '=(.*)$', 'm')) || [])[1]?.trim() ?? ''
@@ -119,6 +120,10 @@ async function main() {
       // 口语题（input_mode='speak'，如 listen_and_repeat 需音频源 / interview_speaking 需 ASR+评分管线）：
       //   仅检查 rubric 不足以保证就绪。默认拒绝，除非显式 qa_flags.speaking_ready=true（管线就绪后人工置位）。
       else if (items.some((i) => i.input_mode === 'speak') && flags.speaking_ready !== true) reason = 'speaking_pipeline_not_ready'
+      // build_a_sentence（2026-07-05 Task 2 边界）：即便 scoring_not_ready 被清掉，每个 item 也必须
+      //   携带 accepted-sequence 判分契约（canonical + acceptedSequences + official:false），否则拒绝。
+      //   该任务无论是否 active 均被组卷器 PAPER_EXCLUDED_TASK_TYPES 排除在 TOEFL 整卷外。
+      else if (s.task_type === 'build_a_sentence' && !items.every((i) => isBuildSentenceAnswer(i.answer))) reason = 'build_sentence_scoring_not_ready'
       for (const it of items) {
         if (reason) break
         if (it.input_mode === 'free_text' || it.input_mode === 'speak') {
@@ -127,6 +132,8 @@ async function main() {
           const ch = Array.isArray(it.choices) ? (it.choices as { id: string }[]) : []
           if (typeof it.answer !== 'string' || !ch.some((c) => String(c.id) === it.answer)) reason = 'choice_answer_not_in_choices'
         } else if (it.input_mode === 'multi_blank' || it.input_mode === 'matching') {
+          // build_a_sentence 契约对象 answer（accepted_sequence_exact）非数组，已在上方专项校验，此处豁免。
+          if (isBuildSentenceAnswer(it.answer)) continue
           if (!Array.isArray(it.answer) || it.answer.length === 0) reason = 'multiblank_answer_empty'
         }
       }

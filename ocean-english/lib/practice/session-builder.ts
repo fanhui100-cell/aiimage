@@ -380,7 +380,22 @@ export function reconstructBuildSentence(
   answer: unknown,
   explanationZh: string,
 ): { buildBody: { ask?: string; zh: string; tokens: { id: string; t: string }[] }; review: { build: { canonical: string[]; explanationZh?: string } } } | null {
-  if (!Array.isArray(answer) || choices.length < 3) return null
+  if (choices.length < 3) return null
+  // accepted-sequence 契约（2026-07-05 Task 2）：answer 为 { canonical: string[], acceptedSequences, ... }
+  // 对象 → 直接读 canonical 词块文本作参考语序；tokens 仍来自 choices（乱序词块）。
+  if (answer && typeof answer === 'object' && !Array.isArray(answer) && Array.isArray((answer as { canonical?: unknown }).canonical)) {
+    const canonical = ((answer as { canonical: unknown[] }).canonical).map((x) => String(x))
+    if (canonical.length !== choices.length || canonical.some((t) => !t.trim())) return null
+    return {
+      buildBody: {
+        ask: prompt || 'Arrange all chunks into a natural English sentence.',
+        zh: promptZh || prompt || 'Arrange all chunks into a natural English sentence.',
+        tokens: choices.map((c) => ({ id: c.id, t: c.text })),
+      },
+      review: { build: { canonical, ...(explanationZh ? { explanationZh } : {}) } },
+    }
+  }
+  if (!Array.isArray(answer)) return null
   const ids = choices.map((c) => c.id)
   const answerIds = answer.map((x) => String(x))
   if (answerIds.length !== ids.length) return null

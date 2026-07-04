@@ -32,6 +32,45 @@ function blankAnswers(key: unknown): unknown[] {
 
 const MANUAL_MODES = new Set(['free_text', 'speak'])
 
+// ── Build a Sentence（TOEFL）可接受语序判分（2026-07-05 Task 2 边界）────────────
+// exact accepted-sequence match only：作答词块序列须逐块命中集合中的某一可接受语序（含 canonical）。
+// 不做宽泛语法等价（部分等价表达需人工判断）；official:false，非官方 TOEFL 评分。
+/** Build a Sentence 判分契约：answer 存 canonical + 可接受语序集合。 */
+export interface BuildSentenceAnswer {
+  canonical: string[]
+  acceptedSequences: string[][]
+  scoring: 'accepted_sequence_exact'
+  official: false
+}
+
+export function isBuildSentenceAnswer(a: unknown): a is BuildSentenceAnswer {
+  if (!a || typeof a !== 'object' || Array.isArray(a)) return false
+  const o = a as Record<string, unknown>
+  if (o.scoring !== 'accepted_sequence_exact' || o.official !== false) return false
+  const canonical = o.canonical
+  if (!Array.isArray(canonical) || canonical.length === 0 || canonical.some((t) => typeof t !== 'string' || !t.trim())) return false
+  const seqs = o.acceptedSequences
+  if (!Array.isArray(seqs) || seqs.length < 1) return false
+  return seqs.every((s) => Array.isArray(s) && s.length === canonical.length && s.every((t) => typeof t === 'string' && t.trim()))
+}
+
+/** 词块归一：trim + 小写 + 折叠多空格 + 去尾部句末标点。 */
+export function normalizeBuildSentenceTokens(tokens: string[]): string[] {
+  return tokens.map((token) =>
+    String(token)
+      .trim()
+      .toLowerCase()
+      .replace(/[.!?。！？]+$/g, '')
+      .replace(/\s+/g, ' ')
+  )
+}
+
+export function sequenceEquals(a: string[], b: string[]): boolean {
+  const na = normalizeBuildSentenceTokens(a)
+  const nb = normalizeBuildSentenceTokens(b)
+  return na.length === nb.length && na.every((token, index) => token === nb[index])
+}
+
 /** 单题评分。max=该题满分（由 section 均分得到）。 */
 export function scoreItem(item: PaperItem, response: unknown, max: number): ItemScore {
   const id = item.questionItemId
@@ -40,6 +79,14 @@ export function scoreItem(item: PaperItem, response: unknown, max: number): Item
   if (mode === 'choice') {
     const correct = typeof item.answerKey === 'string' && String(response) === item.answerKey
     return { questionItemId: id, kind: 'objective', awarded: correct ? max : 0, max, correct }
+  }
+
+  // Build a Sentence（accepted_sequence_exact，须在通用 multi_blank 之前）：作答=词块文本序列，
+  // 命中任一可接受语序得满分，否则 0；不做部分给分、不做宽泛语法等价。
+  if (isBuildSentenceAnswer(item.answerKey)) {
+    const resp = Array.isArray(response) ? (response as unknown[]).map((x) => String(x)) : []
+    const hit = item.answerKey.acceptedSequences.some((seq) => sequenceEquals(seq, resp))
+    return { questionItemId: id, kind: 'objective', awarded: hit ? max : 0, max, correct: hit }
   }
 
   if (mode === 'multi_blank' || mode === 'matching') {
