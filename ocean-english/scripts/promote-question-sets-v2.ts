@@ -107,9 +107,12 @@ async function main() {
     const items = (itemsData ?? []) as ItemRow[]
     let reason: string | null = null
 
-    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean; speaking_ready?: boolean; source?: string; authored?: string; provider?: string }
+    const flags = (s.qa_flags ?? {}) as { scoring_not_ready?: boolean; official_spec_unverified?: boolean; speaking_ready?: boolean; source?: string; authored?: string; provider?: string; doNotPromote?: boolean }
     if (isDeprecatedQuestionType(s.task_type)) reason = 'deprecated_type'
     else if (WORD_UNIVERSE.has(s.task_type) && !isGenOriginal(s.legacy_id, flags)) reason = 'word_universe_non_gen_source'
+    // 显式封存标记（2026-07-05 Task 5）：qa_flags.doNotPromote=true 的行一律拒（如旧 qb: WU draft 封存）。
+    // 置于 WU 来源门之后：qb WU draft 仍以 word_universe_non_gen_source 为首要拒因（guards 验证依赖该 reason）。
+    else if (flags.doNotPromote === true) reason = 'do_not_promote'
     else if (flags.scoring_not_ready === true) reason = 'scoring_not_ready'
     else if (flags.official_spec_unverified === true) reason = 'official_spec_unverified'
     else if (!items.length) reason = 'no_items'

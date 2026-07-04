@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-01T14:53:30.732Z",
+  "generatedAt": "2026-07-04T17:09:14.361Z",
   "ok": true,
   "checks": {
     "activeQbCount": 0,
     "qbDraftSample": {
-      "id": "20c4b012-6d78-48c6-88f4-5e25a5842e14",
-      "legacy_id": "qb:set:def_to_word-abash",
+      "id": "28c6668f-a16f-40fe-b653-8c9c069883cf",
+      "legacy_id": "qb:set:def_to_word-abdicate",
       "result": "rejected:word_universe_non_gen_source"
     },
     "genDraftSample": {
