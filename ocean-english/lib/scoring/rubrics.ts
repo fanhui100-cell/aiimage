@@ -58,6 +58,16 @@ export const RUBRICS: Rubric[] = [
   rubric('kaoyan', 'translation', ['translation_en_zh'], '考研 · 翻译', 15, TRANSLATION_DIMS(), '英译汉（英一长难句 / 英二段落）。'),
   rubric('toefl', 'writing', ['build_a_sentence', 'email_writing', 'academic_discussion'], 'TOEFL · 写作', 6, WRITING_DIMS(), 'TOEFL 2026 写作（1-6 量表近似）。'),
   rubric('toefl', 'speaking', ['listen_and_repeat', 'interview_speaking'], 'TOEFL · 口语', 6, SPEAKING_DIMS(), 'TOEFL 2026 口语（1-6 量表近似）；本期基于文字转写评分。'),
+  // IELTS（coming_soon，2026-07-05 pilot）：维度按官方公开评分标准四等权映射——
+  // Writing: Task Achievement/Response · Coherence & Cohesion · Lexical Resource · Grammatical Range & Accuracy；
+  // Speaking: Fluency & Coherence · Lexical Resource · Grammatical Range & Accuracy · Pronunciation。
+  // 仅用于 draft pilot 导入与未来估分；估分为练习估分（1-9 band 近似），非官方 IELTS 成绩。
+  rubric('ielts', 'writing', ['essay_writing'], 'IELTS · 写作（Task 1/Task 2）', 9,
+    [dim('task_achievement', 0.25), dim('coherence', 0.25), dim('vocabulary', 0.25), dim('grammar', 0.25)],
+    'IELTS Academic Writing：官方四标准等权（TA/TR · CC · LR · GRA）；1-9 band 近似估分，非官方成绩。'),
+  rubric('ielts', 'speaking', ['interview_speaking'], 'IELTS · 口语（Part 1-3）', 9,
+    [dim('fluency', 0.25), dim('vocabulary', 0.25), dim('grammar', 0.25), dim('pronunciation', 0.25)],
+    'IELTS Speaking：官方四标准等权（FC · LR · GRA · P）；本期基于文字转写近似估分，非官方成绩。'),
 ]
 
 const BY_KEY = new Map(RUBRICS.map((r) => [r.id, r]))

@@ -1,0 +1,68 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below describes the number of visitors (in thousands) to three museums in one European city in 2015 and 2023.\n\nCity History Museum: 2015 = 420, 2023 = 610\nModern Art Gallery: 2015 = 380, 2023 = 350\nScience Discovery Centre: 2015 = 150, 2023 = 490\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：概述表格中三家博物馆 2015 与 2023 年参观人数（千人）的主要特征并作比较，不少于 150 词。",
+      "referencePoints": ["overview of the overall trend (growth dominated by the Science Discovery Centre)", "largest absolute figures (City History Museum in both years)", "the only decline (Modern Art Gallery)", "relevant comparisons with data support"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the percentage of households in one country with access to high-speed internet between 2005 and 2025.\n\n2005 = 8%, 2010 = 27%, 2015 = 55%, 2020 = 81%, 2025 = 93%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：概述 2005-2025 年某国家庭高速网络接入率折线图的主要特征，不少于 150 词。",
+      "referencePoints": ["overall rising trend across the period", "fastest growth interval (2010-2020)", "signs of the curve levelling off after 2020", "accurate use of figures"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show how a city council spent its budget in 2000 and in 2020.\n\n2000: Education 30%, Transport 25%, Healthcare 20%, Housing 15%, Parks and recreation 10%\n2020: Education 28%, Transport 18%, Healthcare 31%, Housing 17%, Parks and recreation 6%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：比较某市议会 2000 与 2020 年预算分配两张饼图的主要变化，不少于 150 词。",
+      "referencePoints": ["healthcare overtaking education as the largest share", "declines in transport and parks", "relatively stable education and housing shares", "clear comparative structure"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the average number of hours per week that students in four countries spent on part-time work in 2022, divided by age group (16-18 and 19-22).\n\nCountry A: 16-18 = 6 hours, 19-22 = 14 hours\nCountry B: 16-18 = 11 hours, 19-22 = 16 hours\nCountry C: 16-18 = 3 hours, 19-22 = 8 hours\nCountry D: 16-18 = 9 hours, 19-22 = 10 hours\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：比较四国两个年龄段学生每周兼职小时数柱状图的主要特征，不少于 150 词。",
+      "referencePoints": ["older students work more in every country", "largest gap (Country A) vs smallest gap (Country D)", "highest and lowest overall figures", "grouped comparisons rather than listing every number"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the process of producing drinking water from seawater at a desalination plant. The stages are:\n\n1) Seawater is drawn through an intake screen that removes large debris. 2) Sand filters remove smaller particles. 3) The water is forced at high pressure through reverse-osmosis membranes, which separate fresh water from concentrated brine. 4) Minerals are added to the fresh water. 5) The treated water is chlorinated and stored in tanks before being piped to homes. 6) The leftover brine is diluted and returned to the sea.\n\nSummarise the information by selecting and reporting the main features. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述海水淡化厂制取饮用水的流程图（六个阶段），不少于 150 词。",
+      "referencePoints": ["clear sequencing language for the six stages", "identifying the reverse-osmosis stage as central", "mention of the brine by-product path", "passive voice / process register"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the proportion of workers in one country employed in agriculture, manufacturing and services in 1970, 1995 and 2020.\n\nAgriculture: 1970 = 34%, 1995 = 18%, 2020 = 7%\nManufacturing: 1970 = 38%, 1995 = 33%, 2020 = 21%\nServices: 1970 = 28%, 1995 = 49%, 2020 = 72%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：概述某国 1970/1995/2020 三大产业就业比例变化表的主要特征，不少于 150 词。",
+      "referencePoints": ["services rising to dominate employment", "steady decline of agriculture", "manufacturing's slower decline", "overview sentence capturing the structural shift"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows average monthly rainfall (in millimetres) in two cities, one coastal and one inland, over a calendar year.\n\nCoastal city: January 210, March 150, May 80, July 30, September 90, November 180\nInland city: January 40, March 60, May 110, July 140, September 100, November 50\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：比较沿海与内陆两城市全年月降雨量折线图的主要特征，不少于 150 词。",
+      "referencePoints": ["opposite seasonal patterns of the two cities", "peak and trough months for each", "crossover points in late spring and early autumn", "comparative language"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the number of books borrowed from a university library by students in four faculties in each of three terms in one academic year.\n\nHumanities: Term 1 = 5200, Term 2 = 4800, Term 3 = 6100\nSciences: Term 1 = 3100, Term 2 = 3300, Term 3 = 4700\nEngineering: Term 1 = 2400, Term 2 = 2200, Term 3 = 2900\nBusiness: Term 1 = 2900, Term 2 = 3500, Term 3 = 3200\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：比较四个学院三个学期图书馆借书量柱状图的主要特征，不少于 150 词。",
+      "referencePoints": ["humanities highest throughout", "general Term 3 peak (except Business)", "engineering lowest overall", "selecting features rather than listing all twelve numbers"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the life cycle of a honey bee. The stages are:\n\n1) The queen lays an egg in a wax cell. 2) After three days the egg hatches into a larva, which is fed by worker bees for about six days. 3) The cell is capped and the larva becomes a pupa. 4) Over twelve days the pupa develops adult features. 5) The adult bee chews through the cap and emerges, roughly 21 days after the egg was laid. 6) The new worker begins hive duties before later flying out to forage.\n\nSummarise the information by selecting and reporting the main features. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述蜜蜂生命周期图（六个阶段、约 21 天），不少于 150 词。",
+      "referencePoints": ["cyclical process language", "durations attached to each stage", "total 21-day span stated", "clear stage-to-stage transitions"],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of household waste that was recycled, composted, incinerated or sent to landfill in one region in 2000, 2010 and 2020.\n\nRecycled: 2000 = 11%, 2010 = 26%, 2020 = 44%\nComposted: 2000 = 4%, 2010 = 12%, 2020 = 18%\nIncinerated: 2000 = 10%, 2010 = 17%, 2020 = 21%\nLandfill: 2000 = 75%, 2010 = 45%, 2020 = 17%\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：概述某地区 2000/2010/2020 家庭垃圾处理方式比例表的主要变化，不少于 150 词。",
+      "referencePoints": ["landfill collapsing from three-quarters to under a fifth", "recycling quadrupling to become the largest category", "smaller but steady rises in composting and incineration", "figures quoted accurately"],
+      "wordLimit": ">=150"
+    }
+  ]
+}

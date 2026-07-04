@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-29T17:07:02.442Z",
+  "generatedAt": "2026-07-04T20:25:50.800Z",
   "apply": true,
   "plan": {
     "examSpecs": 8,
     "examSections": 42,
-    "taskTemplates": 30,
-    "rubrics": 10,
+    "taskTemplates": 33,
+    "rubrics": 12,
     "templateIds": [
       "cet-banked-cloze",
       "cet-para-match",
@@ -16,6 +16,7 @@
       "gaokao-listening-mcq",
       "gaokao-reading-mcq",
       "gaokao-seven-select",
+      "ielts-academic-reading-mcq",
       "kaoyan-cloze-passage",
       "kaoyan-reading-b",
       "kaoyan-reading-mcq",
@@ -28,11 +29,13 @@
       "toefl-academic-discussion",
       "toefl-academic-reading",
       "toefl-build-a-sentence",
+      "toefl-choose-a-response",
       "toefl-complete-the-words",
       "toefl-email-writing",
       "toefl-four-skills",
       "toefl-interview-speaking",
       "toefl-listen-and-repeat",
+      "toefl-listening-mcq",
       "toefl-read-daily-life",
       "zhongkao-cloze-passage",
       "zhongkao-grammar-fill",
@@ -48,11 +51,13 @@
       "kaoyan:writing",
       "kaoyan:translation",
       "toefl:writing",
-      "toefl:speaking"
+      "toefl:speaking",
+      "ielts:writing",
+      "ielts:speaking"
     ]
   },
   "rubricResult": {
-    "inserted": 0,
+    "inserted": 2,
     "updated": 10
   }
 }

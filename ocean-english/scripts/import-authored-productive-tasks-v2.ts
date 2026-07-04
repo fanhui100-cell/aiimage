@@ -126,7 +126,7 @@ async function main() {
       }
 
       const sourceCharCount = srcZh ? zhCharCount(srcZh) : null
-      const qaFlags = { generated: true, authored: 'claude', provider: 'claude-authored', stage: STAGE, productive: true, skill: pf.skill, wordLimit: task.wordLimit ?? null, sourceCharCount }
+      const qaFlags = { generated: true, source: 'original_authored', authored: 'claude', provider: 'claude-authored', stage: STAGE, productive: true, skill: pf.skill, wordLimit: task.wordLimit ?? null, sourceCharCount }
       const { data: setData, error: setErr } = await db.from('question_sets').insert({
         legacy_id: legacyId, exam_id: pf.examId, stimulus_id: stimulusId, level, task_type: pf.taskType,
         topic_tags: [pf.skill, pf.taskType], status: 'draft', qa_flags: qaFlags,

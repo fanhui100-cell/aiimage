@@ -93,7 +93,7 @@ async function writeDraftSet(db: SupabaseClient, t: Template, level: number, sta
     if (error) { console.error(`  stimulus insert: ${error.message}`); return false }
     stimulusId = (data as { id: string }).id
   }
-  const qaFlags: Record<string, unknown> = { generated: true, authored: 'claude', provider: 'claude-authored', stage, template: t.templateId }
+  const qaFlags: Record<string, unknown> = { generated: true, source: 'original_authored', authored: 'claude', provider: 'claude-authored', stage, template: t.templateId }
   if (parsed.meta.paras != null) qaFlags.paras = parsed.meta.paras
   if (parsed.meta.scoringNotReady) qaFlags.scoring_not_ready = true
   if (explainZh) qaFlags.explainZh = explainZh
