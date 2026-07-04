@@ -81,11 +81,14 @@ export function FreeTextRenderer({
   const estimate = submitted ? review?.estimate : undefined
   const provider = review?.provider ?? estimate?.provider ?? 'AI'
 
+  // 口语转写边界（2026-07-05 Task 3）：speak 题走文字转写估分；录音不上传、不保存、不建 Storage 对象。
+  const isSpeaking = item.inputMode === 'speak'
+
   return (
     <div className="fade-up">
       <div className="eyebrow">
-        <span className="tag">写作</span>
-        <span className="ask">{ASK_FREE_TEXT}</span>
+        <span className="tag">{isSpeaking ? '口语' : '写作'}</span>
+        <span className="ask">{isSpeaking ? ASK_SPEAKING : ASK_FREE_TEXT}</span>
       </div>
 
       <div className="pr-prompt-card">
@@ -93,12 +96,18 @@ export function FreeTextRenderer({
         <div className="pq">{item.prompt}</div>
       </div>
 
+      {isSpeaking && (
+        <div className="feedback show note" role="note" style={{ marginBottom: 10 }}>
+          <div className="fb-exp">口语练习当前按文字转写估分；录音不会上传或保存。请把你要说的话打字或粘贴到下方。</div>
+        </div>
+      )}
+
       <div className="pr-ta-wrap">
         <label className="sr-only" htmlFor="pr-ft">作答</label>
         <textarea
           id="pr-ft"
           className="pr-ta"
-          placeholder="在此用英文撰写你的作答…（支持中/英文输入法）"
+          placeholder={isSpeaking ? '把你的口语作答以文字转写形式输入…（录音不会上传或保存）' : '在此用英文撰写你的作答…（支持中/英文输入法）'}
           value={value}
           disabled={submitted}
           onChange={(e) => onChange(e.target.value)}
@@ -184,3 +193,4 @@ export function FreeTextRenderer({
 }
 
 const ASK_FREE_TEXT = '根据要求完成写作'
+const ASK_SPEAKING = '按提示口头作答，并以文字转写提交'

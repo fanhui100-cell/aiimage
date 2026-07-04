@@ -22,8 +22,16 @@ export async function POST(req: NextRequest) {
   let body: Record<string, unknown>
   try { body = (await req.json()) as Record<string, unknown> } catch { return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 }) }
 
+  // 隐私边界（2026-07-05 Task 3）：显式拒绝任何音频载荷（不接收、不存储、不建 Storage 对象）。
+  // 客户端若尝试上传 audio/recording/audioBase64/audioUrl → 受控 400，转写请求不受影响。
+  for (const k of ['audio', 'audioBase64', 'audioUrl', 'audioData', 'recording', 'recordingUrl']) {
+    if (body[k] != null && body[k] !== '') {
+      return NextResponse.json({ ok: false, error: 'audio_upload_not_supported' }, { status: 400 })
+    }
+  }
+
   const rawExam = String(body.examId ?? '').trim()
-  // 仅接收文字转写；显式忽略任何 audio 字段（不接收/不存储原始音频）
+  // 仅接收文字转写（不接收/不存储原始音频；音频字段已在上方显式拒绝）
   const text = String(body.transcript ?? body.text ?? '').trim()
   const sourceText = body.sourceText != null ? String(body.sourceText).trim().slice(0, 2000) : undefined
   const level = body.level != null ? Number(body.level) : undefined
