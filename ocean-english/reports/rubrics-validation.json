@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T17:35:32.321Z",
+  "generatedAt": "2026-07-04T20:50:54.544Z",
   "rubrics": [
     "zhongkao:writing",
     "gaokao:writing",
@@ -10,16 +10,15 @@
     "kaoyan:writing",
     "kaoyan:translation",
     "toefl:writing",
-    "toefl:speaking"
+    "toefl:speaking",
+    "ielts:writing",
+    "ielts:speaking"
   ],
   "subjectiveSections": 14,
   "errors": [],
-  "warnings": [
-    "ielts/writing 缺 rubric（skill=writing, tasks=essay_writing） · status=coming_soon，组卷受控拒，非阻塞",
-    "ielts/speaking 缺 rubric（skill=speaking, tasks=interview_speaking） · status=coming_soon，组卷受控拒，非阻塞"
-  ],
+  "warnings": [],
   "notes": [
-    "生产性 section 14 个 · rubric 10 个"
+    "生产性 section 14 个 · rubric 12 个"
   ],
   "ok": true
 }

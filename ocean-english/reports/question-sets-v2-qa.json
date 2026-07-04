@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T17:31:26.036Z",
+  "generatedAt": "2026-07-04T20:46:22.874Z",
   "status": "applied",
   "templates": [
     "cet-banked-cloze",
@@ -11,6 +11,7 @@
     "gaokao-listening-mcq",
     "gaokao-reading-mcq",
     "gaokao-seven-select",
+    "ielts-academic-reading-mcq",
     "kaoyan-cloze-passage",
     "kaoyan-reading-b",
     "kaoyan-reading-mcq",
@@ -37,8 +38,8 @@
   ],
   "errors": [],
   "notes": [
-    "篇幅校验：检查 1663 个 gen set 的 stimulus 词数",
-    "数据 QA：gen draft sets 2783 · items 4347"
+    "篇幅校验：检查 1668 个 gen set 的 stimulus 词数",
+    "数据 QA：gen draft sets 2818 · items 4407"
   ],
   "ok": true
 }
