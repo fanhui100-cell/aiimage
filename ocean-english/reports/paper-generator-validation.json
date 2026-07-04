@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-07-04T16:36:20.145Z",
+  "generatedAt": "2026-07-04T17:25:00.208Z",
   "status": "applied",
   "errors": [],
   "notes": [
-    "v2 applied · smoke：cet4 mini + 听力 section（带 60s 超时）",
-    "⏱ cet4 mini: 15.9s",
-    "⏱ cet4 listening section: 13.0s",
-    "⏱ toefl mini: 9.5s",
-    "⏱ toefl full: 33.7s"
+    "v2 applied：执行真实生成 + 确定性/退役/池不足校验",
+    "⏱ cet4 mini: 10.4s",
+    "⏱ cet4 full: 12.2s",
+    "确定性：原始卷即逐字节相等（本卷无时变签名 URL）"
   ],
   "ok": true
 }

@@ -92,12 +92,25 @@ async function fetchActiveSets(db: SupabaseClient, taskType: string, level: numb
   if (error) return []
   return ((data ?? []) as SetRow[]).filter((s) => !isDeprecatedQuestionType(s.task_type))
 }
-async function fetchActiveItems(db: SupabaseClient, setId: string): Promise<ItemRow[]> {
-  const { data } = await db.from('question_items')
-    .select('id, question_set_id, order_index, input_mode, prompt, prompt_zh, choices, answer')
-    .eq('status', 'active').eq('question_set_id', setId)
-    .order('order_index', { ascending: true })
-  return (data ?? []) as ItemRow[]
+/** 批量取候选 set 的 active items（Task 7 性能）：分块 .in()，替代循环内每 set 一次远程往返。
+ *  chunk=150：每 set 最多约 4-5 item → 单响应 <1000 行，避开 PostgREST max-rows 截断。
+ *  组内顺序仍按 order_index（跨 set 混排不影响单 set 内相对顺序）。 */
+async function fetchActiveItemsBatch(db: SupabaseClient, setIds: string[]): Promise<Map<string, ItemRow[]>> {
+  const map = new Map<string, ItemRow[]>()
+  for (let i = 0; i < setIds.length; i += 150) {
+    const chunk = setIds.slice(i, i + 150)
+    if (!chunk.length) break
+    const { data } = await db.from('question_items')
+      .select('id, question_set_id, order_index, input_mode, prompt, prompt_zh, choices, answer')
+      .eq('status', 'active').in('question_set_id', chunk)
+      .order('order_index', { ascending: true })
+    for (const it of (data ?? []) as ItemRow[]) {
+      const arr = map.get(it.question_set_id) ?? []
+      arr.push(it)
+      map.set(it.question_set_id, arr)
+    }
+  }
+  return map
 }
 /** 返回 stimulus_id → active 音频 URL（既作听力可用门，又供 PaperStimulus.audioUrl）。 */
 async function fetchActiveAudioUrls(db: SupabaseClient, stimulusIds: string[]): Promise<Map<string, string>> {
@@ -216,11 +229,18 @@ async function drawTask(
   const grouped = GROUPED_MULTI_ITEM.has(taskType)
   const wholeTask = SINGLE_WHOLE_TASK.has(taskType)
   const needAudio = taskType === 'listening_comprehension'
-  // 听力可用门：先只查哪些候选有 active 音频（不现签）；现签留到抽中最终 set 后小批做（见循环后）。
-  const audioAvail = needAudio ? await fetchActiveAudioStimulusIds(db, sets.map((s) => s.stimulus_id).filter((x): x is string => !!x)) : null
-
   const ordered = seededShuffle(sets, rnd)
-  const stimById = await fetchStimuli(db, [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))])
+  // 批量预取（Task 7 性能）：三路独立远程查询并行（听力可用门 / stimuli / 候选 items），
+  // target words 依赖 items 结果后再分块取。替代循环内每 set 2 次远程往返（400 候选、多 section
+  // 累积曾达数百次，是 validate/smoke 的主要耗时）。选择逻辑（迭代顺序/跳过条件/终止条件）
+  // 不变 → 同 seed 同卷的确定性不受影响。听力现签仍留到抽中最终 set 后小批做（见循环后）。
+  const stimulusIds = [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))]
+  const [audioAvail, stimById, itemsBySet] = await Promise.all([
+    needAudio ? fetchActiveAudioStimulusIds(db, stimulusIds) : Promise.resolve(null),
+    fetchStimuli(db, stimulusIds),
+    fetchActiveItemsBatch(db, ordered.map((s) => s.id)),
+  ])
+  const tw = await fetchTargetWords(db, [...itemsBySet.values()].flat().map((i) => i.id))
 
   const outSets: PaperSetRef[] = []
   const outItems: PaperItem[] = []
@@ -231,9 +251,8 @@ async function drawTask(
     if (s.stimulus_id && usedStimuli.has(s.stimulus_id)) continue                  // 同卷不重复 stimulus
     if (needAudio && (!s.stimulus_id || !audioAvail!.has(s.stimulus_id))) continue // 听力无 active 音频 → 跳过，绝不顶替（用可用门，不现签）
 
-    const items = await fetchActiveItems(db, s.id)
+    const items = itemsBySet.get(s.id) ?? []
     if (!items.length) continue
-    const tw = await fetchTargetWords(db, items.map((i) => i.id))
 
     // 单题型（非整篇/非整任务）：尽量不过度重复 target word
     if (!grouped && !wholeTask) {
@@ -285,10 +304,14 @@ async function drawProductive(
     const sets = await fetchActiveSets(db, t, level)
     if (!sets.length) continue
     const ordered = seededShuffle(sets, rnd)
-    const stimById = await fetchStimuli(db, [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))])
+    // 批量预取（Task 7 性能）：stimuli 与候选 items 并行取回，替代循环内每 set 一次 items 往返。
+    const [stimById, itemsBySet] = await Promise.all([
+      fetchStimuli(db, [...new Set(ordered.map((s) => s.stimulus_id).filter((x): x is string => !!x))]),
+      fetchActiveItemsBatch(db, ordered.map((s) => s.id)),
+    ])
     for (const s of ordered) {
       if (s.stimulus_id && usedStimuli.has(s.stimulus_id)) continue            // 同卷不重复 stimulus
-      const items = await fetchActiveItems(db, s.id)
+      const items = itemsBySet.get(s.id) ?? []
       if (!items.length) continue
       if (s.stimulus_id) usedStimuli.add(s.stimulus_id)
       const stim = s.stimulus_id ? stimById.get(s.stimulus_id) : undefined
