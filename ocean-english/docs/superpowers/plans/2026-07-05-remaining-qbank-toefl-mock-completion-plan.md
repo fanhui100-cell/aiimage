@@ -960,4 +960,3 @@ Stop immediately and report if any of these happen:
 - A promote apply partially succeeds without a rollback or manifest report.
 
 If none of these happen, continue phase by phase until Task 8 is complete.
-
