@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-04T17:08:26.652Z",
-  "apply": true,
+  "generatedAt": "2026-07-04T20:34:42.485Z",
+  "apply": false,
   "blockedReason": "legacy_qb_not_for_promotion",
   "candidates": 600,
   "byTask": {
