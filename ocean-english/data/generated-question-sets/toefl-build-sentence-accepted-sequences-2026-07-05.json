@@ -1,0 +1,78 @@
+{
+  "stage": "toefl-build-sentence-accepted-sequences-2026-07-05",
+  "taskType": "build_a_sentence",
+  "scoring": "accepted_sequence_exact",
+  "note": "10 条 pilot draft 的可接受语序集合（人工逐句审定，Claude 亲撰）。这批句子全部是 V + 直接宾语 + 介词短语论元 的固定结构（compare X with Y / provide X with Y / supply X with Y / remind X of Y / congratulate X on Y / introduce X to Y / divide X into Y / base X on Y / transform X into Y / attribute X to Y）——PP 为论元不可前置、宾语较轻不可重 NP 移位，故每句 genuinely acceptable 的语序只有 canonical 一种；诚实起见 acceptedSequences 仅含 canonical，绝不添加会导致错误判对的假等价语序。canonical 非官方 TOEFL 答案（official:false）。sequences 以 chunk 下标表示（下标对应 DB choices id）。",
+  "entries": [
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:p0ejgb",
+      "sentence": "My aunt compared the new phone with her old one.",
+      "canonicalIdx": [2, 1, 3, 0],
+      "acceptedIdx": [[2, 1, 3, 0]],
+      "why_single": "compare X with Y：with-PP 为论元，不可前置或后移"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:2x8lvz",
+      "sentence": "The waiter provided the guests with fresh towels.",
+      "canonicalIdx": [2, 3, 0, 1],
+      "acceptedIdx": [[2, 3, 0, 1]],
+      "why_single": "provide X with Y：论元 PP 固定语序"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1q4ya0v",
+      "sentence": "The farmer supplied the village with fresh milk.",
+      "canonicalIdx": [3, 2, 0, 1],
+      "acceptedIdx": [[3, 2, 0, 1]],
+      "why_single": "supply X with Y：论元 PP 固定语序"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:59bt4l",
+      "sentence": "The teacher reminded the students of the deadline.",
+      "canonicalIdx": [3, 2, 1, 0],
+      "acceptedIdx": [[3, 2, 1, 0]],
+      "why_single": "remind X of Y：of-PP 为论元，不可移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:eny9in",
+      "sentence": "The manager congratulated the team on their success.",
+      "canonicalIdx": [2, 3, 1, 0],
+      "acceptedIdx": [[2, 3, 1, 0]],
+      "why_single": "congratulate X on Y：on-PP 为论元，不可移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:12w1h09",
+      "sentence": "The guide introduced the tourists to the old town.",
+      "canonicalIdx": [1, 3, 2, 0],
+      "acceptedIdx": [[1, 3, 2, 0]],
+      "why_single": "introduce X to Y：to-PP 为论元；宾语轻，不可重 NP 移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1jsa8xn",
+      "sentence": "The coach divided the players into two teams.",
+      "canonicalIdx": [2, 3, 1, 0],
+      "acceptedIdx": [[2, 3, 1, 0]],
+      "why_single": "divide X into Y：into-PP 为论元，不可移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1u37htn",
+      "sentence": "The judge based her decision on the evidence.",
+      "canonicalIdx": [2, 0, 3, 1],
+      "acceptedIdx": [[2, 0, 3, 1]],
+      "why_single": "base X on Y：on-PP 为论元，不可移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1frp5u3",
+      "sentence": "The committee transformed the empty hall into a library.",
+      "canonicalIdx": [2, 3, 0, 1],
+      "acceptedIdx": [[2, 3, 0, 1]],
+      "why_single": "transform X into Y：into-PP 为论元，不可移位"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:iebtzf",
+      "sentence": "The article attributed the delay to bad weather.",
+      "canonicalIdx": [3, 2, 0, 1],
+      "acceptedIdx": [[3, 2, 0, 1]],
+      "why_single": "attribute X to Y：to-PP 为论元，不可移位"
+    }
+  ]
+}

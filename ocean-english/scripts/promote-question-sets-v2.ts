@@ -113,7 +113,7 @@ async function main() {
     // 显式封存标记（2026-07-05 Task 5）：qa_flags.doNotPromote=true 的行一律拒（如旧 qb: WU draft 封存）。
     // 置于 WU 来源门之后：qb WU draft 仍以 word_universe_non_gen_source 为首要拒因（guards 验证依赖该 reason）。
     else if (flags.doNotPromote === true) reason = 'do_not_promote'
-    else if (flags.scoring_not_ready === true) reason = 'scoring_not_ready'
+    else if (flags.scoring_not_ready === true) reason = s.task_type === 'build_a_sentence' ? 'build_sentence_scoring_not_ready' : 'scoring_not_ready'
     else if (flags.official_spec_unverified === true) reason = 'official_spec_unverified'
     else if (!items.length) reason = 'no_items'
     else if (GROUPED.has(s.task_type) && !s.stimulus_id) reason = 'grouped_without_stimulus'
@@ -123,10 +123,16 @@ async function main() {
       // 口语题（input_mode='speak'，如 listen_and_repeat 需音频源 / interview_speaking 需 ASR+评分管线）：
       //   仅检查 rubric 不足以保证就绪。默认拒绝，除非显式 qa_flags.speaking_ready=true（管线就绪后人工置位）。
       else if (items.some((i) => i.input_mode === 'speak') && flags.speaking_ready !== true) reason = 'speaking_pipeline_not_ready'
-      // build_a_sentence（2026-07-05 Task 2 边界）：即便 scoring_not_ready 被清掉，每个 item 也必须
-      //   携带 accepted-sequence 判分契约（canonical + acceptedSequences + official:false），否则拒绝。
-      //   该任务无论是否 active 均被组卷器 PAPER_EXCLUDED_TASK_TYPES 排除在 TOEFL 整卷外。
-      else if (s.task_type === 'build_a_sentence' && !items.every((i) => isBuildSentenceAnswer(i.answer))) reason = 'build_sentence_scoring_not_ready'
+      // build_a_sentence（2026-07-05 边界）：即便 scoring_not_ready 被清掉，每个 item 也必须携带
+      //   合法 accepted-sequence 判分契约。粒度拒因：answer 缺失/仍是 legacy 排列 → accepted_sequences_missing；
+      //   对象存在但形状非法 → accepted_sequence_invalid。该任务无论是否 active 均被组卷器
+      //   PAPER_EXCLUDED_TASK_TYPES 排除在 TOEFL 整卷外。
+      else if (s.task_type === 'build_a_sentence' && !items.every((i) => isBuildSentenceAnswer(i.answer))) {
+        const bad = items.find((i) => !isBuildSentenceAnswer(i.answer))
+        reason = (bad && bad.answer != null && typeof bad.answer === 'object' && !Array.isArray(bad.answer))
+          ? 'accepted_sequence_invalid'
+          : 'accepted_sequences_missing'
+      }
       for (const it of items) {
         if (reason) break
         if (it.input_mode === 'free_text' || it.input_mode === 'speak') {

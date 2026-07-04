@@ -15,7 +15,11 @@
 --       - grouped task types (reading_comprehension/listening_comprehension/banked_cloze/seven_select/
 --         cloze_passage/grammar_fill/para_match) have a stimulus;
 --       - choice items: the keyed answer references an existing choice id;
---       - multi_blank/matching items: answer is a non-empty array;
+--       - multi_blank/matching items: answer is a non-empty array (build_a_sentence exempted —
+--         its valid shape is the accepted-sequence contract object, checked next);
+--       - build_a_sentence items (2026-07-05): answer must be a VALID accepted-sequence contract
+--         {scoring:'accepted_sequence_exact', official:false, canonical:[...], acceptedSequences:[[...],...]}
+--         (missing/array → accepted_sequences_missing; malformed object → accepted_sequence_invalid);
 --       - productive items (input_mode in free_text/speak) have rubric_id;
 --       - listening sets (task_type listening_comprehension OR any item input_mode='listen')
 --         have an ACTIVE audio asset on their stimulus;
@@ -108,12 +112,46 @@ begin
     if v_bad > 0 then
       set_id := v_id; result := 'rejected'; reason := 'choice_answer_not_in_choices'; return next; continue;
     end if;
-    -- multi_blank / matching: answer must be a non-empty array
+    -- multi_blank / matching: answer must be a non-empty array — EXCEPT build_a_sentence, whose valid
+    -- answer shape (2026-07-05 accepted-sequence contract) is an OBJECT; that shape is fully validated
+    -- by the dedicated build_a_sentence block below, so it is exempted here (not silently accepted).
     select count(*) into v_bad from question_items qi
       where qi.question_set_id = v_id and qi.input_mode in ('multi_blank', 'matching')
-        and (jsonb_typeof(qi.answer) is distinct from 'array' or jsonb_array_length(qi.answer) = 0);
+        and (jsonb_typeof(qi.answer) is distinct from 'array' or jsonb_array_length(qi.answer) = 0)
+        and not (v_set.task_type = 'build_a_sentence' and jsonb_typeof(qi.answer) = 'object');
     if v_bad > 0 then
       set_id := v_id; result := 'rejected'; reason := 'multiblank_answer_empty'; return next; continue;
+    end if;
+
+    -- build_a_sentence (2026-07-05): every item must carry a VALID accepted-sequence contract:
+    -- scoring='accepted_sequence_exact', official=false, canonical = non-empty array, and
+    -- acceptedSequences = array (>=1) of arrays each with the same length as canonical.
+    -- Missing/legacy-array answers reject as accepted_sequences_missing; malformed objects as
+    -- accepted_sequence_invalid. Mirrors promote-question-sets-v2.ts client-side guard.
+    if v_set.task_type = 'build_a_sentence' then
+      select count(*) into v_bad from question_items qi
+        where qi.question_set_id = v_id and jsonb_typeof(qi.answer) is distinct from 'object';
+      if v_bad > 0 then
+        set_id := v_id; result := 'rejected'; reason := 'accepted_sequences_missing'; return next; continue;
+      end if;
+      select count(*) into v_bad from question_items qi
+        where qi.question_set_id = v_id
+          and not (
+            qi.answer->>'scoring' = 'accepted_sequence_exact'
+            and (qi.answer->'official') = 'false'::jsonb
+            and jsonb_typeof(qi.answer->'canonical') = 'array'
+            and jsonb_array_length(qi.answer->'canonical') > 0
+            and jsonb_typeof(qi.answer->'acceptedSequences') = 'array'
+            and jsonb_array_length(qi.answer->'acceptedSequences') >= 1
+            and not exists (
+              select 1 from jsonb_array_elements(qi.answer->'acceptedSequences') seq
+              where jsonb_typeof(seq.value) is distinct from 'array'
+                 or jsonb_array_length(seq.value) is distinct from jsonb_array_length(qi.answer->'canonical')
+            )
+          );
+      if v_bad > 0 then
+        set_id := v_id; result := 'rejected'; reason := 'accepted_sequence_invalid'; return next; continue;
+      end if;
     end if;
 
     v_is_listening := v_set.task_type = 'listening_comprehension'

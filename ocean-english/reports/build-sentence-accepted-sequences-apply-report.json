@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-07-04T18:11:11.910Z",
+  "apply": true,
+  "source": "data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json",
+  "entries": 10,
+  "updated": 0,
+  "dupSkipped": 10,
+  "failed": 0,
+  "results": [
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:p0ejgb",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:2x8lvz",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1q4ya0v",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:59bt4l",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:eny9in",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:12w1h09",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1jsa8xn",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1u37htn",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:1frp5u3",
+      "action": "dup-skip"
+    },
+    {
+      "legacyId": "gen:toefl-build-a-sentence:set:claude:iebtzf",
+      "action": "dup-skip"
+    }
+  ]
+}
