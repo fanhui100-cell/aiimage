@@ -1,8 +1,8 @@
 # v2 Question Bank Coverage Audit (R1 canonical matrix)
 
-Generated: 2026-07-04T13:17:24.081Z
+Generated: 2026-07-04T15:37:22.214Z
 
-Totals: sets 6517 · items 8347 · active 2852 · draft 3665
+Totals: sets 6517 · items 8347 · active 2854 · draft 3663
 
 ## A. EXPECTED canonical matrix (from EXAM_SPECS) — MISSING 4 · THIN 0 · PILOT_DRAFT 0 · READY_DRAFT 0 · READY_ACTIVE 42 · BLOCKED 3
 
@@ -41,7 +41,7 @@ Totals: sets 6517 · items 8347 · active 2852 · draft 3665
 | kaoyan | 5 | writing_large | essay_writing | - | free_text | - | Y | 0 | 0 | 50 | 50 | 0 | 0 | 50 | 1 | READY_ACTIVE | - |
 | toefl | 6 | reading | complete_the_words | - | spell | - | - | 0 | 0 | 100 | 100 | 100 | 0 | 0 | 3 | READY_ACTIVE | - |
 | toefl | 6 | reading | read_daily_life | - | choice | - | - | 0 | 0 | 100 | 250 | 100 | 0 | 0 | 2 | READY_ACTIVE | - |
-| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 2 | 0 | 98 | 400 | 100 | 0 | 0 | 2 | READY_ACTIVE | - |
+| toefl | 6 | reading | reading_comprehension | - | choice | - | - | 0 | 0 | 100 | 400 | 100 | 0 | 0 | 2 | READY_ACTIVE | - |
 | toefl | 6 | listening | choose_a_response | - | choice | Y | - | 0 | 0 | 100 | 100 | 100 | 100 | 0 | 2 | READY_ACTIVE | - |
 | toefl | 6 | listening | listening_comprehension | - | choice | Y | - | 0 | 0 | 100 | 300 | 100 | 100 | 0 | 2 | READY_ACTIVE | - |
 | toefl | 6 | writing | build_a_sentence | - | multi_blank | - | Y | 10 | 0 | 0 | 10 | 0 | 0 | 0 | 1 | BLOCKED | scoring_not_ready |
@@ -115,7 +115,7 @@ Totals: sets 6517 · items 8347 · active 2852 · draft 3665
 - kaoyan lv5 / essay_writing — active 50
 - toefl lv6 / complete_the_words — active 100
 - toefl lv6 / read_daily_life — active 100
-- toefl lv6 / reading_comprehension — active 98
+- toefl lv6 / reading_comprehension — active 100
 - toefl lv6 / choose_a_response — active 100
 - toefl lv6 / listening_comprehension — active 100
 - toefl lv6 / email_writing — active 100
@@ -242,7 +242,7 @@ Totals: sets 6517 · items 8347 · active 2852 · draft 3665
 | toefl | 6 | listen_to_meaning | 54 | 54 | 0 | 54 | 0 | 0 | 0 | 54 | 0 | insufficient_active_pool |
 | toefl | 6 | listening_comprehension | 100 | 0 | 100 | 300 | 100 | 100 | 0 | 0 | 2 | - |
 | toefl | 6 | read_daily_life | 100 | 0 | 100 | 250 | 100 | 0 | 0 | 0 | 2 | - |
-| toefl | 6 | reading_comprehension | 100 | 2 | 98 | 400 | 100 | 0 | 0 | 0 | 2 | - |
+| toefl | 6 | reading_comprehension | 100 | 0 | 100 | 400 | 100 | 0 | 0 | 0 | 2 | - |
 | toefl | 6 | synonym_choice | 143 | 56 | 87 | 143 | 0 | 0 | 0 | 143 | 3 | - |
 | toefl | 6 | synonym_substitute | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |
 | toefl | 6 | word_form | 50 | 50 | 0 | 50 | 0 | 0 | 0 | 50 | 0 | insufficient_active_pool |

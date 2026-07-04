@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T13:16:59.194Z",
+  "generatedAt": "2026-07-04T15:34:29.253Z",
   "ok": true,
   "errors": [],
   "warnings": [],
@@ -164,7 +164,7 @@
       "email_writing",
       "academic_discussion"
     ],
-    "readingAcademicReviewHeldDraft": 2,
+    "readingAcademicReviewHeldDraft": 0,
     "audioReviewedAndActive": [
       "choose_a_response",
       "listening_comprehension"

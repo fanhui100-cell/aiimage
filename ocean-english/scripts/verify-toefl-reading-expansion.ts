@@ -34,10 +34,11 @@ const STAGE = 'toefl-reading-expansion-2026-07-03'
 const DIR = `data/generated-question-sets/${STAGE}`
 const TPLDIR = 'data/exam-task-templates'
 // heldDraftWhenActive：--expect=active 时该 task 全库允许（且必须）保留的 draft 数。
-// reading_comprehension = 2：pilot REVIEW 弱推断 Q4（plankton/desert）被排除出 promote 清单、保持 draft。
+// 2026-07-04 Phase1：2 条 pilot REVIEW 弱推断 Q4（plankton/desert）已重写、复审 PASS 并经 owner 批准
+// promote → reading_comprehension 100 active / 0 draft（此前为 98+2 held）。
 const PACKS = [
   { template: 'toefl-read-daily-life', taskType: 'read_daily_life', source: 'toefl-read-daily-life-90.json', expectSets: 90, itemsRange: [2, 3] as [number, number], poolTotal: 100, heldDraftWhenActive: 0 },
-  { template: 'toefl-academic-reading', taskType: 'reading_comprehension', source: 'toefl-academic-reading-90.json', expectSets: 90, itemsRange: [4, 4] as [number, number], poolTotal: 100, heldDraftWhenActive: 2 },
+  { template: 'toefl-academic-reading', taskType: 'reading_comprehension', source: 'toefl-academic-reading-90.json', expectSets: 90, itemsRange: [4, 4] as [number, number], poolTotal: 100, heldDraftWhenActive: 0 },
 ]
 
 const MODE_SOURCE = process.argv.includes('--source')

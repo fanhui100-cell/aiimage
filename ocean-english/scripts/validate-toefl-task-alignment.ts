@@ -9,7 +9,8 @@
   - Listening 专项 (choose_a_response / listening_comprehension): pilot 20 + F3 180 = 100+100 active with
     reviewed audio (F3 audio owner-delegated sample-review + activation + promote, 2026-07-04).
   - Reading 专项 (read_daily_life / reading_comprehension) promoted active 2026-07-04 (F2, owner-approved);
-    2 pilot academic REVIEW sets (weak-inference Q4) are held draft; full/mini papers stay closed.
+    the 2 pilot REVIEW Q4s were rewritten + re-reviewed + promoted (Phase1) → 100+100 active, 0 held draft;
+    full/mini papers stay closed.
   - Build/speaking tasks remain blocked by explicit reasons.
 */
 
@@ -177,11 +178,12 @@ async function validateDb() {
   const academicSets = readingSets.filter((set) => set.task_type === 'reading_comprehension')
   const readingItems = readingSets.flatMap((set) => asArray(set.question_items).map((item) => ({ ...(item as any), set })))
 
-  // TOEFL Reading 专项 promoted 2026-07-04 (F2, owner-approved): the 20 pilot sets are now mostly active.
-  // read_daily_life pilot: all 10 active. reading_comprehension pilot: 8 active + 2 held-back REVIEW draft
-  // (weak-inference Q4 on the plankton/desert academic sets, excluded from the promote manifest). Full/mini
-  // mock stays closed (paperReady=false). Item status must match its set status.
-  const READING_ACADEMIC_REVIEW_DRAFT = 2 // known pilot REVIEW sets deliberately kept draft
+  // TOEFL Reading 专项 promoted 2026-07-04 (F2, owner-approved). 2026-07-04 Phase1: the 2 held-back
+  // pilot REVIEW academic sets (weak-inference Q4, plankton/desert) were rewritten (e880378), re-reviewed
+  // PASS, and promoted with owner approval → pilot is now 10+10 all active, reading_comprehension
+  // whole-bank 100 active / 0 draft. Full/mini mock stays closed (paperReady=false). Item status must
+  // match its set status.
+  const READING_ACADEMIC_REVIEW_DRAFT = 0 // Phase1 之后不再有 held-back draft
   ok(dailyLifeSets.length === 10, `DB ${READING_STAGE}: read_daily_life sets=${dailyLifeSets.length}, expected 10`)
   ok(academicSets.length === 10, `DB ${READING_STAGE}: reading_comprehension sets=${academicSets.length}, expected 10`)
   ok(readingItems.length === 64, `DB ${READING_STAGE}: items=${readingItems.length}, expected 64`)
@@ -279,9 +281,9 @@ async function main() {
 
   const blockerSummary = {
     paperReady: false,
-    // Reading 专项 promoted active 2026-07-04 (owner-approved); 2 pilot academic REVIEW sets held draft.
+    // Reading 专项 promoted active 2026-07-04; Phase1 补 promote 2 条重写 Q4 → 无 held draft。
     reviewedActive: ['read_daily_life', 'reading_comprehension', 'complete_the_words', 'email_writing', 'academic_discussion'],
-    readingAcademicReviewHeldDraft: 2,
+    readingAcademicReviewHeldDraft: 0,
     audioReviewedAndActive: ['choose_a_response', 'listening_comprehension'],
     scoringNotReady: ['build_a_sentence'],
     speakingPipelineNotReady: ['listen_and_repeat', 'interview_speaking'],
