@@ -177,12 +177,12 @@
           "answer": "The presence of predators"
         },
         {
-          "prompt": "What can be inferred if fish are not present?",
-          "options": ["Plankton may stay nearer the surface in daylight", "Plankton will stop feeding at night", "Algae will disappear from the lake", "Water temperature will no longer matter"],
-          "answer": "Plankton may stay nearer the surface in daylight"
+          "prompt": "What does the plankton's behavior in lakes without fish most strongly suggest about vertical migration?",
+          "options": ["Avoiding predators, more than light itself, drives their descent in daytime", "Swimming upward requires no energy from the plankton", "Algae can grow only in the deepest parts of a lake", "The daily movement happens regardless of any outside conditions"],
+          "answer": "Avoiding predators, more than light itself, drives their descent in daytime"
         }
       ],
-      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+      "explain_zh": "推断题：结合'有鱼时白天下沉躲避、无鱼时白天仍留表层'与'捕食者影响移动'两处信息，可推断白天下潜主因是躲避捕食者而非单纯光照；其余选项与'游动耗能'/表层夜间食藻/'多因素影响'相矛盾。"
     },
     {
       "passage": "The invention of movable type did not immediately make books cheap everywhere. Printing required skilled workers, presses, paper, ink, and a market large enough to cover costs. In regions where paper was expensive or literacy was limited, handwritten manuscripts continued to circulate alongside printed books. Printers also had to choose texts carefully. A religious text or schoolbook with steady demand was safer to print than a new poem that might attract only a few readers. Thus, printing technology changed communication gradually, shaped by materials, labor, and the needs of local communities. The technology was powerful, but its impact depended on the institutions and readers surrounding it. In this sense, printing was both a technical invention and a practical business decision.",
@@ -229,12 +229,12 @@
           "answer": "Nocturnal predators may be more active"
         },
         {
-          "prompt": "What might happen if nights become warmer?",
-          "options": ["Some species may need to adjust their behavior again", "All desert animals will become active only at noon", "Evaporation will stop completely", "Predators will disappear from deserts"],
-          "answer": "Some species may need to adjust their behavior again"
+          "prompt": "Why would warmer nights create a problem for a mammal that feeds at night?",
+          "options": ["The cooler night air that limits its water loss would no longer help as much", "It would be forced to hunt only during the hottest midday hours", "Its nighttime predators would suddenly vanish from the desert", "Evaporation from its body would stop entirely once nights warmed"],
+          "answer": "The cooler night air that limits its water loss would no longer help as much"
         }
       ],
-      "explain_zh": "Academic reading explanation: the correct answers are directly supported by the passage and the distractors contradict or overstate the text."
+      "explain_zh": "推断题：结合'夜行减少失水因夜间空气凉、蒸发慢'与'若夜间变暖需再改行为'，可推断变暖会削弱夜间凉爽带来的省水优势；其余选项过度夸大或与文意相矛盾。"
     },
     {
       "passage": "Maps are often treated as neutral pictures of space, but every map involves choices. A mapmaker decides what area to show, which features to label, and how to represent distance. A subway map, for example, may distort actual geography so that station connections are easier to understand. This distortion is useful for riders, even though it would be misleading for measuring walking distance. Historical maps require similar caution. A map made for sailors may emphasize coastlines and harbors while ignoring inland roads. To interpret a map well, readers must ask what problem the map was designed to solve. This question helps explain why two accurate maps of the same place can look very different. The same landscape may be simplified differently for navigation, teaching, or political administration.",
