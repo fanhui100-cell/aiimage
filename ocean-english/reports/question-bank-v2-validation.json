@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-03T18:18:54.900Z",
+  "generatedAt": "2026-07-04T13:06:51.954Z",
   "status": "applied",
   "counts": {
     "questionSets": 6517,
-    "activeSets": 2672,
+    "activeSets": 2852,
     "questionItems": 8347,
-    "activeItems": 4316,
+    "activeItems": 4676,
     "taskTemplates": 30,
     "targetWordRefs": 895
   },

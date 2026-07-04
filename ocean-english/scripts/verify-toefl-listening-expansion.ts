@@ -12,14 +12,16 @@
        （choose_a_response 25-90；listening_comprehension 110-220）；
      - item input_mode 归一为 'listen'；批内无重复内容；无退役题型。
 
-   --db（需凭据）:
-     - source→DB 前向 1:1（确定性 legacy_id），均为 draft、stage 命中、每 item input_mode='listen'；
-     - 全库 draft 合计：choose_a_response = 90+现存draft、listening_comprehension = 90+现存draft
-       （pilot 各 10 已 active，故新增 90 draft 后 draft 各 = 90）；
-     - 反向本 stage 无孤行；active(本 stage)=0；无退役题型；
-     - 报告本 stage 各 set 的 active 音频计数（预期 0，音频尚未生成/激活；仅信息，不 fail）。
+   --db（需凭据，phase-aware）:
+     - source→DB 前向 1:1（确定性 legacy_id）、stage 命中、每 item input_mode='listen'；
+     - phase 由 --expect 指定（默认 active = 2026-07-04 owner 委托抽查通过后 promote 的现契约）：
+       · --expect=active：本 stage 90+90 全 active；全库两型各 active=100/draft=0；
+         本 stage 每 set 的 stimulus 均有 active 音频（90+90 硬断言）；
+       · --expect=draft（历史/promote 前重跑）：本 stage 全 draft、全库 draft 各=90；
+         active 音频计数仅报告不 fail；
+     - 反向本 stage 无孤行；无退役题型；item 状态与 set 一致。
 
-   用法：npx tsx scripts/verify-toefl-listening-expansion.ts --source | --db
+   用法：npx tsx scripts/verify-toefl-listening-expansion.ts --source | --db [--expect=active|draft]
    ════════════════════════════════════════════════════════════════════════ */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import { readFileSync, existsSync } from 'node:fs'
@@ -30,12 +32,14 @@ const STAGE = 'toefl-listening-expansion-2026-07-03'
 const DIR = `data/generated-question-sets/${STAGE}`
 const TPLDIR = 'data/exam-task-templates'
 const PACKS = [
-  { template: 'toefl-choose-a-response', taskType: 'choose_a_response', source: 'toefl-choose-a-response-90.json', expectSets: 90, items: [1, 1] as [number, number], words: [25, 90] as [number, number], expectNewDraft: 90 },
-  { template: 'toefl-listening-mcq', taskType: 'listening_comprehension', source: 'toefl-listening-mcq-90.json', expectSets: 90, items: [3, 3] as [number, number], words: [110, 220] as [number, number], expectNewDraft: 90 },
+  { template: 'toefl-choose-a-response', taskType: 'choose_a_response', source: 'toefl-choose-a-response-90.json', expectSets: 90, items: [1, 1] as [number, number], words: [25, 90] as [number, number], poolTotal: 100 },
+  { template: 'toefl-listening-mcq', taskType: 'listening_comprehension', source: 'toefl-listening-mcq-90.json', expectSets: 90, items: [3, 3] as [number, number], words: [110, 220] as [number, number], poolTotal: 100 },
 ]
 
 const MODE_SOURCE = process.argv.includes('--source')
 const MODE_DB = process.argv.includes('--db')
+// phase：默认 active（2026-07-04 owner 委托抽查通过后 promote 的现契约）；--expect=draft 供历史重现。
+const EXPECT: 'active' | 'draft' = (process.argv.find((a) => a.startsWith('--expect='))?.slice(9) === 'draft') ? 'draft' : 'active'
 const errors: string[] = []
 const err = (m: string) => errors.push(m)
 function hashId(s: string): string { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) } return (h >>> 0).toString(36) }
@@ -123,14 +127,15 @@ async function verifyDb() {
       expected.add(legacy)
       const s = byLegacy.get(legacy)
       if (!s) { err(`${pack.template}: 源无对应 DB set（${legacy}）`); continue }
-      if (s.status !== 'draft') err(`${pack.template}: ${legacy} status=${s.status}（须 draft）`)
+      // phase-aware：本 stage 90+90 全部在 2026-07-04 promote 清单内 → expect=active 时须 active。
+      if (s.status !== EXPECT) err(`${pack.template}: ${legacy} status=${s.status}（须 ${EXPECT}）`)
       if ((s.qa_flags as { stage?: string } | null)?.stage !== STAGE) err(`${pack.template}: ${legacy} stage≠${STAGE}`)
       const { data: items } = await db.from('question_items').select('input_mode, choices, answer, status').eq('question_set_id', s.id)
       const its = (items ?? []) as { input_mode: string; choices: unknown; answer: unknown; status: string }[]
       if (its.length < pack.items[0] || its.length > pack.items[1]) err(`${pack.template}: ${legacy} item 数 ${its.length}`)
       for (const it of its) {
         if (it.input_mode !== 'listen') err(`${pack.template}: ${legacy} input_mode=${it.input_mode}`)
-        if (it.status !== 'draft') err(`${pack.template}: ${legacy} item 非 draft`)
+        if (it.status !== s.status) err(`${pack.template}: ${legacy} item status=${it.status}（须与 set 一致 ${s.status}）`)
         const ch = Array.isArray(it.choices) ? (it.choices as DraftChoice[]) : []
         if (ch.length !== 4) err(`${pack.template}: ${legacy} 选项数 ${ch.length}`)
         if (!ch.map((c) => String(c.id)).includes(String(it.answer))) err(`${pack.template}: ${legacy} answer 未命中`)
@@ -138,11 +143,19 @@ async function verifyDb() {
       okFwd++
     }
     const draftN = all.filter((s) => s.task_type === pack.taskType && s.status === 'draft').length
-    if (draftN !== pack.expectNewDraft) err(`${pack.taskType}: 全库 draft ${draftN} ≠ ${pack.expectNewDraft}`)
+    const activeN = all.filter((s) => s.task_type === pack.taskType && s.status === 'active').length
+    if (draftN + activeN !== pack.poolTotal) err(`${pack.taskType}: 全库 draft+active ${draftN + activeN} ≠ ${pack.poolTotal}`)
+    const wantDraft = EXPECT === 'active' ? 0 : pack.expectSets
+    const wantActive = pack.poolTotal - wantDraft
+    if (draftN !== wantDraft) err(`${pack.taskType}: 全库 draft ${draftN} ≠ ${wantDraft}（expect=${EXPECT}）`)
+    if (activeN !== wantActive) err(`${pack.taskType}: 全库 active ${activeN} ≠ ${wantActive}（expect=${EXPECT}）`)
     const activeStage = stageSets.filter((s) => s.task_type === pack.taskType && s.status === 'active').length
-    if (activeStage !== 0) err(`${pack.taskType}: 本 stage active=${activeStage}（须0）`)
+    const wantStageActive = EXPECT === 'active' ? pack.expectSets : 0
+    if (activeStage !== wantStageActive) err(`${pack.taskType}: 本 stage active=${activeStage}（expect=${EXPECT} 须 ${wantStageActive}）`)
     const audioN = stageSets.filter((s) => s.task_type === pack.taskType && s.stimulus_id && activeAudio.has(s.stimulus_id)).length
-    console.log(`  [db] ${pack.template}: 前向 ${okFwd}/${ids.length} · draft ${draftN}/${pack.expectNewDraft} · 本stage active音频 ${audioN}（预期0，音频未激活）`)
+    // expect=active 时音频为硬条件（promote 已依赖）；expect=draft 时仅报告
+    if (EXPECT === 'active' && audioN !== pack.expectSets) err(`${pack.taskType}: 本 stage active 音频 ${audioN} ≠ ${pack.expectSets}`)
+    console.log(`  [db] ${pack.template}: 前向 ${okFwd}/${ids.length} · 全库 active ${activeN}/${wantActive} · draft ${draftN}/${wantDraft} · 本stage active音频 ${audioN}（expect=${EXPECT}）`)
   }
   let orphan = 0
   for (const s of stageSets) { if (!s.legacy_id || !expected.has(s.legacy_id)) { orphan++; err(`DB-outside-source：${s.legacy_id ?? s.id}`) } if (isDeprecatedQuestionType(s.task_type)) err(`stage 含退役题型 ${s.task_type}`) }

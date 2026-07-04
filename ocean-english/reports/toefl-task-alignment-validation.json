@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T18:19:06.385Z",
+  "generatedAt": "2026-07-04T13:16:59.194Z",
   "ok": true,
   "errors": [],
   "warnings": [],
@@ -38,7 +38,7 @@
       "shape": "listening_multi",
       "itemCount": 1,
       "optionCount": 4,
-      "readiness": "audio_missing"
+      "readiness": "active_ok"
     },
     {
       "sectionId": "listening",
@@ -47,7 +47,7 @@
       "shape": "listening_multi",
       "itemCount": 3,
       "optionCount": 4,
-      "readiness": "audio_missing"
+      "readiness": "active_ok"
     },
     {
       "sectionId": "writing",
@@ -149,7 +149,7 @@
       "listening_comprehension": 10,
       "items": 40,
       "stimuli": 20,
-      "activeToeflListeningSets": 20,
+      "activeToeflListeningSets": 200,
       "activePilotAudioAssets": 20,
       "readingPilotSets": 20,
       "readingPilotItems": 64

@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-07-04T12:57:17.039Z",
+  "stage": "toefl-listening-expansion-2026-07-03",
+  "reviewer": "owner-delegated_claude-stt-sample40-wer2.5",
+  "evidence": "STT round-trip 40/40 PASS (WER med 2.5% max 11.1%), ffmpeg decode 40/40 clean, duration drift 0, 24-set semantic sample 0 defects; owner delegation 2026-07-04",
+  "stimuli": 180,
+  "audioRows": 180,
+  "before": {
+    "machine_checked": 180
+  },
+  "activated": 180,
+  "afterByStatus": {
+    "active": 180
+  }
+}

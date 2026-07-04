@@ -6,7 +6,8 @@
   It checks that exam-specs, authored templates, current pilot DB rows, and
   readiness blockers agree with the product contract:
   - TOEFL专项可练, but full/mini mock exams remain paper_not_ready (paperReady=false).
-  - Listening 专项 (choose_a_response / listening_comprehension) pilot rows are active with reviewed audio.
+  - Listening 专项 (choose_a_response / listening_comprehension): pilot 20 + F3 180 = 100+100 active with
+    reviewed audio (F3 audio owner-delegated sample-review + activation + promote, 2026-07-04).
   - Reading 专项 (read_daily_life / reading_comprehension) promoted active 2026-07-04 (F2, owner-approved);
     2 pilot academic REVIEW sets (weak-inference Q4) are held draft; full/mini papers stay closed.
   - Build/speaking tasks remain blocked by explicit reasons.
@@ -34,8 +35,9 @@ const EXPECTED: ExpectedTask[] = [
   { sectionId: 'reading', taskType: 'complete_the_words', templateId: 'toefl-complete-the-words', shape: 'complete_words', itemCount: 1, optionCount: 0, readiness: 'active_ok' },
   { sectionId: 'reading', taskType: 'read_daily_life', templateId: 'toefl-read-daily-life', shape: 'reading_multi', itemCount: 3, optionCount: 4, readiness: 'active_ok' },
   { sectionId: 'reading', taskType: 'reading_comprehension', templateId: 'toefl-academic-reading', shape: 'reading_multi', itemCount: 4, optionCount: 4, readiness: 'active_ok' },
-  { sectionId: 'listening', taskType: 'choose_a_response', templateId: 'toefl-choose-a-response', shape: 'listening_multi', itemCount: 1, optionCount: 4, readiness: 'audio_missing' },
-  { sectionId: 'listening', taskType: 'listening_comprehension', templateId: 'toefl-listening-mcq', shape: 'listening_multi', itemCount: 3, optionCount: 4, readiness: 'audio_missing' },
+  // 2026-07-04: F3 180 条听力经 owner 委托抽查（STT 40/40）+ 音频激活 + promote → 两型各 100 active。
+  { sectionId: 'listening', taskType: 'choose_a_response', templateId: 'toefl-choose-a-response', shape: 'listening_multi', itemCount: 1, optionCount: 4, readiness: 'active_ok' },
+  { sectionId: 'listening', taskType: 'listening_comprehension', templateId: 'toefl-listening-mcq', shape: 'listening_multi', itemCount: 3, optionCount: 4, readiness: 'active_ok' },
   { sectionId: 'writing', taskType: 'build_a_sentence', templateId: 'toefl-build-a-sentence', shape: 'build_sentence', itemCount: 1, optionCount: 0, readiness: 'scoring_not_ready' },
   { sectionId: 'writing', taskType: 'email_writing', templateId: 'toefl-email-writing', shape: 'free_text_rubric', itemCount: 1, optionCount: 0, readiness: 'rubric_active_ok' },
   { sectionId: 'writing', taskType: 'academic_discussion', templateId: 'toefl-academic-discussion', shape: 'free_text_rubric', itemCount: 1, optionCount: 0, readiness: 'rubric_active_ok' },
@@ -117,8 +119,9 @@ function validateSpecAndTemplates() {
     if (expected.readiness === 'scoring_not_ready') {
       ok(template.generation?.scoringNotReady === true, `${expected.templateId}: build_a_sentence must keep generation.scoringNotReady=true`)
     }
-    if (expected.readiness === 'audio_missing') {
-      ok(template.skill === 'listening', `${expected.templateId}: audio-gated templates must be listening skill`)
+    // listening 模板形状检查按 section 归属（2026-07-04 起 readiness 已是 active_ok，不再以 audio_missing 触发）
+    if (expected.sectionId === 'listening') {
+      ok(template.skill === 'listening', `${expected.templateId}: listening-section templates must be listening skill`)
       ok(template.answerSchema?.shape === 'listening_multi', `${expected.templateId}: listening templates must use listening_multi`)
     }
   }
@@ -249,7 +252,8 @@ async function validateDb() {
     .in('task_type', ['choose_a_response', 'listening_comprehension'])
 
   if (activeError) throw new Error(`active listening query: ${activeError.message}`)
-  ok((activeListening ?? []).length === (expectedRuntimeStatus === 'active' ? 20 : 0), `DB: TOEFL listening active sets=${(activeListening ?? []).length}, expected ${expectedRuntimeStatus === 'active' ? 20 : 0}`)
+  // 2026-07-04 F3 promote 后：pilot 20 + F3 180 = 200 active（此前仅 pilot 20）。
+  ok((activeListening ?? []).length === (expectedRuntimeStatus === 'active' ? 200 : 0), `DB: TOEFL listening active sets=${(activeListening ?? []).length}, expected ${expectedRuntimeStatus === 'active' ? 200 : 0}`)
 
   return {
     status: 'checked',

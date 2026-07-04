@@ -30,7 +30,10 @@ const _signCache = new Map<string, { url: string; exp: number }>()
 
 /** Mint a signed URL for a private-bucket object path. Returns null if unavailable.
  *  Default TTL 6h so a long practice/paper session (mounted once at build time) won't see the
- *  audio URL expire mid-session; the bucket stays private and the token is still time-bounded. */
+ *  audio URL expire mid-session; the bucket stays private and the token is still time-bounded.
+ *  瞬时失败重试（2026-07-04）：storage 限流/网络抖动会让单次 createSignedUrl 偶发失败，此前直接
+ *  返回 null → 听力 payload 静默缺 audioUrl（validate:practice-session 间歇红）。对同一 path 重试
+ *  至多 3 次（150/400ms 退避）；持续失败仍返回 null（语义不变）。 */
 export async function signAudioPath(path: string | null | undefined, ttlSeconds = 21600): Promise<string | null> {
   if (!path) return null
   const now = Date.now()
@@ -39,12 +42,17 @@ export async function signAudioPath(path: string | null | undefined, ttlSeconds 
   const a = admin()
   const b = bucket()
   if (!a || !b) return null
-  try {
-    const { data, error } = await a.storage.from(b).createSignedUrl(path, ttlSeconds)
-    if (error || !data?.signedUrl) return null
-    _signCache.set(path, { url: data.signedUrl, exp: now + ttlSeconds * 1000 })
-    return data.signedUrl
-  } catch {
-    return null
+  const BACKOFF_MS = [0, 150, 400]
+  for (let attempt = 0; attempt < BACKOFF_MS.length; attempt++) {
+    if (BACKOFF_MS[attempt]) await new Promise((r) => setTimeout(r, BACKOFF_MS[attempt]))
+    try {
+      const { data, error } = await a.storage.from(b).createSignedUrl(path, ttlSeconds)
+      if (error || !data?.signedUrl) continue
+      _signCache.set(path, { url: data.signedUrl, exp: Date.now() + ttlSeconds * 1000 })
+      return data.signedUrl
+    } catch {
+      // transient network error → retry with backoff
+    }
   }
+  return null
 }
