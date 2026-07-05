@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that governments should spend large sums of money on space exploration, while others argue these funds would be better used to solve problems on Earth. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论政府应资助太空探索还是优先解决地球上的问题这两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Scientific and technological spin-offs from space programmes",
+        "Urgency of terrestrial issues such as poverty and healthcare",
+        "Long-term survival and inspiration arguments for exploration",
+        "A balanced position on how public budgets should be prioritised"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that university places should be awarded on the basis of a single entrance examination, while others believe continuous assessment of schoolwork over several years is a fairer method. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论大学录取应依据一次性入学考试还是多年持续评估这两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Objectivity and equal conditions offered by a single exam",
+        "Exam pressure and the risk of one bad day deciding a future",
+        "How continuous assessment rewards steady effort but may invite bias",
+        "Your view on which method selects students more fairly"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that governments should invest in high-speed rail networks for travel between cities, while others believe expanding air travel is a better use of resources. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论政府应投资城际高速铁路还是发展航空运输这两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Environmental impact of rail compared with aviation",
+        "Construction costs and geographical limits of rail networks",
+        "Convenience, speed and coverage offered by air routes",
+        "A reasoned conclusion about long-term transport planning"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that computer programming should be a compulsory subject for all primary school children, while others feel this time would be better spent on traditional subjects. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论小学是否应将编程设为必修课，还是应把时间留给传统科目，讨论两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Digital skills and logical thinking developed through coding",
+        "Crowded curricula and the foundational value of literacy and numeracy",
+        "Whether coding taught early will still be relevant later",
+        "Your position on curriculum priorities for young children"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that a legal minimum wage set by the government protects workers, while others argue that it discourages companies from hiring and harms small businesses. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论法定最低工资是保护劳动者还是抑制企业雇佣的两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Protection against exploitation and in-work poverty",
+        "Possible effects on hiring, automation and small firms",
+        "Alternatives such as tax credits or sector-specific wage floors",
+        "Your judgement on how governments should balance these interests"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Television talent shows attract huge audiences worldwide. Some people say these programmes give ordinary people a valuable route to success, while others claim they exploit participants for entertainment. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论电视选秀节目是给普通人提供成功途径还是利用参赛者取乐的两种观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Opportunities and exposure such shows give unknown performers",
+        "Pressure, public ridicule and short-lived fame for contestants",
+        "The commercial motives of producers and broadcasters",
+        "Your overall assessment of these programmes' value"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that all schoolchildren should be required to wear a uniform. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：所有中小学生都应被要求穿校服，你在多大程度上同意或不同意？不少于 250 词。",
+      "referencePoints": [
+        "Equality and reduced peer pressure over clothing",
+        "Loss of personal expression and individuality",
+        "Costs to families and practical considerations",
+        "A clear overall position with consistent support"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Governments should subsidise farmers who switch to organic methods, even if this makes some food more expensive. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：政府应补贴转向有机耕作的农民，即使这会推高部分食品价格，你在多大程度上同意或不同意？不少于 250 词。",
+      "referencePoints": [
+        "Environmental and soil-health benefits of organic farming",
+        "Effects of higher food prices on low-income households",
+        "Whether subsidies are the best tool to change farming practices",
+        "A clear stance on the trade-off between environment and affordability"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say that dangerous extreme sports such as free climbing and wingsuit flying should be banned or strictly regulated by law. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：危险的极限运动应被法律禁止或严格管制，你在多大程度上同意或不同意？不少于 250 词。",
+      "referencePoints": [
+        "Personal freedom and the right to take risks with one's own life",
+        "Costs of rescue operations and medical care borne by society",
+        "Whether regulation, training and licensing are better than bans",
+        "A definite position supported by relevant examples"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that university students should be required to complete a period of unpaid volunteering before they are allowed to graduate. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：大学生毕业前应被要求完成一段无偿志愿服务，你在多大程度上同意或不同意？不少于 250 词。",
+      "referencePoints": [
+        "Character development and social awareness gained through volunteering",
+        "Whether compulsory service undermines the spirit of volunteering",
+        "Time pressure on students who must work or study intensively",
+        "Your conclusion on making such service a graduation requirement"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Advertising for cosmetic surgery should be banned because it encourages people, especially the young, to feel dissatisfied with their appearance. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：应禁止整容手术广告，因为它助长人们尤其是年轻人对外貌的不满，你在多大程度上同意或不同意？不少于 250 词。",
+      "referencePoints": [
+        "The influence of advertising on body image and self-esteem",
+        "Commercial freedom and adults' right to information about legal services",
+        "Whether restrictions or warnings are preferable to a total ban",
+        "A firm overall judgement with supporting reasons"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, people living in remote rural areas struggle to access doctors and hospitals. What problems does this cause, and what measures could governments take to address this situation? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：许多国家偏远农村地区居民难以获得医疗服务，这带来哪些问题，政府可采取哪些措施？不少于 250 词。",
+      "referencePoints": [
+        "Delayed diagnosis, preventable deaths and rural depopulation",
+        "Telemedicine and mobile clinics as partial solutions",
+        "Incentives to attract doctors and nurses to remote regions",
+        "Investment in transport links and local health infrastructure"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. An increasing number of employees now work overnight shifts in factories, hospitals and logistics centres. What effects does regular night work have on individuals and society, and what should employers and governments do to protect these workers? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：越来越多员工长期上夜班，这对个人和社会有哪些影响，雇主和政府应如何保护这些劳动者？不少于 250 词。",
+      "referencePoints": [
+        "Health consequences of disrupted sleep and irregular routines",
+        "Effects on family life and social participation",
+        "Workplace measures such as shift limits, rest breaks and health checks",
+        "Possible legal protections and compensation for night workers"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many towns and cities, public libraries are losing visitors and facing closure as more people read and research online. Why is this happening, and what could be done to keep public libraries relevant? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：数字时代公共图书馆访客减少甚至面临关闭，原因何在，可采取什么措施使其保持价值？不少于 250 词。",
+      "referencePoints": [
+        "Convenience of e-books, search engines and online databases",
+        "Funding cuts and changing reading habits",
+        "Reinventing libraries as community, learning and digital-access hubs",
+        "The library's role for people without internet access at home"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many children under the recommended minimum age regularly use social media platforms. What problems does this cause for young users, and how can parents, technology companies and governments deal with this issue? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：许多未达最低年龄的儿童经常使用社交媒体，这带来哪些问题，家长、企业与政府应如何应对？不少于 250 词。",
+      "referencePoints": [
+        "Exposure to harmful content, cyberbullying and addictive design",
+        "Effects on concentration, sleep and self-image",
+        "Stricter age verification and platform accountability",
+        "Digital literacy education and parental supervision"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some companies have introduced a four-day working week with no reduction in pay. Do the advantages of this arrangement outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：一些公司实行四天工作制且薪酬不变，这种安排的利是否大于弊？不少于 250 词。",
+      "referencePoints": [
+        "Improved wellbeing, motivation and staff retention",
+        "Possible productivity pressures compressed into fewer days",
+        "Challenges for customer service and industries needing constant cover",
+        "A clear verdict on whether benefits outweigh drawbacks"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Driverless vehicles are expected to become common on public roads in the coming decades. Do the advantages of this development outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：无人驾驶汽车预计将在未来几十年普及，这一发展的利是否大于弊？不少于 250 词。",
+      "referencePoints": [
+        "Potential reductions in accidents caused by human error",
+        "Job losses among professional drivers",
+        "Questions of legal responsibility and software reliability",
+        "Mobility benefits for elderly and disabled people"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some supermarkets and shops now sell products without any packaging, requiring customers to bring their own containers. Do the advantages of this approach outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：一些商店推行无包装销售、顾客自带容器，这种做法的利是否大于弊？不少于 250 词。",
+      "referencePoints": [
+        "Reduction of packaging waste and pollution",
+        "Hygiene concerns and food safety considerations",
+        "Convenience costs for shoppers and retailers",
+        "Whether this model can work beyond niche stores"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many cities now require property developers to include parks and other green spaces in new building projects. Why are green spaces important for city residents, and should such requirements be enforced by law? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：许多城市要求开发商在新建项目中配建绿地，绿地为何对居民重要，是否应以法律强制执行？不少于 250 词。",
+      "referencePoints": [
+        "Physical and mental health benefits of accessible green areas",
+        "Environmental effects such as cooling and air quality",
+        "Costs to developers and pressure on housing supply",
+        "Your view on legal mandates versus voluntary planning"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Scientists are developing methods that could replace the use of animals in laboratory testing. Why has animal testing been considered necessary in the past, and should governments now require companies to adopt these alternative methods? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：科学家正在开发替代动物实验的方法，过去为何认为动物实验必要，如今政府是否应强制企业采用替代方法？不少于 250 词。",
+      "referencePoints": [
+        "Historical role of animal testing in medical and safety research",
+        "Ethical objections and animal welfare concerns",
+        "Reliability and readiness of alternatives such as cell cultures and computer models",
+        "Your position on government mandates and transition timelines"
+      ],
+      "wordLimit": ">=250"
+    }
+  ]
+}

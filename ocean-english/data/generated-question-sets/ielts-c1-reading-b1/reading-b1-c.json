@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Cities were once regarded as barren places for wildlife, hostile stretches of concrete and glass where only pigeons and rats could persist. That view has been steadily overturned. Ecologists now recognise urban areas as dynamic habitats in which a surprising range of species not only survives but flourishes. The animals that succeed, however, are rarely those that thrive in untouched wilderness. Instead, cities favour a particular kind of resident: the flexible generalist, an organism capable of adjusting its diet, behaviour and daily rhythm to conditions that would defeat a more specialised competitor.\n\nConsider the fox. In many European cities, red foxes have become a familiar sight, trotting along pavements at dusk and raising cubs beneath garden sheds. Rural foxes hunt across wide territories, but their urban relatives occupy far smaller ranges because food is densely concentrated. Discarded takeaways, compost heaps and overflowing bins provide a reliable supply of calories, so a city fox need not roam far. This compression of territory illustrates a broader principle: the city rewrites the rules of foraging, and the animals that read the new rules quickest are the ones that prosper.\n\nBehavioural flexibility is only part of the story. Physical and physiological changes can appear with striking speed. Studies of urban birds have found that many sing at a higher pitch than their countryside counterparts. The reason is acoustic: low-frequency traffic noise masks low-pitched song, so males that raise their pitch can still be heard by potential mates. Other birds have shifted the timing of their singing, performing before dawn when the roads are quieter. These are not conscious decisions but the product of selection acting on natural variation, and they demonstrate how quickly a population can be reshaped by an artificial environment.\n\nLight is another powerful force. Artificial illumination extends the apparent day, and its effects ripple through the food web. Some spiders now build their webs beside street lamps, exploiting the insects that gather there, and certain bats have learned to patrol the same pools of light for an easy meal. Yet the same brightness that benefits these hunters disorients others. Newly hatched sea turtles, which instinctively head towards the brightest horizon, may crawl inland towards floodlit buildings rather than seaward, a fatal error. The city is therefore neither uniformly kind nor uniformly cruel; it distributes advantage unevenly, according to how each species happens to be equipped.\n\nWarmth reinforces these patterns. Dense construction, dark roofs and waste heat combine to make cities several degrees warmer than the surrounding countryside, an effect known as the urban heat island. Milder winters allow some insects and their predators to remain active for longer, and a number of birds that once migrated south now stay put, sustained by garden feeders and the extra warmth. Over time such choices may become fixed in a population, so that migration itself is abandoned.\n\nNone of this means that urban living is easy. Roads kill enormous numbers of animals, pollutants accumulate in tissues, and populations can be squeezed into fragmented pockets of green space. Diseases may spread rapidly where animals congregate around a shared food source. The species that persist are those whose tolerance is broad enough to absorb these costs while still exploiting the opportunities. For every adaptable crow or raccoon there are many sensitive specialists that simply vanish from the built environment, leaving cities biologically simpler than the landscapes they replaced.\n\nRecognising the city as a genuine habitat has practical consequences. Planners increasingly design green corridors that link parks and gardens, allowing animals to move safely and maintaining the genetic exchange on which healthy populations depend. Ponds, hedgerows and even planted rooftops can raise the diversity a city supports. Some researchers argue that studying urban wildlife offers an unusual scientific gift: because environmental change here is so rapid and so measurable, cities function as vast open-air laboratories in which evolution can be watched almost in real time. What was once dismissed as a wildlife desert is now understood as a frontier, one where the ancient process of adaptation is unfolding faster than almost anywhere else on Earth.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Cities have become dangerous places that most wild animals should be helped to leave.",
+            "Cities are active habitats that favour adaptable species and can reveal rapid evolutionary change.",
+            "Urban foxes are the clearest example of how wildlife suffers in modern cities.",
+            "Artificial light is the single most important factor shaping urban animal populations."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why do urban foxes occupy smaller territories than rural foxes?",
+          "options": [
+            "They are physically weaker and cannot travel long distances.",
+            "City authorities confine them to particular districts.",
+            "Food is concentrated densely, so they do not need to roam far.",
+            "They must avoid the larger territories claimed by other predators."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What reason does the passage give for some urban birds singing at a higher pitch?",
+          "options": [
+            "Higher notes travel further in warm city air.",
+            "Low-pitched song is masked by low-frequency traffic noise.",
+            "Higher song requires less energy in a noisy environment.",
+            "Females in cities prefer higher songs for no clear reason."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that highly specialised species tend to",
+          "options": [
+            "adapt their diets faster than generalists do.",
+            "disappear from cities because they cannot tolerate the new conditions.",
+            "benefit most from the warmth of the urban heat island.",
+            "become the dominant animals in green corridors."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the sixth paragraph, the word \"absorb\" is closest in meaning to",
+          "options": [
+            "withstand or cope with.",
+            "soak up like a sponge.",
+            "measure precisely.",
+            "spread widely."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The writer's main purpose in the final paragraph is to",
+          "options": [
+            "warn that urban wildlife cannot be saved without drastic action.",
+            "criticise planners for ignoring the needs of animals.",
+            "show how the new understanding of cities has useful and scientific value.",
+            "argue that cities are more diverse than natural landscapes."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇讨论城市野生动物的适应，主旨是城市是有利于灵活物种并能快速展现进化的真实栖息地。题目覆盖主旨、细节、推断、词义与写作目的。"
+    },
+    {
+      "passage": "The world is generating ever more electricity from wind and sunlight, yet these sources share an awkward feature: they are intermittent. The sun sets, clouds pass, and the wind drops, often at the very moment that demand for power is climbing. A grid that relies heavily on such sources must therefore find ways to store energy when it is abundant and release it when it is scarce. The economics of that storage, rather than the cost of the panels and turbines themselves, may ultimately decide how quickly the world can abandon fossil fuels.\n\nThe most established storage technology is pumped hydroelectricity. When surplus power is available, water is pumped uphill into a reservoir; when demand rises, it is allowed to fall back through turbines. The method is cheap per unit of energy stored and can last for decades, but it depends on suitable terrain, namely two large bodies of water at different heights. Most convenient sites in wealthy countries were developed long ago, so although pumped hydro still accounts for the great majority of the world's storage capacity, its scope for expansion is limited.\n\nBatteries have therefore attracted enormous attention. Lithium-ion cells, the same chemistry that powers phones and electric cars, can be installed almost anywhere and respond within milliseconds. Their price has fallen dramatically over the past decade as manufacturing has scaled up. Yet batteries are best suited to short bursts, smoothing the flow of power over minutes or a few hours. Using them to cover a still, dark week in winter would require quantities so vast that the cost becomes prohibitive. Here economists distinguish between two very different services: managing brief fluctuations, at which batteries excel, and providing long-duration backup, at which they currently do not.\n\nThe difficulty is best understood through the idea of cost per cycle. A storage system that charges and discharges every day spreads its capital cost over thousands of uses, so each unit of delivered energy is cheap. A system that is called upon only during rare shortages may cycle just a handful of times a year, so its fixed cost is divided among very few units and the effective price soars. This is why the market is unlikely to be won by a single technology. Instead, a portfolio is emerging in which fast batteries handle the daily rhythm while other methods address the longer gaps.\n\nSeveral candidates compete for that longer role. Flow batteries store energy in tanks of liquid and can be scaled up simply by using bigger tanks, which makes them attractive for durations of many hours. Compressed air and heated rock or molten salt offer ways to bank energy for days. The most ambitious proposals involve using surplus electricity to split water into hydrogen, which can be stored for months and burned or converted back when needed. Hydrogen's round-trip efficiency is poor, meaning much of the original energy is lost, but its ability to hold power across seasons gives it a value that efficiency figures alone do not capture.\n\nPolicy shapes these calculations profoundly. In many countries the rules that govern electricity markets were written for a system of large, controllable power stations and do not reward the flexibility that storage provides. If an operator is paid only for the energy it sells, and not for standing ready to deliver at critical moments, investment in long-duration storage will lag behind what the grid actually needs. Reformers argue that markets must place an explicit value on reliability itself, so that the service of being available is properly rewarded.\n\nThere is also a hidden competitor that costs almost nothing to build: doing without storage altogether. Demand can be shifted rather than supply stored. Encouraging factories, water-heating systems and electric cars to consume power when it is plentiful, and to pause when it is scarce, flattens the peaks that storage would otherwise have to fill. Combined with long transmission lines that move power from regions where the wind is blowing to those where it is calm, such measures reduce the total amount of storage required. The cheapest stored energy, in other words, is often the energy that never needs to be stored. The transition to clean power will hinge not on any single breakthrough but on the careful assembly of these complementary pieces.",
+      "questions": [
+        {
+          "prompt": "What is the central argument of the passage?",
+          "options": [
+            "Lithium-ion batteries will soon make all other storage technologies obsolete.",
+            "The economics of storing and managing intermittent power, not generation cost, will largely determine the pace of the clean-energy transition.",
+            "Pumped hydroelectricity remains the only realistic form of large-scale storage.",
+            "Renewable energy is too unreliable to replace fossil fuels in the near future."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why is the expansion of pumped hydroelectricity limited?",
+          "options": [
+            "It is more expensive per unit of energy than batteries.",
+            "It responds too slowly to sudden changes in demand.",
+            "It requires specific terrain, and most convenient sites are already developed.",
+            "It cannot store energy for more than a few hours."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the passage say about using hydrogen for storage?",
+          "options": [
+            "It is highly efficient, losing very little of the original energy.",
+            "It can hold power across seasons despite poor round-trip efficiency.",
+            "It is the cheapest of all long-duration options.",
+            "It works only in countries with suitable terrain."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the discussion of cost per cycle that a storage system used only during rare shortages",
+          "options": [
+            "delivers energy more cheaply than one used daily.",
+            "produces energy at a high effective price because its cost is shared among few uses.",
+            "is always more efficient than a lithium-ion battery.",
+            "should be built only where pumped hydro is impossible."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"flattens\" is closest in meaning to",
+          "options": [
+            "reduces the height of.",
+            "completely removes.",
+            "measures accurately.",
+            "makes more frequent."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The writer discusses shifting demand and long transmission lines mainly in order to",
+          "options": [
+            "prove that storage technology will never be needed.",
+            "criticise governments for failing to build enough batteries.",
+            "show that reducing the need for storage is part of the overall solution.",
+            "explain why hydrogen is superior to flow batteries."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇分析可再生能源储能的经济学，强调储能与调度成本是清洁能源转型速度的关键。题型含主旨、细节、推断、词义与写作意图。"
+    },
+    {
+      "passage": "Long before the invention of the mechanical clock, human societies devised ingenious ways of dividing the day and the year. The measurement of time was never a purely abstract exercise; it grew out of practical needs. Farmers had to know when to plant and harvest, priests when to hold festivals, and rulers when to collect taxes. To answer such questions, ancient peoples turned to the most dependable clock available: the sky. The regular movements of the sun, moon and stars offered a set of natural rhythms that could be observed, recorded and eventually predicted.\n\nThe simplest of these instruments was the shadow. A vertical stick, known as a gnomon, casts a shadow that shortens and lengthens as the sun climbs and descends, and that swings from one side to the other as the day passes. By marking the ground where the shadow fell, early observers created the first sundials. The Egyptians refined the idea into tall obelisks whose moving shadows announced the hours to anyone in the surrounding square. Yet the sundial had obvious limitations: it was useless at night, and it fell silent whenever clouds obscured the sun.\n\nTo tell time in darkness, other devices were required. The water clock, or clepsydra, measured the steady dripping of water from one vessel into another; as the level rose against marked graduations, the passing of the hours could be read. The Egyptians and later the Greeks made increasingly elaborate versions, some fitted with floats that turned pointers or even rang bells. Because water flows regardless of weather or the hour, the clepsydra freed timekeeping from the sun, and it remained in use for many centuries. Its accuracy, however, drifted with temperature, for water runs faster when warm and slower when cold.\n\nMeasuring longer spans demanded attention to the moon and stars. The waxing and waning of the moon provided a natural unit of roughly thirty days, and many early calendars were lunar. The trouble was that twelve lunar months fall about eleven days short of a solar year, so a purely lunar calendar soon drifts out of step with the seasons. Different civilisations solved this problem in different ways. Some, like the Babylonians, periodically inserted an extra month to realign the calendar with the sun. The Egyptians, by contrast, largely abandoned the moon for civil purposes and adopted a year of 365 days, having noticed that the star Sirius reappeared in the dawn sky at the same point in their agricultural cycle each year.\n\nThe motive behind such precision was often as much religious as agricultural. In Mesoamerica, the Maya developed calendars of extraordinary sophistication, interlocking cycles that tracked both ritual and solar time. Their astronomers recorded the movements of Venus with remarkable accuracy, not to organise farming but because the planet was woven into their mythology and their decisions about when to wage war. Here the measurement of time reveals something deeper: for many ancient cultures, the heavens were not a neutral backdrop but a source of meaning, and to chart their motions was to glimpse the intentions of the gods.\n\nAcross these varied traditions a common pattern emerges. Timekeeping advanced through patient observation accumulated over generations, then recorded in forms that later observers could build upon. The night sky, endlessly repeating yet subtly shifting, rewarded those who kept careful records with the power of prediction, and prediction conferred authority. A priesthood that could foretell an eclipse or announce the flooding of a river seemed to command the very order of nature. In this sense the earliest astronomers were also among the earliest custodians of knowledge, and their measurements laid foundations on which all later science would rest. The mechanical clocks that appeared much later did not so much replace this ancient enterprise as inherit it, translating the rhythms of the heavens into the turning of gears.",
+      "questions": [
+        {
+          "prompt": "Which statement best captures the main idea of the passage?",
+          "options": [
+            "Ancient civilisations measured time by observing the sky to meet practical and religious needs, building knowledge over generations.",
+            "The water clock was the most important timekeeping device ever invented.",
+            "Lunar calendars were superior to solar ones in every ancient society.",
+            "The mechanical clock made all earlier methods of timekeeping worthless."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what was a major limitation of the sundial?",
+          "options": [
+            "It was too large to place in a public square.",
+            "It could not be read at night or when clouds hid the sun.",
+            "Its accuracy changed with the temperature of the air.",
+            "It required an extra month to be inserted each year."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the Egyptians adopt a 365-day year rather than a lunar calendar for civil purposes?",
+          "options": [
+            "They found lunar months easier to divide into weeks.",
+            "They noticed the star Sirius reappeared at dawn at the same point in their farming cycle each year.",
+            "They wanted to match the calendar used by the Babylonians.",
+            "They believed the moon was unrelated to the seasons."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the Maya recorded the movements of Venus primarily because",
+          "options": [
+            "Venus was the best guide to the timing of the harvest.",
+            "the planet held religious meaning and influenced decisions such as when to fight.",
+            "they had no way of observing the sun or moon.",
+            "they wished to correct errors in the Egyptian calendar."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"conferred\" is closest in meaning to",
+          "options": [
+            "discussed with others.",
+            "granted or gave.",
+            "compared carefully.",
+            "took away."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The writer mentions a priesthood that could foretell an eclipse mainly to",
+          "options": [
+            "suggest that ancient astronomers were dishonest.",
+            "illustrate how the power of prediction gave early timekeepers authority.",
+            "explain how eclipses were used to set the length of the year.",
+            "argue that religion held back the progress of science."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇讲古代文明如何借助天象测量时间，兼具实用与宗教动机。题目涵盖主旨、细节、推断、词义与写作目的。"
+    },
+    {
+      "passage": "To an adult observer, a child at play may seem to be doing nothing of consequence: stacking blocks, chasing friends, or inventing conversations between toys. For much of history this activity was dismissed as a trivial way of filling the hours until real learning could begin. Modern research tells a very different story. Play, it turns out, is not a pause from development but one of its principal engines. Through play children rehearse the physical, intellectual and social skills they will need throughout their lives, and they do so with an intensity and persistence that formal instruction rarely commands.\n\nThe benefits begin with the body. In the rough-and-tumble of running, climbing and balancing, children refine the coordination of muscle and nerve. A toddler who repeatedly stacks and topples a tower is not merely amusing itself; it is testing the properties of objects, learning about gravity, weight and balance through direct experiment. Because the child sets the challenge and controls the pace, it remains engaged far longer than it would with a task imposed from outside. This sense of ownership is one reason play is such a powerful teacher.\n\nJust as important are the cognitive gains. Pretend play, in which a stick becomes a sword or a cardboard box becomes a spaceship, requires the child to hold two ideas in mind at once: the object as it is and the object as imagined. Psychologists regard this capacity for symbolic thought as a foundation for later abstract reasoning, including language and mathematics. When children narrate their games, assign roles and negotiate rules, they also stretch their vocabulary and practise the give-and-take of conversation. A game of make-believe is, in effect, a rehearsal for thinking itself.\n\nThe social dimension may be the most far-reaching of all. In group play children must take turns, resolve disputes and read the intentions of others. When a disagreement erupts over the rules of a game, the players face a genuine problem: either they find a compromise or the game collapses. In working towards a solution they practise negotiation, empathy and self-control, the very abilities that underpin cooperation in adult life. Crucially, the stakes in play are low. A mistake carries no lasting penalty, so the child is free to experiment with behaviour that would be risky in a real setting.\n\nThis safety helps explain why play so often involves managing fear and uncertainty. Children deliberately seek out situations that are mildly frightening, climbing a little higher or telling a scary story, and in doing so they learn to regulate their own emotions. The pretend world lets them confront worries at a comfortable distance. A child who acts out a visit to the doctor, for instance, may be rehearsing a way to master an experience that felt overwhelming when it actually happened. What looks like idle fantasy can be a form of quiet emotional work.\n\nGiven these findings, many researchers express concern about the direction in which childhood is moving. In some societies the hours available for free, unstructured play have shrunk, squeezed by longer school days, an emphasis on measurable academic results, and the pull of screens that offer stimulation without the same open-ended exploration. The worry is not that children have stopped playing altogether but that spontaneous, self-directed play, the kind children organise for themselves, is giving way to activities designed and supervised by adults. Something valuable may be lost when every game has a goal set by a grown-up.\n\nNone of this implies that adults have no part to play. Sensitive caregivers can enrich play by providing varied materials, safe spaces and, occasionally, a well-timed question that nudges a game in a new direction. The art lies in supporting without taking over, in resisting the temptation to turn every moment into a lesson. Play works precisely because it belongs to the child, and its lessons are absorbed all the more deeply for never feeling like lessons at all. To protect children's freedom to play, then, is not to indulge them but to safeguard one of the most effective forms of learning that human beings possess.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Adults should design more structured games to make children's play educational.",
+            "Play is a central driver of children's physical, cognitive, social and emotional development.",
+            "Pretend play is the only type of play that benefits children.",
+            "Modern childhood has been improved by longer school days and screens."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why does a child remain engaged in play longer than in an imposed task?",
+          "options": [
+            "Play is always physically easier than formal instruction.",
+            "The child sets the challenge and controls the pace, giving a sense of ownership.",
+            "Adults reward children for playing for long periods.",
+            "Play requires no thinking and is therefore effortless."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage say children practise during disagreements in group play?",
+          "options": [
+            "Ignoring the feelings of other players.",
+            "Negotiation, empathy and self-control.",
+            "Following rules set entirely by adults.",
+            "Winning at any cost to keep the game going."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that when a child acts out a visit to the doctor, the child is likely",
+          "options": [
+            "trying to avoid ever going to the doctor again.",
+            "processing and gaining control over an experience that felt overwhelming.",
+            "showing that pretend play has no real purpose.",
+            "imitating an adult purely to earn praise."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the sixth paragraph, the word \"squeezed\" is closest in meaning to",
+          "options": [
+            "pressed or reduced.",
+            "measured carefully.",
+            "gently encouraged.",
+            "completely removed."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's attitude towards the adult role in play can best be described as",
+          "options": [
+            "dismissive: adults should never interfere with children's play.",
+            "balanced: adults should support play without taking control of it.",
+            "critical: adults inevitably ruin the value of play.",
+            "indifferent: the adult role makes no measurable difference."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇论述游戏在儿童身体、认知、社交与情绪发展中的核心作用，并主张保护自由游戏。题型含主旨、细节、推断、词义与作者态度。"
+    },
+    {
+      "passage": "The deep sea is the largest habitat on Earth and also the least explored. Below about two hundred metres sunlight fades to nothing, and the water grows steadily colder and heavier. At the greatest depths the pressure is more than a thousand times that at the surface, enough to crush a submarine built for shallower waters. Cold, darkness and crushing force together make the deep ocean an environment as hostile to human beings as outer space, and in some respects harder to reach. It is often noted that we have mapped the surface of Mars in finer detail than the floor of our own oceans.\n\nThe first tool for descending safely was the bathysphere, a hollow steel ball lowered on a cable in the 1930s. Its occupants could observe the deep through small windows, but they were entirely at the mercy of the vessel above and could not move under their own power. A crucial advance came with the bathyscaphe, which carried its own buoyancy in the form of a large float filled with petrol, a liquid lighter than water and, importantly, almost incompressible. Releasing iron ballast allowed the craft to rise again. In 1960 such a vessel carried two men to the bottom of the Mariana Trench, the deepest known point in the ocean, proving that even the most extreme depths were within human reach.\n\nCarrying people to such places, however, is costly and dangerous, and a human occupant severely limits how long a mission can last. For this reason much modern exploration relies on machines. Remotely operated vehicles, or ROVs, are connected to a ship by a long cable, called a tether, that supplies power and carries a stream of video to operators at the surface. Because no human life is aboard, an ROV can remain submerged for many hours and venture into spaces too cramped or hazardous for a crewed craft. Skilled pilots use robotic arms to collect samples, place instruments and even perform delicate tasks on the seabed.\n\nThe tether that makes an ROV so capable is also its chief constraint, limiting range and requiring a support ship to remain overhead. Autonomous underwater vehicles, or AUVs, dispense with the cable altogether. Programmed in advance, they cruise through the water on their own, mapping wide areas of seabed with sonar before returning to be collected. Freed from a physical link, they can survey far larger territories, though they cannot yet match the fine manipulation that a tethered vehicle allows. The two technologies are therefore complementary rather than rival: the AUV surveys broadly, and the ROV investigates closely.\n\nWhatever the vehicle, certain problems must always be solved. Ordinary radio waves scarcely travel through seawater, so communication and navigation depend instead on sound. Vehicles fix their position by timing acoustic signals exchanged with beacons or the surface ship, and they send data as pulses of sound, a channel far slower than the radio and light that serve us on land. Light itself must be carried down, for the deep is utterly dark; powerful lamps illuminate only a small sphere, and fine particles suspended in the water scatter the beam and blur the view. Every image returned from the abyss is won against these obstacles.\n\nThe rewards, however, have been extraordinary. Deep-sea vehicles revealed hydrothermal vents, cracks in the sea floor where superheated, mineral-rich water gushes out. Around them thrive communities of animals that depend not on sunlight but on chemical energy drawn from the vent fluids, a discovery that overturned the long-held assumption that all life ultimately runs on the sun. Exploration has also mapped vast mountain ranges, located historic shipwrecks and catalogued countless previously unknown species. Each expedition underlines how little of this realm has been seen.\n\nInterest in the deep is now intensifying for reasons beyond pure science. The sea floor holds valuable minerals, and some companies hope to mine them, raising urgent questions about damage to ecosystems we barely understand. Better exploration technology is therefore not merely a scientific luxury but a practical necessity: only by observing these habitats can we judge what their disturbance might cost. The instruments that let us see into the dark, in other words, may prove essential to deciding how, and whether, we should exploit it.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the passage as a whole?",
+          "options": [
+            "Deep-sea exploration technology has advanced from crewed craft to robotic vehicles, enabling discoveries and informing decisions about the ocean's future.",
+            "The bathysphere remains the safest way to explore the deep ocean.",
+            "Autonomous vehicles have completely replaced remotely operated ones.",
+            "Deep-sea mining should be banned because the technology is inadequate."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what advantage did the bathyscaphe have over the earlier bathysphere?",
+          "options": [
+            "It could send video directly to the surface.",
+            "It carried its own buoyancy and could rise by releasing ballast, rather than depending only on a cable.",
+            "It was operated entirely without any human crew.",
+            "It could travel across wide areas mapping the seabed with sonar."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage identify as the chief constraint of a remotely operated vehicle (ROV)?",
+          "options": [
+            "Its inability to carry lights into the dark.",
+            "The tether, which limits its range and requires a support ship overhead.",
+            "Its reliance on radio waves for communication.",
+            "The short time it can remain submerged compared with a crewed craft."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the discovery of life around hydrothermal vents was significant because it",
+          "options": [
+            "proved that sunlight reaches the deepest parts of the ocean.",
+            "challenged the belief that all life ultimately depends on the sun.",
+            "showed that ROVs are unnecessary for deep-sea research.",
+            "demonstrated that the sea floor contains no valuable minerals."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"complementary\" is closest in meaning to",
+          "options": [
+            "working together so that each makes up for the other's weaknesses.",
+            "competing directly for the same task.",
+            "expensive and difficult to operate.",
+            "identical in design and purpose."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The writer's main purpose in the final paragraph is to",
+          "options": [
+            "argue that deep-sea mining is certain to be harmless.",
+            "explain why better exploration technology matters for decisions about exploiting the sea floor.",
+            "describe the design of a new mining vehicle.",
+            "prove that the deep sea holds no minerals worth extracting."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇介绍深海探测技术从载人潜器到无人机器人的演进及其科学发现与现实意义。题目含主旨、细节、推断、词义与写作目的。"
+    }
+  ]
+}

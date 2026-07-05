@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that schools should teach practical life skills such as cooking, managing money and basic home repairs, while others think schools should concentrate only on traditional academic subjects. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：学校应教授生活技能还是专注学术科目，讨论双方观点并给出你的看法，不少于 250 词。",
+      "referencePoints": [
+        "Both views must be genuinely developed before the writer's own position is given; a one-sided essay caps Task Response.",
+        "Look for concrete illustrations, e.g. specific life skills or academic subjects, rather than vague generalities.",
+        "The writer's own opinion should be clear and consistent throughout, not appear only in the conclusion.",
+        "Reward cohesive contrast language (whereas, by contrast, admittedly) used accurately and without over-repetition."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that instant translation software has made learning foreign languages at school a waste of time, while others believe language learning remains as valuable as ever. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：机器翻译时代学外语是否仍有价值，讨论双方观点并表明立场，不少于 250 词。",
+      "referencePoints": [
+        "Check that the essay addresses both the technology argument and the value-of-learning argument in reasonable balance.",
+        "Ideas should be extended with reasons or examples (cultural understanding, cognitive benefits, software limitations), not merely listed.",
+        "A clear position is required; hedging that never commits to a view weakens Task Response.",
+        "Assess precision of topic vocabulary (e.g. fluency, immersion, algorithm) and control of complex sentences."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think museums and galleries should aim above all to entertain their visitors, while others believe their main purpose is to educate and preserve heritage. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：博物馆应以娱乐为主还是以教育和保护遗产为主，讨论双方并给出观点，不少于 250 词。",
+      "referencePoints": [
+        "Both purposes (entertainment vs education/preservation) need development; note whether the writer explores why each side holds its view.",
+        "Reward recognition of possible middle ground (entertainment as a tool for education) if it is argued coherently rather than as fence-sitting.",
+        "Paragraphing should show one clear central idea per paragraph with logical progression.",
+        "Check range and accuracy of culture-related lexis (exhibit, curator, heritage, interactive display)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that enjoying one's job matters more than earning a high salary, while others say that a well-paid position should always be the priority. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：工作满意度与高薪哪个更重要，讨论双方观点并表明你的立场，不少于 250 词。",
+      "referencePoints": [
+        "Both positions should be explained with plausible supporting reasons (well-being, motivation vs financial security, family obligations).",
+        "Examples from personal or general experience should support, not replace, argumentation.",
+        "The final opinion must follow logically from the discussion rather than contradict earlier points.",
+        "Note grammatical range: conditionals and comparatives are natural here and their accuracy is a useful discriminator."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many cities there is disagreement about old buildings: some people say historic architecture should be protected even at great expense, while others argue the land should be used for modern housing and offices. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：历史建筑应不惜代价保护还是让位于现代开发，讨论双方并给出观点，不少于 250 词。",
+      "referencePoints": [
+        "Expect engagement with the cost dimension ('even at great expense'), not just a generic preservation-versus-development essay.",
+        "Reward specific, relevant support such as identity, tourism value, housing shortages or maintenance costs.",
+        "The writer's position should be evident and consistently maintained across paragraphs.",
+        "Cohesion should come from logical sequencing, not mechanical overuse of linkers like 'firstly/secondly'."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that staying healthy is each individual's own responsibility, while others think governments should take active steps to make citizens live more healthily. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：健康是个人责任还是政府应主动干预，讨论双方观点并表明立场，不少于 250 词。",
+      "referencePoints": [
+        "Both the personal-responsibility view and the state-intervention view need substantive treatment.",
+        "Look for concrete policy or lifestyle examples (taxes on sugary drinks, exercise habits, public campaigns) used to extend ideas.",
+        "A clear, sustained opinion is required; assess whether the conclusion adds a considered position rather than repeating the prompt.",
+        "Check accurate use of health and policy vocabulary and appropriate formal register."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Because most news is now available online without charge, some people claim that high-quality journalism will inevitably decline. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：新闻免费在线获取是否必然导致优质新闻衰落，你在多大程度上同意，不少于 250 词。",
+      "referencePoints": [
+        "The degree of agreement must be explicit; essays that merely describe online news without evaluating the claim lose Task Response marks.",
+        "Reward engagement with the causal claim ('inevitably'), e.g. discussion of subscriptions, advertising or public funding as counter-evidence.",
+        "Each body paragraph should advance the argued position with developed support, not a list of loosely related facts.",
+        "Assess media-related vocabulary (paywall, editorial standards, clickbait) and control of complex structures."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say that governments should pass laws banning all single-use plastic packaging, regardless of the cost to businesses and consumers. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否应立法全面禁止一次性塑料包装，你在多大程度上同意，不少于 250 词。",
+      "referencePoints": [
+        "The absolute wording ('all', 'regardless of the cost') invites a nuanced stance; reward writers who engage with it directly.",
+        "Support should be specific: environmental impacts, alternatives to plastic, effects on prices or small businesses.",
+        "Partial agreement is acceptable but the boundaries of the position must be clearly drawn and consistently held.",
+        "Check environmental lexis (biodegradable, landfill, supply chain) and accuracy of passive and conditional forms."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. It is sometimes claimed that the media now shapes young people's values and behaviour more strongly than their families do. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：媒体对青少年价值观的影响是否已超过家庭，你在多大程度上同意，不少于 250 词。",
+      "referencePoints": [
+        "Expect a comparison of the two influences, since the claim is comparative; treating only media influence is incomplete coverage.",
+        "Reward developed reasoning about how influence works (time spent, role models, early upbringing) rather than assertion.",
+        "The stated extent of agreement should match the arguments actually made in the body.",
+        "Assess coherence across paragraphs: clear topic sentences and logical referencing (this influence, such exposure)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that public money should be spent on essential services such as hospitals and roads rather than on supporting the arts. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：公共资金应优先用于基础服务而非资助艺术吗，你在多大程度上同意，不少于 250 词。",
+      "referencePoints": [
+        "A clear position on the funding priority is essential; note whether the writer addresses the 'rather than' trade-off directly.",
+        "Reward arguments that weigh benefits (public health, mobility vs cultural identity, creative industries) with specific examples.",
+        "Counter-arguments, if raised, should be answered rather than left hanging.",
+        "Check formal register and range: nominalisation and hedging language (arguably, to some degree) used accurately."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say that because almost all writing is now done on keyboards and screens, teaching children neat handwriting is no longer a good use of school time. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：键盘时代还有必要教孩子书写吗，你在多大程度上同意，不少于 250 词。",
+      "referencePoints": [
+        "The essay should evaluate the 'good use of school time' claim, weighing handwriting against competing curriculum priorities.",
+        "Reward specific support: memory and motor-skill research claims, exam practicalities, digital-first workplaces.",
+        "Position must be unambiguous; a survey of both sides without commitment does not satisfy an agree/disagree task.",
+        "Assess lexical resource around education and technology and the accuracy of comparative structures."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, a large proportion of the food that is produced is thrown away by shops, restaurants and households. Why does so much food go to waste? What measures could reduce this problem? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：食物浪费的原因及解决措施，不少于 250 词。",
+      "referencePoints": [
+        "Both parts must be answered: identifiable causes and workable measures, ideally with measures linked back to the causes given.",
+        "Reward specific causes (cosmetic standards, over-ordering, date-label confusion) over vague claims that people are careless.",
+        "Solutions should name an agent (governments, supermarkets, households) and explain how each measure would work.",
+        "Check clear two-part organisation and cause/solution language (stems from, one remedy would be)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many young people today sleep far fewer hours than doctors recommend. What are the causes of this trend, and what effects does it have on individuals and on society? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：年轻人睡眠不足的原因及其对个人和社会的影响，不少于 250 词。",
+      "referencePoints": [
+        "Both causes and effects are required, and effects must cover the individual and the societal level as the question specifies.",
+        "Reward plausible, developed causes (late-night device use, study or work pressure) rather than a long undeveloped list.",
+        "Effects should be reasoned chains (poor concentration leading to accidents or lower productivity), not bare assertions.",
+        "Assess coherence of the cause-to-effect structure and accuracy of result language (consequently, as a result of)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many major cities, ordinary workers can no longer afford to buy or even rent a home near their workplace. What are the causes of this situation? What steps could governments and other groups take to address it? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：大城市住房难以负担的原因与应对措施，不少于 250 词。",
+      "referencePoints": [
+        "Both causes and steps must be addressed; note whether proposed steps respond to the specific causes identified.",
+        "Reward concrete causes (limited land, speculative investment, wage stagnation) and named actors in the solutions (councils, developers, employers).",
+        "Feasibility matters: better answers acknowledge trade-offs or limitations of a measure such as rent control.",
+        "Check paragraph organisation and precision of housing and economics vocabulary (affordability, subsidy, commute)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, many young people cannot find work, yet employers complain that they cannot fill vacant positions. Why does this mismatch exist? What can be done to solve it? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：青年失业与岗位空缺并存的原因及解决办法，不少于 250 词。",
+      "referencePoints": [
+        "The essay must explain the mismatch itself (skills gap, expectations, location, information), not just youth unemployment in general.",
+        "Solutions should map onto the causes given, e.g. vocational training for a skills gap, and identify who implements them.",
+        "Reward development depth over breadth: two or three well-explained causes beat six unexplained ones.",
+        "Assess employment-related lexis (vocational, apprenticeship, credentials) and clarity of the two-part structure."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, cash is disappearing and almost all payments are made by card or smartphone. Do the advantages of a society without cash outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：无现金社会利大于弊吗，不少于 250 词。",
+      "referencePoints": [
+        "Both advantages and disadvantages must appear, and the essay must reach a clear judgement about which side outweighs the other.",
+        "Reward genuine weighing (e.g. convenience versus exclusion of the elderly or privacy risks), not two disconnected lists.",
+        "Examples should be specific: contactless payments, power outages, informal traders, financial tracking.",
+        "Check evaluation language (a more significant drawback, this benefit is offset by) and consistent verdict in the conclusion."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many students now take a year away from study between finishing school and starting university, often to work or travel. Do the advantages of this gap year outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：高中与大学之间的间隔年利大于弊吗，不少于 250 词。",
+      "referencePoints": [
+        "A clear overall judgement is required; describing pros and cons without weighing them limits Task Response.",
+        "Reward developed points such as maturity and savings versus lost momentum or unequal access to the option.",
+        "The strength of claims should be controlled with appropriate hedging rather than absolute statements.",
+        "Assess paragraph unity: advantages and disadvantages clearly organised, with the verdict sustained rather than switched."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. An increasing number of students choose to complete their university degree in a foreign country rather than at home. Do the advantages of studying abroad outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：出国读大学利大于弊吗，不少于 250 词。",
+      "referencePoints": [
+        "Look for balanced coverage followed by an explicit, justified verdict on which side outweighs the other.",
+        "Reward specific support: language immersion, career prospects, cost, homesickness, brain drain implications.",
+        "Better essays consider for whom the balance holds (family finances, field of study) rather than treating all students alike.",
+        "Check accuracy of comparative and concessive structures (although, despite, far more valuable than)."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Stories about the private lives of famous people fill newspapers, websites and social media feeds. Why are so many people interested in celebrity news? Is this interest a positive or negative development? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：人们为何热衷名人新闻，这种现象是好是坏，两问都需回答，不少于 250 词。",
+      "referencePoints": [
+        "Both questions must be answered: reasons for the interest and an evaluated judgement on whether it is positive or negative.",
+        "Reward explanatory depth on the 'why' (escapism, parasocial connection, media business models) rather than assertion.",
+        "The evaluation should be argued with consequences (privacy erosion, distraction from serious news, or harmless entertainment).",
+        "Check that the two parts are clearly signposted and the final assessment is unambiguous."
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many large cities, the number of people who live alone is rising steadily. Why is this happening? Is it a positive or negative development for individuals and for society? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：大城市独居人口增多的原因，及其对个人和社会是好是坏，不少于 250 词。",
+      "referencePoints": [
+        "Both parts are compulsory: causes of the trend and a clear positive/negative evaluation covering individuals and society.",
+        "Reward specific causes (later marriage, career mobility, higher incomes, longer lifespans) developed with brief support.",
+        "The evaluation may be mixed, but it must be reasoned and lead to an overall judgement, not left undecided.",
+        "Assess cohesion between the two sections and control of trend language (a steady rise, increasingly common)."
+      ],
+      "wordLimit": ">=250"
+    }
+  ]
+}

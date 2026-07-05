@@ -1,0 +1,366 @@
+{
+  "template": "ielts-listening-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Woman: Good morning, Riverside Community Hall. How can I help? Man: Hi, I'd like to hire the hall for my daughter's birthday party. I was hoping for Saturday the fourteenth of next month. Woman: Let me check... I'm afraid the fourteenth is already taken by a wedding reception. The hall is free on Saturday the twenty-first, though. Man: The twenty-first works. How many people does the hall hold? Woman: Up to eighty seated, or a hundred standing. The hire fee is sixty pounds for four hours, and there's a twenty-pound cleaning deposit, which we return afterwards if everything's left tidy. Man: Does that include the kitchen? Woman: Yes, the kitchen's included, but I should mention we don't allow alcohol unless you arrange a temporary licence. Man: That's fine, it's a children's party. How do I confirm the booking? Woman: You'll need to pay the cleaning deposit online within forty-eight hours — the hire fee itself can wait until the day. Man: Great, I'll do that this evening. Woman: Lovely. I'll email you the payment link and the booking form now.",
+      "questions": [
+        {
+          "prompt": "Why is the man calling the community hall?",
+          "options": [
+            "To arrange a wedding reception",
+            "To book the hall for a child's party",
+            "To apply for an alcohol licence",
+            "To ask about kitchen equipment"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which date does the man agree to book?",
+          "options": [
+            "Saturday the fourteenth",
+            "Sunday the fourteenth",
+            "Saturday the twenty-eighth",
+            "Saturday the twenty-first"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What must the man pay first to confirm the booking?",
+          "options": [
+            "The twenty-pound cleaning deposit",
+            "The sixty-pound hire fee",
+            "Both the fee and the deposit together",
+            "A licence fee for serving drinks"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "预订场地对话：注意日期被占后改期到21日，且确认预订只需先付20镑清洁押金。"
+    },
+    {
+      "passage": "Man: Hello, I'm interested in joining the gym. Could you tell me about membership? Woman: Of course. Standard membership is thirty-five pounds a month and gives you full access at any time, including all the fitness classes. Off-peak is twenty-two pounds, but you can only come in before four on weekdays. And students pay twenty-five with a valid ID card. Man: I actually work evening shifts at the hospital, so my free time is mostly in the mornings and early afternoons. Woman: Then off-peak would probably suit you well — you'd save quite a bit. The only thing is that classes aren't included on that plan; they're five pounds each. Man: That's fine, I mainly want the pool and the weights room. What do I need to sign up? Woman: Just some photo ID and your bank details for the monthly payment. Oh, and before you decide, we run a free trial session every Thursday evening — sorry, Thursday at midday for off-peak visitors. Man: A trial sounds sensible. Can I book one now? Woman: Absolutely, I'll put you down for this Thursday. Bring a towel and a padlock for the lockers.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the man's visit?",
+          "options": [
+            "To cancel his current membership",
+            "To book a fitness class",
+            "To find out about joining the gym",
+            "To complain about opening hours"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the woman suggest off-peak membership for the man?",
+          "options": [
+            "His free time is during weekday daytimes",
+            "He is a full-time student",
+            "He only wants to attend evening classes",
+            "It includes free classes every week"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "When is the free trial session the man can attend?",
+          "options": [
+            "Thursday evening",
+            "Monday at midday",
+            "Friday morning",
+            "Thursday at midday"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "健身房咨询：男士上晚班故白天有空，适合非高峰会员；免费体验课被更正为周四中午。"
+    },
+    {
+      "passage": "Woman: Hello, is that Apex Appliance Repairs? My washing machine has stopped draining, and there's water sitting in the drum. Man: Sorry to hear that. Let's get an engineer out to you. We've nothing left tomorrow morning — Tuesday's fully booked — but I can offer Wednesday between twelve and three. Woman: Wednesday afternoon is fine, I work from home that day. What will it cost? Man: The standard call-out fee is forty-five pounds, plus parts. But can I ask when you bought the machine? Woman: About eighteen months ago, from your Harbour Street branch. Man: Then you're in luck. Our machines carry a two-year warranty, so the call-out fee and any parts are covered — you won't pay anything. Woman: Oh, that's a relief! Do you need anything from me before Wednesday? Man: Yes, please find the model number. It's on a white sticker just inside the door frame, not on the back panel. Read it to me now if you can, or text it to this number later. Woman: I'll check after this call and text it over. Man: Perfect. The engineer will phone you half an hour before he arrives.",
+      "questions": [
+        {
+          "prompt": "Why is the woman calling the company?",
+          "options": [
+            "Her washing machine will not drain",
+            "She wants to buy a new machine",
+            "She wants to extend her warranty",
+            "Her machine is making a loud noise"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "When will the engineer visit?",
+          "options": [
+            "Tuesday morning",
+            "Wednesday between nine and twelve",
+            "Wednesday between twelve and three",
+            "Thursday afternoon"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why will the woman not have to pay the call-out fee?",
+          "options": [
+            "She is a regular customer",
+            "The machine is still under warranty",
+            "The company made the fault worse",
+            "She agreed to a weekday appointment"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "报修对话：机器购于18个月前、保修期两年，故上门费全免；上门时间为周三12点至3点。"
+    },
+    {
+      "passage": "Man: So, are we still going to the coast next weekend? I checked the trains — it's forty-eight pounds return each, which seems a lot. Woman: Forty-eight? That's more than I expected. What about driving? Man: My brother needs the car that weekend, and anyway, parking near the seafront is a nightmare in summer. Woman: True. There's the coach, though. I looked it up — nineteen pounds return, leaving from the bus station at half past eight. Man: Half eight is early, but for that price I can't complain. It takes about three hours, doesn't it? Woman: Three hours, yes, an hour longer than the train, but we'd save nearly thirty pounds each. Let's do the coach. Man: Agreed. Now, where should we stay? There's that hostel right in the town centre. Woman: I stayed there once — it's noisy on weekends because of the bars. The one near the harbour is quieter, and it's actually two pounds cheaper a night. Man: Harbour it is, then. Shall I book two nights? Woman: Yes, Friday and Saturday. I'll book the coach tickets tonight if you sort the hostel. Man: Deal. I'll send you the confirmation once it's done.",
+      "questions": [
+        {
+          "prompt": "What are the speakers mainly doing in this conversation?",
+          "options": [
+            "Complaining about train prices",
+            "Deciding where to eat at the coast",
+            "Arranging to borrow a car",
+            "Planning the details of a weekend trip"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why do the speakers choose to travel by coach?",
+          "options": [
+            "It is faster than the train",
+            "It is much cheaper than the train",
+            "It leaves later in the morning",
+            "It stops right beside their hostel"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why do they pick the hostel near the harbour?",
+          "options": [
+            "It is closer to the bus station",
+            "It includes free breakfast",
+            "It is quieter and slightly cheaper",
+            "It is the only one with rooms left"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "旅行计划对话：选长途汽车因单程仅19镑远比火车便宜，住港口旁旅舍因更安静且每晚便宜2镑。"
+    },
+    {
+      "passage": "Woman: City Adult Education Centre, good afternoon. Man: Hi, I saw your advert for evening Spanish courses. Is the beginners' class still open? Woman: I'm afraid beginners filled up last week — it's always the most popular. But we do have places on the intermediate course. Man: I did Spanish at school years ago, so intermediate might actually work. When does it run? Woman: Tuesday evenings, six thirty to eight thirty, for ten weeks starting the first week of October. It's a hundred and twenty pounds, and that covers all the class materials. The optional textbook is another eighteen pounds if you want your own copy. Man: How do I know if my level is good enough? Woman: Before we can enrol you, everyone joining intermediate takes a short placement test. It's free, it's online, and it takes about twenty minutes. If your score's too low, we'd pop you on the waiting list for beginners instead. Man: Fair enough. What's the deadline? Woman: You'd need to complete the test and enrol by this Friday, as the class list is finalised on Monday. Man: I'll do the test tonight, then. Could you email me the link? Woman: Certainly. What's your email address?",
+      "questions": [
+        {
+          "prompt": "Why is the man phoning the education centre?",
+          "options": [
+            "To cancel his place on a course",
+            "To ask about an evening language course",
+            "To order a Spanish textbook",
+            "To complain about a full class"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which class does the woman say has places available?",
+          "options": [
+            "The intermediate Spanish class",
+            "The beginners' Spanish class",
+            "A Tuesday morning class",
+            "A weekend conversation class"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What must the man do before he can enrol?",
+          "options": [
+            "Pay for the textbook in advance",
+            "Attend a trial lesson on Monday",
+            "Provide his school certificates",
+            "Take a free online placement test"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "课程咨询：初级班已满只剩中级班，报名前须先完成免费的在线分级测试并在周五前注册。"
+    },
+    {
+      "passage": "Right, before you all disappear, let me go over the assessment for this module, because there's been some confusion. First, it's a report, not an essay — that means headings, numbered sections, and a short executive summary at the start. You'll write two thousand words comparing any two of the case studies on the list I've just uploaded; please don't choose your own cases this year, as some students did last time and lost marks. Now, the module handbook says the deadline is the end of week ten. That's a printing error. The real deadline is Friday of week nine, and I can't move it, because the exam board meets the following Monday. Submit through the online portal only — I know some of you emailed work to me last term, but the department no longer accepts email submissions, and anything sent that way counts as not submitted. Late work loses ten per cent per day, up to five days, after which it gets zero. Finally, I expect at least six academic sources, properly referenced. Lecture slides don't count towards the six. If anything's unclear, come to my office hour on Wednesday rather than emailing, as I can explain much more quickly face to face.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly doing in this talk?",
+          "options": [
+            "Reviewing the results of a previous assignment",
+            "Introducing a new set of lecture topics",
+            "Clarifying the requirements for an assessment",
+            "Explaining how the exam board works"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "When is the actual deadline for the report?",
+          "options": [
+            "The end of week ten",
+            "Monday of week ten",
+            "Wednesday of week nine",
+            "Friday of week nine"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How must students submit their work?",
+          "options": [
+            "By email to the tutor",
+            "Through the online portal",
+            "In person during office hours",
+            "At the department office"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "导师说明作业要求：手册截止日期系印刷错误，实际为第9周周五，且只接受线上门户提交。"
+    },
+    {
+      "passage": "Welcome, everyone, to your library induction. I'll keep this brief so you can start exploring. First, borrowing: undergraduates can take out eight books at a time for three weeks; postgraduates get twelve. You can renew online twice, unless another reader has requested the book, in which case you'll get an email asking you to bring it back. Fines are twenty pence a day, so do check those emails. Second, study spaces. The third floor is our silent zone — no phones, no group work, not even whispering. If you need to work with others, the group study rooms on the first floor can be booked at the welcome desk or through the library app, up to a week ahead. Third, printing. You'll need to load credit onto your campus card at the machines beside the lifts; printing is five pence a page in black and white. And one thing many students miss: every Wednesday at four we run a free workshop on referencing, up in training room two. Honestly, an hour there will save you days of confusion later. Any questions, ask anyone wearing a purple lanyard — that's the library team. Enjoy your studies.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of this talk?",
+          "options": [
+            "To introduce new students to library services",
+            "To explain changes to the fine system",
+            "To advertise a referencing workshop",
+            "To recruit students to the library team"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How many books can an undergraduate borrow at one time?",
+          "options": [
+            "Twelve",
+            "Eight",
+            "Three",
+            "Twenty"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where should students go if they want to study in complete silence?",
+          "options": [
+            "The group study rooms",
+            "Training room two",
+            "The first floor",
+            "The third floor"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "图书馆入馆培训：本科生一次可借8本（研究生12本为干扰项），三楼是静音区。"
+    },
+    {
+      "passage": "Good afternoon, and welcome to the Northgate Maritime Museum. My name's Elena, and I'll be your guide for the next ninety minutes. Before we set off, a few housekeeping points. Photography is welcome throughout the museum, but please switch off your flash, as it damages the older paintings — and in the special exhibition on the top floor, photography isn't allowed at all, because those items are on loan from private collectors. Now, I have one apology. The shipwreck gallery, which is normally the highlight of this tour, is closed today for conservation cleaning. Instead, we'll spend extra time in the lighthouse collection, which has just reopened after two years — you'll be among the first visitors to see it. If you get separated from the group, don't worry: simply make your way back to the main entrance, and I'll return there on the hour. The café is on the ground floor, next to the gift shop, and stays open until five. Toilets are behind the ticket desk and also on the second floor. Right — if everyone's ready, let's begin in the navigation room, just through these doors on your left.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly doing?",
+          "options": [
+            "Describing the history of shipwrecks",
+            "Apologising for a cancelled tour",
+            "Explaining how to buy tickets",
+            "Giving practical information before a tour"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Which part of the museum can visitors NOT see today?",
+          "options": [
+            "The lighthouse collection",
+            "The navigation room",
+            "The shipwreck gallery",
+            "The special exhibition"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the rule about photography in the special exhibition?",
+          "options": [
+            "No photographs may be taken there",
+            "Photographs are allowed without flash",
+            "Only staff may take photographs",
+            "Photography is allowed after five o'clock"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "博物馆导览开场：沉船展厅今日闭馆保养，特展区完全禁止拍照（其余区域只是禁用闪光灯）。"
+    },
+    {
+      "passage": "Before we enter the production floor, please give me your full attention for this safety briefing — it's required for all visitors, even those who've been here before. First, the equipment you've been given. Safety glasses and closed shoes must be worn at all times, everywhere on site. The hard hats, on the other hand, are only compulsory in the loading bay, where the overhead cranes operate — you can carry them until we reach that area. Second, please stay behind the yellow lines painted on the floor and remain with me at all times; visitors are never permitted to walk around unaccompanied. Third, no food or drink anywhere past this door — there's a break room by reception if you need water afterwards. Now, the most important part. If you hear a continuous alarm — not the short beeps, which are just forklift signals, but a continuous tone — stop what you're doing and follow the green signs. Do not head back to the main entrance; the assembly point is car park B, at the rear of the building. A supervisor will take a register there, so please don't leave until your name has been called. Any questions? Good — helmets in hand, and follow me.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of this talk?",
+          "options": [
+            "To describe how the factory's products are made",
+            "To explain safety rules before a site visit",
+            "To introduce the members of staff",
+            "To announce a change to the tour route"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where should visitors go if they hear a continuous alarm?",
+          "options": [
+            "The main entrance",
+            "The break room by reception",
+            "The loading bay",
+            "Car park B behind the building"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "When do visitors have to wear the hard hats?",
+          "options": [
+            "At all times on site",
+            "Only when crossing the yellow lines",
+            "Only in the loading bay",
+            "Whenever the forklifts are beeping"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "安全简报：护目镜全程佩戴而安全帽仅装卸区必戴，连续警报时集合点是B停车场而非正门。"
+    },
+    {
+      "passage": "Today I want to look at something we walk past every day without noticing: street trees, and why city councils now take them so seriously. The most obvious benefit is temperature. A mature tree shades the pavement and releases moisture through its leaves, and studies in several European cities have found that tree-lined streets can be up to five degrees cooler in summer than bare ones nearby. As heatwaves become more common, that difference genuinely saves lives. Trees also soak up rainwater. Their roots and the soil around them absorb heavy rainfall, which reduces the pressure on drains and lowers the risk of flash flooding — a much cheaper solution than digging up roads to lay bigger pipes. Of course, trees bring problems too. Choose the wrong species and the roots lift paving slabs, or the branches tangle with power lines, so selection matters enormously. And here history offers a warning. Many cities once planted a single species along every street because it looked elegant and was easy to maintain. Then Dutch elm disease arrived in the twentieth century, and whole cities lost almost every street tree at once. That's why modern planting schemes deliberately mix many different species — if one disease strikes, most of the canopy survives. Next week, we'll look at how these ideas apply to city parks.",
+      "questions": [
+        {
+          "prompt": "What is the main topic of this lecture extract?",
+          "options": [
+            "The history of Dutch elm disease",
+            "How to design city drainage systems",
+            "The benefits and risks of trees in cities",
+            "Why heatwaves are becoming more common"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the lecturer, how much cooler can tree-lined streets be in summer?",
+          "options": [
+            "Up to five degrees",
+            "Up to fifteen degrees",
+            "About two degrees",
+            "Around ten degrees"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why do modern planting schemes use many different tree species?",
+          "options": [
+            "Mixed streets look more elegant",
+            "So one disease cannot destroy most of the trees",
+            "Different species are cheaper to maintain",
+            "To stop roots lifting the paving slabs"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "城市行道树讲座：树荫可使街道降温最多5度，混种多树种是为防止单一病害毁掉全部树木。"
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The desire to know what the sky will do next is as old as agriculture itself, yet for most of human history weather prediction rested on folklore, the appearance of clouds, and the aches of an old injury. Farmers watched the behaviour of animals, sailors studied the colour of the evening sun, and priests in many cultures claimed a special authority over the coming rain. These methods were not entirely worthless, for they encoded genuine local patterns accumulated over generations, but they could not look beyond the horizon or more than a few hours into the future. A shepherd might sense that a storm was near, but he had no way of knowing that it had formed two days earlier over a distant ocean.\n\nThe first real advance came not from better observation of a single place but from the ability to gather observations from many places at once. This depended on a technology that had nothing to do with the atmosphere: the electric telegraph. In the middle of the nineteenth century, weather reports could suddenly travel faster than the weather itself. A network of stations could telegraph their readings of pressure, temperature and wind to a central office, where a clerk could assemble them into a synoptic chart, a single map showing conditions across a whole country at one moment. For the first time it became possible to see a storm approaching and to warn the towns that lay in its path. The loss of a fleet in a violent gale in 1859 persuaded the British authorities to fund exactly such a warning service.\n\nEarly forecasters, however, worked largely by analogy. They compared today's chart with charts from the past and guessed that similar patterns would produce similar outcomes. This was an improvement on folklore, but it was still closer to informed judgement than to science. The decisive intellectual step was the realisation that the atmosphere obeys the ordinary laws of physics, and that its future state could in principle be calculated from its present one. A Norwegian group led by Vilhelm Bjerknes argued that forecasting was, at bottom, a problem in fluid dynamics. If one knew the temperature, pressure, humidity and motion of the air everywhere, one could solve the governing equations and march the solution forward in time.\n\nThe difficulty was that these equations could not be solved by hand in any reasonable period. Lewis Fry Richardson demonstrated the point almost by accident. During the First World War he attempted a single six-hour forecast using nothing but pencil and paper, and the calculation took him weeks; worse, the answer he obtained was wildly wrong. Yet his failure was instructive, for it showed that the method itself was sound and that what was missing was sheer computational speed. He imagined a vast hall filled with thousands of human calculators, each handling one small region and passing results to neighbours, a fantasy that anticipated the parallel computer by decades.\n\nThat speed arrived with the electronic computer after the Second World War. Machines could repeat the same arithmetic millions of times without tiring, and the numerical methods that Richardson had pioneered were refined so that they no longer produced nonsense. The globe was divided into a three-dimensional grid, and the equations were applied to every cell. As computers grew more powerful, the grid grew finer and the forecasts reached further ahead. A useful three-day forecast, once impossible, became routine, and even predictions a week in advance acquired real skill.\n\nModern meteorology, however, has abandoned the dream of a single perfect prediction. The atmosphere is chaotic, meaning that tiny errors in the initial measurements grow rapidly until the forecast becomes worthless. Rather than fight this property, forecasters now exploit it. They run the same model many times, each with slightly different starting conditions, and observe how the results spread apart. When the various runs agree, confidence is high; when they diverge, the forecaster reports a probability rather than a certainty. In this way the modern forecast is honest about its own limits, offering not a promise about tomorrow but a carefully reasoned estimate of the odds.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Traditional weather lore was based on superstition and had no value at all.",
+            "Weather forecasting advanced through better communication, physical theory and computing power.",
+            "The electric telegraph was the single most important invention in human history.",
+            "Modern forecasters can now predict the weather with complete certainty."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what did the electric telegraph make possible for the first time?",
+          "options": [
+            "The measurement of atmospheric pressure at a single station.",
+            "The prediction of storms using the behaviour of animals.",
+            "The assembly of observations from many places into one map more quickly than the weather moved.",
+            "The solving of the equations that govern the atmosphere."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the passage say about Lewis Fry Richardson's attempt at a forecast?",
+          "options": [
+            "It produced an accurate result that impressed other scientists.",
+            "It took weeks and gave a badly wrong answer, yet showed the method was sound.",
+            "It relied on comparing his chart with charts from the past.",
+            "It was carried out using an early electronic computer."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that early forecasters who worked \"by analogy\" were limited because",
+          "options": [
+            "they had no access to telegraph networks of any kind.",
+            "they refused to make maps of atmospheric conditions.",
+            "matching present patterns to past ones is not the same as calculating future states from physical law.",
+            "they believed the atmosphere did not obey the laws of physics."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"diverge\" is closest in meaning to",
+          "options": [
+            "move apart from one another.",
+            "become more accurate.",
+            "confirm each other.",
+            "slow down gradually."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's main purpose in the final paragraph?",
+          "options": [
+            "To criticise modern forecasters for failing to give definite answers.",
+            "To argue that chaotic behaviour makes all forecasting pointless.",
+            "To recommend that forecasters return to the methods of the nineteenth century.",
+            "To explain that admitting uncertainty is a deliberate and honest feature of modern forecasting."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讲天气预报从民间经验到电报、物理方程再到计算机与集合预报的发展。词汇题 diverge 出现在末段。"
+    },
+    {
+      "passage": "In an age when almost every message is typed, the slow business of forming letters by hand can seem a quaint survival, useful for signing cheques and little else. Many schools have quietly reduced the hours devoted to it, reasoning that keyboards are faster and that legibility no longer matters when a machine sets the type. Yet a growing body of research suggests that the act of handwriting is doing more than putting marks on paper. It appears to shape the way the brain processes and retains information, and to abandon it entirely may carry hidden costs.\n\nThe clearest evidence comes from studies of note-taking. When students are asked to record a lecture, those who type tend to capture more words, often something close to a verbatim transcript. This looks like an advantage, but when the same students are later tested on the ideas the lecture contained, the writers by hand frequently do better on questions that require understanding rather than mere recall. The explanation offered is that the keyboard is almost too efficient. Because typing can keep pace with speech, the typist can transcribe without thinking, whereas the slower writer is forced to select, condense and reformulate. The very limitation of the pen becomes a spur to comprehension.\n\nThere is also evidence from the earliest stages of literacy. Learning to read and learning to write are often treated as separate skills, but they may be more closely linked than that. When young children practise forming a letter by hand, they must produce it themselves, and each attempt is slightly different from the last. This variability, far from being a nuisance, seems to help. The child builds a flexible sense of what makes an A an A, one that survives changes in size, slant and neatness. Children who learn letters by tracing or typing, where the form is always identical, appear to develop a weaker grasp of the same letters. Brain imaging supports the idea, showing that regions involved in reading are more strongly engaged after handwriting practice than after typing.\n\nWhy should the hand matter so much to the brain? One suggestion is that handwriting recruits a wider network of neural activity. Moving a pen is a complex motor task, demanding fine control and constant feedback from the eyes and fingers. This rich sensorimotor experience may leave a deeper trace than the uniform tap of a key, in which every letter feels the same and occupies the same small square of plastic. In effect, the messiness of handwriting gives the brain more to hold on to, binding the shape of a word to the movement that produced it.\n\nNone of this amounts to a case against the keyboard, and the sensible conclusion is not to ban the machine but to recognise what each tool does well. For composing long documents, editing and searching, the computer is plainly superior, and no researcher seriously proposes returning to the pen for such work. The argument is narrower and more interesting: that certain kinds of learning, particularly in early childhood and in situations that demand deep processing, may benefit from the friction that handwriting supplies. To remove it altogether, on the assumption that faster is always better, would be to discard a tool whose value is not obvious on the surface.\n\nThe practical implications are still being worked out, and honest researchers caution against overstating them. The effects measured in experiments are real but usually modest, and they depend heavily on how a task is designed. A poorly organised handwritten note is worse than a well-structured typed one. What the evidence does suggest is that the choice of writing tool is not neutral, and that a curriculum which treats handwriting as an obsolete craft may be discarding something useful before fully understanding it. The pen, it turns out, is not merely a slower keyboard. It engages the mind in a distinct way, and that distinction deserves to be preserved at least until its consequences are better known.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Handwriting should completely replace typing in all schools.",
+            "Handwriting engages the brain in distinctive ways and may aid learning, so it should not be abandoned carelessly.",
+            "Typing is always inferior to handwriting for every task.",
+            "Brain imaging has proved that keyboards damage children's reading ability."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why do students who type often perform worse on tests of understanding?",
+          "options": [
+            "They record fewer words than those who write by hand.",
+            "They cannot read their own notes afterwards.",
+            "Typing lets them transcribe without thinking, while writing forces them to select and reformulate.",
+            "They are given more difficult lectures to listen to."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the passage say about children who learn letters by tracing or typing?",
+          "options": [
+            "They develop a weaker grasp of the letters than children who form them by hand.",
+            "They read faster than children who write by hand.",
+            "They produce letters that are always slightly different from one another.",
+            "They show stronger activity in reading-related brain regions."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"friction\" is closest in meaning to",
+          "options": [
+            "conflict between students.",
+            "the useful difficulty or resistance of a task.",
+            "physical heat produced by movement.",
+            "disagreement among researchers."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the writer believes the variability of children's handwriting",
+          "options": [
+            "is a serious problem that teachers should correct.",
+            "makes handwriting unsuitable for early learning.",
+            "actually helps children form a flexible concept of each letter.",
+            "is identical to the uniformity of typed letters."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the writer's attitude toward the research discussed in the final paragraph?",
+          "options": [
+            "Enthusiastic and certain that handwriting is superior in every respect.",
+            "Dismissive, regarding the findings as worthless.",
+            "Hostile toward the use of computers in education.",
+            "Cautiously positive, accepting the effects are real but modest and context-dependent."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讨论手写对认知与识字的影响，主张不应轻易放弃手写。词汇题 friction 在第四段。"
+    },
+    {
+      "passage": "Wetlands have long suffered from a poor reputation. To earlier generations, a marsh or a swamp was wasted ground, a breeding place for disease and a barrier to farming and building. For centuries the response was to drain such land, straighten the rivers that fed it and convert it to fields or streets. Only recently has this attitude begun to reverse, as scientists have documented the extraordinary range of services that intact wetlands quietly provide. Far from being wasteland, they are among the most productive and useful ecosystems on the planet.\n\nA wetland is, at its simplest, land where water sits at or near the surface for much of the year, whether as a coastal salt marsh, an inland bog, or the flooded margin of a lake. This waterlogged condition creates a distinctive environment. Because the soil is starved of oxygen, dead plant material decays very slowly, and over long periods it accumulates as peat. This slow decay is one reason wetlands are so valuable in the fight against climate change: they lock away enormous quantities of carbon that would otherwise return to the atmosphere. Drain a peatland and the stored carbon begins to oxidise, so that a habitat which had been absorbing carbon for millennia turns abruptly into a source of it.\n\nThe benefits do not end there. Wetlands act as natural sponges, absorbing the surge of water after heavy rain and releasing it slowly, which reduces the severity of floods downstream. They filter pollutants, as their plants and sediments trap nutrients and break down contaminants that would otherwise foul rivers and coasts. Coastal wetlands blunt the force of storm waves, protecting the land behind them, and the shallow, sheltered water is a nursery for fish and a feeding ground for vast numbers of birds. Economists who have tried to put a monetary figure on these services arrive at sums that dwarf the value the same land would have if drained and farmed.\n\nGiven all this, the scale of past destruction is sobering. It is estimated that a large proportion of the world's wetlands has been lost since 1700, and the losses continue, driven by agriculture, urban expansion and the diversion of water for irrigation. The consequences ripple outward. Species that depend on wetlands decline; floods grow more damaging as the natural sponges disappear; and the carbon released from drained peat adds to the very warming that threatens the remaining habitats. Recognising this, many countries have shifted from draining wetlands to protecting and even rebuilding them.\n\nRestoration, however, is rarely as simple as letting the water back in. A wetland is a system in balance, and undoing decades of drainage can produce surprises. If the surrounding land has been fertilised for farming, the returning water may carry a heavy load of nutrients that encourages a few aggressive plants to crowd out everything else. If the natural supply of sediment has been cut off by dams upstream, a coastal marsh may be unable to build itself up fast enough to keep pace with the rising sea. Successful projects therefore treat the wetland as part of a wider landscape, restoring not just the wet ground but the flows of water and sediment that sustain it.\n\nEncouragingly, where such care is taken, recovery can be swift. Blocking the drainage channels of a peat bog allows the water table to rise, the characteristic mosses to return and the accumulation of peat to resume. Reconnecting a river to its former floodplain can bring back fish and birds within a few seasons. The lesson emerging from these efforts is that wetlands are not fragile relics to be fenced off, but working parts of the landscape whose repair pays for itself many times over. What was once dismissed as useless ground is now understood as infrastructure, every bit as real as a dam or a sea wall, and considerably cheaper to maintain.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Wetlands are dangerous places that should be drained wherever possible.",
+            "Peat is the only reason wetlands are worth preserving.",
+            "Wetland restoration is impossible once drainage has occurred.",
+            "Once dismissed as wasteland, wetlands provide valuable services and are now being protected and restored."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the passage, why does draining a peatland harm the climate?",
+          "options": [
+            "It causes the peat to absorb more carbon from the air.",
+            "It turns a carbon-absorbing habitat into a source of carbon as the stored carbon oxidises.",
+            "It increases the amount of oxygen trapped in the soil.",
+            "It removes the birds that feed on the wetland."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage identify as a possible problem when restoring a wetland on former farmland?",
+          "options": [
+            "The water may be too clean for any plants to grow.",
+            "The soil will contain too much oxygen for peat to form.",
+            "Nutrients left from fertiliser may let a few aggressive plants dominate.",
+            "Birds will refuse to return to the restored area."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"swift\" is closest in meaning to",
+          "options": [
+            "quick.",
+            "expensive.",
+            "unlikely.",
+            "permanent."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the writer regards the earlier view of wetlands as",
+          "options": [
+            "essentially correct and worth returning to.",
+            "mistaken, because it overlooked the many benefits wetlands provide.",
+            "irrelevant to modern science.",
+            "the reason wetlands are now fully protected everywhere."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the writer compare wetlands to \"a dam or a sea wall\" at the end of the passage?",
+          "options": [
+            "To warn that wetlands are as dangerous as large engineering works.",
+            "To suggest that wetlands should be replaced by concrete structures.",
+            "To emphasise that wetlands are valuable, functioning infrastructure rather than useless ground.",
+            "To argue that sea walls are cheaper than wetlands."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇讲湿地的生态价值与修复。词汇题 swift 出现在最后一段，意为迅速。"
+    },
+    {
+      "passage": "Few plants have shaped human history as quietly and thoroughly as the tea bush. Today tea is the most widely consumed drink in the world after water, brewed in kitchens and served in ceremonies across every inhabited continent. Yet all of this variety springs from a single species of evergreen shrub, and the story of how its leaves travelled from a corner of Asia to the far side of the globe is bound up with trade, empire and the everyday habits of ordinary people.\n\nThe plant is native to the hills where present-day China, India and Burma meet, and its use as a drink appears to have begun in China. For many centuries tea drinking remained an essentially Chinese practice, refined into an art and surrounded by ritual. The leaves were processed in different ways to produce different characters of drink, and connoisseurs learned to distinguish them as carefully as wine is judged elsewhere. Because the climate and skill required to grow and process good tea were concentrated in a few regions, China enjoyed a near monopoly on its production, and this fact would later have far-reaching consequences.\n\nTea reached Europe relatively late, carried by traders in the seventeenth century, and at first it was a luxury for the wealthy few. As supply grew, the price fell and the drink spread down through society until it became a staple of daily life, particularly in Britain. This growing appetite created a problem of trade. Europeans wanted ever more tea, but they produced little that China wished to buy in return, so they were obliged to pay in silver. The steady drain of silver eastward troubled European merchants and governments, who searched for some other commodity that could balance the accounts. The search for such a commodity led, in one notorious case, to the trafficking of opium, and to conflicts whose bitterness lingered for generations.\n\nAnother response to the imbalance was to break China's monopoly by growing tea elsewhere. Colonial powers realised that if the plant could be established under their own control, they need no longer depend on a single distant supplier. Attention turned to the hills of India, where a wild variety of the tea plant was found growing, and to the highlands of what is now Sri Lanka. Establishing plantations there was neither quick nor easy; it required suitable land, knowledge of processing that was jealously guarded, and above all a large labour force willing or compelled to do the demanding work of picking. Within a few decades, however, these new regions were producing tea on an industrial scale, and the balance of the trade shifted decisively.\n\nThe consequences of this expansion reached far beyond the drink itself. Vast areas of forest were cleared for plantations, altering landscapes permanently. Millions of workers were moved, sometimes across great distances, to labour on the estates, and the social patterns created by this movement persist in these regions to this day. The tea that had once been a rare Chinese luxury became a cheap, mass-produced commodity, and the profits flowed to the companies and countries that controlled the plantations rather than to the lands where the plant had first been cultivated.\n\nSeen from the present, the humble cup of tea carries a weight of history that its ordinariness disguises. It reminds us that the goods we take for granted often have complicated origins, shaped by the pursuit of profit and the exercise of power as much as by taste. The spread of tea was not a simple matter of a pleasant drink winning admirers. It was driven by the appetites of consumers, the calculations of merchants and the ambitions of empires, and it left marks on landscapes, economies and populations that are still visible today. To trace the journey of the leaf is, in a small way, to trace the making of the modern world.",
+      "questions": [
+        {
+          "prompt": "What is the central idea of the passage?",
+          "options": [
+            "Tea is healthier than any other drink in the world.",
+            "China deliberately shared its tea-growing techniques with Europe.",
+            "The spread of tea from Asia was shaped by trade, empire and social change, leaving lasting effects.",
+            "Tea plantations in India failed to produce commercially useful crops."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, why were Europeans obliged to pay for Chinese tea in silver?",
+          "options": [
+            "China refused to accept any form of payment except silver coins.",
+            "Silver was the only metal available to European traders.",
+            "The tea plant could only be bought with precious metals by law.",
+            "Europeans produced little that China wished to buy in exchange."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the passage say made establishing tea plantations in India and Sri Lanka difficult?",
+          "options": [
+            "The tea plant did not grow anywhere in the region.",
+            "It required suitable land, guarded processing knowledge and a large labour force.",
+            "European governments forbade the growing of tea outside China.",
+            "The climate there was completely unsuitable for any crop."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that breaking China's monopoly was attractive to colonial powers mainly because",
+          "options": [
+            "it would end their dependence on a single distant supplier and stop the drain of silver.",
+            "tea grown in colonies tasted noticeably better than Chinese tea.",
+            "Chinese tea had become impossible to obtain by the seventeenth century.",
+            "they wished to preserve the forests of India and Sri Lanka."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the third paragraph, the word \"staple\" is closest in meaning to",
+          "options": [
+            "a rare and costly item.",
+            "a basic product used regularly.",
+            "a metal fastening.",
+            "a forbidden substance."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the writer's main purpose in the final paragraph?",
+          "options": [
+            "To argue that people should stop drinking tea.",
+            "To claim that the history of tea is too trivial to study.",
+            "To praise the companies that controlled the plantations.",
+            "To show that an ordinary drink carries a complex history shaped by profit and power."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讲茶的种植与贸易史及其对社会与地貌的影响。词汇题 staple 在第三段，意为日常必需品。"
+    },
+    {
+      "passage": "Anyone who has been swept along in a dense crowd knows the strange feeling of losing control over one's own movement. You may wish to turn left, but the press of bodies carries you straight ahead. This experience, uncomfortable and occasionally dangerous, has become the subject of serious scientific study. Researchers now investigate how crowds move, why they sometimes become deadly, and how the spaces people walk through can be designed to keep them safe. Their findings overturn some comfortable assumptions about human behaviour under pressure.\n\nThe popular image of a crowd disaster is one of panic. In this account, a frightened mob loses its reason, and people trample one another in a blind rush for the exits. Investigators of real incidents, however, have found that this picture is largely a myth. In the great majority of cases, the victims were not behaving irrationally at all. They were walking calmly, or standing still, when the sheer density of bodies became the killer. When a crowd grows tight enough, individuals lose the ability to control their own position. Shock waves pass through the mass as people are pushed from behind, and the pressure can be strong enough to bend steel barriers and to make breathing impossible. The tragedy is not caused by mad behaviour but by physics.\n\nThis insight has encouraged scientists to treat pedestrian movement, at least in part, as a problem in fluid mechanics. At low densities, walkers behave like independent individuals, each choosing a comfortable speed and steering around obstacles. As density rises, the crowd begins to behave more like a flowing liquid, and at the highest densities it can flip suddenly into a turbulent state in which people are shoved unpredictably in all directions. It is this turbulent regime, rather than any collective madness, that precedes most crushing disasters. Crucially, the transition can be measured, which means that dangerous conditions can be detected before they turn fatal.\n\nOne of the most striking discoveries is that crowds spontaneously organise themselves in ways individuals never intend. When two streams of people walk in opposite directions along a corridor, they do not mix into chaos. Instead they sort themselves into lanes, each moving smoothly in one direction, because it is easier to follow the person ahead than to force a path through oncoming traffic. At a doorway where two flows cross, the crowd may take turns, first one direction passing and then the other, in a rhythm that no one has arranged. These patterns arise from simple local rules, each person reacting only to their immediate neighbours, yet they produce a kind of order visible only from above.\n\nUnderstanding these patterns has practical value, because the design of a space strongly shapes the behaviour of the crowd within it. A column placed just in front of an exit sounds like an obstruction, yet in some conditions it can actually ease the flow, by breaking up the pressure that builds when everyone converges on the same point. Widening a corridor helps, but a bottleneck at its far end may simply move the danger rather than remove it. Designers now use computer models, in which thousands of simulated pedestrians follow simple behavioural rules, to test a building or a stadium long before it is built, searching for the hidden points where a crowd might jam.\n\nThe field is not without its difficulties. Human beings are not water molecules, and a model that works for a calm commuter crowd may fail for a frightened one or for a group unfamiliar with the venue. Cultural habits, the presence of children, even the direction people expect to find an exit, all influence how a crowd behaves, and no simulation captures every factor. Yet the progress made is real. By replacing the lazy explanation of panic with a careful study of density, flow and design, researchers have given engineers and event organisers genuine tools to prevent disasters. The crowd, it turns out, is not a monster to be feared but a system to be understood.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Crowds are dangerous because people always panic under pressure.",
+            "Pedestrian movement can never be predicted or modelled.",
+            "Placing columns near exits is the only way to keep crowds safe.",
+            "Scientific study of crowd density, flow and space design offers real tools to prevent disasters."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the passage, what have investigators of real crowd disasters found about the victims?",
+          "options": [
+            "They were usually behaving irrationally and trampling one another.",
+            "They were mostly behaving calmly when density itself became the killer.",
+            "They had all failed to find the nearest exit.",
+            "They were deliberately pushing the barriers to escape."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage say happens when two streams of people walk in opposite directions along a corridor?",
+          "options": [
+            "They mix together into complete chaos.",
+            "They stop moving until one group leaves.",
+            "They spontaneously sort themselves into lanes.",
+            "They always crush against the walls."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the third paragraph, the word \"turbulent\" is closest in meaning to",
+          "options": [
+            "violently disordered and unpredictable.",
+            "calm and steady.",
+            "slow and independent.",
+            "carefully organised."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that measuring the transition to a turbulent state is important because",
+          "options": [
+            "it proves that crowds are driven by collective madness.",
+            "it shows that widening a corridor is always sufficient.",
+            "it means human crowds behave exactly like water.",
+            "it allows dangerous conditions to be detected before they become fatal."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is the writer's attitude toward the study of crowd behaviour, as shown in the final paragraph?",
+          "options": [
+            "Pessimistic, believing the models are useless because humans are not water molecules.",
+            "Balanced, acknowledging real limitations while affirming genuine progress.",
+            "Indifferent to whether disasters can be prevented.",
+            "Convinced that panic is the correct explanation after all."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇讲人群行为与行人流动研究，破除恐慌迷思。词汇题 turbulent 在第三段，意为混乱无序。"
+    }
+  ]
+}

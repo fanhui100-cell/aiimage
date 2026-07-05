@@ -1,0 +1,29 @@
+{
+  "templateId": "ielts-listening-mcq",
+  "examIds": ["ielts"],
+  "taskType": "listening_comprehension",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "IELTS Listening（MCQ 子集，draft 脚本阶段）。原创口语体 script（对话=日常/社交场景，独白=学术/培训场景，对应官方 Part 1-4 语域），每段 3 道 4 选 1。⚠️ 本阶段只产 draft 脚本，不生成音频（音频供应商/成本待 owner 批准）；无 active 音频的听力 set 永不 promote（既有硬门 listening_without_active_audio）。官方还含 matching/labelling/completion 等题型——需专用 shape，属产线后续阶段。100% 原创，不抄真题，不调 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "dialogue",
+    "minWords": 120,
+    "maxWords": 260,
+    "perStimulusItems": 3
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi" },
+  "subskills": ["listening_detail", "listening_gist", "listening_inference"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭剑桥/官方真题",
+    "script 120-260 词口语体（对话或独白）",
+    "每段恰 3 题、每题 4 选项、答案唯一命中",
+    "答案须由 script 支撑；干扰项听感可信",
+    "draft-only：无 active 音频绝不 promote",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

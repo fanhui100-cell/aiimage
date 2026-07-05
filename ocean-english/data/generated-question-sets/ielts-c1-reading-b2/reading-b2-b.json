@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The Physics of Bridges and Resonance\n\nEvery structure that stands in the open air must contend with forces that push, pull and twist it. For a bridge, these forces arrive from many directions at once: the steady downward weight of the deck and its traffic, the sideways shove of the wind, and the rhythmic tremors that travel through the ground during an earthquake. Engineers spend much of their working lives ensuring that a bridge can absorb such loads without cracking, sagging or, in the worst case, tearing itself apart. To do this they rely on a branch of physics concerned with how objects vibrate.\n\nAny solid body, if disturbed, tends to vibrate at particular frequencies that depend on its shape, its mass and the stiffness of its materials. These are known as its natural frequencies. A guitar string sounds a specific note because it prefers to oscillate at that rate; a wine glass rings when tapped for the same reason. A bridge is no different, although its natural frequencies are usually far too low for the human ear to detect. The trouble begins when an outside force happens to push the structure at, or very close to, one of these preferred rates. Under those conditions the vibrations do not cancel out but instead reinforce one another, growing larger with each cycle. This build-up is called resonance, and it can turn a modest, harmless push into a swaying motion powerful enough to threaten the whole span.\n\nThe most famous demonstration of the danger occurred in 1940, when a suspension bridge in the American state of Washington collapsed only months after it opened. A moderate wind, blowing steadily across the deck, set the roadway twisting in slow, ever-widening waves until the structure broke apart. For decades the failure was taught, somewhat loosely, as a simple case of resonance. Modern analysis paints a subtler picture: the wind itself was shedding swirls of air, and the motion of the deck altered how those swirls formed, feeding energy back into the twisting in a self-sustaining loop. Whatever the precise mechanism, the lesson for engineers was the same. A bridge must never be allowed to respond so freely to a repeated external push.\n\nSeveral strategies address the problem. The first is to raise a structure's natural frequencies well above anything the environment is likely to supply, chiefly by making it stiffer. A short, deep, heavily braced beam vibrates quickly and reluctantly, so ordinary winds and footsteps cannot easily match its rhythm. The second is to add damping, that is, to build in mechanisms that drain vibrational energy away as heat before it can accumulate. Rubber bearings, hydraulic pistons and heavy pendulums slung beneath the deck all serve this purpose, quietly converting dangerous motion into a faint warmth that disperses into the air.\n\nPedestrian bridges present their own peculiar challenge. When a large crowd crosses, walkers unconsciously fall into step with the slight side-to-side sway they feel underfoot, and their synchronised footfalls then amplify that very sway. A footbridge opened in London in 2000 had to be closed within days when exactly this feedback made it lurch alarmingly. Engineers cured it by fitting dozens of dampers, and the episode reminded the profession that even the soft, irregular tread of human beings can, under the wrong circumstances, act as a surprisingly orderly driving force.\n\nCalculating all of this in advance is demanding work. Designers build mathematical models of a proposed bridge, then subject the virtual structure to simulated winds, earthquakes and crowds, watching for any frequency at which the response spikes. Scale models are sometimes placed in wind tunnels for the same reason. The aim is never to make a bridge perfectly rigid, which is impossible, but to guarantee that whatever vibrations do arise remain small, slow to grow and quick to fade.\n\nThe result is that the great spans we cross without a second thought are, in a sense, always trembling. They flex a little under every gust and every lorry, storing and releasing tiny amounts of energy thousands of times a day. Good engineering does not silence this restless motion; it merely keeps it firmly within safe limits, ensuring that a bridge sways just enough to survive and never enough to fall.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Bridges are designed to be completely rigid so that they cannot vibrate at all.",
+            "Engineers manage the vibrations bridges naturally undergo to prevent dangerous resonance.",
+            "Most modern bridges are at constant risk of collapsing without warning.",
+            "The 1940 Washington bridge disaster was caused entirely by poor construction materials."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, a bridge's natural frequencies depend on all of the following EXCEPT",
+          "options": [
+            "its shape.",
+            "its mass.",
+            "the stiffness of its materials.",
+            "the volume of traffic crossing it."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How did engineers solve the problem with the London footbridge opened in 2000?",
+          "options": [
+            "They closed it permanently to pedestrians.",
+            "They made the deck significantly heavier.",
+            "They installed dozens of dampers.",
+            "They limited the number of people allowed to cross."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a bridge which is short, deep and heavily braced is comparatively safe from ordinary wind because",
+          "options": [
+            "its natural frequencies are too high for such winds to match.",
+            "wind cannot exert any force on a stiff structure.",
+            "it contains no materials capable of vibrating.",
+            "it absorbs all wind energy as visible movement."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"drain\" is closest in meaning to",
+          "options": [
+            "measure.",
+            "remove gradually.",
+            "strengthen.",
+            "record."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the writer's main purpose in the final paragraph?",
+          "options": [
+            "To warn readers that crossing bridges is more dangerous than they assume.",
+            "To criticise engineers for failing to eliminate all bridge movement.",
+            "To emphasise that safe bridges are ones whose constant slight motion is kept within limits.",
+            "To argue that older bridges should be replaced with rigid modern ones."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文说明桥梁如何因外力接近其固有频率而发生共振，以及工程师通过增加刚度和阻尼来控制振动。主旨是管理而非消除振动。"
+    },
+    {
+      "passage": "Seed Banks and the Preservation of Crop Diversity\n\nBeneath a frozen mountainside on a remote Arctic island lies one of the most quietly important buildings on Earth. Its long concrete tunnel leads to chambers stacked with sealed packets, and inside those packets are seeds: hundreds of millions of them, gathered from farms and wild landscapes across the planet. This is a seed bank, a facility whose entire purpose is to keep the genetic variety of the world's crops alive for a future no one can yet see.\n\nThe need for such places is bound up with the recent history of farming. For thousands of years, growers saved and swapped seeds from their best plants, and each region slowly developed its own local varieties, or landraces, suited to its particular soils, pests and weather. A single valley might once have grown dozens of distinct kinds of wheat or bean. Over the past century, however, agriculture has narrowed dramatically. A handful of high-yielding, commercially bred varieties now dominates vast areas, and countless older types have vanished from fields altogether. With them goes their genetic information, some of which may carry resistance to a disease or a tolerance for drought that farmers have not yet needed but one day might.\n\nThis loss matters because uniformity is fragile. When millions of hectares are planted with genetically similar crops, a single new pest or fungus can sweep through them with little to stop it. History offers grim reminders. In the nineteenth century a water mould destroyed the potato harvests of Ireland, which depended heavily on just a few varieties, and the resulting famine killed or displaced millions of people. A diverse stock of crops, by contrast, behaves like a broad insurance policy: if one type falls to a new threat, others may prove resistant, and breeders can draw on their traits to develop replacements.\n\nSeed banks aim to hold that insurance in trust. Most operate by drying seeds carefully and then storing them at temperatures far below freezing, conditions under which the seeds enter a kind of suspended animation and can remain viable for decades or, for some species, centuries. Periodically the staff must take a sample out, plant it, and grow a fresh batch, because no seed lasts forever even in the cold. This process, called regeneration, is essential but laborious, and it is one reason seed banks require steady funding and expert attention rather than merely a cold room and a lock on the door.\n\nThe Arctic vault mentioned earlier plays a special role. It does not gather seeds directly from farmers; instead it holds duplicate copies of collections kept by other, national seed banks around the world. If one of those banks is damaged by war, fire, flood or simple neglect, its custodians can request their backup from the Arctic store. That is not a hypothetical scenario. When a major seed bank in the Middle East was cut off by conflict, researchers withdrew duplicates from the Arctic vault, grew them elsewhere, and eventually returned fresh seeds to the frozen chambers, completing a full circle of loss and recovery.\n\nYet seed banks are not a complete answer, and their supporters are the first to say so. Seeds preserved in a freezer are frozen in time in more than one sense: they stop evolving. Out in the fields, crops and their wild relatives continue to adapt, generation by generation, to shifting pests and a changing climate. A variety stored since the 1980s knows nothing of the diseases that have emerged since. For this reason many scientists argue that vaults must be paired with living conservation, in which farmers and communities continue to grow diverse traditional crops, keeping them evolving in the very conditions where they will be needed.\n\nThe most secure future, then, probably lies in combining the two approaches. The frozen archive guards against sudden catastrophe, offering a way back should a variety disappear entirely. The living fields ensure that diversity keeps pace with the world as it changes. Neither strategy is sufficient on its own, but together they form a layered defence for the astonishing range of plants on which human food ultimately rests. In an age of unpredictable weather and mounting pressure on farmland, that quiet insurance may prove among the wisest investments our species has made.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "The Arctic seed vault is the only facility capable of protecting the world's crops.",
+            "Traditional farming methods are superior to modern high-yield agriculture in every respect.",
+            "Preserving crop diversity requires both frozen seed storage and continued growing in the field.",
+            "Genetic uniformity in crops has already made a global famine unavoidable."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, why has agricultural diversity narrowed over the past century?",
+          "options": [
+            "Governments banned the planting of traditional landraces.",
+            "A few high-yielding commercial varieties came to dominate large areas.",
+            "Seeds of older varieties became impossible to store safely.",
+            "Farmers lost interest in producing food crops."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happened after a major seed bank in the Middle East was cut off by conflict?",
+          "options": [
+            "Its entire collection was lost permanently.",
+            "Its seeds were replaced by newly bred commercial varieties.",
+            "Duplicates were withdrawn from the Arctic vault, grown, and eventually returned.",
+            "The Arctic vault refused to release the backup copies."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a crop variety kept frozen since the 1980s may be at a disadvantage because",
+          "options": [
+            "it has not adapted to diseases that have appeared more recently.",
+            "its seeds can no longer be regenerated by planting.",
+            "it was never resistant to any disease in the first place.",
+            "freezing permanently alters its genetic information."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"viable\" is closest in meaning to",
+          "options": [
+            "capable of growing.",
+            "expensive to keep.",
+            "easy to identify.",
+            "resistant to cold."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude toward seed banks?",
+          "options": [
+            "They are a flawless solution that makes field conservation unnecessary.",
+            "They are valuable but insufficient on their own and best combined with living conservation.",
+            "They are a waste of resources that could be spent on modern breeding.",
+            "They are too risky to rely on because seeds inevitably die in storage."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "文章说明种子库通过冷冻保存作物遗传多样性以防灾难，但冷冻种子停止进化，因此需与田间活体保护相结合。作者态度是肯定但认为其不足以单独依赖。"
+    },
+    {
+      "passage": "The History of Public Libraries\n\nThe idea that anyone, regardless of wealth, should be able to walk into a building and borrow a book for free is now so familiar that it seems almost self-evident. Yet the free public library is a comparatively recent invention, and its rise tells a story about how societies came to view knowledge as something to be shared rather than hoarded.\n\nCollections of written texts are, of course, ancient. The great library at Alexandria, assembled more than two thousand years ago, gathered scrolls from across the known world. But such institutions were not public in the modern sense. They served scholars, priests and rulers, and their contents were guarded jealously. Throughout the medieval period in Europe, books were copied slowly by hand, were extraordinarily costly, and were often literally chained to the shelves of monasteries and universities. To read was a privilege of the few, and a library was less a public service than a treasure house.\n\nThe printing press, spreading through Europe from the fifteenth century onward, began to change the arithmetic of reading. As books grew cheaper and more numerous, private individuals and clubs assembled their own collections. In the eighteenth century a fashion arose for subscription libraries, in which members paid an annual fee to borrow from a shared stock of books. These were a genuine step toward wider access, but access still came at a price, and the price kept the poor firmly outside. A labourer earning a few shillings a week could no more join such a library than buy the books outright.\n\nThe decisive shift came in the nineteenth century, and it was driven as much by anxiety as by generosity. Industrial cities were swelling with workers, and reformers worried about what those crowds might do with their few hours of leisure. Some argued, in frankly moralising tones, that reading rooms would draw men away from taverns and toward self-improvement. Others made a more democratic case: that a nation asking its citizens to vote and to work skilled trades owed them the means to educate themselves. In Britain, a law passed in 1850 allowed local authorities to raise a small tax to fund free libraries, and similar measures followed in other industrialising countries.\n\nProgress was uneven. Many towns were reluctant to spend public money, and early free libraries were sometimes cramped, poorly stocked and open only for awkward hours. What transformed the movement was a wave of private philanthropy. A Scottish-born industrialist who had made an immense fortune in steel funded the construction of thousands of library buildings across the English-speaking world, on one firm condition: that the local community agree to pay for the books, the staff and the upkeep. His reasoning was pointed. A gift of a building alone, he believed, would breed dependence, whereas a partnership committed the public to owning and sustaining what it had been given.\n\nThose new libraries slowly redefined what such a place could be. The old model kept readers away from the shelves; a clerk fetched requested volumes from a locked store. Reformers pushed instead for open shelves, allowing visitors to browse and discover books by chance, a change some traditionalists feared would lead to theft and disorder. It did not. Libraries also began to add reading rooms for newspapers, sections for children, and, in time, services that had nothing to do with printed books at all.\n\nThat willingness to expand has defined the institution ever since. A modern public library is likely to lend films and recorded music, provide free access to computers and the internet, host lessons in languages and job skills, and offer a warm, quiet place simply to sit. Critics occasionally ask whether libraries are still needed in an age when so much information is a few taps away on a phone. Defenders reply that the need has, if anything, grown. Not everyone owns a device or can pay for connection, and the library remains one of the last civic spaces a person may enter freely, without being asked to buy anything at all.\n\nSeen across the centuries, the public library represents a quiet but radical proposition: that access to knowledge should not depend on the size of one's purse. It is an idea that took a very long time to arrive, and one that each generation must decide anew to keep alive.",
+      "questions": [
+        {
+          "prompt": "What is the central argument of the passage?",
+          "options": [
+            "Libraries were more useful in the past than they are in the digital age.",
+            "The free public library is a recent idea reflecting a belief that knowledge should be widely shared.",
+            "Ancient libraries such as Alexandria were the true origin of modern public libraries.",
+            "Private philanthropy was the only factor that created public libraries."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why did subscription libraries fail to give the poor access to books?",
+          "options": [
+            "They contained only religious texts.",
+            "They were open only to scholars and priests.",
+            "They required members to pay an annual fee.",
+            "They chained their books to the shelves."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What condition did the Scottish-born industrialist attach to funding library buildings?",
+          "options": [
+            "That the buildings be named after him.",
+            "That the local community pay for the books, staff and upkeep.",
+            "That the libraries admit only skilled workers.",
+            "That the books be kept behind locked stores."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that some nineteenth-century supporters of free libraries were motivated partly by",
+          "options": [
+            "a wish to reduce the number of books being printed.",
+            "concern about how industrial workers spent their leisure time.",
+            "a desire to preserve ancient scrolls from decay.",
+            "opposition to the spread of the printing press."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"upkeep\" is closest in meaning to",
+          "options": [
+            "advertising.",
+            "ongoing maintenance.",
+            "original design.",
+            "annual profit."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How does the writer respond to critics who question whether libraries are still needed?",
+          "options": [
+            "By agreeing that phones have made libraries obsolete.",
+            "By arguing that libraries should return to their nineteenth-century form.",
+            "By pointing out that not everyone can afford devices and that libraries remain freely open civic spaces.",
+            "By suggesting that libraries should begin charging entry fees."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章追溯公共图书馆从古代藏书处到十九世纪免费公共图书馆的历史，强调其体现知识应向所有人开放的理念。作者反驳图书馆已过时的批评。"
+    },
+    {
+      "passage": "Animal Tool Use and Intelligence\n\nFor much of modern history, the ability to make and use tools was treated as a bright line separating human beings from every other animal. To fashion an object for a purpose, the reasoning went, required foresight, planning and a grasp of cause and effect that only our own species possessed. That comfortable belief has steadily crumbled. Over the past several decades, careful observation of animals in the wild and in the laboratory has revealed tool use across a startling range of creatures, forcing scientists to reconsider what the behaviour actually tells us about a mind.\n\nThe earliest and most celebrated challenge came from chimpanzees. Researchers watching them in Africa saw the apes strip the leaves from thin twigs and poke these prepared stems into termite mounds, withdrawing them coated with insects to eat. This was not merely using an object found ready-made; it was modifying material to suit a task, a distinction many had assumed to be uniquely human. Since then, other primates have been seen cracking nuts with carefully chosen stones, and some populations pass particular techniques from one generation to the next, so that neighbouring groups develop distinct local customs, a pattern researchers are willing to call culture.\n\nBirds have proved even more surprising, because their brains are built on a different plan from ours and are, relative to some mammals, small. Certain crows found on a Pacific island manufacture hooked tools from twigs and stiff leaves to winkle grubs out of crevices, and in laboratory tests they solve multi-step puzzles that defeat many mammals. In one striking experiment, a crow was faced with food it could not reach and a sequence of tools of different lengths; to succeed it had to use a short stick to obtain a longer one, then use the longer stick to reach the reward. The bird worked through the chain with little hesitation, suggesting an ability to plan several moves ahead rather than merely stumble upon a solution.\n\nBeneath the waves, the octopus offers a still stranger case. Some have been observed gathering the two halves of discarded coconut shells, carrying them awkwardly across the seabed, and later assembling them into a shelter. Because the shells are of no immediate use while being carried, and are in fact a burden, this behaviour hints at the animal acting for a future benefit, an apparent foresight that is remarkable in a creature so distantly related to us. The octopus reminds researchers that intelligence has evolved more than once, and along very different paths.\n\nAll of this raises a difficult question: does tool use actually prove intelligence? The honest answer is that it depends on what is meant by the word. Some tool use is essentially instinctive and inflexible. A certain wasp uses a pebble to tamp down the soil over its burrow, but it does so in a fixed, unvarying way and cannot adjust the action to new circumstances. That is very different from a crow inventing a novel solution to a problem it has never met before. What impresses scientists is not the mere handling of objects but flexibility: the capacity to size up an unfamiliar situation and craft a fresh response.\n\nThis is why researchers now pay close attention to how a behaviour is acquired and how readily it can be varied. If an animal can learn a technique by watching others, improve on it, and apply the underlying idea to a new problem, that points to a mind doing something more than following a genetic script. Careful experiments try to rule out simpler explanations, such as trial-and-error learning or lucky accident, before crediting an animal with genuine understanding, and good scientists remain cautious about reading human-like thoughts into a wild creature.\n\nThe cumulative effect of these findings has been humbling. Tool use, once a proud badge of human uniqueness, turns out to be scattered across the animal kingdom, appearing in apes, birds, sea creatures and more. What separates us from other animals, if anything does, is now thought to lie less in the bare fact of using tools than in the sheer scale and cumulative complexity of what we build. The gap, in other words, may be one of degree rather than of kind, and that shift in understanding is quietly reshaping how we picture our place among the other thinking creatures of the world.",
+      "questions": [
+        {
+          "prompt": "What is the main point the passage makes about tool use?",
+          "options": [
+            "Only chimpanzees and crows are capable of using tools.",
+            "Tool use is found across many animals, challenging the idea that it is uniquely human.",
+            "Tool use proves that animals think in exactly the same way humans do.",
+            "Animals use tools only by instinct and never through learning."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what did researchers observe chimpanzees doing with twigs?",
+          "options": [
+            "Building shelters from discarded shells.",
+            "Cracking nuts against carefully chosen stones.",
+            "Stripping the leaves off them to fish for termites.",
+            "Using a short stick to obtain a longer one."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the crow experiment described in the passage, what made the task notable?",
+          "options": [
+            "The crow used one tool to obtain another before reaching the reward.",
+            "The crow shared its food with other birds afterward.",
+            "The crow refused to use any of the tools provided.",
+            "The crow completed the task only after many failed attempts."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the wasp's use of a pebble is considered less impressive than a crow's behaviour because",
+          "options": [
+            "the wasp is smaller than the crow.",
+            "the wasp's action is fixed and cannot be adjusted to new situations.",
+            "the wasp does not actually touch the pebble.",
+            "the wasp learned the action from other wasps."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"flexibility\" is closest in meaning to",
+          "options": [
+            "physical strength.",
+            "the ability to adapt behaviour to new situations.",
+            "speed of movement.",
+            "the tendency to repeat an action exactly."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the writer's attitude toward crediting animals with intelligence?",
+          "options": [
+            "Enthusiastically certain that all tool use proves human-like thought.",
+            "Dismissive of the idea that animals can plan ahead.",
+            "Carefully balanced, stressing that simpler explanations must first be ruled out.",
+            "Convinced that laboratory tests reveal nothing useful."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章说明多种动物会使用工具，挑战了工具使用为人类独有的观念，并指出真正体现智力的是行为的灵活性而非单纯使用工具。作者态度审慎。"
+    },
+    {
+      "passage": "The Rise of Container Shipping\n\nWalk along the edge of any great port today and you will see the same scene: towering cranes lowering steel boxes, all of a standard size, onto ships as long as skyscrapers laid flat. These identical containers are so ordinary a sight that it is easy to forget they represent one of the most consequential business ideas of the twentieth century, an innovation that quietly reorganised the global economy.\n\nTo appreciate the change, one must picture what came before. For centuries, ocean freight was handled as break-bulk cargo, meaning that goods were loaded piece by piece. Sacks of coffee, barrels of oil, crates of machinery and bundles of timber were each carried aboard by gangs of dock workers and stowed by hand, fitted together like an enormous, awkward puzzle. The work was slow, dangerous and astonishingly expensive. A ship might spend as long in port being loaded and unloaded as it spent at sea, and theft from the open crates was rampant. By some estimates, the cost of handling cargo at the two ends of a voyage could exceed the cost of the ocean crossing itself.\n\nThe man usually credited with changing this was an American trucking businessman with no maritime background at all. Frustrated by the hours his lorries wasted waiting at the docks, he reasoned that the goods need never be unpacked from their road vehicles in the first place. What if the whole truck body, a sealed metal box, could simply be lifted from its wheels and set directly onto a ship, then lifted off at the far end onto another set of wheels? In the mid-1950s he converted an old tanker to carry such boxes and sent it on its first voyage. The idea itself was not wholly new, but he pursued it with a persistence others had lacked.\n\nThe early years were difficult. Established shipping firms were sceptical, dock workers rightly feared for their jobs, and, most awkwardly of all, everyone used boxes of different shapes and sizes. A container that fit one company's cranes and ships was useless to another. The breakthrough that made the system truly global was therefore not a machine but an agreement. During the 1960s, after hard negotiation, the industry adopted common standards for the dimensions and corner fittings of containers. Once a box built in one country could be lifted by any crane and stacked on any ship anywhere in the world, the network effects were enormous, and adoption accelerated sharply.\n\nThe consequences reached far beyond the waterfront. Loading times collapsed from days to hours, and the cost of moving goods across oceans fell so steeply that transport ceased to be a major part of the price of most products. This, in turn, made it economical to manufacture goods thousands of kilometres from where they would be sold. A factory could now be sited wherever labour or materials were cheapest, confident that its output could be shipped cheaply to distant markets. The sprawling global supply chains of the modern age, in which a single product may gather components from a dozen countries, rest squarely on the humble container.\n\nNot everyone gained. The old dockside districts, once teeming with labourers, emptied as machines took over the loading. Ports that could not dredge deeper channels or build the vast paved yards the new ships demanded were left behind, while others, sometimes in previously minor towns, grew into giants almost overnight. Whole communities built around the older way of working saw their livelihoods disappear within a generation, a reminder that even a change celebrated as progress can carry a steep human cost.\n\nToday the container remains the unglamorous backbone of world trade, and its very dullness is a mark of its success. Precisely because the boxes are standard and interchangeable, they can move through an intricate web of ships, cranes, trains and trucks with minimal friction, each handoff requiring no unpacking. When the system falters, as it did during a recent series of global disruptions, shortages and delays ripple outward and remind consumers how much they had taken for granted. The steel box, in the end, changed the world not by being clever to look at but by being ruthlessly, universally simple.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Container shipping was invented by experienced sailors seeking safer voyages.",
+            "The standardised shipping container transformed global trade despite its plain appearance.",
+            "Break-bulk cargo handling was actually more efficient than container shipping.",
+            "The main benefit of containers was that they looked more modern than crates."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what was a major drawback of break-bulk cargo handling?",
+          "options": [
+            "Ships could not carry heavy goods such as machinery.",
+            "It required containers of a standard size.",
+            "Loading and unloading were slow, dangerous and very expensive.",
+            "Goods could only be transported over short distances."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, what was the key breakthrough that made the container system truly global?",
+          "options": [
+            "The invention of a faster type of crane.",
+            "The conversion of an old tanker in the 1950s.",
+            "An industry agreement on common container standards.",
+            "A decision by dock workers to support the new system."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that falling transport costs encouraged companies to",
+          "options": [
+            "manufacture goods far from where they would be sold.",
+            "return to loading cargo by hand.",
+            "keep all their factories close to their customers.",
+            "abandon ocean shipping in favour of road transport."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the sixth paragraph, the word \"teeming\" is closest in meaning to",
+          "options": [
+            "crowded.",
+            "abandoned.",
+            "silent.",
+            "profitable."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude toward the rise of container shipping?",
+          "options": [
+            "Wholly negative, viewing it as a disaster for world trade.",
+            "Recognising its enormous benefits while acknowledging its human costs.",
+            "Indifferent, treating it as a minor technical detail.",
+            "Convinced that break-bulk handling should be revived."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "文章讲述标准化集装箱如何取代传统散货装卸，大幅降低运输成本并重塑全球供应链。作者肯定其巨大效益，同时承认对码头工人和社区造成的冲击。"
+    }
+  ]
+}
