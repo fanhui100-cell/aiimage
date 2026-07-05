@@ -1,0 +1,35 @@
+/* listening.css — D15 听写练习（ls-* 页面专属；通用类见 screen-kit.css .scr） */
+.ls-screen { height: calc(100svh - var(--nav-h, 60px)); display: flex; flex-direction: column; background: var(--paper); color: var(--ink); }
+.ls-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 18px 22px 24px; }
+.ls-top { display: flex; align-items: center; gap: 14px; margin-bottom: auto; }
+.ls-prog { flex: 1; height: 7px; border-radius: 999px; background: rgba(20,30,40,.08); overflow: hidden; }
+.ls-prog i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal-deep), var(--teal)); transition: width .4s; }
+.ls-cnt { font-family: var(--font-mono); font-size: 13px; color: var(--ink-sub); }
+.ls-cnt b { color: var(--teal-ink); font-size: 15px; }
+.ls-close { border: none; background: none; cursor: pointer; color: var(--ink-muted); font-size: 18px; }
+.ls-mid { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center; max-width: 460px; margin: 0 auto; width: 100%; }
+.ls-play { width: 96px; height: 96px; border-radius: 50%; border: none; cursor: pointer; background: linear-gradient(180deg, #6ff0db, #34d8c0); color: #04241f; display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 36px -14px rgba(79,230,206,.7); transition: transform .12s; }
+.ls-play:active { transform: scale(.95); }
+.ls-tip { font-size: 13px; color: var(--ink-muted); }
+.ls-tip b { color: var(--teal-ink); }
+.ls-input { width: 100%; padding: 15px 18px; border-radius: 14px; border: 1.5px solid var(--line-strong); background: var(--card-2); color: var(--ink); font-size: 20px; text-align: center; font-family: var(--font-news); outline: none; letter-spacing: .04em; box-sizing: border-box; }
+.ls-input:focus { border-color: var(--teal-ink); }
+.ls-input.correct { border-color: var(--teal-ink); background: var(--teal-bg); color: var(--teal-ink); }
+.ls-input.wrong { border-color: var(--rose-ink); background: var(--rose-bg); }
+.ls-reveal { animation: scrFade .3s ease both; }
+.ls-reveal .w { font-family: var(--font-news); font-size: 30px; font-weight: 600; color: var(--ink); }
+.ls-reveal .ipa { font-family: var(--font-mono); font-size: 13px; color: var(--teal-ink); margin: 2px 0 6px; }
+.ls-reveal .zh { font-family: var(--font-serif-zh); font-size: 16px; color: var(--ink); }
+.ls-reveal .ex { font-family: var(--font-news); font-style: italic; font-size: 14px; color: var(--ink-sub); margin-top: 8px; line-height: 1.6; }
+.ls-reveal .ex b { font-style: normal; color: var(--teal-ink); }
+.ls-tag { font-size: 12.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; padding: 5px 13px; border-radius: 999px; margin-bottom: 4px; }
+.ls-tag.ok { color: var(--teal-ink); background: var(--teal-bg); }
+.ls-tag.no { color: var(--rose-ink); background: var(--rose-bg); }
+.ls-foot { display: flex; gap: 11px; width: 100%; max-width: 460px; margin: 18px auto 0; }
+.ls-foot .btn { flex: 1; }
+/* 卡片/小结在 .ls-screen 内（非 .scr），自带按钮样式（镜像 screen-kit） */
+.ls-screen .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; border-radius: 999px; cursor: pointer; border: 1px solid transparent; font-family: var(--font-sans); font-weight: 700; font-size: 14.5px; padding: 12px 24px; transition: transform .12s, box-shadow .16s, background .15s, color .15s; text-decoration: none; }
+.ls-screen .btn:active { transform: scale(.97); }
+.ls-screen .btn-primary { color: #04241f; background: linear-gradient(180deg, #6ff0db, #34d8c0); box-shadow: 0 14px 30px -16px rgba(79,230,206,.75); }
+.ls-screen .btn-ink { color: #fff; background: var(--teal-ink); }
+.ls-screen .btn-ghost { color: var(--ink-sub); background: var(--card); border-color: var(--line-strong); }

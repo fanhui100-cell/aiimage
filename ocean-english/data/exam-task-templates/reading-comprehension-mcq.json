@@ -1,0 +1,29 @@
+{
+  "templateId": "reading-comprehension-mcq",
+  "examIds": ["zhongkao", "gaokao", "cet4", "cet6", "kaoyan"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "一段原创短文 + 多道四选一理解题（细节/推断/主旨/词义/态度）。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 120,
+    "maxWords": 400,
+    "perStimulusItems": 4,
+    "topicDomains": ["社会", "科技", "教育", "文化", "环境", "健康", "人物"]
+  },
+  "itemCount": 4,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["detail", "inference", "main_idea", "vocab_in_context", "attitude", "purpose"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "每题恰好 4 个选项，唯一正确答案",
+    "干扰项需合理、与文意相关但可排除",
+    "难度与等级匹配（中考易→考研难）",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

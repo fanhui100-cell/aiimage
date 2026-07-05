@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The Psychology of Colour in Marketing and Design\n\nFew decisions in commercial design attract as much confident opinion as the choice of colour. Brand consultants speak of red as urgent and blue as trustworthy, and popular articles routinely list the emotions that each hue supposedly triggers. Yet the science underneath these claims is far more cautious. Researchers who study colour perception agree that human beings respond to colour, but they disagree sharply about how predictable those responses really are, and about how much of the reaction is built into the nervous system rather than learned from culture.\n\nAt the physiological level, colour is not a property of objects at all but an interpretation constructed by the brain. Light of particular wavelengths strikes receptors in the eye, and the visual system compares their signals to produce the experience of hue. Because that comparison depends on surrounding light, the same patch of paint can look warm under one lamp and cold under another. This instability is inconvenient for marketers, who would prefer that a logo evoke the identical feeling in every shop and on every screen. In practice, the mood a colour conveys is shaped as much by context as by the wavelength itself.\n\nCulture complicates the picture further. White signifies purity at many Western weddings but is associated with mourning in parts of East Asia, while the meanings attached to purple, gold or green shift from one society to the next. Such variation undermines the idea of a universal emotional code. Even within a single country, a colour that feels fashionable to one generation can strike another as dated. Designers who assume that their own associations are shared by all customers are, the evidence suggests, likely to be mistaken.\n\nWhere psychologists have found firmer ground is in the concept of appropriateness. Rather than asking whether a colour is liked, careful studies ask whether it fits the product it advertises. A soft, muted palette may suit a spa but feel wrong on an energy drink; a bright, saturated scheme that excites teenagers may unsettle buyers of luxury goods. In this account, colour works not by pressing fixed emotional buttons but by signalling that a brand belongs to a particular category and carries a particular promise. Consumers judge the match, often without noticing that they are doing so.\n\nContrast and salience matter too. A button that differs sharply from its background is easier to find, and shoppers move towards it more readily, regardless of its exact hue. Much of what is credited to the magic of a specific colour may in fact be the ordinary effect of visibility. When a company changes a call-to-action from grey to orange and sales rise, the gain may owe more to the button standing out than to any inherent property of orange. Distinguishing these explanations requires controlled testing, which many confident claims never receive.\n\nThis is why serious practitioners treat colour choices as hypotheses to be examined rather than rules to be obeyed. They run experiments, showing different versions of a page or package to comparable groups and measuring what people actually do. The results are frequently modest and sometimes surprising: a palette that focus groups praised may perform no better than the original, while an unglamorous adjustment quietly lifts engagement. Such findings puncture the romance of colour, but they replace guesswork with evidence.\n\nNone of this means colour is unimportant. It contributes to the first impression a product makes, to how quickly information can be read, and to whether a brand feels coherent across many touchpoints. The mistake lies in overstating its power and in pretending that a single chart of hues and feelings can substitute for knowledge of a particular audience. Colour operates alongside typography, imagery, price and reputation, and its influence cannot easily be isolated from theirs.\n\nThe wiser conclusion, then, is one of disciplined humility. Colour is a genuine tool of communication, capable of guiding attention and reinforcing meaning, but it is not a lever that reliably moves emotion in one direction for everyone. Treating it as a subject for study rather than superstition allows designers to use it thoughtfully, testing their assumptions against real behaviour instead of trusting the tidy but exaggerated stories that so often circulate about what each colour is supposed to do.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Blue and red are the most effective colours for building consumer trust.",
+            "The emotional effects of colour are less fixed and universal than popular claims suggest, and should be tested rather than assumed.",
+            "Cultural differences make colour useless as a tool in international marketing.",
+            "Physiological research has now identified the exact feeling each colour produces."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why can the same patch of paint appear warm in one setting and cold in another?",
+          "options": [
+            "Because paint chemically changes over time.",
+            "Because different generations perceive colour differently.",
+            "Because the brain's interpretation of hue depends on the surrounding light.",
+            "Because marketers deliberately alter the wavelength."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the passage say psychologists have found firmer evidence for?",
+          "options": [
+            "Whether a colour is generally liked by most people.",
+            "Whether a colour is appropriate to the product it advertises.",
+            "Which colour universally signals purity.",
+            "How to make a logo look identical on every screen."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a rise in sales after changing a button from grey to orange",
+          "options": [
+            "proves that orange is an inherently persuasive colour.",
+            "may result mainly from the button becoming more visible rather than from the colour itself.",
+            "shows that focus groups always predict results accurately.",
+            "is impossible to measure through controlled testing."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"humility\" most nearly means",
+          "options": [
+            "a modest, cautious attitude that avoids overclaiming.",
+            "a sense of embarrassment about past mistakes.",
+            "a refusal to use colour at all.",
+            "confidence based on proven rules."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude towards popular claims about colour and emotion?",
+          "options": [
+            "Enthusiastic acceptance of their conclusions.",
+            "Complete dismissal of colour as meaningless.",
+            "Sceptical but not dismissive, favouring evidence over confident generalisation.",
+            "Indifference to whether they are true or false."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章主旨是颜色的情感效果并不像流行说法那样固定和普遍，应通过实验检验而非盲目相信。作者态度是谨慎怀疑但不否定颜色的作用。"
+    },
+    {
+      "passage": "Bringing Back the Beaver\n\nFor centuries the beaver was hunted across Europe and North America for its fur and for a musky secretion once prized in medicine and perfume. By the early twentieth century the animal had vanished from most of its former range, and with it went a quiet but powerful force that had shaped rivers for millions of years. Only recently have ecologists come to appreciate how much was lost, and a growing number of projects now aim to return beavers to the waterways they once engineered.\n\nThe beaver's influence flows from a single habit: it builds dams. Using felled branches, mud and stones, a family of beavers can transform a narrow, fast-running stream into a chain of ponds and wet meadows. To a casual observer these structures may look like obstacles or messes, but to a hydrologist they are remarkable pieces of engineering. Water that once rushed downstream is slowed, spread out and held in the landscape, changing the behaviour of the whole catchment.\n\nThe consequences are surprisingly wide-ranging. Ponds created by dams trap sediment and filter pollutants, so that water leaving a beaver wetland is often cleaner than water entering it. The slowing of flow reduces the sudden surges that cause flooding downstream after heavy rain, and the stored water is released gradually, helping rivers keep flowing through dry spells. In effect, the beaver performs for free a range of services that human engineers attempt, at great expense, with concrete and pipes.\n\nThe benefits extend to other species. The mosaic of open water, dead standing timber and damp ground supports insects, which in turn feed fish, amphibians and birds. Studies of beaver wetlands repeatedly record more species and greater numbers of individuals than comparable stretches of unmodified stream. By altering one part of the system, the beaver creates opportunities for many others, which is why ecologists describe it as a keystone species: its impact on the community is out of all proportion to its numbers.\n\nReintroduction, however, is not without friction. The very flooding that benefits a wetland can inconvenience people who own land nearby. Fields may become waterlogged, culverts may block, and trees valued by their owners may be gnawed down overnight. Farmers and foresters who were not consulted are understandably resentful when a protected animal begins rearranging their property. Successful projects therefore devote as much attention to human relationships as to ecology, offering compensation, installing devices that limit pond depth, and involving local communities from the outset.\n\nThere is also debate about how far nature should be left to manage itself. Some conservationists favour releasing beavers into large enclosures where their effects can be monitored and contained. Others argue for allowing the animals to spread freely along river systems, trusting that populations will settle at a level the landscape can support. The first approach is cautious and controllable; the second is cheaper and, its supporters claim, truer to the wild processes that reintroduction is meant to restore. Which path is chosen often depends less on biology than on local politics and on how much uncertainty a society is willing to tolerate.\n\nEarly results have encouraged the optimists. In several catchments where beavers have been present for a decade or more, downstream flooding has eased, water quality has improved and once-scarce species have returned. These outcomes are difficult to achieve by conventional means and cost little once the animals are established. Yet scientists caution against treating the beaver as a cure for every problem. Its dams can occasionally raise water temperatures or block the passage of migrating fish, and its benefits appear most clearly in certain kinds of landscape. Enthusiasm, they warn, should be tempered by careful observation of each particular site.\n\nWhat the beaver's story illustrates most clearly is a shift in how conservation is understood. For much of the last century the goal was to protect individual rare species behind fences. Increasingly, the ambition is to restore the processes that once kept whole ecosystems healthy, and to let living things do work that people have struggled to do themselves. The beaver, an animal long regarded as either a commodity or a nuisance, has become an unlikely emblem of that more ambitious and more humble vision of repair.",
+      "questions": [
+        {
+          "prompt": "What is the writer's main purpose in the passage?",
+          "options": [
+            "To argue that beavers should never be reintroduced because they damage property.",
+            "To explain how reintroducing beavers can restore river ecosystems, while acknowledging the practical difficulties involved.",
+            "To describe the history of the fur trade in detail.",
+            "To prove that human engineering is superior to natural processes."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what effect do beaver dams have on water quality?",
+          "options": [
+            "They make water dirtier as it leaves the wetland.",
+            "They have no measurable effect on pollutants.",
+            "They trap sediment and filter pollutants, so outflowing water is often cleaner.",
+            "They raise water temperatures to dangerous levels everywhere."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why do the writer and ecologists call the beaver a \"keystone species\"?",
+          "options": [
+            "Because it is the largest animal in the river system.",
+            "Because its effect on the wider community is far greater than its numbers would suggest.",
+            "Because it is the rarest species in the wetland.",
+            "Because it can survive only in enclosures built by people."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that whether beavers are kept in enclosures or allowed to spread freely",
+          "options": [
+            "is decided purely by biological evidence.",
+            "makes no practical difference to the outcome.",
+            "often depends on local politics and a society's tolerance of uncertainty as much as on science.",
+            "is illegal in most countries."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"friction\" most nearly means",
+          "options": [
+            "physical heat produced by movement.",
+            "conflict or tension between people's interests.",
+            "financial profit.",
+            "scientific measurement."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage suggest about the shift in conservation thinking?",
+          "options": [
+            "The focus is moving from protecting individual species to restoring whole ecosystem processes.",
+            "Conservationists have abandoned all interest in rare species.",
+            "Fences are now considered the only reliable method.",
+            "Natural processes are viewed as too dangerous to restore."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "文章说明重新引入河狸如何恢复河流生态系统，同时承认实际困难。河狸被称为关键种，因为其影响远超其数量所示。"
+    },
+    {
+      "passage": "The Long Journey of Numerals and Zero\n\nWe use numbers so automatically that it is easy to forget they were invented. Counting itself is ancient: notches cut into bone tens of thousands of years ago suggest that people were keeping tallies long before they could write. But a tally is not a number system. To do arithmetic efficiently, and to record large quantities compactly, humanity needed something more sophisticated, and the tools we now take for granted were assembled slowly, across many centuries and cultures.\n\nEarly civilisations devised ingenious ways of writing numbers, yet most were awkward for calculation. Roman numerals, familiar from clock faces and monuments, are a good example. They can represent quantities clearly enough, but multiplying one Roman numeral by another is a laborious business, and there is no simple way to show the difference between, say, sixty and six hundred except by adding more symbols. Systems like these worked well for recording results but poorly for producing them, so complex reckoning was often done on a counting board or with an abacus and only the answer written down.\n\nThe breakthrough was the idea of place value. In a place-value system the meaning of a digit depends on its position: the same symbol stands for a different amount in the units column, the tens column or the hundreds column. This elegant principle allows a mere handful of symbols to express any number, however large, and it makes written calculation straightforward. Several cultures moved towards the idea independently, but a place-value system faces one stubborn problem. If position carries meaning, how does one show that a particular column is empty?\n\nThe solution was zero, and its acceptance was neither quick nor obvious. At first a gap or a dot was used simply as a placeholder, a mark that said \"nothing goes here\" so that other digits would not be misread. This modest role was itself a considerable achievement, for it made large numbers unambiguous. The deeper leap came when mathematicians began to treat zero not merely as a space but as a number in its own right, something that could be added, subtracted and reasoned about like any other quantity.\n\nThat leap was resisted for good reasons. A number that represents nothing seems paradoxical, and it behaves strangely: adding it changes nothing, while dividing by it produces nonsense. Philosophers were uneasy about granting existence to emptiness, and merchants managed their accounts without needing to philosophise about it. Only gradually did the usefulness of a fully-fledged zero, especially in the algebra and astronomy of scholars in India and later the Islamic world, overcome this discomfort and establish it as indispensable.\n\nThe system we now call the Hindu-Arabic numerals spread westward through trade and translation. Merchants encountered it in the markets of the Mediterranean, and scholars met it in translated texts. Its advantages for commerce were plain: calculations that had required specialist skill could now be done on paper by anyone who learned the method. Even so, adoption in Europe was slow and sometimes suspicious. Established authorities distrusted the new figures, partly from habit and partly because the unfamiliar symbols were easier to alter fraudulently than the old ones. For a time the two systems coexisted, the new numerals for calculation and the old for display.\n\nWhat finally settled the matter was practicality. As trade grew more complicated and record-keeping more demanding, the efficiency of place-value arithmetic became impossible to ignore. Printing helped standardise the shapes of the digits and spread instruction in their use. Within a few generations the once-controversial figures had become the ordinary language of commerce and science, and the systems they replaced survived only in ceremonial roles.\n\nThe history of numerals is thus a reminder that even our most basic mental tools have a past. The digits a child learns today are the outcome of a long conversation between many peoples, in which practical need repeatedly pushed against inherited habit. Zero in particular stands as a striking case of how an idea that once seemed absurd, the notion of counting nothing, can become so fundamental that its absence is almost unimaginable. Progress in mathematics, this story suggests, is not only the discovery of new truths but also the slow acceptance of ideas that were available, yet unwelcome, long before they were embraced.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Roman numerals are superior to modern digits for calculation.",
+            "Our number system, and especially zero, developed gradually across many cultures as practical need overcame resistance.",
+            "Counting was invented at the same time as writing.",
+            "Zero was accepted instantly once mathematicians proposed it."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why was multiplication difficult with Roman numerals?",
+          "options": [
+            "The symbols were too small to read.",
+            "The system was awkward for calculation, so complex reckoning was usually done on a counting board or abacus.",
+            "Romans were forbidden from multiplying numbers.",
+            "The system had no symbols above one hundred."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What problem did a place-value system need zero to solve?",
+          "options": [
+            "How to make numbers look more decorative.",
+            "How to show that a particular column is empty so digits are not misread.",
+            "How to replace the abacus entirely.",
+            "How to prevent merchants from calculating."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that Europeans initially distrusted the new numerals partly because",
+          "options": [
+            "the symbols could be altered fraudulently more easily than the old ones.",
+            "the numerals were impossible to print.",
+            "no one understood how place value worked.",
+            "trade had stopped growing."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"paradoxical\" most nearly means",
+          "options": [
+            "extremely useful.",
+            "seemingly self-contradictory or absurd.",
+            "easy to understand.",
+            "religiously forbidden."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What point is the writer making in the final paragraph?",
+          "options": [
+            "That mathematics has stopped developing.",
+            "That children today invent their own numerals.",
+            "That progress in mathematics can involve accepting ideas that were long available but unwelcome.",
+            "That zero should be removed from the number system."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章主旨是数字系统尤其是零经历多文化逐步发展，实用需求最终战胜抗拒。作者在结尾强调进步也包括接受早已存在却不受欢迎的观念。"
+    },
+    {
+      "passage": "Reading the Climate in Antarctic Ice\n\nDeep beneath the surface of Antarctica lies one of the most valuable archives on Earth. It is not a library of documents but a record written in ice, laid down snowfall by snowfall over hundreds of thousands of years. Each winter's snow settles on the layers below and is slowly compressed into ice, and within that ice are trapped tiny clues about the world at the moment it formed. By drilling down and extracting long cylinders known as ice cores, scientists can read this frozen diary and reconstruct the climate of the distant past.\n\nThe most direct evidence comes from bubbles of ancient air. As snow turns to ice, it seals off pockets of the atmosphere that was present when the snow fell. Cracking open the ice in a laboratory releases this trapped gas, allowing researchers to measure directly how much carbon dioxide and methane the air once contained. No other method provides such a plain sample of the ancient atmosphere; instead of inferring past concentrations, scientists can measure them. These records show that the amounts of these gases have risen and fallen many times, and that they track closely with changes in temperature.\n\nTemperature itself leaves a subtler signature. Water is made of atoms that come in slightly different weights, and the proportion of heavier to lighter forms locked in the ice depends on how cold it was when the snow fell. By analysing this ratio, researchers can estimate the temperature of the era that produced each layer. Read from top to bottom, an ice core therefore becomes a thermometer stretching back through repeated ice ages and the warmer periods between them.\n\nDating the layers is the crucial task, because a record is useless if its timing is uncertain. In the upper part of a core, annual layers can sometimes be counted directly, much as one counts tree rings. Deeper down, where the weight of the ice above has squeezed the layers thin, other techniques are needed. Scientists match distinctive markers such as the ash from known volcanic eruptions, and they use models of how ice flows to estimate the age of the deepest ice. Combining several methods allows a reliable chronology to be built, though the oldest ice remains the hardest to date precisely.\n\nWhat emerges from these cores has reshaped our understanding of climate. The records reveal that carbon dioxide and temperature have marched in step for hundreds of thousands of years, rising and falling together. This close relationship does not by itself prove which drives which, and the natural cycles were set in motion by slow changes in the Earth's orbit. But the ice makes one comparison starkly clear. The level of carbon dioxide in the atmosphere today is far higher than anything recorded in the entire span the cores cover, and it has climbed to that level with extraordinary speed. Against the long, slow rhythms preserved in the ice, the recent increase stands out as abrupt.\n\nGathering these records is a formidable undertaking. Drilling sites sit in some of the coldest and most remote places on the planet, and a single deep core can take several seasons to complete. The cores must then be transported and stored at low temperatures, for if they melt the trapped air escapes and the archive is lost. International teams share both the labour and the samples, and the results are checked against cores drilled elsewhere and against entirely independent evidence from ocean sediments and other sources. Agreement among these different lines of enquiry is what gives scientists confidence in their conclusions.\n\nThe ice, however, is not indefinitely patient. The very deepest and oldest layers are thin and disturbed, and there is a limit to how far back the Antarctic record can reach. Researchers are now searching for sites that may hold ice older than any yet recovered, hoping to extend the archive and to understand climate shifts that occurred before the current pattern of ice ages began. Whatever they find, the principle will remain the same: that the frozen past, patiently read, offers one of our clearest measures of how unusual the present has become.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the central idea of the passage?",
+          "options": [
+            "Antarctica is too cold and remote for useful scientific work.",
+            "Ice cores preserve a detailed record of past climate that helps scientists understand how unusual present conditions are.",
+            "Tree rings are a more reliable record than ice cores.",
+            "Carbon dioxide levels have remained constant for hundreds of thousands of years."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what makes the bubbles in ice cores especially valuable?",
+          "options": [
+            "They allow scientists to measure ancient air directly rather than merely infer its composition.",
+            "They contain fragments of ancient plants.",
+            "They can be seen with the naked eye from the surface.",
+            "They reveal the colour of the ancient sky."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How do scientists estimate the temperature of the era that produced a particular layer of ice?",
+          "options": [
+            "By counting the number of bubbles per layer.",
+            "By measuring the ratio of heavier to lighter forms of the atoms in the water.",
+            "By weighing the entire ice core.",
+            "By recording the depth of the drilling site."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the close match between ice cores and independent ocean-sediment evidence",
+          "options": [
+            "shows that both methods are unreliable.",
+            "increases scientists' confidence in their conclusions about past climate.",
+            "proves the cores were dated incorrectly.",
+            "means ocean sediments are no longer studied."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"abrupt\" most nearly means",
+          "options": [
+            "sudden and rapid.",
+            "gradual and gentle.",
+            "impossible to measure.",
+            "carefully planned."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude towards the recent rise in atmospheric carbon dioxide?",
+          "options": [
+            "Indifference, since it matches natural cycles exactly.",
+            "The view that it is trivial compared with past changes.",
+            "The view that it is strikingly unusual when set against the long record in the ice.",
+            "Certainty that it will soon reverse on its own."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章主旨是冰芯保存了详细的古气候记录，帮助科学家了解当前状况有多不寻常。作者认为近期二氧化碳的上升与冰中长记录相比异常突出。"
+    },
+    {
+      "passage": "The Gig Economy and the Changing Shape of Work\n\nA generation ago, most people imagined a working life as a series of jobs, each with an employer, a fixed schedule and a pay slip at the end of the month. That picture has not disappeared, but it now shares the stage with a different arrangement. In the so-called gig economy, workers take on individual tasks or short assignments, often arranged through digital platforms, and are paid for each piece of work rather than for their time. A driver accepts a ride, a designer completes a logo, a courier delivers a meal, and the relationship may end the moment the task is done.\n\nSupporters present this shift as liberating. Platforms match people who need work done with people willing to do it, cutting out much of the friction that once made casual work hard to find. A worker can, in principle, log on when it suits them, choose which assignments to accept, and combine several sources of income. For students, carers and others who cannot commit to fixed hours, this flexibility can be genuinely valuable, and for the platforms it provides a large, responsive workforce without the costs of permanent staff.\n\nCritics, however, argue that the flexibility is more apparent than real. Much gig work pays little, and because earnings depend on completing tasks, workers may feel compelled to stay available for long stretches in the hope of enough assignments. The freedom to refuse a job means little if refusing too often reduces the flow of future offers. Moreover, gig workers are frequently classified not as employees but as independent contractors, and this label carries consequences. It typically excludes them from protections that employees take for granted, such as paid sick leave, minimum-wage guarantees and contributions towards a pension.\n\nThe classification question has become the central battleground. If a platform merely connects independent businesspeople with customers, then those workers are running their own enterprises and bear their own risks. But critics point out that platforms often set the prices, dictate how tasks must be performed, and monitor workers closely through ratings and data. Such control, they argue, looks a great deal like the direction an ordinary employer exercises, and workers who are managed in this way ought to receive the corresponding rights. Courts and governments in several countries have reached conflicting conclusions, and the legal status of gig work remains unsettled.\n\nBeneath the legal argument lies a question about risk. In traditional employment, the employer absorbs much of the uncertainty of business: staff are paid even when demand is slack, and the firm bears the cost of quiet periods. In the gig model, that uncertainty is transferred to the individual. When orders are plentiful, a worker may earn well; when they dry up, income vanishes, yet the worker's own expenses continue. Shifting risk from organisations to individuals is, for many economists, the defining feature of the trend, and its social consequences reach beyond any single industry.\n\nThe rise of gig work also reflects deeper changes in technology and expectation. Smartphones make it possible to summon a service within minutes, and consumers have grown accustomed to speed and low prices. Meeting these expectations requires a workforce that can expand and contract on demand, which is precisely what the gig model supplies. In this sense the phenomenon is not an accident but a response to what customers, and investors, have come to want. Understanding it therefore requires looking not only at the platforms but at the appetites they serve.\n\nWhat happens next is uncertain. Some observers expect regulation gradually to extend familiar protections to gig workers, blurring the line between contractor and employee and raising the cost of the model. Others foresee new arrangements altogether, in which benefits are attached to the worker rather than to a particular job, travelling with people as they move between platforms. What seems unlikely is a simple return to the older world of stable, lifelong employment. The task for policymakers is not to abolish flexible work, which many people value, but to ensure that its rewards and its risks are shared more fairly than they are today.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "The gig economy will soon disappear and traditional jobs will return.",
+            "The gig economy offers flexibility but raises unresolved questions about workers' rights and the sharing of risk.",
+            "Digital platforms are entirely harmful to society.",
+            "Traditional employment provides no benefits to workers."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why do critics say that gig workers' freedom to refuse jobs may mean little?",
+          "options": [
+            "Because refusing jobs is against the law.",
+            "Because refusing too often can reduce the flow of future offers.",
+            "Because workers cannot log on when they wish.",
+            "Because platforms pay the same regardless of tasks completed."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What consequence does the passage say follows from classifying gig workers as independent contractors?",
+          "options": [
+            "They automatically receive higher pay.",
+            "They are usually excluded from protections such as paid sick leave and minimum-wage guarantees.",
+            "They are guaranteed a company pension.",
+            "They are prevented from using digital platforms."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the writer regards the transfer of risk from organisations to individuals as",
+          "options": [
+            "a minor detail of little importance.",
+            "a central and socially significant feature of the gig economy.",
+            "a benefit that clearly favours workers.",
+            "a problem confined to a single industry."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"battleground\" most nearly means",
+          "options": [
+            "a physical field where fighting occurs.",
+            "a contested issue over which parties strongly disagree.",
+            "an agreement that all sides accept.",
+            "a type of digital platform."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the writer suggest is the appropriate task for policymakers?",
+          "options": [
+            "To abolish flexible work entirely.",
+            "To ignore the gig economy until it disappears.",
+            "To ensure the rewards and risks of flexible work are shared more fairly.",
+            "To force all workers back into lifelong employment."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章主旨是零工经济带来灵活性，但引发关于劳动者权利与风险分担的未解问题。作者认为政策制定者应让灵活工作的回报与风险更公平地分担。"
+    }
+  ]
+}

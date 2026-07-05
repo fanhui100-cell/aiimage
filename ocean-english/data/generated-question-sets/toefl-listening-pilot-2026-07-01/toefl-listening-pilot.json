@@ -1,0 +1,166 @@
+{
+  "template": "toefl-choose-a-response",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "A student tells a lab assistant, I reserved the microscope room for two o'clock, but my biology discussion was moved to the same time. I still need to finish the slide observations before tomorrow morning.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the lab assistant?",
+          "options": [
+            "You should cancel the biology discussion because the lab always takes priority.",
+            "I can check whether the room is open later today and help you move the reservation.",
+            "The microscopes are not available to students this week.",
+            "You need to repeat the entire experiment before making a new reservation."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The student has a scheduling conflict and needs the room before tomorrow. The helpful response is to check a later opening and move the reservation."
+    },
+    {
+      "passage": "During office hours, a professor says, Your essay has a strong argument, but the examples all come from the first half of the novel. Try using at least one scene from the final chapters.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the student?",
+          "options": [
+            "So I should remove the argument and write about a different novel.",
+            "I understand. I will add evidence from the later chapters to balance the essay.",
+            "I cannot revise it because the final chapters are not important.",
+            "Could you grade only the introduction instead of the whole essay?"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The professor asks for evidence from later chapters, not a new topic or a partial grade."
+    },
+    {
+      "passage": "A student at the library desk says, I returned this history book yesterday, but my account still shows an overdue fine. I put it in the night return box before it closed.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the librarian?",
+          "options": [
+            "The fine cannot be changed under any circumstances.",
+            "I can check the return box records and update your account if the book was processed late.",
+            "You should buy a new copy of the same book today.",
+            "The history section is on the third floor."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The student reports a possible processing issue, so the librarian should check records and correct the account if needed."
+    },
+    {
+      "passage": "At a residence hall meeting, the advisor says, The kitchen will be closed on Friday morning while maintenance repairs the sink. Please remove any food from the shared refrigerator by Thursday night.",
+      "questions": [
+        {
+          "prompt": "What is the best response from a resident?",
+          "options": [
+            "Thanks for letting us know. I will take my food out before Thursday night.",
+            "I will use the kitchen Friday morning because the repair will be finished by then.",
+            "The advisor should move the refrigerator into my room permanently.",
+            "I will ignore the notice because it only concerns the laundry room."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The notice asks residents to remove food before Thursday night because the kitchen closes Friday morning."
+    },
+    {
+      "passage": "A music instructor tells a student, Your rhythm is accurate, but you are pressing the keys too hard. For this piece, the opening should sound light and almost hesitant.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the student?",
+          "options": [
+            "I will slow down every section of the piece.",
+            "I will try playing the opening with a softer touch.",
+            "I should stop practicing rhythm because it is already accurate.",
+            "I will choose a louder piece for the recital."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The instructor wants a lighter touch in the opening, not a slower tempo or a louder piece."
+    },
+    {
+      "passage": "A campus shuttle driver announces, The next stop is the science complex. Because of road work, this bus will not continue to the stadium. Students going there should transfer at the science complex.",
+      "questions": [
+        {
+          "prompt": "What is the best response from a student going to the stadium?",
+          "options": [
+            "I should stay on this bus until it reaches the stadium.",
+            "I should get off at the science complex and transfer.",
+            "I should ask the driver to skip the science complex.",
+            "I should walk back to the first stop."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The driver states the bus will not continue to the stadium, so the student should transfer at the science complex."
+    },
+    {
+      "passage": "A student says to an academic advisor, I want to add environmental chemistry, but the online system says I need instructor permission. The class still has seats available.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the advisor?",
+          "options": [
+            "Seats are available, so permission is never required.",
+            "You should email the instructor and explain why you want to join the course.",
+            "You must wait until next year because chemistry courses cannot be added.",
+            "The online system is only for paying tuition."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The system requires instructor permission, so the advisor should direct the student to contact the instructor."
+    },
+    {
+      "passage": "A teaching assistant says, I noticed several groups used the same chart from the textbook. For the final presentation, try creating your own visual so your analysis is easier to follow.",
+      "questions": [
+        {
+          "prompt": "What is the best response from a student?",
+          "options": [
+            "We will design a new chart that matches our own data.",
+            "We will remove all visuals from the presentation.",
+            "We will use the textbook chart twice so it is clearer.",
+            "We will change our topic to avoid presenting data."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The assistant suggests creating an original visual based on the group's analysis."
+    },
+    {
+      "passage": "A student at the dining office says, I bought a meal plan for weekdays, but my internship schedule changed. I will be off campus most weekdays and on campus on weekends.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the dining office worker?",
+          "options": [
+            "You can ask about switching to a plan that better matches your new schedule.",
+            "Meal plans can only be used by students without internships.",
+            "The office cannot discuss meal plans during the semester.",
+            "You should stop attending the internship immediately."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The student's schedule changed, so a plan adjustment is the appropriate response."
+    },
+    {
+      "passage": "A professor says after class, I liked your question about the coral data. If you are interested, the marine science group meets on Wednesday afternoons and welcomes first-year students.",
+      "questions": [
+        {
+          "prompt": "What is the best response from the student?",
+          "options": [
+            "I am interested. Could you tell me where the group meets on Wednesday?",
+            "I will avoid the group because first-year students are not allowed.",
+            "I already submitted the coral data to another class.",
+            "I think Wednesday afternoons should be removed from the schedule."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The professor invites the student to a group that welcomes first-year students; asking for the meeting location is appropriate."
+    }
+  ]
+}

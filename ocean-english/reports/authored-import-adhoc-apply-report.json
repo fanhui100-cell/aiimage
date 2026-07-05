@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-06-21T14:04:39.365Z",
+  "apply": true,
+  "stage": null,
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 0,
+    "reject": 2,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {
+    "passage_too_short:102<150": 1,
+    "passage_too_short:103<150": 1
+  },
+  "files": [
+    {
+      "file": "data/generated-question-sets/gapfill/grammar-fill-zhongkao-lv1.json",
+      "template": "gaokao-grammar-fill",
+      "level": 1,
+      "parsedOk": 0,
+      "reject": 2,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

@@ -1,0 +1,824 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-1du0787",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "distractions",
+        "introduce",
+        "increasing",
+        "strength",
+        "efficiently",
+        "quickly",
+        "confuse",
+        "habit",
+        "skill",
+        "regarded",
+        "noise",
+        "boost",
+        "reduce",
+        "ignored",
+        "levels"
+      ],
+      "answers": [
+        9,
+        0,
+        11,
+        14,
+        4,
+        1,
+        6,
+        8,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-1htzlf5",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "presence",
+        "unspoken",
+        "anxious",
+        "viewed",
+        "silence",
+        "recharge",
+        "balance",
+        "ignored",
+        "frequent",
+        "rare",
+        "deliberate",
+        "noise",
+        "enhance",
+        "relaxed",
+        "absence"
+      ],
+      "answers": [
+        9,
+        4,
+        2,
+        14,
+        12,
+        5,
+        10,
+        3,
+        1,
+        6
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-gqc7c2",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "relaxed",
+        "ignore",
+        "dismiss",
+        "respect",
+        "increase",
+        "create",
+        "overlooked",
+        "capture",
+        "reflect",
+        "regulate",
+        "valuing",
+        "anxious",
+        "reduce",
+        "enhance",
+        "avoid"
+      ],
+      "answers": [
+        6,
+        8,
+        12,
+        3,
+        10,
+        5,
+        9,
+        11,
+        13,
+        7
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-w2yyp2",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "temporary",
+        "expensive",
+        "challenges",
+        "rewarding",
+        "adopt",
+        "ignore",
+        "improve",
+        "environmental",
+        "decline",
+        "momentum",
+        "benefit",
+        "shortage",
+        "free",
+        "reduce",
+        "match"
+      ],
+      "answers": [
+        9,
+        10,
+        2,
+        4,
+        3,
+        6,
+        11,
+        12,
+        14,
+        7
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-17uicil",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "essential",
+        "consume",
+        "contend",
+        "minimizing",
+        "permeate",
+        "enhance",
+        "pervasive",
+        "necessary",
+        "neglect",
+        "deliberate",
+        "dominance",
+        "curtail",
+        "privilege",
+        "superficial",
+        "realities"
+      ],
+      "answers": [
+        4,
+        9,
+        11,
+        6,
+        3,
+        2,
+        14,
+        10,
+        7,
+        1
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-1lcyqvs",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "challenge",
+        "revealed",
+        "identify",
+        "preserve",
+        "attention",
+        "stimulation",
+        "dictate",
+        "harsh",
+        "tackle",
+        "paradox",
+        "engage",
+        "familiar",
+        "aware",
+        "balance",
+        "anxious"
+      ],
+      "answers": [
+        4,
+        0,
+        1,
+        14,
+        5,
+        8,
+        10,
+        13,
+        12,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-16jmsus",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. Applicants often feel frustrated when they receive no explanation for automated rejections.",
+        "B. Consequently, the very tool designed to eliminate human bias may actually amplify it.",
+        "C. Algorithms can also help reduce unconscious bias by ignoring irrelevant personal information.",
+        "D. Despite these efforts, the problem persists and continues to affect marginalized groups disproportionately.",
+        "E. Some companies argue that algorithmic hiring is more objective than human decision-making.",
+        "F. Even when bias is identified, correcting it can be technically challenging and costly.",
+        "G. To address this issue, a growing number of experts advocate for a hybrid approach combining AI with human judgment."
+      ],
+      "answers": [
+        1,
+        0,
+        5,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-16srgy9",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Instead of owning a car, many urban dwellers now subscribe to short-term rental services for occasional trips.",
+        "Critics often overlook the fact that these platforms create flexible job opportunities for millions of gig workers.",
+        "Rather than acquiring physical products, consumers increasingly pay for temporary usage rights through digital apps.",
+        "This phenomenon has sparked heated debates among economists about its impact on traditional industries.",
+        "In response, some cities have imposed strict caps on short-term rentals to protect housing affordability.",
+        "The environmental benefits, however, are sometimes offset by increased travel and packaging waste.",
+        "By contrast, traditional business models rely on mass production and long-term customer ownership."
+      ],
+      "answers": [
+        2,
+        0,
+        4,
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1h3auk1",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. Many people find that constant digital engagement leaves them feeling drained and disconnected from their surroundings.",
+        "B. One notable experiment involved a group of office workers who agreed to keep their smartphones in a locked drawer during work hours.",
+        "C. The practice has gained traction particularly among young professionals in urban centers who feel overwhelmed by information overload.",
+        "D. Low-wage gig workers, by contrast, often depend on constant app notifications to secure their next income stream.",
+        "E. Instead, it encourages periodic audits of one’s digital habits and the removal of apps that do not align with personal values.",
+        "F. Some even go so far as to switch to ‘dumb phones’ that only support calls and texts.",
+        "G. Digital minimalism, however, is not a one-size-fits-all solution, and its implementation varies widely across different socioeconomic groups."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1l9gyjf",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "These unintended consequences challenge the conventional wisdom that green spaces are universally beneficial.",
+        "Some cities have responded by creating affordable housing quotas near new parks.",
+        "Instead, they become victims of their own neighborhood’s improvement.",
+        "Critics argue that the environmental gains are often overstated.",
+        "The financial burden can be particularly acute in post-industrial cities with shrinking tax bases.",
+        "Yet the benefits of urban greenery are not distributed evenly across socioeconomic groups.",
+        "Nevertheless, the long-term health advantages of parks are well-documented."
+      ],
+      "answers": [
+        0,
+        5,
+        2,
+        4,
+        1
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1rl3fq5",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Employees who work from home often report higher job satisfaction due to reduced commuting stress.",
+        "Consequently, junior staff may miss crucial development opportunities that arise from day-to-day observation.",
+        "Yet many organizations have rushed to adopt permanent remote policies without fully evaluating the long-term implications.",
+        "This constant connectivity makes it difficult for employees to disconnect, ultimately harming mental health.",
+        "For instance, regular video check-ins can help replicate the serendipitous exchanges that occur in hallways.",
+        "Some studies even suggest that remote teams outperform their office-based counterparts in measurable productivity.",
+        "Companies must also ensure that remote workers have equal access to promotions and high-visibility projects."
+      ],
+      "answers": [
+        2,
+        1,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-2g0nlu",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Digital minimalism, however, is not a one-size-fits-all solution and requires personal adaptation.",
+        "Many people find that reducing notifications alone can significantly lower their stress levels.",
+        "The core idea is to focus on tools that add genuine value to one’s life while discarding those that merely consume time.",
+        "Critics argue that this approach may lead to social isolation in an increasingly connected world.",
+        "Supporters often begin by conducting a 30-day digital declutter to reset their habits.",
+        "Ultimately, the goal is not to reject technology but to master it rather than be mastered by it.",
+        "These small changes can accumulate into substantial improvements in mental well-being."
+      ],
+      "answers": [
+        2,
+        4,
+        1,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-3r44x3",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people feel overwhelmed by the sheer volume of notifications and updates demanding their attention.",
+        "Instead, it advocates for periodic digital fasts and strict boundaries around device usage.",
+        "Interestingly, these benefits were most pronounced among participants who initially reported high levels of screen dependency.",
+        "Some even argue that constant connectivity has rewired our brains to crave distraction.",
+        "Others worry that such practices might exacerbate social isolation for lower-income groups.",
+        "The key is to replace passive scrolling with active, meaningful engagement.",
+        "Without structural support, the advice to simply 'unplug' may ring hollow for those who rely on digital work for survival."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-vgcxy8",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "The more we rely on digital tools, the more they seem to fragment our concentration.",
+        "This constant connectivity has been linked to increased rates of anxiety and depression among young adults.",
+        "Some companies have even introduced 'focus hours' during which all non-essential notifications are silenced.",
+        "But the deeper issue is that our brains are not wired for the pace and volume of modern digital input.",
+        "In response, some workplaces have adopted strict policies limiting personal device use during meetings.",
+        "The key, researchers argue, is to design environments that encourage mindful engagement rather than passive consumption.",
+        "However, completely disconnecting is impractical in a society that demands instant communication."
+      ],
+      "answers": [
+        0,
+        3,
+        2,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-xq4du4",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "These informal channels are vital for career advancement and organizational culture.",
+        "Remote work also offers employees greater autonomy over their schedules and locations.",
+        "Without them, new hires may take longer to become productive and feel less connected to the team.",
+        "Many companies have reported increased productivity after shifting to permanent remote work.",
+        "However, the loss of incidental learning poses a long-term risk to innovation and cohesion.",
+        "Others argue that remote work reduces distractions and improves focus on complex tasks.",
+        "These formal structures, however, often fail to capture the nuanced, context-rich knowledge exchanged in person."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        6,
+        1
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1jikyss",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Listening is the only way to get good grades.",
+        "Teaching others is a powerful learning tool.",
+        "Many students prefer studying alone at home.",
+        "It also helps you find out what you don’t know.",
+        "Some students feel nervous when speaking in class.",
+        "By doing this, you can check your own understanding.",
+        "Trying this method can make learning more fun and effective."
+      ],
+      "answers": [
+        1,
+        3,
+        5,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1og8vr7",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Tom’s grandpa agreed with a warm smile.",
+        "Grandpa carefully opened the box with a key he kept in his pocket.",
+        "Tom decided to plant some flowers in the garden.",
+        "They sat on the bench and Grandpa read the letter aloud.",
+        "Tom’s grandpa asked him to dig a hole for a new tree.",
+        "The box was buried under a big rose bush.",
+        "Tom felt a little disappointed and went back to digging."
+      ],
+      "answers": [
+        4,
+        5,
+        1,
+        3,
+        0
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-hdf72n",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. It helps you meet people with similar interests.",
+        "B. Being friendly is the first step to making friends.",
+        "C. You should always keep silent in class.",
+        "D. Don’t be afraid to start a conversation.",
+        "E. Making friends is very easy for everyone.",
+        "F. This will make others feel welcome and warm.",
+        "G. They might be just as nervous as you are."
+      ],
+      "answers": [
+        1,
+        3,
+        0,
+        6,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-joc74d",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "I bought a beautiful dress in the shop.",
+        "Then I began to decorate it.",
+        "Her eyes were full of tears of joy.",
+        "I had no idea what to buy at first.",
+        "On the back I drew some small flowers.",
+        "I felt very nervous when I handed it to her.",
+        "She hugged me and said thank you with a smile."
+      ],
+      "answers": [
+        3,
+        1,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-q5l6zn",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "I bought a beautiful card from the store.",
+        "I worked on it carefully for two hours.",
+        "She gave me a big hug and thanked me.",
+        "I also wrote a poem on the back.",
+        "I felt very happy and proud.",
+        "At first I felt a little sad.",
+        "Sometimes the simplest things can bring the greatest joy."
+      ],
+      "answers": [
+        5,
+        3,
+        1,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-rl0k31",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "At first, I was not very happy because I thought it would be boring.",
+        "However, I still went with her because she needed my help.",
+        "It was a big surprise for me!",
+        "My mother smiled and told me to open it.",
+        "I couldn't believe my eyes.",
+        "I named it Lucky and played with it all afternoon.",
+        "I asked my father to help me instead."
+      ],
+      "answers": [
+        0,
+        3,
+        4,
+        5,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-wxlcp9",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "I turned on the light slowly.",
+        "Suddenly I heard a strange noise from my room.",
+        "I was deeply moved and hugged them tightly.",
+        "Then we had a wonderful party together.",
+        "However, something special was waiting for me.",
+        "They forgot my birthday again.",
+        "After the party, I helped clean the house."
+      ],
+      "answers": [
+        4,
+        0,
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1akijte",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people think they can get by with just a few hours of sleep.",
+        "This is why a good night's rest is so important for learning.",
+        "However, there are simple ways to improve sleep quality.",
+        "Some people even believe that sleeping less makes them more productive.",
+        "Interestingly, the amount of sleep needed varies from person to person.",
+        "Therefore, we should try to sleep as much as possible every day.",
+        "Adults generally need seven to nine hours of sleep per night."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1ayfrzb",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people consider silence boring or even uncomfortable.",
+        "This is why silence is often linked to improved creativity and problem-solving.",
+        "Silence can also help us become more aware of our own thoughts and feelings.",
+        "However, too much silence may cause anxiety in some individuals.",
+        "These benefits are supported by a growing body of scientific evidence.",
+        "Interestingly, silence can also enhance our ability to listen to others.",
+        "Such practices have been shown to improve academic performance and emotional well-being."
+      ],
+      "answers": [
+        0,
+        2,
+        1,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1e16wpn",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "However, saying no does not mean being rude or unhelpful.",
+        "Many people find it difficult to refuse because they want to be liked.",
+        "Instead, it can be done politely and with empathy.",
+        "Without such boundaries, you may end up sacrificing your own needs.",
+        "Therefore, learning to refuse gracefully is a sign of maturity.",
+        "This approach helps avoid sounding accusatory while still being clear.",
+        "Additionally, saying yes too often can make you less reliable."
+      ],
+      "answers": [
+        1,
+        3,
+        2,
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1f168nv",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "This small action might seem too insignificant to matter.",
+        "Instead, you could try writing down your goals every morning.",
+        "They are less likely to cause burnout or feelings of guilt.",
+        "For instance, you could do ten push-ups before breakfast.",
+        "Then you might feel ready to run a short distance.",
+        "People often give up when they set unrealistic goals.",
+        "Therefore, micro-habits can be a powerful tool for change."
+      ],
+      "answers": [
+        0,
+        4,
+        3,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1f65xe8",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "It is the daily routine that shapes our future, not occasional bursts of effort.",
+        "For example, a person who exercises for five minutes every day is more likely to stick with it than one who tries to work out for an hour.",
+        "This is why many successful people attribute their achievements to simple daily disciplines.",
+        "Without clear goals, even small habits can lead to confusion and wasted effort.",
+        "Moreover, small wins boost confidence and motivate further action.",
+        "In contrast, waiting for the perfect moment often results in missed opportunities.",
+        "However, it is important to note that habits alone cannot guarantee success without proper planning."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1stkzrs",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people fear that saying no will damage their relationships.",
+        "Instead, they can offer an alternative solution, such as suggesting another time.",
+        "But with practice, it becomes easier to decline requests gracefully.",
+        "However, constantly saying yes to every request can lead to burnout and resentment.",
+        "Therefore, it is wise to prioritize tasks and avoid overcommitting.",
+        "Similarly, when a friend invites you to an event you are not interested in, a gentle no is acceptable.",
+        "Actually, most people appreciate clear communication rather than vague excuses."
+      ],
+      "answers": [
+        0,
+        5,
+        1,
+        6,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-tjcd0o",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "These conversations are often dismissed as unimportant.",
+        "Instead, they can open doors to new opportunities.",
+        "Such light-hearted chats help people feel more connected.",
+        "It helps colleagues build rapport and trust.",
+        "Some even avoid it altogether.",
+        "However, these conversations are rarely remembered later.",
+        "Learning to start a small talk is a valuable life skill."
+      ],
+      "answers": [
+        0,
+        2,
+        6,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-w52wrw",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people mistake hearing for listening, but they are quite different.",
+        "Instead, we should resist the urge to respond immediately and focus on what is being said.",
+        "However, listening is often undervalued in our daily interactions.",
+        "Without it, important details may be missed and feelings hurt.",
+        "Moreover, listening well can help us learn from diverse perspectives.",
+        "Silence, on the other hand, can make conversations awkward.",
+        "Listening is a natural ability that everyone is born with."
+      ],
+      "answers": [
+        2,
+        1,
+        0,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-zkvggn",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "They suggest that we should avoid boredom at all costs.",
+        "Boredom can actually spark creativity and innovation.",
+        "Therefore, it is wise to fill every spare moment with entertainment.",
+        "Many people feel anxious when they have nothing to do.",
+        "Students should not be afraid of having idle time.",
+        "This explains why some inventors loved long walks alone.",
+        "Instead, they can schedule short periods without any digital devices."
+      ],
+      "answers": [
+        1,
+        4,
+        5,
+        6,
+        3
+      ]
+    }
+  }
+]

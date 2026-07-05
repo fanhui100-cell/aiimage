@@ -1,0 +1,29 @@
+{
+  "templateId": "zhongkao-cloze-passage",
+  "examIds": ["zhongkao"],
+  "taskType": "cloze_passage",
+  "skill": "integrated",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "中考完形：一篇 150-230 词原创记叙/夹叙夹议短文（话题贴近中学生：成长/校园/亲情/助人/兴趣），挖 12 空（编号 1-12），每空 4 选项、唯一正确，考语境词义与简单逻辑衔接。难度贴近中考（词汇与句式简单），不要高考/CET 化。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 150,
+    "maxWords": 250,
+    "perStimulusItems": 12,
+    "topicDomains": ["成长", "校园", "亲情", "助人", "兴趣", "环保"]
+  },
+  "itemCount": 12,
+  "optionCount": 4,
+  "answerSchema": { "shape": "cloze_passage", "blanks": 12, "optionCount": 4 },
+  "subskills": ["vocab_in_context", "logical_cohesion", "word_discrimination"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "恰好 12 空，每空 4 选项，唯一正确",
+    "干扰项同词性、合语法、靠语境排除",
+    "难度贴近中考（简单词汇/句式），不要高考或 CET 化",
+    "不得出现退役题型（尤其 cet_cloze）"
+  ],
+  "copyrightPolicy": "original_only"
+}

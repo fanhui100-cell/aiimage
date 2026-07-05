@@ -1,0 +1,138 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Building a Light on the Rocks\n\nFor sailors of the early nineteenth century, few things were as feared as the submerged reef. Unlike a visible cliff, a low ridge of rock hidden just beneath the waves gave no warning, and countless vessels were torn open in the dark by hazards that no map could adequately describe. The obvious answer was to place a warning light upon the danger itself. Yet to erect a tower on a rock that was drowned at every high tide, and battered by the full weight of the open ocean, was a task that stretched the engineering knowledge of the age to its limits.\n\nThe first difficulty was simply reaching the site. A crew could work only during the brief window when the tide had fallen far enough to expose the rock, and even then a rising swell might sweep the ledge clean of men and tools within minutes. On some notorious reefs the workable period amounted to no more than two or three hours a day, and then only in calm summer weather. Masons therefore spent long stretches marooned on a floating barrack moored nearby, rowing out to the rock whenever the sea permitted and abandoning it the instant conditions turned. A season of labour might yield only a few weeks of actual building.\n\nEven when the men could stand on the rock, the question remained of how to fix anything to it. Early builders had assumed that sheer weight would hold a tower down, but experience taught them otherwise. Waves striking a vertical wall do not merely push; they can lift, and a mass of water hurled against masonry exerts pressures that were, at the time, almost impossible to calculate. The celebrated engineer John Smeaton, studying the problem, drew inspiration from an unlikely source: the trunk of an oak tree, broad at its base and tapering as it rose. A tower shaped in this way would present a curved face that deflected the sea rather than opposing it head on, and would carry most of its weight low down, where the blows fell hardest.\n\nSmeaton's second innovation lay beneath the surface. Rather than resting his tower on the rock, he carved the rock itself into a series of steps and dovetailed the lowest stones into these notches, so that the base and the reef became, in effect, a single interlocked body. Each course of masonry was likewise joined to the one below by stone plugs and marble dowels, turning a stack of separate blocks into something closer to a solid monolith. He also experimented with a cement that would set in wet conditions, a genuine novelty in an era when most mortars needed to dry in air before they gained any strength. Without such a mixture, the rising tide would have washed his joints away before they had a chance to harden.\n\nMaterials posed their own puzzles. Ordinary brick was useless against the sea, and even good building stone had to be selected with unusual care, for a block that split along a hidden flaw might doom the whole structure. Granite, hard and dense, eventually became the favoured choice, but it was heavy and awkward, and every shaped block had to be cut and trial-fitted on shore before being ferried out and hoisted into place. A single ill-matched stone could hold up the entire operation until a replacement was prepared, sometimes months later.\n\nThe reward for all this labour was a structure of extraordinary durability. Several towers raised by these methods have withstood more than a century of storms with little more than routine maintenance, and the tapering profile that Smeaton borrowed from the oak became the template for rock lighthouses across the world. What is striking, in retrospect, is how much of the achievement rested not on new machinery but on patient observation. The engineers who succeeded were those who studied how the sea actually behaved, who watched which stones survived and which failed, and who were willing to abandon the comfortable assumption that strength was merely a matter of size. In learning to work with the ocean rather than against it, they turned the most dangerous rocks in their waters into the safest.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Nineteenth-century lighthouse builders overcame extreme natural obstacles through careful observation and inventive design rather than brute strength.",
+            "The greatest danger to nineteenth-century ships was the submerged reef, which no map of the period could show.",
+            "John Smeaton was the most important engineer of the nineteenth century because of his work on lighthouses.",
+            "Granite eventually replaced brick and ordinary stone as the standard material for building towers at sea."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, why did masons often live on a floating barrack near the rock?",
+          "options": [
+            "Because the tide exposed the rock for only short periods, so they had to be ready to reach it whenever the sea allowed.",
+            "Because the local towns were too far away to reach the site by land within a single day.",
+            "Because the completed lighthouse could not yet accommodate a permanent keeper.",
+            "Because the barrack could store granite blocks more safely than the mainland."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What did Smeaton do to secure the base of his tower to the reef?",
+          "options": [
+            "He cut steps into the rock and dovetailed the lowest stones into these notches so the base and reef locked together.",
+            "He relied on the sheer weight of the granite blocks to hold the structure in place.",
+            "He surrounded the base with a ring of loose stones to break the force of the waves.",
+            "He bolted iron frames into the rock and rested the masonry on top of them."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a wet-setting cement was essential to Smeaton's design because",
+          "options": [
+            "the joints between stones would otherwise have been destroyed by the incoming tide before an air-drying mortar could gain strength.",
+            "granite could not be shaped accurately unless the cement holding it remained permanently soft.",
+            "the tapering shape of the tower placed unusual strain on every mortar joint.",
+            "ordinary mortar was too expensive to transport to such remote sites in large quantities."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The word 'notorious' in paragraph 2 is closest in meaning to",
+          "options": [
+            "widely known for being dangerous",
+            "unusually small in size",
+            "difficult to locate on a map",
+            "recently discovered by surveyors"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "emphasise that the builders' success came from studying nature and observation rather than from powerful machinery.",
+            "warn that even the strongest towers will eventually be destroyed by repeated storms.",
+            "argue that modern engineers have failed to match the achievements of their predecessors.",
+            "describe the specific maintenance routines that keep old lighthouses standing."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲述19世纪在暗礁上建造灯塔的工程难题（潮汐、海浪冲击、材料与固定方法及Smeaton的锥形设计）。题目涵盖主旨、两道细节、一道推断（湿凝水泥的必要性）、一道词汇题（notorious）和一道作者目的题。"
+    },
+    {
+      "passage": "Finding the Way: The Navigation of Migratory Birds\n\nEach year, billions of birds undertake journeys that dwarf anything achieved by human travellers without instruments. A small warbler weighing less than a coin may leave a northern forest in autumn and arrive, weeks later, at a particular patch of African woodland it has never seen, having crossed deserts and open sea along the way. That such feats are possible at all is remarkable; that many birds perform them alone, as juveniles, without ever following an experienced adult, has long puzzled the scientists who study them.\n\nA useful way to think about the problem is to divide it in two. A bird must have a 'compass', some means of knowing which direction it is heading, and it must also have a 'map', some sense of where it currently is in relation to its goal. These are separate abilities, and the evidence suggests that birds draw on several sources for each, switching between them as conditions demand.\n\nThe most familiar compass is the sun. Many species can hold a steady course by the sun's position, but this alone would be useless without a way to correct for the fact that the sun moves across the sky through the day. Birds appear to combine their reading of the sun with an internal clock, so that a low sun in the east and a low sun in the west are not confused. Experiments in which birds were kept under artificial lighting that shifted their internal clock produced predictable errors in the direction they chose, which is strong evidence that the two systems work together.\n\nAt night, when most small songbirds actually migrate, the sun is obviously unavailable, and here the stars take over. Rather than memorising individual constellations, birds seem to learn, early in life, the single point in the sky around which all the stars appear to rotate. In the northern hemisphere this point lies close to the Pole Star and marks true north regardless of the season or the hour. A young bird raised in a planetarium, watching an artificial sky rotate about a false centre, will later orient itself with respect to that false centre rather than the real one, which shows that the ability is learned rather than fixed at birth.\n\nPerhaps the most intriguing sense is the ability to detect the Earth's magnetic field. Unlike the sun and stars, the magnetic field is available at any hour and through cloud, and it offers information not only about direction but potentially about position, since its strength and angle vary in a regular way across the globe. Exactly how birds sense it remains debated. One leading idea involves light-sensitive molecules in the eye whose chemical behaviour is subtly altered by magnetism, which would mean, strangely, that a bird might in some sense see the field. Whatever the mechanism, birds deprived of their other cues can still choose a sensible heading, suggesting the magnetic sense serves as a dependable backup.\n\nNone of these systems is perfect on its own, and the real skill lies in reconciling them. Cues can conflict: a magnetic reading may point one way while the setting sun implies another, and researchers have found that many birds recalibrate one system against another, often treating the direction of sunset as a trusted reference at dusk and adjusting their magnetic compass accordingly. This redundancy explains how a bird can complete a journey even when fog hides the stars for nights on end or a magnetic anomaly distorts the local field.\n\nThe 'map' sense, by which a displaced bird works out not merely a direction but a correction toward its goal, is far less well understood. Experienced adults blown off course will often turn and compensate, heading toward their destination from an entirely unfamiliar starting point, whereas young birds on their first migration frequently do not, continuing instead on their original heading as though following a fixed instruction. This difference hints that part of the map is assembled through experience, layered gradually upon the inherited compass with which every bird apparently begins. If so, migration is neither purely instinctive nor purely learned, but a partnership between the two, refined over a lifetime of journeys.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Migratory birds navigate by drawing on several complementary systems for direction and position, some inherited and some learned.",
+            "The Earth's magnetic field is the single most important tool that migratory birds use to find their way.",
+            "Young birds are unable to migrate successfully unless they follow experienced adults.",
+            "Scientists have now fully explained how birds construct an internal map of their surroundings."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, why is an internal clock necessary for the sun compass to work?",
+          "options": [
+            "Because the sun changes its position in the sky through the day, so its bearing must be interpreted according to the time.",
+            "Because the sun is only visible for part of the birds' migratory journey.",
+            "Because the sun's brightness varies too much to give a reliable heading on its own.",
+            "Because most small songbirds migrate at night rather than during the day."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What did the planetarium experiment demonstrate about how birds use the stars?",
+          "options": [
+            "That birds learn the centre of the sky's rotation early in life rather than being born knowing it.",
+            "That birds memorise the shapes of individual constellations before their first migration.",
+            "That birds cannot orient themselves at all unless the real Pole Star is visible.",
+            "That the star compass is more accurate than the magnetic compass at night."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the difference between how adult and young birds respond to being blown off course suggests that",
+          "options": [
+            "the 'map' sense that allows true course correction is developed partly through experience rather than being fully inherited.",
+            "young birds possess no functioning compass until they have completed at least one migration.",
+            "adult birds abandon their magnetic sense once they have learned to read the stars.",
+            "the direction of a bird's first migration is chosen at random and later corrected."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The word 'reconciling' in paragraph 6 is closest in meaning to",
+          "options": [
+            "bringing into agreement",
+            "storing for later use",
+            "measuring precisely",
+            "abandoning in turn"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude toward the study of bird navigation?",
+          "options": [
+            "Appreciative of what has been discovered while openly acknowledging that important questions remain unresolved.",
+            "Sceptical that any of the proposed navigational systems have been convincingly demonstrated.",
+            "Confident that the mechanism of the magnetic sense has now been settled beyond doubt.",
+            "Dismissive of laboratory experiments as a way of understanding natural behaviour."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇介绍候鸟长途迁徙的导航机制（太阳罗盘与内在时钟、星辰、地磁场以及“地图”与“罗盘”的区分和相互校准）。题目涵盖主旨、两道细节、一道推断（成鸟与幼鸟差异说明地图靠经验习得）、一道词汇题（reconciling）和一道作者态度题。"
+    }
+  ]
+}

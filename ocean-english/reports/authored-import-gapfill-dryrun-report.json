@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T02:26:15.263Z",
+  "apply": false,
+  "stage": "gapfill",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 10,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\gapfill\\grammar-fill-zhongkao-lv1.json",
+      "template": "gaokao-grammar-fill",
+      "level": 1,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\gapfill\\reading-cet6-lv4.json",
+      "template": "reading-comprehension-mcq",
+      "level": 4,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\gapfill\\reading-gaokao-lv2.json",
+      "template": "reading-comprehension-mcq",
+      "level": 2,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\gapfill\\reading-kaoyan-lv5.json",
+      "template": "reading-comprehension-mcq",
+      "level": 5,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\gapfill\\reading-zhongkao-lv1.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "template": "sat-standard-english-conventions",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Standard English Conventions items, batch 4. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The novel ______ made her famous was written in barely six weeks, scrawled across a stack of cheap notebooks during a long train journey through a country she was seeing for the very first time.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["that", ", which", " which,", ", that"],
+      "answer": "that",
+      "domain": "Standard English Conventions",
+      "explain_zh": "限定性从句指明是哪一部小说，用 that 且不加逗号；which 加逗号为非限定，改变语义；that 不用逗号。"
+    },
+    {
+      "passage": "Since the new curbside recycling program began three years ago, the amount of waste the town sends to the regional landfill ______ by nearly half, a drop that has surprised even the program's earliest supporters.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["has fallen", "fell", "falls", "had fallen"],
+      "answer": "has fallen",
+      "domain": "Standard English Conventions",
+      "explain_zh": "Since + 过去起点 引导的时间状语，主句用现在完成时 has fallen。"
+    },
+    {
+      "passage": "The ancient mountain road was neither as straight as the old maps had stubbornly suggested nor ______ as the cheerful local guides had promised the exhausted travelers the night before they set out.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["as level", "leveled", "leveling", "the levelest"],
+      "answer": "as level",
+      "domain": "Standard English Conventions",
+      "explain_zh": "neither as straight … nor as level 须平行（as + 形容词），用 as level。"
+    },
+    {
+      "passage": "Having grown up in a cramped house right beside the noisy harbor, ______ could identify every kind of fishing boat by the particular rhythm of its engine long before it ever rounded the point.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["the old sailor", "the engines", "identifying boats", "it was easy"],
+      "answer": "the old sailor",
+      "domain": "Standard English Conventions",
+      "explain_zh": "开头分词短语 Having grown up… 须修饰其后主语，只有 the old sailor 才是在港口长大的人，其余造成悬垂修饰。"
+    },
+    {
+      "passage": "After months of heated debate the planners finally settled on a single unifying theme for the redesigned downtown park ______ water, expressed through fountains, shallow winding streams, and a long reflecting pool running down its center.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [":", ";", ", and", " of"],
+      "answer": ":",
+      "domain": "Standard English Conventions",
+      "explain_zh": "前为完整独立句，后接对 theme 的解释性名词短语 water…，用冒号引出；分号后须接独立句。"
+    },
+    {
+      "passage": "Carefully cataloguing many thousands of fragile, pinned insect specimens ______ exactly the kind of patient, unglamorous labor that rarely makes headlines yet quietly keeps an entire branch of science moving forward.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["is", "are", "were", "have been"],
+      "answer": "is",
+      "domain": "Standard English Conventions",
+      "explain_zh": "动名词短语作主语视为单数，用 is。"
+    },
+    {
+      "passage": "Each of the lovingly restored steam engines, polished until ______ brass fittings gleamed in the afternoon light, was rolled slowly onto the platform to the delight of a crowd that had waited since dawn.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["its", "their", "it's", "they're"],
+      "answer": "its",
+      "domain": "Standard English Conventions",
+      "explain_zh": "Each 为单数，物主代词用 its 指代单台 engine；their 复数，it's=it is，they're=they are。"
+    },
+    {
+      "passage": "By the time the last weary volunteers leave the crowded shelter late this evening, they ______ more than two thousand hot meals to families who had lost their homes in the flood only days before.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["will have served", "served", "have served", "are serving"],
+      "answer": "will have served",
+      "domain": "Standard English Conventions",
+      "explain_zh": "By the time + 将来动作（leave），表在该将来时点前完成，用将来完成时 will have served。"
+    },
+    {
+      "passage": "The detailed biography reveals that the restless inventor sketched almost constantly, rarely slept more than four hours a night, and ______ on a dozen unrelated problems at once, certain that one of them would eventually give way.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["worked", "working", "was working", "to work"],
+      "answer": "worked",
+      "domain": "Standard English Conventions",
+      "explain_zh": "与 sketched、slept 构成一般过去时平行，用 worked。"
+    },
+    {
+      "passage": "The old harbor lighthouse had not guided a single ship in well over forty years ______ the town still gathered faithfully every summer to switch on its great lamp for one symbolic, almost defiant evening.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [", yet", ",", " yet", "; yet,"],
+      "answer": ", yet",
+      "domain": "Standard English Conventions",
+      "explain_zh": "两个独立句语义转折，用逗号加并列连词 , yet；单逗号造成 comma splice，缺逗号为 run-on，; yet, 标点冗余。"
+    },
+    {
+      "passage": "The small research team ______ been working in near-total isolation for eighteen months, communicating with the outside world only through a single satellite link that often went dead for days at a stretch.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["has", "have", "are", "were"],
+      "answer": "has",
+      "domain": "Standard English Conventions",
+      "explain_zh": "集合名词 team 在美式英语中作单数，搭配 has been working。"
+    }
+  ]
+}

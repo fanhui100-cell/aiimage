@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "speaking",
+  "taskType": "interview_speaking",
+  "tasks": [
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Favourite Room.\nPart 1 (interview): 1) Which room do you spend the most time in at home? 2) Do you prefer rooms with lots of natural light or softer lighting? Why? 3) Have you changed anything about your room recently?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a room in your home (or a home you know well) that you especially like. You should say: where the room is, what it looks like inside, what you usually do in this room, and explain why you like this room more than the others.\nPart 3 (discussion): 1) How does the design of a room affect people's mood and productivity? 2) Why do people in some cultures invest heavily in decorating their homes while others keep them plain? 3) Do you think open-plan living spaces will replace separate rooms in future homes?",
+      "promptZh": "雅思口语练习组——最喜欢的房间",
+      "referencePoints": [
+        "Part 2: cover all four cue-card points — location, appearance, activities, and the reason it stands out",
+        "Use descriptive vocabulary for space and atmosphere (cosy, spacious, cluttered, airy)",
+        "Part 3: move from personal examples to general claims about design, culture, and housing trends",
+        "Support opinions with reasons and at least one concrete example"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Growing Plants.\nPart 1 (interview): 1) Do you or your family grow any plants at home? 2) Would you rather grow flowers or vegetables? Why? 3) Did you learn anything about plants when you were at school?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a plant that you (or someone you know) have grown or looked after. You should say: what the plant is, how it was looked after, what happened to it over time, and explain how you felt about caring for it.\nPart 3 (discussion): 1) Why do you think gardening has become popular among young city dwellers? 2) Should governments encourage people to grow some of their own food? Why or why not? 3) In what ways can caring for plants change a person's attitude towards nature?",
+      "promptZh": "雅思口语练习组——种植植物",
+      "referencePoints": [
+        "Part 2: narrate the plant's story over time — planting, care routine, outcome, and feelings",
+        "Use process language (water, prune, repot, sprout, wilt) and time markers",
+        "Part 3: discuss social trends and policy with hedging language (it tends to, arguably)",
+        "Balance both sides before giving a clear opinion on the policy question"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Letters and Postcards.\nPart 1 (interview): 1) Have you ever written a letter or postcard by hand? 2) Do you keep any cards or letters that people have sent you? 3) When was the last time you received something in the post that made you happy?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a letter, card, or postcard that you received and still remember. You should say: who sent it to you, what it looked like, what it said, and explain why you still remember it today.\nPart 3 (discussion): 1) Why do some people feel that handwritten messages are more sincere than digital ones? 2) Is it worth teaching children how to write formal letters in the digital age? 3) How might postal services need to change to survive in the future?\n",
+      "promptZh": "雅思口语练习组——信件与明信片",
+      "referencePoints": [
+        "Part 2: identify sender, describe the physical object, summarise the message, explain its lasting meaning",
+        "Use past tenses accurately and emotion vocabulary (touched, nostalgic, treasured)",
+        "Part 3: compare handwritten and digital communication with concession structures (although, even so)",
+        "Speculate about the future using modal verbs (might, could, will probably)"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Local News.\nPart 1 (interview): 1) How do you usually find out what is happening in your town or city? 2) Do you talk about local events with your neighbours or friends? 3) Are you more interested in local news or international news? Why?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a piece of news about your local area that interested you. You should say: what the news was about, how you heard about it, how people around you reacted, and explain why this news caught your attention.\nPart 3 (discussion): 1) Why are many local newspapers struggling while social media groups about neighbourhoods are growing? 2) Who should be responsible for making sure local news is accurate? 3) Does knowing about local issues make people more likely to get involved in their community?",
+      "promptZh": "雅思口语练习组——本地新闻",
+      "referencePoints": [
+        "Part 2: report the story clearly — event, source, public reaction, personal significance",
+        "Use reported speech and media vocabulary (headline, coverage, went viral, word of mouth)",
+        "Part 3: analyse causes of media change and issues of accountability",
+        "Link community awareness to civic participation with cause-effect language"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Learning to Drive or Ride.\nPart 1 (interview): 1) Can you ride a bicycle or drive a car? 2) Who taught you, or who would you like to teach you? 3) Is it common for young people in your country to learn to drive?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe your experience of learning to drive a car, ride a bicycle, or ride a motorbike. You should say: when you learned, who helped you learn, what difficulties you faced, and explain how you felt when you could finally do it on your own.\nPart 3 (discussion): 1) Why do some people find learning practical skills more stressful than studying from books? 2) Should the minimum age for driving be raised, lowered, or kept the same? 3) How might self-driving vehicles change the way people think about learning to drive?",
+      "promptZh": "雅思口语练习组——学开车或骑车",
+      "referencePoints": [
+        "Part 2: tell a learning story — timeline, helper, obstacles, moment of independence",
+        "Use narrative tenses and skill vocabulary (balance, stall, practice runs, gain confidence)",
+        "Part 3: compare practical and academic learning; evaluate age rules with clear criteria",
+        "Speculate about technology's impact using conditional structures"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Entering Competitions.\nPart 1 (interview): 1) Did you take part in any competitions when you were at school? 2) Do you prefer competing as part of a team or on your own? 3) Do you ever watch competitions, such as quiz shows or talent contests?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a competition you entered or would like to enter. You should say: what kind of competition it was (or is), how you prepared (or would prepare) for it, what the result was (or what you hope it would be), and explain what you learned (or hope to learn) from taking part.\nPart 3 (discussion): 1) Do competitions bring out the best or the worst in people? 2) Is it healthy for schools to rank students against each other? 3) Why do companies use competitions, such as hackathons or design contests, to find new ideas?",
+      "promptZh": "雅思口语练习组——参加比赛",
+      "referencePoints": [
+        "Part 2: structure around preparation, performance, result, and lesson learned",
+        "Use competition vocabulary (contestant, round, runner-up, personal best)",
+        "Part 3: weigh benefits and drawbacks of competitiveness in education and work",
+        "Give balanced answers before committing to a position"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Ideas Borrowed from Other Cultures.\nPart 1 (interview): 1) Have you ever tried food from another country? What did you think of it? 2) Are there any foreign festivals that people celebrate in your country? 3) Would you like to learn a custom or tradition from another culture?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe something from another culture — for example a habit, a dish, a style, or a celebration — that has become popular in your country. You should say: what it is and where it comes from, how it became popular where you live, how people in your country have changed or adapted it, and explain why you think it appeals to people in your country.\nPart 3 (discussion): 1) What are the benefits and risks when cultures borrow ideas from each other? 2) Does globalisation make national cultures stronger or weaker? 3) Who should decide how a traditional custom can be used by people outside that culture?",
+      "promptZh": "雅思口语练习组——从其他文化借来的事物",
+      "referencePoints": [
+        "Part 2: explain origin, route to popularity, local adaptation, and appeal",
+        "Use cultural vocabulary (custom, adopt, adapt, fusion, tradition)",
+        "Part 3: discuss globalisation with balanced argument structures",
+        "Handle the sensitive ownership question with careful, nuanced language"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Conversation with a Stranger.\nPart 1 (interview): 1) Do you find it easy to start conversations with people you don't know? 2) Where do people in your country usually chat with strangers, if at all? 3) Do you prefer talking to new people face to face or online?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an interesting conversation you had with someone you had never met before. You should say: where and when the conversation happened, who the person was, what you talked about, and explain why the conversation stayed in your mind.\nPart 3 (discussion): 1) Why are people in big cities often less willing to talk to strangers than people in small towns? 2) Can short conversations with strangers genuinely improve people's wellbeing? 3) Has technology made it easier or harder for people to meet new people in real life?",
+      "promptZh": "雅思口语练习组——与陌生人的一次交谈",
+      "referencePoints": [
+        "Part 2: set the scene, introduce the person, summarise the topic, explain the impact",
+        "Use conversational vocabulary (strike up a conversation, small talk, hit it off)",
+        "Part 3: contrast urban and rural social behaviour with generalising language",
+        "Evaluate technology's social effects with concrete examples"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Morning People and Evening People.\nPart 1 (interview): 1) Are you more energetic in the morning or in the evening? 2) What does a typical morning look like in your household? 3) Do you know anyone whose daily schedule is very different from yours?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe someone you know whose daily routine is very different from your own. You should say: who the person is, what their typical day looks like, how their routine differs from yours, and explain what you think about their way of organising the day.\nPart 3 (discussion): 1) Why do some people work best late at night while others prefer early mornings? 2) Should schools and workplaces offer flexible starting times? What problems might this cause? 3) Is society organised mainly for morning people? If so, is that fair?",
+      "promptZh": "雅思口语练习组——早起型与夜猫子型的人",
+      "referencePoints": [
+        "Part 2: describe the person, outline their day, draw explicit comparisons with your own routine",
+        "Use comparison structures (whereas, unlike me, by contrast) and routine vocabulary",
+        "Part 3: discuss body clocks and flexibility with cautious scientific claims",
+        "Address the fairness question with a reasoned judgement"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Useful Machine at Home.\nPart 1 (interview): 1) Which machine or appliance do you use most often at home? 2) Are you good at working out how new devices function? 3) What did your family cook or clean with before modern appliances existed?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a machine or appliance in your home that you find very useful. You should say: what it is and what it does, how often you use it, how life would be different without it, and explain why it is so useful to you or your family.\nPart 3 (discussion): 1) Have household machines really given people more free time, or do we just fill the time with other tasks? 2) Why do some appliances break quickly while older machines seem to last for decades? 3) Should manufacturers be required to make appliances easy to repair?",
+      "promptZh": "雅思口语练习组——家里好用的机器",
+      "referencePoints": [
+        "Part 2: cover function, frequency of use, hypothetical absence, and overall value",
+        "Use appliance vocabulary and unreal conditionals (if we didn't have it, we would...)",
+        "Part 3: question assumptions about time-saving technology",
+        "Discuss durability and the right to repair with cause-effect reasoning"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Place to Study.\nPart 1 (interview): 1) Where do you usually study or do focused work? 2) Do you like background noise when you concentrate, or do you need silence? 3) How do you stop yourself getting distracted while studying?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a place where you like to study or concentrate on work. You should say: where it is, what it is like there, why you chose this place, and explain how being there helps you concentrate.\nPart 3 (discussion): 1) Why can some people concentrate in noisy cafés while others need complete silence? 2) Should universities invest more in libraries or in online study platforms? 3) How important is physical environment compared with self-discipline for effective study?",
+      "promptZh": "雅思口语练习组——学习的好地方",
+      "referencePoints": [
+        "Part 2: describe location, atmosphere, reason for choice, and effect on focus",
+        "Use concentration vocabulary (distraction-free, get into a flow, buckle down)",
+        "Part 3: compare individual differences and institutional priorities",
+        "Rank environment against self-discipline and justify the ranking"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Singing.\nPart 1 (interview): 1) Do you enjoy singing, even just to yourself? 2) Where do people in your country usually sing — at home, at events, or somewhere else? 3) Did you sing songs at school when you were a child?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an occasion when you heard someone sing, or when you sang, and it left an impression on you. You should say: where and when it happened, who was singing, what the song was like, and explain why the moment left an impression on you.\nPart 3 (discussion): 1) Why does singing together seem to create a strong feeling of connection between people? 2) Are talent shows a good way for singers to start a career? 3) Should singing remain a compulsory part of school education? Why or why not?",
+      "promptZh": "雅思口语练习组——唱歌",
+      "referencePoints": [
+        "Part 2: recreate the scene, the performer, the sound, and the emotional effect",
+        "Use music and emotion vocabulary (melody, moving, off-key, gave me goosebumps)",
+        "Part 3: explain group psychology with tentative language",
+        "Evaluate talent shows and school music policy with pros and cons"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Childhood Neighbourhood.\nPart 1 (interview): 1) Did you grow up in the place where you live now? 2) What could children do for fun in the area where you grew up? 3) Have you been back to your childhood area recently?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe the neighbourhood or area where you spent your childhood. You should say: where it was, what it looked like, what you used to do there as a child, and explain how you feel about that place now.\nPart 3 (discussion): 1) Why do places from childhood often seem smaller or different when we return as adults? 2) Are today's children losing the freedom to explore their neighbourhoods? What are the consequences? 3) Should cities protect old neighbourhoods from redevelopment, even when land is valuable?",
+      "promptZh": "雅思口语练习组——童年时的社区",
+      "referencePoints": [
+        "Part 2: use 'used to' and 'would' for past habits; end with present feelings",
+        "Include sensory details of streets, buildings, and play spaces",
+        "Part 3: discuss memory, childhood freedom, and urban change",
+        "Weigh heritage against development with evaluative language"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Repairing Things.\nPart 1 (interview): 1) When something of yours breaks, do you usually fix it, pay someone to fix it, or replace it? 2) Did anyone in your family teach you how to repair things? 3) Are repair shops common in your area?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an item that you repaired or that someone repaired for you. You should say: what the item was, what was wrong with it, how it was fixed, and explain how you felt once it was working again.\nPart 3 (discussion): 1) Why do many people today throw things away rather than repair them? 2) What could schools do to teach practical repair skills? 3) Would a culture of repairing rather than replacing significantly help the environment?",
+      "promptZh": "雅思口语练习组——修理物品",
+      "referencePoints": [
+        "Part 2: explain the fault, the repair process, and the satisfaction afterwards",
+        "Use repair vocabulary (spare part, glue, tighten, patch up, good as new)",
+        "Part 3: analyse throwaway culture with economic and social causes",
+        "Connect repair habits to environmental outcomes with evidence-style reasoning"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Queueing and Waiting.\nPart 1 (interview): 1) Do you often have to queue for things in your daily life? 2) What do you usually do while you are waiting in a line? 3) Are people in your country generally patient about queueing?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you had to wait in a long queue. You should say: where you were queueing and why, how long you had to wait, what you did to pass the time, and explain whether the wait was worth it in the end.\nPart 3 (discussion): 1) Why do people accept long queues for some things, like concert tickets, but not for others? 2) Is it fair for businesses to sell 'skip-the-queue' passes to customers who pay more? 3) How has technology, such as online booking and virtual queues, changed the experience of waiting?",
+      "promptZh": "雅思口语练习组——排队与等待",
+      "referencePoints": [
+        "Part 2: describe context, duration, coping strategies, and final judgement",
+        "Use time and patience vocabulary (kill time, inch forward, lose my patience)",
+        "Part 3: discuss fairness of paid priority with clear ethical reasoning",
+        "Describe technological change with before-and-after comparisons"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Local Business You Admire.\nPart 1 (interview): 1) Are there any small shops or family businesses near where you live? 2) Do you prefer shopping at small local businesses or large chains? Why? 3) Have any local businesses in your area closed or opened recently?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a small local business that you think is run well. You should say: what the business is and what it sells or does, how often you go there, what makes it different from similar businesses, and explain why you admire the way it is run.\nPart 3 (discussion): 1) What advantages do small businesses have over large corporations, and where do they struggle? 2) Should local governments give special support to small businesses? 3) How has online shopping changed the role of neighbourhood shops in people's lives?",
+      "promptZh": "雅思口语练习组——欣赏的本地商家",
+      "referencePoints": [
+        "Part 2: cover the business, your relationship with it, its distinctiveness, and your admiration",
+        "Use business vocabulary (loyal customers, personal service, word of mouth, overheads)",
+        "Part 3: compare small and large businesses systematically",
+        "Evaluate government support and e-commerce effects with balanced points"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Dancing.\nPart 1 (interview): 1) Do you ever dance, even just for fun? 2) When do people in your country usually dance? 3) Would you like to take dance lessons of any kind?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an occasion when you watched people dancing or danced yourself. You should say: where and when it was, what kind of dancing it was, who was dancing, and explain how the dancing made you feel.\nPart 3 (discussion): 1) Why does almost every culture in the world have some form of traditional dance? 2) Is dancing a better form of exercise than going to the gym? Why or why not? 3) Do you think traditional dances will survive when young people mostly follow global pop culture?",
+      "promptZh": "雅思口语练习组——跳舞",
+      "referencePoints": [
+        "Part 2: set the scene, name the dance style, describe movement and atmosphere, share feelings",
+        "Use movement vocabulary (rhythm, graceful, spin, in step with the music)",
+        "Part 3: discuss universality of dance with cultural examples",
+        "Compare exercise forms and speculate on tradition versus pop culture"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Changing Plans.\nPart 1 (interview): 1) Do you like to plan things in detail, or do you prefer to be spontaneous? 2) How do you feel when your plans suddenly change? 3) Do you use a calendar or app to organise your plans?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you had to change your plans at the last minute. You should say: what you had originally planned, why you had to change it, what you did instead, and explain whether the change turned out to be a good thing.\nPart 3 (discussion): 1) Why do some people cope well with unexpected changes while others find them very stressful? 2) Is it better for young people to have a fixed life plan or to stay flexible? 3) Do businesses today need to change their plans more often than in the past? Why?",
+      "promptZh": "雅思口语练习组——改变计划",
+      "referencePoints": [
+        "Part 2: contrast the original plan with what actually happened; end with an evaluation",
+        "Use planning vocabulary (fall through, backup plan, on short notice, silver lining)",
+        "Part 3: discuss adaptability with psychological and practical angles",
+        "Apply the flexibility question to business with modern examples"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: An Outdoor Meal.\nPart 1 (interview): 1) Do you like eating outdoors? 2) Where do people in your area go for picnics or barbecues? 3) What food do you think is best for eating outside?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a picnic, barbecue, or other meal that you had outdoors. You should say: where the meal took place, who you were with, what you ate and did, and explain what made the occasion enjoyable (or not).\nPart 3 (discussion): 1) Why does food often seem to taste better when it is eaten outdoors? 2) How important are shared meals for keeping families and friendships strong? 3) Should cities create more public spaces where people can cook and eat together?",
+      "promptZh": "雅思口语练习组——户外用餐",
+      "referencePoints": [
+        "Part 2: cover setting, companions, food and activities, and overall atmosphere",
+        "Use food and outdoor vocabulary (spread out a blanket, grill, in the open air)",
+        "Part 3: explore psychology of eating outdoors with light speculation",
+        "Argue for or against public cooking spaces with community-focused reasons"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Time Away from Phones.\nPart 1 (interview): 1) How often do you check your phone on a normal day? 2) Do you ever switch your phone off completely? When? 3) What do you enjoy doing that doesn't involve a screen?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a period of time when you did not use your phone (or used it much less than usual). You should say: when this was and how long it lasted, why you were away from your phone, what you did instead, and explain how the experience affected you.\nPart 3 (discussion): 1) Why do many people find it difficult to spend even one day without their phones? 2) Should restaurants, schools, or workplaces have phone-free rules? Where would such rules work best? 3) In the future, do you think society will use phones more, or will there be a movement towards using them less?",
+      "promptZh": "雅思口语练习组——远离手机的时光",
+      "referencePoints": [
+        "Part 2: give the timeframe, the reason, alternative activities, and the personal effect",
+        "Use digital-habit vocabulary (notifications, switch off, digital detox, present in the moment)",
+        "Part 3: analyse phone dependence with cause-effect language",
+        "Evaluate phone-free rules by context and predict future trends with justification"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    }
+  ]
+}

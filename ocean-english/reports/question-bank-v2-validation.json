@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-07-05T01:59:14.864Z",
+  "status": "applied",
+  "counts": {
+    "questionSets": 6752,
+    "activeSets": 2854,
+    "questionItems": 8847,
+    "activeItems": 4684,
+    "taskTemplates": 33,
+    "targetWordRefs": 895
+  },
+  "errors": [],
+  "ok": true
+}

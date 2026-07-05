@@ -1,0 +1,23 @@
+{
+  "templateId": "toefl-academic-discussion",
+  "examIds": ["toefl"],
+  "taskType": "academic_discussion",
+  "skill": "writing",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Writing · Write for an Academic Discussion。提示含 professor 的提问 + academic/社会话题 + 至少两位学生的不同观点；Academic 语境。考生写一段有清晰论点、论据充分、语法词汇多样的回应（可同意/反对/第三观点），AI/rubric 评分（max 5），input_mode=free_text，走 productive importer。answer 为非官方 rubric_scored 占位（official:false）+ referencePoints；不设唯一答案、不提供范文。Claude 亲撰，不抄真题、不调 DeepSeek。注：productive importer 直接按 examId/skill/taskType 读取 *.productive.json，本 template 仅作规格记录、不被 shape 消费。"
+  },
+  "stimulusRequirements": { "kind": "none", "perStimulusItems": 1 },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "free_text_rubric", "rubric": true, "maxScore": 5 },
+  "subskills": ["writing", "argumentation", "academic_register", "support_reasoning"],
+  "qualityRules": [
+    "100% 原创讨论提示，禁止抄袭 ETS 真题",
+    "含教授提问 + 话题 + 至少两位学生不同观点",
+    "input_mode=free_text，rubric 100% 覆盖（toefl/writing），max 5",
+    "answer 为非官方 rubric_scored 占位（official:false）+ referencePoints，无范文/唯一答案",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

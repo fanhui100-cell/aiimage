@@ -1,0 +1,135 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao-level 语法填空 (gblanks shape, 10 blanks each), batch G5 (final, 8 sets to bring zhongkao grammar_fill lv1 to 50). Topics distinct from G1-G4. Dialogue single-quoted. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Weekends are the (1)____ (good) part of my week. This Saturday, I (2)____ (visit) the city museum with my classmates. We are all interested (3)____ history, so we cannot wait to go. In the morning, I will get up early and meet my friends (4)____ the bus stop. After the museum, we plan (5)____ (have) lunch in a small restaurant nearby. On Sunday, I will stay at home and finish my homework, (6)____ I always leave some for the last day. My mother says I should manage my time (7)____ (good). I agree that a good plan makes the weekend (8)____ (enjoyable). Doing something useful is much better than (9)____ (waste) time. I really hope this weekend (10)____ be wonderful.",
+      "gblanks": [
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" },
+        { "answer": "will visit", "acceptable": ["will visit", "am going to visit"], "hint": "future, this Saturday" },
+        { "answer": "in", "acceptable": ["in"], "hint": "interested in" },
+        { "answer": "at", "acceptable": ["at"], "hint": "at the bus stop" },
+        { "answer": "to have", "acceptable": ["to have"], "hint": "plan to do" },
+        { "answer": "because", "acceptable": ["because"], "hint": "reason connector" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of well" },
+        { "answer": "more enjoyable", "acceptable": ["more enjoyable"], "hint": "comparative, make sth + adj" },
+        { "answer": "wasting", "acceptable": ["wasting"], "hint": "than + doing (gerund)" },
+        { "answer": "will", "acceptable": ["will"], "hint": "future, hope ..." }
+      ],
+      "explain_zh": "(1) the best 最高级；(2) this Saturday 将来 will visit；(3) interested in；(4) at the bus stop；(5) plan to have；(6) 原因 because；(7) manage better 比较级副词；(8) more enjoyable 比较级；(9) than wasting 动名词；(10) 将来 will。"
+    },
+    {
+      "passage": "Last autumn, our class went on a trip to a beautiful mountain. The weather was cool, and the leaves (1)____ (turn) red and yellow. We climbed up the path together, (2)____ (sing) happy songs. The view from the top was the (3)____ (wonderful) I had ever seen. We could see the whole town (4)____ us. Our teacher told us to be careful and stay (5)____ (close) to the group. At noon, we sat on the grass and shared the food (6)____ we had brought. A gentle wind blew, and everyone felt (7)____ (peace). On the way back, I picked up some colourful leaves (8)____ a gift for my mother. That trip was (9)____ enjoyable that nobody wanted to go home. I will always remember that (10)____ (love) autumn day.",
+      "gblanks": [
+        { "answer": "turned", "acceptable": ["turned"], "hint": "past tense" },
+        { "answer": "singing", "acceptable": ["singing"], "hint": "present participle, -ing" },
+        { "answer": "most wonderful", "acceptable": ["most wonderful"], "hint": "superlative" },
+        { "answer": "below", "acceptable": ["below", "beneath"], "hint": "preposition, under us" },
+        { "answer": "close", "acceptable": ["close"], "hint": "stay close, adjective" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "relative, the food" },
+        { "answer": "peaceful", "acceptable": ["peaceful"], "hint": "feel + adjective" },
+        { "answer": "as", "acceptable": ["as"], "hint": "as a gift" },
+        { "answer": "so", "acceptable": ["so"], "hint": "so ... that" },
+        { "answer": "lovely", "acceptable": ["lovely"], "hint": "adjective form" }
+      ],
+      "explain_zh": "(1) 过去 turned；(2) singing 现在分词；(3) the most wonderful 最高级；(4) below us；(5) stay close 形容词；(6) that/which 指物；(7) feel peaceful 形容词；(8) as a gift；(9) so...that；(10) lovely 形容词。"
+    },
+    {
+      "passage": "Of all the four seasons, I love spring (1)____ (well). In spring, everything comes back (2)____ life. The trees turn green, and the flowers open (3)____ (one) by one. The weather is warm, and the days grow (4)____ (long) than in winter. Birds fly back from the south and sing (5)____ (sweet) in the morning. I like to fly kites in the park (6)____ my family. My mother says spring is the best time (7)____ (plant) trees. Last spring, we planted a small tree in our garden, and now it (8)____ (grow) taller every day. Spring fills my heart (9)____ hope and joy. I wish spring (10)____ stay longer every year.",
+      "gblanks": [
+        { "answer": "best", "acceptable": ["best"], "hint": "love ... best, superlative" },
+        { "answer": "to", "acceptable": ["to"], "hint": "come back to life" },
+        { "answer": "one", "acceptable": ["one"], "hint": "one by one" },
+        { "answer": "longer", "acceptable": ["longer"], "hint": "comparative of long" },
+        { "answer": "sweetly", "acceptable": ["sweetly"], "hint": "adverb form" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with my family" },
+        { "answer": "to plant", "acceptable": ["to plant"], "hint": "the best time to do" },
+        { "answer": "is growing", "acceptable": ["is growing", "grows"], "hint": "present, taller every day" },
+        { "answer": "with", "acceptable": ["with"], "hint": "fill ... with" },
+        { "answer": "would", "acceptable": ["would", "could"], "hint": "wish + would/could" }
+      ],
+      "explain_zh": "(1) love spring best 最高级；(2) come back to life；(3) one by one；(4) longer 比较级；(5) sweetly 副词；(6) with my family；(7) the best time to plant；(8) is growing/grows 现在；(9) fill with；(10) wish + would/could。"
+    },
+    {
+      "passage": "One afternoon, on my way home, I saw a little boy (1)____ (cry) on the street. He had lost his mother and looked very (2)____ (frighten). I walked up to him and asked him (3)____ was wrong. He told me that he could not find (4)____ (he) way home. I decided (5)____ (help) him at once. First, I gave him some water and spoke to him (6)____ (gentle). Then I took him to the nearest police station, (7)____ the police called his mother. Soon his mother came and thanked me again and again. She said I was a (8)____ (help) and kind girl. That day I felt (9)____ (happy) than ever, because I had done something good. Helping others really (10)____ (make) me feel proud.",
+      "gblanks": [
+        { "answer": "crying", "acceptable": ["crying"], "hint": "see sb doing" },
+        { "answer": "frightened", "acceptable": ["frightened"], "hint": "adjective describing feeling" },
+        { "answer": "what", "acceptable": ["what"], "hint": "asked what was wrong" },
+        { "answer": "his", "acceptable": ["his"], "hint": "possessive of he" },
+        { "answer": "to help", "acceptable": ["to help"], "hint": "decide to do" },
+        { "answer": "gently", "acceptable": ["gently"], "hint": "adverb form" },
+        { "answer": "where", "acceptable": ["where"], "hint": "relative, the station" },
+        { "answer": "helpful", "acceptable": ["helpful"], "hint": "adjective form" },
+        { "answer": "happier", "acceptable": ["happier"], "hint": "comparative of happy" },
+        { "answer": "makes", "acceptable": ["makes"], "hint": "helping others makes, subject-verb" }
+      ],
+      "explain_zh": "(1) see sb crying；(2) frightened 感受形容词；(3) asked what；(4) his way 物主；(5) decide to help；(6) gently 副词；(7) where 指地点；(8) helpful 形容词；(9) happier 比较级；(10) helping makes 动名词主语。"
+    },
+    {
+      "passage": "My bedroom is small, (1)____ I love it very much. There is a wooden desk (2)____ the window, where I do my homework every evening. On the desk, there (3)____ many books and a small lamp. The walls are painted blue, my (4)____ (favourite) colour. I keep my room clean and tidy (5)____ (we). My mother says a tidy room helps me study (6)____ (good). Every morning, sunshine comes (7)____ the window and wakes me up. I have lived in this room (8)____ I was born. It is the (9)____ (quiet) place in our home, perfect for reading and dreaming. I think a room is not just a place; it is where the heart (10)____ (feel) safe.",
+      "gblanks": [
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "by", "acceptable": ["by", "near"], "hint": "by the window" },
+        { "answer": "are", "acceptable": ["are"], "hint": "there are + many books" },
+        { "answer": "favourite", "acceptable": ["favourite", "favorite"], "hint": "adjective, no change" },
+        { "answer": "myself", "acceptable": ["myself"], "hint": "reflexive, by myself" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of well" },
+        { "answer": "through", "acceptable": ["through", "in through"], "hint": "come through the window" },
+        { "answer": "since", "acceptable": ["since"], "hint": "since + point of time" },
+        { "answer": "quietest", "acceptable": ["quietest"], "hint": "superlative of quiet" },
+        { "answer": "feels", "acceptable": ["feels"], "hint": "the heart feels, subject-verb" }
+      ],
+      "explain_zh": "(1) 转折 but；(2) by the window；(3) there are 主谓一致；(4) favourite 形容词；(5) (by) myself 反身代词；(6) study better 比较级；(7) through the window；(8) since I was born；(9) the quietest 最高级；(10) the heart feels 主谓一致。"
+    },
+    {
+      "passage": "Many students think English is difficult, but I have found some useful (1)____ (way) to learn it well. First, I read English stories every day, (2)____ helps me learn new words. I also listen to English songs, because they make learning (3)____ (interest). When I meet a new word, I try (4)____ (guess) its meaning before using a dictionary. My teacher says that speaking (5)____ (be) the most important skill. So I am not afraid (6)____ making mistakes when I talk. The more I practise, the (7)____ (confident) I become. Last year, my English was not good, but now it is much (8)____ (good). I keep a notebook (9)____ I write down beautiful sentences. Learning a language needs patience, (10)____ it is really worth the effort.",
+      "gblanks": [
+        { "answer": "ways", "acceptable": ["ways"], "hint": "plural after some" },
+        { "answer": "which", "acceptable": ["which"], "hint": "non-defining relative, the whole idea" },
+        { "answer": "interesting", "acceptable": ["interesting"], "hint": "adjective, -ing" },
+        { "answer": "to guess", "acceptable": ["to guess"], "hint": "try to do" },
+        { "answer": "is", "acceptable": ["is"], "hint": "speaking is, gerund subject" },
+        { "answer": "of", "acceptable": ["of"], "hint": "afraid of" },
+        { "answer": "more confident", "acceptable": ["more confident"], "hint": "the more ... the more" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good" },
+        { "answer": "where", "acceptable": ["where", "in which"], "hint": "relative, the notebook" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" }
+      ],
+      "explain_zh": "(1) some ways 复数；(2) which 非限定指整句；(3) interesting 形容词；(4) try to guess；(5) speaking is 动名词主语；(6) afraid of；(7) the more confident 比较级；(8) better 比较级；(9) where 指笔记本；(10) 转折 but。"
+    },
+    {
+      "passage": "Last Sunday, my friends gave me a surprise birthday party, and it was the (1)____ (happy) day of my year. When I opened the door, everyone shouted, 'Happy birthday!' I was so surprised that I almost (2)____ (cry). The room (3)____ (decorate) with colourful balloons and flowers. My best friend had baked a cake (4)____ (she). It was the (5)____ (delicious) cake I had ever eaten. We sang songs, played games, and danced (6)____ (happy) together. My parents gave me a new bike, (7)____ I had always wanted. I felt very lucky (8)____ have such kind friends and family. Before they left, I thanked each of (9)____ from the bottom of my heart. I will never forget how (10)____ (special) that day was.",
+      "gblanks": [
+        { "answer": "happiest", "acceptable": ["happiest"], "hint": "superlative of happy" },
+        { "answer": "cried", "acceptable": ["cried"], "hint": "past tense, almost ..." },
+        { "answer": "was decorated", "acceptable": ["was decorated"], "hint": "past passive" },
+        { "answer": "herself", "acceptable": ["herself"], "hint": "reflexive, by herself" },
+        { "answer": "most delicious", "acceptable": ["most delicious"], "hint": "superlative" },
+        { "answer": "happily", "acceptable": ["happily"], "hint": "adverb form" },
+        { "answer": "which", "acceptable": ["which"], "hint": "non-defining relative, the bike" },
+        { "answer": "to", "acceptable": ["to"], "hint": "lucky to do" },
+        { "answer": "them", "acceptable": ["them"], "hint": "object pronoun, each of them" },
+        { "answer": "special", "acceptable": ["special"], "hint": "adjective, how + adj" }
+      ],
+      "explain_zh": "(1) the happiest 最高级；(2) almost cried 过去；(3) was decorated 过去被动；(4) (by) herself 反身；(5) the most delicious 最高级；(6) happily 副词；(7) which 非限定指 bike；(8) lucky to have；(9) each of them 宾格；(10) how special 形容词。"
+    },
+    {
+      "passage": "Water is one of the most important things (1)____ life, yet many people waste it every day. We cannot live (2)____ water, and neither can animals or plants. In some places, people do not have (3)____ (enough) clean water to drink. We should learn (4)____ (save) water in our daily life. For example, we can turn (5)____ the tap while brushing our teeth. We can also use the water that (6)____ (wash) vegetables to water the flowers. My teacher says that saving water (7)____ (be) everyone's duty. If we waste water now, our children (8)____ have none in the future. Last term, our school started an activity (9)____ (protect) water resources. Let us act today, (10)____ tomorrow may be too late.",
+      "gblanks": [
+        { "answer": "in", "acceptable": ["in", "for"], "hint": "things in life" },
+        { "answer": "without", "acceptable": ["without"], "hint": "live without" },
+        { "answer": "enough", "acceptable": ["enough"], "hint": "enough + noun, no change" },
+        { "answer": "to save", "acceptable": ["to save"], "hint": "learn to do" },
+        { "answer": "off", "acceptable": ["off"], "hint": "turn off the tap" },
+        { "answer": "washes", "acceptable": ["washes", "washed", "has washed"], "hint": "the water that washes" },
+        { "answer": "is", "acceptable": ["is"], "hint": "saving water is, gerund subject" },
+        { "answer": "will", "acceptable": ["will"], "hint": "future in if-result clause" },
+        { "answer": "to protect", "acceptable": ["to protect"], "hint": "purpose, to do" },
+        { "answer": "or", "acceptable": ["or"], "hint": "..., or (otherwise)" }
+      ],
+      "explain_zh": "(1) things in/for life；(2) live without；(3) enough water 不加变化；(4) learn to save；(5) turn off；(6) the water that washes 定从；(7) saving water is 动名词主语；(8) 将来 will；(9) to protect 目的；(10) ..., or 否则。"
+    }
+  ]
+}

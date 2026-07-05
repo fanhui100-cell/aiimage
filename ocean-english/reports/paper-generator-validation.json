@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-07-04T20:41:18.516Z",
+  "status": "applied",
+  "errors": [],
+  "notes": [
+    "v2 applied · smoke：cet4 mini + 听力 section（带 60s 超时）",
+    "⏱ cet4 mini: 12.0s",
+    "⏱ cet4 listening section: 5.1s",
+    "⏱ toefl mini: 7.4s",
+    "⏱ toefl full: 9.9s"
+  ],
+  "ok": true
+}

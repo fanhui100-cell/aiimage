@@ -1,0 +1,103 @@
+{
+  "template": "sat-craft-and-structure",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Craft and Structure items, batch 2. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The chef's approach was utterly novel: instead of hiding cheap ingredients under rich, heavy sauces, she let a single humble vegetable stand alone at the very center of the plate.",
+      "prompt": "As used in the text, what does the word 'novel' most nearly mean?",
+      "options": ["new and original", "a long work of fiction", "imaginary", "widely admired"],
+      "answer": "new and original",
+      "domain": "Craft and Structure",
+      "explain_zh": "novel 兼有小说与新颖之义；语境为前所未见的做法，取新颖 new and original。"
+    },
+    {
+      "passage": "A series of locks along the canal served to check the rushing water, slowing it stage by stage so that heavily loaded boats could descend the steep hillside in perfect safety.",
+      "prompt": "As used in the text, what does the word 'check' most nearly mean?",
+      "options": ["restrain", "examine closely", "a written order for money", "a mark of approval"],
+      "answer": "restrain",
+      "domain": "Craft and Structure",
+      "explain_zh": "check 多义；语境为减缓水流，取约束、抑制 restrain。"
+    },
+    {
+      "passage": "Her written instructions were admirably plain: just three short numbered steps, no jargon at all, and nothing that a tired reader at midnight could possibly misunderstand or get wrong.",
+      "prompt": "As used in the text, what does the word 'plain' most nearly mean?",
+      "options": ["clear and simple", "unattractive to look at", "a flat grassland", "blunt to the point of rudeness"],
+      "answer": "clear and simple",
+      "domain": "Craft and Structure",
+      "explain_zh": "plain 多义；语境为不会被误解，取清楚易懂 clear and simple。"
+    },
+    {
+      "passage": "Long after the argument itself was over, he continued to harbor a quiet resentment, never mentioning it aloud but never quite letting it go either.",
+      "prompt": "As used in the text, what does the word 'harbor' most nearly mean?",
+      "options": ["hold on to", "a sheltered port for ships", "to hide a fugitive", "to bring a boat to dock"],
+      "answer": "hold on to",
+      "domain": "Craft and Structure",
+      "explain_zh": "harbor 多义；语境为持续怀有怨恨，取怀着、持有 hold on to。"
+    },
+    {
+      "passage": "The colors in the old tapestry had stayed remarkably fast, refusing to fade even after centuries of strong sunlight had poured through the tall western windows.",
+      "prompt": "As used in the text, what does the word 'fast' most nearly mean?",
+      "options": ["resistant to fading", "moving at high speed", "firmly shut", "going without food"],
+      "answer": "resistant to fading",
+      "domain": "Craft and Structure",
+      "explain_zh": "fast 多义（colorfast 不褪色）；语境为 refusing to fade，取不易褪色 resistant to fading。"
+    },
+    {
+      "passage": "At first the urgent warning did not seem to register with the crowd; only when the alarm sounded a second, louder time did people finally look up and begin to move toward the doors.",
+      "prompt": "As used in the text, what does the word 'register' most nearly mean?",
+      "options": ["make an impression", "sign an official list", "a machine that records sales", "a range of a singing voice"],
+      "answer": "make an impression",
+      "domain": "Craft and Structure",
+      "explain_zh": "register 多义；语境为未被注意到，取被察觉、留下印象 make an impression。"
+    },
+    {
+      "passage": "The biography devotes ten glowing chapters to the inventor's triumphs and a single, unsparing paragraph to the failures he spent his last years trying to forget. That lone paragraph, tucked near the very end, somehow lingers longest in the reader's mind.",
+      "prompt": "Which choice best describes the function of the lone paragraph?",
+      "options": ["It introduces a note of complexity that complicates the celebratory account.", "It briefly summarizes the inventor's many triumphs.", "It supplies technical detail about the inventions.", "It lists the exact dates of the major discoveries."],
+      "answer": "It introduces a note of complexity that complicates the celebratory account.",
+      "domain": "Craft and Structure",
+      "explain_zh": "在满篇赞颂中，关于失败的一段引入复杂性，挥之不去。B、C、D 与该段作用不符。"
+    },
+    {
+      "passage": "The article begins by assuring readers that the remedy is ancient, trusted, and entirely natural. Only in the closing lines does it note, in noticeably small print, that no study has ever shown the remedy to work at all.",
+      "prompt": "Which choice best describes the overall structure of the text?",
+      "options": ["Reassurance is offered and then quietly undercut by a final qualification.", "A problem is described and then completely solved.", "Two competing remedies are compared in detail.", "A historical event is narrated in chronological order."],
+      "answer": "Reassurance is offered and then quietly undercut by a final qualification.",
+      "domain": "Craft and Structure",
+      "explain_zh": "先给保证再以末句小字推翻。B、C、D 与文本展开不符。"
+    },
+    {
+      "passage": "Instead of opening with its conclusion, the report walks the reader slowly through each rejected alternative first, so that by the time the final recommendation appears, it feels less like one opinion among many than like the only door left unlocked.",
+      "prompt": "Which choice best describes the function of presenting the rejected alternatives first?",
+      "options": ["It makes the final recommendation feel inevitable.", "It hides the report's true conclusion from readers.", "It proves that all the alternatives were equally good.", "It introduces several unrelated new topics."],
+      "answer": "It makes the final recommendation feel inevitable.",
+      "domain": "Craft and Structure",
+      "explain_zh": "先逐一排除其他选项，使最终建议显得顺理成章、别无选择。B、C、D 与此手法不符。"
+    },
+    {
+      "passage": "Text 1: A critic praises the new museum's vast empty halls, arguing that the space itself invites quiet reflection and gives each artwork room to breathe.\n\nText 2: A regular visitor complains that the same echoing halls feel cold and unfinished, as if the builders had simply run out of paintings to hang on the bare walls.",
+      "prompt": "Based on the texts, how would the visitor in Text 2 most likely characterize the empty halls praised in Text 1?",
+      "options": ["As a flaw rather than a virtue.", "As clear proof of careful design.", "As far too crowded with art.", "As irrelevant to the museum's real purpose."],
+      "answer": "As a flaw rather than a virtue.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 觉得空旷冷清、像未完工，视其为缺点而非优点。B、C、D 与该态度不符。"
+    },
+    {
+      "passage": "Text 1: One coach argues that young athletes improve fastest when pushed hard every single day, since difficulty steadily builds both skill and toughness.\n\nText 2: A sports scientist warns that without regular rest the same young bodies break down, and that the athletes who improve most are usually the ones allowed to recover.",
+      "prompt": "Based on the texts, the sports scientist in Text 2 would most likely respond to the coach in Text 1 by",
+      "options": ["emphasizing that rest, not constant pushing, drives the greatest improvement.", "agreeing that daily hard training is always best.", "denying that training has any effect on performance.", "arguing that young athletes cannot improve at all."],
+      "answer": "emphasizing that rest, not constant pushing, drives the greatest improvement.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 强调休息才带来最大进步，以此回应一味施压。B、C、D 与其立场不符。"
+    },
+    {
+      "passage": "Text 1: A historian claims that the city's prosperity came almost entirely from its great harbor, the gateway through which all of its trade once flowed.\n\nText 2: Another historian points out that several inland cities with no harbor at all grew just as rich in the very same period, suggesting that something other than the sea must explain the boom.",
+      "prompt": "Based on the texts, how does Text 2 challenge the claim made in Text 1?",
+      "options": ["By citing prosperous cities that lacked the feature said to cause prosperity.", "By denying that the city was ever prosperous at all.", "By agreeing that the harbor was the single cause.", "By arguing that no trade ever flowed through the harbor."],
+      "answer": "By citing prosperous cities that lacked the feature said to cause prosperity.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 举出无港口却同样繁荣的内陆城市，反驳港口是繁荣之因。B、C、D 与该反驳不符。"
+    }
+  ]
+}

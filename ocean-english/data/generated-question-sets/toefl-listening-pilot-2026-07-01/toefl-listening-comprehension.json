@@ -1,0 +1,366 @@
+{
+  "template": "toefl-listening-mcq",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Listen to a conversation between a student and a campus technology assistant. Student: Hi, I uploaded my digital design portfolio last night, but the course website still marks it as missing. Assistant: Did you submit the file through the portfolio tab or attach it to a message? Student: I attached it to a message because the tab would not load. Assistant: That explains it. The grading system only reads files uploaded through the portfolio tab. Student: Is it too late to fix it? Assistant: No. The deadline is tonight at midnight. Try a different browser, and if the tab still fails, send me a screenshot. Then I can document the problem for your instructor. Student: Great, I will try that right away.",
+      "questions": [
+        {
+          "prompt": "What problem does the student have?",
+          "options": [
+            "Her portfolio file was uploaded in the wrong place.",
+            "Her instructor changed the assignment topic.",
+            "She forgot the deadline for the portfolio.",
+            "She cannot remember her course password."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the assistant suggest the student do first?",
+          "options": [
+            "Ask the instructor to grade the message attachment.",
+            "Try uploading the file through another browser.",
+            "Print the portfolio and bring it to class.",
+            "Wait until the deadline has passed."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why might the student need to send a screenshot?",
+          "options": [
+            "To prove that the design is original.",
+            "To document a technical problem with the upload tab.",
+            "To show that the message attachment is too large.",
+            "To request a new topic for the project."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The file was attached to a message, but the grading system reads only the portfolio tab. The assistant first suggests another browser and asks for a screenshot only if the tab still fails."
+    },
+    {
+      "passage": "Listen to part of an environmental science lecture. Professor: When people hear the word restoration, they often imagine returning an ecosystem to exactly the way it was centuries ago. In practice, that is rarely possible. Climate patterns, soil chemistry, and nearby human activity may all have changed. A restored wetland, for example, might not contain every plant species that lived there before farming began. Instead, scientists often focus on restoring functions: filtering water, storing carbon, and providing habitat for birds and insects. This approach can be controversial because it accepts that the past cannot be perfectly recreated. But it also gives managers realistic goals and measurable outcomes. Those goals can be monitored over several seasons.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the lecture excerpt?",
+          "options": [
+            "Wetland restoration should always reproduce the exact original ecosystem.",
+            "Modern restoration often focuses on ecosystem functions rather than perfect historical reconstruction.",
+            "Farming usually improves the soil chemistry of wetlands.",
+            "Bird habitats are less important than plant diversity."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the professor mention filtering water and storing carbon?",
+          "options": [
+            "To give examples of ecosystem functions that can be restored.",
+            "To explain why wetlands should be converted into farms.",
+            "To list problems caused by insects.",
+            "To compare wetlands with forests."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What attitude does the professor express toward function-based restoration?",
+          "options": [
+            "It is unrealistic because it cannot be measured.",
+            "It is useful even though some people disagree with it.",
+            "It should be avoided because it ignores water quality.",
+            "It is only appropriate for ecosystems without birds."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The professor contrasts exact historical reconstruction with restoring functions such as filtering water and storing carbon, and presents the functional approach as realistic though controversial."
+    },
+    {
+      "passage": "Listen to a campus announcement. Speaker: This is a reminder from the student activities office. The outdoor film night scheduled for Friday has been moved indoors because of the weather forecast. The film will now be shown in East Hall, room 210, at the same time, seven thirty in the evening. Students who reserved picnic blankets do not need to bring them, but they should bring their student ID cards because seating in the room is limited. Free popcorn will still be available outside the room starting at seven. If you can no longer attend, please cancel your reservation online so another student can use the seat. Doors will open fifteen minutes before the film begins.",
+      "questions": [
+        {
+          "prompt": "Why has the event location changed?",
+          "options": [
+            "The film equipment is broken.",
+            "The weather may be bad.",
+            "East Hall was recently renovated.",
+            "Too few students made reservations."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should students bring to the event?",
+          "options": [
+            "A picnic blanket",
+            "A printed ticket",
+            "A student ID card",
+            "A folding chair"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What are students asked to do if they cannot attend?",
+          "options": [
+            "Pick up popcorn before seven",
+            "Move their reservation to next week",
+            "Cancel online so another student can attend",
+            "Return their picnic blanket to East Hall"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "The film night is moved indoors because of the forecast. Students need ID cards due to limited seating and should cancel online if they cannot attend."
+    },
+    {
+      "passage": "Listen to a discussion in an art history seminar. Professor: The painting looks spontaneous, almost unfinished, but that impression is misleading. The artist made dozens of preparatory sketches. Student: So the loose brushwork was planned? Professor: Exactly. In the nineteenth century, some painters wanted viewers to notice the act of painting itself, not just the subject. By leaving visible strokes, they suggested movement and light rather than fixed outlines. Student: That explains why the river seems to shimmer. Professor: Yes. The technique asks the viewer's eye to complete the scene. It was criticized at first because it looked careless to people trained to value smooth surfaces, but later it became influential.",
+      "questions": [
+        {
+          "prompt": "What does the professor mainly explain?",
+          "options": [
+            "Why some visible brushwork was intentional and meaningful",
+            "How painters copied river scenes from photographs",
+            "Why nineteenth-century artists stopped making sketches",
+            "How smooth surfaces became the only accepted style"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the professor say about the artist's preparation?",
+          "options": [
+            "The artist painted without planning.",
+            "The artist made many preparatory sketches.",
+            "The artist destroyed all earlier versions.",
+            "The artist used sketches made by students."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why was the technique criticized at first?",
+          "options": [
+            "It made the subject impossible to identify.",
+            "It seemed careless to viewers who preferred smooth surfaces.",
+            "It required too many colors.",
+            "It copied an older style too closely."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The professor explains that loose brushwork was deliberate. The artist prepared with sketches, but early viewers criticized the visible strokes as careless."
+    },
+    {
+      "passage": "Listen to a conversation between a student and a financial aid counselor. Student: I received a notice saying my scholarship renewal is incomplete, but I submitted the form last week. Counselor: I see the form, but the system is waiting for your community service hours. Student: I volunteered at the campus garden. The coordinator said she would send the record. Counselor: She may have sent it to the general office instead of financial aid. Student: Should I ask her to send it again? Counselor: Yes, ask her to email it directly to this address. Once we receive it, the renewal can be processed within two business days. Keep the confirmation email for your own records.",
+      "questions": [
+        {
+          "prompt": "What is missing from the student's scholarship renewal?",
+          "options": [
+            "A course schedule",
+            "A record of community service hours",
+            "A recommendation letter",
+            "A copy of a tax form"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What probably happened to the record?",
+          "options": [
+            "It was sent to the wrong office.",
+            "It was rejected because the hours were too low.",
+            "It was lost before the student volunteered.",
+            "It was attached to the scholarship form."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What should the student do next?",
+          "options": [
+            "Volunteer for two additional days",
+            "Ask the coordinator to email the record directly",
+            "Wait until the scholarship expires",
+            "Submit a different scholarship application"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The form is present, but service hours are missing. The record may have gone to the general office, so the student should ask the coordinator to email financial aid directly."
+    },
+    {
+      "passage": "Listen to part of a psychology lecture. Professor: One reason habits are powerful is that they reduce the amount of decision-making we do. Imagine a student who studies in the same quiet corner of the library every afternoon. After a few weeks, simply arriving at that corner may signal the brain to begin concentrating. The location becomes a cue. This does not mean the student has more willpower than everyone else. Instead, the environment supports the behavior. Researchers have found that changing cues can disrupt unwanted habits as well. For instance, moving snacks out of sight can reduce automatic eating, not because hunger disappears, but because the cue is weaker.",
+      "questions": [
+        {
+          "prompt": "What is the lecture mainly about?",
+          "options": [
+            "How environmental cues can shape habits",
+            "Why willpower is impossible to measure",
+            "How libraries choose quiet study areas",
+            "Why students should avoid snacks entirely"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor mention a library corner?",
+          "options": [
+            "To show how a place can become a cue for studying",
+            "To recommend the best location for all students",
+            "To criticize students who study every afternoon",
+            "To explain why libraries reduce hunger"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred about moving snacks out of sight?",
+          "options": [
+            "It removes hunger completely.",
+            "It weakens a cue that can trigger automatic eating.",
+            "It increases the need for willpower.",
+            "It is effective only in libraries."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The professor explains that habits are shaped by cues. A library corner can cue studying, and removing visible snacks weakens a cue for automatic eating."
+    },
+    {
+      "passage": "Listen to a conversation in a campus bookstore. Student: I bought this used economics book yesterday, but the access code inside has already been used. Clerk: Used books often come without valid codes. Was the code listed on the price tag? Student: I don't think so. I just assumed it would work. Clerk: The textbook itself can be returned within seven days if it is unmarked. But we cannot replace a used access code unless the tag promised one. Student: So if I need the online exercises, I may have to buy a separate code? Clerk: That's right. I can show you the least expensive option on the publisher's website.",
+      "questions": [
+        {
+          "prompt": "What problem does the student have?",
+          "options": [
+            "The bookstore sold the wrong edition.",
+            "The access code in a used book has already been used.",
+            "The textbook pages are missing.",
+            "The online exercises are no longer required."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Under what condition could the student return the textbook?",
+          "options": [
+            "If it is returned within seven days and is unmarked",
+            "If the publisher removes the online exercises",
+            "If the access code was printed on the cover",
+            "If another student wants the same book"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the clerk offer to do?",
+          "options": [
+            "Give the student a free access code",
+            "Show the student a less expensive way to buy a code",
+            "Mark the used book as new",
+            "Contact the economics professor"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "The used book's access code has already been used. The clerk explains return conditions and offers to show a cheaper way to buy a separate code."
+    },
+    {
+      "passage": "Listen to part of a geology lecture. Professor: Many people think of sand dunes as simple piles of sand, but dunes can record information about past winds. The steep side of a dune usually forms on the downwind side, where sand grains fall after being pushed over the crest. By studying the angle and direction of ancient dune layers preserved in rock, geologists can infer the direction of winds that blew millions of years ago. These records are not perfect, because later pressure can deform the layers. Still, when combined with other evidence, dune structures help scientists reconstruct old desert environments. They are one useful clue, not the entire story.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the lecture excerpt?",
+          "options": [
+            "To explain how dunes can preserve evidence of ancient wind directions",
+            "To show why all dunes have the same shape",
+            "To describe modern methods for removing sand from deserts",
+            "To argue that dune layers are always perfectly preserved"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the professor, where does the steep side of a dune usually form?",
+          "options": [
+            "On the side facing the strongest rain",
+            "On the downwind side",
+            "At the center of the dune",
+            "Under the oldest rock layer"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the professor say the records are not perfect?",
+          "options": [
+            "Later pressure can deform the layers.",
+            "Wind never affects sand grains.",
+            "Geologists cannot measure angles.",
+            "Dunes disappear before becoming rock."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The lecture explains that preserved dune layers can indicate ancient wind directions, though later pressure may deform the layers."
+    },
+    {
+      "passage": "Listen to a conversation between two students after a sociology class. Student A: I was surprised by today's discussion about public benches. I never thought of benches as part of social policy. Student B: Me neither, but the professor's example made sense. If a city removes benches from a transit station, older adults or people with disabilities may find it harder to travel. Student A: Right, the design looks minor, but it can affect who feels welcome in public space. Student B: The professor also said planners sometimes focus too much on preventing loitering and forget about people who genuinely need a place to rest. Student A: I may use that idea for my response paper.",
+      "questions": [
+        {
+          "prompt": "What are the students mainly discussing?",
+          "options": [
+            "How a small design choice can affect access to public space",
+            "Why transit stations should remove all benches",
+            "How to build benches from recycled materials",
+            "Why sociology classes should avoid city planning"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Who might be especially affected if benches are removed?",
+          "options": [
+            "People who never use public transit",
+            "Older adults or people with disabilities",
+            "Students who dislike response papers",
+            "City planners who design private homes"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Student A imply at the end?",
+          "options": [
+            "She may write about the bench example.",
+            "She plans to skip the response paper.",
+            "She disagrees with the professor completely.",
+            "She wants to design a transit station."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The students discuss how benches affect access and inclusion in public space. Student A may use that idea in a response paper."
+    },
+    {
+      "passage": "Listen to part of a biology lecture. Professor: In many forests, fungi connect with plant roots in a relationship called mycorrhiza. The fungus helps the plant absorb minerals from the soil, especially phosphorus. In return, the plant supplies the fungus with sugars produced during photosynthesis. This exchange can benefit both organisms, but it is not always perfectly balanced. If soil nutrients are abundant, a plant may depend less on the fungus. If light is limited, the plant may produce fewer sugars, which affects the fungus. So the relationship is mutualistic, but the strength of the benefit changes with environmental conditions. Ecologists study these shifts across different forest types over time.",
+      "questions": [
+        {
+          "prompt": "What is the main topic of the lecture excerpt?",
+          "options": [
+            "A relationship between fungi and plant roots",
+            "A method for removing phosphorus from forests",
+            "A disease that prevents photosynthesis",
+            "A type of soil that contains no minerals"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the plant provide to the fungus?",
+          "options": [
+            "Water from deep roots",
+            "Sugars produced during photosynthesis",
+            "Protection from all soil bacteria",
+            "Extra phosphorus from leaves"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the professor say the exchange is not always perfectly balanced?",
+          "options": [
+            "Environmental conditions can change how much each organism benefits.",
+            "Fungi never help plants absorb minerals.",
+            "Plants stop producing sugars in every forest.",
+            "The relationship occurs only in laboratory experiments."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "The lecture explains mycorrhiza, a relationship between fungi and plant roots. The plant gives sugars to the fungus, and environmental conditions can change the balance of benefits."
+    }
+  ]
+}

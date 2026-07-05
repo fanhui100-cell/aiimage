@@ -1,0 +1,69 @@
+{
+  "examId": "zhongkao",
+  "level": 1,
+  "skill": "writing",
+  "taskType": "applied_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "promptZh": "假设你是李华。你的英国笔友 Tom 想了解你的校园生活。请根据以下要点给他写一封电子邮件：(1) 你最喜欢的科目及原因；(2) 一项你喜欢的课外活动；(3) 你在学校遇到的一个困难。词数 60-90，开头 Dear Tom，结尾署名 Li Hua。",
+      "prompt": "You are Li Hua. Your British pen friend Tom wants to know about your school life. Write him an email (60-90 words). Audience: your pen friend Tom. Purpose: tell him about your daily life at school. Cover these key points: (1) your favourite subject and why; (2) one after-class activity you enjoy; (3) one difficulty you meet at school. Begin with 'Dear Tom' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Email format correct: greeting (Dear Tom) and signature (Li Hua) both present",
+        "All three required content points clearly included",
+        "Simple present tense used correctly for routines and habits",
+        "Friendly, personal tone suitable for writing to a pen friend",
+        "Reference points guide scoring only and are not a model answer"
+      ],
+      "wordLimit": "60-90"
+    },
+    {
+      "promptZh": "假设你是学生会主席王林。学校将于下周五下午举办秋季运动会。请用英文写一则通知，告知全校学生。要点：(1) 时间和地点；(2) 主要活动；(3) 对学生的要求（穿运动服、准时到场）。词数 50-80。",
+      "prompt": "You are Wang Lin, chair of the Student Union. The school will hold its autumn sports meeting next Friday afternoon. Write a notice in English to inform all students. Audience: the whole school. Purpose: announce the sports meeting. Include: (1) the time and place; (2) the main activities; (3) what students should do (wear sports clothes, arrive on time). Word limit 50-80. Use a notice format with a title and 'Student Union' at the end.",
+      "referencePoints": [
+        "Notice format used: a title and the issuer (Student Union) shown",
+        "Time, place, activities and requirements all stated clearly",
+        "Imperative and future forms used appropriately for an announcement",
+        "Language is brief, clear and public in tone",
+        "Reference points are for scoring guidance, not a fixed answer"
+      ],
+      "wordLimit": "50-80"
+    },
+    {
+      "promptZh": "你今天放学后要去图书馆参加小组学习，晚饭可能晚回家。请给妈妈写一张英文留言条。要点：(1) 你去哪里、做什么；(2) 大约几点回家；(3) 让妈妈不要担心，并把饭菜留在桌上。词数 50-70。",
+      "prompt": "After school today you are going to the library for group study and may be late for dinner. Write a short message in English to your mother. Audience: your mother. Purpose: tell her your plan so she will not worry. Include: (1) where you are going and what you will do; (2) about what time you will be home; (3) a kind request to leave your dinner on the table and not to worry. Word limit 50-70.",
+      "referencePoints": [
+        "Message is addressed to mother and signed by the writer",
+        "All three points (place/activity, time home, reassurance) covered",
+        "Present continuous or 'be going to' used for planned actions",
+        "Warm, considerate family tone",
+        "Reference points support scoring and are not an official answer"
+      ],
+      "wordLimit": "50-70"
+    },
+    {
+      "promptZh": "学校英语角正在招募志愿者。请用英文写一段自我介绍来申请。要点：(1) 你的姓名、年级和性格特点；(2) 你的英语水平和兴趣爱好；(3) 你为什么想加入以及你能做什么。词数 60-90。",
+      "prompt": "The school English Corner is looking for student volunteers. Write a short self-introduction in English to apply. Audience: the English Corner organizers. Purpose: persuade them to accept you as a volunteer. Include: (1) your name, grade and one personality strength; (2) your English level and hobbies; (3) why you want to join and what you can do to help. Word limit 60-90.",
+      "referencePoints": [
+        "Self-introduction clearly states name, grade and a personal strength",
+        "English level, hobbies, motivation and contribution all addressed",
+        "Positive, persuasive tone suitable for an application",
+        "Adjectives of personality and present tense used correctly",
+        "Reference points guide scoring; no single correct wording is required"
+      ],
+      "wordLimit": "60-90"
+    },
+    {
+      "promptZh": "你的同班来了一名新同学 Mike，他刚到中国，对学校生活还不熟悉。请用英文给他写一封短信，给他三条适应学校生活的建议。要点可包括：交朋友、参加活动、遇到困难时找老师帮忙。词数 60-90，开头 Dear Mike，署名 Li Hua。",
+      "prompt": "A new classmate, Mike, has just arrived in China and is not yet familiar with school life. Write him a short letter in English with three pieces of advice for fitting in. Audience: your new classmate Mike. Purpose: help him adjust to school. You may mention: making friends, joining activities, and asking teachers for help when in trouble. Word limit 60-90. Begin with 'Dear Mike' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format with greeting (Dear Mike) and signature (Li Hua)",
+        "Gives three clear, relevant pieces of advice",
+        "Uses suggestion structures such as 'You could', 'Why not', 'It is a good idea to'",
+        "Encouraging, welcoming tone",
+        "Reference points are scoring guidance, not a model letter"
+      ],
+      "wordLimit": "60-90"
+    }
+  ]
+}

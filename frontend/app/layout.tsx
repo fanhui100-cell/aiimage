@@ -5,6 +5,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Prompt123 | 高质量中文 AI 提示词库",
   description: "面向 GPT-Image-2、Gemini Nano Banana、Midjourney 和视频生成平台的中文提示词库与 AI 图像生成工作台。",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://prompt123.com"),
+  openGraph: {
+    siteName: "Prompt123",
+    locale: "zh_CN",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

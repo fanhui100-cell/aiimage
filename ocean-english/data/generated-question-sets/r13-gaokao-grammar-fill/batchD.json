@@ -1,0 +1,167 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Gaokao 语法填空 style: 10 blanks per passage testing tense/voice, non-finite verbs, relatives, articles, prepositions, comparatives, derivation, connectors. batchD topics: marathon volunteer, tea ceremony, power outage, wildlife photography, noodle dish history, school radio station, lost tourist, garden restoration, coding competition, Dragon Boat race.",
+  "sets": [
+    {
+      "passage": "Last spring I signed up to be a volunteer at our city marathon, an event (1)____ attracts thousands of runners every year. We had to arrive before sunrise, so I felt rather (2)____ (sleep) when my alarm rang at four o'clock. My job was to hand out water at a station near the river. As the first runners came by, I was amazed by their (3)____ (determine). Some of them looked exhausted, yet they kept (4)____ (push) themselves forward. One elderly man, (5)____ shoes were almost worn out, smiled and thanked every volunteer he passed. By noon I had given away more than a thousand cups (6)____ water, and my arms ached. (7)____ (luck), the weather stayed cool, which made the work easier. The most touching moment came (8)____ a young woman crossed the finish line in tears of joy. That day taught me that helping others can be (9)____ (reward) than I had imagined. I have already promised (10)____ (return) as a volunteer next year. Looking back now, I am certain that those few tiring hours by the river changed the way I think about ordinary people and their quiet courage. The runners I met that morning were not famous athletes at all, yet each of them carried a private dream across every difficult mile of the long course.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "sleepy", "acceptable": ["sleepy"], "hint": "sleep -> 形容词" },
+        { "answer": "determination", "acceptable": ["determination"], "hint": "determine -> 名词" },
+        { "answer": "pushing", "acceptable": ["pushing"], "hint": "keep doing 固定搭配" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "" },
+        { "answer": "of", "acceptable": ["of"], "hint": "" },
+        { "answer": "Luckily", "acceptable": ["Luckily"], "hint": "luck -> 副词" },
+        { "answer": "when", "acceptable": ["when"], "hint": "时间状语从句" },
+        { "answer": "more rewarding", "acceptable": ["more rewarding"], "hint": "rewarding 比较级" },
+        { "answer": "to return", "acceptable": ["to return"], "hint": "promise to do" }
+      ],
+      "explain_zh": "(1) 限定性定语从句先行词 event 指物，主语位置用 that/which；(2) sleep→形容词 sleepy 作表语；(3) determine→名词 determination 作宾语；(4) keep doing sth 固定搭配用动名词 pushing；(5) 表示\"他的鞋\"所属关系用 whose；(6) cups of water 固定搭配用 of；(7) luck→副词 Luckily 修饰全句；(8) 时间状语从句 when；(9) rewarding 多音节比较级 more rewarding；(10) promise to do 固定搭配。"
+    },
+    {
+      "passage": "When I was twelve, my grandmother began teaching me the traditional art of making tea. She believed that the ceremony was not simply about drinking (1)____ about respect and patience. The first lesson was the (2)____ (hard) one of all, because I could not even hold the small cup properly. \"A good cup of tea,\" she said, \"depends on the heat of the water and the (3)____ (quiet) of your heart.\" Every weekend I sat beside her, (4)____ (watch) how she warmed the pot and poured the water in a thin, careful stream. Gradually my movements became (5)____ (smooth), and I learned to wait without feeling restless. One afternoon she handed me the pot and let me prepare the tea (6)____ myself. My hands trembled, but the tea I made (7)____ (taste) wonderful, and her eyes filled with pride. She told me (8)____ this old ceremony had been passed down for many generations. Now, whenever life feels too busy, I make a pot of tea (9)____ (slow) and remember her gentle voice. The ceremony has become (10)____ part of who I am.",
+      "gblanks": [
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "hardest", "acceptable": ["hardest"], "hint": "hard 最高级" },
+        { "answer": "quietness", "acceptable": ["quietness", "quiet"], "hint": "quiet -> 名词" },
+        { "answer": "watching", "acceptable": ["watching"], "hint": "现在分词作伴随状语" },
+        { "answer": "smoother", "acceptable": ["smoother"], "hint": "smooth 比较级" },
+        { "answer": "by", "acceptable": ["by"], "hint": "" },
+        { "answer": "tasted", "acceptable": ["tasted"], "hint": "一般过去时" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "slowly", "acceptable": ["slowly"], "hint": "slow -> 副词" },
+        { "answer": "a", "acceptable": ["a"], "hint": "" }
+      ],
+      "explain_zh": "(1) not simply...but 表转折并列用 but；(2) the+最高级 hardest，后接 one of all；(3) quiet→名词 quietness，与 heat 并列；(4) 现在分词 watching 作伴随状语；(5) smooth 比较级 smoother；(6) by myself 固定搭配；(7) 全文过去时叙述，taste 用过去式 tasted；(8) told me 后接宾语从句连词 that；(9) slow→副词 slowly 修饰 make；(10) 单数可数名词 part 前用不定冠词 a。"
+    },
+    {
+      "passage": "It was a stormy evening, and our whole family was watching a film (1)____ the lights suddenly went out. The entire neighbourhood had lost its power, and the house fell into complete (2)____ (dark). At first my little sister was frightened, but my father quickly found some candles (3)____ (keep) in a kitchen drawer. Soon the warm, flickering light made the room feel (4)____ (cosy) than ever. Without our phones and television, we had to invent our own entertainment. My mother, (5)____ loves old stories, began telling us tales from her childhood. We laughed (6)____ (loud) than we had in months, and even the wind outside seemed less terrible. My brother and I played a guessing game (7)____ used only sounds and our imagination. By the time the electricity (8)____ (return) two hours later, none of us really wanted the lights back. That power outage reminded me (9)____ a simple truth: the best moments often need no screen at all. It was honestly one of the (10)____ (happy) evenings our family had shared in years.",
+      "gblanks": [
+        { "answer": "when", "acceptable": ["when"], "hint": "" },
+        { "answer": "darkness", "acceptable": ["darkness"], "hint": "dark -> 名词" },
+        { "answer": "kept", "acceptable": ["kept"], "hint": "过去分词作后置定语" },
+        { "answer": "cosier", "acceptable": ["cosier", "cozier"], "hint": "cosy 比较级" },
+        { "answer": "who", "acceptable": ["who"], "hint": "" },
+        { "answer": "more loudly", "acceptable": ["more loudly", "louder"], "hint": "loudly 比较级" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "returned", "acceptable": ["returned", "came back"], "hint": "一般过去时" },
+        { "answer": "of", "acceptable": ["of"], "hint": "" },
+        { "answer": "happiest", "acceptable": ["happiest"], "hint": "happy 最高级" }
+      ],
+      "explain_zh": "(1) was doing...when 表\"正在...突然\"用 when；(2) dark→名词 darkness；(3) candles 与 keep 是被动关系，过去分词 kept 作后置定语；(4) cosy 比较级 cosier，后接 than；(5) 非限定性定语从句先行词 mother 指人用 who；(6) loudly 比较级 more loudly/louder；(7) 限定性定语从句先行词 game 指物，主语位置 that/which；(8) 过去时间状语，electricity 自行恢复用主动 returned/came back；(9) remind sb of sth 固定搭配；(10) one of the+最高级 happiest。"
+    },
+    {
+      "passage": "Three years ago I discovered a hobby (1)____ has completely changed the way I see the world: wildlife photography. It all started one winter morning when I spotted a bright kingfisher by the lake. I had only an old camera then, but the photo I took, (2)____ blurry, filled me with excitement. Since that day I have spent countless hours (3)____ (wait) quietly in fields and forests. Photographing wild animals requires far more (4)____ (patient) than most people think. You may sit still for an entire afternoon and (5)____ (final) capture nothing at all. Yet the rare moment when a fox suddenly appears is truly (6)____ (amaze). Last autumn I managed to photograph a family of deer (7)____ were grazing at dawn, and that picture later won a local prize. Through my lens I have learned to notice tiny details (8)____ I once walked past without a second look. The hobby has also made me far more (9)____ (patient) in daily life. Photography teaches me that nature rewards those (10)____ are willing to wait. Each photograph I keep is a small reminder of one perfect, silent moment that I was lucky enough to witness.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "though", "acceptable": ["though", "although"], "hint": "让步连词" },
+        { "answer": "waiting", "acceptable": ["waiting"], "hint": "spend time doing" },
+        { "answer": "patience", "acceptable": ["patience"], "hint": "patient -> 名词" },
+        { "answer": "finally", "acceptable": ["finally"], "hint": "final -> 副词" },
+        { "answer": "amazing", "acceptable": ["amazing"], "hint": "amaze -> 形容词" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "patient", "acceptable": ["patient"], "hint": "patience -> 形容词" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "" }
+      ],
+      "explain_zh": "(1) 限定性定语从句先行词 hobby 指物，主语位置 that/which；(2) though/although blurry 让步状语，省略主语+be；(3) spend time doing sth 用动名词 waiting；(4) patient→名词 patience，more 后接名词；(5) final→副词 finally 修饰 capture；(6) amaze→形容词 amazing 描述事物；(7) 限定性定语从句先行词 deer 指物，主语位置 that/which；(8) 限定性定语从句 details 作 walked past 的宾语，关系词 that/which；(9) more+形容词 patient 作表语；(10) those who 固定结构，先行词指人用 who/that。"
+    },
+    {
+      "passage": "Few people realize that the bowl of beef noodles they enjoy today has (1)____ history of more than a hundred years. According to one popular story, the dish was first created by a chef (2)____ wanted to use up leftover broth in his small shop. He added hand-pulled noodles and a few slices of beef, and the result was (3)____ (surprise) delicious. Word spread quickly, and soon his little restaurant became (4)____ (crowd) than any other on the street. Over the years the recipe (5)____ (carry) from one city to another by travelling merchants. Each region added its own flavours, so today there are countless versions, each (6)____ (taste) slightly different. (7)____ (make) a truly good bowl is regarded as an art that takes years to master. The secret, most chefs agree, lies (8)____ the broth, which must be boiled slowly for many hours. (9)____ I travel, I always try the local noodles to compare them. This humble dish, born from one chef's clever idea, has fed (10)____ (count) hungry travellers ever since. Every steaming bowl, I like to think, still carries a small taste of that first lucky accident in a tiny roadside shop.",
+      "gblanks": [
+        { "answer": "a", "acceptable": ["a"], "hint": "" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "" },
+        { "answer": "surprisingly", "acceptable": ["surprisingly"], "hint": "surprise -> 副词" },
+        { "answer": "more crowded", "acceptable": ["more crowded"], "hint": "crowded 比较级" },
+        { "answer": "was carried", "acceptable": ["was carried"], "hint": "一般过去时被动语态" },
+        { "answer": "tasting", "acceptable": ["tasting"], "hint": "现在分词作定语" },
+        { "answer": "Making", "acceptable": ["Making", "To make"], "hint": "动名词作主语" },
+        { "answer": "in", "acceptable": ["in"], "hint": "" },
+        { "answer": "Whenever", "acceptable": ["Whenever", "When"], "hint": "时间状语从句" },
+        { "answer": "countless", "acceptable": ["countless"], "hint": "count -> 形容词" }
+      ],
+      "explain_zh": "(1) history 前有 of more than... 修饰，泛指用不定冠词 a；(2) 限定性定语从句先行词 chef 指人用 who/that；(3) surprise→副词 surprisingly 修饰 delicious；(4) crowded 多音节比较级 more crowded；(5) recipe 与 carry 为被动，过去时 was carried；(6) each tasting different 现在分词作定语，描述主动状态；(7) 动名词 Making/不定式 To make 作主语；(8) lie in 固定搭配；(9) 时间状语从句 Whenever/When；(10) count→形容词 countless 修饰 travellers。"
+    },
+    {
+      "passage": "Our school radio station, (1)____ broadcasts every lunchtime, is run entirely by students like me. I joined two years ago as a shy newcomer who could (2)____ (hard) speak into the microphone without trembling. My first task was simply (3)____ (choose) the music, but I soon longed to host a programme of my own. The teacher in charge encouraged me, saying that confidence grows (4)____ practice. So every week I prepared scripts, interviewed classmates, and learned to control my (5)____ (nervous). Bit by bit, my voice became (6)____ (steady) and clearer. One day a younger student told me that my morning show was the (7)____ (good) part of her school day, and I almost cried with happiness. Running the station has taught me skills (8)____ no ordinary lesson could provide: teamwork, courage, and the joy of sharing ideas. (9)____ (sit) in that little studio, I feel I am truly part of something bigger. I hope the station will keep inspiring students long (10)____ I have graduated. Sometimes I picture a nervous newcomer sitting where I once sat, switching on the microphone for the very first time. If my own small voice could grow braver week after week, then surely theirs can too, and that single thought makes every early rehearsal feel completely worthwhile to me.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "hardly", "acceptable": ["hardly"], "hint": "hard -> 副词(几乎不)" },
+        { "answer": "to choose", "acceptable": ["to choose"], "hint": "不定式作表语" },
+        { "answer": "through", "acceptable": ["through", "with"], "hint": "" },
+        { "answer": "nervousness", "acceptable": ["nervousness"], "hint": "nervous -> 名词" },
+        { "answer": "steadier", "acceptable": ["steadier"], "hint": "steady 比较级" },
+        { "answer": "best", "acceptable": ["best"], "hint": "good 最高级" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "Sitting", "acceptable": ["Sitting"], "hint": "现在分词作状语" },
+        { "answer": "after", "acceptable": ["after"], "hint": "时间连词" }
+      ],
+      "explain_zh": "(1) 非限定性定语从句先行词 station 指物用 which，不可用 that；(2) hardly 意为\"几乎不\"，与 without trembling 呼应；(3) 不定式 to choose 作表语；(4) grow through practice\"通过练习\"用 through；(5) nervous→名词 nervousness 作宾语；(6) steady 比较级 steadier，与 clearer 并列；(7) the+最高级 best；(8) 限定性定语从句 skills 作 provide 宾语，关系词 that/which；(9) 现在分词 Sitting 作时间状语；(10) long after\"在...很久之后\"用时间连词 after。"
+    },
+    {
+      "passage": "While I was shopping in the old part of the city last week, a foreign tourist came up to me looking completely (1)____ (lose). She held a paper map upside down and could not find the famous bell tower (2)____ she wanted to visit. My English was far from perfect, but I decided (3)____ (help) her anyway. Using simple words and a lot of gestures, I explained (4)____ she should turn left at the next corner. She still seemed confused, so I offered (5)____ (walk) with her for a few minutes. Along the way we chatted, and I discovered that she had travelled to more than twenty countries (6)____ her own. When we finally reached the tower, her face lit up (7)____ delight, and she thanked me again and again. That small act of kindness made me feel (8)____ (proud) than any test score ever had. (9)____ (interest), she later sent me a postcard from her next destination. I have learned that a little courage and a (10)____ (friend) smile can cross any language barrier.",
+      "gblanks": [
+        { "answer": "lost", "acceptable": ["lost"], "hint": "lose -> 形容词(迷路的)" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "to help", "acceptable": ["to help"], "hint": "decide to do" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "to walk", "acceptable": ["to walk"], "hint": "offer to do" },
+        { "answer": "on", "acceptable": ["on"], "hint": "" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "prouder", "acceptable": ["prouder"], "hint": "proud 比较级" },
+        { "answer": "Interestingly", "acceptable": ["Interestingly"], "hint": "interest -> 副词" },
+        { "answer": "friendly", "acceptable": ["friendly"], "hint": "friend -> 形容词" }
+      ],
+      "explain_zh": "(1) lose→形容词 lost\"迷路的\"作宾补；(2) 限定性定语从句 tower 作 visit 宾语，关系词 that/which；(3) decide to do 用不定式 to help；(4) explained 后宾语从句连词 that；(5) offer to do 用不定式 to walk；(6) on one's own\"独自\"固定搭配用 on；(7) with delight\"高兴地\"用 with；(8) proud 比较级 prouder/more proud；(9) interest→副词 Interestingly 修饰全句；(10) friend→形容词 friendly 修饰 smile。"
+    },
+    {
+      "passage": "Behind my new house lay an old garden (1)____ had been neglected for nearly twenty years. The first time I saw it, the paths were buried under weeds, and the broken fountain (2)____ (fill) with dead leaves. Most of my friends thought the work would be too hard, but I was determined (3)____ (bring) the place back to life. I spent the whole spring (4)____ (pull) out weeds, planting flowers, and repairing the stone walls. The job was much (5)____ (tiring) than I had expected, yet every small change gave me real joy. An elderly neighbour, (6)____ had grown up nearby, shared old photographs that showed (7)____ beautiful the garden had once been. Following those pictures, I replanted roses along the very paths (8)____ they had bloomed long ago. By midsummer the garden was (9)____ (gradual) coming alive again, full of colour and the hum of bees. Sitting there in the evening light, I feel deeply (10)____ (grateful) that I never gave up on it. Neighbours who once hurried past the locked gate now stop to admire the flowers and ask about their names. Children chase butterflies along the gravel paths, and the old fountain bubbles cheerfully once more. A neglected corner of the world, I have learned, can be reborn whenever someone simply decides to care.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "was filled", "acceptable": ["was filled"], "hint": "一般过去时被动语态" },
+        { "answer": "to bring", "acceptable": ["to bring"], "hint": "be determined to do" },
+        { "answer": "pulling", "acceptable": ["pulling"], "hint": "spend time doing" },
+        { "answer": "more tiring", "acceptable": ["more tiring"], "hint": "tiring 比较级" },
+        { "answer": "who", "acceptable": ["who"], "hint": "" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "where", "acceptable": ["where"], "hint": "" },
+        { "answer": "gradually", "acceptable": ["gradually"], "hint": "gradual -> 副词" },
+        { "answer": "grateful", "acceptable": ["grateful"], "hint": "feel + 形容词" }
+      ],
+      "explain_zh": "(1) 限定性定语从句先行词 garden 指物，主语位置 that/which；(2) fountain 与 fill 为被动，过去时 was filled；(3) be determined to do 用不定式 to bring；(4) spend time doing 用动名词 pulling，与 planting/repairing 并列；(5) tiring 比较级 more tiring；(6) 非限定性定语从句先行词 neighbour 指人用 who；(7) 宾语从句中修饰 beautiful 表程度用 how；(8) 定语从句先行词 paths 表地点，从句不缺主宾用 where；(9) gradual→副词 gradually 修饰 coming；(10) feel grateful，feel 后接形容词。"
+    },
+    {
+      "passage": "Last month our class took part in a national coding competition, and the whole experience was both exciting and (1)____ (challenge). Our team of four had only six hours (2)____ (build) a working program, so every single minute counted. At first we made a (3)____ (care) mistake that cost us nearly an hour to fix. I felt my heart sink, but our captain stayed calm and reminded us that panic would only make things (4)____ (bad). We divided the tasks among (5)____ (we): two members wrote the main code while the others tested it. The biggest difficulty was a tiny error (6)____ kept crashing the program. After checking the code (7)____ (patient) line by line, my teammate finally found it, and we all cheered (8)____ relief. We submitted the project just three minutes before the deadline, feeling (9)____ (complete) exhausted. To our great surprise, we won the second prize, which proved that teamwork matters far more (10)____ individual talent. On the bus home that night, none of us could stop grinning, and we replayed every tense moment of the contest again and again. We agreed that the trophy itself was far less important than the friendship we had forged under pressure. Before that day I had believed that the cleverest programmer always wins, but now I understand that patience, trust, and a calm leader can turn four ordinary students into one strong team.",
+      "gblanks": [
+        { "answer": "challenging", "acceptable": ["challenging"], "hint": "challenge -> 形容词" },
+        { "answer": "to build", "acceptable": ["to build"], "hint": "不定式作定语" },
+        { "answer": "careless", "acceptable": ["careless"], "hint": "care -> 形容词" },
+        { "answer": "worse", "acceptable": ["worse"], "hint": "bad 比较级" },
+        { "answer": "ourselves", "acceptable": ["ourselves"], "hint": "we -> 反身代词" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "patiently", "acceptable": ["patiently"], "hint": "patient -> 副词" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "completely", "acceptable": ["completely"], "hint": "complete -> 副词" },
+        { "answer": "than", "acceptable": ["than"], "hint": "" }
+      ],
+      "explain_zh": "(1) challenge→形容词 challenging，与 exciting 并列作表语；(2) 不定式 to build 修饰 six hours；(3) care→形容词 careless\"粗心的\"修饰 mistake；(4) make things worse，bad 比较级 worse；(5) we→反身代词 ourselves，among ourselves\"在我们之间\"；(6) 限定性定语从句先行词 error 指物，主语位置 that/which；(7) patient→副词 patiently 修饰 checking；(8) with relief\"如释重负地\"用 with；(9) complete→副词 completely 修饰 exhausted；(10) more...than 比较结构用 than。"
+    },
+    {
+      "passage": "Every year at the Dragon Boat Festival, our village holds a thrilling boat race on the wide river (1)____ runs past the ancient temple. This summer I was chosen to join our team, which made me both proud and (2)____ (nerve). For three long weeks we trained hard, rowing together until our movements were perfectly (3)____ (time). On the day of the race, the riverbank was crowded with cheering people, and the warm air was filled (4)____ the steady beating of drums. When the starting signal was given, all the boats shot forward (5)____ (sudden). Our drummer set the rhythm, and we rowed (6)____ (hard) than we ever had in practice. Halfway through, another team pulled ahead of us, but we firmly refused (7)____ (give) up. With a final burst of effort, we crossed the line just (8)____ second ahead of them. The whole crew jumped into the river (9)____ pure joy, hugging one another. That hard-won victory was the (10)____ (proud) moment of my entire summer. Long after the crowds had drifted home and the drums had fallen silent, our team sat together on the warm riverbank, soaked and exhausted but utterly happy. We talked about every stroke we had taken and laughed at our earlier nerves, knowing that this single race had bound us together for life.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "nervous", "acceptable": ["nervous"], "hint": "nerve -> 形容词" },
+        { "answer": "timed", "acceptable": ["timed"], "hint": "time -> 过去分词" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "suddenly", "acceptable": ["suddenly"], "hint": "sudden -> 副词" },
+        { "answer": "harder", "acceptable": ["harder"], "hint": "hard 比较级" },
+        { "answer": "to give", "acceptable": ["to give"], "hint": "refuse to do" },
+        { "answer": "a", "acceptable": ["a"], "hint": "" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "proudest", "acceptable": ["proudest"], "hint": "proud 最高级" }
+      ],
+      "explain_zh": "(1) 限定性定语从句先行词 river 指物，主语位置 that/which；(2) nerve→形容词 nervous，与 proud 并列作宾补；(3) time→过去分词 timed，be timed\"配合得...\"作表语；(4) be filled with 固定搭配；(5) sudden→副词 suddenly 修饰 shot forward；(6) hard 副词比较级 harder；(7) refuse to do 用不定式 to give；(8) a second ahead\"领先一秒\"，泛指用不定冠词 a；(9) with joy\"高兴地\"用 with；(10) the+最高级 proudest。"
+    }
+  ]
+}

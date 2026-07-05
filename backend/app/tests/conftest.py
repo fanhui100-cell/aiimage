@@ -31,3 +31,9 @@ def client():
     app.dependency_overrides[get_db] = override_db
     yield TestClient(app)
     app.dependency_overrides.clear()
+
+@pytest.fixture
+def db_session(setup_db):
+    from sqlalchemy.orm import Session
+    with Session(engine) as session:
+        yield session

@@ -1,0 +1,30 @@
+{
+  "templateId": "sat-information-and-ideas",
+  "examIds": ["sat"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "Digital SAT R&W — Information and Ideas。一段 25-150 词原创短文本（说明/科普/史料/社科/文学，或含类表格/数据描述），后接 1 道四选一，考 central idea / detail / command of evidence / inference / 数据解读。干扰项与文本相关但可排除，唯一正确。Claude 亲撰，不抄真题，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 25,
+    "maxWords": 150,
+    "perStimulusItems": 1,
+    "topicDomains": ["literature", "history", "science", "social_science", "humanities", "data_graphic"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "single_choice", "choices": 4, "domain": "Information and Ideas" },
+  "subskills": ["central_ideas_details", "command_of_evidence", "inference", "quantitative_evidence"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 College Board 真题",
+    "短文本 25-150 词，单题四选一",
+    "题干问主旨/细节/证据/推断/数据支持",
+    "干扰项与文本相关但可排除，唯一正确",
+    "qa_flags.domain 必须为 information_and_ideas",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

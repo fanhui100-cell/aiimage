@@ -1,0 +1,32 @@
+{
+  "templateId": "cet6-listening-mcq",
+  "examIds": ["cet6"],
+  "taskType": "listening_comprehension",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "CET-6 难度原创听力 transcript（长对话 / 听力篇章 / 讲座报道风格，80-220 词，话题：学术/职场/社会议题/科普/校园/文化）+ 3-4 道四选一理解题（细节/主旨/推断/态度/目的）。语言为六级难度（较高级词汇与句式，但仍为自然口语/讲述）。须仅凭音频可答，答案唯一，干扰项合理。Claude 亲撰，neutral US，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "lecture",
+    "minWords": 80,
+    "maxWords": 220,
+    "perStimulusItems": 3,
+    "topicDomains": ["学术", "职场", "社会议题", "科普", "校园", "文化", "环境", "心理"]
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi", "optionCount": 4 },
+  "subskills": ["detail", "main_idea", "inference", "attitude", "purpose"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "transcript 为自然口语/讲述（长对话/篇章/讲座），80-220 词，CET-6 难度（不要考研化或书面化）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "问题须能仅凭音频内容作答",
+    "干扰项需合理、与音频相关但可排除",
+    "题目混合细节 + 主旨/推断/态度/目的",
+    "适合朗读为 ~40-70 秒音频，neutral US",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

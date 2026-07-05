@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-07-02T13:29:06.179Z",
+  "stage": "toefl-listening-pilot-2026-07-01",
+  "reviewer": "user-listened_codex-content-audit",
+  "sets": 20,
+  "stimuli": 20,
+  "audioRows": 20,
+  "before": {
+    "machine_checked": 20,
+    "active": 0
+  },
+  "afterByStatus": {
+    "active": 20
+  }
+}

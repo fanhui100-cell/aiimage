@@ -1,0 +1,161 @@
+{
+  "template": "gaokao-seven-select",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao seven-select. Not copied. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Creativity is often imagined as a rare gift handed down only to a lucky few painters, inventors, and writers who seem touched by some special magic. (1)______ The truth, however, is far more encouraging than that comfortable myth suggests, because the ability to generate fresh ideas can be steadily trained much like a muscle in the gym. The first step toward a more creative mind is simply allowing yourself to ask questions without rushing to find a single correct answer. (2)______ Children do this quite naturally, wondering aloud about why the sky slowly changes colour at dusk or how distant birds somehow know exactly when to fly south for the long winter. As we grow older, many of us gradually lose this gentle habit, partly because school tends to reward quick, tidy responses far more than curious, open exploration. A second useful practice is deliberately combining ideas that do not usually belong together in the same place. (3)______ Many of the most famous inventions were born precisely when someone noticed an unexpected link between two completely separate fields of knowledge. You can train this skill by reading widely, talking with people outside your usual circle, and paying close attention to small details that others tend to overlook. Equally important is giving your busy brain enough quiet rest, because the most surprising connections often appear when you are not actively trying to force them. (4)______ A relaxed walk in the park, a warm shower, or a few unhurried minutes of staring out of a window can do more for a stubborn problem than hours of anxious effort at a crowded desk. Finally, accept honestly that most of your early ideas will be rather rough and imperfect, and understand that this is completely normal. (5)______ By treating every failure as useful information rather than proof of weakness, you keep the door to imagination wide open and welcoming.",
+      "bank": [
+        "Buying expensive art supplies, surprisingly, has almost nothing to do with becoming genuinely creative.",
+        "When the mind is calm and unhurried, it quietly works on puzzles somewhere in the background.",
+        "Most people therefore wrongly believe they were simply born without any artistic talent at all.",
+        "A good question can open doors that a confident answer would have firmly kept shut.",
+        "Great thinkers are rarely afraid of being wrong, and they revise their work again and again.",
+        "Music and mathematics, for instance, share hidden patterns that creative minds love to explore together.",
+        "Strict daily schedules are the only reliable way to guarantee a steady flow of new ideas."
+      ],
+      "answers": [2, 3, 5, 1, 4],
+      "explain_zh": "空1选C（承接误解：人们以为自己天生没天赋）；空2选D（好问题能打开门）；空3选F（音乐与数学跨领域结合）；空4选B（平静头脑后台运转）；空5选E（伟大思想家不怕犯错、反复修改）。干扰句A、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "Stress has quietly become one of the most common complaints among students and working adults alike in our fast-moving modern world. A pounding heart before an important exam, a sleepless night before a tight deadline, a heavy feeling in the chest during a busy and crowded week. These familiar signs warn us that the body is under real pressure and is asking, rather urgently, for some careful attention. (1)______ In small, short bursts it can actually sharpen our focus and push us to perform at our very best when it truly matters. The real trouble begins only when stress becomes constant and we never give ourselves the chance to recover properly between one challenge and the next. One of the simplest ways to manage daily pressure is to control your breathing whenever you feel tension quietly rising inside your body. (2)______ Slow, deep breaths send a gentle but powerful signal to the brain that the danger has passed and that it is finally safe to relax again. Another effective tool is regular physical movement, which need not be exhausting or painful to make a real difference. (3)______ Even a brisk twenty-minute walk through a nearby park can clear a cluttered head and lift a heavy mood remarkably well. Talking honestly with someone you trust also helps far more than people expect, because worries shrink noticeably once they are finally spoken aloud. (4)______ A patient friend, a caring parent, or a kind teacher can offer comfort, fresh perspective, and practical advice you might never have reached alone. Finally, remember to protect your sleep carefully, since a tired mind tends to magnify every small worry far beyond its true size. (5)______ With these small habits practised steadily over time, stress slowly becomes a manageable companion rather than a frightening enemy that controls your days.",
+      "bank": [
+        "Bottling up your feelings, by contrast, often makes ordinary worries feel far heavier than they really are.",
+        "It is important first to understand clearly that stress itself is not entirely a bad thing.",
+        "Exercise releases natural chemicals that calm the restless nerves and brighten our general outlook on life.",
+        "Protecting seven or eight hours of rest each night lets the tired brain repair and reset for tomorrow.",
+        "Skipping meals and drinking very strong coffee are the smartest tricks for staying alert under pressure.",
+        "When we are anxious, our breathing tends to grow shallow, fast, and unsteady without us even noticing.",
+        "Deadlines should always be ignored completely until the very last possible moment finally arrives."
+      ],
+      "answers": [1, 5, 2, 0, 3],
+      "explain_zh": "空1选B（压力并非全是坏事）；空2选F（焦虑时呼吸变浅）；空3选C（运动释放镇静化学物质）；空4选A（憋着感受让烦恼更重）；空5选D（保护七八小时睡眠）。干扰句E、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "Walk through almost any large city today and you will quickly notice that green spaces are becoming a serious priority for planners and residents alike. Parks, rooftop gardens, tree-lined avenues, and small pocket squares are steadily appearing where bare grey concrete once completely dominated the view. This important shift is not merely about making the streets look a little prettier for passing visitors. (1)______ Trees and plants quietly perform a long and valuable list of services that benefit everyone who lives or works nearby. On hot summer afternoons, for example, leafy areas can be several full degrees cooler than the surrounding paved streets. (2)______ This gentle natural cooling reduces the need for expensive air conditioning and helps protect the elderly during dangerous summer heat waves. Green spaces also act as quiet filters, trapping floating dust and absorbing some of the harmful gases produced by heavy traffic. (3)______ Cleaner air, in turn, means fewer breathing problems for young children and a noticeably healthier population across the whole city. The benefits reach well beyond the purely physical, touching our restless minds in important ways too. Studies repeatedly show that even a short visit to a leafy park lowers stress and gently lifts a tired person's mood. (4)______ Spending time among trees seems to restore an attention that has been worn down by screens, traffic, and endless noise. Of course, creating and maintaining these green spaces takes careful planning, steady funding, and the patient cooperation of many ordinary people. (5)______ When neighbours plant flowers together or share the daily care of a small community garden, real friendships naturally grow alongside the plants. A greener city, in the end, turns out to be a kinder and far more connected one as well.",
+      "bank": [
+        "Beneath this pleasant appearance lies a whole set of powerful, practical reasons for planting more.",
+        "Cutting down the old trees, some planners wrongly argue, is the fastest route to a modern skyline.",
+        "Shade from a single mature tree can noticeably lower the temperature of a busy, crowded pavement.",
+        "Yet the rewards extend even further, since shared green projects quietly bring local people together.",
+        "By holding firmly onto these tiny particles, the leaves keep the air people breathe noticeably cleaner.",
+        "Concrete surfaces, by sharp contrast, are remarkably good at storing daytime warmth and releasing it slowly.",
+        "Such mental relief helps explain why many hospitals increasingly add gardens for their recovering patients."
+      ],
+      "answers": [0, 2, 4, 6, 3],
+      "explain_zh": "空1选A（美观之下有实际理由）；空2选C（一棵大树的阴凉降温）；空3选E（叶片留住颗粒使空气更净）；空4选G（这种精神缓解解释医院加花园）；空5选D（共享绿色项目让人们更亲近）。干扰句B、F放入任一空都不连贯。"
+    },
+    {
+      "passage": "Every autumn, as the days grow shorter and colder across the northern half of our world, billions of birds rise into the open sky and begin one of nature's most astonishing journeys. Tiny warblers no heavier than a few small coins, along with powerful geese and graceful cranes, travel many thousands of kilometres toward distant warmer lands. (1)______ Scientists have spent many patient years trying to understand exactly how these small creatures find their way across wide oceans, empty deserts, and unfamiliar mountains. The reasons behind migration itself are far easier to explain than the mysterious methods the birds actually use. (2)______ As the northern winters arrive, the insects vanish, the plants die back, and the hard ground freezes solid, leaving very little for a hungry bird to eat. By flying south to regions where food still remains plentiful, the birds give themselves and their future young a far better chance of survival. The greater mystery lies in navigation, which still genuinely amazes researchers despite many decades of patient and careful study. (3)______ Many species appear to sense the Earth's invisible magnetic field, using it almost like a vast compass stretched silently across the whole planet. Others rely on the position of the sun by day and the patterns of stars by night, adjusting their course with remarkable precision. (4)______ Older, more experienced birds often guide the younger ones, passing down knowledge of safe routes and reliable resting places along the long way. Sadly, these incredible journeys are growing more dangerous every year because of careless human activity. Bright city lights confuse the night fliers, and the quiet wetlands where the birds once rested are steadily disappearing. (5)______ By protecting key stopover sites and dimming our unnecessary lights, we can help ensure these ancient travellers keep crossing our skies for many generations to come.",
+      "bank": [
+        "Birds migrate mainly in search of food, since their usual supplies disappear once the cold winter comes.",
+        "Caged birds, researchers sadly note, quickly forget how to fly any meaningful distance at all.",
+        "Memory and shared experience also play a surprisingly large part in any successful migration.",
+        "Such steady losses make the long flight harder and threaten populations that have travelled for thousands of years.",
+        "How they manage such precise navigation has long puzzled and deeply fascinated scientists everywhere.",
+        "Several remarkable natural clues help these long-distance travellers stay carefully on the correct path.",
+        "Most birds, in fact, prefer to remain comfortably in one warm place throughout the entire year."
+      ],
+      "answers": [4, 0, 5, 2, 3],
+      "explain_zh": "空1选E（如何精准导航长期令人着迷）；空2选A（鸟迁徙主要为找食物）；空3选F（若干自然线索帮其辨路）；空4选C（记忆与经验也很重要）；空5选D（这些损失威胁古老种群）。干扰句B、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "Imagine a busy city where almost everyone leaves the car at home and instead glides smoothly to work on clean, reliable public transport every single day. For many quickly growing cities around the world, this hopeful picture is slowly turning into ordinary everyday reality. Buses, trains, trams, and underground subways carry enormous numbers of people while taking up only a small fraction of the road space that private cars stubbornly demand. (1)______ A single full bus can easily replace dozens of separate vehicles, freeing the crowded streets and cutting the long queues that frustrate so many tired drivers. The advantages, however, reach well beyond simply easing the daily traffic congestion. Public transport produces far less pollution for each passenger carried than a wide road crammed full of individual cars. (2)______ This makes a real and lasting difference to the air quality that every single resident, young and old, must breathe each day. There is an important economic side too, which ordinary families often appreciate most of all. (3)______ Owning a private car involves fuel, insurance, parking, and seemingly endless repairs, while a simple monthly transport pass usually costs only a modest amount. Good public transport can also bring a whole community closer together in quiet and unexpected ways. (4)______ On a shared train or bus, people from many different neighbourhoods and backgrounds briefly travel side by side as equals. Building such large systems is certainly expensive and demands patient long-term planning by careful and far-sighted governments. (5)______ When the buses always run on time, the stations feel clean and safe, and the fares stay genuinely affordable for everyone, more and more people happily choose to leave their cars behind at home for good.",
+      "bank": [
+        "Abandoning all the roads, some people foolishly argue, would instantly solve every transport problem forever.",
+        "Cleaner engines and shared journeys together reduce the harmful gases hanging heavily over our busy roads.",
+        "Yet the long-term reward of a cleaner, fairer, and far less crowded city is well worth the cost.",
+        "This simple efficiency is one of the strongest arguments in favour of investing in such networks.",
+        "For households watching every single expense, giving up a car can free up a surprising amount of money.",
+        "It also gives ordinary strangers a rare chance to share the same calm, unremarkable daily space.",
+        "Most commuters, oddly enough, secretly wish their journeys to work were far longer and slower."
+      ],
+      "answers": [3, 1, 4, 5, 2],
+      "explain_zh": "空1选D（这种效率是投资此类网络的有力理由）；空2选B（更清洁引擎与共乘减少废气）；空3选E（放弃私家车省下不少钱）；空4选F（让陌生人共享平常空间）；空5选C（长远回报值得成本）。干扰句A、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "Good writing rarely appears by accident or by pure flash of inspiration, however effortless the finished page may seem to a relaxed reader. Behind every clear and convincing piece lies a small set of patient habits that any ordinary student can learn and steadily improve over time. The very first habit worth carefully building is reading widely and attentively across many different subjects and styles. (1)______ When you notice how a skilled writer opens a paragraph or builds slowly toward a strong conclusion, you quietly absorb techniques that you can later borrow yourself. A second essential habit is planning a little before you rush headlong into the actual writing. (2)______ A few short minutes spent sketching your main points saves you from wandering off the path and losing your reader halfway through. Once you begin drafting, try hard to resist the strong urge to make every single sentence perfect on the very first attempt. (3)______ Getting your rough ideas down quickly, even in clumsy and untidy form, is far more useful than staring helplessly at a blank white page. The real magic of good writing, many experienced authors insist, actually happens later during careful and honest revision. (4)______ Reading your own draft aloud is a wonderfully simple trick, because your patient ear often catches awkward phrasing that your hurried eye has learned to skip over. Finally, never underestimate the quiet but enormous value of honest feedback from a trusted reader. (5)______ A thoughtful friend can gently point out where your meaning suddenly turned cloudy or where a promising argument simply fell flat. With patience and steady daily practice, almost anyone can gradually grow into a clearer, stronger, and far more confident writer.",
+      "bank": [
+        "Copying whole pages word for word from famous books is the surest path to a truly original style.",
+        "This is the moment to cut weak words, reorder messy ideas, and sharpen every unclear sentence.",
+        "Reading exposes you to countless living examples of how language can be shaped, arranged, and controlled.",
+        "Knowing roughly where you are heading keeps your writing focused and your overall structure firm.",
+        "Long, complicated sentences crammed with rare words always impress every single kind of reader.",
+        "First drafts are honestly meant to be messy, and pretending otherwise only freezes your progress.",
+        "What seems perfectly obvious to you may still badly confuse someone reading your words for the first time."
+      ],
+      "answers": [2, 3, 5, 1, 6],
+      "explain_zh": "空1选C（阅读提供大量语言运用范例）；空2选D（知道方向使写作聚焦）；空3选F（初稿本就凌乱）；空4选B（修改时删弱词、重排、改句）；空5选G（你觉得显然的别人初读或困惑）。干扰句A、E放入任一空都不连贯。"
+    },
+    {
+      "passage": "In many cultures around the world, respecting and caring for older people has long been treated as one of the very deepest of all human duties. Yet in our busy modern societies, the natural bonds between the generations sometimes seem to weaken and quietly fade away. Grandparents and grandchildren may now live far apart, meeting only briefly during a few rushed holidays each year. (1)______ This growing distance is a real and quiet loss, because both the young and the old have a great deal to offer one another. Older people carry a whole lifetime of stories, skills, and hard-won wisdom that no textbook could ever fully contain. (2)______ A grandparent who clearly recalls how life was lived many decades ago gives the young a priceless window into the past. In return, younger people bring fresh energy, easy patience with new technology, and a bright window onto the rapidly changing present. (3)______ Teaching a grandmother to make her first video call, the young learn to slow down, explain things clearly, and truly value good company. Building stronger ties between the generations does not require grand gestures or any expensive plans at all. (4)______ Sharing a simple meal, walking together slowly in the park, or asking an older relative about their distant childhood can quietly rebuild a fading bond. Schools and communities can help a great deal as well, by inviting older volunteers to share their experience with curious young students. (5)______ When the young listen carefully and the old are truly heard, both sides happily discover that respect flows warmly in two directions. A society that genuinely honours its elders, in the end, teaches its own children exactly how to be kind.",
+      "bank": [
+        "Sending older relatives away to distant homes is, some claim, widely seen as the most caring choice.",
+        "Listening to such old memories helps children understand where their own families truly came from.",
+        "These warm exchanges, when they happen, enrich the young and the old in equal and lasting measure.",
+        "Often the relentless rhythm of daily work and study pulls families further and further apart.",
+        "Such relationships, sadly, can never really be repaired once the years have driven people apart.",
+        "Such friendly projects let knowledge pass naturally from one generation to the next inside the classroom.",
+        "Small, regular moments of genuine attention matter far more than rare, dramatic, expensive ones."
+      ],
+      "answers": [3, 1, 2, 6, 5],
+      "explain_zh": "空1选D（日常忙碌使家人渐行渐远）；空2选B（聆听记忆助孩子了解家世）；空3选C（这些交流让老少同样受益）；空4选G（小而经常的关注更重要）；空5选F（此类项目让知识在课堂代代相传）。干扰句A、E放入任一空都不连贯。"
+    },
+    {
+      "passage": "There is a special kind of quiet joy in growing your very own plants at home, even in the smallest and most crowded of city apartments. Family gardening, whether on a sunny little balcony or in a modest backyard, offers far more than just a few fresh tomatoes. (1)______ It can teach restless children patience, bring scattered relatives closer together, and turn an ordinary grey weekend into something genuinely memorable. Starting a small family garden does not demand a large piece of land or any expensive and complicated equipment. (2)______ A few simple pots on a windowsill, some good rich soil, and a single packet of seeds are honestly all that a nervous beginner truly needs. The most important ingredient, in fact, is just a little daily attention rather than any rare special talent. Once the very first tiny green shoots push bravely through the dark soil, something wonderful happens to everyone watching. (3)______ Children who might normally never finish their vegetables suddenly grow proud and curious about the small lettuce they planted entirely themselves. Gardening also gently teaches important lessons that no ordinary classroom ever quite could. Plants simply do not grow overnight, and a young gardener slowly learns that good things often require real patience and steady care. (4)______ When a small seedling wilts sadly from too little water, the lesson sticks far better than any stern spoken warning ever would. Perhaps the greatest reward of all, though, is the unhurried time that families spend together with their hands happily in the soil. (5)______ Around a shared garden bed, parents and children talk easily, laugh often, and build warm memories that last for many years. A small home garden, it turns out, grows much more than vegetables.",
+      "bank": [
+        "Buying ready-made vegetables from the busy shop teaches children exactly the same valuable lessons.",
+        "The simple daily act of caring for living things brings unexpected calm and lasting satisfaction.",
+        "Watching a single seed they sowed grow slowly into food fills young hearts with real wonder.",
+        "Small mistakes, too, quietly become gentle and patient teachers out in the family garden.",
+        "Almost anyone at all can begin with very little money and only a small sunny corner of space.",
+        "Working side by side, they enjoy a kind of unhurried closeness that bright screens rarely allow.",
+        "Most experts firmly agree that gardening is far too difficult for any ordinary family to attempt."
+      ],
+      "answers": [1, 4, 2, 3, 5],
+      "explain_zh": "空1选B（照料生命带来平静满足）；空2选E（几乎人人花很少钱小空间就能开始）；空3选C（看亲手种的种子长成食物充满惊奇）；空4选D（错误也成为耐心的老师）；空5选F（并肩劳作享受难得的从容亲近）。干扰句A、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "A good science exhibition has a rare and quiet power to turn confusing ideas into bright moments of pure wonder for visitors of every single age. Unlike a quiet and patient textbook, it warmly invites you to touch, press, listen, and experiment freely until simple curiosity takes over completely. (1)______ A small child who presses a glowing button and watches lightning crackle inside a glass globe is learning real physics without even realising it. The greatest strength of such lively exhibitions lies precisely in this hands-on approach to genuine discovery. (2)______ When you actually feel a heavy magnet pull or watch a strange chemical slowly change colour before your own eyes, the lesson becomes vivid and unforgettable. Well-designed exhibits also explain difficult concepts using everyday comparisons that almost anyone can grasp at once. A complicated idea about distant galaxies, for instance, might be cleverly shown through a simple model you can spin with your own hand. (3)______ Suddenly the vast and abstract becomes something close, friendly, and surprisingly easy to picture in the mind. Many of the best exhibitions go even further still by connecting science directly to the real problems of daily life. (4)______ Visitors then leave understanding not only how a clever machine actually works but also why it truly matters for their own future. Perhaps most valuable of all, a great exhibition quietly plants a small seed of lasting curiosity deep in young minds. (5)______ Years later, a grown adult may trace a deep love of medicine, engineering, or astronomy back to one single thrilling afternoon. In this gentle and lasting way, one short visit can quietly shape the whole direction of an entire human life.",
+      "bank": [
+        "Reading silently about an experiment, by sharp contrast, rarely sparks the same kind of lasting excitement.",
+        "Information that is merely read tends to be quickly forgotten, but a real experience usually stays with us.",
+        "Such familiar comparisons build a sturdy bridge between the strange unknown and the things we already know.",
+        "Crowded noisy rooms and very long queues are the real reason most families avoid these places entirely.",
+        "Exhibits on clean energy or healthy eating clearly show how careful research shapes the choices we make.",
+        "That bright spark of wonder, once it is lit, can quietly guide a young person's choices for many decades.",
+        "Most visitors, sadly, learn absolutely nothing useful and leave even more confused than when they arrived."
+      ],
+      "answers": [0, 1, 2, 4, 5],
+      "explain_zh": "空1选A（默读实验难激发同样持久的兴奋）；空2选B（亲历比阅读更难忘）；空3选C（熟悉的类比架起已知与未知的桥）；空4选E（清洁能源或健康饮食展示研究如何影响选择）；空5选F（那点惊奇可指引青年数十年的选择）。干扰句D、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "More and more people today are deliberately choosing to live with much less, embracing a calmer and quieter way of life that is often called minimalism. At its very heart, minimalism is really not about cold empty white rooms or owning almost nothing at all. (1)______ Instead, it is the gentle daily practice of keeping only what truly adds real value and patiently clearing away all the rest. Many of us, almost without ever noticing, slowly fill our small homes with countless objects we rarely use and can barely even remember buying. (2)______ These forgotten things crowd our shelves, quietly drain our money, and steadily demand the attention that we would much rather spend elsewhere. The first clear benefit of owning a great deal less is the surprising sense of calm that quietly follows a good clear-out. (3)______ A tidy, open, uncluttered space allows the busy mind to settle, much as a clean desk helps a tired student finally concentrate. There is a real financial reward as well, which a great many people welcome with genuine relief. When you simply stop buying things you do not actually need, you naturally save money for experiences that matter far more. (4)______ A short weekend trip or a long meal shared with old friends often brings far deeper happiness than another shiny gadget ever could. Minimalism also frees up something even more precious and limited than money, namely our own time. (5)______ With far fewer objects to clean, organise, store, and repair, you slowly gain back quiet hours to spend on the people and passions you truly love. Living with less, in the end, can actually mean living with so much more of what really counts most.",
+      "bank": [
+        "Throwing away absolutely everything you own overnight is the only honest way to begin this whole journey.",
+        "Less money spent on possessions can quietly mean more invested in warm memories that genuinely last.",
+        "It is really a thoughtful daily approach to deciding what truly deserves a place in our lives.",
+        "A home free of all needless clutter feels lighter, and so, remarkably, does the person living inside it.",
+        "Each unused purchase quietly represents money, space, and energy spent on something that gives little back.",
+        "Every single item we own quietly asks for a little of our care, our limited space, and our time.",
+        "Collecting as many possessions as you possibly can remains the surest known path to lasting contentment."
+      ],
+      "answers": [2, 4, 3, 1, 5],
+      "explain_zh": "空1选C（极简是判断何物真正值得占有的方式）；空2选E（每件闲置购物都是回报甚微的花费）；空3选D（无杂物的家更轻盈人也如此）；空4选B（少花在物品上多投入持久回忆）；空5选F（每件物品都索取关照、空间与时间）。干扰句A、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "On a forgotten patch of bare land squeezed between two tall apartment blocks, something quietly remarkable can take root and slowly flourish. A community garden, lovingly tended by a handful of ordinary neighbours, transforms dull ground into a shared source of fresh food, simple beauty, and real friendship. (1)______ What was once a dull and useless strip of weeds gradually becomes a lively place where people of all ages gather happily with shovels and seeds. The most obvious gift of such a humble garden is, of course, the fresh produce that it steadily provides. (2)______ Ripe tomatoes, green beans, and fragrant herbs grown only a few steps from home taste far better and cost far less than anything trucked in from afar. Yet the deeper value of a community garden lies in the warm human bonds it quietly creates among complete strangers. (3)______ A retired teacher might patiently share planting tips with a young family, while curious children learn the names of plants from a kindly old neighbour. These small gardens also bring real and lasting benefits to the wider neighbourhood all around them. A green, well-kept plot lifts the spirit of an entire grey street and even gently encourages people to look after the area. (4)______ Where a garden quietly grows, scattered litter tends to vanish and a calm sense of shared pride takes its place instead. Best of all, working the dark soil together teaches lessons that reach far beyond merely growing a few vegetables. (5)______ People who once passed each other in cold silence soon greet one another warmly by name across the rows. In this humble and patient way, a single small shared garden can help heal the deep loneliness of modern city life.",
+      "bank": [
+        "Locking such open land away behind tall iron fences, many wrongly believe, keeps a whole neighbourhood far safer.",
+        "Working patiently side by side, neighbours who were once total strangers slowly become genuine, lasting friends.",
+        "Neighbours soon quietly learn patience, real cooperation, and the simple joy of caring for something together.",
+        "Families that might otherwise never once meet are gently drawn together by a common and hopeful purpose.",
+        "Growing your own vegetables means harvesting healthy, fresh food at only a small fraction of the usual price.",
+        "Residents naturally take much greater care of the streets they feel a genuine share in shaping and protecting.",
+        "Most people, however, would honestly far rather pave the whole area over and use it simply for parking."
+      ],
+      "answers": [3, 4, 1, 5, 2],
+      "explain_zh": "空1选D（本不相识的家庭被共同目标聚到一起）；空2选E（自种蔬菜以低价收获健康食物）；空3选B（并肩劳作的陌生邻里渐成真朋友）；空4选F（居民更爱护自己参与塑造的街道）；空5选C（邻里学会耐心、合作与共同照料之乐）。干扰句A、G放入任一空都不连贯。"
+    }
+  ]
+}

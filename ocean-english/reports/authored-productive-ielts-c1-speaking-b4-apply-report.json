@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-05T07:43:33.916Z",
+  "apply": true,
+  "stage": "ielts-c1-speaking-b4",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 20,
+    "wrote": 0,
+    "dup": 20,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\ielts-c1-speaking-b4\\ielts-speaking-b4.productive.json",
+      "examId": "ielts",
+      "taskType": "interview_speaking",
+      "level": 8,
+      "skill": "speaking",
+      "tasks": 20,
+      "wrote": 0,
+      "dup": 20
+    }
+  ]
+}

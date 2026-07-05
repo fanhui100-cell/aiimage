@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lexiverse · Word Detail · 单词详情</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lexiverse-ui/liquid-glass.css" />
+<style>
+  body { min-height: 100vh; overflow-x: hidden; }
+  #app { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+  /* top bar */
+  .topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 14px 22px; margin: 14px 18px 0; border-radius: var(--r-pill); }
+  .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .brand .logo { width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0;
+    background: linear-gradient(135deg, #BFF6FF, var(--cyan) 45%, var(--cyan-deep)); box-shadow: 0 4px 14px rgba(56,189,248,0.45), inset 0 1px 0 rgba(255,255,255,0.6);
+    display: flex; align-items: center; justify-content: center; color: var(--ink); font-weight: 700; font-size: 16px; }
+  .brand .names { line-height: 1.1; min-width: 0; }
+  .brand .app { font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em; font-family: var(--font-mono); }
+  .brand .page { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+  .topbar .right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+  /* hero */
+  .stage { flex: 1; display: flex; justify-content: center; padding: 30px 20px 60px; }
+  .hero { width: 100%; max-width: 900px; padding: 40px 44px; border-radius: var(--r-xl); }
+
+  .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 22px; }
+
+  .word-head { display: flex; align-items: flex-end; gap: 18px; flex-wrap: wrap; }
+  .word { font-size: clamp(52px, 9vw, 92px); font-weight: 700; letter-spacing: -0.04em; line-height: 0.95; color: var(--pearl);
+    text-shadow: 0 0 38px rgba(126,249,255,0.22); }
+  .speak { margin-bottom: 12px; }
+  .ipa-row { display: flex; align-items: center; gap: 14px; margin-top: 14px; flex-wrap: wrap; }
+  .ipa { font-family: var(--font-mono); font-size: clamp(16px, 2.4vw, 21px); color: var(--cyan); }
+  .pos { font-size: 14px; color: var(--text-dim); font-style: italic; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 30px; }
+
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(190,228,255,0.22), transparent); margin: 4px 0 26px; }
+
+  .def-en { font-size: clamp(19px, 2.6vw, 23px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
+  .def-zh { font-size: 15.5px; color: var(--text-dim); margin-top: 8px; }
+
+  .example { margin-top: 22px; padding: 18px 20px; border-radius: var(--r-md); display: flex; gap: 14px; }
+  .example .bar { width: 3px; flex-shrink: 0; border-radius: 3px; background: linear-gradient(180deg, var(--cyan), transparent); }
+  .example .en { font-size: 16.5px; line-height: 1.55; color: var(--text-soft); }
+  .example .en b { color: var(--cyan); font-weight: 700; }
+  .example .zh { font-size: 13.5px; color: var(--text-muted); margin-top: 7px; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 26px; }
+  .sub { padding: 16px 18px; border-radius: var(--r-md); }
+  .sub .lg-sec { display: block; margin-bottom: 11px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip { font-size: 13px; padding: 6px 12px; border-radius: var(--r-pill); cursor: default;
+    background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: var(--text-soft); transition: all 0.16s var(--ease); }
+  .chip.click { cursor: pointer; }
+  .chip.click:hover { border-color: rgba(126,249,255,0.5); color: var(--cyan); background: rgba(126,249,255,0.08); transform: translateY(-1px); }
+  .chip.neg { color: var(--rose); border-color: color-mix(in srgb, var(--rose) 36%, transparent); background: color-mix(in srgb, var(--rose) 14%, transparent); }
+  .mnemonic { font-size: 14.5px; line-height: 1.6; color: var(--text-soft); }
+  .kv { display: flex; align-items: center; gap: 10px; }
+  .kv .diff { display: flex; gap: 4px; }
+  .kv .diff i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.14); }
+  .kv .diff i.on { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+
+  /* word switcher */
+  .switcher { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; align-items: center; }
+  .switcher .lg-sec { margin-right: 4px; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 28px 22px; }
+    .grid { grid-template-columns: 1fr; }
+    .topbar .right .hide-sm { display: none; }
+    .brand .page { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+  <div class="cosmic-bg"></div>
+  <div id="app">
+    <header class="topbar lg-surface">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div class="names">
+          <div class="app">LexiOcean</div>
+          <div class="page">Lexiverse · 词汇宇宙</div>
+        </div>
+      </div>
+      <div class="right">
+        <button class="lg-icon-btn hide-sm" title="Search · 搜索">⌕</button>
+        <button class="lg-icon-btn hide-sm" title="Profile · 我的">◍</button>
+        <button class="lg-icon-btn" title="Settings · 设置">⚙</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="hero lg-panel lg-bright" id="hero"><!-- rendered --></section>
+    </main>
+  </div>
+
+  <script src="lexiverse-ui/lexiverse-mock.js"></script>
+  <script>
+    const M = window.LexiverseMock;
+    let currentId = 'w_arise';
+
+    function speak(text) {
+      try { const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.92; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) {}
+    }
+
+    function highlight(sentence, word) {
+      const re = new RegExp('\\b(' + word + '\\w*)\\b', 'ig');
+      return sentence.replace(re, '<b>$1</b>');
+    }
+
+    function render() {
+      const w = M.byId[currentId];
+      const c = M.STATE_COLOR[w.learningState];
+      const diff = Array.from({ length: 5 }, (_, i) => `<i class="${i < w.difficulty ? 'on' : ''}"></i>`).join('');
+      const examBadges = w.examTags.map(t => `<span class="lg-badge lg-badge--mono" style="--c:var(--amber)">${t}</span>`).join('');
+      const themeBadges = w.themeTags.map(t => `<span class="lg-badge" style="--c:var(--aqua)">${t}</span>`).join('');
+
+      document.getElementById('hero').innerHTML = `
+        <div class="crumbs">
+          <span class="lg-badge lg-badge--mono" style="--c:var(--cyan)">CEFR ${w.cefr}</span>
+          <span class="lg-badge" style="--c:${c}"><span class="dot"></span>${M.STATE_LABEL[w.learningState]}</span>
+          <span class="lg-badge" style="--c:var(--violet)">${w.pos}</span>
+        </div>
+
+        <div class="word-head">
+          <h1 class="word">${w.word}</h1>
+          <button class="lg-icon-btn speak" title="Play pronunciation · 朗读" onclick="speak('${w.word}')">▶</button>
+        </div>
+        <div class="ipa-row">
+          <span class="ipa">${w.ipa}</span>
+          <span class="pos">${w.pos}</span>
+        </div>
+
+        <div class="actions">
+          <button class="lg-btn lg-btn--primary" onclick="speak('${w.word}')">Add to Review · 加入复习</button>
+          <button class="lg-btn" onclick="location.href='Lexiverse Quiz Center.html'">Quiz this word · 测验</button>
+          <button class="lg-btn">Ask AI · 问 AI</button>
+          <button class="lg-btn">Open Word Detail · 词条</button>
+          <button class="lg-btn lg-btn--ghost" onclick="location.href='LexiGraph.html?word=${encodeURIComponent(w.word)}'">Open in LexiGraph · 词汇关系图 ↗</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="def-en">${w.defEn}</p>
+        <p class="def-zh">${w.defZh}</p>
+
+        <div class="example lg-card">
+          <div class="bar"></div>
+          <div>
+            <div class="en">${highlight(w.exampleEn, w.word)}</div>
+            <div class="zh">${w.exampleZh}</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="sub lg-card">
+            <span class="lg-sec">Synonyms · 近义词</span>
+            <div class="chips">${w.synonyms.map(s => `<span class="chip click" onclick="jumpWord('${s}')">${s}</span>`).join('')}</div>
+          </div>
+          <div class="sub lg-card">
+            <span class="lg-sec">Antonyms · 反义词</span>
+            <div class="chips">${w.antonyms.map(s => `<span class="chip neg">${s}</span>`).join('')}</div>
+          </div>
+          <div class="sub lg-card">
+            <span class="lg-sec">Collocations · 搭配</span>
+            <div class="chips">${w.collocations.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+          </div>
+          <div class="sub lg-card">
+            <span class="lg-sec">Mnemonic · 记忆法</span>
+            <div class="mnemonic">${w.mnemonic}</div>
+          </div>
+          <div class="sub lg-card">
+            <span class="lg-sec">Exam Tags · 考试标签</span>
+            <div class="chips">${examBadges}</div>
+          </div>
+          <div class="sub lg-card">
+            <span class="lg-sec">CEFR &amp; Difficulty · 难度</span>
+            <div class="kv">
+              <span class="lg-badge lg-badge--mono" style="--c:var(--cyan)">${w.cefr}</span>
+              <span class="diff">${diff}</span>
+              <span style="font-size:12px;color:var(--text-muted)">level ${w.difficulty}/5</span>
+            </div>
+            <div class="chips" style="margin-top:10px">${themeBadges}</div>
+          </div>
+        </div>
+
+        <div class="switcher">
+          <span class="lg-sec">Jump to word ·</span>
+          ${M.WORDS.map(x => `<span class="chip click ${x.id === currentId ? 'lg-active' : ''}" onclick="setWord('${x.id}')">${x.word}</span>`).join('')}
+        </div>
+      `;
+    }
+
+    function setWord(id) { currentId = id; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function jumpWord(label) {
+      const found = M.WORDS.find(x => x.word === label);
+      if (found) setWord(found.id);
+    }
+    render();
+  </script>
+</body>
+</html>

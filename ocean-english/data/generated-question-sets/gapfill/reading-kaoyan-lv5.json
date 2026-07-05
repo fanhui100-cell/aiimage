@@ -1,0 +1,27 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 5,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Kaoyan Part A-level reading, 4 MCQs each (inference/attitude/argument/main idea).",
+  "sets": [
+    {
+      "passage": "Periodically, commentators announce that the study of the humanities is in terminal decline. Enrolments in literature and history, they note, have fallen as students flock to subjects promising clearer financial returns. The conclusion drawn is usually that such fields are a luxury societies can no longer afford. This argument, however, rests on a narrow conception of value. The humanities have never primarily sold themselves as a route to wealth; their justification lies elsewhere. By immersing students in unfamiliar perspectives — the moral dilemmas of a distant century, the assumptions hidden in a political speech — they cultivate the capacity to weigh evidence, tolerate ambiguity, and question one's own certainties. These are precisely the habits of mind that a complex democracy depends upon, and that no algorithm can supply. It is telling that employers themselves increasingly complain not of a shortage of technical skill, but of graduates who cannot reason, write, or adapt. To dismiss the humanities as impractical, then, may be to misunderstand what practicality, in a rapidly changing world, actually requires.",
+      "questions": [
+        { "prompt": "What does the author think of the claim that the humanities are a luxury?", "options": ["The author firmly agrees with it.", "The author considers it based on a narrow view of value.", "The author finds it impossible to judge.", "The author thinks it applies only to literature."], "answer": "B" },
+        { "prompt": "According to the passage, what do the humanities chiefly cultivate?", "options": ["A reliable path to high salaries.", "Technical skills for specific jobs.", "The capacity to weigh evidence and question certainties.", "Memory of historical dates and names."], "answer": "C" },
+        { "prompt": "Why does the author mention employers' complaints?", "options": ["To show that technical skills are in short supply.", "To suggest that reasoning and writing are widely valued and lacking.", "To argue that graduates earn too little.", "To prove that the humanities are outdated."], "answer": "B" },
+        { "prompt": "What is the main argument of the passage?", "options": ["Universities should close humanities departments.", "The value of the humanities is wider than financial return.", "Students should avoid practical subjects.", "Democracy no longer needs educated citizens."], "answer": "B" }
+      ],
+      "explain_zh": "态度(B：基于狭隘的价值观)、细节(C：培养权衡证据、质疑确定性的能力)、论证作用(B：说明推理与写作被需要却短缺)、主旨(B：人文价值远超财务回报)。"
+    },
+    {
+      "passage": "The promise of remote work was once stated with great confidence: freed from the commute and the open-plan office, employees would be both happier and more productive. Several years on, the evidence is decidedly mixed. Some studies do report gains in focused output, particularly for tasks that require long stretches of concentration. Others, however, point to subtler costs that take longer to surface. Innovation, which often depends on the unplanned exchange of ideas, may suffer when colleagues no longer meet by chance. Junior staff, deprived of the informal mentoring that once happened over a shared desk, can find it harder to learn. Perhaps most importantly, the boundary between work and life, which the office at least made visible, can dissolve entirely at home, leaving employees quietly exhausted. None of this means remote work is a failure. It means that its benefits are not automatic. They depend on deliberate design — on rituals that rebuild connection and rules that protect rest — rather than on the simple absence of an office.",
+      "questions": [
+        { "prompt": "How does the author describe the evidence on remote work?", "options": ["Overwhelmingly positive.", "Decidedly mixed.", "Entirely negative.", "Too limited to assess."], "answer": "B" },
+        { "prompt": "Why might innovation suffer with remote work?", "options": ["Employees work fewer hours.", "Unplanned exchanges of ideas become rarer.", "Computers are less reliable at home.", "Managers give fewer instructions."], "answer": "B" },
+        { "prompt": "What problem do junior staff face, according to the passage?", "options": ["They are paid less than office workers.", "They lose informal mentoring once gained near colleagues.", "They cannot use the necessary software.", "They are given too much responsibility."], "answer": "B" },
+        { "prompt": "What does the author conclude about the benefits of remote work?", "options": ["They appear automatically once the office is gone.", "They depend on deliberate design.", "They are impossible to achieve.", "They matter only to senior staff."], "answer": "B" }
+      ],
+      "explain_zh": "态度(B：证据好坏参半)、细节(B：偶发的思想交流变少)、细节(B：失去同桌时的非正式指导)、主旨(B：好处取决于刻意设计)。"
+    }
+  ]
+}

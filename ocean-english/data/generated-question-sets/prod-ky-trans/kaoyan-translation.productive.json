@@ -1,0 +1,659 @@
+{
+  "examId": "kaoyan",
+  "level": 5,
+  "skill": "translation",
+  "taskType": "translation_en_zh",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "sourceTextEn": "The notion that scientific knowledge advances through a steady accumulation of facts, a view long cherished by the public, has been seriously challenged by historians of science. What they have come to recognize is that progress in any discipline rarely follows a smooth, linear path; rather, it proceeds through periods of relative stability punctuated by abrupt and often disorienting upheavals. During such moments, the very assumptions that researchers had taken to be self-evident are called into question, and the framework within which problems were once posed gives way to a new one. This pattern, however unsettling it may appear to those who prize certainty, lies at the heart of how human understanding genuinely deepens over time. To grasp this is to abandon the comforting fiction that the road to knowledge runs straight, and to accept that every settled conviction remains, in principle, open to revision.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The notion 后接 that 同位语从句，又插入 a view long cherished by the public 同位语+过去分词短语，主干谓语 has been challenged 被推后；句2 What they have come to recognize is that... 含 what 主语从句，宾语从句内 punctuated by 过去分词后置修饰 periods",
+        "keyTerms: scientific knowledge→科学知识; accumulation of facts→事实的积累; historians of science→科学史学家; linear path→线性路径; upheavals→剧变/动荡; self-evident→不言自明的; framework→框架",
+        "syntacticFocus: 同位语从句、过去分词后置定语、what 引导的主语/表语从句、however 让步插入语、被动语态",
+        "meaningUnits: 科学知识靠事实稳步积累的看法受到挑战；进步并非平滑线性而是稳定期被突变打断；既有自明假设被质疑、旧框架让位于新框架；这种模式正是理解深化的核心",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is often assumed that the rapid spread of digital communication has brought people closer together, yet the reality may be considerably more complicated than this optimistic picture suggests. While individuals can now exchange messages across continents in an instant, the depth of the connections so formed remains open to doubt. Sociologists who study online behaviour have observed that the sheer volume of interaction available to us does not necessarily translate into meaningful relationships; on the contrary, it may foster a kind of restless superficiality, in which attention is perpetually divided. What such observations imply is that technology, for all its undeniable conveniences, cannot by itself supply the patience and presence on which genuine intimacy depends. The tools that promise to abolish distance, in other words, may leave wholly untouched the slower and harder task of truly coming to know another person.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句3 Sociologists who study online behaviour have observed that... 含 who 定语从句作主语修饰，宾语从句内 the sheer volume...does not translate into...；分号后 in which attention is perpetually divided 为 in which 非限定从句；末句 What such observations imply is that... 主语从句+for all 让步插入",
+        "keyTerms: digital communication→数字通信; across continents→跨越大洲; superficiality→肤浅; intimacy→亲密关系; for all its conveniences→尽管有种种便利",
+        "syntacticFocus: it is assumed that 形式主语、who 定语从句、in which 非限定从句、what 主语从句、for all 让步状语",
+        "meaningUnits: 数字通信拉近人际距离的假设被质疑；瞬时跨洲交流但连接深度存疑；交互量大不等于关系有意义、反而催生分心式肤浅；技术本身无法提供真正亲密所需的耐心与在场",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Few institutions have undergone so profound a transformation in recent decades as the modern university. Once conceived primarily as a sanctuary in which scholars might pursue knowledge for its own sake, it has increasingly come to be regarded, by governments and students alike, as an engine of economic productivity whose worth is measured chiefly by the employability of its graduates. This shift, gradual though it has been, raises uncomfortable questions about what education is ultimately for. If the value of learning is to be reckoned solely in terms of the salaries it commands, then those forms of inquiry that yield no immediate financial return are likely to find themselves marginalized, however vital they may be to a thoughtful and humane society.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Few institutions have undergone so profound a transformation...as... 含 so...as 比较结构倒装语气；句2 Once conceived...为过去分词独立结构置于句首，主句 it has come to be regarded...as an engine...whose worth is measured... 含 whose 定语从句；末句 If...then...含虚拟条件 + however vital they may be 让步",
+        "keyTerms: modern university→现代大学; sanctuary→庇护所/殿堂; for its own sake→为知识本身; employability→可就业性; marginalized→被边缘化",
+        "syntacticFocus: so...as 比较、过去分词作状语前置、whose 定语从句、if 条件句、however 让步从句",
+        "meaningUnits: 现代大学经历深刻转型；曾是为知识而求知的殿堂，如今被视为以毕业生就业力衡量的经济引擎；这一转变引出教育目的之问；若只以薪资衡量学习价值，无即时回报的探究将被边缘化",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The relationship between memory and personal identity has long fascinated philosophers, who have struggled to explain how a person can remain the same individual over a lifetime despite the ceaseless flux of experience. Some have argued that it is precisely the continuity of remembered events that binds together the disparate moments of a life into a coherent self. Others, more skeptical, point out that memory is notoriously unreliable, prone to distortion and selective forgetting, and ask how so fragile a faculty could possibly bear the weight of our sense of who we are. What both camps acknowledge, nonetheless, is that without some thread linking past to present, the very idea of a persisting self would dissolve. The puzzle, in the end, may reveal less about memory than about how desperately we need to believe that we are, despite everything, one and the same person throughout.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主句后接 who have struggled to explain how... 含 who 定语从句套 how 间接疑问从句，despite the ceaseless flux 让步状语；句2 it is precisely the continuity...that... 为 it is...that 强调句；句3 ask how so fragile a faculty could possibly bear... 含 so...a 倒装",
+        "keyTerms: personal identity→个人身份/自我同一性; ceaseless flux→不息的流变; continuity→连续性; coherent self→连贯的自我; faculty→（心智）能力",
+        "syntacticFocus: who 定语从句、how 间接疑问、it is...that 强调句、so + adj + a + n 倒装、without 引导虚拟",
+        "meaningUnits: 记忆与个人身份的关系引哲学家深思；一派认为正是记忆的连续性把零散时刻凝聚成连贯自我；另一派指出记忆不可靠、质疑其能否承载自我感；双方都承认无连接过去与现在的线索则持续自我之念将消解",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Among the many consequences of industrialization, none has proved more far-reaching than its impact upon our perception of time. In agrarian societies, the rhythms of daily life had been governed by the natural cycles of sun and season; with the coming of the factory, however, time itself was reconceived as a measurable commodity, to be parcelled out, bought, and sold like any other resource. Workers who had once labored according to the demands of the harvest now found their movements dictated by the relentless ticking of the clock. This profound reordering of human experience, though seldom remarked upon at the time, would come to shape the assumptions and anxieties of generations yet unborn. So thoroughly have we internalized this new discipline that we can scarcely imagine a mode of living in which the hours were not perpetually counted and weighed.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 none has proved more far-reaching than... 否定主语+比较级最高级含义；句2 with the coming of...however, time was reconceived as a commodity, to be parcelled out... 含 to be 不定式被动作后置定语；句3 Workers who had once labored...now found their movements dictated by... 含 who 定语从句 + 过去分词作宾补",
+        "keyTerms: industrialization→工业化; perception of time→时间观念; agrarian societies→农业社会; commodity→商品; the relentless ticking of the clock→时钟无情的滴答",
+        "syntacticFocus: none...more...than 比较、to be + 过去分词作定语、who 定语从句、find + 宾语 + 过去分词宾补、过去完成时与一般过去时对照",
+        "meaningUnits: 工业化诸后果中对时间观念的影响最深远；农业社会依自然循环作息，工厂到来后时间被重构为可买卖的商品；工人由依农时劳作变为受时钟支配；这一重塑当时少被察觉却影响后世几代人",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It would be a mistake to suppose that creativity is the exclusive preserve of a gifted few, born with talents the rest of us can only envy. Research in cognitive psychology increasingly suggests that the capacity to generate novel and useful ideas is far more widely distributed than popular myth allows, and that it can be cultivated through deliberate practice no less than any other skill. What distinguishes highly creative individuals, it appears, is not some mysterious spark denied to ordinary minds, but rather a willingness to tolerate uncertainty, to entertain seemingly absurd possibilities, and to persist in the face of repeated failure. Seen in this light, creativity becomes less a matter of innate endowment than of disposition and habit. If this is correct, then the most consequential question is not who happens to possess the gift, but what kinds of environment encourage the rest of us to develop the capacities we already have.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It would be a mistake to suppose that... 形式主语+虚拟语气，born with talents the rest of us can only envy 含省略关系词的定语从句；句3 What distinguishes...is not...but rather...含 what 主语从句 + not...but 结构 + 三个并列不定式",
+        "keyTerms: creativity→创造力; exclusive preserve→专属领域; cognitive psychology→认知心理学; deliberate practice→刻意练习; innate endowment→天赋秉性; disposition→性情/倾向",
+        "syntacticFocus: it would be...to 形式主语虚拟、省略 that 的定语从句、what 主语从句、not...but rather 结构、less...than 比较",
+        "meaningUnits: 创造力非天才独享的错误假设；认知心理学表明产生新颖有用想法的能力分布更广且可经刻意练习培养；高创造力者的区别在于容忍不确定、考虑荒诞可能、屡败仍坚持；据此创造力更关乎性情习惯而非天赋",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The argument that economic inequality is simply the natural and inevitable outcome of differences in individual effort and ability, frequently advanced by those who benefit most from the existing order, deserves closer examination than it usually receives. Careful study of how wealth is actually transmitted across generations reveals that the circumstances of one's birth exert an influence at least as powerful as anything one subsequently does. A child born into privilege inherits not only material assets but also networks, expectations, and forms of confidence that markedly improve the odds of success. To attribute the resulting disparities solely to merit is therefore to mistake the consequences of accumulated advantage for the rewards of personal virtue. Such a confusion is hardly innocent, for it furnishes the comfortable with a flattering story about why they deserve what they enjoy.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The argument 后接 that 同位语从句，又插入 frequently advanced by those who... 过去分词+who 定语从句，主干谓语 deserves...被推后；末句 To attribute...is to mistake A for B 含不定式主语 + mistake...for 结构",
+        "keyTerms: economic inequality→经济不平等; transmitted across generations→代际传递; privilege→特权; accumulated advantage→累积优势; merit→才能/功绩; personal virtue→个人德行",
+        "syntacticFocus: 同位语从句、过去分词+who 嵌套定语、at least as...as 比较、不定式作主语、mistake A for B",
+        "meaningUnits: 不平等仅源于个人努力与能力差异之论应被审视；财富代际传递研究显示出身影响至少与后续作为同样强大；特权之子继承资产、人脉、预期与自信；将差距全归于才能即把累积优势误认作个人德行的回报",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Language, far from being a mere instrument for labelling a reality that exists independently of it, plays an active part in shaping the very categories through which we apprehend the world. This insight, developed by linguists over the course of the past century, implies that speakers of different languages may, in subtle but significant ways, inhabit somewhat different conceptual universes. Where one tongue draws a sharp distinction, another may see only continuity; what one culture treats as a single phenomenon, another may carve into several. Such variation, while it ought not be exaggerated into a claim that translation is impossible, does suggest that the words we inherit quietly predispose us to notice certain things and to overlook others. To learn another language well, on this view, is to acquire not merely a new vocabulary but an unfamiliar way of dividing up experience.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Language, far from being a mere instrument..., plays an active part... 含 far from 让步插入 + a reality that exists independently of it 定语从句；句3 Where one tongue draws..., another may see... / what one culture treats..., another may carve... 为 where/what 引导的对照并列结构",
+        "keyTerms: instrument→工具; categories→范畴; apprehend→领会/把握; conceptual universes→概念世界; predispose→使倾向于",
+        "syntacticFocus: far from being 让步、that 定语从句、where 引导对照状语从句、what 引导名词性从句、while 让步从句",
+        "meaningUnits: 语言并非给独立现实贴标签的工具而是塑造我们认知范畴；不同语言使用者居于略异的概念世界；一语严分处他语见连续、一文化视为单一者他文化分为数个；此变异不应夸大为翻译不可能但确表明继承的词语使我们倾向注意某些事物而忽略另一些",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "There has emerged in recent years a growing consensus that the traditional distinction between work and leisure, once so firmly drawn, is beginning to erode. Portable devices that keep employees perpetually reachable have blurred the boundary between the office and the home, so that the hours nominally set aside for rest are increasingly colonized by the demands of one's job. While champions of this arrangement praise the flexibility it affords, critics warn that the inability ever fully to disengage takes a quiet but cumulative toll on health and wellbeing. What is at stake, they contend, is nothing less than the capacity to lead a life in which labour, however necessary, does not crowd out everything else that makes existence worthwhile.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 There has emerged...a growing consensus that... 含 there 引导存现句 + that 同位语从句 + once so firmly drawn 过去分词插入；句2 Portable devices that...have blurred...so that... 含 that 定语从句 + so that 结果状语；末句 What is at stake...is nothing less than the capacity to lead a life in which... 主语从句 + in which 定语从句",
+        "keyTerms: work and leisure→工作与休闲; portable devices→便携设备; disengage→抽身/脱离; cumulative toll→累积代价; at stake→攸关/危如累卵",
+        "syntacticFocus: there has emerged 存现倒装、that 同位语从句、so that 结果状语、what 主语从句、in which 定语从句、nothing less than 强调",
+        "meaningUnits: 工作与休闲的传统界限正在瓦解之共识渐成；便携设备使员工随时可联，模糊了办公室与家的边界、休息时间被工作侵占；支持者赞其灵活、批评者警告无法脱离对健康有累积损害；他们认为攸关的是能否过上劳动不挤占其余有价值之事的生活",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The widespread belief that human beings are fundamentally selfish, pursuing their own advantage at every turn, has been thrown into question by a body of research that paints a far more nuanced portrait of our nature. Experiments conducted across many cultures reveal that people routinely act in ways that benefit others at a cost to themselves, even when no reciprocity can be expected and no observer is present to applaud. Such findings do not, of course, deny that self-interest is a powerful motive; they suggest, rather, that it coexists with a deep-seated tendency toward cooperation, fairness, and concern for the wellbeing of strangers. To ignore this second dimension is to misunderstand what kind of creature we actually are. A theory of human conduct built upon the premise of pure selfishness will therefore mispredict precisely those moments in which people behave most admirably.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The widespread belief 后接 that 同位语从句 + pursuing...at every turn 现在分词状语，主干谓语 has been thrown into question by a body of research that... 含 that 定语从句；句2 even when no reciprocity can be expected and no observer is present to applaud 让步状语并列",
+        "keyTerms: fundamentally selfish→本质上自私; nuanced portrait→更细致的描绘; reciprocity→回报/互惠; self-interest→自利; deep-seated tendency→根深蒂固的倾向",
+        "syntacticFocus: 同位语从句、现在分词状语、that 定语从句、even when 让步状语、not...rather 转折",
+        "meaningUnits: 人本质自私之说被研究质疑；跨文化实验显示人常以己损利他、即便无回报无旁观；这些发现不否认自利是强动机，而指出其与合作公平及关怀陌生人的深层倾向并存；忽视后一维度即误解人之本性",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Historians have increasingly come to appreciate that the events recorded in official documents represent only a fraction of what actually took place in the past. The lives of ordinary men and women, who left behind few written traces of their existence, have for centuries remained largely invisible to scholarship preoccupied with kings, battles, and treaties. In recent decades, however, a new generation of researchers has turned its attention to court records, parish registers, and the fragmentary testimony of the obscure, attempting to reconstruct experiences that conventional history had passed over in silence. What emerges from these patient labours is a richer and more democratic picture of the past, one in which the powerless are at last accorded a voice. History so written ceases to be a chronicle of the mighty and becomes, instead, an account of how the great mass of humanity actually endured.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句2 The lives of ordinary men and women, who left behind few written traces..., have...remained...invisible to scholarship preoccupied with... 含 who 非限定从句 + 过去分词后置；句3 attempting to reconstruct experiences that conventional history had passed over in silence 现在分词状语 + that 定语从句；末句 What emerges...is a picture..., one in which... 主语从句 + 同位语 + in which 定语从句",
+        "keyTerms: official documents→官方文献; written traces→文字痕迹; parish registers→教区登记簿; fragmentary testimony→零散的见证; the powerless→无权势者",
+        "syntacticFocus: who 非限定从句、过去分词作定语、现在分词状语、that 定语从句、what 主语从句、in which 定语从句",
+        "meaningUnits: 历史学家渐识官方文献仅记过往一小部分；普通人少留文字、长期被关注王侯战争条约的学术忽视；近数十年新一代转向庭审记录、教区簿与卑微者的零散见证以重建被沉默略过的经历；由此呈现更丰富更平民化的过去图景，无权势者终获声音",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Whether the pursuit of happiness ought to be regarded as the proper aim of a human life is a question that has divided thinkers since antiquity. Those who answer in the affirmative tend to assume that pleasant feelings are intrinsically good and that a life is improved to the extent that such feelings predominate. Yet a moment's reflection reveals difficulties with this view. Many of the experiences we most value, from raising children to mastering a demanding art, involve considerable hardship, and would scarcely be chosen if comfort were our sole criterion. It may be, then, that a meaningful life and a merely pleasant one are not the same thing, and that we sometimes have good reason to prefer the former.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Whether...ought to be regarded as...is a question that has divided thinkers since antiquity 含 whether 主语从句 + that 定语从句；句2 a life is improved to the extent that... 含 to the extent that 程度状语；句4 ...would scarcely be chosen if comfort were our sole criterion 虚拟条件",
+        "keyTerms: the pursuit of happiness→对幸福的追求; intrinsically good→本质上好的; predominate→占主导; a demanding art→一门要求很高的技艺; sole criterion→唯一标准",
+        "syntacticFocus: whether 主语从句、that 定语从句、to the extent that 程度状语、if + 过去时虚拟、not the same 对比",
+        "meaningUnits: 追求幸福是否人生正当目标自古争议；肯定者认为愉悦本质上好、愉悦越多生活越好；然而细思有难处；养育子女、精研技艺等所珍视经历多含艰辛、若以舒适为唯一标准则不会选；故有意义之生与仅愉悦之生或非一事，有时我们有理由偏好前者",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The conviction that scientific and technological progress will of itself solve the environmental problems it has helped to create rests on assumptions that merit careful scrutiny. It is true that ingenuity has repeatedly devised remedies for difficulties once thought insurmountable, and there is no reason in principle why it should not continue to do so. Nevertheless, to place unbounded faith in future breakthroughs is to risk postponing indefinitely the changes in behaviour and policy that the present moment demands. Technology may indeed buy us time, but the belief that it will rescue us regardless of how we choose to live encourages precisely the complacency that has brought us to our current predicament. Prudence counsels that we treat innovation as an ally to be cultivated rather than a saviour to be awaited.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The conviction 后接 that 同位语从句，从句内 the environmental problems it has helped to create 含省略关系词的定语从句，主干 rests on assumptions that merit scrutiny 含 that 定语从句；句2 there is no reason in principle why it should not... 含 why 定语从句；句3 to place...faith...is to risk postponing... 不定式作主语 + 表语",
+        "keyTerms: technological progress→技术进步; insurmountable→不可逾越的; unbounded faith→无限信任; complacency→自满; predicament→困境",
+        "syntacticFocus: 同位语从句、省略 that 的定语从句、why 定语从句、不定式作主语和表语、regardless of 让步",
+        "meaningUnits: 相信科技进步本身会解决其所造成环境问题之信念应被审视；机巧屡解曾视为不可逾越之难、原则上仍可如此；然而对未来突破抱无限信任会无限期推迟当下所需的行为与政策变革；技术或能争取时间，但相信其无论我们如何生活都会拯救我们，恰助长了导致当前困境的自满",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The assumption that markets, left entirely to themselves, will always allocate resources in the most efficient and socially beneficial manner has been one of the most influential ideas of the modern era. Yet experience suggests that unregulated markets, for all their dynamism, are prone to failures that no amount of competition can correct on its own. They tend systematically to ignore costs imposed on third parties, such as the pollution generated by production, and they frequently undersupply goods, like basic research, whose benefits cannot easily be captured by those who pay for them. Recognizing these limitations need not imply hostility to markets as such; it implies only that they function best within a framework of intelligent rules. The relevant debate, properly understood, concerns not whether markets should be governed but how, and by whom, the necessary rules are to be devised.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The assumption 后接 that markets, left entirely to themselves, will always allocate... 同位语从句 + 过去分词独立结构插入；句3 They tend...to ignore costs imposed on third parties, such as..., and they frequently undersupply goods, like basic research, whose benefits cannot easily be captured by those who pay 含过去分词后置 + whose/who 定语从句",
+        "keyTerms: allocate resources→配置资源; unregulated markets→不受监管的市场; third parties→第三方; undersupply→供给不足; basic research→基础研究",
+        "syntacticFocus: 同位语从句、过去分词独立结构、过去分词后置定语、whose 与 who 定语从句、need not imply 否定",
+        "meaningUnits: 市场全凭自身总能最有效且社会有益地配置资源之假设极具影响；然而无监管市场虽富活力却易失灵、竞争本身无法纠正；它们系统性忽视加于第三方的成本如污染，并常对基础研究等收益难被付费者获取之物供给不足；承认此局限不必敌视市场，只表明市场在明智规则框架内运作最佳",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "What we call common sense, far from being a reliable guide to truth, often turns out to be little more than the accumulated prejudices of a particular time and place, dressed up in the language of self-evidence. Many propositions that earlier generations regarded as too obvious to require argument, concerning the proper roles of men and women, for instance, or the natural ordering of human societies, strike us today as plainly mistaken. This ought to instil a certain humility about our own convictions. If those who came before us were so confidently wrong about matters they took to be beyond dispute, we have little reason to suppose that we ourselves are wholly exempt from comparable errors. The most dangerous beliefs, after all, are not those we argue for but those we never think to examine at all.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 What we call common sense, far from being..., often turns out to be little more than... 含 what 主语从句 + far from 让步插入 + dressed up in... 过去分词后置；句2 Many propositions that...regarded as too obvious to require argument, concerning..., strike us...as mistaken 含 that 定语从句 + too...to + concerning 插入；末句 If those who...were so confidently wrong about matters they took to be... 虚拟/事实条件 + 省略关系词定语从句",
+        "keyTerms: common sense→常识; accumulated prejudices→累积的偏见; self-evidence→不言自明; instil humility→灌输谦逊; beyond dispute→无可争辩",
+        "syntacticFocus: what 主语从句、far from 让步、过去分词后置、too...to 结构、that/省略关系词定语从句、if 条件句",
+        "meaningUnits: 所谓常识远非通向真理的可靠指南，常只是特定时地累积偏见披上自明外衣；前人视为明显无须论证的命题如两性角色、社会自然秩序今看显然有误；这应使我们对自身信念存几分谦逊；若前人对自认无可争辩之事都如此自信地错，我们没理由设想自己全然免于类似错误",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The idea that art should serve some useful social purpose, rather than existing merely for the delight it affords, has provoked fierce controversy among critics and artists alike. On one side stand those who insist that a work of genuine value must engage with the pressing concerns of its time, holding up a mirror to injustice or stirring its audience to action. On the other are defenders of the view that beauty requires no justification beyond itself, and that to demand of art a practical payoff is to misconstrue its very nature. Perhaps the dispute rests on a false opposition; a painting or a poem may move us deeply precisely because it refuses to be reduced to a message. The work that endures is rarely the one that preaches, but rather the one that, by its very form, enlarges our capacity to feel and to perceive.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句2 On one side stand those who insist that...holding up a mirror... 倒装句 + who 定语从句 + that 宾语从句 + 现在分词状语；句3 On the other are defenders of the view that...and that to demand of art a practical payoff is to misconstrue... 倒装 + that 同位语从句并列 + 不定式主语；末句 a painting or a poem may move us...precisely because it refuses to be reduced to a message 原因状语",
+        "keyTerms: useful social purpose→有用的社会目的; for the delight it affords→为其所带来的愉悦; holding up a mirror to injustice→映照不公; practical payoff→实际回报; misconstrue→曲解",
+        "syntacticFocus: 地点状语前置引发倒装、who 定语从句、that 宾语/同位语从句、现在分词状语、不定式作主语、because 原因状语",
+        "meaningUnits: 艺术应否服务于有用社会目的而非仅为愉悦引发激烈争论；一方坚持真正有价值的作品须介入时代紧迫关切、映照不公或激发行动；另一方主张美无须自身之外的辩护、要求艺术有实际回报即曲解其本性；或许争论建于虚假对立，画作或诗篇打动我们恰因其拒被化约为讯息",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It has become fashionable to speak of the brain as though it were simply a sophisticated computer, processing inputs and generating outputs according to fixed rules. While this metaphor has undeniably proved fruitful, guiding much valuable research, there are reasons to suspect that it captures only a part of the truth. Unlike any machine yet devised, the human mind is embedded in a living body and shaped continuously by emotion, by social relationships, and by a history of experiences that no two individuals share in exactly the same way. To reduce so rich and dynamic a phenomenon to the operations of a mechanism, however complex, may be to leave out what is most essential about it. A metaphor that illuminates one aspect of its subject can, if pressed too far, quietly obscure all the rest.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It has become fashionable to speak of the brain as though it were... 形式主语 + as though 虚拟；句3 the human mind is...shaped continuously by emotion, by..., and by a history of experiences that no two individuals share in exactly the same way 含三项并列 by 短语 + that 定语从句；末句 To reduce so rich and dynamic a phenomenon to..., however complex, may be to leave out... 不定式主语 + so...a 倒装 + however 让步插入",
+        "keyTerms: a sophisticated computer→精密的计算机; metaphor→隐喻; embedded in a living body→嵌于活体之中; mechanism→机制; what is most essential→最本质之物",
+        "syntacticFocus: it 形式主语、as though 虚拟语气、并列介词短语、that 定语从句、so + adj + a + n 倒装、however 让步、不定式作主语",
+        "meaningUnits: 把大脑比作精密计算机的说法流行；此隐喻虽富成果指导诸多研究却或仅含部分真相；与任何已造机器不同，人心嵌于活体并持续被情感、社会关系及无人完全相同的经历史塑造；将如此丰富动态之现象化约为机制运作或许略去其最本质者",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Few subjects arouse stronger feelings than the question of how much we owe to future generations who do not yet exist and whose interests cannot, by their very nature, be consulted. Some philosophers maintain that since these people are no less real for being unborn, we are bound to take their welfare into account when we make decisions whose consequences will outlast us. Others reply that obligations can be owed only to actual persons, and that it is incoherent to speak of duties toward those who may never come into being at all. However the dispute is resolved, the choices we make about resources and the climate will profoundly shape a world we ourselves shall never see. That those who will inhabit that world cannot reproach us does not, on reflection, make our responsibility toward them any lighter.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Few subjects arouse stronger feelings than the question of how much we owe to future generations who...and whose interests cannot...be consulted 含 how much 间接疑问 + who/whose 并列定语从句；句2 since these people are no less real for being unborn, we are bound to...when we make decisions whose consequences will outlast us 含 since 原因 + for being 让步 + whose 定语从句；句3 it is incoherent to speak of duties toward those who may never come into being 形式主语",
+        "keyTerms: future generations→后代/子孙后代; whose interests cannot be consulted→其利益无从征询; no less real→同样真实; obligations→义务; come into being→产生/存在",
+        "syntacticFocus: how much 间接疑问、who/whose 定语从句、since 原因状语、for + 动名词让步、it is...to 形式主语、however 让步",
+        "meaningUnits: 我们对尚不存在且利益无从征询的后代负多少责引发强烈争议；一派认为未出生者同样真实、我们决策影响超越自身故须顾其福祉；另一派回应义务只能对实存之人、谈对或永不存在者的责任不通；无论争论如何解决，我们关于资源与气候的抉择将深刻塑造一个我们永不得见的世界",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The claim that travel broadens the mind, repeated so often that it has hardened into a cliché, deserves to be examined rather than simply accepted. There is no doubt that exposure to unfamiliar ways of living can loosen the grip of habits we had never thought to question. Yet travel undertaken in the wrong spirit, as a mere collection of sights to be photographed and ticked off, may leave the traveller's assumptions wholly intact, or even reinforce them. What transforms a journey into an education is not the distance covered but the willingness to be genuinely unsettled by what one encounters, to surrender, however briefly, the comforting conviction that one's own way of life is the natural one. Travel of this rarer kind sends us home, paradoxically, as strangers to the assumptions we had never before thought to question.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The claim that travel broadens the mind, repeated so often that it has hardened into a cliché, deserves... 含 that 同位语从句 + 过去分词 + so...that 结果状语插入；末句 What transforms a journey into an education is not the distance covered but the willingness to be genuinely unsettled..., to surrender, however briefly, the comforting conviction that... 含 what 主语从句 + not...but + 不定式并列 + however 插入 + that 同位语从句",
+        "keyTerms: broadens the mind→开阔心智; hardened into a cliché→固化为陈词滥调; ticked off→逐一打勾完成; be genuinely unsettled→真正被动摇; comforting conviction→令人安心的信念",
+        "syntacticFocus: that 同位语从句、过去分词后置、so...that 结果状语、what 主语从句、not...but 结构、不定式并列、however 让步插入",
+        "meaningUnits: 旅行开阔心智之说重复成陈词应被审视而非照收；接触陌生生活方式确能松动从未质疑的习惯；但以错误心态把旅行当作拍照打卡的景点收集，或使旅者假设原封不动甚至强化；使旅程成为教育者非里程，而是甘愿被所遇真正动摇、哪怕短暂放弃自身生活方式天然如此的安心信念",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is widely supposed that democracy and economic prosperity naturally reinforce one another, the one creating the conditions in which the other can flourish. The historical record, however, offers a more ambiguous lesson than this comforting assumption would lead us to expect. Prosperous societies have at times tolerated, and even embraced, authoritarian rule, while fragile democracies have arisen and endured in conditions of considerable hardship. What seems to matter is less the level of wealth a society has attained than the strength of the institutions and habits that hold power accountable. Where these are absent, prosperity may simply enrich those who already dominate, leaving the many no freer than before. The lesson, if there is one, is that liberty depends less on the wealth a people commands than on the arrangements that determine who may wield it and to what end.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 democracy and economic prosperity naturally reinforce one another, the one creating the conditions in which the other can flourish 含独立主格结构 + in which 定语从句；句4 What seems to matter is less the level of wealth a society has attained than the strength of the institutions and habits that hold power accountable 含 what 主语从句 + less...than 比较 + 省略关系词定语 + that 定语从句；句5 Where these are absent... 含 where 条件状语",
+        "keyTerms: democracy→民主; economic prosperity→经济繁荣; authoritarian rule→威权统治; fragile democracies→脆弱的民主政体; hold power accountable→使权力受到问责",
+        "syntacticFocus: 独立主格、in which 定语从句、what 主语从句、less...than 比较、where 条件状语、省略关系词的定语从句",
+        "meaningUnits: 普遍以为民主与经济繁荣相互促进；史实却比这安慰性假设更含糊；富裕社会有时容忍甚至拥抱威权，脆弱民主亦在艰难中产生并存续；要紧的与其说是财富水平不如说是使权力受问责的制度与习惯之强度；若缺此，繁荣或仅富了既得统治者、令多数人并不更自由",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The romantic image of the lone genius, toiling in isolation until a flash of inspiration delivers a finished masterpiece, has proved remarkably durable despite mounting evidence that it bears little resemblance to how creative work is actually accomplished. Most significant achievements, on closer inspection, turn out to be the product of long collaboration, of ideas borrowed and adapted, of countless small refinements contributed by many hands over many years. To attribute them to a single mind is not merely inaccurate; it does a quiet injustice to all those whose contributions, less visible or less celebrated, were nonetheless indispensable to the result that posterity remembers under one famous name. The myth of solitary genius, however inspiring, thus distorts our understanding of how anything of lasting value actually comes to be made.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The romantic image of the lone genius, toiling in isolation until a flash of inspiration delivers a finished masterpiece, has proved...durable despite mounting evidence that... 含现在分词长插入 + until 时间状语 + that 同位语从句；句3 it does a quiet injustice to all those whose contributions, less visible or less celebrated, were nonetheless indispensable to the result that posterity remembers under one famous name 含 whose/that 定语从句 + 形容词插入",
+        "keyTerms: the lone genius→孤独的天才; flash of inspiration→灵感的闪现; masterpiece→杰作; refinements→改进/打磨; posterity→后世",
+        "syntacticFocus: 现在分词长状语、until 时间状语、that 同位语从句、whose/that 定语从句、not merely...it 递进",
+        "meaningUnits: 孤独天才独自苦干直至灵感闪现交出杰作的浪漫形象异常顽固，尽管证据日增表明其与创作实情相去甚远；细察重大成就多为长期协作、借鉴改造、众手多年无数小改进之产物；归功于一人不仅失实，更默默亏待了那些贡献虽不显却不可或缺、而成果却以一个名字被后世铭记之人",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Among the more troubling developments of recent years has been the erosion of any shared sense of what counts as a credible source of information. Where citizens once disagreed about how to interpret a body of facts they nonetheless held in common, they now increasingly inhabit separate informational worlds, each furnished with its own version of reality. This fragmentation, accelerated by algorithms that feed users whatever holds their attention, poses a peculiar threat to democratic life, which depends on the possibility of reasoned argument across lines of disagreement. When there is no longer any agreement even about the basic facts, the very ground on which such argument might proceed begins to disappear. A community that can no longer reason together about a shared reality is left with little but the bare assertion of rival convictions, each impervious to the other.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Among the more troubling developments...has been the erosion of... 介词短语前置引发倒装；句2 Where citizens once disagreed about how to interpret a body of facts they nonetheless held in common, they now...inhabit separate informational worlds, each furnished with... 含 where 对照状语 + how 间接疑问 + 省略关系词定语 + 独立主格；句3 accelerated by algorithms that feed users whatever holds their attention...democratic life, which depends on... 含 that/which 定语从句 + whatever 宾语从句",
+        "keyTerms: credible source→可信来源; informational worlds→信息世界; fragmentation→碎片化; algorithms→算法; reasoned argument→理性论辩",
+        "syntacticFocus: 介词短语前置倒装、where 对照状语、how 间接疑问、独立主格、that/which 定语从句、whatever 宾语从句",
+        "meaningUnits: 近年更令人忧者是对何为可信信息来源的共识之侵蚀；公民曾就如何解释共有事实分歧，如今渐居各自信息世界、各配自有现实版本；这一被投其所好的算法加速的碎片化威胁依赖跨分歧理性论辩的民主生活；当连基本事实都不再有共识，论辩可凭之地基开始消失",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The proposition that punishment deters crime, often invoked to justify ever harsher penalties, turns out on examination to be far less straightforward than its proponents assume. Studies repeatedly indicate that what discourages potential offenders is not so much the severity of the sentence they might face as the likelihood of being caught at all. A would-be thief who believes he will escape detection is scarcely restrained by the knowledge that those who are apprehended receive long terms of imprisonment. If this is so, then policies that pour resources into lengthening sentences, while neglecting the more mundane work of effective enforcement, may be addressing the problem at precisely the wrong end. The appetite for severity, however emotionally satisfying, can thus distract a society from the measures that would actually make it safer.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 主语 The proposition 后接 that punishment deters crime 同位语从句 + often invoked to justify... 过去分词插入，主干 turns out...to be far less straightforward than... 比较；句2 what discourages potential offenders is not so much the severity...as the likelihood of being caught 含 what 主语从句 + not so much...as 结构；句3 A would-be thief who believes he will escape detection is scarcely restrained by the knowledge that... 含 who 定语从句 + that 同位语从句",
+        "keyTerms: punishment deters crime→刑罚遏制犯罪; harsher penalties→更严厉的刑罚; severity of the sentence→量刑的严厉程度; likelihood of being caught→被抓获的可能性; enforcement→执法",
+        "syntacticFocus: 同位语从句、过去分词插入、what 主语从句、not so much...as 比较、who 定语从句、if 条件句",
+        "meaningUnits: 刑罚遏制犯罪、常被援引以证更严刑罚之说经审视远不简单；研究表明阻吓潜在罪犯的与其说是可能面临的刑罚严厉不如说是被抓的概率；自信能逃脱者几乎不为重刑所慑；若如此，则把资源投于延长刑期而忽视有效执法的政策恰从错误一端处理问题",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The widespread enthusiasm for measuring intelligence by means of a single numerical score, however convenient for the purposes of comparison and selection, rests on a questionable premise about the nature of the human mind. It assumes that the diverse capacities we lump together under the name of intelligence, the ability to reason abstractly, to grasp another's feelings, to create, to adapt to unfamiliar situations, can all be ranged along one dimension and reduced to a point upon it. Yet there is no compelling reason to believe that these abilities, which often vary independently of one another, form so unified a quantity. A person gifted in one respect may be quite ordinary in another, and to collapse such a profile into a single figure is to discard precisely the information that makes each mind distinctive.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The widespread enthusiasm for measuring intelligence..., however convenient..., rests on a questionable premise about... 含动名词宾语 + however 让步插入；句2 It assumes that the diverse capacities we lump together under the name of intelligence, the ability to reason..., to grasp..., to create..., to adapt..., can all be ranged along one dimension 含 that 宾语从句 + 省略关系词定语 + 同位语不定式并列；句3 these abilities, which often vary independently of one another, form so unified a quantity 含 which 非限定从句 + so...a 倒装",
+        "keyTerms: a single numerical score→单一数值分数; questionable premise→可疑的前提; reason abstractly→抽象推理; one dimension→单一维度; vary independently→各自独立变化",
+        "syntacticFocus: 动名词作宾语、however 让步插入、that 宾语从句、同位语不定式并列、which 非限定从句、so + adj + a + n 倒装",
+        "meaningUnits: 以单一数值衡量智力的热情虽便于比较选拔却建于关于人心本质的可疑前提；它假设我们统称智力的各种能力如抽象推理、体察他人、创造、适应陌生情境都可沿单一维度排列归为一点；然而无理由相信这些常各自独立变化的能力构成如此统一的量；一人某方面有天赋他方面或甚平庸",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The conviction that the past was a simpler and happier age, from which the modern world represents a regrettable decline, exercises a powerful hold on the imagination of every generation. Such nostalgia, comforting though it may be, tends to rest upon a selective memory that magnifies the virtues of bygone times while conveniently forgetting their hardships and cruelties. The very people who lament the loss of an idealized past would, if transported back to it, find themselves shocked by the deprivations they had taken so lightly. To understand history honestly is to resist the seductive but distorting glow that distance casts upon what is gone. Only by recovering the full texture of earlier lives, their fears and discomforts no less than their pleasures, can we judge fairly whether anything of real value has indeed been lost. The honest historian, in this respect, is the enemy of comfortable myth.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The conviction that the past was a simpler...age, from which the modern world represents a regrettable decline, exercises a powerful hold... 含 that 同位语从句 + from which 定语从句；句2 Such nostalgia, comforting though it may be, tends to rest upon a selective memory that magnifies...while conveniently forgetting... 含 though 让步倒装 + that 定语从句 + while 对照；句3 The very people who lament...would, if transported back to it, find themselves shocked by the deprivations they had taken so lightly 含 who 定语从句 + if 虚拟 + 省略关系词定语",
+        "keyTerms: nostalgia→怀旧/乡愁; selective memory→选择性记忆; bygone times→往昔/逝去的年代; deprivations→匮乏/困苦; distorting glow→失真的光晕",
+        "syntacticFocus: that 同位语从句、from which 定语从句、though 让步倒装、that 定语从句、if 虚拟条件、省略关系词定语",
+        "meaningUnits: 过去更简单更幸福、现代是可叹衰落之信念牢牢攫住每代人想象；此怀旧虽慰人却常基于放大往昔美德而方便遗忘其艰辛残酷的选择性记忆；那些哀叹理想化过去消逝者若被送回，会为自己轻视的匮乏震惊；诚实理解历史即抵抗距离投于逝物之上诱人却失真的光晕",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is sometimes argued that the function of education is not to fill the mind with information, which any reference work can supply on demand, but to cultivate the disciplined habits of thought by which information is critically weighed and put to use. On this view, a curriculum crammed with facts to be memorized and reproduced may actually defeat the deeper purpose it is meant to serve. What a student most needs to acquire is not a stock of answers but the capacity to ask searching questions, to recognize a flawed argument, and to hold conclusions provisionally, revising them as fresh evidence comes to light. These are dispositions, not data, and they cannot be downloaded. They are cultivated slowly, through practice and example, in the kind of patient apprenticeship that no shortcut has yet been found to replace.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 the function of education is not to fill the mind with information, which any reference work can supply on demand, but to cultivate the disciplined habits of thought by which information is critically weighed 含 not...but 不定式 + which 非限定从句 + by which 定语从句；句3 What a student most needs to acquire is not a stock of answers but the capacity to ask..., to recognize..., and to hold conclusions provisionally, revising them as fresh evidence comes to light 含 what 主语从句 + not...but + 不定式并列 + 现在分词 + as 状语",
+        "keyTerms: cultivate→培养; disciplined habits of thought→严谨的思维习惯; a stock of answers→一套现成答案; searching questions→深入的问题; provisionally→暂定地/姑且",
+        "syntacticFocus: not...but 结构、which 非限定从句、by which 定语从句、what 主语从句、不定式并列、现在分词状语、as 时间状语",
+        "meaningUnits: 有人认为教育之职非以可随需查阅的信息填塞头脑而是培养据以批判权衡运用信息的严谨思维习惯；据此塞满待记诵复述事实的课程或反而挫败其深层目的；学生最需获得的非一套现成答案而是提深入问题、识破有缺陷论证、姑且持结论并随新证修正的能力；这些是性情非数据、无法下载",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The assumption that giving people more choices invariably makes them better off, so deeply ingrained in the culture of consumer societies, has been called into question by a growing body of psychological research. Beyond a certain point, it appears, an expanding array of options ceases to liberate and begins instead to oppress, burdening the chooser with the labour of comparison and the gnawing fear of having decided wrongly. Those confronted with too many alternatives often end up less satisfied with what they finally select, haunted by the alternatives they declined. Freedom of choice, it seems, is a genuine good only within limits that the prevailing ideology is curiously reluctant to acknowledge. Beyond those limits, what is offered as an expansion of our liberty may turn out, on closer inspection, to be a subtle new form of burden.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The assumption that giving people more choices invariably makes them better off, so deeply ingrained in..., has been called into question 含 that 同位语从句 + 过去分词 so...插入；句2 an expanding array of options ceases to liberate and begins instead to oppress, burdening the chooser with... 含现在分词结果状语；句3 Those confronted with too many alternatives often end up less satisfied..., haunted by the alternatives they declined 含过去分词后置 + 省略关系词定语",
+        "keyTerms: more choices→更多选择; consumer societies→消费社会; an expanding array of options→不断扩大的选项; gnawing fear→啮咬般的恐惧; freedom of choice→选择自由",
+        "syntacticFocus: that 同位语从句、过去分词插入、现在分词结果状语、过去分词作定语、省略关系词定语、it seems 插入",
+        "meaningUnits: 给人更多选择必使其更好的假设深植消费社会文化却受心理研究质疑；过某点后选项扩张不再解放反而压迫、以比较之劳与决策错误的恐惧压垮选择者；面对过多选项者常对最终所选更不满、被放弃的选项萦绕；选择自由似仅在限度内为真正之善，而主流意识形态出奇地不愿承认",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "Nowhere is the gap between intention and outcome more vividly illustrated than in the long history of well-meaning attempts to reform societies from above. Reformers possessed of a clear and compelling vision have repeatedly underestimated the complexity of the systems they sought to remake, and the capacity of those systems to respond in ways no one had foreseen. Measures introduced to relieve one hardship have bred others perhaps more severe; institutions designed to embody noble principles have hardened into instruments of the very oppression they were meant to end. None of this counsels passivity in the face of injustice, but it does urge a sober awareness of how easily our best efforts may miscarry. The wise reformer, accordingly, proceeds with humility, alert to the possibility that the remedy may prove worse than the ailment it was meant to cure.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 Nowhere is the gap...more vividly illustrated than in... 否定副词前置全句倒装 + 比较；句2 Reformers possessed of a clear and compelling vision have repeatedly underestimated the complexity of the systems they sought to remake, and the capacity of those systems to respond in ways no one had foreseen 含过去分词后置 + 省略关系词定语 + 不定式 + 省略关系词定语；句3 institutions designed to embody noble principles have hardened into instruments of the very oppression they were meant to end 含过去分词后置 + 省略关系词定语",
+        "keyTerms: intention and outcome→意图与结果; reform societies from above→自上而下改革社会; compelling vision→引人信服的愿景; miscarry→失败/落空; sober awareness→清醒的认识",
+        "syntacticFocus: nowhere 否定前置倒装、比较结构、过去分词后置定语、省略关系词的定语从句、不定式作定语",
+        "meaningUnits: 意图与结果之差距在自上而下改革社会的善意尝试史中最鲜明；怀清晰愿景的改革者一再低估所欲重塑系统之复杂及其以无人预见方式回应的能力；为解一难而推的措施滋生或更重之难、为体现高尚原则而设的制度固化为其本欲终结之压迫的工具；这一切不劝面对不公时被动，却促人清醒认识最善努力何其易落空",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The popular image of scientists as wholly objective observers, dispassionately gathering data and following wherever the evidence leads, captures an ideal that the actual practice of science only imperfectly attains. Researchers, being human, approach their work with expectations and commitments that can subtly colour what they notice and how they interpret it. The strength of science lies not in the supposed perfection of individual investigators, who are as fallible as anyone else, but in a communal process of mutual criticism through which errors are, over time, exposed and corrected. It is this social mechanism, rather than any superhuman impartiality on the part of its practitioners, that lends scientific knowledge its distinctive reliability. Take away the open exchange of criticism, and what remains is not a purer science but a collection of unchecked individual opinions.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The popular image of scientists as wholly objective observers, dispassionately gathering data and following wherever the evidence leads, captures an ideal that... 含现在分词长插入 + wherever 状语 + that 定语从句；句3 The strength of science lies not in the supposed perfection of individual investigators, who are as fallible as anyone else, but in a communal process...through which errors are...exposed and corrected 含 not in...but in + who 非限定从句 + through which 定语从句；末句 It is this social mechanism, rather than..., that lends... 强调句",
+        "keyTerms: wholly objective observers→全然客观的观察者; dispassionately→不带感情地; fallible→会犯错的; mutual criticism→相互批评; impartiality→公正无偏",
+        "syntacticFocus: 现在分词长状语、wherever 状语、that 定语从句、not in...but in 结构、who/through which 定语从句、it is...that 强调句",
+        "meaningUnits: 科学家是全然客观观察者、冷静收集数据循证而行的流行形象只是科学实践不完美趋近的理想；研究者身为人，带着可微妙影响所见与释义的预期与立场；科学之力不在个体研究者假定的完美（他们与常人一样会错）而在借以使错误终被揭露纠正的相互批评的共同体过程；正是这一社会机制而非从业者超人的公正赋予科学知识其独特可靠性",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The growing reliance on automated systems to make decisions once entrusted to human judgment, from approving loans to recommending sentences, raises questions that we have barely begun to address. Such systems are often praised for their consistency and their freedom from the prejudices that notoriously afflict human deciders. Yet they may simply reproduce, beneath a veneer of mathematical objectivity, the very biases embedded in the historical data on which they were trained. Worse still, the workings of these systems are frequently so opaque that those affected by their verdicts cannot discover, let alone contest, the reasoning behind a decision that may profoundly alter the course of their lives. A justice that cannot be questioned, however efficient it may appear, is difficult to distinguish from no justice at all.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The growing reliance on automated systems to make decisions once entrusted to human judgment, from...to..., raises questions that we have barely begun to address 含不定式定语 + 过去分词后置 + that 定语从句；句3 they may simply reproduce, beneath a veneer of mathematical objectivity, the very biases embedded in the historical data on which they were trained 含插入状语 + 过去分词后置 + on which 定语从句；句4 the workings...are...so opaque that those affected by their verdicts cannot discover, let alone contest, the reasoning behind a decision that may... 含 so...that 结果状语 + 过去分词后置 + let alone + that 定语从句",
+        "keyTerms: automated systems→自动化系统; human judgment→人类判断; a veneer of mathematical objectivity→数学客观性的外表; biases→偏见; opaque→不透明的",
+        "syntacticFocus: 不定式作定语、过去分词后置、that/on which 定语从句、so...that 结果状语、let alone 递进否定",
+        "meaningUnits: 把曾托付人类判断的决策如批贷、量刑建议交给自动化系统的依赖日增引出我们才刚开始面对的问题；此类系统常因一致与免于人类决策者偏见而受赞；然而它们或仅在数学客观外表下再生其训练所用历史数据中的偏见；更糟者其运作常如此不透明，以致受裁决影响者无法发现更别说质疑可能深刻改变其人生之决策背后的推理",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is a commonplace of contemporary discussion that we live in an age of accelerating change, in which the skills acquired in youth are rendered obsolete with a speed unknown to earlier generations. This observation, repeated until it has acquired the status of an unquestioned truth, may nonetheless deserve a degree of skepticism. People in every era have been inclined to regard their own moment as uniquely turbulent, and to look back upon the past as comparatively static. Whether the changes we are living through are genuinely more rapid than those that transformed, say, the lives of our great-grandparents is a question not easily settled, and one that our very immersion in the present makes peculiarly hard to judge. We are, in a sense, the least reliable witnesses to the pace of our own times.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It is a commonplace...that we live in an age of accelerating change, in which the skills acquired in youth are rendered obsolete with a speed unknown to earlier generations 含 that 同位语从句 + in which 定语从句 + 过去分词后置；句4 Whether the changes we are living through are genuinely more rapid than those that transformed...is a question not easily settled, and one that our very immersion in the present makes peculiarly hard to judge 含 whether 主语从句 + 省略关系词定语 + 比较 + that 定语从句 + 同位语 + that 定语从句",
+        "keyTerms: accelerating change→加速的变化; rendered obsolete→变得过时; turbulent→动荡的; immersion in the present→对当下的浸没; settled→解决/定论",
+        "syntacticFocus: it is...that 形式主语、that 同位语从句、in which 定语从句、过去分词后置、whether 主语从句、比较结构、that 定语从句",
+        "meaningUnits: 当代讨论的老生常谈是我们处于加速变化之世、青年所习技能以前人未知之速过时；此说重复至成无疑真理却或值几分怀疑；各时代人都倾向视己刻为独一动荡、视往昔较为静止；我们所历变化是否真比改变曾祖辈生活者更快是难有定论之问，且我们对当下的浸没使其格外难判",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The conviction that translation between languages is, in principle, a perfectly achievable task, requiring no more than the substitution of equivalent words, dissolves on contact with the realities of the translator's craft. Every language carries with it a freight of associations, connotations, and rhythms that resist transfer into another tongue without remainder. A word that seems on the surface to have an exact counterpart may evoke, in its native setting, a web of feeling for which the supposed equivalent provides no parallel. The translator is thus condemned to a series of compromises, forever weighing fidelity to the letter against fidelity to a spirit that no dictionary can capture. That the task can never be performed to perfection does not, however, make it any less worth attempting; it is precisely in the struggle to bridge what cannot fully be bridged that the art of translation consists.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The conviction that translation...is...a perfectly achievable task, requiring no more than the substitution of equivalent words, dissolves on contact with... 含 that 同位语从句 + 现在分词后置；句3 A word that seems on the surface to have an exact counterpart may evoke, in its native setting, a web of feeling for which the supposed equivalent provides no parallel 含 that 定语从句 + 插入状语 + for which 定语从句；句4 forever weighing fidelity to the letter against fidelity to a spirit that no dictionary can capture 含现在分词 + weigh A against B + that 定语从句",
+        "keyTerms: translation→翻译; equivalent words→对等词语; connotations→内涵/言外之意; counterpart→对应物; fidelity to the letter→对字面的忠实",
+        "syntacticFocus: that 同位语从句、现在分词后置、that/for which 定语从句、weigh A against B、现在分词作状语",
+        "meaningUnits: 语言间翻译原则上完全可达、只需替换对等词语之信念一触及译者实务即消解；每种语言携带难以无残余转入他语的联想内涵节奏；表面似有精确对应的词在母语语境或唤起一片对应词无从平行的情感之网；译者因而被判于一连串妥协、永在字面忠实与无字典可捕捉之精神忠实间权衡",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "There is something paradoxical in the way modern medicine, for all its undoubted triumphs over disease, has in some respects made the experience of dying more difficult than it once was. Where death formerly came swiftly and was accepted as an unavoidable feature of the human lot, it can now be postponed, sometimes for years, by interventions of remarkable sophistication. Yet a life thus prolonged is not always a life its possessor would have wished to lead, and the very capacity to defer the inevitable confronts patients and families with agonizing choices that earlier generations were spared. What medicine has conferred with one hand, it has in this sense complicated with the other. The power to extend life, it turns out, has obliged us to confront questions about its proper end that earlier ages, for better or worse, were never compelled to ask.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 There is something paradoxical in the way modern medicine, for all its undoubted triumphs over disease, has...made the experience of dying more difficult 含 the way 定语从句 + for all 让步插入；句2 Where death formerly came swiftly and was accepted as..., it can now be postponed...by interventions of remarkable sophistication 含 where 对照状语；句3 a life thus prolonged is not always a life its possessor would have wished to lead, and the very capacity...confronts patients and families with agonizing choices that earlier generations were spared 含过去分词 + 省略关系词定语 + 虚拟 + that 定语从句",
+        "keyTerms: modern medicine→现代医学; triumphs over disease→对疾病的胜利; the human lot→人之命运; defer the inevitable→推迟必然之事; agonizing choices→痛苦的抉择",
+        "syntacticFocus: the way 定语从句、for all 让步、where 对照状语、过去分词作定语、would have wished 虚拟、that 定语从句",
+        "meaningUnits: 现代医学尽管战胜疾病成就斐然却在某些方面使临终经历比从前更难，颇具悖论；昔日死亡迅至且被接受为人命运不可免之特征，如今可凭精妙干预推迟甚至数年；然如此延长之生未必是其拥有者愿过之生，且推迟必然之能力使病人家属面对前人得免的痛苦抉择；就此而言医学一手所赐另一手使之复杂",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is tempting to believe that moral progress, like progress in science, accumulates steadily over time, so that each generation inherits a more enlightened set of values than the one before. The historical record offers some support for this hopeful narrative, in the gradual abolition of practices once widely condoned. Yet it would be rash to assume that such advances are irreversible, or that the moral insights painfully won by our predecessors are secure against erosion. Values sustained by habit and unexamined assumption can prove surprisingly fragile when the circumstances that nourished them change, and a society that takes its decency for granted may discover, too late, how much vigilance its preservation required. The gains of one generation, in short, are never simply bequeathed to the next; they must be actively defended, lest they quietly slip away.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It is tempting to believe that moral progress...accumulates steadily over time, so that each generation inherits a more enlightened set of values than the one before 含形式主语 + that 宾语从句 + so that 结果状语 + 比较；句3 it would be rash to assume that such advances are irreversible, or that the moral insights painfully won by our predecessors are secure against erosion 含形式主语虚拟 + that 宾语从句并列 + 过去分词后置；句4 a society that takes its decency for granted may discover, too late, how much vigilance its preservation required 含 that 定语从句 + how 间接疑问",
+        "keyTerms: moral progress→道德进步; enlightened→开明的; irreversible→不可逆的; moral insights→道德洞见; vigilance→警惕/警觉",
+        "syntacticFocus: it is...to 形式主语、that 宾语从句、so that 结果状语、比较结构、过去分词后置、that 定语从句、how 间接疑问",
+        "meaningUnits: 诱人相信道德进步如科学般随时间稳步累积、每代继承比前代更开明的价值；史实在曾被普遍宽容做法的渐废上略予支持；然而设其不可逆或前人艰难赢得的道德洞见免于侵蚀则失之轻率；靠习惯与未审假设维系的价值在滋养其的环境变化时或意外脆弱，视己之体面为当然的社会或太迟才发现保全它需多少警惕",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The notion that a work of literature has a single, determinate meaning, waiting to be uncovered by a sufficiently attentive reader, has been challenged by a tradition of criticism that locates meaning instead in the encounter between text and interpreter. On this account, what a poem or a novel signifies is never wholly fixed by the author's intention, however carefully reconstructed, but emerges anew in each act of reading, shaped by the experiences and assumptions the reader brings to it. This does not reduce interpretation to mere caprice, since some readings remain demonstrably better supported by the text than others; it suggests, rather, that meaning is less a property residing in words than an event that words and readers together bring about.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The notion that a work...has a single, determinate meaning, waiting to be uncovered by..., has been challenged by a tradition of criticism that locates meaning instead in... 含 that 同位语从句 + 现在分词后置 + that 定语从句；句2 what a poem or a novel signifies is never wholly fixed by the author's intention, however carefully reconstructed, but emerges anew in each act of reading, shaped by the experiences and assumptions the reader brings to it 含 what 主语从句 + however 让步插入 + not...but + 过去分词 + 省略关系词定语；末句 meaning is less a property residing in words than an event that words and readers together bring about 含 less...than 比较 + 现在分词 + that 定语从句",
+        "keyTerms: a work of literature→文学作品; determinate meaning→确定的意义; the author's intention→作者意图; caprice→任意妄为; an event→一桩事件",
+        "syntacticFocus: that 同位语从句、现在分词后置、that 定语从句、what 主语从句、however 让步、not...but 结构、less...than 比较",
+        "meaningUnits: 文学作品有单一确定意义、待足够细心读者发掘之念受一派批评挑战、后者把意义置于文本与阐释者的相遇中；据此诗或小说之所指从不全由作者意图（无论如何细致重构）所定，而在每次阅读中重新生成、被读者所带经验与假设塑造；这不把阐释化为任意，因某些解读确比他者更受文本支持；而是表明意义与其说是驻于词语的属性不如说是词语与读者共同促成的事件",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The widely held view that emotion and reason stand opposed to one another, the former a source of error to be mastered by the latter, has been undermined by recent work in the cognitive sciences. Far from being an enemy of sound judgment, emotion appears to be indispensable to it. Patients whose capacity for feeling has been impaired by injury to certain regions of the brain, though their reasoning powers remain intact, prove strangely incapable of making the ordinary decisions that daily life requires, paralyzed by an inability to attach value to the alternatives before them. Reason, it seems, cannot function on its own; it needs emotion to tell it what matters. The old ideal of a purely rational deliberation, stripped of all feeling, thus turns out to describe not the highest form of judgment but a kind of incapacity.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The widely held view that emotion and reason stand opposed to one another, the former a source of error to be mastered by the latter, has been undermined by recent work 含 that 同位语从句 + 独立主格（the former...the latter）；句3 Patients whose capacity for feeling has been impaired by injury..., though their reasoning powers remain intact, prove strangely incapable of making the ordinary decisions that daily life requires, paralyzed by an inability to attach value to the alternatives before them 含 whose 定语从句 + though 让步 + that 定语从句 + 过去分词后置",
+        "keyTerms: emotion and reason→情感与理性; sound judgment→健全的判断; reasoning powers→推理能力; attach value→赋予价值; indispensable→不可或缺的",
+        "syntacticFocus: that 同位语从句、独立主格、whose 定语从句、though 让步状语、that 定语从句、过去分词作状语",
+        "meaningUnits: 情感与理性相对立、前者为错误之源应被后者驾驭之普遍看法被认知科学新成果削弱；情感远非健全判断之敌反似不可或缺；某些脑区受损致感受力受损而推理力完好的病人，竟无力做日常所需的寻常决定、因无法对眼前选项赋予价值而瘫痪；理性似无法独行、需情感告知何者要紧",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The expectation that an increase in material wealth would bring a corresponding increase in human contentment has not, on the whole, been borne out by experience. Beyond the level at which basic needs are securely met, additional income appears to contribute surprisingly little to lasting happiness, a finding that sits awkwardly with the assumptions on which much of economic policy continues to be built. Part of the explanation may lie in our remarkable capacity to grow accustomed to our circumstances, so that gains which once delighted us are soon taken for granted and cease to register. We are, it seems, forever adapting to whatever we have, and forever wanting a little more. If contentment recedes as fast as we approach it, then a life organized wholly around the accumulation of more may be a pursuit with no natural resting place.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The expectation that an increase in material wealth would bring a corresponding increase in human contentment has not...been borne out 含 that 同位语从句 + 虚拟语气；句2 Beyond the level at which basic needs are securely met, additional income appears to contribute surprisingly little..., a finding that sits awkwardly with the assumptions on which much of economic policy continues to be built 含 at which/that/on which 多重定语从句 + 同位语；句3 our remarkable capacity to grow accustomed to our circumstances, so that gains which once delighted us are soon taken for granted 含不定式 + so that 结果 + which 定语从句",
+        "keyTerms: material wealth→物质财富; contentment→满足/知足; borne out→证实; grow accustomed to→习惯于; taken for granted→视为理所当然",
+        "syntacticFocus: that 同位语从句、at which/on which/which/that 多重定语从句、不定式作定语、so that 结果状语",
+        "meaningUnits: 物质财富增长会带来相应满足增长的预期总体未被经验证实；基本需求稳获满足之上额外收入对持久幸福贡献意外地小，此发现与诸多经济政策赖以构建的假设格格不入；部分解释或在我们惯于自身处境的非凡能力，使曾令我们欣喜的所得很快被视为当然而不再被察觉；我们似永在适应所拥有者、又永想再多一点",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is frequently maintained that the proliferation of specialized expertise, while it has vastly extended our collective command of the natural world, has come at the cost of a fragmentation of knowledge that no individual can any longer hope to overcome. The scholar who once might have surveyed the whole field of learning has given way to the specialist, master of a narrow domain but a stranger to all that lies beyond it. Whether this development is to be lamented or welcomed remains a matter of dispute. Some see in it an impoverishment of the cultivated mind; others reply that the depth modern problems demand could never be attained by minds that insisted on ranging across everything. Perhaps the genuine challenge is not to resist specialization but to build the bridges across disciplines that no single specialist can construct alone.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It is frequently maintained that the proliferation of specialized expertise, while it has vastly extended..., has come at the cost of a fragmentation of knowledge that no individual can any longer hope to overcome 含形式主语 + that 宾语从句 + while 让步插入 + that 定语从句；句2 The scholar who once might have surveyed the whole field...has given way to the specialist, master of a narrow domain but a stranger to all that lies beyond it 含 who 定语从句 + 虚拟 + 同位语 + that 定语从句；句3 Whether this development is to be lamented or welcomed remains a matter of dispute 含 whether 主语从句",
+        "keyTerms: specialized expertise→专业知识/专长; fragmentation of knowledge→知识的碎片化; the specialist→专家; the cultivated mind→有教养的心智; impoverishment→贫乏化",
+        "syntacticFocus: it is...that 形式主语、that 宾语从句、while 让步插入、who/that 定语从句、whether 主语从句、虚拟语气",
+        "meaningUnits: 常言专业知识激增虽极大拓展我们对自然界的集体掌控却以无人能再克服的知识碎片化为代价；曾或纵览整个学问之域的学者让位于专家、精于狭窄领域而对其外一切陌生；此进展应叹应迎仍争议未定；有人视之为有教养心智的贫乏化、有人回应坚持博涉一切之心智永达不到现代问题所需深度",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The belief that human beings are by nature inclined to violence, civilization serving merely as a thin and precarious restraint upon impulses that would otherwise run riot, has exerted a powerful influence on political thought. Yet anthropologists who have studied a wide range of human societies report that organized aggression, far from being a constant of our species, varies enormously from one culture to another, and is in some all but absent. If our capacity for cruelty is undeniable, so too is our capacity for cooperation and compassion, and which of these predominates appears to depend less on some fixed feature of our nature than on the institutions and norms within which we are reared. If that is so, then the project of building a more peaceful world is not a vain struggle against nature but a realistic, if demanding, endeavour.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The belief that human beings are by nature inclined to violence, civilization serving merely as a thin and precarious restraint upon impulses that would otherwise run riot, has exerted... 含 that 同位语从句 + 独立主格 + that 定语从句 + 虚拟；句2 anthropologists who have studied...report that organized aggression, far from being a constant..., varies enormously...and is in some all but absent 含 who 定语从句 + that 宾语从句 + far from 让步插入；句3 If our capacity for cruelty is undeniable, so too is our capacity for cooperation..., and which of these predominates appears to depend less on...than on... 含 if 条件 + so too is 倒装 + which 主语从句 + less...than 比较",
+        "keyTerms: inclined to violence→倾向于暴力; precarious restraint→脆弱的约束; organized aggression→有组织的侵略/攻击; cruelty→残忍; norms→规范",
+        "syntacticFocus: that 同位语从句、独立主格、that 定语从句、who 定语从句、far from 让步、so too is 倒装、which 主语从句、less...than 比较",
+        "meaningUnits: 人天生倾向暴力、文明只是对本会肆虐之冲动的薄而脆弱约束之信念深刻影响政治思想；然而研究众多社会的人类学家报告有组织攻击远非我们物种之恒常、各文化间差异极大、某些社会几近于无；我们残忍之力固不可否认、合作与同情之力亦然，而何者占上风似更取决于养育我们的制度与规范而非本性某固定特征",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The supposition that privacy is a value of merely instrumental worth, important only insofar as it shields us from tangible harms such as fraud or discrimination, fails to capture the deeper significance it holds in human life. To be perpetually observed, even by those who wish us no ill, is to lose the space in which a self can be freely formed, experimenting with possibilities it is not yet prepared to defend before the world. A person who knows that every word and gesture may be recorded and scrutinized comes, almost imperceptibly, to police her own behaviour, narrowing the range of what she allows herself to think and feel. Privacy, on this understanding, is less a shield than a precondition of authentic selfhood.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The supposition that privacy is a value of merely instrumental worth, important only insofar as it shields us from tangible harms..., fails to capture the deeper significance it holds 含 that 同位语从句 + insofar as 状语 + 省略关系词定语；句2 To be perpetually observed, even by those who wish us no ill, is to lose the space in which a self can be freely formed, experimenting with possibilities it is not yet prepared to defend 含不定式主语 + who 定语从句 + in which 定语从句 + 现在分词 + 省略关系词定语；句3 A person who knows that...comes...to police her own behaviour, narrowing... 含 who/that 从句 + 现在分词结果状语",
+        "keyTerms: privacy→隐私; instrumental worth→工具性价值; tangible harms→实际伤害; police her own behaviour→自我约束行为; authentic selfhood→真实的自我",
+        "syntacticFocus: that 同位语从句、insofar as 状语、不定式作主语、who/in which 定语从句、现在分词作状语、less...than 比较",
+        "meaningUnits: 隐私只具工具价值、仅在屏蔽欺诈歧视等实际伤害时重要之设想未能把握其在人生中的更深意义；被永久观察（哪怕出于善意者）即失去自我得以自由形成、试验尚未准备好向世人辩护之可能的空间；知一言一行皆可被记录审视者会几乎不觉地自我约束、收窄容许自己思与感的范围；据此隐私与其说是盾不如说是真实自我的前提",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It has long been assumed that competition is the surest engine of human achievement, the spur without which individuals would lapse into complacency and effort would slacken. There is evidently some truth in this, yet it is far from the whole story. A great deal of what human beings have accomplished, in the arts no less than in the sciences, has sprung not from the desire to outdo a rival but from a disinterested absorption in the task itself, a fascination that asks for no audience and seeks no prize. To organize a society as though rivalry were the only reliable motive is to neglect, and perhaps to stifle, some of the richest sources of human creativity. A culture that rewards only those who defeat others may, without realizing it, drive out the quiet, intrinsic delight from which its finest work has always sprung.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It has long been assumed that competition is the surest engine of human achievement, the spur without which individuals would lapse into complacency and effort would slacken 含形式主语 + that 宾语从句 + 同位语 + without which 定语从句 + 虚拟；句3 A great deal of what human beings have accomplished...has sprung not from the desire to outdo a rival but from a disinterested absorption in the task itself, a fascination that asks for no audience and seeks no prize 含 what 名词性从句 + not...but + 同位语 + that 定语从句；末句 To organize a society as though rivalry were the only reliable motive is to neglect, and perhaps to stifle... 含不定式主语 + as though 虚拟",
+        "keyTerms: competition→竞争; the surest engine→最可靠的引擎; complacency→自满; disinterested absorption→无私的投入; stifle→扼杀",
+        "syntacticFocus: it has been assumed 形式主语、that 宾语从句、without which 定语从句、what 名词性从句、not...but 结构、as though 虚拟、不定式作主语",
+        "meaningUnits: 长久以来设竞争是人类成就最可靠的引擎、无此鞭策则个体陷自满努力松懈；此显有几分真却远非全部；人类成就（艺术不亚于科学）多非源于胜过对手之欲而出于对任务本身无私的投入、一种不求观众不图奖赏的着迷；把社会组织得仿佛竞争是唯一可靠动机即忽视、或许扼杀人类创造力最丰沛的源泉之一",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The conviction that what is natural must therefore be good, and what is artificial correspondingly suspect, exerts a curious pull on contemporary sensibilities, despite the ease with which it can be shown to collapse under scrutiny. Nature, after all, is the source not only of nourishment and beauty but of disease, famine, and countless forms of suffering that human ingenuity has labored to overcome. Conversely, much of what we rightly cherish, from medicine to music, is artificial in the precise sense of being a product of deliberate human contrivance. To invest the word natural with automatic approval is to mistake a rhetorical habit for a reasoned principle, and to let a vague feeling do the work that argument should perform.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The conviction that what is natural must therefore be good, and what is artificial correspondingly suspect, exerts a curious pull..., despite the ease with which it can be shown to collapse under scrutiny 含 that 同位语从句 + 两个 what 从句 + 省略谓语并列 + with which 定语从句；句2 Nature...is the source not only of...but of disease, famine, and countless forms of suffering that human ingenuity has labored to overcome 含 not only...but + that 定语从句；末句 To invest the word natural with automatic approval is to mistake a rhetorical habit for a reasoned principle, and to let a vague feeling do the work that argument should perform 含不定式主语 + mistake A for B + that 定语从句",
+        "keyTerms: natural→自然的; artificial→人造的; human ingenuity→人类的智巧; deliberate human contrivance→人为的有意设计; a reasoned principle→经过论证的原则",
+        "syntacticFocus: that 同位语从句、what 名词性从句、with which 定语从句、not only...but、that 定语从句、不定式作主语、mistake A for B",
+        "meaningUnits: 自然者必好、人造者相应可疑之信念对当代感受有奇异吸引、尽管易证其经审视即崩；自然毕竟不仅是滋养与美之源也是疾病饥荒及人类智巧竭力克服的无数苦难之源；反之我们正当珍视的许多事物如医药音乐恰是人为有意设计之产物即人造的；赋予自然一词自动认可即把修辞习惯误作论证原则、让模糊感觉去做论证应做之工",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The widespread belief that great works of art testify to the timeless and universal character of human experience, speaking across the centuries to all who encounter them, captures a genuine truth while obscuring an equally important one. It is undeniable that certain creations continue to move audiences far removed from the circumstances of their making. Yet the meaning such works hold for us is never simply identical to the meaning they bore for their original public; each generation, approaching them from the vantage of its own preoccupations, discovers in them something its predecessors could not have seen. Their endurance, paradoxically, owes as much to this capacity for reinterpretation as to any fixed and unchanging essence. A masterpiece survives, one might say, not by remaining forever the same but by proving inexhaustibly open to being seen anew.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The widespread belief that great works of art testify to the timeless and universal character..., speaking across the centuries to all who encounter them, captures a genuine truth while obscuring an equally important one 含 that 同位语从句 + 现在分词后置 + who 定语从句 + while 对照；句3 the meaning such works hold for us is never simply identical to the meaning they bore for their original public; each generation, approaching them from the vantage of its own preoccupations, discovers in them something its predecessors could not have seen 含两处省略关系词定语 + 现在分词插入 + 虚拟 + 省略关系词定语；末句 Their endurance...owes as much to this capacity for reinterpretation as to any fixed and unchanging essence 含 as much...as 比较",
+        "keyTerms: great works of art→伟大的艺术作品; timeless and universal→永恒而普遍的; original public→最初的观众; reinterpretation→重新阐释; unchanging essence→不变的本质",
+        "syntacticFocus: that 同位语从句、现在分词后置、who 定语从句、while 对照、省略关系词定语、as much...as 比较、虚拟语气",
+        "meaningUnits: 伟大艺术作品见证人类经验永恒普遍特征、跨世纪向一切遇之者言说之普遍信念把握一真却遮蔽另一同样重要之真；某些创作确续打动远离其创作情境的观众无可否认；然此类作品对我们之意义从不简单等同于其对最初观众之意义；每代从自身关切的视角接近、在其中发现前人不可能见到者；其历久之力悖论地既归于此重释能力又归于任何固定不变本质",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "There is a tendency, deeply rooted in the way we tell stories about our own lives, to impose upon the disordered flux of events a coherence and a direction that they did not in fact possess at the time. Looking back, we readily perceive the steps that led us to where we now stand as forming a meaningful sequence, each one a preparation for what followed. Yet this sense of inevitability is largely an illusion conferred by hindsight; the path that appears, in retrospect, to have been laid out before us was in reality assembled from choices that might easily have gone otherwise, and from accidents over which we exercised no control whatever. To recognize this is not to deny that our lives have meaning, but to locate that meaning in the stories we tell rather than in any destiny inscribed in the events themselves.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 There is a tendency, deeply rooted in the way we tell stories..., to impose upon the disordered flux of events a coherence and a direction that they did not in fact possess 含 there 引导 + 过去分词插入 + 省略关系词定语 + 不定式 + that 定语从句（宾语后置）；句2 we readily perceive the steps that led us to where we now stand as forming a meaningful sequence, each one a preparation for what followed 含 that 定语从句 + where 名词性从句 + perceive...as + 独立主格 + what 从句；句3 the path that appears, in retrospect, to have been laid out before us was in reality assembled from choices that might easily have gone otherwise, and from accidents over which we exercised no control 含 that 定语从句 + 不定式完成式 + 虚拟 + over which 定语从句",
+        "keyTerms: the disordered flux of events→杂乱无序的事件之流; coherence→连贯性; sense of inevitability→必然之感; hindsight→事后之明; in retrospect→回顾起来",
+        "syntacticFocus: there is + 不定式、过去分词作定语、that/where/over which 定语从句、perceive...as 结构、独立主格、虚拟完成式、宾语后置",
+        "meaningUnits: 我们讲述自身人生的方式深植一种倾向、把当时其实不具的连贯与方向强加于杂乱事件之流；回望时易把引我们至今所处的步骤视为有意义序列、每步皆为后事之铺垫；然此必然感大半是事后之明所赋幻觉；回顾似早已铺设于前的路其实由本易另样的抉择与我们全然无从掌控的偶然拼合而成",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The assumption that an action is morally justified so long as it produces the greatest happiness for the greatest number, however appealing in its apparent simplicity, encounters formidable objections when its implications are pressed. For it seems to permit, and even to require, the sacrifice of an innocent individual whenever doing so would sufficiently benefit the majority, a conclusion that strikes most people as monstrous. The difficulty suggests that our moral intuitions are not exhausted by considerations of aggregate welfare, and that there are constraints on how persons may be treated which no calculation of collective advantage is allowed to override. What these constraints are, and how they are to be grounded, remains among the deepest questions of ethics. That we cannot yet answer them with confidence is no reason to pretend that the simple arithmetic of happiness can be made to bear the whole weight of morality.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The assumption that an action is morally justified so long as it produces the greatest happiness for the greatest number, however appealing..., encounters formidable objections when its implications are pressed 含 that 同位语从句 + so long as 条件 + however 让步插入 + when 状语；句2 it seems to permit...the sacrifice of an innocent individual whenever doing so would sufficiently benefit the majority, a conclusion that strikes most people as monstrous 含 whenever 状语 + 虚拟 + 同位语 + that 定语从句；句3 there are constraints on how persons may be treated which no calculation of collective advantage is allowed to override 含 how 间接疑问 + which 定语从句；末句 What these constraints are, and how they are to be grounded, remains... 含 what/how 主语从句",
+        "keyTerms: morally justified→道德上正当的; the greatest happiness for the greatest number→最大多数人的最大幸福; aggregate welfare→总体福利; constraints→约束/限制; grounded→奠定基础/证立",
+        "syntacticFocus: that 同位语从句、so long as 条件、however 让步、whenever 状语、that/which 定语从句、how 间接疑问、what/how 主语从句",
+        "meaningUnits: 只要行为产生最大多数人最大幸福即道德正当之假设其表面简单虽诱人却在推究其含义时遇强烈反对；因它似允许甚至要求只要足够利于多数便牺牲无辜个体、此结论多数人视为骇人；难题表明我们的道德直觉不止于总体福利考量、对待人有任何集体利益计算都不得凌驾之约束；这些约束为何、如何证立仍属伦理学最深之问",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It is frequently observed that the modern city, for all the opportunities it affords, can be a place of peculiar loneliness, in which one may dwell for years among multitudes and yet remain a stranger to almost everyone. The very density that throws so many lives into proximity seems, paradoxically, to discourage the kind of sustained acquaintance from which community is built. Confronted daily with more faces than the mind can hold, the city-dweller learns a protective indifference, a habit of not seeing, that shields him from sensory overload but at the cost of a certain warmth. What is gained in stimulation and freedom is thus offset, for many, by a quiet hunger for connection that the crowd does nothing to satisfy.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 the modern city, for all the opportunities it affords, can be a place of peculiar loneliness, in which one may dwell for years among multitudes and yet remain a stranger 含 for all 让步 + 省略关系词定语 + in which 定语从句；句2 The very density that throws so many lives into proximity seems...to discourage the kind of sustained acquaintance from which community is built 含 that 定语从句 + from which 定语从句；句3 Confronted daily with more faces than the mind can hold, the city-dweller learns a protective indifference, a habit of not seeing, that shields him...but at the cost of... 含过去分词状语 + 比较 + 同位语 + that 定语从句；末句 What is gained...is thus offset...by a quiet hunger for connection that the crowd does nothing to satisfy 含 what 主语从句 + that 定语从句",
+        "keyTerms: the modern city→现代城市; peculiar loneliness→特有的孤独; sustained acquaintance→持久的相识; protective indifference→保护性的冷漠; a hunger for connection→对连接的渴求",
+        "syntacticFocus: for all 让步、省略关系词定语、in which/from which/that 定语从句、过去分词作状语、比较结构、what 主语从句",
+        "meaningUnits: 常言现代城市尽管予人机遇却可能是特有孤独之所、人可于人群中居数年而对几乎所有人仍是陌生人；把众多生命投于毗邻的密度本身悖论地似阻碍据以建立共同体的持久相识；每日面对超出心智所容的面孔、城居者学得保护性冷漠、一种不去看的习惯、护其免于感官过载却以某种温暖为代价；所得之刺激与自由因而对许多人被人群无力满足的对连接的静默渴求所抵消",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The notion that a nation's history can be neatly divided into discrete periods, each with its own distinctive character, is a convenience of the textbook that bears only a loose relation to the way change actually unfolds. The boundaries we draw between one age and the next, however useful for purposes of instruction, are imposed in retrospect upon a continuous and untidy flow, in which the new emerges gradually from the old and the two coexist for generations before the transition is complete. To those who lived through them, the great turning points so confidently marked by later historians would often have been invisible, indistinguishable from the ordinary succession of one year by another. The neat divisions of the textbook, useful though they are, must therefore be handled as the convenient fictions they ultimately remain.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The notion that a nation's history can be neatly divided into discrete periods, each with its own distinctive character, is a convenience of the textbook that bears only a loose relation to the way change actually unfolds 含 that 同位语从句 + 独立主格 + that 定语从句 + the way 定语从句；句2 The boundaries we draw between one age and the next, however useful..., are imposed in retrospect upon a continuous and untidy flow, in which the new emerges gradually from the old 含省略关系词定语 + however 让步 + in which 定语从句；句3 the great turning points so confidently marked by later historians would often have been invisible, indistinguishable from the ordinary succession 含过去分词后置 + 虚拟完成式",
+        "keyTerms: discrete periods→各自分立的时期; distinctive character→鲜明的特征; in retrospect→事后回顾; turning points→转折点; indistinguishable→无从区分的",
+        "syntacticFocus: that 同位语从句、独立主格、that/the way/in which 定语从句、however 让步、省略关系词定语、虚拟完成式",
+        "meaningUnits: 一国历史可被整齐分为各具特征的分立时期之念是教科书的便利、与变化实际展开方式仅松散相关；我们在一代与下一代间所划界限无论于教学多有用都是事后强加于连续而不整齐之流、其中新者渐自旧者生出、二者并存数代方完成过渡；对身历者而言后世史家如此自信标出的重大转折点常本不可见、与一年接一年的寻常更替无从区分",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The expectation that the spread of education would by itself dissolve prejudice and usher in an era of mutual understanding has proved, on the evidence of the past century, to be touchingly naive. Knowledge, it turns out, is no guarantee of goodwill; the same intellectual gifts that can be enlisted in the service of tolerance can be turned, with equal facility, to the construction of elaborate rationalizations for cruelty. What determines whether learning ennobles or corrupts is not the quantity of information a mind contains but the purposes to which that information is bent, purposes that are shaped by forces lying largely outside the schoolroom. Education may furnish the instruments of thought; it cannot dictate the ends they serve. Whether a trained mind becomes a force for understanding or for harm depends, in the last analysis, on a moral formation that no syllabus by itself can guarantee.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The expectation that the spread of education would by itself dissolve prejudice and usher in an era of mutual understanding has proved...to be touchingly naive 含 that 同位语从句 + 虚拟 + 不定式；句2 the same intellectual gifts that can be enlisted in the service of tolerance can be turned...to the construction of elaborate rationalizations for cruelty 含 that 定语从句；句3 What determines whether learning ennobles or corrupts is not the quantity...but the purposes to which that information is bent, purposes that are shaped by forces lying largely outside the schoolroom 含 what 主语从句 + whether 间接疑问 + not...but + to which 定语从句 + 同位语 + that 定语从句 + 现在分词",
+        "keyTerms: dissolve prejudice→消解偏见; mutual understanding→相互理解; goodwill→善意; rationalizations→（自圆其说的）辩解; ennobles→使高尚",
+        "syntacticFocus: that 同位语从句、虚拟语气、that/to which 定语从句、what 主语从句、whether 间接疑问、not...but 结构、现在分词作定语",
+        "meaningUnits: 教育普及本身会消解偏见、迎来相互理解之世的预期据上世纪证据被证天真得可怜；知识原来不保证善意、同样可被用于宽容的智识天赋也可同样轻易转向为残忍构筑精巧辩解；决定学习使人高尚或堕落的非心智所含信息之量而是信息被弯向之目的、而此目的由大半在课堂之外的力量塑造；教育或提供思维之具却无法规定其所服务之目的",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "It has become almost a reflex to suppose that whatever is older must be inferior to what has replaced it, as though the mere passage of time guaranteed improvement in every domain of human activity. In technology, where each innovation builds demonstrably upon its predecessors, the assumption may often hold. But it is rash to extend it uncritically to realms such as art, morality, or the conduct of life, where there is no comparable accumulation and where much that earlier ages understood has been not surpassed but simply forgotten. The conceit that we are wiser than those who came before us, merely because we come after them, is one against which a thoughtful person does well to remain on guard.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 It has become almost a reflex to suppose that whatever is older must be inferior to what has replaced it, as though the mere passage of time guaranteed improvement 含形式主语 + that 宾语从句 + whatever/what 名词性从句 + as though 虚拟；句2 In technology, where each innovation builds demonstrably upon its predecessors, the assumption may often hold 含 where 定语从句；句3 realms such as art, morality, or the conduct of life, where there is no comparable accumulation and where much that earlier ages understood has been not surpassed but simply forgotten 含两个 where 定语从句 + that 定语从句 + not...but；末句 The conceit that we are wiser..., merely because..., is one against which a thoughtful person does well to remain on guard 含 that 同位语从句 + because 状语 + against which 定语从句",
+        "keyTerms: a reflex→一种本能反应; inferior to→劣于; the passage of time→时间的流逝; the conduct of life→生活的处世之道; the conceit→自负/妄念",
+        "syntacticFocus: it has become 形式主语、that 宾语从句、whatever/what 名词性从句、as though 虚拟、where 定语从句、that/against which 定语从句、not...but",
+        "meaningUnits: 凡更旧者必劣于取代之者之设想几成本能反应、仿佛仅时间流逝即保证人类各活动领域皆有改进；在每项创新明显建于前者之上的技术中此假设或常成立；但不加批判地推及艺术、道德、处世等无可比累积、且前代所悟许多非被超越而仅被遗忘之域则失之轻率；仅因后于前人便自以为更智的妄念是审慎者应常加提防者",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    },
+    {
+      "sourceTextEn": "The widespread faith that conflicts of value can always, in principle, be resolved by an appeal to reason, so that a sufficiently rational discussion would bring all disputants to agreement, may underestimate the genuine plurality of human ends. There are goods that cannot be jointly maximized, liberty and equality being the most familiar example, such that the pursuit of one beyond a certain point comes at the expense of the other. In such cases what is required is not the discovery of a single right answer, which may not exist, but a reasoned and humane choice among competing values, none of which can claim an absolute priority over the rest. To deny this is to mistake the character of much that is most difficult in political life.",
+      "prompt": "Translate the following English passage into Chinese. (note academic register)",
+      "promptZh": "请将下面的英语段落译成汉语。",
+      "referencePoints": [
+        "difficultSentences: 句1 The widespread faith that conflicts of value can always...be resolved by an appeal to reason, so that a sufficiently rational discussion would bring all disputants to agreement, may underestimate the genuine plurality of human ends 含 that 同位语从句 + so that 结果 + 虚拟；句2 There are goods that cannot be jointly maximized, liberty and equality being the most familiar example, such that the pursuit of one beyond a certain point comes at the expense of the other 含 that 定语从句 + 独立主格 + such that 结果；句3 what is required is not the discovery of a single right answer, which may not exist, but a reasoned and humane choice among competing values, none of which can claim an absolute priority 含 what 主语从句 + not...but + which 非限定 + none of which 定语从句",
+        "keyTerms: conflicts of value→价值冲突; an appeal to reason→诉诸理性; the plurality of human ends→人类目的之多元; jointly maximized→同时最大化; absolute priority→绝对优先性",
+        "syntacticFocus: that 同位语从句、so that/such that 结果状语、that 定语从句、独立主格、what 主语从句、not...but、which/none of which 定语从句",
+        "meaningUnits: 价值冲突原则上总能诉诸理性解决、足够理性的讨论会使所有争论者达成一致之普遍信念或低估人类目的之真正多元；有些善无法同时最大化、自由与平等是最熟例、以致过某点追求其一即以牺牲另一为代价；此时所需非发现可能不存在的单一正确答案而是于竞争价值间作理性人道的抉择、其中无一可主张对余者的绝对优先；否认此即误解政治生活中最难之事的性质",
+        "reference points help scoring; they are not the only correct translation"
+      ],
+      "wordLimit": null
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "template": "cet-para-match",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "[A] When people imagine an ideal holiday, they often picture themselves alone or with a small family group, free to wander wherever they please. Yet a growing number of travellers are discovering that joining an organised group can turn an ordinary trip into something far richer. The reasons go well beyond simply sharing a bus.\n\n[B] One immediate advantage is cost. Hotels, restaurants and attractions frequently offer reduced rates to parties of ten or more. Tour companies negotiate these discounts in advance, so each member pays noticeably less than an independent visitor would for the same experiences. For travellers on a tight budget, this saving can decide whether a long-dreamed-of journey actually happens.\n\n[C] Safety is another factor that quietly reassures many people. In an unfamiliar country, where the language and customs are strange, moving as part of a group reduces the chance of becoming a target for thieves. A guide who knows the region can also steer everyone away from areas that are best avoided after dark.\n\n[D] Perhaps the most unexpected reward is friendship. Strangers who board the same coach as polite acquaintances often leave as genuine companions, having shared meals, laughter and the occasional travel disaster. Some couples even trace the beginning of lifelong partnerships to a chance seat allocation on a group tour.\n\n[E] Group travel also removes the burden of planning. Working out train timetables, booking the right hotels and finding the famous sights can swallow hours of precious holiday time. With everything arranged in advance, travellers are free to relax and absorb their surroundings rather than worry over logistics.\n\n[F] Knowledge is shared too. A well-trained guide explains the history and meaning behind a monument that a lone tourist might pass without a second glance. Fellow travellers add their own insights, so the whole party returns home understanding far more than the guidebook alone could teach.\n\n[G] Of course, this style of travel does not suit everyone. Those who treasure spontaneity may feel restricted by fixed schedules and the need to keep pace with others. For such people, the gentle compromise is a small private tour that blends a little structure with plenty of freedom.\n\n[H] In the end, the popularity of group travel rests on a simple truth: shared experiences tend to feel larger than solitary ones. The cathedral seems grander, the meal tastes better and the memory lasts longer when there is someone beside you to say, years later, do you remember that day?",
+      "statements": [
+        "Travelling within a group lowers the risk of being robbed in a foreign place.",
+        "Companies arrange bulk discounts so each participant spends less than a solo tourist.",
+        "People who value acting on impulse may find a fixed timetable too limiting.",
+        "Many lasting relationships have started from sitting next to a stranger on a tour.",
+        "An expert leader reveals the background of a landmark that an individual might overlook.",
+        "Having the itinerary settled beforehand frees visitors from time-consuming arrangements.",
+        "The overall appeal comes down to the idea that experiences feel bigger when shared.",
+        "More tourists are realising that an organised trip can be far more rewarding than a lonely one.",
+        "A blend of light planning and freedom can suit those who dislike rigid groups.",
+        "Other members of the party contribute observations that deepen everyone's understanding."
+      ],
+      "answers": [2, 1, 6, 3, 5, 4, 7, 0, 6, 5],
+      "paras": 8,
+      "explain_zh": [
+        "C段说在陌生国家以团队形式行动可降低成为窃贼目标的几率。",
+        "B段说旅行社提前谈好折扣，每名成员花费比独立游客更少。",
+        "G段说珍视随性的人会觉得固定行程受限。",
+        "D段说有些伴侣把终生关系的开端追溯到团队游中偶然的座位安排。",
+        "F段说训练有素的导游讲解纪念碑背后的历史，而独行游客可能视而不见。",
+        "E段说行程提前安排好，游客无需为后勤花费宝贵时间。",
+        "H段说团队游的吸引力归结于：共享的体验比独享的更大。",
+        "A段说越来越多旅行者发现有组织的行程比独自旅行更丰富。",
+        "G段说小型私人团把一点结构与充分自由结合，适合不喜欢固定团的人。",
+        "F段说同行旅客补充各自见解，使全团理解更深。"
+      ]
+    },
+    {
+      "passage": "[A] Walk into any modern supermarket and you step into a carefully engineered environment. Almost nothing about the layout, the lighting or the music is accidental. Every element has been studied and adjusted to encourage you to linger longer and, ultimately, to buy more than you intended.\n\n[B] Consider the position of basic goods such as milk and bread. These everyday essentials are usually placed at the far back of the store. To reach them, shoppers must walk past shelves of tempting items, and many things land in the trolley along the way that were never on the original list.\n\n[C] Music plays a subtle but powerful role. Researchers have found that slow, gentle tunes cause customers to move more slowly through the aisles. The longer a person stays inside, the greater the number of products they notice, and noticing usually leads to purchasing.\n\n[D] The placement of goods on the shelves themselves is equally deliberate. The most profitable products sit at eye level, where they are seen first and grabbed most easily. Cheaper alternatives are pushed to the top or bottom, where tired shoppers are less likely to bend or stretch for them.\n\n[E] Smell can be a quiet persuader as well. Many stores bake bread on the premises so that the warm aroma drifts through the building. This comforting scent makes people feel hungry and relaxed, a mood in which they tend to spend more freely.\n\n[F] The checkout area is the final trap. While waiting in line, customers face racks of sweets, magazines and small gadgets. These low-priced impulse buys are easy to drop into the basket at the last moment, adding a little extra to almost every bill.\n\n[G] None of this means shoppers are helpless. Going in with a written list, eating before you arrive and simply being aware of these tricks can all help you resist. Knowledge, in the end, is the customer's best defence against a very clever system.",
+      "statements": [
+        "Profitable items are positioned at eye level so customers spot and seize them first.",
+        "Staple foods sit at the rear, forcing buyers to pass many tempting displays.",
+        "Being aware of these methods helps customers avoid spending more than planned.",
+        "Soft, slow music keeps shoppers in the store longer and exposed to more goods.",
+        "Sweets and magazines near the tills encourage last-minute unplanned purchases.",
+        "The fresh smell of baking bread relaxes people and loosens their spending.",
+        "Nearly every detail of the store has been designed to make you buy more.",
+        "Cheaper goods are placed high or low where weary shoppers rarely reach for them.",
+        "Spending more time inside means a customer sees and then buys more products.",
+        "A written list and shopping after eating are practical ways to resist temptation."
+      ],
+      "answers": [3, 1, 6, 2, 5, 4, 0, 3, 2, 6],
+      "paras": 7,
+      "explain_zh": [
+        "D段说最赚钱的商品放在与视线齐平处，最先被看到也最易拿取。",
+        "B段说牛奶面包等必需品放在店内最里面，顾客须经过诱人货架。",
+        "G段说了解这些手法可帮助顾客避免超支。",
+        "C段说舒缓慢节奏音乐使顾客逗留更久、接触更多商品。",
+        "F段说收银台旁的糖果杂志诱发最后时刻的冲动购买。",
+        "E段说现烤面包的香味让人放松，从而更舍得花钱。",
+        "A段说商店几乎每个细节都被设计来让你买得更多。",
+        "D段说便宜商品放在最高或最低处，疲惫顾客很少去够。",
+        "C段说待在店内时间越久，顾客看到并购买的商品就越多。",
+        "G段说写购物清单和饭后购物是抵御诱惑的实用方法。"
+      ]
+    },
+    {
+      "passage": "[A] As people grow older, many parts of life naturally shrink. Working colleagues disappear after retirement, children move to distant cities, and old friends may pass away. In this quieter season, the value of friendship does not fade; if anything, it becomes more precious than ever.\n\n[B] Doctors have long noticed a striking link between companionship and health. Older adults who keep close friends tend to recover faster from illness and live longer than those who are isolated. The presence of someone who cares appears to strengthen the body as well as the spirit.\n\n[C] Loneliness, by contrast, carries real dangers. Studies suggest that long-term isolation in later life can be as harmful to health as smoking. A mind left without conversation and connection may slip into sadness, and the decline can be surprisingly swift.\n\n[D] Friends also provide practical help that family far away cannot. A neighbour who notices the curtains have stayed closed, or who drives a companion to a medical appointment, offers a kind of everyday support that keeps independent living possible for much longer.\n\n[E] There is an emotional richness in old friendships that newer ones rarely match. Friends who have shared decades of memories can comfort one another with a single glance, understanding griefs and jokes that would take an outsider hours to explain.\n\n[F] Making new friends in later years remains entirely possible, however. Community classes, volunteer groups and local clubs bring together people with free time and shared interests, proving that the door to companionship never truly closes with age.\n\n[G] Technology now plays a helpful part as well. Video calls and simple messaging apps allow grandparents to chat with relatives overseas and to stay in touch with friends who can no longer travel, shrinking the distances that once cut people off.\n\n[H] In short, friendship in old age is far more than a pleasant extra. It guards both body and mind, eases daily life, and gives the final chapters their warmth. Investing in it may be among the wisest things anyone can do.",
+      "statements": [
+        "Prolonged isolation among the elderly can damage health as much as smoking does.",
+        "Older people with close friends often heal more quickly and live longer.",
+        "Video and messaging tools let seniors keep contact across long distances.",
+        "Long friendships hold an emotional depth that recent ones seldom reach.",
+        "It is still quite possible to form new friendships through clubs and classes.",
+        "A nearby friend offers daily practical aid that distant relatives cannot.",
+        "Friendship protects health, eases life and warms the final years.",
+        "As people age, friendship grows even more valuable rather than less.",
+        "Sharing decades of memories lets old friends comfort each other almost wordlessly.",
+        "Lacking conversation, a lonely mind may sink into sadness rather quickly."
+      ],
+      "answers": [2, 1, 6, 4, 5, 3, 7, 0, 4, 2],
+      "paras": 8,
+      "explain_zh": [
+        "C段说老年长期孤独对健康的危害可与吸烟相当。",
+        "B段说有亲密朋友的老人往往康复更快、活得更长。",
+        "G段说视频和消息工具让老人跨越远距离保持联系。",
+        "E段说老友情谊有新友难及的情感深度。",
+        "F段说通过俱乐部和课程结交新朋友仍完全可能。",
+        "D段说身边的朋友提供远方亲属无法给予的日常实际帮助。",
+        "H段说友谊护佑身心、缓解生活、温暖晚年。",
+        "A段说人变老时友谊变得更珍贵而非更不重要。",
+        "E段说共享数十年记忆让老友几乎无需言语就能互相安慰。",
+        "C段说缺乏交谈的孤独心灵可能很快陷入悲伤。"
+      ]
+    },
+    {
+      "passage": "[A] For decades, cooking at home was simply how families ate. Then came an era of takeaways, ready meals and busy schedules, and the kitchen grew quiet in many households. Recently, however, a fresh wave of interest has sent people back to their own stoves, eager to learn the craft for themselves.\n\n[B] The most obvious reward of home cooking is money saved. A meal prepared from raw ingredients usually costs a fraction of the same dish ordered from a restaurant. Over a month, families who cook regularly can keep a surprising amount in their pockets without feeling deprived.\n\n[C] Health is another powerful motive. When you cook a meal yourself, you decide exactly how much salt, sugar and oil goes into it. Restaurant food and packaged dishes often hide large amounts of these, so the home cook gains real control over what the body receives.\n\n[D] Beginners need not feel discouraged by complicated recipes. Experts advise starting with a handful of simple dishes and repeating them until they feel natural. Confidence grows with each success, and soon the nervous learner is ready to attempt something more ambitious.\n\n[E] The internet has made the learning far easier than it once was. Free video lessons demonstrate every step, pausing and replaying at the click of a button, so a curious cook can follow an experienced hand without ever leaving the kitchen.\n\n[F] Cooking can also draw a household closer together. Chopping vegetables side by side, or teaching a child to stir a sauce, turns an ordinary evening into shared time. The meal that follows tastes better for the effort that went into it together.\n\n[G] Beyond all the practical gains lies a quieter pleasure. There is deep satisfaction in transforming plain ingredients into something delicious with your own hands. For many, this creative joy is reason enough to keep returning to the stove.",
+      "statements": [
+        "Preparing food yourself gives you full command over salt, sugar and oil.",
+        "A home-cooked dish typically costs far less than the restaurant version.",
+        "Online video lessons let a learner follow an expert step by step at home.",
+        "There is a deep personal satisfaction in turning raw ingredients into a tasty meal.",
+        "Cooking together can strengthen the bonds within a family.",
+        "New cooks should begin with a few easy dishes and repeat them to gain confidence.",
+        "A recent revival of interest has drawn people back to cooking for themselves.",
+        "Families who cook regularly save a noticeable sum over a month.",
+        "Hidden quantities of salt and sugar are common in packaged and restaurant food.",
+        "Repeating successful simple dishes builds the courage to try harder ones."
+      ],
+      "answers": [2, 1, 4, 6, 5, 3, 0, 1, 2, 3],
+      "paras": 7,
+      "explain_zh": [
+        "C段说自己做饭可完全掌控盐、糖和油的用量。",
+        "B段说家常菜通常远比餐厅同款便宜。",
+        "E段说在线视频课程让学习者在家中一步步跟着行家学。",
+        "G段说把原料变成美味带来深切的个人满足。",
+        "F段说一起做饭能加强家庭成员之间的纽带。",
+        "D段说新手应从几道简单菜入手并反复做来积累信心。",
+        "A段说近来兴趣回潮让人们重新回到自己下厨。",
+        "B段说经常做饭的家庭一个月能省下可观的钱。",
+        "C段说包装食品和餐厅食物常隐藏大量盐和糖。",
+        "D段说反复做成功的简单菜培养尝试更难菜肴的勇气。"
+      ]
+    },
+    {
+      "passage": "[A] Not long ago, the only way to enjoy a book was to read it with your eyes. Today millions of people are listening instead. Audiobooks, once a small niche, have become one of the fastest-growing corners of the publishing world, reshaping how stories reach their audience.\n\n[B] The greatest appeal lies in convenience. A listener can follow a thrilling novel while driving to work, cooking dinner or jogging through the park. The format turns dead time into reading time, fitting books into corners of the day that print could never occupy.\n\n[C] Skilled narration adds a dimension that the printed page cannot offer. A talented voice actor brings characters alive with accents, pauses and emotion, so a familiar story can feel surprisingly new when it is performed rather than silently read.\n\n[D] Audiobooks have also opened doors for people who struggle with traditional text. Those with poor eyesight or with reading difficulties such as dyslexia can finally enjoy literature on equal terms, freed from the barriers that print once placed in their way.\n\n[E] The technology behind the boom matters too. Cheap smartphones and fast internet allow an entire library to be carried in a pocket and downloaded within seconds. This effortless access has removed the bulky cassettes and discs that once held the format back. Subscription services now let a listener sample dozens of titles for a single monthly fee, lowering the cost barrier that once kept many curious readers away.\n\n[F] Some critics worry that listening is not真正 reading and that the mind absorbs less. Yet research suggests comprehension is broadly similar whether a story is heard or seen, calming fears that the audio generation is somehow learning less.\n\n[G] Publishers have certainly noticed the trend. Many now record an audio edition at the same time as the printed one, and popular performers are hired to attract fans. What began as an afterthought has become a central part of the modern book business.",
+      "statements": [
+        "A gifted narrator can make a well-known story feel fresh through voice and emotion.",
+        "The main attraction is being able to enjoy books while doing other tasks.",
+        "Affordable phones and quick downloads let users carry a whole library easily.",
+        "People with dyslexia or weak eyesight can now enjoy books on equal footing.",
+        "Studies indicate understanding is similar whether a book is heard or read.",
+        "Publishers now often produce the audio version alongside the printed edition.",
+        "Once a minor format, audiobooks are now among publishing's fastest-growing areas.",
+        "The audio format converts idle moments into time spent with a book.",
+        "Performance by a voice actor gives stories a quality the printed page lacks.",
+        "Bulky cassettes and discs that once limited the format have been replaced."
+      ],
+      "answers": [2, 1, 4, 3, 5, 6, 0, 1, 2, 4],
+      "paras": 7,
+      "explain_zh": [
+        "C段说有天赋的朗读者通过声音和情感让熟悉的故事焕然一新。",
+        "B段说主要吸引力是能在做其他事时享受书籍。",
+        "E段说便宜手机和快速下载让用户轻松随身携带整座图书馆。",
+        "D段说有阅读障碍或视力差的人现在能平等地享受书籍。",
+        "F段说研究表明听书与读书的理解程度大体相近。",
+        "G段说出版商如今常在印刷版的同时制作有声版。",
+        "A段说曾是小众的有声书如今是出版业增长最快的领域之一。",
+        "B段说有声形式把闲置时刻转化为读书时间。",
+        "C段说配音演员的演绎赋予故事印刷页面所缺的特质。",
+        "E段说曾限制该形式的笨重磁带和光盘已被取代。"
+      ]
+    },
+    {
+      "passage": "[A] In a world that changes ever faster, the old songs, crafts and festivals of a place can seem fragile. Globalisation spreads the same shops, films and fashions across continents, and a community may wake one day to find its distinctive traditions slipping quietly away. Protecting these inherited treasures has become an urgent task.\n\n[B] Local traditions matter first because they give people a sense of who they are. A festival passed down through generations links the present community to its ancestors and to one another, providing roots that steady people amid constant change.\n\n[C] There is an economic argument too. Visitors travel great distances to witness an unusual ceremony, taste a regional dish or buy a handmade craft. When a town protects what makes it unique, it often protects a valuable source of income at the same time.\n\n[D] The greatest threat is usually the loss of young people's interest. When the younger generation moves to cities and adopts global tastes, the elders who hold traditional knowledge grow old with no one to teach. A single unbroken chain, once snapped, is hard to repair.\n\n[E] Schools can play a powerful role in keeping that chain whole. By inviting craftspeople to demonstrate their skills or by teaching local songs in class, teachers plant seeds of pride that may flower into lifelong commitment. When children grow up regarding their heritage as something living and admirable rather than a dusty relic, they are far likelier to carry it forward into adulthood.\n\n[F] Sensitive use of technology offers another lifeline. Recording an elderly weaver's techniques on video, or filming a fading dialect being spoken, preserves knowledge that might otherwise vanish entirely when its last practitioner dies.\n\n[G] Care is needed, however, not to freeze a tradition in time. Living customs have always adapted gently to new circumstances. The wisest approach keeps the spirit of a practice alive while allowing it to breathe and grow within the modern world.",
+      "statements": [
+        "Tourists travelling to see rare customs can become an important source of local income.",
+        "Inherited festivals give a community a steady sense of identity and belonging.",
+        "Filming an old weaver's methods preserves knowledge that could otherwise disappear.",
+        "The worst danger is that young people lose interest and abandon the old ways.",
+        "Bringing craftspeople into classrooms can spark lasting pride in students.",
+        "The wisest protection lets a custom adapt rather than freezing it unchanged.",
+        "Global sameness threatens to erase the distinctive traditions of a place.",
+        "Protecting what makes a town unique often safeguards its earnings as well.",
+        "When young people leave, elders find no one to inherit their knowledge.",
+        "Recording a dying dialect saves it from vanishing with its last speaker."
+      ],
+      "answers": [2, 1, 5, 3, 4, 6, 0, 2, 3, 5],
+      "paras": 7,
+      "explain_zh": [
+        "C段说为观看罕见习俗而远道而来的游客可成为当地重要收入来源。",
+        "B段说世代相传的节日给社区稳定的身份与归属感。",
+        "F段说拍摄老织工的手法可保存本可能消失的知识。",
+        "D段说最大危险是年轻人失去兴趣、抛弃传统。",
+        "E段说把手艺人请进课堂能在学生心中点燃持久的自豪。",
+        "G段说最明智的保护是让习俗适应而非将其原封冻结。",
+        "A段说全球化的同质化威胁着抹去一地的独特传统。",
+        "C段说保护小镇的独特之处往往同时守护其收入。",
+        "D段说年轻人离开后，长者找不到知识的继承者。",
+        "F段说记录濒危方言使其不致随最后的使用者一同消失。"
+      ]
+    },
+    {
+      "passage": "[A] Why is it so hard to start jogging every morning, yet so easy to reach for a snack without thinking? The answer lies in the science of habits, a field that reveals how much of our daily behaviour runs on automatic pilot rather than conscious choice.\n\n[B] Researchers describe every habit as a loop of three parts. First comes a cue, a trigger such as a time of day or a feeling. Then follows the routine, the behaviour itself. Finally arrives the reward, the pleasant result that teaches the brain to repeat the loop next time.\n\n[C] Understanding this loop explains why habits are so durable. Once a behaviour is wired in, the brain stops working hard and lets it run almost effortlessly. This frees mental energy for other things, but it also makes unwanted habits stubbornly difficult to break.\n\n[D] The good news is that bad habits can be reshaped rather than simply crushed. Experts suggest keeping the same cue and reward but swapping the routine in between. A craving for an afternoon biscuit, for instance, might be redirected into a short walk that delivers a similar lift.\n\n[E] Small beginnings work far better than grand resolutions. Promising to exercise for two hours daily usually collapses within a week, while a modest commitment of five minutes is gentle enough to survive and, over time, to grow on its own.\n\n[F] Environment shapes habits more than willpower does. If healthy fruit sits in plain view while sweets are locked away in a high cupboard, good choices become the easy ones. Designing your surroundings quietly does much of the work for you.\n\n[G] Finally, patience is essential. Studies show that a new behaviour often takes a couple of months, not a few days, to feel automatic. Those who expect instant change give up too soon, while those who persist are eventually rewarded.",
+      "statements": [
+        "Each habit can be understood as a loop of cue, routine and reward.",
+        "Habits are hard to break because the brain runs them with little effort.",
+        "Arranging your surroundings can make healthy choices the easy ones.",
+        "A bad habit is best changed by keeping the cue and reward but altering the routine.",
+        "Much of our everyday behaviour operates automatically rather than by conscious choice.",
+        "A new behaviour usually needs months, not days, before it feels automatic.",
+        "Tiny commitments survive far better than sweeping, ambitious resolutions.",
+        "The reward is the pleasant outcome that teaches the brain to repeat the loop.",
+        "Keeping the same trigger but redirecting the action can defeat a craving.",
+        "People who expect instant results tend to quit before the habit forms."
+      ],
+      "answers": [1, 2, 5, 3, 0, 6, 4, 1, 3, 6],
+      "paras": 7,
+      "explain_zh": [
+        "B段说每个习惯可理解为线索、惯例、奖赏构成的循环。",
+        "C段说习惯难改是因为大脑几乎不费力地运行它。",
+        "F段说布置环境能让健康选择变得容易。",
+        "D段说改掉坏习惯最好保留线索和奖赏而改变中间的惯例。",
+        "A段说我们大量日常行为靠自动运行而非有意识选择。",
+        "G段说新行为通常需要数月而非数天才会变得自动。",
+        "E段说微小承诺远比宏大雄心的决心更易坚持。",
+        "B段说奖赏是让大脑重复该循环的愉悦结果。",
+        "D段说保留相同触发因素而改变行动可击败渴求。",
+        "G段说期待立竿见影的人往往在习惯形成前就放弃。"
+      ]
+    },
+    {
+      "passage": "[A] Few decisions shape a life as deeply as the choice of a career, yet many young people approach it with little guidance. Surrounded by advice from parents, teachers and society, they can easily lose sight of what truly fits them. A wiser approach begins not with the job market but with honest self-knowledge.\n\n[B] The first step is to understand your own interests and strengths. A person who loves solving puzzles may thrive in engineering, while someone who delights in people may flourish in teaching or sales. Work that aligns with natural inclinations rarely feels like a burden.\n\n[C] Values deserve equal attention. Some workers are driven mainly by money, others by the desire to help society, and still others by the freedom to set their own hours. A job that clashes with deep personal values brings quiet unhappiness, however high the salary.\n\n[D] Practical realities cannot be ignored, of course. It is sensible to research which fields are growing, what qualifications they demand and how well they pay. Passion alone does not pay the rent, and a clear-eyed look at the market protects against bitter disappointment.\n\n[E] Real-world experience teaches what no description can. A summer internship or a few days of job shadowing reveals the daily reality of an occupation, and many people discover that a career they admired from afar looks very different up close.\n\n[F] It also helps to remember that the first job is rarely the last. Modern workers change direction several times across their lives, so an early choice need not feel like a life sentence. Each role builds skills that open unexpected doors later on.\n\n[G] Above all, the decision should be the individual's own. Following a path purely to please others, or merely to copy a successful friend, often leads to regret. A career chosen with genuine self-understanding stands the best chance of lasting fulfilment.",
+      "statements": [
+        "Choosing a job that conflicts with one's core values brings quiet unhappiness.",
+        "The first step is recognising your own interests and natural strengths.",
+        "An internship reveals the daily reality that a job description cannot convey.",
+        "It is sensible to study which fields are growing and what they pay.",
+        "The decision should ultimately belong to the individual, not to others.",
+        "Because workers change paths often, an early choice is not a life sentence.",
+        "Many young people decide on a career with too little real guidance.",
+        "Work matching a person's natural inclinations rarely feels like a burden.",
+        "Copying a friend's path purely to imitate them often ends in regret.",
+        "Passion alone cannot pay the bills, so the market deserves a clear look."
+      ],
+      "answers": [2, 1, 4, 3, 6, 5, 0, 1, 6, 3],
+      "paras": 7,
+      "explain_zh": [
+        "C段说选择与核心价值观冲突的工作会带来无声的不快乐。",
+        "B段说第一步是认识自己的兴趣与天赋。",
+        "E段说实习揭示职位描述无法传达的日常现实。",
+        "D段说明智地研究哪些领域在增长、薪酬如何。",
+        "G段说决定最终应属于个人，而非他人。",
+        "F段说因工作者常常转换方向，早期选择并非终身判决。",
+        "A段说许多年轻人在几乎缺乏指导下做出职业选择。",
+        "B段说与天性相符的工作很少让人感到负担。",
+        "G段说纯粹模仿朋友的道路往往以后悔告终。",
+        "D段说激情本身付不起账单，因此市场值得认真审视。"
+      ]
+    },
+    {
+      "passage": "[A] There is a special kind of contentment that settles over a person tending a garden, however small. In an age of screens and hurry, more people are turning to soil and seed, discovering that the simple act of growing plants brings rewards far beyond a handful of vegetables.\n\n[B] Gardening is, before anything else, gentle exercise. Digging, weeding and carrying watering cans keep the body moving without the strain of a gym. An hour among the flower beds quietly works the muscles and the joints while the mind is happily occupied elsewhere.\n\n[C] The mental benefits may be greater still. Watching a seed swell into a green shoot offers a calm satisfaction that soothes a worried mind. Many gardeners describe their plots as a refuge where the stresses of the working day simply melt away.\n\n[D] Growing food brings a very practical pleasure too. A tomato picked warm from your own vine tastes sweeter than any from a shop, and the knowledge that you raised it yourself adds a flavour that money cannot buy.\n\n[E] A garden also teaches patience in a way few modern activities do. Nature keeps its own timetable, indifferent to human impatience, and the gardener slowly learns to trust the seasons rather than to demand instant results.\n\n[F] The hobby need not require sprawling land. A few pots on a balcony, or a window box of herbs, can deliver much of the same joy. City dwellers with no lawn at all can still feel the pleasure of tending something green.\n\n[G] Finally, a garden quietly invites nature back into our lives. Flowers draw bees and butterflies, birds come to feed, and the gardener gains a front-row seat to the small daily dramas of the living world just outside the door. Watching these visitors return season after season reminds us that even a modest patch of earth forms part of a far wider web of living things.",
+      "statements": [
+        "Watching a seed grow brings a calm that eases a troubled mind.",
+        "Digging and weeding provide gentle exercise without the strain of a gym.",
+        "Even a few balcony pots can deliver much of gardening's pleasure to city dwellers.",
+        "A home-grown tomato tastes sweeter and carries pride no shop can sell.",
+        "A garden draws bees, butterflies and birds, bringing nature close.",
+        "Nature's own pace slowly teaches the gardener to be patient.",
+        "More people are turning to gardening and finding rewards beyond the harvest.",
+        "Tending flower beds works the body while the mind rests pleasantly elsewhere.",
+        "Many describe their plot as a refuge where workday stress melts away.",
+        "Gardening needs no large plot of land to give its joy."
+      ],
+      "answers": [2, 1, 5, 3, 6, 4, 0, 1, 2, 5],
+      "paras": 7,
+      "explain_zh": [
+        "C段说看着种子生长带来抚慰烦忧心灵的平静。",
+        "B段说挖土除草提供不带健身房劳损的温和运动。",
+        "F段说阳台上几盆花草也能给城市居民带来园艺乐趣。",
+        "D段说自家番茄更甜，且带着商店买不到的自豪。",
+        "G段说花园引来蜜蜂、蝴蝶和鸟，让自然贴近。",
+        "E段说大自然自有节奏，慢慢教会园丁耐心。",
+        "A段说越来越多人转向园艺，发现收获之外的回报。",
+        "B段说打理花坛锻炼身体，同时心思愉快地放在别处。",
+        "C段说许多人把菜园形容为工作压力消融的避难所。",
+        "F段说园艺无需大块土地也能带来乐趣。"
+      ]
+    },
+    {
+      "passage": "[A] Every morning a flood of news alerts, messages and updates pours onto our screens before breakfast is even finished. We live in an age that produces more information in a single day than our grandparents met in a year. The challenge is no longer finding facts but surviving the deluge of them.\n\n[B] This constant stream takes a real toll on the mind. When too much data arrives at once, the brain struggles to sort the important from the trivial, and a familiar fog of tiredness and anxiety sets in. Decisions grow harder, and clear thinking slips away.\n\n[C] Part of the problem is the design of the technology itself. Apps are deliberately built to grab and hold attention, with endless feeds and bright alerts that pull us back again and again. The pull is engineered, not accidental, which is why willpower alone often fails.\n\n[D] One sensible response is to choose your sources with care. Rather than glancing at a dozen scattered outlets, a person can rely on one or two trusted ones. Quality, the experts insist, matters far more than quantity when it comes to staying genuinely informed.\n\n[E] Setting boundaries around time helps as well. Checking messages only at fixed points in the day, instead of every few minutes, returns a sense of control. The world rarely collapses in the hours between one deliberate look and the next.\n\n[F] Switching off completely, even briefly, restores the tired mind. A walk without a phone, or a weekend free of screens, gives the brain space to rest and to process what it has already taken in, much as sleep settles a busy day.\n\n[G] In the end, the goal is not to flee information but to master our relationship with it. Those who learn to filter, to pause and to choose deliberately can enjoy the riches of the connected age without drowning in its endless tide.",
+      "statements": [
+        "Apps are deliberately designed to capture and keep our attention.",
+        "Too much data at once leaves the brain foggy, tired and anxious.",
+        "Briefly switching off all screens lets the tired mind rest and recover.",
+        "Relying on one or two trusted sources beats scanning many scattered ones.",
+        "The modern difficulty is surviving an overwhelming flood of information.",
+        "The aim is to manage our relationship with information, not to escape it.",
+        "Checking messages at fixed times restores a sense of control.",
+        "The engineered pull of feeds explains why willpower alone often fails.",
+        "Today's world creates far more information in a day than past generations met in a year.",
+        "Quality of sources matters more than sheer quantity for staying informed."
+      ],
+      "answers": [2, 1, 5, 3, 0, 6, 4, 2, 0, 3],
+      "paras": 7,
+      "explain_zh": [
+        "C段说应用程序被刻意设计来抓住并留住我们的注意力。",
+        "B段说一次涌来过多数据让大脑昏沉、疲惫且焦虑。",
+        "F段说短暂关掉所有屏幕让疲惫的大脑休息恢复。",
+        "D段说依靠一两个可信来源胜过浏览许多零散来源。",
+        "A段说现代难题是在压倒性的信息洪流中生存。",
+        "G段说目标是管理我们与信息的关系，而非逃避它。",
+        "E段说在固定时间查看消息可恢复掌控感。",
+        "C段说被刻意设计的信息流吸引力解释了为何单凭意志力常失败。",
+        "A段说当今世界一天产生的信息远超前几代人一年所遇。",
+        "D段说就保持知情而言，来源质量比纯粹数量更重要。"
+      ]
+    }
+  ]
+}

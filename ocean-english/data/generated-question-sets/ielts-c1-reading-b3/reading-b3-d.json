@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "A) Descend a few hundred metres beneath the sunlit surface of the ocean and you enter a world where darkness is nearly total. Yet this apparent void is punctuated by countless flashes, glows and ribbons of living light. Bioluminescence, the production of light by living organisms, is not a rare curiosity in the sea; it is arguably the most common form of communication on the planet. Researchers estimate that the majority of animals living in the deep open ocean are capable of generating their own light, an ability that has evolved independently dozens of times across unrelated groups.\n\nB) The chemistry behind this glow is remarkably consistent. In most cases a light-emitting molecule called luciferin reacts with oxygen, a reaction that is helped along by an enzyme known as luciferase. The result is a cool light: almost all of the energy is released as photons rather than heat, making the process far more efficient than an ordinary electric bulb. Different organisms use slightly different versions of these molecules, which is one reason biologists believe the trait arose so many separate times. Some animals do not manufacture the chemicals themselves at all. Instead, they cultivate colonies of luminous bacteria in special organs, feeding and sheltering the microbes in exchange for a steady supply of light.\n\nC) Why invest in light at all? The functions are surprisingly varied. For many small creatures, light is a defensive tool. A startled shrimp may vomit a cloud of glowing chemicals to dazzle a predator, much as an octopus releases ink, then dart away into the dark. Others use a trick known as counter-illumination: they produce a faint glow on their undersides that matches the dim light filtering down from above, erasing the silhouette that a hunter looking upward would otherwise see. In this way an animal becomes, in effect, invisible by shining.\n\nD) Light is equally valuable for attack and attraction. The anglerfish, a creature of the perpetual midnight zone, dangles a glowing lure in front of its jaws to draw curious prey within reach. Certain squid flash complex patterns that may serve to startle, to communicate with others of their kind, or to coordinate the movements of a shoal. During the breeding season, some species use distinctive rhythms of flashing to identify suitable mates, a private code that is difficult for the wrong audience to read.\n\nE) Studying these behaviours is notoriously difficult. The animals live where sunlight never reaches, and the very act of capturing them, hauling them upward through changing pressures and temperatures, can damage the delicate organs that produce light or exhaust their chemical reserves. Bright submersible lamps, meanwhile, overwhelm the faint natural signals scientists hope to record and frighten the creatures into stillness. In response, engineers have built cameras fitted with red illumination, since most deep-sea animals cannot perceive red wavelengths and behave as though the water were still dark. One celebrated device, designed to imitate the pinwheel flashing of a distressed jellyfish, has repeatedly coaxed large and rarely seen squid into camera range by exploiting their instinct to investigate a possible meal.\n\nF) The practical rewards of this research reach well beyond natural history. The luciferase enzyme has become an indispensable tool in laboratories, where it is attached to genes so that their activity can be tracked as a glow whose brightness reveals what is happening inside living cells. A related protein, first isolated from a luminous jellyfish, transformed biology by allowing researchers to make specific structures within cells light up under a microscope. Discoveries that began as attempts to understand why the sea sparkles have thus quietly reshaped medicine, enabling scientists to watch tumours spread or nerve cells fire in real time.\n\nG) There is a broader lesson in all this. The deep ocean is often described as empty, yet it is in truth the largest living space on Earth and one of the least understood. The ubiquity of bioluminescence is a reminder that life adapts to darkness not by surrendering to it but by inventing its own light. Each flash in the abyss is a message, a warning or an invitation, exchanged in a language that humans are only beginning to translate.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Bioluminescence is a widespread and versatile adaptation whose study also benefits science.",
+            "The anglerfish is the most sophisticated user of light in the deep ocean.",
+            "Deep-sea research has failed because artificial light disturbs the animals studied.",
+            "Luminous bacteria are more important to the ocean than the animals that host them."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to paragraph B, why do biologists think bioluminescence evolved many separate times?",
+          "options": [
+            "Because the light produced generates a great deal of heat",
+            "Because organisms use slightly different versions of the light-producing molecules",
+            "Because only bacteria are able to produce luciferin",
+            "Because the reaction cannot occur without sunlight"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is 'counter-illumination', as described in paragraph C?",
+          "options": [
+            "Releasing a glowing cloud to confuse a predator",
+            "Flashing patterns to attract a mate during breeding",
+            "Producing a faint underside glow that hides an animal's silhouette",
+            "Using red light that most deep-sea animals cannot see"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from paragraph E that cameras using red light are effective mainly because",
+          "options": [
+            "red light is cheaper to produce than white light at depth",
+            "the animals cannot detect the red light and so continue behaving naturally",
+            "red light travels further through seawater than other colours",
+            "red light strengthens the animals' own faint glow"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph F, the word 'indispensable' is closest in meaning to",
+          "options": [
+            "occasionally useful",
+            "impossible to replace",
+            "difficult to obtain",
+            "recently invented"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "warn that bioluminescent species are close to extinction",
+            "argue that submersibles should no longer be used in research",
+            "reflect on what the prevalence of ocean light reveals about life adapting to darkness",
+            "compare the deep ocean unfavourably with shallow coastal waters"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文说明海洋生物发光的化学原理、功能、研究方法及其对科学的贡献。主旨题强调发光是普遍而多用途的适应，末段体现作者对生命适应黑暗的反思。"
+    },
+    {
+      "passage": "A) Few objects pass through as many hands as a banknote, and few are subject to such determined efforts at imitation. From the moment governments began issuing paper money, they have been locked in a quiet contest with counterfeiters, and the design of currency is largely a record of that struggle. A modern note is less a simple certificate of value than a dense package of security features, each one added to defeat a particular method of forgery.\n\nB) The starting point is the paper itself, though in a strict sense it is usually not paper at all. Ordinary writing paper is made from wood pulp, but most banknotes are printed on a substrate of cotton and linen fibres, sometimes blended with other materials. This gives the note a distinctive feel and, crucially, a resilience that allows it to survive years of folding, washing and handling. A growing number of countries have gone further and switched to thin polymer film, which resists dirt and moisture and can incorporate transparent windows that are extremely hard to reproduce on a home printer.\n\nC) Embedded within the substrate are features created during manufacture rather than printing. The best known is the watermark, an image formed by varying the thickness of the material so that it becomes visible only when the note is held up to the light. Alongside it runs the security thread, a thin strip woven into the paper that may carry tiny lettering or shift colour when tilted. Because these elements are built into the sheet before any ink is applied, a forger cannot simply add them afterwards with a scanner and printer.\n\nD) The printing itself relies on techniques that ordinary reproduction cannot match. Intaglio printing presses ink into the paper under great pressure from engraved plates, leaving raised lines that can be felt with a fingertip. Fine patterns of interwoven lines, so intricate that a photocopier blurs them into a smudge, cover much of the surface. Some inks change colour depending on the angle of view, shifting for example from green to gold, an effect that a flat printed copy simply cannot capture. Microprinting adds text so small that it looks like a solid line to the naked eye but resolves into legible words under a magnifying glass.\n\nE) A further layer of protection is deliberately invisible in everyday light. Under ultraviolet illumination, hidden fibres and printed patterns spring into view, allowing banks and shops to check notes quickly. Many currencies also carry a pattern of small circles, arranged in a particular constellation, that image-editing software and photocopiers are programmed to recognise and refuse to reproduce. In this way the defence extends beyond the note itself and into the very machines a counterfeiter would hope to use.\n\nF) No single feature is expected to be foolproof. The philosophy of currency design is one of layering: an amateur may be stopped by the feel of the paper, a more skilled forger by the colour-shifting ink, and only a well-equipped criminal organisation could hope to imitate several features convincingly, at which point the cost and risk outweigh the reward. Central banks also redesign their notes periodically, not because the old designs have wholly failed but to stay ahead of improvements in scanning and printing technology available to the public.\n\nG) It is tempting to assume that the rise of cards and digital payment will soon make all of this obsolete. Yet in most countries the demand for cash has proved stubbornly durable, valued for its privacy, its independence from electronic systems and its usefulness to those without bank accounts. As long as notes circulate, the contest between the mint and the forger will continue, and the humble banknote will remain one of the most carefully engineered objects that ordinary people carry without a second thought.",
+      "questions": [
+        {
+          "prompt": "What is the central argument of the passage?",
+          "options": [
+            "Digital payment has already made banknotes unnecessary in most countries.",
+            "Banknote design is shaped by a continuing effort to stay ahead of counterfeiters.",
+            "Polymer notes are the only reliable defence against forgery.",
+            "Counterfeiting has become impossible thanks to modern printing."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph B, why are banknotes commonly printed on cotton and linen?",
+          "options": [
+            "Because these fibres are cheaper than wood pulp",
+            "Because they give the note durability to withstand handling",
+            "Because they cannot be printed on by any machine",
+            "Because they glow under ultraviolet light"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph C, why can a forger not simply add a watermark with a scanner and printer?",
+          "options": [
+            "Because the watermark is printed in colour-shifting ink",
+            "Because the watermark is formed by varying the thickness of the material during manufacture",
+            "Because the watermark is only visible under ultraviolet light",
+            "Because the watermark is made of woven metal thread"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from paragraph F that the main reason a well-equipped forger might still be deterred is that",
+          "options": [
+            "counterfeiting is legal only for central banks",
+            "imitating many features at once becomes too costly and risky to be worthwhile",
+            "polymer notes are impossible to obtain",
+            "shops never accept cash payments"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph G, the word 'durable' is closest in meaning to",
+          "options": [
+            "long-lasting",
+            "unexpected",
+            "expensive",
+            "decreasing"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The writer's attitude towards the future of cash can best be described as",
+          "options": [
+            "confident that cash will disappear within a few years",
+            "indifferent to whether cash survives",
+            "of the view that cash is likely to persist and remain carefully engineered",
+            "alarmed by the growing use of banknotes"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文讲述纸币防伪的多层设计及其与伪造者的持续较量。主旨强调设计随技术演进而不断更新，末段作者认为现金短期内不会消失。"
+    },
+    {
+      "passage": "A) It is a common belief that some people are simply good at doing several things at once. They answer emails during meetings, glance at messages while driving and keep a video playing in a corner of the screen as they work. Yet a substantial body of psychological research suggests that genuine multitasking, in the sense of attending fully to two demanding tasks at the same moment, is largely an illusion. What actually happens, most studies indicate, is rapid switching of attention from one task to another, and that switching carries a hidden cost.\n\nB) The human capacity to attend is strikingly limited. Although the senses take in an enormous volume of information every second, only a small fraction reaches conscious awareness. Attention acts as a kind of gatekeeper, selecting what matters and filtering out the rest. When two activities each demand this selective focus, they compete for the same limited resource. The brain cannot expand the resource at will, so it copes by alternating, granting each task a brief slice of attention in turn.\n\nC) This alternation is not free. Every time attention moves from one task to another, there is a short delay while the mind disengages from the first task and reorients itself to the rules and goals of the second. Psychologists call this delay a switch cost. On any single occasion it may last only a fraction of a second, easy to overlook. But across a working day filled with interruptions and self-interruptions, these fractions accumulate into a substantial loss of time, and the quality of work tends to suffer as well, with more errors and shallower thinking.\n\nD) Laboratory experiments have measured the effect in various ways. In a typical study, volunteers are asked to sort items by one rule, such as colour, and then by another, such as shape, sometimes staying with a single rule and sometimes switching between them. Participants are reliably slower and less accurate on trials that require a switch than on trials that do not. Strikingly, people who report that they multitask a great deal in daily life often perform worse on such tests than those who rarely do, and they are also poorer at filtering out irrelevant information, the very skill they believe they excel at.\n\nE) Not all combinations of activity produce the same interference. A well-practised task that has become largely automatic, such as walking, makes few demands on selective attention and can be combined with a more demanding one without much difficulty. Problems arise chiefly when two tasks draw on the same mental machinery, for instance when both require language, or when both call for decisions. This is why holding a demanding conversation and composing a written report at the same time feels impossible, while humming a familiar tune while tidying a room does not.\n\nF) The findings have practical consequences that extend well beyond the psychology laboratory. The debate over the use of phones while driving rests directly on this research: even a hands-free conversation occupies attention that the road requires, which is why the danger lies less in the hands than in the mind. In offices, a culture of constant notifications may quietly erode the very productivity it is meant to serve. Some researchers therefore advocate 'single-tasking', deliberately setting aside blocks of uninterrupted time for demanding work and checking messages only at planned intervals.\n\nG) None of this means the brain is feeble; on the contrary, its ability to switch rapidly and flexibly is a considerable achievement. The point is rather that attention is a finite resource to be spent wisely, not an unlimited one to be divided endlessly. Recognising the true cost of switching may be the first step towards using our limited focus where it matters most.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Some people are naturally gifted at doing several demanding tasks simultaneously.",
+            "Multitasking is mostly rapid attention-switching that carries real costs.",
+            "The brain has an unlimited capacity for attention if properly trained.",
+            "Walking and talking cannot be done at the same time."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph B, attention is described as a gatekeeper because it",
+          "options": [
+            "increases the amount of information the senses can take in",
+            "selects what reaches awareness and filters out the rest",
+            "removes the need to switch between tasks",
+            "stores information for long periods"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did the sorting experiments described in paragraph D find about frequent multitaskers?",
+          "options": [
+            "They filtered out irrelevant information better than others.",
+            "They performed switching trials faster than non-multitaskers.",
+            "They often performed worse and were poorer at ignoring irrelevant information.",
+            "They made no more errors than people who rarely multitask."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from paragraph E that two tasks interfere most when they",
+          "options": [
+            "are both highly automatic and well practised",
+            "draw on the same mental resources, such as language or decision-making",
+            "are performed by different people",
+            "involve physical movement rather than thought"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph F, the phrase 'erode the very productivity it is meant to serve' suggests that constant notifications",
+          "options": [
+            "reliably increase the amount of work completed",
+            "gradually reduce the productivity they are supposed to support",
+            "have no measurable effect on office work",
+            "are necessary for demanding tasks"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's purpose is mainly to",
+          "options": [
+            "criticise the brain for being unable to multitask",
+            "recommend that people stop using phones entirely",
+            "reframe the findings positively while urging wiser use of limited attention",
+            "prove that switching between tasks has no cost at all"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文论证真正的多任务是幻觉，实为注意力快速切换并带来切换成本。末段作者肯定大脑能力，呼吁明智使用有限注意力。"
+    },
+    {
+      "passage": "A) Before the plough and the fence reshaped whole continents, vast expanses of the interior were covered not by forest but by grass. Temperate grasslands, known by many regional names, once stretched across enormous areas of North America, Eurasia and elsewhere. To a casual eye they can look monotonous, a rolling sea of stems beneath an open sky. In reality they are among the richest and most intricate ecosystems on land, and their disappearance has been one of the least noticed environmental losses of the modern age.\n\nB) The apparent simplicity of a grassland hides its true structure, which lies largely underground. A single square metre of healthy prairie may contain dozens of species of grasses and flowering plants, many sending roots several metres down. This dense underground network stores carbon, holds the soil together and allows the plants to survive drought and fire by drawing on deep reserves of water and nutrients. The soils built up over thousands of years beneath these plants are among the most fertile on the planet, which is precisely why so much grassland has been ploughed up to grow crops.\n\nC) Grasslands are not static. They are shaped, and in a sense created, by disturbance. Periodic fire, whether sparked by lightning or set deliberately by people, clears away accumulated dead material and prevents shrubs and trees from taking hold. Grazing by large herbivores, once great herds of wild animals and later domesticated livestock, has a similar effect, keeping dominant grasses in check and opening space for a wider variety of plants. Remove these disturbances entirely and the grassland begins to change, often becoming choked with a few aggressive species or slowly turning into scrub.\n\nD) Restoring a grassland that has been ploughed or degraded is therefore far more demanding than simply leaving the land alone. Practitioners often begin by collecting seed from surviving patches of native vegetation, sometimes travelling long distances to gather a sufficient diversity of local species. The ground must frequently be cleared of aggressive introduced plants that would otherwise smother the emerging natives. Once sown, the young grassland may take years, even decades, to develop the complex structure of a mature one, and in many projects fire or carefully managed grazing must be reintroduced to keep the system healthy.\n\nE) The rewards of this patient work are considerable. Restored grasslands provide habitat for insects, birds and mammals that have declined sharply as their homes were converted to farmland. They filter and store water, reducing the risk of flooding downstream, and their deep roots lock away carbon in the soil, offering a modest but genuine contribution to the effort to limit climate change. Because they are adapted to periodic drought, well-established native grasslands can also remain productive in conditions that would leave shallow-rooted crops withered.\n\nF) Yet restoration faces real obstacles. It competes for land with agriculture, which is often far more profitable in the short term, and the benefits it provides, such as cleaner water and stored carbon, are widely shared rather than captured by the landowner who bears the cost. There is also a subtler difficulty of perception. A newly restored grassland can look untidy or even neglected to eyes accustomed to neat rows of crops or clipped lawns, and this cultural preference for tidiness can undermine public support for projects that are, ecologically, thriving.\n\nG) Changing that perception may be as important as any technical advance. To value a grassland is to learn to read it, to see in its tangle of stems and flowers not emptiness but abundance, and to recognise that the health of the land often lies hidden beneath the surface. The grasslands that remain are fragments of a once-continuous whole, and their restoration is a slow act of repair whose full benefits will be felt by generations not yet born.",
+      "questions": [
+        {
+          "prompt": "The main purpose of the passage is to",
+          "options": [
+            "explain the value of native grasslands and the challenges of restoring them",
+            "argue that grasslands should be converted to forest",
+            "describe the history of farming in North America",
+            "prove that grasslands are simpler than forests"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to paragraph B, why has so much grassland been ploughed up?",
+          "options": [
+            "Because the plants have very shallow roots",
+            "Because the soils beneath grasslands are extremely fertile",
+            "Because grasslands store no carbon",
+            "Because the land is unsuitable for wild animals"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph C, what happens if fire and grazing are removed from a grassland entirely?",
+          "options": [
+            "It becomes even more diverse over time",
+            "It stores more water underground",
+            "It may become dominated by a few species or turn into scrub",
+            "It immediately reverts to fertile farmland"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from paragraph F that a landowner may be reluctant to restore grassland mainly because",
+          "options": [
+            "restoration is technically impossible on private land",
+            "the costs fall on the landowner while the benefits are shared by many",
+            "grasslands attract too many tourists",
+            "native grasses cannot survive drought"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph F, the word 'untidy' is closest in meaning to",
+          "options": [
+            "poisonous",
+            "expensive",
+            "disorderly in appearance",
+            "highly productive"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's attitude towards grassland restoration is best described as",
+          "options": [
+            "sceptical that it can ever succeed",
+            "appreciative of its long-term value while acknowledging its slowness",
+            "indifferent to its ecological effects",
+            "opposed to it on economic grounds"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本文说明原生草地的生态价值、依赖干扰维持以及修复的难点。末段作者呼吁改变对'整洁'的偏好，肯定修复的长远价值。"
+    },
+    {
+      "passage": "A) For most of human history, the great enemy of food was time. A freshly caught fish or a slaughtered animal began to spoil within hours, and the supply of fresh produce was tied rigidly to the seasons and to distance from where it was grown. The story of refrigeration is, in a sense, the story of how societies learned to slow that decay, and in doing so transformed not only what people ate but where they could live and work.\n\nB) Long before machines, people exploited natural cold. In many regions, ice was cut from frozen lakes and rivers in winter and stored in insulated pits or specially built houses, packed with straw or sawdust to slow melting. Wealthy households and, later, whole cities relied on this harvested ice through the warmer months, and a substantial trade grew up around shipping blocks of ice over long distances. The method worked, but it was at the mercy of the weather: a mild winter could leave suppliers short, and the ice was steadily lost to melting along the way.\n\nC) The breakthrough came with the understanding that cold could be manufactured rather than merely gathered. The principle rests on a simple physical fact: when a liquid evaporates into a gas, it absorbs heat from its surroundings. Mechanical refrigerators exploit this by compressing a special fluid, allowing it to expand and evaporate, and thereby drawing heat out of an insulated compartment. The warmed gas is then compressed again and the cycle repeats. Early industrial versions of this machinery were large, and their first great use was not in the home but in industry, particularly in brewing and in the preservation of meat.\n\nD) The consequences for trade were dramatic. Refrigerated ships made it possible to carry meat across oceans, so that animals raised on distant grasslands could feed populations in crowded cities thousands of miles away. Ports, railways and warehouses were fitted with cold storage, and an unbroken 'cold chain' gradually stretched from the farm to the shop. Foods that had once been strictly local or seasonal became available all year round, and diets in many countries grew more varied and, in important respects, safer, since spoiled food is a common cause of illness.\n\nE) The arrival of the refrigerator in the ordinary household, though it came later, changed daily life just as deeply. Shopping no longer had to be a near-daily chore, since perishable food could be kept safely for days. Leftovers could be saved rather than discarded, reducing waste. The design of kitchens and the habits of cooking shifted around the reassuring hum of the machine in the corner. What had once been a luxury became, within a couple of generations, an appliance so ordinary that its absence would seem remarkable.\n\nF) These benefits, however, came with costs that were slow to be recognised. The chemicals first chosen as refrigerants included substances that were toxic or dangerously flammable, and the compounds later developed to replace them were eventually found to damage the protective ozone layer high in the atmosphere, prompting an international effort to phase them out. Refrigeration is also a heavy consumer of energy; the cumulative demand of countless cooling units, running day and night around the world, represents a significant share of electricity use and, indirectly, of greenhouse gas emissions.\n\nG) The history of keeping food cold is thus a mirror of technological progress more generally. A genuine and far-reaching good, the ability to preserve food and free people from the tyranny of the seasons, has been accompanied by unintended harms that later generations must labour to correct. The challenge now is to keep the enormous benefits of the cold chain while making it cleaner, an undertaking that engineers and policymakers continue to pursue.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Natural ice was always superior to manufactured cold.",
+            "Refrigeration transformed food supply and daily life but also brought unintended costs.",
+            "Refrigerators were first invented for use in ordinary homes.",
+            "The trade in harvested ice never had any commercial importance."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph B, what was a major drawback of relying on harvested natural ice?",
+          "options": [
+            "It could not be stored for even a single day",
+            "Its supply depended on the weather and it melted during transport",
+            "It was more expensive than mechanical refrigeration",
+            "It could only be used in industry, not in homes"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to paragraph C, mechanical refrigeration works by exploiting the fact that",
+          "options": [
+            "a gas becomes colder when it is compressed",
+            "a liquid absorbs heat from its surroundings when it evaporates",
+            "ice melts more slowly when packed in sawdust",
+            "meat spoils faster in warm brewing tanks"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from paragraph D that refrigerated shipping was important chiefly because it",
+          "options": [
+            "made local, seasonal food more expensive",
+            "allowed distant food production to supply crowded distant cities",
+            "eliminated the need for railways and warehouses",
+            "reduced the variety of diets in many countries"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph E, the word 'perishable' is closest in meaning to",
+          "options": [
+            "likely to spoil",
+            "expensive to buy",
+            "difficult to cook",
+            "imported from abroad"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer presents the history of refrigeration mainly as",
+          "options": [
+            "a warning that the technology should be abandoned",
+            "proof that technological progress has no drawbacks",
+            "an example of a real benefit accompanied by harms that later generations must address",
+            "evidence that natural cooling methods should be revived"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文讲述制冷技术如何改变食物供应与日常生活，并带来能源与环境代价。末段作者将其视为技术进步利弊并存的缩影。"
+    }
+  ]
+}

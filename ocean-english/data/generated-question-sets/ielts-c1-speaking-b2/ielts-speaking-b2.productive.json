@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "speaking",
+  "taskType": "interview_speaking",
+  "tasks": [
+    {
+      "prompt": "IELTS Speaking practice set — topic: Childhood Games.\nPart 1 (interview): What games did you enjoy playing when you were a child? Did you usually play indoors or outdoors? Do children in your country still play the games you played?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a game you often played as a child. You should say: what the game was, who you played it with, where you usually played it, and explain why you enjoyed this game so much.\nPart 3 (discussion): How have children's games changed over the past few decades? Do you think competitive games teach children useful life skills? Should adults organise children's play, or is unstructured play more valuable?",
+      "promptZh": "雅思口语练习组——童年游戏",
+      "referencePoints": [
+        "Name a specific game and describe its basic rules clearly",
+        "Mention the people involved and the setting where it was played",
+        "Explain the feelings or memories attached to the game",
+        "Compare past and present play habits when discussing Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Teachers Who Influenced You.\nPart 1 (interview): Who was your favourite teacher at school? Do you still remember anything a teacher told you? Would you like to be a teacher yourself?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a teacher who had a strong influence on you. You should say: who this teacher was, what subject they taught, how they treated their students, and explain how this teacher changed the way you think or act.\nPart 3 (discussion): What qualities separate a great teacher from an average one? Is a teacher's personality more important than their knowledge? How might the role of teachers change as technology becomes more common in classrooms?",
+      "promptZh": "雅思口语练习组——影响你的老师",
+      "referencePoints": [
+        "Identify the teacher and the context in which you knew them",
+        "Give a concrete example of something they said or did",
+        "Explain the lasting effect on your habits, choices, or attitudes",
+        "Discuss teacher qualities in general terms for Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Websites and Apps.\nPart 1 (interview): Which app do you open most often on your phone? Have you ever deleted an app because it wasted your time? Do you prefer using websites or mobile apps for the same service?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a website or app that you find very useful. You should say: what it is, how you first discovered it, what you use it for, and explain why it is more useful to you than similar alternatives.\nPart 3 (discussion): Why do some apps become popular very quickly and then disappear? Should governments regulate how apps are designed to hold people's attention? In what ways do useful apps change how people organise their daily lives?",
+      "promptZh": "雅思口语练习组——网站与应用程序",
+      "referencePoints": [
+        "Name the website or app and its main function",
+        "Describe how it fits into your routine with a specific example",
+        "Compare it briefly with an alternative to justify your choice",
+        "Move from personal use to social effects in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Being Busy.\nPart 1 (interview): Are you busier now than you were a few years ago? What do you usually do when you have too many things to do at once? Do you like having a full schedule?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a period in your life when you were extremely busy. You should say: when it was, what you had to do during that time, how you managed your time, and explain what you learned from being so busy.\nPart 3 (discussion): Why do many people today feel busier than previous generations did? Is being busy sometimes used as a way to appear important? How can societies help people achieve a better balance between work and rest?",
+      "promptZh": "雅思口语练习组——忙碌的生活",
+      "referencePoints": [
+        "Set the scene: when the busy period happened and what caused it",
+        "List two or three specific demands on your time",
+        "Describe a concrete time-management strategy you used",
+        "Reflect on lessons learned and link them to wider society in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Borrowing and Lending.\nPart 1 (interview): Have you ever borrowed anything from a neighbour or classmate? Do you feel comfortable lending your belongings to others? Is there anything you would never lend to anyone?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you borrowed something important from someone. You should say: what you borrowed, who you borrowed it from, why you needed it, and explain how you felt about having to borrow it.\nPart 3 (discussion): Why are some people reluctant to lend money even to close friends? How has the sharing economy changed attitudes towards ownership? Should schools teach young people about responsible borrowing and debt?",
+      "promptZh": "雅思口语练习组——借用与出借",
+      "referencePoints": [
+        "State clearly what was borrowed and from whom",
+        "Explain the situation that made borrowing necessary",
+        "Describe your feelings and whether you returned it promptly",
+        "Broaden to trust, money, and the sharing economy in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Waiting and Patience.\nPart 1 (interview): How do you usually pass the time when you have to wait for something? Are you a patient person? Does waiting bother you more now than it did in the past?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an occasion when you had to wait a long time for something or someone. You should say: what you were waiting for, where you were waiting, how long you had to wait, and explain how you felt while you were waiting.\nPart 3 (discussion): Why do people seem less patient today than in the past? In what situations is waiting actually good for people? How do businesses try to make waiting feel shorter for their customers?",
+      "promptZh": "雅思口语练习组——等待与耐心",
+      "referencePoints": [
+        "Describe the waiting situation with specific time and place details",
+        "Explain what made the wait difficult or bearable",
+        "Express your emotions with a range of vocabulary",
+        "Analyse modern impatience and its causes in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Maps and Directions.\nPart 1 (interview): Do you use paper maps or digital maps more often? Are you good at giving directions to strangers? Have you ever got lost in an unfamiliar place?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you had to find your way in a place you did not know. You should say: where you were, why you were there, how you tried to find the right way, and explain what the experience taught you about navigating new places.\nPart 3 (discussion): Do navigation apps make people worse at finding their way on their own? Why do some people enjoy exploring places without any plan? How important is it for city planners to design streets that are easy to navigate?",
+      "promptZh": "雅思口语练习组——地图与方向",
+      "referencePoints": [
+        "Set the scene of the unfamiliar place and your purpose there",
+        "Narrate the steps you took to find your way",
+        "Mention any help you received from people or technology",
+        "Debate technology's effect on natural navigation skills in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Wild Animals Seen in Person.\nPart 1 (interview): Are there many wild animals or birds where you live? Did you learn about wild animals when you were at school? Would you like to see animals in the wild rather than in a zoo?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a wild animal you have seen with your own eyes. You should say: what the animal was, where and when you saw it, what it was doing, and explain why seeing this animal left an impression on you.\nPart 3 (discussion): Why do encounters with wild animals affect people so strongly? Should tourists be allowed to visit areas where endangered animals live? What responsibilities do cities have when wild animals move into urban areas?",
+      "promptZh": "雅思口语练习组——亲眼见过的野生动物",
+      "referencePoints": [
+        "Identify the animal and describe its appearance and behaviour",
+        "Give clear details of the place and moment of the sighting",
+        "Convey the emotional impact of the encounter",
+        "Discuss conservation and human-wildlife contact in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Advertising Encounters.\nPart 1 (interview): Where do you see advertisements most often in your daily life? Have you ever bought something because of an advertisement? Do you ever skip or block adverts?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an advertisement that you remember well. You should say: what product or service it promoted, where you saw or heard it, what happened in the advertisement, and explain why it stayed in your memory.\nPart 3 (discussion): What techniques make an advertisement memorable rather than annoying? Should advertising aimed at children be restricted? Do advertisements shape what people believe they need?",
+      "promptZh": "雅思口语练习组——遇到的广告",
+      "referencePoints": [
+        "Describe the advertisement's content, style, and message",
+        "Explain where you encountered it and how often",
+        "Analyse the specific element that made it memorable",
+        "Evaluate advertising ethics and influence in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Family Meal Traditions.\nPart 1 (interview): How often does your family eat a meal together? Who usually decides what your family eats? Did you have any special meal customs when you were growing up?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a meal tradition in your family. You should say: what the tradition is, when and how often it happens, who takes part in it, and explain why this tradition matters to your family.\nPart 3 (discussion): Why are shared meals important for family relationships? Are family meal traditions disappearing in modern societies? How do meal customs differ between generations in your country?",
+      "promptZh": "雅思口语练习组——家庭聚餐传统",
+      "referencePoints": [
+        "Describe the tradition and the food or setting involved",
+        "Explain each family member's role in the occasion",
+        "Show why the tradition carries emotional or cultural weight",
+        "Compare generational and social changes in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Learning from Mistakes.\nPart 1 (interview): Do you usually admit it when you make a mistake? How do you feel when someone corrects you? Are you afraid of making mistakes when you speak English?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a mistake you made that taught you something valuable. You should say: what the mistake was, when and where it happened, what the immediate result was, and explain what you learned from making this mistake.\nPart 3 (discussion): Why do some people find it hard to admit their mistakes? Should schools punish mistakes or treat them as part of learning? Do organisations learn from failures in the same way individuals do?",
+      "promptZh": "雅思口语练习组——从错误中学习",
+      "referencePoints": [
+        "Tell the story of the mistake honestly with clear sequence",
+        "Describe the consequences and your initial reaction",
+        "Articulate the specific lesson you took away",
+        "Generalise to attitudes towards failure in education and work in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Outdoor Markets.\nPart 1 (interview): Are there any street markets or open-air markets near where you live? What kinds of things can people buy at markets in your country? Do you prefer markets or supermarkets?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an outdoor market you have visited. You should say: where the market is, what is sold there, what the atmosphere is like, and explain why you would or would not recommend this market to others.\nPart 3 (discussion): Why do traditional markets survive even when supermarkets are more convenient? What role do markets play in the social life of a community? Should local governments protect small market traders from large retail chains?",
+      "promptZh": "雅思口语练习组——露天市场",
+      "referencePoints": [
+        "Locate the market and describe its layout and goods",
+        "Use sensory details to capture sounds, smells, and crowds",
+        "Give a clear recommendation with reasons",
+        "Discuss economic and community value of markets in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Staying Up Late.\nPart 1 (interview): What time do you usually go to bed? Do you ever stay up late? What do you normally do if you cannot fall asleep?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a night when you stayed up very late. You should say: when it was, why you stayed up, what you did during the night, and explain how you felt the next day.\nPart 3 (discussion): Why do many young people prefer to stay up late? How does modern technology affect people's sleeping habits? Should employers or schools adjust their schedules to suit people who work better at night?",
+      "promptZh": "雅思口语练习组——熬夜",
+      "referencePoints": [
+        "Explain the reason for staying up, whether work, study, or fun",
+        "Narrate the night's events in chronological order",
+        "Describe the physical and mental effects afterwards",
+        "Connect sleep habits to technology and schedules in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Handmade Things.\nPart 1 (interview): Have you ever made anything by hand? Did you do craft activities at school? Do you prefer handmade or factory-made products as gifts?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe something you made by hand, or a handmade object you own. You should say: what it is, who made it and how, what it is used for, and explain why this handmade object is special to you.\nPart 3 (discussion): Why are handmade products often more expensive than mass-produced ones? Are traditional craft skills worth preserving in an age of automation? What do people gain personally from making things with their hands?",
+      "promptZh": "雅思口语练习组——手工制品",
+      "referencePoints": [
+        "Describe the object's appearance, materials, and making process",
+        "Explain its practical or decorative purpose",
+        "Convey the personal meaning behind the object",
+        "Weigh craftsmanship against mass production in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Sharing Accommodation.\nPart 1 (interview): Do you live alone or with other people? What do you think is the hardest part of sharing a home? Have you ever had to share a room?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an experience of living with other people, such as flatmates, roommates, or relatives. You should say: who you lived with, how the household was organised, what you enjoyed or found difficult, and explain what the experience taught you about living with others.\nPart 3 (discussion): Why is sharing accommodation becoming more common in big cities? What rules help people live together peacefully? Does living with strangers change a person's character?",
+      "promptZh": "雅思口语练习组——合住与共享居所",
+      "referencePoints": [
+        "Introduce the people and the living arrangement",
+        "Give examples of shared duties, routines, or conflicts",
+        "Balance positive and negative aspects honestly",
+        "Analyse urban housing trends and social skills in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Public Speaking.\nPart 1 (interview): Have you ever spoken in front of a group of people? Do you get nervous when many people are listening to you? Did your school give you chances to practise speaking to an audience?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you spoke in front of an audience. You should say: what the occasion was, what you talked about, how you prepared for it, and explain how you felt before, during, and after speaking.\nPart 3 (discussion): Why is public speaking frightening for so many people? Is the ability to speak well in public becoming more or less important in the digital age? Should presentation skills be a compulsory part of education?",
+      "promptZh": "雅思口语练习组——公开演讲",
+      "referencePoints": [
+        "Set the context: event, audience size, and your topic",
+        "Describe your preparation methods in detail",
+        "Trace your emotions through the stages of the experience",
+        "Debate the value of speaking skills in modern life in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Collecting Things.\nPart 1 (interview): Do you or anyone in your family collect anything? What things do people commonly collect in your country? Did you keep any collections when you were younger?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe something you collect or would like to collect. You should say: what the items are, how you got or would get them, where you keep or would keep them, and explain why collecting these things appeals to you.\nPart 3 (discussion): Why do people enjoy collecting things that have little practical use? Has the internet changed the way people collect and trade items? Can collecting become an unhealthy habit, and if so, when?",
+      "promptZh": "雅思口语练习组——收藏物品",
+      "referencePoints": [
+        "Specify the collected items and how the collection started",
+        "Describe how items are found, stored, or displayed",
+        "Explain the satisfaction or meaning behind collecting",
+        "Explore psychology and online trading of collections in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Weekend Habits.\nPart 1 (interview): What do you usually do at the weekend? Do you prefer to plan your weekends or keep them free? Is Saturday or Sunday more enjoyable for you?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe how you usually spend a typical weekend. You should say: what activities you normally do, who you spend the time with, how this routine developed, and explain whether you would like to change anything about your weekends.\nPart 3 (discussion): Why do some people fill their weekends with activities while others prefer to rest? Is the traditional two-day weekend still suitable for modern working life? How do weekend habits reflect a country's culture?",
+      "promptZh": "雅思口语练习组——周末习惯",
+      "referencePoints": [
+        "Outline a typical weekend timetable with concrete activities",
+        "Mention the people who share your weekend time",
+        "Evaluate your routine and suggest possible changes",
+        "Discuss work-rest culture across societies in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Unexpected Kindness.\nPart 1 (interview): Have you helped anyone recently? Do strangers in your city often help each other? How do you usually thank people who help you?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when someone was unexpectedly kind to you. You should say: who the person was, what they did for you, why their kindness surprised you, and explain how this experience affected the way you treat others.\nPart 3 (discussion): Why do small acts of kindness from strangers affect people so deeply? Are people in big cities less kind than people in small towns, or does it only appear that way? Can kindness be taught, or is it a natural personality trait?",
+      "promptZh": "雅思口语练习组——意外的善意",
+      "referencePoints": [
+        "Narrate the situation and the kind act clearly",
+        "Explain why the help was unexpected at that moment",
+        "Describe the emotional impact and any change in your behaviour",
+        "Reflect on kindness in urban society and education in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Rivers, Lakes and the Sea.\nPart 1 (interview): Is there a river, lake, or sea near your hometown? Do you enjoy activities in or near water? Did you learn to swim when you were young?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a place by the water that you like, such as a river, lake, or beach. You should say: where it is, how often you go there, what people do at this place, and explain why being near the water there makes you feel good.\nPart 3 (discussion): Why are so many cities built next to rivers or the sea? How does water pollution affect the way people use rivers and coastlines? Should access to beaches and lakesides always be free for the public?",
+      "promptZh": "雅思口语练习组——河流、湖泊与大海",
+      "referencePoints": [
+        "Locate the water place and describe its scenery",
+        "Describe typical activities and your personal connection",
+        "Express the calming or energising effect of the place",
+        "Discuss urban geography and environmental protection in Part 3"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    }
+  ]
+}

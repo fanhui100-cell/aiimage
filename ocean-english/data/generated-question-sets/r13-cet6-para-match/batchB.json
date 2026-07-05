@@ -1,0 +1,296 @@
+{
+  "template": "cet-para-match",
+  "level": 4,
+  "sets": [
+    {
+      "passage": "[A] For most of the twentieth century, economists treated continuous expansion as the natural condition of a healthy nation. Rising output was assumed to lift wages, fund public services, and quiet political discontent. The very word \"recession\" came to signal failure, and policymakers organised entire institutions around the promise that next year would always produce more than the last.\n[B] Yet this confidence rested on a quiet assumption that the planet could supply endless raw materials and absorb unlimited waste. As factories multiplied and consumption deepened, the physical inputs that growth depended upon began to show strain. Forests, fisheries, and underground reserves were drawn down faster than they could replenish.\n[C] Critics began to ask whether an economy could keep enlarging within a system that itself does not enlarge. The earth, they pointed out, is fixed in size, so any process that demands ever more from it must eventually meet a ceiling. This insight challenged the comfortable belief that ingenuity alone could postpone every limit indefinitely.\n[D] Defenders of expansion replied that human cleverness repeatedly outwits scarcity. When one resource grows dear, they argued, inventors devise substitutes or learn to extract value from less. History, in their telling, is a record of pessimists proven wrong by the next breakthrough.\n[E] Still, even sympathetic observers noticed that certain costs were not appearing on any balance sheet. Polluted rivers, degraded soil, and a warming atmosphere imposed real burdens, yet conventional measures of prosperity ignored them entirely, treating destruction as if it were free.\n[F] In response, a movement arose proposing that nations measure success differently. Instead of celebrating sheer volume of activity, these thinkers wanted indicators that captured health, leisure, and the condition of the environment, arguing that a wiser society would track wellbeing rather than mere transactions.\n[G] Their boldest claim was that a mature economy might deliberately stop chasing increase and settle into a steady state, neither swelling nor shrinking. Such an arrangement, they insisted, need not mean stagnation, since improvement in quality could continue even after the quantity of stuff stabilised.\n[H] Opponents found this vision naive, warning that halting growth would trap the poor in permanent hardship and ignite fierce competition over a fixed pie. Without expansion, they cautioned, every gain for one group would require a loss for another, breeding resentment rather than contentment.\n[I] The debate ultimately turned on a question of values rather than mechanics. What, after all, is an economy for? If its purpose is to deliver dignified lives within the boundaries the planet imposes, then the pursuit of perpetual increase may be less a triumph than a trap disguised as progress.",
+      "statements": [
+        "Some reformers urged replacing output-based scorecards with gauges of human and ecological flourishing.",
+        "Throughout the last century, economists regarded never-ending expansion as the normal state of a thriving country.",
+        "Supporters of endless growth insist that inventiveness has always found ways around shortages.",
+        "The fiercest proposal held that a developed economy could intentionally cease enlarging and remain stable.",
+        "The argument finally rested on what an economy is meant to achieve rather than on technical details.",
+        "Belief in expansion silently presumed the earth could provide materials without end and swallow all refuse.",
+        "Detractors warned that ending growth would lock disadvantaged people into lasting deprivation.",
+        "Skeptics questioned how something could keep enlarging inside a world that stays the same size.",
+        "Many harms such as soiled water and a heating atmosphere never showed up in standard prosperity figures.",
+        "A label once used for downturns became shorthand for national failure."
+      ],
+      "answers": [5, 0, 3, 6, 8, 1, 7, 2, 4, 0],
+      "paras": 9,
+      "explain_zh": [
+        "第[F]段提出改用衡量健康、闲暇与环境状况的指标，而非单纯产值。",
+        "第[A]段说整个二十世纪经济学家把持续扩张视为健康国家的常态。",
+        "第[D]段指出扩张的拥护者认为人类聪明才智总能绕过稀缺。",
+        "第[G]段最大胆的主张是成熟经济体可有意停止增长、维持稳态。",
+        "第[I]段说辩论最终落在经济目的这一价值问题，而非机制。",
+        "第[B]段指出增长信念暗含地球能无限供料并吸纳一切废物的假设。",
+        "第[H]段反对者警告停止增长会让穷人陷入长期困苦。",
+        "第[C]段质疑在一个体量固定的系统里如何持续扩大。",
+        "第[E]段说污水、变暖等代价从不出现在常规繁荣度量中。",
+        "第[A]段提到\"衰退\"一词成了国家失败的代名词。"
+      ]
+    },
+    {
+      "passage": "[A] We tend to imagine memory as a faithful recording, a private archive that stores the past exactly as it happened. From this comforting picture comes the belief that who we are is simply the sum of accurate files we can replay whenever we wish to know ourselves.\n[B] Research into how the brain actually works has dismantled that picture. Each act of recollection turns out to be an act of reconstruction, in which fragments are reassembled and quietly altered to fit present needs, so the remembered scene is rebuilt rather than retrieved unchanged.\n[C] Because recall reshapes its material, the stories we tell about our lives drift over time. A childhood humiliation may soften into a wry anecdote, while a minor slight can swell into a defining wound, depending on the meaning we later attach to it. The same vacation, recalled at thirty and again at sixty, can shift its colour entirely, as later joys and disappointments seep backward and quietly recolour what we thought was settled long ago.\n[D] This pliability matters because identity leans heavily on narrative. We knit scattered episodes into a continuous story with a hero, a struggle, and a direction, and that story, more than any single fact, tells us who we believe ourselves to be.\n[E] The narrative we assemble is not purely personal, for families and communities supply ready-made plots. A culture that prizes self-reliance encourages its members to recall their triumphs as solo achievements, while one that honours kinship frames the same events as collective gifts. The plots we inherit thus act like invisible templates, sorting the same raw episodes into very different shapes long before we are aware of having chosen anything at all.\n[F] When memory fails on a large scale, the threat to selfhood becomes vivid. People living with severe amnesia often retain skills and intelligence yet lose the thread that links their yesterdays to their tomorrows, and observers describe a strange loosening of the person they once knew.\n[G] Forgetting, however, is not merely loss; it performs essential editing. A mind that clung to every detail would drown in clutter, unable to distinguish the meaningful from the trivial, so the pruning away of most experience is what allows a coherent self to emerge at all. Far from being a defect, this gentle erosion clears space for pattern and emphasis, letting a few vivid landmarks stand out against an otherwise featureless plain.\n[H] These findings carry a quiet liberation. If the past is rebuilt each time we summon it, then we are not prisoners of what happened but authors who may, with honesty and effort, revise the meaning of our history and so reshape the person we are becoming.",
+      "statements": [
+        "Cultures that celebrate independence prompt people to remember victories as individual feats.",
+        "Many assume recollection is an exact recording that preserves events just as they occurred.",
+        "Studies show that remembering is really a rebuilding in which pieces are reassembled and changed.",
+        "Discarding most experience is precisely what permits a unified self to take shape.",
+        "Because we may rebuild the past, we are authors who can revise its meaning rather than captives of it.",
+        "Our sense of self depends largely on weaving separate events into one ongoing tale.",
+        "Severe memory loss can strip away the link between a person's past and future even when skills remain.",
+        "Over the years the accounts we give of ourselves shift, hardening or softening past episodes.",
+        "Communities hand their members pre-formed storylines rather than leaving narrative entirely private.",
+        "A mind retaining every detail would be overwhelmed and unable to sort the important from the trivial."
+      ],
+      "answers": [4, 0, 1, 6, 7, 3, 5, 2, 4, 6],
+      "paras": 8,
+      "explain_zh": [
+        "第[E]段说推崇自立的文化让人把成功记成个人成就。",
+        "第[A]段说人们以为记忆是如实录像，原样保存往事。",
+        "第[B]段指出研究表明回忆其实是重建，碎片被重组并改动。",
+        "第[G]段说舍弃大多数经历正是连贯自我得以形成的前提。",
+        "第[H]段说因往事可重建，我们是可修改其意义的作者而非俘虏。",
+        "第[D]段说自我感很大程度依赖把零散事件编成连续叙事。",
+        "第[F]段说严重失忆即便保留技能也会切断过去与未来的联系。",
+        "第[C]段说多年里我们对自己的讲述会变化，淡化或强化往事。",
+        "第[E]段说社群向成员提供现成情节，而非全留给个人。",
+        "第[G]段说保留每个细节的头脑会不堪重负，无法分辨轻重。"
+      ]
+    },
+    {
+      "passage": "[A] Trust is the invisible glue that lets strangers cooperate. Every time we board a bus, eat in a restaurant, or sign a contract, we extend a quiet confidence that others will behave as expected. Without this background faith, the simplest exchange would collapse into suspicion and paralysis.\n[B] Economists have shown that societies rich in mutual confidence prosper more easily, because transactions need fewer guards, lawyers, and locks. When people assume good faith, the friction of doing business drops, and resources that would have gone to policing one another can be spent on creating value instead.\n[C] Trust also lubricates democratic life. Citizens accept losing an election only if they believe the winners will not abuse power and will surrender it next time. Where that belief erodes, defeated factions reach for fraud or force, and the peaceful rotation of authority breaks down.\n[D] Yet confidence is not handed out blindly; it is calibrated through experience. We watch how others treat us, swap stories with neighbours, and gradually decide whom to rely upon. This slow accounting lets cooperation expand outward from family to acquaintance to the wider public. Each kept promise becomes a small deposit, and over time these deposits add up into a quiet ledger that guides how far we are willing to extend ourselves.\n[E] Modern institutions were designed to extend that accounting beyond people we personally know. Credit ratings, professional licences, and online reviews act as portable reputations, allowing us to deal safely with strangers whose faces we will never see and whose pasts we cannot directly inspect.\n[F] The fragility of trust is its most sobering feature. Built slowly over years, it can be shattered by a single betrayal, and once broken it resists quick repair. A bank that lies, a doctor who cheats, a friend who informs, leaves a scar that colours every future encounter.\n[G] Some thinkers warn that excessive suspicion is itself corrosive. A society that demands proof of honesty at every step exhausts itself in verification, and the very surveillance meant to protect citizens can poison the spontaneous goodwill on which a healthy community depends.\n[H] Rebuilding broken confidence, scholars suggest, requires more than apologies. It demands consistent behaviour over a long stretch, visible accountability when promises fail, and institutions that make honesty the easier path, so that ordinary people are not asked to be saints merely to function.\n[I] In the end, trust reveals a paradox at the heart of social life. It cannot be commanded into existence, yet nothing of value gets built without it. We are forever wagering on one another, and the willingness to make that bet is what separates a community from a crowd.",
+      "statements": [
+        "Tools like credit scores and online ratings serve as portable reputations for dealing with unknown people.",
+        "An unspoken assurance that others will act predictably underlies even our most routine dealings.",
+        "Restoring shattered confidence takes sustained reliable conduct and visible accountability, not mere apology.",
+        "Communities flourish more readily where mutual confidence reduces the need for guards and legal safeguards.",
+        "Trust cannot be ordered into being, yet nothing worthwhile is created in its absence.",
+        "We grant reliance selectively, judging it through accumulated personal experience and shared accounts.",
+        "Losing parties accept electoral defeat only while convinced the victors will eventually relinquish power.",
+        "Demanding proof of honesty at every turn can drain a society and sour its natural goodwill.",
+        "Confidence takes years to build but can be destroyed by one act of treachery and heals slowly.",
+        "Once distrust sets in, defeated political groups may resort to deceit or violence."
+      ],
+      "answers": [4, 0, 7, 1, 8, 3, 2, 6, 5, 2],
+      "paras": 9,
+      "explain_zh": [
+        "第[E]段说信用评分、网络评价等是便携声誉，便于与陌生人打交道。",
+        "第[A]段说连最日常的往来都建立在他人会按预期行事的默契上。",
+        "第[H]段说重建破裂信任需长期一致行为与可见问责，而非只道歉。",
+        "第[B]段说互信降低对看守与法律保障的需求，社会因此更繁荣。",
+        "第[I]段说信任无法被命令产生，但缺它则一切有价值之物难成。",
+        "第[D]段说我们靠累积的亲身经验与他人说法有选择地给予信任。",
+        "第[C]段说败选方接受结果的前提是相信胜者终会交权。",
+        "第[G]段说处处索要诚实证明会耗尽社会并败坏自然善意。",
+        "第[F]段说信任多年才建成，却可能因一次背叛毁掉且恢复缓慢。",
+        "第[C]段说一旦不信任，败选政治群体可能诉诸欺诈或暴力。"
+      ]
+    },
+    {
+      "passage": "[A] False information has always travelled, but the speed and scale of its modern spread are without precedent. A rumour that once crept from village to village can now circle the globe before any correction is even drafted, reaching millions while the truth is still lacing its boots.\n[B] Part of the explanation lies in how our minds are built. We are drawn to claims that confirm what we already believe and to stories that stir strong emotion, so a vivid falsehood that flatters our prejudices spreads more eagerly than a dull fact that complicates them. The mental shortcuts that once helped our ancestors react quickly to danger now misfire in a flood of information, nudging us to share before we have paused to weigh whether the claim is even plausible.\n[C] The architecture of online platforms amplifies this tendency. Systems that reward whatever keeps users glued to a screen learn to promote outrage and astonishment, and since fabrications can be engineered to be more shocking than reality, the machinery quietly tilts toward the false.\n[D] Money sharpens the incentive further. Whole enterprises now exist to manufacture sensational content purely for advertising revenue, indifferent to whether their headlines are accurate, profiting from clicks regardless of the confusion they sow in the wider world.\n[E] Political actors add a deliberate edge. Some spread deception not by chance but by design, seeking to discredit opponents, depress turnout, or so flood the public square with contradictory claims that audiences give up trying to tell what is real at all.\n[F] The damage extends beyond any single lie. As falsehoods accumulate, people grow cynical about every source, and a corrosive doubt sets in where citizens trust nothing and no one, a condition arguably more dangerous than believing a particular untruth. When trust in shared facts dissolves, even honest reporting is dismissed as just another angle, and the common ground on which argument depends slowly washes away beneath everyone's feet.\n[G] Proposed remedies vary widely. Some pin their hopes on fact-checking and platform regulation, while others argue that the only durable defence is education that trains ordinary people to question sources, weigh evidence, and pause before sharing. Such habits, taught early and practised often, may matter more than any single rule, since they travel with a person into every new platform yet to be invented.\n[H] None of these fixes is simple, because the line between honest error, sincere disagreement, and deliberate deception is genuinely blurry. Heavy-handed censorship risks silencing legitimate dissent, yet doing nothing surrenders the public sphere to whoever shouts the most arresting lie.",
+      "statements": [
+        "Some spread falsehoods on purpose to smear rivals or flood discourse until people stop sorting truth from lies.",
+        "Modern fabrication travels at a velocity and reach never before seen in history.",
+        "Heavy censorship may mute genuine dissent, while inaction hands the public arena to the loudest liar.",
+        "Platforms that reward attention tend to push outrage, and lies can be made more startling than facts.",
+        "Our cognition favours claims that match existing beliefs and arouse strong feeling.",
+        "Certain businesses fabricate sensational stories solely to earn advertising income.",
+        "The accumulation of lies breeds a sweeping cynicism that may be worse than any single false belief.",
+        "Some place faith in fact-checking and regulation, others in teaching people to scrutinise sources.",
+        "A blurry boundary among honest mistakes, sincere disagreement, and intentional deceit complicates any cure.",
+        "Engineered shock value lets falsehoods outcompete reality within attention-driven recommendation systems."
+      ],
+      "answers": [4, 0, 7, 2, 1, 3, 5, 6, 7, 2],
+      "paras": 8,
+      "explain_zh": [
+        "第[E]段说有人故意散布谎言以抹黑对手或淹没舆论使人放弃辨真。",
+        "第[A]段说现代虚假信息传播的速度与规模前所未有。",
+        "第[H]段说严厉审查可能压制正当异见，无所作为则让位给最响的谎言。",
+        "第[C]段说奖励注意力的平台倾向推送愤怒，而谎言能比事实更耸动。",
+        "第[B]段说人脑偏爱契合既有信念且激发强烈情绪的说法。",
+        "第[D]段说某些企业纯为广告收入炮制耸人听闻的内容。",
+        "第[F]段说谎言累积催生普遍犬儒，可能比相信某条假话更糟。",
+        "第[G]段说有人寄望事实核查与监管，有人主张教人审视来源。",
+        "第[H]段说诚实失误、真诚分歧与蓄意欺骗界限模糊，使对策难行。",
+        "第[C]段说经设计的震撼性让谎言在注意力驱动的推荐系统中胜出。"
+      ]
+    },
+    {
+      "passage": "[A] A square, a park, a public library: these shared places ask nothing of us except that we show up. Unlike shops or clubs, they do not demand a purchase or a password, and this openness is precisely what makes them rare and quietly precious in a commercialised world.\n[B] Such spaces perform a social function that markets cannot. They are among the few settings where people of different incomes, ages, and backgrounds physically mingle, and that ordinary co-presence, repeated daily, slowly weaves the fabric of a common life.\n[C] Sociologists note that casual encounters in these places build a kind of low-level familiarity. We may never learn a stranger's name, yet seeing the same faces at the fountain or the bus stop generates a reassuring sense that we belong to a shared world rather than a swarm of isolated individuals. Over months these wordless recognitions accumulate into something like trust, so that a neighbourhood begins to feel less like a grid of addresses and more like a place where one is quietly known.\n[D] Public spaces also serve democracy directly. They provide the ground on which people gather to protest, celebrate, or simply form opinions in one another's company, and a society that loses such ground loses a vital arena in which collective voice can take physical shape.\n[E] Their value extends to mental and physical health. Access to greenery and room to walk lowers stress and invites movement, and researchers have linked the presence of well-kept parks to measurable improvements in the wellbeing of nearby residents. A bench in the shade or a path along the water offers a small daily reprieve from noise and crowding, and these modest pleasures, freely available, prove surprisingly powerful when repeated across a lifetime.\n[F] Despite these benefits, such places are under pressure. Budgets are cut, land is sold to developers, and once-open plazas are subtly converted into zones where only paying customers feel welcome, a process that hollows out the commons while preserving its appearance.\n[G] The privatisation of shared ground carries hidden costs. When the only available gathering points are malls and cafes, those who cannot spend are quietly excluded, and the city fragments into pockets sorted by wealth rather than knit together by encounter. Each enclave then grows a little more certain that strangers are threats rather than neighbours, and the easy mixing that once softened differences gradually thins into wary separation.\n[H] Some cities are pushing back, reclaiming streets for pedestrians, opening libraries as community hubs, and treating public space as essential infrastructure rather than leftover land. Their wager is that a place belonging to everyone is the foundation on which everything else worth having must rest.",
+      "statements": [
+        "When only malls and cafes remain for gathering, those without money are subtly shut out.",
+        "Shared places like squares and libraries require no payment or membership, unlike commercial venues.",
+        "Certain cities are reclaiming streets and reframing public space as vital infrastructure.",
+        "These places let people of varied incomes and ages physically mix in ways markets cannot replicate.",
+        "Open plazas are quietly turned into zones welcoming only paying customers as budgets shrink.",
+        "Repeatedly seeing the same unnamed faces fosters a comforting sense of belonging to a shared world.",
+        "Such ground gives democracy a physical arena for protest, celebration, and forming opinions together.",
+        "Access to green areas and walking room reduces stress and boosts residents' wellbeing.",
+        "Their openness, demanding neither purchase nor password, makes them rare in a commercialised age.",
+        "Treating shared land as foundational, some cities open libraries as community hubs."
+      ],
+      "answers": [6, 0, 7, 1, 5, 2, 3, 4, 0, 7],
+      "paras": 8,
+      "explain_zh": [
+        "第[G]段说若只剩商场咖啡馆可聚集，无钱者被悄然排除。",
+        "第[A]段说广场、图书馆等共享场所不像商业场所需付费或入会。",
+        "第[H]段说有些城市夺回街道，把公共空间视作重要基础设施。",
+        "第[B]段说这些场所让不同收入年龄者实地交融，是市场无法复制的。",
+        "第[F]段说预算缩减下开放广场被悄然改成只欢迎付费顾客的区域。",
+        "第[C]段说反复见到同样无名面孔带来归属于共享世界的安心感。",
+        "第[D]段说这类场地为抗议、庆祝与共同形成意见提供实体舞台。",
+        "第[E]段说接触绿地与步行空间降低压力、提升居民福祉。",
+        "第[A]段说其无需购物或密码的开放性使其在商业化时代稀有。",
+        "第[H]段说视共享土地为根基，一些城市把图书馆办成社区枢纽。"
+      ]
+    },
+    {
+      "passage": "[A] For decades the popular recipe for getting people to act was simple: dangle a reward or threaten a punishment. Pay more for more output, dock the lazy, and behaviour would obediently follow. This carrot-and-stick model felt like common sense and shaped schools, offices, and homes alike.\n[B] Careful experiments, however, revealed a stranger picture. For routine, mechanical tasks, bigger payments did boost performance, but for work requiring even modest creativity, larger rewards often made results worse, as if the promise of a prize narrowed attention and squeezed out inventiveness.\n[C] Researchers traced the puzzle to a distinction between two engines of action. External inducements push us from outside, while a deeper drive arises from within, from the satisfaction of the activity itself, and this internal fuel turns out to power our most sophisticated efforts. Where outside pressure tends to fade the moment the reward stops, the inner engine keeps turning quietly on its own, which is why it sustains the patient, exploratory work that genuine problems demand.\n[D] Three ingredients, studies suggest, feed that inner drive. People work hardest when they feel they direct their own actions, when they are steadily improving at something that matters to them, and when their effort connects to a purpose larger than their own gain.\n[E] The autonomy ingredient is easily underestimated. Granting workers genuine say over how, when, and with whom they labour repeatedly lifts both their output and their contentment, yet many organisations cling to control, mistaking surveillance for management.\n[F] Mastery, the second ingredient, explains why people pour unpaid hours into difficult hobbies. The slow climb toward competence is intrinsically gratifying, and the absence of any external reward is no obstacle, since the reward is the felt progress itself. The guitarist who practises scales at midnight and the coder who tinkers with a side project are paid in nothing but the quiet thrill of getting steadily better at something they have chosen to care about.\n[G] Purpose, the third, has grown more visible as workers increasingly ask what their labour is for. Firms that can credibly link daily tasks to some meaningful end find their people more committed than those that offer only a paycheck, however generous. When the work seems to matter beyond the office walls, even tedious stretches feel bearable, because they are understood as steps toward an end the worker actually values.\n[H] None of this means money is irrelevant. Fair and sufficient pay removes the distraction of want, freeing people to be moved by deeper motives. The mistake is to imagine that more cash, piled ever higher, can manufacture the engagement that only autonomy, mastery, and purpose can supply.",
+      "statements": [
+        "Letting employees genuinely decide how and when they work raises both productivity and satisfaction.",
+        "The old formula for prompting action was to offer rewards or impose penalties.",
+        "Adequate fair pay clears away the distraction of need so deeper motives can operate.",
+        "Inner drive is fed by self-direction, steady improvement at something meaningful, and a larger purpose.",
+        "People devote unpaid hours to hard hobbies because advancing toward skill is rewarding in itself.",
+        "On mechanical chores bigger payments helped, but on creative work larger rewards often hurt results.",
+        "Companies that link everyday tasks to a meaningful end secure greater commitment than pay alone.",
+        "Action springs from two sources: outside inducements and a deeper drive arising from within.",
+        "Treating surveillance as management, many organisations cling to control over their workers.",
+        "Money cannot, however high it is piled, manufacture the engagement that deeper motives supply."
+      ],
+      "answers": [4, 0, 7, 3, 5, 1, 6, 2, 4, 7],
+      "paras": 8,
+      "explain_zh": [
+        "第[E]段说让员工真正自主决定如何与何时工作可提升产出与满意度。",
+        "第[A]段说旧的促动公式是给奖励或施惩罚。",
+        "第[H]段说充足公平的报酬消除匮乏的干扰，让深层动机得以发挥。",
+        "第[D]段说内在动力由自主、对有意义之事的持续精进和更大目的滋养。",
+        "第[F]段说人为难的爱好投入无偿时间，因迈向熟练本身令人满足。",
+        "第[B]段说机械任务多付有效，但创造性工作中更大奖励常损害结果。",
+        "第[G]段说把日常任务连接有意义目的的公司获得超越薪酬的投入。",
+        "第[C]段说行动有两源：外部诱因与源自内心的更深驱动。",
+        "第[E]段说许多机构误把监视当管理，紧抓对员工的控制不放。",
+        "第[H]段说金钱无论堆多高都无法制造只有深层动机才能提供的投入。"
+      ]
+    },
+    {
+      "passage": "[A] The neat division between work and the rest of life is a surprisingly recent invention. Before the factory, labour blurred into household and field, and only the rhythm of the industrial clock carved the day into hours that were sold and hours that were one's own.\n[B] Digital technology has now smudged that boundary again, but in the opposite direction. The same devices that free us from the office also follow us home, so that the email arriving at midnight quietly annexes the evening that once belonged to family or rest.\n[C] This constant availability exacts a toll that productivity figures rarely capture. People who never fully disconnect report rising exhaustion, frayed relationships, and a creeping sense that they are always on duty yet never quite present, neither fully working nor truly resting. The body too registers the strain, in shallow sleep and a restlessness that lingers even on supposed holidays, when the phone in the pocket keeps a thin wire running straight back to the desk.\n[D] Some employers have begun to treat rest as a resource rather than a weakness. Recognising that a depleted workforce is an unproductive one, they experiment with shorter weeks and protected hours, betting that fewer but fresher hours yield more than many tired ones.\n[E] A handful of nations have written such ideas into law, granting employees a right to ignore work messages outside agreed hours. These rules signal a shift in expectation, declaring that constant reachability is not the natural order but a choice societies may decline.\n[F] Yet the pressure does not fall evenly. Those in insecure or low-paid jobs often lack the standing to switch off, so the freedom to disconnect can become a privilege of the comfortable, deepening rather than easing existing divides.\n[G] Cultural habits prove as stubborn as any policy. In workplaces where long hours signal devotion, employees compete to be seen straining late, and a quiet arms race of visible busyness undermines even well-meaning attempts to protect personal time.\n[H] The deeper question is what a life is for. If we organise everything around output, the hours not spent producing come to feel like guilty idleness, whereas a fuller view treats rest, care, and unhurried attention as ends in themselves rather than fuel for the next shift. Seen this way, an idle afternoon is not wasted time awaiting justification but a portion of life finally being lived for its own sake.\n[I] Striking the balance, then, is less a scheduling trick than a reckoning with values. It asks individuals and societies to decide how much of a single, finite life they are willing to trade for income, and what they hope the remainder is for.",
+      "statements": [
+        "A few countries have legislated a right to disregard work messages beyond agreed hours.",
+        "The tidy split between work and the rest of life is a fairly recent creation tied to the factory clock.",
+        "Achieving balance is ultimately a confrontation with values, not a clever scheduling trick.",
+        "The same devices that liberate us from the office also pursue us home, seizing the evening.",
+        "Some employers now treat rest as a resource, trying shorter weeks and protected hours.",
+        "Insecure or low-paid workers often lack the standing to switch off, making disconnection a privilege.",
+        "Never fully unplugging brings exhaustion and a feeling of being on duty yet never present.",
+        "Where long hours signal loyalty, staff compete to appear busy, undercutting protective measures.",
+        "If life is organised around output, non-producing hours feel like guilty idleness.",
+        "New right-to-disconnect rules declare that constant reachability is a choice, not the natural order."
+      ],
+      "answers": [4, 0, 8, 1, 3, 5, 2, 6, 7, 4],
+      "paras": 9,
+      "explain_zh": [
+        "第[E]段说少数国家立法赋予在约定时间外无视工作消息的权利。",
+        "第[A]段说工作与生活的整齐划分是与工厂时钟相关的较近发明。",
+        "第[I]段说实现平衡终究是与价值观的较量，而非排程技巧。",
+        "第[B]段说让我们脱离办公室的设备也跟回家中，吞掉夜晚。",
+        "第[D]段说有些雇主把休息当资源，尝试更短工作周与受保护时段。",
+        "第[F]段说不稳定或低薪者常无底气下线，使断联成为特权。",
+        "第[C]段说从不彻底脱网带来疲惫与始终在岗却从不在场之感。",
+        "第[G]段说长工时象征忠诚处，员工争相显忙，削弱保护措施。",
+        "第[H]段说若生活以产出为中心，不生产的时间便像有罪的闲散。",
+        "第[E]段说断联权规则宣告随时可达是一种选择而非自然秩序。"
+      ]
+    },
+    {
+      "passage": "[A] Food is never merely fuel. What lands on a plate is the end point of decisions about land, labour, trade, and taste, so that even a humble sandwich carries within it a web of choices stretching across continents and centuries.\n[B] The modern food system is astonishingly efficient at producing calories cheaply, yet that cheapness conceals hidden costs. Low prices at the till are subsidised by exhausted soils, underpaid pickers, and a climate strained by the long journeys our groceries routinely make. The bill paid at the register is therefore only a fraction of the true price; the rest is quietly charged to ecosystems and workers who have no seat at the table when the figure is set.\n[C] Who eats well and who eats poorly maps closely onto wider inequality. In many wealthy cities, fresh produce is abundant in prosperous districts and scarce in poor ones, so diet becomes one more axis along which advantage and disadvantage are quietly reproduced.\n[D] Governments shape the plate more than diners realise. Subsidies steer farmers toward certain crops, tariffs decide which imports are affordable, and labelling rules determine what shoppers can even know, so the supposedly free choice of the consumer is fenced in advance.\n[E] Food also carries fierce symbolic weight. Dishes mark belonging and difference, and debates over what is authentic or acceptable to eat often stand in for older quarrels about identity, migration, and whose customs deserve respect. A dish carried across borders by one generation can become, for the next, a cherished emblem of home or an awkward marker of difference, and the kitchen quietly becomes a stage on which belonging is negotiated.\n[F] Activists have responded by reconnecting eaters with origins. Movements promoting local markets, fair trade, and transparency aim to shorten the distance, both physical and moral, between the person who grows food and the person who consumes it.\n[G] Critics caution that such movements can slide into privilege. When eating ethically demands time and money that many lack, the pursuit of virtuous food risks becoming a badge of status rather than a remedy for the injustices it claims to address. The farmers' market on a sunny weekend can quietly turn into a showcase for the comfortable, its higher prices fencing out the very households whose diets the movement most hoped to improve.\n[H] The politics of food, then, gathers the largest questions into the most intimate act. Every meal is a small vote about how land should be used, how labour should be valued, and what kind of world we are, three times a day, choosing to sustain.",
+      "statements": [
+        "Movements for local markets and fair trade seek to shorten the gap between grower and eater.",
+        "What reaches the plate is the outcome of decisions about land, labour, trade, and taste.",
+        "Every meal acts as a small vote on land use and the value of labour.",
+        "Cheap calories hide costs borne by depleted soils, underpaid pickers, and a strained climate.",
+        "Eating ethically can become a status badge when it demands time and money many lack.",
+        "Who eats well tracks broader inequality, with fresh produce scarce in poorer districts.",
+        "Disputes over authentic or acceptable food often stand in for quarrels about identity and migration.",
+        "Subsidies, tariffs, and labelling rules fence in the consumer's supposedly free choice.",
+        "Activists try to reconnect eaters with the origins of what they consume.",
+        "Diet becomes one more axis along which advantage is quietly reproduced."
+      ],
+      "answers": [5, 0, 7, 1, 6, 2, 4, 3, 5, 2],
+      "paras": 8,
+      "explain_zh": [
+        "第[F]段说本地市场与公平贸易运动力图缩短生产者与食用者的距离。",
+        "第[A]段说端上盘的是关于土地、劳动、贸易与口味决策的终点。",
+        "第[H]段说每顿饭都是关于土地使用与劳动价值的小小投票。",
+        "第[B]段说廉价热量掩盖了由耗竭土壤、低薪采摘者与受压气候承担的代价。",
+        "第[G]段说当合乎伦理的饮食需大量时间金钱时会沦为身份标志。",
+        "第[C]段说吃得好坏映射更广不平等，鲜货在贫困区稀缺。",
+        "第[E]段说关于何为正宗或可接受食物的争论常代替身份与移民之争。",
+        "第[D]段说补贴、关税与标签规则提前圈定消费者所谓的自由选择。",
+        "第[F]段说活动者试图把食用者与所食之物的来源重新连接。",
+        "第[C]段说饮食成为优势被悄然再生产的又一维度。"
+      ]
+    },
+    {
+      "passage": "[A] The ability to read and edit the code of life has advanced from distant dream to routine laboratory work within a single generation. Techniques once imagined only in fiction now let scientists rewrite genetic instructions with a precision that would have astonished researchers a few decades ago.\n[B] The medical promise is genuine and large. Diseases caused by a single faulty gene, long considered incurable, may become correctable, and the prospect of relieving inherited suffering gives the whole enterprise a powerful moral pull that is hard to dismiss. For a family that has watched the same cruel illness claim relative after relative, the chance to break that chain is not an abstract debate but a deeply personal hope few would ask them to surrender.\n[C] Yet a crucial line divides two kinds of intervention. Repairing the cells of a consenting patient affects only that individual, but altering the cells that pass to offspring would change every future descendant, who can never be asked whether they wished it.\n[D] This heritable editing raises the spectre of consequences no one can recall. A mistake confined to one person is a tragedy; the same mistake written into the germline could propagate down the generations, an experiment whose subjects have not yet been born and cannot consent. Unlike a flawed drug that can be withdrawn from the market, an edit woven into the species would be almost impossible to recall once it had spread through enough family lines.\n[E] Beyond safety lies the question of enhancement. Once we can prevent disease, the same tools might tune height, temperament, or intelligence, and societies must decide whether such tinkering is healing at all or merely the manufacture of children to specification. The boundary between curing a deficit and engineering a preference is far hazier than it first appears, and where a society draws that line will quietly reveal what it believes a person is owed at birth.\n[F] Justice complicates the picture further. If these powers arrive expensively, the wealthy could purchase advantages for their children that the poor cannot, hardening inequality into something written into biology itself rather than merely into bank balances.\n[G] Different societies are likely to answer these questions differently, and that divergence is itself a problem. A procedure banned in one country may be offered freely in another, so prohibitions leak across borders and a global technology resists any single nation's rules.\n[H] Many scientists therefore call not for a permanent ban but for caution paced by consent. They urge broad public deliberation, arguing that decisions touching the shared inheritance of the species should not be made by laboratories and markets alone, but by societies thinking together.",
+      "statements": [
+        "If these powers are costly, the rich could buy biological advantages the poor cannot, hardening inequality.",
+        "Reading and rewriting genetic instructions has moved from fantasy to routine within one generation.",
+        "Many researchers urge not a permanent ban but caution paced by broad public deliberation.",
+        "A vital line separates treating a consenting patient from altering cells passed to descendants.",
+        "Once disease can be prevented, the same tools might adjust traits like height or intelligence.",
+        "Correcting single-gene diseases once thought incurable gives the work a strong moral pull.",
+        "A procedure banned in one country may be freely offered in another, so prohibitions leak across borders.",
+        "An error written into the germline could propagate through generations of unconsenting descendants.",
+        "Societies must weigh whether tuning a child's traits is healing or manufacture to specification.",
+        "Decisions touching the species' shared inheritance should not rest with labs and markets alone."
+      ],
+      "answers": [5, 0, 7, 2, 4, 1, 6, 3, 4, 7],
+      "paras": 8,
+      "explain_zh": [
+        "第[F]段说若技术昂贵，富人可为子女买到穷人无法获得的生物优势，固化不平等。",
+        "第[A]段说读写基因指令在一代人内从幻想变为日常实验工作。",
+        "第[H]段说许多研究者主张不是永久禁止而是以公众审议为节奏的谨慎。",
+        "第[C]段说有条关键界线把治疗知情患者与改动传给后代的细胞分开。",
+        "第[E]段说一旦能防病，同样工具可能调整身高或智力等特征。",
+        "第[B]段说修复曾被视为不治的单基因病给这项工作强烈道德吸引力。",
+        "第[G]段说一国禁止的操作另一国或自由提供，禁令跨境泄漏。",
+        "第[D]段说写入生殖系的错误会在未同意的后代世代间传播。",
+        "第[E]段说社会须权衡调整孩子特征究竟是治疗还是按规格制造。",
+        "第[H]段说触及物种共同遗产的决定不应只由实验室和市场决定。"
+      ]
+    },
+    {
+      "passage": "[A] Heritage is often pictured as a collection of old buildings and dusty objects, but it is better understood as a relationship. What survives from the past becomes heritage only when a living community decides it is worth caring for, so the act of valuing is as important as the thing valued.\n[B] This means heritage is always selective. Out of the vast debris of history, societies choose a few monuments, songs, and rituals to preserve while letting the rest dissolve, and those choices quietly reveal whose past is honoured and whose is allowed to vanish. What a nation places in its museums and what it lets crumble are two halves of the same decision, and the silences are often as telling as the celebrations carved in stone.\n[C] Because selection encodes power, heritage can become contested ground. A statue that one group reveres as a tribute to its ancestors may strike another as a celebration of its oppressors, so the same stone carries opposite meanings depending on who is looking.\n[D] Heritage is not only material. Languages, recipes, craft techniques, and ways of telling stories are equally part of it, and these intangible forms are often the most fragile, capable of disappearing within a single generation if the chain of transmission is broken.\n[E] The pressures of the present constantly threaten this inheritance. Development paves over old quarters, global commerce flattens local distinctiveness, and young people drawn toward wider opportunities may simply stop practising the customs their grandparents took for granted. A craft that took a lifetime to master can lapse in a decade if no apprentice steps forward, and what vanishes leaves no rubble behind to mark that it was ever there.\n[F] Tourism cuts both ways. The visitors it draws can fund the upkeep of fragile sites and reward the survival of crafts, yet the same crowds can reduce a living tradition to a staged performance, hollowing out meaning even as they preserve appearances. A ceremony once performed for the gods may end up timed to the arrival of tour buses, its gestures intact but its spirit quietly drained, leaving the community uncertain whether it has been rescued or merely embalmed.\n[G] A further danger is freezing heritage in place. Treating a culture as a fixed museum exhibit denies the people who carry it the right to change, whereas living traditions have always evolved, absorbing new influences while keeping a thread of continuity intact.\n[H] At its best, then, the care of heritage is less about clinging to the past than about deciding, deliberately, what to carry forward. It asks each generation to choose which threads of inheritance still nourish a shared identity worth handing on.",
+      "statements": [
+        "Tourism can fund the upkeep of fragile sites yet reduce living traditions to staged performance.",
+        "Heritage is best seen as a relationship, since the past becomes heritage only when a community values it.",
+        "Caring for heritage is less about clinging to the past than deliberately choosing what to carry forward.",
+        "Out of history's vast debris, societies preserve only a chosen few items, revealing whose past is honoured.",
+        "Pressures of the present, like development and global commerce, threaten inherited customs.",
+        "Languages, recipes, and craft techniques are part of heritage and often the most fragile.",
+        "Treating a culture as a fixed exhibit denies its carriers the right to change.",
+        "Because selection encodes power, the same monument can carry opposite meanings for different groups.",
+        "Young people drawn to wider opportunities may simply stop practising inherited customs.",
+        "Each generation is asked to choose which threads of inheritance still nourish a shared identity."
+      ],
+      "answers": [5, 0, 7, 1, 4, 3, 6, 2, 4, 7],
+      "paras": 8,
+      "explain_zh": [
+        "第[F]段说旅游可资助脆弱遗址维护，却也把活传统降为表演。",
+        "第[A]段说遗产最好看作一种关系，过去须被社群珍视才成遗产。",
+        "第[H]段说守护遗产不在死守过去，而在刻意选择把什么传下去。",
+        "第[B]段说社会只从历史残骸中保存少数选项，揭示谁的过去被尊崇。",
+        "第[E]段说开发与全球商业等当下压力威胁继承的习俗。",
+        "第[D]段说语言、食谱与手艺属遗产且往往最脆弱。",
+        "第[G]段说把文化当固定展品否定其承载者改变的权利。",
+        "第[C]段说因选择含权力，同一纪念物对不同群体可有相反含义。",
+        "第[E]段说被更广机会吸引的年轻人可能干脆不再践行继承的习俗。",
+        "第[H]段说每一代都被要求选择哪些继承之线仍滋养共同身份。"
+      ]
+    }
+  ]
+}

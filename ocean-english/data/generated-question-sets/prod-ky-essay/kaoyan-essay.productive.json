@@ -1,0 +1,609 @@
+{
+  "examId": "kaoyan",
+  "level": 5,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A teenager stands before two doors. The left door, labelled 「the easy road」, opens onto a smooth downhill slope where others lie idle on sofas staring at screens; the right door, labelled 「the worthwhile road」, opens onto a steep staircase that climbs toward a distant sunrise. The teenager hesitates, one foot lifted. A caption reads: 「Comfort is a cage that feels like a hammock.」 Requirements: (1) describe the picture briefly; (2) interpret what the choice between comfort and challenge reveals about personal growth; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:一名少年站在两扇门前,左门「轻松之路」通向他人躺着刷屏的下坡,右门「值得之路」通向通往朝阳的陡梯,少年犹豫不决,配文「舒适是看似吊床的牢笼」。要求:简述图画、阐释舒适与挑战的抉择对个人成长的意义、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: teenager at two doors, easy downhill road vs steep worthwhile stairs toward sunrise; caption comfort is a cage that feels like a hammock",
+        "requiredTheme: personal growth / choosing challenge over comfort",
+        "argumentDirection: lasting fulfilment comes from embracing difficulty rather than ease; comfort zones quietly limit potential",
+        "keyPoints: describe the two-door image; interpret the comfort-versus-challenge dilemma in growth; comment with a suggestion to step beyond comfort",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Daily screen time of university students, 2015 vs 2025」. In 2015 the average was about 3 hours per day; by 2025 it had risen to roughly 8 hours per day. A small note adds that average daily reading of printed books fell from 40 minutes to 12 minutes over the same period. Requirements: (1) describe the chart's main information; (2) analyse the causes and possible consequences of this shift; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「大学生日均屏幕时间,2015 与 2025 对比」显示从约 3 小时升至约 8 小时,纸质书阅读从 40 分钟降至 12 分钟。要求:描述图表主要信息、分析这一变化的原因与可能后果、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: average student screen time rose from ~3h (2015) to ~8h (2025); printed reading fell from 40min to 12min",
+        "requiredTheme: rising screen dependence and declining deep reading",
+        "argumentDirection: surging screen use erodes attention and reflective reading; balance and digital discipline are needed",
+        "keyPoints: describe the bar chart trend; analyse causes (smartphones, social media) and consequences (shallow focus); comment with a call for balance",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A grandmother holds a paper map upside down while her grandchild, smiling, gently turns her phone toward her and points to a glowing navigation route. Around them, blurred crowds rush past. A caption reads: 「Sometimes the young guide the old.」 Requirements: (1) describe the picture briefly; (2) interpret the reversal of traditional teaching roles in the digital age; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:祖母拿反了纸质地图,孙辈微笑着把手机导航转向她并指路,周围人群匆匆而过,配文「有时是年轻人引导长者」。要求:简述图画、阐释数字时代「文化反哺」现象、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: grandchild helps grandmother use phone navigation while she holds a paper map upside down; caption sometimes the young guide the old",
+        "requiredTheme: reverse mentoring / cultural feedback across generations",
+        "argumentDirection: in the digital era knowledge flows both ways; intergenerational learning strengthens family and society",
+        "keyPoints: describe the navigation scene; interpret the reversal of teaching roles; comment with a suggestion for mutual learning",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: Two seeds lie in soil. One sprouts a tiny green shoot reaching toward a thin beam of light; the other, larger and plumper, refuses to crack open and remains buried in shadow, waiting for 「perfect conditions」. A caption reads: 「The seed that waits for the perfect day never grows.」 Requirements: (1) describe the picture briefly; (2) interpret the danger of waiting for ideal conditions before acting; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:两粒种子,一粒已破土向光生长,另一粒更饱满却拒绝萌发,在阴影里等待「完美条件」,配文「等待完美之日的种子永不发芽」。要求:简述图画、阐释「等待理想条件再行动」的弊端、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: one seed sprouts toward light, the other waits in shadow for perfect conditions; caption the seed that waits for the perfect day never grows",
+        "requiredTheme: action over endless waiting / overcoming perfectionism",
+        "argumentDirection: growth requires acting amid imperfect conditions; excessive waiting wastes opportunity",
+        "keyPoints: describe the two seeds; interpret the cost of waiting for ideal circumstances; comment with a suggestion to start now",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A pie chart titled 「How young Chinese spend their weekends, 2025」. The slices read: short-video browsing 35%, paid online courses and self-study 22%, outdoor activities and exercise 18%, part-time work 13%, family time 8%, and volunteering 4%. Requirements: (1) describe the chart's main information; (2) analyse what these proportions reveal about young people's priorities; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:饼状图「2025 年中国青年周末时间分配」显示刷短视频 35%、付费课程与自学 22%、户外运动 18%、兼职 13%、家庭 8%、志愿服务 4%。要求:描述图表信息、分析这些比例反映的青年价值取向、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: weekend time of young Chinese — short video 35%, paid study 22%, exercise 18%, part-time 13%, family 8%, volunteering 4%",
+        "requiredTheme: how young people allocate leisure and self-investment",
+        "argumentDirection: heavy short-video use crowds out family, exercise and service; a more balanced use of leisure is desirable",
+        "keyPoints: describe the pie proportions; analyse priorities and the dominance of passive entertainment; comment with advice for balance",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A man rows a boat furiously, sweat flying, yet the boat does not move; the anchor is still firmly dropped into the riverbed, hidden beneath the surface. Onlookers on the bank cheer at his effort. A caption reads: 「Effort without releasing the anchor.」 Requirements: (1) describe the picture briefly; (2) interpret how outdated habits or mindsets can hold back even hard work; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:一人拼命划船却纹丝不动,因水下铁锚仍牢牢沉底,岸上人却为其努力喝彩,配文「不起锚的努力」。要求:简述图画、阐释陈旧习惯或心态如何拖累努力、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: man rows hard but boat stays put because the anchor is still down; caption effort without releasing the anchor",
+        "requiredTheme: removing hidden obstacles / changing outdated mindsets",
+        "argumentDirection: effort alone is futile if invisible constraints remain; we must identify and discard what holds us back",
+        "keyPoints: describe the anchored boat; interpret the metaphor of unseen constraints on hard work; comment with a suggestion to find and remove them",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young woman posts a glowing photo of a gourmet meal online, surrounded by hundreds of red 「like」 hearts; in the next frame, the real plate before her is a plain instant-noodle bowl, and she eats alone in a dim room. A caption reads: 「The life we display, the life we live.」 Requirements: (1) describe the picture briefly; (2) interpret the gap between curated online images and real life; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:女子在网上晒精致美食获大量点赞,实际面前却是一碗泡面,独自在昏暗房间用餐,配文「我们展示的生活与真实的生活」。要求:简述图画、阐释精修网络形象与现实生活的落差、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: woman posts gourmet photo for likes but really eats instant noodles alone; caption the life we display, the life we live",
+        "requiredTheme: online self-presentation versus reality",
+        "argumentDirection: curated social media images breed comparison and anxiety; authenticity and self-acceptance matter more than appearances",
+        "keyPoints: describe the contrast of posted image and real meal; interpret the performance of online life; comment with a suggestion toward authenticity",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Number of public libraries and their annual visitors in City X, 2010-2025」. The number of libraries grew steadily from 20 to 55, while annual visits per resident rose from 1.2 to 4.6. A note adds that the sharpest rise came after free Wi-Fi, study rooms and evening hours were introduced in 2018. Requirements: (1) describe the chart's main information; (2) analyse the reasons behind the growing popularity of libraries; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「X 市公共图书馆数量及年人均访问量,2010-2025」显示馆数由 20 增至 55,年人均访问由 1.2 升至 4.6,2018 年提供免费 WiFi、自习室、延时开放后增长最快。要求:描述图表信息、分析图书馆日益受欢迎的原因、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: libraries in City X grew from 20 to 55; per-resident annual visits rose from 1.2 to 4.6, fastest after 2018 service upgrades",
+        "requiredTheme: revival and rising appeal of public libraries",
+        "argumentDirection: investment in accessible, modern public services revitalises reading culture and civic life",
+        "keyPoints: describe the upward trends; analyse causes (services, study space, accessibility); comment on the value of public reading spaces",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A craftsman patiently carves a wooden lattice window by hand under a single lamp, his workshop sign reading 「third generation」; outside, a factory billboard advertises 「1,000 identical pieces a day」. A young apprentice watches the old master, torn between the two worlds. A caption reads: 「Slow hands, lasting beauty.」 Requirements: (1) describe the picture briefly; (2) interpret the tension between traditional craftsmanship and mass production; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:老匠人在独灯下手工雕刻木格窗,作坊牌匾「三代传承」,门外工厂广告写着「日产千件一模一样」,年轻学徒在两个世界间徘徊,配文「慢工出久美」。要求:简述图画、阐释传统手艺与大规模生产的张力、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: old craftsman hand-carves a window under one lamp while a factory advertises mass output; apprentice torn between them; caption slow hands, lasting beauty",
+        "requiredTheme: traditional craftsmanship versus mass production",
+        "argumentDirection: handmade craft carries cultural value and quality that mass production cannot replace; it deserves protection and inheritance",
+        "keyPoints: describe the workshop-versus-factory contrast; interpret the value of artisanship; comment with a suggestion to preserve traditional skills",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A bird stands at the edge of its nest on a high branch, wings half-open, hesitating to leap; below, its parent flies in wide encouraging circles, calling. The nest is comfortable but crowded. A caption reads: 「The nest was built for leaving.」 Requirements: (1) describe the picture briefly; (2) interpret the necessity of leaving one's comfort zone to mature and become independent; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:幼鸟在高枝巢边半张翅膀犹豫不敢起飞,亲鸟在下方盘旋鸣叫鼓励,巢虽舒适却拥挤,配文「筑巢本为离巢」。要求:简述图画、阐释离开舒适区走向独立成熟的必要性、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: fledgling hesitates to leave the nest while its parent circles encouragingly; caption the nest was built for leaving",
+        "requiredTheme: independence / leaving the comfort zone to mature",
+        "argumentDirection: growth demands leaving familiar shelter; overprotection or hesitation delays maturity",
+        "keyPoints: describe the hesitant fledgling; interpret the need for independence; comment with a suggestion to embrace the leap",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Main reasons graduates give for choosing a job, 2015 vs 2025」. In 2015 the top reason was 「high salary」 (52%), followed by 「stability」 (28%) and 「personal interest」 (12%). In 2025 「personal interest and growth」 led at 41%, 「work-life balance」 rose to 30%, and 「high salary」 fell to 21%. Requirements: (1) describe the chart's main information; (2) analyse what this shift reveals about changing values; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「毕业生择业主因,2015 与 2025 对比」显示 2015 高薪 52%、稳定 28%、兴趣 12%;2025 兴趣与成长 41%、工作生活平衡 30%、高薪降至 21%。要求:描述图表信息、分析价值观变化、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: graduate job priorities shifted from salary-led (2015) to interest/growth (41%) and work-life balance (30%) in 2025",
+        "requiredTheme: changing career values among young graduates",
+        "argumentDirection: young people increasingly value meaning and balance over pay; this reflects a maturing, self-aware generation",
+        "keyPoints: describe the changing percentages; analyse the value shift; comment on its significance for individuals and employers",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A person holds a magnifying glass over a single harsh online comment, which looms enormous and dark, while ninety-nine warm, supportive comments float small and ignored in the background. A caption reads: 「One stone, a hundred flowers — yet we only feel the stone.」 Requirements: (1) describe the picture briefly; (2) interpret the human tendency to dwell on negativity, especially online; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:有人用放大镜盯着一条恶评,使其放大变黑,而背景里九十九条温暖评论被忽略,配文「一块石头,百朵花——我们却只感到那块石头」。要求:简述图画、阐释人们尤其在网络上执着于负面信息的倾向、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: magnifying glass enlarges one harsh comment while 99 kind comments shrink unnoticed; caption one stone, a hundred flowers",
+        "requiredTheme: negativity bias and emotional resilience online",
+        "argumentDirection: dwelling on a few criticisms distorts perspective; we should cultivate balance and resilience toward online feedback",
+        "keyPoints: describe the magnified negative comment; interpret negativity bias; comment with a suggestion to keep perspective",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A river is fenced off with a sign reading 「protected wetland」; on one side wild birds return and reeds flourish, while on the other side, beyond the fence, factories that once stood there are now grassland. A child plants a sapling near the water. A caption reads: 「We borrow the earth from our children.」 Requirements: (1) describe the picture briefly; (2) interpret the message about ecological restoration and intergenerational responsibility; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:河流被围为「湿地保护区」,鸟群归来、芦苇茂盛,昔日工厂处变为草地,一名孩子在水边种树苗,配文「大地是我们向子孙借来的」。要求:简述图画、阐释生态修复与代际责任、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: protected wetland with returning birds and reeds replacing former factories; a child plants a sapling; caption we borrow the earth from our children",
+        "requiredTheme: ecological restoration and intergenerational responsibility",
+        "argumentDirection: environmental protection is a duty owed to future generations; restoration shows nature can recover when respected",
+        "keyPoints: describe the restored wetland; interpret intergenerational ecological responsibility; comment with a suggestion for sustainable action",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Average age of first-time marathon runners in City Y, 2010-2025」 shows the age rising from 28 to 41. A companion bar note reports total participants grew from 3,000 to 26,000 over the same period. Requirements: (1) describe the chart's main information; (2) analyse why running and lifelong fitness are attracting more middle-aged people; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「Y 市首次参加马拉松者平均年龄,2010-2025」由 28 升至 41 岁,参赛总人数由 3000 增至 26000。要求:描述图表信息、分析跑步与终身健身吸引更多中年人的原因、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: average age of first-time marathon runners rose from 28 to 41; participants grew from 3,000 to 26,000",
+        "requiredTheme: rising health awareness and lifelong fitness",
+        "argumentDirection: growing middle-aged participation reflects deepening health consciousness and the pursuit of an active life at any age",
+        "keyPoints: describe the rising age and numbers; analyse causes (health awareness, stress relief, community); comment on lifelong fitness",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A student carries a towering backpack labelled 「expectations」; inside it are stones marked 「parents」, 「teachers」, 「society」 and 「self」. He walks bent double, yet a smaller bag beside him, marked 「what I truly want」, lies untouched on the ground. A caption reads: 「Whose dream am I carrying?」 Requirements: (1) describe the picture briefly; (2) interpret the burden of external expectations on young people; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:学生背着写满「期望」的巨大背包,内装「父母」「老师」「社会」「自我」石块,弯腰前行,而旁边「我真正想要的」小包却无人理会,配文「我背负的是谁的梦想?」。要求:简述图画、阐释外界期望对青年的重压、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: student bent under a backpack of expectations from parents, teachers, society while a bag of his own wishes lies untouched; caption whose dream am I carrying",
+        "requiredTheme: the weight of external expectations on the young",
+        "argumentDirection: living solely for others' expectations stifles individuality; young people need space to define their own goals",
+        "keyPoints: describe the heavy expectations backpack; interpret the pressure of external demands; comment with a suggestion to balance others' hopes and one's own will",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A volunteer in a bright vest helps an elderly stranger cross a busy street; behind them, a chain of small scenes shows the helped person later guiding a lost child, who in turn picks up litter, and so on, the kind acts spreading like ripples. A caption reads: 「Kindness has an echo.」 Requirements: (1) describe the picture briefly; (2) interpret how small acts of kindness can spread through society; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:志愿者扶老人过繁忙街道,身后一连串小场景显示受助者又帮迷路孩子、孩子又捡垃圾,善意如涟漪扩散,配文「善意会回响」。要求:简述图画、阐释微小善举如何在社会传播、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a volunteer helps an elder cross the street, sparking a chain of further kind acts spreading like ripples; caption kindness has an echo",
+        "requiredTheme: the ripple effect of kindness in society",
+        "argumentDirection: small kind acts inspire others and build social trust; individuals can shape a warmer society",
+        "keyPoints: describe the chain of kindness; interpret how goodwill spreads; comment with a suggestion to practise everyday kindness",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A pie chart titled 「Where city dwellers buy fresh produce, 2025」 shows: online grocery apps 46%, neighbourhood markets 24%, supermarkets 20%, community farm shares 7%, and self-grown 3%. A note records that the online slice was only 11% in 2018. Requirements: (1) describe the chart's main information; (2) analyse the causes and effects of the shift toward online grocery shopping; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:饼状图「2025 年城市居民买生鲜的渠道」显示生鲜电商 46%、社区菜场 24%、超市 20%、社区农场 7%、自种 3%,2018 年电商仅占 11%。要求:描述图表信息、分析生鲜网购兴起的原因与影响、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: fresh produce channels — online apps 46% (up from 11% in 2018), markets 24%, supermarkets 20%, farm shares 7%, self-grown 3%",
+        "requiredTheme: the rise of online grocery shopping and changing consumption habits",
+        "argumentDirection: convenience drives the shift online, reshaping daily life and traditional markets; balance and quality awareness remain important",
+        "keyPoints: describe the dominance of online apps; analyse causes (convenience, time pressure) and effects on markets; comment on the trade-offs",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A traveller stands before two paths in a forest; one is a wide, well-worn highway crowded with people all walking in the same direction, the other a narrow, grassy trail with a single set of footprints. The traveller studies a compass in his hand rather than following the crowd. A caption reads: 「Direction matters more than the crowd.」 Requirements: (1) describe the picture briefly; (2) interpret the value of independent thinking against blind conformity; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:旅人面对林中两路,一条宽阔大道人潮同向,一条窄草径仅一行脚印,旅人看手中指南针而非随大流,配文「方向比人多更重要」。要求:简述图画、阐释独立思考、反对盲从的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: traveller chooses by compass between a crowded highway and a lone grassy trail; caption direction matters more than the crowd",
+        "requiredTheme: independent thinking versus blind conformity",
+        "argumentDirection: following the majority is not always right; reasoned, independent judgement leads to a more meaningful path",
+        "keyPoints: describe the two paths and the compass; interpret independent thinking; comment with a suggestion to judge for oneself",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A father and his teenage son sit at the same dinner table, each absorbed in a separate phone; a thought bubble above each shows them wishing the other would speak first. An untouched home-cooked meal grows cold between them. A caption reads: 「So near, yet a screen apart.」 Requirements: (1) describe the picture briefly; (2) interpret how digital devices can weaken close relationships; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:父子同桌吃饭却各看手机,头顶气泡都盼对方先开口,中间家常菜渐凉,配文「咫尺之间,一屏之隔」。要求:简述图画、阐释电子设备如何削弱亲密关系、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: father and son each absorbed in phones at dinner, both wishing the other would speak, meal going cold; caption so near, yet a screen apart",
+        "requiredTheme: technology's effect on family communication",
+        "argumentDirection: overuse of devices erodes face-to-face intimacy; families should consciously reconnect offline",
+        "keyPoints: describe the silent dinner; interpret how screens weaken relationships; comment with a suggestion for device-free family time",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Top fields chosen by Chinese students returning from overseas study, 2015 vs 2025」. In 2015 finance led (34%), then management (26%) and engineering (15%). In 2025 「artificial intelligence and data science」 led (38%), followed by 「green energy」 (22%) and 「biomedicine」 (17%), while finance fell to 12%. Requirements: (1) describe the chart's main information; (2) analyse what this shift reflects about national and personal priorities; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「海归选择领域,2015 与 2025 对比」显示 2015 金融 34%、管理 26%、工程 15%;2025 人工智能与数据科学 38%、绿色能源 22%、生物医药 17%,金融降至 12%。要求:描述图表信息、分析其反映的国家与个人取向、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: returnees' fields shifted from finance-led (2015) to AI/data (38%), green energy (22%), biomedicine (17%) in 2025",
+        "requiredTheme: changing career fields and national development priorities",
+        "argumentDirection: young talent is moving toward strategic, technology and sustainability fields, aligning personal growth with national needs",
+        "keyPoints: describe the field shift; analyse drivers (tech demand, national strategy); comment on aligning ambition with development",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A climber pauses on a mountain ledge to help another stranger who has slipped; though delayed, both later reach the summit together, while a lone climber who refused to stop is shown stranded and exhausted lower down. A caption reads: 「We rise faster when we lift others.」 Requirements: (1) describe the picture briefly; (2) interpret the relationship between helping others and personal success; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:登山者在岩台停下帮助滑倒的陌生人,虽有耽搁两人终一同登顶,而拒绝停留的独行者却被困筋疲力尽,配文「扶人者,自登更高」。要求:简述图画、阐释助人与个人成功的关系、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a climber helps a fallen stranger and both summit together, while a selfish lone climber is stranded; caption we rise faster when we lift others",
+        "requiredTheme: cooperation and mutual help versus selfish competition",
+        "argumentDirection: helping others does not hinder success but often enables shared and greater achievement",
+        "keyPoints: describe the contrasting climbers; interpret the link between helping and success; comment with a suggestion to value cooperation",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A goldfish leaps out of a small crowded bowl toward a vast open lake glimmering in the distance; other fish in the bowl stare in fear and disbelief. The bowl is labelled 「the familiar」, the lake 「the unknown」. A caption reads: 「Growth begins beyond the glass.」 Requirements: (1) describe the picture briefly; (2) interpret the courage required to leave familiar limits in pursuit of larger possibilities; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:金鱼跃出拥挤鱼缸奔向远处浩瀚湖泊,缸中众鱼惊惧不解,缸标「熟悉」,湖标「未知」,配文「成长始于玻璃之外」。要求:简述图画、阐释离开熟悉局限、追求更大可能所需的勇气、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a goldfish leaps from a crowded bowl toward a vast lake while others stare fearfully; caption growth begins beyond the glass",
+        "requiredTheme: courage to break free of familiar limits",
+        "argumentDirection: real growth requires leaving safe but limiting environments; courage opens wider possibilities",
+        "keyPoints: describe the leaping fish; interpret the courage to face the unknown; comment with a suggestion to embrace bold change",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Number of registered volunteers in Province Z, 2010-2025」 shows steady growth from 0.8 million to 6.5 million. A note adds that the largest annual increases followed two events: a major flood relief effort in 2016 and a public health campaign in 2022. Requirements: (1) describe the chart's main information; (2) analyse the reasons behind the rapid growth of volunteering; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「Z 省注册志愿者人数,2010-2025」由 80 万增至 650 万,2016 抗洪与 2022 公共卫生行动后增幅最大。要求:描述图表信息、分析志愿服务迅速增长的原因、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: registered volunteers in Province Z grew from 0.8m to 6.5m, with surges after 2016 flood relief and 2022 health campaign",
+        "requiredTheme: the rise of volunteering and civic spirit",
+        "argumentDirection: growing volunteerism reflects strengthening social responsibility and the power of shared purpose in crises",
+        "keyPoints: describe the rising volunteer numbers; analyse causes (crises, civic awareness, policy support); comment on the value of volunteering",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young woman waters a small plant labelled 「skill」 every single day; in the next frame, after a year of patient daily care, it has grown into a tall, fruit-bearing tree, while a neighbour who watered violently for one day then quit stares at his withered sprout. A caption reads: 「Drops of water, not floods, grow trees.」 Requirements: (1) describe the picture briefly; (2) interpret the power of small, consistent effort over sudden bursts; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:女子每日浇灌标着「技能」的小苗,一年后长成结果大树,而邻居一天猛浇后放弃,只剩枯苗,配文「滴水而非洪流育成大树」。要求:简述图画、阐释持续的小努力胜过一时猛劲、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: woman waters a skill plant daily until it becomes a fruit tree, while a neighbour who quit after one day has a withered sprout; caption drops of water, not floods, grow trees",
+        "requiredTheme: persistence and consistency over short bursts of effort",
+        "argumentDirection: steady daily effort compounds into great results, while inconsistent bursts fail; discipline beats intensity",
+        "keyPoints: describe the contrast of daily care and abandonment; interpret the power of consistency; comment with a suggestion to build steady habits",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A robot and a human sit side by side at a desk; the robot rapidly solves equations on a screen, while the human sketches a wildly imaginative invention in a notebook. They glance at each other with curiosity, not rivalry. A caption reads: 「Machines calculate; humans imagine.」 Requirements: (1) describe the picture briefly; (2) interpret the proper relationship between artificial intelligence and human creativity; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:机器人与人并肩而坐,机器人在屏上飞速解方程,人在本上勾画奇思发明,二者好奇相望而非对立,配文「机器计算,人类想象」。要求:简述图画、阐释人工智能与人类创造力的恰当关系、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a robot solves equations while a human sketches an imaginative invention, both curious not rivals; caption machines calculate, humans imagine",
+        "requiredTheme: AI and human creativity / collaboration not replacement",
+        "argumentDirection: AI should complement rather than replace human imagination and judgement; people must cultivate uniquely human strengths",
+        "keyPoints: describe the robot and human at work; interpret their complementary roles; comment with a suggestion to develop human creativity alongside AI",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Sources young people trust most for daily information, 2025」 shows: short-video influencers 38%, friends and family 21%, official news outlets 17%, search engines 14%, and expert publications 10%. A note observes that in 2015 official news outlets led at 45%. Requirements: (1) describe the chart's main information; (2) analyse the implications of trusting influencers over traditional sources; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「2025 年青年最信任的日常信息来源」显示短视频博主 38%、亲友 21%、官方媒体 17%、搜索引擎 14%、专家著作 10%,而 2015 年官方媒体居首达 45%。要求:描述图表信息、分析青年更信任博主而非传统来源的影响、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: most-trusted info sources for youth — influencers 38%, friends/family 21%, official news 17%, search 14%, experts 10%; official news led at 45% in 2015",
+        "requiredTheme: shifting trust from traditional media to social influencers",
+        "argumentDirection: reliance on influencers risks misinformation and shallow understanding; media literacy and critical thinking are essential",
+        "keyPoints: describe the trust shift; analyse risks of influencer reliance; comment with a call for media literacy",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A student stands proudly holding a diploma, but his graduation gown is stitched together from many small patches, each labelled with a failure: 「failed exam」, 「rejected application」, 「lost competition」, 「mistake at internship」. A caption reads: 「Success wears the cloth of its failures.」 Requirements: (1) describe the picture briefly; (2) interpret the role of failure as a necessary part of achievement; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:学生自豪地举着毕业证,学位袍却由「考试不及格」「申请被拒」「比赛失利」「实习出错」等失败碎片拼成,配文「成功身披失败之衣」。要求:简述图画、阐释失败是成就的必要组成、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: graduate's gown is patched from labelled failures like failed exams and rejections; caption success wears the cloth of its failures",
+        "requiredTheme: failure as a stepping stone to success",
+        "argumentDirection: failures are not opposites of success but its building blocks; resilience turns setbacks into growth",
+        "keyPoints: describe the patchwork gown; interpret failure's constructive role; comment with a suggestion to learn from setbacks",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A man stands at a crossroads holding a phone that displays glowing five-star reviews of a distant city, while ignoring the quiet, real beauty of his own hometown river just behind him, where neighbours fish and children play. A caption reads: 「We scroll past the scenery we live in.」 Requirements: (1) describe the picture briefly; (2) interpret how the pursuit of distant or virtual experiences can blind us to present value; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:男子在岔路口看手机上远方城市的五星好评,却无视身后家乡小河的真实之美——邻人垂钓、孩童嬉戏,配文「我们刷过了自己身处的风景」。要求:简述图画、阐释一味追逐远方或虚拟体验如何让我们看不见眼前的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: man fixates on phone reviews of a distant city while ignoring the real beauty of his hometown river behind him; caption we scroll past the scenery we live in",
+        "requiredTheme: appreciating present value over distant or virtual ideals",
+        "argumentDirection: chasing far-off or online ideals can blind us to the worth of what we already have; mindful presence matters",
+        "keyPoints: describe the man and his hometown; interpret the neglect of present value; comment with a suggestion to appreciate the here and now",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Annual per-person express delivery parcels in China, 2010-2025」 climbs from 4 to 130. A bar note beside it shows that the share of parcels using recyclable or reduced packaging rose from 2% to 35% after 2020. Requirements: (1) describe the chart's main information; (2) analyse the relationship between booming online consumption and the push for green packaging; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「中国年人均快递包裹量,2010-2025」由 4 件升至 130 件,旁注柱状显示 2020 后可回收/减量包装占比由 2% 升至 35%。要求:描述图表信息、分析网购繁荣与绿色包装推进的关系、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: per-person parcels rose from 4 to 130; green packaging share rose from 2% to 35% after 2020",
+        "requiredTheme: booming e-commerce and the move toward green packaging",
+        "argumentDirection: surging consumption brings environmental costs that must be offset by sustainable packaging and responsible habits",
+        "keyPoints: describe the parcel surge and green packaging rise; analyse the consumption-environment link; comment on sustainable consumption",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A pie chart titled 「Reasons people give for not exercising regularly, 2025」 shows: 「no time」 34%, 「too tired after work」 27%, 「no suitable place」 14%, 「lack of motivation」 17%, and 「health concerns」 8%. A note adds that 70% of the same respondents still spend over two hours a day on entertainment apps. Requirements: (1) describe the chart's main information; (2) analyse the gap between stated reasons and actual behaviour; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:饼状图「2025 年不规律运动的原因」显示「没时间」34%、「下班太累」27%、「缺乏动力」17%、「没合适场地」14%、「健康顾虑」8%,注:同一受访者中 70% 仍日均刷娱乐 App 超两小时。要求:描述图表信息、分析借口与实际行为的落差、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: reasons for not exercising — no time 34%, too tired 27%, no motivation 17%, no place 14%, health 8%; yet 70% spend 2+ hours daily on entertainment apps",
+        "requiredTheme: excuses versus genuine priorities in healthy living",
+        "argumentDirection: lack of time is often a matter of priorities, not reality; self-honesty and small habits can fix it",
+        "keyPoints: describe the reasons and the contradicting app-time note; analyse the excuse-behaviour gap; comment with a suggestion to reorder priorities",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A child eagerly shows a hand-drawn picture to a parent, but the parent, eyes fixed on a work laptop, waves a distracted hand without looking. In the next frame, years later, a grown child stares at a phone while the now-elderly parent holds out an old photo, waved away in turn. A caption reads: 「Attention, like an echo, returns.」 Requirements: (1) describe the picture briefly; (2) interpret how the neglect of attention is passed between generations; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:孩子兴奋向父母展示手绘画,父母盯着工作电脑漫不经心地挥手不看;多年后长大的孩子盯着手机,年迈父母递出旧照片同样被挥开,配文「关注如回声,终会返回」。要求:简述图画、阐释「忽视」如何在代际间传递、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a distracted parent ignores a child's drawing; years later the grown child ignores the elderly parent's photo; caption attention, like an echo, returns",
+        "requiredTheme: intergenerational attention, neglect and reciprocity in family",
+        "argumentDirection: the attention we give or withhold tends to be passed on; valuing loved ones now shapes how we are treated later",
+        "keyPoints: describe the two-generation contrast; interpret the cycle of neglect; comment with a suggestion to give genuine attention",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A person carries a heavy backpack uphill labelled 「grudges and regrets」, stuffed with stones; a fellow traveller beside him empties similar stones one by one and walks lighter and faster. The first traveller watches, hesitating to let go. A caption reads: 「We choose what we carry.」 Requirements: (1) describe the picture briefly; (2) interpret the value of letting go of past burdens for a lighter, freer life; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:一人背着装满石块、标着「怨恨与悔恨」的重包上坡,同行者逐一卸石、轻快前行,前者犹豫难以放下,配文「负担由我们选择」。要求:简述图画、阐释放下过往负担、轻装前行的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: one traveller struggles uphill with a backpack of grudges and regrets while another lets the stones go and walks lighter; caption we choose what we carry",
+        "requiredTheme: letting go of past burdens and emotional baggage",
+        "argumentDirection: clinging to grudges and regrets weighs us down; releasing them frees energy for growth and happiness",
+        "keyPoints: describe the two travellers; interpret the value of letting go; comment with a suggestion to release the past",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Time Chinese adults spend learning a new skill per week, 2018 vs 2025」 shows averages rising from 1.5 hours to 5.2 hours. A note reports that online course enrolments in non-work hobbies — such as music, cooking and languages — tripled in the same period. Requirements: (1) describe the chart's main information; (2) analyse the rise of lifelong learning and self-improvement; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「中国成年人每周学习新技能时间,2018 与 2025 对比」由 1.5 小时升至 5.2 小时,注:音乐、烹饪、语言等兴趣类网课报名同期增长两倍。要求:描述图表信息、分析终身学习与自我提升的兴起、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: weekly skill-learning time rose from 1.5h to 5.2h; hobby online course enrolments tripled",
+        "requiredTheme: the rise of lifelong learning and self-improvement",
+        "argumentDirection: adults increasingly invest in continuous learning for growth and fulfilment, not only career gain; this enriches individuals and society",
+        "keyPoints: describe the rising learning time; analyse drivers (online access, self-fulfilment); comment on the value of lifelong learning",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A craftsman teaches a young apprentice to write Chinese calligraphy with a brush; on a nearby screen, an app offers to 「generate perfect calligraphy in one click」. The apprentice glances at the screen, then back at the ink-stained paper and the master's patient hand. A caption reads: 「The path, not just the result.」 Requirements: (1) describe the picture briefly; (2) interpret the value of effortful learning of traditional arts in an age of instant results; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:匠人执笔教幼徒书法,旁屏 App 称「一键生成完美书法」,学徒看看屏幕又看看墨迹纸与师傅耐心的手,配文「重在过程,而非仅结果」。要求:简述图画、阐释在「即时出结果」时代亲身学习传统技艺的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a master teaches calligraphy by hand while an app offers one-click results; the apprentice weighs effort against shortcut; caption the path, not just the result",
+        "requiredTheme: effortful learning of tradition versus instant technological results",
+        "argumentDirection: the process of learning traditional arts builds character and depth that instant tools cannot; effort itself has value",
+        "keyPoints: describe the calligraphy scene; interpret the worth of effortful learning; comment with a suggestion to value process over shortcut",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A man pours water into a leaking bucket faster and faster, exhausted, while ignoring a small toolbox at his feet that could patch the holes. The bucket is labelled 「busy life」 and the holes are labelled 「no rest」, 「no reflection」, 「no health」. A caption reads: 「Working harder, not wiser.」 Requirements: (1) describe the picture briefly; (2) interpret the difference between mindless busyness and effective effort; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:男子疲惫地越来越快往漏桶里倒水,却无视脚边能补漏的工具箱,桶标「忙碌人生」,漏洞标「不休息」「不反思」「不健康」,配文「只知更努力,不知更聪明」。要求:简述图画、阐释盲目忙碌与高效努力的区别、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a man frantically fills a leaking bucket of busy life while ignoring a toolbox to fix the holes of no rest, reflection and health; caption working harder, not wiser",
+        "requiredTheme: mindless busyness versus effective, balanced effort",
+        "argumentDirection: working harder without rest, reflection and health is self-defeating; we should fix the leaks rather than pour faster",
+        "keyPoints: describe the leaking bucket; interpret busyness versus wisdom; comment with a suggestion to work smarter and rest",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Average daily steps walked by office workers in City W, 2015-2025」 shows a fall from 7,800 to 3,200, sharpest after remote work and food delivery became common. A bar note reports that gym memberships, by contrast, rose 60% in the same period. Requirements: (1) describe the chart's main information; (2) analyse the paradox of falling daily movement alongside rising gym use; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「W 市上班族日均步数,2015-2025」由 7800 降至 3200,远程办公与外卖普及后下降最猛;旁注柱状显示同期健身房会员增长 60%。要求:描述图表信息、分析「日常活动下降却健身房增长」的悖论、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: daily steps fell from 7,800 to 3,200 amid remote work and delivery, while gym memberships rose 60%",
+        "requiredTheme: declining everyday movement versus formal exercise",
+        "argumentDirection: convenience erodes natural daily activity; isolated gym sessions cannot fully offset a sedentary lifestyle, so movement must return to daily life",
+        "keyPoints: describe the falling steps and rising gym use; analyse the paradox; comment with a suggestion to rebuild everyday activity",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young man stands at the foot of a mountain labelled 「dream」; the path up is long, but he has divided it into small, clearly marked stages, each with a flag. Another man at a different mountain stares only at the distant peak, overwhelmed, and has not taken a single step. A caption reads: 「A great journey, one marked step at a time.」 Requirements: (1) describe the picture briefly; (2) interpret the value of breaking large goals into achievable steps; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:青年立于「梦想」之山脚,把漫长山路分成一个个插旗的小阶段;另一人只盯远峰望而生畏、寸步未动,配文「伟大旅程,一步一标记」。要求:简述图画、阐释将大目标拆解为可达成的小步骤的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: one man divides a dream mountain into flagged stages and climbs, while another is paralysed staring only at the far peak; caption a great journey, one marked step at a time",
+        "requiredTheme: breaking large goals into achievable steps",
+        "argumentDirection: huge goals become attainable when split into small milestones; focusing only on the distant end can paralyse action",
+        "keyPoints: describe the two climbers; interpret the value of step-by-step planning; comment with a suggestion to set small milestones",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A tourist tramples on a fragile flowerbed to take a better selfie at a famous scenic spot, while a sign clearly reads 「please keep off」. Behind him, a long line of footprints has flattened the once-blooming field. A caption reads: 「A perfect photo, a ruined view.」 Requirements: (1) describe the picture briefly; (2) interpret the conflict between personal gratification and shared responsibility in public spaces; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:景区里游客踩进脆弱花圃只为拍更好的自拍,旁有明示「请勿入内」,身后一长串脚印踏平了曾经盛开的花田,配文「一张完美照片,一片毁坏风景」。要求:简述图画、阐释公共空间中个人满足与共同责任的冲突、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a tourist tramples a flowerbed for a selfie despite a keep-off sign, leaving a trail of flattened blooms; caption a perfect photo, a ruined view",
+        "requiredTheme: personal gratification versus public responsibility and civility",
+        "argumentDirection: selfish behaviour in public spaces harms shared resources; civic awareness and rules must be respected for the common good",
+        "keyPoints: describe the trampled flowerbed; interpret the clash of self-interest and shared duty; comment with a suggestion for public civility",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Where rural-born young graduates choose to work after university, 2015 vs 2025」. In 2015, 78% chose big coastal cities and only 9% returned to their hometowns. In 2025, those returning to hometowns or small cities rose to 34%, drawn by remote work, local start-ups and rural revitalisation programmes. Requirements: (1) describe the chart's main information; (2) analyse the reasons behind young talent returning to smaller places; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「农村籍毕业生就业去向,2015 与 2025 对比」显示 2015 年 78% 选沿海大城市、仅 9% 返乡;2025 年因远程办公、本地创业与乡村振兴,返乡或回小城者升至 34%。要求:描述图表信息、分析青年人才回流小城的原因、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: graduates returning to hometowns/small cities rose from 9% (2015) to 34% (2025), driven by remote work, local start-ups and rural revitalisation",
+        "requiredTheme: young talent returning to smaller cities and rural areas",
+        "argumentDirection: more graduates see opportunity and meaning beyond big cities; this benefits balanced regional development and personal fulfilment",
+        "keyPoints: describe the return trend; analyse causes (remote work, policy, quality of life); comment on its broader significance",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young woman stands before a mirror; the reflection she sees is heavily edited and flawless, like a filtered photo, while her real face — natural and kind — is faintly visible behind the glossy image. She looks anxious, comparing herself to her own filtered reflection. A caption reads: 「Chasing a face that does not exist.」 Requirements: (1) describe the picture briefly; (2) interpret the effect of beauty filters and unrealistic standards on self-image; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:女子照镜,镜中是经过重度美化、完美无瑕如滤镜照的影像,而其自然善良的真容隐于光鲜形象之后,她焦虑地与自己的滤镜倒影相比,配文「追逐一张并不存在的脸」。要求:简述图画、阐释美颜滤镜与不切实际标准对自我认知的影响、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a woman compares her real face to a heavily filtered, flawless reflection in the mirror and feels anxious; caption chasing a face that does not exist",
+        "requiredTheme: beauty filters and unrealistic standards versus self-acceptance",
+        "argumentDirection: filtered, unrealistic ideals harm self-image and breed anxiety; genuine self-acceptance and inner worth matter more",
+        "keyPoints: describe the filtered-versus-real reflection; interpret the impact on self-image; comment with a suggestion toward self-acceptance",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A large old library stands beside a brand-new digital learning centre full of screens; instead of competing, a glass bridge connects the two, and students walk freely between paper books and tablets, smiling. A caption reads: 「The old and the new, hand in hand.」 Requirements: (1) describe the picture briefly; (2) interpret the ideal coexistence of tradition and innovation in education; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:古老大图书馆与满是屏幕的新数字学习中心相邻,二者非对立,一座玻璃桥相连,学生在纸书与平板间自由穿行、面带微笑,配文「新旧携手」。要求:简述图画、阐释教育中传统与创新理想的共存、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: an old library and a new digital centre joined by a glass bridge, students moving freely between books and tablets; caption the old and the new, hand in hand",
+        "requiredTheme: coexistence of tradition and innovation in education",
+        "argumentDirection: tradition and technology need not conflict; combining the depth of books with digital tools enriches learning",
+        "keyPoints: describe the bridged library and digital centre; interpret the harmony of old and new; comment with a suggestion to integrate both wisely",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A pie chart titled 「How people respond to making a mistake at work, 2025 survey」 shows: 「hide it and hope no one notices」 31%, 「blame circumstances or others」 19%, 「admit it and seek a solution」 38%, and 「ignore and move on」 12%. A note adds that teams whose members chose to admit mistakes reported far higher trust. Requirements: (1) describe the chart's main information; (2) analyse why honestly facing mistakes matters; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:饼状图「2025 年面对工作失误的反应」显示「隐瞒侥幸」31%、「归咎客观或他人」19%、「承认并寻求解决」38%、「无视照旧」12%,注:成员选择承认错误的团队信任度更高。要求:描述图表信息、分析诚实面对错误为何重要、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: responses to mistakes — hide 31%, blame others 19%, admit and solve 38%, ignore 12%; admitting linked to higher team trust",
+        "requiredTheme: honesty and accountability when facing mistakes",
+        "argumentDirection: admitting and fixing mistakes builds trust and growth, while hiding or blaming damages both relationships and progress",
+        "keyPoints: describe the response proportions; analyse the value of accountability; comment with a suggestion to face errors honestly",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A street performer plays a guzheng beautifully on a busy modern shopping street; most passers-by hurry past staring at phones, but one small child stops, entranced, and tugs a parent's sleeve to listen. A caption reads: 「Beauty waits for those who pause.」 Requirements: (1) describe the picture briefly; (2) interpret how the hurried, distracted pace of modern life makes us miss what matters; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:繁华现代商业街上街头艺人优美地弹奏古筝,多数路人盯手机匆匆而过,唯一名小童驻足入迷、拽父母衣袖聆听,配文「美等待懂得停下的人」。要求:简述图画、阐释现代生活的匆忙与分心如何让我们错过重要之物、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a guzheng street performer plays beautifully but only a child stops to listen as others hurry past on phones; caption beauty waits for those who pause",
+        "requiredTheme: slowing down to appreciate beauty and meaning in busy life",
+        "argumentDirection: the rushed, distracted pace of modern life causes us to miss what is valuable; pausing to appreciate enriches life",
+        "keyPoints: describe the performer and the attentive child; interpret what hurry makes us miss; comment with a suggestion to slow down and notice",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young man stands proudly on a podium holding a trophy, but the podium is built entirely of many hands lifting him up — teachers, parents, friends, strangers — most of whom he cannot see beneath him. A caption reads: 「No one stands alone at the top.」 Requirements: (1) describe the picture briefly; (2) interpret the importance of gratitude and recognising the help behind personal success; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:青年自豪地站在领奖台上举杯,而台子全由托举他的众手——师长、父母、朋友、陌生人——构成,多数他看不见,配文「无人独自登顶」。要求:简述图画、阐释感恩与认识到成功背后的他人帮助的重要、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a man holds a trophy on a podium made of many lifting hands he cannot see; caption no one stands alone at the top",
+        "requiredTheme: gratitude and recognising others' contributions to success",
+        "argumentDirection: individual success rests on the unseen support of many; gratitude and humility are due to those who help us",
+        "keyPoints: describe the podium of hands; interpret the role of others in success; comment with a suggestion to practise gratitude",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A line chart titled 「Average attention span on a single task among students, 2010-2025」 shows a decline from 12 minutes to 4 minutes. A bar note reports that, over the same years, the average number of times a student switches between apps per hour rose from 15 to 70. Requirements: (1) describe the chart's main information; (2) analyse the causes and consequences of shrinking attention spans; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:折线图「学生单任务平均专注时长,2010-2025」由 12 分钟降至 4 分钟,旁注柱状显示每小时切换 App 次数由 15 升至 70。要求:描述图表信息、分析专注力下降的原因与后果、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: average single-task attention fell from 12 to 4 minutes; app-switching rose from 15 to 70 times per hour",
+        "requiredTheme: declining attention span in the digital age",
+        "argumentDirection: constant digital switching fragments attention and harms deep work; deliberate focus practices are needed",
+        "keyPoints: describe the falling attention and rising switching; analyse causes and consequences; comment with a suggestion to rebuild focus",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: An old fisherman teaches a boy not by handing him fish, but by patiently showing him how to mend a net and read the tides; in the background, another adult simply tosses ready-caught fish to a different child who waits idly with open hands. A caption reads: 「Give a skill, not just a meal.」 Requirements: (1) describe the picture briefly; (2) interpret the difference between fostering self-reliance and offering short-term help; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:老渔夫不直接给鱼,而是耐心教男孩补网、识潮;背景中另一成人只把现成的鱼丢给一个伸手空等的孩子,配文「授以技能,而非仅一餐」。要求:简述图画、阐释培养自立与提供短期帮助的区别、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: an old fisherman teaches a boy to mend nets and read tides while another adult merely hands ready fish to an idle child; caption give a skill, not just a meal",
+        "requiredTheme: fostering self-reliance versus short-term handouts",
+        "argumentDirection: teaching skills empowers lasting independence, whereas simply giving results breeds dependence; education over handouts",
+        "keyPoints: describe the contrast in teaching methods; interpret self-reliance versus dependence; comment with a suggestion to empower rather than spoon-feed",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young woman cleans up litter on a quiet beach alone at dawn; she is filmed by no one and praised by no one, yet she smiles. Nearby, an empty stage with a banner reading 「Environmental Awards Ceremony」 stands deserted. A caption reads: 「Virtue needs no audience.」 Requirements: (1) describe the picture briefly; (2) interpret the value of doing good without seeking recognition; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:清晨女子独自在寂静海滩捡拾垃圾,无人拍摄、无人称赞,她却面带微笑;旁边写着「环保颁奖典礼」的舞台空无一人,配文「美德无需观众」。要求:简述图画、阐释不为获得认可而行善的价值、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a woman cleans a beach alone at dawn, unfilmed and unpraised, smiling, while an awards stage stands empty; caption virtue needs no audience",
+        "requiredTheme: doing good for its own sake versus seeking recognition",
+        "argumentDirection: genuine virtue acts without needing applause; sincere good deeds matter more than performative ones done for show",
+        "keyPoints: describe the unwitnessed good deed; interpret virtue without audience; comment with a suggestion to value sincerity over recognition",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following chart (described in words). CHART: A bar chart titled 「Hours per week young people spend in nature, 2005 vs 2025」 shows a fall from 9 hours to 2.5 hours. A companion note reports that, over the same period, the proportion of young people reporting frequent anxiety rose from 18% to 41%. Requirements: (1) describe the chart's main information; (2) analyse the possible link between losing contact with nature and rising mental stress; (3) give your comment. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图表写一篇 160-200 词作文:柱状图「青年每周亲近自然时间,2005 与 2025 对比」由 9 小时降至 2.5 小时,注:同期常感焦虑的青年比例由 18% 升至 41%。要求:描述图表信息、分析远离自然与心理压力上升的可能联系、给出评论,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "chartData: weekly time in nature fell from 9h to 2.5h; frequent anxiety among youth rose from 18% to 41%",
+        "requiredTheme: declining contact with nature and rising mental stress",
+        "argumentDirection: losing touch with nature may worsen mental well-being; reconnecting with the natural world supports a healthier mind",
+        "keyPoints: describe the falling nature time and rising anxiety; analyse the possible link; comment with a suggestion to reconnect with nature",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A man stands before a wall of doors, each promising 「instant wealth」, 「ten-minute fluency」, 「effortless fitness」; he hesitates, drawn to them, while a plain, narrow staircase nearby — labelled 「one step a day」 — quietly leads upward to a bright open door. A caption reads: 「Shortcuts circle; steps climb.」 Requirements: (1) describe the picture briefly; (2) interpret the appeal and danger of seeking shortcuts to success; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:男子面对一排门,门上写「速成致富」「十分钟流利」「不费力健身」,他心动犹豫,而旁边标着「日进一步」的朴素窄梯静静通向明亮之门,配文「捷径打转,台阶登高」。要求:简述图画、阐释追求成功捷径的诱惑与危害、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a man is tempted by doors promising instant success while a plain staircase labelled one step a day leads upward; caption shortcuts circle, steps climb",
+        "requiredTheme: the lure and danger of shortcuts versus steady effort",
+        "argumentDirection: quick-fix promises rarely deliver and often mislead; genuine success comes from steady, honest effort",
+        "keyPoints: describe the tempting doors and the staircase; interpret the danger of shortcuts; comment with a suggestion to value steady effort",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    },
+    {
+      "prompt": "Write an essay of 160-200 words based on the following picture (described in words). PICTURE: A young woman holds a single small candle in a dark hall; instead of guarding its flame jealously, she leans toward others' unlit candles, lighting them one by one. As more candles glow, the whole hall brightens and her own flame is undiminished. A caption reads: 「Sharing the light loses none.」 Requirements: (1) describe the picture briefly; (2) interpret the idea that sharing knowledge or kindness enriches rather than diminishes the giver; (3) give your comment and one suggestion. Use the standard three-part structure: description, interpretation, conclusion.",
+      "promptZh": "根据所给文字描述的图画写一篇 160-200 词作文:暗厅中女子持一支小烛,不独自守焰,而是俯身逐一点亮他人未燃之烛,烛火渐多、满厅明亮,其火却毫不减损,配文「分光不损己」。要求:简述图画、阐释分享知识或善意非但不减损反而充实给予者、给出评论与建议,采用描述-阐释-结论三段式。",
+      "referencePoints": [
+        "visualDescription: a woman lights others' candles from her own, brightening the hall without diminishing her flame; caption sharing the light loses none",
+        "requiredTheme: sharing knowledge and kindness enriches the giver",
+        "argumentDirection: sharing what we have — knowledge, help, goodwill — multiplies value for all without lessening our own, building a brighter community",
+        "keyPoints: describe the shared candlelight; interpret how sharing enriches rather than depletes; comment with a suggestion to share generously",
+        "reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "160-200"
+    }
+  ]
+}

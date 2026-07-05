@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-06-24T11:15:05.430Z",
+  "apply": false,
+  "stage": "g3",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 0,
+    "reject": 6,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {
+    "passage_too_short:191<240": 1,
+    "passage_too_short:174<240": 1,
+    "passage_too_short:137<150": 1,
+    "passage_too_short:139<150": 1,
+    "passage_too_short:133<250": 1,
+    "passage_too_short:140<250": 1
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\g3\\cet-banked-cloze-lv3.json",
+      "template": "cet-banked-cloze",
+      "level": 3,
+      "parsedOk": 0,
+      "reject": 2,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\g3\\gaokao-grammar-fill-lv2.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 0,
+      "reject": 2,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\g3\\gaokao-seven-select-lv2.json",
+      "template": "gaokao-seven-select",
+      "level": 2,
+      "parsedOk": 0,
+      "reject": 2,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

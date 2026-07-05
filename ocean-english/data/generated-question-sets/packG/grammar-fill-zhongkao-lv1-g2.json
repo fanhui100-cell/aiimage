@@ -1,0 +1,167 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao-level 语法填空 (gblanks shape, 10 blanks each), batch G2. Topics distinct from G1; points rotate over tense/preposition/article/pronoun/comparative-superlative/word-form/connector/subject-verb agreement/non-finite. Dialogue single-quoted. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "My best friend Tom and I (1)____ (know) each other since primary school. He is taller than me, but I run (2)____ (fast) than him. We share many hobbies, (3)____ playing basketball is our favourite. Every weekend we meet (4)____ the park to practise together. Last month, our team won a match, and Tom scored the (5)____ (high) point of the game. After that, the coach said we (6)____ (be) the future of the team. I felt very proud (7)____ him. A good friend is someone (8)____ stands by you in hard times. Tom always helps me (9)____ (solve) my problems. I hope our friendship will last (10)____ (forever).",
+      "gblanks": [
+        { "answer": "have known", "acceptable": ["have known"], "hint": "present perfect, since ..." },
+        { "answer": "faster", "acceptable": ["faster"], "hint": "comparative of fast" },
+        { "answer": "and", "acceptable": ["and"], "hint": "connector" },
+        { "answer": "in", "acceptable": ["in", "at"], "hint": "in the park" },
+        { "answer": "highest", "acceptable": ["highest"], "hint": "superlative of high" },
+        { "answer": "were", "acceptable": ["were"], "hint": "past, subject we" },
+        { "answer": "of", "acceptable": ["of"], "hint": "proud of sb" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "relative, person" },
+        { "answer": "solve", "acceptable": ["solve", "to solve"], "hint": "help sb (to) do" },
+        { "answer": "forever", "acceptable": ["forever"], "hint": "adverb, no change" }
+      ],
+      "explain_zh": "(1) since 现在完成 have known；(2) faster 比较级；(3) 并列 and；(4) in the park；(5) highest 最高级；(6) we were 过去；(7) proud of；(8) who/that 指人；(9) help sb (to) solve；(10) forever 副词。"
+    },
+    {
+      "passage": "Yesterday our teacher gave us an interesting (1)____ (lesson) about the environment. She told us that the earth (2)____ (be) our only home, so we must protect it. We learned that plastic bags are bad (3)____ nature. If everyone uses fewer of (4)____, the world will become cleaner. The teacher showed us a video, and it was (5)____ (move) that some students almost cried. She asked us (6)____ (turn) off the lights when we leave a room. I think saving water is (7)____ (important) than wasting it. From now on, I (8)____ ride a bike to school instead of taking a car. Small actions can make (9)____ big difference. We should all do (10)____ (we) best to keep the earth green.",
+      "gblanks": [
+        { "answer": "lesson", "acceptable": ["lesson"], "hint": "singular noun after an" },
+        { "answer": "is", "acceptable": ["is"], "hint": "the earth is, general truth" },
+        { "answer": "for", "acceptable": ["for"], "hint": "bad for" },
+        { "answer": "them", "acceptable": ["them"], "hint": "object pronoun, the bags" },
+        { "answer": "so moving", "acceptable": ["so moving"], "hint": "so ... that; word form" },
+        { "answer": "to turn", "acceptable": ["to turn"], "hint": "ask sb to do" },
+        { "answer": "more important", "acceptable": ["more important"], "hint": "comparative" },
+        { "answer": "will", "acceptable": ["will"], "hint": "future, from now on" },
+        { "answer": "a", "acceptable": ["a"], "hint": "make a difference" },
+        { "answer": "our", "acceptable": ["our"], "hint": "do our best" }
+      ],
+      "explain_zh": "(1) an interesting lesson 单数；(2) the earth is 一般真理；(3) bad for；(4) fewer of them 宾格；(5) so moving that 形容词+so...that；(6) ask sb to turn；(7) more important 比较级；(8) from now on 将来 will；(9) make a difference；(10) do our best。"
+    },
+    {
+      "passage": "When I was a child, I was afraid (1)____ the dark. Every night I asked my mother (2)____ (stay) with me until I fell asleep. One evening, she gave me a small lamp (3)____ shone like a star. 'You are braver than you think,' she said (4)____ a gentle smile. Slowly, I learned to sleep alone, and the fear (5)____ (disappear). Now I am thirteen, and I am no longer (6)____ (afraid) of anything in the dark. I understand that growing up means facing our fears (7)____ ourselves. My mother often tells me that courage (8)____ (come) from inside. I am thankful for everything she (9)____ (teach) me. She is the (10)____ (good) mother in the world.",
+      "gblanks": [
+        { "answer": "of", "acceptable": ["of"], "hint": "afraid of" },
+        { "answer": "to stay", "acceptable": ["to stay"], "hint": "ask sb to do" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "relative, the lamp" },
+        { "answer": "with", "acceptable": ["with"], "hint": "with a smile" },
+        { "answer": "disappeared", "acceptable": ["disappeared"], "hint": "past tense" },
+        { "answer": "afraid", "acceptable": ["afraid"], "hint": "adjective, no change" },
+        { "answer": "by", "acceptable": ["by"], "hint": "by ourselves" },
+        { "answer": "comes", "acceptable": ["comes"], "hint": "courage comes, subject-verb" },
+        { "answer": "has taught", "acceptable": ["has taught"], "hint": "present perfect, everything she ..." },
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" }
+      ],
+      "explain_zh": "(1) afraid of；(2) ask sb to stay；(3) that/which 指物；(4) with a smile；(5) 过去 disappeared；(6) afraid 形容词；(7) by ourselves；(8) courage comes 主谓一致；(9) has taught 现在完成；(10) the best 最高级。"
+    },
+    {
+      "passage": "Our city has changed a lot in the past ten years. Twenty years ago, there (1)____ only a few tall buildings here. Now there are hundreds of (2)____ (they), and the streets are much (3)____ (wide) than before. People can travel around (4)____ (easy) by subway. The air is cleaner because many trees (5)____ (plant) along the roads. My grandparents say that life today is more convenient (6)____ it was in their youth. Last year, a beautiful park (7)____ (build) near my home. Every evening, families go there (8)____ (relax) after work. I am proud of my city, and I believe it will become even (9)____ (beautiful) in the future. We should all work hard to make (10)____ a better place.",
+      "gblanks": [
+        { "answer": "were", "acceptable": ["were"], "hint": "there were, past" },
+        { "answer": "them", "acceptable": ["them"], "hint": "object pronoun, buildings" },
+        { "answer": "wider", "acceptable": ["wider"], "hint": "comparative of wide" },
+        { "answer": "easily", "acceptable": ["easily"], "hint": "adverb form" },
+        { "answer": "have been planted", "acceptable": ["have been planted"], "hint": "present perfect passive" },
+        { "answer": "than", "acceptable": ["than"], "hint": "more ... than" },
+        { "answer": "was built", "acceptable": ["was built"], "hint": "past passive, last year" },
+        { "answer": "to relax", "acceptable": ["to relax"], "hint": "purpose, to do" },
+        { "answer": "more beautiful", "acceptable": ["more beautiful"], "hint": "comparative" },
+        { "answer": "it", "acceptable": ["it"], "hint": "object pronoun, the city" }
+      ],
+      "explain_zh": "(1) there were 过去；(2) hundreds of them 宾格；(3) wider 比较级；(4) easily 副词；(5) trees have been planted 现在完成被动；(6) more...than；(7) was built 过去被动；(8) to relax 目的；(9) more beautiful 比较级；(10) make it 宾格。"
+    },
+    {
+      "passage": "Reading is one of the best (1)____ (way) to learn about the world. My father, (2)____ is a teacher, often buys me new books. He says that a good book (3)____ (be) like a good friend. Last winter, I read a story (4)____ a brave girl who saved her village. It was so exciting (5)____ I finished it in one day. Since then, I have read more (6)____ thirty books. Reading helps me think (7)____ (deep) and write better essays. My teacher says my writing has improved (8)____ (great) this term. I usually read for an hour (9)____ I go to bed. Books have opened a window (10)____ a wider world for me.",
+      "gblanks": [
+        { "answer": "ways", "acceptable": ["ways"], "hint": "plural after one of the" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "relative, person" },
+        { "answer": "is", "acceptable": ["is"], "hint": "a good book is, subject-verb" },
+        { "answer": "about", "acceptable": ["about"], "hint": "a story about" },
+        { "answer": "that", "acceptable": ["that"], "hint": "so ... that" },
+        { "answer": "than", "acceptable": ["than"], "hint": "more than" },
+        { "answer": "more deeply", "acceptable": ["more deeply"], "hint": "comparative adverb" },
+        { "answer": "greatly", "acceptable": ["greatly"], "hint": "adverb form" },
+        { "answer": "before", "acceptable": ["before"], "hint": "time connector" },
+        { "answer": "to", "acceptable": ["to", "onto"], "hint": "a window to" }
+      ],
+      "explain_zh": "(1) one of the best ways 复数；(2) who 指人；(3) a good book is 主谓一致；(4) a story about；(5) so...that；(6) more than；(7) think more deeply 比较级副词；(8) greatly 副词；(9) before I go to bed；(10) a window to a world。"
+    },
+    {
+      "passage": "Sports are very important (1)____ our health. At our school, students must do exercise (2)____ (regular). My favourite sport is swimming, (3)____ I started when I was seven. I think it is (4)____ (relax) and good for the whole body. My brother prefers running, and he runs (5)____ (fast) than anyone in his class. Last term, our school (6)____ (hold) a sports meeting. Many parents came (7)____ (watch) their children compete. The most exciting moment was the relay race, (8)____ our class won. After the race, everyone was tired but (9)____ (happy). I believe that doing sports makes us (10)____ (strong) and happier.",
+      "gblanks": [
+        { "answer": "for", "acceptable": ["for", "to"], "hint": "important for/to" },
+        { "answer": "regularly", "acceptable": ["regularly"], "hint": "adverb form" },
+        { "answer": "which", "acceptable": ["which"], "hint": "relative, the sport" },
+        { "answer": "relaxing", "acceptable": ["relaxing"], "hint": "adjective, -ing" },
+        { "answer": "faster", "acceptable": ["faster"], "hint": "comparative of fast" },
+        { "answer": "held", "acceptable": ["held"], "hint": "past tense, last term" },
+        { "answer": "to watch", "acceptable": ["to watch"], "hint": "purpose, to do" },
+        { "answer": "where", "acceptable": ["where"], "hint": "relative, the race" },
+        { "answer": "happy", "acceptable": ["happy"], "hint": "adjective, no change" },
+        { "answer": "stronger", "acceptable": ["stronger"], "hint": "comparative of strong" }
+      ],
+      "explain_zh": "(1) important for/to；(2) regularly 副词；(3) which 指物；(4) relaxing 形容词；(5) faster 比较级；(6) held 过去；(7) to watch 目的；(8) where 引导地点(race中)；(9) tired but happy；(10) stronger 比较级。"
+    },
+    {
+      "passage": "My mother loves growing flowers on our balcony. She has more than twenty (1)____ (pot) of plants there. Every morning she waters them carefully (2)____ they can grow well. 'Plants are living things,' she always (3)____ (say) to me. In spring, the roses are the (4)____ (colourful) of all. Last week, one little plant (5)____ (begin) to die, and my mother looked worried. She moved it into the sun, and slowly it became green (6)____. Now I understand that caring (7)____ a plant needs patience. My mother says that growing flowers (8)____ (teach) us to be gentle. When I grow up, I (9)____ have a big garden of my own. I will fill it (10)____ beautiful flowers.",
+      "gblanks": [
+        { "answer": "pots", "acceptable": ["pots"], "hint": "plural after twenty" },
+        { "answer": "so", "acceptable": ["so", "so that"], "hint": "purpose, in order that" },
+        { "answer": "says", "acceptable": ["says"], "hint": "she says, subject-verb" },
+        { "answer": "most colourful", "acceptable": ["most colourful", "most colorful"], "hint": "superlative" },
+        { "answer": "began", "acceptable": ["began"], "hint": "past tense, last week" },
+        { "answer": "again", "acceptable": ["again"], "hint": "adverb, once more" },
+        { "answer": "for", "acceptable": ["for"], "hint": "care for" },
+        { "answer": "teaches", "acceptable": ["teaches"], "hint": "growing flowers teaches, subject-verb" },
+        { "answer": "will", "acceptable": ["will"], "hint": "future, when I grow up" },
+        { "answer": "with", "acceptable": ["with"], "hint": "fill ... with" }
+      ],
+      "explain_zh": "(1) twenty pots 复数；(2) so (that) 目的；(3) she says 主谓一致；(4) most colourful 最高级；(5) began 过去；(6) green again；(7) care for；(8) growing flowers teaches 动名词主语；(9) 将来 will；(10) fill with。"
+    },
+    {
+      "passage": "Last month, my class (1)____ (visit) an old farm in the countryside. The farmer, an old man (2)____ smile was very kind, welcomed us warmly. He showed us how vegetables (3)____ (grow) from tiny seeds. We learned that farmers get up (4)____ (early) than most people. Each of us (5)____ (be) given a chance to feed the chickens. It was much (6)____ (dirty) than I expected, but also great fun. The farmer said that food does not come (7)____ supermarkets, but from hard work. 'Never waste your meals,' he told us (8)____ (serious). On the way home, we talked about (9)____ we had learned. That trip taught me (10)____ (respect) every farmer.",
+      "gblanks": [
+        { "answer": "visited", "acceptable": ["visited"], "hint": "past tense, last month" },
+        { "answer": "whose", "acceptable": ["whose"], "hint": "possessive relative" },
+        { "answer": "grow", "acceptable": ["grow"], "hint": "how vegetables grow" },
+        { "answer": "earlier", "acceptable": ["earlier"], "hint": "comparative of early" },
+        { "answer": "was", "acceptable": ["was"], "hint": "each of us was, subject-verb" },
+        { "answer": "dirtier", "acceptable": ["dirtier"], "hint": "comparative of dirty" },
+        { "answer": "from", "acceptable": ["from"], "hint": "come from" },
+        { "answer": "seriously", "acceptable": ["seriously"], "hint": "adverb form" },
+        { "answer": "what", "acceptable": ["what"], "hint": "what we had learned" },
+        { "answer": "to respect", "acceptable": ["to respect"], "hint": "teach sb to do" }
+      ],
+      "explain_zh": "(1) last month 过去 visited；(2) whose smile；(3) how vegetables grow；(4) earlier 比较级；(5) each of us was 主谓一致；(6) dirtier 比较级；(7) come from；(8) seriously 副词；(9) what 引导宾语从句；(10) teach sb to respect。"
+    },
+    {
+      "passage": "Music plays an important part in my life. I (1)____ (learn) to play the piano for five years now. At first, it was difficult, and I almost gave (2)____. But my teacher encouraged me, and I kept (3)____ (practise) every day. Now playing the piano is one of the (4)____ (great) joys in my life. Music helps me relax (5)____ I feel tired or sad. My sister sings (6)____ (beautiful), and sometimes we perform together. Last summer, we (7)____ (take) part in a school concert. The audience clapped (8)____ loudly that we played another song. I believe music is a language (9)____ everyone can understand. It brings people (10)____ no matter where they are from.",
+      "gblanks": [
+        { "answer": "have learned", "acceptable": ["have learned", "have been learning"], "hint": "present perfect, for five years" },
+        { "answer": "up", "acceptable": ["up"], "hint": "give up" },
+        { "answer": "practising", "acceptable": ["practising", "practicing"], "hint": "keep doing" },
+        { "answer": "greatest", "acceptable": ["greatest"], "hint": "superlative of great" },
+        { "answer": "when", "acceptable": ["when"], "hint": "time connector" },
+        { "answer": "beautifully", "acceptable": ["beautifully"], "hint": "adverb of sing" },
+        { "answer": "took", "acceptable": ["took"], "hint": "past tense, last summer" },
+        { "answer": "so", "acceptable": ["so"], "hint": "so ... that" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "relative, the language" },
+        { "answer": "together", "acceptable": ["together"], "hint": "bring people together" }
+      ],
+      "explain_zh": "(1) for five years 现在完成 have learned；(2) give up；(3) keep practising；(4) one of the greatest 最高级；(5) when 时间；(6) beautifully 副词；(7) last summer 过去 took；(8) so...that；(9) that/which 指物；(10) bring people together。"
+    },
+    {
+      "passage": "In our school, we have a special rule: every student must join (1)____ club. There are many clubs, such as art, science and (2)____ (history). I chose the writing club because I love (3)____ (tell) stories. Our teacher says that good writing (4)____ (need) practice and patience. Last term, I wrote a short story, and it (5)____ (choose) for the school magazine. I felt happier than (6)____ before. The club has also helped me make many new (7)____ (friend). We often share our ideas (8)____ each other after class. I think joining a club is a wonderful way (9)____ (discover) your interests. It makes school life (10)____ (rich) and more colourful.",
+      "gblanks": [
+        { "answer": "a", "acceptable": ["a"], "hint": "join a club, indefinite article" },
+        { "answer": "history", "acceptable": ["history"], "hint": "uncountable, no change" },
+        { "answer": "telling", "acceptable": ["telling", "to tell"], "hint": "love doing / to do" },
+        { "answer": "needs", "acceptable": ["needs"], "hint": "good writing needs, subject-verb" },
+        { "answer": "was chosen", "acceptable": ["was chosen"], "hint": "past passive" },
+        { "answer": "ever", "acceptable": ["ever"], "hint": "happier than ever" },
+        { "answer": "friends", "acceptable": ["friends"], "hint": "plural after many" },
+        { "answer": "with", "acceptable": ["with"], "hint": "share with" },
+        { "answer": "to discover", "acceptable": ["to discover"], "hint": "a way to do" },
+        { "answer": "richer", "acceptable": ["richer"], "hint": "comparative of rich" }
+      ],
+      "explain_zh": "(1) join a club 不定冠词；(2) history 不可数；(3) love telling/to tell；(4) good writing needs 主谓一致；(5) was chosen 过去被动；(6) happier than ever；(7) many friends 复数；(8) share with；(9) a way to discover；(10) richer 比较级。"
+    }
+  ]
+}

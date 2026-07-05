@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-07-04T20:29:05.939Z",
+  "apply": true,
+  "stage": "ielts-pilot-2026-07-05",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 30,
+    "wrote": 0,
+    "dup": 30,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\ielts-pilot-2026-07-05\\ielts-speaking.productive.json",
+      "examId": "ielts",
+      "taskType": "interview_speaking",
+      "level": 8,
+      "skill": "speaking",
+      "tasks": 10,
+      "wrote": 0,
+      "dup": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-pilot-2026-07-05\\ielts-writing-task1.productive.json",
+      "examId": "ielts",
+      "taskType": "essay_writing",
+      "level": 8,
+      "skill": "writing",
+      "tasks": 10,
+      "wrote": 0,
+      "dup": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-pilot-2026-07-05\\ielts-writing-task2.productive.json",
+      "examId": "ielts",
+      "taskType": "essay_writing",
+      "level": 8,
+      "skill": "writing",
+      "tasks": 10,
+      "wrote": 0,
+      "dup": 10
+    }
+  ]
+}

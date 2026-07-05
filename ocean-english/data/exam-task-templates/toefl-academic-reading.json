@@ -1,0 +1,31 @@
+{
+  "templateId": "toefl-academic-reading",
+  "examIds": ["toefl"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Reading · Read an Academic Passage。原创学术说明文（120-200 词，复杂文本可至 200 词，CEFR B1-C2，Academic 语境，不抄 CET/高考/考研文章冒充）+ 3-4 道四选一，覆盖主旨/细节/词义推断/指代/句意/篇章组织；每篇至少 1 道 inference 或 organization 高阶题。唯一正确，干扰项合理。机器评分，无 rubric。passageType=toefl_academic。Claude 亲撰，不抄真题、不调 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 120,
+    "maxWords": 200,
+    "perStimulusItems": 4,
+    "passageType": "toefl_academic",
+    "topicDomains": ["biology", "earth_science", "history", "social_science", "humanities", "physics", "psychology", "environment"]
+  },
+  "itemCount": 4,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["main_idea", "detail", "inference", "vocab_in_context", "rhetorical_organization"],
+  "qualityRules": [
+    "100% 原创学术说明文，禁止抄袭 ETS 真题，禁止复用 CET/高考/考研文章冒充",
+    "篇幅 120-200 词，学术难度 B1-C2，Academic 语境（说明/解释，非记叙）",
+    "每篇 3-4 道四选一，唯一正确，干扰项与文意相关但可排除",
+    "每篇至少含 1 道 inference 或 organization 高阶理解题",
+    "正确选项位置分散，不集中于某一项",
+    "机器评分，无 rubric；不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

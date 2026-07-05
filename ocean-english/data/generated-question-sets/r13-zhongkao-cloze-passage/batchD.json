@@ -1,0 +1,186 @@
+{
+  "template": "zhongkao-cloze-passage",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Last Friday our school had a music festival in the big hall. Everyone in my class was very (1)____ about it for many days. We decided to sing a happy song together on the stage. We (2)____ for two weeks after class every single day. Some students could not sing well at first, but they were brave and never (3)____ up. Our music teacher helped us a lot and was always (4)____ to us. On the day of the festival, the school hall was (5)____ of parents and students. When it was finally our (6)____, we walked onto the stage slowly. My heart was beating fast because I felt a little (7)____ in front of so many people. Then the music started and we began to (8)____. Soon I forgot my fear and only thought about the beautiful song. The whole audience listened (9)____ and no one made a sound. When we finished our song, everyone (10)____ their hands loudly for a long time. We were so (11)____ that we almost cried with joy. We had taken part in many school events since last September, yet that music festival was truly the best day of the whole (12)____. I will surely remember it forever.",
+      "blanks": [
+        { "options": ["excited", "tired", "bored", "afraid"], "answer": "A" },
+        { "options": ["slept", "practiced", "shopped", "argued"], "answer": "B" },
+        { "options": ["woke", "stood", "gave", "looked"], "answer": "C" },
+        { "options": ["rude", "angry", "kind", "lazy"], "answer": "C" },
+        { "options": ["afraid", "free", "empty", "full"], "answer": "D" },
+        { "options": ["mistake", "turn", "money", "lunch"], "answer": "B" },
+        { "options": ["nervous", "happy", "hungry", "sleepy"], "answer": "A" },
+        { "options": ["cry", "run", "sing", "eat"], "answer": "C" },
+        { "options": ["quietly", "loudly", "angrily", "slowly"], "answer": "A" },
+        { "options": ["washed", "hid", "cut", "clapped"], "answer": "D" },
+        { "options": ["sad", "proud", "tired", "bored"], "answer": "B" },
+        { "options": ["week", "month", "minute", "year"], "answer": "D" }
+      ],
+      "explain_zh": "(1)对音乐节大家都很兴奋,excited符合语境。(2)放学后练习两周,practiced。(3)从不放弃give up。(4)老师总是对我们很友善kind。(5)大厅里满是家长和学生,be full of。(6)轮到我们时,turn指轮到。(7)心跳很快因为有点紧张nervous。(8)音乐响起开始唱歌sing。(9)观众安静地听,quietly。(10)大声鼓掌clapped their hands。(11)我们如此自豪几乎要哭proud。(12)自去年九月以来参加了许多活动,那是这一整年最棒的一天year,week/month时间跨度太短,minute荒谬。"
+    },
+    {
+      "passage": "One sunny morning I found a baby bird on the ground under a big tall tree. It was very (1)____ and could not fly at all. I felt (2)____ for it, so I picked it up gently with both hands. The little bird looked up at me with its small bright (3)____. I carried it home carefully and made a soft warm bed inside a (4)____ box. My mother told me to give it some (5)____ and a little bread to eat. At first the poor bird was too (6)____ to eat anything at all. I waited (7)____ beside the box and never gave up hope. After a few days, it began to eat and grew (8)____ every single day. Soon it could even (9)____ its small thin wings. I knew that it was finally time to let it go (10)____. One bright morning I took the little bird outside and gently opened my (11)____. The bird flew up high into the blue sky. I felt a little sad to see it leave, but I was also very (12)____ because I had helped a small life.",
+      "blanks": [
+        { "options": ["big", "weak", "old", "fat"], "answer": "B" },
+        { "options": ["happy", "proud", "sorry", "angry"], "answer": "C" },
+        { "options": ["eyes", "feet", "ears", "teeth"], "answer": "A" },
+        { "options": ["broken", "small", "dirty", "heavy"], "answer": "B" },
+        { "options": ["water", "sand", "paper", "ice"], "answer": "A" },
+        { "options": ["strong", "weak", "tall", "young"], "answer": "B" },
+        { "options": ["loudly", "patiently", "quickly", "angrily"], "answer": "B" },
+        { "options": ["smaller", "shorter", "stronger", "colder"], "answer": "C" },
+        { "options": ["close", "open", "wash", "break"], "answer": "B" },
+        { "options": ["free", "away", "down", "back"], "answer": "A" },
+        { "options": ["window", "door", "hands", "book"], "answer": "C" },
+        { "options": ["sad", "happy", "tired", "afraid"], "answer": "B" }
+      ],
+      "explain_zh": "(1)小鸟很虚弱不能飞,weak。(2)替它感到难过feel sorry for。(3)用它明亮的小眼睛看我eyes。(4)放进一个小盒子small。(5)给它一些水water。(6)起初太虚弱吃不下weak。(7)我耐心地在旁等待patiently。(8)一天天变得更强壮stronger。(9)能扇动小翅膀open its wings。(10)是时候放它自由let it go free。(11)张开我的双手hands。(12)帮助了一个小生命我也很开心happy。"
+    },
+    {
+      "passage": "Last week my whole class went to a science museum for a field (1)____. We were all very happy to leave the (2)____ for a whole day. Our kind teacher told us to stay close (3)____ and not get lost in the crowd. The museum was very huge and (4)____ of interesting things to see. First we saw many old machines that people had used long (5)____ in the past. Then we walked into a dark quiet room to look at the (6)____. Through a big telescope I could see the moon and the (7)____ very clearly. My favorite part of the day was a robot that could (8)____ to all our questions. It even told us a funny (9)____ and we all laughed together. After that, we also did a small (10)____ about water and electricity. The whole day passed very (11)____ and soon it was time to leave. On the bus home, everyone happily talked about what they had (12)____. I really hope that we can visit this wonderful museum again next year.",
+      "blanks": [
+        { "options": ["trip", "test", "meal", "game"], "answer": "A" },
+        { "options": ["park", "school", "shop", "river"], "answer": "B" },
+        { "options": ["alone", "behind", "together", "outside"], "answer": "C" },
+        { "options": ["full", "free", "tired", "afraid"], "answer": "A" },
+        { "options": ["away", "ago", "later", "after"], "answer": "B" },
+        { "options": ["flowers", "stars", "books", "cars"], "answer": "B" },
+        { "options": ["sun", "stars", "trees", "rivers"], "answer": "B" },
+        { "options": ["sleep", "answer", "run", "eat"], "answer": "B" },
+        { "options": ["song", "price", "joke", "name"], "answer": "C" },
+        { "options": ["dinner", "experiment", "race", "song"], "answer": "B" },
+        { "options": ["slowly", "quickly", "sadly", "loudly"], "answer": "B" },
+        { "options": ["lost", "broken", "learned", "missed"], "answer": "C" }
+      ],
+      "explain_zh": "(1)去科学博物馆进行实地考察field trip。(2)能离开学校一整天school。(3)老师让我们待在一起together。(4)博物馆满是有趣的东西be full of。(5)很久以前人们用的机器long ago。(6)进暗室看星星stars。(7)透过望远镜看到月亮和星星stars。(8)能回答我们问题的机器人answer。(9)还讲了个笑话逗大家笑joke,song/price/name不能与funny及大家发笑搭配。(10)做了关于水电的小实验experiment。(11)这一天过得很快quickly。(12)谈论学到了什么learned。"
+    },
+    {
+      "passage": "Last Sunday I decided to learn how to (1)____ noodles all by myself at home. My grandmother is very good at it, so I kindly asked her to (2)____ me. First, we needed to boil some clean (3)____ in a big metal pot. Grandmother told me to be very (4)____ because the hot stove could burn me. When the water was finally ready, I put the noodles in very (5)____. I had to wait a few (6)____ until they became soft enough. Then Grandmother showed me how to add salt and other (7)____ to make the soup tasty. The small kitchen soon smelled very (8)____ and warm. I was a little worried that I would (9)____ everything up. But with her patient help, the noodles finally turned out (10)____. We sat down at the table and (11)____ them together happily. They were the most delicious noodles I had ever had in my life. Now I can cook this simple tasty dish all by (12)____, and my whole family is really proud of me today.",
+      "blanks": [
+        { "options": ["sell", "cook", "buy", "draw"], "answer": "B" },
+        { "options": ["teach", "watch", "stop", "leave"], "answer": "A" },
+        { "options": ["water", "milk", "juice", "oil"], "answer": "A" },
+        { "options": ["lazy", "rude", "careful", "quiet"], "answer": "C" },
+        { "options": ["lately", "carefully", "loudly", "angrily"], "answer": "B" },
+        { "options": ["minutes", "weeks", "months", "years"], "answer": "A" },
+        { "options": ["toys", "books", "spices", "stones"], "answer": "C" },
+        { "options": ["bad", "good", "dirty", "strange"], "answer": "B" },
+        { "options": ["clean", "wash", "mess", "wake"], "answer": "C" },
+        { "options": ["terrible", "great", "cold", "raw"], "answer": "B" },
+        { "options": ["threw", "hid", "enjoyed", "bought"], "answer": "C" },
+        { "options": ["myself", "themselves", "yourself", "himself"], "answer": "A" }
+      ],
+      "explain_zh": "(1)我决定自己学煮面cook。(2)请奶奶教我teach。(3)先在大锅里烧水water。(4)炉子热要小心careful。(5)小心地把面放进去carefully。(6)等几分钟直到变软minutes。(7)加盐和调料spices。(8)厨房闻起来很香good。(9)担心会把一切弄糟mess up。(10)面做得很棒great。(11)我们一起享用enjoyed。(12)现在我能自己做myself。"
+    },
+    {
+      "passage": "Tom and I had been best friends for many years, but last week we had a big (1)____. He borrowed my favorite book and then lost it somewhere. I was very (2)____ at the time and shouted at him angrily. After that, we did not (3)____ to each other for three whole days. I felt very sad and could not (4)____ well at night. I really missed playing and laughing with my best (5)____. On Thursday, Tom quietly came to my desk during the morning (6)____. He looked very nervous and held a small (7)____ in his hands. He said softly that he was really (8)____ and that he had bought me a brand new book. I was deeply (9)____ that he had done this kind thing for me. I suddenly realized that our friendship was far more important than a (10)____ book. I told him that I was sorry too for being so (11)____ to him. We shook hands warmly and became good friends (12)____. Now I clearly know that saying sorry is not easy, but it can fix many big problems.",
+      "blanks": [
+        { "options": ["party", "fight", "meal", "game"], "answer": "B" },
+        { "options": ["happy", "angry", "proud", "calm"], "answer": "B" },
+        { "options": ["run", "eat", "talk", "write"], "answer": "C" },
+        { "options": ["sleep", "swim", "sing", "draw"], "answer": "A" },
+        { "options": ["teacher", "friend", "brother", "neighbor"], "answer": "B" },
+        { "options": ["break", "night", "weekend", "holiday"], "answer": "A" },
+        { "options": ["box", "dog", "tree", "car"], "answer": "A" },
+        { "options": ["happy", "sorry", "busy", "lucky"], "answer": "B" },
+        { "options": ["touched", "bored", "afraid", "tired"], "answer": "A" },
+        { "options": ["single", "broken", "red", "heavy"], "answer": "A" },
+        { "options": ["kind", "quiet", "angry", "shy"], "answer": "C" },
+        { "options": ["never", "again", "alone", "later"], "answer": "B" }
+      ],
+      "explain_zh": "(1)我们大吵了一架fight。(2)我很生气angry。(3)三天没和对方说话talk。(4)晚上睡不好sleep。(5)想念我最好的朋友friend。(6)早上课间Tom来到我桌边break。(7)手里拿着一个小盒子box。(8)他说自己真的很抱歉sorry。(9)我很感动touched。(10)友谊比区区一本书更重要single book(强调只是一本),broken/red/heavy在此语境无关。(11)我也为自己刚才的生气道歉angry。(12)我们又成了好朋友again。"
+    },
+    {
+      "passage": "Last Saturday our neighborhood held a special clean-up (1)____. Many kind people came to help make our whole community (2)____ again. My family and I got up very (3)____ in the morning and joined the others in the park. We brought gloves, big bags and some other useful (4)____ with us. The park looked quite dirty because some people had carelessly left (5)____ everywhere. We picked up empty bottles, old paper and many plastic (6)____. It was really hard (7)____ for all of us, but everyone worked happily together. An old man (8)____ us with a big warm smile and thanked us kindly. By noon, the whole park was clean and (9)____ once again. The green grass looked fresh and the bright flowers were (10)____. We all felt very (11)____ of what we had done that day. Our teacher said that if everyone helps a little, the whole world will become a much better (12)____. From that special day on, I promised myself to always protect our environment. I also told my classmates about it the next Monday, and many of them said that they would like to join us next time too.",
+      "blanks": [
+        { "options": ["day", "test", "race", "trip"], "answer": "A" },
+        { "options": ["dirty", "clean", "noisy", "dark"], "answer": "B" },
+        { "options": ["late", "early", "slowly", "alone"], "answer": "B" },
+        { "options": ["tools", "toys", "foods", "books"], "answer": "A" },
+        { "options": ["money", "flowers", "rubbish", "water"], "answer": "C" },
+        { "options": ["bags", "trees", "desks", "birds"], "answer": "A" },
+        { "options": ["sleep", "work", "rain", "music"], "answer": "B" },
+        { "options": ["hit", "pushed", "greeted", "left"], "answer": "C" },
+        { "options": ["ugly", "beautiful", "broken", "empty"], "answer": "B" },
+        { "options": ["dead", "blooming", "falling", "burning"], "answer": "B" },
+        { "options": ["afraid", "tired", "proud", "bored"], "answer": "C" },
+        { "options": ["person", "time", "story", "place"], "answer": "D" }
+      ],
+      "explain_zh": "(1)社区举行了清洁日clean-up day。(2)让社区重新变干净make...clean again,用原级搭配自然。(3)我们起得很早early。(4)带了手套、袋子和有用的工具tools。(5)有人到处乱扔垃圾rubbish。(6)捡起空瓶、纸和许多塑料袋bags。(7)这是辛苦的工作hard work。(8)一位老人微笑着向我们打招呼greeted。(9)公园又变得美丽beautiful。(10)花儿在盛开blooming。(11)我们为所做的感到自豪proud。(12)世界会变成更好的地方place。"
+    },
+    {
+      "passage": "One rainy afternoon, I really wanted to do a fun science (1)____ at home. I had read all about it earlier in my school (2)____. For it, I needed a clean bottle, some vinegar and a little baking (3)____. My little sister stood beside me and watched with (4)____ eyes. First, I carefully poured some vinegar into the empty (5)____. Then I slowly added the white baking soda into it. Suddenly, lots of (6)____ came out of the bottle just like a small volcano! My little sister was so (7)____ that she quickly jumped back. She shouted loudly that it looked just like (8)____. I patiently explained that it happened because the two things had a chemical (9)____. She listened very (10)____ and asked me many good questions. I really felt like a real (11)____ while teaching my curious little sister. Doing simple experiments at home is both fun and very (12)____. Now my little sister wants to study science too, just like me. We have already planned to try another safe and easy experiment together this coming weekend at home.",
+      "blanks": [
+        { "options": ["game", "experiment", "song", "trip"], "answer": "B" },
+        { "options": ["bag", "book", "shoe", "window"], "answer": "B" },
+        { "options": ["salt", "soda", "sugar", "rice"], "answer": "B" },
+        { "options": ["closed", "curious", "tired", "angry"], "answer": "B" },
+        { "options": ["bottle", "box", "bag", "cup"], "answer": "A" },
+        { "options": ["water", "bubbles", "smoke", "stones"], "answer": "B" },
+        { "options": ["bored", "sleepy", "surprised", "hungry"], "answer": "C" },
+        { "options": ["magic", "music", "money", "food"], "answer": "A" },
+        { "options": ["lesson", "story", "reaction", "problem"], "answer": "C" },
+        { "options": ["loudly", "carefully", "angrily", "sadly"], "answer": "B" },
+        { "options": ["doctor", "scientist", "driver", "farmer"], "answer": "B" },
+        { "options": ["boring", "useful", "dangerous", "easy"], "answer": "B" }
+      ],
+      "explain_zh": "(1)在家做科学实验experiment。(2)在学校课本里读到book。(3)需要一点小苏打baking soda。(4)妹妹好奇地看着curious。(5)把醋倒进空瓶子bottle。(6)很多气泡冒出来bubbles。(7)妹妹很惊讶surprised。(8)像魔法一样magic。(9)因为发生了化学反应reaction。(10)她认真地听carefully。(11)我感觉像个真正的科学家scientist。(12)做实验既有趣又有用useful。"
+    },
+    {
+      "passage": "My grandmother often tells me wonderful stories about her (1)____ when she was very young. She grew up in a small quiet (2)____ near the green mountains. Life was very (3)____ in those old days, and her family did not have much money at all. She had to walk a long way to (4)____ every single morning. There was no electricity then, so she studied by (5)____ light at night. Although her life was very hard, she was always (6)____ and worked very hard every day. She often told me that she loved (7)____ books more than anything else. Her kind teacher once gave her an old book as a (8)____, and she read it many times. Now my grandmother is quite old, but she still (9)____ a lot every day. Her simple stories teach me to always value what I (10)____ today. I am really very (11)____ to live in such a comfortable warm home. Every weekend I like to sit beside her and listen to these old stories again and again. I will always remember my dear grandmother's (12)____ words.",
+      "blanks": [
+        { "options": ["future", "childhood", "dream", "trip"], "answer": "B" },
+        { "options": ["city", "village", "factory", "office"], "answer": "B" },
+        { "options": ["easy", "hard", "rich", "funny"], "answer": "B" },
+        { "options": ["sleep", "play", "school", "shop"], "answer": "C" },
+        { "options": ["candle", "phone", "sun", "fire"], "answer": "A" },
+        { "options": ["lazy", "sad", "happy", "angry"], "answer": "C" },
+        { "options": ["burning", "selling", "reading", "throwing"], "answer": "C" },
+        { "options": ["gift", "rule", "joke", "test"], "answer": "A" },
+        { "options": ["sleeps", "reads", "cries", "runs"], "answer": "B" },
+        { "options": ["lose", "break", "have", "hide"], "answer": "C" },
+        { "options": ["afraid", "lucky", "tired", "bored"], "answer": "B" },
+        { "options": ["loud", "wise", "rude", "empty"], "answer": "B" }
+      ],
+      "explain_zh": "(1)讲她小时候的故事childhood。(2)在山边安静的小村庄长大village。(3)那时生活很艰难hard。(4)每天早晨走很远去上学school。(5)晚上靠烛光学习candle。(6)虽然苦但她总是快乐happy。(7)她最爱读书reading。(8)老师送她一本旧书作礼物gift。(9)现在仍每天读很多reads。(10)珍惜今天所拥有的have。(11)我很幸运住在舒适的家lucky。(12)记住奶奶睿智的话wise。"
+    },
+    {
+      "passage": "Last month our school held a charity (1)____ to help sick children in the city hospital. Students, teachers and many parents all came to (2)____ part in it. Before the big race, I trained every single day to get (3)____. On the morning of the event, the weather was (4)____ and very sunny. Hundreds of happy people stood at the starting (5)____, feeling quite excited. When the whistle blew loudly, we all started to (6)____ together at once. The whole race was five kilometers (7)____, and it really was not easy. Halfway through, my tired legs felt very (8)____, but I did not stop at all. Many kind people on the side cheered for us (9)____. I kept thinking about the sick children we were trying so hard to (10)____. Finally, I crossed the finish line and felt so (11)____ and proud. Together we raised a lot of (12)____ for the children's hospital. It was a tiring but very meaningful day for everyone there. On the way home, our teacher told us that the sick children would surely feel happier because of what we had done together.",
+      "blanks": [
+        { "options": ["run", "test", "meal", "show"], "answer": "A" },
+        { "options": ["give", "take", "make", "have"], "answer": "B" },
+        { "options": ["weak", "fit", "sick", "fat"], "answer": "B" },
+        { "options": ["rainy", "warm", "cold", "windy"], "answer": "B" },
+        { "options": ["line", "room", "table", "door"], "answer": "A" },
+        { "options": ["sleep", "eat", "run", "sing"], "answer": "C" },
+        { "options": ["short", "long", "wide", "deep"], "answer": "B" },
+        { "options": ["tired", "fresh", "strong", "light"], "answer": "A" },
+        { "options": ["sadly", "loudly", "angrily", "quietly"], "answer": "B" },
+        { "options": ["hurt", "help", "leave", "forget"], "answer": "B" },
+        { "options": ["bored", "happy", "afraid", "lazy"], "answer": "B" },
+        { "options": ["water", "time", "paper", "money"], "answer": "D" }
+      ],
+      "explain_zh": "(1)学校举办慈善跑charity run。(2)大家都来参加take part。(3)赛前训练让自己更健康fit。(4)天气温暖晴朗warm。(5)站在起跑线starting line。(6)哨声响起一起跑run。(7)赛程五公里长long。(8)中途腿很累tired。(9)路边人大声加油loudly。(10)想着要帮助的患病孩子help。(11)冲过终点很开心happy。(12)为儿童医院筹了很多钱money。"
+    },
+    {
+      "passage": "Last winter I took a slow train to visit my (1)____ in another faraway city. The train was very crowded and I could not find a (2)____ to sit. I felt cold and very tired after standing for a long (3)____. An old man sitting nearby soon noticed me and (4)____ at me. He kindly offered me his own (5)____ and asked me to rest there. At first I politely said no, but he gently (6)____ with a warm smile. After that, we began to (7)____ and he told me many interesting stories about his long life. He even shared some (8)____ with me when he saw that I was hungry. His simple kindness made the long journey feel much (9)____. When the train finally arrived, I thanked him many (10)____. He just smiled and said that helping other people always made him (11)____. I have never forgotten that very kind (12)____ on the train. Now I always try my best to help other people too. Whenever I see someone in need on the bus or in the street, I think of that old man and his warm and friendly smile.",
+      "blanks": [
+        { "options": ["dog", "aunt", "car", "book"], "answer": "B" },
+        { "options": ["seat", "door", "window", "bag"], "answer": "A" },
+        { "options": ["color", "while", "money", "song"], "answer": "B" },
+        { "options": ["laughed", "slept", "smiled", "left"], "answer": "C" },
+        { "options": ["seat", "hat", "coat", "book"], "answer": "A" },
+        { "options": ["refused", "insisted", "cried", "ran"], "answer": "B" },
+        { "options": ["chat", "fight", "sleep", "eat"], "answer": "A" },
+        { "options": ["money", "food", "books", "toys"], "answer": "B" },
+        { "options": ["longer", "shorter", "harder", "colder"], "answer": "B" },
+        { "options": ["weeks", "times", "days", "years"], "answer": "B" },
+        { "options": ["sad", "happy", "tired", "angry"], "answer": "B" },
+        { "options": ["dog", "stranger", "teacher", "driver"], "answer": "B" }
+      ],
+      "explain_zh": "(1)坐火车去看姨妈aunt。(2)找不到座位seat。(3)站了很久a long while。(4)老人注意到我并对我微笑smiled。(5)好心让出自己的座位seat。(6)我起初拒绝但他温和地坚持insisted。(7)我们开始聊天chat。(8)看我饿了分给我食物food。(9)让漫长旅程感觉更短shorter。(10)我多次感谢他times。(11)帮助别人让他开心happy。(12)我从未忘记那位好心的陌生人stranger。"
+    }
+  ]
+}

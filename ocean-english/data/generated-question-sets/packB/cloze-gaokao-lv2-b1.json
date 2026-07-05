@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空 (narrative + reflection). Each passage ~220-260 words, 15 blanks, 4 same-part-of-speech options per blank, exactly one correct by context/logic/collocation. DeepSeek not used. answer letters resolve to option index.",
+  "sets": [
+    {
+      "passage": "Two years ago, I moved to a new city where I knew no one. The first weeks were (1)___. Every evening I walked home alone, feeling that I did not (2)___ anywhere. One cold night, I noticed an old man sitting outside a small shop, selling hand-made paper flowers. Few people (3)___. I had no need for flowers, but something made me (4)___. I bought one and asked about his work, and his face (5)___ as he told me he had made flowers for forty years. Each flower, he explained, was folded slowly by hand from bright coloured paper, and no two of them were ever exactly the same. After that, I greeted him every day, and our short chats slowly became the (6)___ part of my evening. The strange city began to feel less (7)___. Months later he fell ill and his corner stood (8)___. I realised how much our small friendship had (9)___ to me. When he returned, thinner but smiling, I felt a joy that (10)___ me. That experience taught me something (11)___: in a world of strangers, a single friendly (12)___ can change everything. We often wait for others to reach out (13)___, but kindness usually begins with one (14)___ person. Since then, I have tried to be that person, offering a smile to those who, like my younger self, feel (15)___.",
+      "blanks": [
+        { "options": ["exciting", "lonely", "busy", "ordinary"], "answer": "B" },
+        { "options": ["belong", "stay", "live", "go"], "answer": "A" },
+        { "options": ["paid", "stopped", "returned", "hurried"], "answer": "B" },
+        { "options": ["leave", "pause", "refuse", "hurry"], "answer": "B" },
+        { "options": ["fell", "brightened", "turned", "hardened"], "answer": "B" },
+        { "options": ["worst", "best", "longest", "hardest"], "answer": "B" },
+        { "options": ["strange", "crowded", "modern", "noisy"], "answer": "A" },
+        { "options": ["open", "empty", "ready", "busy"], "answer": "B" },
+        { "options": ["meant", "given", "cost", "said"], "answer": "A" },
+        { "options": ["worried", "surprised", "frightened", "tired"], "answer": "B" },
+        { "options": ["strange", "important", "funny", "sad"], "answer": "B" },
+        { "options": ["gift", "gesture", "order", "habit"], "answer": "B" },
+        { "options": ["first", "again", "politely", "slowly"], "answer": "A" },
+        { "options": ["rich", "brave", "busy", "quiet"], "answer": "B" },
+        { "options": ["proud", "alone", "angry", "tired"], "answer": "B" }
+      ],
+      "explain_zh": "1孤独 2belong属于 3stopped停下买 4pause停步 5brightened脸亮起 6best最好时光 7less strange不那么陌生 8empty摊位空 9meant对我意义 10surprised惊喜 11important重要 12gesture善举 13first先伸手 14brave勇敢的人 15alone孤单。"
+    },
+    {
+      "passage": "When I was twelve, I was terribly afraid of water. My friends could all swim, but I always found an (1)___ to stay on dry land. That summer, my father decided it was time for me to (2)___ my fear. The first lesson was a (3)___: the moment my feet left the bottom of the pool, I panicked and grabbed the edge. My father did not (4)___ me. Instead, he stayed close and spoke in a calm, steady (5)___, telling me to relax and breathe. Progress was painfully (6)___. For days I could only float for a second before fear pulled me under, and many times I wanted to (7)___, but my father's patience never (8)___. 'Every swimmer you admire,' he said, 'once started exactly (9)___ you are now.' Then, one afternoon, something (10)___. As I kicked and breathed the way he had shown me, I realised I was actually (11)___: I had swum the whole width of the pool. My arms were shaking and my heart was still pounding hard, yet I could not stop laughing with relief and disbelief. The (12)___ I felt was unlike anything I had known. Looking back, I learned that fear (13)___ smaller the moment we face it, and that with the right (14)___ beside us, almost nothing is impossible. Today, whenever a new challenge frightens me, I remember that pool and (15)___ in.",
+      "blanks": [
+        { "options": ["answer", "excuse", "order", "example"], "answer": "B" },
+        { "options": ["hide", "face", "forget", "describe"], "answer": "B" },
+        { "options": ["success", "disaster", "joke", "habit"], "answer": "B" },
+        { "options": ["push", "watch", "hear", "blame"], "answer": "A" },
+        { "options": ["face", "voice", "hand", "look"], "answer": "B" },
+        { "options": ["fast", "slow", "clear", "simple"], "answer": "B" },
+        { "options": ["quit", "shout", "hide", "rest"], "answer": "A" },
+        { "options": ["failed", "helped", "grew", "returned"], "answer": "A" },
+        { "options": ["when", "where", "what", "how"], "answer": "B" },
+        { "options": ["stopped", "changed", "waited", "returned"], "answer": "B" },
+        { "options": ["sinking", "swimming", "falling", "resting"], "answer": "B" },
+        { "options": ["fear", "pride", "anger", "doubt"], "answer": "B" },
+        { "options": ["grows", "waits", "hides", "wins"], "answer": "A" },
+        { "options": ["tool", "person", "idea", "book"], "answer": "B" },
+        { "options": ["give", "dive", "break", "join"], "answer": "B" }
+      ],
+      "explain_zh": "1excuse借口 2face面对 3disaster灾难 4push逼迫(did not push) 5voice嗓音 6slow缓慢 7quit放弃 8failed从未消退 9where起点和你一样 10changed发生变化 11swimming在游 12pride自豪 13grows smaller变小 14person对的人 15dive in纵身入水。"
+    },
+    {
+      "passage": "On a rainy afternoon, a young man named Leo missed his bus and had to wait in the cold. An elderly woman nearby was struggling with several heavy (1)___. Without thinking, Leo offered to (2)___ them to her car. She thanked him warmly and, as they walked, they began to (3)___. She told him she ran a small bookshop that was, sadly, about to (4)___ because business was poor. Leo, who loved books, was (5)___ to hear this. The next day, Leo returned to her shop. He could not save it with money he did not have, but he had another (6)___. He took photos of the cosy little shop and shared its story online, urging people to (7)___ it before it disappeared. To everyone's (8)___, the post spread quickly. Within a week, the shop was (9)___ with curious visitors, many of whom had never known it (10)___. Sales rose enough to keep the doors (11)___. The old woman often said that Leo had (12)___ her shop, but he disagreed. All he had done, he insisted, was carry a few bags and tell a (13)___ story. The real lesson, he came to believe, was that small acts of kindness can (14)___ in ways we never expect, and that no good deed is ever truly (15)___.",
+      "blanks": [
+        { "options": ["books", "bags", "doors", "chairs"], "answer": "B" },
+        { "options": ["buy", "carry", "sell", "throw"], "answer": "B" },
+        { "options": ["talk", "walk", "run", "argue"], "answer": "A" },
+        { "options": ["open", "close", "grow", "move"], "answer": "B" },
+        { "options": ["glad", "sorry", "proud", "afraid"], "answer": "B" },
+        { "options": ["book", "idea", "bus", "bag"], "answer": "B" },
+        { "options": ["visit", "build", "ignore", "leave"], "answer": "A" },
+        { "options": ["surprise", "sadness", "anger", "regret"], "answer": "A" },
+        { "options": ["crowded", "empty", "finished", "closed"], "answer": "A" },
+        { "options": ["existed", "opened", "sold", "moved"], "answer": "A" },
+        { "options": ["shut", "open", "clean", "locked"], "answer": "B" },
+        { "options": ["saved", "sold", "found", "built"], "answer": "A" },
+        { "options": ["true", "funny", "sad", "long"], "answer": "A" },
+        { "options": ["spread", "end", "fail", "disappear"], "answer": "A" },
+        { "options": ["finished", "wasted", "rewarded", "forced"], "answer": "B" }
+      ],
+      "explain_zh": "1bags袋子 2carry搬 3talk攀谈 4close倒闭 5sorry难过 6idea主意 7visit光顾 8surprise出乎意料 9crowded挤满 10existed存在过 11open营业 12saved救活 13true真实的 14spread扩散 15wasted白费。"
+    },
+    {
+      "passage": "Mei had always been the top student in her class, so when she failed an important exam, the shock was (1)___. For days she could hardly speak, certain that her future was (2)___. Her grandmother, noticing her silence, invited her for a walk in the garden. She pointed to a tall, healthy tree and asked Mei how many times it had been (3)___ by storms before growing so strong. 'A tree that has never bent,' she said gently, 'has roots that are (4)___.' Mei did not fully understand at first, but the words stayed with her. Slowly, she began to (5)___ her failure differently. Instead of hiding from it, she studied her mistakes (6)___, asking exactly where her understanding had gone wrong. It was not (7)___: reviewing every error was painful, and progress came (8)___. But for the first time, she was learning not just to (9)___ answers but to truly understand them. When the next exam came, Mei did not get a perfect (10)___, but she passed a subject she had once found (11)___, and she had lost her old (12)___ of failure. Today, Mei often tells younger students that a single bad result does not (13)___ them. What matters, she says, is whether you let failure (14)___ you or teach you. The exam she failed, she now believes, was one of the most (15)___ lessons of her life.",
+      "blanks": [
+        { "options": ["pleasant", "great", "small", "brief"], "answer": "B" },
+        { "options": ["bright", "ruined", "certain", "ready"], "answer": "B" },
+        { "options": ["planted", "struck", "watered", "grown"], "answer": "B" },
+        { "options": ["deep", "weak", "strong", "wide"], "answer": "B" },
+        { "options": ["see", "hide", "forget", "repeat"], "answer": "A" },
+        { "options": ["quickly", "carefully", "proudly", "silently"], "answer": "B" },
+        { "options": ["easy", "clear", "free", "fair"], "answer": "A" },
+        { "options": ["early", "slowly", "suddenly", "often"], "answer": "B" },
+        { "options": ["memorise", "hear", "copy", "check"], "answer": "A" },
+        { "options": ["day", "score", "plan", "test"], "answer": "B" },
+        { "options": ["easy", "difficult", "boring", "useless"], "answer": "B" },
+        { "options": ["habit", "fear", "love", "memory"], "answer": "B" },
+        { "options": ["define", "help", "follow", "teach"], "answer": "A" },
+        { "options": ["defeat", "find", "follow", "leave"], "answer": "A" },
+        { "options": ["boring", "valuable", "difficult", "recent"], "answer": "B" }
+      ],
+      "explain_zh": "1great巨大震惊 2ruined毁了 3struck被风暴击打 4weak根浅弱 5see看待 6carefully仔细 7easy并不容易 8slowly缓慢 9memorise死记 10score分数 11difficult曾觉难 12fear恐惧 13define定义 14defeat击垮 15valuable宝贵。"
+    },
+    {
+      "passage": "For a long time, Daniel believed that one person could do (1)___ about a problem as huge as climate change. The issue felt too big, and his own actions too (2)___, to make any difference. His view began to change after he joined a local clean-up of a nearby river. Wading through the mud, the volunteers pulled out hundreds of plastic bottles and bags, and by evening the riverbank looked completely (3)___. What struck Daniel most was not the rubbish, but the (4)___: dozens of ordinary people, strangers that morning, had worked together and (5)___ something real. Alone, each could have done little; (6)___, they had transformed the place. Inspired, Daniel started making small changes. He carried a reusable bottle, (7)___ meat a few days a week, and repaired things instead of (8)___ them away. None of these acts was dramatic, but together they began to feel (9)___. He also noticed that his habits were (10)___: seeing his reusable cup, two colleagues bought their own. His choices quietly gave others (11)___ to change too. Daniel no longer believes that individual action is (12)___. He knows it cannot, by itself, solve the crisis, and that governments must do far (13)___. But he has come to see each small choice as a kind of (14)___, a quiet vote for the world he hopes to see. And votes, he reminds himself, only count when enough people (15)___ them.",
+      "blanks": [
+        { "options": ["nothing", "everything", "something", "anything"], "answer": "A" },
+        { "options": ["large", "small", "strong", "clear"], "answer": "B" },
+        { "options": ["worse", "clean", "wild", "wet"], "answer": "B" },
+        { "options": ["water", "people", "weather", "silence"], "answer": "B" },
+        { "options": ["lost", "achieved", "imagined", "promised"], "answer": "B" },
+        { "options": ["instead", "together", "however", "again"], "answer": "B" },
+        { "options": ["cooked", "avoided", "bought", "enjoyed"], "answer": "B" },
+        { "options": ["giving", "throwing", "running", "putting"], "answer": "B" },
+        { "options": ["useless", "meaningful", "tiring", "strange"], "answer": "B" },
+        { "options": ["failing", "spreading", "ending", "hiding"], "answer": "B" },
+        { "options": ["money", "courage", "time", "trouble"], "answer": "B" },
+        { "options": ["useful", "useless", "easy", "common"], "answer": "B" },
+        { "options": ["less", "more", "nothing", "worse"], "answer": "B" },
+        { "options": ["gift", "vote", "game", "rule"], "answer": "B" },
+        { "options": ["cast", "buy", "win", "forget"], "answer": "A" }
+      ],
+      "explain_zh": "1nothing做不了什么 2small微不足道 3clean变干净 4people是人们 5achieved做成 6together合力 7avoided少吃肉 8throwing扔掉 9meaningful有意义 10spreading在扩散 11courage勇气 12useless无用 13more做得多 14vote一票 15cast投票。"
+    }
+  ]
+}

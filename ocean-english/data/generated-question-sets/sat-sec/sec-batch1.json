@@ -1,0 +1,111 @@
+{
+  "template": "sat-standard-english-conventions",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Standard English Conventions items. 100% original, not copied from College Board. DeepSeek not used. Each text 25-150 words with a single blank; 4 options, exactly one conforms to Standard English.",
+  "sets": [
+    {
+      "passage": "A new analysis of migratory songbirds suggests that the timing of their long journeys, along with the routes that individual flocks choose, ______ shaped more by subtle shifts in daylight than by changes in temperature.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["is", "are", "were", "have been"],
+      "answer": "is",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语是单数 the timing（along with… 为插入语，不影响数），故用单数 is。"
+    },
+    {
+      "passage": "When a hummingbird pauses to hover before a flower, ______ wings beat so rapidly that, to the human eye, they dissolve into a faint and shimmering blur of motion.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["its", "it's", "their", "there"],
+      "answer": "its",
+      "domain": "Standard English Conventions",
+      "explain_zh": "需要单数物主代词指代 hummingbird，用 its；it's=it is，their 为复数，there 表地点。"
+    },
+    {
+      "passage": "The final prize was divided between my research partner and ______, a quiet acknowledgment of the long months we had spent repeating the experiment until the data finally stabilized.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["me", "I", "myself", "mine"],
+      "answer": "me",
+      "domain": "Standard English Conventions",
+      "explain_zh": "介词 between 后用宾格 me；I 为主格，myself 为反身代词（无先行主语），mine 为物主代词。"
+    },
+    {
+      "passage": "Over the summer the museum invited teenagers to restore old photographs, to interview elderly residents about the neighborhood, and ______ a small exhibition that the whole community could later visit.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["to design", "designing", "they designed", "having designed"],
+      "answer": "to design",
+      "domain": "Standard English Conventions",
+      "explain_zh": "与 to restore、to interview 构成平行结构，需用不定式 to design。"
+    },
+    {
+      "passage": "By the time the telescope was finally launched into orbit, the engineers ______ its enormous mirror for almost a decade, polishing the surface until it was smoother than any made before.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["had been testing", "are testing", "will test", "test"],
+      "answer": "had been testing",
+      "domain": "Standard English Conventions",
+      "explain_zh": "动作发生在过去某点（launched）之前并持续，用过去完成进行时 had been testing。"
+    },
+    {
+      "passage": "Famous for the towering dunes that ring its distant shores, ______ draws photographers who travel for days to capture the way the light keeps changing across the rippling sand.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["the remote lake", "photographers", "capturing the light", "it is a place that"],
+      "answer": "the remote lake",
+      "domain": "Standard English Conventions",
+      "explain_zh": "开头修饰语 Famous for… 须修饰其后的主语，只有 the remote lake 才是 famous for the dunes 的对象，其余造成悬垂修饰。"
+    },
+    {
+      "passage": "The geologist's most influential paper ______ overturned decades of comfortable assumptions and is still cited today by researchers studying how mountain ranges slowly rise and then erode.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [", published in 1969,", " published in 1969", ", published in 1969", " published in 1969,"],
+      "answer": ", published in 1969,",
+      "domain": "Standard English Conventions",
+      "explain_zh": "非限定性插入成分 published in 1969 须用一对逗号前后括起；缺一个或两个逗号均不规范。"
+    },
+    {
+      "passage": "The expedition relied on three tools that few modern climbers would even recognize ______ a brass altimeter, a hand-drawn map, and a compass whose thin needle kept sticking in the bitter cold.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [":", ";", ",", " namely;"],
+      "answer": ":",
+      "domain": "Standard English Conventions",
+      "explain_zh": "前面是完整独立句，后接解释性列表，用冒号引出；分号后须接独立句，逗号过弱，namely; 标点错误。"
+    },
+    {
+      "passage": "The collection of medieval coins that the museum quietly acquired last winter ______ now displayed in a small upstairs gallery that hurried visitors almost always overlook entirely.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["is", "are", "have been", "were"],
+      "answer": "is",
+      "domain": "Standard English Conventions",
+      "explain_zh": "主语 the collection 为单数（of medieval coins 为修饰），用单数 is。"
+    },
+    {
+      "passage": "The river had flooded the low valley nearly every spring for as long as anyone could remember ______ the new dam built upstream has gradually made such destructive floods increasingly rare.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [", but", ",", " however,", "; but,"],
+      "answer": ", but",
+      "domain": "Standard English Conventions",
+      "explain_zh": "两个独立句且语义转折，用逗号加并列连词 , but；单逗号造成 comma splice，however 前用逗号也是粘连句，; but, 标点冗余。"
+    },
+    {
+      "passage": "Critics were quick to note that the second novel was not only longer than the author's celebrated debut but also ______, weaving together three separate timelines that the earlier book had never dared to attempt.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["more ambitious", "ambitiously", "with great ambition", "an ambitious book"],
+      "answer": "more ambitious",
+      "domain": "Standard English Conventions",
+      "explain_zh": "not only X but also Y 须平行；X 为比较级形容词 longer，Y 也须为比较级形容词 more ambitious。"
+    },
+    {
+      "passage": "The number of students enrolling in the university's introductory astronomy courses ______ risen sharply ever since the campus observatory began offering free public viewing nights twice a month.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["has", "have", "are", "were"],
+      "answer": "has",
+      "domain": "Standard English Conventions",
+      "explain_zh": "the number of… 作主语视为单数，搭配 has risen；the number 用 has，a number of 才用复数。"
+    },
+    {
+      "passage": "The guide explained that the steep trail had become popular not because of its modest length but ______ the unexpected waterfall hidden near its midpoint, which only the most patient hikers ever reached.",
+      "prompt": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": ["because of", "due to", "since", "owing to"],
+      "answer": "because of",
+      "domain": "Standard English Conventions",
+      "explain_zh": "not because of X but because of Y 须平行，须重复 because of；due to/since/owing to 破坏平行结构。"
+    }
+  ]
+}

@@ -1,0 +1,1867 @@
+{
+  "template": "kaoyan-cloze-passage",
+  "level": 5,
+  "_provenance": "Claude-authored original Kaoyan 完形填空 (academic prose). Ten distinct social-science topics, each passage 240-340 words with 20 numbered blanks, 4 same-class options per blank, exactly one correct by context/discourse logic/collocation and three distractors excluded by context not grammar. DeepSeek not used. answer letters resolve to option index A/B/C/D.",
+  "sets": [
+    {
+      "passage": "Economists once treated inequality largely as a (1)____ by-product of growth, an unfortunate cost worth paying for rising prosperity. That comfortable assumption has come under (2)____ scrutiny. When the gains of an expanding economy flow (3)____ to those who already own the most, the result is not merely a wider gap in incomes but a slow erosion of opportunity itself. Children born into poverty inherit (4)____ schools, weaker networks, and thinner safety nets, so talent that might have flourished is quietly (5)____. The damage, in other words, is dynamic rather than static. Defenders of steep disparities argue that the prospect of great reward (6)____ effort and innovation, and there is truth in this. Yet beyond a certain point the link (7)____: extreme concentrations of wealth tend to buy political influence, which is then used to (8)____ the very rules that allowed such fortunes to accumulate. Markets that should reward (9)____ begin instead to reward incumbency. The consequences are not only economic. Societies marked by gaping divides report lower levels of trust, poorer health, and more (10)____ politics, as citizens come to (11)____ that the game is rigged against them. None of this implies that perfect equality is either possible or (12)____; differences in effort and luck will always produce differences in outcome. The relevant question is not whether inequality should exist but at what level it becomes (13)____ to the common good. Answering that question requires us to distinguish the inequality that (14)____ from honest contribution from the kind that merely (15)____ advantage across generations. A healthy economy needs incentives, but it also needs the (16)____ belief, widely shared, that hard work can change one's station. When that belief (17)____, the social fabric frays in ways no growth statistic can (18)____. The (19)____ challenge for policy, then, is to preserve the spur of reward while preventing privilege from hardening into a closed and self-perpetuating (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "necessary",
+            "harmless",
+            "welcome",
+            "deliberate"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "renewed",
+            "casual",
+            "gentle",
+            "minimal"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "disproportionately",
+            "randomly",
+            "slowly",
+            "evenly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "expensive",
+            "crowded",
+            "underfunded",
+            "distant"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "trained",
+            "wasted",
+            "rewarded",
+            "celebrated"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "delays",
+            "spurs",
+            "replaces",
+            "limits"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "appears",
+            "strengthens",
+            "weakens",
+            "returns"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "publish",
+            "rewrite",
+            "enforce",
+            "obey"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "age",
+            "merit",
+            "luck",
+            "size"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "cautious",
+            "stable",
+            "divisive",
+            "polite"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forget",
+            "hope",
+            "deny",
+            "conclude"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "popular",
+            "temporary",
+            "desirable",
+            "expensive"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "corrosive",
+            "invisible",
+            "neutral",
+            "essential"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "differs",
+            "hides",
+            "escapes",
+            "springs"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "shares",
+            "questions",
+            "earns",
+            "perpetuates"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "foolish",
+            "fading",
+            "reasonable",
+            "secret"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "grows",
+            "spreads",
+            "returns",
+            "collapses"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "capture",
+            "ignore",
+            "predict",
+            "create"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "minor",
+            "imaginary",
+            "distant",
+            "central"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "bargain",
+            "hierarchy",
+            "festival",
+            "market"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1necessary把不平等视为增长的必要代价 2renewed重新受到审视 3disproportionately收益过度流向富者 4underfunded继承资金不足的学校 5wasted才能被浪费 6spurs回报前景激励努力 7weakens超过临界点后联系减弱 8rewrite用影响力改写规则 9merit本应奖励贡献/能力 10divisive更分裂的政治 11conclude公民断定游戏被操纵 12desirable完全平等既不可能也不可取 13corrosive达到何种程度才腐蚀公益 14springs来自诚实贡献的不平等 15perpetuates仅使优势代际延续 16reasonable合理而共享的信念 17collapses信念崩塌 18capture任何增长数据都无法捕捉 19central政策的核心挑战 20hierarchy防止特权固化为封闭等级。"
+    },
+    {
+      "passage": "A public good, in the language of economists, is something that is both non-rival and non-excludable: my enjoyment of clean air or national defence does not (1)____ yours, and no one can easily be shut out. These two features make such goods immensely (2)____, yet they also explain a stubborn puzzle—why so many of them are chronically (3)____. The trouble lies in incentives. Because a person benefits whether or not she contributes, the (4)____ choice for any individual is to let others bear the cost. Economists call this temptation the (5)____ problem. If everyone reasons this way, the good is provided in quantities far (6)____ what the community would actually prefer. Each acts sensibly, and (7)____ all are worse off. The market, so reliable at supplying private goods, here (8)____ to deliver, since no firm can profit from a product it cannot withhold from non-payers. This is why roads, basic research, and disease control are typically financed through (9)____ rather than sales. Yet taxation invites its own (10)____: citizens who cannot see a direct return often resent the bill, and politicians find it easier to fund (11)____ projects than invisible ones. A new stadium is photographed at its opening; the quiet maintenance of a water system, which prevents disasters that never (12)____, wins no such gratitude. The benefits of prevention are real but (13)____, while the costs are immediate and concentrated. Thus public goods suffer a double (14)____: markets will not supply them, and political systems systematically under-reward them. Recognising this pattern does not (15)____ it, but it does point toward remedies—binding commitments, shared rules, and institutions designed to make cooperation the (16)____ path rather than the heroic exception. Above all, it reminds us that some of the things we value most cannot be (17)____ individually. They must be (18)____ collectively or not at all, and a society that forgets this will slowly find its shared foundations (19)____, long before anyone notices the (20)____ has begun.",
+      "blanks": [
+        {
+          "options": [
+            "diminish",
+            "match",
+            "explain",
+            "increase"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "fragile",
+            "valuable",
+            "rare",
+            "private"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "regulated",
+            "underfunded",
+            "overfunded",
+            "duplicated"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "illegal",
+            "generous",
+            "risky",
+            "rational"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "free-rider",
+            "principal-agent",
+            "supply-chain",
+            "market-clearing"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "below",
+            "above",
+            "beyond",
+            "around"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "unless",
+            "therefore",
+            "because",
+            "yet"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "fails",
+            "agrees",
+            "rushes",
+            "refuses"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "advertising",
+            "donations",
+            "lotteries",
+            "taxation"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "profits",
+            "supporters",
+            "discontents",
+            "rewards"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "foreign",
+            "secret",
+            "visible",
+            "costly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "end",
+            "happen",
+            "return",
+            "spread"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "dramatic",
+            "instant",
+            "narrow",
+            "diffuse"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "reward",
+            "honor",
+            "benefit",
+            "neglect"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "cause",
+            "hide",
+            "cure",
+            "worsen"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forbidden",
+            "default",
+            "secret",
+            "lonely"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "secured",
+            "taxed",
+            "imagined",
+            "sold"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "delayed",
+            "banned",
+            "funded",
+            "ignored"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "shining",
+            "expanding",
+            "crumbling",
+            "strengthening"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "harvest",
+            "decay",
+            "recovery",
+            "debate"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1diminish我的享用不会减少你的 2valuable这两特征使其极有价值 3underfunded长期资金不足 4rational对个人而言搭便车是理性选择 5free-rider搭便车问题 6below供给远低于偏好 7yet各自明智却整体更糟(转折) 8fails市场在此失灵 9taxation靠征税而非销售 10discontents征税带来不满 11visible资助可见项目更易 12happen预防的灾难从未发生 13diffuse收益真实却分散 14neglect公共品遭双重忽视 15cure认识规律不能治愈它 16default让合作成为默认路径 17secured无法个体获得 18funded须集体供给 19crumbling共同根基瓦解 20decay衰败已开始。"
+    },
+    {
+      "passage": "Few words divide opinion as sharply as globalization. To its (1)____, the integration of markets has lifted hundreds of millions out of poverty, spread technology, and made once-exotic goods affordable to ordinary families. To its critics, the same process has (2)____ communities, depressed wages for the less skilled, and handed extraordinary power to corporations answerable to no electorate. Both stories contain truth, which is precisely why the debate (3)____ unresolved. The classic economic case is elegant. When nations specialise in what they do best and trade for the rest, the total pie (4)____, leaving room for everyone to gain. The flaw lies not in the logic but in the word everyone. Theory shows that the winners gain enough to (5)____ the losers in principle; it does not guarantee that they actually (6)____. A factory town whose jobs migrate overseas experiences the loss as (7)____ and personal, while the diffuse benefit—slightly cheaper products for distant consumers—is barely (8)____. The gains are real but spread thin; the pain is sharp and (9)____. Critics also point to a deeper (10)____: as capital crosses borders freely while labour and democratic institutions remain (11)____ tied to nations, governments compete to attract investment by (12)____ taxes, weakening protections, and asking workers to accept less. The race, they warn, runs toward the (13)____. Defenders reply that retreat into protectionism would (14)____ the poor it claims to help and invite the very stagnation it fears. The more honest conclusion is that globalization is neither a (15)____ nor a curse but a powerful tool whose effects depend on the rules that (16)____ it and the cushions a society (17)____ for those it displaces. The failure has often been less in the trade itself than in the (18)____ of any serious plan to share its gains and ease its losses. To reject openness outright is to (19)____ the baby with the bathwater; to embrace it uncritically is to (20)____ the bath is empty.",
+      "blanks": [
+        {
+          "options": [
+            "champions",
+            "victims",
+            "observers",
+            "enemies"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "united",
+            "enriched",
+            "expanded",
+            "hollowed"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "seems",
+            "remains",
+            "grows",
+            "becomes"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "shrinks",
+            "vanishes",
+            "grows",
+            "spoils"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "compensate",
+            "envy",
+            "punish",
+            "ignore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "do",
+            "wait",
+            "lose",
+            "refuse"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "minor",
+            "abstract",
+            "concrete",
+            "imagined"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "shared",
+            "paid",
+            "noticed",
+            "earned"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "delayed",
+            "concentrated",
+            "distant",
+            "shared"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "habit",
+            "agreement",
+            "victory",
+            "tension"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "loosely",
+            "firmly",
+            "newly",
+            "rarely"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hiding",
+            "raising",
+            "cutting",
+            "fixing"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "top",
+            "centre",
+            "bottom",
+            "future"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "free",
+            "harm",
+            "ignore",
+            "enrich"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "problem",
+            "secret",
+            "miracle",
+            "blessing"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "ignore",
+            "praise",
+            "create",
+            "govern"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "builds",
+            "borrows",
+            "destroys",
+            "sells"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "cost",
+            "design",
+            "presence",
+            "absence"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "wash",
+            "throw",
+            "raise",
+            "save"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "pretend",
+            "warn",
+            "prove",
+            "deny"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "1champions对其拥护者而言 2hollowed掏空了社区 3remains争论悬而未决 4grows蛋糕做大 5compensate原则上足以补偿输家 6do不保证真的补偿 7concrete损失具体而切身 8noticed分散收益几乎无人察觉 9concentrated痛苦集中 10tension更深的张力 11firmly劳工与制度仍紧系于国家 12cutting竞相减税 13bottom向底线竞赛 14harm保护主义反伤穷人 15blessing既非福也非祸(与curse对) 16govern取决于约束它的规则 17builds社会为被替代者所建的缓冲 18absence缺乏分享收益的认真计划 19throw连孩子带洗澡水一起倒(throw out) 20pretend无批判拥抱则是假装澡盆空着。"
+    },
+    {
+      "passage": "What is a university actually for? The question sounds naive, yet the answers a society gives quietly (1)____ how it spends billions and shapes generations. One familiar reply is economic: higher education exists to (2)____ workers with marketable skills, raising both their wages and national productivity. On this view, a degree is essentially an (3)____ that pays a measurable return, and a course of study should be judged by the salaries it (4)____. There is obvious sense here, but taken alone it leaves much (5)____. If job training were the whole purpose, much of the curriculum—history, philosophy, the close reading of poems—would appear merely (6)____. A rival tradition insists that the deeper aim is the (7)____ of judgement: to teach students not what to think but how, equipping them to weigh evidence, tolerate doubt, and revise their beliefs when the facts (8)____. Such capacities rarely appear on a payslip, yet a democracy starved of them grows dangerously (9)____ to manipulation. A third answer is frankly social. Universities sort and certify, acting less as engines of learning than as elaborate (10)____ that signal who is diligent and able. On this cynical reading, much of what students gain is not knowledge but a (11)____ that opens doors—a function that would survive even if little were truly (12)____. These purposes need not (13)____ one another, but they pull in different directions, and confusion about which (14)____ leads to incoherent policy. A system that promises career returns while delivering broad culture will (15)____ students expecting jobs; one that abandons the wider mission to chase employment statistics may (16)____ its soul to balance its books. The wisest institutions resist the pressure to (17)____ themselves to a single metric. They recognise that the most (18)____ outcomes of education—curiosity, integrity, the courage to think independently—are precisely the ones that (19)____ measurement, and that a culture which funds only what it can count will, in time, find itself unable to (20)____ what it has lost.",
+      "blanks": [
+        {
+          "options": [
+            "ignore",
+            "dictate",
+            "follow",
+            "question"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "confuse",
+            "replace",
+            "equip",
+            "amuse"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "obstacle",
+            "investment",
+            "accident",
+            "illusion"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "wastes",
+            "hides",
+            "commands",
+            "loses"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "alone",
+            "behind",
+            "out",
+            "open"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "compulsory",
+            "practical",
+            "essential",
+            "decorative"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "cultivation",
+            "imitation",
+            "abandonment",
+            "purchase"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "change",
+            "vanish",
+            "agree",
+            "repeat"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "resistant",
+            "vulnerable",
+            "indifferent",
+            "superior"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "factories",
+            "filters",
+            "gardens",
+            "libraries"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "credential",
+            "friendship",
+            "skill",
+            "memory"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "taught",
+            "tested",
+            "learned",
+            "forgotten"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "follow",
+            "resemble",
+            "support",
+            "exclude"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "matters",
+            "appears",
+            "remains",
+            "fails"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "disappoint",
+            "employ",
+            "please",
+            "enrich"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "find",
+            "save",
+            "sell",
+            "prove"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "open",
+            "compare",
+            "devote",
+            "reduce"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "common",
+            "visible",
+            "trivial",
+            "valuable"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "reward",
+            "resist",
+            "invite",
+            "require"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "sell",
+            "buy",
+            "ignore",
+            "name"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "1dictate答案悄然决定开支 2equip为劳动者配备技能 3investment学位本质是投资 4commands课程以其带来的薪资来评判(commands高薪) 5out单凭此留下许多未尽 6decorative人文课程显得纯装饰 7cultivation更深目标是判断力的培养 8change事实改变时修正信念 9vulnerable易受操纵 10filters精致的筛选器 11credential打开门的资历证书 12learned即使学不到什么也存续 13exclude目的之间无须互斥 14matters哪个目的最重要 15disappoint会令期待就业的学生失望 16sell为账目出卖灵魂 17reduce抗拒被简化为单一指标 18valuable最有价值的成果 19resist恰恰是抗拒度量的 20name无法说出失去了什么。"
+    },
+    {
+      "passage": "Markets are usually praised, or condemned, for their efficiency—their genius at matching what people want with what others can supply. Less often noticed is a quieter effect: markets do not merely (1)____ our preferences, they slowly (2)____ them. When more and more of life is organised around buying and selling, the very language we use to value things begins to (3)____. Consider what happens when a good once exchanged as a gift, a favour, or a duty is suddenly (4)____ a price. Blood donation offers a famous example. Where giving blood is treated as an act of civic (5)____, supply often holds up; introduce cash payment, and some donors, feeling their gift has been (6)____ into a mere transaction, simply (7)____ away. The market intended to expand the supply can perversely (8)____ it, because it changes what the act (9)____. This is the deeper worry the critics raise. They do not deny that trade brings prosperity; they fear that the relentless spread of market norms can (10)____ out other norms—the loyalty of friends, the dedication of teachers, the impartial duty of public servants—that money cannot buy and may quietly (11)____. Once we are accustomed to pricing everything, we risk losing the (12)____ to recognise that some things should not be for sale at all. Defenders answer, reasonably, that markets are merely (13)____, indifferent to ends, and that the fault lies with us if we misuse them. Yet tools are not always so (14)____; the habit of reducing every question to cost and benefit can subtly (15)____ how we see one another, encouraging us to treat people as means rather than (16)____. The point is not to (17)____ markets, which remain among humanity's most useful inventions, but to keep them in their (18)____. A society that prices everything may end up (19)____ nothing, having quietly traded away the very (20)____ that money was supposed to serve.",
+      "blanks": [
+        {
+          "options": [
+            "hide",
+            "punish",
+            "create",
+            "satisfy"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "reshape",
+            "obey",
+            "record",
+            "ignore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "expand",
+            "return",
+            "freeze",
+            "shift"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "lost",
+            "promised",
+            "denied",
+            "given"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "fear",
+            "duty",
+            "profit",
+            "habit"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "cheapened",
+            "praised",
+            "raised",
+            "doubled"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "give",
+            "drift",
+            "stay",
+            "rush"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "secure",
+            "predict",
+            "shrink",
+            "expand"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "costs",
+            "weighs",
+            "means",
+            "earns"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "crowd",
+            "bring",
+            "carry",
+            "lift"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "strengthen",
+            "corrode",
+            "ignore",
+            "reward"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "money",
+            "habit",
+            "capacity",
+            "permission"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "dangerous",
+            "rare",
+            "neutral",
+            "costly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "useful",
+            "common",
+            "cheap",
+            "innocent"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "warp",
+            "obey",
+            "clarify",
+            "reflect"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rivals",
+            "tools",
+            "ends",
+            "enemies"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "abolish",
+            "praise",
+            "study",
+            "build"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "favour",
+            "place",
+            "way",
+            "price"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "selling",
+            "buying",
+            "saving",
+            "valuing"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "prices",
+            "values",
+            "goods",
+            "profits"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1satisfy市场不只满足偏好 2reshape更慢慢重塑偏好 3shift估价的语言开始转变 4given被标上价格(give a price) 5duty公民义务之举 6cheapened馈赠被贬为交易 7drift一些人悄然离开(drift away) 8shrink反而使供给萎缩 9means改变了行为的含义 10crowd把其他规范挤出(crowd out) 11corrode金钱可能悄然腐蚀 12capacity失去辨识的能力 13neutral市场只是中性的 14innocent工具未必那么无辜 15warp扭曲我们看待彼此的方式 16ends把人当手段而非目的 17abolish重点不是废除市场 18place让其各安其位(in their place) 19valuing定价一切者终将一无所重(value) 20values换走了金钱本应服务的价值。"
+    },
+    {
+      "passage": "For most of the twentieth century, the wealth of a nation was judged by a single famous number: Gross Domestic Product, the total value of goods and services it produced. GDP is a powerful (1)____, and its rise broadly tracks longer lives and fuller stomachs. Yet a growing chorus of economists now argues that the measure, taken as a (2)____ of national success, is dangerously (3)____. The trouble is what it leaves (4)____. GDP counts a forest only when it is cut down and sold, not the clean air and shelter it (5)____ while standing. It records the money spent treating illness or repairing storm damage as (6)____, as though sickness and disaster were forms of progress. Meanwhile, work that sustains every society—a parent raising children, a neighbour caring for the elderly—goes (7)____ because no money changes hands. The number, in short, is (8)____ to the difference between activity that builds wellbeing and activity that merely (9)____ harm. Critics also note that an average can (10)____ as much as it reveals: a country's GDP per head may climb impressively even as most of its citizens grow no (11)____ off, if the gains pool at the very top. What we measure, the reformers insist, quietly shapes what we (12)____. A government judged solely by output will chase growth even when it (13)____ the very things—health, leisure, a livable environment—that make prosperity worth having. The response has not been to (14)____ GDP but to (15)____ it with broader indicators: measures of health, education, inequality, and even self-reported satisfaction. Such dashboards are admittedly (16)____ to compile and easy to dispute, since happiness resists the tidy precision of a ledger. But the deeper lesson is (17)____. No single figure can (18)____ the texture of a good life, and a society that mistakes its instruments for its (19)____ will steer confidently toward the wrong (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "accident",
+            "burden",
+            "illusion",
+            "indicator"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "rival",
+            "copy",
+            "sample",
+            "measure"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "modern",
+            "popular",
+            "incomplete",
+            "reliable"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "out",
+            "alone",
+            "in",
+            "behind"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "provides",
+            "wastes",
+            "destroys",
+            "sells"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "loss",
+            "waste",
+            "debt",
+            "gain"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "praised",
+            "rewarded",
+            "uncounted",
+            "doubled"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "blind",
+            "sensitive",
+            "equal",
+            "central"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "prevents",
+            "measures",
+            "repairs",
+            "predicts"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "explain",
+            "conceal",
+            "prove",
+            "increase"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "worse",
+            "fewer",
+            "older",
+            "better"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "forget",
+            "sell",
+            "value",
+            "produce"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "measures",
+            "builds",
+            "destroys",
+            "rewards"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "abandon",
+            "trust",
+            "double",
+            "praise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "replace",
+            "supplement",
+            "hide",
+            "shorten"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "simple",
+            "messy",
+            "precise",
+            "cheap"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hidden",
+            "plain",
+            "doubtful",
+            "minor"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "create",
+            "capture",
+            "raise",
+            "sell"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "goals",
+            "errors",
+            "instruments",
+            "habits"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "price",
+            "market",
+            "road",
+            "destination"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "1indicator GDP是有力的指标 2measure作为成功的衡量标准 3incomplete危险地不完整 4out问题在于它遗漏的(leaves out) 5provides森林矗立时提供的清洁空气 6gain把治病修灾的支出记为增益 7uncounted无偿劳动未被计入 8blind对二者差别视而不见 9repairs仅修补损害的活动 10conceal平均数掩盖的与揭示的一样多 11better多数人并未更富 12value度量什么便悄然塑造珍视什么 13destroys即便毁掉健康等也追逐增长 14abandon并非抛弃GDP 15supplement而是以更广指标补充 16messy这类仪表盘编制起来杂乱 17plain更深的教训很朴素 18capture没有单一数字能捕捉好生活的肌理 19goals把工具误作目标 20destination自信驶向错误的目的地。"
+    },
+    {
+      "passage": "Why does any society bother to support its artists? In strictly practical terms, a poem feeds no one and a symphony shelters no family, and yet no human culture, however poor, has ever done (1)____ art. The persistence of this apparent luxury suggests it answers a need we do not always (2)____ name. One common defence is economic: museums draw tourists, films employ thousands, and a lively cultural scene helps a city (3)____ talent. These arguments are true but (4)____, for they justify art only by reference to something else, treating beauty as a means to fuller hotels. A more ambitious claim is that art (5)____ us to inhabit lives not our own. A novel can place a reader inside the mind of a stranger across centuries or continents, and in doing so it quietly (6)____ the muscles of empathy that a narrow life leaves (7)____. Art, on this view, is a kind of moral (8)____, expanding the circle of those whose suffering we can (9)____ imagine. Others stress a different power. Where ordinary language hurries toward the useful, art (10)____ us, forcing attention onto the texture of experience we normally rush (11)____. A painting can make us see a face we have looked at a thousand times as if for the (12)____ time. Authoritarian regimes grasp this instinctively, which is why they so often (13)____ to control or silence artists: a society that can imagine alternatives is harder to (14)____. None of this means art must be earnest or improving; much of it exists simply to (15)____, and delight is no small thing in a hard world. But the deeper case is that a culture without art grows (16)____, capable of building and trading yet unable to (17)____ what any of it is for. The artist, by this account, is not a (18)____ on a serious society but one of the instruments by which a people (19)____ on who they are and dares to imagine who they might (20)____ become.",
+      "blanks": [
+        {
+          "options": [
+            "beyond",
+            "with",
+            "without",
+            "before"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "happen",
+            "know",
+            "wish",
+            "refuse"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "tax",
+            "lose",
+            "attract",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "endless",
+            "new",
+            "false",
+            "thin"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "pays",
+            "allows",
+            "forbids",
+            "forces"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "buys",
+            "ignores",
+            "exercises",
+            "weakens"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "unused",
+            "tired",
+            "busy",
+            "strong"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "education",
+            "accident",
+            "market",
+            "burden"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "vividly",
+            "rarely",
+            "wrongly",
+            "hardly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "slows",
+            "blinds",
+            "hurries",
+            "follows"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "toward",
+            "into",
+            "through",
+            "past"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "same",
+            "last",
+            "first",
+            "wrong"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "fail",
+            "seek",
+            "refuse",
+            "forget"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "praise",
+            "rule",
+            "join",
+            "free"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "frighten",
+            "deceive",
+            "instruct",
+            "delight"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "narrower",
+            "louder",
+            "richer",
+            "kinder"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "ignore",
+            "buy",
+            "say",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "blessing",
+            "burden",
+            "luxury",
+            "tool"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hides",
+            "reflects",
+            "profits",
+            "spends"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "already",
+            "soon",
+            "never",
+            "yet"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "1without从未有文化没有艺术(do without) 2know回应我们未必能道出的需求 3attract帮助城市吸引人才 4thin论证为真却单薄 5allows艺术让我们栖居他者人生 6exercises锻炼共情之肌 7unused狭窄人生使之闲置 8education一种道德的教育 9vividly能生动想象其苦 10slows艺术使我们慢下来 11past我们平时匆匆掠过(rush past) 12first仿佛初次看见 13seek威权常设法控制艺术家 14rule能想象替代方案者更难被统治 15delight许多艺术只为愉悦 16narrower无艺术的文化变得狭隘 17say说不出这一切为何 18burden艺术家不是负担(burden on) 19reflects民族借以反思自身 20yet敢想象将来可能成为谁。"
+    },
+    {
+      "passage": "The idea of progress—that humanity is, on the whole, moving toward something better—shapes the modern mind so deeply that we rarely (1)____ it. Yet for most of recorded history the assumption ran the other way. Many ancient cultures believed the world was in slow (2)____ from a vanished golden age, and looked backward for wisdom rather than (3)____ for improvement. The confident forward gaze is a comparatively (4)____ invention, born with the scientific revolution and the dazzling growth it (5)____. There is much to (6)____ the optimists. Across centuries, life has lengthened, plagues have been tamed, and ideas once thought (7)____—that slavery is wrong, that ordinary people deserve a voice—have spread across the globe. To deny all this would be wilfully (8)____. And yet the faith in progress conceals two (9)____ traps. The first is to assume that advance is (10)____, a law of history rather than the hard-won fruit of choices that could be (11)____. Hopes of permanent peace died in the trenches of the last century, a reminder that gains can be (12)____ as well as made. The second trap is subtler: to assume that progress in one domain (13)____ progress in all. Our technical powers have grown astonishingly, yet it is far from clear that we have grown proportionately (14)____ in using them, and the same science that conquers disease can also (15)____ weapons of unprecedented reach. Material advance, in short, does not automatically (16)____ moral advance, and to confuse the two is to mistake speed for (17)____. A mature idea of progress, then, neither despairs nor (18)____ complacent. It holds that things can get better, that they often have, but that nothing (19)____ they will continue to do so. Improvement, on this view, is not a current that carries us along whether we paddle or not; it is a direction we must (20)____ choose, and can always abandon.",
+      "blanks": [
+        {
+          "options": [
+            "obey",
+            "enjoy",
+            "question",
+            "abandon"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "balance",
+            "motion",
+            "growth",
+            "decline"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "inward",
+            "outward",
+            "downward",
+            "forward"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "ancient",
+            "foreign",
+            "recent",
+            "common"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "delayed",
+            "unleashed",
+            "feared",
+            "hid"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "encourage",
+            "doubt",
+            "warn",
+            "silence"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "radical",
+            "useless",
+            "ancient",
+            "obvious"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "blind",
+            "modest",
+            "clear",
+            "honest"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "minor",
+            "false",
+            "ancient",
+            "dangerous"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "costly",
+            "inevitable",
+            "recent",
+            "fragile"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "repeated",
+            "rewarded",
+            "reversed",
+            "ignored"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "earned",
+            "delayed",
+            "shared",
+            "lost"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "follows",
+            "delays",
+            "guarantees",
+            "prevents"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "wiser",
+            "richer",
+            "older",
+            "faster"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forge",
+            "hide",
+            "fear",
+            "ban"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "follow",
+            "delay",
+            "prevent",
+            "ensure"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "effort",
+            "distance",
+            "direction",
+            "speed"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "looks",
+            "stays",
+            "departs",
+            "seems"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "delays",
+            "guarantees",
+            "explains",
+            "denies"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "slowly",
+            "actively",
+            "secretly",
+            "rarely"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1question我们很少质疑进步观 2decline认为世界从黄金时代缓慢衰落 3forward而非向前求改进(与backward对) 4recent前瞻自信是较晚近的发明 5unleashed科学释放的惊人增长 6encourage有许多支持乐观者(与optimists搭) 7radical曾被视为激进的观念 8blind否认这一切是故意视而不见 9dangerous隐藏两个危险陷阱 10inevitable误以为进步是必然的 11reversed本可被逆转的选择 12lost进步可得亦可失(lost与made对) 13guarantees误以为一域之进步保证全域 14wiser未必相应更有智慧 15forge同一科学也能锻造武器 16ensure物质进步不自动确保道德进步 17direction把速度误作方向 18stays既不绝望也不安于自满(stays complacent) 19guarantees无物保证进步将持续 20actively是须主动选择的方向。"
+    },
+    {
+      "passage": "When the biologist Garrett Hardin described the \"tragedy of the commons,\" he painted a bleak picture. Imagine a pasture open to all herders. Each gains the full benefit of adding one more animal, while the cost of overgrazing is (1)____ among everyone. So each rationally adds beasts until the field is (2)____ and ruined. The grim moral seemed to be that shared resources are doomed unless (3)____ privatised or seized by the state. For decades this parable was treated as an iron (4)____. Then the political scientist Elinor Ostrom did something Hardin had not: she went out and (5)____ how real communities actually manage shared forests, fisheries, and irrigation systems. What she found (6)____ the gloomy theory. Around the world, ordinary people had devised (7)____ arrangements that sustained common resources for centuries without either private ownership or distant rulers. The herders, it turned out, were not the helpless prisoners of their own (8)____ that the model assumed. Ostrom identified the conditions under which cooperation (9)____. Successful commons tended to have clear (10)____ about who could use the resource, rules crafted by the users themselves rather than (11)____ from above, and cheap ways to (12)____ on one another so that cheating was quickly noticed. Crucially, there were graduated (13)____ for those who broke the rules—not ruinous, but enough to (14)____ the temptation to free-ride. None of this happened automatically; cooperation had to be patiently (15)____ and could collapse if trust eroded. The lesson is not that markets and governments are (16)____, but that they are not the only tools available. Between the pure market and the heavy state lies a vast, often (17)____ territory of self-organisation, in which communities solve collective problems by (18)____ the very rules they then agree to (19)____. Human beings, Ostrom showed, are neither saints nor the pure egoists of the textbook, but creatures fully capable of (20)____ when the conditions are right.",
+      "blanks": [
+        {
+          "options": [
+            "doubled",
+            "concentrated",
+            "hidden",
+            "shared"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "expanded",
+            "enriched",
+            "exhausted",
+            "protected"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "either",
+            "rarely",
+            "never",
+            "partly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "law",
+            "promise",
+            "accident",
+            "puzzle"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "studied",
+            "feared",
+            "ignored",
+            "imagined"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "repeated",
+            "confirmed",
+            "complicated",
+            "proved"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "secret",
+            "foreign",
+            "useless",
+            "ingenious"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "wealth",
+            "logic",
+            "kindness",
+            "wisdom"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "ends",
+            "succeeds",
+            "spreads",
+            "fails"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rumours",
+            "boundaries",
+            "profits",
+            "doubts"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "earned",
+            "imposed",
+            "removed",
+            "copied"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "spy",
+            "report",
+            "depend",
+            "monitor"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "favours",
+            "taxes",
+            "rewards",
+            "penalties"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "feed",
+            "curb",
+            "praise",
+            "hide"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "built",
+            "broken",
+            "bought",
+            "ignored"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "useful",
+            "rare",
+            "modern",
+            "useless"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "crowded",
+            "private",
+            "overlooked",
+            "foreign"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "breaking",
+            "hiding",
+            "crafting",
+            "selling"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "ignore",
+            "forget",
+            "obey",
+            "sell"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "cooperation",
+            "competition",
+            "isolation",
+            "betrayal"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "1shared过度放牧的成本由众人分摊 2exhausted田地被耗尽毁坏 3either除非或私有或国有(either...or) 4law被当作铁律 5studied她出去实地研究 6complicated研究使悲观理论复杂化(反驳) 7ingenious人们设计出巧妙安排 8logic并非自身逻辑的囚徒 9succeeds合作得以成功的条件 10boundaries清晰的边界(谁可用) 11imposed规则由使用者自定而非自上强加 12monitor廉价地相互监督 13penalties对违规者的分级惩罚 14curb足以抑制搭便车诱惑 15built合作须耐心构建 16useless并非市场政府无用 17overlooked常被忽视的自组织领域 18crafting通过自行制定规则 19obey然后同意遵守 20cooperation条件合适时完全能够合作。"
+    },
+    {
+      "passage": "Trust is the invisible currency on which complex societies (1)____. We hand our money to banks we never inspect, swallow pills tested by people we will never meet, and board planes flown by strangers, all because we (2)____ the institutions behind them to do their jobs. When such trust is high, life runs smoothly and cheaply; when it (3)____, every transaction must be guarded with contracts, audits, and suspicion, and the friction (4)____ everything down. It is alarming, then, that confidence in institutions—governments, media, courts, even science—has been visibly (5)____ across many democracies. Diagnosing the cause is not simple. Some blame a (6)____ of genuine failures: scandals, broken promises, and crises that institutions handled (7)____, giving citizens real reason for doubt. On this account, falling trust is a (8)____ response to poor performance, and the remedy is for institutions to earn confidence back by behaving (9)____. Others point to the changed information landscape, in which every misstep is instantly (10)____ and amplified, while a fragmented media rewards outrage over (11)____ reporting. Trust, they argue, has not necessarily fallen because institutions grew worse, but because their flaws became more (12)____. Both factors are probably at work, and they (13)____ each other in a vicious circle. The danger is that distrust, once entrenched, becomes self-(14)____: citizens who assume the worst stop cooperating, comply only when watched, and elect leaders who promise to burn the system down, thereby (15)____ the very dysfunction they feared. Yet blind trust is no remedy either, for institutions unchecked by scepticism tend to (16)____. The healthy condition is not faith but warranted confidence—trust that is (17)____ on evidence and withdrawn when that evidence (18)____. Rebuilding it is slow, unglamorous work: transparency, accountability, and the patient keeping of small promises. Trust, after all, arrives on foot and departs on horseback, and a society that lets it (19)____ may take generations to (20)____ what was lost.",
+      "blanks": [
+        {
+          "options": [
+            "report",
+            "depend",
+            "compete",
+            "spend"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "fear",
+            "watch",
+            "pay",
+            "trust"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "collapses",
+            "returns",
+            "rises",
+            "spreads"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "shuts",
+            "speeds",
+            "slows",
+            "breaks"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "growing",
+            "stable",
+            "returning",
+            "eroding"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "promise",
+            "rumour",
+            "secret",
+            "record"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "fairly",
+            "quietly",
+            "badly",
+            "well"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "secret",
+            "rational",
+            "sudden",
+            "foolish"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "better",
+            "louder",
+            "older",
+            "worse"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hidden",
+            "rewarded",
+            "exposed",
+            "forgiven"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "loud",
+            "false",
+            "cheap",
+            "careful"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "visible",
+            "distant",
+            "invisible",
+            "minor"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reinforce",
+            "cancel",
+            "replace",
+            "ignore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "curing",
+            "fulfilling",
+            "hiding",
+            "ending"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "curing",
+            "hiding",
+            "producing",
+            "preventing"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "improve",
+            "rot",
+            "shrink",
+            "vanish"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hidden",
+            "spent",
+            "based",
+            "wasted"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "returns",
+            "grows",
+            "spreads",
+            "fails"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "slip",
+            "spread",
+            "rise",
+            "build"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forget",
+            "rebuild",
+            "sell",
+            "count"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "1depend复杂社会赖以运转 2trust因为信任背后的机构 3collapses信任崩塌时 4slows摩擦使一切变慢 5eroding信任明显在侵蚀 6record一连串真实失败的记录 7badly机构处理得糟糕 8rational对劣绩的理性反应 9better靠表现更好赢回信任 10exposed每个失误被即时曝光 11careful媒体奖励愤怒而非审慎报道 12visible缺陷变得更显眼 13reinforce二者相互强化成恶性循环 14fulfilling不信任自我应验(self-fulfilling) 15producing反而制造所惧的失灵 16rot不受质疑的机构会腐坏 17based建立在证据之上 18fails证据不再支持时(撤回) 19slip任由信任溜走 20rebuild需数代才能重建。"
+    }
+  ]
+}

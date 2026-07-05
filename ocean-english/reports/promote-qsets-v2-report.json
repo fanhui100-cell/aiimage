@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-04T18:12:13.783Z",
+  "apply": false,
+  "filters": {
+    "exam": null,
+    "level": null,
+    "task": "build_a_sentence",
+    "limit": 10
+  },
+  "candidates": 10,
+  "eligible": 10,
+  "promoted": 0,
+  "rejected": [],
+  "reasonCounts": {},
+  "rpcResults": []
+}

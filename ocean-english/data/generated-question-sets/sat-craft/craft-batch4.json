@@ -1,0 +1,103 @@
+{
+  "template": "sat-craft-and-structure",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Craft and Structure items, batch 4. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The small family business somehow managed to weather the long recession, emerging leaner and quieter but still standing at a time when many of its larger rivals had already closed their doors for good.",
+      "prompt": "As used in the text, what does the word 'weather' most nearly mean?",
+      "options": ["survive", "the day's atmospheric conditions", "to wear away by wind and rain", "to discolor with age"],
+      "answer": "survive",
+      "domain": "Craft and Structure",
+      "explain_zh": "weather 多义；语境为挺过经济衰退，取度过、挺过 survive。"
+    },
+    {
+      "passage": "Years of wide reading had given him a vast store of odd and useless facts, which he produced at dinner parties to the delight of some guests and the quiet despair of others.",
+      "prompt": "As used in the text, what does the word 'store' most nearly mean?",
+      "options": ["a supply", "a shop that sells goods", "to keep something for later use", "a computer's memory"],
+      "answer": "a supply",
+      "domain": "Craft and Structure",
+      "explain_zh": "store 多义；a vast store of facts 指大量储备，取储藏、储量 a supply。"
+    },
+    {
+      "passage": "The strange, unfinished painting seemed to arrest almost everyone who entered the quiet room, stopping ordinary conversations mid-sentence as people slowly turned to stare at it in silence.",
+      "prompt": "As used in the text, what does the word 'arrest' most nearly mean?",
+      "options": ["halt", "to take into police custody", "a sudden failure of the heart", "to formally charge with a crime"],
+      "answer": "halt",
+      "domain": "Craft and Structure",
+      "explain_zh": "arrest 多义；语境为让人驻足、谈话戛然而止，取使停止 halt。"
+    },
+    {
+      "passage": "Lacking any proper tools, the stranded castaways had to fashion knives out of sharpened shells and fishhooks out of carefully bent thorns gathered from the brush.",
+      "prompt": "As used in the text, what does the word 'fashion' most nearly mean?",
+      "options": ["make", "a currently popular style", "a particular manner of doing something", "the clothing industry"],
+      "answer": "make",
+      "domain": "Craft and Structure",
+      "explain_zh": "fashion 作动词多义；语境为用贝壳、荆棘造工具，取制作 make。"
+    },
+    {
+      "passage": "The scientist was careful to qualify her bold conclusion, openly noting the small sample size and the many important questions that her single study had inevitably left unanswered.",
+      "prompt": "As used in the text, what does the word 'qualify' most nearly mean?",
+      "options": ["limit the certainty of", "earn an official certificate", "advance to a final round", "describe a noun grammatically"],
+      "answer": "limit the certainty of",
+      "domain": "Craft and Structure",
+      "explain_zh": "qualify 多义；语境为指出局限以收束结论，取使有保留、限定 limit the certainty of。"
+    },
+    {
+      "passage": "Only after many hard years on the job did the once-timid young reporter season into someone who could face a furious official across a desk without so much as flinching.",
+      "prompt": "As used in the text, what does the word 'season' most nearly mean?",
+      "options": ["mature through experience", "add salt and spices to", "one of the four parts of the year", "a set of television episodes"],
+      "answer": "mature through experience",
+      "domain": "Craft and Structure",
+      "explain_zh": "season 作动词多义；语境为历练成熟，取使老练 mature through experience。"
+    },
+    {
+      "passage": "The first half of the speech lists everything the small community has lost: the closed factory, the empty school, the shuttered shops along Main Street. The second half lists, one steady item at a time, what it might yet build in their place.",
+      "prompt": "Which choice best describes the overall structure of the speech?",
+      "options": ["An account of losses is balanced by a vision of possibilities.", "A single event is examined from many different angles.", "One claim is simply repeated without any development.", "Two unrelated stories are told one after another."],
+      "answer": "An account of losses is balanced by a vision of possibilities.",
+      "domain": "Craft and Structure",
+      "explain_zh": "前半列损失、后半列愿景，形成对照平衡。B、C、D 与该结构不符。"
+    },
+    {
+      "passage": "The author interrupts her own argument midway through to imagine the sharpest objection a skeptic might possibly raise, states that objection as forcefully as she can, and only then explains why, in the end, it does not actually hold.",
+      "prompt": "Which choice best describes the function of imagining the skeptic's objection?",
+      "options": ["It strengthens the argument by confronting its strongest challenge.", "It abandons the argument in favor of the skeptic's view.", "It introduces an entirely unrelated new topic.", "It merely restates points already made earlier."],
+      "answer": "It strengthens the argument by confronting its strongest challenge.",
+      "domain": "Craft and Structure",
+      "explain_zh": "主动提出并驳倒最强反对意见，从而加固论证。B、C、D 与此手法不符。"
+    },
+    {
+      "passage": "The poem returns, at the end of every single stanza, to the very same six words about the tide, so that the reader feels the steady rhythm of the sea even as the scenes surrounding those words keep shifting and changing.",
+      "prompt": "Which choice best describes the function of repeating the same six words?",
+      "options": ["It creates a steady rhythm that unifies the changing scenes.", "It signals that the poem has finally ended.", "It corrects a factual mistake made earlier.", "It lists a sequence of items in order."],
+      "answer": "It creates a steady rhythm that unifies the changing scenes.",
+      "domain": "Craft and Structure",
+      "explain_zh": "反复的六字制造稳定节奏，统一不断变化的场景。B、C、D 与其作用不符。"
+    },
+    {
+      "passage": "Text 1: One economist argues that raising the minimum wage helps workers most, directly lifting incomes for exactly the people who need the money.\n\nText 2: Another economist worries that the very same raise may end up hurting the least experienced workers, if employers respond by simply hiring fewer of them.",
+      "prompt": "Based on the texts, the two economists disagree about whether raising the minimum wage will",
+      "options": ["help or harm the workers it aims to assist.", "prove popular or unpopular with voters.", "raise or lower company profits alone.", "take effect quickly or only slowly."],
+      "answer": "help or harm the workers it aims to assist.",
+      "domain": "Craft and Structure",
+      "explain_zh": "分歧在于加薪究竟帮助还是伤害目标工人。B、C、D 非其争点。"
+    },
+    {
+      "passage": "Text 1: A city planner praises tall apartment towers for housing many people on very little land, leaving far more room for parks and open green space.\n\nText 2: A community organizer counters that such towers often isolate residents, who may live stacked by the hundreds and yet never learn a single neighbor's name.",
+      "prompt": "Based on the texts, the organizer in Text 2 responds to Text 1 by raising a concern about",
+      "options": ["the social cost of the towers the planner praises.", "the precise height of the towers.", "the rising price of building public parks.", "the exact number of people who can fit inside."],
+      "answer": "the social cost of the towers the planner praises.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 提出高楼带来的社会代价（邻里疏离），与 Text 1 的赞美形成对照。B、C、D 非其关切。"
+    },
+    {
+      "passage": "Text 1: A historian credits a single brilliant general for the empire's astonishingly swift expansion, pointing above all to his daring and unconventional battlefield tactics.\n\nText 2: Another historian argues that the same rapid expansion owed far more to dull but decisive advantages, such as better roads, fuller granaries, and steadier supplies of grain.",
+      "prompt": "Based on the texts, how does Text 2 complicate the explanation offered in Text 1?",
+      "options": ["By attributing the expansion to logistics rather than to one leader's genius.", "By denying that the empire ever expanded at all.", "By agreeing that the general alone was responsible.", "By claiming that the battles in question were never fought."],
+      "answer": "By attributing the expansion to logistics rather than to one leader's genius.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 把扩张归因于后勤优势而非一人之才，使单因解释复杂化。B、C、D 与该反驳不符。"
+    }
+  ]
+}

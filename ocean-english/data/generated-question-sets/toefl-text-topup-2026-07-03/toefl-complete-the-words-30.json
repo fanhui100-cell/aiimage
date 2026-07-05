@@ -1,0 +1,186 @@
+{
+  "template": "toefl-complete-the-words",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "During photosynthesis, green plants convert sunlight, water, and carbon dioxide into glucose, releasing oxygen as a byproduct that most animals depend on to breathe.",
+      "targetWord": "photosynthesis",
+      "maskedForm": "p_o_o_y_t_e_i_",
+      "explain_zh": "目标词 photosynthesis：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Isaac Newton realized that the same gravity pulling a falling apple toward the ground also holds the Moon in its orbit, preventing it from drifting off into space.",
+      "targetWord": "gravity",
+      "maskedForm": "g_a_i_y",
+      "explain_zh": "目标词 gravity：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Before running an experiment, a careful scientist first states a testable hypothesis, a tentative explanation that the collected data will later either support or overturn.",
+      "targetWord": "hypothesis",
+      "maskedForm": "h_p_t_e_i_",
+      "explain_zh": "目标词 hypothesis：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "In an early Athenian democracy, ordinary male citizens gathered in the public assembly to debate and vote directly on new laws, rather than obeying the will of a single king.",
+      "targetWord": "democracy",
+      "maskedForm": "d_m_c_a_y",
+      "explain_zh": "目标词 democracy：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "A healthy wetland ecosystem ties together water, soil, insects, fish, and wading birds in one interdependent web, so that removing a single species can disturb every other member.",
+      "targetWord": "ecosystem",
+      "maskedForm": "e_o_y_t_m",
+      "explain_zh": "目标词 ecosystem：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Pressed into ancient layers of rock, a single fossil can reveal the shape, size, and approximate age of a creature that died millions of years before the first humans walked the Earth.",
+      "targetWord": "fossil",
+      "maskedForm": "f_s_i_",
+      "explain_zh": "目标词 fossil：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Combining careful digging with laboratory analysis, archaeology allows researchers to reconstruct how prehistoric peoples farmed, traded goods, and buried their dead, long before any written records survived.",
+      "targetWord": "archaeology",
+      "maskedForm": "a_c_a_o_o_y",
+      "explain_zh": "目标词 archaeology：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Although far too small to see without a microscope, helpful bacteria live inside the human gut, where many species break down food and manufacture vitamins the body cannot make alone.",
+      "targetWord": "bacteria",
+      "maskedForm": "b_c_e_i_",
+      "explain_zh": "目标词 bacteria：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Before coins were minted, communities bartered goods directly; introducing a standard currency finally let people assign one fixed, agreed value to products as different as grain, cloth, and cattle.",
+      "targetWord": "currency",
+      "maskedForm": "c_r_e_c_",
+      "explain_zh": "目标词 currency：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Ancient farmers dug long channels to carry river water across dry land, a method of irrigation that let their crops flourish far from the natural banks of the river.",
+      "targetWord": "irrigation",
+      "maskedForm": "i_r_g_t_o_",
+      "explain_zh": "目标词 irrigation：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "A national court usually has no jurisdiction over crimes committed inside another country, so the two governments must sign a formal treaty before one can prosecute a fugitive from the other.",
+      "targetWord": "jurisdiction",
+      "maskedForm": "j_r_s_i_t_o_",
+      "explain_zh": "目标词 jurisdiction：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Ecologists call the sea otter a keystone species because its steady hunting keeps sea-urchin numbers low, which in turn allows entire underwater kelp forests to survive and thrive.",
+      "targetWord": "keystone",
+      "maskedForm": "k_y_t_n_",
+      "explain_zh": "目标词 keystone：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Because sunlight strikes the equator almost straight down, regions at low latitude stay warm throughout the year, while lands near the poles receive only weak, sharply slanting rays.",
+      "targetWord": "latitude",
+      "maskedForm": "l_t_t_d_",
+      "explain_zh": "目标词 latitude：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Deep beneath a volcano, molten rock called magma slowly collects inside a hidden chamber; once the pressure grows unbearable, it bursts through the surface and flows out as glowing lava.",
+      "targetWord": "magma",
+      "maskedForm": "m_g_a",
+      "explain_zh": "目标词 magma：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "The human brain contains tens of billions of neurons, specialized cells that fire electrical signals and pass them across microscopic gaps to control thought, memory, sensation, and movement.",
+      "targetWord": "neurons",
+      "maskedForm": "n_u_o_s",
+      "explain_zh": "目标词 neurons：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "When bare iron is left exposed to oxygen in damp air, slow oxidation forms a flaky, reddish-brown layer of rust that steadily eats into and weakens the metal.",
+      "targetWord": "oxidation",
+      "maskedForm": "o_i_a_i_n",
+      "explain_zh": "目标词 oxidation：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "To keep a dangerous outbreak from spreading, health officials may place newly infected travelers under quarantine, isolating them completely until they can no longer pass the illness to anyone else.",
+      "targetWord": "quarantine",
+      "maskedForm": "q_a_a_t_n_",
+      "explain_zh": "目标词 quarantine：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "During a severe recession, a nation's total output shrinks for many months, companies lay off workers, and anxious consumers spend less, which only deepens the wider economic downturn.",
+      "targetWord": "recession",
+      "maskedForm": "r_c_s_i_n",
+      "explain_zh": "目标词 recession：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "A well-preserved museum specimen lets modern biologists examine the exact coloring, bone structure, and body proportions of an animal that a naturalist collected more than a century ago.",
+      "targetWord": "specimen",
+      "maskedForm": "s_e_i_e_",
+      "explain_zh": "目标词 specimen：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Relying on taxonomy, biologists sort every living thing into a nested hierarchy of groups, such as kingdom, class, order, and species, based on the physical features organisms share.",
+      "targetWord": "taxonomy",
+      "maskedForm": "t_x_n_m_",
+      "explain_zh": "目标词 taxonomy：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "In his famous book, the philosopher described an imaginary utopia with no poverty, crime, or greed, a flawless society so perfect that it could never actually exist in the real world.",
+      "targetWord": "utopia",
+      "maskedForm": "u_o_i_",
+      "explain_zh": "目标词 utopia：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "By exposing the immune system to a harmless fragment of a virus, a vaccine trains the body to recognize that exact pathogen and destroy it quickly during any future infection.",
+      "targetWord": "vaccine",
+      "maskedForm": "v_c_i_e",
+      "explain_zh": "目标词 vaccine：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Every drop of rain that falls within a river's watershed eventually drains into the same main channel, which means pollution released far upstream can harm communities living far downstream.",
+      "targetWord": "watershed",
+      "maskedForm": "w_t_r_h_d",
+      "explain_zh": "目标词 watershed：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "By carefully rotating their crops and adding nitrogen fertilizer, the farmers steadily raised the annual grain yield of each field, harvesting far more wheat from exactly the same area of soil.",
+      "targetWord": "yield",
+      "maskedForm": "y_e_d",
+      "explain_zh": "目标词 yield：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "As a major branch of biology, zoology investigates the anatomy, behavior, and classification of animals, ranging from nearly invisible microscopic organisms to the enormous blue whales of the open ocean.",
+      "targetWord": "zoology",
+      "maskedForm": "z_o_o_y",
+      "explain_zh": "目标词 zoology：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Charles Darwin argued that evolution through natural selection favors organisms whose inherited traits best fit their surroundings, gradually reshaping entire species across countless generations of survival and reproduction.",
+      "targetWord": "evolution",
+      "maskedForm": "e_o_u_i_n",
+      "explain_zh": "目标词 evolution：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "Prehistoric painters ground colored minerals into a fine pigment, then mixed the powder with animal fat so the bright hues would cling to the rough stone walls of their caves.",
+      "targetWord": "pigment",
+      "maskedForm": "p_g_e_t",
+      "explain_zh": "目标词 pigment：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "In classical physics, an object's momentum equals its mass multiplied by its velocity, which explains why a heavy freight truck is far harder to stop than a bicycle moving at the same speed.",
+      "targetWord": "momentum",
+      "maskedForm": "m_m_n_u_",
+      "explain_zh": "目标词 momentum：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "When developers drain a coastal marsh, they wipe out the fragile habitat that frogs, turtles, and wading birds depend upon for their food, shelter, and safe breeding grounds.",
+      "targetWord": "habitat",
+      "maskedForm": "h_b_t_t",
+      "explain_zh": "目标词 habitat：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    },
+    {
+      "passage": "A chemical catalyst speeds up a reaction without being used up itself, which is exactly why factories add only a tiny amount of platinum to accelerate otherwise sluggish industrial processes.",
+      "targetWord": "catalyst",
+      "maskedForm": "c_t_l_s_",
+      "explain_zh": "目标词 catalyst：可由短文学术语境唯一还原（首字母及部分字母已给出）。"
+    }
+  ]
+}

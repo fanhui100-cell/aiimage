@@ -1,0 +1,366 @@
+{
+  "template": "ielts-listening-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Man: Hello, Greenhill Library, Ben speaking. Woman: Hi Ben, it's Carla from the Thursday evening book club. I'm afraid I need to change something. I'm supposed to lead the discussion on the fourteenth, but my sister's wedding is that week. Man: Ah, congratulations to her! Let me look at the rota. Priya is leading on the twenty-eighth. Shall I ask if she'll swap with you? Woman: Actually, I already spoke to Priya, and she's happy to swap. I just need you to update the rota so there's no confusion. Man: Done. You're now down for the twenty-eighth. You're doing the new detective novel, is that right? Woman: No, that's Priya's book. Mine is the travel memoir. We're swapping dates, not books. Man: Of course, silly me. The memoir on the twenty-eighth. Will you still come along on the fourteenth as an ordinary member? Woman: I can't, I'll be away from the twelfth to the sixteenth. Man: No problem. Oh, one more thing. We've moved the club from the reading room to the community room upstairs, as the group has grown. Woman: Good to know. Thanks for your help, Ben.",
+      "questions": [
+        {
+          "prompt": "Why is Carla calling the library?",
+          "options": [
+            "To cancel her book club membership",
+            "To recommend a new novel to the club",
+            "To change the date she leads the discussion",
+            "To book the community room for a wedding"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Which book will Carla present on the twenty-eighth?",
+          "options": [
+            "The travel memoir",
+            "The new detective novel",
+            "A book about weddings",
+            "Priya's favourite novel"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What has recently changed about the book club?",
+          "options": [
+            "It now meets on a different evening",
+            "It has fewer members than before",
+            "Members must now reserve seats",
+            "It meets in a different room"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为调换读书会主持日期的对话,注意两人只交换日期而不交换所讲的书目。"
+    },
+    {
+      "passage": "Woman: Good morning, Skyline Mobile customer service. How can I help? Man: Hi. I've just opened my bill and it's forty-eight pounds, but my plan is supposed to be twenty-two a month. I'd like to know why it's more than double. Woman: Let me check your account. Ah, I can see two extra charges. The larger one, twenty pounds, is for data roaming. Did you travel abroad last month? Man: I was in Canada for a week, but I thought my plan covered roaming. Woman: Your plan covers Europe only, I'm afraid. Canada is charged separately. The other charge, six pounds, is for calls to a premium-rate number, a competition line, by the look of it. Man: That must be my son. All right, the roaming was my mistake, but can anything be done? Woman: I can't remove it, but I can add our worldwide roaming pack for future trips at five pounds a month. And I'll put a free block on premium numbers right now, if you like. Man: Yes to the block, please. I'll think about the roaming pack. Woman: Done. The block starts today. Anything else? Man: No, that's everything. Thanks for explaining.",
+      "questions": [
+        {
+          "prompt": "Why is the man calling the phone company?",
+          "options": [
+            "To cancel his mobile contract",
+            "To ask why his bill is higher than usual",
+            "To report a fault with his phone",
+            "To add his son to his phone plan"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What was the twenty-pound charge for?",
+          "options": [
+            "Calls to a competition line",
+            "The worldwide roaming pack",
+            "Using data in Europe",
+            "Using data in Canada"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the woman do for the man during the call?",
+          "options": [
+            "She blocks premium numbers at no cost",
+            "She removes the roaming charge",
+            "She adds the worldwide roaming pack",
+            "She gives him five pounds of credit"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为查询话费账单的对话,需分清二十镑的加拿大漫游费与六镑的付费电话费。"
+    },
+    {
+      "passage": "Man: Hi there. I'd like to hire a bike for a week. I'm here on holiday. Woman: Certainly. We have city bikes at ten pounds a day and touring bikes at fifteen. For a full week the city bike works out at fifty pounds and the touring bike at seventy, so you effectively get two days free. Man: I'm planning to ride along the coast path, quite long distances. Woman: Then I'd recommend the touring bike. It has better gears for the hills, and the price includes panniers for your luggage. Man: Fine, the touring bike, then. Do you need a deposit? Woman: We hold one hundred pounds on your card, and it's released when you bring the bike back undamaged. You'll also need to show your passport or a driving licence. Man: I have my driving licence with me. Is a helmet extra? Woman: Helmets and locks are free with every hire. Repairs are free too, but if you get a flat tyre out on the trail, you fix it yourself. There's a repair kit under the seat. Man: Understood. Can I return it on Sunday evening? Woman: We close at five on Sundays, so bring it back by four thirty to be safe. Man: Perfect, thank you.",
+      "questions": [
+        {
+          "prompt": "What does the man want to do?",
+          "options": [
+            "Rent a bicycle for his holiday",
+            "Book a guided cycling tour",
+            "Have his own bike repaired",
+            "Buy a second-hand touring bike"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the woman recommend the touring bike?",
+          "options": [
+            "It is cheaper for a full week",
+            "It is the only bike still available",
+            "It suits long, hilly rides better",
+            "It comes with a free repair service"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "By what time should the man return the bike on Sunday?",
+          "options": [
+            "Five o'clock",
+            "Four thirty",
+            "Four o'clock",
+            "Five thirty"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇为租自行车一周的对话,注意周日五点关门,店员建议四点半前归还。"
+    },
+    {
+      "passage": "Woman: Hello, I'd like to join an adult swimming class, but I'm not sure which level to choose. Man: No problem. Can you swim at all? Woman: I can manage a width of the pool, but I get nervous in deep water and I can't do proper front crawl. Man: Okay. Beginners is for people who can't swim a stroke, so that's too basic for you. Improvers works on stroke technique and builds confidence in the deep end, so that sounds right. The advanced class is really for people training for distance swimming. Woman: Improvers, then. When does it run? Man: There are two sessions: Tuesday at seven in the evening and Saturday at nine in the morning. The Tuesday class has a waiting list at the moment, though. Woman: Saturday morning suits me anyway, as I work late on weekdays. Man: Great. It's a ten-week course, sixty pounds, and that includes pool entry. You just need a swimsuit and a towel. Goggles are useful but not essential. Woman: Do I pay everything now? Man: Just a ten-pound deposit today, and the balance at your first lesson on the eighth. Woman: Here's my card. Man: Lovely. Welcome to Improvers, Saturdays at nine.",
+      "questions": [
+        {
+          "prompt": "Why has the woman come to the pool?",
+          "options": [
+            "To book private swimming lessons",
+            "To complain about the pool timetable",
+            "To join the advanced swimming class",
+            "To find the right class for her ability"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the man suggest the Improvers class?",
+          "options": [
+            "She has never swum before",
+            "She can swim a little but lacks confidence",
+            "She wants to train for distance swimming",
+            "The beginners class is already full"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How much does the woman pay today?",
+          "options": [
+            "Sixty pounds",
+            "Fifty pounds",
+            "Ten pounds",
+            "Nothing until the first lesson"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇为选择游泳班级别的对话,注意当天只需支付十镑定金,余款首课再付。"
+    },
+    {
+      "passage": "Man: Good morning, parks department. Woman: Hello, I'm ringing about the allotment gardens on Wetherby Lane. Do you have any plots available? Man: We do, actually, which is unusual for this time of year. Two full plots and one half plot came free last month. Woman: What's the difference in cost? Man: A full plot is sixty-five pounds a year and a half plot is thirty-five. Water is included, but you pay a one-off key deposit of ten pounds for the gate. Woman: I've never grown vegetables before, to be honest. Man: Then I'd honestly suggest the half plot. New tenants often take on a full plot, can't keep up with the weeding, and give up within a year. You can move up the list for a full plot later. Woman: That makes sense. The half plot, please. Are there any rules I should know about? Man: The main ones: no bonfires between May and September, sheds need written permission, and you must cultivate at least half the plot in your first year or the tenancy can be ended. Woman: Understood. How do I sign up? Man: Come to our office with proof of address, and you can sign the agreement the same day. Woman: I'll come in tomorrow. Thank you.",
+      "questions": [
+        {
+          "prompt": "Why is the woman calling the parks department?",
+          "options": [
+            "To complain about weeds on her plot",
+            "To ask about renting an allotment plot",
+            "To report a broken gate on Wetherby Lane",
+            "To order vegetable seeds for the spring"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the man recommend the half plot?",
+          "options": [
+            "Beginners often struggle to manage a full plot",
+            "The full plots are already taken",
+            "It has better soil than the full plots",
+            "It comes with a free shed"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What must the woman do to sign up?",
+          "options": [
+            "Pay sixty-five pounds tomorrow",
+            "Join a waiting list first",
+            "Get written permission for a shed",
+            "Take proof of address to the office"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为咨询社区菜园地块的对话,店方因她是新手而推荐较小的半块地。"
+    },
+    {
+      "passage": "Good afternoon, everyone, and welcome to Harwood University. I'm Miguel from the International Office, and this short talk covers your first week as exchange students. The most urgent task is registration. Unlike home students, you cannot register online. Exchange students must come in person to the International Office with your passport and your letter of acceptance. We're open nine to four, and I'd come early in the week, because the queues on Friday are terrible. Second, your student card. It's printed while you wait at the library, but only after you've registered with us, so do things in that order. The card gets you into buildings, borrows your books, and gives you discounts at the campus shops. Third, English support. Everyone here was accepted with good English, but academic writing is a different skill, and the free Tuesday workshops fill up fast. I recommend them even to confident students. Finally, a social note: the International Society barbecue is this Saturday at the lakeside, and it's genuinely the easiest place to meet people. Buses back to the halls run until eleven thirty. My colleagues are at the back with maps and timetables, so grab one on your way out.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the talk?",
+          "options": [
+            "To explain what new exchange students should do first",
+            "To describe the history of the university",
+            "To advertise the campus shops",
+            "To recruit helpers for a barbecue"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How must exchange students register?",
+          "options": [
+            "Online, in the same way as home students",
+            "At the library while they wait",
+            "By posting their passport to the office",
+            "In person at the International Office"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "When can students collect their student card?",
+          "options": [
+            "Before they register, to save time",
+            "At the International Office on Friday",
+            "At the library, once they have registered",
+            "At the Saturday barbecue"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇为交换生迎新说明,注意必须先到国际办公室现场注册,之后才能在图书馆领学生卡。"
+    },
+    {
+      "passage": "Before you start your first essays, I want to spend five minutes on citing sources, because every year good students lose marks over it. Let's be clear about why we cite. It isn't just to avoid plagiarism. Citations let your reader trace your evidence and see how your argument was built. Now, the department uses the author-date system: name and year in brackets in the text, with full details in a reference list at the end. Please don't use footnotes. That's the history department, not us. Three habits will save you. First, record the full details of every source the moment you use it, because chasing missing page numbers the night before a deadline is misery. Second, when you copy an author's exact words, use quotation marks and a page number. Changing one or two words does not make the sentence your own, and our software will flag it. Third, cite your sources even at the draft stage. And a warning about websites: anything without a named author or a date should make you suspicious, and personal blogs are not acceptable sources in this module. The library runs a referencing clinic on Monday lunchtimes. Take your draft along; they're endlessly patient. Right, back to the reading list.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly doing in this talk?",
+          "options": [
+            "Introducing the history department's methods",
+            "Warning students that they will fail the module",
+            "Advising students on how to reference correctly",
+            "Promoting a new library building"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Which referencing system does the department use?",
+          "options": [
+            "Footnotes at the bottom of each page",
+            "Author and year in brackets in the text",
+            "Numbered endnotes with a bibliography",
+            "Any system the student prefers"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker say about using an author's exact words?",
+          "options": [
+            "Changing a few words does not make them your own",
+            "They may be used freely in draft essays",
+            "They are only allowed in history essays",
+            "They should be avoided completely"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为学术引用规范讲解,强调本系用作者—年份体系而非脚注,且改动几个词仍算抄袭。"
+    },
+    {
+      "passage": "Morning, volunteers, and thank you for giving up your Saturday. I'm Aisha from the Shoreline Trust, and before we start collecting, some quick safety points. You've each got gloves, a bag, and a litter picker. The gloves stay on the whole time, please. The commonest injury at these events is a cut from broken glass, and it's entirely avoidable. If you find anything sharp like needles or fishing hooks, don't pick it up, even with the picker. Put one of these yellow markers next to it and tell a team leader, and we'll deal with it. Anything unusual, like a sealed drum or a canister you can't identify, leave completely alone and report it. We work in pairs, always within sight of your partner. The tide turns at midday, so we'll clear the far end of the beach first and move back towards the car park as the water comes in. We finish at one, and there's soup and rolls in the beach cafe afterwards, courtesy of the town council. One last thing: we weigh everything we collect for our national survey, so bring your full bags to the blue tent. Please don't put them in the ordinary bins. Right, let's get started.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of Aisha's talk?",
+          "options": [
+            "To thank the town council for the food",
+            "To explain the results of a national survey",
+            "To recruit new team leaders",
+            "To give safety instructions before the cleanup"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What should volunteers do if they find a needle?",
+          "options": [
+            "Pick it up carefully with the litter picker",
+            "Put it straight into their bag",
+            "Mark it and inform a team leader",
+            "Bury it safely in the sand"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Where should volunteers take their full bags?",
+          "options": [
+            "To the ordinary bins by the car park",
+            "To the blue tent to be weighed",
+            "To the beach cafe",
+            "To the far end of the beach"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇为海滩清洁志愿活动的安全交代,尖锐物要用黄色标记并报告,垃圾袋须送到蓝色帐篷称重。"
+    },
+    {
+      "passage": "Welcome to the Harbourside Museum archive. Before I take you through, I need to explain our rules, which I know seem strict, but some of our documents are over four hundred years old. First, bags and coats go in the lockers by the entrance. They take a one-pound coin, which you get back. You may bring in a laptop, a phone, and loose notes, but pens of any kind are forbidden. Pencils only, and we can lend you one. Photography is allowed without flash for most items, but anything marked with a red dot is under copyright, so you'll need to fill in a permission form for those. Documents are ordered at the desk, not fetched from the shelves yourselves, and you can have up to three items on your table at a time. Please handle everything with the foam supports provided. And contrary to what television dramas suggest, we do not use white gloves for paper, because gloves actually reduce your sense of touch and cause tears. Clean, dry hands are far safer. The archive opens at ten, and readers' tables must be cleared by a quarter to five. Lastly, the digitised catalogue is online, so you can order documents before you visit. Any questions before we go in?",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly doing?",
+          "options": [
+            "Describing the museum's oldest documents",
+            "Explaining the rules for using the archive",
+            "Recruiting volunteers for digitisation work",
+            "Announcing new opening hours"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why are white gloves not used for paper documents?",
+          "options": [
+            "They are too expensive to provide",
+            "They spread dirt onto the paper",
+            "Television crews borrowed them all",
+            "They reduce touch and can cause tears"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is true of items marked with a red dot?",
+          "options": [
+            "A permission form is needed to photograph them",
+            "They may not be photographed at all",
+            "They must be ordered before the visit",
+            "They can only be viewed online"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为博物馆档案室使用规则说明,红点标记的藏品需填许可表才能拍摄,纸质文献不戴白手套。"
+    },
+    {
+      "passage": "Thanks for coming, everyone. Tonight's short talk is about the story of our local canals. It's hard to imagine now, watching the ducks and the joggers, but two hundred years ago the Merton Canal was the motorway of its day. It opened in seventeen ninety-six, built to carry coal from the Denby pits to the river port, and for forty years it made this town rich. A single horse pulling a barge could move thirty tonnes, ten times what the same horse managed on the roads, and that is the simple reason canals were dug at all. Decline came quickly. The railway arrived in eighteen forty-one, cutting the journey from two days to three hours, and by the eighteen eighties commercial traffic had almost vanished. What saved the canal, oddly enough, was neglect: it was too expensive to fill in, so it simply sat there until the nineteen sixties, when volunteers began restoring it for leisure boating. Today the towpath carries more people in a week than the barges ever did. Walkers, cyclists, anglers, they all share it. If you'd like to help, the Canal Society meets on the first Thursday of every month at the Bridge Inn, and new members are always welcome.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the talk?",
+          "options": [
+            "To ask for money to restore the canal",
+            "To compare canals with modern motorways",
+            "To describe the history of the local canal",
+            "To explain how coal was mined at Denby"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the speaker, why were canals originally built?",
+          "options": [
+            "A horse could pull far heavier loads by water",
+            "The roads were closed to coal traffic",
+            "The railway was too expensive to use",
+            "The river port had run out of space"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why did the canal survive after commercial traffic ended?",
+          "options": [
+            "Commercial barges kept using it",
+            "The railway company bought it",
+            "The town council protected it",
+            "Filling it in would have cost too much"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为本地运河历史短讲,运河因填埋成本过高而幸存,后由志愿者修复用于休闲航运。"
+    }
+  ]
+}

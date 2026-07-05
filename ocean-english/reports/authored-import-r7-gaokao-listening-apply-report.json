@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-23T16:47:33.705Z",
+  "apply": true,
+  "stage": "r7-gaokao-listening",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 53,
+    "reject": 0,
+    "wrote": 41,
+    "dupSkip": 12
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r7-gaokao-listening\\gaokao-listening-expand.json",
+      "template": "gaokao-listening-mcq",
+      "level": 2,
+      "parsedOk": 41,
+      "reject": 0,
+      "wrote": 41,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r7-gaokao-listening\\gaokao-listening-pilot.json",
+      "template": "gaokao-listening-mcq",
+      "level": 2,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 12
+    }
+  ]
+}

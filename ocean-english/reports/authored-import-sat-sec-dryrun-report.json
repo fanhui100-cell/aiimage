@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-21T16:43:44.558Z",
+  "apply": false,
+  "stage": "sat-sec",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 50,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\sat-sec\\sec-batch1.json",
+      "template": "sat-standard-english-conventions",
+      "level": 7,
+      "parsedOk": 13,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-sec\\sec-batch2.json",
+      "template": "sat-standard-english-conventions",
+      "level": 7,
+      "parsedOk": 13,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-sec\\sec-batch3.json",
+      "template": "sat-standard-english-conventions",
+      "level": 7,
+      "parsedOk": 13,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-sec\\sec-batch4.json",
+      "template": "sat-standard-english-conventions",
+      "level": 7,
+      "parsedOk": 11,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

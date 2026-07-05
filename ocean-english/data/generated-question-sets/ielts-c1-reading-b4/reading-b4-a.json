@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "According to Chinese legend, the empress Leizu was drinking tea beneath a mulberry tree when a cocoon dropped into her cup and began to unravel into a single shimmering thread. Whatever the truth of the tale, archaeology confirms that the deliberate rearing of silkworms, known as sericulture, was practised in the river valleys of China more than five thousand years ago. From these beginnings grew an industry that shaped trade, diplomacy and technology across three continents, and whose influence long outlasted the caravans that carried its most famous product.\n\nProducing silk has always been an exacting business. The domesticated silk moth, Bombyx mori, is a pampered creature that can no longer survive in the wild: its caterpillars eat almost nothing but fresh mulberry leaves, which must be gathered, chopped and delivered around the clock for roughly a month. When a caterpillar finally spins its cocoon, it wraps itself in a single continuous filament that may be more than a kilometre long. To keep that filament intact, the cocoon is steamed or plunged into hot water before the moth can emerge, and the softened strand is then carefully unwound, or reeled, and twisted together with others to form a thread strong enough to weave. The process demands patience, skill and enormous quantities of labour, which is one reason silk remained a luxury for most of its history.\n\nFor centuries China guarded its monopoly jealously. Revealing the secrets of sericulture, or carrying silkworm eggs and mulberry seed out of the empire, was reportedly punishable by death. Bolts of silk functioned almost as a second currency: officials were sometimes paid in it, and emperors used it to purchase peace with nomadic neighbours. The fabric travelled westwards along the caravan routes that nineteenth-century geographers would later name the Silk Road, reaching Persia, India and eventually Rome, where moralists complained bitterly about the quantities of gold flowing east to pay for a material they considered scandalously thin.\n\nThe monopoly could not last forever. Knowledge of sericulture seeped gradually into Korea, Japan and Central Asia, but the most celebrated breach came in the sixth century, when, according to the Byzantine historian Procopius, two monks arrived at the court of the emperor Justinian carrying silkworm eggs concealed inside hollow bamboo canes. This clandestine cargo allowed Byzantium to establish imperial workshops of its own, and from there the craft spread through the Islamic world into Sicily and Spain, and later to the city-states of Italy, whose merchants made fortunes from velvets and brocades.\n\nBy the eighteenth century the French city of Lyon had become the centre of European silk weaving, home to tens of thousands of looms and to weavers whose intricately patterned fabrics demanded weeks of preparation. It was in Lyon, early in the nineteenth century, that Joseph-Marie Jacquard perfected a loom attachment that could weave elaborate designs automatically, following instructions punched into chains of stiff cards. The invention transformed the industry, but its significance reached far beyond textiles: the punched cards that told a loom which threads to lift later inspired pioneers of mechanical calculation, and through them the earliest programmable machines. It is only a slight exaggeration to say that the modern computer owes a debt to the demands of fashionable silk.\n\nThe industry's dominance of luxury textiles ended in the twentieth century. The invention of nylon in the nineteen thirties provided a cheap substitute for silk stockings and parachutes, and the Second World War cut Western manufacturers off from Asian supplies of raw fibre. Silk never recovered its old commercial position, yet it did not disappear. China and India today produce the overwhelming majority of the world's silk, much of it still reeled from cocoons in ways a medieval farmer would recognise, and the fabric retains a prestige that no synthetic fibre has quite managed to acquire.\n\nPerhaps that is the most remarkable thing about silk: its story is less about a fabric than about connection. A thread first unwound in a Chinese farmyard drew distant empires into contact, provoked espionage and financial anxiety, and helped, indirectly, to inspire the information age. Few luxury goods can claim so productive an afterlife.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Silk production methods have remained essentially unchanged for five thousand years.",
+            "The invention of synthetic fibres was the most important event in the history of textiles.",
+            "The historical significance of silk extends far beyond its role as a luxury fabric, influencing trade, politics and technology.",
+            "China's monopoly on silk was broken mainly through the efforts of European merchants."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the passage say about the domesticated silk moth, Bombyx mori?",
+          "options": [
+            "It is entirely dependent on human care and cannot survive in the wild.",
+            "It produces several short filaments rather than one continuous thread.",
+            "It feeds on a wide variety of leaves besides mulberry.",
+            "It emerges from the cocoon before the filament is reeled."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, how did sericulture reportedly reach Byzantium?",
+          "options": [
+            "Byzantine merchants purchased the technique from Persian intermediaries.",
+            "The Chinese emperor sent silkworm eggs as a diplomatic gift to Justinian.",
+            "Korean craftsmen migrated to Constantinople and set up workshops.",
+            "Two monks smuggled silkworm eggs to Justinian's court hidden in bamboo canes."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What can be inferred from the passage about silk consumption in ancient Rome?",
+          "options": [
+            "Roman weavers quickly learned to produce silk fabric themselves.",
+            "Romans continued to buy silk in large quantities despite public disapproval of the trade.",
+            "The Roman government successfully banned the wearing of silk garments.",
+            "Silk was cheaper in Rome than in the lands where it was produced."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph 4, the word 'clandestine' is closest in meaning to",
+          "options": [
+            "dangerous",
+            "valuable",
+            "secret",
+            "fragile"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The writer's main purpose in paragraph 5 is to",
+          "options": [
+            "criticise the working conditions of weavers in Lyon",
+            "explain why French silk was superior to Italian silk",
+            "describe the decline of hand weaving in Europe",
+            "show how the silk industry contributed to a technology far outside textiles"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讲述丝绸产业的历史：从中国养蚕起源、垄断与丝绸之路，到技术外传、里昂提花机对早期计算机的启发，以及二十世纪的衰落。题目考查主旨、细节、推断、词义与写作目的。"
+    },
+    {
+      "passage": "Volcanoes are among the most destructive forces on the planet, capable of burying whole towns in ash and mud within hours. A map of the world's population, however, reveals a puzzling pattern: some of the most densely settled farmland on Earth lies in the shadow of active volcanoes. Villages cling to the slopes of Indonesian cones, vineyards climb the flanks of Vesuvius, and coffee flourishes on the volcanic highlands of East Africa and Central America. The explanation for this apparently reckless attachment lies not in the dramatic peaks themselves but beneath the farmers' feet, in the soil.\n\nWhen a volcano erupts, it scatters ash made largely of tiny fragments of volcanic glass and minerals. Unlike quartz sand, which is chemically inert, this glassy material breaks down quickly when exposed to water and air, releasing a steady supply of the elements plants need, including potassium, calcium, magnesium and phosphorus. As the ash weathers, it forms distinctive minerals such as allophane, which give the young soils, classified by scientists as andisols, a light, crumbly structure. These soils hold water remarkably well and are easy for roots to penetrate, yet they rarely become waterlogged. In agricultural terms, they combine advantages that most other soils offer only in part.\n\nThe consequences are visible in settlement patterns. The Indonesian island of Java, generously dusted with ash from its many volcanoes, supports one of the highest rural population densities in the world, while neighbouring islands with older, heavily weathered soils remain comparatively sparsely farmed. Around the Bay of Naples, farmers have cultivated the slopes of Vesuvius for thousands of years, drawn back after every eruption by the exceptional harvests of grapes, tomatoes and apricots. Similar stories can be told of the terraced potato fields of the Andes and the tea gardens of volcanic hills in East Africa.\n\nNot all volcanic materials are equally generous, however. Ash rich in basalt weathers rapidly and releases abundant nutrients, whereas silica-rich ash breaks down more slowly and yields poorer soil. A fresh lava flow, unlike ash, may need centuries or even millennia to develop a workable soil cover, which is why recent flows often remain barren rock long after nearby ash falls have turned green. Climate matters too: warmth and rainfall speed up the weathering that releases nutrients, but heavy tropical rain also washes those same nutrients downwards and out of reach, a process known as leaching, so the fertility of a volcanic soil depends on a balance between renewal and loss.\n\nVolcanic soils also come with a hidden defect. The very allophane that gives them their excellent structure binds phosphate so tightly that plants may be unable to extract it, a problem soil scientists call phosphorus fixation. Farmers on andisols often find that crops respond weakly to ordinary fertiliser applications because much of the added phosphorus is locked away in the soil rather than taken up by roots. Managing this quirk, by applying larger doses, placing fertiliser carefully or choosing tolerant crops, is a routine part of agriculture in volcanic landscapes.\n\nWhy, then, do people accept the risk of living beside an active crater? Part of the answer is that eruptions at any single volcano are rare on the scale of a human lifetime, while the productivity of the land is enjoyed every season. A modest fall of ash, though disruptive, can even act as a subsidy from the mountain, refreshing the soil with a new layer of nutrient-rich material. The gamble is not irrational, but it does depend on modern monitoring and honest land-use planning, so that the people who profit from the volcano's generosity in quiet decades are not abandoned to its violence in the critical hours.\n\nVolcanic soils are a reminder that natural hazard and natural resource are often two faces of the same phenomenon. The same geological restlessness that periodically destroys fields is also what created their fertility in the first place, and communities around the world have decided, over many generations, that the bargain is worth striking.",
+      "questions": [
+        {
+          "prompt": "Which of the following best summarises the main idea of the passage?",
+          "options": [
+            "Governments should prevent people from farming near active volcanoes.",
+            "The fertility of volcanic soils explains why people accept the risks of farming near volcanoes, though that fertility has conditions and limits.",
+            "Volcanic eruptions are less dangerous than most people believe.",
+            "Andisols are the most productive soils on Earth under all circumstances."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why does volcanic ash produce fertile soil relatively quickly?",
+          "options": [
+            "It contains living organisms that enrich the ground.",
+            "It prevents rainfall from penetrating the surface.",
+            "It is chemically identical to quartz sand.",
+            "Its glassy fragments break down readily, releasing nutrients that plants need."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What problem with andisols does the passage describe?",
+          "options": [
+            "They bind phosphate so tightly that plants may be unable to use it.",
+            "They become waterlogged after moderate rainfall.",
+            "They are too dense for roots to penetrate.",
+            "They contain toxic levels of magnesium."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a recent fall of basalt-rich ash in a warm, moderately rainy region would",
+          "options": [
+            "remain barren for millennia like a lava flow",
+            "yield poorer soil than silica-rich ash in the same climate",
+            "develop into productive soil sooner than the same ash in a cold, dry region",
+            "be immune to the process of leaching"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In paragraph 6, the word 'subsidy' is closest in meaning to",
+          "options": [
+            "a penalty",
+            "a helpful contribution",
+            "a warning",
+            "a repayment"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude towards people who farm near active volcanoes?",
+          "options": [
+            "Open disapproval of their carelessness",
+            "Amusement at their superstitions",
+            "Indifference to their situation",
+            "Sympathetic understanding of a calculated choice"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇解释火山土壤为何肥沃：火山灰中的玻璃质碎屑快速风化释放养分，但也存在磷固定、淋溶等问题，并探讨人们在火山旁务农的风险权衡。题目覆盖主旨、细节、推断、词义与作者态度。"
+    },
+    {
+      "passage": "Popular advice has long claimed that it takes twenty-one days to form a habit. The figure appears in self-help books, fitness apps and motivational posters, and it can be traced back to a plastic surgeon writing in the nineteen sixties, who observed that his patients seemed to need about three weeks to adjust to their changed appearance. His remark was an anecdote about self-image, not an experiment about behaviour, yet it hardened into a rule through decades of repetition. When psychologists finally put habit formation to a proper test, they found the reality both slower and more forgiving than the slogan suggests.\n\nIn a frequently cited study at a London university, researchers asked volunteers to choose one simple new behaviour, such as drinking a glass of water after breakfast or taking a short walk after dinner, and to attempt it every day in the same context. Each day the participants reported how automatic the behaviour felt, how much they had to remind or force themselves. On average, the behaviours took about sixty-six days to reach their peak of automaticity, but the range was striking: some people needed fewer than three weeks, while others were still building the habit after more than eight months. Simpler actions became automatic faster than demanding ones, and the trajectory was a curve that climbed steeply at first and then flattened out.\n\nWhat is happening beneath the surface is a gradual transfer of control. When a behaviour is new, it is managed deliberately by brain systems associated with planning and decision-making, which weigh goals and consequences. With repetition in a stable context, control shifts towards deeper structures, including the basal ganglia, that specialise in storing well-practised routines. The behaviour becomes welded to its trigger, the time of day, the room, the preceding action, rather than to any conscious intention. This is why a strong habit feels effortless, and also why it can persist stubbornly even after the reward that originally motivated it has lost its appeal.\n\nResearch of this kind has practical lessons. People who form a specific plan linking a situation to an action, deciding in advance that after they pour their morning coffee they will write one sentence of their journal, succeed far more often than people who merely resolve to write more. Attaching a new behaviour to an existing routine gives it a ready-made trigger. The design of the surrounding environment matters as much as willpower: deliberately adding friction, such as keeping snacks in an inconvenient cupboard or deleting an app from a phone's home screen, can weaken an unwanted routine, while removing friction from a desired one, laying out running clothes the night before, makes the healthy choice the easy choice.\n\nContext dependence also explains how habits can be broken. Because routines are anchored to their surroundings, they loosen when the surroundings change. Studies of people who move to a new house or change jobs find that long-standing behaviours, both good and bad, become unusually easy to alter in the months after the disruption, a phenomenon researchers call habit discontinuity. Something similar happens around symbolic new beginnings such as the start of a year or a birthday, when people feel separated from their past selves and more willing to act differently.\n\nThe findings also counsel patience and self-forgiveness. The averages conceal enormous individual variation, so a habit that takes months to settle is not evidence of weak character. Notably, the London study found that missing a single day did not derail the overall process; automaticity resumed its climb when the behaviour did. What damages habit formation is not the occasional lapse but abandoning the attempt altogether after one.\n\nThe twenty-one-day rule, then, is best retired. Habits are built not by counting days but by repeating a specific action in a stable context, engineering the environment so the action is easy, and treating lapses as noise rather than failure. That picture is less tidy than the slogan, but it has the advantage of being true.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Habit formation is slower and more variable than popular claims suggest, but it follows principles that can be used deliberately.",
+            "Habits can only be changed by moving to a new house or changing jobs.",
+            "The twenty-one-day rule has been confirmed by modern psychological research.",
+            "Willpower is the only reliable way to build a new habit."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What did the London study find about the time needed for a new behaviour to become automatic?",
+          "options": [
+            "All participants needed exactly sixty-six days.",
+            "Most participants gave up before three weeks had passed.",
+            "It averaged about sixty-six days but varied from under three weeks to over eight months.",
+            "Complex behaviours became automatic faster than simple ones."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, what happens in the brain as a behaviour is repeated in a stable context?",
+          "options": [
+            "The planning systems strengthen their control over the behaviour.",
+            "The behaviour becomes linked to conscious intentions rather than triggers.",
+            "The basal ganglia stop participating in the routine.",
+            "Control shifts from deliberate planning systems to structures that store well-practised routines."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Based on the passage, what would most likely happen to someone who quit an old routine after moving away and then returned to live in their former neighbourhood?",
+          "options": [
+            "They would find the routine permanently erased from memory.",
+            "The old cues around them could revive the routine even if they no longer valued it.",
+            "They would need exactly sixty-six days to resist the routine.",
+            "Their planning systems would automatically block the old behaviour."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph 4, the word 'friction' is closest in meaning to",
+          "options": [
+            "inconvenience that makes an action harder to perform",
+            "heat generated by physical movement",
+            "disagreement between people",
+            "enthusiasm for a new activity"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the writer describe the origin of the twenty-one-day rule in paragraph 1?",
+          "options": [
+            "To praise the careful observations of an early researcher",
+            "To argue that plastic surgery changes patients' habits",
+            "To show how a casual anecdote hardened into widely accepted advice",
+            "To demonstrate that self-help books are always unreliable"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇讨论习惯养成的心理学：21天定律源于轶事而非实验，研究显示平均约66天且个体差异极大，并介绍情境线索、执行意图与环境摩擦等原理。题目考查主旨、细节、推断、词义与写作目的。"
+    },
+    {
+      "passage": "The lighthouse keeper occupies a secure place in the popular imagination: a solitary figure climbing a spiral staircase at dusk, tending a lamp that stands between sailors and the rocks. What the imagination has not fully absorbed is that the profession has effectively vanished. Within little more than a generation, automation swept keepers from towers around the world, closing one of the most distinctive occupations of the industrial age with remarkably little public debate.\n\nFor most of the nineteenth century, keeping a light was relentless manual work. Keepers trimmed lamp wicks, hauled oil up hundreds of steps, wound the clockwork machinery that rotated the great lenses, and polished the prisms until they gleamed. They recorded weather and shipping movements in meticulous logbooks, sounded fog signals by hand when mist rolled in, and, at isolated stations, launched boats to rescue survivors of wrecks. On rock towers far from shore, small crews lived for weeks at a time in circular rooms, their supplies arriving by boat when the sea allowed; at land stations, whole families grew up around the light, with children rowing to school and gardens planted in thin, salty soil.\n\nThe technology that would end this way of life arrived in stages. Electrification replaced oil lamps at many stations early in the twentieth century, simplifying the nightly routine. More radical was the work of the Swedish engineer Gustaf Dalen, who developed a system for lighting remote beacons with acetylene gas. His most elegant invention was the sun valve, a device that used the differing expansion of heated metals to shut off the gas supply in daylight and reopen it at dusk, allowing a beacon to run unattended for months. The achievement earned him a Nobel Prize and made genuinely unmanned lights practical for the first time. Later decades added automatic bulb changers that rotated a fresh lamp into place when one burned out, standby generators, and eventually remote monitoring, first over telephone lines and then by radio and computer links, so that a single office could watch over dozens of towers.\n\nThe economics were difficult to argue with. Staffing a remote station meant salaries for several keepers, dwellings for their families, and regular deliveries of food, fuel and mail by boat or, at the most inaccessible stations, by helicopter. An automated light, by contrast, needed only periodic maintenance visits. At the same time, the ships the lights served were changing: radar, radio beacons and finally satellite positioning gave navigators independent ways of fixing their position, so the lighthouse, while still valued, was no longer the mariner's only defence against the coast.\n\nAutomation programmes therefore gathered pace through the second half of the twentieth century, and the last keepers left in a trickle of quiet ceremonies. In Britain, the general lighthouse authorities converted their final manned stations in the late nineteen nineties, and the profession ended with a handful of retirements and redeployments. In the United States, the coast guard automated its network but one historic light in Boston harbour was deliberately kept staffed for years as a living memorial. Canada, unusually, retained keepers at a number of stations after campaigns argued that human eyes on remote coasts still saved lives by reporting local weather and spotting boaters in trouble.\n\nWhat automation removed was not illumination, the lights themselves mostly still shine, but the continuous human vigil that surrounded them. Keepers had radioed storm warnings, noticed capsized kayaks, and provided a reassuring voice on lonely stretches of coast; sensors and cameras replicate parts of this watchfulness, but not all of it. The buildings found new lives as museums, holiday cottages and heritage attractions, purchased eagerly by a public that seems to miss the keepers more than the shipping industry does.\n\nIt is hard to argue that the outcome was wrong. The work was dangerous, isolating and expensive, and no navigational case can be made for reinstating it. Yet something is worth recording: for two centuries, societies paid people simply to stay awake and watch. In an age of satellite navigation, the towers endure as an unblinking, low-technology backup, and the keeper's lamp has outlived the keeper.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Lighthouses became unnecessary once satellite navigation was invented.",
+            "Lighthouse keepers resisted automation more fiercely than any other profession.",
+            "Modern sensors perform every task that lighthouse keepers once performed.",
+            "Technological and economic forces quietly ended the lighthouse keeper's profession, with losses that went beyond the practical."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the passage, what did Gustaf Dalen's sun valve do?",
+          "options": [
+            "It rotated a fresh bulb into place when the old one failed.",
+            "It shut off a beacon's gas supply in daylight and restored it at dusk.",
+            "It converted sunlight into electricity to power remote lights.",
+            "It transmitted warnings to a central monitoring office."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage say about the historic light in Boston harbour?",
+          "options": [
+            "It was the first light in the United States to be automated.",
+            "It was demolished after its keepers retired.",
+            "It was deliberately kept staffed for years as a living memorial.",
+            "It was sold to a private owner as a holiday cottage."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The contrast between Canada's policy and the general trend suggests that decisions about keeping lighthouse staff",
+          "options": [
+            "were shaped by public campaigns and safety arguments, not by economics alone",
+            "depended entirely on the age of each country's towers",
+            "were made by shipping companies rather than governments",
+            "reflected Canada's lack of modern navigation technology"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In paragraph 6, the word 'vigil' is closest in meaning to",
+          "options": [
+            "celebration",
+            "silence",
+            "repair",
+            "watch"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude towards the automation of lighthouses?",
+          "options": [
+            "Anger that a valuable profession was destroyed for profit",
+            "Acceptance of its logic combined with regret for what was lost",
+            "Enthusiasm untroubled by any sense of loss",
+            "Suspicion that automated lights are unsafe for shipping"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇讲述灯塔自动化的历史：从守塔人的日常劳作，到乙炔太阳阀、自动换泡与远程监控使无人值守成为可能，经济因素推动各国裁撤守塔人。题目考查主旨、细节、推断、词义与作者态度。"
+    },
+    {
+      "passage": "Deserts are defined by the scarcity of rain, but not by its total absence. What little rain arid regions receive tends to arrive in brief, violent bursts, falling on baked ground that cannot absorb it. Within hours, the water races down normally dry channels, ephemeral streams that flow only after storms, and disappears, leaving the land as thirsty as before. For thousands of years, the inhabitants of drylands have responded with a simple, patient idea: if the rain will not stay, it must be caught. The techniques they developed, known collectively as rainwater harvesting, are now attracting renewed attention from engineers and governments.\n\nThe antiquity of the idea is striking. In the Negev desert, farmers of the Nabataean civilisation built low stone walls across hillsides to intercept the sheets of water released by winter storms, guiding the runoff into walled fields below where it soaked deep into the soil. On this stored moisture they raised grapes, wheat and olives in a landscape that receives only a hand's breadth of rain a year. Across the Middle East and the Mediterranean, households carved bell-shaped cisterns into soft rock beneath their courtyards to store roof water for the dry months. In India, communities dug stepwells of astonishing architectural ambition, and villages in the north-west built johads, crescent-shaped earthen embankments that trap monsoon runoff and let it seep quietly into the ground.\n\nThe modern vocabulary of the field distinguishes several approaches. Micro-catchment systems shape small basins or ridges around individual trees or plots, so that a plant effectively harvests the rain from several times its own area. Macro-catchment systems collect runoff from whole hillsides and deliver it to fields, ponds or underground tanks. Rooftop harvesting channels rain from an impermeable roof through gutters into a storage tank, providing households with water of reasonable quality at negligible running cost. Check dams, the modern descendants of the johad, are built across gullies to slow storm flows, reduce erosion and give the water time to recharge the aquifer beneath.\n\nThe revival of these methods has produced some celebrated results. In the Indian state of Rajasthan, village movements have restored or rebuilt thousands of johads since the nineteen eighties; in several districts, wells that had been dry for decades began to yield again, and seasonal rivers flowed for more months of the year than living memory could recall. Indian cities, led by Chennai, have made rooftop harvesting compulsory on new buildings, and subsidised tanks have become common in parts of Australia and the American south-west. International agencies now promote water harvesting as a cheap, local complement to large dams and pipelines, particularly for scattered rural populations that central infrastructure will never economically reach.\n\nEnthusiasm, however, should be tempered with hydrological arithmetic. Water stored in open ponds in hot climates evaporates at ferocious rates, sometimes losing more than is ever used, which is why techniques that hurry water underground, into soils and aquifers where the sun cannot reach it, are generally more efficient than surface storage. Quality needs care as well: the first flush of rain from a rooftop carries dust and debris and is best diverted away from the tank. Most fundamentally, water captured in one place is water that no longer flows to another. Hydrologists caution that if thousands of structures are built across a river basin without any overall accounting, upstream gains can become downstream losses, and the apparent creation of new water may be partly a quiet redistribution of it. Maintenance, finally, is decisive: a check dam full of silt or a cracked cistern harvests nothing.\n\nNone of this makes rainwater harvesting a false promise; it makes it a tool with a proper place. Small, decentralised storage cannot conjure water where none falls, but it can smooth the wild swings between deluge and drought that define arid climates, and it can do so with local materials, local labour and little energy. As climate change makes rainfall in many drylands even more erratic, the logic of catching the storm has rarely looked stronger, and one of humanity's oldest water technologies finds itself, unexpectedly, back at the frontier.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Large dams and pipelines have made traditional water techniques obsolete.",
+            "Rainwater harvesting was invented in the twentieth century by Indian engineers.",
+            "Rainwater harvesting is an ancient and newly relevant technique whose real benefits come with practical and hydrological limits.",
+            "Deserts receive no rainfall and therefore cannot support agriculture."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, how did Nabataean farmers in the Negev use winter storms?",
+          "options": [
+            "They built low stone walls that guided hillside runoff into walled fields where it soaked into the soil.",
+            "They pumped groundwater to the surface using wind power.",
+            "They carved stepwells to store water for religious ceremonies.",
+            "They diverted a permanent river into irrigation canals."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the passage say that moving harvested water underground is generally more efficient than storing it in open ponds?",
+          "options": [
+            "Underground water is easier to sell to neighbouring villages.",
+            "Open ponds are forbidden by most water authorities.",
+            "Aquifers purify water more quickly than tanks do.",
+            "Water in open ponds in hot climates is lost to evaporation at very high rates."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "It can be inferred from the passage that a very successful water harvesting campaign in the upper part of a river basin might",
+          "options": [
+            "guarantee increased river flow for every community downstream",
+            "reduce the water available to communities living downstream",
+            "have no effect on the basin's overall water balance",
+            "eliminate the need for any maintenance of the structures"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In paragraph 1, the word 'ephemeral' is closest in meaning to",
+          "options": [
+            "extremely deep",
+            "lasting only a short time",
+            "heavily polluted",
+            "artificially constructed"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the writer mention climate change in the final paragraph?",
+          "options": [
+            "To argue that rainwater harvesting causes changes in rainfall patterns",
+            "To predict that deserts will disappear within a century",
+            "To suggest that increasingly erratic rainfall strengthens the case for water harvesting",
+            "To criticise governments for subsidising storage tanks"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇介绍干旱地区的雨水收集：从纳巴泰人的径流农业、印度的johad到现代屋顶集水与拦水坝，指出蒸发损失、上下游分配与维护等限制。题目考查主旨、细节、推断、词义与写作目的。"
+    }
+  ]
+}

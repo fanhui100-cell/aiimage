@@ -1,0 +1,164 @@
+{
+  "window": "A",
+  "task": "TOEFL 2026 Expansion Window A — complete_the_words draft sets",
+  "generatedAt": "2026-06-22",
+  "scopeNote": "Plan specified exactly 40 new sets (DB target 50). Mid-run the user changed the target to 60 NEW sets (DB target 70). The first 40 were authored, applied, and verified; then a 20-set delta was authored and the source consolidated to a single 60-set file. Distribution scaled editorially to per-domain 8/8/8/8/7/7/7/7 and difficulty intent 18 B1 / 24 B2 / 18 C1. A subsequent Codex review required a one-record science fix (see codexRemediation); final count remains complete_the_words = 70 (no deletion for symmetry).",
+  "startingCommit": "d30f049caac1c0dceb5c66bde5000da5fb7f0f2e",
+  "checkpointTag": "qbank-v2-pre-parallel-20260622",
+  "branch": "qbank/toefl-complete-words",
+  "worktreePath": "D:/ai-worktrees/ocean-toefl-a (ocean-english subdir)",
+  "startingGitStatus": "clean (empty git status --short at window start)",
+
+  "baseline": {
+    "totalSets": 4878,
+    "activeTotal": 0,
+    "antonym_choice": 0,
+    "cet_cloze": 0,
+    "complete_the_words_draft": 10,
+    "verifyToeflPilotExit": 0
+  },
+
+  "source": {
+    "file": "data/generated-question-sets/toefl-2026-expansion-a/toefl-complete-the-words-60.json",
+    "template": "toefl-complete-the-words",
+    "level": 6,
+    "sourceCount": 60,
+    "parsedOk": 60,
+    "rejected": 0,
+    "keysPerSet": ["passage", "targetWord", "maskedForm", "explain_zh"]
+  },
+
+  "distributionCompanionMetadata": {
+    "note": "Domain label and difficulty are DECLARED companion metadata / difficulty INTENT only — not a machine verification of the passages' real linguistic difficulty.",
+    "domains": {
+      "biology and ecology": 8,
+      "earth and environmental science": 8,
+      "physics and technology": 8,
+      "medicine and health": 8,
+      "history and archaeology": 7,
+      "economics and social science": 7,
+      "psychology and education": 7,
+      "arts and humanities": 7
+    },
+    "difficultyIntent": { "B1": 18, "B2": 24, "C1": 18 }
+  },
+
+  "passageWordCount": { "min": 29, "avg": 33.8, "max": 48 },
+
+  "targetAndMaskStats": {
+    "uniqueTargetWords": 60,
+    "targetWordLength": { "min": 7, "avg": 9.42, "max": 13 },
+    "hiddenLetterCount": { "min": 4, "avg": 5.5, "max": 8 },
+    "revealedLetterCount": { "min": 2, "avg": 3.92, "max": 6 },
+    "hiddenRatio": { "min": 0.45, "avg": 0.59, "max": 0.71 },
+    "explicitDefinitionFrames_isCalled_knownAs": 0,
+    "frameCapNote": "Plan §12 cap is at most 8 of 40 (scaled headroom at 60). 0 of the explicit 'is called X'/'known as X' frames; one mild appositive ('this same force, called friction') is well within the cap.",
+    "overlapWithPilot10": 0
+  },
+
+  "codexRemediation": {
+    "trigger": "Codex review: record 'vibration' had a scientifically wrong statement ('the speed of each vibration decides how high the note sounds'). Pitch depends on vibration frequency/rate, not speed.",
+    "fix": "Rewrote the passage to: '... how high the note sounds depends not on how far the string moves but on how many times per second it completes a vibration; more cycles each second produce a higher note.' targetWord=vibration and maskedForm='vibr_____' kept; context still uniquely recovers the word; explain_zh updated to cite frequency/cycles (not speed) and the visible-letter pattern.",
+    "legacyIdHandling": {
+      "oldSetLegacyId": "gen:toefl-complete-the-words:set:claude:1v3y5gy",
+      "newSetLegacyId": "gen:toefl-complete-the-words:set:claude:1lcao6o",
+      "deletionMethod": "Targeted delete keyed on the OLD legacy_id only. Pre-delete assertions: task_type='complete_the_words', status='draft', qa_flags.template='toefl-complete-the-words', qa_flags.stage='adhoc', exactly 1 item (input_mode='spell', draft), stimulus legacy_id matched. Deleted by precise IDs: item (by question_set_id) -> set (by id) -> stimulus (by id). No broad task_type deletion was used.",
+      "deleted": { "items": 1, "sets": 1, "stimuli": 1 }
+    },
+    "reapply": { "apply1": { "wrote": 1, "dupSkip": 59 }, "apply2_idempotency": { "wrote": 0, "dupSkip": 60 } },
+    "verifierCommentsFixed": "All stale '40' comments in verify-toefl-complete-words-expansion.ts updated to 60 (except one provenance line documenting the 40->60 scaling). Difficulty/domain explicitly labelled companion metadata / difficulty intent, not machine-verified text difficulty."
+  },
+
+  "applyCounts": {
+    "firstBatch_40file": { "apply1": { "wrote": 40, "dupSkip": 0 }, "apply2_idempotency": { "wrote": 0, "dupSkip": 40 } },
+    "consolidated_60file": { "apply1": { "wrote": 20, "dupSkip": 40 }, "apply2_idempotency": { "wrote": 0, "dupSkip": 60 } },
+    "codexRemediation_vibrationFix": { "apply1": { "wrote": 1, "dupSkip": 59 }, "apply2_idempotency": { "wrote": 0, "dupSkip": 60 } },
+    "note": "-40.json was consolidated into -60.json and retired. The vibration fix changed one record's content (new legacy_id), so its old draft set/item/stimulus were deleted by precise IDs first; re-apply wrote only the new record (1) and dup-skipped the 59 unchanged."
+  },
+
+  "dbState": {
+    "complete_the_words_draft": 70,
+    "complete_the_words_active": 0,
+    "pilotRetained": 10,
+    "newApplied": 60,
+    "itemsPerNewSet": 1,
+    "inputMode": "spell",
+    "choices": "empty",
+    "sourceToDbExactPayloadMatch": "60/60",
+    "totalSetsSharedDb": 5038,
+    "totalSetsNote": "totalSets reflects the SHARED Supabase DB during the parallel run; it rose beyond this window's 4878+60 because Window B (qbank/toefl-writing) writes its own draft sets to the same DB. This window's net contribution is exactly +60 complete_the_words (the vibration replace is net 0). gen active=0 and deprecated=0 still hold globally."
+  },
+
+  "sampleLegacyIds": [
+    { "index": 0, "targetWord": "predators", "setLegacyId": "gen:toefl-complete-the-words:set:claude:ktzolv" },
+    { "index": 1, "targetWord": "nutrients", "setLegacyId": "gen:toefl-complete-the-words:set:claude:1o01bfz" },
+    { "index": 2, "targetWord": "pollinate", "setLegacyId": "gen:toefl-complete-the-words:set:claude:1xtgbgp" },
+    { "index": 3, "targetWord": "dormant", "setLegacyId": "gen:toefl-complete-the-words:set:claude:1o0xb4s" },
+    { "index": 19, "targetWord": "vibration (post-fix)", "setLegacyId": "gen:toefl-complete-the-words:set:claude:1lcao6o" }
+  ],
+
+  "manualReviewMethod": {
+    "authoring": "8 academic domains authored in parallel by Claude (Opus) subagents — no DeepSeek, no external generation API, no scraping of real test items.",
+    "mechanicalGate": "Per-record JS gate mirroring lib/exam-task-templates/shape.ts complete_words branch: target is a plain lowercase lexical word len>=6, maskedForm length match, case-exact shown letters, hidden>=2 and >=30% and not all, exactly one whole-word occurrence in passage, passage 15-55 words, explain_zh present and references the target.",
+    "adversarialVerify": "Each candidate independently re-checked by an Opus skeptic that reconstructs the word from the masked passage WITHOUT seeing the answer and rejects same-length ambiguous alternatives or non-recoverable / non-ordinary words.",
+    "loopAndDedup": "Loop-to-quota per domain with difficulty-slot filling; global de-duplication vs pilot 10, existing 40, and each other; definitional-frame cap fixup.",
+    "controllerReview": "All 60 maskedForms verified letter-by-letter; single-occurrence and uniqueness re-checked; stage verifier run in source-only and DB modes. Codex-flagged vibration record corrected and re-verified."
+  },
+  "replacedOrRejectedDrafts": "In-loop rejections (none imported): mostly occ_0 inflection mismatches auto-corrected (e.g. predator->predators, evaporates->evaporate, settlement/satellite variants); adversarial ambiguity/recoverability rejections; >=3 global-duplicate drops in batch 1 (nutrients, resistance, sediment) plus delta-stage dups. Post-hoc Codex remediation: 1 record (vibration) replaced for scientific accuracy via targeted delete + re-apply.",
+
+  "validationCommands": [
+    { "cmd": "npx tsx scripts/verify-toefl-complete-words-expansion.ts (source-only)", "exit": 0, "result": "60 records all shape-pass" },
+    { "cmd": "npx tsx scripts/import-authored-question-sets-v2.ts --file=...-60.json (dry-run)", "exit": 0, "result": "parsed_ok 60 reject 0" },
+    { "cmd": "npx tsx scripts/import-authored-question-sets-v2.ts --file=...-60.json --apply (post-fix)", "exit": 0, "result": "wrote 1 dup-skip 59" },
+    { "cmd": "npx tsx scripts/import-authored-question-sets-v2.ts --file=...-60.json --apply (idempotency)", "exit": 0, "result": "wrote 0 dup-skip 60" },
+    { "cmd": "npx tsx scripts/verify-toefl-complete-words-expansion.ts --db", "exit": 0, "result": "60/60 payload match, draft 70" },
+    { "cmd": "npm run qa:qsets-v2", "exit": 0, "result": "errors 0" },
+    { "cmd": "npm run validate:qbank-v2", "exit": 0, "result": "active 0, errors 0" },
+    { "cmd": "npm run lint", "exit": 0, "result": "clean" },
+    { "cmd": "npx tsc --noEmit", "exit": 0, "result": "clean" },
+    { "cmd": "npx tsx scripts/qbank-v2-snapshot.ts", "exit": 0, "result": "activeTotal 0, antonym 0, cet_cloze 0, totalSets 5038 (shared with Window B)" }
+  ],
+
+  "finalInvariants": {
+    "genActive": 0,
+    "antonym_choice": 0,
+    "cet_cloze": 0,
+    "complete_the_words_draft": 70,
+    "complete_the_words_active": 0
+  },
+
+  "compliance": {
+    "noDeepSeek": true,
+    "noExternalGenerationApi": true,
+    "originalOnly_noCopying": true,
+    "noPromoteNoActivation_allDraft": true,
+    "noFrontendSchemaSharedInfraEdits": true,
+    "didNotEditVerifyToeflPilot": true,
+    "didNotEditShapeOrImporterOrTemplates": true,
+    "windowBUntouched": true,
+    "targetedDeleteByIdWithAssertions_noBroadTaskTypeDelete": true
+  },
+
+  "committedFiles_AOwnedOnly": [
+    "data/generated-question-sets/toefl-2026-expansion-a/toefl-complete-the-words-60.json",
+    "scripts/verify-toefl-complete-words-expansion.ts",
+    "reports/toefl-2026-complete-words-expansion-a.md",
+    "reports/toefl-2026-complete-words-expansion-a.json"
+  ],
+  "revertedNotCommitted_sharedAutoReports": [
+    "reports/authored-import-adhoc-dryrun-report.json",
+    "reports/authored-import-adhoc-apply-report.json",
+    "reports/question-bank-v2-validation.json",
+    "reports/question-sets-v2-qa.json"
+  ],
+  "excludedFromCommit": [".superpowers/sdd/ (controller run artifact, removed before commit)"],
+
+  "filesLeftForCentralIntegration": [
+    "scripts/verify-toefl-pilot.ts — NOT modified; still encodes the pre-integration 10-set complete_the_words baseline. Central integration should update it to the post-merge 70-set pool after both windows land.",
+    "reports/qbank-production-final-summary.md, reports/qbank-production-issue-ledger.*, reports/toefl-2026-non-audio-* — intentionally NOT touched (central integration owns them).",
+    "Shared auto-generated validation/import reports — reverted in this branch; central integration regenerates and reconciles with Window B.",
+    "Window B (qbank/toefl-writing) directory/verifier/reports — untouched."
+  ],
+
+  "recommendation": "Ready for central Codex integration review. The vibration science error is fixed and re-verified; complete_the_words = 70 (10 pilot + 60 new), all draft, no activation. Validate the 70-set pool alongside Window B, then update the canonical verify-toefl-pilot.ts baseline and production final-summary centrally."
+}

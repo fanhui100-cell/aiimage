@@ -1,0 +1,186 @@
+{
+  "template": "cet-para-match",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "[A] Many students treat their hours as if they were endless, yet a single day offers only a fixed amount of attention. People who learn to handle this resource early tend to feel calmer and accomplish more than peers who simply react to whatever lands in front of them.\n\n[B] One common trap is the belief that being busy equals being productive. Rushing from one chore to another can fill a schedule completely while leaving the truly important goals untouched. Activity, in other words, should never be confused with genuine achievement.\n\n[C] Experts suggest that the first step is to separate urgent matters from significant ones. A ringing phone feels pressing, but answering it may add nothing to your long-term plans. Sorting tasks by real value protects you from spending energy on trivial demands.\n\n[D] Writing down what must be done also lightens the mental load. When everything lives inside your head, the brain keeps rehearsing the list and grows tired. A simple note frees the mind to focus fully on the job at hand.\n\n[E] Breaking a large project into smaller pieces removes the fear that often causes delay. A thesis seems impossible, but a single paragraph does not. Each completed step builds confidence and creates a pleasant sense of forward motion.\n\n[F] Distractions deserve special attention because they steal time quietly. A glance at social media can stretch into an hour without warning. Turning off alerts during periods of deep work keeps concentration unbroken and tasks moving.\n\n[G] Rest, surprisingly, belongs in any honest plan. A brain pushed without pause produces sloppy results and needs longer to recover. Scheduling short breaks actually raises the quality of the remaining hours.\n\n[H] Finally, reviewing how the day actually unfolded reveals where minutes leaked away. Noticing these patterns lets a person adjust tomorrow's approach. Over weeks, such reflection turns scattered effort into a steady and reliable rhythm.",
+      "statements": [
+        "Recording tasks on paper reduces the strain on a person's memory.",
+        "Looking back at a finished day shows where time was wasted.",
+        "Feeling occupied is not the same as reaching meaningful goals.",
+        "Dividing a big task into parts helps overcome the urge to postpone it.",
+        "Those who manage their time well generally feel less stressed.",
+        "Silencing notifications protects a stretch of focused work.",
+        "Distinguishing what matters from what merely feels pressing prevents wasted effort.",
+        "Planned pauses improve the standard of the work that follows.",
+        "Completing each small portion gives a satisfying feeling of progress.",
+        "A small written note allows the brain to concentrate on the current task."
+      ],
+      "answers": [3, 7, 1, 4, 0, 5, 2, 6, 4, 3],
+      "paras": 8,
+      "explain_zh": "①记录任务减轻记忆负担→[D]。②回顾一天找出浪费→[H]。③忙碌≠真正成就→[B]。④拆分大任务克服拖延→[E]。⑤善于管理时间者压力更小→[A]。⑥关闭提醒保护专注→[F]。⑦区分重要与紧迫避免浪费精力→[C]。⑧计划休息提升后续质量→[G]。⑨完成每一小步带来进步感→[E]。⑩写下小笔记让大脑专注当前任务→[D]。"
+    },
+    {
+      "passage": "[A] Walk through any large city after dark and you will meet creatures that no longer belong only to forests and fields. Foxes, raccoons, and countless birds have quietly moved in, treating streets and rooftops as a strange new kind of habitat.\n\n[B] Food is the main reason for this shift. Bins overflowing with leftovers offer an easy meal that requires far less hunting than the wild demands. For an animal weighing the cost of survival, a city alley can look remarkably generous.\n\n[C] Temperature plays a part too. Concrete and brick soak up heat during the day and release it slowly at night, keeping the urban core several degrees warmer than the surrounding countryside. Many species find these mild conditions easier to endure through winter.\n\n[D] Behaviour, however, must change for survival here. Pigeons learn the timing of traffic lights, and crows wait for cars to crack open nuts they cannot break themselves. Such clever adjustments show intelligence rather than mere instinct.\n\n[E] Some animals even alter their daily rhythm. Creatures once active by day now hunt at night to avoid crowds, slipping through quiet streets while humans sleep. This shift lets them share the same space without constant conflict.\n\n[F] Body and senses may shift as well over generations. City birds tend to sing at higher pitches so their calls rise above the rumble of engines, ensuring that mates can still hear them through the noise.\n\n[G] Not every consequence is positive, of course. Bright lights confuse migrating birds, and easy human food can leave animals less healthy than a natural diet would. The convenience of the city carries hidden costs.\n\n[H] Still, the broad lesson is one of remarkable flexibility. Wildlife keeps proving that survival favours those willing to bend their habits, and the modern city has become an unexpected stage for that ancient drama. Researchers who once travelled to remote regions now study evolution unfolding on ordinary streets, watching ordinary species rewrite their behaviour within a few short generations.",
+      "statements": [
+        "Warm surfaces in built-up areas help certain animals survive cold seasons.",
+        "Some animals switch to nighttime activity to steer clear of people.",
+        "Plentiful discarded food makes urban living easier than hunting in the wild.",
+        "Artificial lighting can mislead birds during their seasonal journeys.",
+        "Urban birds raise the pitch of their songs to be heard over traffic.",
+        "A growing number of wild creatures now make their homes among city buildings.",
+        "Some birds have figured out how to use passing vehicles to open hard food.",
+        "The overall message is that adaptable species are the ones that endure.",
+        "Cleverly timed behaviour reflects genuine intelligence rather than instinct alone.",
+        "Relying on human scraps can make animals less healthy."
+      ],
+      "answers": [2, 4, 1, 6, 5, 0, 3, 7, 3, 6],
+      "paras": 8,
+      "explain_zh": "①城市暖表面助动物过冬→[C]。②转夜间活动避人→[E]。③丰富剩食比野外狩猎容易→[B]。④人工灯光误导迁徙鸟→[G]。⑤城市鸟提高鸣叫音高→[F]。⑥越来越多野生动物在城市安家→[A]。⑦鸟利用车辆敲开坚果→[D]。⑧整体启示:适应者生存→[H]。⑨巧妙定时行为体现智慧而非本能→[D]。⑩依赖人类残食使动物不健康→[G]。"
+    },
+    {
+      "passage": "[A] When schools debate which subjects to cut, music lessons are often first on the list, dismissed as a pleasant extra. Yet a growing pile of research suggests that learning an instrument shapes young minds far more deeply than many adults assume.\n\n[B] The clearest gains appear in the brain itself. Reading notes while moving the fingers and listening at the same time trains several regions to cooperate, strengthening the links that also support memory and language.\n\n[C] Mathematics benefits in surprising ways. Rhythm is built on dividing time into equal parts, and counting beats quietly teaches fractions long before a textbook does. Children who play often find numbers less frightening as a result.\n\n[D] There are emotional rewards as well. Mastering a difficult piece after weeks of effort teaches patience and shows a child that persistence pays off, a lesson that carries far beyond the practice room.\n\n[E] Playing together adds a social dimension. In an orchestra or band, each member must listen carefully and time their part to fit the whole, learning cooperation in a way no lecture could deliver.\n\n[F] Confidence grows on the stage too. Standing before an audience and performing, despite trembling hands, helps a shy student discover that nervousness can be faced and overcome rather than avoided.\n\n[G] The benefits are not limited to the young. Older adults who take up an instrument report sharper thinking and a brighter mood, evidence that the mind stays flexible at every stage of life.\n\n[H] For all these reasons, treating music as a luxury misses the point. It is less a decoration on education than a powerful tool for building the whole person, mind and character together. Schools that protect their music programmes through difficult budgets often discover, years later, that those very lessons quietly shaped some of their most balanced and resilient graduates, proving the early investment worthwhile.",
+      "statements": [
+        "Counting musical beats quietly introduces children to fractions.",
+        "Performing in front of others helps timid learners conquer their nerves.",
+        "Coordinating notes, fingers, and listening strengthens connections useful for language.",
+        "Music education is often regarded as a non-essential subject when budgets are tight.",
+        "Even elderly beginners report sharper thinking after learning to play.",
+        "Playing in a group teaches members to cooperate and listen to one another.",
+        "Mastering a hard piece teaches a child the value of persistence.",
+        "Music should be seen as a means of developing the whole person.",
+        "The deepest measurable effects of music show up within the brain itself.",
+        "Learning rhythm makes children more comfortable with numbers."
+      ],
+      "answers": [2, 5, 1, 0, 6, 4, 3, 7, 1, 2],
+      "paras": 8,
+      "explain_zh": "①数拍子引入分数→[C]。②上台表演助胆小者克服紧张→[F]。③音符手指听觉协调强化语言连接→[B]。④经费紧张时音乐常被视为非必需→[A]。⑤老年初学者思维更敏锐→[G]。⑥合奏教会合作与倾听→[E]。⑦攻克难曲教会坚持的价值→[D]。⑧音乐应被视为培养完整人格的手段→[H]。⑨最深层可测效果出现在大脑→[B]。⑩学节奏让孩子更适应数字→[C]。"
+    },
+    {
+      "passage": "[A] The average family throws away a startling amount each week, and much of that waste could be avoided with small changes in daily habit. Cutting what we discard saves money and eases pressure on crowded landfills at the same time.\n\n[B] Food is usually the largest offender. Buying more than a household can eat leads to forgotten vegetables rotting at the back of the fridge. Planning meals before shopping keeps purchases in line with real need.\n\n[C] Packaging is another major source. A single trip to the supermarket can bring home layers of plastic that vanish into the bin within minutes. Choosing loose produce and refillable containers trims this stream considerably.\n\n[D] Many items labelled rubbish are not truly finished. A torn shirt becomes a cleaning cloth, and glass jars store dry goods neatly. Giving objects a second purpose keeps them out of the waste stream entirely.\n\n[E] Composting deals with the scraps that remain. Peelings and coffee grounds, instead of rotting uselessly in a sealed bag, can break down into rich soil that feeds a garden through the year.\n\n[F] Habits around water and energy matter too. A dripping tap or a light left burning wastes resources just as surely as a tossed apple, even though the loss is harder to see.\n\n[G] Children learn quickly by example. When parents sort recycling and reuse bags without complaint, the next generation absorbs these routines as ordinary rather than as a tiresome chore.\n\n[H] Taken together, these small steps add up. No single act transforms a home overnight, but a steady stream of modest choices gradually shrinks the pile a family leaves behind. Households that keep a simple record of what they discard each week are often startled by how quickly the savings mount, and that visible proof tends to keep everyone in the household committed long after the early enthusiasm has faded.",
+      "statements": [
+        "Turning old objects into something else keeps them out of the bin.",
+        "Buying loose goods and refillable containers cuts down on plastic.",
+        "Kitchen scraps can be broken down into soil that nourishes plants.",
+        "A leaking tap wastes resources even when the loss goes unnoticed.",
+        "Planning meals before shopping prevents buying more food than needed.",
+        "Children copy waste-reducing routines they see their parents perform.",
+        "Reducing what is thrown out lowers costs and relieves landfills.",
+        "No single action changes things instantly, but small choices accumulate.",
+        "Excess food often rots forgotten at the back of the refrigerator.",
+        "Reusing a jar or cloth gives an item a fresh purpose."
+      ],
+      "answers": [3, 2, 4, 5, 1, 6, 0, 7, 1, 3],
+      "paras": 8,
+      "explain_zh": "①把旧物变他用避免丢弃→[D]。②买散装与可重复容器减塑→[C]。③厨余可分解成滋养植物的土壤→[E]。④漏水龙头悄悄浪费资源→[F]。⑤购物前规划餐食防超买→[B]。⑥孩子模仿父母减废习惯→[G]。⑦减少丢弃省钱缓解填埋→[A]。⑧单一行动不立竿见影但小选择累积→[H]。⑨多余食物常被遗忘在冰箱后部腐烂→[B]。⑩重复利用罐子或布给物品新用途→[D]。"
+    },
+    {
+      "passage": "[A] After years of glowing screens dominating living rooms, the humble board game has returned with surprising force. Sales climb each holiday season, and cafes built entirely around tabletop play now appear in cities worldwide.\n\n[B] Part of the appeal is simple human contact. Sitting around a table, laughing and arguing over the rules, offers a closeness that scrolling alone in separate rooms can never quite provide.\n\n[C] Modern designs have also grown far richer than the simple roll-and-move games of the past. Today's titles weave clever strategy and original themes into the experience, rewarding thought rather than mere luck.\n\n[D] The hobby reaches across generations with rare ease. A grandparent and a grandchild can share the same table on equal footing, something few other pastimes manage to achieve so naturally.\n\n[E] Cost helps explain the boom as well. A single box, bought once, can entertain a group dozens of times, making it a far cheaper evening than a trip to the cinema or a restaurant.\n\n[F] Online crowdfunding transformed how games reach players. Designers now pitch their ideas directly to enthusiasts, who fund production in advance, freeing creators from the cautious tastes of large publishers.\n\n[G] Schools and therapists have noticed the trend too. Games are quietly used to teach patience, negotiation, and graceful losing, skills that prove valuable long after the pieces are packed away.\n\n[H] For all the talk of a digital future, then, people keep returning to cardboard and dice. The pull of gathering face to face, it seems, is something technology has not managed to replace. Long winter evenings spent shuffling cards and moving wooden tokens create memories that no streaming service can match, and many families now guard one fixed night each week for exactly this kind of unhurried shared play, treating it as a small but precious ritual that the children, in turn, come to cherish and pass on.",
+      "statements": [
+        "Crowdfunding lets designers appeal directly to fans rather than big publishers.",
+        "A single purchase can entertain a group many times over.",
+        "Contemporary games reward strategy and theme rather than luck alone.",
+        "Educators and therapists use games to teach skills like patience.",
+        "Older and younger family members can play together as equals.",
+        "Sales of board games rise every holiday period.",
+        "The draw of meeting in person is something digital tools have never managed to substitute.",
+        "Playing around a table offers closeness that solitary scrolling cannot.",
+        "Buying a game costs less than a night at the cinema or restaurant.",
+        "Game cafes centred on tabletop play have opened in cities everywhere."
+      ],
+      "answers": [5, 4, 2, 6, 3, 0, 7, 1, 4, 0],
+      "paras": 8,
+      "explain_zh": "①众筹让设计者直面粉丝绕过大出版商→[F]。②一次购买可多次娱乐群体→[E]。③现代游戏奖励策略主题非运气→[C]。④教育者治疗师用游戏教耐心→[G]。⑤老少可平等同桌→[D]。⑥桌游销量每逢假期上升→[A]。⑦面对面聚会是技术无法取代的吸引→[H]。⑧围桌而坐提供独自刷屏无法给的亲近→[B]。⑨买游戏比看电影下馆子便宜→[E]。⑩桌游主题咖啡馆在各城市开张→[A]。"
+    },
+    {
+      "passage": "[A] The internet opens a vast world of friendship, learning, and entertainment, yet the same doors that let good things in can also admit trouble. Learning to move through this space wisely matters as much as any lesson taught at school.\n\n[B] Passwords form the first line of defence. A short, obvious word can be cracked in seconds, while a long mix of letters, numbers, and symbols holds intruders at bay far more effectively.\n\n[C] Suspicious messages deserve a careful eye. An email claiming you have won a prize, or urging you to confirm your bank details at once, is almost always a trap designed to steal money or identity.\n\n[D] What you share publicly leaves a lasting mark. Photos and comments posted today may resurface years later, so thinking before pressing send protects a reputation that is hard to repair.\n\n[E] Strangers online are not always who they claim to be. A new friend who quickly asks to meet in person, or presses for private information, should raise immediate concern rather than excitement.\n\n[F] Keeping software up to date is quietly powerful. Each update repairs weaknesses that criminals are eager to exploit, so a delayed installation leaves a door propped open for them.\n\n[G] Public networks carry their own risk. Logging into a bank account over free cafe wifi can expose your details to anyone watching the same connection, so sensitive tasks are best saved for home.\n\n[H] Above all, a calm and questioning attitude is the strongest shield. Treating every urgent demand with healthy doubt, rather than instant obedience, keeps a user safer than any single tool alone. The criminals behind these schemes rely above all on panic and haste, so a habit of pausing to ask one or two simple questions before clicking dismantles the very pressure on which most of their tricks depend, leaving the would-be victim calm and firmly in control.",
+      "statements": [
+        "Outdated software leaves weaknesses that criminals are keen to exploit.",
+        "A long combination of characters resists intruders better than a simple word.",
+        "Content posted now may reappear years later and damage one's reputation.",
+        "Messages promising prizes or demanding bank details are usually traps.",
+        "Free public wifi can expose sensitive details to others on the network.",
+        "Online strangers pressing to meet or share private data should arouse suspicion.",
+        "A doubting, unhurried attitude is the best protection of all.",
+        "Moving wisely online matters as much as any school lesson.",
+        "Confirming bank details on demand by email is almost always a scam.",
+        "Promptly installing updates closes doors that attackers hope to use."
+      ],
+      "answers": [5, 1, 3, 2, 6, 4, 7, 0, 2, 5],
+      "paras": 8,
+      "explain_zh": "①过时软件留下被罪犯利用的弱点→[F]。②长字符组合比简单词更防入侵→[B]。③现发内容多年后重现损名誉→[D]。④承诺奖品或索要银行信息多为陷阱→[C]。⑤免费公共wifi暴露敏感信息→[G]。⑥网友催见面或索私密信息应警惕→[E]。⑦怀疑从容的态度是最好保护→[H]。⑧明智上网与学校课程同样重要→[A]。⑨按邮件要求确认银行信息几乎都是骗局→[C]。⑩及时安装更新关闭攻击者想用的门→[F]。"
+    },
+    {
+      "passage": "[A] Parents and teachers sometimes worry that a part-time job will pull a student away from books and lower their grades. Yet handled sensibly, a few hours of work each week can teach lessons no classroom offers.\n\n[B] The most obvious gain is money sense. Earning a wage, then deciding what to spend and what to save, makes the value of cash real in a way that an allowance handed over freely never quite does.\n\n[C] Work also sharpens the management of time. A student juggling shifts and homework quickly learns to plan the week carefully, a discipline that often improves study habits rather than ruining them.\n\n[D] Dealing with customers builds confidence in speaking. Explaining a product or calming an annoyed shopper teaches a young person to handle real conversations that no textbook exercise can fully imitate.\n\n[E] A job introduces the idea of responsibility too. Showing up on time and finishing tasks others depend on carries a weight that homework, with its softer deadlines, rarely manages to convey.\n\n[F] Early work can also light a path toward a career. A summer at a clinic or workshop may reveal a passion, or just as usefully, prove that a once-dreamed job is not the right fit after all.\n\n[G] The experience looks good later as well. Employers reading a CV tend to favour applicants who have already proven they can hold down a role, however modest that first position may have been.\n\n[H] Balance, naturally, remains the key. As long as study stays the priority and rest is protected, a part-time job adds far more to a young life than it takes away. Many adults look back on those first modest roles, bagging groceries or waiting tables, as the place where they first felt genuinely useful, and the quiet pride of earning that early wage often lingers far longer than the memory of the pay itself.",
+      "statements": [
+        "Serving customers improves a young person's confidence in real conversation.",
+        "Earning and then budgeting money makes its value feel real.",
+        "Juggling shifts and homework sharpens a student's planning skills.",
+        "An early job may reveal a passion or rule out an unsuitable career.",
+        "Showing up reliably teaches a sense of responsibility homework rarely conveys.",
+        "Employers tend to favour applicants who have held a job before.",
+        "Handled sensibly, work can teach lessons no classroom provides.",
+        "A part-time job adds more than it takes as long as study stays first.",
+        "Sampling real work can show that a long-imagined occupation does not actually suit you.",
+        "Planning a busy week often improves rather than ruins study habits."
+      ],
+      "answers": [3, 1, 2, 5, 4, 6, 0, 7, 5, 2],
+      "paras": 8,
+      "explain_zh": "①接待顾客提升真实对话自信→[D]。②挣钱再预算让金钱价值变真实→[B]。③兼顾轮班作业磨炼规划能力→[C]。④早期工作揭示热情或排除不适合职业→[F]。⑤可靠出勤教会作业难传达的责任感→[E]。⑥雇主青睐有工作经历的应聘者→[G]。⑦理智对待工作能教课堂没有的课→[A]。⑧只要学业第一兼职利大于弊→[H]。⑨尝试工作可证明曾梦想职业不合适→[F]。⑩规划忙碌一周常改善而非破坏学习习惯→[C]。"
+    },
+    {
+      "passage": "[A] In an age of crowded roads and rising fuel prices, the bicycle is enjoying a remarkable revival. Once seen as a child's toy or a poor man's transport, it is now celebrated as a smart choice for modern city life.\n\n[B] Health is the most widely praised benefit. A daily ride strengthens the heart and clears the mind without the cost of a gym membership, turning the ordinary commute into useful exercise.\n\n[C] The environment gains too. A bicycle burns no fuel and releases no fumes, so every journey made on two wheels instead of four leaves the air a little cleaner for everyone.\n\n[D] In congested centres, cycling is often simply faster. While cars crawl bumper to bumper, a rider slips along quiet lanes and reaches the office while drivers are still searching for a parking space.\n\n[E] City governments have noticed and responded. New protected lanes and public hire schemes make riding safer and easier, encouraging even nervous beginners to give two wheels a try.\n\n[F] The cost advantage is hard to ignore. Beyond the price of the bike itself, there is no fuel to buy, no insurance to renew, and only the occasional cheap repair to worry about.\n\n[G] Technology has widened the appeal further. Electric bikes flatten steep hills and shorten long distances, opening cycling to older riders and to those who once dismissed it as too tiring.\n\n[H] For all these reasons, the comeback looks less like a passing fashion than a lasting shift. As cities grow denser, the simple bicycle may prove to be one of the wisest ways to move through them. Planners in several crowded capitals already report that streets once choked with cars feel calmer and quieter wherever cycling has taken hold, hinting at a future in which the machine long dismissed as humble quietly reshapes the rhythm of urban life.",
+      "statements": [
+        "Protected lanes and hire schemes have been introduced by city authorities.",
+        "Riding produces no fumes, leaving the air cleaner.",
+        "In jammed centres a bike often arrives sooner than a car.",
+        "A daily ride exercises the body without a gym fee.",
+        "Electric bikes open cycling to older or less energetic riders.",
+        "Once dismissed as a toy, the bicycle is now praised for city life.",
+        "Beyond the bike's price there is no fuel or insurance to pay.",
+        "The revival appears to be a lasting change rather than a fad.",
+        "A rider can pass crawling traffic and reach work before drivers park.",
+        "Cycling strengthens the heart and clears the mind during a commute."
+      ],
+      "answers": [4, 2, 3, 1, 6, 0, 5, 7, 3, 1],
+      "paras": 8,
+      "explain_zh": "①市政当局引入保护车道与租车计划→[E]。②骑行无尾气使空气更洁净→[C]。③拥堵市中心自行车常比汽车快→[D]。④每日骑行无需健身费锻炼身体→[B]。⑤电动车让年长或体力差者也能骑→[G]。⑥曾被视玩具如今被赞为城市出行佳选→[A]。⑦除车价外无燃油保险费→[F]。⑧此次回归是持久转变而非时尚→[H]。⑨骑手可越过拥堵在司机停车前到达→[D]。⑩通勤中骑行强心清脑→[B]。"
+    },
+    {
+      "passage": "[A] Most shoppers pick up a packaged product, glance at the bright picture on the front, and drop it into the basket. Yet the small print on the back often tells a more honest story about what is really inside.\n\n[B] The ingredient list follows one simple rule worth knowing. Items are arranged by weight from most to least, so whatever appears first makes up the largest share of the food in your hand.\n\n[C] Serving size is a number that quietly misleads. A bottle may seem low in sugar until you notice it counts as two or three servings, which doubles or triples the figure you actually consume.\n\n[D] Words on the front are designed to tempt. Terms like natural or wholesome carry no fixed legal meaning, and a cheerful claim about one vitamin can distract from a heavy load of salt or fat.\n\n[E] The figures that matter most sit in the nutrition table. Checking the amounts of sugar, salt, and saturated fat per hundred grams lets shoppers compare two brands on equal terms.\n\n[F] Dates cause needless confusion and waste. A best-before date concerns quality rather than safety, so food past it is often perfectly fine, while a use-by date is the one that truly warns of risk.\n\n[G] Hidden sugars wear many disguises. Syrup, concentrate, and a long list of words ending in -ose are all forms of sugar, so a product may be sweeter than a single honest label suggests.\n\n[H] Reading labels need not slow shopping to a crawl. With a little practice the eye learns where to look, and a few seconds of checking can lead to choices that are healthier and better value. Over months these small habits quietly add up, steering a weekly trolley away from the most heavily processed items and towards food that genuinely matches the cheerful promises printed on the front of the box.",
+      "statements": [
+        "A best-before date relates to quality, not safety.",
+        "Ingredients are listed from the heaviest to the lightest.",
+        "Comparing sugar and salt per hundred grams lets brands be judged fairly.",
+        "Words like natural lack any fixed legal definition.",
+        "A misleading serving size can hide how much you actually eat.",
+        "The front picture matters less than the small print on the back.",
+        "Sugar disguises itself as syrup and many chemical names with the same suffix.",
+        "With practice, checking labels takes only a few seconds.",
+        "A use-by date is the one that genuinely signals risk.",
+        "The first ingredient listed makes up the largest portion."
+      ],
+      "answers": [5, 1, 4, 3, 2, 0, 6, 7, 5, 1],
+      "paras": 8,
+      "explain_zh": "①最佳食用期关乎质量非安全→[F]。②配料按从重到轻排列→[B]。③按每百克比糖盐使品牌公平比较→[E]。④natural等词无固定法律定义→[D]。⑤误导性份量隐藏实际摄入→[C]。⑥正面图片不如背面小字重要→[A]。⑦糖以syrup及-ose结尾词伪装→[G]。⑧熟练后查标签只需几秒→[H]。⑨use-by日期才真正警示风险→[F]。⑩列在首位的配料占比最大→[B]。"
+    },
+    {
+      "passage": "[A] When people dream of changing their lives, they often picture one dramatic leap. Yet lasting transformation usually arrives in the opposite way, through tiny actions repeated so often that they quietly reshape who we are.\n\n[B] The mathematics of repetition is striking. A habit that improves you by a sliver each day seems trivial in the moment, but compounded across a year it produces a difference almost too large to believe.\n\n[C] Small habits succeed where grand plans fail because they ask so little. A vow to run for an hour collapses within a week, while a promise to lace up and step outside for two minutes is easy enough to keep.\n\n[D] Linking a new habit to an old one makes it stick. Doing a few stretches right after brushing your teeth borrows the strength of an action already fixed firmly in your daily routine.\n\n[E] The surroundings matter more than willpower. Placing fruit on the counter and hiding the biscuits means the easy, automatic choice becomes the healthy one, with no struggle required.\n\n[F] Identity is the deepest engine of change. Each small action is a quiet vote for the kind of person you wish to become, and slowly the evidence persuades you that you already are that person.\n\n[G] Setbacks need not undo the work. Missing a single day matters little, but missing two in a row begins a slide, so the wise rule is simply never to skip twice.\n\n[H] In the end, the lesson is patient and reassuring. We rarely rise to lofty goals, but we do fall to the level of our systems, and steady small habits build the strongest systems of all. The people we admire for sudden success have usually been laying these invisible foundations for years, one unremarkable repetition at a time, until the slow accumulation finally surfaces as what looks, from the outside, like an overnight change.",
+      "statements": [
+        "Arranging your surroundings makes the healthy choice the automatic one.",
+        "A habit improving you slightly each day compounds into a huge yearly difference.",
+        "Each small action is a vote for the person you want to become.",
+        "Attaching a new habit to an existing routine helps it stick.",
+        "Modest goals succeed because they demand very little effort.",
+        "Lasting change usually comes from tiny repeated actions, not one big leap.",
+        "Missing one day is minor, but never miss two in a row.",
+        "We fall to the level of our systems rather than rising to our goals.",
+        "A two-minute version of a habit is far easier to keep than an hour-long vow.",
+        "Repeating a small improvement daily yields an almost unbelievable result over a year."
+      ],
+      "answers": [4, 1, 5, 3, 2, 0, 6, 7, 2, 1],
+      "paras": 8,
+      "explain_zh": "①布置环境让健康选择自动化→[E]。②每天微进步累积成巨大年差→[B]。③每个小动作是为想成为之人投票→[F]。④把新习惯接在旧惯例后助其固化→[D]。⑤小目标因要求极少而成功→[C]。⑥持久改变源于微小重复而非一跃→[A]。⑦缺一天无妨但勿连缺两天→[G]。⑧我们落到系统水平而非升到目标→[H]。⑨两分钟版习惯比一小时誓言易坚持→[C]。⑩每日重复微进步一年得近乎难信结果→[B]。"
+    }
+  ]
+}

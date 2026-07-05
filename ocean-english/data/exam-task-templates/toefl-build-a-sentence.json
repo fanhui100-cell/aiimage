@@ -1,0 +1,29 @@
+{
+  "templateId": "toefl-build-a-sentence",
+  "examIds": ["toefl"],
+  "taskType": "build_a_sentence",
+  "skill": "writing",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Writing · Build a Sentence。给 4-8 个打乱的词块（chunks，互不重复），考生按语法重构成通顺句子。answer 为词块下标的全排列（每块恰用一次），定义为 canonical/参考语序，**非唯一合法解**——英语论元 PP 等可前置，常存在自然替代语序。chunks 以打乱顺序提供（answer 顺序须不同于 chunks 数组原序）。Social Interpersonal 语境，A1-C2。机器评分。⚠️ 本项目重构等价判定/可接受排列集合未实现，导入即标 qa_flags.scoring_not_ready=true，保持 draft + promote 硬拦截，不作唯一答案自动判分。Claude 亲撰，不抄真题、不调 DeepSeek。",
+    "scoringNotReady": true
+  },
+  "stimulusRequirements": {
+    "kind": "none",
+    "perStimulusItems": 1,
+    "chunkRange": [4, 8]
+  },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "build_sentence" },
+  "subskills": ["sentence_structure", "word_order", "grammar"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭 ETS 真题",
+    "4-8 个互不重复的词块，重构出通顺合语法句子",
+    "chunks 以打乱顺序给出，answer 全排列每块恰用一次",
+    "answer 为 canonical/参考语序，非唯一合法解（论元 PP 等可前置，存在自然替代语序）",
+    "导入即标 scoring_not_ready（重构等价判定/可接受排列集合未实现），保持 draft + promote 硬拦截，不作唯一答案自动判分",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

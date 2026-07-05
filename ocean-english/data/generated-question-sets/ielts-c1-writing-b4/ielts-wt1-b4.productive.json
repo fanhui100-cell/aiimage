@@ -1,0 +1,308 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of households with a private garden in four countries in 2000, 2010 and 2020. Data: United Kingdom — 2000: 84%, 2010: 81%, 2020: 79%; Japan — 2000: 45%, 2010: 41%, 2020: 38%; Canada — 2000: 72%, 2010: 73%, 2020: 74%; Spain — 2000: 30%, 2010: 34%, 2020: 39%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中四个国家 2000 至 2020 年拥有私人花园的家庭比例变化，不少于 150 词。",
+      "referencePoints": [
+        "The UK had the highest proportion throughout, despite a gradual fall from 84% to 79%.",
+        "Japan showed the steepest decline, dropping seven percentage points over the period.",
+        "Spain was the only country with substantial growth, rising from 30% to 39%, while Canada remained almost unchanged."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of passenger trains arriving on time in five regions of one country in 2015 and 2023. Data: Northern region — 2015: 88.2%, 2023: 91.5%; Southern region — 2015: 79.4%, 2023: 76.8%; Eastern region — 2015: 92.1%, 2023: 93.0%; Central region — 2015: 85.7%, 2023: 82.3%; Western region — 2015: 90.3%, 2023: 94.6%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中某国五个地区 2015 年与 2023 年火车准点率的对比，不少于 150 词。",
+      "referencePoints": [
+        "The Western region recorded the largest improvement, rising by over four percentage points to become the most punctual by 2023.",
+        "Punctuality worsened in the Southern and Central regions, with the Southern region lowest in both years.",
+        "The Eastern region stayed consistently high, changing by less than one percentage point."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the average number of dentist visits per person per year, by age group, in Finland and New Zealand in 2019. Data: Finland — under 18: 2.1 visits, 18-39: 1.3, 40-59: 1.6, 60 and over: 2.0; New Zealand — under 18: 1.8 visits, 18-39: 0.9, 40-59: 1.2, 60 and over: 1.5. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中芬兰与新西兰不同年龄段人均每年看牙医次数的差异，不少于 150 词。",
+      "referencePoints": [
+        "Finland recorded more visits than New Zealand in every age group.",
+        "In both countries, visits followed a U-shaped pattern: highest among under-18s, lowest among 18-39 year olds, then rising again with age.",
+        "The gap between the two countries was widest for those aged 60 and over (2.0 versus 1.5 visits)."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of ferry passengers (in thousands) carried annually on three routes operated from the port town of Alden in 2019, 2021 and 2023. Data: Alden to Brackwater — 2019: 420, 2021: 180, 2023: 465; Alden to Milton Quay — 2019: 310, 2021: 150, 2023: 295; Brackwater to Sandell Island — 2019: 95, 2021: 60, 2023: 140. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中三条渡轮航线 2019、2021、2023 年客运量的变化，不少于 150 词。",
+      "referencePoints": [
+        "All three routes fell sharply in 2021, with passenger numbers roughly halving on each.",
+        "The Alden to Brackwater route was the busiest in every year and exceeded its 2019 level by 2023.",
+        "The Sandell Island route, though the smallest, grew the most in relative terms, from 95,000 to 140,000 passengers overall."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of supermarket transactions completed at three types of checkout in one country in 2012, 2017 and 2022. Data: Staffed checkout — 2012: 84%, 2017: 62%, 2022: 41%; Self-service checkout — 2012: 15%, 2017: 32%, 2022: 44%; Scan-as-you-shop handsets — 2012: 1%, 2017: 6%, 2022: 15%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中 2012 至 2022 年超市三种结账方式使用比例的变化，不少于 150 词。",
+      "referencePoints": [
+        "Staffed checkouts fell dramatically, losing more than half their share, from 84% to 41%.",
+        "Self-service checkouts almost tripled their share and overtook staffed tills by 2022.",
+        "Scan-as-you-shop handsets grew fastest in proportional terms, from a negligible 1% to 15%."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of blood donations per 1,000 adults, by age group, in one country in 2005 and 2015. Data: aged 18-25 — 2005: 62 donations, 2015: 38; aged 26-40 — 2005: 55, 2015: 47; aged 41-60 — 2005: 48, 2015: 58; aged 61 and over — 2005: 20, 2015: 31. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中 2005 年与 2015 年各年龄段每千名成年人献血次数的变化，不少于 150 词。",
+      "referencePoints": [
+        "Donation rates among the two younger groups declined, most sharply for 18-25 year olds (62 down to 38 per 1,000).",
+        "The two older groups donated more in 2015, with the 41-60 group becoming the most active donors.",
+        "Overall, the age profile of donors shifted markedly from younger to older adults over the decade."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of people on waiting lists for rented allotment garden plots in four cities in 2012 and 2022. Data: Hartleigh — 2012: 450 people, 2022: 1,980; Corvale — 2012: 1,200, 2022: 1,150; Ostmere — 2012: 300, 2022: 2,400; Denbrook — 2012: 780, 2022: 940. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中四个城市 2012 年与 2022 年市民菜园租用等候人数的变化，不少于 150 词。",
+      "referencePoints": [
+        "Ostmere saw an eight-fold rise, moving from the shortest waiting list to the longest.",
+        "Hartleigh's list also grew more than four times, while Denbrook rose only modestly.",
+        "Corvale was the exception, with numbers slightly lower in 2022 than a decade earlier."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the average room occupancy rate (%) by season for three types of hotel in one country in 2023. Data: City business hotels — spring: 74%, summer: 58%, autumn: 76%, winter: 62%; Coastal resort hotels — spring: 55%, summer: 92%, autumn: 48%, winter: 25%; Countryside inns — spring: 60%, summer: 71%, autumn: 68%, winter: 44%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中三类酒店四季平均入住率的差异，不少于 150 词。",
+      "referencePoints": [
+        "Coastal resorts showed the most extreme seasonal swing, from 92% in summer to just 25% in winter.",
+        "City business hotels were the most stable, peaking in spring and autumn rather than summer.",
+        "Countryside inns fell between the two patterns, with moderately high occupancy from spring to autumn."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows annual sales of energy drinks (in million litres) in three countries between 2005 and 2020. Data: Brazil — 2005: 40, 2010: 95, 2015: 170, 2020: 240; Germany — 2005: 110, 2010: 130, 2015: 145, 2020: 150; South Korea — 2005: 25, 2010: 30, 2015: 90, 2020: 205. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2005 至 2020 年三个国家能量饮料销量的变化趋势，不少于 150 词。",
+      "referencePoints": [
+        "Brazil showed strong, steady growth throughout, ending as the largest market at 240 million litres.",
+        "South Korea's sales were nearly flat until 2010, then surged, overtaking Germany between 2015 and 2020.",
+        "Germany began as the clear leader but grew only slowly and was overtaken by both other countries."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the number of letters and parcels (in millions of items) delivered by the national postal service of one country between 2000 and 2020. Data: Letters — 2000: 14,200, 2005: 13,600, 2010: 11,000, 2015: 8,400, 2020: 6,100; Parcels — 2000: 900, 2005: 1,200, 2010: 1,800, 2015: 2,900, 2020: 4,300. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2000 至 2020 年信件与包裹投递量的相反变化趋势，不少于 150 词。",
+      "referencePoints": [
+        "Letter volumes fell continuously, losing more than half their 2000 level by 2020.",
+        "Parcel deliveries rose in every period, almost quintupling from 900 to 4,300 million items.",
+        "Despite the opposite trends, letters still outnumbered parcels at the end of the period, though the gap narrowed dramatically."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the percentage of university students who mainly used printed textbooks and the percentage who mainly used digital e-textbooks in one country between 2010 and 2022. Data: Printed — 2010: 88%, 2014: 74%, 2018: 55%, 2022: 39%; Digital — 2010: 12%, 2014: 26%, 2018: 45%, 2022: 61%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2010 至 2022 年大学生使用纸质与电子教材比例的此消彼长，不少于 150 词。",
+      "referencePoints": [
+        "The two lines are mirror images, with digital use rising exactly as printed use declined.",
+        "The crossover occurred shortly after 2018, when digital textbooks became the majority choice.",
+        "By 2022 the 2010 pattern had almost reversed: 61% digital versus 39% printed, compared with 12% and 88% initially."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows average monthly snowfall (in centimetres) from November to April in two towns: Kelsmere, a mountain town, and Draymouth, a coastal town. Data: Kelsmere — November: 35 cm, December: 80, January: 110, February: 95, March: 60, April: 20; Draymouth — November: 5 cm, December: 18, January: 30, February: 22, March: 8, April: 0. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中山区小镇与沿海小镇 11 月至次年 4 月平均月降雪量的对比，不少于 150 词。",
+      "referencePoints": [
+        "Both towns peaked in January, but Kelsmere's peak (110 cm) was almost four times Draymouth's (30 cm).",
+        "Kelsmere received substantial snow in every month shown, whereas Draymouth had virtually none in November and April.",
+        "The seasonal shape of the two curves was similar; only the scale differed markedly."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows annual honey production (in tonnes) in three regions of one country between 2000 and 2020. Data: Valley region — 2000: 1,800, 2005: 2,100, 2010: 2,400, 2015: 2,600, 2020: 2,900; Highland region — 2000: 2,500, 2005: 2,300, 2010: 1,900, 2015: 1,600, 2020: 1,400; Coastal region — 2000: 900, 2005: 950, 2010: 1,500, 2015: 1,450, 2020: 1,550. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2000 至 2020 年三个地区蜂蜜产量的变化趋势，不少于 150 词。",
+      "referencePoints": [
+        "The Valley region grew steadily throughout and overtook the Highland region between 2005 and 2010 to become the largest producer.",
+        "Highland output declined in every period, falling from 2,500 to 1,400 tonnes.",
+        "The Coastal region jumped sharply between 2005 and 2010 and then levelled off around 1,500 tonnes."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows annual gift shop revenue (in thousands of pounds) at three museums in the same city between 2012 and 2022. Data: Science Centre — 2012: 210, 2017: 340, 2022: 520; Maritime Museum — 2012: 180, 2017: 190, 2022: 175; City Art Gallery — 2012: 320, 2017: 280, 2022: 390. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2012 至 2022 年三家博物馆纪念品商店收入的变化，不少于 150 词。",
+      "referencePoints": [
+        "The Science Centre's revenue rose steeply and continuously, more than doubling to become the highest earner by 2022.",
+        "The City Art Gallery dipped mid-period before recovering to finish above its 2012 level.",
+        "The Maritime Museum's revenue was essentially flat, hovering around £180,000 throughout."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the average number of monthly visitors to the indoor pool and the outdoor pool at one public leisure centre in 2023, for four selected months. Data: January — indoor: 9,200 visitors, outdoor: 400; April — indoor: 7,800, outdoor: 2,100; July — indoor: 5,100, outdoor: 11,600; October — indoor: 8,500, outdoor: 900. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中某休闲中心室内与室外泳池不同月份客流量的对比，不少于 150 词。",
+      "referencePoints": [
+        "The indoor pool dominated in January, April and October, while the outdoor pool was busiest only in July.",
+        "July was the only month when outdoor visitors (11,600) exceeded indoor visitors, by more than double.",
+        "Indoor attendance was relatively stable across the year, whereas outdoor attendance swung from 400 to 11,600."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of pupils choosing each of three school lunch options in one secondary school in 2023, by year group. Data: Year 7 — hot cooked meal: 58%, packed lunch from home: 34%, salad bar: 8%; Year 9 — hot cooked meal: 44%, packed lunch: 41%, salad bar: 15%; Year 11 — hot cooked meal: 30%, packed lunch: 46%, salad bar: 24%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中不同年级学生选择三种学校午餐方式的比例差异，不少于 150 词。",
+      "referencePoints": [
+        "Hot cooked meals were most popular with the youngest pupils and declined steadily with age, from 58% to 30%.",
+        "Packed lunches and the salad bar both gained share in older year groups, with packed lunches the top choice by Year 11.",
+        "Salad bar uptake tripled between Year 7 (8%) and Year 11 (24%), though it remained the least chosen option overall."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of candidates who passed the practical driving test at their first attempt in one country in 2022, by age group and gender. Data: aged 17-20 — men: 54%, women: 49%; aged 21-30 — men: 47%, women: 45%; aged 31-45 — men: 41%, women: 43%; aged 46 and over — men: 33%, women: 38%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中不同年龄段和性别考生驾照路考首次通过率的差异，不少于 150 词。",
+      "referencePoints": [
+        "First-attempt pass rates fell with age for both genders, from over half among 17-20 year olds to roughly a third for those 46 and over.",
+        "Men outperformed women in the two youngest groups, but the pattern reversed from age 31 onwards.",
+        "The gender gap was widest at the extremes: five points in favour of young men, five points in favour of older women."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the number of overnight stays (in millions) spent at campsites and at caravan parks in one country in each season of 2022. Data: Spring — campsites: 2.1 million, caravan parks: 3.4; Summer — campsites: 8.9, caravan parks: 6.2; Autumn — campsites: 1.8, caravan parks: 3.1; Winter — campsites: 0.4, caravan parks: 1.6. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中露营地与房车营地四季过夜人次的对比，不少于 150 词。",
+      "referencePoints": [
+        "Summer was the peak season for both, but campsites (8.9 million) overtook caravan parks only in that season.",
+        "Caravan parks recorded more stays than campsites in spring, autumn and winter.",
+        "Campsite use was highly seasonal, collapsing to 0.4 million in winter, whereas caravan parks kept a steadier year-round base."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the number of board games sold (in thousands of units) in one country in 2013 and 2023, divided into four categories. Data: Strategy games — 2013: 320 thousand, 2023: 910; Family games — 2013: 780, 2023: 890; Card games — 2013: 450, 2023: 620; Party games — 2013: 150, 2023: 540. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中 2013 年与 2023 年四类桌面游戏销量的变化，不少于 150 词。",
+      "referencePoints": [
+        "Sales rose in all four categories over the decade.",
+        "Strategy games grew almost three-fold and replaced family games as the best-selling category by 2023.",
+        "Party games showed the largest proportional increase, more than tripling from 150 to 540 thousand units, while family games grew only modestly."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the value of cut flower sales (in millions of dollars) at florists in one country in 2003 and 2023, by flower type. Data: Roses — 2003: 95 million, 2023: 88; Tulips — 2003: 40, 2023: 76; Lilies — 2003: 55, 2023: 50; Mixed bouquets — 2003: 30, 2023: 92. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中 2003 年与 2023 年四类鲜切花销售额的变化，不少于 150 词。",
+      "referencePoints": [
+        "Roses were the clear leader in 2003 but slipped slightly, finishing just below mixed bouquets in 2023.",
+        "Mixed bouquets tripled in value, showing by far the strongest growth of any category.",
+        "Tulip sales almost doubled, while lilies, like roses, declined marginally."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the proportions of fruit trees, by variety, planted in the orchards of one growing region in 1995 and 2020. Data for 1995: apples 52%, pears 24%, cherries 14%, plums 10%. Data for 2020: apples 35%, pears 18%, cherries 33%, plums 14%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两幅饼图中 1995 年与 2020 年某果区四种果树种植比例的变化，不少于 150 词。",
+      "referencePoints": [
+        "Apples remained the single largest variety in both years but lost a third of their share, falling from 52% to 35%.",
+        "Cherries more than doubled their share, from 14% to 33%, nearly matching apples by 2020.",
+        "Pears declined moderately while plums grew slightly, leaving the region far less apple-dominated overall."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the sources of income of a community sports centre in 2000 and 2020. Data for 2000: local council grant 55%, membership fees 30%, cafe and shop sales 10%, business sponsorship 5%. Data for 2020: local council grant 25%, membership fees 42%, cafe and shop sales 21%, business sponsorship 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两幅饼图中某社区体育中心 2000 年与 2020 年收入来源结构的变化，不少于 150 词。",
+      "referencePoints": [
+        "The council grant, once over half of all income, shrank to a quarter, losing its dominant position.",
+        "Membership fees became the largest source by 2020, rising from 30% to 42%.",
+        "Both commercial streams grew strongly: cafe and shop sales doubled and sponsorship more than doubled, showing a shift towards self-generated income."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the types of bread sold at bakeries in one city, as a percentage of total loaves sold, in 2000 and 2020. Data for 2000: standard white 48%, wholemeal 27%, sourdough 6%, speciality and seeded 19%. Data for 2020: standard white 26%, wholemeal 25%, sourdough 28%, speciality and seeded 21%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两幅饼图中 2000 年与 2020 年城市面包店各类面包销量占比的变化，不少于 150 词。",
+      "referencePoints": [
+        "Standard white bread lost almost half its share, falling from 48% to 26%.",
+        "Sourdough was the standout gainer, jumping from a niche 6% to become the most popular type at 28%.",
+        "Wholemeal and speciality breads barely changed, so the overall shift was essentially from white to sourdough."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the materials used in furniture manufactured in one country, by percentage of total production weight, in 1980 and 2020. Data for 1980: solid wood 58%, metal 20%, plastic 12%, glass and other materials 10%. Data for 2020: solid wood 24%, engineered wood board 38%, metal 16%, plastic 15%, glass and other materials 7%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两幅饼图中 1980 年与 2020 年家具制造原材料构成的变化，不少于 150 词。",
+      "referencePoints": [
+        "Solid wood collapsed from well over half of production to under a quarter.",
+        "Engineered wood board, absent from the 1980 chart, became the single largest material at 38% by 2020.",
+        "The shares of metal, plastic and glass changed only a few percentage points, so wood substitution was the dominant story."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the process by which chocolate bars are manufactured from cacao pods. Stages shown, in order: (1) ripe cacao pods are harvested by hand from trees; (2) the pods are split open and the beans removed; (3) beans are fermented in covered wooden boxes for five to seven days; (4) beans are spread out to dry in the sun for about two weeks; (5) dried beans are transported to the factory and roasted at 120-140°C; (6) roasted beans are crushed and their outer shells removed by winnowing; (7) the inner nibs are ground into a thick paste called cocoa mass; (8) sugar and milk powder are mixed in and the mixture is conched (stirred continuously) for up to 24 hours; (9) the chocolate is tempered by careful heating and cooling, poured into bar moulds, cooled, and wrapped for sale. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述流程图中从可可豆荚到巧克力棒的生产过程，不少于 150 词。",
+      "referencePoints": [
+        "The process is linear with nine stages, moving from agricultural work on the farm to mechanised production in the factory.",
+        "The early stages (fermenting and drying) are slow natural processes taking days or weeks, while factory stages are controlled by temperature and machinery.",
+        "The final stages transform liquid cocoa mass into a finished consumer product through mixing, conching, tempering, moulding and wrapping."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows how used glass bottles are recycled into new bottles. Stages shown, in order: (1) consumers place used bottles in roadside collection banks; (2) lorries transport the bottles to a treatment plant; (3) bottles are sorted by colour into clear, green and brown streams; (4) caps, labels and other contaminants are removed by washing and magnetic separation; (5) the clean glass is crushed into small pieces called cullet; (6) the cullet is melted in a furnace at about 1,500°C, together with small amounts of new sand, soda ash and limestone; (7) the molten glass is poured into moulds and blown into new bottle shapes; (8) the new bottles are cooled, quality-checked and delivered to drinks manufacturers, where the cycle can begin again. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述流程图中废旧玻璃瓶回收再制成新瓶的过程，不少于 150 词。",
+      "referencePoints": [
+        "The process is cyclical: it begins and ends with bottles in consumers' hands, so the stages repeat continuously.",
+        "Preparation stages (sorting by colour, cleaning, crushing) come before the key transformation, melting at around 1,500°C.",
+        "Recycled cullet is supplemented with small quantities of raw materials before moulding, showing the process is not entirely closed-loop."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows how raw sheep's wool is processed into woollen cloth. Stages shown, in order: (1) sheep are shorn once a year, usually in spring; (2) the raw fleece is sorted and graded by fibre length and fineness; (3) the wool is scoured in warm soapy water to remove grease and dirt; (4) the clean fibres are dried and then carded, passing between rollers covered in fine teeth so that the fibres untangle and align; (5) the carded wool is drawn out and twisted into continuous yarn on spinning machines; (6) the yarn is wound onto bobbins and dyed in large pressurised vats; (7) the dyed yarn is woven on looms into cloth; (8) the finished cloth is inspected, pressed and rolled ready for garment makers. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述流程图中羊毛从剪取到织成布料的加工过程，不少于 150 词。",
+      "referencePoints": [
+        "The process has eight linear stages, beginning with annual shearing on the farm and ending with finished cloth for garment makers.",
+        "Early stages focus on cleaning and preparing fibres (sorting, scouring, carding), while later stages create the product (spinning, dyeing, weaving).",
+        "The material changes form three times: loose fleece becomes aligned fibre, fibre becomes yarn, and yarn becomes woven cloth."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps below show the ground floor of Millbrook Public Library in 2005 and the same floor today. In 2005: the entrance on the south side opened onto a lobby with an enquiry desk in the centre; the entire west wing held fiction and non-fiction bookshelves; the east wing contained a newspaper reading room at the front and a children's corner at the back; a small photocopying room sat in the north-east corner. Today: the entrance and lobby remain, but the enquiry desk has been replaced by self-service kiosks along the lobby wall; the west wing has been halved, with bookshelves now only in its northern half and a cafe with seating in its southern half; the former reading room in the east wing is now a computer and study zone with twenty desks; the children's corner has been enlarged into a full children's library with a storytelling area; the photocopying room has become a bookable meeting room. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：对比两幅平面图，描述米尔布鲁克公共图书馆一层布局的今昔变化，不少于 150 词。",
+      "referencePoints": [
+        "Space for physical books has roughly halved, with the west wing now shared between shelves and a new cafe.",
+        "Technology has replaced staffed services: self-service kiosks supersede the enquiry desk, and the reading room is now a computer and study zone.",
+        "Facilities for children and group use expanded, with an enlarged children's library and a meeting room replacing the photocopying room, while the entrance layout is unchanged."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps below show Tarnwick Harbour in 1990 and in 2020. In 1990: fishing boats moored along the entire north quay, where a fish market hall and net-mending sheds stood; the south side of the harbour had a boat repair yard and a fuel depot; a narrow coastal road ran behind the quays, and open grassland lay to the east of the harbour mouth. In 2020: fishing boats occupy only the western third of the north quay; the fish market hall has been converted into a seafood restaurant and gallery, and the net sheds are now holiday apartments; the boat repair yard remains, but the fuel depot has been demolished and replaced by a 120-berth marina for leisure yachts; the coastal road has been widened, with a new car park behind the south quay; a footpath and cycle route now runs across the former grassland to a viewpoint at the harbour mouth. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：对比两幅地图，描述塔恩威克港 1990 年至 2020 年从渔港向休闲旅游港的转变，不少于 150 词。",
+      "referencePoints": [
+        "The harbour's function shifted from fishing industry to leisure and tourism, with fishing confined to a third of its former quay space.",
+        "Industrial buildings were converted rather than kept: the market became a restaurant and gallery, the sheds became holiday apartments, and the fuel depot gave way to a marina.",
+        "Access and visitor infrastructure improved, with a widened road, new car park, and a footpath and cycle route to a viewpoint; only the boat repair yard survives unchanged."
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps below show Aldenby Village Primary School in 2000 and the same site today. In 2000: a single rectangular school building stood in the centre of the site, containing four classrooms and a hall; a paved playground lay to its south, next to the main gate on the village road; a grass playing field occupied the entire northern half of the site; bicycle racks stood beside the gate. Today: the original building remains but has been extended eastwards with a wing of four additional classrooms and a library; a separate single-storey nursery building has been constructed in the north-west corner of the former playing field; the remaining field has been reduced to the north-east quarter of the site; the paved playground is unchanged, but a covered outdoor teaching area has been added along its western edge; a staff car park with a second entrance has replaced the bicycle racks, which have moved next to the playground. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：对比两幅平面图，描述奥登比村小学校园 2000 年至今的扩建变化，不少于 150 词。",
+      "referencePoints": [
+        "Teaching capacity roughly doubled: an eastern wing with four classrooms and a library was added, and a separate nursery was built.",
+        "Expansion came at the cost of green space, with the playing field shrinking from half the site to a quarter.",
+        "Access arrangements changed, with a new staff car park and second entrance replacing the bicycle racks, which were relocated beside the unchanged playground."
+      ],
+      "wordLimit": ">=150"
+    }
+  ]
+}

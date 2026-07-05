@@ -1,0 +1,303 @@
+{
+  "template": "cet-banked-cloze",
+  "level": 4,
+  "sets": [
+    {
+      "passage": "Scientific knowledge is often imagined by the public as a collection of fixed, unshakeable truths. In reality, research advances through a process that is far more (1)____ than most people assume. Every experiment carries a margin of error, and even the most carefully designed study can only (2)____ the strength of a hypothesis rather than prove it beyond all doubt. Far from being a weakness, this built-in uncertainty is what allows science to (3)____ itself when fresh evidence emerges. A theory that once seemed (4)____ may be quietly revised, or even abandoned, after a single unexpected observation. Researchers therefore treat their conclusions as (5)____ statements, open to challenge and refinement by anyone who can supply better data. Unfortunately, this cautious habit is frequently (6)____ by journalists who crave dramatic headlines. A modest finding, hedged with qualifications in the original paper, is (7)____ stripped of its nuance and presented to readers as a definitive breakthrough. Such distortion erodes public trust, because when the inevitable correction arrives, audiences feel deceived rather than (8)____. Genuine scientific literacy requires accepting that doubt is not the enemy of knowledge but its engine. It also means understanding that consensus among experts emerges slowly, after countless rival explanations have been tested and discarded over many years. The willingness to say \"we are not yet certain\" demands a kind of intellectual (9)____ that is rare in an age of instant opinions, where confidence is too often mistaken for competence. Those who master it gain something more valuable than any single fact: the capacity to think clearly amid (10)____ evidence and to update their beliefs without embarrassment when the world proves more complicated than they had originally expected.",
+      "bank": [
+        "tentative",
+        "establish",
+        "routinely",
+        "tentatively",
+        "conclusive",
+        "ambiguous",
+        "uncertain",
+        "humility",
+        "distorted",
+        "correct",
+        "enlightened",
+        "accuse",
+        "abandon",
+        "rigid",
+        "indicate"
+      ],
+      "answers": [
+        6,
+        14,
+        9,
+        4,
+        0,
+        8,
+        2,
+        10,
+        7,
+        5
+      ],
+      "explain_zh": "(1) uncertain：句意是科研过程比人们想象的更“不确定”，作表语形容词，修饰 process。(2) indicate：实验只能“表明/提示”假设的可信度而非证明，搭配宾语 the strength。(3) correct：不确定性使科学能在新证据出现时自我“纠正”，及物动词带 itself。(4) conclusive：曾经看似“确凿/定论”的理论，作表语形容词修饰 theory。(5) tentative：研究者把结论视为“暂定的”陈述，形容词修饰 statements。(6) distorted：谨慎的习惯常被记者“扭曲”，被动语态过去分词。(7) routinely：被“例行地/惯常地”剥去细节，副词修饰 stripped。(8) enlightened：读者感到被欺骗而非被“启迪”，过去分词作表语与 deceived 并列。(9) humility：说“尚不确定”需要一种智识上的“谦逊”，抽象名词。(10) ambiguous：在“含糊/模棱两可”的证据中清晰思考，形容词修饰 evidence。\n干扰项失败原因：establish（动词‘确立/证实’≈prove，(2)处句意为‘只能 indicate 而非 prove’，establish 与 prove 同义会使‘rather than prove’自相矛盾，故语义自败；(3)槽位需‘纠正’非‘建立’）；tentatively（副词，(5)槽位需形容词修饰 statements 故词性不符）；accuse（动词‘指控’，须接人作宾语并搭配 of（accuse sb of），(2)处宾语为 the strength of a hypothesis 不通，其余槽位词性语义皆不合，故每槽皆败）；abandon（动词原形‘放弃’，无槽位为其提供主谓与宾语结构且(3)已用 correct）；rigid（形容词‘僵硬的’，(4)处理论描述用 conclusive‘定论’更贴切，rigid 不能与 evidence/statement 形成正确搭配，故每槽皆败）。"
+    },
+    {
+      "passage": "Few fields provoke as much moral unease as modern biotechnology. The ability to edit the human genome, once confined to the realm of fiction, has become an everyday laboratory (1)____. Scientists can now alter the genetic code of an embryo with a precision that would have astonished researchers a generation ago. Supporters argue that such techniques could (2)____ inherited diseases that have caused suffering for centuries. Yet critics insist that the same tools could be (3)____ to design children according to fashionable preferences, blurring the line between healing and enhancement. The central dilemma is that a single decision may carry consequences that (4)____ across many future generations, none of whom can give their consent. Because the stakes are so high, many countries have imposed strict (5)____ on this research, hoping to slow its pace until society can debate the implications. Others worry that overly cautious rules will simply (6)____ promising work toward nations with weaker oversight. Ethicists therefore call for a framework that is both flexible and (7)____, capable of adapting to discoveries no one can yet foresee. They stress that scientific capability must never be (8)____ with moral permission; the fact that something can be done does not mean it ought to be. History offers ample warning of technologies that were embraced enthusiastically long before their risks were properly weighed. What makes the issue so (9)____ is that reasonable people, all acting in good faith and armed with the same evidence, nonetheless reach opposite conclusions. Resolving it will require a patient, inclusive conversation that respects this disagreement rather than a hasty (10)____ imposed by a handful of experts alone.",
+      "bank": [
+        "misused",
+        "eliminate",
+        "reverberate",
+        "verdict",
+        "controversial",
+        "restrictions",
+        "consensus",
+        "drive",
+        "confused",
+        "reality",
+        "principled",
+        "exaggerate",
+        "fragile",
+        "consult",
+        "obvious"
+      ],
+      "answers": [
+        9,
+        1,
+        0,
+        2,
+        5,
+        7,
+        10,
+        8,
+        4,
+        3
+      ],
+      "explain_zh": "(1) reality：基因编辑从虚构变成实验室的日常“现实”，名词，与 fiction 对照。(2) eliminate：技术可“消除”遗传病，及物动词带宾语 diseases。(3) misused：同样的工具可能被“滥用”去设计婴儿，被动语态过去分词。(4) reverberate：一个决定的后果会在未来世代中“回响/波及”，不及物动词后接 across。(5) restrictions：许多国家施加严格“限制”，复数名词作 impose 的宾语。(6) drive：过严规则会把研究“驱赶”到监管薄弱国家，及物动词带 work toward。(7) principled：框架既灵活又“有原则”，形容词与 flexible 并列。(8) confused：能力绝不可与道德许可“混淆”，be confused with 固定搭配。(9) controversial：使问题如此“有争议”，形容词作表语。(10) verdict：仓促的“裁决/定论”由专家强加，名词。\n干扰项失败原因：consensus（名词‘共识’，(10)处与 imposed by experts alone、hasty 语义冲突——强加的应是 verdict 而非共识）；exaggerate（动词‘夸大’，(2)处需‘消除疾病’语义不符，无其他槽位）；fragile（形容词‘脆弱的’，(7)处与 flexible 并列需‘有原则’，fragile 语义相反）；consult（动词‘咨询’，无匹配主谓宾结构，(2)(3)(6)均不通）；obvious（形容词‘明显的’，(9)处问题是‘有争议’而非‘明显’，且 reasonable people reach opposite conclusions 恰恰说明不 obvious，故败）。"
+    },
+    {
+      "passage": "The world of work is currently undergoing a transformation every bit as profound as the industrial revolution, yet one that is far less visible to those living through it. For most of the long twentieth century, a stable career meant a single (1)____ pursued steadily and loyally until the day of retirement. That model is rapidly (2)____. Automation now performs many routine tasks once handled by humans, while digital platforms allow companies to assemble teams that (3)____ the moment a project ends. As a result, an increasing share of the workforce operates as freelancers, juggling several short-term (4)____ at once. This shift offers genuine freedom over when and where one works, but it also strips away the security that previous generations had quietly taken for granted. Without an employer to provide health insurance, paid leave, or a pension, individuals must (5)____ the burden of risk entirely on their own, planning for illness and old age unaided. Economists remain deeply (6)____ about whether this arrangement genuinely benefits ordinary workers or merely transfers cost and uncertainty from large corporations to vulnerable individuals. What seems certain is that the particular skills demanded of employees will keep changing at an accelerating pace, forcing people to (7)____ themselves repeatedly throughout their working lives. The comforting notion of learning a single trade once and practicing it unchanged forever has become hopelessly (8)____. Those who thrive will be the ones who treat adaptability itself as their core (9)____, remaining curious and willing to learn long after formal education has ended. Policymakers, meanwhile, face the urgent task of redesigning a social safety net that was built for a vanished industrial era, lest the real gains of flexibility be (10)____ by a tide of widening insecurity.",
+      "bank": [
+        "occupation",
+        "vanishing",
+        "dissolve",
+        "assignments",
+        "shoulder",
+        "reliant",
+        "reinvent",
+        "obsolete",
+        "asset",
+        "overshadowed",
+        "career",
+        "expand",
+        "pensions",
+        "skeptical",
+        "recruit"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        13,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) occupation：一份职业意味着单一“职业/职位”，名词，与 career 同义但语境此处更指具体职位（career 已在句首使用，避免重复）。(2) vanishing：那种模式正在迅速“消失”，进行时现在分词作表语。(3) dissolve：项目结束时团队随即“解散”，不及物动词，主语 teams。(4) assignments：同时兼顾多个短期“任务/委派”，复数名词，强调被分派的工作单元。(5) shoulder：个人必须独自“承担”风险负担，及物动词搭配 burden。(6) skeptical：经济学家对此“持怀疑态度”，形容词作表语。(7) reinvent：被迫反复“重塑”自己，及物动词带 themselves。(8) obsolete：一次学成终身从业的观念已“过时”，形容词。(9) asset：把适应力本身当作核心“资产/优势”，名词。(10) overshadowed：灵活性的收益被不安全感“盖过/抵消”，被动过去分词。\n干扰项失败原因：career（名词‘职业生涯’，(1)处主句已是‘a stable career meant a single ___’，填 career 即‘career meant a single career’语义循环自败，故唯一可填 occupation）；reliant（形容词‘依赖的’，(6)处固定搭配为 reliant on，而句中是 ___ about whether，介词不符，且语义需‘怀疑’用 skeptical，故每槽皆败）；expand（动词‘扩张’，(3)处 teams that ___ the moment a project ends 语义需‘解散’用 dissolve，expand‘扩张’与‘项目结束’矛盾；(2)需现在分词，expand 词形不符，故败）；pensions（名词‘养老金’，(4)处 juggling several short-term ___ 需‘工作单元’用 assignments，short-term pensions 语义不通且 pension 已在原文出现，故败）；recruit（动词‘招募’，宾语须为人，(5)处 ___ the burden of risk 不通，无其他槽位提供合理结构，故每槽皆败）。"
+    },
+    {
+      "passage": "As goods, ideas, and people move across borders with unprecedented ease, the relationship between global commerce and local culture has grown increasingly (1)____. Optimists celebrate globalization for spreading prosperity and exposing isolated communities to a wider world. Critics counter that the same forces tend to (2)____ the rich diversity that makes humanity interesting. When an international chain opens in a small town, it may offer convenience, but it can also (3)____ the family-run shops that once gave the place its character. Languages spoken by only a few thousand people are especially (4)____, often vanishing within a single generation as the young abandon them for tongues that promise economic advantage. Yet the picture is not uniformly bleak, and a purely defensive attitude misreads how cultures have always behaved. Many communities have learned to (5)____ outside influences into their own way of life without surrendering their identity, skillfully weaving foreign elements into traditions that remain unmistakably and (6)____ their own. A festival may adopt new music and lively modern dances while faithfully preserving its ancient (7)____; a cuisine may incorporate imported spices and techniques yet keep its essential character intact. Scholars now argue that cultures are not fragile museum pieces to be sealed behind glass but living systems that constantly (8)____ in order to survive and stay relevant. The real danger, they suggest, lies not in change itself but in change so rapid and one-sided that communities cannot (9)____ it on their own terms. Protecting cultural diversity therefore does not mean freezing the past in place; it means ensuring that local people retain the power to decide for themselves which outside influences to (10)____ and which to resist.",
+      "bank": [
+        "intricate",
+        "erode",
+        "displace",
+        "vulnerable",
+        "absorb",
+        "distinctly",
+        "rituals",
+        "evolve",
+        "negotiate",
+        "embrace",
+        "overt",
+        "coincide",
+        "grievances",
+        "hesitate",
+        "outweigh"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) intricate：全球商业与本土文化的关系日益“错综复杂”，形容词作表语，强调相互交织难以拆解。(2) erode：同样的力量倾向于“侵蚀”多样性，及物动词，喻指渐进消磨。(3) displace：国际连锁可能“取代/挤走”家庭小店，及物动词。(4) vulnerable：使用人数少的语言尤其“脆弱/易受损”，形容词作表语。(5) absorb：许多社区学会把外来影响“吸收”进自身生活方式，及物动词，搭配 absorb...into（into 结构锁定 absorb，embrace 不接 into 故不可互换）。(6) distinctly：编织进仍“鲜明地”属于自己的传统，副词修饰 their own。(7) rituals：保留古老的“仪式”，复数名词。(8) evolve：文化是不断“演进”的活系统，不及物动词。(9) negotiate：社区无法按自身方式“协商应对”变化，及物动词，喻指处理斡旋。(10) embrace：决定“接纳”哪些影响，及物动词，与 resist 对照（absorb 已用于(5)且(5)的 into 结构排除 embrace，二者不可互换）。\n干扰项失败原因：outweigh（动词‘比……更重要/超过’，需比较结构与具体宾语，本文无任何槽位提供其主谓宾框架，每槽皆败）；overt（形容词‘公开的/明显的’，(1)处关系是‘错综复杂’用 intricate，(4)处语言是‘脆弱’用 vulnerable，overt‘公开’语义皆不合，故每槽皆败）；coincide（不及物动词，须搭配 with，(2)处 ___ the rich diversity 缺 with 且语义不通，(8)处‘文化巧合以求生’不通，故每槽皆败）；grievances（名词‘不满/积怨’，(7)处 festival 保留的是 rituals‘仪式’，preserving its ancient grievances‘保留古老积怨’语义荒谬，故败）；hesitate（不及物动词‘犹豫’，(8)处需‘演进’用 evolve，systems that constantly hesitate 语义不合，且(2)(9)(10)需及物动词，hesitate 词性语义皆不符，故每槽皆败）。"
+    },
+    {
+      "passage": "Human beings like to think of themselves as rational creatures who weigh evidence before deciding. Decades of psychological research, however, paint a far less (1)____ picture. Our choices are shaped by mental shortcuts that operate beneath conscious awareness, helping us act quickly but occasionally leading us badly (2)____. One well-documented tendency is our reluctance to abandon a course of action once we have invested heavily in it, even when persisting is plainly (3)____. Another is the way the mere framing of a question can (4)____ the answer we give, so that identical options feel different depending on whether they are described as a gain or a loss. Marketers, advertisers, and politicians have long understood these predictable quirks and routinely (5)____ them to nudge us, almost imperceptibly, toward predetermined conclusions. The discomfort we feel when holding two conflicting beliefs at the same time drives us to (6)____ our reasoning until the contradiction conveniently disappears, a process we rarely pause to notice. Crucially, simply knowing about these biases does not reliably (7)____ us from their influence; bitter experience shows that awareness alone offers only partial protection. What helps more is deliberately designing environments that make good decisions easier and bad ones harder, an approach researchers call choice architecture. By altering the surrounding (8)____ rather than lecturing the chooser about willpower, institutions can gently guide behavior without ever removing genuine freedom. The deepest lesson of this entire body of research is ultimately one of (9)____: recognizing that our minds are not the cool, impartial instruments we fondly imagine should make us markedly more (10)____ of confident, sweeping judgments, including, above all, our own.",
+      "bank": [
+        "flattering",
+        "astray",
+        "irrational",
+        "sway",
+        "exploit",
+        "rationalize",
+        "immunize",
+        "context",
+        "humility",
+        "wary",
+        "assertive",
+        "wrong",
+        "exaggerate",
+        "obey",
+        "compliance"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) flattering：研究描绘出一幅远不那么“讨好/抬高人”的图景，形容词，与人自视理性对照。(2) astray：心理捷径偶尔把我们‘严重带偏’，lead...astray 固定搭配，副词。(3) irrational：坚持明显是‘不理性的’，形容词作表语。(4) sway：问题的措辞会‘左右’我们的答案，及物动词，喻指影响动摇。(5) exploit：营销者和政客‘利用’这些怪癖，及物动词，含贬义。(6) rationalize：促使我们‘自圆其说/合理化’推理，及物动词带 reasoning。(7) immunize：仅知道偏见并不能使我们‘免疫’其影响，immunize...from 搭配。(8) context：通过改变‘情境/环境’而非说教，名词，对应 choice architecture。(9) humility：研究最深的教训是‘谦逊’，名词。(10) wary：应使我们对自信判断更‘警惕/戒备’，be wary of 固定搭配。\n干扰项失败原因：assertive（形容词‘自信果断的’，通常修饰人或语气，不能修饰 picture——‘a far less assertive picture’搭配不通；(3)处‘persisting is plainly assertive’语义不合，故每槽皆败）；wrong（形容词/副词‘错误’，(2)需 astray 与 lead 固定搭配，lead badly wrong 不地道；(3)需 irrational‘不理性’更精准，wrong 太泛，无独占槽）；exaggerate（动词‘夸大’，(4)处 framing 是‘左右/改变’答案用 sway，‘夸大答案’语义不通；(5)(6)亦不合，故每槽皆败）；obey（动词‘服从’，(5)处营销者是‘利用’怪癖用 exploit，‘服从怪癖去操纵我们’语义矛盾；(6)‘服从推理’不通，故败）；compliance（名词‘顺从’，(8)处名词槽是 context‘情境’，altering the surrounding compliance 语义不通；(9)处教训是 humility‘谦逊’，a lesson of compliance 不合，故每槽皆败）。"
+    },
+    {
+      "passage": "Universities are facing pressures that threaten to reshape them beyond recognition. For centuries the lecture hall stood as the (1)____ symbol of higher learning, but the rise of online platforms has called that model into question. Today a student in a remote village can access the same recorded lectures as one seated in an elite institution, a development that some hail as the great (2)____ of education. Yet the optimism deserves scrutiny. Watching a recorded video alone at home is not equivalent to the (3)____ exchange that occurs when curious minds gather to argue and reason face to face. Critics also note that the soaring (4)____ of tuition has saddled an entire generation of graduates with debt that takes decades to repay, prompting many of them to ask aloud whether a degree still genuinely (5)____ its enormous price. In response to such doubts, institutions are increasingly experimenting with shorter, cheaper, skills-focused programs designed to (6)____ students for specific jobs rather than to cultivate broad, lasting understanding. Defenders of the traditional model warn that reducing education to narrow vocational training would quietly (7)____ its deeper and original purpose: teaching people to think independently, to weigh competing arguments, and to question received wisdom. The challenge, then, is to (8)____ accessibility with depth, harnessing technology without discarding what makes a campus valuable. Perhaps the university of the future will be a hybrid, (9)____ the convenience of digital tools with the irreplaceable richness of human community. Whatever final form it eventually takes, one thing already seems abundantly clear: an institution that stubbornly fails to (10)____ to a rapidly changing world will sooner or later struggle to justify its continued existence.",
+      "bank": [
+        "enduring",
+        "democratization",
+        "lively",
+        "cost",
+        "justifies",
+        "prepare",
+        "betray",
+        "balance",
+        "combining",
+        "adapt",
+        "notorious",
+        "freedom",
+        "curriculum",
+        "examine",
+        "enroll"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) enduring：讲堂是高等教育‘历久不衰的’象征，形容词。(2) democratization：被誉为教育的伟大‘民主化/平民化’，名词。(3) lively：与录像不同的是面对面的‘热烈/活跃’交流，形容词修饰 exchange。(4) cost：学费高涨的‘成本/代价’，名词（与下文 price 对照，cost 指经济负担）。(5) justifies：质疑学位是否仍‘证明/对得起’其高价，及物动词第三人称单数。(6) prepare：项目旨在为具体工作‘准备’学生，prepare...for 搭配。(7) betray：把教育降为职训会‘背弃’其深层目的，及物动词，喻指辜负。(8) balance：挑战在于‘平衡’可及性与深度，及物动词带 A with B。(9) combining：未来大学是混合体，‘结合’数字便利与人际丰富，现在分词带 A with B。(10) adapt：不能‘适应’变化世界的机构难以立足，adapt to 搭配，不及物。\n干扰项失败原因：notorious（形容词‘臭名昭著的’，(1)处讲堂数百年来是受尊崇的‘历久象征’用 enduring，notorious‘恶名’语义相反；(3)处‘notorious exchange’亦不合，故每槽皆败）；freedom（名词‘自由’，(2)处需‘人人可及’的 democratization，great freedom of education 语义偏‘自由’不合；(4)槽需 cost，freedom 不通，故无槽）；curriculum（名词‘课程’，(4)处 the soaring ___ of tuition 需指‘费用’用 cost，soaring curriculum of tuition 搭配荒谬；(2)处 great curriculum of education 亦不合，故每槽皆败）；examine（动词‘检查/考核’，(6)处项目是为工作‘准备’学生用 prepare，designed to examine students for jobs 语义不合；(5)(7)(10)亦不通，故每槽皆败）；enroll（动词‘注册/招收’，须搭配 in/on，(6)处 to enroll students for specific jobs 介词与语义皆不符；(8)处 to enroll accessibility with depth 不通，故每槽皆败）。(8) balance 与(9) combining 不可互换：(8)需动词原形 to ___，(9)需 -ing 形式，词形已锁定。"
+    },
+    {
+      "passage": "Crafting environmental policy is less a matter of choosing between right and wrong than of weighing one good against another. Almost every measure intended to protect the planet imposes costs that end up spread thinly and (1)____ over a vast patchwork of regions, so that some communities sacrifice far more than their neighbours. A tax on carbon, for example, may successfully curb emissions, yet it can weigh on poorer households (2)____ relative to their slender incomes, taking a far bigger proportional bite out of them than it ever does out of the comfortably wealthy. Shutting down a polluting factory cleans the air but may (3)____ an entire town of the jobs on which it depends. Such painful trade-offs explain why even the most well-intentioned reforms regularly provoke fierce (4)____ from those who stand to lose. Policymakers must also reckon with the awkward problem of timing, for the benefits of acting decisively on climate are largely (5)____, arriving only decades after the costly sacrifices are made, while the economic pain is felt almost at once. This mismatch in timing makes it sorely tempting for elected leaders to (6)____ difficult decisions, quietly leaving them to successors who will inherit an even harder situation. A further complication is that environmental problems rarely respect national borders, so a single nation that acts alone and in good faith may (7)____ a competitive disadvantage while its neighbors continue to pollute cheaply and freely. Effective solutions therefore demand sustained international (8)____, which is notoriously difficult to build and harder still to sustain. None of this argues for inaction; the costs of doing nothing are (9)____ greater than the costs of a thoughtful response. It does suggest, however, that honest debate must openly acknowledge the genuine losses involved rather than pretending that every green policy is (10)____ beneficial to every single group alike, with no losers anywhere.",
+      "bank": [
+        "unevenly",
+        "disproportionately",
+        "deprive",
+        "resistance",
+        "deferred",
+        "postpone",
+        "incur",
+        "cooperation",
+        "vastly",
+        "uniformly",
+        "legally",
+        "endow",
+        "loyalty",
+        "mandatory",
+        "isolation"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) unevenly：成本‘不均地’铺散在众多地区，副词，与 thinly 并列（spread thinly and unevenly 描述分布的疏密肌理）；disproportionately 须接比较对象、且与‘thinly’这种描述铺散程度的副词并列不成立，故(1)只可填 unevenly，二者不可互换。(2) disproportionately：碳税相对穷困家庭微薄收入‘不成比例地’加重其负担，副词，后接 relative to their slender incomes 与 a far bigger proportional bite 共同锁定比例义；unevenly 不与 relative to X 搭配、也不用于衡量单一群体相对自身收入的比例，故(2)只可填 disproportionately。(3) deprive：关停工厂会‘剥夺’全镇赖以生存的工作，deprive...of 固定搭配。(4) resistance：善意改革引发激烈‘抵抗’，名词，fierce resistance。(5) deferred：气候行动的收益大多是‘延后兑现的’，过去分词作表语。(6) postpone：民选领导人易‘推迟’艰难决定，及物动词。(7) incur：单独行动的国家可能‘招致’竞争劣势，及物动词。(8) cooperation：解决方案需要国际‘合作’，名词。(9) vastly：无所作为的代价‘远远’更大，副词修饰比较级 greater（only vastly 可强化 greater）。(10) uniformly：假装每项绿色政策对每个群体‘无差别一律’有利、毫无输家，副词修饰 beneficial（vastly 表程度‘巨大’，与 to every group alike/no losers 不搭，故不可填(10)，二者不可互换）。\n干扰项失败原因：legally（副词‘合法地’，(1)(2)(9)(10)各槽语义皆不合——costs distributed legally / legally beneficial 等均不通，故每槽皆败）；endow（动词‘赋予/捐赠’，搭配 endow...with，(3)处是 ___ a town of the jobs（of 结构）介词不符且语义相反（endow=给予 vs deprive=剥夺），(7)亦不合，故每槽皆败）；loyalty（名词‘忠诚’，(4)处改革引发的是‘抵抗’用 resistance，provoke fierce loyalty 语义矛盾；(8)处 solutions demand international loyalty 不通，故败）；mandatory（形容词‘强制的’，(5)处 benefits are largely ___ 需‘延后’用 deferred，benefits are largely mandatory 语义不合；(4)需名词，故每槽皆败）；isolation（名词‘孤立’，(8)处 effective solutions demand international ___ 需‘合作’用 cooperation，demand international isolation 与‘有效解决方案’自相矛盾，故败）。"
+    },
+    {
+      "passage": "Whenever public budgets tighten and hard choices must be made, funding for the arts is almost always among the very first expenditures to face the axe. The reasoning seems superficially obvious: in a world of urgent and unmet material needs, paintings and symphonies can easily look like a (1)____ luxury that society can ill afford and could painlessly do without. Yet this seemingly hard-headed view rests on a surprisingly narrow understanding of what art actually does for a society over the long term. Far from being merely (2)____, the arts perform functions that no spreadsheet easily captures. A powerful novel can cultivate empathy by inviting readers to (3)____ lives utterly unlike their own, while a piece of music can articulate emotions that ordinary language struggles to (4)____. Historically, art has also served as a form of dissent, allowing citizens to (5)____ injustices that could not be named openly. Authoritarian regimes grasp this power instinctively, which is why they so often move to (6)____ artists whose work questions official truths. Even in cold economic terms, the case for public support is far stronger than skeptics typically (7)____: vibrant cultural districts reliably attract tourists, talent, and investment, generating returns that ripple outward through entire cities and regions. Perhaps most importantly of all, a flourishing artistic life signals a community confident and secure enough to value reflection over mere material (8)____. A society that treats its creativity as disposable and unnecessary risks becoming relentlessly efficient yet strangely (9)____, perfectly capable of producing wealth but unable to explain why that wealth should matter. To fund the arts, then, is not to indulge a (10)____ and self-regarding taste but to invest in the very meaning that makes prosperity worthwhile in the first place.",
+      "bank": [
+        "dispensable",
+        "decorative",
+        "inhabit",
+        "express",
+        "expose",
+        "silence",
+        "concede",
+        "survival",
+        "hollow",
+        "frivolous",
+        "abolish",
+        "occupy",
+        "memorize",
+        "commit",
+        "fertile"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) dispensable：艺术看似可有可无的‘可省去的’奢侈，形容词修饰 luxury，后接的定语从句 that society can ill afford and could painlessly do without 用‘do without（弃之不用）’直接界定‘可省去’之义，与 dispensable 一一对应；frivolous 表‘轻浮无聊’是另一维度，与‘do without’不构成同义照应，故(1)只可填 dispensable，与(10)的 frivolous 不可互换。(2) decorative：远非仅是‘装饰性的’，形容词作表语，指无实用功能的表象。(3) inhabit：邀请读者‘进入/置身’全然不同的人生，及物动词，喻指代入。(4) express：音乐能表达语言难以‘表达’的情感，及物动词，与情感搭配。(5) expose：艺术让公民‘揭露’无法公开点名的不公，及物动词。(6) silence：威权政权常‘压制/噤声’质疑官方的艺术家，及物动词。(7) concede：理由比怀疑者‘承认’的更有力，及物动词，指勉强认可。(8) survival：把反思置于单纯‘生存’之上，名词。(9) hollow：社会变得高效却‘空洞的’，形容词作表语。(10) frivolous：资助艺术不是纵容‘轻浮无聊的’品味，形容词修饰 taste。\n干扰项失败原因：abolish（动词‘废除/取消’，宾语通常为制度、法律、做法等抽象事物，(6)处 move to ___ artists 的宾语是‘人’，abolish artists 不通；噤声艺术家用 silence，故每槽皆败）；occupy（动词‘占据’，(3)处 inhabit lives 喻‘置身他人人生’，occupy lives 偏物理占用、不地道，且(3)是唯一动词代入槽，故败）；memorize（动词‘记忆/背诵’，(4)处情感是被‘表达’用 express，language struggles to memorize emotions 语义不通；(3)(7)亦不合，故每槽皆败）；commit（动词‘犯下/承诺’，(5)处艺术作为异见是‘揭露’不公用 expose，commit injustices 意为‘犯下不公’恰好相反，语境矛盾；(6)亦不合，故每槽皆败）；fertile（形容词‘肥沃的/多产的’，(9)处社会精神‘空洞’用 hollow，efficient yet strangely fertile 语义不合；(1)(2)(10)各槽亦不通，故每槽皆败）。"
+    },
+    {
+      "passage": "The widening gap between the very richest members of society and almost everyone else has quietly become one of the defining political and moral issues of our time. Economists may disagree sharply about its precise causes, but few of them seriously dispute that the (1)____ has grown markedly and steadily over recent decades. Technology, for its part, lavishly rewards those who possess scarce, specialized skills while simultaneously rendering many older, traditional jobs (2)____, thereby concentrating the gains among a shrinking and increasingly distant elite. Globalization has compounded the effect, allowing capital to flow toward whatever country offers the cheapest labor and the lightest (3)____. Wealth, moreover, tends to (4)____ itself: those who already own assets watch them appreciate, while those living paycheck to paycheck struggle merely to (5)____ even. The consequences of this trend extend well beyond the realm of pure economics. Deep and persistent inequality can gradually (6)____ social trust, breeding a quiet resentment that poisons political life and makes reasonable compromise nearly impossible. It also steadily undermines the cherished ideal that hard work alone determines success, for a child born into poverty faces stubborn obstacles that talent and effort alone cannot easily (7)____. Some defenders nevertheless argue that a certain degree of inequality is necessary to (8)____ ambition, encourage hard work, and reward genuine innovation. Critics respond that beyond a certain point the disparity becomes self-perpetuating, hardening over time into a rigid hierarchy that quietly betrays the very promise of opportunity. Crafting a remedy is fiercely (9)____, since measures that redistribute wealth may also blunt the incentives that drive growth. What almost everyone agrees on is that ignoring the trend is unwise, for societies in which the many feel permanently left behind rarely remain stable or (10)____ for long.",
+      "bank": [
+        "disparity",
+        "obsolete",
+        "regulation",
+        "compound",
+        "break",
+        "erode",
+        "overcome",
+        "stimulate",
+        "contested",
+        "cohesive",
+        "inherit",
+        "transparent",
+        "suppress",
+        "deliberate",
+        "fluctuate"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explain_zh": "(1) disparity：贫富‘差距/悬殊’近几十年急剧扩大，名词，正式词贴‘inequality’学术语境（首句已用 gap，此处用 disparity 避免撞词且为唯一名词答案）。(2) obsolete：技术使许多传统工作‘过时/淘汰’，形容词作宾补 rendering...obsolete。(3) regulation：资本流向劳力最廉、‘监管’最轻的国家，名词。(4) compound：财富倾向于‘自我累加/复利增长’，及物动词带 itself，喻指叠加放大。(5) break：月光族仅求‘收支持平’，break even 固定搭配。(6) erode：深度不平等会‘侵蚀’社会信任，及物动词。(7) overcome：天赋努力难以轻易‘克服’的障碍，及物动词。(8) stimulate：一定不平等是激发‘刺激’雄心所必需，及物动词。(9) contested：制定对策极具‘争议’，形容词作表语，fiercely contested 固定搭配。(10) cohesive：社会难以长久‘团结/有凝聚力’，形容词作表语，与 stable 并列。\n干扰项失败原因：inherit（动词‘继承’，全文无任何槽位为其提供合理主谓宾——(4)是 wealth compound itself 而非‘继承自身’，故每槽皆败）；transparent（形容词‘透明的’，(2)处形容工作用 obsolete，(9)(10)语义皆不合，无槽可填）；suppress（动词‘压制’，(8)处 defenders 主张不平等‘激发’雄心用 stimulate，suppress‘压制雄心’语义恰好相反；(6)搭配 trust 用 erode 更准，故每槽皆败）；deliberate（形容词/动词‘故意的/审议’，(9)处需 contested‘有争议’，deliberate 语义不合，其余槽位词性语义皆不匹配）；fluctuate（不及物动词‘波动’，(10)处 stable or ___ 需与 stable 并列的形容词用 cohesive，fluctuate 为动词且‘波动’与 stable 语义冲突，故败）。"
+    }
+  ]
+}

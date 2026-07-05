@@ -1,0 +1,1867 @@
+{
+  "template": "kaoyan-cloze-passage",
+  "level": 5,
+  "_provenance": "Claude-authored original Kaoyan (考研) cloze-passage (完形填空) sets. 100% original academic/argumentative prose, not copied from any real exam. Each passage 240-340 words with exactly 20 numbered blanks (1)-(20); each blank has 4 same-class options with exactly one contextually correct answer and 3 distractors excluded by meaning, logical connector, or collocation. Discourse-logic and lexical-precision focus at Kaoyan difficulty.",
+  "sets": [
+    {
+      "passage": "Scientific progress is often pictured as a steady climb, with each generation of researchers adding another stone to an ever-rising tower of certain knowledge. This (1)____ image, however comforting, is profoundly misleading. In reality, science advances less by smooth accumulation than by repeated (2)____ of accepted ideas. A theory that once seemed beyond dispute is suddenly found unable to (3)____ for new observations, and what was treated as settled fact becomes a problem demanding fresh explanation. (4)____ such moments of crisis, the discipline does not simply add data; it reorganizes its entire way of seeing. (5)____ , the history of physics is punctuated by upheavals in which established frameworks were not merely refined but overthrown. Critics sometimes (6)____ that if today's theories may be discarded tomorrow, science offers no reliable truth at all. This conclusion, (7)____ , confuses fallibility with futility. The fact that a theory can be (8)____ is precisely what gives it scientific value, for a claim immune to refutation explains nothing. Each successful prediction (9)____ our confidence, while each failure marks the boundary where understanding must be extended. Progress therefore consists not in reaching final answers but in (10)____ ever sharper questions. The scientist who expects permanence will be (11)____ ; the one who embraces revision will (12)____ . Moreover, the supposed (13)____ between revolution and accumulation dissolves on closer inspection, since even the most dramatic breakthroughs (14)____ heavily on the patient measurement that preceded them. Without the slow labor of ordinary research, the (15)____ insight would have nothing to explain and no anomaly to resolve. What looks like a sudden leap is usually the (16)____ of pressures that had been building for years. (17)____ , progress is neither purely cumulative nor purely revolutionary but a (18)____ of both. To understand science, then, we must (19)____ the myth of inevitable advance and accept that knowledge grows through struggle, error, and the constant willingness to (20)____ what we thought we knew.",
+      "blanks": [
+        {
+          "options": [
+            "tidy",
+            "heroic",
+            "modern",
+            "scientific"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "celebration",
+            "overthrow",
+            "confirmation",
+            "repetition"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "search",
+            "answer",
+            "account",
+            "make"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Despite",
+            "Until",
+            "Beyond",
+            "During"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Indeed",
+            "Otherwise",
+            "Nevertheless",
+            "Likewise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "deny",
+            "object",
+            "wonder",
+            "ensure"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "therefore",
+            "moreover",
+            "however",
+            "instead"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "proven",
+            "ignored",
+            "praised",
+            "disproven"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "strengthens",
+            "weakens",
+            "reflects",
+            "delays"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "avoiding",
+            "posing",
+            "memorizing",
+            "rejecting"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rewarded",
+            "promoted",
+            "disappointed",
+            "convinced"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "retreat",
+            "complain",
+            "hesitate",
+            "flourish"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "opposition",
+            "agreement",
+            "similarity",
+            "exchange"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "comment",
+            "depend",
+            "look",
+            "insist"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "accidental",
+            "harmful",
+            "revolutionary",
+            "minor"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "beginning",
+            "opposite",
+            "cause",
+            "culmination"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "In short",
+            "By contrast",
+            "For example",
+            "Above all"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rejection",
+            "blend",
+            "choice",
+            "separation"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "embrace",
+            "ignore",
+            "abandon",
+            "spread"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "preserve",
+            "repeat",
+            "defend",
+            "question"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A tidy 与下句\"误导\"呼应，指\"整洁\"的错误印象；(2)B overthrow 与后文\"推翻\"主题一致；(3)C account 固定搭配\"解释\"；(4)D During 指\"在危机时刻\"；(5)A Indeed 加强语气举例；(6)B object 与that从句\"提出异议\"搭配；(7)C however 转折反驳批评；(8)D disproven 可被证伪才有科学价值；(9)A strengthens 成功预测增强信心；(10)B posing 提出更尖锐问题；(11)C disappointed 期待永恒者会失望；(12)D flourish 接受修正者会兴盛；(13)A opposition 革命与积累的\"对立\"被消解；(14)B depend 搭配\"依赖\"；(15)C revolutionary 革命性洞见；(16)D culmination 多年压力的\"顶点\"；(17)A In short 总结；(18)B blend 二者的\"融合\"；(19)C abandon 抛弃神话；(20)D question 质疑既有认知。"
+    },
+    {
+      "passage": "When two distinguished experts examine the same evidence and reach opposite conclusions, the public is often (1)____ and tempted to dismiss expertise altogether. Yet such disagreement, far from proving that knowledge is worthless, frequently (2)____ how genuine inquiry actually works. Experts rarely quarrel over the raw facts themselves; instead, they differ over how those facts should be (3)____ . One specialist may emphasize long-term risks, (4)____ another stresses immediate benefits, and each weighs the same data through a different framework of assumptions. (5)____ , disagreement reflects not ignorance but the inevitable presence of judgment in any complex field. A further source of conflict lies in the very (6)____ that expertise demands. Deep mastery of a narrow domain can make a scholar acutely sensitive to certain patterns while leaving him (7)____ to considerations that fall outside his specialty. (8)____ , two authorities trained in different disciplines may approach an identical question with incompatible vocabularies and priorities. Critics who expect unanimity (9)____ a crucial point: a field in which everyone instantly agrees is usually one that has stopped (10)____ . Productive disagreement, by contrast, keeps assumptions under (11)____ and forces each side to defend its reasoning. (12)____ , this does not mean every opinion deserves equal weight. The (13)____ observer must distinguish substantive debate among informed parties from manufactured controversy designed to (14)____ doubt for political ends. Genuine expert dispute tends to (15)____ around a shared body of method, even when conclusions diverge, whereas pseudo-controversy ignores evidence entirely. (16)____ understanding this difference, laypeople can avoid two opposite errors: blind deference to any credentialed voice and reflexive (17)____ of all authority. The mature response to expert disagreement is neither despair nor cynicism but (18)____ attention to the quality of the arguments offered. (19)____ , the existence of dissent should increase rather than (20)____ our trust, for it signals that ideas are being tested rather than merely repeated.",
+      "blanks": [
+        {
+          "options": [
+            "bewildered",
+            "delighted",
+            "informed",
+            "relieved"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "conceals",
+            "reveals",
+            "prevents",
+            "imagines"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "collected",
+            "ignored",
+            "interpreted",
+            "recorded"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "because",
+            "since",
+            "unless",
+            "while"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "In short",
+            "By contrast",
+            "Above all",
+            "For example"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "popularity",
+            "specialization",
+            "honesty",
+            "experience"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "sensitive",
+            "loyal",
+            "blind",
+            "equal"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Nevertheless",
+            "Instead",
+            "Consequently"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "miss",
+            "prove",
+            "make",
+            "raise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "growing",
+            "thinking",
+            "failing",
+            "spreading"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "control",
+            "wraps",
+            "scrutiny",
+            "arrest"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Likewise",
+            "Thus",
+            "Yet"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "discerning",
+            "careless",
+            "anxious",
+            "hostile"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "resolve",
+            "manufacture",
+            "remove",
+            "settle"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "scatter",
+            "collapse",
+            "cluster",
+            "vanish"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Despite",
+            "Without",
+            "Against",
+            "By"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "rejection",
+            "acceptance",
+            "respect",
+            "praise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "careless",
+            "discriminating",
+            "random",
+            "indifferent"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Sadly",
+            "Predictably",
+            "Paradoxically",
+            "Reluctantly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "increase",
+            "double",
+            "guarantee",
+            "undermine"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A bewildered 公众面对分歧感到\"困惑\"；(2)B reveals 揭示探究的运作；(3)C interpreted 专家对事实的\"解读\"不同；(4)D while 表对比；(5)A In short 概括；(6)B specialization 专业化既是优势也致分歧；(7)C blind 对专业外的事\"视而不见\"；(8)D Consequently 因果推进；(9)A miss 批评者\"忽略\"关键点；(10)B thinking 停止\"思考\"的领域才全体同意；(11)C scrutiny 受审视；(12)D Yet 转折——并非每种意见都等值；(13)A discerning 有辨别力的观察者；(14)B manufacture 制造怀疑；(15)C cluster 围绕共同方法\"聚集\"；(16)D By 通过理解；(17)A rejection 与\"盲从\"相对的\"拒斥\"；(18)B discriminating 有判断力地关注；(19)C Paradoxically 引出反直觉结论；(20)D undermine 异议应增加而非\"削弱\"信任。"
+    },
+    {
+      "passage": "Why do some people pursue a difficult goal for years while others abandon it within weeks? Psychologists once assumed that motivation was simply a matter of (1)____ : promise a large enough reward, and effort would follow. Decades of research, (2)____ , have complicated this picture considerably. External incentives certainly work in the short term, but they can also (3)____ the very interest they are meant to encourage. When people are paid to perform an activity they once enjoyed, their intrinsic enthusiasm often (4)____ , as if the task had been redefined as mere labor. This surprising finding suggests that the (5)____ of motivation matters as much as its strength. A person driven by genuine curiosity tends to persist (6)____ obstacles, whereas one driven solely by external pressure collapses the moment the reward (7)____ . (8)____ , the most durable motivation arises when an activity satisfies deeper psychological needs—above all the desire to feel (9)____ rather than controlled. People work hardest at tasks they have freely chosen and whose purpose they (10)____ understand. (11)____ , a sense of growing competence sustains effort even when progress is slow, because each small mastery becomes its own reward. (12)____ , goals that feel imposed from outside breed resentment and (13)____ resistance, no matter how generous the bribe. These insights carry practical (14)____ for educators and managers alike. Rather than dangling ever-larger prizes, the wise leader designs conditions in which people can experience (15)____ , connection, and meaningful challenge. (16)____ , offering choices, explaining reasons, and acknowledging effort tend to be far more effective than crude reward and punishment. (17)____ , this does not mean that incentives are useless; they remain valuable for routine tasks that no one finds inherently engaging. The (18)____ , as so often, lies in matching the tool to the situation. (19)____ understood, motivation is less a fuel to be poured into people than an inner capacity to be (20)____ .",
+      "blanks": [
+        {
+          "options": [
+            "incentive",
+            "talent",
+            "luck",
+            "habit"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "therefore",
+            "however",
+            "moreover",
+            "likewise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "reinforce",
+            "explain",
+            "undermine",
+            "predict"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "grows",
+            "returns",
+            "spreads",
+            "fades"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "source",
+            "amount",
+            "speed",
+            "cost"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "because of",
+            "despite",
+            "instead of",
+            "regardless"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "increases",
+            "doubles",
+            "disappears",
+            "arrives"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Surprisingly",
+            "Conversely",
+            "Reluctantly",
+            "Indeed"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "autonomous",
+            "wealthy",
+            "obeyed",
+            "admired"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "barely",
+            "fully",
+            "rarely",
+            "never"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "However",
+            "Nevertheless",
+            "Similarly",
+            "Otherwise"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Likewise",
+            "Therefore",
+            "Thus",
+            "Conversely"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "quiet",
+            "cheerful",
+            "honest",
+            "eager"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "jokes",
+            "lessons",
+            "rewards",
+            "delays"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "money",
+            "fame",
+            "autonomy",
+            "comfort"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "By contrast",
+            "In doubt",
+            "Above all",
+            "For instance"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Still",
+            "Moreover",
+            "Therefore",
+            "Thus"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "problem",
+            "secret",
+            "danger",
+            "reward"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Wrongly",
+            "Rarely",
+            "Rightly",
+            "Suddenly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "bought",
+            "ignored",
+            "measured",
+            "released"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A incentive 误以为动机只是\"诱因\"；(2)B however 转折复杂化；(3)C undermine 外在奖励会\"削弱\"内在兴趣；(4)D fades 热情\"消退\"；(5)A source 动机的\"来源\"和强度同样重要；(6)B despite 不顾障碍坚持；(7)C disappears 奖励\"消失\"即放弃；(8)D Indeed 加强；(9)A autonomous 想感到\"自主\"而非被控制；(10)B fully 充分理解目的；(11)C Similarly 并列补充；(12)D Conversely 转折对比被强加的目标；(13)A quiet 被强加的目标滋生怨恨与“暗中”抵触，cheerful/honest/eager 与“resentment”矛盾；(14)B lessons 这些洞见带来实际“教益”，与 practical 搭配；(15)C autonomy 三要素之一自主；(16)D For instance 举例；(17)A Still 让步——诱因并非无用；(18)B secret 诀窍在于因地制宜；(19)C Rightly 正确理解；(20)D released 动机是待\"释放\"的内在能力。"
+    },
+    {
+      "passage": "Most of what we do each day is governed not by deliberate choice but by habit, the silent (1)____ of repeated behavior into automatic routine. Far from being a sign of weakness, this automation is a remarkable (2)____ of the mind, freeing limited attention for tasks that genuinely require it. (3)____ , the same mechanism that makes beneficial routines effortless also entrenches destructive ones, which is why bad habits prove so stubbornly (4)____ to willpower alone. Researchers describe habits as loops with three parts: a cue that (5)____ the behavior, the routine itself, and a reward that the brain learns to (6)____ . Once this loop is established, the mere appearance of the cue can launch the entire sequence (7)____ conscious intention. This explains why people so often act against their stated goals, reaching for a cigarette or a phone before they have even (8)____ deciding to. Understanding the loop, (9)____ , points toward a strategy for change. Because cues and rewards are difficult to eliminate, the most effective approach is not to suppress a habit by force but to (10)____ its routine while keeping the surrounding structure intact. A person who craves the relief a cigarette provides may (11)____ that craving with a brisk walk, satisfying the same underlying need through a healthier (12)____ . (13)____ , willpower is best understood as a limited resource that fluctuates throughout the day, which is why relying on it (14)____ tends to fail. (15)____ , durable change comes from redesigning one's environment so that good behaviors become the path of least (16)____ . Small adjustments to surroundings often accomplish what sheer determination cannot. (17)____ , habits do not vanish; the old neural pathways remain, ready to reassert themselves under stress. (18)____ , lasting transformation requires not a single heroic effort but the patient (19)____ of new loops until they, too, become automatic. In this light, character itself may be little more than the (20)____ of our accumulated habits.",
+      "blanks": [
+        {
+          "options": [
+            "consolidation",
+            "explosion",
+            "rejection",
+            "imitation"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "weakness",
+            "achievement",
+            "accident",
+            "burden"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Likewise",
+            "Yet",
+            "Thus"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "obedient",
+            "helpful",
+            "similar",
+            "resistant"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "triggers",
+            "ends",
+            "rewards",
+            "delays"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forget",
+            "crave",
+            "punish",
+            "doubt"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "with",
+            "before",
+            "without",
+            "despite"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "finished",
+            "avoided",
+            "regretted",
+            "consciously"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "however",
+            "therefore",
+            "moreover",
+            "instead"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "preserve",
+            "replace",
+            "ignore",
+            "repeat"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "create",
+            "punish",
+            "satisfy",
+            "delay"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "habit",
+            "reward",
+            "cue",
+            "routine"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Moreover",
+            "By contrast",
+            "For example",
+            "Therefore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "wisely",
+            "alone",
+            "early",
+            "rarely"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Otherwise",
+            "Likewise",
+            "Instead",
+            "Nevertheless"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "pleasure",
+            "interest",
+            "value",
+            "resistance"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Importantly",
+            "Surprisingly",
+            "Fortunately",
+            "Reluctantly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "However",
+            "Therefore",
+            "Likewise",
+            "Otherwise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "destruction",
+            "removal",
+            "cultivation",
+            "discovery"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "enemy",
+            "opposite",
+            "cause",
+            "sum"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A consolidation 行为\"固化\"为常规；(2)B achievement 大脑的非凡\"成就\"；(3)C Yet 转折——同机制也固化坏习惯；(4)D resistant 坏习惯对意志力\"顽抗\"；(5)A triggers 线索\"触发\"行为；(6)B crave 大脑学会\"渴求\"奖励；(7)C without 无需意识介入；(8)D consciously 还没\"有意识地\"决定；(9)A however 转折引出对策；(10)B replace 替换常规而非压制；(11)C satisfy 用散步\"满足\"同一渴求；(12)D routine 更健康的\"常规\"；(13)A Moreover 递进补充意志力局限；(14)B alone 单靠意志力会失败；(15)C Instead 而是靠环境设计；(16)D resistance 最小\"阻力\"路径；(17)A Importantly 强调旧通路仍在；(18)B Therefore 因此需耐心；(19)C cultivation 新循环的\"培育\"；(20)D sum 性格是习惯的\"总和\"。"
+    },
+    {
+      "passage": "Trust may seem like a soft, sentimental notion, but economists increasingly regard it as one of the most valuable (1)____ a society can possess. Where trust is high, strangers can transact, lend, and cooperate at low cost; where it is (2)____ , every exchange must be hedged with contracts, guarantees, and suspicion. The reason is that trust dramatically reduces what economists call transaction costs—the time, money, and effort spent (3)____ that the other party will keep its word. (4)____ , in a high-trust community a handshake may suffice, while in a low-trust one even a signed agreement invites litigation. (5)____ , trust is not merely pleasant; it is productive, lubricating the countless small interactions on which a complex economy (6)____ . Yet trust is also peculiarly (7)____ to build and easy to destroy. It accumulates slowly, through repeated experiences of reliability, but a single act of (8)____ can erase years of goodwill in an instant. This asymmetry helps explain why reputations are guarded so jealously and why institutions invest so heavily in (9)____ their trustworthiness. (10)____ , the value of trust creates a temptation to exploit it. Whenever others lower their guard, an opportunist can profit by (11)____ on their good faith—at least until he is caught. (12)____ , societies develop mechanisms to punish betrayal and reward reliability, from informal gossip to formal courts. (13)____ such enforcement, the fragile equilibrium of trust would quickly (14)____ , as each person defected in anticipation of being cheated first. (15)____ , the deepest forms of trust cannot be fully secured by enforcement alone; they rest on shared norms that people internalize and honor even when (16)____ would go unpunished. A purely calculating individual, trusting only when monitored, generates far less (17)____ than one who is reliable on principle. (18)____ , the economic case for trust ultimately points beyond economics, toward the moral (19)____ that make markets possible. In the end, prosperity depends not only on capital and labor but on the invisible (20)____ that bind people together.",
+      "blanks": [
+        {
+          "options": [
+            "assets",
+            "dangers",
+            "habits",
+            "burdens"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "abundant",
+            "scarce",
+            "useless",
+            "stable"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "proving",
+            "hoping",
+            "ensuring",
+            "denying"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Nevertheless",
+            "Otherwise",
+            "For instance"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "In short",
+            "In doubt",
+            "By contrast",
+            "Above all"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "comments",
+            "depends",
+            "reflects",
+            "imposes"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "easy",
+            "cheap",
+            "slow",
+            "simple"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "kindness",
+            "patience",
+            "honesty",
+            "betrayal"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "signaling",
+            "hiding",
+            "doubting",
+            "wasting"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Surprisingly",
+            "Paradoxically",
+            "Fortunately",
+            "Reluctantly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "depending",
+            "relying",
+            "preying",
+            "insisting"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Likewise",
+            "Otherwise",
+            "Therefore"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Without",
+            "With",
+            "Despite",
+            "Beyond"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "strengthen",
+            "collapse",
+            "stabilize",
+            "expand"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Moreover",
+            "Thus",
+            "Yet",
+            "Likewise"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "honesty",
+            "loyalty",
+            "fairness",
+            "cheating"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "value",
+            "risk",
+            "doubt",
+            "cost"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "By contrast",
+            "In this sense",
+            "For example",
+            "Above all"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "obstacles",
+            "rewards",
+            "foundations",
+            "accidents"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "walls",
+            "barriers",
+            "rules",
+            "bonds"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A assets 信任是宝贵\"资产\"；(2)B scarce 信任\"稀缺\"时交易成本高；(3)C ensuring 花成本\"确保\"对方守信；(4)D For instance 举例；(5)A In short 概括；(6)B depends 经济\"依赖\"互动；(7)C slow 信任\"缓慢\"建立；(8)D betrayal 一次\"背叛\"毁多年善意；(9)A signaling 投资于\"展示\"可信度；(10)B Paradoxically 价值反而招致利用；(11)C preying 投机者\"掠夺\"他人善意；(12)D Therefore 因此社会建惩罚机制；(13)A Without 没有这种执行；(14)B collapse 信任均衡会\"崩溃\"；(15)C Yet 转折——最深信任不能仅靠执行；(16)D cheating 即使\"作弊\"也不会被罚；(17)A value 纯算计者创造的\"价值\"更少；(18)B In this sense 在此意义上；(19)C foundations 道德\"根基\"；(20)D bonds 无形的\"纽带\"。"
+    },
+    {
+      "passage": "Classical economics long rested on a flattering assumption: that human beings are rational agents who calmly weigh costs and benefits before (1)____ . This elegant model yields precise predictions, but a growing body of research has exposed its (2)____ from how people actually behave. Far from computing optimal choices, we rely on mental shortcuts that, while usually serviceable, systematically (3)____ us astray in predictable ways. (4)____ , most people will drive across town to save ten dollars on a cheap item, yet refuse the identical trip to save ten dollars on an expensive one, as though the same sum changed (5)____ depending on context. Such inconsistencies are not random errors that cancel out; they reveal that our reasoning is shaped by how problems are (6)____ rather than by their underlying logic. (7)____ , a medical treatment described as having a ninety-percent survival rate seems far more appealing than the very same treatment described as carrying a ten-percent mortality rate. The framing alone (8)____ the decision, even though the facts are identical. These findings do not prove that humans are simply (9)____ ; the shortcuts that mislead us in artificial puzzles often serve us well in the messy conditions for which they (10)____ . (11)____ , the discovery of systematic bias undermines the confident claim that markets, being composed of rational individuals, will (12)____ produce optimal outcomes. If the individuals themselves are predictably irrational, their aggregate behavior may (13)____ from the textbook ideal. (14)____ , this insight has reshaped public policy, inspiring efforts to design choices so that the easiest option is also the (15)____ one. Critics worry that such \"nudging\" is (16)____ , subtly steering people without their full awareness. Defenders reply that some default must always be chosen, and that a (17)____ default is preferable to a careless one. (18)____ the debate over manipulation, few now dispute the central lesson: the rational agent of theory is at best a useful (19)____ , not an accurate portrait. Acknowledging the (20)____ of reason is the first step toward designing institutions that work with human nature rather than against it.",
+      "blanks": [
+        {
+          "options": [
+            "deciding",
+            "sleeping",
+            "resting",
+            "dreaming"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "agreement",
+            "departure",
+            "support",
+            "copy"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "guide",
+            "comfort",
+            "lead",
+            "follow"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Nevertheless",
+            "Therefore",
+            "For example"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "value",
+            "color",
+            "size",
+            "weight"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "solved",
+            "framed",
+            "answered",
+            "ignored"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "However",
+            "Therefore",
+            "Similarly",
+            "Instead"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "explains",
+            "records",
+            "delays",
+            "shifts"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "foolish",
+            "honest",
+            "selfish",
+            "lazy"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "failed",
+            "evolved",
+            "vanished",
+            "competed"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Likewise",
+            "Nonetheless",
+            "Thus"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "rarely",
+            "slowly",
+            "accidentally",
+            "automatically"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "deviate",
+            "benefit",
+            "result",
+            "recover"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Reluctantly",
+            "Increasingly",
+            "Rarely",
+            "Suddenly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "worst",
+            "cheapest",
+            "best",
+            "fastest"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "generous",
+            "transparent",
+            "useless",
+            "manipulative"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "thoughtful",
+            "careless",
+            "random",
+            "hidden"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Because of",
+            "Whatever",
+            "Thanks to",
+            "Instead of"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "fact",
+            "burden",
+            "fiction",
+            "danger"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "power",
+            "speed",
+            "beauty",
+            "limits"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A deciding 决策前权衡；(2)B departure 模型与现实的\"背离\"；(3)C lead 把我们\"引入\"歧途固定搭配；(4)D For example 举例；(5)A value 同一金额\"价值\"随情境变化；(6)B framed 推理受问题\"表述\"方式影响；(7)C Similarly 类比另一例；(8)D shifts 表述\"改变\"决策；(9)A foolish 不能证明人类只是\"愚蠢\"；(10)B evolved 捷径为某些环境\"进化\"而来；(11)C Nonetheless 转折——偏见仍动摇理性假设；(12)D automatically 市场不会\"自动\"产生最优；(13)A deviate 总体行为\"偏离\"理想；(14)B Increasingly 日益重塑政策；(15)C best 最易选项也是\"最佳\"；(16)D manipulative 批评\"操纵\"；(17)A thoughtful 经深思的默认优于草率的；(18)B Whatever 无论这场争论如何；(19)C fiction 理性人是有用的\"虚构\"；(20)D limits 承认理性的\"局限\"。"
+    },
+    {
+      "passage": "Few claims command such broad agreement as the assertion that education benefits society as a whole, yet the precise nature of that benefit is rarely (1)____ examined. The simplest argument is economic: a better-educated workforce is more productive, and individuals with more schooling tend to earn (2)____ incomes. This view, however, captures only a fraction of education's true (3)____ . If schooling merely raised private earnings, the state would have little reason to subsidize it so heavily. The deeper justification rests on the idea that education produces benefits that (4)____ beyond the individual learner. An educated citizen is better equipped to evaluate political claims, (5)____ less easily by demagogues, and to participate thoughtfully in collective decisions. (6)____ , these gains accrue not only to the person educated but to everyone who lives alongside him. (7)____ , widespread literacy enables conversations across a whole community. Critics sometimes (8)____ that much of what schools teach is quickly forgotten. Even if true, this objection (9)____ the point, for education's most durable effect may be less the retention of facts than the cultivation of (10)____ habits of mind. A person who has learned to question evidence and tolerate complexity carries that disposition (11)____ long after the particular lessons fade. (12)____ , education tends to foster the trust and shared understanding on which cooperation depends, knitting strangers into a functioning public. (13)____ , some of these claims are difficult to (14)____ , and skeptics rightly demand evidence rather than pious assertion. The challenge is that the (15)____ benefits of education—a more reflective electorate, a more cohesive society—resist easy measurement, (16)____ its private financial returns can be calculated with apparent precision. This asymmetry creates a danger: because the measurable gains are easiest to defend, policy may gradually (17)____ them while neglecting the broader purposes that justified public schooling in the first place. (18)____ , a society that treats education solely as job training risks (19)____ the very qualities that make self-government possible. The (20)____ value of education, in short, is not merely what it does for earners but what it does for citizens.",
+      "blanks": [
+        {
+          "options": [
+            "carefully",
+            "rarely",
+            "loudly",
+            "happily"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "lower",
+            "higher",
+            "fixed",
+            "equal"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "cost",
+            "danger",
+            "worth",
+            "burden"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "fall",
+            "shrink",
+            "remain",
+            "extend"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "swayed",
+            "delayed",
+            "repaired",
+            "lifted"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "However",
+            "Crucially",
+            "Reluctantly",
+            "Rarely"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "By contrast",
+            "In doubt",
+            "For example",
+            "Above all"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "agree",
+            "prove",
+            "wonder",
+            "complain"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "misses",
+            "proves",
+            "makes",
+            "supports"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "lazy",
+            "critical",
+            "rigid",
+            "narrow"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "away",
+            "back",
+            "forward",
+            "down"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Therefore",
+            "Otherwise",
+            "Moreover"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Admittedly",
+            "Therefore",
+            "Likewise",
+            "Thus"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "ignore",
+            "quantify",
+            "forget",
+            "spread"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "private",
+            "narrow",
+            "social",
+            "physical"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "because",
+            "since",
+            "unless",
+            "whereas"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "privilege",
+            "abandon",
+            "reject",
+            "hide"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Otherwise",
+            "Thus",
+            "However",
+            "Nevertheless"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "strengthening",
+            "measuring",
+            "eroding",
+            "praising"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "financial",
+            "physical",
+            "private",
+            "social"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A carefully 这一益处很少被\"仔细\"审视；(2)B higher 受教育者收入\"更高\"；(3)C worth 只反映了真正\"价值\"的一部分；(4)D extend 益处\"延伸\"到个人之外；(5)A swayed less easily swayed by demagogues 不被煽动者\"左右\"，与前文 evaluate 并列；delayed/repaired/lifted 与\"被煽动者影响\"语义不搭，均明显排除；(6)B Crucially 关键地——益处惠及他人；(7)C For example 举例；(8)D complain 批评者\"抱怨\"所学速忘；(9)A misses 该反驳\"没抓住\"要点；(10)B critical 培养\"批判性\"思维习惯；(11)C forward 把这种倾向\"带向\"未来；(12)D Moreover 递进；(13)A Admittedly 让步——有些主张难证实；(14)B quantify 难以\"量化\"；(15)C social 教育的\"社会\"益处难测量；(16)D whereas 对比私人收益可计算；(17)A privilege 政策\"偏重\"可测收益；(18)B Thus 因此；(19)C eroding 仅当职业训练会\"侵蚀\"公民素质；(20)D social 教育的\"社会\"价值在于其对公民的作用。"
+    },
+    {
+      "passage": "When a genuinely useful innovation appears, we tend to assume it will spread on its own, carried forward by its obvious (1)____ . History suggests otherwise. Many superior technologies have languished for decades while inferior rivals (2)____ , and the difference rarely lies in technical merit alone. The diffusion of an innovation depends less on what it can do than on how its potential adopters (3)____ it. Researchers who study this process find that people do not evaluate a new idea in (4)____ ; they watch what others around them do and adjust accordingly. (5)____ , the earliest adopters tend to be venturesome individuals willing to bear the risk of something unproven, but these pioneers are too few and too unusual to (6)____ widespread change by themselves. The decisive moment arrives only when respected members of a community—those whose judgment others trust—begin to adopt the innovation. (7)____ their endorsement, the cautious majority hesitates, unwilling to be the (8)____ to try something that might fail. This explains a frequently observed pattern: adoption begins slowly, then (9)____ rapidly once a critical threshold is crossed, and finally tapers off as only the most reluctant remain. The shape of this curve is remarkably (10)____ across innovations as different as new crops, medicines, and software. (11)____ , an innovation's design strongly affects its fate. Ideas that can be tried on a small scale, observed easily, and (12)____ into existing routines spread far faster than those demanding wholesale commitment. (13)____ , a technology that is superior but disruptive may lose to one that is mediocre but compatible, because compatibility lowers the (14)____ of trial. (15)____ , the lesson for reformers is sobering: it is not enough to build a better mousetrap. One must also (16)____ the social channels through which adoption travels, identify the (17)____ figures whose example others follow, and reduce the perceived risk of being first. (18)____ understood, diffusion is less a matter of technical persuasion than of social (19)____ . The innovations that change the world are not always the best; they are the ones that best (20)____ how human communities decide to change.",
+      "blanks": [
+        {
+          "options": [
+            "merit",
+            "danger",
+            "cost",
+            "novelty"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "failed",
+            "spread",
+            "waited",
+            "shrank"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "build",
+            "ignore",
+            "perceive",
+            "destroy"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "groups",
+            "public",
+            "secret",
+            "isolation"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Typically",
+            "However",
+            "Reluctantly",
+            "Rarely"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "prevent",
+            "drive",
+            "delay",
+            "imagine"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "With",
+            "Despite",
+            "Without",
+            "Beyond"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "last",
+            "best",
+            "only",
+            "first"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "accelerates",
+            "falls",
+            "stops",
+            "reverses"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "random",
+            "consistent",
+            "unique",
+            "weak"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "However",
+            "Therefore",
+            "Moreover",
+            "Otherwise"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "forced",
+            "translated",
+            "frozen",
+            "integrated"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Thus",
+            "Likewise",
+            "Nevertheless",
+            "Otherwise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reward",
+            "cost",
+            "value",
+            "speed"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Surprisingly",
+            "Reluctantly",
+            "Accordingly",
+            "Rarely"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "ignore",
+            "block",
+            "destroy",
+            "understand"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "influential",
+            "unknown",
+            "hostile",
+            "ordinary"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Wrongly",
+            "Properly",
+            "Rarely",
+            "Suddenly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "accident",
+            "isolation",
+            "contagion",
+            "resistance"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "ignore",
+            "delay",
+            "oppose",
+            "fit"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A merit 假定凭\"优点\"自行传播；(2)B spread 劣质对手却\"扩散\"开来；(3)C perceive 取决于采纳者如何\"看待\"它；(4)D isolation 人们不\"孤立地\"评价新事物；(5)A Typically 通常最早采纳者是冒险者；(6)B drive 先驱无法独自\"推动\"广泛变革；(7)C Without 没有其认可，多数人犹豫；(8)D first 不愿做尝试失败的\"第一个\"；(9)A accelerates 越过临界点后\"加速\"；(10)B consistent 曲线形状高度\"一致\"；(11)C Moreover 递进——设计也影响命运；(12)D integrated 能\"融入\"既有惯例的更快；(13)A Thus 因此优而具颠覆性者可能败给兼容者；(14)B cost 兼容性降低尝试的\"成本\"；(15)C Accordingly 因此对改革者的教训；(16)D understand 须\"理解\"社会渠道；(17)A influential 找出\"有影响力\"的人物；(18)B Properly 正确理解；(19)C contagion 社会\"传染\"；(20)D fit 最契合社区如何决定改变。"
+    },
+    {
+      "passage": "Persuasion is woven so deeply into human life that we scarcely notice it, yet the moment we examine it closely, troubling ethical questions (1)____ . To persuade is to alter another person's beliefs or conduct through communication rather than force, and at first glance this seems entirely (2)____ : we reason, we argue, we offer evidence. The difficulty arises because not all influence (3)____ to reasoned argument. A skilled persuader can bypass judgment altogether, exploiting fears, flattering vanities, or manufacturing a false sense of (4)____ . The line between legitimate persuasion and manipulation, (5)____ , is notoriously hard to draw. One useful principle holds that persuasion respects the listener's rationality, presenting reasons she is free to weigh, (6)____ manipulation works precisely by circumventing that rational scrutiny. By this standard, an argument that invites reflection is ethical, (7)____ a technique that triggers an automatic response without engaging the mind is not. (8)____ , the same message may be acceptable or objectionable depending on whether it (9)____ the audience or treats them as mere levers to be pulled. Yet even this criterion proves harder to apply than it sounds. Emotions, after all, are not always (10)____ to reason; fear of a genuine danger is a perfectly appropriate response, and an advertisement that arouses it may be informing rather than deceiving. (11)____ , the problem is not emotion as such but the use of emotion to (12)____ truth. A second complication concerns transparency. Many persuasive techniques lose their power once their (13)____ are revealed, which suggests that they depend on a kind of concealment the persuaded party would resent if she (14)____ it. (15)____ , a reasonable test asks whether the persuader would be willing to disclose his methods to the very person he hopes to influence. (16)____ he would not, the technique is probably illegitimate. None of this implies that persuasion is inherently (17)____ ; a society that abandoned it would have to rely on coercion instead, which is far worse. The ethical task, (18)____ , is not to eliminate persuasion but to (19)____ its honest forms from its corrupt ones, and to build a culture in which the former (20)____ .",
+      "blanks": [
+        {
+          "options": [
+            "arise",
+            "vanish",
+            "settle",
+            "hide"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "dangerous",
+            "legitimate",
+            "useless",
+            "secret"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "objects",
+            "belongs",
+            "appeals",
+            "refers"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "patience",
+            "calm",
+            "boredom",
+            "urgency"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "however",
+            "therefore",
+            "moreover",
+            "likewise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "because",
+            "whereas",
+            "since",
+            "unless"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "because",
+            "since",
+            "whereas",
+            "if"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "However",
+            "Nevertheless",
+            "Otherwise",
+            "Thus"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "respects",
+            "ignores",
+            "fears",
+            "praises"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "similar",
+            "opposed",
+            "loyal",
+            "equal"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Likewise",
+            "Rather",
+            "Otherwise"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reveal",
+            "support",
+            "spread",
+            "obscure"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "mechanisms",
+            "benefits",
+            "rewards",
+            "origins"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "enjoyed",
+            "recognized",
+            "trusted",
+            "forgot"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "However",
+            "Reluctantly",
+            "Accordingly",
+            "Rarely"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Although",
+            "Unless",
+            "While",
+            "If"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "suspect",
+            "honest",
+            "useful",
+            "public"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "therefore",
+            "then",
+            "however",
+            "likewise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "combine",
+            "create",
+            "distinguish",
+            "repeat"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "fails",
+            "hides",
+            "weakens",
+            "prevails"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A arise 伦理问题\"浮现\"；(2)B legitimate 初看完全\"正当\"；(3)C appeals 并非所有影响都\"诉诸\"理性论证；(4)D urgency 制造虚假的\"紧迫感\"；(5)A however 转折——界线难划；(6)B whereas 对比操纵；(7)C whereas 对比触发自动反应的技巧；(8)D Thus 因此同一信息可接受与否；(9)A respects 是否\"尊重\"受众；(10)B opposed 情感并非总与理性\"对立\"；(11)C Rather 而是用情感\"掩盖\"真相；(12)D obscure 掩盖真相；(13)A mechanisms 技巧的\"机制\"一旦揭示即失效；(14)B recognized 若她\"识破\"会反感；(15)C Accordingly 因此可用一个测试；(16)D If 若他不愿公开方法；(17)A suspect 不意味劝说本身\"可疑\"；(18)B then 那么伦理任务；(19)C distinguish 区分诚实与腐败形式；(20)D prevails 让前者\"占上风\"。"
+    },
+    {
+      "passage": "Intelligence is among the most studied yet least understood of human attributes, and nowhere is this paradox more (1)____ than in the long effort to measure it. The very idea that so multifaceted a quality could be (2)____ to a single number strikes many people as absurd, and yet standardized tests of mental ability have proved remarkably (3)____ at predicting performance in school and certain kinds of work. This predictive power is precisely what makes the measurement of intelligence so (4)____ : a tool that forecasts outcomes can also be used to sort, rank, and exclude. Defenders of testing argue that the alternative—relying on subjective impressions—is far more (5)____ to prejudice, since a uniform examination at least treats every candidate by the same standard. (6)____ , a well-designed test can reveal talent in those whom privilege and appearance might otherwise (7)____ . Critics, (8)____ , insist that what such tests measure is not raw ability but a narrow band of skills shaped by culture and schooling. A child who has never encountered the kind of puzzle a test (9)____ may perform poorly without lacking intelligence in any meaningful sense. (10)____ , the score reflects opportunity as much as aptitude. There is also the deeper worry that labeling people by a single figure (11)____ a self-fulfilling prophecy: told they are gifted, students flourish; told they are dull, they (12)____ trying. The number, meant to describe ability, may end up (13)____ it. (14)____ these objections, few researchers would abandon measurement altogether, for the impulse behind it is sound: to replace arbitrary judgment with something more (15)____ . The real lesson is humbler. A test score is not a verdict on a person's worth but a (16)____ snapshot, useful within limits and misleading beyond them. (17)____ , intelligence is almost certainly not one thing but many, and a single scale inevitably (18)____ dimensions it was never built to capture. To treat such a number as the (19)____ measure of a mind is to mistake a convenient instrument for the reality it only partly (20)____ .",
+      "blanks": [
+        {
+          "options": [
+            "evident",
+            "hidden",
+            "absent",
+            "false"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "raised",
+            "reduced",
+            "added",
+            "compared"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "poor",
+            "slow",
+            "effective",
+            "random"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "useless",
+            "simple",
+            "cheap",
+            "controversial"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "vulnerable",
+            "resistant",
+            "loyal",
+            "equal"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "However",
+            "Indeed",
+            "Reluctantly",
+            "Rarely"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "reveal",
+            "reward",
+            "overlook",
+            "promote"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "therefore",
+            "moreover",
+            "likewise",
+            "however"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "presents",
+            "avoids",
+            "rewards",
+            "ignores"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "By contrast",
+            "In short",
+            "For example",
+            "Above all"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "prevents",
+            "delays",
+            "becomes",
+            "doubts"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "keep",
+            "love",
+            "enjoy",
+            "stop"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "shaping",
+            "describing",
+            "praising",
+            "recording"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Because of",
+            "Despite",
+            "Thanks to",
+            "Instead of"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "arbitrary",
+            "secret",
+            "objective",
+            "personal"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "complete",
+            "perfect",
+            "final",
+            "partial"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Moreover",
+            "However",
+            "Therefore",
+            "Otherwise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "captures",
+            "omits",
+            "doubles",
+            "rewards"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "partial",
+            "rough",
+            "final",
+            "early"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "creates",
+            "ignores",
+            "rejects",
+            "captures"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)A evident 这一悖论在测量中最\"明显\"；(2)B reduced 把多面品质\"简化\"为一个数；(3)C effective 测验在预测上很\"有效\"；(4)D controversial 预测力使测量富\"争议\"；(5)A vulnerable 主观印象更\"易受\"偏见影响；(6)B Indeed 加强；(7)C overlook 否则会被\"忽视\"的天才；(8)D however 转折——批评者反对；(9)A presents 测验所\"呈现\"的谜题；(10)B In short 概括——分数反映机会；(11)C becomes 标签\"成为\"自我实现的预言；(12)D stop 被说迟钝者\"停止\"努力；(13)A shaping 数字反而\"塑造\"了能力；(14)B Despite 尽管有这些反对；(15)C objective 用更\"客观\"的东西取代武断；(16)D partial 只是\"片面\"快照；(17)A Moreover 递进——智力非一物；(18)B omits 单一量表\"遗漏\"维度；(19)C final 视为心智的\"最终\"尺度是错的；(20)D captures 只\"捕捉\"了部分现实。"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "templateId": "cet-para-match",
+  "examIds": ["cet4", "cet6"],
+  "taskType": "para_match",
+  "skill": "reading",
+  "generation": {
+    "mode": "ai",
+    "promptHintZh": "CET 段落信息匹配：一篇 360-560 词原创说明/议论长文，分 7-10 个段落，每段以 [A] [B] [C].. 顺序标号开头；出 10 个陈述句，每句匹配到含该信息的段落（同一段可被多句匹配，段落数可少于 10）。陈述用强同义改写避免与段落字面对应。输出 statements（10 句）、answers（10 个 0-based 段落索引，允许重复）、paras（段落数）。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 300,
+    "maxWords": 620,
+    "perStimulusItems": 10,
+    "topicDomains": ["社会", "科技", "教育", "文化", "经济", "健康", "环境"]
+  },
+  "itemCount": 10,
+  "optionCount": 10,
+  "answerSchema": {
+    "shape": "para_match_multi",
+    "statements": 10,
+    "answerRange": "0-(paras-1), repeats allowed"
+  },
+  "subskills": ["paraphrase", "scanning", "info_matching", "gist"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "7-10 个段落，以 [A][B].. 顺序标号；恰好 10 个陈述句",
+    "每陈述唯一匹配一个段落（同一段可被多句命中）；用强同义改写避免字面对应",
+    "答案为 0-based 段落索引，落在 0..paras-1，可重复",
+    "难度为 CET（四级偏易/六级偏难），不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

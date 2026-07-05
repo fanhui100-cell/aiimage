@@ -1,0 +1,36 @@
+/* goals.css — D13 每日目标（gl-* 页面专属；通用类见 screen-kit.css .scr） */
+.scr .gl-hero { display: flex; gap: 26px; align-items: center; padding: 24px 28px; border-radius: 20px; background: radial-gradient(120% 130% at 100% 0%, rgba(14,140,122,.07), transparent 55%), var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-rest); margin: 18px 0 16px; flex-wrap: wrap; }
+.scr .gl-main-ring { position: relative; flex-shrink: 0; }
+.scr .gl-main-ring .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.scr .gl-main-ring .pct { font-family: var(--font-mono); font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1; }
+.scr .gl-main-ring .lb { font-size: 10.5px; color: var(--ink-muted); margin-top: 2px; }
+.scr .gl-hero-txt { flex: 1; min-width: 200px; }
+.scr .gl-hero-txt .h { font-family: var(--font-serif-zh); font-size: 20px; font-weight: 700; color: var(--ink); }
+.scr .gl-hero-txt .s { font-size: 13px; color: var(--ink-sub); margin: 4px 0 12px; }
+.scr .gl-subrings { display: flex; gap: 18px; flex-wrap: wrap; }
+.scr .gl-sr { display: flex; align-items: center; gap: 9px; }
+.scr .gl-sr .t { font-size: 12px; }
+.scr .gl-sr .t b { display: block; font-family: var(--font-mono); font-size: 14px; color: var(--ink); }
+.scr .gl-sr .t span { color: var(--ink-muted); font-size: 11px; }
+.scr .gl-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-rest); padding: 20px 22px; margin-bottom: 16px; }
+.scr .gl-week { display: flex; align-items: flex-end; gap: 12px; height: 130px; margin-top: 6px; }
+.scr .gl-wd { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 7px; height: 100%; justify-content: flex-end; }
+.scr .gl-wbar { width: 100%; max-width: 34px; border-radius: 7px 7px 0 0; background: linear-gradient(180deg, var(--teal), var(--teal-deep)); transition: height .5s cubic-bezier(.2,.8,.2,1); position: relative; min-height: 3px; }
+.scr .gl-wbar.today { box-shadow: 0 0 0 2px var(--card), 0 0 0 4px rgba(14,140,122,.35); }
+.scr .gl-wbar.miss { background: var(--paper-2); }
+.scr .gl-wd small { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-muted); }
+.scr .gl-wd small.t { color: var(--teal-ink); font-weight: 700; }
+.scr .gl-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 8px; }
+.scr .gl-cal .hh { text-align: center; font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); padding-bottom: 2px; }
+.scr .gl-day { aspect-ratio: 1; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 12px; color: var(--ink-sub); background: var(--paper-2); position: relative; }
+.scr .gl-day.done { background: var(--teal-bg); color: var(--teal-ink); font-weight: 700; }
+.scr .gl-day.done::after { content: ''; position: absolute; bottom: 4px; width: 4px; height: 4px; border-radius: 999px; background: var(--teal-ink); }
+.scr .gl-day.today { outline: 2px solid var(--teal-ink); outline-offset: -2px; }
+.scr .gl-set { display: flex; flex-direction: column; gap: 16px; }
+.scr .gl-setrow { display: flex; align-items: center; gap: 14px; }
+.scr .gl-setrow .nm { width: 88px; font-size: 13.5px; color: var(--ink); flex-shrink: 0; }
+.scr .gl-seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.scr .gl-seg button { padding: 7px 14px; border-radius: 999px; font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; cursor: pointer; background: var(--card-2); border: 1px solid var(--line-strong); color: var(--ink-sub); transition: all .13s; }
+.scr .gl-seg button:hover { border-color: var(--teal-ink); color: var(--teal-ink); }
+.scr .gl-seg button.on { background: var(--teal-ink); border-color: var(--teal-ink); color: #fff; }
+.scr .gl-set-foot { display: flex; align-items: center; gap: 10px; margin-top: 4px; font-size: 12px; color: var(--ink-muted); flex-wrap: wrap; }

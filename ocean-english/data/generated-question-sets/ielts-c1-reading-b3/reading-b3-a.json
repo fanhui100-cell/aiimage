@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "For much of recorded history, silk was arguably the most coveted textile on earth. Light, strong, and capable of taking dye more brilliantly than wool or linen, it commanded prices that at times exceeded its weight in gold. The story of how this fabric was produced, traded, and eventually mass-manufactured spans more than four thousand years and connects farming villages in East Asia with the banking houses of Renaissance Italy and the mechanised mills of the nineteenth century.\n\nSilk production, or sericulture, began in China, where archaeological finds suggest that silkworms were being raised deliberately by at least 2500 BCE. The process was, and remains, remarkably labour-intensive. The larvae of the domesticated silk moth feed exclusively on mulberry leaves, which must be gathered fresh and chopped several times a day. When a silkworm spins its cocoon, it produces a single continuous filament that can be more than a kilometre long. To harvest this thread intact, the cocoon is placed in hot water before the moth can emerge, and the filament is carefully unwound and combined with others to form a usable yarn. Early Chinese states recognised the economic power this knowledge conferred and treated it as a state secret; according to tradition, revealing the techniques of sericulture to foreigners was punishable by death.\n\nFor centuries the strategy worked. Silk became a form of currency within China, used to pay soldiers and officials, and a diplomatic instrument beyond its borders, presented to nomadic rulers to secure peace along the frontier. The overland routes that carried the fabric westward to Persia, India, and eventually Rome became so closely identified with it that nineteenth-century geographers named the entire network the Silk Road. Yet the monopoly could not last forever. Sericulture spread first to Korea and then to Central Asia, and in the sixth century CE it reached the Byzantine Empire in famously clandestine fashion: chroniclers relate that two monks, acting on the emperor Justinian's instructions, smuggled silkworm eggs out of Asia concealed inside hollow walking canes.\n\nOnce the secret was out, production migrated steadily westward. By the twelfth century, Italian cities such as Lucca had built thriving silk industries, and skilled weavers who fled political turmoil there carried their expertise to Venice, Florence, and beyond. In France, royal policy deliberately fostered a silk industry at Lyon, which by the eighteenth century employed tens of thousands of workers and set fashions for all of Europe. Competition drove technical ingenuity: water-powered mills for twisting thread appeared in Italy centuries before comparable machinery transformed the cotton industry, and the drawlooms of Lyon, which allowed complex woven patterns, laid the conceptual groundwork for the punch-card looms of the early 1800s, themselves often cited as ancestors of computer programming.\n\nThe nineteenth century brought both expansion and crisis. Demand from newly prosperous middle-class consumers soared, but in the 1850s a mysterious epidemic known as pébrine devastated the silkworm stocks of France and Italy. The disease resisted every remedy until the chemist Louis Pasteur, after years of methodical experiment, showed that it was transmitted through infected eggs and could be eliminated by microscopic screening of breeding moths. Even so, European production never fully recovered its dominance. Japan, which reformed and industrialised its sericulture with exceptional speed after 1868, became the world's leading exporter of raw silk, and revenue from silk financed a significant share of its early industrial development.\n\nThe twentieth century finally ended silk's long reign as the supreme luxury fibre. The invention of nylon in the 1930s provided a cheap substitute for stockings and parachutes, the two products that had sustained mass demand, and wartime disruption severed trade routes. Yet silk did not disappear; it retreated upmarket. Today the fabric survives as a high-value niche product, with China once again the dominant producer, and the industry's history is studied less as a chapter in textile manufacturing than as an early example of how technology transfer, industrial espionage, and globalisation have shaped the world economy.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Silk manufacturing declined because European producers failed to control silkworm diseases.",
+            "The history of silk illustrates how a prized technology spread from a guarded monopoly to a global industry.",
+            "China's silk monopoly was destroyed primarily by the invention of synthetic fibres.",
+            "The Silk Road was more important for diplomacy than for trade in physical goods."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, how did sericulture reach the Byzantine Empire?",
+          "options": [
+            "Byzantine merchants purchased breeding stock openly in Central Asian markets.",
+            "Korean weavers migrated westward and re-established their workshops there.",
+            "Justinian's armies captured silk-producing territory during a frontier war.",
+            "Monks hid silkworm eggs inside hollow canes and carried them out of Asia."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the passage say about the disease pébrine?",
+          "options": [
+            "Pasteur showed it spread through infected eggs and could be controlled by screening breeding moths.",
+            "It was cured by importing resistant silkworm varieties from Japan.",
+            "It affected mulberry trees rather than the silkworms themselves.",
+            "It was quickly eliminated once European governments funded research."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the extraordinarily high price of silk in the ancient world depended partly on",
+          "options": [
+            "the refusal of Roman consumers to buy cheaper fabrics such as linen.",
+            "the difficulty of transporting fragile cocoons across mountain routes.",
+            "the fact that knowledge of how to produce it was confined to one region.",
+            "a deliberate Chinese policy of destroying surplus stocks each year."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the third paragraph, the word \"clandestine\" is closest in meaning to",
+          "options": [
+            "ceremonial",
+            "secretive",
+            "violent",
+            "profitable"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "argue that synthetic fibres are superior to silk in every practical respect.",
+            "criticise twentieth-century governments for neglecting traditional industries.",
+            "predict that silk production will eventually return to Europe.",
+            "explain how silk lost its mass market yet survived, and why its history still matters."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讲述丝绸业四千年的兴衰：中国的技术垄断、养蚕术西传、欧洲丝织业兴起、蚕病危机与日本崛起，以及合成纤维时代丝绸转向高端小众市场。"
+    },
+    {
+      "passage": "It is one of the enduring puzzles of human geography: why do millions of people choose to live on the slopes of active volcanoes? Roughly one person in twelve worldwide lives within a hundred kilometres of a volcano that has erupted in historical times, and in some regions the figure is far higher. Part of the answer lies in inertia and poverty, since moving is costly and land near volcanoes is often cheap. But a large part of the explanation is agricultural: volcanic soils are among the most productive on the planet, and for farming communities the promise of reliable harvests has repeatedly outweighed the distant threat of eruption.\n\nThe fertility of volcanic soils begins with the chemistry of the rock from which they form. Volcanic ash and lava are rich in minerals that plants require, including potassium, phosphorus, calcium, magnesium, and iron. Because ash particles are small and glassy, they weather quickly, releasing these nutrients into the soil over decades rather than the millennia required for hard granite to break down. As the ash decomposes, it forms distinctive clay-like materials, most notably a substance called allophane, which give the resulting soils, classified by scientists as Andisols, an unusual combination of virtues. They are light and easy to cultivate, they hold remarkable quantities of water without becoming waterlogged, and they retain nutrients in forms that plant roots can access rather than allowing rain to wash them away.\n\nThe consequences are visible on any population map. The Indonesian island of Java, dotted with active volcanoes, supports well over a thousand people per square kilometre in its rural heartland, while neighbouring Borneo, geologically quiet and covered with old, heavily leached soils, remains sparsely settled by comparison. The slopes of Mount Vesuvius carry some of the most intensively farmed land in Italy, producing tomatoes, vines, and apricots, and the flanks of Mount Etna in Sicily are terraced with vineyards whose wines now command premium prices. In East Africa, the highlands created by the Rift Valley's volcanic activity underpin the coffee economies of Ethiopia and Kenya.\n\nIt would be wrong, however, to imagine that volcanic material is a kind of instant fertiliser. Freshly fallen ash is initially sterile, and a thick blanket of it can smother crops, acidify streams, and put fields out of production for years. The transformation of ash into fertile soil requires time, moisture, and biological activity, and in dry climates the process may take centuries. Moreover, mature volcanic soils have a well-known agronomic flaw: the same allophane minerals that hold nutrients so effectively also bind phosphorus in chemical forms that plants cannot absorb. Farmers on Andisols therefore often face the paradox of soil that is rich in total phosphorus yet deficient in the usable kind, and they must apply phosphate fertiliser or organic matter to compensate.\n\nFarming communities have developed sophisticated ways of living with these trade-offs. In Java, elaborate terracing controls erosion on steep ash slopes and allows paddy rice to exploit the soil's water-holding capacity. Around Vesuvius and Etna, growers have learned which crops tolerate occasional ashfall and how quickly cultivation can resume after an eruption. Agricultural scientists, meanwhile, have begun mapping volcanic soils in detail so that fertiliser recommendations can address the phosphorus problem directly. Such knowledge does not remove the underlying hazard, but it helps explain why evacuation campaigns so often fail: for the farmer weighing a rare catastrophe against an annual harvest, staying put can be an economically rational choice.\n\nAs global food demand rises and climate change stresses conventional farmland, volcanic regions are attracting new scientific attention. Some researchers argue that crushed volcanic rock could even be spread on ordinary fields, both to supply nutrients and to absorb carbon dioxide as it weathers, effectively borrowing the volcano's gift for land far from any crater. Whether or not such schemes prove practical at scale, they underline a central lesson of the volcanic landscape: the same geological violence that periodically destroys farms is also, over the long run, what created their extraordinary productivity in the first place.",
+      "questions": [
+        {
+          "prompt": "The main purpose of the passage is to",
+          "options": [
+            "warn that population growth near active volcanoes has become unsustainable.",
+            "describe the techniques farmers use to rebuild fields after eruptions.",
+            "explain why volcanic soils are fertile and how this shapes where and how people farm.",
+            "compare the agricultural output of Java with that of Sicily."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, why do volcanic ash particles enrich soil relatively quickly?",
+          "options": [
+            "They are small and glassy, so they weather and release nutrients faster than hard rock.",
+            "They contain living microorganisms that fertilise the ground.",
+            "They attract rainfall, which accelerates the breakdown of underlying granite.",
+            "They prevent older soils beneath them from losing nitrogen."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What problem does the passage associate with allophane in mature volcanic soils?",
+          "options": [
+            "It makes the soil too heavy for ordinary ploughs to work.",
+            "It gradually acidifies streams that drain the farmland.",
+            "It causes the soil to become waterlogged during monsoon rains.",
+            "It locks phosphorus into forms that plants cannot take up."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The comparison between Java and Borneo most strongly suggests that",
+          "options": [
+            "Borneo's low population is mainly the result of government resettlement policy.",
+            "differences in soil quality can have a measurable effect on where people settle.",
+            "Java would be even more densely populated if its volcanoes were dormant.",
+            "islands with old soils cannot support commercial agriculture of any kind."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"sterile\" is closest in meaning to",
+          "options": [
+            "unable to support plant growth",
+            "free from dangerous chemicals",
+            "extremely hot to the touch",
+            "impossible to remove from fields"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude towards people who continue farming near active volcanoes?",
+          "options": [
+            "Frustration that they repeatedly ignore scientific warnings.",
+            "Surprise that so few of them adopt modern fertilisers.",
+            "Understanding, since their choice can be economically rational.",
+            "Indifference, since the risks they face are exaggerated."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "文章解释火山土壤肥沃的化学与矿物学原因（火山灰快速风化、水铝英石保水保肥），列举爪哇、维苏威、埃特纳等实例，并指出新鲜火山灰贫瘠、磷被固定等局限，说明农民留守火山区往往是理性选择。"
+    },
+    {
+      "passage": "Every morning, millions of people brush their teeth, make coffee, and check their phones in almost exactly the same sequence, with almost no conscious thought. Psychologists estimate that somewhere near forty per cent of our daily actions are not decisions at all but habits: behaviours triggered automatically by the situations in which we find ourselves. Understanding how such routines are formed, maintained, and broken has become one of the liveliest areas of behavioural science, with implications ranging from public health campaigns to the design of digital products.\n\nThe modern account of habit rests on a simple architecture that researchers often call the habit loop. A cue, some feature of the environment or of one's internal state, triggers a routine, the behaviour itself, which is followed by a reward that teaches the brain the routine is worth repeating. With repetition, control of the behaviour gradually shifts from brain systems involved in deliberate goal pursuit to deeper structures, particularly the basal ganglia, that specialise in storing well-practised action sequences. The result is automaticity: the behaviour runs off smoothly with minimal attention, freeing the conscious mind for other work. This delegation is enormously efficient, but it has a cost, for once a routine is stored in this way it no longer consults our current goals. This is why people who have recently moved house sometimes find themselves driving to their old address.\n\nOne of the most persistent pieces of folklore in this field is the claim that a new habit takes twenty-one days to form. The figure appears to have originated with a plastic surgeon in the 1960s, who observed that his patients took about three weeks to adjust to their altered appearance, and it was repeated for decades in self-help books until it hardened into apparent fact. When researchers finally tested the claim directly, tracking volunteers who tried to establish new eating, drinking, or exercise routines, the myth was comprehensively debunked. On average, the behaviours in the study took about sixty-six days to become automatic, and the range was enormous, from under three weeks for simple actions such as drinking a glass of water after breakfast to the better part of a year for demanding ones such as regular exercise. Missing a single day, encouragingly, made little measurable difference to the eventual outcome.\n\nA second key finding concerns the importance of context. Because habits are welded to the cues that trigger them, they are surprisingly vulnerable to changes of environment. Studies of people relocating to a new city find that their old routines, both good and bad, are disrupted far more than their stated intentions would predict, a phenomenon researchers call the habit discontinuity effect. Campaigners have learned to exploit this window: messages promoting cycling or recycling are markedly more effective when delivered to people who have just moved than to settled residents, because the newcomers' behaviour has been temporarily returned to conscious control.\n\nThe same logic explains why simply resolving to break a bad habit so often fails. Willpower operates on decisions, but a fully formed habit bypasses decision-making altogether, so the resolution never gets the chance to act. More effective strategies work on the loop itself: removing or avoiding the cue, adding friction so the routine becomes harder to perform, or attaching a precise plan, of the form 'when situation X arises, I will do Y', to a cue that will reliably occur. In experiments, such implementation intentions roughly double the success rates of people pursuing goals like exercising or eating more fruit.\n\nNone of this amounts to a formula for effortless self-transformation, and researchers are generally careful to say so. Habit formation is slower, more variable, and more dependent on circumstance than the self-improvement industry tends to admit. Yet the central insight remains genuinely useful: because so much of behaviour is governed by context rather than character, changing the situation is often more powerful than exhorting the person. For individuals and policymakers alike, that is a quietly optimistic conclusion.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the passage as a whole?",
+          "options": [
+            "Habits are so deeply rooted in the brain that attempts to change them almost always fail.",
+            "The twenty-one-day rule remains the most reliable guide for people trying to change their behaviour.",
+            "Digital products are the main reason modern habits have become harder to break.",
+            "Research has revealed how habits form through cues and repetition, and this knowledge suggests practical ways to change behaviour."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the passage, what happens in the brain as a behaviour becomes habitual?",
+          "options": [
+            "The conscious mind begins to monitor the behaviour more closely.",
+            "Control shifts to structures such as the basal ganglia that store practised action sequences.",
+            "The reward associated with the behaviour steadily increases in strength.",
+            "Goal-pursuit systems and habit systems merge into a single network."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did the study of volunteers forming new routines find about missing a single day?",
+          "options": [
+            "It roughly doubled the time needed for the habit to form.",
+            "It mattered greatly for exercise habits but not for eating habits.",
+            "It had little measurable effect on whether the habit eventually formed.",
+            "It caused most volunteers to abandon the attempt entirely."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred that campaigns promoting cycling succeed better with people who have recently moved because",
+          "options": [
+            "their travel behaviour is temporarily under conscious control rather than habitual.",
+            "newcomers tend to be younger and more physically active than settled residents.",
+            "moving house usually brings people closer to dedicated cycle routes.",
+            "recent movers feel social pressure to adopt the customs of their new city."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the third paragraph, the word \"debunked\" is closest in meaning to",
+          "options": [
+            "widely publicised",
+            "cautiously accepted",
+            "partially confirmed",
+            "shown to be false"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The writer's attitude towards the practical value of habit research is best described as",
+          "options": [
+            "sceptical, because laboratory findings rarely apply to real life.",
+            "cautiously positive, acknowledging limits while affirming genuinely useful insights.",
+            "enthusiastic, presenting habit science as a formula for effortless change.",
+            "neutral, refusing to evaluate the competing claims of researchers."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "文章介绍习惯形成的“线索—行为—奖赏”回路与基底神经节的作用，驳斥“21天养成习惯”的迷思（平均约66天且差异极大），并说明环境变化与执行意图等策略比单纯依靠意志力更有效。"
+    },
+    {
+      "passage": "Few occupations have inspired as much romantic imagery as that of the lighthouse keeper: the solitary figure tending a lamp above a storm-lashed sea, the last human light between ships and disaster. For roughly three centuries, from the great expansion of maritime trade in the 1700s to the closing decades of the twentieth century, keepers were a fixture of coastlines around the world. Their disappearance, accomplished almost everywhere within a single generation, is a striking case study in how quietly technology can extinguish an entire way of life.\n\nThe job itself was far less romantic than the imagery suggests. Before electrification, a keeper's night was dominated by the lamp: wicks had to be trimmed, fuel replenished, and the glass lantern panes kept free of soot and salt spray, since even a thin film could dim the light dangerously. The great rotating lenses were driven by clockwork, which meant hauling weights up the tower by hand every few hours, and every watch had to be logged. Daylight brought maintenance, painting, and the endless recording of weather. At isolated stations, keepers and their families endured months without fresh supplies, and at remote rock lighthouses, built on wave-swept reefs, men were confined for weeks to quarters little larger than a ship's cabin. The work demanded reliability above all: a light that failed on a single bad night could cost dozens of lives.\n\nThe technologies that would ultimately eliminate the keeper began to appear surprisingly early. In the first decade of the twentieth century, the Swedish engineer Gustaf Dalén developed a system that combined acetylene gas lighting with an ingenious device called the sun valve, which used the differential expansion of heated metal rods to switch the light off automatically at dawn and on again at dusk. Lighthouses equipped with his apparatus could run unattended for months at a time, and thousands were installed in Scandinavia and beyond. Electrification extended the same logic: electric lamps needed no wick-trimming, automatic lamp changers could rotate a fresh bulb into position when one burned out, and eventually sensors could report a station's condition to a distant control room.\n\nWhat converted technical possibility into policy was economics. Maintaining staffed stations, with salaries, relief crews, supply boats, and family housing, was expensive, and by the 1960s and 1970s maritime authorities in many countries had concluded that automated equipment, periodically serviced by visiting technicians, could do the job at a fraction of the cost. Helicopters made even the most inaccessible rock stations reachable for routine maintenance, removing the last practical argument for resident staff. National automation programmes gathered pace through the 1980s, and the process reached its symbolic conclusions at the end of the century: the United States automated its final station in 1998, the same year Britain withdrew its last keepers, and other maritime nations followed within a few years.\n\nThe gains were real, but so were the losses, and not only sentimental ones. Keepers had functioned as informal coastguards, spotting vessels in distress and launching rescues; automated towers watch nothing. Their meticulous daily logs, kept for decades at fixed points along the coast, have proved unexpectedly valuable to modern climate scientists reconstructing past weather and sea conditions, a data series that ended with the profession itself. Coastal communities lost employers and neighbours, and heritage bodies inherited hundreds of empty buildings. Many have since found second lives as museums, holiday cottages, and field stations, tended by volunteers who preserve the towers precisely because no one lives in them any longer.\n\nToday the lighthouses themselves face a gentler version of the same obsolescence. Satellite navigation guides ships with an accuracy no coastal light can match, and authorities have quietly decommissioned many minor lights altogether. Yet few propose extinguishing the great landfall lights entirely: electronics fail, signals can be jammed, and a light on a headland asks nothing of the sailor but eyes. The keepers are gone for good, but the lights they once tended remain, burning on as an elegant insurance policy written by an earlier age.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Automation ended the centuries-old profession of lighthouse keeping, bringing clear savings but also unexpected losses.",
+            "Lighthouse keepers were replaced because they proved unreliable in emergencies.",
+            "Satellite navigation has made lighthouses completely unnecessary for modern shipping.",
+            "The romantic image of the lighthouse keeper was invented by writers who never visited a lighthouse."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what did Gustaf Dalén's sun valve do?",
+          "options": [
+            "It converted sunlight directly into electricity to power the lamp.",
+            "It rotated a fresh bulb into position whenever one burned out.",
+            "It switched the light off at dawn and on at dusk using the expansion of heated metal.",
+            "It reported the station's condition to a distant control room."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, which factor removed the last practical argument for keeping resident staff at remote rock lighthouses?",
+          "options": [
+            "The introduction of acetylene gas lighting in Scandinavia.",
+            "Helicopter access, which made such stations reachable for routine maintenance.",
+            "The decision to convert rock stations into museums and field stations.",
+            "New laws limiting how long employees could be confined offshore."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The passage implies that keepers' weather logs became valuable to climate scientists mainly because they",
+          "options": [
+            "were written by trained meteorological observers.",
+            "recorded rescues as well as routine weather conditions.",
+            "described storms more vividly than official records did.",
+            "provided long, continuous records taken at fixed coastal locations."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"obsolescence\" is closest in meaning to",
+          "options": [
+            "restoration to an earlier condition",
+            "sudden and violent destruction",
+            "the process of becoming no longer needed",
+            "transfer to private ownership"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In discussing the disappearance of lighthouse keepers, the writer's tone can best be described as",
+          "options": [
+            "measured and mildly elegiac, weighing genuine gains against genuine losses.",
+            "indignant at the short-sightedness of maritime authorities.",
+            "amused by the public's nostalgia for an unpleasant job.",
+            "triumphant about the victory of automation over tradition."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "文章回顾灯塔看守人这一职业：从繁重的守灯工作，到达伦的乙炔灯与日光阀、电气化和直升机维护使自动化在经济上可行，最终各国于二十世纪末撤走全部看守人；作者以克制而略带怀旧的笔调权衡得失。"
+    },
+    {
+      "passage": "In the drylands that cover roughly two-fifths of the earth's land surface, the defining fact of life is not that rain never falls but that it falls rarely, briefly, and unpredictably. A season's entire allocation may arrive in a handful of violent storms, running off baked ground within hours and leaving the remaining months dry. For thousands of years, the peoples of arid regions have responded with the same essential insight: if the rain will not stay, it must be caught. Rainwater harvesting, the deliberate collection and storage of runoff, is among humanity's oldest water technologies, and after a century in the shadow of dams and deep wells it is attracting renewed attention.\n\nThe historical record is remarkably rich. In the Negev desert, farmers of the Nabataean civilisation and their successors, working two thousand years ago in areas receiving barely a hundred millimetres of rain a year, cleared hillsides and built low stone walls to guide storm runoff onto small terraced fields, concentrating the water from a large catchment onto a small cultivated area. The technique, now called runoff farming, allowed orchards and cereals to grow in a landscape that appears hopelessly barren. In the Indian subcontinent, communities developed an extraordinary variety of storage structures: covered household cisterns known as tankas, village ponds, and stepwells whose descending flights of masonry gave access to water as its level fell through the dry season. Many of these works were maintained for centuries by local institutions that allocated water and organised repairs.\n\nThe basic techniques have changed less than one might expect. Rooftop harvesting channels rain from a house or school roof through gutters into a tank, providing a household supply that is largely protected from contamination. At field scale, farmers shape the land itself: contour bunds and semicircular earth banks slow runoff and give it time to soak in, while small check dams built across seasonal streams hold back storm flows so that they recharge the groundwater beneath. What has changed is the supporting science. Hydrologists can now estimate how much water a catchment will yield, engineers can size tanks to match rainfall statistics, and cheap materials such as ferrocement have brought storage within reach of poor households.\n\nThe most celebrated modern revival comes from the Indian state of Rajasthan, where from the mid-1980s village communities, supported by non-governmental campaigners, began rebuilding thousands of johads, traditional earthen check dams that had fallen into disrepair. Over the following decades, observers documented rising water tables, the return of year-round flow in several small rivers, and the revival of agriculture in districts that had been losing population. Urban policy has followed the same logic: several Indian cities, led by Chennai, have made rooftop rainwater harvesting compulsory for buildings, and cities from Australia to the American Southwest now subsidise domestic tanks.\n\nEnthusiasm, however, deserves scrutiny, and researchers who have studied these schemes closely are careful to list their limits. Open storage loses a substantial share of its water to evaporation, precisely because arid climates are hot. Roof water is relatively clean, but surface runoff carries silt, animal waste, and bacteria, so harvested water often needs treatment before drinking. Structures silt up and embankments erode, and the history of the technique shows that its success has always depended on institutions capable of organising maintenance, a lesson some modern programmes relearned expensively. There is also a subtler hydrological point: water captured upstream is water that does not flow downstream, so large-scale harvesting can quietly redistribute a river basin's resources from one community to another. Rainwater harvesting, in short, is a valuable tool but not a panacea for water scarcity.\n\nThe fairest verdict is probably that harvesting works best as one layer in a diversified supply, buffering households and farms against variability while aquifers and reservoirs provide bulk storage. Climate models generally predict that dry regions will experience more intense rainfall concentrated in fewer events, which is precisely the pattern harvesting is designed to exploit. An ancient technology, refined by modern hydrology and honest about its limits, may yet have its most important century ahead of it.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the central idea of the passage?",
+          "options": [
+            "Modern engineering has made traditional water storage structures obsolete.",
+            "Rainwater harvesting is an ancient, newly revived technique that is genuinely useful but has clear limitations.",
+            "The success of Rajasthan's johads proves that dams and deep wells are unnecessary.",
+            "Water scarcity in arid regions is caused mainly by the failure to maintain old infrastructure."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, how did Nabataean farmers grow crops in the Negev desert?",
+          "options": [
+            "They dug stepwells that gave access to deep groundwater throughout the year.",
+            "They irrigated their fields with water carried from distant rivers.",
+            "They planted drought-resistant crops that needed no additional water.",
+            "They used cleared slopes and stone walls to direct storm runoff onto small terraced fields."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the passage say check dams built across seasonal streams are intended to do?",
+          "options": [
+            "Hold back storm flows so that water recharges the groundwater below.",
+            "Filter silt and bacteria out of water before it is stored.",
+            "Divert floodwater away from villages during intense storms.",
+            "Raise the level of rivers so boats can operate in the dry season."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The passage suggests that a large-scale harvesting programme in the upper part of a river basin could",
+          "options": [
+            "make the region's rainfall events less intense over time.",
+            "eliminate the need for water treatment in downstream cities.",
+            "reduce the amount of water available to communities downstream.",
+            "cause water tables in the upper basin to fall sharply."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"panacea\" is closest in meaning to",
+          "options": [
+            "temporary experiment",
+            "financial burden",
+            "traditional custom",
+            "universal remedy"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The writer discusses the limitations of rainwater harvesting in the fifth paragraph primarily in order to",
+          "options": [
+            "argue that governments should stop subsidising domestic tanks.",
+            "give a balanced assessment before endorsing the technique's future role.",
+            "show that ancient societies understood hydrology better than modern engineers.",
+            "explain why the Rajasthan revival ultimately failed."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "文章梳理干旱区雨水收集的古今脉络：纳巴泰人的径流农业、印度的水窖与阶梯井、拉贾斯坦邦重建johad土坝的复兴，以及蒸发损失、水质、维护和上下游分配等局限，结论是雨水收集应作为多元供水体系中的一环。"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T14:50:48.033Z",
+  "apply": true,
+  "stage": "packF",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f1.json",
+      "template": "kaoyan-reading-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f2.json",
+      "template": "kaoyan-reading-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f3.json",
+      "template": "kaoyan-reading-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f4.json",
+      "template": "kaoyan-reading-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f5.json",
+      "template": "kaoyan-reading-mcq",
+      "level": 5,
+      "parsedOk": 8,
+      "reject": 0,
+      "wrote": 8,
+      "dupSkip": 0
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao reading, batch C3. Short simple passages (~130-160 words), 4 MCQs each (detail/main idea/inference/vocab). DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Our class decided to put on a play for the school festival. I was given the main part, which made me both excited and terrified, for I had never acted in front of so many people before. For weeks, we practised every afternoon. Some students painted the background, others made the costumes, and we all helped each other learn our lines. On the night of the show, my heart was beating fast. When I walked onto the stage, the bright lights almost blinded me, and for one moment I forgot my first line! But my classmates whispered it to me from the side, and I quickly continued. The play was a great success, and the audience clapped loudly at the end. I felt so proud. More than that, I learned that a play is never the work of one person; it was our teamwork, not just my acting, that made the night so special.",
+      "questions": [
+        { "prompt": "What part did the writer get in the play?", "options": ["A very small part.", "The main part.", "No part at all.", "The teacher's part."], "answer": "B" },
+        { "prompt": "What happened to the writer on stage?", "options": ["He sang a song.", "He forgot his first line.", "He fell over.", "He ran off the stage."], "answer": "B" },
+        { "prompt": "How did the classmates help?", "options": ["They laughed at him.", "They whispered the line to him.", "They went home early.", "They turned off the lights."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["That acting is easy.", "That a play is the work of a team, not just one person.", "That he should never act again.", "That festivals are boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 主角)、细节(B 忘了第一句台词)、细节(B 同学在旁提词)、主旨(B 话剧靠团队协作而非一人)。"
+    },
+    {
+      "passage": "On my way to school one morning, I saw an old blind man standing at the edge of a busy road. He held a white stick and seemed unsure when to cross. Cars rushed past quickly, and no one stopped to help him. I was in a hurry, but I could not just walk away. So I went over and gently asked if he needed help. He smiled and nodded. I told him when the traffic light turned green, and then I carefully led him across the road. He thanked me warmly and said I had made his whole day better. That small act made me late for school, and my teacher was a little angry at first. But when I explained what had happened, she smiled and said I had done the right thing. Helping that old man taught me that we should always have time to care for others, even when we are busy.",
+      "questions": [
+        { "prompt": "Who did the writer see by the road?", "options": ["A young boy.", "An old blind man.", "A police officer.", "A teacher."], "answer": "B" },
+        { "prompt": "What did the writer do?", "options": ["Walked away quickly.", "Led the man across the road.", "Called the man's family.", "Took the man's stick."], "answer": "B" },
+        { "prompt": "Why was the writer late for school?", "options": ["He had overslept.", "He stopped to help the old man.", "He missed the bus.", "He lost his way."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["Never to help strangers.", "We should always have time to care for others.", "That being late is a good thing.", "That roads are too dangerous."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 盲人老者)、细节(B 扶他过马路)、细节(B 因帮人而迟到)、主旨(B 再忙也要有时间关心他人)。"
+    },
+    {
+      "passage": "Last summer, I went to a riding camp in the mountains for one week. I had always loved horses, but I had never ridden one before. On the first day, I was given a brown horse named Coco. She was big and strong, and at first I felt a little afraid. Our teacher showed us how to sit, hold the reins, and speak gently to the horse. Learning to ride was not easy. I had to practise for hours, and I fell off twice! But Coco was patient and kind, and slowly we became friends. By the end of the week, I could ride her around the field on my own. Saying goodbye to Coco was the hardest part. That week taught me that trust takes time to build, whether between two people or between a girl and her horse.",
+      "questions": [
+        { "prompt": "What was the camp about?", "options": ["Swimming.", "Riding horses.", "Painting.", "Singing."], "answer": "B" },
+        { "prompt": "How did the writer feel on the first day?", "options": ["Bored.", "A little afraid.", "Angry.", "Sleepy."], "answer": "B" },
+        { "prompt": "What was the hardest part of the week?", "options": ["Feeding Coco.", "Saying goodbye to Coco.", "Cleaning the field.", "The camp food."], "answer": "B" },
+        { "prompt": "What did the week teach the writer?", "options": ["That horses are dangerous.", "That trust takes time to build.", "That riding is very easy.", "That camps are boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 骑马)、细节(B 起初有点怕)、细节(B 与 Coco 告别最难)、主旨(B 信任需要时间建立)。"
+    },
+    {
+      "passage": "One afternoon, I went to a small shop to buy a bottle of water. I gave the shopkeeper a ten-yuan note. She was very busy and gave me too much change by mistake — almost five yuan extra. I had already left the shop before I noticed. For a moment, I thought about keeping the money. After all, it was her mistake, not mine, and five yuan could buy a nice snack. But then I remembered how hard shopkeepers work for every coin. If she was short of money at the end of the day, she might even have to pay it herself. So I turned around and went back to return the extra change. The shopkeeper was surprised and very grateful. She thanked me and gave me a free sweet. I walked home feeling something far better than five yuan could ever buy: the warm, light feeling of having done the right thing.",
+      "questions": [
+        { "prompt": "What did the writer buy?", "options": ["A snack.", "A bottle of water.", "A book.", "A sweet."], "answer": "B" },
+        { "prompt": "What mistake did the shopkeeper make?", "options": ["She gave the wrong item.", "She gave too much change.", "She charged too much money.", "She forgot the water."], "answer": "B" },
+        { "prompt": "What did the writer finally do?", "options": ["Kept the extra money.", "Went back to return the extra change.", "Bought a snack with it.", "Said nothing."], "answer": "B" },
+        { "prompt": "How did the writer feel afterwards?", "options": ["Angry.", "Good, for having done the right thing.", "Sad.", "Bored."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 买水)、细节(B 多找了零钱)、细节(B 返回退还)、推断(B 因做对的事而心安愉悦)。"
+    },
+    {
+      "passage": "This year, our school turned a piece of empty land into a vegetable garden. Each class was given a small plot to look after. At first, we knew nothing about growing vegetables. We planted our seeds too deep, forgot to water them, and pulled out a few plants by mistake, thinking they were weeds! Our science teacher patiently taught us what to do. Slowly, green leaves began to appear. We learned to water in the cool morning, to keep away insects, and to wait. It took weeks of hard work. Finally, the day came to pick our vegetables. We cooked them in the school kitchen and shared a meal together. Those vegetables were the best I had ever eaten, perhaps because we had grown them ourselves. The garden taught us where food really comes from, and how much patience nature requires.",
+      "questions": [
+        { "prompt": "What did the school turn the empty land into?", "options": ["A car park.", "A vegetable garden.", "A swimming pool.", "A new classroom."], "answer": "B" },
+        { "prompt": "What mistake did the students make at first?", "options": ["They watered far too much.", "They planted too deep and pulled out good plants by mistake.", "They sold the seeds.", "They ate all the seeds."], "answer": "B" },
+        { "prompt": "What did the students do with the vegetables?", "options": ["Sold them in the market.", "Cooked them and shared a meal.", "Threw them away.", "Gave them all to animals."], "answer": "B" },
+        { "prompt": "What did the garden teach the students?", "options": ["That gardening is useless.", "Where food comes from and how much patience nature needs.", "That vegetables are very cheap.", "That science is boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 改成菜园)、细节(B 种太深、误拔好苗)、细节(B 烹饪并共享)、主旨(B 食物之源与自然所需的耐心)。"
+    },
+    {
+      "passage": "Last week, our city held a Science and Technology Fair, and our school took us to visit it. It was amazing! There were robots that could dance, cars that ran on sunlight, and even glasses that could help deaf people 'see' sound as words. My favourite was a robot arm that could write Chinese characters more beautifully than I can. A scientist explained that all these inventions were created to make people's lives better and easier. One machine could turn dirty water into clean drinking water, which could help people in places where water is hard to find. Walking around the fair, I felt that the future was full of hope. I came home full of new ideas and dreams. The fair made me want to study science harder, so that one day I might invent something that helps the world too.",
+      "questions": [
+        { "prompt": "Where did the school take the students?", "options": ["A zoo.", "A Science and Technology Fair.", "A library.", "A farm."], "answer": "B" },
+        { "prompt": "What was the writer's favourite invention?", "options": ["A dancing robot.", "A robot arm that writes Chinese characters.", "A sunlight car.", "The food stall."], "answer": "B" },
+        { "prompt": "What could one machine do?", "options": ["Make people fly.", "Turn dirty water into clean drinking water.", "Cook meals by itself.", "Read people's minds."], "answer": "B" },
+        { "prompt": "How did the fair make the writer feel?", "options": ["Bored.", "Hopeful and eager to study science.", "Tired.", "Afraid."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 科技展)、细节(B 写汉字的机械臂)、细节(B 把脏水变清水)、推断(B 充满希望、想更努力学科学)。"
+    },
+    {
+      "passage": "My neighbour, Mrs. Lee, broke her leg last month and could not walk her dog, Lucky. Lucky is a friendly little dog who needs to run and play every day. When I heard about this, I offered to walk him for her. Every morning before school and every evening after dinner, I take Lucky to the park. At first, my parents worried it would be too much work for me. But I have come to love our walks. Lucky is always so happy to see me, jumping and wagging his tail. While we walk, I have time to think quietly, and I have made several new friends among the other dog walkers in the park. Mrs. Lee says I have been a great help. But the truth is, helping her has helped me too. I have learned that doing something kind for others often brings unexpected joy to ourselves.",
+      "questions": [
+        { "prompt": "Why couldn't Mrs. Lee walk her dog?", "options": ["She was too busy.", "She had broken her leg.", "She did not like the dog.", "She had moved away."], "answer": "B" },
+        { "prompt": "How often does the writer walk Lucky?", "options": ["Once a week.", "Every morning and every evening.", "Only on weekends.", "Never."], "answer": "B" },
+        { "prompt": "What did the writer gain from walking Lucky?", "options": ["A lot of money.", "New friends and quiet time to think.", "A new dog of his own.", "Nothing at all."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["That walking dogs is too hard.", "That doing kind things often brings joy to ourselves.", "That dogs are too much work.", "That helping others is useless."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 摔断了腿)、细节(B 每天早晚)、细节(B 收获新朋友与静思时间)、主旨(B 善待他人常给自己带来意外的快乐)。"
+    },
+    {
+      "passage": "My grandfather is a master of making kites. When I was young, I loved watching him work. With just bamboo, paper and string, he could create beautiful kites in the shapes of birds, fish and dragons. Last spring, he finally offered to teach me. I thought it would be easy, but I was wrong. My first kite was crooked and would not fly at all, and I felt like giving up. But my grandfather smiled and said, 'A kite, like a person, needs balance to rise.' He helped me see my mistakes, and we tried again and again. After many attempts, I finally made a simple kite that flew high into the blue sky. Watching it dance in the wind, I felt a joy I will never forget. My grandfather taught me far more than how to make a kite; he taught me that patience and balance can lift us above any difficulty.",
+      "questions": [
+        { "prompt": "What is the grandfather good at?", "options": ["Cooking.", "Making kites.", "Painting.", "Singing."], "answer": "B" },
+        { "prompt": "What materials does he use to make kites?", "options": ["Metal and glass.", "Bamboo, paper and string.", "Plastic only.", "Wood and stone."], "answer": "B" },
+        { "prompt": "What did the grandfather say to the writer?", "options": ["That kites are easy to make.", "That a kite, like a person, needs balance to rise.", "That the writer should give up.", "That it is better to buy a kite."], "answer": "B" },
+        { "prompt": "What is the main lesson of the passage?", "options": ["Kite-making is useless.", "Patience and balance can lift us above any difficulty.", "Grandfathers are too strict.", "Flying kites is dangerous."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 做风筝高手)、细节(B 竹/纸/线)、细节(B 风筝如人需平衡才能升起)、主旨(B 耐心与平衡能助我们越过困难)。"
+    },
+    {
+      "passage": "During our seaside holiday, my family did something a little different. Instead of only swimming and sunbathing, we joined a beach clean-up. Early one morning, we met a group of volunteers with gloves and large bags. Together, we walked along the shore, picking up every piece of rubbish we could find: plastic bottles, broken nets, bags and cans. I was shocked by how much there was. In just two hours, our group filled more than twenty bags! A volunteer told us that this rubbish is very dangerous for sea animals, which sometimes eat it by mistake. By the time we finished, the beach looked clean and beautiful again. I felt tired but very proud. That morning changed the way I think about rubbish. Now I am always careful to take my litter home, because I have seen with my own eyes the harm it can do to our beautiful seas.",
+      "questions": [
+        { "prompt": "What did the family join during their holiday?", "options": ["A swimming race.", "A beach clean-up.", "A fishing trip.", "A boat tour."], "answer": "B" },
+        { "prompt": "What did they pick up on the shore?", "options": ["Shells and pretty stones.", "Plastic bottles, nets, bags and cans.", "Food for a picnic.", "Children's toys."], "answer": "B" },
+        { "prompt": "Why is the rubbish dangerous?", "options": ["It smells very bad.", "Sea animals sometimes eat it by mistake.", "It is too heavy to move.", "It is brightly coloured."], "answer": "B" },
+        { "prompt": "What does the writer do now?", "options": ["Drops litter on the beach.", "Always takes her litter home.", "Stops going to the sea.", "Ignores rubbish completely."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 海滩清洁)、细节(B 瓶/网/袋/罐)、细节(B 海洋动物误食)、推断(B 现在总把垃圾带回家)。"
+    },
+    {
+      "passage": "Our maths teacher, Mr. Sun, has taught our class for three years. He is strict but kind, and he always stays after school to help students who do not understand. Last month, he suddenly fell ill and had to stay in hospital for an operation. The whole class was worried about him, and we wanted to show him how much we cared. So we came up with a plan. Each of us wrote a short letter or drew a picture for him. We also made a big card with all our names on it, and we recorded a video of the whole class saying, 'Get well soon, Mr. Sun!' Our monitor took everything to the hospital. Later, we heard that Mr. Sun was deeply moved and even cried a little when he saw our gifts. He said our love gave him strength to recover. When he finally came back to school, the whole class stood up and cheered. That day, we all understood how strong the bond between a teacher and his students can be.",
+      "questions": [
+        { "prompt": "What happened to Mr. Sun last month?", "options": ["He moved to another city.", "He fell ill and had to stay in hospital.", "He retired from teaching.", "He won a big prize."], "answer": "B" },
+        { "prompt": "What did the students do for him?", "options": ["Nothing at all.", "Wrote letters and made a card and a video.", "Visited his house every day.", "Sent him a lot of money."], "answer": "B" },
+        { "prompt": "How did Mr. Sun feel when he saw the gifts?", "options": ["Angry.", "Deeply moved; they gave him strength.", "Bored.", "Embarrassed."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Teachers are too strict.", "The strong bond between a teacher and his students.", "Hospitals are frightening places.", "Maths is a hard subject."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 生病住院手术)、细节(B 写信、做卡片与视频)、细节(B 深受感动、获得力量)、主旨(B 师生间深厚的情谊)。"
+    }
+  ]
+}

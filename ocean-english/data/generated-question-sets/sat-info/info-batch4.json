@@ -1,0 +1,103 @@
+{
+  "template": "sat-information-and-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Information and Ideas items, batch 4. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The deepest parts of the ocean were once thought to be lifeless deserts, far too dark and cold for anything to survive. Then explorers found whole communities thriving around volcanic vents, fed not by sunlight but by chemicals seeping up from the earth itself. Life, it turned out, had simply found another way to begin.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Life was found thriving in the deep ocean by relying on chemicals rather than sunlight.", "The deep ocean is, as long believed, a completely lifeless desert.", "Volcanic vents occur only in shallow, sunlit water.", "Sunlight is necessary for every form of life on Earth."],
+      "answer": "Life was found thriving in the deep ocean by relying on chemicals rather than sunlight.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：深海生命靠化学物质而非阳光繁荣。B、C、D 均与文中发现相反。"
+    },
+    {
+      "passage": "The young pianist practiced the same difficult passage every single morning for a month, and her neighbor, a retired musician, said nothing at all. On the day she finally played it flawlessly, she found a single sheet of new, far harder music slipped quietly under her door, entirely unsigned.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The neighbor had been quietly following her progress and encouraging her to advance.", "The neighbor was deeply annoyed by the constant practicing.", "The pianist had already given up on the difficult passage.", "The neighbor wanted the pianist to stop playing for good."],
+      "answer": "The neighbor had been quietly following her progress and encouraging her to advance.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：在她成功当天送来更难的曲谱，说明一直留意并鼓励她进阶。B、C、D 与这一举动相悖。"
+    },
+    {
+      "passage": "The arctic fox changes with the seasons. In winter its fur grows thick and white, hiding it against the deep snow; in summer the coat thins and turns brown, blending instead with the bare tundra rocks. The same animal wears two different disguises each year, each one matched to the land around it.",
+      "prompt": "According to the text, why does the arctic fox's fur turn brown in summer?",
+      "options": ["To blend in with the bare tundra rocks.", "To keep it warmer during the summer nights.", "To hide it against the winter snow.", "To attract a mate during the breeding season."],
+      "answer": "To blend in with the bare tundra rocks.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说夏季棕毛与裸露苔原岩石融为一体。B、D 文未提，C 是冬季白毛的作用。"
+    },
+    {
+      "passage": "An economist claims that a city's new bike-share program reduced car traffic downtown. Skeptics point out that traffic also tends to fall whenever fuel prices rise, so she needs evidence that separates the effect of the bikes from that of other possible causes.",
+      "prompt": "Which finding would most directly support the economist's claim?",
+      "options": ["Traffic fell downtown even during months when fuel prices stayed flat.", "Fuel prices happened to rise sharply the same year the program began.", "The bike-share program proved popular in several nearby towns.", "Downtown parking remained just as expensive as before."],
+      "answer": "Traffic fell downtown even during months when fuel prices stayed flat.",
+      "domain": "Information and Ideas",
+      "explain_zh": "需排除油价因素，故油价不变时交通仍下降最有力。B 反而引入混淆，C、D 与因果分离无关。"
+    },
+    {
+      "passage": "Each year the gardener saved seeds only from the tomato plants that had survived the driest weeks without wilting. After many seasons, her tomatoes could endure droughts that killed every other plant in the valley, though she had never read a single word about plant breeding.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["By repeatedly saving seeds from the hardiest plants, the gardener gradually bred drought-resistant tomatoes.", "The gardener's success depended on her formal training in plant science.", "The tomatoes grew steadily weaker with each passing season.", "Drought had no real effect on the plants in the valley."],
+      "answer": "By repeatedly saving seeds from the hardiest plants, the gardener gradually bred drought-resistant tomatoes.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：年年留最耐旱植株的种子，逐代培育出抗旱番茄。B 与从未读过育种相反，C、D 与结果矛盾。"
+    },
+    {
+      "passage": "A library compared book borrowing before and after it extended its evening hours. In the year before the change, members borrowed an average of 9 books each. In the year after, when the library stayed open three hours later, that average rose to 14 books, with the steepest increase among working adults.",
+      "prompt": "Which choice best describes data presented in the text?",
+      "options": ["Borrowing rose after the evening hours were extended, especially among working adults.", "Borrowing fell once the library began staying open later.", "Working adults borrowed far fewer books than before.", "The change in hours had no measurable effect on borrowing."],
+      "answer": "Borrowing rose after the evening hours were extended, especially among working adults.",
+      "domain": "Information and Ideas",
+      "explain_zh": "数据：9→14，工作成人增幅最大。B、C 与上升相反，D 与变化矛盾。"
+    },
+    {
+      "passage": "We often picture great discoveries as sudden flashes of insight. Yet the notebooks of many famous scientists tell a duller, more honest story: page after page of repeated failures, crossed-out guesses, and patient measurement. The flash, when it finally comes, almost always rests on years of unglamorous, accumulated work.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["Major discoveries usually grow out of long, patient effort rather than sudden inspiration alone.", "Famous scientists rarely bothered to keep written records of their work.", "Sudden flashes of insight are the main source of scientific discovery.", "Repeated failure generally prevents scientists from making discoveries."],
+      "answer": "Major discoveries usually grow out of long, patient effort rather than sudden inspiration alone.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：重大发现多源于长期耐心积累而非灵光一现。B 与 notebooks 矛盾，C 与文意相反，D 误读失败的作用。"
+    },
+    {
+      "passage": "The café posts no menu and serves only whatever the cook has bought fresh that very morning. Regulars say they have never once eaten the same dish twice, and newcomers learn quickly that asking what is good today brings only a smile and the day's single, unrepeatable plate.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The café's offerings change daily depending on what is freshly available.", "The café serves the very same dish to everyone every day.", "Customers may order anything they wish from a fixed menu.", "The café is rarely able to obtain fresh ingredients."],
+      "answer": "The café's offerings change daily depending on what is freshly available.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：按当日新鲜食材供应、从不重样。B、C 与无菜单/不重样矛盾，D 与 bought fresh 矛盾。"
+    },
+    {
+      "passage": "To navigate at night, the dung beetle does something no other insect is known to do: it looks to the Milky Way. Unable to make out individual stars, the beetle instead reads the broad, pale band of light stretching across the sky, using it as a compass to roll its ball in a straight line away from rivals.",
+      "prompt": "According to the text, how does the dung beetle navigate at night?",
+      "options": ["By using the broad band of the Milky Way as a compass.", "By identifying particular bright individual stars.", "By following the light of the rising moon.", "By tracking the movements of rival beetles."],
+      "answer": "By using the broad band of the Milky Way as a compass.",
+      "domain": "Information and Ideas",
+      "explain_zh": "文明说它读银河那条光带作罗盘。B 与 unable to make out individual stars 矛盾，C、D 文未提。"
+    },
+    {
+      "passage": "A historian argues that a medieval queen, long dismissed as powerless, actually shaped many major decisions of her husband's court. To support this view, she is searching for documents that show the queen's direct, personal involvement in real matters of state.",
+      "prompt": "Which find would most directly support the historian's argument?",
+      "options": ["Official orders from the period bearing the queen's own seal beside the king's.", "A portrait showing the queen in elegant ceremonial robes.", "Records of the lavish banquets the queen often hosted.", "A court poem praising the queen's beauty and grace."],
+      "answer": "Official orders from the period bearing the queen's own seal beside the king's.",
+      "domain": "Information and Ideas",
+      "explain_zh": "支持参与国政最直接的是盖有王后印的官方政令。B、C、D 仅涉形象、社交与美貌，不证政治权力。"
+    },
+    {
+      "passage": "The factory's oldest machine has a small brass plate that the workers polish but never read, its engraving worn smooth by a century of passing hands. The newer machines nearby are sleek and silent, yet it is the old one, still faithfully running, that the workers speak of with something close to affection.",
+      "prompt": "Which choice is best supported by the text?",
+      "options": ["The workers value the old machine for reasons beyond its mere usefulness.", "The old machine is by far the most efficient one in the factory.", "The workers wish the old machine would finally be replaced.", "The brass plate clearly explains how the machine works."],
+      "answer": "The workers value the old machine for reasons beyond its mere usefulness.",
+      "domain": "Information and Ideas",
+      "explain_zh": "推断：对仍在运转的旧机器怀有近乎情感的喜爱，说明价值超出实用。B 文未比较效率，C 与 affection 相反，D 与 never read 矛盾。"
+    },
+    {
+      "passage": "A single honeybee, entirely on its own, is almost helpless and rarely survives for long. But a hive of many thousands can regulate its own temperature, defend itself against intruders, and store enough food to last through a hard winter. The colony accomplishes together what no individual bee could ever manage alone.",
+      "prompt": "Which choice best states the main idea of the text?",
+      "options": ["A bee colony achieves through cooperation what no single bee could do alone.", "Individual honeybees are far stronger than the colony as a whole.", "Honeybees cannot survive cold winters under any circumstances.", "A single bee can perform all the essential tasks of the hive."],
+      "answer": "A bee colony achieves through cooperation what no single bee could do alone.",
+      "domain": "Information and Ideas",
+      "explain_zh": "主旨：蜂群协作完成单只蜂无法完成之事。B、D 与 helpless alone 矛盾，C 与 store food through winter 矛盾。"
+    }
+  ]
+}

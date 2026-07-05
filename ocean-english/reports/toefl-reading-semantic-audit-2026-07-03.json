@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-07-03T12:02:15.289Z",
+  "scope": "toefl lv6 read_daily_life + reading_comprehension, status=draft",
+  "perTask": {
+    "read_daily_life": {
+      "draft": 100,
+      "nonDraft": 0,
+      "items": 250,
+      "pos": {
+        "a": 79,
+        "b": 58,
+        "c": 58,
+        "d": 55
+      },
+      "wordViolations": 0
+    },
+    "reading_comprehension": {
+      "draft": 100,
+      "nonDraft": 0,
+      "items": 400,
+      "pos": {
+        "a": 130,
+        "b": 90,
+        "c": 90,
+        "d": 90
+      },
+      "wordViolations": 0
+    }
+  },
+  "nearDupPairs": 0,
+  "errors": [],
+  "warnings": [
+    "read_daily_life gen:toefl-read-daily-life:set:claude:s956lg: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:bqr501: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:12uxxpj: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1xsciyr: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:hymvhw: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1ql4zt6: 可能纯词面重叠可解（正确项重叠 5，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:nksksk: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:nksksk: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1xmlcjg: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1utnmrp: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:15babwk: 可能纯词面重叠可解（正确项重叠 6，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:116pm02: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:3zhhek: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:qbvrtb: 可能纯词面重叠可解（正确项重叠 6，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1jguhxj: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1jguhxj: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:eiycew: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:18i00nq: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1hpezad: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1mni1rn: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:x9fttt: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1fimnm9: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:c1rb7r: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1wp7g26: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:krtciu: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:ph8vug: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:azmyp9: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1i4h2bz: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1m9ivp4: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:13p8y2r: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:zff1a3: 可能纯词面重叠可解（正确项重叠 5，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:17kgapx: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "read_daily_life gen:toefl-read-daily-life:set:claude:1ta0k8: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "reading_comprehension gen:toefl-academic-reading:set:claude:1mdm4aa: 可能纯词面重叠可解（正确项重叠 4，干扰项 0）",
+    "reading_comprehension gen:toefl-academic-reading:set:claude:13xqmkr: 可能纯词面重叠可解（正确项重叠 3，干扰项 0）",
+    "reading_comprehension gen:toefl-academic-reading:set:claude:jzsy0i: 可能纯词面重叠可解（正确项重叠 7，干扰项 0）"
+  ],
+  "ok": true
+}

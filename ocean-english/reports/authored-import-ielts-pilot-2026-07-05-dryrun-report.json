@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-07-04T20:26:08.385Z",
+  "apply": false,
+  "stage": "ielts-pilot-2026-07-05",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 5,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\ielts-pilot-2026-07-05\\ielts-reading-a.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 3,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-pilot-2026-07-05\\ielts-reading-b.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 2,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

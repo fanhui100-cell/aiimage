@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-21T06:55:14.066Z",
+  "apply": false,
+  "stage": "packF",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f1.json",
+      "template": "reading-comprehension-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packF\\reading-kaoyan-lv5-f2.json",
+      "template": "reading-comprehension-mcq",
+      "level": 5,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

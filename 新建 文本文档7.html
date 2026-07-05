@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminous Banyan - Precision Physics</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000000;
+            font-family: monospace;
+        }
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        #ui-layer {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(190, 215, 230, 0.7);
+            font-size: 12px;
+            letter-spacing: 3px;
+            pointer-events: none;
+            text-align: center;
+            z-index: 10;
+        }
+        #panel {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 220px;
+            padding: 16px 16px 18px;
+            background: rgba(8, 12, 18, 0.65);
+            border: 1px solid rgba(150, 190, 210, 0.3);
+            border-radius: 10px;
+            backdrop-filter: blur(6px);
+            color: #cfe3ee;
+            font-size: 11px;
+            letter-spacing: 1px;
+            user-select: none;
+            z-index: 10;
+        }
+        #panel h2 {
+            margin: 0 0 14px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #eaf6ff;
+            opacity: 0.95;
+        }
+        .row { margin-bottom: 14px; }
+        .row label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+        .row .val { color: #9fe4f5; font-weight: bold;}
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 3px;
+            background: rgba(140, 200, 220, 0.35);
+            border-radius: 3px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: #9fe4f5;
+            box-shadow: 0 0 10px rgba(120, 220, 240, 0.9);
+            cursor: pointer;
+        }
+        .swatches { display: flex; gap: 8px; }
+        .swatch {
+            flex: 1;
+            height: 22px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform .12s ease;
+        }
+        .swatch:hover { transform: translateY(-2px); }
+        .swatch.active { border-color: #fff; box-shadow: 0 0 12px rgba(255,255,255,0.6); }
+        #colorPicker {
+            width: 100%; height: 26px;
+            border: 1px solid rgba(150,190,210,0.3);
+            border-radius: 5px;
+            background: transparent;
+            cursor: pointer;
+        }
+        #instruction {
+            margin-top: 12px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            text-align: center;
+            font-size: 10px;
+            color: #7dffb0;
+            letter-spacing: 1px;
+            line-height: 1.6;
+        }
+    </style>
+
+    <script src="https://unpkg.com/three@0.140.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://unpkg.com/three@0.140.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <div id="panel">
+        <h2>PARTICLE CONTROLS</h2>
+        <div class="row">
+            <label>粒子大小 <span class="val" id="sizeVal">3.0</span></label>
+            <input type="range" id="size" min="0.5" max="6" step="0.1" value="3.0">
+        </div>
+        <div class="row">
+            <label>拖尾亮度 <span class="val" id="alphaVal">0.25</span></label>
+            <input type="range" id="alpha" min="0" max="0.6" step="0.01" value="0.25">
+        </div>
+        <div class="row">
+            <label>颜色预设</label>
+            <div class="swatches">
+                <div class="swatch active" data-c="#ffffff" style="background:#cfe2ee" title="银白"></div>
+                <div class="swatch" data-c="#5fd8f0" style="background:#5fd8f0" title="赛博青"></div>
+                <div class="swatch" data-c="#7dffb0" style="background:#7dffb0" title="生命绿"></div>
+                <div class="swatch" data-c="#c79bff" style="background:#c79bff" title="幽紫"></div>
+            </div>
+        </div>
+        <div class="row">
+            <label>自定义颜色</label>
+            <input type="color" id="colorPicker" value="#ffffff">
+        </div>
+        <div id="instruction">
+            ❖ 树冠排斥: 极柔微风<br>
+            ❖ 浮尘引力: 均衡凝聚<br>
+            ❖ 发光拖尾: 生物流体
+        </div>
+        <button id="replay">↻ 重新生长</button>
+    </div>
+
+    <div id="ui-layer">ECOSYSTEM INITIALIZING...</div>
+
+    <script>
+        // ----------------------------------------------------
+        // 1. 基础场景设置
+        // ----------------------------------------------------
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x000000, 0.0022); 
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1500);
+        camera.position.set(0, 30, 260);
+        camera.lookAt(0, 45, 0);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: "high-performance" });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x000000);
+        container.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.20; 
+        controls.target.set(0, 45, 0);
+
+        // ----------------------------------------------------
+        // 2. 后期辉光
+        // ----------------------------------------------------
+        const renderScene = new THREE.RenderPass(scene, camera);
+        const bloomPass = new THREE.UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 2.0, 0.6, 0.1);
+
+        const composer = new THREE.EffectComposer(renderer);
+        composer.addPass(renderScene);
+        composer.addPass(bloomPass);
+
+        // ====================================================
+        // 3. 大树底层的数学算法与骨架配置
+        // ====================================================
+        const particlesData = { positions: [], pathLengths: [], delays: [], durations: [], colors: [] };
+
+        const colorBase = new THREE.Color(0xDDF0FF); 
+        const colorTip  = new THREE.Color(0xFFFFFF); 
+        const colorAlt  = new THREE.Color(0xC2E0FA); 
+        const grassBase = new THREE.Color(0xA5E6D8);
+        const grassAlt  = new THREE.Color(0x75D1C3);
+
+        const rand = (min, max) => Math.random() * (max - min) + min;
+        const jitterVec = (s) => new THREE.Vector3(rand(-s, s), rand(-s, s), rand(-s, s));
+
+        function addCurveToSystem(curve, pointCount, delay, duration, colorScale = 1.0, cBase = colorBase, cAlt = colorAlt) {
+            const points = curve.getPoints(pointCount);
+            const isVariant = Math.random() > 0.7;
+            let finalColor = new THREE.Color().copy(cBase);
+            if (isVariant) finalColor.lerp(cAlt, 0.7);
+
+            for (let i = 0; i <= pointCount; i++) {
+                const pt = points[i];
+                if (!pt) continue;
+                const progress = i / pointCount;
+                particlesData.positions.push(pt.x, pt.y, pt.z);
+                particlesData.pathLengths.push(progress);
+                particlesData.delays.push(delay);
+                particlesData.durations.push(duration);
+                const ptColor = finalColor.clone().lerp(colorTip, Math.min(1, progress * colorScale));
+                particlesData.colors.push(ptColor.r, ptColor.g, ptColor.b);
+            }
+        }
+
+        for(let i=0; i<250; i++) {
+            const angle = rand(0, Math.PI * 2);
+            const radius = rand(15, 65); 
+            const p0 = new THREE.Vector3(rand(-4,4), -5, rand(-4,4)); 
+            const p1 = new THREE.Vector3(Math.cos(angle)*radius*0.4, 0, Math.sin(angle)*radius*0.4);
+            const p2 = new THREE.Vector3(Math.cos(angle)*radius, rand(-3, 0), Math.sin(angle)*radius);
+            addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 150, rand(0, 0.5), rand(1.0, 1.5));
+        }
+
+        for(let i=0; i<1200; i++) {
+            const angle = rand(0, Math.PI * 2);
+            const radius = Math.pow(Math.random(), 1.5) * 75; 
+            const p0 = new THREE.Vector3(Math.cos(angle)*radius, -4.5 + rand(-0.5, 0.5), Math.sin(angle)*radius);
+            const leanDir = rand(0.5, 3.5);
+            const p1 = new THREE.Vector3(p0.x + Math.cos(angle)*leanDir*0.5, p0.y + rand(1.0, 2.5), p0.z + Math.sin(angle)*leanDir*0.5);
+            const p2 = new THREE.Vector3(p1.x + Math.cos(angle)*leanDir, p1.y + rand(0.5, 2.0), p1.z + Math.sin(angle)*leanDir);
+            addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 18, rand(0.5, 1.5), rand(0.8, 1.5), 1.0, grassBase, grassAlt);
+        }
+
+        const trunkTops = [];
+        const numMainTrunks = 4;
+        const strandsPerTrunk = 75; 
+
+        for (let t = 0; t < numMainTrunks; t++) {
+            const baseAngle = (t / numMainTrunks) * Math.PI * 2 + rand(-0.2, 0.2);
+            const startRadius = rand(3, 7);
+            const startCenter = new THREE.Vector3(Math.cos(baseAngle)*startRadius, 0, Math.sin(baseAngle)*startRadius);
+            const lean = rand(15, 25);
+            const endCenter = new THREE.Vector3(Math.cos(baseAngle)*lean, rand(35, 45), Math.sin(baseAngle)*lean);
+            
+            for (let i = 0; i < strandsPerTrunk; i++) {
+                const rBase = rand(0, 5);
+                const angle = rand(0, Math.PI * 2);
+                const p0 = new THREE.Vector3(startCenter.x + Math.cos(angle)*rBase, 0, startCenter.z + Math.sin(angle)*rBase);
+                const twist = angle + rand(-Math.PI, Math.PI); 
+                const p1 = new THREE.Vector3(
+                    startCenter.x + (endCenter.x - startCenter.x)*0.5 + Math.cos(twist)*(rBase*2), 
+                    endCenter.y * rand(0.4, 0.6), 
+                    startCenter.z + (endCenter.z - startCenter.z)*0.5 + Math.sin(twist)*(rBase*2)
+                );
+                const p2 = new THREE.Vector3(endCenter.x + rand(-8, 8), endCenter.y + rand(-5, 5), endCenter.z + rand(-8, 8));
+                trunkTops.push(p2);
+                addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 200, rand(0.5, 1.2), rand(1.5, 2.0));
+            }
+        }
+
+        const branchTops = [];
+        trunkTops.forEach(tTop => {
+            const numBranches = Math.floor(rand(1, 3)); 
+            for(let i=0; i<numBranches; i++) {
+                const outVector = new THREE.Vector3(tTop.x, 0, tTop.z).normalize();
+                const branchDir = outVector.clone().applyAxisAngle(new THREE.Vector3(0,1,0), rand(-1.2, 1.2));
+                const bSpread = rand(40, 110); 
+                const bHeight = tTop.y + rand(-2, 12); 
+                const p0 = tTop;
+                const p1 = new THREE.Vector3(tTop.x + branchDir.x * bSpread * 0.4, tTop.y + rand(5, 12), tTop.z + branchDir.z * bSpread * 0.4);
+                const p2 = new THREE.Vector3(tTop.x + branchDir.x * bSpread, bHeight, tTop.z + branchDir.z * bSpread);
+                branchTops.push(p2);
+                addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 160, rand(2.0, 3.0), rand(1.5, 2.5), 1.2);
+            }
+        });
+
+        for (let i = 0; i < 3000; i++) { 
+            const src = branchTops[Math.floor(rand(0, branchTops.length))];
+            const dir = new THREE.Vector3(rand(-1, 1), rand(-0.2, 0.6), rand(-1, 1)).normalize();
+            const len = rand(15, 35); 
+            const p0 = src.clone().add(jitterVec(5));
+            const p1 = p0.clone().add(dir.clone().multiplyScalar(len * 0.5)).add(jitterVec(4));
+            const p2 = p0.clone().add(dir.clone().multiplyScalar(len)).add(jitterVec(4));
+            addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 60, rand(3.0, 5.0), rand(1.2, 2.2), 1.3);
+        }
+
+        for(let i=0; i<1200; i++) {
+            const src = branchTops[Math.floor(rand(0, branchTops.length))];
+            const p0 = src;
+            const p1 = new THREE.Vector3(src.x + rand(-5,5), src.y * 0.5, src.z + rand(-5,5));
+            const dropY = rand(-5, 5); 
+            const p2 = new THREE.Vector3(src.x + rand(-2,2), dropY, src.z + rand(-2,2));
+            addCurveToSystem(new THREE.CatmullRomCurve3([p0, p1, p2]), 160, rand(3.5, 4.5), rand(1.5, 2.5));
+        }
+
+        // ====================================================
+        // 4. 主树 Shader - 微弱且柔和的斥力效果
+        // ====================================================
+        const geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(particlesData.positions, 3));
+        geometry.setAttribute('aPathLength', new THREE.Float32BufferAttribute(particlesData.pathLengths, 1));
+        geometry.setAttribute('aDelay', new THREE.Float32BufferAttribute(particlesData.delays, 1));
+        geometry.setAttribute('aDuration', new THREE.Float32BufferAttribute(particlesData.durations, 1));
+        geometry.setAttribute('aColor', new THREE.Float32BufferAttribute(particlesData.colors, 3));
+
+        const shaderMaterial = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0 },
+                uPointSize: { value: 3.0 },          
+                uTailAlpha: { value: 0.25 },         
+                uTint: { value: new THREE.Color(0xffffff) }, 
+                uMouse: { value: new THREE.Vector2(-10, -10) }, 
+                uMouseActive: { value: 0.0 }
+            },
+            vertexShader: `
+                uniform float uTime;
+                uniform float uPointSize;
+                uniform float uTailAlpha;
+                uniform vec2 uMouse;
+                uniform float uMouseActive;
+
+                attribute float aPathLength;
+                attribute float aDelay;
+                attribute float aDuration;
+                attribute vec3 aColor;
+
+                varying vec3 vColor;
+                varying float vAlpha;
+
+                void main() {
+                    vColor = aColor * 1.2; 
+                    vAlpha = 0.0;
+
+                    float progress = clamp((uTime - aDelay) / aDuration, 0.0, 1.0);
+                    progress = progress * progress * (3.0 - 2.0 * progress);
+
+                    vec3 pos = position;
+                    bool grown = (aPathLength <= progress && progress > 0.0);
+
+                    if (grown) {
+                        float headDist = progress - aPathLength;
+                        if (headDist < 0.02) {
+                            vAlpha = 1.0;
+                            vColor = vec3(1.0); 
+                        } else {
+                            vAlpha = uTailAlpha;
+                            float afterTime = uTime - (aDelay + aDuration);
+                            if (afterTime > 0.0) {
+                                float pulsePhase = mod(afterTime * 0.3, 1.0);
+                                float pulseDist = abs(aPathLength - pulsePhase);
+                                if (pulseDist < 0.05) {
+                                    vAlpha += (0.05 - pulseDist) * 15.0; 
+                                    vColor = mix(vColor, vec3(1.0, 1.0, 1.0), 0.9); 
+                                }
+                                vAlpha += sin(uTime * 2.0 + aPathLength * 20.0) * 0.08;
+                            }
+                        }
+                        pos.x += sin(uTime * 1.5 + pos.y * 0.5) * 0.12 * progress;
+                        pos.z += cos(uTime * 1.5 + pos.x * 0.5) * 0.12 * progress;
+                    }
+
+                    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+                    gl_Position = projectionMatrix * mvPosition;
+
+                    float ptSize = uPointSize * (100.0 / -mvPosition.z);
+
+                    if (grown && uMouseActive > 0.5) {
+                        vec2 ndc = gl_Position.xy / gl_Position.w;
+                        vec2 pushDir = ndc - uMouse;
+                        float md = length(pushDir);
+                        
+                        float infl = smoothstep(0.25, 0.0, md); 
+                        
+                        if (md > 0.001) {
+                            gl_Position.xy += (pushDir / md) * (infl * infl) * 0.012 * gl_Position.w;
+                        }
+                        
+                        vAlpha += infl * 0.05; 
+                        vColor = mix(vColor, vec3(1.0), infl * 0.08); 
+                        ptSize *= (1.0 + infl * 0.15); 
+                    }
+
+                    gl_PointSize = ptSize;
+                }
+            `,
+            fragmentShader: `
+                uniform vec3 uTint;
+                varying vec3 vColor;
+                varying float vAlpha;
+
+                void main() {
+                    if (vAlpha <= 0.0) discard;
+                    vec2 coord = gl_PointCoord - vec2(0.5);
+                    float dist = length(coord);
+                    if (dist > 0.5) discard;
+                    float core = pow(1.0 - (dist * 2.0), 1.5);
+                    gl_FragColor = vec4(vColor * uTint, core * vAlpha);
+                }
+            `,
+            transparent: true,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particleSystem = new THREE.Points(geometry, shaderMaterial);
+        scene.add(particleSystem); 
+
+        // ----------------------------------------------------
+        // 4.1 环境浮尘 Shader - 知识凝聚 (半径减小，系数锁定0.4)
+        // ----------------------------------------------------
+        const dustCount = 4000;
+        const dustGeo = new THREE.BufferGeometry();
+        const dustPos = new Float32Array(dustCount * 3);
+        const dustPhase = new Float32Array(dustCount);
+
+        for(let i=0; i<dustCount; i++) {
+            dustPos[i*3] = rand(-150, 150);
+            dustPos[i*3+1] = rand(-20, 120);
+            dustPos[i*3+2] = rand(-150, 150);
+            dustPhase[i] = rand(0, Math.PI * 2);
+        }
+        dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+        dustGeo.setAttribute('aPhase', new THREE.BufferAttribute(dustPhase, 1));
+
+        const dustMat = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0 },
+                uTint: { value: new THREE.Color(0xffffff) },
+                uMouse: { value: new THREE.Vector2(-10, -10) }, 
+                uMouseActive: { value: 0.0 } 
+            },
+            vertexShader: `
+                uniform float uTime;
+                uniform vec2 uMouse;
+                uniform float uMouseActive;
+                attribute float aPhase;
+                varying float vAlpha;
+
+                void main() {
+                    vec3 pos = position;
+                    pos.y += sin(uTime * 0.3 + aPhase) * 6.0;
+                    pos.x += cos(uTime * 0.2 + aPhase) * 4.0;
+                    pos.z += sin(uTime * 0.15 + aPhase) * 4.0;
+                    
+                    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+                    gl_Position = projectionMatrix * mvPosition;
+                    
+                    vAlpha = (sin(uTime * 0.8 + aPhase) * 0.5 + 0.5) * 0.45;
+                    float ptSize = 3.5;
+                    
+                    // 【引力算法优化】
+                    if (uMouseActive > 0.5) {
+                        vec2 ndc = gl_Position.xy / gl_Position.w;
+                        vec2 pullDir = uMouse - ndc;
+                        float md = length(pullDir);
+                        
+                        // 半径缩小到 0.45
+                        float pullInfl = smoothstep(0.2, 0.0, md); 
+                        
+                        if (md > 0.001) {
+                            // 系数精确设定为 0.4
+                            gl_Position.xy += (pullDir / md) * (pullInfl * pullInfl) * 0.2 * gl_Position.w;
+                        }
+                        
+                        vAlpha += pullInfl * 1.0;
+                        ptSize *= (1.0 + pullInfl * 1.5);
+                    }
+
+                    gl_PointSize = ptSize * (100.0 / -mvPosition.z);
+                }
+            `,
+            fragmentShader: `
+                uniform vec3 uTint;
+                varying float vAlpha;
+                void main() {
+                    if (vAlpha <= 0.01) discard;
+                    vec2 coord = gl_PointCoord - vec2(0.5);
+                    float dist = length(coord);
+                    if (dist > 0.5) discard;
+                    float core = pow(1.0 - (dist * 2.0), 1.5);
+                    gl_FragColor = vec4(uTint, core * vAlpha);
+                }
+            `,
+            transparent: true,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        });
+
+        const dustSystem = new THREE.Points(dustGeo, dustMat);
+        scene.add(dustSystem); 
+
+        // ----------------------------------------------------
+        // 4.2 生物流体拖尾 (蓝眼泪)
+        // ----------------------------------------------------
+        const maxTrails = 200;
+        const trailPositions = new Float32Array(maxTrails * 3);
+        const trailAges = new Float32Array(maxTrails);
+        for(let i=0; i<maxTrails; i++) { 
+            trailAges[i] = 1.0; 
+            trailPositions[i*3] = 9999; 
+        }
+        
+        const trailGeo = new THREE.BufferGeometry();
+        trailGeo.setAttribute('position', new THREE.BufferAttribute(trailPositions, 3));
+        trailGeo.setAttribute('aAge', new THREE.BufferAttribute(trailAges, 1));
+        
+        const trailMat = new THREE.ShaderMaterial({
+            uniforms: { 
+                uTint: { value: new THREE.Color(0xffffff) } 
+            },
+            vertexShader: `
+                attribute float aAge;
+                varying float vAlpha;
+                void main() {
+                    vAlpha = 1.0 - aAge; 
+                    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                    gl_Position = projectionMatrix * mvPosition;
+                    gl_PointSize = 25.0 * vAlpha * (100.0 / -mvPosition.z);
+                }
+            `,
+            fragmentShader: `
+                uniform vec3 uTint;
+                varying float vAlpha;
+                void main() {
+                    if(vAlpha <= 0.0) discard;
+                    float dist = length(gl_PointCoord - vec2(0.5));
+                    if(dist > 0.5) discard;
+                    float core = pow(1.0 - (dist * 2.0), 2.0);
+                    gl_FragColor = vec4(uTint, core * vAlpha * 0.8);
+                }
+            `,
+            transparent: true, 
+            depthWrite: false, 
+            blending: THREE.AdditiveBlending
+        });
+
+        const trailSystem = new THREE.Points(trailGeo, trailMat);
+        scene.add(trailSystem);
+
+        let trailIndex = 0;
+        const raycaster = new THREE.Raycaster();
+        const rawMouseVec = new THREE.Vector2();
+
+        // ----------------------------------------------------
+        // 5. 交互与 UI 事件绑定
+        // ----------------------------------------------------
+        const sizeEl = document.getElementById('size');
+        const sizeVal = document.getElementById('sizeVal');
+        sizeEl.addEventListener('input', () => {
+            shaderMaterial.uniforms.uPointSize.value = parseFloat(sizeEl.value);
+            sizeVal.textContent = parseFloat(sizeEl.value).toFixed(1);
+        });
+
+        const alphaEl = document.getElementById('alpha');
+        const alphaVal = document.getElementById('alphaVal');
+        alphaEl.addEventListener('input', () => {
+            shaderMaterial.uniforms.uTailAlpha.value = parseFloat(alphaEl.value);
+            alphaVal.textContent = parseFloat(alphaEl.value).toFixed(2);
+        });
+
+        const colorPicker = document.getElementById('colorPicker');
+        const swatches = document.querySelectorAll('.swatch');
+        function applyTint(hex) {
+            shaderMaterial.uniforms.uTint.value.set(hex);
+            dustMat.uniforms.uTint.value.set(hex); 
+            trailMat.uniforms.uTint.value.set(hex); 
+            colorPicker.value = hex;
+        }
+        colorPicker.addEventListener('input', () => {
+            applyTint(colorPicker.value);
+            swatches.forEach(s => s.classList.remove('active'));
+        });
+        swatches.forEach(s => {
+            s.addEventListener('click', () => {
+                swatches.forEach(x => x.classList.remove('active'));
+                s.classList.add('active');
+                applyTint(s.dataset.c);
+            });
+        });
+
+        document.getElementById('replay').addEventListener('click', () => { globalTime = 0.0; });
+
+        const mouse = shaderMaterial.uniforms.uMouse.value;
+        const dustMouse = dustMat.uniforms.uMouse.value;
+
+        window.addEventListener('pointermove', (e) => {
+            rawMouseVec.x = (e.clientX / window.innerWidth) * 2 - 1;
+            rawMouseVec.y = -(e.clientY / window.innerHeight) * 2 + 1;
+            
+            mouse.x = rawMouseVec.x;
+            mouse.y = rawMouseVec.y;
+            dustMouse.x = rawMouseVec.x;
+            dustMouse.y = rawMouseVec.y;
+            
+            shaderMaterial.uniforms.uMouseActive.value = 1.0;
+            dustMat.uniforms.uMouseActive.value = 1.0;
+
+            raycaster.setFromCamera(rawMouseVec, camera);
+            const planeNormal = new THREE.Vector3(0,0,1).applyQuaternion(camera.quaternion);
+            const plane = new THREE.Plane().setFromNormalAndCoplanarPoint(planeNormal, new THREE.Vector3(0,0,0));
+            const intersectPt = new THREE.Vector3();
+            raycaster.ray.intersectPlane(plane, intersectPt);
+            
+            if (intersectPt) {
+                for(let k=0; k<2; k++) {
+                    trailPositions[trailIndex*3] = intersectPt.x + rand(-3, 3);
+                    trailPositions[trailIndex*3+1] = intersectPt.y + rand(-3, 3);
+                    trailPositions[trailIndex*3+2] = intersectPt.z + rand(-3, 3);
+                    trailAges[trailIndex] = 0.0; 
+                    trailIndex = (trailIndex + 1) % maxTrails;
+                }
+            }
+        });
+
+        window.addEventListener('pointerleave', () => {
+            shaderMaterial.uniforms.uMouseActive.value = 0.0;
+            dustMat.uniforms.uMouseActive.value = 0.0;
+        });
+
+        // ----------------------------------------------------
+        // 6. 渲染循环 
+        // ----------------------------------------------------
+        const clock = new THREE.Clock();
+        const uiText = document.getElementById('ui-layer');
+        let globalTime = -0.5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+
+            const dt = clock.getDelta();
+            globalTime += dt;
+            
+            shaderMaterial.uniforms.uTime.value = Math.max(0, globalTime);
+            dustMat.uniforms.uTime.value = Math.max(0, globalTime);
+
+            for(let i=0; i<maxTrails; i++) {
+                if(trailAges[i] < 1.0) {
+                    trailAges[i] += dt * 1.2; 
+                    trailPositions[i*3] += rand(-0.2, 0.2);
+                    trailPositions[i*3+1] += rand(0.1, 0.4); 
+                }
+            }
+            trailGeo.attributes.position.needsUpdate = true;
+            trailGeo.attributes.aAge.needsUpdate = true;
+
+            if (globalTime < 0) uiText.innerText = "STANDBY...";
+            else if (globalTime < 0.5) uiText.innerText = "[ 0-0.5s ] SEED & ROOTS";
+            else if (globalTime < 1.5) uiText.innerText = "[ 0.5-1.5s ] UNDERGROWTH GRASS SPROUTING";
+            else if (globalTime < 2.5) uiText.innerText = "[ 1.5-2.5s ] MAIN TRUNK FORMATION";
+            else if (globalTime < 4) uiText.innerText = "[ 2.5-4s ] CANOPY SPREAD";
+            else if (globalTime < 5) uiText.innerText = "[ 4-5s ] AERIAL ROOTS DROPPING";
+            else uiText.innerText = "LIVING BANYAN ECOSYSTEM CONSTRUCTED";
+
+            composer.render();
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>

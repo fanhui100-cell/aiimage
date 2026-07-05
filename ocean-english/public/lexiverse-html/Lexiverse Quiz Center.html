@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lexiverse · Quiz Center · 测验中心</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lexiverse-ui/liquid-glass.css" />
+<style>
+  body { min-height: 100vh; overflow-x: hidden; }
+  #app { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px; margin: 14px 18px 0; border-radius: var(--r-pill); }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .logo { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg,#BFF6FF,var(--cyan) 45%,var(--cyan-deep)); box-shadow: 0 4px 14px rgba(56,189,248,0.45), inset 0 1px 0 rgba(255,255,255,0.6); display: flex; align-items: center; justify-content: center; color: var(--ink); font-weight: 700; }
+  .brand .app { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+  .brand .page { font-size: 15px; font-weight: 700; }
+
+  .wrap { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 28px 22px 60px; }
+
+  .modes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 22px 0 34px; }
+  .mode { padding: 20px 18px; border-radius: var(--r-lg); cursor: pointer; text-align: left; }
+  .mode .ic { width: 42px; height: 42px; border-radius: 13px; display: flex; align-items: center; justify-content: center; font-size: 21px;
+    background: color-mix(in srgb, var(--c) 18%, transparent); border: 1px solid color-mix(in srgb, var(--c) 40%, transparent); color: var(--c); box-shadow: 0 0 16px color-mix(in srgb, var(--c) 30%, transparent); }
+  .mode h3 { font-size: 16px; font-weight: 700; margin: 14px 0 5px; }
+  .mode p { font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+  .mode .stat { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-top: 12px; }
+  .mode.sel { border-color: rgba(126,249,255,0.6); box-shadow: var(--glass-highlight), var(--glow-cyan-sm); }
+
+  .qhead { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 6px; }
+  .qhead .lg-sec { color: var(--text-dim); }
+  .progress { height: 5px; border-radius: 5px; background: rgba(255,255,255,0.08); overflow: hidden; margin: 14px 0 26px; }
+  .progress > i { display: block; height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--cyan-deep), var(--cyan)); transition: width 0.5s var(--ease); }
+
+  .qcard { padding: 34px 36px; border-radius: var(--r-xl); }
+  .prompt { font-size: 13px; color: var(--cyan); font-family: var(--font-mono); letter-spacing: 0.04em; }
+  .sentence { font-size: clamp(22px, 3.4vw, 30px); font-weight: 600; line-height: 1.4; margin: 14px 0 30px; color: var(--text); text-wrap: pretty; }
+  .sentence .blank { color: var(--cyan); border-bottom: 2px dashed rgba(126,249,255,0.5); padding: 0 12px; }
+
+  .options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .opt { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: var(--r-md); cursor: pointer; text-align: left;
+    background: var(--glass-fill-soft); border: 1px solid var(--glass-border); color: var(--text); font-family: inherit; font-size: 16px; transition: all 0.16s var(--ease); }
+  .opt:hover:not(.locked) { transform: translateY(-2px); border-color: var(--glass-border-strong); }
+  .opt .key { width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; font-family: var(--font-mono); background: rgba(255,255,255,0.07); color: var(--text-dim); }
+  .opt.correct { border-color: rgba(107,224,160,0.7); background: color-mix(in srgb, var(--mint) 16%, transparent); box-shadow: 0 0 18px rgba(107,224,160,0.25); }
+  .opt.correct .key { background: var(--mint); color: var(--ink); }
+  .opt.wrong { border-color: rgba(255,143,168,0.7); background: color-mix(in srgb, var(--rose) 15%, transparent); }
+  .opt.wrong .key { background: var(--rose); color: var(--ink); }
+  .opt.locked { cursor: default; }
+  .opt .mark { margin-left: auto; font-size: 17px; }
+
+  .explain { margin-top: 22px; padding: 16px 18px; border-radius: var(--r-md); display: none; }
+  .explain.show { display: block; }
+  .explain .lg-sec { display: block; margin-bottom: 8px; }
+  .explain p { font-size: 14.5px; line-height: 1.6; color: var(--text-soft); }
+  .verdict { font-size: 14px; font-weight: 700; }
+  .verdict.ok { color: var(--mint); } .verdict.no { color: var(--rose); }
+
+  .qfoot { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; gap: 14px; }
+  .scorepill { font-size: 12.5px; color: var(--text-dim); font-family: var(--font-mono); }
+  .scorepill b { color: var(--cyan); }
+
+  @media (max-width: 860px) { .modes { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .modes { grid-template-columns: 1fr; } .options { grid-template-columns: 1fr; } .qcard { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+  <div class="cosmic-bg"></div>
+  <div id="app">
+    <header class="topbar lg-surface">
+      <div class="brand">
+        <div class="logo">L</div>
+        <div><div class="app">LexiOcean</div><div class="page">Lexiverse · 测验中心</div></div>
+      </div>
+      <div class="lg-segmented" role="tablist">
+        <button class="lg-seg is-active" data-cat="quick">Quick · 快速</button>
+        <button class="lg-seg" data-cat="review">Review · 复习</button>
+        <button class="lg-seg" data-cat="exam">Exam · 应试</button>
+        <button class="lg-seg" data-cat="ai">Custom AI · 定制</button>
+      </div>
+      <button class="lg-icon-btn" title="Settings">⚙</button>
+    </header>
+
+    <div class="wrap">
+      <span class="lg-sec">Choose a mode · 选择测验模式</span>
+      <div class="modes" id="modes"></div>
+
+      <span class="lg-sec">Question card · 题目演示</span>
+      <div class="qcard lg-panel lg-bright" style="margin-top:14px">
+        <div class="qhead">
+          <span class="lg-sec" id="qmode">VOCABULARY DRILL · 词汇速练</span>
+          <span class="scorepill" id="qnum">Question 1 / 3</span>
+        </div>
+        <div class="progress"><i id="pbar" style="width:33%"></i></div>
+        <div id="qbody"></div>
+        <div class="explain lg-card" id="explain">
+          <span class="lg-sec">Explanation · 解析</span>
+          <div class="verdict" id="verdict"></div>
+          <p id="explainText"></p>
+        </div>
+        <div class="qfoot">
+          <span class="scorepill">Score · 得分 <b id="score">0</b> / 3</span>
+          <button class="lg-btn lg-btn--primary" id="nextBtn" aria-disabled="true" style="opacity:.45">Next · 下一题 →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="lexiverse-ui/lexiverse-mock.js"></script>
+  <script>
+    const M = window.LexiverseMock;
+    const MODES = [
+      { id: 'vocabulary-drill', c: 'var(--cyan)', ic: '⚡', title: 'Vocabulary Drill', zh: '词汇速练', desc: 'Fast recall of meaning & form.', stat: '~5 min · 10 words' },
+      { id: 'sentence-practice', c: 'var(--violet)', ic: '✎', title: 'Sentence Practice', zh: '句子运用', desc: 'Use the word correctly in context.', stat: '~7 min · 8 items' },
+      { id: 'exam-practice', c: 'var(--amber)', ic: '◎', title: 'Exam Practice', zh: '应试模拟', desc: 'Original demo questions, exam-style.', stat: 'CET · IELTS · TOEFL' },
+      { id: 'wrong-booster', c: 'var(--rose)', ic: '↻', title: 'Wrong Answer Booster', zh: '错题强化', desc: 'Re-drill the words you missed.', stat: 'from your weak set' },
+    ];
+    let selMode = 'vocabulary-drill', qi = 0, score = 0, answered = false;
+
+    document.getElementById('modes').innerHTML = MODES.map(m => `
+      <button class="mode lg-panel lg-hover ${m.id===selMode?'sel':''}" style="--c:${m.c}" data-id="${m.id}">
+        <div class="ic">${m.ic}</div>
+        <h3>${m.title}</h3>
+        <p>${m.zh} · ${m.desc}</p>
+        <div class="stat">${m.stat}</div>
+      </button>`).join('');
+    document.querySelectorAll('.mode').forEach(b => b.onclick = () => {
+      selMode = b.dataset.id;
+      document.querySelectorAll('.mode').forEach(x => x.classList.toggle('sel', x.dataset.id === selMode));
+      const m = MODES.find(x => x.id === selMode);
+      document.getElementById('qmode').textContent = (m.title + ' · ' + m.zh).toUpperCase();
+      qi = 0; score = 0; document.getElementById('score').textContent = '0'; renderQ();
+    });
+
+    function renderQ() {
+      answered = false;
+      const q = M.QUIZ[qi];
+      document.getElementById('qnum').textContent = `Question ${qi+1} / ${M.QUIZ.length}`;
+      document.getElementById('pbar').style.width = ((qi) / M.QUIZ.length * 100 + 8) + '%';
+      const sentence = q.sentence === M.byId[q.wordId].word
+        ? `<span class="blank">${q.sentence}</span>`
+        : q.sentence.replace('___', '<span class="blank">___</span>');
+      document.getElementById('qbody').innerHTML = `
+        <div class="prompt">${q.prompt}</div>
+        <div class="sentence">${sentence}</div>
+        <div class="options" id="options">
+          ${q.options.map((o,i) => `<button class="opt" data-i="${i}"><span class="key">${String.fromCharCode(65+i)}</span><span>${o}</span><span class="mark"></span></button>`).join('')}
+        </div>`;
+      document.getElementById('explain').classList.remove('show');
+      const nb = document.getElementById('nextBtn'); nb.setAttribute('aria-disabled','true'); nb.style.opacity = '.45';
+      document.querySelectorAll('.opt').forEach(o => o.onclick = () => choose(parseInt(o.dataset.i), q));
+    }
+
+    function choose(i, q) {
+      if (answered) return; answered = true;
+      const opts = document.querySelectorAll('.opt');
+      opts.forEach((o, idx) => {
+        o.classList.add('locked');
+        if (idx === q.answer) { o.classList.add('correct'); o.querySelector('.mark').textContent = '✓'; }
+        else if (idx === i) { o.classList.add('wrong'); o.querySelector('.mark').textContent = '✕'; }
+      });
+      const ok = i === q.answer;
+      if (ok) { score++; document.getElementById('score').textContent = score; }
+      const v = document.getElementById('verdict');
+      v.textContent = ok ? '✓ Correct · 回答正确' : '✕ Not quite · 再想想';
+      v.className = 'verdict ' + (ok ? 'ok' : 'no');
+      document.getElementById('explainText').textContent = q.explain;
+      document.getElementById('explain').classList.add('show');
+      document.getElementById('pbar').style.width = ((qi+1) / M.QUIZ.length * 100) + '%';
+      const nb = document.getElementById('nextBtn'); nb.setAttribute('aria-disabled','false'); nb.style.opacity = '1';
+    }
+
+    document.getElementById('nextBtn').onclick = () => {
+      if (!answered) return;
+      qi = (qi + 1) % M.QUIZ.length;
+      if (qi === 0) { score = 0; document.getElementById('score').textContent = '0'; }
+      renderQ();
+    };
+    renderQ();
+  </script>
+</body>
+</html>

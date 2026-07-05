@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T18:45:23.885Z",
+  "apply": true,
+  "stage": "prod-ky-aw",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 50,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-ky-aw\\kaoyan-applied-writing.productive.json",
+      "examId": "kaoyan",
+      "taskType": "applied_writing",
+      "level": 5,
+      "skill": "writing",
+      "tasks": 50,
+      "wrote": 0,
+      "dup": 50
+    }
+  ]
+}

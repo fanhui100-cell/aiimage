@@ -1,0 +1,279 @@
+// lib/lexiverse/lexiverse-archetypes.ts
+// ─────────────────────────────────────────────────────────────────────────
+// Phase 8 · Stage B — Celestial archetype library (R3F-friendly).
+//
+// Each archetype is an IMPERATIVE Three.js builder that returns a Group +
+// metadata. PlanetNode.tsx mounts the returned object3D via <primitive>.
+// Why imperative? Because the prototype's planets.js already proved this
+// is the cheapest way to support 9 variants at 60fps with shared geometry
+// and procedurally-tinted textures. Porting them to JSX would 3× the cost.
+//
+// Each builder:
+//   build(THREE, radius, color, rnd) → {
+//     object3D: THREE.Group,
+//     pickR:    number,         // invisible raycast sphere scale
+//     spin:     number,         // rad/sec self-rotation
+//     spinTarget?: THREE.Object3D, // only the spiral arms / wireframe spin
+//   }
+// ─────────────────────────────────────────────────────────────────────────
+
+import * as THREE from 'three'
+
+type Rnd = () => number
+
+// ── shared cached resources ──────────────────────────────────────────────
+const geoCache: Record<string, THREE.BufferGeometry> = {}
+const texCache: Record<string, THREE.Texture> = {}
+let tightGlowTex: THREE.Texture | null = null
+let starTex: THREE.Texture | null = null
+
+function g<T extends THREE.BufferGeometry>(key: string, make: () => T): T {
+  return (geoCache[key] ?? (geoCache[key] = make())) as T
+}
+
+function mulberryLocal(seed: number): Rnd {
+  let a = seed
+  return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296 }
+}
+
+// ── Tight glow sprite: bright core, thin fade — hugs the planet ──────────
+function tightGlow(): THREE.Texture {
+  if (tightGlowTex) return tightGlowTex
+  const s = 128, c = document.createElement('canvas')
+  c.width = c.height = s
+  const ctx = c.getContext('2d')!
+  const grd = ctx.createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2)
+  grd.addColorStop(0.0, 'rgba(255,255,255,1)')
+  grd.addColorStop(0.30, 'rgba(255,255,255,0.7)')
+  grd.addColorStop(0.52, 'rgba(255,255,255,0.22)')
+  grd.addColorStop(1.0, 'rgba(255,255,255,0)')
+  ctx.fillStyle = grd; ctx.fillRect(0, 0, s, s)
+  tightGlowTex = new THREE.CanvasTexture(c)
+  return tightGlowTex
+}
+function starTexture(): THREE.Texture {
+  if (starTex) return starTex
+  const s = 64, c = document.createElement('canvas')
+  c.width = c.height = s
+  const ctx = c.getContext('2d')!
+  const grd = ctx.createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2)
+  grd.addColorStop(0, 'rgba(255,255,255,1)')
+  grd.addColorStop(0.4, 'rgba(255,255,255,0.5)')
+  grd.addColorStop(1, 'rgba(255,255,255,0)')
+  ctx.fillStyle = grd; ctx.fillRect(0, 0, s, s)
+  starTex = new THREE.CanvasTexture(c)
+  return starTex
+}
+
+// ── Procedural grayscale surface textures (tinted via material.color) ────
+function surfaceTexture(kind: string, variant: number): THREE.Texture {
+  const key = kind + variant
+  if (texCache[key]) return texCache[key]
+  const w = 256, h = 128, c = document.createElement('canvas')
+  c.width = w; c.height = h
+  const ctx = c.getContext('2d')!
+  const rnd = mulberryLocal(variant * 2654435761 >>> 0)
+  ctx.fillStyle = '#8a8a8a'; ctx.fillRect(0, 0, w, h)
+
+  if (kind === 'bands') {
+    let y = 0
+    while (y < h) {
+      const bh = 4 + rnd() * 14
+      const v = 90 + (rnd() * 150) | 0
+      ctx.fillStyle = `rgb(${v},${v},${v})`
+      ctx.fillRect(0, y, w, bh)
+      y += bh
+    }
+    for (let i = 0; i < 5; i++) {
+      ctx.globalAlpha = 0.18; ctx.fillStyle = rnd() > 0.5 ? '#fff' : '#444'
+      ctx.beginPath(); ctx.ellipse(rnd()*w, rnd()*h, 18+rnd()*30, 5+rnd()*8, 0, 0, 7); ctx.fill()
+    }
+    ctx.globalAlpha = 1
+  } else if (kind === 'speckle') {
+    for (let i = 0; i < 900; i++) {
+      const v = 70 + (rnd() * 170) | 0
+      ctx.fillStyle = `rgb(${v},${v},${v})`
+      ctx.beginPath(); ctx.arc(rnd()*w, rnd()*h, 0.6 + rnd()*2.2, 0, 7); ctx.fill()
+    }
+  } else if (kind === 'swirl') {
+    for (let i = 0; i < 28; i++) {
+      const v = 80 + (rnd() * 160) | 0
+      ctx.strokeStyle = `rgba(${v},${v},${v},0.5)`; ctx.lineWidth = 2 + rnd()*6
+      ctx.beginPath()
+      const cx = rnd()*w, cy = rnd()*h, rad = 10 + rnd()*40
+      ctx.arc(cx, cy, rad, rnd()*7, rnd()*7); ctx.stroke()
+    }
+  } else if (kind === 'molten') {
+    ctx.fillStyle = '#5a5a5a'; ctx.fillRect(0,0,w,h)
+    for (let i = 0; i < 40; i++) {
+      ctx.strokeStyle = `rgba(255,255,255,${0.3+rnd()*0.5})`; ctx.lineWidth = 1 + rnd()*2.5
+      ctx.beginPath(); let x = rnd()*w, y = rnd()*h; ctx.moveTo(x, y)
+      for (let k = 0; k < 4; k++) { x += (rnd()-0.5)*60; y += (rnd()-0.5)*40; ctx.lineTo(x, y) }
+      ctx.stroke()
+    }
+  }
+  const t = new THREE.CanvasTexture(c)
+  t.wrapS = t.wrapT = THREE.RepeatWrapping
+  texCache[key] = t
+  return t
+}
+
+// ── building blocks ──────────────────────────────────────────────────────
+function glowSprite(color: THREE.ColorRepresentation, scale: number): THREE.Sprite {
+  const mat = new THREE.SpriteMaterial({
+    map: tightGlow(), color, transparent: true, opacity: 0.6,
+    blending: THREE.AdditiveBlending, depthWrite: false,
+  })
+  const sp = new THREE.Sprite(mat)
+  sp.scale.setScalar(scale)
+  sp.userData.glow = { base: scale }
+  return sp
+}
+function solidSphere(color: THREE.ColorRepresentation, r: number, texKind?: string, variant = 0): THREE.Mesh {
+  const matOpts: THREE.MeshBasicMaterialParameters = { color, transparent: true }
+  if (texKind) matOpts.map = surfaceTexture(texKind, variant)
+  const mat = new THREE.MeshBasicMaterial(matOpts)
+  const mesh = new THREE.Mesh(g('sphere', () => new THREE.SphereGeometry(1, 24, 24)), mat)
+  mesh.scale.setScalar(r)
+  mat.userData = { dim: true, base: 1 }
+  return mesh
+}
+function coreDot(color: THREE.ColorRepresentation, r: number): THREE.Mesh {
+  const mat = new THREE.MeshBasicMaterial({ color, transparent: true })
+  const mesh = new THREE.Mesh(g('coreLow', () => new THREE.SphereGeometry(1, 12, 12)), mat)
+  mesh.scale.setScalar(r)
+  mat.userData = { core: true, base: 1 }
+  return mesh
+}
+function wire(geoKey: string, geoMake: () => THREE.BufferGeometry, color: THREE.ColorRepresentation, r: number, opacity: number): THREE.Mesh {
+  const mat = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity })
+  const mesh = new THREE.Mesh(g(geoKey, geoMake), mat)
+  mesh.scale.setScalar(r)
+  mat.userData = { dim: true, base: opacity }
+  return mesh
+}
+function orbitRing(color: THREE.ColorRepresentation, r: number, tilt: { x: number; y: number }, opacity: number): THREE.Mesh {
+  const t = new THREE.Mesh(
+    g('thinTorus', () => new THREE.TorusGeometry(1, 0.014, 8, 80)),
+    new THREE.MeshBasicMaterial({ color, transparent: true, opacity, blending: THREE.AdditiveBlending, depthWrite: false }),
+  )
+  t.scale.setScalar(r); t.rotation.x = Math.PI/2 + tilt.x; t.rotation.y = tilt.y
+  ;(t.material as THREE.MeshBasicMaterial).userData = { dim: true, base: opacity }
+  return t
+}
+
+// ── public archetype API ─────────────────────────────────────────────────
+export interface BuiltArchetype {
+  object3D: THREE.Group
+  pickR: number
+  spin: number
+  spinTarget?: THREE.Object3D
+}
+
+const finish = (grp: THREE.Group, pickR: number, spin: number, spinTarget?: THREE.Object3D): BuiltArchetype => ({ object3D: grp, pickR, spin, spinTarget: spinTarget ?? grp })
+
+function buildGas(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.0))
+  grp.add(solidSphere(color, radius, 'bands', (rnd() * 9999) | 0))
+  return finish(grp, radius * 1.5, 0.18 + rnd() * 0.18)
+}
+function buildRocky(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 1.8))
+  grp.add(solidSphere(color, radius, 'speckle', (rnd() * 9999) | 0))
+  return finish(grp, radius * 1.5, 0.12 + rnd() * 0.15)
+}
+function buildMolten(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.3))
+  grp.add(solidSphere(color, radius, 'molten', (rnd() * 9999) | 0))
+  grp.add(coreDot(0xffffff, radius * 0.2))
+  return finish(grp, radius * 1.5, 0.10 + rnd() * 0.12)
+}
+function buildGeodesic(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.2))
+  grp.add(wire('ico1', () => new THREE.IcosahedronGeometry(1, 1), color, radius, 0.85))
+  grp.add(wire('ico0', () => new THREE.IcosahedronGeometry(1, 0), color, radius * 0.62, 0.4))
+  grp.add(coreDot(0xffffff, radius * 0.22))
+  if (rnd() > 0.4) grp.add(orbitRing(color, radius * 1.5, { x: (rnd()-0.5)*2, y: rnd()*Math.PI }, 0.5))
+  return finish(grp, radius * 1.6, 0.25 + rnd() * 0.3)
+}
+function buildOrb(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.4))
+  grp.add(solidSphere(color, radius * 0.78, 'swirl', (rnd() * 9999) | 0))
+  grp.add(coreDot(0xffffff, radius * 0.3))
+  return finish(grp, radius * 1.6, 0.08 + rnd() * 0.16)
+}
+function buildRinged(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 1.9))
+  grp.add(solidSphere(color, radius * 0.85, 'bands', (rnd() * 9999) | 0))
+  const ring = new THREE.Mesh(
+    g('ring', () => new THREE.RingGeometry(1.35, 2.1, 64)),
+    new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false }),
+  )
+  ring.scale.setScalar(radius)
+  ring.rotation.x = Math.PI/2.3 + (rnd()-0.5)*0.8
+  ring.rotation.y = (rnd()-0.5)*0.6
+  ;(ring.material as THREE.MeshBasicMaterial).userData = { dim: true, base: 0.55 }
+  grp.add(ring)
+  return finish(grp, radius * 1.9, 0.14 + rnd() * 0.2)
+}
+function buildGalaxy(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  const N = 140, arms = 2
+  const pos = new Float32Array(N * 3), col = new Float32Array(N * 3)
+  const c1 = new THREE.Color(color), c2 = new THREE.Color(0xffffff)
+  for (let i = 0; i < N; i++) {
+    const t = i / N
+    const ang = (i % arms) / arms * Math.PI * 2 + t * Math.PI * 3.2
+    const rad = t * radius * 2.0
+    const sp = (rnd()-0.5) * radius * 0.4 * (1 - t)
+    pos[i*3] = Math.cos(ang)*rad + sp
+    pos[i*3+1] = (rnd()-0.5) * radius * 0.3 * (1 - t)
+    pos[i*3+2] = Math.sin(ang)*rad + sp
+    const cc = c2.clone().lerp(c1, t)
+    col[i*3] = cc.r; col[i*3+1] = cc.g; col[i*3+2] = cc.b
+  }
+  const geo = new THREE.BufferGeometry()
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3))
+  geo.setAttribute('color', new THREE.BufferAttribute(col, 3))
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({
+    size: radius * 0.42, map: starTexture(), vertexColors: true, transparent: true, opacity: 0.95,
+    blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true,
+  }))
+  ;(pts.material as THREE.PointsMaterial).userData = { dim: true, base: 0.95 }
+  pts.rotation.x = (rnd()-0.5)*1.4; pts.rotation.z = (rnd()-0.5)*1.0
+  grp.add(pts)
+  grp.add(glowSprite(color, radius * 2.0))
+  return finish(grp, radius * 1.7, 0.4 + rnd() * 0.3, pts)
+}
+function buildCrystal(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.0))
+  const useDodeca = rnd() > 0.5
+  const geoKey = useDodeca ? 'dodeca' : 'octa'
+  grp.add(wire(geoKey, () => useDodeca ? new THREE.DodecahedronGeometry(1, 0) : new THREE.OctahedronGeometry(1, 0), color, radius, 0.82))
+  grp.add(coreDot(0xffffff, radius * 0.26))
+  return finish(grp, radius * 1.5, 0.3 + rnd() * 0.4)
+}
+function buildDwarf(radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  const grp = new THREE.Group()
+  grp.add(glowSprite(color, radius * 2.6))
+  grp.add(coreDot(color, radius * 0.7))
+  grp.add(coreDot(0xffffff, radius * 0.34))
+  return finish(grp, radius * 2.0, 0.02 + rnd() * 0.06)
+}
+
+const BUILDERS: Record<string, (radius: number, color: THREE.ColorRepresentation, rnd: Rnd) => BuiltArchetype> = {
+  gas: buildGas, rocky: buildRocky, molten: buildMolten,
+  geodesic: buildGeodesic, orb: buildOrb, ringed: buildRinged,
+  galaxy: buildGalaxy, crystal: buildCrystal, dwarf: buildDwarf,
+}
+
+export function buildArchetype(visualType: string, radius: number, color: THREE.ColorRepresentation, rnd: Rnd): BuiltArchetype {
+  return (BUILDERS[visualType] ?? buildOrb)(radius, color, rnd)
+}

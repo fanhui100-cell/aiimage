@@ -1,0 +1,438 @@
+{
+  "template": "gaokao-listening-mcq",
+  "level": 2,
+  "sets": [
+    {
+      "passage": "Hey, Lisa, you look exhausted. Are you still working on that history project? Yeah, the one comparing ancient trade routes. I've been in the library since nine this morning. Wow, that's nearly eight hours straight. Have you eaten anything? Just a sandwich at noon. I really want to finish the first draft before the weekend. Well, my advice is to stop now. Your brain stops absorbing information after a certain point. A short walk would help more than another hour of staring at books. You're probably right. I keep reading the same paragraph without understanding it. Exactly. Come on, let's grab a proper dinner, and you can come back fresh tomorrow morning. The library opens at eight, so you'll have plenty of time.",
+      "questions": [
+        {
+          "prompt": "Where does the conversation most likely take place?",
+          "options": [
+            "In a restaurant",
+            "In the library",
+            "In a classroom",
+            "In a dormitory"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the man's main suggestion to Lisa?",
+          "options": [
+            "To eat a sandwich immediately",
+            "To read the paragraph again",
+            "To take a break and continue tomorrow",
+            "To change her project topic"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we infer about Lisa's current state of mind?",
+          "options": [
+            "She is too tired to study effectively",
+            "She is satisfied with her progress",
+            "She is angry at the man",
+            "She has already finished the draft"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "对话发生在图书馆（Lisa一直在图书馆做项目）。男士的主要建议是先休息、第二天再继续（stop now... come back fresh tomorrow）。可推断Lisa太累以致无法有效学习（反复读同一段却看不懂）。"
+    },
+    {
+      "passage": "Good afternoon, everyone. As your community volunteer coordinator, I want to thank you all for coming. This Saturday, we're launching a city-wide effort to clean up the riverbank near the old bridge. Over the past few years, plastic waste has seriously damaged the habitat of local birds and fish. Our goal isn't just to pick up litter for a single day. We hope to raise awareness so that residents change their daily habits. We'll provide gloves, bags, and a light lunch. Please wear comfortable shoes and bring a water bottle. If each of us contributes just two hours, together we can remove tons of rubbish. Remember, a clean river belongs to all of us, and protecting it is everyone's responsibility.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the speaker's talk?",
+          "options": [
+            "To report a flood near the bridge",
+            "To organize a riverbank cleanup activity",
+            "To sell water bottles to residents",
+            "To describe local birds and fish"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the speaker, what is the deeper goal beyond picking up litter?",
+          "options": [
+            "To win a city competition",
+            "To rebuild the old bridge",
+            "To change residents' daily habits",
+            "To attract more tourists"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What will be provided to the volunteers?",
+          "options": [
+            "Comfortable shoes",
+            "Gloves, bags and lunch",
+            "Transportation home",
+            "A water bottle each"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "讲话主旨是组织河岸清理活动。超越捡垃圾的更深层目标是改变居民日常习惯（change their daily habits）。提供的是手套、袋子和简餐；鞋和水瓶需自带。"
+    },
+    {
+      "passage": "Have you tried that new translation app everyone's talking about? The one that works offline? Yes, I downloaded it before my trip to Spain last month. Honestly, it surprised me. In the past, those apps needed a strong internet connection, but this one stores the language data right on your phone. So it actually worked in the mountains where there was no signal? Perfectly. I pointed my camera at a road sign, and the translation appeared instantly on the screen. That's incredible. Did you rely on it the whole trip? Not entirely. The technology is impressive, but it sometimes misses cultural meaning. A local laughed when I read out a phrase too literally. So you still think learning some basic phrases yourself matters? Absolutely. The app is a helpful tool, not a complete replacement for real human effort.",
+      "questions": [
+        {
+          "prompt": "What is special about the translation app being discussed?",
+          "options": [
+            "It is completely free",
+            "It works without an internet connection",
+            "It only translates Spanish",
+            "It teaches grammar lessons"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What problem did the app user mention about the app?",
+          "options": [
+            "It drained her battery quickly",
+            "It could not read road signs",
+            "It sometimes missed cultural meaning",
+            "It crashed in the mountains"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the app user's overall attitude toward the app?",
+          "options": [
+            "It can fully replace language learning",
+            "It is useless without signal",
+            "It is a useful tool but not a replacement for human effort",
+            "It is too expensive to recommend"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "该翻译应用的特别之处是可离线使用（works offline / stores data on phone）。遇到的问题是有时漏掉文化含义（misses cultural meaning，导致本地人发笑）。她的总体态度是：好工具但不能替代人的努力。"
+    },
+    {
+      "passage": "Mark, can I talk to you for a moment? Of course, Sarah, what's wrong? You seem upset. It's about the group presentation. I feel like I'm doing most of the work while the others just relax. I've stayed up late three nights in a row. That sounds really unfair. Have you told the rest of the team how you feel? Not directly. I don't want to seem like I'm complaining or starting an argument. I understand, but if you keep silent, the problem won't disappear. People often don't realize the burden they're putting on others until someone speaks up calmly. So you think I should just be honest with them? Yes, but choose your words carefully. Explain the situation instead of blaming anyone. A fair division of tasks benefits the whole group, and most people will respond well if you stay reasonable.",
+      "questions": [
+        {
+          "prompt": "Why is Sarah upset?",
+          "options": [
+            "She failed the presentation",
+            "She is doing most of the group's work",
+            "She argued with Mark",
+            "She missed three classes"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Mark advise Sarah to do?",
+          "options": [
+            "To quit the group immediately",
+            "To stay silent and finish the work",
+            "To honestly explain the situation to the team",
+            "To blame the lazy members publicly"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can we infer about Mark's attitude?",
+          "options": [
+            "He thinks Sarah is overreacting",
+            "He believes open and calm communication solves problems",
+            "He refuses to get involved",
+            "He wants Sarah to compete with others"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "Sarah烦恼是因为她承担了小组大部分工作。Mark建议她冷静诚实地向团队说明情况（explain instead of blaming）。可推断Mark认为开诚布公、冷静沟通能解决问题。"
+    },
+    {
+      "passage": "Attention, please. This is an announcement for all students planning to join the spring exchange program. The application deadline has been moved earlier, from May the fifteenth to May the first. This change is due to the large number of partner universities confirming their places sooner than expected. To apply, you must submit a personal statement, two teacher recommendations, and proof of your language level. Please note that incomplete applications will not be considered, so check your documents carefully before sending them. We strongly encourage students who are still hesitating to attend the information session this Thursday in Room 204. Former exchange students will share their experiences and answer your questions. Spaces in the program are limited, and selection is competitive, so prepare your materials early and don't leave everything until the last minute.",
+      "questions": [
+        {
+          "prompt": "What is the main news in this announcement?",
+          "options": [
+            "The exchange program has been cancelled",
+            "The application deadline has been moved earlier",
+            "The language test has changed",
+            "Room 204 is closed"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will happen to incomplete applications?",
+          "options": [
+            "They will be returned for correction",
+            "They will get extra time",
+            "They will not be considered",
+            "They will be reviewed last"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why are students encouraged to attend the session on Thursday?",
+          "options": [
+            "To submit their documents there",
+            "To hear from former exchange students",
+            "To take the language test",
+            "To meet partner university staff"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "通知主要消息是申请截止日期提前（从5月15日改到5月1日）。不完整的申请将不被考虑（will not be considered）。鼓励学生周四参加是为了听往届交换生分享经验。"
+    },
+    {
+      "passage": "Welcome to today's science segment. Scientists have recently developed a new kind of paint that can help cool buildings without using electricity. You might wonder how a simple coat of paint could do that. The secret lies in tiny particles that reflect almost all sunlight while releasing heat into the sky. In tests, surfaces covered with this paint stayed several degrees cooler than the surrounding air, even under the midday sun. This could be a game-changer for hot cities where air conditioning consumes enormous amounts of energy. Of course, the paint is still expensive to produce, and researchers are working hard to lower the cost. If they succeed, ordinary homeowners could one day reduce their cooling bills dramatically while also cutting harmful emissions. It's a small idea with potentially huge benefits for our warming planet.",
+      "questions": [
+        {
+          "prompt": "What is the main topic of this science segment?",
+          "options": [
+            "A new way to generate electricity",
+            "A special paint that cools buildings",
+            "A method to make brighter colors",
+            "A device for measuring sunlight"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How does the paint keep surfaces cool?",
+          "options": [
+            "By absorbing all the sunlight",
+            "By using a small electric fan",
+            "By reflecting sunlight and releasing heat into the sky",
+            "By trapping cold air underneath"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is currently the main limitation of the paint?",
+          "options": [
+            "It is too expensive to produce",
+            "It cannot survive rain",
+            "It only works at night",
+            "It damages building walls"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "科普片段主题是一种能给建筑降温的特殊涂料。其降温原理是反射几乎所有阳光并把热量释放到天空（reflect sunlight and release heat into the sky）。目前主要局限是生产成本太高（still expensive to produce）。"
+    },
+    {
+      "passage": "Have you ever wondered why tea is such a big deal in our culture? Well, I read that in many southern Chinese towns, offering tea isn't just about the drink itself. When a guest enters your home, the very first thing you do is pour them a cup, even before you sit down to talk. It's a quiet way of saying, you are welcome here. I find that fascinating. In some families, younger members pour tea for the elders during festivals as a sign of deep respect. So next time someone hands you a cup, remember it carries far more meaning than you might expect.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what is the first thing a host typically does when a guest arrives?",
+          "options": [
+            "Sit down and start a conversation",
+            "Pour the guest a cup of tea",
+            "Introduce the family members",
+            "Prepare a festival meal"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main point the speaker wants to make about tea?",
+          "options": [
+            "Tea tastes better in southern towns",
+            "Tea carries cultural meaning beyond the drink",
+            "Young people drink more tea than elders",
+            "Tea should only be served at festivals"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker imply about pouring tea for elders during festivals?",
+          "options": [
+            "It is an outdated tradition",
+            "It shows respect within the family",
+            "It is only done by hosts",
+            "It replaces conversation entirely"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题，原文说客人进门第一件事是倒茶，选B。第2题为主旨题，全文强调茶承载的文化含义超越饮品本身，选B。第3题为推断题，给长辈倒茶象征家庭中的尊敬，选B。"
+    },
+    {
+      "passage": "So, did you hear about the new recycling rule in our neighborhood? Yes, starting next month we have to separate food waste from everything else. Honestly, I think it's a bit of a hassle at first. I get that, but think about it. Most of what ends up in landfills could actually be turned into compost or reused. The city says nearly forty percent of household rubbish is food scraps. Forty percent? That's huge. Exactly. If we sort it properly, far less waste gets buried. I suppose a little extra effort is worth it if it really makes a difference. That's the spirit. Once it becomes a habit, you won't even notice.",
+      "questions": [
+        {
+          "prompt": "What new rule is the neighborhood introducing next month?",
+          "options": [
+            "Banning plastic bags",
+            "Separating food waste from other rubbish",
+            "Charging fees for recycling",
+            "Limiting household water use"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What percentage of household rubbish is food scraps, according to the city?",
+          "options": [
+            "Fourteen percent",
+            "Thirty percent",
+            "Forty percent",
+            "Fifty percent"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the woman's attitude toward the new rule by the end of the conversation?",
+          "options": [
+            "Completely opposed to it",
+            "Reluctantly accepting it as worthwhile",
+            "Indifferent to the outcome",
+            "Confused about how it works"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题细节题，新规是分类食物垃圾，选B。第2题细节题，原文明确说40%，选C。第3题态度题，女士起初觉得麻烦，最后认为值得付出努力，属于勉强接受，选B。"
+    },
+    {
+      "passage": "Mr. Lee, thank you for taking the time. I'm a final-year student and I'm not sure whether to pursue a master's degree right away or start working. That's a common dilemma. Tell me, what draws you toward graduate school? Mainly I think it would make my resume stronger. I see. But a degree alone rarely impresses employers if you lack real experience. My advice would be to gain a couple of years in the field first. Then you'll know exactly which specialization suits you. So you mean working could actually help me choose a better program later? Precisely. You'll study with a clear purpose rather than just delaying decisions.",
+      "questions": [
+        {
+          "prompt": "Why does the student initially want to pursue a master's degree?",
+          "options": [
+            "To follow family expectations",
+            "To strengthen the resume",
+            "To move to another city",
+            "To avoid a difficult job market"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Mr. Lee mainly advise the student to do?",
+          "options": [
+            "Apply for graduate school immediately",
+            "Gain work experience before studying further",
+            "Choose any specialization quickly",
+            "Give up the idea of a master's degree"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about Mr. Lee's view on getting a degree without experience?",
+          "options": [
+            "It guarantees a good job",
+            "It impresses most employers",
+            "It has limited value on its own",
+            "It should always come first"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题细节题，学生想读研主要为了让简历更好看，选B。第2题主旨题，李先生建议先工作积累经验再深造，选B。第3题推断题，他认为缺乏经验的学位本身价值有限，选C。"
+    },
+    {
+      "passage": "I've been feeling exhausted lately, even though I sleep eight hours every night. Have you been staring at your phone before bed? Well, yes, usually until I fall asleep. That might be the problem. The blue light from screens tricks your brain into thinking it's still daytime, so your sleep isn't truly deep. Really? I never connected the two. Try putting your phone away an hour before bed and read something instead. I suppose I could give that a shot. Trust me, the quality of your rest matters far more than the number of hours. You could sleep ten hours and still wake up tired if it's poor sleep.",
+      "questions": [
+        {
+          "prompt": "What problem is the speaker experiencing?",
+          "options": [
+            "Difficulty falling asleep",
+            "Feeling tired despite enough sleep",
+            "Frequent headaches",
+            "Waking up too early"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the friend suggest as the likely cause?",
+          "options": [
+            "Drinking coffee at night",
+            "Using the phone before sleeping",
+            "Eating too late",
+            "Sleeping too few hours"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main message the friend wants to convey?",
+          "options": [
+            "Sleeping longer always helps",
+            "Sleep quality matters more than quantity",
+            "Reading is bad before bed",
+            "Phones improve relaxation"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题细节题，说话人睡够八小时仍感疲惫，选B。第2题细节题，朋友指出睡前玩手机是原因，选B。第3题主旨题，朋友强调睡眠质量比时长更重要，选B。"
+    },
+    {
+      "passage": "Today I want to talk about why traditional festivals still matter in a modern world. Some people argue that holidays like the Mid-Autumn Festival are losing their meaning because everyone is too busy. But I disagree. These festivals give families a rare reason to gather, share food, and slow down. In our fast-paced lives, that pause is precious. My grandmother always says the mooncakes themselves aren't the point. What matters is sitting under the same moon, no matter how far apart we usually live. So rather than fading away, I believe these traditions adapt and survive because the need for connection never disappears.",
+      "questions": [
+        {
+          "prompt": "What is the speaker's main argument about traditional festivals?",
+          "options": [
+            "They are gradually disappearing",
+            "They still matter because they bring people together",
+            "They are mainly about special food",
+            "They should be modernized completely"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the grandmother, what truly matters during the festival?",
+          "options": [
+            "Eating the finest mooncakes",
+            "Being together under the same moon",
+            "Traveling to distant places",
+            "Keeping old recipes alive"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker imply about the future of these traditions?",
+          "options": [
+            "They will vanish in modern society",
+            "They will survive by meeting the need for connection",
+            "They will become purely commercial",
+            "They will only appeal to the elderly"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题主旨题，说话人认为传统节日仍有意义因为它让人团聚，选B。第2题细节题，祖母说重要的是同在一轮月下，选B。第3题推断题，说话人认为因人对联结的需求不灭，传统会适应并延续，选B。"
+    },
+    {
+      "passage": "Excuse me, are you the volunteer coordinator? Yes, how can I help? I'm interested in joining the program, but I'm worried I don't have the right skills. Don't worry about that. Most of our volunteers start with no experience at all. We provide training during the first two weeks. That's reassuring. What kind of work would I be doing? It depends on your interests. Some people help organize events, while others prefer working directly with the community. Could I try different roles before deciding? Absolutely. We actually encourage newcomers to explore, so they can discover what they enjoy most and where they're genuinely useful.",
+      "questions": [
+        {
+          "prompt": "Why is the person hesitant about joining the program?",
+          "options": [
+            "They have no free time",
+            "They worry they lack the right skills",
+            "They live too far away",
+            "They dislike teamwork"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the coordinator say about new volunteers?",
+          "options": [
+            "They must have prior experience",
+            "They receive training in the first two weeks",
+            "They are paid during training",
+            "They work alone at first"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about the program's approach to newcomers?",
+          "options": [
+            "It assigns fixed roles immediately",
+            "It encourages exploring different roles",
+            "It only accepts experienced people",
+            "It discourages event organizing"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题细节题，此人担心自己缺乏相应技能，选B。第2题细节题，协调员说前两周提供培训，选B。第3题推断题，项目鼓励新人尝试不同角色以发现兴趣，选B。"
+    }
+  ]
+}

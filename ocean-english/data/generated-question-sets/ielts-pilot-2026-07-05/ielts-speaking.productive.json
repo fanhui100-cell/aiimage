@@ -1,0 +1,68 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "speaking",
+  "taskType": "interview_speaking",
+  "tasks": [
+    {
+      "prompt": "IELTS Speaking practice set — topic: Daily routines.\nPart 1 (interview): Do you prefer mornings or evenings? How do you usually start your day? Has your daily routine changed in recent years?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a part of your day you especially enjoy. You should say: when it is, what you do, who you spend it with, and explain why you enjoy it.\nPart 3 (discussion): Why do some people find routines comforting while others find them boring? How do work schedules affect people's health? Do you think flexible working hours will become more common?",
+      "promptZh": "雅思口语练习组——日常作息：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。按文字转写作答估分。",
+      "referencePoints": ["fluency across all three parts", "Part 2 covers all cue points with organisation", "Part 3 shows opinion + speculation language", "topic vocabulary for routines and time management"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Places to live.\nPart 1 (interview): Do you live in a house or a flat? What do you like about your neighbourhood? Is your hometown a good place for young people?\nPart 2 (long turn): Describe a town or city you would like to live in one day. You should say: where it is, how you first learned about it, what you would do there, and explain why it appeals to you.\nPart 3 (discussion): What makes a city pleasant to live in? Should governments limit the size of big cities? How might cities change over the next fifty years?",
+      "promptZh": "雅思口语练习组——居住地：Part 1 访谈、Part 2 描述想居住的城市、Part 3 城市化讨论。",
+      "referencePoints": ["descriptive vocabulary for places", "clear reasons and examples", "comparative and future forms in Part 3", "coherent long turn"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Learning skills.\nPart 1 (interview): What skill are you learning at the moment? Do you prefer learning alone or with others? What was your favourite subject at school?\nPart 2 (long turn): Describe a skill that took you a long time to learn. You should say: what the skill is, why you started learning it, how you practised, and explain how you felt when you improved.\nPart 3 (discussion): Why do adults sometimes find learning harder than children? Are online courses as effective as classroom learning? Which skills will be most valuable in the future?",
+      "promptZh": "雅思口语练习组——技能学习：Part 1 访谈、Part 2 描述花长时间掌握的技能、Part 3 学习方式讨论。",
+      "referencePoints": ["past narrative tenses in Part 2", "process and effort vocabulary", "evaluated comparison of learning modes in Part 3", "extended answers, not single sentences"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Food and cooking.\nPart 1 (interview): What did you eat this morning? Can you cook? Are eating habits in your country changing?\nPart 2 (long turn): Describe a meal you shared with friends or family that you remember well. You should say: what the occasion was, what you ate, who was there, and explain why you remember it.\nPart 3 (discussion): Why is sharing food important in many cultures? Should schools teach students how to cook? How does advertising influence what people eat?",
+      "promptZh": "雅思口语练习组——饮食：Part 1 访谈、Part 2 描述难忘的一餐、Part 3 饮食文化讨论。",
+      "referencePoints": ["food and occasion vocabulary", "narrative organisation in Part 2", "cultural comparison in Part 3", "natural linking devices"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Technology in everyday life.\nPart 1 (interview): How often do you use your phone each day? What app do you find most useful? Is there any technology you try to avoid?\nPart 2 (long turn): Describe a piece of technology that has changed how you work or study. You should say: what it is, when you started using it, how you use it, and explain what difference it has made.\nPart 3 (discussion): Do the benefits of smartphones outweigh the drawbacks? How has technology changed communication between generations? Should children's screen time be limited by law?",
+      "promptZh": "雅思口语练习组——科技生活：Part 1 访谈、Part 2 描述改变你工作/学习方式的科技、Part 3 科技影响讨论。",
+      "referencePoints": ["technology vocabulary with precision", "cause-effect explanation in Part 2", "balanced argument in Part 3", "opinion language with justification"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Nature and the outdoors.\nPart 1 (interview): Do you enjoy spending time outdoors? Is there much green space where you live? What was the last natural place you visited?\nPart 2 (long turn): Describe a natural place that impressed you. You should say: where it is, when you went there, what you saw and did, and explain why it impressed you.\nPart 3 (discussion): Why do people living in cities need contact with nature? Who should be responsible for protecting natural areas — governments or individuals? Will tourism harm or help conservation in the long run?",
+      "promptZh": "雅思口语练习组——自然户外：Part 1 访谈、Part 2 描述让你印象深刻的自然景观、Part 3 自然保护讨论。",
+      "referencePoints": ["descriptive scenery vocabulary", "past experience narration", "responsibility and policy discussion in Part 3", "extended reasoning"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Work and careers.\nPart 1 (interview): What job would you like to do in the future? Is salary the most important thing about a job? Do people in your country often change careers?\nPart 2 (long turn): Describe a person whose job you admire. You should say: who they are, what they do, how you know about their work, and explain why you admire it.\nPart 3 (discussion): What makes a job satisfying beyond money? How has the idea of a 'career for life' changed? Should companies be required to offer training to their employees?",
+      "promptZh": "雅思口语练习组——工作职业：Part 1 访谈、Part 2 描述你敬佩其职业的人、Part 3 职业发展讨论。",
+      "referencePoints": ["work vocabulary and collocations", "clear description of another person", "abstract discussion of job satisfaction", "hypothetical and comparative structures"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Celebrations and traditions.\nPart 1 (interview): What festivals are important in your country? How does your family celebrate special occasions? Do you prefer big celebrations or small ones?\nPart 2 (long turn): Describe a celebration you attended that you particularly enjoyed. You should say: what was being celebrated, where it took place, what happened, and explain why you enjoyed it.\nPart 3 (discussion): Why do traditions matter to communities? Are traditional celebrations becoming too commercial? How do celebrations differ between generations?",
+      "promptZh": "雅思口语练习组——节庆传统：Part 1 访谈、Part 2 描述一次喜欢的庆祝活动、Part 3 传统文化讨论。",
+      "referencePoints": ["festival and tradition vocabulary", "event narration with detail", "generalisation with examples in Part 3", "views on cultural change"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Reading and media.\nPart 1 (interview): Do you read more on paper or on a screen? What kind of stories do you enjoy? How do you usually get your news?\nPart 2 (long turn): Describe a book or article that changed the way you think about something. You should say: what it was, when you read it, what it was about, and explain how it changed your thinking.\nPart 3 (discussion): Why do some people trust traditional news sources more than social media? Should reading fiction be encouraged in schools? Will printed books disappear in the future?",
+      "promptZh": "雅思口语练习组——阅读与媒体：Part 1 访谈、Part 2 描述改变你想法的书/文章、Part 3 媒体信任讨论。",
+      "referencePoints": ["media and reading vocabulary", "abstract idea explained concretely in Part 2", "trust and reliability discussion", "prediction language"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Health and exercise.\nPart 1 (interview): How do you keep fit? Do you prefer indoor or outdoor exercise? Did you play any sports as a child?\nPart 2 (long turn): Describe a healthy habit you would like to develop. You should say: what it is, why you want to develop it, what has stopped you so far, and explain how it would improve your life.\nPart 3 (discussion): Why do many people find it hard to keep healthy habits? Should governments spend more on preventing illness than treating it? How can schools encourage children to be more active?",
+      "promptZh": "雅思口语练习组——健康运动：Part 1 访谈、Part 2 描述想养成的健康习惯、Part 3 公共健康讨论。",
+      "referencePoints": ["health vocabulary", "intention and obstacle language in Part 2", "policy discussion with reasons", "personal-to-general progression"],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    }
+  ]
+}

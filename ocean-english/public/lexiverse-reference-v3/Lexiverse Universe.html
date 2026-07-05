@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Lexiverse Universe · 词汇宇宙</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lexiverse-ui/liquid-glass.css" />
+<link rel="stylesheet" href="lexiverse-ui/galaxy-app.css" />
+<link rel="stylesheet" href="lexiverse-ui/exam-overlay.css" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; background: #070d1f; color: #ECFBFF;
+    font-family: 'Space Grotesk', 'Noto Sans SC', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  #stage { position: fixed; inset: 0; }
+  #universe-wrap { position: absolute; inset: 0; }
+  #universe-wrap canvas { display: block; }
+
+  /* shared liquid surface */
+  .liquid { background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17);
+    border-radius: 14px; backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+  .liquid::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(126,249,255,0.6), transparent); pointer-events: none; }
+
+  /* ── Top: breadcrumb + return ── */
+  #topbar { position: absolute; top: 0; left: 0; right: 0; padding: 14px 22px;
+    display: flex; align-items: center; justify-content: space-between; z-index: 16; pointer-events: none; }
+  #breadcrumb { font-size: 13px; pointer-events: auto; }
+  #breadcrumb .home { background: transparent; border: none; color: #7EF9FF; font-family: inherit; font-size: inherit; font-weight: 700; cursor: pointer; padding: 0; }
+  #breadcrumb .sep { color: rgba(159,182,198,0.35); margin: 0 8px; }
+  #breadcrumb .crumb-constellation { color: #9FB6C6; }
+  #breadcrumb .crumb-galaxy { color: #ECFBFF; font-weight: 600; }
+  #breadcrumb .crumb-galaxy-zh { color: #9FB6C6; }
+  #breadcrumb:not(.with-trail) .sep, #breadcrumb:not(.with-trail) .crumb-constellation,
+  #breadcrumb:not(.with-trail) .crumb-galaxy, #breadcrumb:not(.with-trail) .crumb-galaxy-zh { display: none; }
+
+  #return-btn { display: none; padding: 9px 14px; border-radius: 12px; cursor: pointer;
+    font-family: inherit; font-size: 13px; font-weight: 600; color: #9FB6C6;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(150,200,255,0.17);
+    backdrop-filter: blur(12px); pointer-events: auto; align-items: center; gap: 6px; }
+  #return-btn:hover { border-color: rgba(126,249,255,0.5); color: #7EF9FF; }
+
+  /* ── Top-right: search + filter ── */
+  #right-stack { position: absolute; top: 60px; right: 20px; z-index: 6;
+    display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+  .liquid-input-wrap { position: relative; width: 260px; }
+  #search { width: 100%; padding: 9px 14px; border-radius: 11px;
+    background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17); color: #ECFBFF;
+    font-family: inherit; font-size: 13px; outline: none;
+    backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5); }
+  #search:focus { border-color: rgba(126,249,255,0.45); }
+  #search-results { position: absolute; top: calc(100% + 6px); left: 0; right: 0; display: none;
+    background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17); border-radius: 10px;
+    backdrop-filter: blur(12px); padding: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.45); }
+  #search-results button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 9px;
+    border-radius: 7px; background: transparent; border: none; cursor: pointer; color: #ECFBFF;
+    font-family: inherit; font-size: 12.5px; text-align: left; }
+  #search-results button:hover { background: rgba(126,249,255,0.06); }
+  #search-results .dot { width: 9px; height: 9px; border-radius: 50%; }
+  #search-results .zh { color: #6F8AA0; font-size: 11px; margin-left: 2px; }
+
+  #filter-bar { display: inline-flex; background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17);
+    border-radius: 10px; padding: 3px; backdrop-filter: blur(12px); }
+  #filter-bar button { padding: 5px 11px; border-radius: 7px; font-size: 11.5px; font-weight: 600; cursor: pointer;
+    background: transparent; border: none; color: #6F8AA0; font-family: inherit; transition: all 0.16s ease; }
+  #filter-bar button.active { background: rgba(126,249,255,0.18); color: #7EF9FF; }
+
+  /* ── Hover preview tooltip (right side, below search — never overlaps left nav) ── */
+  #preview { position: absolute; right: 20px; top: 150px; width: 282px; z-index: 6; padding: 16px;
+    background: linear-gradient(160deg, rgba(13,24,48,0.82), rgba(8,15,33,0.78)); border: 1px solid rgba(150,200,255,0.2); border-radius: 16px;
+    backdrop-filter: blur(22px) saturate(1.4); box-shadow: 0 18px 46px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.14);
+    opacity: 0; transform: translateY(-6px); transition: opacity 0.24s ease, transform 0.24s cubic-bezier(0.22,1,0.36,1); pointer-events: none; }
+  #preview.show { opacity: 1; transform: translateY(0); }
+  #preview .row { display: flex; gap: 10px; align-items: flex-start; }
+  #preview .dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  #preview .head .title { font-size: 14px; font-weight: 700; letter-spacing: -0.005em; }
+  #preview .head .zh { font-size: 12px; color: #9FB6C6; }
+  #preview .desc { font-size: 12px; color: #DCEAF2; line-height: 1.55; margin-top: 8px; }
+  #preview .desc.zh-desc { color: #8AA2B2; }
+  #preview .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  #preview .chip { font-size: 10.5px; padding: 2px 7px; border-radius: 4px; color: #7EF9FF; border: 1px solid rgba(126,249,255,0.3); background: rgba(126,249,255,0.06); font-family: 'Space Mono', monospace; }
+  #preview .chip.muted { color: #9FB6C6; border-color: rgba(159,182,198,0.18); background: rgba(255,255,255,0.02); }
+
+  /* ── Bottom-left HUD ── */
+  .hud { position: absolute; bottom: 20px; left: 22px; z-index: 6; padding: 14px 16px; min-width: 240px;
+    position: absolute; background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17);
+    border-radius: 14px; backdrop-filter: blur(18px); }
+  .hud .title { font-size: 10px; letter-spacing: 0.14em; color: rgba(126,249,255,0.55); font-family: 'Space Mono', monospace; margin-bottom: 10px; }
+  .hud .stats { display: flex; gap: 22px; }
+  .hud .stat b { display: block; font-size: 17px; font-weight: 700; color: #7EF9FF; font-family: 'Space Mono', monospace; line-height: 1; }
+  .hud .stat span { display: block; font-size: 10px; color: #6F8AA0; margin-top: 3px; letter-spacing: 0.02em; }
+
+  /* ── Legend bottom-right ── */
+  #legend { position: absolute; bottom: 20px; right: 20px; z-index: 6; padding: 10px;
+    background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17); border-radius: 14px;
+    backdrop-filter: blur(18px); display: flex; flex-direction: column; gap: 5px; }
+  #legend .row { display: flex; align-items: center; gap: 8px; }
+  #legend .ring { width: 10px; height: 10px; border-radius: 50%; }
+  #legend .t { font-size: 10.5px; color: #9FB6C6; font-family: 'Space Mono', monospace; }
+  #legend .t b { color: #CFE6F2; font-weight: 400; }
+
+  /* ── Galaxy labels ── */
+  #left-nav { position: absolute; top: 74px; left: 16px; width: 264px; max-height: calc(100vh - 250px); overflow-y: auto; z-index: 8 !important; pointer-events: auto; }
+  #left-nav::-webkit-scrollbar { width: 0; }
+  .lv-label { position: absolute; left: 0; top: 0; white-space: nowrap; font-size: 12px;
+    color: #ECFBFF; text-align: center; transition: opacity 0.2s ease; pointer-events: none;
+    text-shadow: 0 0 8px rgba(0,0,0,0.95), 0 1px 3px rgba(0,0,0,0.95); }
+  .lv-label b { font-weight: 700; }
+  .lv-label span { font-size: 10px; opacity: 0.75; }
+  .lv-label i { font-style: normal; font-family: 'Space Mono', monospace; font-size: 10px; color: #FFC85A; }
+  .lv-label.lv-mini { font-size: 11px; }
+  .lv-label.lv-mini span { font-size: 9.5px; }
+
+  /* ── Detail drawer ── */
+  #detail { position: absolute; top: 0; right: 0; bottom: 0; width: 400px; max-width: 100vw; z-index: 8;
+    background: linear-gradient(180deg, rgba(12,22,46,0.80), rgba(7,14,32,0.88));
+    border-left: 1px solid rgba(150,200,255,0.17); backdrop-filter: blur(26px) saturate(1.5);
+    box-shadow: -30px 0 80px rgba(0,0,0,0.6);
+    transform: translateX(102%); transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+  #detail.open { transform: translateX(0); }
+  #detail::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(126,249,255,0.55), transparent); pointer-events: none; }
+  #close-btn { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; border-radius: 50%;
+    border: 1px solid rgba(150,200,255,0.17); background: rgba(255,255,255,0.04); color: #9FB6C6; cursor: pointer;
+    font-size: 15px; display: flex; align-items: center; justify-content: center; }
+  #close-btn:hover { border-color: rgba(126,249,255,0.4); color: #7EF9FF; }
+  #detail-body { padding: 32px 28px; overflow-y: auto; height: 100%; }
+  #detail-body .badge { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600;
+    padding: 4px 11px; border-radius: 999px; font-family: 'Space Mono', monospace; }
+  #detail-body .badge .dot { width: 7px; height: 7px; border-radius: 50%; }
+  #detail-body h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; color: #ECFBFF; margin-top: 14px; line-height: 1; }
+  #detail-body .subtitle { font-size: 16px; color: #9FB6C6; margin-top: 4px; }
+  #detail-body .constellation { font-size: 12px; color: #6F8AA0; margin-top: 10px; font-family: 'Space Mono', monospace; }
+  #detail-body .sec { font-size: 10px; letter-spacing: 0.14em; color: rgba(126,249,255,0.55); font-family: 'Space Mono', monospace; margin: 24px 0 10px; }
+  #detail-body .desc { font-size: 14.5px; line-height: 1.6; color: #DCEAF2; }
+  #detail-body .desc-zh { font-size: 13px; color: #8AA2B2; margin-top: 5px; }
+  #detail-body .filter-block { display: flex; flex-direction: column; gap: 6px; }
+  #detail-body .kv { display: flex; gap: 10px; font-size: 12.5px; font-family: 'Space Mono', monospace; }
+  #detail-body .kv .k { color: #6F8AA0; min-width: 90px; }
+  #detail-body .kv .v { color: #ECFBFF; }
+  #detail-body .note { font-size: 12.5px; color: #9FB6C6; line-height: 1.6;
+    border-left: 2px solid rgba(126,249,255,0.45); padding: 8px 12px; background: rgba(126,249,255,0.04); border-radius: 0 8px 8px 0; }
+  #detail-body .actions { margin-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  #detail-body .actions button { padding: 12px; border-radius: 12px; font-family: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer; }
+  #detail-body .actions .primary { background: linear-gradient(135deg, #7EF9FF, #38BDF8); border: none; color: #04202B; box-shadow: 0 8px 26px rgba(56,189,248,0.32); }
+  #detail-body .actions .ghost { background: rgba(255,255,255,0.03); border: 1px solid rgba(159,182,198,0.18); color: #9FB6C6; }
+  #detail-body .actions .ghost:hover { border-color: rgba(126,249,255,0.4); color: #ECFBFF; }
+
+  /* ── brand chip + rich HUD (Liquid Glass upgrade) ── */
+  #topbar .topbar-left { display: flex; align-items: center; gap: 14px; pointer-events: auto; }
+  #brand-chip { display: flex; align-items: center; gap: 10px; padding: 7px 13px 7px 8px; border-radius: 999px;
+    background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17); backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 30px rgba(2,8,26,0.4); }
+  #brand-chip .bl { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; position: relative;
+    background: linear-gradient(135deg,#BFF6FF,#7EF9FF 40%,#38BDF8 80%,#7C5CFF); color: #051421; font-weight: 700; font-size: 17px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 0 16px rgba(126,249,255,0.45), 0 0 34px rgba(124,92,255,0.25); }
+  #brand-chip .bl::after { content: ''; position: absolute; inset: -3px; border-radius: 12px; border: 1px solid rgba(126,249,255,0.35); pointer-events: none; }
+  #brand-chip .bt { line-height: 1.1; }
+  #brand-chip .bt b { display: block; font-size: 14.5px; font-weight: 700; letter-spacing: 0.01em;
+    background: linear-gradient(90deg,#F2FAFF,#9EE8FF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  #brand-chip .bt i { font-size: 9px; font-style: normal; color: rgba(126,249,255,0.62); font-family: 'Space Mono', monospace; letter-spacing: 0.22em; }
+  #breadcrumb:not(.with-trail) { display: none; }
+  #module-nav { display: inline-flex; gap: 3px; padding: 4px; border-radius: 999px;
+    background: rgba(9,18,38,0.62); border: 1px solid rgba(150,200,255,0.17); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.16); }
+  #module-nav .mn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 999px; border: none; cursor: pointer; font-family: inherit;
+    font-size: 12px; font-weight: 600; color: #9DB6CB; background: transparent; transition: color 0.16s, background 0.16s, transform 0.16s; white-space: nowrap; }
+  #module-nav .mn .i { font-size: 12.5px; opacity: 0.9; }
+  #module-nav .mn:hover { color: #ECFBFF; background: rgba(126,249,255,0.07); transform: translateY(-1px); }
+  #module-nav .mn.is-active { color: #7EF9FF; background: rgba(126,249,255,0.13); box-shadow: inset 0 0 0 1px rgba(126,249,255,0.3); }
+  #module-nav .mn.more { color: #BFE3F0; }
+  #module-nav .mn.more:hover { color: #7EF9FF; }
+
+  /* ── All-modules grid overlay ── */
+  #module-grid { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center;
+    background: rgba(2,6,16,0.62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  #module-grid.open { display: flex; animation: mgFade 0.24s ease; }
+  @keyframes mgFade { from { opacity: 0; } to { opacity: 1; } }
+  #module-grid .mg-sheet { position: relative; width: min(760px, calc(100vw - 40px)); max-height: 84vh; overflow-y: auto; padding: 30px 30px 26px; border-radius: 24px;
+    background: linear-gradient(170deg, rgba(13,24,48,0.95), rgba(7,13,30,0.96)); border: 1px solid rgba(126,249,255,0.22);
+    box-shadow: 0 40px 120px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.16); }
+  #module-grid .mg-x { position: absolute; top: 18px; right: 18px; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(150,200,255,0.2); color: #9FB6C6; font-size: 14px; transition: all 0.16s; }
+  #module-grid .mg-x:hover { color: #7EF9FF; border-color: rgba(126,249,255,0.5); transform: rotate(90deg); }
+  #module-grid .mg-title { font-size: 10.5px; letter-spacing: 0.2em; color: rgba(126,249,255,0.6); font-family: 'Space Mono', monospace; margin-bottom: 20px; }
+  #module-grid .mg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  #module-grid .mg-item { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px 14px; border-radius: 16px; cursor: pointer; text-align: left;
+    background: rgba(255,255,255,0.025); border: 1px solid rgba(150,200,255,0.13); transition: transform 0.18s cubic-bezier(0.22,1,0.36,1), border-color 0.18s, background 0.18s; }
+  #module-grid .mg-item:hover { transform: translateY(-3px); border-color: var(--c, rgba(126,249,255,0.5)); background: rgba(126,249,255,0.06); box-shadow: 0 14px 30px rgba(0,0,0,0.4); }
+  #module-grid .mg-item .mi-ic { width: 38px; height: 38px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 18px;
+    color: var(--c, #7EF9FF); background: color-mix(in srgb, var(--c, #7EF9FF) 14%, transparent); border: 1px solid color-mix(in srgb, var(--c, #7EF9FF) 32%, transparent); }
+  #module-grid .mg-item .mi-zh { font-size: 13.5px; font-weight: 700; color: #ECFBFF; }
+  #module-grid .mg-item .mi-en { font-size: 10px; color: #7E96A6; font-family: 'Space Mono', monospace; letter-spacing: 0.04em; }
+  #module-grid .mg-item.current { border-color: rgba(126,249,255,0.5); background: rgba(126,249,255,0.08); }
+  #module-grid .mg-item.current .mi-en::after { content: ' · 当前'; color: #7EF9FF; }
+  @media (max-width: 640px) { #module-grid .mg-grid { grid-template-columns: repeat(2, 1fr); } }
+  #left-nav { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s; }
+  #left-nav.collapsed { transform: translateX(-115%); opacity: 0; pointer-events: none; }
+  #nav-expand { display: none; position: fixed; left: 20px; top: 110px; z-index: 12; align-items: center; gap: 9px; padding: 10px 16px 10px 12px; border-radius: 14px; cursor: pointer;
+    font-family: inherit; font-size: 12.5px; font-weight: 600; color: #CFE6F2; background: linear-gradient(150deg, rgba(13,24,48,0.8), rgba(8,15,33,0.74)); border: 1px solid rgba(126,249,255,0.22);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 28px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.14); transition: transform 0.18s, border-color 0.18s, color 0.18s; }
+  #nav-expand .ne-ic { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 8px; font-size: 13px;
+    color: #04202B; background: linear-gradient(135deg, #BFF6FF, #7EF9FF); box-shadow: 0 0 12px rgba(126,249,255,0.5); }
+  #nav-expand:hover { transform: translateX(2px); color: #7EF9FF; border-color: rgba(126,249,255,0.55); }
+  #nav-expand.show { display: inline-flex; }
+  #u-toast { position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 16px); z-index: 40; padding: 10px 18px; border-radius: 999px;
+    font-size: 12.5px; color: #ECFBFF; background: rgba(9,18,38,0.9); border: 1px solid rgba(126,249,255,0.3); opacity: 0; pointer-events: none; transition: all 0.3s; }
+  #u-toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .prog-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .prog-row span { font-size: 11.5px; color: #9DB6CB; min-width: 44px; }
+  .prog-row b { font-size: 12.5px; font-family: 'Space Mono', monospace; min-width: 36px; text-align: right; }
+  .prog-row .prog { flex: 1; height: 5px; border-radius: 3px; background: rgba(126,249,255,0.10); overflow: hidden; }
+  .prog-row .prog i { display: block; height: 100%; border-radius: 3px; }
+  .prog-note { font-size: 11px; color: #7791A8; margin-top: 4px; }
+  .hud--rich { min-width: 312px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.32), 0 18px 50px rgba(2,8,26,0.45); }
+  .hud--rich .hud-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+  .hud--rich .lexistar { font-size: 10.5px; color: #FFD66B; font-family: 'Space Mono', monospace; white-space: nowrap; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 18px; }
+  .stats-grid .stat b { display: block; font-size: 18px; font-weight: 700; font-family: 'Space Mono', monospace; line-height: 1; }
+  .stats-grid .stat span { display: block; font-size: 9.5px; color: #7791A8; margin-top: 4px; }
+  #hud-bar { position: relative; height: 4px; border-radius: 2px; background: rgba(126,249,255,0.10); margin-top: 13px; overflow: hidden; }
+  #hud-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; }
+  #hud-bar-fill { background: linear-gradient(90deg, rgba(255,233,168,0.5), #FFE9A8); }
+  #hud-bar-fill-m { background: linear-gradient(90deg, #FFC85A, #FFD66B); box-shadow: 0 0 8px rgba(255,200,90,0.6); }
+  #hud-bar-note { font-size: 9.5px; color: #7791A8; margin-top: 6px; font-family: 'Space Mono', monospace; }
+  @media (max-width: 640px) { #brand-chip .bt { display: none; } .hud--rich { min-width: 0; } .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 10px 12px; } }
+</style>
+</head>
+<body>
+  <div class="cosmic-bg"></div>
+  <div id="stage">
+    <div id="universe-wrap"></div>
+
+    <!-- Left constellation nav — renders via ui.js renderLeftNav() -->
+    <aside id="left-nav" class="ga-index lg-panel" style="padding:0;z-index:7"></aside>
+
+    <header id="topbar">
+      <div class="topbar-left">
+        <div id="brand-chip"><span class="bl">L</span><span class="bt"><b>Lexiverse</b><i>词汇宇宙 · WORD GALAXY</i></span></div>
+        <nav id="module-nav"></nav>
+        <nav id="breadcrumb">
+          <button class="home">Lexiverse</button>
+          <span class="sep">/</span>
+          <span class="crumb-constellation"></span>
+          <span class="sep">/</span>
+          <span class="crumb-galaxy"></span>
+          <span class="crumb-galaxy-zh"></span>
+        </nav>
+      </div>
+      <button id="return-btn">↑ Return to universe · 返回宇宙</button>
+    </header>
+
+    <div id="preview"></div>
+
+    <div id="right-stack">
+      <div class="liquid-input-wrap">
+        <input id="search" placeholder="Search galaxy · 搜索星系" aria-label="Search galaxies" autocomplete="off" />
+        <div id="search-results"></div>
+      </div>
+      <div id="filter-bar">
+        <button data-filter="all" class="active">All · 全部</button>
+        <button data-filter="level">Level · 等级</button>
+        <button data-filter="exam">Exam · 考试</button>
+        <button data-filter="skill">Skill · 技能</button>
+        <button data-filter="lexis">Lexis · 词源</button>
+        <button data-filter="mine">Mine · 私域</button>
+      </div>
+    </div>
+
+    <div id="universe-hud" class="hud hud--rich">
+      <div class="hud-head">
+        <div class="title">YOUR LEXIVERSE · 词汇宇宙</div>
+      </div>
+      <div class="stats-grid" style="grid-template-columns:repeat(4,auto);gap:14px 22px">
+        <div class="stat"><b id="hud-galaxies" style="color:#7EF9FF">16 / 16</b><span>Galaxies · 星系</span></div>
+        <div class="stat"><b id="hud-words" style="color:#EAF6FF">—</b><span>Words · 单词星</span></div>
+        <div class="stat"><b id="hud-lit" style="color:#FFE9A8">0</b><span>Lit · 已点亮</span></div>
+        <div class="stat"><b id="hud-mastered" style="color:#FFD66B">0</b><span>Mastered · 已掌握</span></div>
+      </div>
+      <div id="hud-bar"><i id="hud-bar-fill"></i><i id="hud-bar-fill-m"></i></div>
+      <div id="hud-bar-note">点亮 0% · 掌握 0%</div>
+    </div>
+
+    <div id="galaxy-hud" class="hud" style="display:none">
+      <div class="title">GALAXY VIEW · 星系视图</div>
+      <div class="stats">
+        <div class="stat"><b style="color:#7EF9FF">—</b><span>Total · 总计</span></div>
+        <div class="stat"><b style="color:#7EF9FF">—</b><span>Learned · 学过</span></div>
+        <div class="stat"><b style="color:#FFA85A">—</b><span>Review · 复习</span></div>
+      </div>
+    </div>
+
+    <div id="legend">
+      <div class="row"><span class="ring" style="background:linear-gradient(90deg,#FFC85A,#FFE9A8);border-radius:2px;height:3px;width:14px;box-shadow:0 0 6px #FFC85A"></span><span class="t"><b>Level Path</b> · 等级轨道 01→07</span></div>
+      <div class="row"><span class="ring" style="background:linear-gradient(90deg,#FFD66B,#6BE0A0,#C8B8FF);border-radius:2px;height:3px;width:14px"></span><span class="t"><b>Sector Link</b> · 星座区连线</span></div>
+      <div class="row"><span class="ring" style="background:#7EF9FF;box-shadow:0 0 6px #7EF9FF"></span><span class="t"><b>Size = Words</b> · 星系大小 = 词量</span></div>
+      <div class="row"><span class="ring" style="background:#FFE9A8;box-shadow:0 0 6px #FFE9A8"></span><span class="t"><b>Click to enter</b> · 点击星系进入</span></div>
+    </div>
+
+    <button id="nav-expand"><span class="ne-ic">☰</span><span>星座导航</span></button>
+    <div id="u-toast"></div>
+    <div id="module-grid"><div class="mg-sheet"><button class="mg-x" id="mg-close">✕</button><div class="mg-title">ALL MODULES · 全部功能板块</div><div class="mg-grid" id="mg-grid"></div></div></div>
+
+    <aside id="detail">
+      <button id="close-btn">✕</button>
+      <div id="detail-body"></div>
+    </aside>
+  </div>
+
+  <script type="importmap">
+  { "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/three-addons/"
+  } }
+  </script>
+  <script src="lexiverse-universe/catalog.js"></script>
+  <script src="lexiverse-ui/exam-data.js"></script>
+  <script type="module" src="lexiverse-universe/ui.js"></script>
+  <!-- 实装联动层（ocean-english）：模块跳转 + SRS 回流；独立运行时 no-op -->
+  <script src="wu-bridge.js"></script>
+</body>
+</html>

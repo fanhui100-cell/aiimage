@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-23T16:17:02.595Z",
+  "apply": false,
+  "stage": "r7-toefl-speaking",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r7-toefl-speaking\\toefl-interview-speaking.json",
+      "template": "toefl-interview-speaking",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r7-toefl-speaking\\toefl-listen-and-repeat.json",
+      "template": "toefl-listen-and-repeat",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

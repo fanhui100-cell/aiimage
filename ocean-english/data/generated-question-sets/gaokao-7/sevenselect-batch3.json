@@ -1,0 +1,247 @@
+{
+  "template": "gaokao-seven-select",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao seven-select. Not copied. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Almost every single week now, some fresh piece of technology is announced with enormous excitement and noise, and a great many thoughtful people quietly wonder whether all this rapid, restless change is truly making ordinary daily life any better at all. (1)______ A clever new invention, however widely praised and however loudly advertised it may happen to be at first, is genuinely useful only when it actually solves a real and pressing problem that real people honestly face in their everyday lives. Consider, for a quiet moment, the simple smartphone that almost everyone now carries around in a pocket. (2)______ It quietly and completely replaced the bulky camera, the folded paper map, the heavy address book, the alarm clock, and easily a dozen other separate objects that earlier generations once had to carry everywhere they ever went. Yet not every shiny new gadget proves remotely worth the considerable money and the constant trouble. (3)______ Countless once-celebrated devices, loudly launched with enormous advertising budgets and breathless promises, were quietly and completely forgotten within a single short year because they cleverly answered a question that almost nobody had ever actually bothered to ask in the first place. The most lasting innovations of all, history keeps gently and patiently reminding us, tend to be the quietest and the least dramatic ones imaginable. (4)______ The humble metal zipper, the ordinary safety pin, and the simple wheeled suitcase changed millions upon millions of ordinary human days far more deeply than many loud, costly, and heavily hyped machines ever truly managed to do. So the next time you read some breathless glowing headline about an amazing breakthrough, try to pause and ask one calm, simple, sensible question first. (5)______ If the honest answer turns out to be a genuine yes, then real progress may quietly be happening; if not, it is very probably just another noisy passing wave that the patient years will soon wash completely away.",
+      "bank": [
+        "It succeeded so completely precisely because it folded so many separate useful tools into one small device.",
+        "Whatever the noisy truth turns out to be, real innovation should never be judged by loud advertising alone.",
+        "They rarely ever make the headlines, yet they quietly reshape the small daily routines of everyday human life.",
+        "History is in fact thickly littered with expensive gadgets that almost nobody ended up truly needing or wanting.",
+        "The fastest computer chip in the entire world is, without any doubt at all, the most important invention ever made.",
+        "You should simply ask plainly whether this clever new thing really makes some real task easier or kinder for people.",
+        "A product can be marketed endlessly, but the cleverest advertising can never truly invent a need that does not exist."
+      ],
+      "answers": [
+        1,
+        0,
+        3,
+        2,
+        5
+      ],
+      "explain_zh": "空1选B（总起：真正的创新不能只靠喧嚣广告评判）；空2选A（智能手机把众多工具合为一体而成功）；空3选D（历史上充斥着无人真正需要的昂贵小玩意）；空4选C（最持久的发明往往最不起眼）；空5选F（应自问这东西是否让真实任务更轻松更友善）。干扰句E、G放入任一空都不连贯。"
+    },
+    {
+      "passage": "A great many people sincerely and genuinely want to become fitter, healthier, and stronger, yet they quietly give the whole effort up after only a couple of weeks of exhausting, sweaty, and rather painful work. (1)______ The single biggest mistake that almost all beginners make, with very few exceptions anywhere, is starting far too hard and far too fast in the first burning, eager rush of fresh enthusiasm. A much wiser and gentler approach is instead to begin with movements that feel almost embarrassingly easy and light. (2)______ Walking briskly for just twenty gentle minutes, perhaps three or four relaxed times each week, builds a steady, calm, and genuinely reliable habit that will quietly carry you forward for many years to come. It also helps absolutely enormously to choose some form of regular exercise that you honestly and genuinely enjoy doing. (3)______ A person who secretly hates running but happily loves dancing, swimming, or cycling will obviously stick far longer with the activity that brings a real warm smile rather than a familiar sinking feeling of grim, joyless dread. Rest, which eager beginners so often carelessly dismiss as plain ordinary laziness, is in plain truth an absolutely essential and central part of getting stronger. (4)______ Muscles, perhaps surprisingly, do not actually grow during the hard sweaty workout itself but instead during the calm, quiet, unhurried hours of deep sleep and patient recovery that thoughtfully follow it. Finally, always remember that real lasting fitness is a slow patient journey measured carefully in months and years rather than in frantic, anxious, hurried days. (5)______ The ordinary person who simply keeps gently showing up, week after unremarkable week, will always quietly overtake the one who trains furiously for ten heroic days and then vanishes completely from the gym forever.",
+      "bank": [
+        "Enjoyment, it honestly turns out, is not a small luxury but the very glue that holds any lasting habit firmly together.",
+        "The hardest part of any sensible exercise program, rather surprisingly, is not the sweating at all but the patient pacing.",
+        "Taking at least one or two full days off from training each week is therefore a genuine and necessary part of it.",
+        "Small, comfortable, modest beginnings are nearly always far more powerful in the long run than grand exhausting ones.",
+        "Buying the single most expensive pair of running shoes available will instantly turn anyone into a serious athlete.",
+        "Steady quiet consistency stretched over time always gently beats short heroic bursts of unsustainable effort.",
+        "Lifting the very heaviest possible weights on the very first day is clearly the fastest possible route to real strength."
+      ],
+      "answers": [
+        1,
+        3,
+        0,
+        2,
+        5
+      ],
+      "explain_zh": "空1选B（总起：最难的是耐心配速而非流汗）；空2选D（舒适的小开端长远更有力）；空3选A（享受是习惯的黏合剂）；空4选C（每周休息一两天也是训练的一部分）；空5选F（持续胜过短暂英雄式爆发）。干扰句E、G（买贵鞋、第一天举最重）放入任一空都不连贯。"
+    },
+    {
+      "passage": "In a noisy modern world utterly overflowing with bright glowing screens and endless buzzing notifications, the quiet old-fashioned habit of reading a real paper book can feel almost wonderfully and quietly rebellious. (1)______ Unlike a quick restless scroll through a noisy social feed, sitting down properly with a good book gently asks you to slow right down, to focus deeply, and to follow a single long unbroken thought patiently all the way through to its satisfying end. Building such a valuable habit, however, almost never happens by lucky accident or by vague wishful thinking alone. (2)______ The simplest and most reliable trick of all is to set firmly aside a small fixed amount of time each day, perhaps just fifteen quiet unhurried minutes right before sleep, and then to protect that gentle daily ritual quite fiercely. It also genuinely helps tremendously to keep a book physically within very easy reach at absolutely all times. (3)______ When a worn paperback sits openly on your pillow or waits patiently inside your everyday bag, you are far, far more likely to read a few real pages than when it hides forgotten on some distant, dusty, unreachable shelf. Choosing books that genuinely and honestly excite you matters far more in the end than dutifully reading whatever other people sternly insist you really ought to. (4)______ A happy reader who is honestly gripped by a thrilling adventure story will joyfully finish ten cheerful books while a bored, dutiful reader still struggles grimly and slowly through a single worthy classic. Above all, try gently and kindly to let go of any guilty nagging pressure to finish every single book you ever happen to start. (5)______ Putting down a genuinely dull book without the slightest shame or regret quietly frees up precious time and scarce attention for the very next one that might just quietly change the entire way you see the whole world.",
+      "bank": [
+        "Visibility, oddly enough, is one of the quiet hidden secrets standing behind almost every lifelong reading habit.",
+        "Reading slowly and deeply is itself a kind of valuable training that the busy distracted modern mind badly needs.",
+        "Like any other worthwhile skill, regular reading must be carefully built up on purpose and then protected on purpose.",
+        "Genuine interest is the real engine of all reading, and no dull sense of duty can ever truly replace honest curiosity.",
+        "Abandoning a book you clearly dislike is not a shameful failure but a wise and perfectly honest use of your short time.",
+        "Reading exactly one hundred thick books every single year is, in the end, the only true proof of a properly educated mind.",
+        "Owning tall expensive leather bookcases is, everyone surely agrees, the surest possible sign of a deep serious reader."
+      ],
+      "answers": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "explain_zh": "空1选B（总起：慢读深读是现代心智需要的训练）；空2选C（阅读习惯要刻意建立并守护）；空3选A（可见性是终身阅读习惯的秘诀）；空4选D（兴趣是阅读的引擎，责任替代不了好奇）；空5选E（放下不喜欢的书是明智用时）。干扰句F、G（每年读一百本、昂贵书柜）放入任一空都不连贯。"
+    },
+    {
+      "passage": "Beneath the calm shimmering silver surface of the open ocean lies a vast hidden world that is far stranger, darker, and more wonderful than most people living safely on dry land ever once bother to imagine. (1)______ Warm sunlight reaches only the very thin uppermost layer of the deep sea, so the overwhelming majority of this enormous cold watery realm sits forever in a permanent, crushing, and almost total ink-black darkness. Yet even down in that frozen lightless world, stubborn life has somehow found astonishing and genuinely clever ways to survive and thrive. (2)______ Many strange deep-sea fish proudly carry their own soft glowing lights, produced by tiny living chemicals deep inside their own bodies, which they use cunningly to lure curious prey, to confuse hungry hunters, or to silently find a distant mate in the dark. Much closer to the bright warm sunlit shore, living coral reefs form some of the busiest, richest, and most dazzlingly colorful neighborhoods on the entire crowded planet. (3)______ Although a single tiny coral animal is no larger than the small nail on your little finger, billions upon billions of them, patiently working together over many slow centuries, gradually build vast stony underwater cities that shelter fully a quarter of all known sea creatures. Sadly, this beautiful, fragile, and deeply intricate underwater world is now in very serious and rapidly growing danger. (4)______ Steadily warming seas, drifting plastic waste, and reckless careless overfishing are all quietly damaging the fragile reefs and emptying the once-crowded waters far faster than almost anyone on land yet fully realizes. Protecting the great ocean, marine scientists keep urgently and repeatedly reminding us, is truly not merely about saving a few charming and photogenic animals. (5)______ A healthy, living, breathing sea quietly produces much of the very oxygen we breathe and helps gently steady the climate of the whole spinning planet, so its quiet distant fate is, in the end, tightly bound up with our own.",
+      "bank": [
+        "Living reefs are built, quite remarkably, by enormous patient colonies of tiny creatures that most humans never once notice.",
+        "The largest blue whale that ever swam is, beyond all possible doubt, simply the very loudest animal on the whole planet.",
+        "The sea, in honest truth, is far less a single simple place than a tall stack of utterly different layered worlds.",
+        "Its many troubles, far from being safely distant, reach right back across the water to touch every single person on the land.",
+        "Fishing boats everywhere should plainly be allowed to catch absolutely as many fish as they could ever possibly want.",
+        "Down in the cold deep, strange creatures have evolved tricks that would seem utterly impossible up in the bright light.",
+        "Reckless human activity, sadly, is now reshaping the world's oceans far more rapidly than slow nature ever could alone."
+      ],
+      "answers": [
+        2,
+        5,
+        0,
+        6,
+        3
+      ],
+      "explain_zh": "空1选C（总起：海洋是叠加的不同分层世界）；空2选F（深海生物进化出光中无法想象的本领）；空3选A（珊瑚礁由微小生物的庞大群落建成）；空4选G（人类活动正快速改变海洋）；空5选D（海洋的困境关乎陆上每个人）。干扰句B、E（蓝鲸最响、渔船随意捕捞）放入任一空都不连贯。"
+    },
+    {
+      "passage": "Clean fresh drinking water can honestly feel almost completely endless when it pours so easily and so reliably out of the kitchen tap, and yet in plain truth it is quietly one of our very most precious and most strictly limited natural resources. (1)______ Although our lovely blue planet looks gloriously and thoroughly soaked when viewed from far out in cold space, less than one tiny single percent of all its water is actually fresh, liquid, clean, and genuinely reachable for ordinary everyday human use. This rather sobering fact makes the simple act of saving water at home far more important than most busy families ever once stop to seriously think about. (2)______ A tap left carelessly running while you brush your teeth can quietly and uselessly waste several full liters in a single ordinary hurried morning, and that small daily waste silently and steadily adds up over the course of a long year. Fixing small leaks promptly is another wonderfully simple step that brings surprisingly large and lasting rewards. (3)______ A single dripping faucet, lazily ignored for many forgetful months, can quietly lose hundreds upon hundreds of liters that absolutely no one ever consciously chose to use, drink, or even enjoy. Gardens and green lawns, beloved as they so understandably are, can also greedily gulp down truly enormous and hidden quantities of clean water. (4)______ Watering thirsty plants gently in the cool early morning, rather than under the harsh blazing midday sun, lets far more of that precious moisture sink slowly and deeply into the dry soil instead of vanishing uselessly into the warm dry air. None of these small careful everyday habits, taken entirely and stubbornly alone, will ever quite save the whole wide thirsty world. (5)______ But when many millions of separate ordinary households each quietly and willingly choose to waste just a little less, those countless tiny private streams of saving slowly join together into one mighty, powerful, and genuinely unstoppable river of real change.",
+      "bank": [
+        "There is honestly so much water in the wide salty oceans that humanity could surely never possibly run short of any of it.",
+        "Most of us, sitting comfortably, simply assume the cool supply will somehow keep flowing forever without any thought at all.",
+        "Tiny hidden leaks are dangerous precisely because they steadily waste so much while attracting so very little of our attention.",
+        "Small everyday choices made in the kitchen and the bathroom quietly add up to far, far more than most people ever expect.",
+        "Leaving the hot shower running freely for a full hour is a perfectly harmless and deeply relaxing way to begin any day.",
+        "Careless outdoor watering, done without a single thought, is quietly one of the largest single sources of all household waste.",
+        "Together, however, all these small humble daily habits can ripple steadily outward into something genuinely and surprisingly enormous."
+      ],
+      "answers": [
+        1,
+        3,
+        2,
+        5,
+        6
+      ],
+      "explain_zh": "空1选B（总起：人们以为水会永远流淌不会枯竭）；空2选D（厨房浴室的小选择累积惊人）；空3选C（小漏水因不引人注意而危险）；空4选F（户外随意浇水是最大的隐性浪费）；空5选G（这些小习惯汇聚成巨大改变）。干扰句A、E（海水用不完、一小时淋浴无害）放入任一空都不连贯。"
+    },
+    {
+      "passage": "In many of today's busy, towering modern apartment buildings, people can quietly live for whole years just a single thin wall apart and still somehow never once learn each other's first names. (1)______ This quiet invisible wall of polite strangers, though it may often feel perfectly safe, private, and convenient, slowly and steadily robs an entire neighborhood of the easy warmth and ready help that genuinely good neighbors have always naturally provided. Happily, building friendlier and warmer bonds with the people living right next door does not actually require any grand, expensive, or awkward gesture at all. (2)______ A simple warm smile in the crowded lift, a cheerful and unhurried good morning beside the mailboxes, or a small kind offer to help carry a heavy bag upstairs can quietly begin to melt away long years of frosty, distant silence. Shared common spaces, when residents genuinely and willingly choose to actually use them together, slowly become natural and gentle meeting grounds. (3)______ A long-neglected courtyard, once nobody's particular business and yet everyone's tired eyesore, can slowly and beautifully turn into a beloved little garden where happy children play freely and tired adults pause to chat after a long working day. Small honest acts of practical everyday kindness build the very deepest and most lasting trust of all. (4)______ Quietly watering a holiday neighbor's thirsty plants, signing politely for a stray misdelivered parcel, or sharing an extra steaming bowl of warm homemade soup tells people, far more loudly than any polished words ever possibly could, that someone nearby genuinely cares. Over patient unhurried time, these gentle ordinary habits slowly weave separate, lonely, locked households into something far stronger, warmer, and kinder. (5)______ A true real community is never simply a long silent row of locked identical doors along a dim corridor; it is, in the very truest sense, a living breathing web of people who have quietly and freely decided to look out for one another.",
+      "bank": [
+        "Common ground, both quite literally and warmly figuratively, is exactly where neighbors most easily first begin to know each other.",
+        "The very best neighbors of all, surely, are the ones who keep entirely to themselves and never once say a single word.",
+        "Real human connection, fortunately, very nearly always starts with the smallest and the least frightening of friendly gestures.",
+        "The friendly old close-knit neighborhood, where simply everyone knew everyone, is quietly fading away in so many cities today.",
+        "A tall iron fence topped with sharp cruel spikes is plainly the surest way to make any quiet street feel warm and welcoming.",
+        "What slowly grows from all this patient gentle effort is honestly something that money could never once possibly buy outright.",
+        "Helping out in tiny ordinary practical ways quietly speaks of genuine care in a way that empty cheerful greetings simply cannot."
+      ],
+      "answers": [
+        3,
+        2,
+        0,
+        6,
+        5
+      ],
+      "explain_zh": "空1选D（总起：熟识的老邻里正在城市中淡去）；空2选C（联结始于最微小最不令人害怕的举动）；空3选A（共享空间是邻里相识的起点）；空4选G（细小实事比空洞问候更显关心）；空5选F（这一切长成金钱买不到的东西）。干扰句B、E（最好的邻居从不说话、高墙利刺令街道温暖）放入任一空都不连贯。"
+    },
+    {
+      "passage": "Walking slowly and thoughtfully through a really good museum can feel a little like quietly stepping right inside a vast, patient, and shared memory belonging to the whole long human race. (1)______ Each single carefully chosen object placed on display, whether an ancient cracked clay pot or a glowing fresh modern painting, quietly carries a real true story about how earlier people once lived, dreamed, struggled, hoped, and saw their own strange changing world. To get the very most out of any single visit, though, it genuinely and surprisingly helps to slow right down. (2)______ Rushing breathlessly past a full thousand crowded exhibits in a single tiring exhausted afternoon honestly teaches you far, far less than truly studying just ten or twelve chosen pieces with calm, curious, patient, and completely unhurried attention. Carefully reading the small printed labels placed beside each object can quietly open up wonderful and surprising hidden depths. (3)______ A plain dull grey stone tool that you might otherwise carelessly pass in a single bored second suddenly becomes thrilling and alive once you happen to learn that real human hands patiently shaped it many thousands of years before any city anywhere was ever once built. Asking your own honest curious questions makes the whole rich experience richer and deeper still. (4)______ Quietly wondering who first wore a particular golden ring, or why some long-unknown artist deliberately chose those exact sad muted colors, gently turns silent passive looking into genuine active thinking and real living wonder. A museum, in the very end, always rewards the truly curious visitor far more generously than the merely hurried or distracted one. (5)______ Those people who wander in slowly, look closely and kindly, and quietly let themselves feel real honest wonder will carry something quietly and permanently valuable home with them long after the heavy front doors have finally closed firmly behind them.",
+      "bank": [
+        "Honest curiosity, far more than any printed guidebook, is the single best companion you could ever possibly bring inside.",
+        "Quality of warm attention, and not the sheer raw quantity of objects rushed past, is what truly makes any visit worthwhile.",
+        "The single largest museum standing anywhere in the world holds far more paintings than any one person could ever hope to count.",
+        "Every museum, deep at its quiet heart, is really a grand patient collection of human stories told through ordinary objects.",
+        "The very best way to truly enjoy any museum is clearly to photograph absolutely everything without ever once stopping to look.",
+        "Those tiny easily skipped labels are very often the small quiet keys that gently unlock an object's real hidden meaning.",
+        "What exactly you take away in the end depends far less on the grand building than on the real openness you carry within."
+      ],
+      "answers": [
+        3,
+        1,
+        5,
+        0,
+        6
+      ],
+      "explain_zh": "空1选D（总起：博物馆是用器物讲述的人类故事）；空2选B（专注的质量而非看的数量才有价值）；空3选F（小标签是解开器物意义的钥匙）；空4选A（好奇心是最好的同伴）；空5选G（带走多少取决于内心的开放）。干扰句C、E（最大博物馆藏画无数、拍照不看最佳）放入任一空都不连贯。"
+    },
+    {
+      "passage": "Most of us casually think of nightly sleep as simply a complete switching-off of the whole tired body, just a few quiet empty hours of pure nothing wedged in between our long busy noisy days. (1)______ Far from being lazily idle, the sleeping brain actually works astonishingly and tirelessly hard, quietly sorting through and filing away absolutely everything you saw, felt, learned, and worried about during the long hours you spent fully awake. During the deep slow stages of sleep, the resting mind very carefully moves fresh new fragile memories from short shaky temporary storage into firm, stable, lasting form. (2)______ This is exactly and precisely why a tired desperate student who pulls a frantic all-nighter right before a big important exam very often remembers far less the next morning than a calmer rested classmate who simply slept one full and peaceful night. Sleep also quietly and steadily repairs, restores, and refreshes the hardworking physical body itself. (3)______ Tired muscles patiently mend their tiny daily tears, the busy immune system slowly grows noticeably stronger, and countless cells right across the whole body quietly carry out the gentle invisible housekeeping that only deep undisturbed rest ever truly allows. Yet millions and millions of people, and especially restless modern teenagers, regularly and carelessly cheat themselves out of the precious deep sleep they so very badly and genuinely need. (4)______ Bright glowing phone screens late at night, heavy rich evening meals, and wildly irregular shifting bedtimes all quietly and stealthily rob the tired brain of the deep healing rest it silently hungers for. Fortunately, building far better and healthier sleep is mostly just a simple matter of small, steady, gentle, sensible daily habits. (5)______ Going to bed at roughly the very same hour each single night, dimming the harsh bright lights well before sleep, and keeping the quiet bedroom cool and dark together quietly work small everyday miracles over patient time.",
+      "bank": [
+        "Drinking several strong black cups of coffee right at midnight is clearly the perfect way to guarantee deep restful sleep.",
+        "In reality, sleep is honestly one of the very busiest and most important activities your whole tired body ever performs.",
+        "Sleep, in plain other words, is precisely the quiet time when the busy brain carefully files away the lessons of the whole day.",
+        "Such small gentle daily changes cost almost nothing at all, and yet they can completely transform a person's energy and mood.",
+        "Rest is therefore not a passive pause from real living but instead an active, central, and vital part of staying truly healthy.",
+        "Sleeping only three short broken hours every single night is, doctors everywhere firmly agree, the real secret of every success.",
+        "The noisy modern world, unfortunately, is absolutely full of clever little traps that quietly and steadily steal good sleep away."
+      ],
+      "answers": [
+        1,
+        2,
+        4,
+        6,
+        3
+      ],
+      "explain_zh": "空1选B（总起：睡眠是身体最繁忙重要的活动）；空2选C（睡眠是大脑归档全天所学之时）；空3选E（休息是保持健康的主动核心部分）；空4选G（现代世界满是偷走睡眠的陷阱）；空5选D（温和的改变零成本却能彻底改善）。干扰句F、A（每晚只睡三小时、午夜喝咖啡保证深睡）放入任一空都不连贯。"
+    },
+    {
+      "passage": "We tend to walk straight past ordinary green plants every single day as if they were merely silent motionless furniture, quietly and harmlessly decorating the dull edges of our busy human lives. (1)______ In simple reality, the whole green living world growing all around us is fiercely and stubbornly alive, constantly sensing, responding, signaling, and quietly competing in clever ways that would genuinely astonish most careless hurried passersby. Plants obviously cannot ever run swiftly away from sudden danger, so over long ages they have instead evolved many other clever, subtle, and genuinely surprising defenses. (2)______ Some tall trees, when painfully chewed and bitten by hungry insects, quietly release special invisible airborne chemicals that drift outward to warn their leafy neighbors to thicken their own leaves and prepare carefully for the very same coming attack. Beneath the quiet still soil, an even stranger, busier, and more social world slowly unfolds entirely out of our human sight. (3)______ Countless tangled fine threads of living fungus quietly link the deep roots of completely separate trees into one vast hidden underground network, through which the trees patiently share water, food, and even faint chemical warning signals with one another. Plants are also far, far more patient, determined, and quietly persistent than we ever lazily and carelessly assume them to be. (4)______ A single tender young green shoot, soft and seemingly utterly helpless, can slowly and stubbornly crack apart solid grey concrete and bend persistently toward the smallest faint distant sliver of life-giving golden sunlight. Once you truly and honestly begin to notice all of this quiet hidden ingenuity, the entire ordinary everyday world slowly starts to look subtly and permanently different. (5)______ The humble little weed pushing bravely and stubbornly up through a thin crack in the grey city pavement is suddenly no longer just an annoying nuisance but a small, fierce, stubborn daily miracle of living life simply refusing to give up.",
+      "bank": [
+        "A green garden, once you finally understand it, slowly becomes a slow silent living drama playing out right before your own eyes.",
+        "What actually happens hidden underground may well be the single most surprising and most social part of a plant's whole life.",
+        "The single tallest tree on the whole planet honestly grows far faster than any roaring rocket humans have ever once built.",
+        "Unable to ever flee from harm, they have instead quietly become real masters of chemistry and slow patient self-defense.",
+        "Yet ordinary plants are honestly far more active, clever, social, and aware than their deep stillness ever leads us to believe.",
+        "Plants are completely lifeless still objects that simply sit there motionless and quietly do absolutely nothing useful at all.",
+        "Sheer quiet determination, it patiently turns out, is one of the most badly underrated powers in the entire plant kingdom."
+      ],
+      "answers": [
+        4,
+        3,
+        1,
+        6,
+        0
+      ],
+      "explain_zh": "空1选E（总起：植物比静止表象更活跃聪明）；空2选D（无法逃跑而成化学与耐心自卫的高手）；空3选B（地下世界是植物秘密生活中最惊人最社交的部分）；空4选G（坚韧是植物界被严重低估的力量）；空5选A（花园成为眼前缓慢上演的无声活戏剧）。干扰句F、C（植物毫无生命、最高的树比火箭快）放入任一空都不连贯。"
+    },
+    {
+      "passage": "For nearly all of long human history, ordinary curious people everywhere have gazed quietly up at the vast dark glittering night sky and seriously wondered what really, truly lies far beyond our own small fragile blue home. (1)______ Space exploration, once nothing more at all than an ancient and seemingly utterly impossible distant dream, has in just a few short remarkable generations somehow become one of our very boldest and most demanding real-world adventures. The earliest daring journeys far beyond the Earth demanded a courage that is almost completely unimaginable to us. (2)______ The very first brave astronauts climbed willingly right atop towering, roaring, shaking rockets, trusting fragile untested new machines to carry them safely up into a cold black silent emptiness where no living human being had ever once dared to go before. Today the patient work of exploration has grown far broader, cleverer, and more varied than those few daring early manned flights. (3)______ Tireless robotic rovers now crawl slowly and patiently across the rusty red frozen deserts of distant Mars, while powerful space telescopes silently and steadily capture the faint ancient flickering light of galaxies that lie almost unthinkably far away. Yet the very deepest and truest reasons for endlessly reaching outward are honestly not really about the dazzling clever technology at all. (4)______ Every single difficult new mission quietly teaches us fresh, humbling, and sobering lessons about our own small fragile shared planet, about the strict hard limits of frail human life, and about the stubborn endless reach of restless human curiosity. Perhaps that one quiet stubborn curiosity is, in the very end, the single true engine driving absolutely all of it forward. (5)______ As long as small wondering children somewhere keep looking up at the bright distant stars and bravely daring to ask the simple endless word why, the long human adventure outward into space will surely never truly end.",
+      "bank": [
+        "That ancient quiet wonder eventually grew slowly into one of the very greatest scientific quests that humanity has ever begun.",
+        "Astronauts floating in quiet orbit can clearly and easily hear loud sounds traveling freely through the empty vacuum of space.",
+        "Exploring space, in the very end, quietly teaches us nearly as much about our own selves as about the cold distant cosmos.",
+        "Reaching space at all genuinely required a raw bravery that is honestly very hard for most of us to even imagine today.",
+        "The nearest bright star to Earth is honestly so close that a fast ordinary car could comfortably drive there in one weekend.",
+        "Modern space exploration now relies far more on patient clever tireless machines than on lone heroic human pilots alone.",
+        "It is, more than anything else at all, our restless and stubborn human curiosity that keeps gently driving us ever outward."
+      ],
+      "answers": [
+        0,
+        3,
+        5,
+        2,
+        6
+      ],
+      "explain_zh": "空1选A（总起：古老好奇成长为人类最伟大的科学探索）；空2选D（抵达太空需要难以想象的勇气）；空3选F（现代探索更依赖耐心聪明的机器）；空4选C（探索太空教会我们关于自身的东西）；空5选G（永不停歇的好奇心驱动我们向外）。干扰句E、B（最近恒星开车一周末可达、真空中能听见声音）放入任一空都不连贯。"
+    },
+    {
+      "passage": "Every single ordinary day, an enormous quiet mountain of household waste flows steadily out of our warm comfortable homes, and far, far too much of all of it ends up simply and uselessly buried deep in the cold ground. (1)______ Sorting our daily rubbish carefully by hand, though it may honestly seem at first like a small, dull, and tiresome chore, is in plain fact one of the very simplest and most genuinely powerful things any ordinary person can ever quietly do for the whole shared planet. The basic core idea standing behind all of it is reassuringly and refreshingly simple. (2)______ Used paper, old glass, scrap metal, and certain clean plastics can all be carefully cleaned, melted down, or pulped and then patiently remade into useful brand-new things, instead of just sitting uselessly in a crowded landfill for many hundreds of slow years. Soft food scraps and green garden trimmings genuinely deserve their own quite separate and rather special careful treatment. (3)______ When they are buried carelessly together with the ordinary dry trash they rot badly and release harmful warming gases, but when they are composted properly instead they slowly turn into rich dark crumbly soil that helps fresh new plants grow strong. Getting the daily sorting genuinely and reliably right does honestly take just a little patient learning at the very start. (4)______ A single greasy stained pizza box, one broken drinking glass, or a dirty crumpled plastic bag can quietly and completely spoil an entire bin of otherwise perfectly good clean recycling if it carelessly slips into the wrong container. Still, all of this small daily effort is quite unquestionably and genuinely worth it for every single one of us. (5)______ Each correctly sorted glass bottle and neatly folded cardboard box quietly saves real energy, protects precious raw natural materials, and keeps all our shared crowded neighborhoods a great deal cleaner and far healthier for absolutely everyone.",
+      "bank": [
+        "The single easiest possible solution is plainly just to gather and burn absolutely every kind of mixed rubbish all together.",
+        "Clean recyclable materials are honestly just useful resources that have simply been wrongly treated as worthless dirty garbage.",
+        "Small humble daily acts of careful sorting quietly add up over time into a real and lasting benefit for the entire community.",
+        "The genuinely good news is that very much of all this buried waste honestly need never have been thrown out at all.",
+        "Ordinary plastic bottles will naturally and harmlessly break down completely within just a few short and pleasant weeks.",
+        "One single carelessly placed wrong item can unfortunately ruin all the careful patient sorting efforts of a whole household.",
+        "Organic food waste, when it is handled the right careful way, quietly becomes a real gift to the soil rather than a problem."
+      ],
+      "answers": [
+        3,
+        1,
+        6,
+        5,
+        2
+      ],
+      "explain_zh": "空1选D（总起：许多被埋的垃圾本不必被丢弃）；空2选B（可回收物只是被错当成废物的资源）；空3选G（有机物处理得当成为土壤的礼物）；空4选F（一件放错的物品能毁掉整户的努力）；空5选C（每天的分类积累成对社区的长久益处）。干扰句A、E（把所有垃圾一起烧掉、塑料瓶几周自然分解）放入任一空都不连贯。"
+    },
+    {
+      "passage": "In a fast-moving modern age utterly flooded with cheap mass-produced factory goods, the slow patient careful work of the skilled human hand can honestly feel a little like a quiet gentle voice calling out from some far older and slower time. (1)______ A single handmade carved wooden bowl or one carefully tightly woven reed basket quietly carries something deep within it that no shiny cold machine-stamped product ever truly can, namely the warm invisible personal mark of the very person who lovingly and patiently made it. These living traditional crafts are honestly far, far more than merely pretty harmless decorations. (2)______ Each old technique, whether it is the slow natural dyeing of plain cloth or the careful hot firing of soft wet clay, quietly holds within itself many long generations of hard-won practical knowledge, patiently passed down from steady master to eager apprentice across long unbroken centuries. Sadly, very many of these precious irreplaceable skills are now in real and steadily growing danger of quietly fading away forever. (3)______ As young restless people quite understandably leave the quiet sleepy villages behind for busy well-paying jobs in distant crowded cities, fewer and fewer skilled hands honestly remain to patiently learn the slow demanding crafts that once quietly filled every ordinary household. Yet there are still some real and genuinely hopeful reasons not to fall into complete despair just quite yet. (4)______ A bright new generation of curious thoughtful buyers, honestly weary of endless identical mass-produced things, is slowly beginning once again to truly treasure the honest plain beauty and the quiet gentle imperfection of genuinely handmade work. Keeping all these living fragile traditions truly and fully alive, however, will quietly take far more than soft gentle nostalgia alone. (5)______ It honestly requires patient steady teaching, fair and truly honest pay for the skilled hardworking makers, and a real genuine willingness among ordinary everyday people to deliberately choose the slower handmade thing over the cheaper hurried one.",
+      "bank": [
+        "The single greatest threat to all these fragile old skills is the steady quiet drift of restless young people away from them.",
+        "Old traditional crafts are honestly completely useless in today's world and clearly fully deserve to be forgotten entirely now.",
+        "Behind every single living craft there quietly lies one long unbroken chain of knowledge stretching far back into the deep past.",
+        "Cold machines can obviously and easily produce far more beautiful and far more meaningful objects than any human hand ever could.",
+        "There is, quite honestly and simply, a kind of warm living soul in handmade things that no cold factory can ever truly copy.",
+        "Truly saving these old crafts plainly demands real ongoing effort and patience rather than mere fond, soft, and harmless memory.",
+        "Encouragingly, a fresh genuine appreciation for honest handmade goods is quietly and steadily stirring again in many places today."
+      ],
+      "answers": [
+        4,
+        2,
+        0,
+        6,
+        5
+      ],
+      "explain_zh": "空1选E（总起：手工物品有工厂无法复制的灵魂）；空2选C（每门手艺背后是延伸至远古的知识链条）；空3选A（最大威胁是年轻人不断流失）；空4选G（对手工品的新欣赏正在悄然兴起）；空5选F（拯救手艺需要持续努力而非空怀念）。干扰句D、B（机器造的更美、传统手艺毫无用处应被遗忘）放入任一空都不连贯。"
+    }
+  ]
+}

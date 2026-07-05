@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-21T23:01:29.817Z",
+  "apply": false,
+  "stage": "prod-ky-trans",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 0,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-ky-trans\\kaoyan-translation.productive.json",
+      "examId": "kaoyan",
+      "taskType": "translation_en_zh",
+      "level": 5,
+      "skill": "translation",
+      "tasks": 50,
+      "wrote": 50,
+      "dup": 0
+    }
+  ]
+}

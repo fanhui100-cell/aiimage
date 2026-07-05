@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-04T15:22:36.182Z",
+  "phase": "reading-q4fix-promote",
+  "approval": "owner 2026-07-04 Phase1: promote 修好的 2 条 academic reading Q4 draft",
+  "note": "上轮 e880378 重写 Q4(plankton/desert)、独立对抗复审 PASS(unique+realInference)",
+  "total": 2,
+  "setIds": [
+    "8ecbc7e0-2f7e-4d89-a762-4a70fe7cb670",
+    "1f2d5983-657d-45c9-bb1c-7f622a1d1c14"
+  ],
+  "expectedActiveAfter": {
+    "reading_comprehension": 100
+  },
+  "sets": [
+    {
+      "id": "8ecbc7e0-2f7e-4d89-a762-4a70fe7cb670",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1s9djfe"
+    },
+    {
+      "id": "1f2d5983-657d-45c9-bb1c-7f622a1d1c14",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:jyr9in"
+    }
+  ]
+}

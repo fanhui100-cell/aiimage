@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that schools should stop setting homework because children learn more effectively through classroom activities and rest, while others argue that homework is essential for reinforcing what is taught. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论学校是否应取消家庭作业的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Address both views with roughly balanced development before stating a clear position",
+        "Support each side with specific reasons or examples, not just assertions",
+        "Maintain a consistent opinion that is visible in the introduction and conclusion",
+        "Use cohesive devices naturally to signal the shift between the two views"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that boys and girls achieve better results when they are educated in separate schools, while others believe that mixed schools prepare young people better for adult life. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论单性别学校与混合学校孰优孰劣的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Examine both academic outcomes and social development arguments",
+        "Give each viewpoint a fully developed paragraph with examples",
+        "State a personal position clearly rather than sitting on the fence without justification",
+        "Avoid overgeneralising about gender; keep claims measured and supported"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that professional athletes deserve their very high salaries because of their rare talent and short careers, while others believe such earnings are unjustified when essential workers earn far less. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论职业运动员高薪是否合理的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Present the market-value and short-career arguments as well as the fairness objection",
+        "Use concrete examples (types of athletes, comparison professions) to illustrate points",
+        "Ensure the writer's own opinion is explicit and consistent throughout",
+        "Assess whether ideas are extended with reasoning rather than repeated"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that all young adults should be required to complete a period of national service, either in the military or in community programmes, while others think such compulsory schemes are an unfair use of young people's time. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论是否应要求年轻人服义务性国家服务的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Cover benefits claimed for national service (discipline, social mixing, civic duty) and objections (freedom, career delay)",
+        "Distinguish military service from community alternatives where relevant",
+        "Present a reasoned personal stance rather than merely summarising both sides",
+        "Check paragraphing: one clear central idea per paragraph"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say that watching films at home on streaming services is now a better experience than going to the cinema, while others believe cinemas offer something that home viewing can never replace. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论在家流媒体观影与去电影院观影哪种更好的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Develop both convenience/cost arguments and the social or immersive value of cinemas",
+        "Support views with everyday examples rather than vague claims",
+        "Make the personal opinion clear and connected to the arguments given",
+        "Reward precise vocabulary about media and entertainment used naturally"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that children benefit most when they are educated in two languages from an early age, while others argue that studying in a second language slows children's progress in other subjects. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论幼儿双语教育利弊的两种观点并给出个人看法，不少于 250 词。",
+      "referencePoints": [
+        "Address cognitive and career benefits alongside concerns about subject learning and confusion",
+        "Use examples such as bilingual schools or immigrant families to illustrate points",
+        "Ensure both views receive substantive treatment before the writer's conclusion",
+        "Look for a clear, well-supported final position on early bilingual education"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Fast fashion allows people to buy inexpensive clothing that is often worn only a few times before being thrown away. Some people say that the responsibility for reducing the harm caused by this industry lies with consumers rather than with governments or manufacturers. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：就“减少快时尚危害的责任在消费者而非政府或厂商”这一观点表明同意程度，不少于 250 词。",
+      "referencePoints": [
+        "State the degree of agreement clearly in the introduction and sustain it",
+        "Weigh consumer responsibility against the power of regulation and industry practice",
+        "Support arguments with concrete examples of fast fashion's effects or remedies",
+        "Ensure the conclusion matches the position argued in the body"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that entry to all publicly funded museums and galleries should be completely free, even if this means they must be supported by higher taxes. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：就“公立博物馆和美术馆应完全免费开放”这一观点表明同意程度，不少于 250 词。",
+      "referencePoints": [
+        "Take a clear position on free entry and address the taxation trade-off mentioned in the question",
+        "Develop arguments about access, education and funding sustainability",
+        "Acknowledge and respond to the opposing view for a more nuanced answer",
+        "Check that both parts of the statement (free entry and higher taxes) are engaged with"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that placing a high tax on unhealthy snacks and sugary drinks is the most effective way to improve public health. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：就“对垃圾食品和含糖饮料征收高税是改善公众健康最有效方式”这一观点表明同意程度，不少于 250 词。",
+      "referencePoints": [
+        "Respond to the superlative claim (most effective) rather than just whether taxes help at all",
+        "Compare taxation with alternatives such as education or food labelling where relevant",
+        "Support the position with plausible examples or consequences",
+        "Maintain a consistent stance from introduction to conclusion"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that mobile phones should be completely banned from school premises for all students. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：就“学校应全面禁止学生携带手机”这一观点表明同意程度，不少于 250 词。",
+      "referencePoints": [
+        "State a clear degree of agreement, possibly distinguishing total bans from partial restrictions",
+        "Develop arguments about concentration, safety, and learning uses of phones",
+        "Use school-based examples to make points concrete",
+        "Ensure any partial agreement is argued coherently, not as an unexplained hedge"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that large advertising billboards and digital screens should not be allowed in city centres because they spoil the urban environment. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：就“市中心不应允许大型广告牌和电子屏”这一观点表明同意程度，不少于 250 词。",
+      "referencePoints": [
+        "Present a clear stance on restricting outdoor advertising in city centres",
+        "Consider visual pollution and distraction against economic and cultural arguments",
+        "Illustrate with examples of cities or streetscapes, real or plausible",
+        "Reward precise, varied vocabulary about urban environments"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many cities, residents are increasingly affected by noise from traffic, construction and nightlife. What problems does this cause for individuals and communities, and what measures could be taken to reduce them? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析城市噪音带来的问题并提出解决措施，不少于 250 词。",
+      "referencePoints": [
+        "Identify specific problems (health, sleep, community wellbeing) rather than generic complaints",
+        "Propose measures that logically match the problems described",
+        "Distinguish actions by governments, businesses and individuals",
+        "Check both question parts receive substantial, balanced coverage"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. The world now discards millions of tonnes of electronic devices every year, and only a small proportion is safely recycled. Why has electronic waste grown so rapidly, and what can be done to deal with this problem? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析电子垃圾迅速增长的原因并提出应对办法，不少于 250 词。",
+      "referencePoints": [
+        "Explain plausible causes such as short product lifespans, fashion-driven upgrades and falling prices",
+        "Offer solutions aimed at manufacturers, governments and consumers",
+        "Link each solution back to a cause for a coherent argument",
+        "Ensure examples (types of devices, recycling schemes) make ideas concrete"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. As everyday services such as banking, shopping and healthcare move online, many elderly people find themselves excluded because they cannot use digital technology confidently. What problems does this create, and how could societies address them? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析老年人数字排斥造成的问题并提出社会应对之策，不少于 250 词。",
+      "referencePoints": [
+        "Describe concrete problems, from missed services to isolation and dependence",
+        "Suggest realistic responses such as training, simplified design or preserved offline options",
+        "Address responsibilities of both service providers and government",
+        "Maintain clear task response across both parts of the question"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, small islands and remote villages are steadily losing their populations as young people move away, leaving ageing communities behind. What are the causes of this trend, and what could be done to keep these communities alive? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析海岛与偏远村庄人口流失的原因并提出振兴对策，不少于 250 词。",
+      "referencePoints": [
+        "Identify causes such as limited jobs, education and services in remote places",
+        "Propose targeted measures (remote work infrastructure, tourism, incentives) with reasoning",
+        "Consider whether some depopulation may be unavoidable, showing evaluative depth",
+        "Keep the essay focused on remote and island communities, not migration in general"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, landowners are encouraged to return parts of their private farmland to a wild state by planting native trees and allowing natural habitats to recover. Do the advantages of this practice outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：评价私人土地再野化的利是否大于弊，不少于 250 词。",
+      "referencePoints": [
+        "Give a clear verdict on whether advantages outweigh disadvantages, not just a list of both",
+        "Weigh environmental gains against food production and livelihood concerns",
+        "Use comparative evaluation language to show weighing, not mere description",
+        "Support points with plausible examples of rewilding outcomes"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many cities now convert unused plots of land into community gardens where local residents can grow food together. Do the advantages of this development outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：评价城市社区菜园的利是否大于弊，不少于 250 词。",
+      "referencePoints": [
+        "State and sustain an overall judgement about the balance of advantages and disadvantages",
+        "Consider social, health and environmental benefits against land-use and maintenance drawbacks",
+        "Develop a small number of ideas deeply rather than many superficially",
+        "Ensure the conclusion delivers the weighing the question demands"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Several governments have begun banning single-use disposable products such as plastic cutlery, cotton buds and polystyrene cups. Do the advantages of such bans outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：评价禁止一次性用品的利是否大于弊，不少于 250 词。",
+      "referencePoints": [
+        "Reach a clear overall judgement on the balance of the ban's effects",
+        "Discuss environmental benefits against costs to businesses, consumers and people who rely on disposable items",
+        "Use specific product examples to ground the discussion",
+        "Check that both advantages and disadvantages are genuinely evaluated, not just listed"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, an increasing number of people under 30 are starting their own businesses instead of joining established companies. Why is this happening, and is it a positive or negative development? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析年轻人创业增多的原因并评价这一趋势的利弊性质，不少于 250 词。",
+      "referencePoints": [
+        "Answer both parts: plausible causes and a clear evaluation of the trend",
+        "Consider drivers such as technology, job market changes and role models",
+        "Deliver a definite verdict (positive, negative or qualified) with justification",
+        "Balance the space given to the two parts of the question"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, customers are expected to add a tip of ten to twenty percent to their bill in restaurants and taxis, while in others tipping is rare. Why does tipping remain common in certain countries, and would it be better if service staff were simply paid higher fixed wages instead? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：分析小费文化在某些国家盛行的原因，并讨论以固定高工资取代小费是否更好，不少于 250 词。",
+      "referencePoints": [
+        "Address both questions: reasons for tipping's persistence and a judgement on fixed wages",
+        "Consider tradition, wage structures and incentive arguments",
+        "Give a clear, reasoned answer to the second question rather than leaving it open",
+        "Use cross-country comparison naturally without needing precise facts"
+      ],
+      "wordLimit": ">=250"
+    }
+  ]
+}

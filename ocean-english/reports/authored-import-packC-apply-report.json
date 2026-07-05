@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T05:12:11.918Z",
+  "apply": true,
+  "stage": "packC",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 8,
+    "dupSkip": 40
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packC\\reading-zhongkao-lv1-c1.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\packC\\reading-zhongkao-lv1-c2.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\packC\\reading-zhongkao-lv1-c3.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\packC\\reading-zhongkao-lv1-c4.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 10
+    },
+    {
+      "file": "data\\generated-question-sets\\packC\\reading-zhongkao-lv1-c5.json",
+      "template": "reading-comprehension-mcq",
+      "level": 1,
+      "parsedOk": 8,
+      "reject": 0,
+      "wrote": 8,
+      "dupSkip": 0
+    }
+  ]
+}

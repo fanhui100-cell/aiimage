@@ -1,0 +1,107 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao reading, batch C4. Short simple passages (~130-160 words), 4 MCQs each (detail/main idea/inference/vocab). DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "When I got my first skateboard, I was sure I would learn to ride it in a day. How wrong I was! For the first week, I could barely stand on it without falling, and my elbows and knees were soon covered with bruises. My older brother, who is very good at skateboarding, watched me fall again and again. Instead of laughing, he gave me one piece of advice: 'Don't look at your feet. Look where you want to go.' At first I did not understand, but I tried it. To my surprise, it worked! When I looked ahead instead of down, I found my balance much more easily. After a month of daily practice, I could finally ride smoothly around the park. Skateboarding taught me an important lesson that helps me in life too: if you want to move forward, do not stare at the ground; keep your eyes on your goal.",
+      "questions": [
+        { "prompt": "How long did the writer think it would take to learn?", "options": ["A day.", "A month.", "A year.", "A week."], "answer": "A" },
+        { "prompt": "What advice did his brother give?", "options": ["Look at your feet.", "Look where you want to go.", "Give up at once.", "Buy a new board."], "answer": "B" },
+        { "prompt": "What happened when the writer looked ahead?", "options": ["He fell even more.", "He found his balance much more easily.", "Nothing changed.", "He hurt himself."], "answer": "B" },
+        { "prompt": "What is the main lesson of the passage?", "options": ["Skateboarding is too dangerous.", "To move forward, keep your eyes on your goal.", "Brothers are unkind.", "Practice is useless."], "answer": "B" }
+      ],
+      "explain_zh": "细节(A 以为一天就会)、细节(B 看向你想去的方向)、细节(B 看前方更易找平衡)、主旨(B 要前行就别盯着地面、盯住目标)。"
+    },
+    {
+      "passage": "Last month, our whole class went on a trip to a beautiful lake outside the city. The weather was perfect, and everyone was in high spirits. We had planned the day together: some students prepared games, others brought food to share. By the lake, we played football, had a picnic, and took many photos. The best moment came in the afternoon, when our teacher suggested a boat race. We divided into teams and rowed across the lake, laughing and shouting. My team did not win, but it did not matter. What made the day special was not winning, but doing things together. On the bus home, tired and happy, we sang songs all the way. That trip brought our class closer than ever. I realised that the best memories are not made alone, but shared with the people around us.",
+      "questions": [
+        { "prompt": "Where did the class go?", "options": ["A high mountain.", "A lake outside the city.", "A museum.", "A farm."], "answer": "B" },
+        { "prompt": "What did the teacher suggest in the afternoon?", "options": ["A football match.", "A boat race.", "A class test.", "Going home early."], "answer": "B" },
+        { "prompt": "Did the writer's team win the race?", "options": ["Yes, very easily.", "No, but it did not matter.", "The race was cancelled.", "There was no race."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Winning is everything.", "The best memories are shared with others.", "Class trips are boring.", "Lakes are dangerous."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 城外湖)、细节(B 划船比赛)、细节(B 没赢但无所谓)、主旨(B 最好的回忆是与人共享的)。"
+    },
+    {
+      "passage": "One Saturday, while I was shopping in the city centre, a foreign couple stopped me and asked for help. They were trying to find a famous old temple, but they were completely lost. They spoke English, and although I am not very good at it, I decided to try my best. Using simple words and my hands, I explained the way. But the directions were complicated, and I could see they were still confused. So I made a quick decision: instead of just pointing, I walked with them all the way to the temple. It took twenty minutes, but they were so grateful. They thanked me again and again and even took a photo with me. That day, my English improved more than in a month of class. More importantly, I felt proud to have helped visitors enjoy my city. A little kindness, I learned, needs only courage, not perfect English.",
+      "questions": [
+        { "prompt": "What did the foreign couple want?", "options": ["To buy some clothes.", "To find a famous old temple.", "To learn Chinese.", "To find a hotel."], "answer": "B" },
+        { "prompt": "What did the writer finally do?", "options": ["Walked away quickly.", "Walked with them all the way to the temple.", "Called the police.", "Only drew them a map."], "answer": "B" },
+        { "prompt": "What improved for the writer that day?", "options": ["Nothing at all.", "The writer's English.", "The weather.", "The shopping."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["Never to help foreigners.", "Kindness needs courage, not perfect English.", "That English is useless.", "That cities are confusing."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 找古寺)、细节(B 一路陪他们到寺)、细节(B 英语进步了)、主旨(B 善意只需勇气、不需完美英语)。"
+    },
+    {
+      "passage": "My best friend, Tom, is from England, and he is staying with my family for the summer. He loves Chinese food but had never tried to cook it. So one weekend, my mother decided to teach us both how to make dumplings. It looked easy when my mother did it, but it was much harder than we thought! Tom's first dumplings kept falling apart, and mine looked very strange. We made a big mess in the kitchen, with flour everywhere, and we could not stop laughing. My mother was very patient and showed us again and again. After two hours, we finally made a plate of dumplings that actually looked good. When we ate them together, Tom said they were the best he had ever tasted. Cooking together was about much more than food. It helped Tom feel part of our family, and it gave us a wonderful memory we will always share.",
+      "questions": [
+        { "prompt": "Where is Tom from?", "options": ["America.", "England.", "Japan.", "France."], "answer": "B" },
+        { "prompt": "What did they learn to make?", "options": ["Noodles.", "Dumplings.", "Fried rice.", "Soup."], "answer": "B" },
+        { "prompt": "How was the cooking?", "options": ["Very easy.", "Harder than they thought, messy and funny.", "Boring.", "Quick and clean."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Dumplings are hard to make.", "Cooking together helped Tom feel part of the family.", "Tom dislikes Chinese food.", "Mothers are strict."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 来自英格兰)、细节(B 学包饺子)、细节(B 比想象难、又乱又好笑)、主旨(B 一起做饭让 Tom 融入家庭)。"
+    },
+    {
+      "passage": "Every year, our school holds a singing competition, and this year I decided to take part for the first time. I love singing at home, but performing in front of the whole school was a different matter. In the weeks before the competition, I practised every day. I was so nervous that I could hardly sleep the night before. When my turn came, I walked onto the stage with shaking legs. The bright lights and the sea of faces almost made me freeze. But as soon as I started to sing, something wonderful happened: I forgot my fear and lost myself in the music. I did not win first prize, but the warm applause at the end made me feel like a winner anyway. Taking part taught me that the real victory was not the prize, but finding the courage to stand up and share something I love with others.",
+      "questions": [
+        { "prompt": "What competition did the writer enter?", "options": ["A dance competition.", "A singing competition.", "A spelling test.", "A running race."], "answer": "B" },
+        { "prompt": "How did the writer feel before the competition?", "options": ["Calm.", "Very nervous, hardly able to sleep.", "Bored.", "Angry."], "answer": "B" },
+        { "prompt": "What happened when she started to sing?", "options": ["She forgot the words.", "She forgot her fear and enjoyed the music.", "She ran off the stage.", "She started to cry."], "answer": "B" },
+        { "prompt": "What did taking part teach the writer?", "options": ["That winning is everything.", "That the real victory was the courage to share what she loves.", "That singing is very easy.", "That competitions are unfair."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 歌唱比赛)、细节(B 紧张到难入睡)、细节(B 一唱便忘了恐惧)、主旨(B 真正的胜利是鼓起勇气分享所爱)。"
+    },
+    {
+      "passage": "Being the oldest child in my family, I often have to look after my little brother and sister when my parents are at work. To be honest, I used to find it annoying. While my friends were out playing, I had to stay home, help with homework, and stop the little ones from fighting. I felt it was unfair. But last winter, my view changed. My parents both had to work late for a whole week, and the three of us were on our own each evening. I cooked simple meals, helped with reading, and even invented games to keep everyone happy. By the end of the week, something had changed. My brother and sister looked at me differently, with trust and love in their eyes. I realised that taking care of them was not a punishment, but a kind of gift. Now I am proud to be the big sister they can always depend on.",
+      "questions": [
+        { "prompt": "What does the writer often have to do?", "options": ["Cook for her parents.", "Look after her brother and sister.", "Clean the school.", "Walk a dog."], "answer": "B" },
+        { "prompt": "How did she feel about it at first?", "options": ["Happy.", "Annoyed, and she thought it was unfair.", "Proud.", "Excited."], "answer": "B" },
+        { "prompt": "What changed her view?", "options": ["A long holiday.", "A week caring for the children alone.", "A new toy.", "A school test."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Being the oldest child is unfair.", "Caring for her siblings is a gift, not a punishment.", "Parents should not work.", "Children should never help at home."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 照顾弟妹)、细节(B 起初觉得烦、不公平)、细节(B 独自照看一周改变了她)、主旨(B 照顾他们是礼物而非惩罚)。"
+    },
+    {
+      "passage": "On Tree Planting Day, our class joined hundreds of other people to plant trees on a bare hill outside the city. We were each given a young tree, a spade, and a bucket of water. The work was hard. The ground was dry and full of stones, and digging holes made our hands sore. By lunchtime, we were tired and dirty. But as I looked across the hillside, I felt something I had not expected: pride. Where there had been only bare brown earth in the morning, there were now rows of small green trees. Our teacher told us that one day, these little trees would grow into a great forest, giving homes to birds and clean air to the city. I may be old by the time these trees are tall. But I know that part of that future forest was planted by my own hands. Sometimes the most important things we do are for people we will never even meet.",
+      "questions": [
+        { "prompt": "What did the class do on Tree Planting Day?", "options": ["Cleaned a river.", "Planted trees on a bare hill.", "Built a house.", "Picked flowers."], "answer": "B" },
+        { "prompt": "Why was the work hard?", "options": ["It rained heavily.", "The ground was dry and full of stones.", "It was too hot to move.", "They had no tools."], "answer": "B" },
+        { "prompt": "How did the writer feel by the afternoon?", "options": ["Angry.", "Proud.", "Bored.", "Frightened."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Tree planting is useless.", "Some important things we do are for people we will never meet.", "Forests are dangerous.", "Hills should stay bare."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 在荒山植树)、细节(B 地干多石、手酸)、细节(B 午后感到自豪)、主旨(B 有些重要的事是为我们永远见不到的人而做)。"
+    },
+    {
+      "passage": "I was always the shortest boy in my class, so everyone said I could never be good at basketball. For a long time, I believed them and never even tried. Then a new sports teacher, Mr. Black, arrived. He told me that height is not the only thing that matters in basketball. 'Speed, skill and a clever mind can beat height,' he said. He offered to coach me after school. It was not easy. I practised dribbling and shooting for hours, day after day. I was slow to improve, and sometimes I wanted to quit. But Mr. Black never let me give up. Slowly, I became faster and more skilful than taller players. By the end of the year, I had become one of the best players on our team. I learned that the limits other people put on us are not always real. Often, the only thing truly stopping us is our own belief that we cannot.",
+      "questions": [
+        { "prompt": "Why did people say the writer couldn't play basketball?", "options": ["He was lazy.", "He was the shortest in his class.", "He had no ball.", "He disliked all sports."], "answer": "B" },
+        { "prompt": "What did Mr. Black tell the writer?", "options": ["Only tall people can play.", "Speed, skill and a clever mind can beat height.", "That he should give up.", "That basketball is easy."], "answer": "B" },
+        { "prompt": "How did the writer improve?", "options": ["By magic.", "By practising for hours every day.", "By suddenly growing taller.", "By watching television."], "answer": "B" },
+        { "prompt": "What did the writer learn?", "options": ["Short people cannot play sports.", "The limits others put on us are not always real.", "Teachers are unfair.", "Belief does not matter."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 个子最矮)、细节(B 速度技巧头脑可胜身高)、细节(B 每天练数小时)、主旨(B 别人设的限制未必真实)。"
+    },
+    {
+      "passage": "This term, our school started a special class: Chinese calligraphy. At first, I thought it would be boring. How interesting could it be just to write characters with a brush? But I was wrong. Our teacher, an old man with white hair, showed us that calligraphy is a kind of art. He told us that each stroke must be made with care, and that a calm mind is more important than a fast hand. My first attempts were terrible. The ink went everywhere, and my characters looked like the marks of a chicken's feet! But the teacher was patient. 'Slow down and breathe,' he kept saying. As the weeks passed, my hand grew steadier and my mind grew calmer. I began to find a deep peace in those quiet hours of practice. Calligraphy taught me something our busy modern world often forgets: the value of slowing down and doing one thing well.",
+      "questions": [
+        { "prompt": "What new class did the school start?", "options": ["Painting.", "Chinese calligraphy.", "Music.", "Dancing."], "answer": "B" },
+        { "prompt": "What did the teacher say is more important?", "options": ["A fast hand.", "A calm mind.", "Expensive ink.", "A very big brush."], "answer": "B" },
+        { "prompt": "How were the writer's first attempts?", "options": ["Perfect.", "Terrible and messy.", "Very quick.", "Beautiful."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Calligraphy is boring.", "The value of slowing down and doing one thing well.", "Modern life is always best.", "Brushes are too expensive."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 书法课)、细节(B 静心比快手更重要)、细节(B 初学又糟又乱)、主旨(B 慢下来、把一件事做好之可贵)。"
+    },
+    {
+      "passage": "Every Tuesday after school, I pass by the market on my way home. There I often see an old lady named Mrs. Wu, who lives alone in our building. She is over eighty and walks slowly with a stick. Each week she buys her vegetables, but the bags are heavy, and I have seen her struggle to carry them up the stairs. One day, I simply offered to carry her bags for her. She was so happy and grateful. Since then, it has become our little routine. Every Tuesday, I carry her shopping up to her door, and she always insists on giving me a sweet or a piece of fruit. While we walk, she tells me wonderful stories about the past. I look forward to these moments now. What started as a small favour has grown into a real friendship. I have learned that helping an old person is not only a kindness to them, but a gift to ourselves.",
+      "questions": [
+        { "prompt": "Who is Mrs. Wu?", "options": ["A teacher.", "An old lady who lives alone.", "A shopkeeper.", "The writer's grandmother."], "answer": "B" },
+        { "prompt": "What did the writer offer to do?", "options": ["Cook for her.", "Carry her shopping bags.", "Clean her home.", "Buy her vegetables."], "answer": "B" },
+        { "prompt": "What does Mrs. Wu do in return?", "options": ["Gives him money.", "Gives a sweet or fruit and tells him stories.", "Nothing at all.", "Buys him toys."], "answer": "B" },
+        { "prompt": "What is the main idea of the passage?", "options": ["Old people are too much trouble.", "Helping an old person is also a gift to ourselves.", "Markets are too crowded.", "Stairs are dangerous."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 独居老太太)、细节(B 帮她提购物袋)、细节(B 回赠糖果水果并讲故事)、主旨(B 帮助老人也是给自己的礼物)。"
+    }
+  ]
+}

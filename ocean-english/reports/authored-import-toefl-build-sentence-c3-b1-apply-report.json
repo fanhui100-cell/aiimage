@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-05T01:50:34.353Z",
+  "apply": true,
+  "stage": "toefl-build-sentence-c3-b1",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 20
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\toefl-build-sentence-c3-b1\\build-sentence-c3-b1.json",
+      "template": "toefl-build-a-sentence",
+      "level": 6,
+      "parsedOk": 20,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 20
+    }
+  ]
+}

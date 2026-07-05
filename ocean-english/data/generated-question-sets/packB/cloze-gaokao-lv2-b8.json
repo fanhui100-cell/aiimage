@@ -1,0 +1,112 @@
+{
+  "template": "gaokao-cloze-passage",
+  "level": 2,
+  "_provenance": "Claude-authored original Gaokao 完形填空, batch B8. ~220-260 words, 15 blanks, 4 same-part-of-speech options, exactly one correct by context/logic. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Last summer, my father took me on my first real camping (1)___, deep into the mountains, far from any town. I had grumbled at first, certain I would be (2)___ without my phone and computer. The first evening, with no signal at all, I felt strangely (3)___, restless and unsure what to do with myself. But as the days passed, something began to (4)___. Without screens to fill every spare moment, I started to truly (5)___ the world around me. I watched the slow drama of a sunset, listened to a river I would once have walked straight (6)___, and lay awake gazing at more stars than I had ever known (7)___. My father and I talked for hours by the fire, sharing stories we had never had the (8)___ to tell at home. With nothing to distract us, we somehow grew (9)___. I learned practical things too — how to pitch a tent, read a (10)___, and cook a simple meal over flames — and each small skill gave me a quiet sense of (11)___. By the end of the week, I was genuinely (12)___ to leave. The trip taught me how much I had been (13)___ by being always connected. We fill our lives with so much noise that we forget how to be (14)___ with ourselves and the people we love. Since then, I make sure to switch everything off now and then, and simply (15)___ where I am.",
+      "blanks": [
+        { "options": ["trip", "game", "class", "shop"], "answer": "A" },
+        { "options": ["happy", "bored", "busy", "safe"], "answer": "B" },
+        { "options": ["calm", "lost", "proud", "glad"], "answer": "B" },
+        { "options": ["change", "end", "stop", "fall"], "answer": "A" },
+        { "options": ["sell", "notice", "hide", "leave"], "answer": "B" },
+        { "options": ["past", "into", "over", "down"], "answer": "A" },
+        { "options": ["existed", "sold", "left", "cost"], "answer": "A" },
+        { "options": ["chance", "money", "right", "need"], "answer": "A" },
+        { "options": ["older", "closer", "richer", "taller"], "answer": "B" },
+        { "options": ["book", "map", "sign", "clock"], "answer": "B" },
+        { "options": ["fear", "pride", "loss", "doubt"], "answer": "B" },
+        { "options": ["glad", "sad", "afraid", "ready"], "answer": "B" },
+        { "options": ["helped", "missing", "winning", "saving"], "answer": "B" },
+        { "options": ["busy", "quiet", "rich", "loud"], "answer": "B" },
+        { "options": ["enjoy", "sell", "leave", "forget"], "answer": "A" }
+      ],
+      "explain_zh": "1trip露营之旅 2bored以为会无聊 3lost不安 4change变化 5notice留意 6past径直走过 7existed存在过 8chance机会 9closer更亲近 10map地图 11pride成就感 12sad舍不得走 13missing错过 14quiet独处 15enjoy享受当下。"
+    },
+    {
+      "passage": "When my new neighbour Anna moved in, I learned that she was (1)___ and communicated using sign language. At first I felt awkward, unsure how to (2)___ with someone I could not simply talk to. We managed with smiles, gestures and notes, but it felt (3)___, like speaking through a thick wall. One day, I decided I would learn her (4)___. I borrowed books, watched videos, and asked Anna to teach me, which delighted her. Learning to sign was far (5)___ than I had expected; my fingers felt clumsy and I forgot signs constantly. But Anna was a patient (6)___, laughing kindly at my mistakes and celebrating every small (7)___. Slowly, clumsily, I began to be able to (8)___ simple things. The first time we held a real conversation entirely in sign, without paper or guesswork, I felt a joy that is hard to (9)___. A wall between us had quietly come (10)___. Through Anna, I discovered a whole rich (11)___ I had never known existed, with its own jokes, its own poetry, its own pride. I had assumed that her deafness was something to be (12)___; she taught me to see it instead as simply a different way of being in the world. Learning her language did far more than let us (13)___. It made me realise how many people we thoughtlessly shut out, not because we cannot reach them, but because we never (14)___ to try. The effort to understand another person, I learned, is itself a kind of (15)___.",
+      "blanks": [
+        { "options": ["blind", "deaf", "shy", "old"], "answer": "B" },
+        { "options": ["communicate", "win", "sell", "play"], "answer": "A" },
+        { "options": ["easy", "slow", "free", "clear"], "answer": "B" },
+        { "options": ["name", "language", "job", "story"], "answer": "B" },
+        { "options": ["easier", "harder", "cheaper", "shorter"], "answer": "B" },
+        { "options": ["student", "teacher", "doctor", "driver"], "answer": "B" },
+        { "options": ["mistake", "success", "noise", "loss"], "answer": "B" },
+        { "options": ["sell", "say", "hide", "buy"], "answer": "B" },
+        { "options": ["sell", "describe", "buy", "hide"], "answer": "B" },
+        { "options": ["back", "down", "up", "over"], "answer": "B" },
+        { "options": ["world", "shop", "game", "school"], "answer": "A" },
+        { "options": ["sold", "pitied", "shared", "praised"], "answer": "B" },
+        { "options": ["talk", "leave", "win", "pay"], "answer": "A" },
+        { "options": ["choose", "refuse", "leave", "fail"], "answer": "A" },
+        { "options": ["game", "respect", "trouble", "habit"], "answer": "B" }
+      ],
+      "explain_zh": "1deaf失聪 2communicate交流 3slow缓慢 4language语言 5harder更难 6teacher耐心的老师 7success小进步 8say表达 9describe难以形容 10down墙倒下 11world丰富的世界 12pitied被同情 13talk交流 14choose从不选择去试 15respect尊重。"
+    },
+    {
+      "passage": "The mathematics exam was the most important of the year, and I was simply not (1)___ for it. The night before, panic had kept me from studying properly, and now, staring at the paper, my mind was nearly (2)___. Two desks ahead sat Daniel, the top student, his answers no doubt perfect. It would have been so easy to (3)___ a glance at his paper. The teacher was looking out of the window; no one would ever (4)___. For one weak moment, I was truly (5)___. A good grade would please my parents and save me from a difficult (6)___ at home. But as I leaned slightly to one side, a voice inside me asked a simple (7)___: if I cheated, what would the grade actually be (8)___? It would not measure my knowledge, only my (9)___. And I would always know that it was not truly (10)___. So I straightened up and turned back to my own paper. I answered what I could and left the rest (11)___, accepting the result I had earned. My grade was poor, and the conversation with my parents was as hard as I had (12)___. But I felt something I had not expected: a quiet (13)___. I had failed the exam, but I had not failed (14)___. Looking back, that low grade matters to no one now. But the choice I made that day, to be honest even when honesty (15)___ me, is part of who I have become.",
+      "blanks": [
+        { "options": ["ready", "glad", "afraid", "late"], "answer": "A" },
+        { "options": ["clear", "blank", "bright", "full"], "answer": "B" },
+        { "options": ["sell", "steal", "hide", "buy"], "answer": "B" },
+        { "options": ["know", "help", "come", "care"], "answer": "A" },
+        { "options": ["bored", "tempted", "tired", "glad"], "answer": "B" },
+        { "options": ["game", "conversation", "meal", "trip"], "answer": "B" },
+        { "options": ["question", "price", "lesson", "story"], "answer": "A" },
+        { "options": ["worth", "sold", "hidden", "left"], "answer": "A" },
+        { "options": ["skill", "dishonesty", "effort", "luck"], "answer": "B" },
+        { "options": ["mine", "hard", "clear", "ready"], "answer": "A" },
+        { "options": ["full", "blank", "clean", "open"], "answer": "B" },
+        { "options": ["feared", "hoped", "sold", "won"], "answer": "A" },
+        { "options": ["fear", "pride", "loss", "anger"], "answer": "B" },
+        { "options": ["myself", "them", "school", "all"], "answer": "A" },
+        { "options": ["helped", "cost", "saved", "taught"], "answer": "B" }
+      ],
+      "explain_zh": "1ready没准备好 2blank脑中空白 3steal偷瞄 4know没人会知道 5tempted动心 6conversation难堪谈话 7question一个问题 8worth值多少 9dishonesty不诚实 10mine不真属于我 11blank空着 12feared如我所惧 13pride内心安宁/自豪 14myself没辜负自己 15cost代价。"
+    },
+    {
+      "passage": "During my university holidays, I volunteered to teach English for a month at a small school in a poor mountain (1)___. I went, I will admit, partly to help and partly to feel good about (2)___. What I found there changed me far more than I changed it. The school was tiny and (3)___, with broken windows and almost no books. Yet the children's eagerness to learn (4)___ me daily. They walked for hours along mountain paths to reach the school, and their faces lit up at every new (5)___ I taught them. They had so little, and yet complained far (6)___ than the students I knew back in the city. My comfortable assumptions about what people need to be (7)___ were quietly turned upside down. I had arrived imagining myself as the (8)___, the one with knowledge to give. But it was I who received the greater (9)___. The children taught me about gratitude, resilience and joy in (10)___ things. One boy, who owned almost (11)___, shared half his small lunch with me without a second thought, and that generosity humbled me deeply. When the month (12)___ and I had to leave, the children and I both wept. I returned to the city with my view of the world (13)___. I had gone to give a little of my time, but I came back having received a (14)___ I could never repay. Sometimes, I learned, those who appear to have the least are the ones with the most to (15)___.",
+      "blanks": [
+        { "options": ["village", "city", "shop", "road"], "answer": "A" },
+        { "options": ["myself", "school", "money", "them"], "answer": "A" },
+        { "options": ["new", "poor", "clean", "busy"], "answer": "B" },
+        { "options": ["bored", "amazed", "frightened", "tired"], "answer": "B" },
+        { "options": ["word", "toy", "game", "rule"], "answer": "A" },
+        { "options": ["more", "less", "longer", "louder"], "answer": "B" },
+        { "options": ["rich", "happy", "busy", "old"], "answer": "B" },
+        { "options": ["student", "teacher", "guest", "stranger"], "answer": "B" },
+        { "options": ["gift", "prize", "bill", "score"], "answer": "A" },
+        { "options": ["expensive", "simple", "difficult", "strange"], "answer": "B" },
+        { "options": ["everything", "nothing", "something", "all"], "answer": "B" },
+        { "options": ["began", "ended", "waited", "returned"], "answer": "B" },
+        { "options": ["lost", "changed", "sold", "hidden"], "answer": "B" },
+        { "options": ["lesson", "bill", "prize", "score"], "answer": "A" },
+        { "options": ["sell", "teach", "lose", "hide"], "answer": "B" }
+      ],
+      "explain_zh": "1village山村 2myself自我感觉 3poor破旧 4amazed令我惊叹 5word新词 6less抱怨更少 7happy幸福 8teacher给予者 9gift更大的收获 10simple平凡之物 11nothing几乎一无所有 12ended月末 13changed被改变 14lesson教益 15teach可教给人最多。"
+    },
+    {
+      "passage": "For most of my life, I had taken my parents almost entirely for (1)___. They cooked, cleaned, worried and worked, and I, like many teenagers, barely (2)___. Their endless small sacrifices were simply the (3)___ I lived in, as invisible to me as the air. Then one day, an English teacher gave us an unusual (4)___: to write a letter of thanks to someone who had shaped our lives, and actually (5)___ it to them. My first thought was that it would feel (6)___. But as I sat down to write to my mother and father, something unexpected (7)___. Forcing myself to put their kindness into words, I began, for the first time, to truly (8)___ it. Memory after memory came back: the meals cooked after long days of work, the worries hidden behind a (9)___, the quiet sacrifices made so that I could have (10)___ they never had. By the time I finished the letter, my eyes were (11)___. When my parents read it, my mother cried, and my usually silent father simply held me, unable to (12)___. We had loved each other for years, of course, but we had rarely said it (13)___. That single letter opened a door between us that had long been closed. I learned that gratitude felt but never (14)___ is a gift left unopened. Since that day, I try never to let the people I love simply (15)___ how much they mean to me.",
+      "blanks": [
+        { "options": ["granted", "sale", "sure", "once"], "answer": "A" },
+        { "options": ["noticed", "helped", "cooked", "paid"], "answer": "A" },
+        { "options": ["money", "world", "school", "noise"], "answer": "B" },
+        { "options": ["gift", "task", "game", "trip"], "answer": "B" },
+        { "options": ["sell", "give", "hide", "read"], "answer": "B" },
+        { "options": ["easy", "strange", "boring", "funny"], "answer": "B" },
+        { "options": ["stopped", "happened", "waited", "ended"], "answer": "B" },
+        { "options": ["sell", "appreciate", "hide", "forget"], "answer": "B" },
+        { "options": ["door", "smile", "wall", "book"], "answer": "B" },
+        { "options": ["chances", "problems", "noise", "doubts"], "answer": "A" },
+        { "options": ["dry", "wet", "closed", "bright"], "answer": "B" },
+        { "options": ["speak", "leave", "sleep", "pay"], "answer": "A" },
+        { "options": ["again", "aloud", "slowly", "wrong"], "answer": "B" },
+        { "options": ["expressed", "sold", "lost", "paid"], "answer": "A" },
+        { "options": ["know", "wonder", "see", "say"], "answer": "B" }
+      ],
+      "explain_zh": "1granted视为理所当然 2noticed几乎没留意 3world生活的世界 4task任务 5give交给 6strange觉得别扭 7happened发生 8appreciate体会 9smile藏在微笑后 10chances我能有的机会 11wet湿润 12speak说不出话 13aloud说出口 14expressed未表达 15wonder让所爱猜测。"
+    }
+  ]
+}

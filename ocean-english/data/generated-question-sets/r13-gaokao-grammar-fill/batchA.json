@@ -1,0 +1,166 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "sets": [
+    {
+      "passage": "Mr. Lin, who taught us geography, was the most memorable teacher I had ever (1)____ (meet). Unlike others, he rarely opened the textbook. Instead, he brought distant rivers and deserts to life with vivid stories. One rainy afternoon the lights suddenly went out, leaving the whole classroom (2)____ (complete) dark. Most of us expected the lesson to stop, but Mr. Lin calmly lit a candle and went on (3)____ (describe) how ancient travellers had once relied on the stars. His quiet voice was so (4)____ (power) that nobody made a sound. He always said that curiosity was (5)____ greatest gift a student could own. Years later, whenever I face a hard problem, I remember (6)____ (sit) in that flickering light. The facts he taught us have gradually faded, but the (7)____ (warm) of his teaching remains. He showed me that real education is not about filling a mind (8)____ facts. It is about lighting a fire (9)____ (keep) it burning for a lifetime. I owe him more than words can ever (10)____ (express).",
+      "gblanks": [
+        { "answer": "met", "acceptable": ["met"], "hint": "past participle in the past perfect 'had ever met'" },
+        { "answer": "completely", "acceptable": ["completely"], "hint": "adverb modifying the adjective 'dark'" },
+        { "answer": "describing", "acceptable": ["describing"], "hint": "gerund after 'went on' meaning continued doing" },
+        { "answer": "powerful", "acceptable": ["powerful"], "hint": "adjective after the linking verb 'was'" },
+        { "answer": "the", "acceptable": ["the"], "hint": "" },
+        { "answer": "sitting", "acceptable": ["sitting"], "hint": "gerund as object of 'remember' (remember doing a past action)" },
+        { "answer": "warmth", "acceptable": ["warmth"], "hint": "noun form after the definite article" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "to keep", "acceptable": ["to keep"], "hint": "to-infinitive expressing purpose" },
+        { "answer": "express", "acceptable": ["express"], "hint": "base form after the modal 'can'" }
+      ],
+      "explain_zh": "本文回忆一位难忘的地理老师。(1) meet 用过去分词 met 构成过去完成时 had ever met；(2) 修饰形容词 dark，用副词 completely；(3) go on doing 表示继续做同一件事，用现在分词 describing；(4) 系动词 was 后接形容词 powerful；(5) 最高级前用定冠词 the；(6) remember doing 表示记得做过的事，用动名词 sitting；(7) 定冠词后用名词 warmth；(8) fill sth with sth 固定搭配，填 with；(9) 不定式 to keep 表目的；(10) 情态动词 can 后用动词原形 express。"
+    },
+    {
+      "passage": "Last summer I decided to learn Chinese calligraphy, an art that demands both patience and a steady hand. On the first day, my teacher placed a soft brush in my fingers and asked me (1)____ (hold) it upright. My early strokes were clumsy, and the ink spread (2)____ (wild) across the paper. \"Slow down,\" she said gently. \"A single line, (3)____ (write) carelessly, can ruin the whole character.\" Gradually I understood that calligraphy is not about speed (4)____ about control. Each morning I practised the same character again and again until my wrist felt (5)____ (pain). Whenever I grew frustrated, my teacher reminded me of the masters who had trained for decades. By the end of August, my work had become far (6)____ (smooth) than before. I realised that this ancient art had quietly taught me discipline. Now, (7)____ I hold the brush, my breathing slows and my restless mind grows (8)____ (calm). Calligraphy has become more than a hobby; it is a way of (9)____ (live). I feel deeply (10)____ (grate) for the lessons it keeps giving me.",
+      "gblanks": [
+        { "answer": "to hold", "acceptable": ["to hold"], "hint": "to-infinitive in 'ask sb to do sth'" },
+        { "answer": "wildly", "acceptable": ["wildly"], "hint": "adverb modifying the verb 'spread'" },
+        { "answer": "written", "acceptable": ["written"], "hint": "past participle as a reduced passive clause modifying 'a line'" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "painful", "acceptable": ["painful"], "hint": "adjective after the linking verb 'felt'" },
+        { "answer": "smoother", "acceptable": ["smoother"], "hint": "comparative" },
+        { "answer": "when", "acceptable": ["when"], "hint": "" },
+        { "answer": "calm", "acceptable": ["calm"], "hint": "adjective after the linking verb 'grows'" },
+        { "answer": "living", "acceptable": ["living"], "hint": "gerund after the preposition 'of'" },
+        { "answer": "grateful", "acceptable": ["grateful"], "hint": "adjective after the linking verb 'feel'" }
+      ],
+      "explain_zh": "本文讲述学习中国书法的经历。(1) ask sb to do sth，用不定式 to hold；(2) 修饰动词 spread，用副词 wildly；(3) a line written carelessly 为过去分词作后置定语表被动；(4) not...but... 固定结构，填 but；(5) 系动词 felt 后用形容词 painful；(6) far 修饰比较级 smoother；(7) when 引导时间状语从句；(8) 系动词 grows 后用形容词 calm；(9) a way of doing sth，介词后用动名词 living；(10) feel + 形容词 grateful。"
+    },
+    {
+      "passage": "In my family there is a tradition that has lasted for three generations. Every autumn, when the moon is at its brightest, we gather in my grandmother's small courtyard to make mooncakes by hand. My grandmother, whose hands are wrinkled but skilful, always shapes the first cake (1)____ (her). The rest of us follow, pressing the sweet filling into wooden moulds (2)____ (use) for decades. The kitchen fills with the (3)____ (please) smell of baking, and the children can hardly wait. While the cakes cool, my father tells stories about how the tradition (4)____ (begin) long before any of us were born. He firmly believes that keeping such customs alive is far more important than (5)____ (buy) cakes from a shop. I used to think it was just about food, but now I see it is really about (6)____ (stay) connected. No matter (7)____ busy our lives become, this evening reminds us of where we come from. I hope that one day my own children will value it (8)____ (deep) than I do, and that they (9)____ (gather) here just (10)____ we do now.",
+      "gblanks": [
+        { "answer": "herself", "acceptable": ["herself"], "hint": "reflexive pronoun for emphasis" },
+        { "answer": "used", "acceptable": ["used"], "hint": "past participle as a reduced passive clause modifying 'moulds'" },
+        { "answer": "pleasant", "acceptable": ["pleasant"], "hint": "adjective modifying the noun 'smell'" },
+        { "answer": "began", "acceptable": ["began"], "hint": "past tense" },
+        { "answer": "buying", "acceptable": ["buying"], "hint": "gerund after 'than' parallel to 'keeping'" },
+        { "answer": "staying", "acceptable": ["staying"], "hint": "gerund after the preposition 'about'" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "more deeply", "acceptable": ["more deeply"], "hint": "comparative adverb modifying 'value'" },
+        { "answer": "will gather", "acceptable": ["will gather"], "hint": "simple future expressing a hope about later time" },
+        { "answer": "as", "acceptable": ["as"], "hint": "" }
+      ],
+      "explain_zh": "本文介绍延续三代的家庭传统。(1) 反身代词 herself 表强调；(2) moulds used for decades，过去分词作后置定语表被动；(3) 形容词 pleasant 修饰名词 smell；(4) 一般过去时 began；(5) than 后与前面 keeping 并列，用动名词 buying；(6) about 后接动名词 staying；(7) no matter how 引导让步状语从句，填 how；(8) deeply 的比较级 more deeply 修饰 value；(9) 表达对将来的期望，用一般将来时 will gather；(10) just as 表示“正如”，填 as。"
+    },
+    {
+      "passage": "Every Saturday morning, a group of us volunteer at a nearby nursing home, where many elderly people live far from their families. At first I was nervous, for I did not know (1)____ to talk about with strangers so much older than me. But an old gentleman named Mr. Zhao soon put me at ease. He had once been a teacher, and his tired eyes shone (2)____ (bright) whenever he spoke of his former students. I learned that listening was often more (3)____ (help) than speaking. Many residents simply wanted someone (4)____ (share) their memories with. One afternoon, a quiet woman who had (5)____ (say) almost nothing for weeks suddenly smiled and held my hand. That small moment moved me (6)____ (deep). Through this experience I came to see (7)____ kindness costs nothing but means everything. The hours I spend there are, without (8)____ doubt, the most rewarding of my week. I no longer think of it as a duty (9)____ as a gift. Volunteering has taught me that the old still have a great deal (10)____ (teach) the young.",
+      "gblanks": [
+        { "answer": "what", "acceptable": ["what"], "hint": "" },
+        { "answer": "brightly", "acceptable": ["brightly"], "hint": "adverb modifying the verb 'shone'" },
+        { "answer": "helpful", "acceptable": ["helpful"], "hint": "adjective in the comparative 'more helpful than'" },
+        { "answer": "to share", "acceptable": ["to share"], "hint": "to-infinitive as a postmodifier of 'someone'" },
+        { "answer": "said", "acceptable": ["said"], "hint": "past participle in the past perfect 'had said'" },
+        { "answer": "deeply", "acceptable": ["deeply"], "hint": "adverb modifying the verb 'moved'" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "a", "acceptable": ["a"], "hint": "" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "to teach", "acceptable": ["to teach"], "hint": "to-infinitive after 'a great deal' showing content" }
+      ],
+      "explain_zh": "本文讲述在养老院做志愿者。(1) know what to talk about，连接代词 what 接不定式；(2) 修饰动词 shone，用副词 brightly；(3) more helpful than，help 的形容词 helpful；(4) someone to share...with，不定式作后置定语 to share；(5) for weeks 描述过去某刻之前的状态，过去完成时 had said，分词为 said；(6) 修饰动词 moved，用副词 deeply；(7) see 后接宾语从句，连接词 that；(8) without a doubt 固定短语，填 a；(9) not...but... 结构，填 but；(10) have a great deal to do，不定式 to teach。"
+    },
+    {
+      "passage": "Our school held its annual science fair last month, and I had never seen the gym so (1)____ (crowd). Dozens of projects stood on long tables, each one (2)____ (design) to solve a real problem. My partner and I had spent weeks building a small machine that could sort waste (3)____ (automatic). The night before the fair, we worried that it might fail, but it worked (4)____ (perfect) when the judges came round. A teacher asked us how the idea had (5)____ (come) to us, and we explained that we had noticed how much rubbish our school produced every day. To our (6)____ (surprise), we won second prize. What pleased me most, however, was not the prize (7)____ the joy of creating something useful. I realised that science is not merely a subject (8)____ (memorise); it is a way of asking bold questions about the world. Standing among (9)____ those clever inventions, I felt proud of what young people can achieve. The fair gave me a confidence (10)____ I had never felt before.",
+      "gblanks": [
+        { "answer": "crowded", "acceptable": ["crowded"], "hint": "-ed adjective describing the gym after 'so'" },
+        { "answer": "designed", "acceptable": ["designed"], "hint": "past participle as a reduced passive clause modifying 'each one'" },
+        { "answer": "automatically", "acceptable": ["automatically"], "hint": "adverb modifying the verb 'sort'" },
+        { "answer": "perfectly", "acceptable": ["perfectly"], "hint": "adverb modifying the verb 'worked'" },
+        { "answer": "come", "acceptable": ["come"], "hint": "past participle in the past perfect 'had come'" },
+        { "answer": "surprise", "acceptable": ["surprise"], "hint": "noun form in 'to one's surprise'" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "to memorise", "acceptable": ["to memorise", "to memorize"], "hint": "to-infinitive as a postmodifier of 'a subject'" },
+        { "answer": "all", "acceptable": ["all"], "hint": "" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" }
+      ],
+      "explain_zh": "本文讲述学校科技展。(1) crowd 变 -ed 形容词 crowded 描述场馆状态；(2) each one designed to solve，过去分词表被动作后置定语；(3) 修饰动词 sort，用副词 automatically；(4) 修饰动词 worked，用副词 perfectly；(5) had come，过去完成时，过去分词 come；(6) to one's surprise 固定短语，用名词 surprise；(7) not...but... 结构，填 but；(8) a subject to be memorised 简化为 to memorise，不定式作定语；(9) all those inventions，限定词 all；(10) 限制性定语从句修饰 a confidence 作宾语，用 that 或 which。"
+    },
+    {
+      "passage": "During the autumn holiday, my family took a trip to a historic town where time seemed to have stopped. Narrow stone streets wound between old wooden houses, some of which were more than two hundred years old. A local guide, whose family had lived there for generations, led us (1)____ (quiet) through ancient temples. She told us that the town had (2)____ (build) beside a river so that merchants could trade easily. As we walked, I was deeply (3)____ (impress) by how carefully everything had been preserved. We stopped at a tiny tea house, where an old man (4)____ (paint) fans by hand. He kindly invited us (5)____ (taste) the local tea, which was sweeter than any I had ever tried. By sunset, the rooftops glowed (6)____ (gold) in the fading light, and I felt as (7)____ I had stepped into a painting. The trip reminded me that history is not just (8)____ books; it lives in the places people have loved. I left the peaceful town with a quiet wish (9)____ (return) someday, hoping it would stay (10)____ (change) for years to come.",
+      "gblanks": [
+        { "answer": "quietly", "acceptable": ["quietly"], "hint": "adverb modifying the verb 'led'" },
+        { "answer": "been built", "acceptable": ["been built"], "hint": "past perfect passive 'had been built'" },
+        { "answer": "impressed", "acceptable": ["impressed"], "hint": "-ed adjective for a person's feeling" },
+        { "answer": "was painting", "acceptable": ["was painting"], "hint": "past continuous for an action in progress" },
+        { "answer": "to taste", "acceptable": ["to taste"], "hint": "to-infinitive in 'invite sb to do sth'" },
+        { "answer": "golden", "acceptable": ["golden", "gold"], "hint": "adjective form describing the colour" },
+        { "answer": "if", "acceptable": ["if", "though"], "hint": "" },
+        { "answer": "in", "acceptable": ["in"], "hint": "" },
+        { "answer": "to return", "acceptable": ["to return"], "hint": "to-infinitive modifying the noun 'a wish'" },
+        { "answer": "unchanged", "acceptable": ["unchanged"], "hint": "past participle adjective after 'stay' (remain in a state)" }
+      ],
+      "explain_zh": "本文记述游览一座古镇。(1) 修饰动词 led，用副词 quietly；(2) had been built，过去完成时被动，分词为 been built；(3) impress 变 -ed 形容词 impressed 表人的感受；(4) 描述当时正在进行的动作，用过去进行时 was painting；(5) invite sb to do sth，用不定式 to taste；(6) 表颜色用形容词 golden（gold 亦可）；(7) as if 表示“仿佛”，填 if（though 亦可成 as though）；(8) history is in books，填介词 in；(9) a wish to do sth，不定式作定语 to return；(10) stay unchanged 保持不变，用过去分词形容词 unchanged。"
+    },
+    {
+      "passage": "For years I suffered from terrible stage fright, and the very thought of speaking in public filled me (1)____ fear. My hands would shake, my voice would tremble, and my mind went completely (2)____ (blank). Then my drama teacher offered me a small role in the school play, a chance that I almost refused. \"Courage is not the absence of fear,\" she told me, \"(3)____ the decision to act in spite of it.\" During rehearsals I practised my lines until they came (4)____ (nature) to me. On opening night my heart was still pounding, but I forced myself to step onto the stage, (5)____ (take) a slow, deep breath. To my (6)____ (amaze), the words flowed smoothly, and the audience listened (7)____ (attentive). When the curtain finally fell, I felt a joy (8)____ I had never known before. That evening taught me that fear shrinks the moment we face it (9)____ (direct). Now, although I still feel nervous, I no longer let that feeling control me. Overcoming stage fright remains one of the (10)____ (great) victories of my school life.",
+      "gblanks": [
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "blank", "acceptable": ["blank"], "hint": "adjective after the linking verb 'went'" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "naturally", "acceptable": ["naturally"], "hint": "adverb modifying the verb 'came'" },
+        { "answer": "taking", "acceptable": ["taking"], "hint": "present participle showing an accompanying action" },
+        { "answer": "amazement", "acceptable": ["amazement"], "hint": "noun form in 'to one's amazement'" },
+        { "answer": "attentively", "acceptable": ["attentively"], "hint": "adverb modifying the verb 'listened'" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "directly", "acceptable": ["directly"], "hint": "adverb modifying the verb 'face'" },
+        { "answer": "greatest", "acceptable": ["greatest"], "hint": "superlative after 'one of the'" }
+      ],
+      "explain_zh": "本文讲述克服怯场。(1) fill sb with fear 固定搭配，填 with；(2) 系动词 went 后用形容词 blank（go blank 一片空白）；(3) not...but... 结构，填 but；(4) 修饰动词 came，用副词 naturally；(5) 伴随动作用现在分词 taking；(6) to one's amazement，用名词 amazement；(7) 修饰动词 listened，用副词 attentively；(8) 限制性定语从句修饰 a joy 作 known 的宾语，用 that 或 which；(9) 修饰动词 face，用副词 directly；(10) one of the + 最高级 greatest。"
+    },
+    {
+      "passage": "Last spring our neighbourhood organised a community clean-up, and almost everyone (1)____ (turn) up to help. Armed with gloves and bags, we spread out along the riverbank, where years of rubbish had collected. At first the task seemed (2)____ (hope), for plastic bottles and bags lay everywhere. But as more hands joined in, the work went much (3)____ (quick) than expected. An elderly woman, who had lived by the river all her life, told us that the water (4)____ (be) once clear enough to swim in. Her words gave us fresh energy. By noon we had filled over fifty bags, and the bank looked completely (5)____ (differ). What surprised me most was how a small effort, (6)____ shared by many, could change a whole place. We also planted young trees (7)____ (shade) the path in summers to come. That morning taught me a (8)____ (value) lesson: a community grows stronger only (9)____ its members are willing to act together (10)____ the common good. Weeks later, neighbours still greeted one another warmly along the cleaner riverbank, and children played safely where rubbish had once piled high. Several families promised to return each spring, and that simple promise quietly bound our small neighbourhood closer than ever before.",
+      "gblanks": [
+        { "answer": "turned", "acceptable": ["turned"], "hint": "past tense" },
+        { "answer": "hopeless", "acceptable": ["hopeless"], "hint": "adjective after the linking verb 'seemed'" },
+        { "answer": "more quickly", "acceptable": ["more quickly", "quicker"], "hint": "comparative adverb modifying 'went'" },
+        { "answer": "had been", "acceptable": ["had been"], "hint": "past perfect for a state before the past telling" },
+        { "answer": "different", "acceptable": ["different"], "hint": "adjective after the linking verb 'looked'" },
+        { "answer": "when", "acceptable": ["when", "if"], "hint": "" },
+        { "answer": "to shade", "acceptable": ["to shade"], "hint": "to-infinitive expressing purpose" },
+        { "answer": "valuable", "acceptable": ["valuable"], "hint": "adjective modifying the noun 'lesson'" },
+        { "answer": "when", "acceptable": ["when", "if"], "hint": "" },
+        { "answer": "for", "acceptable": ["for"], "hint": "" }
+      ],
+      "explain_zh": "本文记述社区清洁活动。(1) 一般过去时 turned (up)；(2) 系动词 seemed 后用形容词 hopeless；(3) quick 的比较级副词 more quickly（quicker 亦可）修饰 went；(4) 描述过去某刻之前的状态，过去完成时 had been；(5) 系动词 looked 后用形容词 different；(6) a small effort when/if shared by many，省略主语的状语从句，填 when 或 if；(7) 不定式 to shade 表目的；(8) 形容词 valuable 修饰名词 lesson；(9) only when/if 引导条件状语从句；(10) for the common good 固定搭配，填 for。"
+    },
+    {
+      "passage": "I did not always enjoy reading; in fact, as a child I found books (1)____ (bore). Everything changed the summer I was twelve, when a kind librarian handed me an old adventure novel. \"Give it a try,\" she said with a smile that I could not refuse. That night I read until midnight, completely (2)____ (lose) in a world of pirates and storms. By the time I finished, I had (3)____ (discover) something that would shape the rest of my life. Reading, I realised, was not a chore (4)____ a kind of magic that let me travel without leaving my room. From then on I borrowed books (5)____ eagerly that the librarian could hardly keep up. Stories taught me to imagine other lives and to feel (6)____ (deep) for people I would never meet. The more I read, the (7)____ (curious) I became about the world. Reading widely has made me far more (8)____ (thought) than I once was. Today, (9)____ I open a new book, I still feel the same excitement, and I am thankful (10)____ the librarian who first showed me that magic.",
+      "gblanks": [
+        { "answer": "boring", "acceptable": ["boring"], "hint": "-ing adjective describing the books" },
+        { "answer": "lost", "acceptable": ["lost"], "hint": "past participle in 'be lost in' (absorbed)" },
+        { "answer": "discovered", "acceptable": ["discovered"], "hint": "past participle in the past perfect 'had discovered'" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "so", "acceptable": ["so"], "hint": "" },
+        { "answer": "deeply", "acceptable": ["deeply"], "hint": "adverb modifying the verb 'feel'" },
+        { "answer": "more curious", "acceptable": ["more curious"], "hint": "comparative in 'the more..., the more...'" },
+        { "answer": "thoughtful", "acceptable": ["thoughtful"], "hint": "adjective in the comparative 'more thoughtful'" },
+        { "answer": "whenever", "acceptable": ["whenever"], "hint": "" },
+        { "answer": "for", "acceptable": ["for"], "hint": "" }
+      ],
+      "explain_zh": "本文讲述爱上阅读的经过。(1) bore 变 -ing 形容词 boring 描述书；(2) be lost in 沉浸于，用过去分词 lost；(3) had discovered，过去完成时，分词 discovered；(4) not...but... 结构，填 but；(5) so...that... 结构，填 so；(6) 修饰动词 feel，用副词 deeply；(7) the more..., the more curious...，比较级 more curious；(8) more thoughtful，thought 的形容词 thoughtful；(9) whenever 引导时间状语从句“每当”；(10) be thankful for sth，填 for。"
+    },
+    {
+      "passage": "Each year, no matter how far we have travelled, my whole family returns home for the Spring Festival reunion. This year my elder brother flew back from abroad, and the moment he stepped through the door, my mother's eyes (1)____ (fill) with tears of joy. The kitchen was already warm and (2)____ (noise), filled with the sound of laughter and chopping. We spent the whole afternoon (3)____ (make) dumplings together, each of us shaping them in our own way. My grandfather, whose stories we never grow tired of hearing, sat by the stove and recalled the festivals of his youth (4)____ (vivid). At midnight, fireworks lit up the sky, and the children rushed outside, (5)____ (shout) with delight. It is (6)____ this single night that I feel most strongly how (7)____ (precious) family is. The food, the noise and the red lanterns by the gate all remind me where I truly (8)____ (belong). Although the holiday passes quickly, the (9)____ (warm) it brings stays in my heart for months. I now understand that home is not a place (10)____ the people we love most.",
+      "gblanks": [
+        { "answer": "filled", "acceptable": ["filled"], "hint": "past tense" },
+        { "answer": "noisy", "acceptable": ["noisy"], "hint": "adjective after 'and' parallel to 'warm'" },
+        { "answer": "making", "acceptable": ["making"], "hint": "gerund after 'spent the afternoon' (spend time doing)" },
+        { "answer": "vividly", "acceptable": ["vividly"], "hint": "adverb modifying the verb 'recalled'" },
+        { "answer": "shouting", "acceptable": ["shouting"], "hint": "present participle showing an accompanying action" },
+        { "answer": "on", "acceptable": ["on"], "hint": "" },
+        { "answer": "precious", "acceptable": ["precious"], "hint": "adjective after the linking verb 'is'" },
+        { "answer": "belong", "acceptable": ["belong"], "hint": "base verb agreeing with the subject 'I'" },
+        { "answer": "warmth", "acceptable": ["warmth"], "hint": "noun form after the definite article" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" }
+      ],
+      "explain_zh": "本文描写春节团聚。(1) 一般过去时 filled；(2) 与 warm 并列作表语，用形容词 noisy；(3) spend time doing sth，用动名词 making；(4) 修饰动词 recalled，用副词 vividly；(5) 伴随动作用现在分词 shouting；(6) on this night，特定某夜用 on；(7) 系动词 is 后用形容词 precious；(8) 主语 I，用动词原形 belong；(9) 定冠词后用名词 warmth；(10) not a place but the people，not...but... 结构，填 but。"
+    }
+  ]
+}

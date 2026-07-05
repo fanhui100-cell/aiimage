@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-06-24T16:57:31.940Z",
+  "apply": true,
+  "stage": "r13-gaokao-grammar-fill",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 2,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {
+    "passage_too_long:222>220": 1,
+    "passage_too_long:223>220": 1
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r13-gaokao-grammar-fill\\batchA.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-gaokao-grammar-fill\\batchB.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 9,
+      "reject": 1,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-gaokao-grammar-fill\\batchC.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-gaokao-grammar-fill\\batchD.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 9,
+      "reject": 1,
+      "wrote": 9,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\r13-gaokao-grammar-fill\\batchE.json",
+      "template": "gaokao-grammar-fill",
+      "level": 2,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    }
+  ]
+}

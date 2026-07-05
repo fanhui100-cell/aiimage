@@ -1,0 +1,3246 @@
+{
+  "template": "toefl-listening-mcq",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Listen to a conversation between a student and a librarian. Student: Hi, I think I left a silver USB drive at one of the computer desks yesterday afternoon. It has all my thesis notes on it. Librarian: Let me check the lost-and-found box behind the desk. We log everything found after closing. Do you remember which floor? Student: The third floor, near the printers. Librarian: Okay, I see two drives here. One is black, and one is silver with a small blue sticker. Student: Yes! The blue sticker is mine. Thank you so much. I was panicking all morning. Librarian: I understand completely. In the future, you might email a backup to yourself, just in case. Student: That's a good idea. Actually, could you show me how the library backs up files on the shared computers? Librarian: The shared machines wipe everything overnight, so they don't keep copies. Always save to your own drive or the cloud.",
+      "questions": [
+        {
+          "prompt": "Why does the student go to the librarian?",
+          "options": [
+            "To recover a lost USB drive",
+            "To report a broken printer",
+            "To renew a borrowed book",
+            "To reserve a study room"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How does the librarian identify the correct drive?",
+          "options": [
+            "By its black color",
+            "By a blue sticker on it",
+            "By a serial number",
+            "By the files inside it"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about the shared library computers?",
+          "options": [
+            "They automatically email backups",
+            "They require a paid account",
+            "They are only on the third floor",
+            "They do not retain files overnight"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生来图书馆找回丢失的U盘，馆员靠蓝色贴纸辨认，并说明公用电脑每晚清空文件不保存。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and an academic advisor. Student: I signed up for Statistics and Organic Chemistry, but I just realized both lectures meet Tuesday at ten. Advisor: That's a direct conflict, so you can't keep both. Which one matters more for your plan? Student: Chemistry is required for my major, but Statistics is only offered this semester. Advisor: Actually, Statistics runs again in spring with an evening section. Chemistry, though, has just this one slot until next year. Student: Then I should keep Chemistry now and take Statistics in spring. Advisor: I'd agree. Waiting on Chemistry would push your whole major sequence back a year. Student: That would be a disaster. Can you help me drop Statistics today? Advisor: Of course. I'll process the drop, and I'll add a note reminding you to register early for the spring evening section, since it fills quickly. Student: Perfect. Thanks for sorting this out so fast.",
+      "questions": [
+        {
+          "prompt": "What problem does the student bring to the advisor?",
+          "options": [
+            "Two courses meet at the same time",
+            "A course was cancelled",
+            "The tuition was charged twice",
+            "A professor changed the syllabus"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the advisor recommend keeping Chemistry?",
+          "options": [
+            "It is easier than Statistics",
+            "It is offered only once until next year",
+            "It meets in the evening",
+            "It has fewer students"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the advisor suggest about the spring Statistics section?",
+          "options": [
+            "It will be cancelled",
+            "It costs extra money",
+            "The student should register early because it fills quickly",
+            "It has no evening option"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生两门课时间冲突，顾问建议先修一年只开一次的化学，春季再修统计，并提醒尽早选课。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a billing office clerk. Student: I'm looking at my account and it shows the lab fee charged twice this month. Clerk: Let me pull up your statement. You're right, there are two identical charges of forty dollars on the same date. Student: I only registered for one lab, so I don't understand it. Clerk: It looks like a system glitch during the registration update. It duplicated several students' fees that afternoon. Student: So will I get the extra forty dollars back? Clerk: Yes. I'll submit a correction now, and the credit should appear within three business days. Student: Will it come back as a refund or a credit toward next term? Clerk: Since your balance is already paid, it'll be refunded to the card you used. Student: Great. Should I check back if it doesn't show up? Clerk: If you don't see it by Friday, call this office and reference the ticket number I'm giving you now.",
+      "questions": [
+        {
+          "prompt": "What is the student's complaint?",
+          "options": [
+            "A missing scholarship",
+            "A wrong course on the bill",
+            "A late payment penalty",
+            "A lab fee charged twice"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the clerk suggest caused the duplicate charge?",
+          "options": [
+            "A system glitch during a registration update",
+            "The student registered twice",
+            "A late payment",
+            "An advisor's error"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How will the extra money be returned?",
+          "options": [
+            "As cash at the office",
+            "As a credit for next term",
+            "As a refund to the student's card",
+            "As a bookstore voucher"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生发现实验费被重复扣款，职员解释是系统故障导致，将退回到原支付卡上。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a housing office staff member. Student: I'd like to request a room change. My current roommate practices trumpet until midnight, and I can't sleep. Staff: I'm sorry to hear that. Have you tried talking to your roommate first? Student: Twice. He says he has no other place to practice. Staff: Fair enough. We do have a few single rooms opening next week in the north building. Student: Is there an extra charge for a single? Staff: Yes, singles cost about two hundred dollars more per term. But there's also a double in the quiet-study dorm, same price as now. Student: The quiet dorm sounds perfect, and I'd rather not pay more. Staff: Good choice. Quiet-dorm residents agree to keep noise low after nine, so the trumpet issue won't repeat. I'll start the transfer paperwork, and you can move this weekend. Student: Thank you. That's a huge relief.",
+      "questions": [
+        {
+          "prompt": "Why does the student want to change rooms?",
+          "options": [
+            "The room is too small",
+            "The roommate practices trumpet late",
+            "The rent increased",
+            "The heating is broken"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the student choose the quiet-study dorm instead of a single?",
+          "options": [
+            "It is closer to class",
+            "It has a private bathroom",
+            "It costs the same as the current room",
+            "It allows pets"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can be inferred about the quiet-study dorm?",
+          "options": [
+            "It has no roommates at all",
+            "It is more expensive than a single",
+            "It is only for graduate students",
+            "It has stricter noise rules"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生因室友深夜练小号申请换宿，选择与现价相同的安静宿舍，那里有更严格的噪音规定。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a registrar's office clerk. Student: I got a C on my history final grade, but my professor told me I earned a B-plus. Clerk: Grade disputes go through a specific process. Have you contacted the professor directly? Student: Yes, and she agrees it's a mistake. She said she'd submit a change. Clerk: If the professor has already emailed the correction, I can look for it in the pending queue. Let me search. Student: Was anything filed? Clerk: I see a grade-change request from Professor Lin, submitted two days ago, still awaiting the department chair's signature. Student: How long does the chair's approval usually take? Clerk: Normally three to five business days. Once it's signed, the new grade posts automatically to your transcript. Student: Will the old C affect my scholarship review next week? Clerk: I'll flag your file as pending correction, so the review committee won't act on the incorrect grade. Student: That's a relief. Thank you.",
+      "questions": [
+        {
+          "prompt": "What is the student trying to resolve?",
+          "options": [
+            "An incorrect final grade",
+            "A missing transcript",
+            "A registration hold",
+            "A tuition error"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the current status of the grade change?",
+          "options": [
+            "It was rejected",
+            "It was never submitted",
+            "It has already posted",
+            "It is awaiting the department chair's signature"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the clerk flag the student's file?",
+          "options": [
+            "To cancel the scholarship",
+            "So the review committee won't act on the wrong grade",
+            "To charge a correction fee",
+            "To delay the transcript"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生的历史成绩记错，教授已提交改分申请等系主任签字，职员标记档案以免奖学金评审误用错误成绩。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a photography club officer. Student: Hi, I saw your flyer. How do I join the photography club? Officer: Great to hear you're interested. Membership is free, but we ask everyone to attend one intro workshop first. Student: Do I need my own camera? Officer: Not at all. We have six loaner cameras, and the workshop teaches you how to use them. Student: When's the next workshop? Officer: This Thursday at six, in the arts building, room two-ten. Student: Perfect. Is there a limit on how many photos I can enter in the annual show? Officer: Members can submit up to three prints, and the club covers the printing cost for the first one. Student: That's generous. What if I've never developed film before? Officer: Then you'll love our darkroom sessions on Fridays. Beginners always start there. Just sign this sheet, and I'll email you the workshop details tonight.",
+      "questions": [
+        {
+          "prompt": "What must the student do before becoming an active member?",
+          "options": [
+            "Buy a camera",
+            "Pay a membership fee",
+            "Attend an intro workshop",
+            "Submit three photos"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the club provide for members without a camera?",
+          "options": [
+            "Loaner cameras",
+            "A cash allowance",
+            "A discount at a store",
+            "Nothing"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred about the club's attitude toward beginners?",
+          "options": [
+            "It discourages inexperienced members",
+            "It welcomes and supports beginners",
+            "It only accepts professionals",
+            "It charges beginners extra"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生咨询加入摄影社，需先参加入门工作坊，社团提供借用相机并欢迎新手，态度友好。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a lab technician. Student: The spectrometer in room four keeps giving error code twelve whenever I start a scan. Technician: Error twelve usually means the lamp needs warming up. Did you wait the full fifteen minutes after switching it on? Student: I waited maybe five. I was in a hurry. Technician: That's likely the whole problem. The lamp must stabilize, or the readings drift and it throws that error. Student: Oh. So there's nothing broken? Technician: Probably not, but let me check the log. Hmm, the machine also reports the calibration is overdue by a week. Student: Does that matter for my samples? Technician: It could shift your absorbance values slightly. I'll recalibrate it now, and you can rerun your scan afterward. Student: How long will calibration take? Technician: About twenty minutes. Come back at eleven, give the lamp its full warm-up, and you should get clean data. Student: Thanks, I'll be more patient this time.",
+      "questions": [
+        {
+          "prompt": "What error is the student experiencing?",
+          "options": [
+            "Error code twelve during scans",
+            "The lamp won't turn on",
+            "A cracked sample holder",
+            "A software crash"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the technician imply the student did wrong?",
+          "options": [
+            "Used the wrong samples",
+            "Entered the wrong settings",
+            "Turned off the machine mid-scan",
+            "Did not wait for the lamp to warm up fully"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What additional issue does the technician discover?",
+          "options": [
+            "The lamp is burned out",
+            "The calibration is overdue",
+            "The software needs updating",
+            "The samples are contaminated"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生用分光光度计报错，技工指出灯未充分预热是主因，并发现校准逾期，将重新校准。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a bookstore clerk. Student: I need to return this economics textbook. I dropped the course this morning. Clerk: No problem, as long as it's within the return window. Do you have your receipt? Student: Here it is. I bought it four days ago. Clerk: You're within the seven-day period, so you're fine. Is the book still in new condition? Student: I only opened it once, and I didn't write in it. Clerk: Let me inspect it. The cover and pages look untouched, so we can give a full refund. Student: Wonderful. Also, I might need the sociology text instead. Do you have it? Clerk: We're out of new copies, but there's a used one for half price behind me. Student: I'll take the used one. Can I apply my refund toward it? Clerk: Absolutely. I'll deduct the price of the used book from your refund and return the difference to your card.",
+      "questions": [
+        {
+          "prompt": "Why is the student returning the textbook?",
+          "options": [
+            "It was the wrong edition",
+            "The student dropped the course",
+            "It was damaged",
+            "It was too expensive"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What condition allows a full refund?",
+          "options": [
+            "The book being in new, unwritten condition",
+            "Having any receipt",
+            "Returning within thirty days",
+            "Being a first-year student"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the student decide to do with the refund?",
+          "options": [
+            "Take it all as cash",
+            "Save it for next term",
+            "Apply part of it toward a used sociology book",
+            "Donate it to the store"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生退经济学课本因退课，书为全新可全额退款，并用退款抵扣一本半价二手社会学书。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a recreation center employee. Student: My work schedule changed, so I can't make the Monday swim class anymore. Can I switch? Employee: Sure. What times are you now free? Student: Wednesday or Friday mornings work best. Employee: We have an intermediate class Wednesday at seven and a beginner one Friday at eight. Student: I've swum for years, so intermediate is right. Employee: Then Wednesday at seven it is. There's no fee to transfer within the same term. Student: Good. Will my remaining sessions carry over? Employee: Yes, you had six left in the Monday class, and all six move to Wednesday. Student: What about the instructor? I liked coach Rivera. Employee: Coach Rivera actually teaches the Wednesday intermediate class too, so you'll have the same coach. Student: That's perfect. Please move me over. Employee: Done. You'll get a confirmation email, and your first Wednesday session is this week.",
+      "questions": [
+        {
+          "prompt": "Why does the student want to switch swim classes?",
+          "options": [
+            "The pool is closed on Mondays",
+            "The class was too advanced",
+            "The student's work schedule changed",
+            "The instructor left"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Which class does the student choose?",
+          "options": [
+            "Friday beginner at eight",
+            "Tuesday evening",
+            "Monday advanced",
+            "Wednesday intermediate at seven"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What can be inferred that pleases the student most about the switch?",
+          "options": [
+            "A lower fee",
+            "Keeping the same coach",
+            "A larger pool",
+            "Fewer sessions"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生因工作时间变动申请换游泳课，选周三中级班，剩余课次可结转，且教练相同令其满意。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a career center counselor. Student: I'd like to sign up for the resume workshop before the job fair next month. Counselor: Good timing. We run two sessions, one for first drafts and one for polishing. Which fits you? Student: I already have a draft, but it feels weak. Counselor: Then the polishing session is better for you. It focuses on wording and layout. Student: When does it meet? Counselor: Next Tuesday at four. Bring a printed copy and a specific job posting you're targeting. Student: Why the job posting? Counselor: We tailor your resume to match the exact skills each employer lists. Generic resumes get overlooked. Student: That makes sense. Is there space left? Counselor: Two seats remain, so I'll reserve one for you now. Also, book a one-on-one review afterward if you want deeper feedback. Student: I'll do both. Thank you for the advice.",
+      "questions": [
+        {
+          "prompt": "Which workshop session does the counselor recommend?",
+          "options": [
+            "The polishing session",
+            "The first-draft session",
+            "A group interview session",
+            "A networking session"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why should the student bring a specific job posting?",
+          "options": [
+            "To prove eligibility",
+            "To register for the fair",
+            "To pay a fee",
+            "To tailor the resume to the employer's listed skills"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is the counselor's attitude toward generic resumes?",
+          "options": [
+            "They are usually effective",
+            "They are required by employers",
+            "They tend to be overlooked",
+            "They save time"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生报名简历打磨工作坊，需带招聘信息以便按雇主要求定制，顾问认为泛用简历易被忽视。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and an IT help desk technician. Student: I can't log into the campus network on my laptop, but my phone connects fine. Technician: That's a useful clue. When did the laptop stop working? Student: After I changed my password yesterday. Technician: There it is. Your laptop probably saved the old password and keeps trying it. Student: How do I fix that? Technician: Open your network settings, forget the campus network, then reconnect with the new password. Student: Let me try. Okay, it's asking for the password now. Technician: Type the new one carefully. Passwords here are case-sensitive. Student: It connected! That was simple. Technician: Devices cache old credentials all the time. Whenever you change a password, update every device you own. Student: Good to know. Should I update the library computers too? Technician: No, those log you in fresh each time, so they'll use the new password automatically. Student: Thanks for the quick fix.",
+      "questions": [
+        {
+          "prompt": "What is the student's problem?",
+          "options": [
+            "The phone won't connect",
+            "The password won't change",
+            "The laptop won't log into the network",
+            "The library computer is broken"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the technician conclude caused the laptop's issue?",
+          "options": [
+            "A broken network card",
+            "It kept using the old saved password",
+            "A virus",
+            "A dead battery"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What general advice does the technician give?",
+          "options": [
+            "Update every device after a password change",
+            "Never change passwords",
+            "Only use phones on campus",
+            "Avoid library computers"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生笔记本无法联网，因改密码后仍用旧密码，技工建议忘记网络重连，并提醒改密后更新所有设备。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a dining services coordinator. Student: I want to change my meal plan. The nineteen-meal plan is way too much food. Coordinator: A lot of students find that. What's your typical eating pattern? Student: I skip breakfast most days and eat out on weekends. Coordinator: Then the ten-meal plan with dining dollars might suit you better. Student: How do dining dollars work? Coordinator: They're a flexible balance you spend at any campus cafe, not tied to full meals. Student: So I could grab just a coffee and a muffin? Coordinator: Exactly. It's better for lighter or irregular eaters like you. Student: Is there a deadline to switch? Coordinator: You have until Friday. After that, plans lock for the semester. Student: Will I lose the meals I've already used this week? Coordinator: No, we prorate the change, so you only pay for what's ahead. Student: Then please switch me to the ten-meal plan today.",
+      "questions": [
+        {
+          "prompt": "Why does the student want to change the meal plan?",
+          "options": [
+            "The food quality is poor",
+            "The plan is too cheap",
+            "The dining hall closed",
+            "The nineteen-meal plan is too much food"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What advantage of dining dollars does the coordinator mention?",
+          "options": [
+            "They never expire",
+            "They double on weekends",
+            "They can be spent flexibly on any item",
+            "They include free coffee"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What happens to meals already used before switching?",
+          "options": [
+            "The change is prorated so only future meals are paid for",
+            "They are all refunded",
+            "They are lost entirely",
+            "They roll into next semester"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生觉得餐次太多想改餐计划，协调员推荐含灵活餐费的十餐计划，改动按比例结算，周五前须完成。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a professor during office hours. Student: Professor, I wanted to ask for a short extension on the research essay. Professor: What's going on? The deadline is Friday. Student: My grandmother was hospitalized, and I've been traveling to see her all week. Professor: I'm sorry to hear that. Family comes first. How much more time do you need? Student: Would Monday be possible? Professor: Monday works. I'll note the extension so the late penalty doesn't apply. Student: Thank you. Should I email you the essay or upload it? Professor: Upload it to the course portal, same as everyone. I'll just adjust your due date there. Student: Understood. One more thing, I'm worried my sources are too old. Professor: Let me see your list. These are fine, but add two studies from the last five years to show current research. Student: I'll do that over the weekend. Thanks for being so understanding.",
+      "questions": [
+        {
+          "prompt": "What does the student request from the professor?",
+          "options": [
+            "A short extension on an essay",
+            "A grade change",
+            "A recommendation letter",
+            "A meeting reschedule"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor grant the request without penalty?",
+          "options": [
+            "The student is failing",
+            "A family emergency kept the student away",
+            "The essay is optional",
+            "Everyone got an extension"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the professor advise about the student's sources?",
+          "options": [
+            "Remove all of them",
+            "Cite fewer sources",
+            "Use only textbooks",
+            "Add two recent studies from the last five years"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生因祖母住院请求延期，教授准许且免罚，并建议增加近五年的两项研究以体现最新成果。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a financial aid officer. Student: My scholarship hasn't shown up in my account, and rent is due soon. Officer: Let me look. Your scholarship was approved, but the funds are held pending one missing document. Student: Which document? Officer: We need your signed enrollment verification form. Without it, the system won't release the money. Student: I don't remember getting that form. Officer: It was emailed in June. It probably went to your spam folder. I can print you a copy right now. Student: Please do. If I sign it today, when will the money arrive? Officer: Once you submit it, disbursement takes about two business days. Student: That's cutting it close for rent. Officer: If timing is tight, you can request a short-term emergency loan from this office to bridge the gap. Student: I might need that. Let me sign the form first and see. Officer: Sensible. Here's the form and a pen.",
+      "questions": [
+        {
+          "prompt": "Why hasn't the student's scholarship money arrived?",
+          "options": [
+            "It was cancelled",
+            "The student owes tuition",
+            "A signed enrollment verification form is missing",
+            "The bank rejected it"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Where was the missing form likely sent?",
+          "options": [
+            "By postal mail",
+            "To the student's spam folder",
+            "To the advisor",
+            "To the dorm"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What backup option does the officer offer?",
+          "options": [
+            "A tuition waiver",
+            "A payment plan for rent",
+            "A refund",
+            "A short-term emergency loan"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生奖学金因缺少签字的注册确认表被扣发，该表误入垃圾邮件，职员补印并提议紧急短期贷款应急。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a parking services clerk. Student: I'd like to buy a parking permit for the fall semester. Clerk: Do you live on campus or commute? Student: I commute from about twenty minutes away. Clerk: Then you'll want a commuter permit, which lets you park in lots C and D. Student: Are those close to the science building? Clerk: Lot D is a two-minute walk. Lot C is farther but rarely full. Student: How much is the permit? Clerk: A hundred and twenty dollars for the term, or you can pay monthly at twenty-five. Student: The term rate is cheaper overall, so I'll do that. Clerk: Good choice. One rule: permits don't guarantee a space, so arrive early on busy mornings. Student: What counts as busy? Clerk: Before ten most weekdays. After that, Lot D fills up. I'll register your license plate now and email the digital permit.",
+      "questions": [
+        {
+          "prompt": "What type of permit does the student need?",
+          "options": [
+            "A resident permit",
+            "A visitor pass",
+            "A commuter permit",
+            "A faculty permit"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the student choose the term rate?",
+          "options": [
+            "It guarantees a space",
+            "It never expires",
+            "It includes Lot A",
+            "It is cheaper overall than monthly"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the clerk warn the student about?",
+          "options": [
+            "Arriving early is wise since spaces aren't guaranteed",
+            "Permits guarantee a spot",
+            "Lot D is always empty",
+            "Parking is free after ten"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生买通勤停车证，选更划算的整学期费率，职员提醒证不保证车位，繁忙上午需早到。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a writing center tutor. Student: I'd like to book an appointment to go over my scholarship application essay. Tutor: Sure. Is this a first look or a revision? Student: It's a first draft, and I'm not sure my main point is clear. Tutor: Clarity of the main point is exactly what a first session targets. How long is the essay? Student: About seven hundred words. Tutor: That fits a thirty-minute slot. We have openings Wednesday afternoon and Thursday morning. Student: Thursday morning is better. Should I bring anything? Tutor: Bring the prompt and your draft, printed if possible. We read on paper here. Student: Will you fix my grammar too? Tutor: We focus on ideas and structure first. Grammar comes in a later session, once your argument is solid. Student: That order makes sense. Book me for Thursday at nine, please. Tutor: Done. You'll get a reminder the night before.",
+      "questions": [
+        {
+          "prompt": "What kind of session does the student book?",
+          "options": [
+            "A final grammar check",
+            "A first-draft session on the essay's main point",
+            "A group workshop",
+            "An interview practice"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the tutor ask the student to bring?",
+          "options": [
+            "The prompt and a printed draft",
+            "A laptop only",
+            "A grammar textbook",
+            "A recommendation letter"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the tutor postpone grammar to a later session?",
+          "options": [
+            "Grammar doesn't matter",
+            "There isn't enough time ever",
+            "The tutor can't teach grammar",
+            "Ideas and structure are addressed before grammar"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生预约写作中心看奖学金申请文初稿，重点在主旨清晰，需带打印稿，语法留待后续。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a study abroad advisor. Student: I want to apply for the spring program in Lisbon, but I'm confused about the language requirement. Advisor: The Lisbon program is taught in English, so you don't need Portuguese to enroll. Student: Oh, good. I was worried. Do I still need any language course? Advisor: You're encouraged to take a beginner survival-Portuguese class, but it's optional. Student: What about the application deadline? Advisor: It's October fifteenth, and late applications aren't accepted, since housing is arranged in advance. Student: What documents do I need? Advisor: Two things: a one-page statement of purpose and a copy of your passport. Student: My passport expires in March. Is that a problem? Advisor: Yes, it must be valid for six months beyond the program's end. You'll need to renew it first. Student: I'll start the renewal this week, then. Advisor: Do that early. Passport renewals can take weeks.",
+      "questions": [
+        {
+          "prompt": "What is the student confused about at first?",
+          "options": [
+            "The tuition cost",
+            "The language requirement",
+            "The course credits",
+            "The flight booking"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why must the student renew the passport?",
+          "options": [
+            "It must be valid six months beyond the program's end",
+            "It was lost",
+            "The program requires two passports",
+            "It has the wrong photo"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the advisor imply about the application deadline?",
+          "options": [
+            "It can be extended easily",
+            "It only applies to some students",
+            "It is firm because housing is arranged ahead",
+            "It changes each year"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生咨询里斯本项目，课程为英语无需葡语，但护照须在项目结束后仍有效六个月，需尽早续签。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a health center receptionist. Student: I'd like to make an appointment for a persistent cough that's lasted two weeks. Receptionist: Two weeks is worth checking. Are you having trouble breathing or a fever? Student: No fever, and breathing is fine. It's just annoying and won't go away. Receptionist: Okay, that's a routine visit rather than urgent care. Our earliest opening is tomorrow at two. Student: Tomorrow works. Do I need to bring anything? Receptionist: Just your student ID and a list of any medications you take. Student: I take an allergy pill each morning. Receptionist: Note that for the doctor, since allergies can cause a lingering cough. Student: I hadn't thought of that. Is there a visit fee? Receptionist: Routine visits are covered by your student health fee, so there's no charge. Student: Great. Book me for two tomorrow, please. Receptionist: Done. Arrive ten minutes early to fill out a short form.",
+      "questions": [
+        {
+          "prompt": "Why does the student visit the health center?",
+          "options": [
+            "A broken arm",
+            "A vaccination",
+            "A cough lasting two weeks",
+            "A dental problem"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why is the visit classified as routine rather than urgent?",
+          "options": [
+            "The student has a high fever",
+            "There is no fever or breathing trouble",
+            "The student is a first-year",
+            "The doctor is unavailable"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the receptionist suggest the cough might be linked to?",
+          "options": [
+            "Lack of sleep",
+            "A broken bone",
+            "Poor diet",
+            "The student's allergies"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生因两周久咳预约就诊，无发烧属常规就诊，前台提醒久咳可能与其过敏有关，费用已由健康费覆盖。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a music department staff member. Student: I need to reserve a practice room for my recital preparation. Staff: How often do you plan to practice? Student: About two hours every evening for the next month. Staff: For a recital, you can book a priority room with a grand piano. Regular rooms only have uprights. Student: A grand would be ideal, since I'm performing on one. Staff: Priority rooms require your instructor's signature confirming the recital date. Student: I can bring that tomorrow. Is there a booking limit? Staff: Priority holders may reserve up to two hours a day, which matches your plan perfectly. Student: Great. Can I always use the same room? Staff: Yes, we assign recital students a fixed room so you get used to its acoustics. Student: That's thoughtful. Which room would I get? Staff: Room fifteen, on the quiet end of the hall. Bring the signed form and I'll finalize it.",
+      "questions": [
+        {
+          "prompt": "Why does the student want a priority practice room?",
+          "options": [
+            "To prepare for a recital on a grand piano",
+            "To store instruments",
+            "To teach lessons",
+            "To record an album"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is required to book a priority room?",
+          "options": [
+            "A cash deposit",
+            "The instructor's signature confirming the recital",
+            "A department ID card",
+            "A music theory grade"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why are recital students given a fixed room?",
+          "options": [
+            "To save the staff work",
+            "To limit practice time",
+            "Because rooms are scarce",
+            "So they get used to the room's acoustics"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生为音乐会预约带三角钢琴的优先练习室，需老师签字确认，且固定房间以熟悉音响效果。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a registrar's office clerk. Student: I need an official transcript sent to a company for a summer internship. Clerk: Sure. Official transcripts can go electronically or by mail. Which does the company want? Student: The application says an electronic copy sent directly from the school. Clerk: Then I'll use our secure e-delivery. What's the recipient's email? Student: It's on this form here. Clerk: Got it. There's a small fee, five dollars per electronic transcript. Student: That's fine. How soon will it arrive? Clerk: Electronic transcripts are usually delivered within an hour. Student: Perfect, because the deadline is tonight. Clerk: You're well within it, then. One note: your current-semester grades post next week, so this transcript won't include them yet. Student: The internship only needs my completed courses, so that's okay. Clerk: Then you're all set. I'll send it now and email you a confirmation receipt. Student: Thank you so much.",
+      "questions": [
+        {
+          "prompt": "Why does the student need a transcript?",
+          "options": [
+            "To change majors",
+            "To transfer schools",
+            "To graduate",
+            "To apply for a summer internship"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How does the company want the transcript delivered?",
+          "options": [
+            "Picked up in person",
+            "Electronically, directly from the school",
+            "By fax",
+            "By postal mail only"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the clerk note about the transcript's contents?",
+          "options": [
+            "It will include current-semester grades",
+            "It excludes all grades",
+            "It won't yet include current-semester grades",
+            "It needs a signature"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生为暑期实习需学校直接电子发送的官方成绩单，一小时内送达，但不含尚未录入的本学期成绩。"
+    },
+    {
+      "passage": "Listen to a conversation between two students. Student A: Hey, did you go to yesterday's biology lecture? I was home sick. Student B: I did. It was all about cell respiration, and the professor moved fast. Student A: Could I borrow your notes to catch up? Student B: Sure, but honestly my notes are messy. Why don't we form a quick study group instead? Student A: That sounds better. Who else? Student B: Maya and Chen are both behind too. We could meet at the library tonight. Student A: Tonight works. Should we each cover a topic? Student B: Good idea. You take respiration since you missed it, so you'll learn it deeply by teaching us. Student A: Teaching it back does force you to understand it. Fair. Student B: Right. I'll book a group room for seven. Bring the textbook, chapter nine. Student A: Perfect. Thanks for turning my absence into something useful. Student B: That's what classmates are for.",
+      "questions": [
+        {
+          "prompt": "Why did Student A miss the biology lecture?",
+          "options": [
+            "A scheduling conflict",
+            "Being home sick",
+            "A family trip",
+            "A job interview"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Student B suggest instead of just lending notes?",
+          "options": [
+            "Emailing the professor",
+            "Retaking the class",
+            "Forming a study group",
+            "Recording lectures"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does Student B assign the respiration topic to Student A?",
+          "options": [
+            "Teaching it will help Student A learn it deeply",
+            "It is the easiest topic",
+            "No one else understands it",
+            "It was not covered in class"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "两名同学因A缺课，B提议组学习小组而非只借笔记，并让A讲呼吸作用以通过教学更深理解。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a professor. Student: Professor, I'm enrolled in the Thursday lab, but I just got a part-time job with Thursday shifts. Professor: I see. So you'd like to move to a different lab section. Student: Yes, is the Tuesday section open? Professor: Let me check enrollment. Tuesday has two open seats, so a switch is possible. Student: That's a relief. Would I miss anything by moving? Professor: The Tuesday section is actually one experiment ahead. You'd need to make up the enzyme lab you'd skip. Student: How do I make it up? Professor: Come to my Thursday section this week just for that experiment, then start Tuesday next week. Student: So I do the enzyme lab once, then switch permanently. Professor: Exactly. I'll email the Tuesday instructor so she expects you. Student: Thank you. This solves my scheduling clash. Professor: Happy to help. Just don't fall behind on the lab reports during the transition.",
+      "questions": [
+        {
+          "prompt": "Why does the student want to switch lab sections?",
+          "options": [
+            "The lab is too hard",
+            "The lab room changed",
+            "The professor recommended it",
+            "A part-time job conflicts with Thursdays"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What must the student do because the Tuesday section is ahead?",
+          "options": [
+            "Make up the enzyme lab",
+            "Drop the course",
+            "Retake a test",
+            "Buy new equipment"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the professor caution the student about?",
+          "options": [
+            "Missing the final exam",
+            "Changing majors",
+            "Not falling behind on lab reports during the transition",
+            "Paying an extra fee"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生因兼职周四班冲突想转周二实验班，因进度超前需补做酶实验，教授提醒过渡期别落下实验报告。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a librarian. Student: I need an article that our library doesn't have. Can you get it somehow? Librarian: Yes, through interlibrary loan. Do you have the full citation? Student: I have the title, authors, and journal name, but not the exact page numbers. Librarian: That's usually enough for us to locate it. Is it a scanned article or a physical book? Student: It's a journal article. Librarian: Then it'll come as a PDF, emailed to you, often within three to five days. Student: My paper is due in a week, so that should work. Librarian: It should. There's no fee for article scans, only for physical book loans from far away. Student: Good. Is there a limit on requests? Librarian: You can request up to twenty items a semester, and you've used none. Student: Then please submit this one. Librarian: Filling it out now. Watch your email for the download link.",
+      "questions": [
+        {
+          "prompt": "What service does the student use?",
+          "options": [
+            "Interlibrary loan",
+            "A book renewal",
+            "A printing service",
+            "A reserve shelf"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How will the requested article be delivered?",
+          "options": [
+            "As a physical book",
+            "By postal mail",
+            "As a PDF emailed to the student",
+            "Picked up at the desk"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can be inferred about the fees for this request?",
+          "options": [
+            "All requests cost money",
+            "First requests are always charged",
+            "There is a flat semester fee",
+            "Article scans are free; only far physical loans cost"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生通过馆际互借索取本馆没有的期刊文章，将以PDF邮件三到五天内送达，文章扫描免费。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and an academic advisor. Student: I'm thinking about adding a minor in environmental science. Advisor: That pairs well with your economics major. What's driving your interest? Student: I want to work in sustainability policy after graduation. Advisor: Then the minor is a smart fit. It's six courses, and two overlap with your major requirements. Student: So I'd only add four new courses? Advisor: Correct. That's very manageable over your remaining two years. Student: Would it delay my graduation? Advisor: Not if you start next semester. Wait longer, and the required intro course fills up fast. Student: I'll register for it in the first round, then. Advisor: Wise. One more thing: the minor requires a field project in your senior year. Student: Is that a big commitment? Advisor: About one afternoon a week for a semester, but employers love it. Student: That settles it. Please add the minor to my plan. Advisor: Done, and I'll flag the intro course for you.",
+      "questions": [
+        {
+          "prompt": "What does the student want to add?",
+          "options": [
+            "A second major",
+            "A minor in environmental science",
+            "A study abroad term",
+            "An honors thesis"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why is the minor manageable for the student?",
+          "options": [
+            "Two courses overlap with the major",
+            "It requires no courses",
+            "It has no exams",
+            "It can be done in one term"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the advisor imply about starting the minor late?",
+          "options": [
+            "It costs more money",
+            "It is impossible",
+            "The required intro course may fill up",
+            "It doubles the workload"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "学生想加环境科学辅修，与经济学主修有两门重叠仅需再修四门，顾问建议尽早报名以免入门课满员。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a dining services manager. Student: Hi, I was recently diagnosed with a nut allergy, and I'm nervous about eating in the main dining hall. How can I tell which dishes are safe? Manager: That's a common worry, and we take it seriously. Every station now has a printed card listing the main allergens in each dish, and anything containing nuts is marked with a small red symbol. Student: That helps, but what about cross-contamination in the kitchen? Manager: Good question. If you tell the station chef, they'll prepare your plate separately with clean utensils. You can also meet our head chef to plan safe meals for the week. Student: Really? That would put my mind at ease. Manager: Of course. I'll arrange a meeting for Thursday. And download our dining app — you can filter the menu to hide anything with nuts before you even arrive.",
+      "questions": [
+        {
+          "prompt": "Why does the student come to the dining services manager?",
+          "options": [
+            "She wants a refund on her meal plan",
+            "She is worried about eating safely with a nut allergy",
+            "She wants to work in the dining hall",
+            "She is complaining about long lunch lines"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How are dishes that contain nuts identified at each station?",
+          "options": [
+            "By a small red symbol",
+            "By being placed on a separate table",
+            "By a staff announcement",
+            "They are removed from the menu"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the manager suggest telling the station chef?",
+          "options": [
+            "To get a larger portion",
+            "So the meal can be prepared separately and avoid cross-contamination",
+            "To pay at a different register",
+            "To reserve a seat in advance"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生因坚果过敏担心用餐安全；红色标记标出含坚果菜品，告知窗口厨师是为单独备餐、避免交叉污染。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a campus shuttle coordinator. Student: I ride the north-campus shuttle every morning, but lately it's been arriving late. Coordinator: We've had complaints. There was road construction on Elm Street affecting the route. Student: Is that permanent? Coordinator: No, the construction ends next week, and we've added a temporary detour in the meantime. Student: The detour makes me late for my nine o'clock class. Coordinator: I understand. During construction, we've added an earlier bus at seven forty to help riders like you. Student: I didn't know that. Where's the schedule posted? Coordinator: On the app and at every stop, but the earlier bus was added yesterday, so signs are still going up. Student: I'll take the seven-forty then. Will it also detour? Coordinator: Yes, but leaving earlier gives you a cushion. Once construction ends, everything returns to normal timing. Student: Thanks. That earlier bus solves my problem for now.",
+      "questions": [
+        {
+          "prompt": "Why has the shuttle been arriving late?",
+          "options": [
+            "Driver shortages",
+            "Bad weather",
+            "Road construction on the route",
+            "Too many riders"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What solution does the coordinator offer for now?",
+          "options": [
+            "A refund",
+            "A new route permanently",
+            "A private taxi",
+            "An earlier bus at seven forty"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why doesn't the student already know about the earlier bus?",
+          "options": [
+            "It was cancelled",
+            "It was added only yesterday and signs aren't all up",
+            "It runs on weekends only",
+            "It's for faculty only"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "班车因道路施工晚点，协调员告知临时加开七点四十的早班车，因昨天才加还没贴全通知牌。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a billing office clerk. Student: I dropped a course two weeks ago, but I still haven't received the refund. Clerk: Let me pull up your record. Which course did you drop? Student: Introduction to Psychology, on the tenth. Clerk: I see the drop, and it was within the full-refund window, so you're owed the tuition back. Student: Then why hasn't it arrived? Clerk: It looks like the refund was issued as an account credit, not returned to your card. Student: But I paid with a loan, not out of pocket. Clerk: Ah, that changes things. Loan-funded refunds must go back to the lender, not to your account. Student: So I won't see the money myself? Clerk: Correct. It reduces your loan balance instead, which actually saves you interest later. Student: I hadn't thought of it that way. That's fine, then. Clerk: I'll correct the routing so the credit goes to your lender this week.",
+      "questions": [
+        {
+          "prompt": "What is the student inquiring about?",
+          "options": [
+            "A scholarship",
+            "A double charge",
+            "A missing refund from a dropped course",
+            "A late fee"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why must the refund go to the lender?",
+          "options": [
+            "The student requested it",
+            "The course was paid with a loan",
+            "It is store policy for all refunds",
+            "The student graduated"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What benefit does the clerk point out about the loan refund?",
+          "options": [
+            "It arrives faster",
+            "It doubles the amount",
+            "It comes as cash",
+            "It reduces the loan balance and saves interest"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "学生退课退款未到，职员解释因用贷款支付，退款须冲抵贷款而非退回账户，可省利息。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a museum volunteer coordinator. Student: I'd like to volunteer at the campus art museum this semester. Coordinator: Wonderful. We need help with weekend tours and the front desk. Which interests you? Student: I love talking about art, so tours sound perfect. Coordinator: Tour guides go through a two-week training on the current exhibits. Are you free Saturday mornings? Student: Yes, mornings are open for me. Coordinator: Good. Training starts this Saturday at ten. After that, you'd lead one tour a week. Student: How long is each tour? Coordinator: About forty-five minutes, and you'd cover maybe six artworks. Student: Do I need an art background? Coordinator: Not at all. The training gives you a script, and you'll add your own style over time. Student: That's encouraging. Is there any reward besides experience? Coordinator: Volunteers get free entry to all special exhibitions and a reference letter after twenty hours. Student: Count me in. Where do I sign?",
+      "questions": [
+        {
+          "prompt": "Which volunteer role does the student choose?",
+          "options": [
+            "Leading tours",
+            "Front desk",
+            "Gift shop",
+            "Security"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the coordinator imply about volunteers without an art background?",
+          "options": [
+            "It is required",
+            "Only majors may apply",
+            "It isn't needed; training provides a script",
+            "A degree is preferred"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What reward do volunteers receive after twenty hours?",
+          "options": [
+            "A cash payment",
+            "A reference letter and free exhibition entry",
+            "Course credit",
+            "A parking permit"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "学生报名当美术馆讲解志愿者，需两周培训无需艺术背景，满二十小时可获推荐信和特展免费入场。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a teaching assistant. Student: I'm stuck on problem five of the physics set. The answer I get seems impossible. Teaching Assistant: Let's see your work. Walk me through your steps. Student: I used the formula for kinetic energy, then divided by time. Teaching Assistant: There's the issue. Problem five asks for power, but you mixed up two formulas. Student: Aren't energy and power the same thing? Teaching Assistant: No. Power is energy divided by time, but you divided the wrong quantity. Start from work done, then divide by time. Student: Oh, so I should use work, not just kinetic energy at one point. Teaching Assistant: Exactly. Compute the total work over the interval first. Student: Let me try. That gives a reasonable number now. Teaching Assistant: See? The method matters more than the final digit. Redo six and seven the same way. Student: I will. Thanks for spotting my mistake so quickly.",
+      "questions": [
+        {
+          "prompt": "What is the student struggling with?",
+          "options": [
+            "A chemistry equation",
+            "A lab report",
+            "An essay outline",
+            "Problem five of a physics set"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What mistake did the student make?",
+          "options": [
+            "Used the wrong calculator",
+            "Confused the power and energy formulas",
+            "Forgot units",
+            "Copied the wrong numbers"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the TA emphasize at the end?",
+          "options": [
+            "The method matters more than the final number",
+            "The final digit is all that matters",
+            "Speed is most important",
+            "Guessing is acceptable"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生物理第五题因混淆功率与能量公式出错，助教指出应先算总功再除以时间，强调方法比答案数字更重要。"
+    },
+    {
+      "passage": "Listen to a conversation between a student and a dorm front desk clerk. Student: Hi, I got an email saying a package arrived for me. Clerk: Let me check the shelf. What's your name and room number? Student: Dana Ortiz, room three-fourteen. Clerk: Here it is, a medium box from an online bookstore. I'll need to see your student ID. Student: Here you go. Clerk: Thanks. Please sign the log next to the tracking number. Student: Done. Actually, I'm expecting a second package too. Clerk: I only see one under your name today. The other may still be in transit. Student: How will I know when it arrives? Clerk: You'll get the same automated email, just like this one. Student: Do packages ever get returned if I don't pick them up? Clerk: After ten days, yes, we send them back, so try to collect within a week. Student: I'll grab it right away next time. Thanks for holding this one.",
+      "questions": [
+        {
+          "prompt": "Why is the student at the front desk?",
+          "options": [
+            "To report a lost key",
+            "To request a repair",
+            "To pay rent",
+            "To pick up a package"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the clerk require before releasing the package?",
+          "options": [
+            "A signature only",
+            "A payment",
+            "A student ID and a signature in the log",
+            "A room inspection"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What happens to packages left uncollected for ten days?",
+          "options": [
+            "They are returned to the sender",
+            "They are thrown away",
+            "They are donated",
+            "They are opened"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "学生到宿舍前台取包裹，需出示学生证并在登记本签字，超过十天未取的包裹会被退回寄件方。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a biology class. Today I want to talk about fungi that glow in the dark—a phenomenon called foxfire. Now, several dozen mushroom species produce a soft green light from their gills, and for a long time nobody knew why. The glow comes from a chemical reaction involving a compound the fungus makes, plus oxygen and an enzyme. But here's the puzzle: producing light costs energy, so it must give the fungus some advantage. Recent field experiments offer a clue. Researchers placed fake glowing mushrooms, made of resin with tiny lights inside, among real ones on the forest floor. The glowing fakes attracted far more insects—beetles, flies, ants—than dark ones. And that matters because these fungi rely on insects to carry their spores to new locations. So the light seems to be an invitation. It's essentially advertising, drawing in the very couriers the fungus needs to reproduce and spread across the forest.",
+      "questions": [
+        {
+          "prompt": "What is the main topic of the lecture?",
+          "options": [
+            "Why certain fungi produce light",
+            "How fungi digest wood on the forest floor",
+            "How insects navigate in dark forests",
+            "The chemical structure of fungal enzymes"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the professor, what did the researchers use in their experiment?",
+          "options": [
+            "Real mushrooms treated with dye",
+            "Artificial glowing mushrooms made of resin",
+            "Insects raised in a laboratory",
+            "Cameras that detect faint light"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the professor imply about the fungi's glow?",
+          "options": [
+            "It warns insects that the fungus is toxic",
+            "It is an accidental byproduct with no purpose",
+            "It helps the fungus reproduce by attracting spore carriers",
+            "It allows the fungus to absorb more oxygen"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "发光真菌用绿光吸引昆虫帮助传播孢子，实验用树脂假蘑菇证明发光是一种“广告”。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a history class. When we picture learning a trade in medieval towns, we should think about guilds. A guild was an association of craftsmen—say, weavers or goldsmiths—who controlled who could practice their trade. To become a member, a young person began as an apprentice, usually around age twelve. The apprentice lived in the master's household, received food and lodging, but little or no pay, and in exchange learned the craft over perhaps seven years. Now, this system wasn't only about teaching skills. The guild also protected quality. By limiting the number of apprentices each master could take, guilds kept the supply of trained workers low, which supported prices and wages. After finishing, an apprentice became a journeyman, working for wages while saving to open his own shop. The final step was producing a 'masterpiece'—a sample proving his skill—to be judged by senior members. Only then could he join as a full master. So the guild shaped not just training, but the whole economic life of the craft.",
+      "questions": [
+        {
+          "prompt": "According to the professor, where did an apprentice typically live?",
+          "options": [
+            "In a guild dormitory",
+            "In a separate workshop",
+            "With other journeymen",
+            "In the master's household"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What was a 'masterpiece' in this context?",
+          "options": [
+            "A sample proving a worker's skill",
+            "A famous work displayed in a town hall",
+            "A payment made to the guild",
+            "A contract signed by the master"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor mention that guilds limited the number of apprentices?",
+          "options": [
+            "To show guilds cared mainly about education",
+            "To explain how guilds influenced prices and wages",
+            "To suggest few people wanted to learn trades",
+            "To prove that masters were poorly paid"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "行会通过限制学徒数量压低劳动力供给以支撑价格和工资，学徒制塑造了整个行业的经济生活。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a psychology class. Let's talk about how the timing of study affects memory. Suppose you have four hours to prepare for an exam. You could study all four hours in one sitting—that's called massed practice, or cramming. Or you could break those four hours into shorter sessions spread across several days. Decades of research point to a clear winner: spreading it out. This is known as the spacing effect. When you space your study, you tend to remember more, and for longer, than when you cram the same total amount. Why? One idea is that each time you return to the material after a gap, your brain has partly forgotten it, so retrieving it again requires effort—and that effort strengthens the memory. Cramming, by contrast, feels productive because the information stays fresh in the moment, but that fluency is misleading. It fades quickly. So the uncomfortable truth is that the study method that feels easiest often teaches you the least.",
+      "questions": [
+        {
+          "prompt": "What is 'massed practice'?",
+          "options": [
+            "Studying in short sessions over many days",
+            "Reviewing material only before sleep",
+            "Studying all at once in a single sitting",
+            "Testing yourself repeatedly"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the professor, what strengthens memory during spaced study?",
+          "options": [
+            "Studying in a quiet environment",
+            "Keeping the information constantly fresh",
+            "Reducing the total study time",
+            "The effort of retrieving partly forgotten material"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does the professor mean by saying the easiest method 'often teaches you the least'?",
+          "options": [
+            "Cramming feels effective but produces weaker memory",
+            "Students should avoid studying before exams",
+            "Difficult material cannot be memorized",
+            "Spacing requires more total hours than cramming"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "分散学习（间隔效应）比集中突击记得更牢，因为间隔后回忆需努力，而突击带来的流畅感具有误导性。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an environmental science class. Have you noticed that a city can feel several degrees warmer than the countryside just beyond it? This is the urban heat island effect. The main cause is materials. Asphalt roads and dark rooftops absorb sunlight during the day and store that heat, then release it slowly at night. Meanwhile, cities have removed much of the vegetation that would otherwise cool the air. Trees and grass release water vapor, which lowers temperatures, much like sweating cools your skin. Replace them with concrete, and that cooling disappears. Add waste heat from air conditioners and vehicles, and the difference grows. Why should we care? Higher city temperatures raise energy demand for cooling, worsen air pollution, and can be dangerous during heat waves, especially for the elderly. The good news is that solutions exist. Planting trees, installing 'green roofs' covered with plants, and using lighter-colored, reflective surfaces can all bring city temperatures down noticeably. Design choices, in other words, directly shape how hot a neighborhood becomes.",
+      "questions": [
+        {
+          "prompt": "What is the lecture mainly about?",
+          "options": [
+            "How air conditioners work",
+            "Why cities are warmer than surrounding areas",
+            "The health effects of air pollution",
+            "How to measure temperature accurately"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How does vegetation help cool the air, according to the professor?",
+          "options": [
+            "By blocking sunlight with tall trunks",
+            "By absorbing heat into the soil",
+            "By releasing water vapor into the air",
+            "By reflecting light back to the sky"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor mention green roofs and reflective surfaces?",
+          "options": [
+            "To criticize modern city planning",
+            "To show the problem cannot be solved",
+            "To explain why buildings overheat",
+            "To give examples of ways to reduce the effect"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "城市因深色建材吸热、植被减少而比郊区热，教授列举种树、绿色屋顶和反光表面等降温办法。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an art history class. When we admire a wall painting from the Renaissance, it's worth asking how it was actually made. There were two main techniques. The first, buon fresco, means 'true fresco.' The artist spread a layer of wet plaster on the wall and painted directly into it with pigments mixed in water. As the plaster dried, a chemical reaction sealed the color into the wall itself. The result is remarkably durable—the paint becomes part of the surface. But there's a catch: the artist had to work fast, finishing a section before the plaster dried, with no chance to correct mistakes. The second method, fresco secco, means 'dry fresco.' Here the artist painted onto plaster that had already dried, using pigment mixed with a binder like egg. This was more forgiving and allowed finer detail, but the paint sat on the surface rather than bonding with it. Over centuries, secco painting tends to flake and fade. That's why the best-preserved wall paintings are usually true frescoes.",
+      "questions": [
+        {
+          "prompt": "In buon fresco, what does the artist paint onto?",
+          "options": [
+            "Wet plaster",
+            "Dry plaster with an egg binder",
+            "A wooden panel",
+            "A stretched canvas"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the professor, what is a disadvantage of buon fresco?",
+          "options": [
+            "The colors fade within a few years",
+            "The artist must work quickly with no corrections",
+            "It requires very expensive pigments",
+            "It can only be used for small paintings"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why are true frescoes usually better preserved than secco paintings?",
+          "options": [
+            "They were painted by more skilled artists",
+            "They were kept indoors more often",
+            "The pigment bonds into the wall itself",
+            "They used brighter pigments"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "湿壁画颜料随灰泥干燥融入墙体而耐久，但须快速作画不能修改；干壁画易脱落，故保存最好的多为湿壁画。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an astronomy class. One of the oldest problems in astronomy is simply this: how far away are the stars? For nearby stars, we use a clever method called parallax. Hold up your thumb at arm's length and look at it with one eye, then the other—your thumb appears to shift against the background. The closer the object, the bigger the shift. Astronomers do the same thing with stars, but their two 'eyes' are the Earth's position on opposite sides of its orbit, six months apart. As Earth moves, a nearby star appears to shift slightly against the far more distant background stars. Measure that tiny angle, and geometry gives you the distance. The catch is that even for the nearest stars, the angle is incredibly small—far smaller than anything the eye can detect. It took precise instruments, and later telescopes in space, to measure it reliably. Parallax only works out to a certain range, but within that range, it gives us direct, trustworthy distances—the foundation for measuring the rest of the universe.",
+      "questions": [
+        {
+          "prompt": "In the parallax method, what serves as the two 'eyes'?",
+          "options": [
+            "Two different telescopes on Earth",
+            "Two stars close together",
+            "The Sun and the Moon",
+            "Earth's position at opposite sides of its orbit"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the professor, why is stellar parallax hard to measure?",
+          "options": [
+            "The shift angle is extremely small",
+            "Stars are constantly moving on their own",
+            "Clouds block the view for months",
+            "Telescopes cannot see distant stars"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor describe holding up a thumb?",
+          "options": [
+            "To show that the eye cannot judge distance",
+            "To illustrate the parallax principle with a simple example",
+            "To prove that stars are closer than they appear",
+            "To explain why humans have two eyes"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "视差法以地球公转轨道两端为“双眼”测量近星相对遥远背景的微小位移，角度极小，教授用大拇指例子说明原理。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an economics class. Imagine a village with a shared pasture open to everyone. Each herder can graze as many animals as they like. Now, from the point of view of a single herder, adding one more cow is a good deal: that herder gets all the benefit of the extra animal, while the cost—slightly less grass for everyone—is shared across the whole village. So each herder, acting sensibly for themselves, keeps adding animals. The problem is that if everyone follows the same logic, the pasture is soon stripped bare, and everyone loses. This is the tragedy of the commons. It appears whenever a shared resource has no limits on use—think of overfished oceans or polluted air. The key insight is that individual self-interest and the group's interest pull in opposite directions. How do we escape it? Communities have found answers: setting rules about how much each person may take, assigning ownership, or charging fees for use. Without some such arrangement, a freely shared resource tends to be used up.",
+      "questions": [
+        {
+          "prompt": "Why does each herder keep adding animals to the pasture?",
+          "options": [
+            "The village orders them to",
+            "The grass grows faster with more animals",
+            "They receive the full benefit while sharing the cost",
+            "Other herders pay them to do so"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Which of these does the professor give as an example of the tragedy of the commons?",
+          "options": [
+            "A privately owned farm",
+            "A government-run factory",
+            "A crowded shopping street",
+            "Overfished oceans"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is the key insight the professor emphasizes?",
+          "options": [
+            "Individual and group interests can conflict",
+            "Shared resources are always more efficient",
+            "People rarely act in their own interest",
+            "Villages should abandon farming"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "公地悲剧指个人从共享资源多取的收益归己、成本却由众人分摊，结果资源被耗尽，反映个人与集体利益的冲突。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a geology class. Some lakes keep a natural calendar at the bottom, and geologists have learned to read it. In certain lakes, especially those fed by melting glaciers, the sediment settles in distinct yearly layers called varves. Here's how it works. In spring and summer, fast-flowing meltwater carries coarse, light-colored sand and silt into the lake. In winter, the lake surface freezes over, the water grows still, and fine, dark clay slowly settles out. So each year produces a pair of layers—one light, one dark. Count the pairs, and you can count the years, much like counting tree rings. But varves tell us more than age. A thick summer layer suggests a warm year with heavy melting; a thin one suggests a cool year. So by measuring layer thickness, researchers reconstruct past climate stretching back thousands of years. The main limitation is that clear varves form only in special conditions—still, deep lakes without burrowing animals to stir the mud. Where they exist, though, they're an extraordinarily precise record of time.",
+      "questions": [
+        {
+          "prompt": "What produces the light-colored layer in a varve?",
+          "options": [
+            "Winter clay settling in still water",
+            "Spring and summer meltwater carrying sand and silt",
+            "Burrowing animals mixing the sediment",
+            "Algae blooming on the surface"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can a thick summer layer indicate?",
+          "options": [
+            "A cold year with little melting",
+            "A year with heavy rainfall only",
+            "A warm year with heavy melting",
+            "A year when the lake dried up"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor compare varves to tree rings?",
+          "options": [
+            "Both form only near glaciers",
+            "Both are destroyed by burrowing animals",
+            "Both change color with pollution",
+            "Both can be counted to determine age"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "纹泥每年形成一浅一深两层，数层数可定年代，层厚还能反映气候，教授以树木年轮类比其可计数定年。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a linguistics class. Why is it that a young child can pick up a language almost effortlessly, while an adult often struggles for years and still speaks with an accent? Many linguists point to what's called the critical period. The idea is that there's a window early in life—roughly up to puberty—when the brain is especially prepared to absorb language. During this window, children learn grammar and pronunciation naturally, just from being surrounded by speech. After it closes, learning a language becomes a more deliberate, effortful task. What's the evidence? Consider studies of people learning a second language at different ages. Those who begin in early childhood typically reach native-like fluency, while those who start as adults rarely do, no matter how hard they work, especially with pronunciation. There are also rare, tragic cases of children isolated from language altogether; when discovered late, they struggle to acquire normal grammar. Now, adults do have advantages—they learn vocabulary faster at first. But for effortless, complete mastery, earlier really does seem to be better.",
+      "questions": [
+        {
+          "prompt": "What is the critical period?",
+          "options": [
+            "An early window when the brain readily absorbs language",
+            "The age when children first learn to read",
+            "A period when adults learn vocabulary fastest",
+            "The time it takes to master pronunciation"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the professor, what advantage do adults have?",
+          "options": [
+            "They achieve native-like pronunciation",
+            "They learn vocabulary faster at first",
+            "They absorb grammar effortlessly",
+            "They never speak with an accent"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the professor mention children isolated from language?",
+          "options": [
+            "To show adults cannot learn languages",
+            "To argue children should start school earlier",
+            "To provide evidence that late exposure impairs language learning",
+            "To prove pronunciation is unimportant"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "关键期假说认为青春期前大脑最易自然习得语言，二语研究和语言隔离儿童的案例都支持晚接触会削弱语言习得。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a chemistry class. Living cells run thousands of chemical reactions, and most of them, left alone, would happen far too slowly to keep you alive. The solution is a catalyst—a substance that speeds up a reaction without being used up itself. In cells, these catalysts are proteins called enzymes. Here's the basic idea. Every reaction has to climb over an energy barrier before it can proceed, like pushing a boulder over a hill. An enzyme works by lowering that barrier. It doesn't change how much energy the reaction releases overall; it just provides an easier path. It does this by grabbing hold of the reacting molecules and holding them in exactly the right position to react. Because the enzyme itself emerges unchanged, a single enzyme molecule can perform the same trick over and over, thousands of times a second. One more crucial point: enzymes are highly specific. Each one is shaped to fit only certain molecules, like a lock and key. That specificity lets the cell control which reactions speed up and which don't—a kind of chemical management system.",
+      "questions": [
+        {
+          "prompt": "What is a catalyst?",
+          "options": [
+            "A molecule destroyed during the reaction",
+            "A protein that stores energy",
+            "A barrier that slows reactions",
+            "A substance that speeds a reaction without being used up"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How does an enzyme speed up a reaction?",
+          "options": [
+            "By lowering the energy barrier",
+            "By increasing the energy released",
+            "By raising the temperature of the cell",
+            "By becoming part of the product"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor mention a lock and key?",
+          "options": [
+            "To show enzymes are easily broken",
+            "To explain that enzymes act only on specific molecules",
+            "To prove enzymes are used up quickly",
+            "To argue that all enzymes are identical"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "酶是不被消耗的蛋白质催化剂，通过降低能垒加速反应，且像锁与钥匙般专一，只作用于特定分子，从而调控细胞反应。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a biology class. Today let's look at how honeybees tell one another where to find food. When a scout bee discovers a rich patch of flowers, it flies back to the hive and performs what we call a waggle dance. It runs in a straight line while shaking its body, then loops back and repeats the run. Here's the remarkable part: the angle of that straight run, measured against vertical, signals the direction of the food relative to the sun. And the longer the waggle run lasts, the farther away the food is. So in a completely dark hive, using only movement, one bee conveys both direction and distance. Researchers confirmed this by training bees to visit feeders, then decoding their dances to predict where they would send their hivemates — and the predictions matched the feeders. It's one of the few known cases of an animal using a kind of symbolic code.",
+      "questions": [
+        {
+          "prompt": "What is the lecture mainly about?",
+          "options": [
+            "How bees build honeycomb cells",
+            "How honeybees communicate the location of food",
+            "Why bees are attracted to bright colors",
+            "How bees survive the winter months"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the professor, what does the length of the waggle run indicate?",
+          "options": [
+            "The type of flower found",
+            "The number of scout bees",
+            "The distance to the food",
+            "The age of the hive"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor mention that researchers decoded the dances to predict feeder locations?",
+          "options": [
+            "To show that the dance really carries direction and distance information",
+            "To explain why bees sometimes get lost",
+            "To argue that bees cannot see the sun",
+            "To describe how honey is harvested"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "讲座讲蜜蜂用摇摆舞传递食物方位：直线角度示方向、时长示距离；提及解码舞蹈预测喂食点是为证明该舞确实传递了信息。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a botany class. When we look at a forest, we see separate trees standing apart. But underground, the picture is very different. The roots of most plants are wrapped in threadlike fungi, forming a partnership called a mycorrhiza. The fungus extends far into the soil, reaching water and minerals the roots can't get on their own, and passes these to the plant. In return, the plant supplies the fungus with sugars made through photosynthesis. It's a fair trade. But here's the striking part. A single fungus can connect to many plants at once, linking them into a shared network. Through these fungal threads, trees can actually transfer resources to one another. A large tree in sunlight may send sugar to a shaded seedling struggling below. Some researchers even suggest the network carries chemical warning signals when insects attack. Now, we should be careful not to romanticize this as trees being 'friends.' The fungus is acting in its own interest too. Still, it means a forest is less a crowd of individuals and more a connected community.",
+      "questions": [
+        {
+          "prompt": "What does the fungus provide to the plant?",
+          "options": [
+            "Sugars from photosynthesis",
+            "Water and minerals from the soil",
+            "Protection from all insects",
+            "Sunlight for the roots"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can pass between trees through the network?",
+          "options": [
+            "Seeds and pollen",
+            "Roots and leaves",
+            "Resources such as sugar",
+            "Whole fungi"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor warn against calling trees 'friends'?",
+          "options": [
+            "Because trees cannot communicate at all",
+            "Because the network does not really exist",
+            "Because seedlings never receive help",
+            "Because the fungus also acts in its own interest"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "菌根网络中真菌为植物输送水和矿物、换取糖分，还能在树木间转移资源甚至传递警示信号，但教授提醒真菌亦为自身利益，勿过度拟人化。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a physics class. Every object has a natural frequency—a rate at which it 'likes' to vibrate. Pluck a guitar string, tap a wine glass, and you hear that frequency as a tone. Now, something interesting happens when you push an object at exactly its natural frequency. Each push arrives in step with the object's own motion, adding a little energy each time. The vibrations grow larger and larger. This build-up is called resonance. You've felt it on a playground swing: small pushes, perfectly timed, send the swing higher and higher. Resonance can be useful—it's how musical instruments amplify sound. But it can also be dangerous. If wind or an earthquake shakes a bridge or a building at its natural frequency, the structure can vibrate so violently that it tears itself apart. That's why engineers carefully calculate these frequencies and add features that absorb energy, breaking up the dangerous rhythm. So understanding resonance isn't just theory—it's the difference between a structure that sways safely and one that collapses.",
+      "questions": [
+        {
+          "prompt": "What is resonance?",
+          "options": [
+            "Vibrations growing larger when an object is pushed at its natural frequency",
+            "The tone an object makes when struck once",
+            "The frequency at which sound disappears",
+            "The energy an object loses over time"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the playground swing example illustrate?",
+          "options": [
+            "How swings lose energy to friction",
+            "How timed pushes build up motion",
+            "Why swings have a fixed length",
+            "How children learn physics"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why do engineers calculate the natural frequencies of structures?",
+          "options": [
+            "To make bridges produce musical tones",
+            "To increase a building's natural frequency",
+            "To prevent structures from vibrating destructively",
+            "To measure the speed of the wind"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "共振指以物体固有频率施力使振动不断增大，如荡秋千；它能放大乐音，也能使桥梁建筑剧烈振动而毁坏，故工程师须计算固有频率并加以抑制。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an anthropology class. In many societies, giving a gift is far more than a kind gesture—it's a social obligation woven into the fabric of community. Anthropologists have long studied systems of exchange where gifts flow back and forth between groups. The key principle is reciprocity: when you receive a gift, you are expected, sooner or later, to give one in return. This isn't a cold transaction like buying bread. The delay matters. If you gave something back instantly, of equal value, you'd be treating it like a sale, even insulting the giver. Instead, the gap in time creates an ongoing bond—an unpaid debt that keeps two parties connected and obliged to each other. Over years, these chains of giving build alliances, mark status, and hold communities together. A generous giver gains prestige; someone who receives but never reciprocates loses respect. So when we study these exchanges, we're really studying how societies create trust and cooperation without money, contracts, or courts. The gift, in a sense, is the glue.",
+      "questions": [
+        {
+          "prompt": "What is reciprocity?",
+          "options": [
+            "The practice of buying goods with money",
+            "The habit of refusing all gifts",
+            "Giving a gift only to relatives",
+            "The expectation to give a gift in return"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does giving something back instantly cause a problem?",
+          "options": [
+            "It treats the gift like a sale and can insult the giver",
+            "It costs more money than waiting",
+            "It breaks a written contract",
+            "It is forbidden by law"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What main point does the professor make about gift exchange?",
+          "options": [
+            "Gifts are less important than trade",
+            "Gifts create trust and bind communities without money or contracts",
+            "Gift-giving usually leads to conflict",
+            "Only wealthy people can give gifts"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "互惠原则要求受礼者日后回礼，延迟回礼形成持续的社会纽带；这种赠礼体系在没有货币和契约时建立信任、凝聚社会。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an archaeology class. Wood can be a surprisingly precise clock, and the method that reads it is called dendrochronology—dating by tree rings. Each year, a tree adds a new ring of growth just under its bark. In a good year, with plenty of rain, the ring is wide; in a dry year, it's narrow. So a cross-section of a trunk shows a sequence of wide and narrow rings, a pattern that reflects the local climate over the tree's life. Here's the clever part. Because all trees in a region experience the same weather, they share the same pattern of good and bad years. By matching the ring patterns of living trees to those in older, dead wood—say, a beam from an ancient house—researchers can extend the record back thousands of years and pin a piece of wood to an exact calendar year. This gives archaeologists something rare: a precise date for when a timber was cut. It also, as a bonus, records droughts and cold spells from long before written history.",
+      "questions": [
+        {
+          "prompt": "What produces a wide tree ring?",
+          "options": [
+            "A year of drought",
+            "An attack by insects",
+            "A year with plenty of rain",
+            "A very cold winter"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How is the ring record extended back in time?",
+          "options": [
+            "By counting rings on a single old tree",
+            "By measuring the height of trees",
+            "By chemically testing the bark",
+            "By matching patterns of living trees to older dead wood"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does dendrochronology give archaeologists?",
+          "options": [
+            "A precise date for when a timber was cut",
+            "The exact height of an ancient forest",
+            "The species of every tree used",
+            "The number of people in a village"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "树木年轮宽窄反映当年降水，同区域树木图案一致；通过将活树与古木年轮图案匹配可延伸年表数千年，为木材砍伐年份提供精确定年。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a meteorology class. High above our heads, at the altitude where airplanes cruise, rivers of air race around the planet at tremendous speed. These are the jet streams. What creates them? It comes down to temperature differences. Near the equator, air is warm; near the poles, it's cold. Where these two air masses meet, the sharp contrast in temperature generates a strong, fast-flowing current of wind high in the atmosphere. Now, jet streams don't flow in straight lines. They snake north and south in great waves, and those waves largely determine our day-to-day weather. When a jet stream dips south, it can drag cold polar air down over a region; when it bulges north, warm air pushes up. Storms tend to form and travel along the jet stream, so forecasters watch it closely. Airlines watch it too—flying east with the jet stream at your back can save fuel and time, while flying against it slows you down. So this invisible high-altitude wind shapes both our weather and our travel.",
+      "questions": [
+        {
+          "prompt": "What creates jet streams?",
+          "options": [
+            "The rotation of airplane engines",
+            "Temperature differences between warm and cold air",
+            "Ocean currents at the surface",
+            "Mountains blocking the wind"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happens when a jet stream dips south?",
+          "options": [
+            "It stops all storms from forming",
+            "It warms the polar regions",
+            "It can bring cold polar air over a region",
+            "It reverses direction permanently"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor mention airlines?",
+          "options": [
+            "To argue that flying is dangerous",
+            "To explain how engines work",
+            "To prove jet streams are slowing down",
+            "To show the jet stream affects travel, not just weather"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "急流由赤道与极地间温差在高空形成，其南北弯曲决定日常天气并引导风暴，还影响航班顺逆风的耗时耗油。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a paleontology class. Most fossils are made of stone—the original tissue long since replaced by minerals. But there's a rarer, more astonishing kind of fossil that preserves ancient life almost intact, and it comes from tree resin. Millions of years ago, certain trees oozed sticky resin. An insect crawling on the bark could get trapped, coated, and completely engulfed. Over time, the resin hardened, and after millions of years underground it turned into amber—a clear, golden solid. What makes amber special is that it seals its captive away from air and water, the two things that normally cause decay. So inside a piece of amber, we can find a fly, a spider, even a feather, preserved in three dimensions, down to the tiny hairs on its legs. Some specimens are so detailed you'd think the creature was trapped yesterday. This gives scientists a uniquely vivid window into ancient ecosystems—not a flattened imprint in rock, but the actual organism. Of course, amber only captures small things that resin could engulf, so it gives us just one slice of the ancient world.",
+      "questions": [
+        {
+          "prompt": "What is amber?",
+          "options": [
+            "Hardened tree resin",
+            "A mineral that replaces bone",
+            "A type of volcanic glass",
+            "Compressed layers of mud"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why do organisms preserve so well in amber?",
+          "options": [
+            "It freezes them solid",
+            "It seals them away from air and water",
+            "It replaces their tissue with minerals",
+            "It coats them in salt"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What limits the kinds of life amber can preserve?",
+          "options": [
+            "It captures only plants, never animals",
+            "It captures only creatures that lived in water",
+            "It captures only small organisms that resin could engulf",
+            "It captures only animals with bones"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "昆虫被树脂包裹并硬化成琥珀，隔绝空气和水而立体保存细节，为古生态提供生动窗口，但只能保存树脂能包住的小型生物。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a sociology class. When people look for a new job, where do the best leads come from? You might guess close friends and family—the people who know you best and want to help most. But research suggests something surprising. Often, the most useful information comes not from close friends but from acquaintances—people you know only slightly. Sociologists call this the strength of weak ties. Here's the logic. Your close friends tend to move in the same circles you do. They know the same people, hear the same news, so they rarely tell you anything you don't already know. An acquaintance, by contrast, lives in a different social world. They're connected to jobs, opportunities, and information that never reach your inner circle. So a weak tie acts like a bridge to new territory. This doesn't mean close friends don't matter—they offer support and trust that acquaintances can't. But when it comes to spreading fresh information across a society, the loose, casual connections often do the heavy lifting. It's a nice reminder that even distant relationships have real value.",
+      "questions": [
+        {
+          "prompt": "What are 'weak ties'?",
+          "options": [
+            "Close family members",
+            "Best friends from childhood",
+            "Coworkers you see every day",
+            "Acquaintances you know only slightly"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why do close friends rarely provide new information?",
+          "options": [
+            "They move in the same circles and know the same things",
+            "They do not want to help you",
+            "They live too far away",
+            "They dislike sharing job leads"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What main point does the professor make about weak ties?",
+          "options": [
+            "Close friends are useless for finding jobs",
+            "Loose connections often spread fresh information across society",
+            "People should avoid making close friends",
+            "Acquaintances always find better jobs"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "“弱联系的力量”指点头之交身处不同社交圈，能带来密友不知道的新信息和机会，像桥梁般在社会中传播资讯。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a marine biology class. A coral reef looks like rock, but it's built by living animals—tiny creatures called polyps. And those polyps have a secret partner. Living inside their tissues are microscopic algae. Through photosynthesis, the algae produce food and share most of it with the coral; in return, the coral gives them shelter and nutrients. The algae also give coral its brilliant color. This partnership is the engine of the whole reef. But it's fragile. When the water grows too warm—even just a couple of degrees above normal for a few weeks—the relationship breaks down. Stressed, the coral expels the algae living inside it. Without them, the coral turns ghostly white; we call this coral bleaching. And here's the danger: a bleached coral isn't dead, but it's starving, because it has lost its main food source. If cool conditions return quickly, the algae can come back and the coral recovers. But if the heat lasts too long, the coral dies—and with it, the reef that shelters a quarter of all marine species.",
+      "questions": [
+        {
+          "prompt": "What lives inside coral polyps?",
+          "options": [
+            "Small fish",
+            "Bacteria that cause disease",
+            "Microscopic algae",
+            "Tiny shrimp"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What causes coral bleaching?",
+          "options": [
+            "Sudden darkness",
+            "Too many fish",
+            "Heavy rainfall",
+            "Water that is too warm"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why is a bleached coral in danger?",
+          "options": [
+            "It has lost its main food source and is starving",
+            "It is immediately dead",
+            "It can never produce color again",
+            "It is eaten by the algae"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "珊瑚虫体内共生的微藻通过光合作用供养珊瑚并赋予色彩；水温过高时珊瑚排出微藻而白化，虽未死却因失去主要食物来源而挨饿，持续高温会致其死亡。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a neuroscience class. We often think of sleep as simply shutting down for the night. But your brain is remarkably busy while you sleep, and one of its key jobs is managing memory. During the day, your experiences are recorded in a temporary, fragile form. If nothing further happened, many would quickly fade. What sleep does is consolidate them—move important memories into more stable, long-term storage. Studies show this clearly. Learn a list of words, then sleep, and you'll recall more the next day than someone who stayed awake the same number of hours. It seems the sleeping brain replays the day's events, strengthening the connections that store them. Different stages of sleep matter for different things. Deep sleep appears especially important for facts and events, while dream-rich sleep seems to help with skills and emotional memories. The practical lesson is striking: pulling an all-nighter before an exam may actually backfire. Without sleep, the very learning you worked so hard for never gets properly filed away. Sleep, in other words, isn't lost time—it's when learning becomes permanent.",
+      "questions": [
+        {
+          "prompt": "What does the brain do with memories during sleep?",
+          "options": [
+            "It erases the unimportant ones only",
+            "It consolidates them into long-term storage",
+            "It records new experiences for the first time",
+            "It keeps them in a fragile temporary form"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is deep sleep especially important for?",
+          "options": [
+            "Physical skills only",
+            "Emotional memories only",
+            "Facts and events",
+            "Forgetting the day"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor mention pulling an all-nighter?",
+          "options": [
+            "To recommend studying only at night",
+            "To show that exams are unfair",
+            "To prove sleep is a waste of time",
+            "To warn that losing sleep can undermine learning"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "睡眠把白天脆弱的记忆巩固为长期记忆，深睡有助事实记忆、梦境睡眠有助技能与情绪记忆；故考前熬夜反而妨碍学习成果的固化。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an art history class. Imagine a painting that, up close, looks like nothing but thousands of tiny separate dots of pure color. Step back, and those dots blend into a shimmering, complete image. This technique is called pointillism, and it rests on a clever idea about how vision works. Instead of mixing paints on a palette, the artist places small dots of unmixed color side by side—say, dots of pure blue next to dots of pure yellow. The mixing happens not on the canvas but in your eye. From a distance, your visual system blends the neighboring dots, and you perceive green. Why bother? The artists believed that color mixed by the eye stays more vivid and luminous than color muddied together on a palette. There's some truth to that. The cost, though, is enormous labor—covering a large canvas one dot at a time takes extraordinary patience. And the effect only works at the right viewing distance. Too close, and the image dissolves into specks; too far, and the detail is lost. It's a technique that literally depends on where the viewer stands.",
+      "questions": [
+        {
+          "prompt": "In pointillism, where does the color mixing happen?",
+          "options": [
+            "In the viewer's eye",
+            "On the palette before painting",
+            "In the canvas fibers",
+            "Under bright studio lights"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why did artists use this technique?",
+          "options": [
+            "It was faster than normal painting",
+            "They believed eye-mixed color stays more vivid",
+            "It required cheaper paints",
+            "It worked at any distance"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is a drawback of pointillism?",
+          "options": [
+            "The colors fade quickly",
+            "It can only depict people",
+            "It only works at the right viewing distance",
+            "It cannot use blue and yellow"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "点彩派把纯色小点并置，让观者的眼睛在远处自行混合成色，据信比调色板混色更鲜亮，但耗工巨大且只在特定观看距离才有效。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an ecology class. Not all species matter equally to an ecosystem. Some can disappear with little effect, while others, if removed, cause the whole system to unravel. We call this second kind a keystone species—named after the central stone in an arch that holds all the others in place. Take a classic coastal example. Sea otters eat sea urchins. Sea urchins, in turn, eat kelp—the tall underwater plants that form rich forests along the shore. Where otters thrive, they keep urchin numbers in check, and vast kelp forests flourish, sheltering countless fish and other creatures. But remove the otters, and the urchins explode in number. They devour the kelp, and the forest collapses into a barren zone with little life. Notice that the otter isn't the most abundant animal here, nor the largest. Its importance comes from its position in the food web—its effect ripples outward far beyond its own numbers. That's the essence of a keystone species: identify it, protect it, and you protect an entire community that depends on it.",
+      "questions": [
+        {
+          "prompt": "What do sea otters eat?",
+          "options": [
+            "Kelp",
+            "Small fish",
+            "Other otters",
+            "Sea urchins"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What happens when otters are removed from the ecosystem?",
+          "options": [
+            "Urchins multiply and destroy the kelp forest",
+            "Kelp forests grow even larger",
+            "Fish populations immediately rise",
+            "Sea urchins disappear"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why is the otter called a keystone species?",
+          "options": [
+            "It is the largest animal in the sea",
+            "Its effect on the ecosystem far exceeds its numbers",
+            "It is the most abundant species there",
+            "It cannot survive without kelp"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "关键种如同拱心石，海獭数量虽不多，却通过捕食海胆维持海藻林；一旦移除，海胆暴增吃光海藻，整个群落崩溃，其影响远超其数量。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an economics class. Traditional economics assumes people are rational calculators, weighing costs and benefits coolly. But real human behavior often departs from that ideal in predictable ways. Consider a striking pattern called loss aversion. Experiments show that the pain of losing something feels much stronger than the pleasure of gaining the same thing. Losing twenty dollars hurts more than finding twenty dollars feels good—roughly twice as much, studies suggest. Think about what that implies. People will often pass up a fair bet, say a coin flip to win or lose the same amount, because the possible loss looms larger than the equal possible gain. Loss aversion also explains why we cling to things we own. Once something is 'mine,' giving it up registers as a loss, so we demand more to sell it than we'd have paid to buy it. Marketers know this well—'don't miss out' is a more powerful message than 'here's a benefit.' The lesson for economists is humbling: to predict real choices, we can't assume people treat gains and losses as mirror images. They simply don't.",
+      "questions": [
+        {
+          "prompt": "What is loss aversion?",
+          "options": [
+            "People enjoy gains more than they fear losses",
+            "People treat gains and losses equally",
+            "The pain of a loss feels stronger than the pleasure of an equal gain",
+            "People never take any risks"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why do people often pass up a fair coin-flip bet?",
+          "options": [
+            "They cannot calculate the odds",
+            "They dislike all games",
+            "They expect to lose every time",
+            "The possible loss looms larger than the equal gain"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the professor mention marketers and 'don't miss out'?",
+          "options": [
+            "To show that loss aversion appears in everyday persuasion",
+            "To criticize dishonest advertising",
+            "To prove that marketing never works",
+            "To argue that people should not shop"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "损失厌恶指失去某物的痛苦约为获得等量之物快乐的两倍，导致人们回避公平赌局、惜售所拥之物，营销也常用“别错过”来利用这一心理。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a geology class. A century ago, the idea that continents move was ridiculed. The obvious objection was: how could solid continents plow through solid ocean floor? The answer came from the ocean floor itself. Running down the middle of the Atlantic is an underwater mountain range, a ridge. Along its crest, molten rock rises from below, cools, and forms brand-new ocean floor. As more rises, it pushes the older floor outward to either side, like a conveyor belt. This is seafloor spreading. The continents don't plow through anything; they ride along on top as the floor moves. The proof was elegant. The rock nearest the ridge is youngest, and it gets progressively older the farther you go from the ridge on both sides—a mirror image. And the pattern of magnetism frozen into the rock matches on either side too, recording the same history. Once this was understood, the whole theory of plate tectonics fell into place. The Earth's surface, we realized, is broken into moving plates, and the ocean floors are constantly being created and, elsewhere, destroyed.",
+      "questions": [
+        {
+          "prompt": "What happens at the mid-ocean ridge?",
+          "options": [
+            "Old ocean floor sinks and melts",
+            "Molten rock rises and forms new ocean floor",
+            "Continents collide and rise up",
+            "Water drains into the Earth"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Where is the youngest rock found?",
+          "options": [
+            "Along the coasts of continents",
+            "At the deepest ocean trenches",
+            "Nearest the ridge",
+            "Evenly across the whole ocean"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor mention the objection about continents 'plowing through' the floor?",
+          "options": [
+            "To prove continents cannot move at all",
+            "To argue the ridge does not exist",
+            "To criticize early geologists",
+            "To show how seafloor spreading resolved that objection"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "海底扩张说明洋中脊处岩浆上涌形成新洋底并把旧洋底向两侧推移，大陆是搭载其上而非“犁过”洋底；离脊越远岩石越老、磁性对称，由此确立板块构造理论。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a history class. Before the printing press, every book in Europe was copied by hand, usually by scribes working for months on a single volume. Books were therefore rare and enormously expensive—a luxury owned by the wealthy, the church, and universities. Most people never held one. Then, in the fifteenth century, movable-type printing changed everything. A printer could set the letters of a page once and then run off hundreds of identical copies quickly. The cost of a book plummeted. Within decades, the number of books in Europe multiplied enormously. Now, why does this matter beyond convenience? Cheaper books meant more people could own them, which created a reason to learn to read—and reading spread. Ideas, once locked in a few handwritten volumes, could now travel fast and far. New thoughts in science, religion, and politics reached wide audiences almost overnight, and they were much harder for any authority to suppress. Historians often argue that this single technology helped set off waves of change that reshaped European society. Information, quite suddenly, had been set loose.",
+      "questions": [
+        {
+          "prompt": "How were books made before the printing press?",
+          "options": [
+            "Copied by hand by scribes",
+            "Printed slowly on early machines",
+            "Carved into stone tablets",
+            "Woven into cloth"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What did movable-type printing allow?",
+          "options": [
+            "Books written in new languages",
+            "Many identical copies made quickly",
+            "Longer books with more pages",
+            "Books that never wore out"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the professor say information 'had been set loose'?",
+          "options": [
+            "Books became more expensive than before",
+            "Scribes were paid more for their work",
+            "Ideas could spread widely and were hard to suppress",
+            "Reading became illegal"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "印刷术前书籍靠手抄、昂贵稀少；活字印刷使成本骤降、书籍激增，促使更多人识字，思想得以广泛快速传播且难被压制，深刻改变了欧洲社会。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a psychology class. Here's a troubling question: if you collapsed on a busy street, would a large crowd make it more likely, or less likely, that someone helps you? Common sense says more people, more help. But research points the other way. Psychologists call it the bystander effect: the more people who witness an emergency, the less likely any single one of them is to step in. Why? Part of the answer is a phenomenon called diffusion of responsibility. When you're the only witness, the responsibility to act rests entirely on you. But in a crowd, that responsibility feels spread out—everyone assumes someone else will handle it, so no one does. There's also social influence: people look to others for cues, and if everyone is standing calmly, each person concludes it must not be a real emergency. Understanding this has a practical payoff. If you ever need help in a crowd, don't just call out to everyone. Point to one specific person and ask them directly. By doing so, you place the responsibility squarely on that individual—and break the spell.",
+      "questions": [
+        {
+          "prompt": "What is the bystander effect?",
+          "options": [
+            "Crowds always help faster than individuals",
+            "People help only strangers",
+            "Emergencies rarely happen in crowds",
+            "More witnesses make any one person less likely to help"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is diffusion of responsibility?",
+          "options": [
+            "Responsibility feels spread across the crowd so no one acts",
+            "Everyone rushes to help at once",
+            "People forget how to help",
+            "One leader takes charge of the group"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor advise pointing to one specific person?",
+          "options": [
+            "To make the crowd feel guilty",
+            "To place responsibility on a specific individual and overcome the effect",
+            "To prove that crowds are dangerous",
+            "To show that no one ever helps"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "旁观者效应指目击者越多、单个人越不愿相助，原因包括责任分散和社会参照；故求助时应指定某一个人，把责任明确落到其身上以打破僵局。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an astronomy class. A comet spends most of its life as a dark, frozen lump wandering the outer solar system—essentially a 'dirty snowball' of ice and dust, just a few kilometers across. For most of its orbit, it's invisible to us. But something dramatic happens when its long path brings it close to the Sun. The Sun's heat warms the ice, which turns directly into gas, releasing trapped dust. This forms a glowing cloud around the comet, and then the famous tail. Here's a detail people often get wrong: a comet's tail does not stream out behind it like smoke behind a train. Instead, the tail always points away from the Sun, pushed outward by sunlight and the flow of particles streaming from the Sun. So as a comet swings around and heads back out, its tail actually leads the way, pointing ahead of it. Once the comet retreats from the Sun and cools, the tail vanishes, and it becomes a dark lump again, waiting years or centuries for its next pass. The show, in other words, is temporary.",
+      "questions": [
+        {
+          "prompt": "What is a comet for most of its orbit?",
+          "options": [
+            "A ball of burning gas",
+            "A small rocky planet",
+            "A dark, frozen lump of ice and dust",
+            "A cloud of glowing dust"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In which direction does a comet's tail point?",
+          "options": [
+            "Directly behind the comet's motion",
+            "Toward the Sun",
+            "Straight up from the comet",
+            "Away from the Sun"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the professor mention 'smoke behind a train'?",
+          "options": [
+            "To correct a common misconception about the tail's direction",
+            "To explain how trains produce smoke",
+            "To show comets move as fast as trains",
+            "To prove the tail is made of smoke"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "彗星平时是冰尘构成的暗冻块，近日时冰升华成气释出尘埃形成彗尾；教授纠正误解——彗尾并非拖在身后，而是被阳光和太阳粒子推得始终背向太阳。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an environmental science class. We usually think of animals as adapting to their environment. But a few species reshape it so profoundly that they engineer whole landscapes. The beaver is the classic case. A beaver fells trees and piles branches and mud across a stream, building a dam. Behind that dam, the water backs up and spreads out, turning a narrow, fast creek into a broad, calm pond and wetland. Consider what that one structure does. The pond slows the water, so sediment settles out instead of rushing downstream, and the water leaving is cleaner. The wetland stores water, releasing it slowly, which helps a landscape stay moist through dry spells and buffers floods after storms. And the new habitat draws in fish, birds, insects, and amphibians that couldn't live along a fast, narrow stream. In a real sense, the beaver creates an ecosystem that many other species depend on. This is why, when beavers vanish from a region, streams often grow drier and less diverse—and why restoring beavers has become a surprising tool for healing damaged watersheds.",
+      "questions": [
+        {
+          "prompt": "What happens to the water behind a beaver dam?",
+          "options": [
+            "It drains away completely",
+            "It backs up and spreads into a pond and wetland",
+            "It flows faster downstream",
+            "It evaporates immediately"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happens to sediment in the beaver pond?",
+          "options": [
+            "It is carried further downstream",
+            "It dissolves into gas",
+            "It settles out, leaving cleaner water",
+            "It blocks the dam permanently"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the professor call the beaver an 'engineer'?",
+          "options": [
+            "It builds the strongest dams of any animal",
+            "It works harder than other animals",
+            "It uses tools like humans do",
+            "It reshapes the landscape and creates habitat for other species"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "河狸筑坝使溪流蓄成池塘湿地，减缓水流让泥沙沉降、净化并储水缓洪，还为众多物种创造栖息地，是重塑地貌的“生态工程师”。"
+    },
+    {
+      "passage": "Listen to part of a lecture in a biology class. Every year, some birds fly thousands of kilometers between their summer and winter homes, often returning to the very same tree. How do they find their way across oceans and continents, sometimes at night, with no landmarks? Birds use several cues together. On clear days, they navigate by the position of the Sun; on clear nights, by the patterns of the stars. But what about cloudy skies, when neither is visible? Here's the remarkable part: many birds can sense the Earth's magnetic field. The planet acts like a giant magnet, and its field varies in a regular way across the globe—so it can serve as both a compass, giving direction, and a kind of map, hinting at location. Exactly how birds detect it is still debated; some evidence points to specialized cells, other evidence to light-sensitive chemistry in the eye. What's clear from experiments is that when researchers alter the magnetic field around migrating birds, the birds change direction accordingly. So these travelers carry, in effect, a built-in navigation system we're only beginning to understand.",
+      "questions": [
+        {
+          "prompt": "How do birds navigate on clear nights?",
+          "options": [
+            "By the patterns of the stars",
+            "By the position of the Sun",
+            "By following rivers below",
+            "By listening for other birds"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can the Earth's magnetic field provide to birds?",
+          "options": [
+            "Warmth during long flights",
+            "Both direction and a sense of location",
+            "A source of food",
+            "Protection from predators"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the experiment altering the magnetic field show?",
+          "options": [
+            "Birds cannot fly through clouds",
+            "Birds prefer to fly at night",
+            "Birds actually use the magnetic field to orient",
+            "Birds ignore the Sun and stars"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "候鸟综合利用太阳、星辰和地球磁场导航，磁场既可当罗盘指向又似地图示位；改变磁场会使鸟改变方向，证明它们确实依赖磁场定向，其机制尚待研究。"
+    },
+    {
+      "passage": "Listen to part of a lecture in an art history class. Look at a painting from around four hundred years ago in which a single figure emerges from deep shadow, lit as if by one dramatic beam of light. That striking contrast between light and dark has a name: chiaroscuro, from the Italian words for 'light' and 'dark.' Before this technique matured, many painters lit their scenes evenly and flatly, so figures looked somewhat two-dimensional. Chiaroscuro changed that. By modeling forms with strong gradations from bright highlight to deep shadow, artists made objects appear round and solid, as if you could reach out and touch them. But chiaroscuro is more than a trick for creating volume. Artists used it to direct your attention—your eye goes straight to the brightly lit face and ignores the darkness around it. And it sets a mood. A figure surrounded by shadow can feel mysterious, tense, even spiritual. So when we analyze these paintings, we shouldn't ask only 'how is the light made?' but 'what is the darkness doing?' The shadow, handled well, is as expressive as the light itself.",
+      "questions": [
+        {
+          "prompt": "What does the word 'chiaroscuro' mean?",
+          "options": [
+            "Bright and colorful",
+            "Soft and blurred",
+            "Round and solid",
+            "Light and dark"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How did many painters light their scenes before chiaroscuro matured?",
+          "options": [
+            "Evenly and flatly",
+            "With a single dramatic beam",
+            "With deep shadows everywhere",
+            "With no light at all"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the professor ask 'what is the darkness doing?'",
+          "options": [
+            "To argue that dark paintings are unfinished",
+            "To stress that shadow is as expressive as light",
+            "To claim that light is unimportant",
+            "To show that the technique failed"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "明暗对照法（chiaroscuro，意为“明暗”）用强烈的光影渐变塑造立体感、引导视线并营造氛围，教授强调阴影与光同样富有表现力。"
+    },
+    {
+      "passage": "Listen to an announcement about the main campus library. Good afternoon, everyone. Starting next Monday, the Harborview Library will extend its weekday hours to better support students during the busy midterm season. The library will now open at seven in the morning and remain open until two the following morning, Monday through Thursday. Weekend hours, however, will stay the same, closing at ten in the evening. Please note that the third-floor quiet study area will be reserved exclusively for graduate students after nine at night. Undergraduates looking for a late-night spot should use the group study rooms on the first floor, which can be booked online up to a week in advance. Finally, remember that the automatic book-return slot near the east entrance is temporarily out of service due to a jammed mechanism, so kindly return your materials at the main circulation desk instead. Thank you for your patience, and good luck with your exams.",
+      "questions": [
+        {
+          "prompt": "What change to the library's hours is being announced?",
+          "options": [
+            "It will open earlier and close later on weekdays.",
+            "It will close earlier every night.",
+            "It will stay open all night on weekends.",
+            "It will reduce its weekend hours."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Where should undergraduates study late at night?",
+          "options": [
+            "The third-floor quiet area",
+            "The group study rooms on the first floor",
+            "The east entrance lobby",
+            "The graduate lounge"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker mention the book-return slot near the east entrance?",
+          "options": [
+            "To encourage students to return books early",
+            "To announce a new permanent return location",
+            "To alert students that it is broken and they should use the circulation desk",
+            "To praise the library's new technology"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "图书馆工作日延长开放时间，考查开放时间变化、本科生夜间自习地点及还书口故障提示。"
+    },
+    {
+      "passage": "Listen to an announcement about campus transportation. Hello, riders. The Office of Campus Mobility is pleased to introduce a brand-new shuttle route, the Green Line, beginning the first of next month. The Green Line will connect the north dormitories directly to the science quad and the medical campus, a trip that previously required transferring twice. Buses will run every twelve minutes during peak hours, from seven until ten in the morning and from four until seven in the evening. Outside those windows, expect a shuttle roughly every twenty-five minutes. To celebrate the launch, rides on all routes will be completely free for the first two weeks; after that, please tap your student identification card as usual. One important note: because of ongoing construction near the library, the Green Line will temporarily skip the central plaza stop and instead pick up passengers behind the recreation center. Real-time arrival information is available through the campus mobility app. Safe travels, everyone.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the new Green Line?",
+          "options": [
+            "To replace the recreation center stop",
+            "To connect the north dorms to the science quad and medical campus without transfers",
+            "To speed up trips downtown",
+            "To serve only graduate students"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How often will the shuttle run during peak hours?",
+          "options": [
+            "Every twelve minutes",
+            "Every twenty-five minutes",
+            "Once an hour",
+            "Every five minutes"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker mention the construction near the library?",
+          "options": [
+            "To announce that the library is closing",
+            "To explain why the route temporarily skips the central plaza stop",
+            "To encourage students to walk instead",
+            "To promote the mobility app"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "新开Green Line校车直连北宿舍与理科区/医学区，考查线路目的、高峰班次间隔及绕行原因。"
+    },
+    {
+      "passage": "Listen to an announcement about new-student orientation. Welcome, incoming students! I'm here to walk you through tomorrow's orientation schedule so there are no surprises. We'll begin promptly at eight-thirty in the Whitfield Auditorium with a welcome address from the dean. Please arrive fifteen minutes early, since seating is first-come, first-served and the room fills quickly. After the address, you'll split into your assigned advising groups, which are printed on the back of your name badge. Lunch will be provided in the dining commons from noon until one-thirty, and yes, vegetarian and allergy-friendly options will be clearly labeled. The afternoon features campus tours led by current students, followed by an optional but highly recommended session on academic support services. One final reminder: the technology help desk will be open all day in the lobby, so if you haven't yet activated your student email account, stop by early rather than waiting until the lines grow long. See you bright and early tomorrow!",
+      "questions": [
+        {
+          "prompt": "Where does orientation begin?",
+          "options": [
+            "The dining commons",
+            "The lobby help desk",
+            "The Whitfield Auditorium",
+            "The advising offices"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How can students find their assigned advising group?",
+          "options": [
+            "By the color of their badge",
+            "From information printed on the back of their name badge",
+            "By alphabetical order at the door",
+            "Through a text message"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker advise visiting the technology help desk early?",
+          "options": [
+            "Because it closes at noon",
+            "To avoid long lines later in the day",
+            "Because email accounts cost money",
+            "To receive a free laptop"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "介绍新生入学日程，考查开幕地点、分组信息来源及尽早去技术台的原因。"
+    },
+    {
+      "passage": "Listen to a safety briefing in a chemistry teaching laboratory. Before we begin any experiments this semester, let's review a few non-negotiable safety rules. First, safety goggles must be worn at all times once you enter the lab, even if you are only writing in your notebook. Second, closed-toe shoes and long trousers are required; anyone wearing sandals will be asked to leave and marked absent for the session. Third, never eat, drink, or chew gum in this room, since chemical contamination can occur without any visible sign. If a spill happens, do not try to clean it yourself. Instead, notify me immediately, and I will decide whether we need the emergency shower or simply an absorbent kit. You'll notice the eyewash station in the corner and the fire blanket mounted by the door; take a moment now to locate both. Remember, the single most common cause of laboratory accidents is rushing. Work slowly, follow each printed procedure exactly, and ask questions whenever you are unsure.",
+      "questions": [
+        {
+          "prompt": "What will happen to a student who wears sandals?",
+          "options": [
+            "They receive a warning",
+            "They must buy goggles",
+            "Nothing, since it is allowed",
+            "They will be asked to leave and marked absent"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What should a student do if a spill occurs?",
+          "options": [
+            "Clean it up quickly with paper towels",
+            "Notify the instructor immediately",
+            "Use the fire blanket",
+            "Leave the room silently"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker suggest is the main cause of lab accidents?",
+          "options": [
+            "Faulty equipment",
+            "Wearing goggles",
+            "Rushing through the work",
+            "Asking too many questions"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "化学实验室安全须知，考查凉鞋违规后果、洒溢处理方式及事故主因（匆忙）。"
+    },
+    {
+      "passage": "Listen to an announcement about course registration. Attention, students: this is a reminder that registration for spring-semester courses opens next Tuesday at six in the morning. Your enrollment window is determined by the number of credits you have completed, so seniors register first, followed by juniors, sophomores, and finally first-year students. You can find your exact appointment time by logging into the student portal under the tab labeled 'Enrollment.' Before your window opens, please meet with your academic advisor to lift the advising hold on your account; without that clearance, the system simply will not let you register, no matter how early you log in. We also strongly encourage you to build a backup schedule, since popular courses fill within minutes. If a section you want is full, add yourself to the waitlist rather than emailing the professor directly, as instructors cannot override the automated system. Questions about your degree requirements should go to the registrar's office, which extends its hours next week to assist you.",
+      "questions": [
+        {
+          "prompt": "What determines a student's registration appointment time?",
+          "options": [
+            "The number of completed credits",
+            "Alphabetical order",
+            "Their grade point average",
+            "The date they first applied"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What must students do before their registration window opens?",
+          "options": [
+            "Pay tuition in full",
+            "Email their professors",
+            "Meet with an advisor to lift the advising hold",
+            "Visit the registrar in person"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker recommend building a backup schedule?",
+          "options": [
+            "Because advisors require it",
+            "Because the portal often crashes",
+            "Because tuition depends on it",
+            "Because popular courses fill within minutes"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "选课注册提醒，考查注册时间的决定因素、开放前需解除的建议锁及备用课表的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about a campus building. Please be advised that Kessler Hall will be closed to all students and faculty for major renovations beginning the last week of this month and continuing through the end of the summer term. During this period, the classes normally held in Kessler will be relocated, and updated room assignments will appear in your online schedule by the end of this week, so check it carefully before the first day of the new session. The advising offices currently housed on the second floor are moving temporarily to the annex behind the student union; walk-in hours there remain unchanged. The renovation will add modern ventilation, accessible entrances, and a new lecture theater seating three hundred. We recognize that construction noise may occasionally reach neighboring buildings, and we ask for your understanding as crews work as quickly and safely as possible. Once the project is complete, Kessler Hall will reopen in the fall with an open house celebration for the entire campus community.",
+      "questions": [
+        {
+          "prompt": "Where are the advising offices moving during the renovation?",
+          "options": [
+            "The annex behind the student union",
+            "The new lecture theater",
+            "The second floor of Kessler Hall",
+            "The registrar's office"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What new feature will the renovation add?",
+          "options": [
+            "A swimming pool",
+            "A lecture theater seating three hundred",
+            "A parking garage",
+            "A rooftop garden"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker ask for the audience's understanding?",
+          "options": [
+            "Because tuition is increasing",
+            "Because classes are being cancelled",
+            "Because construction noise may occasionally be disruptive",
+            "Because advising hours are being reduced"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "Kessler楼翻修关闭通知，考查咨询办公室临时地点、新增设施及请求谅解的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about an upcoming campus event. Get ready, everyone, because the annual Riverside Spring Music Festival returns this Saturday on the central lawn! Gates open at noon, and the first act takes the stage at one o'clock sharp. This year we have six student bands, a faculty jazz ensemble, and a headlining performance by an alumni group returning to campus for the first time in a decade. Admission is free for anyone with a valid student identification card; guests from outside the university may purchase tickets at the gate for a small fee that supports next year's festival. Food trucks will line the pathway near the fountain, and this year we've added several plant-based options by popular request. Please leave glass containers and pets at home, as neither is permitted on the lawn. Should the weather turn stormy, the entire event will move indoors to the athletic center, and we'll post any changes on the festival's social media pages by ten that morning. Come rain or shine, it's going to be a wonderful afternoon.",
+      "questions": [
+        {
+          "prompt": "Who is headlining this year's festival?",
+          "options": [
+            "A faculty jazz ensemble",
+            "Six student bands",
+            "A famous touring artist",
+            "An alumni group returning after a decade"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is NOT permitted on the lawn?",
+          "options": [
+            "Glass containers and pets",
+            "Student identification cards",
+            "Plant-based food",
+            "Guests from outside the university"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker mention the athletic center?",
+          "options": [
+            "It is where tickets are sold",
+            "It hosts the food trucks",
+            "It is the backup location if the weather turns bad",
+            "It is where pets may be left"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "春季音乐节公告，考查压轴演出者、草坪禁带物品及体育馆作为雨天备用场地。"
+    },
+    {
+      "passage": "Listen to an announcement about a scholarship information session. Good morning. The Office of Financial Aid invites all sophomores and juniors to a special information session about the Merit Leadership Scholarship this Thursday at four o'clock in Room 210 of the administration building. This scholarship covers half of annual tuition and is renewable for up to three years, provided recipients maintain a strong academic record and complete forty hours of community service each year. At the session, we'll explain the eligibility requirements, walk through the online application step by step, and share tips from last year's successful applicants. The application itself requires two letters of recommendation and a short personal essay describing your leadership experience, so it's wise to start early. Please note that the deadline is firm: applications submitted even one minute after midnight on the fifteenth will not be considered, as the system closes automatically. If you cannot attend Thursday's session in person, a recording will be posted to the financial aid website within two days. We hope to see many of you there.",
+      "questions": [
+        {
+          "prompt": "What does the scholarship cover?",
+          "options": [
+            "Half of annual tuition",
+            "Full tuition and housing",
+            "Textbooks only",
+            "A one-time cash award"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is required to renew the scholarship each year?",
+          "options": [
+            "A new essay every semester",
+            "Paying a renewal fee",
+            "Maintaining strong grades and completing community service",
+            "Changing one's major"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker emphasize that the deadline is firm?",
+          "options": [
+            "To discourage students from applying",
+            "To announce that the deadline was extended",
+            "To praise last year's applicants",
+            "To warn that late applications are automatically rejected"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "奖学金说明会公告，考查奖学金覆盖范围、续期条件及强调截止日期的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about a new campus recycling program. Hello, campus community. Beginning Monday, we're launching an expanded recycling and composting program in every residence hall and academic building. You'll notice three color-coded bins in each hallway: blue for paper and cardboard, green for food scraps and compostable containers, and gray for everything else. Please take a moment to sort your waste correctly, because a single bag of improperly sorted material can contaminate an entire batch and send it all to the landfill. The dining halls have switched to fully compostable cutlery and plates, so those items now belong in the green bin, not the trash. To help everyone adjust, student volunteers wearing bright yellow vests will stand near the bins during the first week to answer questions. Our goal is ambitious but achievable: to cut the amount of waste the university sends to the landfill in half within two years. Every small decision adds up, and we're counting on each of you to make this program a success. Thank you for doing your part.",
+      "questions": [
+        {
+          "prompt": "What goes in the green bin?",
+          "options": [
+            "Paper and cardboard",
+            "Food scraps and compostable containers",
+            "Glass bottles",
+            "Old electronics"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the program's stated goal?",
+          "options": [
+            "To eliminate all trash bins",
+            "To save money on cutlery",
+            "To hire more custodial staff",
+            "To cut landfill waste in half within two years"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the speaker mention that one bag can contaminate a batch?",
+          "options": [
+            "To explain the importance of sorting correctly",
+            "To announce a fine for littering",
+            "To promote the dining halls",
+            "To describe the volunteers' duties"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "新回收堆肥项目公告，考查绿桶投放物、项目目标及强调正确分类的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about the campus recreation center. Great news for everyone who loves to stay active: the Delmar Recreation Center reopens this Friday after three months of upgrades. The renovated facility now features a second-floor cardio deck with forty new machines, an expanded free-weight area, and two additional group-fitness studios. Membership remains free for all currently enrolled students; simply swipe your identification card at the turnstile. Faculty and staff may join for a modest monthly rate at the front desk. To prevent overcrowding during the popular evening hours, we've introduced an online reservation system for the basketball courts and the climbing wall, bookable up to forty-eight hours in advance. Group-fitness classes, from yoga to cycling, are included at no extra cost, but space is limited, so arrive a few minutes early. Please remember to bring a towel and to wipe down equipment after each use, a courtesy that keeps the space pleasant for the next person. Lockers are available on a first-come basis, though you'll need to supply your own lock. We can't wait to welcome you back.",
+      "questions": [
+        {
+          "prompt": "What is new on the second floor?",
+          "options": [
+            "A cardio deck with forty new machines",
+            "A swimming pool",
+            "A juice café",
+            "A study lounge"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "How can students reserve the basketball courts?",
+          "options": [
+            "By calling the front desk",
+            "Through an online system up to forty-eight hours ahead",
+            "By arriving at opening time",
+            "Reservations are not allowed"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker mention wiping down equipment?",
+          "options": [
+            "To warn about broken machines",
+            "To explain the reservation rules",
+            "As a courtesy that keeps the space pleasant for others",
+            "To describe the renovation work"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "健身中心重开公告，考查二楼新设施、预约球场方式及提醒擦拭器材的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about campus dining. Attention, meal-plan holders. Starting next week, the university dining program is making several changes we think you'll appreciate. First, the north dining hall will now stay open continuously from seven in the morning until nine at night, eliminating the awkward gap between lunch and dinner when many of you were left without a hot meal. Second, we're introducing a mobile ordering feature in the campus app, allowing you to place an order from the grill station and skip the line entirely. Third, in response to your feedback, every station will now display full ingredient and allergen information on digital screens above the counter. One change to be aware of: the swipe system is being replaced by a points-based account, and any unused points will roll over from the fall to the spring semester, though not into the following year. If you have dietary questions, our new campus dietitian holds open office hours every Wednesday afternoon in the dining hall lobby. Enjoy the improvements.",
+      "questions": [
+        {
+          "prompt": "What change is being made to the north dining hall's hours?",
+          "options": [
+            "It will close earlier",
+            "It will open only for dinner",
+            "It will close on weekends",
+            "It will stay open continuously from seven until nine"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What happens to unused meal points?",
+          "options": [
+            "They are lost immediately",
+            "They convert to cash",
+            "They roll over from fall to spring but not into the next year",
+            "They can be given to friends"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention the awkward gap between lunch and dinner?",
+          "options": [
+            "To explain the benefit of the new continuous hours",
+            "To apologize for a price increase",
+            "To announce the hall is closing",
+            "To promote the mobile app"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "餐饮项目变动公告，考查北餐厅开放时间变化、未用积分处理及提及用餐空档的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about campus parking. This is an important update from the Department of Parking and Transportation. Beginning the first of next month, all parking permits will switch to a fully digital system based on your license-plate number. This means the paper hangtags many of you currently display on your mirrors will no longer be valid, and you must register your vehicle online before the deadline to avoid a citation. Enforcement vehicles will scan plates automatically as they drive through the lots. We're also reassigning several lots: the gravel lot near the stadium, previously reserved for staff, will now be open to commuter students, while Lot C beside the library becomes faculty-only during weekday business hours. Overnight parking for residential students remains in the same garages as before. Permit prices have not changed this year, and financial hardship waivers are available through the dean of students' office. If you rarely drive to campus, consider our discounted daily pass instead of an annual permit. Please direct any questions to the parking office, which reopens after the holiday.",
+      "questions": [
+        {
+          "prompt": "What is changing about the parking permit system?",
+          "options": [
+            "Prices are doubling",
+            "It is switching to a digital license-plate system",
+            "Permits are being eliminated",
+            "Only faculty may park now"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Who can now use the gravel lot near the stadium?",
+          "options": [
+            "Faculty only",
+            "No one",
+            "Commuter students",
+            "Outside visitors"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention the discounted daily pass?",
+          "options": [
+            "To suggest an option for those who rarely drive",
+            "To announce a price increase",
+            "To describe enforcement procedures",
+            "To explain that the parking office is closing"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "停车许可数字化公告，考查许可系统变化、碎石停车场新使用群体及提及日票的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about the upcoming career fair. Hello, students. The fall Career and Internship Fair takes place next Wednesday from ten in the morning until three in the afternoon in the grand ballroom of the student center. More than ninety employers will attend this year, spanning fields from engineering and healthcare to nonprofit work and the arts. To make the most of your time, we recommend three things. First, review the list of attending companies, now posted on the career services website, and prioritize the ones that interest you. Second, bring at least fifteen printed copies of your résumé; while many recruiters accept digital submissions, some still prefer paper. Third, dress in professional attire, since first impressions matter enormously in these brief conversations. A free professional headshot station will be set up near the entrance for your online profiles. And here's a tip that students often overlook: the last hour of the fair tends to be the quietest, giving you longer, more relaxed conversations with recruiters who are no longer rushed. Prepare well, and good luck.",
+      "questions": [
+        {
+          "prompt": "How many printed copies of a résumé does the speaker recommend bringing?",
+          "options": [
+            "Five",
+            "Ten",
+            "Fifty",
+            "At least fifteen"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What free service is available near the entrance?",
+          "options": [
+            "A résumé printing service",
+            "A professional headshot station",
+            "A free lunch buffet",
+            "Mock interview coaching"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker mention that the last hour is the quietest?",
+          "options": [
+            "To warn students to leave early",
+            "To explain that recruiters go home early",
+            "To suggest it as a good time for longer conversations",
+            "To announce the fair is understaffed"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "招聘会公告，考查建议携带的简历份数、入口处免费服务及提及最后一小时较空的用意。"
+    },
+    {
+      "passage": "Listen to an announcement from the campus health center. As flu season approaches, the Student Health Center is hosting free vaccination clinics throughout October. No appointment is necessary; simply walk in during clinic hours, which run from nine to four on weekdays. Bring your student identification card and, if you have one, your insurance card, though the vaccine is provided at no cost regardless of insurance status. The whole process usually takes less than fifteen minutes, including a short waiting period afterward to make sure you feel fine. We especially encourage students living in the residence halls to get vaccinated, since illnesses spread quickly in close quarters, and a single outbreak can sweep through an entire floor during exam season. If you're feeling unwell on the day of your visit, please reschedule rather than coming in, and remember that the vaccine cannot give you the flu, a common myth we hear every year. For students with a fear of needles, a nasal-spray version is available upon request. Stay healthy, and help protect those around you.",
+      "questions": [
+        {
+          "prompt": "What should students bring to the clinic?",
+          "options": [
+            "Their student ID and, if available, an insurance card",
+            "An appointment confirmation",
+            "A doctor's note",
+            "A twenty-dollar payment"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What alternative is available for students afraid of needles?",
+          "options": [
+            "A pill",
+            "A nasal-spray version",
+            "A delayed appointment",
+            "A doctor's home visit"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker specifically encourage residence-hall students to get vaccinated?",
+          "options": [
+            "Because they receive a discount",
+            "Because they lack insurance",
+            "Because the clinic is inside their dorm",
+            "Because illness spreads quickly in close quarters"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "校医院免费流感疫苗公告，考查需携带物品、怕针者替代方案及特别鼓励宿舍生接种的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about the campus writing center. Hi, everyone. I want to make sure you all know about a resource that too many students discover only in their final year: the Writing Center, located on the ground floor of the library. Our trained peer tutors offer free one-on-one sessions to help with any kind of writing, at any stage. And I want to stress that last point, because there's a common misconception that the Writing Center is only for people who are struggling or who have already finished a draft. In truth, some of our most productive sessions happen when a student arrives with nothing but a messy outline and a lot of questions. We can help you brainstorm a thesis, organize your argument, or polish your citations. Sessions last fifty minutes and can be booked online, though we always keep a few slots open for walk-ins. We do not, however, proofread papers for you or guarantee a better grade; our goal is to make you a stronger writer over time. Come see us early and often this semester.",
+      "questions": [
+        {
+          "prompt": "Where is the Writing Center located?",
+          "options": [
+            "The ground floor of the library",
+            "The student center",
+            "The English department",
+            "It exists online only"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the Writing Center NOT do?",
+          "options": [
+            "Help brainstorm a thesis",
+            "Proofread papers or guarantee a better grade",
+            "Offer free sessions",
+            "Allow online booking"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker mention students who arrive with only a messy outline?",
+          "options": [
+            "To criticize unprepared students",
+            "To explain the booking system",
+            "To describe the tutors' training",
+            "To correct the misconception that the center is only for finished drafts"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "写作中心介绍，考查中心位置、其不提供的服务及提及带草稿提纲学生的用意（纠正误解）。"
+    },
+    {
+      "passage": "Listen to an announcement about study-abroad opportunities. Thinking about spending a semester overseas? The Office of Global Education is holding a general information session next Monday evening at six o'clock in the international center's main hall. We'll introduce our partner programs on five continents, explain how your financial aid transfers, and describe how credits earned abroad count toward your degree. A frequent worry we hear is that studying abroad will delay graduation, but with careful planning and early advising, the vast majority of our students finish right on schedule. That's exactly why we urge you to start the conversation now, ideally three semesters before you hope to travel. At the session, returning students will share honest stories about their experiences, including the challenges of adjusting to a new culture, not just the highlights. Applications for next year open the following week, and scholarships specifically for study abroad are available, though they're competitive. Whether you're certain you want to go or merely curious, please join us; there's no commitment required to attend and ask questions.",
+      "questions": [
+        {
+          "prompt": "When should students ideally begin planning to study abroad?",
+          "options": [
+            "Three semesters before they hope to travel",
+            "The week before they travel",
+            "After graduation",
+            "During their final semester"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What will returning students share at the session?",
+          "options": [
+            "Only the highlights of their trips",
+            "Travel discount codes",
+            "Honest stories including cultural challenges",
+            "Guaranteed job offers"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention the worry about delayed graduation?",
+          "options": [
+            "To discourage students from going abroad",
+            "To announce a new graduation requirement",
+            "To explain scholarship rules",
+            "To reassure students that careful planning avoids delays"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "留学说明会公告，考查建议开始规划的时间、往届生分享内容及提及延迟毕业担忧的用意（安抚）。"
+    },
+    {
+      "passage": "Listen to a guided tour of the campus art museum. Welcome, everyone, to the Ashford Museum of Art, and thank you for joining today's tour. We'll spend about an hour together, moving through four galleries in roughly chronological order. To your left is where we'll begin, with the museum's oldest holdings, ceramics and textiles gathered from around the world. As we walk, I'll ask that you refrain from touching the artworks and that you keep any photographs flash-free, since bright light gradually fades delicate pigments over the years. In the second gallery, keep an eye out for the large landscape near the window; it was donated by the university's very first graduating class and is considered the heart of our collection. Our newest wing, which we'll reach at the end, features rotating exhibitions by living artists, many of them our own students and faculty. If a particular piece speaks to you, the small numbered cards on the wall correspond to detailed descriptions in the free booklet I handed out. Please feel free to ask questions at any point along the way.",
+      "questions": [
+        {
+          "prompt": "What will visitors see in the first gallery?",
+          "options": [
+            "Ceramics and textiles from around the world",
+            "Modern student artwork",
+            "A large landscape painting",
+            "Rotating photography exhibits"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why are visitors asked to avoid flash photography?",
+          "options": [
+            "It disturbs other guests",
+            "It damages the cameras",
+            "Bright light gradually fades delicate pigments",
+            "Cameras are banned entirely"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention the large landscape donated by the first graduating class?",
+          "options": [
+            "To warn visitors not to touch it",
+            "To explain the museum's hours",
+            "To describe the newest wing",
+            "To highlight it as a centerpiece of the collection"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "艺术博物馆导览，考查第一展厅展品、禁用闪光灯原因及提及首届毕业班捐赠风景画的用意（镇馆之宝）。"
+    },
+    {
+      "passage": "Listen to an announcement about a research skills workshop. Hello, researchers. The library is offering a free workshop series this month designed to sharpen your research skills, and I'd encourage anyone working on a major paper to attend. The first session, this Thursday at three, covers advanced database searching. You'll learn how to combine search terms to narrow thousands of results down to the few dozen sources that actually matter, a skill that will save you hours of frustration. The second session focuses on citation-management software, which automatically formats your references and lets you store entire libraries of articles in one place. Later sessions address evaluating the credibility of online sources and avoiding accidental plagiarism. Each workshop lasts one hour and is held in the library's instruction lab, where every participant gets a computer to follow along in real time. No registration is required, but seats are limited to twenty per session, so come a little early. If you can't make a session, the slides and a recorded walkthrough will be posted afterward. Bring a current assignment, and we'll work with your real research.",
+      "questions": [
+        {
+          "prompt": "What does the first workshop session cover?",
+          "options": [
+            "Citation-management software",
+            "Advanced database searching",
+            "Evaluating source credibility",
+            "Avoiding plagiarism"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the seat limit per session?",
+          "options": [
+            "Twenty",
+            "Ten",
+            "Fifty",
+            "There is no limit"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the speaker mention that combining search terms saves hours of frustration?",
+          "options": [
+            "To emphasize the practical benefit of the skill",
+            "To warn that databases are unreliable",
+            "To discourage online research",
+            "To promote the citation software"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "图书馆研究技能工作坊公告，考查首场主题、每场座位上限及强调组合检索省时的用意。"
+    },
+    {
+      "passage": "Listen to a professor explain the procedures for submitting lab reports. Before we finish today, let me go over exactly how I want your weekly lab reports submitted, because following these rules will make everyone's life easier. All reports are due by eleven fifty-nine on the Sunday night following each lab session. Submit them through the course website as a single PDF file, not as a word-processing document, since formatting often shifts when I open those on my computer. Name your file with your last name and the lab number, for example, 'Nguyen_Lab3.' This may sound fussy, but when I'm downloading sixty reports at once, clear names save me from a great deal of confusion. Late reports lose ten percent per day, and after three days I no longer accept them, so if something goes wrong, contact me before the deadline rather than after. Each report should include your data table, a short analysis, and one paragraph on sources of error. I care far more about honest, thoughtful error analysis than about getting a perfect result, so don't be tempted to adjust your numbers.",
+      "questions": [
+        {
+          "prompt": "In what format must reports be submitted?",
+          "options": [
+            "A word-processing document",
+            "A printed paper copy",
+            "An email attachment",
+            "A single PDF file"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What is the penalty for late reports?",
+          "options": [
+            "They are never accepted at all",
+            "Ten percent lost per day, refused after three days",
+            "A one-time five percent penalty",
+            "There is no penalty"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the professor value most in the reports?",
+          "options": [
+            "A perfect experimental result",
+            "Colorful formatting",
+            "Honest, thoughtful error analysis",
+            "The longest possible analysis"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "教授讲解实验报告提交流程，考查提交格式、迟交扣分规则及教授最看重的内容（诚实的误差分析）。"
+    },
+    {
+      "passage": "Listen to an announcement from the campus bookstore. Welcome back, students. As you gather materials for the new term, the campus bookstore wants to remind you of the money-saving options available beyond simply buying new textbooks. For most required titles, you can choose to rent the book for the semester at roughly a third of the purchase price, then return it during finals week. We also carry a large selection of gently used copies, and many courses now offer digital editions that you can access instantly on any device. Here's something students frequently forget: before you buy anything, check whether your professor has placed a copy on reserve at the library, where you can use it for free for short periods. If you do rent, please keep the book in good condition; writing lightly in pencil is fine, but highlighting and torn pages will result in a fee when you return it. Rentals not returned by the last day of finals are automatically charged at full purchase price. Our staff is happy to help you find the most affordable path for every class.",
+      "questions": [
+        {
+          "prompt": "About how much does renting a textbook cost compared to buying it new?",
+          "options": [
+            "The same price",
+            "Half the price",
+            "Roughly a third of the purchase price",
+            "Double the price"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What happens if a rented book is not returned by the last day of finals?",
+          "options": [
+            "Nothing happens",
+            "A small flat late fee",
+            "The student is charged the full purchase price",
+            "The account is simply frozen"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention books on reserve at the library?",
+          "options": [
+            "To warn against damaging library books",
+            "To point out a free alternative to buying",
+            "To describe the rental fees",
+            "To promote digital editions"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "书店省钱选项公告，考查租书价格、逾期未还后果及提及图书馆预留本的用意（免费替代）。"
+    },
+    {
+      "passage": "Listen to an announcement about residence hall move-in. Hello, incoming residents, and welcome to your new home. Move-in day is this Saturday, and to keep traffic flowing smoothly, we've assigned arrival windows based on your building. Please check your email for your specific two-hour slot and try to arrive within it; showing up hours early only creates long lines in the parking area. When you arrive, pull up to the loading zone, unload quickly, and then move your vehicle to the remote lot so the next family can pull in. Volunteers with large rolling carts will be stationed at every entrance to help you carry belongings upstairs. Your room key and mailbox combination can be picked up at the check-in table in your building's lobby, where you'll need to show a photo identification. One reminder about prohibited items: candles, space heaters, and cooking appliances with open coils are not allowed in the rooms for fire-safety reasons, and they will be confiscated during inspections. If you've forgotten anything, the campus store stocks the essentials. We're thrilled to have you here.",
+      "questions": [
+        {
+          "prompt": "How are move-in arrival windows assigned?",
+          "options": [
+            "Based on the student's building",
+            "Alphabetically by last name",
+            "First-come, first-served",
+            "By academic year"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which items are prohibited in the rooms?",
+          "options": [
+            "Rolling carts",
+            "Photo identification",
+            "Candles, space heaters, and open-coil appliances",
+            "Mailbox combinations"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker ask students to move their vehicles to the remote lot quickly?",
+          "options": [
+            "To prevent theft",
+            "So the next family can pull in",
+            "Because parking is expensive",
+            "So students can reach their rooms faster"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "宿舍入住日公告，考查到达时段的分配依据、禁带物品及要求尽快移车的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about the university's winter weather policy. With the cold season upon us, I'd like to review how the university handles severe weather closures so you know what to expect. Whenever classes are cancelled or delayed because of snow or ice, the decision will be announced by six in the morning through the emergency text-alert system, the university homepage, and local radio stations. If you haven't signed up for text alerts, please do so today; it's the fastest way to hear the news and takes only a minute on the portal. Remember that a delayed opening does not mean classes are cancelled, only that they start later, following a special schedule posted online. Even when the university remains open, we understand that commuting students may face unsafe roads, and no one will be penalized for staying home when travel is genuinely dangerous; simply notify your instructors. Essential services, including the dining halls and the health center, stay open during closures, staffed by employees who live on or near campus. When in doubt, prioritize your safety over perfect attendance.",
+      "questions": [
+        {
+          "prompt": "By what time will weather closures be announced?",
+          "options": [
+            "Nine in the morning",
+            "Noon",
+            "The night before",
+            "Six in the morning"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does a delayed opening mean?",
+          "options": [
+            "All classes are cancelled",
+            "Classes start later on a special schedule",
+            "The campus is completely closed",
+            "Only essential services run"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker suggest students prioritize during dangerous weather?",
+          "options": [
+            "Perfect attendance",
+            "Arriving early",
+            "Their personal safety",
+            "Helping clear the snow"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "冬季恶劣天气政策公告，考查停课公布时间、延迟开课的含义及危险天气下应优先考虑的事（安全）。"
+    },
+    {
+      "passage": "Listen to an announcement about a new campus bike-share program. Attention, everyone who's tired of walking across our sprawling campus in the rain: a new bike-share program launches next week, and it's completely free for students. We've installed twelve docking stations at key locations, including the dorms, the library, the athletic complex, and the far end of the science quad. To check out a bike, download the campus mobility app, scan the code on the handlebars, and ride to any station you like. There's no charge for trips under an hour, which comfortably covers any journey across our campus; longer trips incur a small fee to keep bikes circulating rather than sitting idle in someone's dorm room. Helmets are strongly recommended and can be borrowed at no cost from the recreation center front desk. Please ride only on the marked bike lanes and pathways, never on the pedestrian-only walkways near the main plaza, where collisions with people on foot are a real concern. If a bike seems damaged, report it in the app rather than riding it, and we'll swap it out promptly.",
+      "questions": [
+        {
+          "prompt": "How long can a trip last before a fee applies?",
+          "options": [
+            "One hour",
+            "Thirty minutes",
+            "Two hours",
+            "Fifteen minutes"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Where can students borrow a helmet for free?",
+          "options": [
+            "At each docking station",
+            "At the library",
+            "At the recreation center front desk",
+            "At the science quad"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker charge a fee for longer trips?",
+          "options": [
+            "To make a profit for the university",
+            "To keep bikes circulating rather than sitting idle",
+            "To discourage students from riding at all",
+            "To pay for the mobility app"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "共享单车项目公告，考查免费骑行时长、免费借头盔地点及长途收费的原因（保持车辆流通）。"
+    },
+    {
+      "passage": "Listen to an announcement about an upcoming theater production. Good evening, theater lovers. The university drama department is proud to present its winter production, an original comedy written and directed entirely by our own students. Performances run for two weekends, with evening shows on Fridays and Saturdays at seven-thirty and a matinee each Sunday at two. Tickets are available now at the box office in the arts building lobby and through the department's website. Students attend free with a valid identification card, but here's the catch: free student tickets must be reserved in advance and picked up at least thirty minutes before curtain, or they'll be released to the waiting list. General admission for the public is ten dollars, with proceeds supporting next season's productions. Please arrive early, as latecomers cannot be seated until a suitable break in the performance, out of respect for the actors and your fellow audience members. And a gentle reminder to silence your phones completely; even a screen lighting up in a dark theater is distracting to the performers just a few feet away. We hope you'll join us for a memorable evening.",
+      "questions": [
+        {
+          "prompt": "What must students do to attend for free?",
+          "options": [
+            "Pay a ten-dollar fee",
+            "Join the waiting list",
+            "Arrive at intermission",
+            "Reserve tickets in advance and pick them up thirty minutes before curtain"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "When are the matinee performances?",
+          "options": [
+            "Friday evenings",
+            "Saturday afternoons",
+            "Sunday at two",
+            "Monday nights"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker ask the audience to silence their phones completely?",
+          "options": [
+            "Because even a lit screen distracts the nearby performers",
+            "To prevent recording of the show",
+            "To follow a legal requirement",
+            "To save the phones' batteries"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "戏剧演出公告，考查学生免费观演的条件、日场时间及要求彻底静音手机的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about financial aid deadlines. This is an important reminder from the Office of Financial Aid regarding next year's funding. The priority deadline to submit your renewal application is the first of March, and I cannot stress enough how much this date matters. Students who apply by the priority deadline are considered for the full range of grants, work-study positions, and institutional scholarships. Those who apply even a week later are still eligible for loans, but much of the free money, the aid you never have to repay, will already have been awarded. In other words, missing this deadline could literally cost you thousands of dollars. The application takes most students under an hour, especially if you gather your tax documents beforehand. If your family's financial situation has changed recently, perhaps due to a job loss, you may submit a special-circumstances appeal, and our counselors will review your case individually. Walk-in advising hours are available every afternoon this month, and we've added evening sessions on Tuesdays for students who work during the day. Please don't wait until the last minute.",
+      "questions": [
+        {
+          "prompt": "What is the priority deadline?",
+          "options": [
+            "The first of March",
+            "The first of January",
+            "The last day of March",
+            "The first of February"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What are late applicants still eligible for?",
+          "options": [
+            "Full institutional scholarships",
+            "Work-study positions",
+            "Loans",
+            "Nothing at all"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker say that missing the deadline could cost thousands of dollars?",
+          "options": [
+            "To describe application fees",
+            "To emphasize the financial importance of applying on time",
+            "To announce a tuition increase",
+            "To discourage students from applying"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "助学金截止日期提醒，考查优先截止日期、迟交者仍可获得的资助及强调金额损失的用意。"
+    },
+    {
+      "passage": "Listen to an announcement from the campus technology office. Attention, campus community. Over the upcoming three-day weekend, our information-technology team will be performing a major upgrade to the campus wireless network. As a result, internet and network services across all buildings will be intermittently unavailable from Friday evening through Monday morning. We know this timing isn't perfect, but we deliberately chose the holiday weekend precisely because far fewer people are on campus and fewer classes are affected. When you return on Tuesday, you'll notice a single new network name replacing the three confusing ones we've had for years. You'll need to reconnect your devices once using your student login, after which they'll connect automatically from then on. The upgrade should roughly double connection speeds in the residence halls, where slow evening service has been a frequent and understandable complaint. During the outage, the library will keep a small number of wired computer stations running for anyone with an urgent deadline. If you experience problems reconnecting after the upgrade, the technology help desk will be fully staffed all day Tuesday. Thank you for your patience during this improvement.",
+      "questions": [
+        {
+          "prompt": "When will network services be disrupted?",
+          "options": [
+            "From Friday evening through Monday morning",
+            "All of next week",
+            "Only on Tuesday",
+            "For the entire month"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What improvement will residence-hall students notice?",
+          "options": [
+            "A brand-new library",
+            "Free laptops",
+            "Roughly doubled connection speeds",
+            "Additional computer labs"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why did the IT team choose the holiday weekend for the upgrade?",
+          "options": [
+            "Because staff are paid more then",
+            "Because equipment is cheaper then",
+            "Because the help desk is closed",
+            "Because fewer people are on campus, affecting fewer classes"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "校园无线网络升级公告，考查中断时段、宿舍网速改善及选在假期升级的原因。"
+    },
+    {
+      "passage": "Listen to an announcement about the campus day of service. Hello, everyone. Mark your calendars for the university's annual Day of Service, coming up on the last Saturday of the month. Every year, hundreds of students, staff, and faculty spend the morning volunteering at sites throughout the surrounding community. This year's projects include planting trees in the riverside park, sorting donations at the food bank, painting classrooms at a local elementary school, and visiting residents at a senior center. When you register online, you'll choose your preferred project, though popular sites fill up fast, so signing up early gives you the best chance. Breakfast and a free event T-shirt are provided to all volunteers who check in by eight in the morning at the student center. Transportation to each site is arranged, so you won't need a car. We ask that you dress appropriately for your chosen activity; outdoor projects, in particular, call for sturdy shoes and clothes you don't mind getting dirty. More than the free shirt or the breakfast, though, what students consistently tell us afterward is how meaningful it feels to connect with our neighbors.",
+      "questions": [
+        {
+          "prompt": "What is provided to volunteers who check in by eight?",
+          "options": [
+            "A free rental car",
+            "Breakfast and an event T-shirt",
+            "Course credit",
+            "A cash payment"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How do volunteers get to their service sites?",
+          "options": [
+            "Transportation is arranged for them",
+            "They drive their own cars",
+            "They walk to each site",
+            "They take public buses at their own cost"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the speaker, what do students value most about the day?",
+          "options": [
+            "The free T-shirt",
+            "The breakfast",
+            "Getting out of class",
+            "Connecting meaningfully with the community"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "校园志愿服务日公告，考查签到福利、前往地点的交通安排及学生最看重的收获（与社区连接）。"
+    },
+    {
+      "passage": "Listen to a professor explain the final exam procedures. Let's take a few minutes to go over exactly how our final exam will work next week, so there are no surprises on the day. The exam is scheduled for Thursday at nine in the morning in our usual classroom, not in a special exam hall, so come to the room you already know. Please arrive a few minutes early and leave your bags at the front; the only items you'll need at your desk are pens and a simple calculator. Note that the calculator must be a basic model; anything with internet access or a full keyboard is not permitted, and I'll be checking. The exam covers everything from the second half of the course, since the material from the first half was already tested at midterm. You'll have exactly two hours, and I won't grant extensions except for documented emergencies arranged in advance. If you finish early, you may leave quietly, but once you hand in your exam, you cannot return to it. Get a good night's sleep beforehand; a rested mind will serve you far better than a few extra hours of frantic cramming.",
+      "questions": [
+        {
+          "prompt": "Where will the final exam take place?",
+          "options": [
+            "In the usual classroom",
+            "In a special exam hall",
+            "Online from home",
+            "In the library"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What kind of calculator is permitted?",
+          "options": [
+            "Any calculator at all",
+            "One with internet access",
+            "A basic model without internet or a full keyboard",
+            "No calculator is allowed"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the professor imply students should do the night before?",
+          "options": [
+            "Cram for a few extra hours",
+            "Review the first half of the course",
+            "Arrive early at a special exam hall",
+            "Get a good night's sleep"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "教授讲解期末考试安排，考查考试地点、允许的计算器类型及暗示考前应做的事（好好睡觉）。"
+    },
+    {
+      "passage": "Listen to an announcement about the new student center. We're delighted to announce that the long-awaited Marlowe Student Center opens its doors this Monday, and we'd love for you to explore it. The three-story building brings together services that used to be scattered across campus. On the ground floor you'll find a food court with six vendors, comfortable lounge seating, and a stage for performances and club events. The second floor houses the offices of more than forty student organizations, along with meeting rooms any registered club can reserve for free through the campus app. The top floor is dedicated to quiet study, with individual carrels and a wall of windows overlooking the quad. To celebrate the opening, there will be free refreshments and live music all day Monday, plus a raffle for campus store gift cards. One practical note: the building uses your student identification card for entry after ten at night, so late-night studiers, be sure to carry your card. We think you'll find the center becomes the natural heart of campus life, and we can't wait to see how you use it.",
+      "questions": [
+        {
+          "prompt": "What is on the top floor of the student center?",
+          "options": [
+            "A food court with six vendors",
+            "Student organization offices",
+            "Quiet study space with carrels",
+            "A performance stage"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How can clubs reserve the second-floor meeting rooms?",
+          "options": [
+            "By paying a rental fee",
+            "For free through the campus app",
+            "At the front desk in person",
+            "They cannot be reserved"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker remind students to carry their ID card at night?",
+          "options": [
+            "Because it is required for entry after ten at night",
+            "To enter the gift-card raffle",
+            "To buy food at the food court",
+            "To reserve a meeting room"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "新学生中心开放公告，考查顶层功能、社团预订会议室方式及夜间需带学生证的原因。"
+    },
+    {
+      "passage": "Listen to a guided tour of the campus botanical garden. Welcome to the university's botanical garden, and thank you for spending your afternoon with us. As we stroll along the main path, please stay on the gravel walkways, since the soil beds are delicate and easily compacted by footsteps. Our garden spans nearly ten acres and is organized into themed sections; we'll pass through the desert collection, the rose terrace, and finally the greenhouse, which stays warm and humid year-round. Keep an eye out for the small signs beside each plant, which give both the common and scientific names, along with the region the plant originally comes from. Many visitors are surprised to learn that a number of these species are endangered in the wild, and part of our mission is preserving them here for future generations. If you'd like to get involved, we welcome student volunteers every weekend, no gardening experience necessary; we'll teach you everything. Photography is welcome throughout the garden. Toward the end, we'll pause at the pond, a lovely spot to rest, and I'll answer any questions you've saved up along the way.",
+      "questions": [
+        {
+          "prompt": "Why are visitors asked to stay on the gravel walkways?",
+          "options": [
+            "To avoid getting lost",
+            "Because the soil beds are delicate and easily compacted",
+            "Because some plants are dangerous",
+            "To keep the paths clean"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What information do the signs beside each plant provide?",
+          "options": [
+            "The price of the plant",
+            "Watering instructions",
+            "Common and scientific names and the plant's region of origin",
+            "The gardener's name"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the speaker mention that some species are endangered in the wild?",
+          "options": [
+            "To warn visitors not to touch them",
+            "To discourage photography",
+            "To recruit paying members",
+            "To explain part of the garden's preservation mission"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "植物园导览，考查要求走碎石道的原因、植物标牌信息及提及濒危物种的用意（保护使命）。"
+    }
+  ]
+}

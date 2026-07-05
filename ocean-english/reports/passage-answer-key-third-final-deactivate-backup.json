@@ -1,0 +1,584 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-1dvfp1v",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "recover",
+        "organize",
+        "effective",
+        "benefit",
+        "incorporate",
+        "beneficial",
+        "destroy",
+        "noise",
+        "integrating",
+        "resource",
+        "harmful",
+        "uncomfortable",
+        "improve",
+        "reduce",
+        "levels"
+      ],
+      "answers": [
+        9,
+        3,
+        0,
+        1,
+        4,
+        5,
+        2,
+        14,
+        11,
+        8
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-k9o4sb",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "genuinely",
+        "different",
+        "maintain",
+        "mindfulness",
+        "similar",
+        "understand",
+        "ignored",
+        "concentration",
+        "complicate",
+        "clarifying",
+        "rarely",
+        "underestimated",
+        "enhance",
+        "effort",
+        "essential"
+      ],
+      "answers": [
+        11,
+        1,
+        7,
+        0,
+        14,
+        5,
+        2,
+        3,
+        9,
+        12
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-v35ol",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "ignore",
+        "avoid",
+        "tend",
+        "lifestyle",
+        "boost",
+        "attention",
+        "distraction",
+        "peace",
+        "value",
+        "relaxation",
+        "conscious",
+        "exploring",
+        "believe",
+        "reflection",
+        "noise"
+      ],
+      "answers": [
+        8,
+        2,
+        4,
+        13,
+        11,
+        12,
+        3,
+        5,
+        10,
+        7
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-152roc0",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "contest",
+        "constant",
+        "enhance",
+        "benefits",
+        "temporary",
+        "challenging",
+        "removing",
+        "meaningful",
+        "superficial",
+        "embracing",
+        "scrutinizing",
+        "drawbacks",
+        "traction",
+        "limits",
+        "timely"
+      ],
+      "answers": [
+        0,
+        13,
+        7,
+        1,
+        6,
+        11,
+        5,
+        10,
+        12,
+        14
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-a318p1",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "cost",
+        "boost",
+        "void",
+        "heightened",
+        "reduced",
+        "expands",
+        "advantage",
+        "limits",
+        "ignores",
+        "consideration",
+        "suggest",
+        "relaxing",
+        "demanding",
+        "enhance",
+        "highlights"
+      ],
+      "answers": [
+        7,
+        13,
+        0,
+        4,
+        3,
+        14,
+        12,
+        2,
+        10,
+        9
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-n60rgv",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "trivial",
+        "recognize",
+        "obstacle",
+        "emissions",
+        "waste",
+        "challenge",
+        "alternative",
+        "lease",
+        "decline",
+        "ignore",
+        "adopt",
+        "substantial",
+        "regenerating",
+        "necessity",
+        "expand"
+      ],
+      "answers": [
+        6,
+        12,
+        13,
+        10,
+        7,
+        2,
+        11,
+        3,
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-131dngz",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet, the prevailing assumption that more choices automatically increase freedom and satisfaction has been challenged by empirical evidence.",
+        "Interestingly, the same pattern holds true in more consequential domains like retirement planning and healthcare decisions.",
+        "Consequently, many consumers now actively seek out brands that offer streamlined product lines.",
+        "To illustrate, a well-known electronics retailer discovered that reducing the number of models on display increased sales by 15%.",
+        "This phenomenon, often termed the 'paradox of choice', has profound implications for how businesses design their product offerings.",
+        "Moreover, some companies intentionally create an illusion of abundance to attract customers while subtly guiding them toward a default option.",
+        "However, critics argue that simplifying choices may infringe on consumer autonomy and reduce market diversity."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-15wumdp",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Advocates claim that this practice leads to improved mental health and greater productivity.",
+        "Instead, they should focus on the potential benefits of occasional digital detoxes.",
+        "Yet the very act of disconnecting can trigger a sense of missing out on important social updates.",
+        "Some experts even argue that digital minimalism may exacerbate existing social inequalities.",
+        "This phenomenon is particularly pronounced among young adults who rely heavily on social media for social validation.",
+        "Therefore, a one-size-fits-all approach to digital reduction is unlikely to be effective.",
+        "These individuals might benefit from a more gradual transition rather than an abrupt cutoff."
+      ],
+      "answers": [
+        2,
+        3,
+        6,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1jfoa9n",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Adherents often cite increased productivity and deeper real-world connections as primary benefits.",
+        "Without digital networks, individuals may lose touch with niche support groups that are vital for their well-being.",
+        "This finding challenges the assumption that less screen time automatically equates to better mental health.",
+        "Yet the solution is not to abandon digital minimalism altogether, but to refine its application.",
+        "Some enthusiasts report that the initial discomfort fades after a few weeks of adaptation.",
+        "Instead, they advocate for a balanced approach that acknowledges both the benefits and drawbacks of digital engagement.",
+        "Critics of the movement argue that it oversimplifies the complex relationship between humans and technology."
+      ],
+      "answers": [
+        0,
+        2,
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1jfpbt5",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people pride themselves on their ability to reply to emails, attend meetings, and draft reports all at once.",
+        "Instead of truly multitasking, what we actually do is switch rapidly between tasks.",
+        "Therefore, it is advisable to turn off notifications and set specific times for checking messages.",
+        "These findings challenge the glorification of multitasking in modern workplace culture.",
+        "Consequently, the quality of output often suffers, even if the worker feels busy and productive.",
+        "Interestingly, some individuals seem to perform better under pressure, but this is the exception rather than the rule.",
+        "Ultimately, embracing monotasking may be the key to thriving in an age of constant distraction."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1m1e5hi",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Garment factories in developing nations frequently exploit workers who have no alternative employment.",
+        "Fast fashion is designed to be worn only a few times before being discarded.",
+        "Yet these efforts are insufficient to offset the damage caused by overproduction.",
+        "Consumers are increasingly demanding eco-friendly products, pressuring brands to change.",
+        "The convenience of online shopping has further accelerated the cycle of consumption.",
+        "Without such measures, the negative impacts on both people and the planet will only intensify.",
+        "Many people are now turning to second-hand clothing to reduce their carbon footprint."
+      ],
+      "answers": [
+        1,
+        4,
+        0,
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1skqfd",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. Digital minimalism advocates often recommend deleting social media apps and setting strict screen time limits.",
+        "B. This paradox highlights the need for a more nuanced understanding of digital habits.",
+        "C. App-blocking software requires constant updates and monitoring, subtly reinforcing the habit of checking one’s phone.",
+        "D. The initial enthusiasm for digital detox often fades when users realize the practical challenges involved.",
+        "E. Research suggests that individuals who abruptly disconnect from digital networks often experience a temporary decline in cognitive performance and emotional well-being.",
+        "F. Many people find that simply reducing screen time does not address the underlying causes of digital addiction.",
+        "G. Ultimately, true digital wellness may lie not in renouncing technology altogether, but in cultivating a mindful and intentional relationship with it."
+      ],
+      "answers": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-vxszdj",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many have found that the key to breaking this cycle is to schedule specific times for checking emails and social media.",
+        "Some companies have even experimented with mandatory \"no-internet\" afternoons to foster creativity.",
+        "Critics argue that digital minimalism is merely a privilege for those who can afford to ignore the digital economy.",
+        "By consciously limiting digital distractions, individuals can restore their capacity for sustained attention.",
+        "The pressure to respond instantly can create anxiety and reduce overall job satisfaction.",
+        "Yet, those who persist often report a paradoxical increase in their sense of control and well-being.",
+        "Digital tools, when used intentionally, can amplify human potential rather than diminish it."
+      ],
+      "answers": [
+        3,
+        0,
+        1,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1foohep",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "We bought a new camera for her.",
+        "After that, we put the photos in order.",
+        "Everyone enjoyed looking at the old pictures.",
+        "She even showed it to all her neighbors.",
+        "We wanted to do something by ourselves.",
+        "Finally, we wrapped it in colorful paper.",
+        "We thought about buying a cake."
+      ],
+      "answers": [
+        4,
+        1,
+        5,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1oiq0f0",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Some people may try to cheat you online.",
+        "Use different passwords for different websites.",
+        "These details can be used to hurt you.",
+        "Always meet in a public place with your parents.",
+        "Don't open strange links or download unknown files.",
+        "It is fun to make new friends on the Internet.",
+        "Never tell anyone your password except your parents."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-e2ei9n",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "He brought some fruit for her.",
+        "He knocked on the door, but no one answered.",
+        "She was surprised to see him.",
+        "He went inside and looked around.",
+        "He walked over and found his grandmother there.",
+        "Tom felt sorry for being late.",
+        "She had a small garden behind the house."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-mu8yfm",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "We bought some seeds from a shop and started digging in the soil.",
+        "An expert said the coin might be over one hundred years old.",
+        "I was so excited that I jumped up and down.",
+        "We found a small box under a big tree.",
+        "It was an old coin with a strange picture on it.",
+        "We cleaned the coin carefully and took it to a museum.",
+        "Then we went home and had lunch together."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-zf7gw3",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Tom found some old toys in the garden, but he didn't stop.",
+        "Suddenly, he saw a little bird eating the seeds in the flowerbed.",
+        "“Oh, dear,” she said, “you planted carrot seeds, not flowers.”",
+        "He wanted to plant some flowers for her birthday.",
+        "Then Tom remembered he forgot to put away his toys.",
+        "Tom worked hard for an hour.",
+        "His mother was very angry and shouted at him."
+      ],
+      "answers": [
+        3,
+        5,
+        1,
+        2,
+        0
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-149dhbz",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "People who are shy often struggle to start conversations with strangers.",
+        "Yet these small talks can actually have a significant impact on our relationships.",
+        "It also allows us to discover common interests with others.",
+        "Such skills are especially useful for students preparing for job interviews.",
+        "Practice makes perfect when it comes to social interactions.",
+        "Many find it awkward to engage in light topics with people they don't know well.",
+        "Small talk is often seen as a necessary evil in social gatherings."
+      ],
+      "answers": [
+        0,
+        2,
+        3,
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-f6s4ug",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people try to fill every spare moment with activities.",
+        "Boredom is often seen as a negative state that should be avoided.",
+        "This mental wandering can lead to unexpected insights.",
+        "However, constant stimulation may actually reduce our ability to focus.",
+        "Similarly, the physicist Albert Einstein credited his daydreaming for some of his breakthroughs.",
+        "Boredom can also help us appreciate the simple joys in life.",
+        "Therefore, embracing boredom might be a key to a more fulfilling life."
+      ],
+      "answers": [
+        1,
+        2,
+        4,
+        0,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-te1rpk",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people mistakenly believe that saying no will damage their relationships.",
+        "However, constantly agreeing to everything can have negative consequences.",
+        "Setting clear limits is essential for mental well-being.",
+        "Similarly, declining an invitation to a social event when you need rest is perfectly acceptable.",
+        "In fact, a well-placed “no” can actually strengthen mutual respect.",
+        "This practice not only saves time but also improves the quality of your work.",
+        "Therefore, it is important to learn how to refuse politely."
+      ],
+      "answers": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  }
+]

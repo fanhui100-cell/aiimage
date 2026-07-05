@@ -1,0 +1,172 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-oc0grf",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "motivation",
+        "discover",
+        "dramatic",
+        "significant",
+        "quality",
+        "environment",
+        "refuse",
+        "tendency",
+        "demonstrate",
+        "minor",
+        "effective",
+        "transform",
+        "accumulate",
+        "ignore",
+        "confirm"
+      ],
+      "answers": [
+        2,
+        10,
+        9,
+        6,
+        0,
+        8,
+        5,
+        12,
+        4,
+        13
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-1ceu42y",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "separation",
+        "fear",
+        "erosion",
+        "destruction",
+        "social",
+        "considerable",
+        "transparency",
+        "integration",
+        "debate",
+        "violation",
+        "opaque",
+        "worry",
+        "individual",
+        "adoption",
+        "transparent"
+      ],
+      "answers": [
+        8,
+        11,
+        2,
+        9,
+        5,
+        6,
+        14,
+        7,
+        13,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-10zdhmd",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people pride themselves on being able to multitask efficiently across various apps and platforms.",
+        "The constant notifications and updates keep us perpetually alert, yet often leave us feeling mentally exhausted.",
+        "Studies indicate that frequent task-switching can reduce overall productivity by as much as 40%.",
+        "Instead of enhancing productivity, these digital tools may be subtly undermining our ability to focus deeply.",
+        "This attentional residue reduces performance on tasks that require sustained mental effort.",
+        "Social media companies have publicly acknowledged these design flaws and are working to mitigate them.",
+        "Such addictive patterns make it increasingly difficult to disengage from the digital environment."
+      ],
+      "answers": [
+        1,
+        3,
+        4,
+        6,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-gsf8jy",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Those with limited access to technology or low digital literacy may find it even harder to catch up if the privileged few disconnect voluntarily.",
+        "For instance, low-income workers often rely on smartphones for job searches, communication, and even essential services.",
+        "Adherents report improved mental health, stronger interpersonal bonds, and greater productivity.",
+        "Similarly, individuals with chronic illnesses or disabilities often depend on online forums for medical advice and emotional solidarity.",
+        "After all, the ability to disconnect presupposes the luxury of having a stable offline support network.",
+        "The movement has gained traction particularly among young professionals in urban areas.",
+        "Nevertheless, many find it impractical to abandon digital tools entirely in a connected world."
+      ],
+      "answers": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1ub0wev",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "We practiced very hard to improve our teamwork.",
+        "He hurt his knee but didn't give up.",
+        "The other teams were all very strong.",
+        "I was the last runner of our team.",
+        "Everyone cheered for us after the race.",
+        "We felt proud of what we had done together.",
+        "The teacher asked us to run faster."
+      ],
+      "answers": [
+        0,
+        3,
+        1,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-z3oj4r",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Suddenly, I had an idea.",
+        "I also added some small flowers around the heart.",
+        "My father bought a cake for her.",
+        "She gave me a big hug and thanked me.",
+        "I spent all my money on a toy.",
+        "However, I didn’t know what to do at first.",
+        "I hope she will like my next gift."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ]
+    }
+  }
+]

@@ -1,0 +1,1866 @@
+{
+  "template": "kaoyan-cloze-passage",
+  "level": 5,
+  "sets": [
+    {
+      "passage": "Ecologists once assumed that a stable ecosystem was simply one that stayed the same year after year. That view has now been largely (1)____. What matters is not whether a system remains unchanged, but whether it can absorb a shock and still (2)____ its essential functions. This capacity is what biologists mean by resilience. A coral reef battered by a storm may lose much of its structure, yet (3)____ recover if enough species survive to rebuild it. Biodiversity is central to this process. A community containing many species is more likely to include some that can (4)____ when conditions shift, so the loss of one organism need not (5)____ a collapse. Scientists call this the insurance effect, (6)____ different species act as a buffer against uncertainty. (7)____, a system dominated by a single crop or a handful of species offers no such protection; one disease can sweep through it (8)____ resistance. The lesson extends (9)____ natural habitats. Economists have borrowed the concept to describe markets and supply chains, arguing that overly efficient systems may be dangerously (10)____. Striving for maximum output, they note, often (11)____ the redundancy that allows recovery after disruption. (12)____, a degree of apparent waste can be the price of long-term survival. This reasoning has practical (13)____. Conservation policy increasingly aims not merely to count species but to protect the variety that keeps a habitat (14)____. Restoring a damaged wetland, for instance, means reintroducing a (15)____ of plants and animals rather than a single showcase species. (16)____ such diversity, the restored site would remain fragile. None of this (17)____ that every species is equally important; some clearly play larger roles. (18)____, the broader point holds. A system rich in variety has more ways to respond when the unexpected arrives, and that flexibility, (19)____ sheer size or speed, is what ultimately (20)____ its future.",
+      "blanks": [
+        {
+          "options": [
+            "abandoned",
+            "confirmed",
+            "celebrated",
+            "recorded"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "abolish",
+            "retain",
+            "exaggerate",
+            "conceal"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "never",
+            "rarely",
+            "still",
+            "barely"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "disappear",
+            "complain",
+            "hesitate",
+            "thrive"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "trigger",
+            "prevent",
+            "delay",
+            "imitate"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "unless",
+            "whereby",
+            "although",
+            "until"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "In addition",
+            "For example",
+            "By contrast",
+            "As a result"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "beyond",
+            "during",
+            "despite",
+            "without"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "beyond",
+            "below",
+            "against",
+            "within"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "robust",
+            "fragile",
+            "flexible",
+            "wealthy"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "preserves",
+            "demands",
+            "eliminates",
+            "rewards"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Meanwhile",
+            "However",
+            "Otherwise",
+            "Therefore"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "implications",
+            "obstacles",
+            "objections",
+            "rituals"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "empty",
+            "functioning",
+            "uniform",
+            "expensive"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "ranking",
+            "shortage",
+            "mixture",
+            "schedule"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "With",
+            "Toward",
+            "Through",
+            "Without"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "denies",
+            "implies",
+            "proves",
+            "guarantees"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Nonetheless",
+            "Likewise",
+            "Consequently"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "in case of",
+            "because of",
+            "instead of",
+            "regardless of"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "wastes",
+            "ignores",
+            "questions",
+            "secures"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)旧观点被‘抛弃’，与下文‘已不再成立’呼应。(2)抗冲击后仍能‘保留’核心功能。(3)足够物种存活则‘仍能’恢复。(4)条件改变时某些物种能‘繁盛’。(5)失去一物种不必‘引发’崩溃。(6)whereby引导‘借此’不同物种充当缓冲。(7)与前句形成对比，By contrast。(8)疾病可‘毫无’抵抗地横扫单一系统。(9)教训‘超越’自然栖息地，extend beyond。(10)过度高效的系统反而危险地‘脆弱’。(11)追求最大产出常‘消除’冗余。(12)因此一定程度的浪费是代价，Therefore。(13)这一推理有实际‘含义’。(14)保护多样性使栖息地‘运转正常’。(15)重新引入多种动植物的‘组合’。(16)若‘没有’这种多样性则仍脆弱。(17)这并不‘否认’每个物种同等重要。(18)Nonetheless转折，更广义观点成立。(19)是灵活性‘而非’规模或速度。(20)灵活性最终‘保障’其未来。"
+    },
+    {
+      "passage": "Few areas of public life reveal the gap between knowledge and action as starkly as climate policy. The underlying science has been settled for decades, yet meaningful legislation remains painfully (1)____. The reason is not mainly scientific but political. Cutting emissions imposes costs that are felt (2)____, while the benefits are diffuse and arrive only in the distant future. Voters who must pay higher energy bills today are understandably (3)____ to sacrifice for a payoff their grandchildren will collect. This mismatch in timing (4)____ even well-intentioned governments. A leader who raises fuel taxes may be voted out (5)____ the policy can show results, so the rational political move is often to (6)____ hard decisions to a successor. (7)____, organized interests complicate matters further. Industries built on fossil fuels have every reason to (8)____ reform, and they command resources that scattered future beneficiaries cannot match. The contest is therefore deeply (9)____: a small group facing concentrated losses fights harder than a large group expecting modest gains. (10)____, some analysts once predicted that disaster itself would force action, on the assumption that visible catastrophe would (11)____ delay. Experience has been less encouraging. Even severe events tend to be blamed on bad luck rather than (12)____ as evidence for systemic change. (13)____ this gloomy picture, there are grounds for cautious hope. The falling cost of renewable energy has begun to (14)____ the economic logic, making clean power attractive on its own (15)____ rather than as a moral duty. When the cheap option and the green option (16)____, political resistance softens. Policy may then follow technology instead of (17)____ it. The deeper lesson is that climate action will probably (18)____ less from appeals to virtue than from the alignment of incentives. (19)____ self-interest points toward sustainability, progress accelerates. The task for policymakers is to (20)____ that alignment rather than wait for it.",
+      "blanks": [
+        {
+          "options": [
+            "frequent",
+            "elusive",
+            "popular",
+            "automatic"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "secretly",
+            "eventually",
+            "immediately",
+            "rarely"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "eager",
+            "delighted",
+            "obliged",
+            "reluctant"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "frustrates",
+            "rewards",
+            "amuses",
+            "educates"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "after",
+            "before",
+            "unless",
+            "since"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "explain",
+            "announce",
+            "defer",
+            "welcome"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Instead",
+            "Nevertheless",
+            "Otherwise",
+            "Moreover"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "resist",
+            "accelerate",
+            "fund",
+            "ignore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "fair",
+            "uneven",
+            "friendly",
+            "public"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Surprisingly",
+            "Optimistically",
+            "Reluctantly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "predict",
+            "justify",
+            "extend",
+            "overcome"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "interpreted",
+            "dismissed",
+            "ignored",
+            "concealed"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Because of",
+            "Despite",
+            "Owing to",
+            "Thanks to"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "obscure",
+            "repeat",
+            "reverse",
+            "delay"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "expense",
+            "behalf",
+            "request",
+            "merits"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "coincide",
+            "diverge",
+            "vanish",
+            "compete"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "naming",
+            "fighting",
+            "funding",
+            "praising"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "suffer",
+            "differ",
+            "result",
+            "recover"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Unless",
+            "Whether",
+            "Although",
+            "Wherever"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "engineer",
+            "postpone",
+            "ignore",
+            "doubt"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "(1)立法仍然‘难以实现’，elusive。(2)成本‘立即’被感受到。(3)选民‘不愿’牺牲。(4)时间错配‘挫败’政府。(5)在政策见效‘之前’被选下台。(6)把难题‘推给’继任者，defer。(7)Moreover进一步补充利益集团因素。(8)化石燃料产业有理由‘抵制’改革。(9)较量是‘不对等的’，uneven。(10)Optimistically语气标志乐观预测。(11)灾难会‘克服’拖延。(12)而非被‘解读’为系统变革的证据。(13)Despite这一悲观图景。(14)可再生能源成本下降开始‘逆转’经济逻辑。(15)凭自身‘优点’merits。(16)便宜选项与绿色选项‘重合’coincide。(17)政策跟随技术而非‘对抗’它。(18)气候行动更可能‘源于’result from。(19)Wherever自利指向可持续之处。(20)主动‘设计’这种一致而非等待。"
+    },
+    {
+      "passage": "Almost everyone who has tried to break a bad habit knows how stubborn behaviour can be. We resolve to exercise, save money, or eat better, and within weeks the old patterns (1)____. Psychologists who study this failure increasingly argue that the problem lies less in weak character than in how the human mind is (2)____. Much of daily behaviour is automatic, governed by cues in the environment rather than by conscious choice. A habit forms when an action becomes (3)____ to a particular context, so that the cue alone is enough to (4)____ the response. Once that link is established, willpower has surprisingly little (5)____ over it. Information, it turns out, is rarely sufficient. Telling smokers that cigarettes are harmful does little, because the behaviour is not driven by a (6)____ of facts. The cue, the craving, and the routine operate (7)____ the level of reasoned decision. (8)____, the most effective interventions target the environment rather than the will. If the cue can be removed or (9)____, the habit loses its trigger. Keeping snacks out of sight, for example, works better than (10)____ on self-control to resist them. (11)____ replacing one routine with another that satisfies the same craving can succeed where outright suppression (12)____. This is why simply urging people to try harder so often (13)____. It places the entire burden on the (14)____ part of the mind while leaving the automatic machinery untouched. Lasting change tends to come from redesigning the small (15)____ of everyday life so that the desired action becomes the easy one. (16)____, the goal is to make good behaviour require less effort, not more. None of this means that intention is (17)____; without it, no one would attempt change at all. (18)____, intention is the beginning, not the whole, of the process. Understanding why behaviour is hard to change is itself a (19)____ step, for it shifts the focus from blame to (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "improve",
+            "vanish",
+            "return",
+            "weaken"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "rewarded",
+            "praised",
+            "trained",
+            "wired"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "linked",
+            "opposed",
+            "compared",
+            "exposed"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "delay",
+            "trigger",
+            "doubt",
+            "explain"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "interest",
+            "respect",
+            "control",
+            "memory"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "review",
+            "fear",
+            "supply",
+            "shortage"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "below",
+            "above",
+            "beside",
+            "toward"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "However",
+            "Therefore",
+            "Otherwise",
+            "Meanwhile"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "enlarged",
+            "ignored",
+            "altered",
+            "praised"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "insisting",
+            "spending",
+            "reflecting",
+            "relying"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Similarly",
+            "Instead",
+            "Nevertheless",
+            "By contrast"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "succeeds",
+            "fails",
+            "begins",
+            "spreads"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "works",
+            "matters",
+            "backfires",
+            "lasts"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "automatic",
+            "physical",
+            "hidden",
+            "deliberate"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "details",
+            "myths",
+            "rewards",
+            "rules"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "In other words",
+            "Otherwise",
+            "By contrast"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "essential",
+            "harmful",
+            "irrelevant",
+            "obvious"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Besides",
+            "Likewise",
+            "Therefore",
+            "Rather"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "valuable",
+            "wasteful",
+            "random",
+            "final"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "punishment",
+            "design",
+            "luck",
+            "memory"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "(1)几周内旧模式‘回归’return。(2)大脑如何被‘连线’wired。(3)动作与情境‘关联’linked。(4)线索足以‘触发’反应。(5)意志力对其几乎没有‘控制’。(6)行为并非由事实的‘缺乏’驱动。(7)在理性决策‘之下’below运作。(8)Therefore因此最有效干预针对环境。(9)若线索可被移除或‘改变’altered。(10)而非‘依赖’relying on自控。(11)Similarly同样地用新常规替换。(12)直接压制‘失败’fails之处。(13)单纯催促常‘适得其反’backfires。(14)只压在‘有意识’deliberate那部分。(15)重新设计日常的小‘细节’details。(16)In other words换言之让好行为更省力。(17)并不意味意图是‘无关的’irrelevant。(18)Rather确切说意图只是开端。(19)理解本身是有‘价值’valuable的一步。(20)从指责转向‘设计’design。"
+    },
+    {
+      "passage": "Anyone who has shopped late in the day, after a long string of choices, may have noticed a curious thing: the decisions get harder, and the temptation to grab whatever is nearest grows (1)____. Researchers call this phenomenon decision fatigue, and it suggests that the capacity to choose well is not (2)____ but limited. Every act of deliberation, the theory goes, draws on a (3)____ pool of mental resources. As that pool is (4)____, the mind looks for shortcuts. Rather than weighing options carefully, a tired decision-maker tends to (5)____ either the easiest option or the default already on the table. Studies of the phenomenon have produced striking (6)____. In one often-cited investigation, judges reviewing parole cases were found to grant release far more (7)____ early in the day or just after a meal than at the end of a long session. The applicants had not changed; the (8)____ had. Such results are unsettling (9)____ they imply that outcomes we expect to be purely rational may (10)____ on something as mundane as the hour or a missed lunch. (11)____, the practical responses are encouraging. People who understand the effect can arrange their affairs to (12)____ it. Important choices can be scheduled for the morning, when reserves are (13)____. Routine matters can be reduced to standing rules so that they no longer (14)____ scarce attention. Some successful figures famously simplify trivial decisions, wearing the same clothes each day, precisely to (15)____ their mental energy for what counts. The broader (16)____ is sobering yet useful. It reminds us that self-control behaves less like a fixed trait and more like a muscle that (17)____ with use. (18)____ recognizing its limits, we can stop treating every lapse as a moral failure and start (19)____ our circumstances instead. The aim is not to make more decisions but to make the ones that matter while the mind is still (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "weaker",
+            "quieter",
+            "rarer",
+            "stronger"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "inexhaustible",
+            "valuable",
+            "natural",
+            "trainable"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "growing",
+            "finite",
+            "public",
+            "random"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "filled",
+            "shared",
+            "drained",
+            "praised"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reject",
+            "criticize",
+            "examine",
+            "favour"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "findings",
+            "objections",
+            "rituals",
+            "rumours"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "rarely",
+            "readily",
+            "slowly",
+            "secretly"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "evidence",
+            "schedule",
+            "verdict",
+            "argument"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "unless",
+            "until",
+            "although",
+            "because"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "hinge",
+            "comment",
+            "insist",
+            "report"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Fortunately",
+            "Similarly",
+            "Consequently"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "worsen",
+            "ignore",
+            "counter",
+            "hide"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "empty",
+            "equal",
+            "false",
+            "full"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "consume",
+            "save",
+            "reflect",
+            "produce"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "waste",
+            "preserve",
+            "expose",
+            "divide"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "rumour",
+            "complaint",
+            "lesson",
+            "habit"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "grows",
+            "improves",
+            "spreads",
+            "tires"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "By",
+            "Without",
+            "Despite",
+            "Against"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "blaming",
+            "redesigning",
+            "praising",
+            "forgetting"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "asleep",
+            "busy",
+            "fresh",
+            "absent"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "(1)抓最近选项的诱惑‘更强’stronger。(2)选择能力并非‘无穷’inexhaustible。(3)动用‘有限’finite的资源池。(4)资源被‘耗尽’drained。(5)倾向‘偏向’favour最易选项。(6)产生惊人‘发现’findings。(7)更‘轻易’readily给予假释。(8)改变的是‘时间表/状态’schedule。(9)令人不安‘因为’because。(10)结果可能‘取决于’hinge on。(11)Fortunately幸而实用对策可喜。(12)安排事务来‘对抗’counter它。(13)储备‘充足’full时。(14)不再‘消耗’consume稀缺注意力。(15)以‘保存’preserve精力。(16)更广的‘教训’lesson。(17)像肌肉一样使用后会‘疲乏’tires。(18)By认识其极限。(19)转而‘重新设计’redesigning环境。(20)趁头脑仍‘清醒’fresh时。"
+    },
+    {
+      "passage": "When we ask why some people live longer and healthier lives than others, the obvious answers, genes and personal habits, tell only part of the story. A growing body of research points to the powerful (1)____ of social conditions on health. Where people are born, work, and grow old shapes their wellbeing as surely as the choices they (2)____. These social determinants include income, education, housing, and the (3)____ of the communities around them. The evidence is hard to (4)____. Studies repeatedly show a gradient: at every step down the social ladder, health tends to (5)____, even among people who are not poor by any absolute (6)____. This pattern cannot be explained by access to medical care alone, since it persists in countries where treatment is (7)____ to all. Something deeper is at work. Chronic stress from insecurity, the researchers argue, takes a steady (8)____ on the body over years. (9)____, a sense of control over one's circumstances appears to (10)____ against illness, which helps explain why position in a hierarchy matters so much. The implications challenge how we usually think about health. If the conditions of daily life are decisive, then improving health may depend less on hospitals than on (11)____ such as fair wages and decent schools. Encouraging individuals to eat well or stop smoking is worthwhile, but such advice often (12)____ the harder reality that healthy choices are easier for those with time, money, and security. Blaming the sick for their (13)____ thus misses the point. (14)____, focusing only on social structures can make personal effort seem (15)____, which is also misleading. The truth lies in the (16)____ between the two. A sensible policy would (17)____ both, helping individuals while also addressing the conditions that (18)____ their options in the first place. Recognizing how thoroughly health is (19)____ in society is the first step toward making it more (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "influence",
+            "doubt",
+            "neglect",
+            "request"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "avoid",
+            "make",
+            "forget",
+            "regret"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "age",
+            "size",
+            "quality",
+            "name"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "find",
+            "collect",
+            "read",
+            "dismiss"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "worsen",
+            "improve",
+            "stabilize",
+            "vanish"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "promise",
+            "measure",
+            "limit",
+            "reward"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "denied",
+            "sold",
+            "free",
+            "rationed"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "risk",
+            "note",
+            "bet",
+            "toll"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Conversely",
+            "Therefore",
+            "Similarly",
+            "Otherwise"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "work",
+            "protect",
+            "vote",
+            "argue"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "symptoms",
+            "diseases",
+            "policies",
+            "rumours"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "reveals",
+            "repeats",
+            "proves",
+            "ignores"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "condition",
+            "wealth",
+            "honesty",
+            "talent"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Yet",
+            "Likewise",
+            "Thus"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "essential",
+            "decisive",
+            "irrelevant",
+            "harmful"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "distance",
+            "absence",
+            "contrast",
+            "interaction"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "address",
+            "reject",
+            "delay",
+            "ignore"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "expand",
+            "shape",
+            "praise",
+            "count"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hidden",
+            "absent",
+            "rooted",
+            "forbidden"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "expensive",
+            "scarce",
+            "private",
+            "equal"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)社会条件的强大‘影响’influence。(2)如同他们所‘做’make的选择。(3)周围社区的‘质量’quality。(4)证据难以‘驳斥’dismiss。(5)社会阶梯每下一级健康趋于‘恶化’worsen。(6)按任何绝对‘标准’measure。(7)治疗对所有人‘免费’free。(8)对身体造成持续‘损耗’toll。(9)Conversely相反，掌控感。(10)似乎‘保护’protect免于疾病。(11)取决于‘政策’policies如公平工资。(12)此建议常‘忽视’ignores更难现实。(13)责怪病人的‘状况’condition。(14)Yet转折，只看结构。(15)使个人努力显得‘无关’irrelevant。(16)真相在二者的‘互动’interaction。(17)明智政策应‘兼顾’address both。(18)首先‘塑造’shape其选择。(19)认识健康深植‘根植’rooted于社会。(20)使其更‘平等’equal。"
+    },
+    {
+      "passage": "Human beings are notoriously poor at judging risk, and the errors follow patterns that psychologists have mapped in detail. We do not assess danger by calmly (1)____ probabilities; instead we rely on feelings and mental shortcuts that evolved long before statistics existed. One of the most powerful of these is the availability shortcut, by which we judge an event as likely simply because examples come (2)____ to mind. A single dramatic plane crash, heavily reported, can make air travel feel perilous, (3)____ the figures show it to be remarkably safe. Vivid and recent events thus (4)____ our sense of the odds. A related bias concerns how we respond to risks we choose (5)____ those imposed on us. People readily accept the considerable dangers of driving or skiing, activities they (6)____ voluntarily, while reacting with alarm to far smaller hazards they feel powerless to (7)____. The presence or absence of control, not the actual numbers, drives much of the (8)____. Dread plays its part too. Threats that are unfamiliar, invisible, or potentially catastrophic provoke a fear out of all (9)____ to their statistical likelihood, which is why a rare new disease can cause more panic than a familiar killer that takes many more lives. These tendencies are not signs of stupidity; they are (10)____ of a mind built for a world of immediate physical dangers rather than abstract numbers. (11)____, they can mislead us badly in a modern society where the gravest risks are often slow and statistical. (12)____, understanding the biases offers a remedy. If we know that fear (13)____ the vivid over the probable, we can deliberately (14)____ our intuitions against the data. Policymakers, in particular, must resist the (15)____ to chase whatever risk currently frightens the public, since resources spent calming an exaggerated fear are resources (16)____ from genuine threats. The goal is not to (17)____ emotion, which is neither possible nor desirable, but to let evidence (18)____ it. A society that judged risk more (19)____ would worry less about the spectacular and more about the (20)____, where most real harm actually lies.",
+      "blanks": [
+        {
+          "options": [
+            "ignoring",
+            "weighing",
+            "hiding",
+            "inventing"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "slowly",
+            "rarely",
+            "easily",
+            "wrongly"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "because",
+            "unless",
+            "so that",
+            "even though"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "distort",
+            "confirm",
+            "explain",
+            "record"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "in case of",
+            "instead of",
+            "because of",
+            "thanks to"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "avoid",
+            "fear",
+            "undertake",
+            "forget"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "enjoy",
+            "describe",
+            "ignore",
+            "control"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "reaction",
+            "number",
+            "delay",
+            "income"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "reach",
+            "proportion",
+            "reason",
+            "control"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "failures",
+            "myths",
+            "features",
+            "accidents"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Thus",
+            "Likewise",
+            "Yet"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Fortunately",
+            "Besides",
+            "Otherwise",
+            "Similarly"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "follows",
+            "favours",
+            "fears",
+            "forgets"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "praise",
+            "trust",
+            "check",
+            "repeat"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "duty",
+            "promise",
+            "ability",
+            "temptation"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "diverted",
+            "earned",
+            "saved",
+            "hidden"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "express",
+            "abolish",
+            "study",
+            "share"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "replace",
+            "ignore",
+            "discipline",
+            "imitate"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "loudly",
+            "privately",
+            "quickly",
+            "rationally"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "mundane",
+            "spectacular",
+            "imaginary",
+            "distant"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "(1)并非冷静‘权衡’weighing概率。(2)例子‘容易’easily浮现脑海。(3)even though尽管数据显示安全。(4)生动事件‘扭曲’distort我们对几率的感知。(5)我们选择的风险‘而非’instead of被强加的。(6)自愿‘从事’undertake的活动。(7)无力‘控制’control的危害。(8)驱动多数‘反应’reaction。(9)与统计可能性‘不成比例’out of proportion。(10)是大脑的‘特征’features。(11)Yet转折，在现代误导我们。(12)Fortunately幸而理解偏差提供解药。(13)恐惧‘偏好’favours生动胜于概率。(14)有意将直觉‘对照’check against数据。(15)抵制‘诱惑’temptation。(16)资源被‘挪走’diverted。(17)目标非‘消除’abolish情绪。(18)而是让证据‘约束’discipline它。(19)更‘理性’rationally判断风险。(20)更关注‘平凡’mundane之处。"
+    },
+    {
+      "passage": "The popular image of self-control is heroic: a strong will that grits its teeth and (1)____ temptation through sheer effort. Recent psychology paints a more humbling picture. Willpower, it turns out, is not an unlimited resource on which we can (2)____ indefinitely. People who have just resisted one temptation perform (3)____ on a second test of restraint, as though the first effort had (4)____ a shared store of energy. This finding suggests that relying on willpower as the main tool for self-improvement is a (5)____ strategy. The will simply cannot bear that much (6)____. If brute resistance is unreliable, what works better? The most successful self-controllers, studies find, are not those who fight the hardest but those who rarely have to fight at all. They (7)____ temptation in advance, arranging their lives so that the difficult choice seldom (8)____. A person trying to study, for instance, does better to leave the phone in another room than to keep it nearby and (9)____ to ignore it. Structuring the environment in this way (10)____ the demand on the will rather than testing it. (11)____, the skill that matters is foresight, not stubbornness. (12)____ this evidence, the old habit of praising iron determination, and condemning its absence as weakness, looks misguided. Treating every lapse as a (13)____ failing ignores how the mind actually works and may even make matters (14)____, since shame tends to drain the very resource it scolds. A wiser approach (15)____ that willpower is precious and easily exhausted, and therefore (16)____ it for the moments when nothing else will do. (17)____, it builds habits and surroundings that make good behaviour the path of least resistance. None of this (18)____ that effort is pointless; the will still has its role. (19)____, the lesson is that we should lean on it sparingly, like a reserve to be (20)____ rather than a workhorse to be driven all day.",
+      "blanks": [
+        {
+          "options": [
+            "welcomes",
+            "follows",
+            "resists",
+            "creates"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "report",
+            "comment",
+            "vote",
+            "draw"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "worse",
+            "better",
+            "calmly",
+            "twice"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "filled",
+            "depleted",
+            "hidden",
+            "doubled"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "reliable",
+            "cheap",
+            "fragile",
+            "popular"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "praise",
+            "interest",
+            "memory",
+            "strain"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "avoid",
+            "welcome",
+            "describe",
+            "repeat"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "vanishes",
+            "arises",
+            "wins",
+            "spreads"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "refuse",
+            "agree",
+            "struggle",
+            "pretend"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "raises",
+            "proves",
+            "hides",
+            "lowers"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "In short",
+            "However",
+            "Otherwise",
+            "By contrast"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Instead of",
+            "Given",
+            "Despite",
+            "Without"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "minor",
+            "physical",
+            "moral",
+            "shared"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "better",
+            "easier",
+            "clearer",
+            "worse"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "recognizes",
+            "denies",
+            "doubts",
+            "forgets"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "wastes",
+            "reserves",
+            "exposes",
+            "shares"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Likewise",
+            "Instead",
+            "Besides"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "implies",
+            "guarantees",
+            "proves",
+            "denies"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Rather",
+            "Therefore",
+            "Likewise",
+            "Thus"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "wasted",
+            "spared",
+            "ignored",
+            "punished"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "(1)凭意志‘抵抗’resists诱惑。(2)无法无限‘汲取’draw on。(3)在第二次测试中表现‘更差’worse。(4)首次努力‘耗尽’depleted共享能量。(5)依赖意志是‘脆弱’fragile策略。(6)意志承受不了那么多‘负担’strain。(7)提前‘避开’avoid诱惑。(8)困难选择很少‘出现’arises。(9)而非放在身边‘挣扎’struggle着忽视。(10)这‘降低’lowers对意志的需求。(11)In short简言之关键是远见。(12)Given鉴于此证据。(13)视每次失误为‘道德’moral缺陷。(14)甚至使情况‘更糟’worse。(15)更明智做法‘承认’recognizes意志珍贵。(16)因而把它‘留’reserves给关键时刻。(17)Instead相反，建立习惯。(18)这并不‘意味’implies努力无用。(19)Rather确切说应节省使用。(20)像被‘留存’spared的储备。"
+    },
+    {
+      "passage": "It is tempting to assume that biodiversity matters chiefly for its own sake, a treasure to be admired the way we value a great painting. That sentiment is real, but it (1)____ a more practical truth: the variety of life delivers services on which human survival quietly (2)____. Insects pollinate the crops we eat; wetlands filter the water we drink; forests (3)____ the carbon that would otherwise warm the planet. These benefits, often called ecosystem services, are so woven into daily life that we notice them only when they begin to (4)____. Because such services rarely carry a price tag, markets tend to (5)____ them. A farmer is paid for his harvest but not for the bees that made it possible, so the habitat those bees depend on is easily (6)____ for short-term gain. This blindness leads to decisions that look profitable on paper yet (7)____ the foundations of future prosperity. Economists have therefore tried to put numbers on nature, estimating, for example, what it would (8)____ to replace natural pollination with human labour. The figures are enormous, which is precisely the (9)____: services we have always received for free turn out to be staggeringly valuable. (10)____, some critics warn that reducing nature to a balance sheet is risky. If a species can be (11)____ in dollars, they ask, what stops us from (12)____ it whenever a higher bid comes along? Assigning a price may unintentionally (13)____ the idea that everything is for sale. There is force in this objection, (14)____ the alternative, treating nature as economically invisible, has clearly served it worse. Perhaps the wiser course is to use valuation as a (15)____, a way of making hidden costs visible, without pretending it (16)____ the whole story. What no spreadsheet can fully (17)____ is that biodiversity also (18)____ as insurance: the more varied the living world, the more options it holds for a future we cannot (19)____. Protecting it, then, is not sentimental indulgence but a hard-headed (20)____ in our own security.",
+      "blanks": [
+        {
+          "options": [
+            "proves",
+            "shares",
+            "repeats",
+            "obscures"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "depends",
+            "comments",
+            "votes",
+            "reports"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "release",
+            "store",
+            "ignore",
+            "create"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "appear",
+            "spread",
+            "fail",
+            "double"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "overvalue",
+            "buy",
+            "protect",
+            "overlook"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "sacrificed",
+            "preserved",
+            "studied",
+            "praised"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "strengthen",
+            "undermine",
+            "describe",
+            "raise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "mean",
+            "earn",
+            "cost",
+            "save"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "mistake",
+            "habit",
+            "danger",
+            "point"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "Yet",
+            "Therefore",
+            "Likewise",
+            "Thus"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "hidden",
+            "priced",
+            "saved",
+            "ignored"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "protecting",
+            "counting",
+            "selling",
+            "studying"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "challenge",
+            "doubt",
+            "weaken",
+            "reinforce"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "yet",
+            "because",
+            "so",
+            "until"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "barrier",
+            "tool",
+            "myth",
+            "reward"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "doubts",
+            "hides",
+            "tells",
+            "begins"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "repeat",
+            "waste",
+            "expose",
+            "capture"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "functions",
+            "fails",
+            "vanishes",
+            "competes"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "enjoy",
+            "foresee",
+            "create",
+            "describe"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "loss",
+            "habit",
+            "investment",
+            "rumour"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "(1)这种情感‘掩盖’obscures更实用真相。(2)人类生存悄然‘依赖’depends。(3)森林‘储存’store碳。(4)只在它们开始‘失灵’fail时才注意。(5)市场倾向‘忽视’overlook它们。(6)栖息地易被为短期利益‘牺牲’sacrificed。(7)却‘损害’undermine未来繁荣根基。(8)估算替代自然授粉要‘花费’cost。(9)这正是‘要点’point。(10)Yet转折，批评者警告。(11)若物种能用美元‘定价’priced。(12)什么阻止我们‘出售’selling它。(13)可能无意‘强化’reinforce一切皆可卖的观念。(14)yet但把自然视为经济隐形更糟。(15)把估值用作‘工具’tool。(16)而不假装它‘讲述’tells全部。(17)电子表无法完全‘捕捉’capture。(18)生物多样性也‘起作用’functions为保险。(19)无法‘预见’foresee的未来。(20)对自身安全的明智‘投资’investment。"
+    },
+    {
+      "passage": "For years, the standard advice for living greener was straightforward: buy efficient appliances, recycle diligently, and choose products labelled environmentally friendly. Such steps are not worthless, but a growing number of analysts argue that they (1)____ the deeper problem. The trouble with framing sustainability as a matter of smarter shopping is that it leaves the underlying engine of (2)____ untouched. Modern economies are built to encourage ever more buying, and individual virtue at the checkout can scarcely (3)____ that momentum. Worse, efficiency can sometimes backfire. When a car becomes cheaper to run, people often (4)____ it more, so the savings are partly (5)____ by extra driving, a paradox economists have long noted. Likewise, a household that installs solar panels may feel (6)____ to consume more electricity, reasoning that the energy is now clean. These rebound effects mean that technical gains alone rarely (7)____ total impact as much as expected. (8)____, the conversation is shifting from greener consumption toward consuming (9)____. The most environmentally significant purchase, on this view, is often the one not made at all. Repairing instead of replacing, sharing instead of owning, and simply (10)____ less all reduce demand at its source rather than merely making it cleaner. This argument is uncomfortable (11)____ it questions the assumption that growth and wellbeing must rise together. (12)____, defenders of the conventional approach reply that asking billions of people to consume less is politically (13)____ and may stall the very economies that fund clean technology. There is truth on both sides. Personal restraint, however admirable, cannot (14)____ for the structural changes that only policy and business can deliver. (15)____, those larger changes are unlikely without a shift in what people regard as a (16)____ life. The most honest conclusion is that sustainable consumption requires action at every (17)____ at once: smarter products, fairer rules, and a willingness to (18)____ that more is not always better. Treating any one of these as a complete (19)____ is precisely the kind of comfortable illusion the planet can no longer (20)____.",
+      "blanks": [
+        {
+          "options": [
+            "dodge",
+            "solve",
+            "prove",
+            "share"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "recycling",
+            "consumption",
+            "pollution",
+            "saving"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "create",
+            "describe",
+            "slow",
+            "double"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "avoid",
+            "repair",
+            "sell",
+            "drive"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "offset",
+            "confirmed",
+            "explained",
+            "stored"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "forbidden",
+            "entitled",
+            "unable",
+            "ashamed"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "raise",
+            "describe",
+            "cut",
+            "double"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "By contrast",
+            "Nevertheless",
+            "Otherwise",
+            "Accordingly"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "less",
+            "faster",
+            "louder",
+            "alone"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "wasting",
+            "buying",
+            "earning",
+            "ignoring"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "unless",
+            "although",
+            "because",
+            "until"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Thus",
+            "Likewise",
+            "Yet"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "difficult",
+            "popular",
+            "cheap",
+            "simple"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "vote",
+            "substitute",
+            "search",
+            "wait"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Otherwise",
+            "Equally",
+            "Instead"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "long",
+            "busy",
+            "cheap",
+            "good"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "level",
+            "price",
+            "moment",
+            "season"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "prove",
+            "accept",
+            "deny",
+            "ignore"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "mistake",
+            "habit",
+            "solution",
+            "burden"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "enjoy",
+            "share",
+            "describe",
+            "afford"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "(1)这些步骤‘回避’dodge更深问题。(2)未触动‘消费’consumption引擎。(3)难以‘减缓’slow势头。(4)车更便宜则人们‘开’drive更多。(5)节省被额外驾驶‘抵消’offset。(6)觉得有‘资格’entitled消费更多。(7)很少如预期‘削减’cut总影响。(8)Accordingly因此话题转向。(9)转向消费‘更少’less。(10)单纯‘买’buying得更少。(11)令人不适‘因为’because它质疑假设。(12)Yet转折，辩护者回应。(13)在政治上‘困难’difficult。(14)个人克制无法‘替代’substitute结构性变革。(15)Equally同样地，大变革也需观念转变。(16)何为‘美好’good生活。(17)在每个‘层面’level同时行动。(18)愿意‘接受’accept‘多并非总是好’。(19)视任一为完整‘解决方案’solution。(20)地球再也‘负担不起’afford的幻觉。"
+    },
+    {
+      "passage": "Scientists often complain that the public misunderstands their work, and they are frequently right. But the old explanation for this gap, that ordinary people are simply ignorant and need to be (1)____ with more facts, has not held up well. Decades of effort to pour information into the public have produced (2)____ results. On many contested issues, supplying people with more data does little to change minds and can even (3)____ existing divisions. The reason, researchers now believe, is that the so-called deficit, a mere shortage of (4)____, is not really the problem. People interpret scientific claims through the (5)____ of their values, identities, and communities. A finding that threatens what someone already (6)____ is likely to be doubted, however solid the evidence. (7)____, accepting it may carry social costs if one's group rejects it. Under these conditions, more information can actually (8)____ disagreement, because better-informed individuals become more skilled at finding reasons to (9)____ what they dislike. This insight has reshaped how experts think about communicating science. The goal, many now argue, is not simply to (10)____ knowledge but to build trust. How a message is delivered, and (11)____ delivers it, can matter as much as its content. A claim is more readily accepted when it comes from a source the audience regards as (12)____ and as sharing their concerns. (13)____, treating the public as an empty vessel to be filled tends to breed resentment rather than understanding. None of this means facts are (14)____; without accurate information no sound judgement is possible. (15)____, facts alone are seldom enough. They must be communicated in a way that respects how people actually (16)____ and decide. A further (17)____ is that scientists themselves must be honest about uncertainty. Overstating confidence may win attention in the short run but (18)____ credibility when claims are later revised. Ultimately, a scientifically literate society is built less on the (19)____ of information than on a relationship of mutual (20)____ between those who produce knowledge and those who must live by it.",
+      "blanks": [
+        {
+          "options": [
+            "deprived",
+            "supplied",
+            "amused",
+            "replaced"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "impressive",
+            "instant",
+            "disappointing",
+            "uniform"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "heal",
+            "ignore",
+            "explain",
+            "deepen"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "knowledge",
+            "money",
+            "time",
+            "space"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "mirror",
+            "lens",
+            "wall",
+            "noise"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "forgets",
+            "avoids",
+            "believes",
+            "buys"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Instead",
+            "Otherwise",
+            "Moreover"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "widen",
+            "reduce",
+            "explain",
+            "settle"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "accept",
+            "reject",
+            "share",
+            "record"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "hide",
+            "doubt",
+            "transmit",
+            "waste"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "why",
+            "where",
+            "when",
+            "who"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "trustworthy",
+            "distant",
+            "famous",
+            "wealthy"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "Therefore",
+            "By contrast",
+            "Likewise",
+            "Thus"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "essential",
+            "harmful",
+            "irrelevant",
+            "obvious"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "Therefore",
+            "Besides",
+            "Likewise",
+            "Rather"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "think",
+            "vote",
+            "earn",
+            "travel"
+          ],
+          "answer": "A"
+        },
+        {
+          "options": [
+            "mistake",
+            "lesson",
+            "rumour",
+            "habit"
+          ],
+          "answer": "B"
+        },
+        {
+          "options": [
+            "earns",
+            "proves",
+            "erodes",
+            "shares"
+          ],
+          "answer": "C"
+        },
+        {
+          "options": [
+            "speed",
+            "absence",
+            "price",
+            "volume"
+          ],
+          "answer": "D"
+        },
+        {
+          "options": [
+            "trust",
+            "suspicion",
+            "ignorance",
+            "distance"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "(1)需用更多事实去‘供给’supplied公众。(2)产生‘令人失望’disappointing的结果。(3)甚至‘加深’deepen分歧。(4)所谓缺乏只是‘知识’knowledge短缺。(5)透过价值观的‘透镜’lens解读。(6)威胁某人已‘相信’believes之物。(7)Moreover而且接受可能有社会代价。(8)更多信息实际‘扩大’widen分歧。(9)更善于找理由‘否定’reject所厌恶者。(10)目标非仅‘传递’transmit知识。(11)以及‘谁’who传递。(12)来源被视为‘可信’trustworthy。(13)By contrast相反，把公众当空容器。(14)这不意味事实‘无关’irrelevant。(15)Rather确切说仅有事实不够。(16)尊重人们实际如何‘思考’think。(17)进一步的‘教训’lesson。(18)后来修正时‘侵蚀’erodes可信度。(19)不在于信息的‘数量’volume。(20)而在于相互‘信任’trust。"
+    }
+  ]
+}

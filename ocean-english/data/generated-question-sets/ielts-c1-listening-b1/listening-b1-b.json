@@ -1,0 +1,366 @@
+{
+  "template": "ielts-listening-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Woman: Good morning. I bought this kettle here last Tuesday, but when I got it home I found the lid doesn't close properly, so water splashes out when it boils. Man: I'm sorry about that. Do you have your receipt with you? Woman: I do, yes, here it is. I paid by card, twenty-nine pounds fifty. Man: Thanks. Now, we can offer you a straight refund, or a replacement from the same range. There's also a newer model at thirty-five pounds if you'd like to pay the difference. Woman: Hmm, actually I'd rather not risk the same problem again. What's the newer one like? Man: It has a wider spout and a locking lid, and it comes with a two-year guarantee instead of one. Woman: That sounds better. I'll take that, then, and pay the extra five fifty. Man: Lovely. I'll just need you to fill in this exchange form with your name and postcode, and I'll bring one out from the stockroom.",
+      "questions": [
+        {
+          "prompt": "Why has the woman come to the shop?",
+          "options": [
+            "To complain about a member of staff",
+            "To deal with a faulty item she bought",
+            "To ask for details of a new kettle range",
+            "To collect an order she paid for online"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the woman finally decide to do?",
+          "options": [
+            "Take a full refund on her card",
+            "Accept a replacement of the same model",
+            "Take store credit for a future purchase",
+            "Pay extra for an upgraded model"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What must the woman do before the exchange is completed?",
+          "options": [
+            "Fill in a form with her details",
+            "Show some photo identification",
+            "Wait for the manager to approve it",
+            "Bring back the original box"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "女士因水壶盖子有问题来店处理，最终决定补差价换更新的型号，并需填写一份换货表格。"
+    },
+    {
+      "passage": "Man: Hello, Riverside Lettings, Daniel speaking. Woman: Oh hi, I'm calling about the two-bedroom flat on Compton Road that's advertised on your website. Is it still available? Man: It is, yes. The rent's eight hundred and forty a month, and that includes water charges, though gas and electricity are separate. Woman: Right. And is it furnished? Man: Partly. There's a sofa, a wardrobe and a cooker, but you'd need your own beds. Woman: That's fine, we've got those. Could we arrange to see it? I'm free most evenings. Man: Let me check. The landlord's redecorating the kitchen this week, so the earliest would be, well, I could do Thursday at half past five, or Saturday morning at ten. Woman: Thursday's tricky, I don't finish work until six. Let's say Saturday, then. Man: Saturday at ten it is. Just so you know, there's a deposit of one month's rent, and we ask for two references. Woman: Understood. Shall I meet you at the flat itself? Man: Yes, outside number fourteen. I'll bring the keys.",
+      "questions": [
+        {
+          "prompt": "Why is the woman calling the agency?",
+          "options": [
+            "To report a problem in her current flat",
+            "To ask when redecorating will finish",
+            "To arrange to view an advertised flat",
+            "To provide references for a tenancy"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is included in the monthly rent?",
+          "options": [
+            "Water charges",
+            "Gas",
+            "Electricity",
+            "Internet access"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "When will the woman see the flat?",
+          "options": [
+            "Thursday at half past five",
+            "Thursday at six o'clock",
+            "Saturday in the afternoon",
+            "Saturday at ten in the morning"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "女士来电是为预约看房，房租含水费，因周四下班太晚，最终约定周六上午十点看房。"
+    },
+    {
+      "passage": "Man: Excuse me, is this the desk for volunteer registration for the food bank? Woman: It is indeed. Are you signing up for the first time? Man: Yes. A friend of mine helps with deliveries and she said you were short of people. Woman: We are, especially for the warehouse shifts. Those involve sorting donated tins and checking dates, usually Tuesday or Friday mornings. Man: Mornings are difficult for me, I study until midday. Do you have anything later? Woman: There's the collection point at the supermarket on Thursday afternoons, from two till five. You'd hand out shopping lists and thank donors. Man: That sounds manageable. Do I need any training? Woman: Just a short induction, it's an online video, about forty minutes, and then you shadow an experienced volunteer on your first shift. Oh, and we'll need one reference, a tutor is fine. Man: Great. Shall I fill anything in now? Woman: Yes, pop your details on this form, and bring some photo ID to your first session.",
+      "questions": [
+        {
+          "prompt": "Why has the man come to the desk?",
+          "options": [
+            "To register as a new volunteer",
+            "To arrange a food delivery",
+            "To hand in a donation of tins",
+            "To change his friend's shift"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which role does the man agree to take on?",
+          "options": [
+            "Sorting tins on Tuesday mornings",
+            "Checking dates on Friday mornings",
+            "Helping at a supermarket collection point",
+            "Driving deliveries on Thursday mornings"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What must the man bring to his first session?",
+          "options": [
+            "A signed reference letter",
+            "Some photo identification",
+            "A certificate from the online video",
+            "A completed shopping list"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "男士首次报名做食物银行志愿者，因上午要上课选择了周四下午超市募集点的岗位，首次到岗需携带带照片的证件。"
+    },
+    {
+      "passage": "Woman: Good afternoon, lost property office. Man: Hello. I think I left my rucksack on the number forty-two bus this morning, the one that gets to the station about quarter past eight. Woman: Let me have a look at what's come in today. Can you describe it? Man: It's dark green, with a broken zip on the front pocket. Inside there's a grey laptop and a library book. Woman: Hmm. We've got a black one and a blue one from that route, but nothing green so far. Drivers hand things in at the end of their shift, so it may arrive this evening. Man: Oh no. The thing is, I need the laptop for a presentation tomorrow. Woman: I understand. What I'd suggest is you ring us after six, quoting a reference number I'll give you now. If it's here, you can collect it up until nine tonight, we're open late on Wednesdays. Man: That's a relief. Do I need to bring anything? Woman: Some identification, and there's a two-pound handling charge. Have you got a pen for that reference?",
+      "questions": [
+        {
+          "prompt": "Why is the man contacting the office?",
+          "options": [
+            "To report that his laptop was stolen",
+            "To complain about a bus driver",
+            "To return an overdue library book",
+            "To ask about a bag he left on a bus"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why might the man's rucksack not be at the office yet?",
+          "options": [
+            "The office has been closed all day",
+            "Drivers hand items in when their shift ends",
+            "The bus was taken off that route",
+            "It was sent to the railway station instead"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the woman advise the man to do?",
+          "options": [
+            "Come to the office at nine tomorrow",
+            "Wait at the office until the evening",
+            "Phone again after six with a reference number",
+            "Email a full description of the bag"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "男士打电话询问落在公交车上的背包，因司机下班才交还失物，工作人员建议他六点后凭编号再来电查询。"
+    },
+    {
+      "passage": "Woman: Hi Tom, thanks for calling back. I wanted to ask a favour, actually. Man: Of course, what's up? Woman: You know I've got that training day in Manchester on the twenty-third? Well, the nursery's closed that Friday for staff development, and Mum's away, so I'm stuck for someone to watch Ellie. Man: Ah, right. What time would you need me? Woman: I'd drop her at yours about half seven, and I should be back by six, half six at the latest. Man: That's fine. Does she still have a nap after lunch? Woman: Not any more, but she does need her allergy tablet with breakfast, I'll put it in her bag with a note. And she's not to have anything with peanuts, obviously. Man: Got it. Shall I take her to the park if it's dry? Woman: She'd love that. Oh, and she's got swimming at four, but honestly, skip it, it's too much fuss with the bus. Man: Okay, no swimming. Just text me her doctor's number, will you, in case? Woman: Will do. You're a lifesaver.",
+      "questions": [
+        {
+          "prompt": "Why is the woman speaking to Tom?",
+          "options": [
+            "To invite him to a training day",
+            "To ask him to look after her daughter",
+            "To rearrange a swimming lesson",
+            "To ask him to collect some medicine"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why can't Ellie go to the nursery that day?",
+          "options": [
+            "It is closed for staff development",
+            "It is shut for the school holidays",
+            "There are no free places left",
+            "The staff are away in Manchester"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the woman say about the swimming lesson?",
+          "options": [
+            "Tom should take Ellie there by bus",
+            "The lesson has been cancelled",
+            "Ellie no longer enjoys swimming",
+            "Ellie should miss it that day"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "女士请Tom在托儿所闭园那天帮忙照看女儿，并交代早餐要吃抗过敏药、忌花生，当天的游泳课直接不去。"
+    },
+    {
+      "passage": "Right, everyone, before we head out to the salt marsh tomorrow, a few practical points. We'll meet at the minibus at seven forty-five, not eight as it says on the printed schedule, because the tide turns earlier than we expected, and we must finish the transect measurements before the channels start to refill. Wear rubber boots, and bring waterproofs even if the forecast looks fine; conditions on the coast change fast. Each group of three will carry one quadrat frame, a GPS unit and a recording sheet. Now, the most important safety rule: stay within sight of your group at all times. The mud near the creek edges looks solid but isn't, so keep to the marked posts. If you hear three blasts on my whistle, stop what you're doing and walk, don't run, back to the assembly point by the gate. Lunch is your own responsibility; there's nowhere to buy food on site. Finally, your data sheets must be photographed and uploaded before Friday's lab session, because we'll be pooling everyone's results to map the whole site.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of this talk?",
+          "options": [
+            "To present the results of a coastal survey",
+            "To explain how the fieldwork will be assessed",
+            "To prepare students for a field trip",
+            "To describe the ecology of salt marshes"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why has the meeting time been changed?",
+          "options": [
+            "The minibus is needed later in the day",
+            "The weather forecast is poor",
+            "The printed schedule contained a misprint",
+            "The tide turns earlier than expected"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What should students do if they hear three whistle blasts?",
+          "options": [
+            "Walk back to the assembly point",
+            "Run straight to the minibus",
+            "Stay exactly where they are",
+            "Phone the tutor immediately"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "这是野外考察前的行前说明：因潮汐提前集合时间改为7:45，听到三声哨响须步行返回大门口集合点。"
+    },
+    {
+      "passage": "Welcome, everyone, to the first session in our study-skills series. Over the next hour, my aim is simple: to show you how to take notes you'll actually use again, because research from our own library team suggests that most first-years never look at their lecture notes a second time. We'll try out three methods this morning. First, the split-page system, where you keep key words on the left and details on the right. Second, mapping, which suits visual thinkers. And third, the summary paragraph, written within a day of the lecture; that timing matters more than the format, by the way. What we won't cover today is referencing, that's the whole of next week's session, so hold your questions on citations until then. You'll work in pairs for most of the hour, using a recorded five-minute lecture on volcanoes as your practice material. Don't worry, no geology knowledge is needed; it's the technique we're interested in. At the end, you'll compare your notes with your partner's and decide which method you'll trial for real in your Monday lectures.",
+      "questions": [
+        {
+          "prompt": "What is the main aim of the workshop?",
+          "options": [
+            "To help students take notes they will reuse",
+            "To teach students how to reference sources",
+            "To introduce the library's research services",
+            "To prepare students for a geology lecture"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the speaker, what matters most about the summary paragraph?",
+          "options": [
+            "Keeping it under one page",
+            "Writing it soon after the lecture",
+            "Using key words on the left side",
+            "Sharing it with a study partner"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will students do at the end of the session?",
+          "options": [
+            "Hand their notes in for marking",
+            "Watch a recorded lecture on volcanoes",
+            "Ask questions about citations",
+            "Compare notes and choose a method to try"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本讲座旨在教学生做真正会复用的笔记，强调总结段落要在讲座后一天内完成，结束时需与搭档对比笔记并选定方法。"
+    },
+    {
+      "passage": "So let's turn to what employers in the heritage sector actually look for. People assume the deciding factor is your degree subject, but in the interviews we ran with fifteen museum managers last year, almost all of them put it third or fourth. What came top, again and again, was evidence that you can work with the public: front-of-house experience, guiding, even a weekend job in a shop counts. Second was digital skills, cataloguing systems, yes, but increasingly things like editing short videos for social media. Now, how do you get that experience while you're still studying? The obvious route is volunteering, but be selective. A single season doing one role thoroughly impresses more than a scattering of one-day events. And do keep a record as you go, dates, tasks, a line about what you learned, because when application forms ask for examples, memory is unreliable. Before the break, I'll hand round a list of local placements taking applications this term; two of them, I should warn you, close this Friday.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly talking about?",
+          "options": [
+            "How to choose a degree subject",
+            "How museums recruit their managers",
+            "How the heritage sector is funded",
+            "What heritage employers value and how to gain it"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to the interviews, what do employers rate most highly?",
+          "options": [
+            "The subject of the applicant's degree",
+            "Skill with cataloguing systems",
+            "Experience of dealing with the public",
+            "The ability to edit social media videos"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What advice does the speaker give about volunteering?",
+          "options": [
+            "Attend as many one-day events as possible",
+            "Stay in one role for a whole season",
+            "Only volunteer after finishing your studies",
+            "Choose roles that pay a small wage"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "讲座指出文博行业雇主最看重与公众打交道的经验，建议志愿服务贵精不贵多，最好整季专注一个岗位并随时记录。"
+    },
+    {
+      "passage": "Good morning, and welcome to your induction for the teaching laboratories. Before anyone touches equipment, there are procedures you must know. First, lab coats and safety glasses are compulsory at all times. Glasses stay on even when you're only writing up, because your neighbour's experiment doesn't stop when yours does. Coats can be borrowed from the rack today, but from next week you must bring your own. Second, no food or drink anywhere in the lab, and that includes bottled water; leave it in the lockers outside. Third, waste. Broken glass goes in the grey bins, chemical waste in the labelled containers in the fume cupboard, never down the sink, however dilute it seems. If you spill anything, don't clean it up yourself; tell a demonstrator first, since some liquids react with paper towels. The eye-wash stations are by each door, so take a moment now to find your nearest one. Finally, sign the safety declaration on your way out this morning. Without it, the card reader won't let you into any lab session, and no signature means no practical marks.",
+      "questions": [
+        {
+          "prompt": "What is the purpose of this talk?",
+          "options": [
+            "To demonstrate a new piece of equipment",
+            "To explain safety rules for using the labs",
+            "To describe this term's practical experiments",
+            "To announce changes to lab opening hours"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why must safety glasses be worn even during writing up?",
+          "options": [
+            "The rule is set by the card reader system",
+            "Writing up always happens in the fume cupboard",
+            "Demonstrators cannot watch every student",
+            "Other students' experiments are still running"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What will happen if a student does not sign the declaration?",
+          "options": [
+            "They must borrow a lab coat each week",
+            "They will pay a small equipment charge",
+            "They will be unable to enter lab sessions",
+            "They must repeat the induction talk"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "这是实验室安全入门讲话：写报告时也要戴护目镜（邻座实验仍在进行），不签安全声明门禁卡将无法进入实验课。"
+    },
+    {
+      "passage": "Now, if you look across the square, the tall brick building with the clock is the old Corn Exchange, and it explains why this town grew so quickly in the eighteen hundreds. Farmers from thirty miles around brought grain here to be weighed and sold, and everything you see radiates from that trade: the wide street behind you was built for wagons to turn, and the row of narrow shops to your left began as offices for the merchants. Most visitors assume the clock tower is medieval. It's actually Victorian, added in eighteen seventy-two after the original wooden one burned down. The exchange closed as a market in the nineteen sixties, when grain sales moved to the telephone, and for twenty years the building stood empty. It was very nearly demolished for a car park, the council approved the plans, believe it or not, but a local campaign saved it, and today it's a concert hall. We'll go inside in a moment. Do notice the iron columns, cast at the foundry we passed earlier, and mind the uneven step at the entrance.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly describing?",
+          "options": [
+            "The programme of concerts held in the town",
+            "The working methods of Victorian farmers",
+            "How the Corn Exchange shaped the town's growth",
+            "How grain is weighed and sold today"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does the speaker say about the clock tower?",
+          "options": [
+            "It is newer than most visitors believe",
+            "It survived a fire in medieval times",
+            "It was moved from another building",
+            "It stopped working in the nineteen sixties"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why is the building still standing today?",
+          "options": [
+            "The council refused to approve demolition",
+            "Local people campaigned to save it",
+            "It was bought by a telephone company",
+            "It was converted into a car park instead"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "导游介绍谷物交易所如何带动小镇发展：钟楼其实是1872年维多利亚时期加建的，建筑因当地居民发起保护运动才免于拆除。"
+    }
+  ]
+}

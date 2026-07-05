@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-23T16:35:45.936Z",
+  "apply": false,
+  "stage": null,
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 40,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data/generated-question-sets/r7-zhongkao-listening/zhongkao-listening-expand.json",
+      "template": "zhongkao-listening-mcq",
+      "level": 1,
+      "parsedOk": 40,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 0
+    }
+  ]
+}

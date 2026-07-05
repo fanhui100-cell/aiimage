@@ -1,0 +1,103 @@
+{
+  "template": "sat-expression-of-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Expression of Ideas items, batch 1 (transitions + rhetorical synthesis). 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Solar panels have become dramatically cheaper over the past decade, with prices falling year after year. ______, many homeowners who once dismissed the panels as an expensive luxury now regard installing them as a thoroughly practical investment.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["As a result", "Nevertheless", "For example", "In contrast"],
+      "answer": "As a result",
+      "domain": "Expression of Ideas",
+      "explain_zh": "前因（变便宜）后果（被视为实用），为因果关系，用 As a result。其余表转折或举例，不合逻辑。"
+    },
+    {
+      "passage": "The new downtown policy was carefully designed to reduce traffic. ______, in its very first year the number of cars actually rose, as drivers rushed into the city to beat the restrictions that were coming.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["However", "Therefore", "Likewise", "For instance"],
+      "answer": "However",
+      "domain": "Expression of Ideas",
+      "explain_zh": "意图减少交通却反而上升，为转折，用 However。Therefore/Likewise/For instance 不合逻辑。"
+    },
+    {
+      "passage": "The author spent nearly ten years living among the fishermen she would later write about, sharing their work and their meals. ______, her descriptions of life at sea carry a precision that outside observers rarely manage to achieve.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["As a result", "Nevertheless", "By contrast", "Meanwhile"],
+      "answer": "As a result",
+      "domain": "Expression of Ideas",
+      "explain_zh": "因长期同住（因）而描写精确（果），用 As a result。其余表转折或并列，不合逻辑。"
+    },
+    {
+      "passage": "Most of the volunteers who showed up that morning had no medical training at all and had never handled an emergency. ______, a few were retired nurses whose calm experience proved absolutely invaluable as the situation worsened.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Still", "Therefore", "As a result", "For example"],
+      "answer": "Still",
+      "domain": "Expression of Ideas",
+      "explain_zh": "多数无训练，但少数是护士，为让步转折，用 Still。Therefore/As a result 表因果，For example 表举例，均不合。"
+    },
+    {
+      "passage": "Bamboo is famous for its astonishing speed, capable of growing nearly a meter in a single day. ______, some bamboo species flower only once every several decades, and then do so all at once across an entire region.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Yet", "Therefore", "For example", "As a result"],
+      "answer": "Yet",
+      "domain": "Expression of Ideas",
+      "explain_zh": "生长极快与几十年才开花一次形成对比，用 Yet。其余表因果或举例，不合逻辑。"
+    },
+    {
+      "passage": "The committee first gathered detailed data on every single proposal it had received from the public. ______, it ranked the surviving options, compared their long-term costs, and at last chose the one plan that promised the greatest benefit.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Then", "However", "Nevertheless", "In contrast"],
+      "answer": "Then",
+      "domain": "Expression of Ideas",
+      "explain_zh": "先收集数据、随后排序比较，为时间先后顺承，用 Then。其余表转折，不合逻辑。"
+    },
+    {
+      "passage": "While researching tide pools, a student took the following notes:\n- Tide pools are shallow pools left on rocky shores when the tide goes out.\n- They are home to crabs, anemones, and small fish.\n- The animals there must survive both crashing waves and long hours of exposure to the open air.",
+      "prompt": "The student wants to emphasize the harsh conditions the tide-pool animals endure. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["The animals of tide pools must survive both crashing waves and long hours exposed to the open air.", "Tide pools are shallow pools found on rocky shores when the tide goes out.", "Crabs, anemones, and small fish all make their home in tide pools.", "Tide pools appear along the shore whenever the tide goes out."],
+      "answer": "The animals of tide pools must survive both crashing waves and long hours exposed to the open air.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调严酷条件，A 同时点出海浪冲击与暴露于空气。B、C、D 只介绍位置或居民，不强调严酷。"
+    },
+    {
+      "passage": "A student studying honey took the following notes:\n- Honey almost never truly spoils if it is sealed and kept dry.\n- Archaeologists have found still-edible honey in tombs thousands of years old.\n- Its very low water content and natural acidity stop bacteria from growing.",
+      "prompt": "The student wants to explain why honey does not spoil. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Honey resists spoiling because its low water content and natural acidity prevent bacteria from growing.", "Archaeologists have found edible honey in tombs that are thousands of years old.", "Honey is a sweet, golden food that bees make from flower nectar.", "Honey should always be kept sealed and dry for the very best flavor."],
+      "answer": "Honey resists spoiling because its low water content and natural acidity prevent bacteria from growing.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释不腐的原因，A 给出机制（低水分+酸性抑菌）。B 是现象非原因，C 无关，D 谈风味。"
+    },
+    {
+      "passage": "A student researching two landscape painters took the following notes:\n- Painter A worked very slowly, finishing only a few large canvases each year.\n- Painter B worked quickly, often completing several small paintings in a single week.\n- Both eventually became famous for their landscapes.",
+      "prompt": "The student wants to emphasize a difference between the two painters. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Painter A finished only a few canvases a year, while Painter B often completed several in a single week.", "Both Painter A and Painter B became famous for their landscape paintings.", "Painter A and Painter B were each, in the end, well-known artists.", "Painter B could complete several small paintings within a single week."],
+      "answer": "Painter A finished only a few canvases a year, while Painter B often completed several in a single week.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调差异，A 用 while 对比快慢产量。B、C 强调相同点，D 只述其一，未构成对比。"
+    },
+    {
+      "passage": "A student studying a hardy desert plant took the following notes:\n- The plant's roots can reach more than thirty meters down in search of water.\n- Its thick, waxy leaves lose very little water to the dry desert air.\n- It can survive for years with almost no rainfall at all.",
+      "prompt": "The student wants to explain how the plant survives long droughts. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["The plant endures drought through deep roots that reach distant water and waxy leaves that lose little moisture.", "The plant can survive for years even with almost no rainfall at all.", "The plant has remarkably long roots and broad, bright green leaves.", "The plant grows in deserts, where rainfall is generally quite rare."],
+      "answer": "The plant endures drought through deep roots that reach distant water and waxy leaves that lose little moisture.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释如何抗旱，A 给出机制（深根取水+蜡叶保水）。B 是结果非机制，C 描述有误（应为蜡质叶），D 仅讲环境。"
+    },
+    {
+      "passage": "A student researching an old bridge took the following notes:\n- The bridge was completed in 1883 and is still in daily use today.\n- It was the first bridge of its kind to be built using steel cables.\n- Engineers today still carefully study its original design.",
+      "prompt": "The student wants to highlight the bridge's lasting influence on engineering. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Engineers today still study the design of the 1883 bridge, the first of its kind to use steel cables.", "The bridge was completed back in 1883 and still remains in daily use.", "The bridge is now quite old, yet it continues to carry traffic each day.", "The bridge was constructed using strong steel cables throughout."],
+      "answer": "Engineers today still study the design of the 1883 bridge, the first of its kind to use steel cables.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是突出持久影响，A 兼顾至今被研究与首创钢缆。B、C 只说仍在用，D 只述事实。"
+    },
+    {
+      "passage": "A student studying birdsong took the following notes:\n- Young songbirds learn their songs by listening closely to nearby adult birds.\n- A bird raised in total silence develops only a crude, incomplete song.\n- Birds of one species in different regions can even sing distinct local dialects.",
+      "prompt": "The student wants to support the idea that birdsong is learned rather than purely instinctive. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["A songbird raised in silence develops only a crude song, showing that the song must be learned from other birds.", "Songbirds of a single species can sing different local dialects in different regions.", "Young songbirds spend time listening to the adult birds nearby.", "Birdsong is widely considered one of the most beautiful sounds in nature."],
+      "answer": "A songbird raised in silence develops only a crude song, showing that the song must be learned from other birds.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是支持习得而非本能，A 用剥夺听觉导致歌不完整这一最直接的证据。B 相关但较间接，C 是过程非证据，D 无关。"
+    }
+  ]
+}

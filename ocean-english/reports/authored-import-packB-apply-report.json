@@ -1,0 +1,105 @@
+{
+  "generatedAt": "2026-06-21T09:10:32.534Z",
+  "apply": true,
+  "stage": "packB",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 50,
+    "reject": 0,
+    "wrote": 50,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b1.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b10.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b2.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b3.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b4.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b5.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b6.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b7.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b8.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packB\\cloze-gaokao-lv2-b9.json",
+      "template": "gaokao-cloze-passage",
+      "level": 2,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 5,
+      "dupSkip": 0
+    }
+  ]
+}

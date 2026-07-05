@@ -1,0 +1,2 @@
+# LexiVault 原型 bundle 必须逐字节不变（fix6 硬性要求）
+public/lexivault.html -text

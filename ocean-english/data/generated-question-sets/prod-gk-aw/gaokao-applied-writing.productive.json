@@ -1,0 +1,609 @@
+{
+  "examId": "gaokao",
+  "level": 2,
+  "skill": "writing",
+  "taskType": "applied_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "promptZh": "假设你是李华,你校将于下月举办首届校园英语戏剧节。请给你的英国笔友 Tom 写一封邀请信。要点:(1) 戏剧节的时间和地点;(2) 主要演出剧目;(3) 你希望他能远程观看并提建议。词数 80-120。",
+      "prompt": "You are Li Hua. Next month your school will hold its first Campus English Drama Festival. Write an invitation letter to your British pen friend, Tom. Audience: Tom. Purpose: invite him to join the festival online. Cover: (1) the time and place of the festival; (2) the main plays to be performed; (3) why you hope he will watch it online and share his advice. Word limit 80-120. Begin with 'Dear Tom' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three required points (time/place, plays, request for online viewing and advice) included",
+        "Warm, friendly tone suited to a pen friend",
+        "Correct future tense for the planned festival",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,你的英国朋友 Alice 想利用暑假来中国学习中文,但不知如何选择城市。请给她写一封建议信。要点:(1) 推荐一座你熟悉的城市;(2) 推荐理由(语言环境、生活成本等);(3) 提醒她注意的事项。词数 80-120。",
+      "prompt": "You are Li Hua. Your British friend Alice wants to study Chinese in China during her summer holiday but cannot decide which city to choose. Write a letter of suggestion to her. Audience: Alice. Purpose: recommend a suitable city. Cover: (1) one city you know well; (2) reasons for recommending it, such as language environment and living costs; (3) one or two things she should pay attention to. Word limit 80-120. Begin with 'Dear Alice' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (city, reasons, reminders) addressed clearly",
+        "Logical, helpful tone offering genuine advice",
+        "Appropriate modal verbs for giving suggestions (could, might, should)",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是学生会主席李华。学校图书馆将于下周日举办一次旧书交换活动。请用英文写一则面向全校学生的通知。要点:(1) 活动的时间、地点;(2) 参与方式;(3) 活动的意义。词数 80-120。",
+      "prompt": "You are Li Hua, chair of the Student Union. Next Sunday the school library will hold a second-hand book exchange. Write a notice in English for all students. Audience: all students. Purpose: inform them and invite participation. Cover: (1) the time and place of the activity; (2) how to take part; (3) the meaning of the activity. Word limit 80-120. Use the heading 'Notice' and sign as 'The Student Union'.",
+      "referencePoints": [
+        "Notice format: title and signing body present",
+        "All three points (time/place, how to join, significance) included",
+        "Clear, formal and impersonal tone fit for a public notice",
+        "Accurate time expressions and imperative or informative sentences",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。某英文报纸正在征集以\"我最难忘的一节课\"为主题的稿件。请写一篇投稿。要点:(1) 这节课的科目和老师;(2) 难忘的具体原因;(3) 这节课对你的影响。词数 80-120。",
+      "prompt": "You are Li Hua. An English newspaper is inviting contributions on the theme 'My Most Unforgettable Lesson'. Write a piece to submit. Audience: readers of the newspaper. Purpose: share a personal experience. Cover: (1) the subject of the lesson and the teacher; (2) why it was unforgettable; (3) how it influenced you. Word limit 80-120.",
+      "referencePoints": [
+        "Clear central theme matching the given topic",
+        "All three points (subject/teacher, reasons, influence) developed",
+        "Engaging, personal narrative tone",
+        "Correct past tense for the recalled lesson",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你想申请加入学校新成立的环保志愿者社团。请给社团负责人 Ms. Green 写一封申请信。要点:(1) 你申请的原因;(2) 你的相关经历或特长;(3) 你能为社团做的贡献。词数 80-120。",
+      "prompt": "You are Li Hua. You want to apply to join your school's newly founded environmental volunteer club. Write an application letter to the club leader, Ms. Green. Audience: Ms. Green. Purpose: apply for membership. Cover: (1) why you are applying; (2) your relevant experience or strengths; (3) what you can contribute to the club. Word limit 80-120. Begin with 'Dear Ms. Green' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (reason, experience, contribution) covered",
+        "Sincere and motivated tone suited to an application",
+        "Correct present perfect for past experience and present tense for abilities",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,校广播站英语栏目编辑。下周该栏目将推出\"传统节日\"特别节目。请写一段面向全校师生的活动介绍。要点:(1) 节目播出的时间;(2) 节目的主要内容;(3) 听众如何参与互动。词数 80-120。",
+      "prompt": "You are Li Hua, editor of the English column of the school radio station. Next week the column will launch a special programme on traditional festivals. Write an introduction to the activity for all teachers and students. Audience: the whole school. Purpose: introduce the programme and encourage participation. Cover: (1) when the programme will be broadcast; (2) its main content; (3) how listeners can interact. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with an inviting opening",
+        "All three points (broadcast time, content, interaction) included",
+        "Lively, welcoming tone suited to a radio promotion",
+        "Correct future tense for the upcoming programme",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。上周你生病住院期间,班主任王老师多次到医院看望并帮你补课。请给王老师写一封感谢信。要点:(1) 表达感谢;(2) 回顾老师的帮助;(3) 表达你的决心。词数 80-120。",
+      "prompt": "You are Li Hua. Last week, while you were in hospital, your head teacher Mr. Wang visited you several times and helped you catch up on your lessons. Write a thank-you letter to Mr. Wang. Audience: Mr. Wang. Purpose: express your gratitude. Cover: (1) your thanks; (2) what the teacher did to help; (3) your resolution to do well. Word limit 80-120. Begin with 'Dear Mr. Wang' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (thanks, the help received, resolution) included",
+        "Warm, respectful and sincere tone",
+        "Correct past tense for the help and future tense for the resolution",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你在网上看到一所国际夏令营的招生信息,但有些细节不清楚。请给主办方写一封咨询信。要点:(1) 说明你从何处得知该夏令营;(2) 你想了解的具体问题(如费用、住宿);(3) 请求回复。词数 80-120。",
+      "prompt": "You are Li Hua. You have seen an advertisement for an international summer camp online but some details are unclear. Write a letter of inquiry to the organisers. Audience: the camp organisers. Purpose: ask for more information. Cover: (1) where you learned about the camp; (2) the specific questions you want answered, such as fees and accommodation; (3) a request for a reply. Word limit 80-120. Begin with 'Dear Sir or Madam' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: salutation and signature present",
+        "All three points (source, specific questions, request for reply) included",
+        "Polite and clear tone suited to a formal inquiry",
+        "Correct use of question forms and polite requests",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你原本答应陪同班的交换生 David 周末参观博物馆,但因家中突发急事无法前往。请给 David 写一封道歉信。要点:(1) 表达歉意并说明原因;(2) 提出补偿安排;(3) 希望得到谅解。词数 80-120。",
+      "prompt": "You are Li Hua. You promised to take David, an exchange student in your class, to visit a museum this weekend, but a family emergency means you cannot go. Write a letter of apology to David. Audience: David. Purpose: apologise and rearrange. Cover: (1) your apology and the reason; (2) a new arrangement to make up for it; (3) your hope for his understanding. Word limit 80-120. Begin with 'Dear David' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (apology with reason, new plan, hope for understanding) included",
+        "Sincere, apologetic and considerate tone",
+        "Correct tenses for the cancelled and the proposed plans",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的好友王明擅长书法,正在申请市青少年艺术奖学金。组委会请你写一封推荐信。要点:(1) 你与王明的关系及了解程度;(2) 他在书法上的表现;(3) 推荐理由。词数 80-120。",
+      "prompt": "You are Li Hua. Your good friend Wang Ming is skilled at calligraphy and is applying for the city's youth art scholarship. The committee has asked you to write a letter of recommendation. Audience: the scholarship committee. Purpose: recommend Wang Ming. Cover: (1) your relationship with him and how well you know him; (2) his achievements in calligraphy; (3) why you recommend him. Word limit 80-120. Begin with 'Dear Members of the Committee' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: salutation and signature present",
+        "All three points (relationship, achievements, reasons) included",
+        "Confident, positive and formal tone",
+        "Accurate descriptive language and supporting examples",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你校国际部将举办一场\"中外美食分享会\"。请给你的外教 Mrs. Brown 写一封邀请信。要点:(1) 分享会的时间、地点;(2) 你希望她带来一道家乡菜;(3) 简要说明活动流程。词数 80-120。",
+      "prompt": "You are Li Hua. The international department of your school will hold a 'Chinese and Foreign Food Sharing Party'. Write an invitation letter to your foreign teacher, Mrs. Brown. Audience: Mrs. Brown. Purpose: invite her to take part. Cover: (1) the time and place of the party; (2) your wish that she bring a dish from her hometown; (3) a brief outline of the programme. Word limit 80-120. Begin with 'Dear Mrs. Brown' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (time/place, the dish request, programme) included",
+        "Friendly, enthusiastic and polite tone",
+        "Correct future tense and clear sequencing of the programme",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的网友 Jack 最近因为考试失利情绪低落。请给他写一封建议信,鼓励他振作。要点:(1) 表达你的理解和安慰;(2) 给出两到三条调整心态的建议;(3) 表达对他的信心。词数 80-120。",
+      "prompt": "You are Li Hua. Your online friend Jack has been feeling low after a poor exam result. Write a letter of suggestion to encourage him. Audience: Jack. Purpose: comfort and advise him. Cover: (1) your understanding and comfort; (2) two or three suggestions for adjusting his mood; (3) your confidence in him. Word limit 80-120. Begin with 'Dear Jack' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (comfort, suggestions, encouragement) included",
+        "Warm, supportive and encouraging tone",
+        "Appropriate suggestion structures and linking words",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是校学生会成员李华。学校计划组织高一新生参观本地科技馆,需要招募学生志愿者。请写一则英文通知。要点:(1) 招募对象与名额;(2) 志愿者的职责;(3) 报名方式与截止时间。词数 80-120。",
+      "prompt": "You are Li Hua, a member of the Student Union. The school plans to organise a visit to the local science museum for Grade One students and needs student volunteers. Write a notice in English. Audience: all students. Purpose: recruit volunteers. Cover: (1) who can apply and how many are needed; (2) the volunteers' duties; (3) how and by when to sign up. Word limit 80-120. Use the heading 'Notice' and sign as 'The Student Union'.",
+      "referencePoints": [
+        "Notice format: title and signing body present",
+        "All three points (eligibility/number, duties, sign-up method and deadline) included",
+        "Clear, formal and instructive tone",
+        "Accurate expression of duties and deadlines",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。学校英文杂志开设\"我的家乡变化\"专栏向学生征稿。请写一篇投稿。要点:(1) 介绍你的家乡;(2) 近年来的两处显著变化;(3) 你的感受。词数 80-120。",
+      "prompt": "You are Li Hua. Your school's English magazine has opened a column called 'Changes in My Hometown' and is inviting student contributions. Write a piece to submit. Audience: magazine readers. Purpose: describe changes in your hometown. Cover: (1) a short introduction to your hometown; (2) two noticeable changes in recent years; (3) how you feel about them. Word limit 80-120.",
+      "referencePoints": [
+        "Clear structure matching the column theme",
+        "All three points (introduction, two changes, feelings) developed",
+        "Descriptive and reflective tone",
+        "Correct contrast between past and present situations",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你希望在暑假期间到本地一家英文书店做兼职店员。请给店长写一封申请信。要点:(1) 你的申请意向和可工作的时间段;(2) 你的相关能力(如英语水平);(3) 请求面试机会。词数 80-120。",
+      "prompt": "You are Li Hua. You would like to work as a part-time assistant at a local English bookshop during the summer holiday. Write an application letter to the manager. Audience: the bookshop manager. Purpose: apply for the part-time job. Cover: (1) your intention and the period you are available; (2) your relevant abilities, such as your level of English; (3) a request for an interview. Word limit 80-120. Begin with 'Dear Manager' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (intention/availability, abilities, interview request) included",
+        "Polite, confident and professional tone",
+        "Correct present tense for abilities and clear time expressions",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,英语角负责人。本学期英语角将以\"用英语讲中国故事\"为主题持续开展活动。请写一段活动介绍,张贴在学校公告栏。要点:(1) 活动主题与目的;(2) 每次活动的形式;(3) 欢迎大家参加。词数 80-120。",
+      "prompt": "You are Li Hua, the organiser of the English Corner. This term the English Corner will run activities on the theme 'Telling China's Stories in English'. Write an introduction to be put on the school notice board. Audience: all students. Purpose: introduce the activity and attract participants. Cover: (1) the theme and aim of the activity; (2) the form of each session; (3) a warm welcome to join. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with a catchy opening",
+        "All three points (theme/aim, form, welcome) included",
+        "Energetic and inviting tone",
+        "Correct present and future tenses for ongoing activities",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你在国外交流期间寄宿在 Wilson 一家。回国后请给寄宿家庭写一封感谢信。要点:(1) 感谢他们的照顾;(2) 回忆一两件难忘的事;(3) 邀请他们来中国做客。词数 80-120。",
+      "prompt": "You are Li Hua. During an exchange programme abroad you stayed with the Wilson family. After returning home, write a thank-you letter to your host family. Audience: the Wilson family. Purpose: express thanks and keep in touch. Cover: (1) your thanks for their care; (2) one or two memorable moments; (3) an invitation for them to visit China. Word limit 80-120. Begin with 'Dear Mr. and Mrs. Wilson' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (thanks, memories, invitation) included",
+        "Warm, grateful and friendly tone",
+        "Correct past tense for memories and future tense for the invitation",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你借了同学陈雪的一本课外书,不慎将其弄脏了。请给她写一封道歉信。要点:(1) 说明事情经过并道歉;(2) 提出弥补办法;(3) 希望不影响你们的友谊。词数 80-120。",
+      "prompt": "You are Li Hua. You borrowed an extracurricular book from your classmate Chen Xue and accidentally got it dirty. Write a letter of apology to her. Audience: Chen Xue. Purpose: apologise and make amends. Cover: (1) what happened and your apology; (2) how you will make up for it; (3) your hope that it will not harm your friendship. Word limit 80-120. Begin with 'Dear Chen Xue' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (account and apology, amends, friendship) included",
+        "Honest, regretful and considerate tone",
+        "Correct past tense for the incident and future tense for amends",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,你校篮球队队长。新学期球队要招募新队员。请写一则英文招募启事,张贴在体育馆门口。要点:(1) 招募对象与要求;(2) 训练安排;(3) 报名方式。词数 80-120。",
+      "prompt": "You are Li Hua, captain of your school basketball team. The team is recruiting new members for the new term. Write a recruitment notice in English to put up at the gym entrance. Audience: interested students. Purpose: recruit new players. Cover: (1) who can apply and the requirements; (2) the training schedule; (3) how to sign up. Word limit 80-120. Use the heading 'Join Our Basketball Team!' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Notice format: title and signature present",
+        "All three points (requirements, training schedule, sign-up method) included",
+        "Energetic and persuasive tone",
+        "Accurate expression of requirements and schedules",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。一家英文学习网站正在征集学习经验文章,主题为\"我提高英语口语的方法\"。请写一篇投稿。要点:(1) 你曾遇到的口语困难;(2) 你采用的两到三个方法;(3) 取得的进步。词数 80-120。",
+      "prompt": "You are Li Hua. An English-learning website is collecting articles on the theme 'How I Improved My Spoken English'. Write a piece to submit. Audience: website readers learning English. Purpose: share your experience. Cover: (1) the speaking difficulties you once had; (2) two or three methods you used; (3) the progress you made. Word limit 80-120.",
+      "referencePoints": [
+        "Clear focus matching the given theme",
+        "All three points (difficulties, methods, progress) developed",
+        "Practical and encouraging tone",
+        "Correct past tense for the process and present perfect for results",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你想申请成为本地图书馆暑期\"故事屋\"的少儿英语志愿讲读员。请给图书馆负责人写一封申请信。要点:(1) 申请的岗位和动机;(2) 你的相关经验;(3) 你的空闲时间。词数 80-120。",
+      "prompt": "You are Li Hua. You want to apply to be a volunteer English story reader for children at the local library's summer 'Story House'. Write an application letter to the librarian in charge. Audience: the librarian. Purpose: apply for the volunteer role. Cover: (1) the role and your motivation; (2) your relevant experience; (3) your free time. Word limit 80-120. Begin with 'Dear Librarian' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (role/motivation, experience, free time) included",
+        "Enthusiastic, sincere and polite tone",
+        "Correct tenses for past experience and present availability",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,校园英语电影社社长。本月社团将放映一部经典英文励志电影。请写一段活动介绍,发布在学校公众号上。要点:(1) 放映的时间、地点;(2) 影片的简要内容与亮点;(3) 观影后的讨论环节。词数 80-120。",
+      "prompt": "You are Li Hua, president of the campus English Film Club. This month the club will screen a classic English inspirational film. Write an introduction to the event for the school's official account. Audience: the whole school. Purpose: introduce the event and attract an audience. Cover: (1) the time and place of the screening; (2) a brief outline of the film and its highlights; (3) the discussion session after the film. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with an appealing opening",
+        "All three points (time/place, film outline, discussion) included",
+        "Lively and inviting promotional tone",
+        "Correct future tense and accurate description of the film",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。在你参加英语演讲比赛期间,外教 Mr. Lee 利用课余时间为你反复辅导,使你最终获奖。请写一封感谢信。要点:(1) 告知获奖喜讯并致谢;(2) 回顾他的具体帮助;(3) 表达今后的努力方向。词数 80-120。",
+      "prompt": "You are Li Hua. While preparing for an English speech contest, your foreign teacher Mr. Lee coached you repeatedly in his spare time, and you finally won a prize. Write a thank-you letter. Audience: Mr. Lee. Purpose: share the good news and thank him. Cover: (1) the news of your prize and your thanks; (2) the specific help he gave; (3) what you will work on in the future. Word limit 80-120. Begin with 'Dear Mr. Lee' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (news and thanks, specific help, future plan) included",
+        "Grateful, joyful and respectful tone",
+        "Correct past tense for the help and future tense for plans",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你在一个国际学生交流网站上看到一则\"中外学生结对学习\"的招募信息。请写一封咨询信。要点:(1) 表达参与意愿;(2) 询问结对方式和交流频率;(3) 请求提供联系方式。词数 80-120。",
+      "prompt": "You are Li Hua. On an international student exchange website you have seen a notice recruiting students for a 'Chinese and Foreign Study Pairing' programme. Write a letter of inquiry. Audience: the programme organiser. Purpose: ask for details. Cover: (1) your wish to join; (2) questions about how pairing works and how often partners communicate; (3) a request for contact details. Word limit 80-120. Begin with 'Dear Sir or Madam' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: salutation and signature present",
+        "All three points (wish to join, questions, request for contact) included",
+        "Polite, interested and formal tone",
+        "Correct question forms and clear organisation",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你因临时有事,未能按约定时间归还从外教 Ms. Carter 处借来的资料。请写一封道歉信。要点:(1) 道歉并说明原因;(2) 说明你将如何归还;(3) 请求谅解。词数 80-120。",
+      "prompt": "You are Li Hua. Because of an unexpected matter, you failed to return some materials you borrowed from your foreign teacher Ms. Carter at the agreed time. Write a letter of apology. Audience: Ms. Carter. Purpose: apologise and arrange the return. Cover: (1) your apology and the reason; (2) how you will return the materials; (3) a request for her understanding. Word limit 80-120. Begin with 'Dear Ms. Carter' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (apology with reason, return plan, request for understanding) included",
+        "Sincere, polite and respectful tone",
+        "Correct past tense and future tense as appropriate",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,你校英语辩论社社长。下周社团将举办一场公开辩论赛。请给历史老师 Mr. Hall 写一封邀请信,请他担任评委。要点:(1) 比赛的时间、地点;(2) 辩论的主题;(3) 你希望他担任评委的原因。词数 80-120。",
+      "prompt": "You are Li Hua, president of your school's English Debate Club. Next week the club will hold an open debate competition. Write an invitation letter to your history teacher, Mr. Hall, inviting him to be a judge. Audience: Mr. Hall. Purpose: invite him to judge the debate. Cover: (1) the time and place of the competition; (2) the debate topic; (3) why you hope he will be a judge. Word limit 80-120. Begin with 'Dear Mr. Hall' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (time/place, topic, reason for inviting) included",
+        "Respectful, polite and warm tone",
+        "Correct future tense and appropriate request expressions",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的外国朋友 Emma 计划开始学习中国书法,但不知如何入门。请给她写一封建议信。要点:(1) 入门所需的基本工具;(2) 练习的方法和步骤;(3) 鼓励她坚持。词数 80-120。",
+      "prompt": "You are Li Hua. Your foreign friend Emma plans to start learning Chinese calligraphy but does not know how to begin. Write a letter of suggestion to her. Audience: Emma. Purpose: advise her on how to start. Cover: (1) the basic tools she needs; (2) the methods and steps for practising; (3) encouragement to keep at it. Word limit 80-120. Begin with 'Dear Emma' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (tools, methods/steps, encouragement) included",
+        "Helpful, clear and friendly tone",
+        "Correct use of sequencing words and imperatives for steps",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,学校环保社团成员。学校将开展\"无塑料校园周\"活动。请写一则英文通知,号召同学参与。要点:(1) 活动的时间和主题;(2) 同学们可以做的具体行动;(3) 活动的意义。词数 80-120。",
+      "prompt": "You are Li Hua, a member of the school's environmental club. The school will run a 'Plastic-Free Campus Week'. Write a notice in English calling on students to take part. Audience: all students. Purpose: inform and encourage action. Cover: (1) the time and theme of the activity; (2) the specific actions students can take; (3) the meaning of the activity. Word limit 80-120. Use the heading 'Notice' and sign as 'The Environmental Club'.",
+      "referencePoints": [
+        "Notice format: title and signing body present",
+        "All three points (time/theme, actions, significance) included",
+        "Clear, motivating and formal tone",
+        "Accurate imperatives and time expressions",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。某青少年英文网站征集以\"一次失败教会我的事\"为主题的文章。请写一篇投稿。要点:(1) 简述这次失败的经历;(2) 你从中学到的东西;(3) 它如何改变了你。词数 80-120。",
+      "prompt": "You are Li Hua. A youth English website is collecting articles on the theme 'What a Failure Taught Me'. Write a piece to submit. Audience: young website readers. Purpose: share a lesson learned. Cover: (1) a brief account of the failure; (2) what you learned from it; (3) how it changed you. Word limit 80-120.",
+      "referencePoints": [
+        "Clear narrative matching the given theme",
+        "All three points (the experience, the lesson, the change) developed",
+        "Honest and reflective tone",
+        "Correct past tense for events and present tense for lasting effects",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你希望申请参加学校组织的赴乡村小学支教夏令营。请给负责老师写一封申请信。要点:(1) 你申请的原因;(2) 你能教授的科目或特长;(3) 你的决心。词数 80-120。",
+      "prompt": "You are Li Hua. You wish to apply to join a summer camp organised by your school to teach at a rural primary school. Write an application letter to the teacher in charge. Audience: the teacher in charge. Purpose: apply to join the teaching camp. Cover: (1) why you are applying; (2) the subject or special skill you can teach; (3) your determination. Word limit 80-120. Begin with 'Dear Teacher' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (reason, what you can teach, determination) included",
+        "Sincere, committed and respectful tone",
+        "Correct present tense for abilities and future tense for determination",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,学校汉语桥兴趣小组负责人。小组将为留学生开设一系列免费汉语体验课。请写一段活动介绍,发布给国际部学生。要点:(1) 课程的时间安排;(2) 课程主要内容;(3) 报名方式。词数 80-120。",
+      "prompt": "You are Li Hua, leader of the school's Chinese Bridge interest group. The group will offer a series of free Chinese experience lessons for international students. Write an introduction to the activity for students in the international department. Audience: international students. Purpose: introduce the lessons and invite sign-ups. Cover: (1) the lesson schedule; (2) the main content of the lessons; (3) how to sign up. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with a welcoming opening",
+        "All three points (schedule, content, sign-up) included",
+        "Friendly, encouraging and informative tone",
+        "Correct future tense and clear scheduling language",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。前不久你在公交车上遗失了书包,一位陌生阿姨拾到后辗转送还给你。请给当地报社写一封感谢信,希望转达谢意。要点:(1) 叙述事情经过;(2) 表达感激之情;(3) 你对这种善举的看法。词数 80-120。",
+      "prompt": "You are Li Hua. Not long ago you lost your schoolbag on a bus, and a stranger, a kind woman, found it and went to great trouble to return it to you. Write a thank-you letter to the local newspaper, hoping it will pass on your gratitude. Audience: the newspaper and the kind woman. Purpose: express thanks publicly. Cover: (1) what happened; (2) your gratitude; (3) your view of such kind acts. Word limit 80-120. Begin with 'Dear Editor' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (the event, gratitude, your view) included",
+        "Warm, grateful and sincere tone",
+        "Correct past tense for the event and present tense for your view",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你在小组合作完成英语项目时,因疏忽延误了进度,影响了组员 Lucy。请给她写一封道歉信。要点:(1) 承认错误并道歉;(2) 说明你将如何补救;(3) 表达对她的感谢。词数 80-120。",
+      "prompt": "You are Li Hua. While working on a group English project, your carelessness delayed the progress and affected your teammate Lucy. Write a letter of apology to her. Audience: Lucy. Purpose: apologise and put things right. Cover: (1) admitting your mistake and apologising; (2) how you will make up for the delay; (3) your thanks to her. Word limit 80-120. Begin with 'Dear Lucy' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (admission and apology, remedy, thanks) included",
+        "Honest, responsible and considerate tone",
+        "Correct past tense for the mistake and future tense for the remedy",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你校将举办\"读书节\"系列活动,届时有作家见面会。请给你喜爱的青年作家张华写一封邀请信。要点:(1) 读书节的时间和地点;(2) 你希望他做的事(如分享创作经历);(3) 学生对他的期待。词数 80-120。",
+      "prompt": "You are Li Hua. Your school will hold a series of 'Reading Festival' activities, including a meeting with a writer. Write an invitation letter to your favourite young writer, Zhang Hua. Audience: Zhang Hua. Purpose: invite him to the festival. Cover: (1) the time and place of the festival; (2) what you hope he will do, such as sharing his writing experience; (3) the students' expectations of him. Word limit 80-120. Begin with 'Dear Mr. Zhang' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (time/place, request, expectations) included",
+        "Respectful, warm and sincere tone",
+        "Correct future tense and polite invitation expressions",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的同桌林涛最近沉迷手机游戏,成绩下滑。作为朋友,请给他写一封建议信。要点:(1) 表达你的关心;(2) 分析过度玩游戏的影响;(3) 提出合理使用手机的建议。词数 80-120。",
+      "prompt": "You are Li Hua. Your deskmate Lin Tao has recently become addicted to mobile games, and his marks have dropped. As a friend, write a letter of suggestion to him. Audience: Lin Tao. Purpose: advise him kindly. Cover: (1) your concern for him; (2) the effects of playing games too much; (3) suggestions for using the phone sensibly. Word limit 80-120. Begin with 'Dear Lin Tao' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (concern, effects, suggestions) included",
+        "Caring, tactful and non-judgemental tone",
+        "Appropriate suggestion and cause-effect structures",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,校园广播站负责人。学校将开展\"光盘行动\"宣传周。请写一则英文通知,倡议同学节约粮食。要点:(1) 宣传周的时间;(2) 倡议的具体做法;(3) 号召大家积极响应。词数 80-120。",
+      "prompt": "You are Li Hua, head of the campus radio station. The school will run a 'Clear Your Plate' publicity week. Write a notice in English calling on students to save food. Audience: all students. Purpose: promote saving food. Cover: (1) the time of the publicity week; (2) the specific things students should do; (3) a call for everyone to respond actively. Word limit 80-120. Use the heading 'Notice' and sign as 'The Campus Radio Station'.",
+      "referencePoints": [
+        "Notice format: title and signing body present",
+        "All three points (time, specific actions, call to respond) included",
+        "Persuasive, positive and formal tone",
+        "Accurate imperatives and clear listing of actions",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。一本面向中学生的英文季刊征集以\"我的偶像\"为主题的稿件。请写一篇投稿。要点:(1) 介绍你的偶像是谁;(2) 你欣赏他/她的原因;(3) 他/她对你的激励。词数 80-120。",
+      "prompt": "You are Li Hua. An English quarterly for secondary students is collecting articles on the theme 'My Role Model'. Write a piece to submit. Audience: student readers of the quarterly. Purpose: introduce your role model. Cover: (1) who your role model is; (2) why you admire him or her; (3) how he or she inspires you. Word limit 80-120.",
+      "referencePoints": [
+        "Clear focus matching the given theme",
+        "All three points (who, reasons, inspiration) developed",
+        "Admiring and sincere tone",
+        "Correct present tense for description and varied vocabulary",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你想申请担任本届校运动会的英语广播员。请给负责老师写一封申请信。要点:(1) 你的申请意愿;(2) 你的英语口语和广播经验;(3) 你对这份工作的理解。词数 80-120。",
+      "prompt": "You are Li Hua. You want to apply to be the English announcer for this year's school sports meeting. Write an application letter to the teacher in charge. Audience: the teacher in charge. Purpose: apply for the announcer role. Cover: (1) your wish to apply; (2) your spoken English and any broadcasting experience; (3) your understanding of the job. Word limit 80-120. Begin with 'Dear Teacher' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (wish, abilities/experience, understanding of the job) included",
+        "Confident, sincere and polite tone",
+        "Correct present tense for abilities and clear self-presentation",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,校志愿者协会负责人。本周末协会将组织前往敬老院开展关爱活动。请写一段活动介绍,招募志愿者。要点:(1) 活动的时间、地点;(2) 主要活动内容;(3) 报名要求与方式。词数 80-120。",
+      "prompt": "You are Li Hua, head of the school volunteer association. This weekend the association will organise a caring visit to a nursing home. Write an introduction to the activity to recruit volunteers. Audience: students interested in volunteering. Purpose: introduce the activity and recruit volunteers. Cover: (1) the time and place of the activity; (2) the main activities planned; (3) the requirements and how to sign up. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with an engaging opening",
+        "All three points (time/place, activities, requirements/sign-up) included",
+        "Warm, encouraging and informative tone",
+        "Correct future tense and clear organisation",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你参加了一次海外短期游学,期间领队老师 Mr. Davis 给予你诸多照顾。回国后请给旅行机构写一封信,表扬这位领队。要点:(1) 说明此行情况;(2) 具体讲述他的帮助;(3) 表达感谢与赞扬。词数 80-120。",
+      "prompt": "You are Li Hua. You took part in a short study tour abroad, during which your group leader Mr. Davis took good care of you. After returning home, write a letter to the travel agency to praise this leader. Audience: the travel agency. Purpose: praise the group leader and express thanks. Cover: (1) a brief account of the trip; (2) the specific help Mr. Davis gave; (3) your thanks and praise. Word limit 80-120. Begin with 'Dear Sir or Madam' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: salutation and signature present",
+        "All three points (the trip, specific help, thanks and praise) included",
+        "Appreciative, positive and sincere tone",
+        "Correct past tense for the trip and clear examples",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,班级英语课代表。由于你统计错误,导致几位同学的英语作业被漏登。请给英语老师 Ms. Reed 写一封道歉信。要点:(1) 说明失误并道歉;(2) 说明你的补救措施;(3) 保证今后认真。词数 80-120。",
+      "prompt": "You are Li Hua, the English class representative. Because of a counting mistake by you, several classmates' English homework was not recorded. Write a letter of apology to your English teacher, Ms. Reed. Audience: Ms. Reed. Purpose: apologise for the mistake. Cover: (1) explaining the mistake and apologising; (2) the steps you will take to fix it; (3) a promise to be careful from now on. Word limit 80-120. Begin with 'Dear Ms. Reed' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (mistake and apology, remedy, promise) included",
+        "Sincere, responsible and respectful tone",
+        "Correct past tense for the mistake and future tense for the promise",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你校摄影社将举办\"镜头里的校园\"主题摄影展。请给美术老师 Mr. Clark 写一封邀请信,请他出席并点评。要点:(1) 摄影展的时间、地点;(2) 展览的主题与规模;(3) 你希望他做的事。词数 80-120。",
+      "prompt": "You are Li Hua. Your school photography club will hold a themed exhibition called 'Campus Through the Lens'. Write an invitation letter to your art teacher, Mr. Clark, inviting him to attend and give comments. Audience: Mr. Clark. Purpose: invite him to the exhibition. Cover: (1) the time and place of the exhibition; (2) its theme and scale; (3) what you hope he will do. Word limit 80-120. Begin with 'Dear Mr. Clark' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (time/place, theme/scale, request) included",
+        "Respectful, warm and polite tone",
+        "Correct future tense and appropriate invitation language",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的英国朋友 Sophie 即将第一次来中国旅游,向你咨询出行准备。请给她写一封建议信。要点:(1) 建议出行的季节;(2) 需要准备的物品;(3) 一两个旅行注意事项。词数 80-120。",
+      "prompt": "You are Li Hua. Your British friend Sophie is about to travel to China for the first time and has asked you for advice on preparing. Write a letter of suggestion to her. Audience: Sophie. Purpose: advise her on travel preparation. Cover: (1) the best season to travel; (2) the things she should prepare; (3) one or two travel reminders. Word limit 80-120. Begin with 'Dear Sophie' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (season, items, reminders) included",
+        "Helpful, friendly and clear tone",
+        "Appropriate suggestion structures and travel vocabulary",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,学校英语学习中心管理员。中心新增了一批英文原版图书和有声资源。请写一则英文通知,告知同学借阅事宜。要点:(1) 新资源的种类;(2) 借阅的时间和规则;(3) 借阅地点。词数 80-120。",
+      "prompt": "You are Li Hua, manager of the school's English Learning Centre. The centre has added a batch of original English books and audio resources. Write a notice in English to inform students about borrowing. Audience: all students. Purpose: inform them about the new resources and borrowing. Cover: (1) the types of new resources; (2) the borrowing hours and rules; (3) where to borrow. Word limit 80-120. Use the heading 'Notice' and sign as 'The English Learning Centre'.",
+      "referencePoints": [
+        "Notice format: title and signing body present",
+        "All three points (resource types, hours/rules, place) included",
+        "Clear, informative and formal tone",
+        "Accurate listing and precise time expressions",
+        "Reference points guide scoring only; they are not a model notice"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。某英文学习平台征集以\"科技如何改变我的学习\"为主题的短文。请写一篇投稿。要点:(1) 介绍一种你常用的学习科技;(2) 它带来的变化;(3) 你的反思。词数 80-120。",
+      "prompt": "You are Li Hua. An English-learning platform is collecting short articles on the theme 'How Technology Has Changed My Learning'. Write a piece to submit. Audience: platform readers. Purpose: share your experience. Cover: (1) one learning technology you often use; (2) the changes it has brought; (3) your reflection on it. Word limit 80-120.",
+      "referencePoints": [
+        "Clear focus matching the given theme",
+        "All three points (the technology, the changes, reflection) developed",
+        "Thoughtful and balanced tone",
+        "Correct present perfect for changes and present tense for reflection",
+        "Reference points guide scoring only; they are not a model essay"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你希望申请成为本市国际马拉松赛事的英语翻译志愿者。请给组委会写一封申请信。要点:(1) 申请意向;(2) 你的语言能力和志愿经历;(3) 你能服务的时间。词数 80-120。",
+      "prompt": "You are Li Hua. You want to apply to be an English interpreter volunteer for your city's international marathon. Write an application letter to the organising committee. Audience: the organising committee. Purpose: apply for the volunteer role. Cover: (1) your intention to apply; (2) your language skills and volunteer experience; (3) the time you are available to serve. Word limit 80-120. Begin with 'Dear Members of the Committee' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: salutation and signature present",
+        "All three points (intention, skills/experience, availability) included",
+        "Confident, sincere and formal tone",
+        "Correct tenses for past experience and present skills",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华,学校国际文化周组委会成员。文化周将设立多个国家展台。请写一段活动介绍,邀请同学报名负责某个国家展台。要点:(1) 文化周的时间;(2) 展台的形式和内容;(3) 报名要求与方式。词数 80-120。",
+      "prompt": "You are Li Hua, a member of the organising committee for the school's International Culture Week. The week will set up stands for several countries. Write an introduction to the activity, inviting students to sign up to run a country stand. Audience: all students. Purpose: introduce the activity and call for volunteers. Cover: (1) the time of the culture week; (2) the form and content of the stands; (3) the requirements and how to sign up. Word limit 80-120.",
+      "referencePoints": [
+        "Clear introduction with an inviting opening",
+        "All three points (time, stand form/content, requirements/sign-up) included",
+        "Lively, welcoming and informative tone",
+        "Correct future tense and well-organised content",
+        "Reference points guide scoring only; they are not a model text"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。在你准备出国留学申请期间,英语老师 Ms. Taylor 牺牲休息时间帮你修改文书。现你已被录取,请写一封感谢信。要点:(1) 告知录取喜讯并致谢;(2) 回顾她的帮助;(3) 表达今后的期望。词数 80-120。",
+      "prompt": "You are Li Hua. While you were preparing your application to study abroad, your English teacher Ms. Taylor gave up her rest time to help you revise your documents. You have now been admitted. Write a thank-you letter. Audience: Ms. Taylor. Purpose: share the good news and thank her. Cover: (1) the news of your admission and your thanks; (2) the help she gave; (3) your hopes for the future. Word limit 80-120. Begin with 'Dear Ms. Taylor' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (news and thanks, the help, future hopes) included",
+        "Grateful, warm and respectful tone",
+        "Correct past tense for the help and future tense for hopes",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你校将于五月举办\"中华诗词朗诵会\",欢迎外国友人参与。请给你的外国朋友 Mark 写一封邀请信。要点:(1) 朗诵会的时间、地点;(2) 活动形式;(3) 你希望他朗诵一首中文诗。词数 80-120。",
+      "prompt": "You are Li Hua. In May your school will hold a 'Chinese Poetry Recital', and foreign friends are welcome to join. Write an invitation letter to your foreign friend, Mark. Audience: Mark. Purpose: invite him to take part. Cover: (1) the time and place of the recital; (2) the form of the activity; (3) your hope that he will recite a Chinese poem. Word limit 80-120. Begin with 'Dear Mark' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (time/place, form, recital request) included",
+        "Warm, encouraging and polite tone",
+        "Correct future tense and natural invitation language",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    },
+    {
+      "promptZh": "假设你是李华。你的表弟即将升入高中,对住校生活感到焦虑。请给他写一封建议信,帮助他适应。要点:(1) 表达理解;(2) 给出适应住校生活的建议;(3) 鼓励的话语。词数 80-120。",
+      "prompt": "You are Li Hua. Your younger cousin is about to enter senior high school and feels anxious about boarding life. Write a letter of suggestion to help him adjust. Audience: your cousin. Purpose: reassure and advise him. Cover: (1) showing that you understand his feelings; (2) suggestions for adjusting to boarding life; (3) words of encouragement. Word limit 80-120. Begin with 'Dear Cousin' and sign as 'Li Hua'.",
+      "referencePoints": [
+        "Letter format: greeting and signature present",
+        "All three points (understanding, suggestions, encouragement) included",
+        "Caring, encouraging and warm tone",
+        "Appropriate suggestion structures and supportive language",
+        "Reference points guide scoring only; they are not a model letter"
+      ],
+      "wordLimit": "80-120"
+    }
+  ]
+}

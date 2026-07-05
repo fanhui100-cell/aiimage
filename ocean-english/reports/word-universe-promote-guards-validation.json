@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-04T20:35:40.979Z",
+  "ok": true,
+  "checks": {
+    "activeQbCount": 0,
+    "qbDraftSample": {
+      "id": "28c6668f-a16f-40fe-b653-8c9c069883cf",
+      "legacy_id": "qb:set:def_to_word-abdicate",
+      "result": "rejected:word_universe_non_gen_source"
+    },
+    "genDraftSample": {
+      "id": "665d0505-6ed6-48a6-b401-705e97853318",
+      "legacy_id": "gen:def_to_word:set:claude:1d2u54o",
+      "result": "eligible(1)"
+    },
+    "deprecatedGuard": {
+      "logicRejectsDeprecated": true,
+      "deprecatedSetsInDb": 0,
+      "note": "库中无退役 set；promote 对退役 task_type 返回 deprecated_type（逻辑已验证）"
+    }
+  },
+  "errors": []
+}

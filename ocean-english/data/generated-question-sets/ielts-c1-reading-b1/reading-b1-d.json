@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Paragraph 1. Across the world, roughly one language falls silent every few weeks. Linguists estimate that of the seven thousand languages spoken today, nearly half may vanish before the end of this century. Yet alongside these losses a quieter movement has taken shape. In communities from the Pacific coast of Canada to the highlands of New Zealand, speakers and scholars are working to reverse the decline of tongues that were once written off as beyond saving. Their efforts, collectively known as language revitalisation, challenge the long-held assumption that a language, once reduced to a handful of elderly speakers, is inevitably lost.\n\nParagraph 2. The most celebrated example is Hebrew, which for centuries survived chiefly as a language of prayer and scholarship rather than daily conversation. Beginning in the late nineteenth century, a determined campaign transformed it into the everyday speech of a modern nation. Enthusiasts coined thousands of new words for objects and ideas that ancient texts had never needed to name, from bicycles to electricity. Hebrew is often cited as the only complete revival of a language that had ceased to be spoken in ordinary life, and its success has encouraged others to attempt what once seemed impossible.\n\nParagraph 3. Most revitalisation projects, however, face far harder circumstances. A community may possess only a few fluent elders, scattered recordings, and fragmentary notes made by earlier travellers. Reconstructing a full language from such traces demands patience and ingenuity. In Cornwall, in south-west England, revivers of Cornish had to reconstruct pronunciation from written records because the last traditional speakers had died generations earlier. Where living speakers remain, the priority is usually to pass their knowledge to the young before the opportunity disappears. This is why the so-called master-apprentice method has proved so influential: a fluent elder and a motivated learner spend long hours together, conversing only in the target language and avoiding the dominant tongue entirely.\n\nParagraph 4. Immersion schooling has become the flagship of the movement. In New Zealand, kohanga reo, or language nests, surround very young children with Maori-speaking caregivers, so that the language is absorbed naturally rather than studied as a subject. Similar nests and immersion classrooms have since appeared in Hawaii and among several First Nations of North America. The results can be striking: children emerge speaking a language their own parents never learned, effectively skipping a generation of loss. Critics sometimes argue that such schools divert scarce resources, yet supporters reply that the alternative, allowing a heritage to disappear, carries a cost that no budget can measure.\n\nParagraph 5. Digital technology has added unexpected momentum. Online dictionaries, recording apps and social media groups allow dispersed speakers to practise together despite living far apart. A teenager can now text a grandparent in an ancestral language, or listen to archived recordings of speakers long dead. Some communities have deliberately created words for modern devices, ensuring that the language does not feel trapped in the past. This adaptability matters, for a language confined to ceremony and museum display rarely attracts the young. The tools of the very globalisation that once threatened small languages are now being turned to their defence.\n\nParagraph 6. Success, nonetheless, is difficult to measure and rarely guaranteed. A language may gain hundreds of new learners yet still lack the everyday households in which it can renew itself without effort. Scholars caution that fluency in a classroom is not the same as a living community of speakers who quarrel, joke and raise children in the tongue. Governments may offer warm words and modest grants, but sustained funding is uncommon, and political enthusiasm can fade. Revitalisation, in short, is less a single triumphant event than a long negotiation with time.\n\nParagraph 7. Why does any of this matter to people who will never speak the languages concerned? Advocates point out that each language encodes a distinct way of classifying the world, from the naming of plants to the marking of family relationships. When a language dies, that accumulated knowledge is seldom fully translated, and something particular is lost to everyone. Perhaps more importantly, the communities themselves report a renewed sense of confidence and continuity when their words are heard again in the street and the schoolyard. Whether or not every project ultimately succeeds, the revival movement has already overturned the old certainty that linguistic death is irreversible.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "A worldwide effort to revive endangered languages is challenging the belief that near-extinct languages cannot be saved.",
+            "Hebrew is the only language that has ever been successfully revived after falling out of use.",
+            "Digital technology has become the single most important tool in preserving small languages.",
+            "Governments should provide far more funding for immersion schools than they currently do."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 3, why did revivers of Cornish face a particular difficulty?",
+          "options": [
+            "The last traditional speakers had died before the revival began, so pronunciation had to be reconstructed from writing.",
+            "The community refused to allow elders to teach the young.",
+            "No written records of the language had ever been made.",
+            "The dominant language had legally banned the use of Cornish."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 4, what is a notable result of language nests in New Zealand?",
+          "options": [
+            "Children can end up speaking a language that their own parents never learned.",
+            "Parents are required to attend classes alongside their children.",
+            "The Maori language is taught only as a formal school subject.",
+            "The schools have proved cheaper to run than conventional schools."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from the passage about the relationship between technology and small languages?",
+          "options": [
+            "Tools associated with globalisation, once seen as a threat, can also be used to help languages survive.",
+            "Technology has completely removed the risk that any language will disappear.",
+            "Older speakers are generally unwilling to use digital tools.",
+            "Languages must avoid inventing words for modern devices in order to stay authentic."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph 6, the word \"renew\" most nearly means",
+          "options": [
+            "regenerate or replenish itself",
+            "translate itself into another language",
+            "record itself for an archive",
+            "abandon its older forms"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "explain why language revival matters even to outsiders and note what the movement has already achieved",
+            "argue that most revival projects are doomed to fail",
+            "criticise communities for wasting money on lost causes",
+            "prove that all endangered languages will eventually be saved"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲濒危语言复兴运动，题型涵盖主旨、细节、推断、词汇与作者目的。注意作者态度是审慎乐观。"
+    },
+    {
+      "passage": "Paragraph 1. Long before scientists understood microbes, viruses or the human immune system, people had begun to protect themselves against deadly disease. The story of vaccination is often told as a triumph of the modern laboratory, yet its foundations were laid by farmers, physicians and ordinary observers who noticed patterns and acted on them, frequently at considerable personal risk. Their methods were crude by today's standards, but they revealed a principle that would eventually save hundreds of millions of lives: that a controlled encounter with a disease could prepare the body to resist a later, more dangerous attack.\n\nParagraph 2. The earliest documented practice was inoculation against smallpox, a disease that killed a large share of those it infected and disfigured many survivors. In parts of Asia and the Ottoman Empire, practitioners deliberately introduced material from the sores of a mildly ill patient into a healthy person, usually through a small cut in the skin. The recipient typically suffered a limited illness and then enjoyed lasting protection. The technique reached western Europe in the early eighteenth century, championed by travellers who had witnessed it abroad. It was dangerous, for a few of those inoculated developed the full disease, yet the risk was far smaller than that of natural infection.\n\nParagraph 3. The decisive advance is usually credited to an English country doctor who paid attention to local folklore. Dairymaids, it was widely said, rarely caught smallpox. He suspected that their frequent exposure to cowpox, a mild disease of cattle that produced sores on the hands, somehow shielded them. In a famous experiment he took material from a dairymaid's cowpox sore and introduced it into a healthy boy, who developed only a slight illness. When the boy was later exposed to smallpox, he did not fall ill. The doctor called his method vaccination, from the Latin word for cow, and published his findings so that others could repeat them.\n\nParagraph 4. What is remarkable is that none of this depended on knowing why it worked. The germ theory of disease, which explains that specific microorganisms cause specific illnesses, would not be widely accepted for almost a century. Vaccination was therefore an empirical discovery: it rested on careful observation and repeated trial rather than on any correct theory of the body's defences. Practitioners could see that the procedure protected people, even though they could not have said what smallpox actually was. This gap between practice and explanation was typical of early medicine, and it did not prevent vaccination from spreading rapidly across continents.\n\nParagraph 5. Spread it did, though not without obstacles. Preserving the delicate material over long distances was a serious problem in an age without refrigeration. In one celebrated expedition, physicians carried a vaccine across the ocean by inoculating a chain of children one after another during the voyage, so that a fresh source was always available when the ship arrived. Resistance also came from those who distrusted the idea of introducing animal matter into human bodies, and from communities suspicious of official campaigns. Cartoonists mocked the practice, and rumours circulated about supposed side effects. Yet the sheer scale of smallpox deaths gradually overcame much of this hesitation.\n\nParagraph 6. The later development of vaccines against other diseases drew on the same underlying insight but demanded new techniques. Researchers learned to weaken or kill dangerous microbes so that they could provoke protection without causing serious illness. This work did increasingly rely on laboratories, cultures and, eventually, an understanding of the immune system. But the guiding idea remained the one glimpsed by observant farmers and physicians long before: that exposure to a harmless version of a threat could train the body in advance. The pre-laboratory pioneers had, in effect, discovered a phenomenon that later science would explain and refine.\n\nParagraph 7. Looking back, the early history of vaccination offers a lesson about the relationship between doing and knowing. Progress did not always begin with a correct theory and proceed neatly to application. Often it ran the other way: a practice that plainly worked pressed scientists to explain it. Recognising this should make us cautious about dismissing knowledge that lacks a fashionable theoretical dress. The dairymaids and inoculators were not merely lucky; they were reading the natural world attentively, and the modern laboratory was in many ways built upon the questions their success obliged others to answer.",
+      "questions": [
+        {
+          "prompt": "Which statement best expresses the main idea of the passage?",
+          "options": [
+            "Effective protection against disease was achieved through observation and trial long before science could explain how vaccination worked.",
+            "Smallpox was the only disease that could be prevented before the invention of the laboratory.",
+            "Vaccination was invented entirely by one English country doctor working alone.",
+            "Public resistance made early vaccination campaigns almost completely unsuccessful."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 2, how was early smallpox inoculation typically carried out?",
+          "options": [
+            "Material from a mildly ill patient's sores was introduced into a healthy person through a small cut.",
+            "Healthy people were made to drink a liquid prepared from cattle.",
+            "Patients were isolated until the natural epidemic had passed.",
+            "A weakened laboratory culture was injected with a needle."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 5, how was vaccine material once transported across the ocean?",
+          "options": [
+            "By inoculating a succession of children during the voyage so a fresh source was always available.",
+            "By freezing it in early refrigeration units aboard the ship.",
+            "By drying it into a powder that could be stored for years.",
+            "By sending it ahead in sealed glass containers before the ship departed."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph 4 about early vaccination?",
+          "options": [
+            "A medical procedure can be reliably effective even when the reason it works is not yet understood.",
+            "The germ theory of disease was fully accepted at the time vaccination began.",
+            "Vaccination could not spread until scientists explained the immune system.",
+            "Early practitioners had a correct understanding of what smallpox was."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph 4, the word \"empirical\" most nearly means",
+          "options": [
+            "based on observation and experiment rather than theory",
+            "officially approved by governments",
+            "financially profitable",
+            "kept secret from the public"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, what is the writer's main purpose?",
+          "options": [
+            "To draw a broader lesson that useful knowledge can precede, and prompt, its theoretical explanation.",
+            "To warn readers that vaccination is more dangerous than usually admitted.",
+            "To argue that laboratories have contributed nothing to medicine.",
+            "To recommend a return to eighteenth-century medical methods."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲实验室出现前疫苗的发展，强调实践先于理论。题目含主旨、细节、推断、词汇(empirical)与作者目的。"
+    },
+    {
+      "passage": "Paragraph 1. In the dry savannahs of Africa and Australia, some of the most sophisticated structures in the natural world are built not by people but by insects a few millimetres long. Termite mounds, which can rise several metres above the ground and endure for decades, have long fascinated observers. What appears from a distance to be a shapeless heap of earth is in fact a carefully organised construction, shaped by millions of tiny builders working without a plan, an architect or any central command. In recent years, engineers and architects have begun to study these mounds closely, hoping to borrow their secrets for human design.\n\nParagraph 2. The termites themselves are blind and individually unremarkable. No single insect holds a picture of the finished mound in its head. Instead, the colony builds through a process in which each termite responds to local signals, such as the shape of the surrounding soil and the scent of building material left by others. A small deposit of moist earth attracts further deposits, and gradually walls, columns and chambers emerge. This kind of coordination, in which complex order arises from many simple actions without a leader directing them, is often described as self-organisation, and it has become a subject of intense interest well beyond biology.\n\nParagraph 3. For a long time the popular explanation held that the mound worked chiefly as an air-conditioner, keeping the nest at a steady temperature. More recent research has refined this picture. The living termites, together with the fungus many species cultivate for food, generate warmth and carbon dioxide, and this stale air must be exchanged for fresh air from outside. The mound's network of tunnels and porous walls allows gases to move in and out as the outside temperature rises and falls over the course of a day. In effect, the structure breathes, driven not by any pump but by the changing warmth of the sun.\n\nParagraph 4. This discovery has particular appeal for architects concerned about energy. Conventional buildings often rely on power-hungry systems to move and cool air. If a structure could instead exchange air passively, using its own shape and materials to drive ventilation, it might remain comfortable while consuming far less energy. A celebrated office and shopping complex in Zimbabwe was designed with this idea in mind, using carefully placed vents and heavy materials to moderate the indoor climate without conventional air-conditioning. Its designers openly acknowledged the inspiration of the termite mound, and the building became a frequently cited example of what is now called biomimicry.\n\nParagraph 5. Biomimicry, the practice of imitating nature's designs to solve human problems, extends far beyond ventilation. Yet termite mounds remain a favourite case because they illustrate the approach so vividly. It is important, however, not to oversimplify. Some scientists caution that the human buildings inspired by mounds do not copy them exactly, and that the biology of real mounds is still imperfectly understood. Nature's solution evolved for the needs of termites, not for offices, and translating it into steel and concrete inevitably involves compromise. Admiration for the mound should not slide into an assumption that its lessons can be applied without careful adjustment.\n\nParagraph 6. Even so, the deeper appeal of the termite mound lies in what it suggests about design itself. The colony achieves an outcome that looks intelligent without any intelligence directing the whole. This challenges the intuitive belief that a complex, well-adapted structure must be the product of a mind that planned it. Engineers who study swarms of insects hope to build systems, from fleets of small robots to flexible transport networks, that behave in a similar way: robust, adaptable and capable of continuing even when individual parts fail. The mound thus offers not only a model for greener buildings but a broader philosophy of how order can arise.\n\nParagraph 7. Researchers who spend their days injecting harmless gas into mounds and scanning their interiors speak of them with something close to admiration. They are quick to add that the termites are not clever, and that our tendency to see purpose in nature can mislead. The value of studying mounds, they suggest, lies precisely in resisting easy conclusions and paying attention to how a structure actually functions. For all the enthusiasm surrounding biomimicry, the most useful thing the mound may teach is patience: the willingness to observe carefully before assuming we already understand.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Termite mounds are sophisticated, self-organised structures whose ventilation has inspired human designers, though their lessons must be applied carefully.",
+            "Termites are highly intelligent insects that consciously plan their mounds.",
+            "Air-conditioning is the only feature of termite mounds worth studying.",
+            "Human buildings can copy termite mounds exactly without any adjustment."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 2, how does a termite colony manage to build its mound?",
+          "options": [
+            "Each termite responds to local signals such as soil shape and scent, and order emerges without a leader.",
+            "A single dominant termite directs all the others according to a plan.",
+            "The termites follow instructions inherited as a complete mental blueprint.",
+            "Larger termites carry smaller ones to the correct building sites."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 3, how does fresh air move through a termite mound?",
+          "options": [
+            "Gases pass through tunnels and porous walls as outside temperatures rise and fall during the day.",
+            "A muscular pump inside the nest forces air through the tunnels.",
+            "The termites fan the air with their wings in shifts.",
+            "Rainwater flushes stale air out of the chambers each night."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph 6 about complex natural structures?",
+          "options": [
+            "A structure can appear intelligently designed without any mind having planned it.",
+            "Only structures planned by an intelligent mind can be well adapted.",
+            "Insect swarms are too disorganised to inspire engineering.",
+            "Termite mounds prove that termites possess individual intelligence."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph 5, the word \"compromise\" most nearly means",
+          "options": [
+            "a trade-off in which the original design is only partly reproduced",
+            "a legal agreement between builders",
+            "a serious structural failure",
+            "a reduction in the cost of materials"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, what is the writer's attitude toward biomimicry?",
+          "options": [
+            "Appreciative but cautious, urging careful observation rather than hasty conclusions.",
+            "Dismissive, regarding it as a worthless fashion.",
+            "Uncritically enthusiastic, believing it solves every problem.",
+            "Indifferent, seeing no practical value in studying mounds."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲白蚁丘结构与仿生学，含主旨、细节、推断、词汇(compromise)与作者态度。作者态度是赞赏但审慎。"
+    },
+    {
+      "passage": "Paragraph 1. For much of the medieval period, a handful of dried plant products were among the most valuable commodities on earth. Pepper, cinnamon, cloves, nutmeg and ginger, grown in the tropical regions of Asia, travelled enormous distances to reach the tables of Europe, where they commanded prices that seem astonishing today. A sack of pepper could represent a substantial fortune, and spices were sometimes accepted in place of money to pay rents or dowries. This trade did not merely flavour food; it reshaped economies, encouraged long-distance travel and drew distant civilisations into contact with one another.\n\nParagraph 2. Part of the reason for these high prices lay in the sheer length and difficulty of the journey. A clove harvested on a small island in what is now Indonesia might pass through the hands of a dozen intermediaries before reaching a European market. It travelled by ship across open seas, was carried overland by camel caravans, and changed owners in a string of bustling ports and inland cities. At each stage a merchant took a share of the profit, and the accumulated costs of transport, risk and taxation multiplied the final price many times over. The consumer at the far end paid for the whole chain.\n\nParagraph 3. Because the growers and the buyers never met, the origins of spices were long shrouded in mystery, and this ignorance was sometimes deliberately encouraged. Merchants who controlled the supply had little reason to reveal where their goods came from, and some circulated fantastic tales about the dangers of gathering them. Such stories, whether believed or not, helped justify high prices and discouraged rivals from seeking the source. For centuries most Europeans had only the vaguest idea of the geography that lay behind the spices they consumed, imagining distant lands of marvels rather than the ordinary farms and forests that actually produced the crops.\n\nParagraph 4. Spices were prized for several reasons beyond taste. They were widely used in medicine, since physicians of the time believed that strongly flavoured substances could correct imbalances in the body. They played a part in religious ritual and in the making of perfumes. Above all, they served as markers of status. To season a feast lavishly with pepper or to present a guest with a dish glowing with saffron was to advertise one's wealth and refinement. Because only the prosperous could afford them in quantity, spices carried a social meaning out of all proportion to their weight, and hosts competed to display them.\n\nParagraph 5. The control of this lucrative trade became a source of intense rivalry. For a long period, key routes passed through the eastern Mediterranean, and the merchants of certain Italian cities grew rich by acting as the gateway between Asia and the rest of Europe. Their dominance, and the high prices that resulted, gave other nations a powerful motive to find alternative paths to the source. The desire to reach the spice-producing regions directly, bypassing the established middlemen, was one of the forces that eventually propelled European sailors out into the Atlantic and around the coasts of Africa in search of a sea route to the East.\n\nParagraph 6. The consequences of that search extended far beyond commerce. Voyages undertaken partly in pursuit of pepper and cloves led to encounters, and often to conflict, between peoples who had never before been in contact. New trading empires were established, and the balance of wealth among nations shifted. Ordinary crops that had once been rare luxuries gradually became more widely available as the volume of trade increased and new routes opened. What had begun as a traffic in fragrant curiosities helped set in motion changes that would remake the map of global commerce for centuries to come.\n\nParagraph 7. It is tempting, from a modern kitchen where pepper costs almost nothing, to find the whole story slightly comic. Yet to dismiss the medieval passion for spices as mere extravagance would be to misread it. In a world without refrigeration or reliable long-distance information, spices were genuinely useful, genuinely scarce and genuinely coveted, and the effort to obtain them mobilised extraordinary reserves of ingenuity, courage and greed. The humble contents of a spice rack are, in a sense, a relic of one of the great engines of early global history, and they deserve rather more respect than we usually grant them.",
+      "questions": [
+        {
+          "prompt": "Which statement best expresses the main idea of the passage?",
+          "options": [
+            "The medieval spice trade was highly valuable and influential, reshaping economies and helping to drive long-distance exploration.",
+            "Spices were valued in the medieval period only because they improved the taste of food.",
+            "Italian merchants were the only people ever to profit from selling spices.",
+            "Medieval Europeans knew exactly where their spices were grown."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 2, why were spices so expensive by the time they reached Europe?",
+          "options": [
+            "Costs accumulated as many intermediaries, along a long and difficult route, each took a share of the profit.",
+            "European governments banned the import of spices to keep prices high.",
+            "Spices spoiled easily and most of each shipment had to be discarded.",
+            "Growers in Asia deliberately produced only tiny quantities each year."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 4, apart from flavour, why were spices valued?",
+          "options": [
+            "They were used in medicine and ritual and served as markers of wealth and status.",
+            "They could be exchanged only for gold and never for other goods.",
+            "They were the main source of food for the poor.",
+            "They were believed to be completely free of any medical use."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph 3 about the merchants who controlled the spice supply?",
+          "options": [
+            "They benefited from keeping buyers ignorant of where spices actually came from.",
+            "They openly published detailed maps of the spice-growing regions.",
+            "They wanted as many competitors as possible to reach the source.",
+            "They believed the frightening tales about gathering spices themselves."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph 5, the word \"lucrative\" most nearly means",
+          "options": [
+            "producing great profit",
+            "extremely dangerous",
+            "strictly forbidden",
+            "widely misunderstood"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, what is the writer's main purpose?",
+          "options": [
+            "To argue that the medieval enthusiasm for spices was rational and historically important, not merely foolish extravagance.",
+            "To mock medieval people for wasting money on unnecessary luxuries.",
+            "To claim that spices have no place in the modern kitchen.",
+            "To prove that the spice trade had no lasting effects on world history."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲中世纪香料贸易，含主旨、细节、推断、词汇(lucrative)与作者目的。作者认为香料贸易意义重大，不应轻视。"
+    },
+    {
+      "passage": "Paragraph 1. On a cold spring morning, a retired teacher stands in her garden noting the first appearance of a particular butterfly, while on another continent a schoolboy photographs a frog and uploads the image to a website. Neither is a professional scientist, yet both are contributing to genuine research. Activities of this kind, in which members of the public gather or process data for scientific projects, are known as citizen science. Once regarded as a marginal hobby, the practice has grown into a significant force, supplying researchers with observations on a scale that no team of specialists could ever hope to collect alone.\n\nParagraph 2. The idea is far from new. For centuries, amateur naturalists kept meticulous records of the weather, the flowering of plants and the arrival of migrating birds. Some of the longest continuous records of the natural world were compiled not by universities but by enthusiastic individuals who simply enjoyed observing and noting what they saw. What has changed in recent decades is the scale and speed of the enterprise. Inexpensive digital cameras, mobile telephones and the internet allow vast numbers of people to record and share their observations instantly, and to be guided and coordinated by scientists they will never meet.\n\nParagraph 3. The advantages for researchers are considerable. Many important questions can only be answered with data gathered across huge areas or over long periods, and funding is rarely sufficient to pay professionals to do the work. A study of how bird populations are shifting in response to a warming climate, for example, requires observations from thousands of locations at once. Volunteers scattered across a whole continent can supply exactly this breadth of coverage. In some projects, participants do not gather data outdoors at all but help to process it, classifying images of distant galaxies or transcribing handwritten records that computers struggle to read.\n\nParagraph 4. Naturally, the reliability of such data has been questioned. Can observations made by untrained volunteers be trusted? Researchers who run these projects have developed a range of safeguards. Participants may be asked to photograph what they see so that experts can verify the identification, and unusual reports are flagged for checking. When many people record the same phenomenon, statistical methods can identify and set aside the occasional mistake. Studies comparing volunteer data with professional surveys have often found the amateur results to be surprisingly accurate, provided the tasks are clearly defined and well designed. Good design, it turns out, matters more than professional credentials.\n\nParagraph 5. The benefits are not confined to the researchers. Taking part can deepen participants' understanding of science and of the natural world around them. Someone who has spent a season counting bees is likely to notice, and care about, changes in the local environment that others overlook. Educators value citizen science for exactly this reason, using it to teach not only facts but the very process of enquiry. There is, too, a democratic appeal in the idea that research need not be the exclusive preserve of professionals working behind closed doors, but can involve anyone willing to look carefully and record honestly.\n\nParagraph 6. There are limits and tensions, nonetheless. Some critics worry that volunteers are used merely as unpaid labour, gathering data that others will analyse and take credit for. Projects can also suffer from uneven participation, since volunteers naturally cluster where people live and travel, leaving remote regions poorly covered. And not every scientific question suits the approach; some require specialised equipment or training that no amount of enthusiasm can replace. Responsible organisers try to address these concerns, acknowledging contributors properly and choosing tasks that genuinely match what volunteers can do well.\n\nParagraph 7. Considered as a whole, citizen science represents a striking shift in how knowledge can be made. It does not replace the trained researcher, the laboratory or the carefully controlled experiment, and its advocates rarely claim that it does. What it offers instead is reach: a way of extending the eyes and hands of science across landscapes and timescales that would otherwise remain unobserved. In an age when many of the most pressing problems, from biodiversity loss to a changing climate, unfold over vast areas and long spans of time, that reach may prove not a curiosity but a necessity.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Citizen science lets members of the public contribute valuable data to research on a scale professionals alone could not achieve.",
+            "Amateur naturalists have never made any lasting contribution to science.",
+            "Citizen science will soon completely replace professional researchers.",
+            "The internet is the only reason that scientific research exists today."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 3, why is citizen science especially useful for certain studies?",
+          "options": [
+            "It can supply observations across huge areas or long periods that limited funding could not otherwise cover.",
+            "It removes the need for any scientific analysis of the results.",
+            "It is the only method capable of studying distant galaxies.",
+            "It guarantees that every region on earth is observed equally."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph 4, how do researchers help ensure that volunteer data is reliable?",
+          "options": [
+            "They ask for photographs to verify identifications and use statistical methods to set aside occasional mistakes.",
+            "They discard all data submitted by untrained volunteers.",
+            "They accept only reports that agree with what they already expected.",
+            "They require every volunteer to hold a scientific qualification."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph 6 about the coverage produced by citizen science?",
+          "options": [
+            "It tends to be uneven, with data concentrated where people live rather than spread evenly everywhere.",
+            "It always covers remote regions better than populated ones.",
+            "It is completely unaffected by where volunteers happen to live.",
+            "It makes specialised equipment unnecessary for every kind of research."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph 5, the word \"preserve\" most nearly means",
+          "options": [
+            "an exclusive domain or reserved sphere of activity",
+            "a method of storing food",
+            "a written scientific record",
+            "a protected wildlife area"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, what is the writer's attitude toward citizen science?",
+          "options": [
+            "Positive but measured, valuing its reach while recognising it does not replace professional research.",
+            "Strongly negative, regarding it as harmful to real science.",
+            "Completely uncritical, claiming it can solve every scientific problem.",
+            "Uninterested, seeing no future for the practice."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇讲公民科学及其对研究的贡献，含主旨、细节、推断、词汇(preserve)与作者态度。作者态度积极而克制。"
+    }
+  ]
+}

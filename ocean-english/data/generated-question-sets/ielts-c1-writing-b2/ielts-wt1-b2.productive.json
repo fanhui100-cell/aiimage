@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of adults holding a gym membership in one European country, by age group, in 2005, 2015 and 2025. Ages 18-29: 2005 = 14%, 2015 = 26%, 2025 = 38%. Ages 30-44: 2005 = 11%, 2015 = 19%, 2025 = 27%. Ages 45-59: 2005 = 7%, 2015 = 12%, 2025 = 21%. Ages 60 and over: 2005 = 3%, 2015 = 6%, 2025 = 15%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某欧洲国家四个年龄组在 2005、2015 和 2025 年健身房会员比例的表格，不少于 150 词。",
+      "referencePoints": [
+        "Overall upward trend across every age group over the twenty-year period",
+        "The 18-29 group remains the highest throughout, almost tripling from 14% to 38%",
+        "The over-60 group shows the fastest relative growth, quintupling from 3% to 15%",
+        "The gap between the youngest and oldest groups widens in absolute terms"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the average number of hours per week spent on housework by men and women in four countries in 1985 and in 2020. Country A: men 5 hours (1985) rising to 11 hours (2020), women 28 hours falling to 16 hours. Country B: men 4 rising to 9, women 30 falling to 18. Country C: men 8 rising to 13, women 22 falling to 15. Country D: men 3 rising to 6, women 33 falling to 24. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述四个国家 1985 年与 2020 年男性和女性每周家务劳动时长的表格，不少于 150 词。",
+      "referencePoints": [
+        "Men's housework hours increased in all four countries while women's decreased",
+        "Women still did more housework than men in every country in 2020",
+        "Country C had the smallest gender gap in both years; Country D the largest",
+        "The male-female gap narrowed most dramatically in Country A (23 hours to 5 hours)"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows annual fish and seafood consumption per person (in kilograms) in five countries in 2000 and 2020. Japan: 66 kg in 2000, 46 kg in 2020. Norway: 48 kg in 2000, 52 kg in 2020. Spain: 40 kg in 2000, 43 kg in 2020. Brazil: 6 kg in 2000, 10 kg in 2020. Egypt: 14 kg in 2000, 23 kg in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述五个国家 2000 年与 2020 年人均鱼类和海产品年消费量的表格，不少于 150 词。",
+      "referencePoints": [
+        "Japan started highest but was the only country to record a fall (66 kg to 46 kg)",
+        "Norway overtook Japan to become the highest consumer by 2020",
+        "Brazil and Egypt grew fastest in relative terms, though from low bases",
+        "The range between the highest and lowest consumers narrowed over the period"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of hospital beds per 1,000 people in five countries in 1990, 2005 and 2020. Germany: 10.4 (1990), 8.5 (2005), 7.8 (2020). South Korea: 3.0 (1990), 6.5 (2005), 12.4 (2020). United Kingdom: 5.9 (1990), 3.9 (2005), 2.4 (2020). India: 0.8 (1990), 0.9 (2005), 1.4 (2020). Argentina: 4.6 (1990), 4.1 (2005), 5.0 (2020). Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述五个国家 1990、2005 和 2020 年每千人医院床位数的表格，不少于 150 词。",
+      "referencePoints": [
+        "South Korea shows a striking quadrupling, moving from mid-range to the highest figure by 2020",
+        "Germany and the UK both declined steadily, with the UK falling by more than half",
+        "India remains lowest throughout despite modest growth after 2005",
+        "Argentina stays relatively stable, dipping slightly before recovering"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows book sales in one country by format, in millions of units, in 2010, 2015, 2020 and 2025. Printed books: 180 million (2010), 152 million (2015), 148 million (2020), 155 million (2025). E-books: 12 million (2010), 58 million (2015), 71 million (2020), 68 million (2025). Audiobooks: 3 million (2010), 9 million (2015), 27 million (2020), 49 million (2025). Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2010 至 2025 年纸质书、电子书和有声书销量变化的表格，不少于 150 词。",
+      "referencePoints": [
+        "Printed books remained the dominant format throughout despite an initial decline and later recovery",
+        "E-book sales surged between 2010 and 2015, then plateaued and dipped slightly",
+        "Audiobooks grew continuously and fastest in relative terms, from 3 to 49 million",
+        "By 2025 audiobooks were approaching e-book sales levels"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph shows the number of new electric vehicle registrations (in thousands) in three countries between 2010 and 2024. Country X rose slowly from 2,000 in 2010 to 30,000 in 2016, then climbed steeply to 420,000 in 2024. Country Y grew steadily from 5,000 in 2010 to 90,000 in 2018 and reached 210,000 in 2024. Country Z stayed below 10,000 until 2018, jumped to 60,000 by 2021, but then levelled off at around 65,000 through 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述三个国家 2010 至 2024 年新增电动汽车注册量变化的折线图，不少于 150 词。",
+      "referencePoints": [
+        "All three countries show growth, but at very different speeds and stages",
+        "Country X's late but explosive growth after 2016 makes it the clear leader by 2024",
+        "Country Y grows steadily throughout, finishing second at 210,000",
+        "Country Z surges after 2018 but then plateaus, ending far behind the other two"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph shows annual meat consumption per person (in kilograms) in one country between 1980 and 2020, for three types of meat. Beef fell steadily from 32 kg in 1980 to 24 kg in 2000 and 15 kg in 2020. Chicken rose from 10 kg in 1980 to 22 kg in 2000, overtaking beef around 2005, and reached 38 kg in 2020. Pork remained fairly stable, fluctuating between 18 kg and 22 kg across the whole period and finishing at 19 kg. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 1980 至 2020 年人均牛肉、鸡肉和猪肉年消费量变化的折线图，不少于 150 词。",
+      "referencePoints": [
+        "Chicken and beef move in opposite directions, with chicken overtaking beef around 2005",
+        "Chicken nearly quadruples over the period, becoming the most consumed meat",
+        "Beef more than halves, dropping from first to last place",
+        "Pork remains stable throughout, acting as a constant middle line"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph shows the circulation of printed daily newspapers and the number of paid online news subscriptions in one country (both in millions) between 2005 and 2025. Printed circulation declined from 22 million in 2005 to 15 million in 2015 and 6 million in 2025. Online subscriptions started at under 1 million in 2005, grew slowly to 4 million by 2015, then accelerated sharply to 18 million by 2025, overtaking print around 2021. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2005 至 2025 年纸质报纸发行量与在线新闻付费订阅数变化的折线图，不少于 150 词。",
+      "referencePoints": [
+        "The two lines move in opposite directions and cross around 2021",
+        "Print circulation falls continuously, losing almost three quarters of its 2005 level",
+        "Online subscriptions grow slowly at first, then accelerate dramatically after 2015",
+        "Combined readership in 2025 (24 million) is slightly higher than print alone in 2005"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph shows the percentage of households owning different types of pets in one country between 1995 and 2025. Dog ownership rose gradually from 24% in 1995 to 27% in 2010 and then more quickly to 35% in 2025. Cat ownership climbed from 20% in 1995 to 26% in 2010 and levelled off at around 28% from 2015 onwards. Ownership of pet fish declined steadily from 15% in 1995 to 10% in 2010 and 6% in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 1995 至 2025 年养狗、养猫和养鱼家庭比例变化的折线图，不少于 150 词。",
+      "referencePoints": [
+        "Dogs remain the most popular pet throughout and accelerate after 2010",
+        "Cat ownership rises then plateaus at around 28% after 2015",
+        "Fish ownership falls consistently, dropping by more than half over the period",
+        "The gap between dog and cat ownership narrows by 2010 and then widens again"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart shows the average number of hours per week that men and women in one country spent on five sporting activities in 2023. Swimming: men 1.2 hours, women 1.8 hours. Running: men 2.1 hours, women 1.6 hours. Football: men 3.4 hours, women 0.7 hours. Yoga or pilates: men 0.4 hours, women 2.2 hours. Cycling: men 2.0 hours, women 1.9 hours. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2023 年男性和女性每周参与五种体育活动时长的柱状图，不少于 150 词。",
+      "referencePoints": [
+        "Football shows the largest gender gap, with men spending nearly five times longer than women",
+        "Yoga or pilates is the reverse, dominated by women (2.2 vs 0.4 hours)",
+        "Cycling is almost identical for both genders",
+        "Football is the most time-consuming activity for men; yoga or pilates for women"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart shows the main reasons people gave for moving from rural areas to cities in one country, based on a 2024 survey, comparing respondents aged under 35 with those aged 35 and over. Better job opportunities: under-35s 52%, over-35s 38%. Access to education: under-35s 24%, over-35s 8%. Healthcare services: under-35s 6%, over-35s 27%. Joining family members: under-35s 10%, over-35s 19%. Entertainment and lifestyle: under-35s 8%, over-35s 8%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2024 年调查中不同年龄段人群从农村迁往城市的主要原因的柱状图，不少于 150 词。",
+      "referencePoints": [
+        "Job opportunities are the leading reason for both age groups, but especially the young",
+        "Education matters three times more to under-35s; healthcare over four times more to over-35s",
+        "Joining family is nearly twice as common a reason among the older group",
+        "Entertainment and lifestyle is equally minor for both groups at 8%"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart shows the percentage of adults in one country who regularly played a musical instrument in 2000 and 2024, by age group. Ages 16-24: 31% in 2000, 18% in 2024. Ages 25-44: 22% in 2000, 15% in 2024. Ages 45-64: 12% in 2000, 20% in 2024. Ages 65 and over: 8% in 2000, 23% in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2000 年与 2024 年各年龄组经常演奏乐器人数比例的柱状图，不少于 150 词。",
+      "referencePoints": [
+        "The pattern reverses: younger groups decline while older groups rise",
+        "The 16-24 group falls from the highest (31%) to below both older groups",
+        "The over-65 group nearly triples, from 8% to 23%, becoming the second highest",
+        "In 2024 participation is far more evenly spread across ages than in 2000"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart shows the total value of charitable donations (in millions of dollars) made by four age groups in one country in 2010 and 2022. Ages 18-29: 120 million in 2010, 95 million in 2022. Ages 30-49: 340 million in 2010, 410 million in 2022. Ages 50-69: 480 million in 2010, 640 million in 2022. Ages 70 and over: 210 million in 2010, 380 million in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2010 年与 2022 年四个年龄组慈善捐款总额变化的柱状图，不少于 150 词。",
+      "referencePoints": [
+        "Total donations rose in every group except the youngest, which fell by about a fifth",
+        "The 50-69 group gave the most in both years and recorded the largest absolute increase",
+        "The over-70 group grew fastest in percentage terms, up by roughly 80%",
+        "The gap between the youngest and oldest donors widened considerably by 2022"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts show how goods were transported within one country in 2000 and in 2020, by share of total freight volume. In 2000: road 48%, rail 30%, inland waterways 14%, air 2%, pipeline 6%. In 2020: road 61%, rail 19%, inland waterways 9%, air 5%, pipeline 6%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 2000 年与 2020 年货物运输方式占比变化的两张饼图，不少于 150 词。",
+      "referencePoints": [
+        "Road freight dominates both years and grows from just under half to 61%",
+        "Rail's share falls sharply, from 30% to 19%, the biggest single decline",
+        "Air freight, though small, more than doubles from 2% to 5%",
+        "Pipeline remains unchanged at 6%, while waterways lose a third of their share"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts show how energy was used in an average home in one country in 1990 and in 2020, by purpose. In 1990: space heating 52%, water heating 22%, appliances 12%, lighting 8%, cooking 6%. In 2020: space heating 38%, water heating 18%, appliances 29%, lighting 5%, cooking 6%, with the remaining 4% used for home cooling. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述某国 1990 年与 2020 年家庭能源用途占比变化的两张饼图，不少于 150 词。",
+      "referencePoints": [
+        "Space heating remains the largest use but drops from over half to 38%",
+        "Appliances show the biggest rise, more than doubling from 12% to 29%",
+        "Lighting's share falls despite more devices, likely reflecting efficiency gains",
+        "Home cooling appears as a new category (4%) in 2020, while cooking is unchanged"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts show the share of global cocoa production by region in 1995 and in 2023. In 1995: West Africa 58%, South America 20%, Southeast Asia 15%, Central America and Caribbean 5%, other regions 2%. In 2023: West Africa 66%, South America 17%, Southeast Asia 9%, Central America and Caribbean 5%, other regions 3%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述 1995 年与 2023 年全球可可产量各地区占比变化的两张饼图，不少于 150 词。",
+      "referencePoints": [
+        "West Africa dominates in both years and extends its lead from 58% to 66%",
+        "Southeast Asia records the sharpest fall, losing 40% of its share (15% to 9%)",
+        "South America slips slightly while Central America and the Caribbean holds steady at 5%",
+        "Production becomes more concentrated in a single region over the period"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram shows the process of producing packaged black tea, from plantation to shop. The process has eight stages. First, tea leaves are hand-picked on hillside plantations. Second, the fresh leaves are spread on ventilated racks and withered for 14 to 18 hours to remove moisture. Third, the softened leaves are rolled by machine to break their cell walls. Fourth, the rolled leaves are laid out in a humid room to oxidise for two to three hours, turning coppery brown. Fifth, the leaves are dried in a hot-air chamber at around 120 degrees Celsius. Sixth, the dried tea is sorted into grades by mesh sieves. Seventh, graded tea is blended and packed into foil-lined bags or tea bags. Finally, the packaged tea is distributed to shops. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述红茶从采摘到上架共八个阶段的生产流程图，不少于 150 词。",
+      "referencePoints": [
+        "Present the process as a clear sequence of eight man-made stages using sequencing language",
+        "Group stages logically: leaf preparation (picking, withering, rolling), transformation (oxidising, drying), and finishing (sorting, packing, distribution)",
+        "Use passive voice for the mechanical stages (are rolled, are dried, are sorted)",
+        "Include key details such as timings and the 120-degree drying temperature"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram shows the life cycle of the monarch butterfly, which consists of four main stages and takes roughly one month in summer. First, the adult female lays a single tiny egg on the underside of a milkweed leaf; the egg hatches after three to five days. Second, the emerging caterpillar (larva) feeds continuously on milkweed leaves for about two weeks, shedding its skin five times and growing to around 2,000 times its original mass. Third, the fully grown caterpillar attaches itself upside down to a stem and forms a hard green case called a chrysalis (pupa), inside which its body is transformed over ten to fourteen days. Finally, the adult butterfly emerges, dries its wings for several hours, and flies off to feed on nectar and reproduce, beginning the cycle again. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述帝王蝶从卵到成虫四个阶段生命周期的示意图，不少于 150 词。",
+      "referencePoints": [
+        "Describe the cycle in order (egg, larva, pupa, adult) and note that it is circular and repeating",
+        "Include durations for each stage: 3-5 days, about two weeks, 10-14 days",
+        "Highlight striking details such as the five skin sheddings and the 2,000-fold growth",
+        "Use present simple and natural-process language rather than passive-heavy phrasing"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps, described here in words, show the coastal village of Seaholm in 1990 and in 2020. In 1990 the village consisted of a small fishing harbour on the south coast, with a fish market and boat-repair yard directly behind it. A single main road ran north from the harbour, lined with about thirty cottages, a church at the northern end, and farmland occupying the entire area east of the road. A small wood stood to the west. By 2020 the fish market had been converted into a seafood restaurant and the boat-repair yard replaced by a marina for leisure yachts. The farmland to the east had been developed into a hotel with landscaped gardens and a car park, while a new coastal footpath connected the marina to the hotel. The cottages and church remained, but the wood to the west had been partly cleared to build twenty holiday apartments. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述海滨村庄 Seaholm 在 1990 年与 2020 年之间布局变化的两幅地图，不少于 150 词。",
+      "referencePoints": [
+        "Frame the overall change: a working fishing village transformed into a tourist destination",
+        "Report conversions precisely: fish market to restaurant, repair yard to marina, farmland to hotel",
+        "Note what remained unchanged (cottages, church) versus what was lost (part of the wood, farmland)",
+        "Use location language (to the east, at the northern end) and passives (was converted, had been replaced)"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps, described here in words, show a riverside industrial site in the town of Garton in 1995 and today. In 1995 the site, on the north bank of the River Gar, contained a textile factory in the centre, a warehouse to its east, and a coal depot to its west, all served by a railway siding running along the northern edge. A narrow footbridge crossed the river at the western end, and the riverbank itself was lined with concrete loading docks. Today the textile factory has been renovated into an arts centre with a cafe, and the warehouse has become a covered food market. The coal depot has been demolished and replaced by a five-storey apartment block with ground-floor shops. The railway siding has been removed and converted into a cycle path, the loading docks have been replaced by a grassy riverside park with trees and benches, and the old footbridge has been widened to carry both pedestrians and cyclists. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述 Garton 镇河畔工业用地 1995 年与现今土地利用变化的两幅地图，不少于 150 词。",
+      "referencePoints": [
+        "Summarise the overview: an industrial site regenerated for leisure, culture and housing",
+        "Track each 1995 feature to its present-day counterpart (factory to arts centre, depot to apartments, siding to cycle path)",
+        "Note the riverbank change from concrete docks to a public park",
+        "Use passive structures (has been demolished, has been converted) and clear spatial references"
+      ],
+      "wordLimit": ">=150"
+    }
+  ]
+}

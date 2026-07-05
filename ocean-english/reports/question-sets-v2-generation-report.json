@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-06-20T20:11:38.898Z",
+  "template": "toefl-four-skills",
+  "taskType": "multi_skill",
+  "skill": "integrated",
+  "examIds": [
+    "toefl"
+  ],
+  "level": 6,
+  "count": 10,
+  "itemCount": 120,
+  "optionCount": 4,
+  "answerSchema": {
+    "shape": "mixed_by_skill"
+  },
+  "subskills": [
+    "academic_reading",
+    "conversation",
+    "lecture",
+    "email",
+    "academic_discussion",
+    "repeat",
+    "interview"
+  ],
+  "generationMode": "manual_seed",
+  "copyrightPolicy": "original_only",
+  "apply": false,
+  "wrote": 0,
+  "note": "dry-run：未调用 DeepSeek、未写库。"
+}

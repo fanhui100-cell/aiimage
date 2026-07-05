@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Practice 高级版 · 移动端</title>
+<style>
+  html,body{ margin:0; min-height:100%; }
+  body{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
+    padding:40px 20px; box-sizing:border-box; min-height:100vh;
+    background:
+      radial-gradient(900px 500px at 50% -10%, #fdfbf6, rgba(253,251,246,0) 60%),
+      radial-gradient(700px 600px at 90% 100%, rgba(14,140,122,.06), rgba(14,140,122,0) 55%),
+      #e9e6df;
+    font-family:'Space Grotesk','Noto Sans SC',system-ui,sans-serif; }
+  .cap{ text-align:center; color:#4a5a66; }
+  .cap .ko{ font-family:'Space Mono',ui-monospace,monospace; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#8a97a2; }
+  .cap h1{ margin:6px 0 0; font-size:19px; font-weight:600; color:#14191e; }
+  .ph-screen{ position:absolute; inset:0; }
+  .ph-screen iframe{ position:absolute; top:48px; left:0; width:402px; height:806px; border:0; display:block; background:#f2efe9; }
+</style>
+</head>
+<body>
+<div class="cap">
+  <div class="ko">Lexiverse · 词渊 · Practice</div>
+  <h1>练习高级版 · 移动端</h1>
+</div>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel">
+function App(){
+  return (
+    <IOSDevice width={402} height={874}>
+      <div className="ph-screen">
+        <iframe src="PracticeRunner Premium.html" title="Practice 移动端" />
+      </div>
+    </IOSDevice>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

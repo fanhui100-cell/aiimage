@@ -1,0 +1,366 @@
+{
+  "template": "toefl-complete-the-words",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "In many grasslands, fast cats and wild dogs hunt the weaker grazing animals. Without these predators to keep their numbers down, herds of deer would soon eat all the grass and starve.",
+      "targetWord": "predators",
+      "maskedForm": "pre______",
+      "explain_zh": "可见首字母‘pre’＋上下文‘fast cats and wild dogs hunt the weaker grazing animals’与‘keep their numbers down’，描述捕食其他动物的物种→predators。9个字母露3藏6，符合隐藏比例。"
+    },
+    {
+      "passage": "Plants pull water and tiny food substances from the soil through their roots. When the ground loses these nutrients after years of farming, crops grow poorly and farmers must add fertilizer to help them.",
+      "targetWord": "nutrients",
+      "maskedForm": "nut______",
+      "explain_zh": "可见首字母‘nut’＋上下文‘tiny food substances from the soil’和‘add fertilizer’，指土壤中供植物生长的养分→nutrients。9个字母露3藏6。"
+    },
+    {
+      "passage": "Bees visit flowers to feed on sweet nectar, and while they move from bloom to bloom they carry tiny grains of pollen on their bodies. In this way they pollinate many crops that humans depend on for food.",
+      "targetWord": "pollinate",
+      "maskedForm": "poll_____",
+      "explain_zh": "可见首字母‘poll’＋上下文‘bees move from bloom to bloom carrying pollen... many crops depend on this’暗示蜜蜂为植物传粉→pollinate。隐藏‘inate’5个字母，约占56%。"
+    },
+    {
+      "passage": "During the coldest months, some bears barely move and live off stored fat. In this dormant state their breathing slows greatly, allowing them to survive without searching for food.",
+      "targetWord": "dormant",
+      "maskedForm": "do_____",
+      "explain_zh": "可见首字母‘do’＋上下文‘barely move’‘breathing slows’‘survive without searching for food’，描述休眠不活动的状态→dormant。7个字母露2藏5。"
+    },
+    {
+      "passage": "Over thousands of generations, desert foxes developed large ears that release body heat. This gradual adaptation lets them stay cool under the burning sun and pass the helpful trait to their young.",
+      "targetWord": "adaptation",
+      "maskedForm": "adap______",
+      "explain_zh": "可见首字母‘adap’＋上下文‘developed large ears that release body heat’‘helpful trait’，指物种为适应环境而产生的变化→adaptation。10个字母露4藏6。"
+    },
+    {
+      "passage": "Many animals survive by blending into their surroundings. A leaf insect, for example, can camouflage itself so well that hungry birds passing overhead simply fail to notice its green, vein-like body resting among the foliage.",
+      "targetWord": "camouflage",
+      "maskedForm": "camo______",
+      "explain_zh": "可见首字母‘camo’＋上下文‘blending into surroundings... birds fail to notice its green body’指动物伪装隐身→camouflage。隐藏‘uflage’6个字母，约占60%。"
+    },
+    {
+      "passage": "When a tree falls in the forest, fungi and certain bacteria slowly break down its dead wood. These decomposers return valuable minerals to the soil, completing a cycle that feeds new plant life.",
+      "targetWord": "decomposers",
+      "maskedForm": "deco_______",
+      "explain_zh": "可见首字母‘deco’＋上下文‘fungi and certain bacteria slowly break down its dead wood’‘return valuable minerals to the soil’，指分解有机物的生物→decomposers。11个字母露4藏7。"
+    },
+    {
+      "passage": "When winter food grows scarce, certain mammals slow their heartbeat and lower their body temperature dramatically. By reducing the rate of their metabolism in this way, they burn far fewer reserves and can endure months of cold.",
+      "targetWord": "metabolism",
+      "maskedForm": "meta______",
+      "explain_zh": "可见首字母‘meta’＋上下文‘slow heartbeat, lower temperature, burn fewer reserves’指体内能量代谢速率→metabolism。隐藏‘bolism’6个字母，约占60%。"
+    },
+    {
+      "passage": "When rivers slow down as they reach the sea, they can no longer carry tiny rock particles. These grains settle to the bottom and build up as soft layers of sediment over many years.",
+      "targetWord": "sediment",
+      "maskedForm": "sed_____",
+      "explain_zh": "可见首字母‘sed’＋上下文‘tiny rock particles... settle to the bottom and build up as soft layers’（细小岩石颗粒沉到底部堆积成层）→ sediment（沉积物）。隐藏5个字母占62.5%，符合难度要求。"
+    },
+    {
+      "passage": "Strong wind and heavy rain slowly wear away the surface of bare hillsides, carrying loose soil downhill. Without plants to hold the ground in place, this erosion can strip away fertile farmland.",
+      "targetWord": "erosion",
+      "maskedForm": "ero____",
+      "explain_zh": "可见首字母‘ero’＋上下文‘wind and rain wear away the surface... carrying loose soil downhill’（风雨磨蚀地表、带走泥土）→ erosion（侵蚀）。隐藏4个字母占约57%。"
+    },
+    {
+      "passage": "When pressure deep underground grows too strong, melted rock pushes upward through a weak spot in the crust. A volcano forms where this hot material finally bursts onto the surface as flowing lava.",
+      "targetWord": "volcano",
+      "maskedForm": "vol____",
+      "explain_zh": "可见首字母 ‘vol’ ＋ 上下文 ‘melted rock pushes upward... bursts onto the surface as flowing lava’（熔岩喷出地表）→ volcano（火山）。隐藏 4/7 个字母，结合语境唯一指向 volcano。"
+    },
+    {
+      "passage": "Unlike coal or oil, which exist in limited amounts and eventually run out, sunlight and wind never disappear. Because such renewable sources keep replacing themselves, they can power homes indefinitely.",
+      "targetWord": "renewable",
+      "maskedForm": "rene_____",
+      "explain_zh": "可见首字母‘rene’＋上下文‘unlike coal or oil... sunlight and wind never disappear... keep replacing themselves’（与煤油不同，阳光风力取之不竭、不断自我补充）→ renewable（可再生的）。隐藏5个字母占约55%。"
+    },
+    {
+      "passage": "Surrounding our planet is a thin blanket of gases that traps heat, shields living things from harmful radiation, and provides the oxygen we breathe. This atmosphere makes Earth habitable.",
+      "targetWord": "atmosphere",
+      "maskedForm": "atmos_____",
+      "explain_zh": "可见首字母‘atmos’＋上下文‘thin blanket of gases that traps heat... provides the oxygen we breathe’（包裹地球、保温、提供氧气的薄气体层）→ atmosphere（大气层）。隐藏5个字母占50%。"
+    },
+    {
+      "passage": "Under strong sunlight, liquid water at the ocean surface slowly turns into invisible vapour. As tiny droplets evaporate and rise into the warm air, they eventually gather to form the clouds we see overhead.",
+      "targetWord": "evaporate",
+      "maskedForm": "evap_____",
+      "explain_zh": "可见首字母 ‘evap’ ＋ 上下文 ‘liquid water... turns into invisible vapour... rise into the warm air’（液态水变成水汽上升）→ evaporate（蒸发）。隐藏 5/9 个字母，语境与字母共同锁定该词。"
+    },
+    {
+      "passage": "Harvesting timber faster than forests can regrow leaves future generations with nothing. Managing resources so that present needs are met without depleting them remains a profoundly sustainable approach to land use.",
+      "targetWord": "sustainable",
+      "maskedForm": "susta______",
+      "explain_zh": "可见首字母‘susta’＋上下文‘meeting present needs without depleting resources... leaves future generations’（满足当下而不耗尽资源、惠及后代）→ sustainable（可持续的）。隐藏6个字母占约54%。"
+    },
+    {
+      "passage": "Across much of the Arctic, soil that has stayed frozen for thousands of years now begins to thaw. As this permafrost softens, it releases trapped greenhouse gases and destabilises the ground beneath buildings and roads.",
+      "targetWord": "permafrost",
+      "maskedForm": "perma_____",
+      "explain_zh": "可见首字母 ‘perma’ ＋ 上下文 ‘soil that has stayed frozen for thousands of years... thaw... releases trapped greenhouse gases’（多年冻结的土壤）→ permafrost（永久冻土）。隐藏 5/10 个字母，恰为 50%，语境唯一指向该词。"
+    },
+    {
+      "passage": "When electric current flows through a thin metal wire, the wire pushes back against the moving charge and turns some energy into heat. This natural opposition to the flow is the wire's resistance.",
+      "targetWord": "resistance",
+      "maskedForm": "resi______",
+      "explain_zh": "可见首字母 'resi' + 上下文 'pushes back against the moving charge' 和 'opposition to the flow'（对电流流动的阻碍）→ resistance（电阻）。隐藏 6/10 字母，结合语境唯一指向 resistance。"
+    },
+    {
+      "passage": "High above our heads, a small machine circles the planet again and again, bouncing television signals and weather pictures back to dishes on the ground. Each loop of this orbiting satellite takes about ninety minutes.",
+      "targetWord": "satellite",
+      "maskedForm": "sate_____",
+      "explain_zh": "可见首字母 'sate' + 上下文 'circles the planet'、'orbiting'、'bouncing signals back to dishes'（绕地球运行、转发信号）→ satellite（卫星）。隐藏 5/9 字母。"
+    },
+    {
+      "passage": "When you push a heavy box across the floor, a force from the surface resists the motion and slows the box down. This same force, called friction, also makes your hands warm when you rub them together quickly.",
+      "targetWord": "friction",
+      "maskedForm": "fri_____",
+      "explain_zh": "可见首字母‘fri’＋上下文‘a force from the surface resists the motion... makes your hands warm when you rub them’（表面阻碍运动、摩擦生热）→ friction。隐藏5个字母约占62%，结合语境唯一可还原。"
+    },
+    {
+      "passage": "Strike a guitar string and it swings back and forth, pushing the surrounding air into sound waves. The pitch we hear depends not on how far the string moves but on how many times per second it completes a vibration; more cycles each second produce a higher note.",
+      "targetWord": "vibration",
+      "maskedForm": "vibr_____",
+      "explain_zh": "可见首字母 'vibr' ＋ 上下文 'how many times per second it completes a ___; more cycles each second produce a higher note'（音高取决于每秒完成的振动次数，即频率/cycles，而非振幅或速度）→ vibration（振动）。9 个字母露 4 藏 5（约 56%），语境唯一指向 vibration。"
+    },
+    {
+      "passage": "Older bulbs wasted most of their power as heat, giving little light in return. Modern LED lamps lose far less energy, so engineers praise their high efficiency when comparing the two designs.",
+      "targetWord": "efficiency",
+      "maskedForm": "effi______",
+      "explain_zh": "可见首字母 'effi' + 上下文 'wasted most of their power' 对比 'lose far less energy'（少损耗、高产出）→ efficiency（效率）。隐藏 6/10 字母。"
+    },
+    {
+      "passage": "Astronomers studying distant galaxies depend on a powerful instrument that gathers faint light through a large mirror or lens. Without such a telescope, objects billions of kilometres away would remain completely invisible to the human eye.",
+      "targetWord": "telescope",
+      "maskedForm": "tele_____",
+      "explain_zh": "可见‘tele’＋上下文‘gathers faint light through a large mirror or lens... objects billions of kilometres away’（用镜片收集远处微光的天文仪器）→ telescope。隐藏5个字母约占55%，语境指向唯一答案。"
+    },
+    {
+      "passage": "When a rocket fires its engines, it does not merely move; its speed grows from one second to the next. Physicists measure this steady increase in velocity as the craft's acceleration during liftoff.",
+      "targetWord": "acceleration",
+      "maskedForm": "accel_______",
+      "explain_zh": "可见首字母 'accel' + 上下文 'speed grows from one second to the next'、'steady increase in velocity'（速度持续增大）→ acceleration（加速度）。隐藏 7/12 字母。"
+    },
+    {
+      "passage": "As an aircraft passes through pockets of rapidly swirling, irregular air, passengers feel sudden jolts and the cabin shakes. Engineers design wings to withstand this chaotic, unpredictable turbulence without compromising the structural safety of the plane.",
+      "targetWord": "turbulence",
+      "maskedForm": "turb______",
+      "explain_zh": "可见‘turb’＋上下文‘rapidly swirling, irregular air... chaotic, unpredictable’（急速旋转、紊乱的气流）→ turbulence。隐藏6个字母占60%，语义与可见字母共同锁定该词。"
+    },
+    {
+      "passage": "After surgery, the patient was told to rest and eat well so the body could heal properly. With enough sleep and gentle exercise, full recovery usually takes several weeks rather than days.",
+      "targetWord": "recovery",
+      "maskedForm": "rec_____",
+      "explain_zh": "可见首字母'rec'＋上下文'rest and eat well so the body could heal... takes several weeks'→ recovery（康复）。可见3个字母，隐藏5个字母（约62%），结合'痊愈'语境可唯一确定 recovery。"
+    },
+    {
+      "passage": "When people catch the flu, their body sends clear warning signs such as fever, sore throat, and tiredness. Doctors look closely at these symptoms before deciding which treatment will help most.",
+      "targetWord": "symptoms",
+      "maskedForm": "sym_____",
+      "explain_zh": "可见首字母'sym'＋上下文'warning signs such as fever, sore throat'→ symptoms（症状）。可见3个字母，隐藏5个字母（约62%），'发烧喉咙痛'明确指向 symptoms。"
+    },
+    {
+      "passage": "When a person catches a cold, the body fights back by raising its temperature. This rise, though uncomfortable, slows the growth of harmful germs and helps the immune system work faster to defend us.",
+      "targetWord": "temperature",
+      "maskedForm": "tempe______",
+      "explain_zh": "可见首五字母‘tempe’＋上下文‘the body... by raising its ___; this rise... slows the growth of harmful germs’（发烧、体温升高）→ temperature。其余6个字母被隐藏（11字母词隐藏6个，约55%）。"
+    },
+    {
+      "passage": "Washing hands regularly and getting vaccinated stop many illnesses from spreading through a community. Public health workers believe that prevention is far cheaper and kinder than treating people once they fall sick.",
+      "targetWord": "prevention",
+      "maskedForm": "prev______",
+      "explain_zh": "可见首字母'prev'＋上下文'Washing hands... stop many illnesses from spreading... cheaper than treating people'→ prevention（预防）。可见4个字母，隐藏6个字母（60%），'防止疾病传播'锁定 prevention。"
+    },
+    {
+      "passage": "The heart works like a tireless pump, pushing blood through a vast network of vessels. This continuous circulation carries oxygen to every tissue and removes waste, keeping each organ alive and functioning properly.",
+      "targetWord": "circulation",
+      "maskedForm": "circul_____",
+      "explain_zh": "可见首字母‘circul’＋上下文‘heart pump... pushing blood through vessels... carries oxygen and removes waste’指血液在体内不断流动的‘循环’→ circulation。隐藏5个字母占约45%，且语境只指向血液循环，无歧义。"
+    },
+    {
+      "passage": "Doctors increasingly rely on continuous heart monitoring to catch irregular rhythms early. Small wearable sensors record each beat throughout the day, alerting physicians before a minor problem develops into something far more dangerous.",
+      "targetWord": "monitoring",
+      "maskedForm": "moni______",
+      "explain_zh": "可见首四字母‘moni’＋上下文‘continuous heart ___ to catch irregular rhythms early; sensors record each beat’（持续监测心脏）→ monitoring。其余6个字母被隐藏（10字母词隐藏6个，60%）。"
+    },
+    {
+      "passage": "When tissue is injured, the body floods the area with immune cells, causing redness, swelling, and warmth. Although this response defends against infection, prolonged inflammation can damage healthy cells and contribute to chronic disease.",
+      "targetWord": "inflammation",
+      "maskedForm": "infla_______",
+      "explain_zh": "可见首字母‘infla’＋上下文‘redness, swelling, warmth... defends against infection... can damage healthy cells and contribute to chronic disease’（红肿、发热的免疫反应，长期则有害）→ inflammation（炎症）。该词长 12，露出前 5 个字母，隐藏 7 个（约 58%）。"
+    },
+    {
+      "passage": "Because antibiotics are prescribed so freely, many bacterial strains have evolved defences against them. This growing resistance now threatens routine surgery, since infections that were once trivial may suddenly prove untreatable and even lethal.",
+      "targetWord": "antibiotics",
+      "maskedForm": "antib______",
+      "explain_zh": "可见首五字母‘antib’＋上下文‘prescribed so freely... bacterial strains have evolved defences against them... infections... untreatable’（抗生素被滥用导致耐药）→ antibiotics。其余6个字母被隐藏（11字母词隐藏6个，约55%）。"
+    },
+    {
+      "passage": "Before they could study the buried temple, the team spent months carefully removing soil layer by layer. This slow excavation revealed pottery, tools, and walls that had been hidden underground for centuries.",
+      "targetWord": "excavation",
+      "maskedForm": "exca______",
+      "explain_zh": "可见首字母‘exca’＋上下文‘removing soil layer by layer... revealed pottery, tools, and walls hidden underground’指向考古中逐层挖掘的过程→ excavation。隐藏6个字母约占60%，结合语境可唯一还原。"
+    },
+    {
+      "passage": "Broken pieces of clay pottery are among the most common finds at ancient sites. Because fired clay survives for thousands of years in the soil, these humble cooking and storage vessels reveal much about everyday life.",
+      "targetWord": "pottery",
+      "maskedForm": "pot____",
+      "explain_zh": "可见首字母‘pot’＋上下文‘broken pieces of clay... fired clay survives... cooking and storage vessels’指陶器→ pottery。隐藏了四个字母‘tery’，根据语境（黏土烧制的器皿）可唯一确定为 pottery。"
+    },
+    {
+      "passage": "Among the ruins, researchers collected hundreds of objects made by people long ago, including clay cups, bone needles, and bronze coins. Such artifacts help us understand how ancient communities lived and worked.",
+      "targetWord": "artifacts",
+      "maskedForm": "arti_____",
+      "explain_zh": "可见首字母‘arti’＋上下文‘objects made by people long ago... clay cups, bone needles, bronze coins’说明是人造的古代器物→ artifacts。隐藏5个字母约占55%，语境清晰，难有同长度词替代。"
+    },
+    {
+      "passage": "When drought struck the region centuries ago, the farming community could no longer grow enough food, so its people left their homes for good. Archaeologists later found the village completely empty and abandoned, with tools still lying on the floors.",
+      "targetWord": "abandoned",
+      "maskedForm": "aban_____",
+      "explain_zh": "可见首字母‘aban’＋上下文‘people left their homes for good... the village completely empty’（人们彻底离开、村庄空无一人）→ abandoned（被废弃的）。隐藏5个字母占约56%，难度适中。"
+    },
+    {
+      "passage": "When farming first allowed people to store surplus grain, many groups stopped wandering and built a permanent settlement. Such fixed villages, often beside rivers, gradually expanded into the earliest towns that archaeologists study today.",
+      "targetWord": "settlement",
+      "maskedForm": "sett______",
+      "explain_zh": "可见首字母‘sett’＋上下文‘stopped wandering and built a permanent... fixed villages... expanded into the earliest towns’指定居点→ settlement。隐藏六个字母‘lement’，结合“永久居住地”语境可唯一锁定为 settlement。"
+    },
+    {
+      "passage": "For decades the carved tablets baffled scholars, who lacked any key to their meaning. Only after a bilingual stone appeared could experts finally decipher the unfamiliar symbols and read the forgotten language.",
+      "targetWord": "decipher",
+      "maskedForm": "dec_____",
+      "explain_zh": "可见首字母‘dec’＋上下文‘baffled scholars... after a bilingual stone... read the forgotten language’指向破译未知符号→ decipher。隐藏5个字母约占62%，语义聚焦于‘解读密码’，可唯一还原。"
+    },
+    {
+      "passage": "When the ancient vase was unearthed, it lay shattered into dozens of pieces scattered across the floor. Conservators patiently fitted the fragile fragments together until the original shape gradually reappeared.",
+      "targetWord": "fragments",
+      "maskedForm": "frag_____",
+      "explain_zh": "可见首字母‘frag’＋上下文‘shattered into dozens of pieces... fitted... together until the original shape reappeared’指向碎片→ fragments。隐藏5个字母约占55%，与‘pieces’呼应，可唯一还原。"
+    },
+    {
+      "passage": "When prices rise faster than wages, families often cannot afford the same goods as before. To keep buying what they need, many households spend savings or rely on money that has been borrowed from banks.",
+      "targetWord": "borrowed",
+      "maskedForm": "bor_____",
+      "explain_zh": "可见首字母‘bor’＋上下文‘rely on money... from banks（依赖从银行得来的钱）’指向‘借来的’→ borrowed。隐藏5个字母占62%，结合语境唯一可还原。"
+    },
+    {
+      "passage": "When two people trade goods at a local market, each tries to get a better deal. Through friendly talk and small offers, they often reach a fair bargain that satisfies both sides equally.",
+      "targetWord": "bargain",
+      "maskedForm": "bar____",
+      "explain_zh": "可见首字母‘bar’＋上下文‘trade goods... better deal... fair ___ that satisfies both sides’（双方满意的交易）→ bargain。7个字母露3隐4（约57%隐藏），结合还价语境可唯一锁定 bargain。"
+    },
+    {
+      "passage": "In an open market, several firms try to attract the same customers by lowering prices or improving quality. Economists argue that such competition usually benefits buyers, who gain cheaper and better products.",
+      "targetWord": "competition",
+      "maskedForm": "comp_______",
+      "explain_zh": "可见‘comp’＋上下文‘several firms try to attract the same customers by lowering prices（多家公司争夺同一批顾客）’→ competition（竞争）。隐藏7字母约64%，语义唯一。"
+    },
+    {
+      "passage": "During the drought, farms produced far less grain than usual, while demand stayed high. The resulting shortage pushed bread prices upward, and poorer households struggled to obtain enough food.",
+      "targetWord": "shortage",
+      "maskedForm": "sho_____",
+      "explain_zh": "可见‘sho’＋上下文‘produced far less grain than usual, while demand stayed high（供给骤减而需求不变）’指向供应不足→ shortage（短缺）。隐藏5字母62%。"
+    },
+    {
+      "passage": "To keep food prices low for poor families, some governments pay farmers part of their costs. These subsidies lower what producers spend, but critics argue they distort markets and burden taxpayers heavily.",
+      "targetWord": "subsidies",
+      "maskedForm": "subs_____",
+      "explain_zh": "可见首四字母‘subs’＋上下文‘governments pay farmers part of their costs... lower what producers spend’（政府补贴生产者）→ subsidies。9个字母露4隐5（约56%隐藏），经济补贴语境使答案唯一。"
+    },
+    {
+      "passage": "Governments sometimes lower taxes on green technology so that companies find it profitable to invest in cleaner machinery. Such financial incentives can quietly steer private decisions toward goals that benefit society as a whole.",
+      "targetWord": "incentives",
+      "maskedForm": "ince______",
+      "explain_zh": "可见‘ince’＋上下文‘lower taxes... so that companies find it profitable to invest（用经济好处引导企业行为）’→ incentives（激励/诱因）。隐藏6字母60%，与语境唯一吻合。"
+    },
+    {
+      "passage": "Even when a nation produces plenty of food overall, hunger can persist if transport networks are weak. The uneven distribution of resources, rather than scarcity itself, frequently explains why some regions remain underfed.",
+      "targetWord": "distribution",
+      "maskedForm": "distri______",
+      "explain_zh": "可见‘distri’＋上下文‘transport networks are weak... uneven... of resources（资源分配不均）’→ distribution（分配）。隐藏6字母50%，语义指向唯一。"
+    },
+    {
+      "passage": "Teachers often advise students to study in several short sessions rather than one long one. Spacing your practice over days makes it much easier to remember new facts when the exam finally arrives.",
+      "targetWord": "remember",
+      "maskedForm": "rem_____",
+      "explain_zh": "可见首字母‘rem’＋上下文‘study in short sessions... easier to ___ new facts for the exam’→记住知识，故答案为 remember。隐藏 5/8 字母约 62%，结合语境唯一指向 remember。"
+    },
+    {
+      "passage": "When teachers offer encouraging feedback and small rewards, learners tend to put more effort into their assignments. Such positive signals strengthen the inner motivation that keeps young people working toward their goals.",
+      "targetWord": "motivation",
+      "maskedForm": "moti______",
+      "explain_zh": "可见‘moti’＋上下文‘rewards... keeps people working toward goals’指内在驱动力→ motivation。隐藏 6/10 字母 60%，语境与字母共同锁定 motivation。"
+    },
+    {
+      "passage": "Concentrating on a single task is surprisingly hard in a noisy classroom. Every buzzing phone or whispered conversation pulls a learner's attention away, so quiet spaces help the brain focus on what truly matters.",
+      "targetWord": "attention",
+      "maskedForm": "att______",
+      "explain_zh": "可见‘att’＋上下文‘pulls a learner's ___ away... focus’指注意力→ attention。隐藏 6/9 字母约 67%，结合‘focus/noisy classroom’语境唯一对应 attention。"
+    },
+    {
+      "passage": "Teachers often worry that pointing out mistakes will discourage learners. Yet when delivered kindly and with concrete suggestions, thoughtful criticism actually helps students notice gaps in their reasoning and steadily improve their written work.",
+      "targetWord": "criticism",
+      "maskedForm": "crit_____",
+      "explain_zh": "可见首字母‘crit’＋上下文‘pointing out mistakes... helps students notice gaps... improve’指向‘批评、指正’→ criticism。隐藏5个字母（约56%），结合语境与可见字母可唯一还原。"
+    },
+    {
+      "passage": "Behaviourists discovered that any action followed by a pleasant outcome is likely to be repeated. This kind of reinforcement gradually shapes habits, because organisms naturally seek consequences that feel rewarding to them.",
+      "targetWord": "reinforcement",
+      "maskedForm": "reinf________",
+      "explain_zh": "可见‘reinf’＋上下文‘action followed by pleasant outcome... shapes habits’指强化→ reinforcement。隐藏 8/13 字母约 62%，行为主义语境唯一指向 reinforcement。"
+    },
+    {
+      "passage": "What we sense and what we consciously experience are not identical. The brain actively interprets incoming signals, filling gaps and correcting errors, so our perception of the world is partly a construction rather than a faithful copy.",
+      "targetWord": "perception",
+      "maskedForm": "perc______",
+      "explain_zh": "可见‘perc’＋上下文‘brain interprets incoming signals... construction of the world’指知觉→ perception。隐藏 6/10 字母 60%，认知语境与字母共同锁定 perception。"
+    },
+    {
+      "passage": "During deep sleep, the brain replays the day's experiences, transferring fragile new memories into more stable long-term storage. This nightly process helps the mind consolidate what was learned, so rested students recall lessons far better than exhausted ones.",
+      "targetWord": "consolidate",
+      "maskedForm": "conso______",
+      "explain_zh": "可见首字母‘conso’＋上下文‘transferring fragile new memories into more stable long-term storage... helps the mind ___ what was learned’表示‘巩固、加固’→ consolidate。隐藏6个字母（约55%），语境唯一锁定该词。"
+    },
+    {
+      "passage": "Before printing existed, scholars copied entire books by hand onto sheets of parchment. Each handwritten copy took months to finish, so a single surviving manuscript today is treasured by libraries and historians.",
+      "targetWord": "manuscript",
+      "maskedForm": "manus_____",
+      "explain_zh": "可见首字母‘manus’＋上下文‘copied books by hand... handwritten copy’（手抄本）→ manuscript。隐藏5/10字母，结合‘手抄、珍藏’语义可还原。"
+    },
+    {
+      "passage": "A skilled novelist does more than list events; she shapes them into a flowing narrative, deciding which scenes to reveal first and which secrets to delay so that readers stay curious until the final page.",
+      "targetWord": "narrative",
+      "maskedForm": "narr_____",
+      "explain_zh": "可见首字母‘narr’＋上下文‘shapes events... scenes to reveal’（叙事、故事讲述）→ narrative。隐藏5/9字母，长度与语境唯一对应。"
+    },
+    {
+      "passage": "When an old fresco fades and cracks, conservators clean its surface, fill the gaps, and carefully match the original colors. This patient restoration lets future visitors admire the painting much as earlier audiences once did.",
+      "targetWord": "restoration",
+      "maskedForm": "rest_______",
+      "explain_zh": "可见首字母‘rest’＋上下文‘conservators clean... match original colors’（修复使之恢复原貌）→ restoration。隐藏7/11字母，语义清晰可还原。"
+    },
+    {
+      "passage": "Working alone in a dusty Florentine studio, the young artist spent months chipping away at a single marble block. Each strike of the chisel revealed the human figure that this patient sculptor imagined trapped inside the cold stone.",
+      "targetWord": "sculptor",
+      "maskedForm": "scu_____",
+      "explain_zh": "可见首字母‘scu’＋上下文‘chipping away at a marble block... chisel revealed the human figure’（用凿子在大理石上雕刻人像）→ sculptor（雕塑家）。隐藏5个字母补全为 sculptor。"
+    },
+    {
+      "passage": "In much religious painting, a white lily does not merely decorate the scene; it carries meaning. Such symbolism allows artists to express ideas about purity that words alone could never convey.",
+      "targetWord": "symbolism",
+      "maskedForm": "symb_____",
+      "explain_zh": "可见首字母‘symb’＋上下文‘lily carries meaning... express ideas about purity’（象征手法）→ symbolism。隐藏5/9字母，与‘象征意义’语境唯一对应。"
+    },
+    {
+      "passage": "Critics often praise a building not only for being useful but for being beautiful. Its aesthetic appeal arises from balanced proportions and elegant lines that please the eye apart from any practical purpose.",
+      "targetWord": "aesthetic",
+      "maskedForm": "aest_____",
+      "explain_zh": "可见首字母‘aest’＋上下文‘beautiful... appeal... please the eye’（审美的、美学的）→ aesthetic。隐藏5/9字母，结合‘美感、悦目’语义可还原。"
+    },
+    {
+      "passage": "Ancient orators trained for years to sway crowds in the public square. By arranging arguments, choosing vivid words, and timing their pauses, they mastered the persuasive art of rhetoric that still shapes political speeches today.",
+      "targetWord": "rhetoric",
+      "maskedForm": "rhe_____",
+      "explain_zh": "可见首字母‘rhe’＋上下文‘orators... sway crowds... persuasive art... shapes political speeches’（演说家用以说服听众的语言艺术）→ rhetoric（修辞学/雄辩术）。隐藏5个字母补全为 rhetoric。"
+    }
+  ]
+}

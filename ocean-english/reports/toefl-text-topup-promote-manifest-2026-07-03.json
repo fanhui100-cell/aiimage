@@ -1,0 +1,571 @@
+{
+  "generatedAt": "2026-07-03T16:57:12.644Z",
+  "phase": "F2B-promote",
+  "stage": "toefl-text-topup-2026-07-03",
+  "total": 110,
+  "setIds": [
+    "287b4406-ff54-4434-b593-a1d831afc227",
+    "30d26eb2-4c63-4f6a-a676-08687880b7a5",
+    "dfd2a576-c389-4fdd-87d5-572560619ca3",
+    "de5d27db-0024-4e94-81ea-3c3657c90e50",
+    "1cf047c6-0bdb-4c58-9be7-2fdf7b1acd66",
+    "dee7ad23-f66e-4b59-98db-796f263d3dcd",
+    "5a568bb5-d87d-4555-9cd0-504b709f1978",
+    "385c51bb-0d14-4591-bdfb-39b6e7f36122",
+    "ffbf9efc-3138-4820-90a7-32f1a0da8679",
+    "2349c472-6804-4e7f-89e8-dfe703f6af01",
+    "5f4ebb37-f793-4d4e-a387-cbc79fbadabf",
+    "6e187bfe-c524-4441-9308-b83224fc1018",
+    "beaac7a2-36f6-40f8-9ed1-b4f68b957a21",
+    "99908bfb-6b36-43fd-8667-7ca3c32c2219",
+    "1819f279-0e74-4731-9ead-8107f19b22c7",
+    "e01fd4b3-bb31-404c-bb39-f3fe530fc10c",
+    "f230316b-7409-4095-bafe-aaa17df4622e",
+    "7fcdcfe7-1347-42cc-959f-f0fca6dcce3a",
+    "1010d504-19c2-4869-bdea-1ceb4d79fc3e",
+    "433b2fbc-382b-4bb2-be80-ea5fd99afd9c",
+    "32a823ac-b3ce-43cc-bf92-b06a859bf545",
+    "3cb11158-7a39-4c17-91b5-a7c0fffa8ba0",
+    "bee11d5a-6566-4d7d-b336-db821385baba",
+    "b2a2a44b-7545-4975-a27e-da0a8470cb71",
+    "4edb14ab-4d8c-45be-a7d1-0b517052125b",
+    "a35f9ce8-cdf3-4f42-8807-0cf81b8455c0",
+    "5f1cf507-0a34-467f-848b-c8a83730948e",
+    "899bcfcf-b960-4cbc-b1a8-28aa136f19fe",
+    "b4e12d98-28a8-4a37-b6d2-8e27b370f096",
+    "99b88c20-c3a4-40fb-83d8-780e6bbd2be2",
+    "54a36436-8015-4e0a-9eeb-63a5d6dc3901",
+    "19223781-4010-4bc3-ac20-677afbbd8e19",
+    "44f2c66d-ff57-4fd7-b977-17dacaed928b",
+    "9892fd0f-9d2f-428f-9a6a-1b6d91662870",
+    "5f8a7c86-dd1b-4a8c-836f-95f5fe8bbb04",
+    "751fb0c1-86c6-4267-a1ab-71e5d1240cbe",
+    "63212183-a7f2-49bf-a623-72639c81f29a",
+    "71d6d74a-32eb-405e-a21f-41af414f3a19",
+    "7942a23a-9f2d-4dc0-860f-5806e7307911",
+    "3dac600b-0d35-435d-976f-9b7423f6b448",
+    "692711a0-0aeb-44d0-b89d-421ef2780784",
+    "d9cd4a92-3ca0-41cc-94f9-5a0e10ea33ba",
+    "bf166322-4570-4449-b5b4-97f33007be2c",
+    "3ea7051a-5938-4bcc-aad1-c80b69af0f1b",
+    "578bb6eb-c0b4-4ac8-b432-846e9b1515d8",
+    "93f705c5-16cb-4097-b38a-753343444eed",
+    "98323ad7-22b1-4951-a7be-1caa57b6509c",
+    "90ab62ae-a397-423c-8cce-7c9eb2239735",
+    "7a7f04cd-9452-41ec-984b-c6d7db1fe01d",
+    "3429cfd3-304a-4367-8d6a-b3165ac3655f",
+    "a3a85900-a755-4a22-8089-b0198c0dd31c",
+    "744f122b-583f-456a-b62f-650c1679c929",
+    "07e6a273-49f0-49c9-a826-8a4d62c44962",
+    "fe1c5111-e492-49d3-85e4-50c5b4f1df37",
+    "da7d6557-498d-4f0c-9d20-bdf6af97665c",
+    "909707e5-5880-41fc-8ecd-30bef40cdd06",
+    "82aacc52-c095-4440-8d41-9670aa4f482a",
+    "61bbc8cc-a626-4c58-9619-45b74c994b90",
+    "28e68a27-e7b6-4aa1-ab3b-c2509f596691",
+    "ecf83ce6-7a32-4ed3-9854-ecad1668cd5c",
+    "2b00e4de-2260-4c05-9a86-759ab72a4b7d",
+    "2ac3bce3-17db-46c1-98fb-4278355eb3cd",
+    "99206ed5-3c92-46e6-8f64-4aee70e76642",
+    "d83a3369-bea8-4572-892a-8493e4e44056",
+    "b1e9ef1f-7e86-4518-b598-7915fc588efe",
+    "cf993fe7-1329-49c6-b768-3a686f0f5e64",
+    "2c45264e-c3b7-425e-8849-da3e601b01f1",
+    "c9e8a686-3838-4b53-bbfb-6c1b95f80a85",
+    "8b1a527f-1d57-4509-bcff-c07c8d4b8a62",
+    "6e3c8630-1ae6-473f-b8de-529056d79cd9",
+    "b5cf2cbe-9a90-4625-bfb5-cd72199e1d12",
+    "f6e900b5-ecde-420c-ae59-f0542bef1285",
+    "f42b7dca-0c08-4c74-a4cb-1c6a0e9a40c7",
+    "7df181c3-aa4f-4f65-bf6f-89723fcc9776",
+    "a3dd7f3f-c6c0-4e01-b146-4671b0c39a42",
+    "2580e6e7-1370-43ff-9b0f-d716bb76dcd6",
+    "64d1ac9a-4fb9-4418-91cf-d59043daa5c1",
+    "8c1056f4-bd23-45e9-a925-3d7ae84e6641",
+    "c268ffd3-fced-4f77-935d-680ac19c1b72",
+    "dc8b2245-4fbf-4732-b8a8-bc4e4389d115",
+    "42c9c126-b001-4ca0-bd7d-aad2d47756f8",
+    "dea6e582-d0e5-406f-807b-1c2bc7cbed6d",
+    "d2bc9836-bc5e-45ae-bc27-d62a0cdf39df",
+    "24efa2a6-171c-462b-a00a-76b62fa22b00",
+    "e95181c0-41f7-4ee0-8f06-e9e0e0d621c4",
+    "dc75b7e8-25f0-46d5-87ca-1888e6cacfdf",
+    "f34cf880-2a0f-4574-9ab3-ac53e6c0500d",
+    "6659f9fb-9aa6-4bfb-b2d9-f13a0b7f7cdc",
+    "7b5712c8-92c6-46f5-8505-001e36f983ce",
+    "a7cb3f34-a250-45d0-96fd-b584dc5c6b11",
+    "56d01bba-0d74-48be-a7df-0cf839b04cfb",
+    "5e0678ba-69f6-442b-b769-e9e5d527c1b9",
+    "6c77c3e2-7f55-42ab-97c6-bdaafd39c2f7",
+    "3c8c44ad-f2f1-4ef5-85f8-72c6894fb698",
+    "42fff610-7962-4f10-a98e-bb67dc81f9cb",
+    "f65fc87f-20ad-450a-93e0-055930e1dfff",
+    "5ec3f5b4-670c-4c2c-8103-1786fa83cb2f",
+    "9239ec79-e478-4e68-9c21-94839c50ea3c",
+    "b4b8295c-fa78-452a-9d75-28c644027d03",
+    "aea32594-8bdb-493a-a510-ded80dff7c72",
+    "f0d9e097-0349-4885-9a5e-f80aa04fa338",
+    "d69b7a08-7dea-4bde-ba0b-db55e91add44",
+    "cb6d59ce-df1f-406b-bae8-37cc4f0a7ecb",
+    "f7aa6a80-e523-4bd1-88a4-f1252528e06d",
+    "49838ca2-4c16-47de-958c-d0e96c3765db",
+    "20162ffa-9358-46a1-af65-4c5be58b603e",
+    "89a82be2-abfd-4766-9494-02606f8c4bbe",
+    "7cce7eb5-d56f-4321-9d57-fecd47881db9",
+    "ed5ce395-c842-4972-97d3-1748f138c258",
+    "348bbe3e-2d9b-449b-a532-5107443ea308"
+  ],
+  "expectedDelta": {
+    "complete_the_words": 30,
+    "email_writing": 40,
+    "academic_discussion": 40
+  },
+  "byTask": {
+    "email_writing": [
+      {
+        "id": "287b4406-ff54-4434-b593-a1d831afc227",
+        "legacy_id": "gen:productive:email_writing:set:claude:1j8l1wj"
+      },
+      {
+        "id": "54a36436-8015-4e0a-9eeb-63a5d6dc3901",
+        "legacy_id": "gen:productive:email_writing:set:claude:3bbv0h"
+      },
+      {
+        "id": "19223781-4010-4bc3-ac20-677afbbd8e19",
+        "legacy_id": "gen:productive:email_writing:set:claude:14qqig2"
+      },
+      {
+        "id": "7df181c3-aa4f-4f65-bf6f-89723fcc9776",
+        "legacy_id": "gen:productive:email_writing:set:claude:19fgi1u"
+      },
+      {
+        "id": "a3dd7f3f-c6c0-4e01-b146-4671b0c39a42",
+        "legacy_id": "gen:productive:email_writing:set:claude:1gug6wi"
+      },
+      {
+        "id": "2580e6e7-1370-43ff-9b0f-d716bb76dcd6",
+        "legacy_id": "gen:productive:email_writing:set:claude:ef35h9"
+      },
+      {
+        "id": "64d1ac9a-4fb9-4418-91cf-d59043daa5c1",
+        "legacy_id": "gen:productive:email_writing:set:claude:c3bnvw"
+      },
+      {
+        "id": "8c1056f4-bd23-45e9-a925-3d7ae84e6641",
+        "legacy_id": "gen:productive:email_writing:set:claude:o7kd9c"
+      },
+      {
+        "id": "c268ffd3-fced-4f77-935d-680ac19c1b72",
+        "legacy_id": "gen:productive:email_writing:set:claude:xren73"
+      },
+      {
+        "id": "dc8b2245-4fbf-4732-b8a8-bc4e4389d115",
+        "legacy_id": "gen:productive:email_writing:set:claude:gffnb9"
+      },
+      {
+        "id": "42c9c126-b001-4ca0-bd7d-aad2d47756f8",
+        "legacy_id": "gen:productive:email_writing:set:claude:1joaanl"
+      },
+      {
+        "id": "dea6e582-d0e5-406f-807b-1c2bc7cbed6d",
+        "legacy_id": "gen:productive:email_writing:set:claude:mqr2ow"
+      },
+      {
+        "id": "d2bc9836-bc5e-45ae-bc27-d62a0cdf39df",
+        "legacy_id": "gen:productive:email_writing:set:claude:1s0e5dc"
+      },
+      {
+        "id": "24efa2a6-171c-462b-a00a-76b62fa22b00",
+        "legacy_id": "gen:productive:email_writing:set:claude:1ul5qhl"
+      },
+      {
+        "id": "e95181c0-41f7-4ee0-8f06-e9e0e0d621c4",
+        "legacy_id": "gen:productive:email_writing:set:claude:j66dmh"
+      },
+      {
+        "id": "dc75b7e8-25f0-46d5-87ca-1888e6cacfdf",
+        "legacy_id": "gen:productive:email_writing:set:claude:fx1lmw"
+      },
+      {
+        "id": "f34cf880-2a0f-4574-9ab3-ac53e6c0500d",
+        "legacy_id": "gen:productive:email_writing:set:claude:8r108r"
+      },
+      {
+        "id": "6659f9fb-9aa6-4bfb-b2d9-f13a0b7f7cdc",
+        "legacy_id": "gen:productive:email_writing:set:claude:1nh9mr3"
+      },
+      {
+        "id": "7b5712c8-92c6-46f5-8505-001e36f983ce",
+        "legacy_id": "gen:productive:email_writing:set:claude:7hvuvo"
+      },
+      {
+        "id": "a7cb3f34-a250-45d0-96fd-b584dc5c6b11",
+        "legacy_id": "gen:productive:email_writing:set:claude:13q6fdj"
+      },
+      {
+        "id": "56d01bba-0d74-48be-a7df-0cf839b04cfb",
+        "legacy_id": "gen:productive:email_writing:set:claude:929vxx"
+      },
+      {
+        "id": "5e0678ba-69f6-442b-b769-e9e5d527c1b9",
+        "legacy_id": "gen:productive:email_writing:set:claude:1by5tgw"
+      },
+      {
+        "id": "6c77c3e2-7f55-42ab-97c6-bdaafd39c2f7",
+        "legacy_id": "gen:productive:email_writing:set:claude:2qmagg"
+      },
+      {
+        "id": "3c8c44ad-f2f1-4ef5-85f8-72c6894fb698",
+        "legacy_id": "gen:productive:email_writing:set:claude:1y2k14l"
+      },
+      {
+        "id": "42fff610-7962-4f10-a98e-bb67dc81f9cb",
+        "legacy_id": "gen:productive:email_writing:set:claude:1k4ebxk"
+      },
+      {
+        "id": "f65fc87f-20ad-450a-93e0-055930e1dfff",
+        "legacy_id": "gen:productive:email_writing:set:claude:1hjra4s"
+      },
+      {
+        "id": "5ec3f5b4-670c-4c2c-8103-1786fa83cb2f",
+        "legacy_id": "gen:productive:email_writing:set:claude:ekjpku"
+      },
+      {
+        "id": "9239ec79-e478-4e68-9c21-94839c50ea3c",
+        "legacy_id": "gen:productive:email_writing:set:claude:1extbu1"
+      },
+      {
+        "id": "b4b8295c-fa78-452a-9d75-28c644027d03",
+        "legacy_id": "gen:productive:email_writing:set:claude:t6h2ce"
+      },
+      {
+        "id": "aea32594-8bdb-493a-a510-ded80dff7c72",
+        "legacy_id": "gen:productive:email_writing:set:claude:1wndeot"
+      },
+      {
+        "id": "f0d9e097-0349-4885-9a5e-f80aa04fa338",
+        "legacy_id": "gen:productive:email_writing:set:claude:h02uxf"
+      },
+      {
+        "id": "d69b7a08-7dea-4bde-ba0b-db55e91add44",
+        "legacy_id": "gen:productive:email_writing:set:claude:v2hche"
+      },
+      {
+        "id": "cb6d59ce-df1f-406b-bae8-37cc4f0a7ecb",
+        "legacy_id": "gen:productive:email_writing:set:claude:ms8v8n"
+      },
+      {
+        "id": "f7aa6a80-e523-4bd1-88a4-f1252528e06d",
+        "legacy_id": "gen:productive:email_writing:set:claude:izfer0"
+      },
+      {
+        "id": "49838ca2-4c16-47de-958c-d0e96c3765db",
+        "legacy_id": "gen:productive:email_writing:set:claude:10vefjf"
+      },
+      {
+        "id": "20162ffa-9358-46a1-af65-4c5be58b603e",
+        "legacy_id": "gen:productive:email_writing:set:claude:1ydl8ll"
+      },
+      {
+        "id": "89a82be2-abfd-4766-9494-02606f8c4bbe",
+        "legacy_id": "gen:productive:email_writing:set:claude:wi026o"
+      },
+      {
+        "id": "7cce7eb5-d56f-4321-9d57-fecd47881db9",
+        "legacy_id": "gen:productive:email_writing:set:claude:oxju8y"
+      },
+      {
+        "id": "ed5ce395-c842-4972-97d3-1748f138c258",
+        "legacy_id": "gen:productive:email_writing:set:claude:qcaqpp"
+      },
+      {
+        "id": "348bbe3e-2d9b-449b-a532-5107443ea308",
+        "legacy_id": "gen:productive:email_writing:set:claude:1n8qf86"
+      }
+    ],
+    "complete_the_words": [
+      {
+        "id": "30d26eb2-4c63-4f6a-a676-08687880b7a5",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:18iozye"
+      },
+      {
+        "id": "dfd2a576-c389-4fdd-87d5-572560619ca3",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1dxf13x"
+      },
+      {
+        "id": "de5d27db-0024-4e94-81ea-3c3657c90e50",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1n3ckta"
+      },
+      {
+        "id": "1cf047c6-0bdb-4c58-9be7-2fdf7b1acd66",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:k7gzky"
+      },
+      {
+        "id": "dee7ad23-f66e-4b59-98db-796f263d3dcd",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1wlcw3n"
+      },
+      {
+        "id": "5a568bb5-d87d-4555-9cd0-504b709f1978",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:hm86f8"
+      },
+      {
+        "id": "385c51bb-0d14-4591-bdfb-39b6e7f36122",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:stir85"
+      },
+      {
+        "id": "ffbf9efc-3138-4820-90a7-32f1a0da8679",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:91mpqw"
+      },
+      {
+        "id": "2349c472-6804-4e7f-89e8-dfe703f6af01",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:6bt1qf"
+      },
+      {
+        "id": "5f4ebb37-f793-4d4e-a387-cbc79fbadabf",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1crqxfb"
+      },
+      {
+        "id": "6e187bfe-c524-4441-9308-b83224fc1018",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1t36l65"
+      },
+      {
+        "id": "beaac7a2-36f6-40f8-9ed1-b4f68b957a21",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:frpjyo"
+      },
+      {
+        "id": "99908bfb-6b36-43fd-8667-7ca3c32c2219",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:fukt0n"
+      },
+      {
+        "id": "1819f279-0e74-4731-9ead-8107f19b22c7",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1eqrkxu"
+      },
+      {
+        "id": "e01fd4b3-bb31-404c-bb39-f3fe530fc10c",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:25srwu"
+      },
+      {
+        "id": "f230316b-7409-4095-bafe-aaa17df4622e",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1j99bdq"
+      },
+      {
+        "id": "7fcdcfe7-1347-42cc-959f-f0fca6dcce3a",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1is1yl7"
+      },
+      {
+        "id": "1010d504-19c2-4869-bdea-1ceb4d79fc3e",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1gqgwdd"
+      },
+      {
+        "id": "433b2fbc-382b-4bb2-be80-ea5fd99afd9c",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:19xqfk2"
+      },
+      {
+        "id": "32a823ac-b3ce-43cc-bf92-b06a859bf545",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:9aouou"
+      },
+      {
+        "id": "3cb11158-7a39-4c17-91b5-a7c0fffa8ba0",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1a21v1i"
+      },
+      {
+        "id": "bee11d5a-6566-4d7d-b336-db821385baba",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:114955k"
+      },
+      {
+        "id": "b2a2a44b-7545-4975-a27e-da0a8470cb71",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1mqyyzm"
+      },
+      {
+        "id": "4edb14ab-4d8c-45be-a7d1-0b517052125b",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1uph58g"
+      },
+      {
+        "id": "a35f9ce8-cdf3-4f42-8807-0cf81b8455c0",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:uft9zw"
+      },
+      {
+        "id": "5f1cf507-0a34-467f-848b-c8a83730948e",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:dvynw8"
+      },
+      {
+        "id": "899bcfcf-b960-4cbc-b1a8-28aa136f19fe",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1dnnckk"
+      },
+      {
+        "id": "b4e12d98-28a8-4a37-b6d2-8e27b370f096",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:5w0eey"
+      },
+      {
+        "id": "99b88c20-c3a4-40fb-83d8-780e6bbd2be2",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:1qppaf4"
+      },
+      {
+        "id": "44f2c66d-ff57-4fd7-b977-17dacaed928b",
+        "legacy_id": "gen:toefl-complete-the-words:set:claude:7b1s6p"
+      }
+    ],
+    "academic_discussion": [
+      {
+        "id": "9892fd0f-9d2f-428f-9a6a-1b6d91662870",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1lltx2e"
+      },
+      {
+        "id": "5f8a7c86-dd1b-4a8c-836f-95f5fe8bbb04",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1rp6h1j"
+      },
+      {
+        "id": "751fb0c1-86c6-4267-a1ab-71e5d1240cbe",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:qt8xtm"
+      },
+      {
+        "id": "63212183-a7f2-49bf-a623-72639c81f29a",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1b7wg84"
+      },
+      {
+        "id": "71d6d74a-32eb-405e-a21f-41af414f3a19",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:wviavh"
+      },
+      {
+        "id": "7942a23a-9f2d-4dc0-860f-5806e7307911",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1obtnuj"
+      },
+      {
+        "id": "3dac600b-0d35-435d-976f-9b7423f6b448",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1crftjl"
+      },
+      {
+        "id": "692711a0-0aeb-44d0-b89d-421ef2780784",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:hw6o6n"
+      },
+      {
+        "id": "d9cd4a92-3ca0-41cc-94f9-5a0e10ea33ba",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1kk8cyp"
+      },
+      {
+        "id": "bf166322-4570-4449-b5b4-97f33007be2c",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1vlho08"
+      },
+      {
+        "id": "3ea7051a-5938-4bcc-aad1-c80b69af0f1b",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:5qo48v"
+      },
+      {
+        "id": "578bb6eb-c0b4-4ac8-b432-846e9b1515d8",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:selzqd"
+      },
+      {
+        "id": "93f705c5-16cb-4097-b38a-753343444eed",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:jsx1f0"
+      },
+      {
+        "id": "98323ad7-22b1-4951-a7be-1caa57b6509c",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:2kkgmh"
+      },
+      {
+        "id": "90ab62ae-a397-423c-8cce-7c9eb2239735",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:7k0wb5"
+      },
+      {
+        "id": "7a7f04cd-9452-41ec-984b-c6d7db1fe01d",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1nn8fqe"
+      },
+      {
+        "id": "3429cfd3-304a-4367-8d6a-b3165ac3655f",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:hyn9b9"
+      },
+      {
+        "id": "a3a85900-a755-4a22-8089-b0198c0dd31c",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:q5nq8i"
+      },
+      {
+        "id": "744f122b-583f-456a-b62f-650c1679c929",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1h38p81"
+      },
+      {
+        "id": "07e6a273-49f0-49c9-a826-8a4d62c44962",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1hvvuk3"
+      },
+      {
+        "id": "fe1c5111-e492-49d3-85e4-50c5b4f1df37",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:yla7z"
+      },
+      {
+        "id": "da7d6557-498d-4f0c-9d20-bdf6af97665c",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:biy6tz"
+      },
+      {
+        "id": "909707e5-5880-41fc-8ecd-30bef40cdd06",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1a2ye5a"
+      },
+      {
+        "id": "82aacc52-c095-4440-8d41-9670aa4f482a",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:iwwp4b"
+      },
+      {
+        "id": "61bbc8cc-a626-4c58-9619-45b74c994b90",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1dgl9gc"
+      },
+      {
+        "id": "28e68a27-e7b6-4aa1-ab3b-c2509f596691",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:gnf96j"
+      },
+      {
+        "id": "ecf83ce6-7a32-4ed3-9854-ecad1668cd5c",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:foawqd"
+      },
+      {
+        "id": "2b00e4de-2260-4c05-9a86-759ab72a4b7d",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1sw6vnc"
+      },
+      {
+        "id": "2ac3bce3-17db-46c1-98fb-4278355eb3cd",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:v8sxyv"
+      },
+      {
+        "id": "99206ed5-3c92-46e6-8f64-4aee70e76642",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:8oahvb"
+      },
+      {
+        "id": "d83a3369-bea8-4572-892a-8493e4e44056",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:22wzg5"
+      },
+      {
+        "id": "b1e9ef1f-7e86-4518-b598-7915fc588efe",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1szr5p4"
+      },
+      {
+        "id": "cf993fe7-1329-49c6-b768-3a686f0f5e64",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:26u1m2"
+      },
+      {
+        "id": "2c45264e-c3b7-425e-8849-da3e601b01f1",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1l48c8v"
+      },
+      {
+        "id": "c9e8a686-3838-4b53-bbfb-6c1b95f80a85",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:zlow61"
+      },
+      {
+        "id": "8b1a527f-1d57-4509-bcff-c07c8d4b8a62",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:b2ynff"
+      },
+      {
+        "id": "6e3c8630-1ae6-473f-b8de-529056d79cd9",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1kssmxi"
+      },
+      {
+        "id": "b5cf2cbe-9a90-4625-bfb5-cd72199e1d12",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:3lm5q0"
+      },
+      {
+        "id": "f6e900b5-ecde-420c-ae59-f0542bef1285",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:1ut65d"
+      },
+      {
+        "id": "f42b7dca-0c08-4c74-a4cb-1c6a0e9a40c7",
+        "legacy_id": "gen:productive:academic_discussion:set:claude:kkjx3b"
+      }
+    ]
+  }
+}

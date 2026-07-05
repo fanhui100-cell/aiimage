@@ -1,0 +1,167 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao-level 语法填空 (gblanks shape, 10 blanks each), batch G1. Topics distinct; points rotate over tense/preposition/article/pronoun/comparative-superlative/word-form/connector/subject-verb agreement/non-finite. Dialogue single-quoted. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Last Saturday, my family (1)____ (go) to the countryside for a picnic. The weather was fine, and the sky looked (2)____ (blue) than usual. My mother made some sandwiches, (3)____ my father brought a basket of fruit. We sat (4)____ a tall tree to enjoy our lunch. My brother and I flew a kite, (5)____ (fly) it higher and higher. The wind was strong, so the kite went up very (6)____ (quick). A little bird sang so sweetly (7)____ we all stopped to listen. We took many (8)____ (photo) of the beautiful flowers. We did not leave (9)____ the sun went down. It was one of the (10)____ (happy) days of my summer.",
+      "gblanks": [
+        { "answer": "went", "acceptable": ["went"], "hint": "past tense, last Saturday" },
+        { "answer": "bluer", "acceptable": ["bluer"], "hint": "comparative of blue" },
+        { "answer": "and", "acceptable": ["and"], "hint": "parallel connector" },
+        { "answer": "under", "acceptable": ["under"], "hint": "preposition, below the tree" },
+        { "answer": "flying", "acceptable": ["flying"], "hint": "present participle, -ing" },
+        { "answer": "quickly", "acceptable": ["quickly"], "hint": "adverb form" },
+        { "answer": "that", "acceptable": ["that"], "hint": "so ... that" },
+        { "answer": "photos", "acceptable": ["photos"], "hint": "plural after many" },
+        { "answer": "until", "acceptable": ["until"], "hint": "not ... until" },
+        { "answer": "happiest", "acceptable": ["happiest"], "hint": "superlative, one of the ..." }
+      ],
+      "explain_zh": "(1) last Saturday 过去 went；(2) blue 比较级 bluer；(3) 并列 and；(4) under a tree；(5) 现在分词 flying；(6) 副词 quickly；(7) so...that；(8) many photos 复数；(9) not...until；(10) one of the happiest 最高级。"
+    },
+    {
+      "passage": "My grandfather is seventy years old, but he is still very (1)____ (health). Every morning he (2)____ (get) up early and waters the flowers in (3)____ (he) garden. He has grown vegetables for more than thirty (4)____ (year). When I was young, he often told me interesting stories, and I loved (5)____ (listen) to them. He says that reading (6)____ (be) good for the mind, so he reads every day. Last week he taught me how (7)____ (ride) a bike, and he was very patient (8)____ me. I think he is the (9)____ (wise) man I know. I hope I can be (10)____ kind as he is one day.",
+      "gblanks": [
+        { "answer": "healthy", "acceptable": ["healthy"], "hint": "adjective form" },
+        { "answer": "gets", "acceptable": ["gets"], "hint": "subject he, simple present" },
+        { "answer": "his", "acceptable": ["his"], "hint": "possessive of he" },
+        { "answer": "years", "acceptable": ["years"], "hint": "plural after thirty" },
+        { "answer": "listening", "acceptable": ["listening", "to listen"], "hint": "love doing / to do" },
+        { "answer": "is", "acceptable": ["is"], "hint": "reading is, gerund subject" },
+        { "answer": "to ride", "acceptable": ["to ride"], "hint": "how + to do" },
+        { "answer": "with", "acceptable": ["with"], "hint": "patient with sb" },
+        { "answer": "wisest", "acceptable": ["wisest"], "hint": "superlative of wise" },
+        { "answer": "as", "acceptable": ["as"], "hint": "as ... as" }
+      ],
+      "explain_zh": "(1) 形容词 healthy；(2) he gets 主谓一致；(3) 物主 his；(4) thirty years 复数；(5) love listening/to listen；(6) reading is 动名词作主语；(7) how to ride；(8) patient with；(9) wisest 最高级；(10) as kind as。"
+    },
+    {
+      "passage": "When I was eight, my father decided (1)____ (teach) me to ride a bike. At first, I was a little afraid, (2)____ I really wanted to learn. He held the back of the bike (3)____ I sat on it. 'Don't look down, look ahead,' he said (4)____ (patient). I fell down several (5)____ (time), but I did not give up. My father told me that practice (6)____ (make) perfect. After a week, I could ride (7)____ (good) than before. Now I ride (8)____ (quick) and safely every day. I often go to school (9)____ my best friend. That summer taught me that nothing is difficult (10)____ we keep trying.",
+      "gblanks": [
+        { "answer": "to teach", "acceptable": ["to teach"], "hint": "decide to do" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "while", "acceptable": ["while", "as"], "hint": "at the same time" },
+        { "answer": "patiently", "acceptable": ["patiently"], "hint": "adverb form" },
+        { "answer": "times", "acceptable": ["times"], "hint": "plural, several ..." },
+        { "answer": "makes", "acceptable": ["makes"], "hint": "practice makes, subject-verb" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of well/good" },
+        { "answer": "quickly", "acceptable": ["quickly"], "hint": "adverb form" },
+        { "answer": "with", "acceptable": ["with"], "hint": "go with sb" },
+        { "answer": "if", "acceptable": ["if"], "hint": "conditional connector" }
+      ],
+      "explain_zh": "(1) decide to teach；(2) 转折 but；(3) while/as 同时；(4) 副词 patiently；(5) several times 复数；(6) practice makes 主谓一致；(7) ride better 比较级；(8) 副词 quickly；(9) go with sb；(10) 条件 if。"
+    },
+    {
+      "passage": "Our school library is a quiet place (1)____ students can read and study. It opened two years ago, and since then it (2)____ (become) my favourite place. There (3)____ thousands of books on the shelves, from science to history. You must speak (4)____ (quiet) when you are inside. Last term I (5)____ (borrow) a book about space, and I learned a lot from it. The librarian is very kind and always helps us (6)____ (find) what we need. Tomorrow our class (7)____ (visit) the library to choose new books. I believe reading (8)____ (open) the door to a (9)____ (wide) world. I love (10)____ library very much.",
+      "gblanks": [
+        { "answer": "where", "acceptable": ["where"], "hint": "relative adverb, place" },
+        { "answer": "has become", "acceptable": ["has become"], "hint": "present perfect, since then" },
+        { "answer": "are", "acceptable": ["are"], "hint": "there are + thousands" },
+        { "answer": "quietly", "acceptable": ["quietly"], "hint": "adverb of speak" },
+        { "answer": "borrowed", "acceptable": ["borrowed"], "hint": "past tense, last term" },
+        { "answer": "find", "acceptable": ["find", "to find"], "hint": "help sb (to) do" },
+        { "answer": "will visit", "acceptable": ["will visit", "is going to visit"], "hint": "future, tomorrow" },
+        { "answer": "opens", "acceptable": ["opens"], "hint": "reading opens, subject-verb" },
+        { "answer": "wider", "acceptable": ["wider"], "hint": "comparative of wide" },
+        { "answer": "the", "acceptable": ["the"], "hint": "definite article" }
+      ],
+      "explain_zh": "(1) where 引导地点；(2) since then 现在完成 has become；(3) there are 主谓一致；(4) speak 副词 quietly；(5) last term 过去 borrowed；(6) help us (to) find；(7) tomorrow 将来 will visit；(8) reading opens 主谓一致；(9) wider 比较级；(10) the library 定冠词。"
+    },
+    {
+      "passage": "It is raining outside now, and I (1)____ (sit) by the window, watching the rain. The streets are wet, and people (2)____ (hurry) home under their umbrellas. I like rainy days (3)____ they make everything fresh and clean. My mother is making hot tea (4)____ the kitchen, and it smells wonderful. Yesterday it (5)____ (be) sunny, but today the sky is grey. The rain is falling (6)____ (heavy) than this morning. My little cat is sleeping quietly on (7)____ soft chair. I think a rainy afternoon is perfect (8)____ (read) a good book. Soon the rain (9)____ (stop), and a rainbow may appear. Rainy days always make me feel (10)____ (peace).",
+      "gblanks": [
+        { "answer": "am sitting", "acceptable": ["am sitting"], "hint": "present continuous, now" },
+        { "answer": "are hurrying", "acceptable": ["are hurrying"], "hint": "present continuous, people" },
+        { "answer": "because", "acceptable": ["because"], "hint": "reason connector" },
+        { "answer": "in", "acceptable": ["in"], "hint": "in the kitchen" },
+        { "answer": "was", "acceptable": ["was"], "hint": "past tense, yesterday" },
+        { "answer": "more heavily", "acceptable": ["more heavily"], "hint": "comparative adverb" },
+        { "answer": "a", "acceptable": ["a"], "hint": "indefinite article" },
+        { "answer": "to read", "acceptable": ["to read", "for reading"], "hint": "perfect to do" },
+        { "answer": "will stop", "acceptable": ["will stop"], "hint": "future, soon" },
+        { "answer": "peaceful", "acceptable": ["peaceful"], "hint": "feel + adjective" }
+      ],
+      "explain_zh": "(1)(2) now 现在进行 am sitting / are hurrying；(3) 原因 because；(4) in the kitchen；(5) yesterday 过去 was；(6) 比较级副词 more heavily；(7) a soft chair 不定冠词；(8) perfect to read；(9) soon 将来 will stop；(10) feel 形容词 peaceful。"
+    },
+    {
+      "passage": "I have a lovely dog (1)____ name is Coco. I (2)____ (have) her for three years now. Coco is much (3)____ (clever) than other dogs in my neighbourhood. Every day she waits for me (4)____ the door when I come home from school. She loves (5)____ (play) with a small ball in the garden. Last weekend, she (6)____ (run) after a butterfly and fell into the pool. Luckily, dogs can swim, so she climbed out (7)____ any help. My family all love her because she is so (8)____ (friend). I always give her a bath and brush (9)____ hair carefully. Taking care of a pet (10)____ (teach) me to be responsible.",
+      "gblanks": [
+        { "answer": "whose", "acceptable": ["whose"], "hint": "possessive relative" },
+        { "answer": "have had", "acceptable": ["have had"], "hint": "present perfect, for three years" },
+        { "answer": "cleverer", "acceptable": ["cleverer", "more clever"], "hint": "comparative of clever" },
+        { "answer": "at", "acceptable": ["at"], "hint": "at the door" },
+        { "answer": "playing", "acceptable": ["playing", "to play"], "hint": "love doing / to do" },
+        { "answer": "ran", "acceptable": ["ran"], "hint": "past tense, last weekend" },
+        { "answer": "without", "acceptable": ["without"], "hint": "preposition, not having" },
+        { "answer": "friendly", "acceptable": ["friendly"], "hint": "adjective form" },
+        { "answer": "her", "acceptable": ["her"], "hint": "possessive, her hair" },
+        { "answer": "teaches", "acceptable": ["teaches"], "hint": "taking care ... teaches, subject-verb" }
+      ],
+      "explain_zh": "(1) whose name；(2) for three years 现在完成 have had；(3) cleverer 比较级；(4) at the door；(5) love playing/to play；(6) last weekend 过去 ran；(7) without help；(8) 形容词 friendly；(9) 物主 her；(10) 动名词主语 teaches 主谓一致。"
+    },
+    {
+      "passage": "The Mid-Autumn Festival is one of the most important festivals (1)____ China. It usually falls (2)____ September or October. On that day, family members come back home (3)____ (celebrate) together. My grandmother always makes delicious mooncakes, (4)____ are round like the moon. In the evening, we sit in the yard and watch the (5)____ (bright) moon of the year. My father tells us old stories, and his voice (6)____ (sound) so magical. Children run around happily (7)____ the adults talk and laugh. I think the festival is special because it brings families (8)____ (close). Last year my uncle could not come, so we (9)____ (feel) a little sad. This year, however, everyone (10)____ be here, and I cannot wait.",
+      "gblanks": [
+        { "answer": "in", "acceptable": ["in"], "hint": "in China" },
+        { "answer": "in", "acceptable": ["in"], "hint": "in + month" },
+        { "answer": "to celebrate", "acceptable": ["to celebrate"], "hint": "purpose, to do" },
+        { "answer": "which", "acceptable": ["which"], "hint": "relative, things" },
+        { "answer": "brightest", "acceptable": ["brightest"], "hint": "superlative of bright" },
+        { "answer": "sounds", "acceptable": ["sounds"], "hint": "his voice sounds, subject-verb" },
+        { "answer": "while", "acceptable": ["while"], "hint": "at the same time" },
+        { "answer": "closer", "acceptable": ["closer"], "hint": "comparative of close" },
+        { "answer": "felt", "acceptable": ["felt"], "hint": "past tense, last year" },
+        { "answer": "will", "acceptable": ["will"], "hint": "future, this year" }
+      ],
+      "explain_zh": "(1) in China；(2) in + 月份；(3) 目的 to celebrate；(4) 非限定 which；(5) brightest 最高级；(6) his voice sounds 主谓一致；(7) while 同时；(8) closer 比较级；(9) last year 过去 felt；(10) this year 将来 will。"
+    },
+    {
+      "passage": "Last Sunday, I cooked dinner for my parents for the (1)____ (one) time. I wanted to give them a surprise, so I got up (2)____ (early) than usual. First, I washed the vegetables and cut (3)____ into small pieces. Then I followed (4)____ recipe that my mother gave me. Cooking was much (5)____ (hard) than I had thought. The kitchen became very hot, and I (6)____ (begin) to sweat. When my parents came home, dinner (7)____ (be) ready on the table. They said the food was delicious, (8)____ I felt very proud. My mother gave me a big hug and (9)____ (tell) me I had done well. Now I cook for my family (10)____ a month.",
+      "gblanks": [
+        { "answer": "first", "acceptable": ["first"], "hint": "ordinal, the ... time" },
+        { "answer": "earlier", "acceptable": ["earlier"], "hint": "comparative of early" },
+        { "answer": "them", "acceptable": ["them"], "hint": "object pronoun, the vegetables" },
+        { "answer": "a", "acceptable": ["a"], "hint": "indefinite article" },
+        { "answer": "harder", "acceptable": ["harder"], "hint": "comparative of hard" },
+        { "answer": "began", "acceptable": ["began"], "hint": "past tense" },
+        { "answer": "was", "acceptable": ["was"], "hint": "dinner was, past" },
+        { "answer": "so", "acceptable": ["so"], "hint": "result connector" },
+        { "answer": "told", "acceptable": ["told"], "hint": "past tense of tell" },
+        { "answer": "once", "acceptable": ["once"], "hint": "frequency, ... a month" }
+      ],
+      "explain_zh": "(1) the first time 序数；(2) earlier 比较级；(3) cut them 宾格；(4) a recipe 不定冠词；(5) harder 比较级；(6) 过去 began；(7) dinner was 过去；(8) 结果 so；(9) 过去 told；(10) once a month 频率。"
+    },
+    {
+      "passage": "Next summer, my family (1)____ (travel) to the seaside for a holiday. I have never (2)____ (see) the sea before, so I am very excited. People say the beach there is the (3)____ (beautiful) in our country. I want to build a big castle (4)____ the soft sand. My brother hopes to swim in the blue sea, (5)____ he is a good swimmer. We (6)____ (stay) in a small hotel near the beach for a week. Every morning, we will collect shells and watch the sun (7)____ (rise). My mother says the seafood there tastes (8)____ (good) than anywhere else. I am sure we (9)____ (have) a wonderful time together. I really hope next summer comes (10)____ (quick).",
+      "gblanks": [
+        { "answer": "will travel", "acceptable": ["will travel", "is going to travel"], "hint": "future, next summer" },
+        { "answer": "seen", "acceptable": ["seen"], "hint": "present perfect, have never ..." },
+        { "answer": "most beautiful", "acceptable": ["most beautiful"], "hint": "superlative" },
+        { "answer": "on", "acceptable": ["on"], "hint": "on the sand" },
+        { "answer": "because", "acceptable": ["because"], "hint": "reason connector" },
+        { "answer": "will stay", "acceptable": ["will stay"], "hint": "future" },
+        { "answer": "rise", "acceptable": ["rise"], "hint": "watch sth do (bare infinitive)" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good" },
+        { "answer": "will have", "acceptable": ["will have"], "hint": "future, be sure" },
+        { "answer": "quickly", "acceptable": ["quickly"], "hint": "adverb of come" }
+      ],
+      "explain_zh": "(1) next summer 将来 will travel；(2) have never seen 现在完成；(3) the most beautiful 最高级；(4) on the sand；(5) 原因 because；(6) 将来 will stay；(7) watch the sun rise 感官动词+原形；(8) tastes better 比较级；(9) 将来 will have；(10) comes 副词 quickly。"
+    },
+    {
+      "passage": "Last spring, our class (1)____ (plant) trees on a hill near our school. It was a sunny day, and everyone (2)____ (be) full of energy. Our teacher divided us (3)____ several groups. Each group got some young trees and a (4)____ (use) tool. My partner dug the holes, (5)____ I put the small trees in carefully. We worked hard, and soon the hill looked (6)____ (green) than before. Trees are very important (7)____ us because they clean the air. Our teacher said that protecting nature (8)____ (be) everyone's duty. By the afternoon, we (9)____ (finish) planting more than fifty trees. I felt proud (10)____ (do) something good for our city.",
+      "gblanks": [
+        { "answer": "planted", "acceptable": ["planted"], "hint": "past tense, last spring" },
+        { "answer": "was", "acceptable": ["was"], "hint": "everyone was, subject-verb" },
+        { "answer": "into", "acceptable": ["into"], "hint": "divide into" },
+        { "answer": "useful", "acceptable": ["useful"], "hint": "adjective form" },
+        { "answer": "while", "acceptable": ["while"], "hint": "at the same time" },
+        { "answer": "greener", "acceptable": ["greener"], "hint": "comparative of green" },
+        { "answer": "to", "acceptable": ["to"], "hint": "important to sb" },
+        { "answer": "is", "acceptable": ["is"], "hint": "protecting nature is, gerund subject" },
+        { "answer": "had finished", "acceptable": ["had finished", "finished"], "hint": "past perfect, by the afternoon" },
+        { "answer": "to do", "acceptable": ["to do"], "hint": "proud to do" }
+      ],
+      "explain_zh": "(1) last spring 过去 planted；(2) everyone was 主谓一致；(3) divide into；(4) 形容词 useful；(5) while 同时；(6) greener 比较级；(7) important to sb；(8) protecting nature is 动名词主语；(9) by the afternoon 过去完成 had finished；(10) proud to do。"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-15t0z1l",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "existence",
+        "ignorance",
+        "patience",
+        "experiment",
+        "valuable",
+        "enrich",
+        "dangerous",
+        "powerful",
+        "weakness",
+        "key",
+        "rarely",
+        "effectively",
+        "managed",
+        "answers",
+        "destroyed"
+      ],
+      "answers": [
+        7,
+        13,
+        0,
+        3,
+        4,
+        11,
+        12,
+        1,
+        5,
+        9
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-1765vkj",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "is reported",
+        "wander",
+        "conceived",
+        "stimulation",
+        "avoid",
+        "ignore",
+        "alternative",
+        "meaningful",
+        "responding",
+        "blocked",
+        "random",
+        "connections",
+        "signal",
+        "distraction",
+        "reap"
+      ],
+      "answers": [
+        13,
+        1,
+        10,
+        8,
+        2,
+        0,
+        14,
+        11,
+        12,
+        7
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-y5915z",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "deny",
+        "ignore",
+        "intentional",
+        "striking",
+        "permeate",
+        "abandoning",
+        "preserving",
+        "evaluate",
+        "casual",
+        "deliberate",
+        "mental",
+        "consume",
+        "excessive",
+        "contend",
+        "persistent"
+      ],
+      "answers": [
+        4,
+        9,
+        10,
+        7,
+        11,
+        14,
+        2,
+        13,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-xsw6wy",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "This constant mental juggling can lead to increased stress and reduced overall efficiency.",
+        "The brain is not wired to process multiple streams of information at the same time with equal effectiveness.",
+        "Instead, we should embrace monotasking as a more sustainable and productive approach.",
+        "Many people believe they can train themselves to become better multitaskers through practice.",
+        "For instance, a simple interruption like checking a text message can take up to 20 minutes to regain full focus.",
+        "Technology companies have designed their products to exploit our tendency to multitask.",
+        "This approach not only improves the quality of output but also enhances long-term memory retention."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-g2qxy7",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people fear that saying no will damage their relationships.",
+        "By setting clear boundaries, you actually earn respect from others.",
+        "This does not mean you should never help others, but rather be selective.",
+        "Practicing this skill in low-stakes situations can build your confidence.",
+        "However, saying no does not have to be rude or abrupt.",
+        "Without this skill, you may find yourself overwhelmed and unhappy.",
+        "Remember that every time you say yes to something, you say no to something else."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        3,
+        5
+      ]
+    }
+  }
+]

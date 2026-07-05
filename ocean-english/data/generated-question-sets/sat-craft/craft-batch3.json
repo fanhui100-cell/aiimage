@@ -1,0 +1,103 @@
+{
+  "template": "sat-craft-and-structure",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Craft and Structure items, batch 3. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "The mayor promised to address the worsening housing shortage directly, not with another round of vague speeches but with a concrete plan to build a thousand new homes within two years.",
+      "prompt": "As used in the text, what does the word 'address' most nearly mean?",
+      "options": ["deal with", "speak to a crowd", "a place where someone lives", "to write a name on an envelope"],
+      "answer": "deal with",
+      "domain": "Craft and Structure",
+      "explain_zh": "address 多义；语境为以计划应对住房短缺，取处理、应对 deal with。"
+    },
+    {
+      "passage": "The student was clearly bright, grasping in a single quiet afternoon a proof that had taken most of her classmates a full week of effort to follow.",
+      "prompt": "As used in the text, what does the word 'bright' most nearly mean?",
+      "options": ["intelligent", "giving off strong light", "vivid in color", "cheerful in mood"],
+      "answer": "intelligent",
+      "domain": "Craft and Structure",
+      "explain_zh": "bright 多义；语境为迅速理解难证明，取聪明 intelligent。"
+    },
+    {
+      "passage": "The festival's real draw turned out to be not the music at all but the night market, whose glowing food stalls pulled curious visitors from towns hours away.",
+      "prompt": "As used in the text, what does the word 'draw' most nearly mean?",
+      "options": ["an attraction", "to sketch with a pencil", "to pull a heavy cart", "a tie in a contest"],
+      "answer": "an attraction",
+      "domain": "Craft and Structure",
+      "explain_zh": "draw 多义；语境为吸引远方游客之物，取吸引人之处 an attraction。"
+    },
+    {
+      "passage": "A good editor must temper honesty with kindness, telling writers the plain truth about their work without ever crushing the fragile will to keep writing at all.",
+      "prompt": "As used in the text, what does the word 'temper' most nearly mean?",
+      "options": ["moderate", "a sudden fit of anger", "to harden metal by heating", "a person's general mood"],
+      "answer": "moderate",
+      "domain": "Craft and Structure",
+      "explain_zh": "temper 多义；语境为以善意调和坦诚，取缓和、调和 moderate。"
+    },
+    {
+      "passage": "The old wooden house, though it looked badly weathered from the road, proved structurally sound, its thick oak beams still as solid as the day they were first cut.",
+      "prompt": "As used in the text, what does the word 'sound' most nearly mean?",
+      "options": ["in good condition", "a noise that is heard", "a narrow channel of sea", "to measure the depth of water"],
+      "answer": "in good condition",
+      "domain": "Craft and Structure",
+      "explain_zh": "sound 多义；语境为结构结实，取完好、坚固 in good condition。"
+    },
+    {
+      "passage": "The photographer hoped to capture not just the dancer's pose but the fleeting energy of the leap itself, the sudden sense that she might never quite come back down to earth.",
+      "prompt": "As used in the text, what does the word 'capture' most nearly mean?",
+      "options": ["represent vividly", "take as a prisoner", "seize by sudden force", "store as computer data"],
+      "answer": "represent vividly",
+      "domain": "Craft and Structure",
+      "explain_zh": "capture 多义；语境为捕捉、表现跃动的能量，取生动呈现 represent vividly。"
+    },
+    {
+      "passage": "The lecture spends nearly a full hour carefully building a case for one elegant theory, then ends with a single quiet question that, if taken seriously, would quietly undo the entire argument just constructed.",
+      "prompt": "Which choice best describes the function of the final question?",
+      "options": ["It unsettles the very case the lecture has just built.", "It neatly summarizes the lecture's main points.", "It supplies further evidence for the theory.", "It simply thanks the audience for attending."],
+      "answer": "It unsettles the very case the lecture has just built.",
+      "domain": "Craft and Structure",
+      "explain_zh": "末句之问足以动摇全场论证，起到颠覆作用。B、C、D 与其作用不符。"
+    },
+    {
+      "passage": "Each section of the guidebook follows exactly the same pattern: a confident recommendation, followed at once by the single warning that the recommendation most needs, so that praise and caution always arrive in the same breath.",
+      "prompt": "Which choice best describes the structure of each section of the guidebook?",
+      "options": ["A recommendation is paired immediately with a relevant caution.", "Several recommendations are ranked from best to worst.", "A problem is stated and then left unresolved.", "A story slowly builds toward a surprising climax."],
+      "answer": "A recommendation is paired immediately with a relevant caution.",
+      "domain": "Craft and Structure",
+      "explain_zh": "每节都是建议紧随相关告诫，褒贬并行。B、C、D 与该固定结构不符。"
+    },
+    {
+      "passage": "The opening paragraph describes a calm, ordinary morning in unhurried detail, gently lulling the reader, so that the disaster announced abruptly in the second paragraph lands with all the more force.",
+      "prompt": "Which choice best describes the function of the detailed calm opening?",
+      "options": ["It heightens the impact of the disaster that follows.", "It explains the underlying causes of the disaster.", "It argues that the morning was entirely unimportant.", "It introduces the full cast of characters."],
+      "answer": "It heightens the impact of the disaster that follows.",
+      "domain": "Craft and Structure",
+      "explain_zh": "平静细致的开头反衬随后的灾难，使冲击更强。B、C、D 与其作用不符。"
+    },
+    {
+      "passage": "Text 1: A teacher argues that handwriting should still be taught, since the slow physical act of forming each letter helps young children remember what they are learning.\n\nText 2: A technologist counters that class time is sharply limited, and every hour spent on handwriting is an hour not spent on the digital skills today's students will actually need.",
+      "prompt": "Based on the texts, the technologist in Text 2 would most likely respond to Text 1 by",
+      "options": ["acknowledging the benefit but questioning whether it is worth the time.", "denying that handwriting has any benefit whatsoever.", "agreeing that handwriting should fully replace digital skills.", "arguing that children are unable to learn digital skills."],
+      "answer": "acknowledging the benefit but questioning whether it is worth the time.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 不否认好处，而是质疑是否值得占用有限课时。B、C、D 与其立场不符。"
+    },
+    {
+      "passage": "Text 1: A reviewer celebrates the film's very slow pace, calling it a rare invitation to sit with the characters long enough to truly come to know them.\n\nText 2: Another reviewer finds the same slowness merely tedious, a long test of patience that reveals little the first ten minutes had not already made plain.",
+      "prompt": "Based on the texts, the two reviewers disagree primarily about whether the film's slow pace is",
+      "options": ["rewarding or tedious.", "intentional or accidental.", "original or imitated.", "expensive or cheap."],
+      "answer": "rewarding or tedious.",
+      "domain": "Craft and Structure",
+      "explain_zh": "两位评论者的分歧在于慢节奏是值得回味还是冗长乏味。B、C、D 非其分歧所在。"
+    },
+    {
+      "passage": "Text 1: An architect insists that a building should announce its purpose at a single glance, so that anyone passing by instantly understands what happens inside.\n\nText 2: Another architect prefers buildings that keep a few secrets, arguing that a little mystery invites curiosity and quietly rewards those who venture in.",
+      "prompt": "Based on the texts, the two architects mainly disagree about whether a building should",
+      "options": ["reveal or conceal its purpose.", "be expensive or cheap to build.", "be very tall or quite short.", "be made of stone or of glass."],
+      "answer": "reveal or conceal its purpose.",
+      "domain": "Craft and Structure",
+      "explain_zh": "分歧在于建筑应一望而知用途，还是保留神秘。B、C、D 非其争点。"
+    }
+  ]
+}

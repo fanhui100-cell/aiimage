@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-04T13:31:20.068Z",
+  "apply": true,
+  "stage": "toefl-reading-pilot-2026-07-02",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 10,
+    "reject": 0,
+    "wrote": 2,
+    "dupSkip": 8
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data/generated-question-sets/toefl-reading-pilot-2026-07-02/toefl-academic-reading.json",
+      "template": "toefl-academic-reading",
+      "level": 6,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 2,
+      "dupSkip": 8
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The Rise and Fall of the Canal\n\nBefore the coming of the railway, moving heavy goods across land was slow, costly and often impractical. A single horse pulling a cart along a rutted road could haul perhaps two tonnes, and even that modest load slowed to a crawl in wet weather. The same horse walking beside a still waterway, however, could tow a barge carrying fifty tonnes or more. This simple fact of physics explains why, in the eighteenth century, ambitious landowners and merchants turned to artificial rivers to solve the problem of transport.\n\nThe engineered canal was not a wholly new idea. Ancient civilisations in China and Mesopotamia had cut channels for irrigation and navigation, and the Romans built waterways to drain marshes and supply their settlements. What changed in Britain was the scale of demand. The growing appetite of new factories for coal, and of expanding cities for food and building materials, created pressure that existing roads and rivers could not relieve. When a canal built for the Duke of Bridgewater opened in 1761, carrying coal from his mines to the mills of Manchester, the price of that coal in the city fell by roughly half almost overnight. The lesson was not lost on his contemporaries.\n\nWhat followed is sometimes called canal mania. Between the 1760s and the 1830s, a dense web of waterways spread across the industrial regions, funded by companies that sold shares to eager investors. Building them was formidable work. Engineers had to keep the water level nearly constant, since barges cannot climb hills, so they devised locks: chambers with gates at each end that could be flooded or drained to lift a boat from one level to the next. Where hills could not be bypassed, tunnels were bored through them, some so long that boatmen propelled their craft by lying on their backs and pushing against the roof with their feet. Aqueducts carried canals over valleys and other rivers, feats of masonry that astonished observers of the day.\n\nThe canals reshaped the places they touched. Towns grew up around junctions and wharves; industries clustered where transport was cheap and reliable. A distinctive culture emerged among the families who lived and worked aboard the narrow boats, painting their vessels with roses and castles and passing their trade from one generation to the next. For a few decades the canal was the artery of an industrialising nation.\n\nYet the very success of the system carried the seeds of its decline. Canals were slow. A laden barge moved at walking pace, and every lock meant a further delay while the chamber filled or emptied. They were also vulnerable to the weather, freezing solid in hard winters and running short of water in dry summers. When the railway arrived in the 1830s, it offered speed that no waterway could match, along with the ability to climb gradients that would have required a whole flight of locks. Freight and passengers alike deserted the canals. Many canal companies were bought outright by the railways, sometimes precisely so that a competing route could be left to decay.\n\nDecline, once begun, was difficult to reverse. As traffic fell, revenues fell with it, and there was less money to dredge silted channels or repair crumbling banks. Neglect made the canals slower and less reliable still, which drove away yet more custom. By the middle of the twentieth century much of the network had been abandoned, its locks jammed, its towpaths overgrown, its water choked with weed. It seemed that the canal had become a relic of a vanished age.\n\nThe story, however, did not end there. From the 1960s onwards, enthusiasts began to argue that the derelict waterways were worth saving, not for freight but for leisure and for the wildlife that had colonised their quiet margins. Volunteers cleared channels and rebuilt locks by hand; abandoned stretches were reopened for holiday cruising and for walkers and cyclists on the old towpaths. Property beside a restored canal often rose in value, and towns that had turned their backs on the water rediscovered it as an asset. The canal that industry had built, and then discarded, found an unexpected second life.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Canals were once vital to industry but were made obsolete by railways, before being revived for recreation.",
+            "The engineering behind canal locks and tunnels was more impressive than that of the railways.",
+            "Canal-boat families developed a distinctive culture that has survived to the present day.",
+            "The Duke of Bridgewater's canal was the single most important transport project of the eighteenth century."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, why did the opening of the Bridgewater canal in 1761 attract so much attention?",
+          "options": [
+            "It was the first artificial waterway ever built in Britain.",
+            "It roughly halved the price of coal in Manchester almost immediately.",
+            "It demonstrated a new method of building locks and tunnels.",
+            "It allowed passengers to travel more quickly than by road."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, how did some railway companies treat canals they had purchased?",
+          "options": [
+            "They upgraded them to carry heavier freight than before.",
+            "They converted them into leisure routes for holidaymakers.",
+            "They deliberately allowed some of them to fall into disrepair.",
+            "They used them to supply water to the new railway lines."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the decline of the canals was self-reinforcing because",
+          "options": [
+            "railway companies were legally required to close competing canals.",
+            "boat families abandoned the trade once painting materials became scarce.",
+            "falling traffic reduced the funds available for maintenance, which further discouraged use.",
+            "locks and aqueducts were too expensive to build in the first place."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The word 'relic' in paragraph 6 is closest in meaning to",
+          "options": [
+            "survivor from an earlier time",
+            "valuable treasure",
+            "religious object",
+            "modern invention"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's main purpose in the final paragraph?",
+          "options": [
+            "To criticise the enthusiasts who wasted money on restoration.",
+            "To argue that canals should once again be used to carry freight.",
+            "To show that the canals found a new value quite different from their original one.",
+            "To explain in detail how volunteers rebuilt the locks."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "篇目讲运河运输的兴衰与休闲复兴；覆盖主旨、细节(x2)、推断、词汇(relic)、写作意图六种题型。"
+    },
+    {
+      "passage": "The Musical Brain\n\nMusic is found in every human society that anthropologists have studied, yet it serves no obvious purpose in the way that food or shelter does. Why our species should devote so much energy to organised sound is a puzzle that has occupied thinkers since antiquity. Modern neuroscience cannot answer the question fully, but it has begun to reveal what actually happens inside the head when we listen to a melody, and the picture is surprisingly rich.\n\nOne of the first findings to emerge from brain-imaging studies was that there is no single 'music centre' in the brain. Instead, listening to even a simple tune lights up a remarkably wide network of regions. Areas that process the raw features of sound, such as pitch and rhythm, work together with regions involved in memory, movement and emotion. This distributed pattern helps to explain why music can affect us on so many levels at once: it can set the foot tapping, stir a powerful feeling and summon a vivid recollection, all within the space of a few bars.\n\nThe link between music and movement is especially striking. When people listen to a strong beat, the motor regions of the brain become active even if the listener sits perfectly still. This may be why rhythm is so hard to resist, and why music has accompanied marching, dancing and communal labour throughout history. Some researchers believe that our ability to synchronise our movements to an external beat, an ability that appears to be rare among other animals, is closely tied to the same neural machinery that allows us to coordinate our actions with other people.\n\nExpectation lies at the heart of the emotional power of music. As we listen, the brain is constantly and unconsciously predicting what will come next, drawing on the patterns it has absorbed from a lifetime of hearing the music of its own culture. A skilful composer plays with these predictions, sometimes fulfilling them and sometimes delaying or thwarting them. The moment when a long-awaited note finally arrives, or arrives in an unexpected form, is often the moment that gives us the pleasurable shiver that listeners describe as chills. In this view, our enjoyment is bound up with the interplay of anticipation and surprise.\n\nMusical training leaves visible traces on the brain. Studies comparing professional musicians with non-musicians have found differences in the size and connectivity of several regions, particularly those concerned with hearing and with fine motor control. Because the brain remains capable of change throughout life, a property known as plasticity, even people who take up an instrument in adulthood show measurable adaptations after sustained practice. Learning music, it seems, gradually reshapes the very organ that produces and perceives it.\n\nThe practical value of these discoveries is now being explored in medicine. Rhythm can help some patients with movement disorders to walk more smoothly, as though the beat supplies a timing signal that their own damaged circuits can no longer generate reliably. Familiar songs can reach people with advanced memory loss when ordinary speech no longer does, perhaps because musical memories are stored so widely across the brain that they survive when other memories fade. Such therapies are still young, and their effects vary from one person to the next, but they hint at how deeply music is woven into our mental life.\n\nNone of this fully explains why music exists at all. Some scientists regard it as a happy accident, a by-product of abilities that evolved for other reasons, such as language or the reading of emotional tones in the voice. Others suspect that making music together strengthened the bonds within early human groups, giving those groups an advantage that natural selection could act upon. The debate is far from settled. What is no longer in doubt is that music is not a trivial decoration upon human life but something that engages the brain profoundly, drawing together perception, feeling, memory and movement into a single experience.",
+      "questions": [
+        {
+          "prompt": "What is the central point the passage makes about music and the brain?",
+          "options": [
+            "Music is processed in one specialised region that scientists have recently located.",
+            "Music engages a broad network of brain systems, which explains its many effects on us.",
+            "Music is useful mainly because it can be used to treat medical conditions.",
+            "Music evolved specifically to help humans coordinate their movements."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what happens in the motor regions of the brain when a person listens to a strong beat while sitting still?",
+          "options": [
+            "They shut down to allow the listener to concentrate.",
+            "They become active despite the absence of movement.",
+            "They transfer their function to the memory regions.",
+            "They respond only if the listener has had musical training."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why can familiar songs sometimes reach people with severe memory loss?",
+          "options": [
+            "Because such patients were usually musicians earlier in life.",
+            "Because songs are simpler to understand than ordinary speech.",
+            "Because musical memories are stored widely and may survive when others fade.",
+            "Because rhythm repairs the damaged circuits in the brain."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the 'chills' listeners feel are most likely produced when",
+          "options": [
+            "the music is played at a very high volume.",
+            "the brain's predictions about the music are confirmed or cleverly broken.",
+            "the listener has received formal training on an instrument.",
+            "the same piece of music is heard many times in succession."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'plasticity' in paragraph 5 is closest in meaning to",
+          "options": [
+            "the capacity to change and adapt",
+            "the tendency to become rigid",
+            "an artificial or synthetic quality",
+            "resistance to outside influence"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude towards the question of why music exists?",
+          "options": [
+            "Certain that music evolved to strengthen social bonds.",
+            "Dismissive of scientists who study the question at all.",
+            "Cautious, presenting competing explanations as still unresolved.",
+            "Convinced that the question can never be investigated scientifically."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "篇目讲大脑如何处理音乐；覆盖主旨、细节(x2)、推断、词汇(plasticity)、作者态度六种题型。"
+    },
+    {
+      "passage": "Taming the Horse\n\nFew partnerships between humans and animals have shaped history as profoundly as that between people and horses. For thousands of years the horse carried riders and goods, drew ploughs and wagons, and thundered into battle. Yet the origins of this relationship long remained obscure, because the moment of domestication left few obvious traces in the ground. Only in recent decades, by combining archaeology with the study of ancient DNA, have researchers begun to reconstruct where and how the wild horse became the tame one.\n\nThe wild ancestors of the domestic horse once roamed in great numbers across the grasslands, or steppes, that stretch from Eastern Europe deep into Central Asia. Early humans hunted these animals for their meat long before anyone thought of riding them. The bones of horses appear in the rubbish heaps of prehistoric camps far earlier than any sign of taming, which tells us that for a long period the horse was prey rather than partner. The shift from hunting horses to keeping them was gradual and, to us, largely invisible.\n\nDeciding whether a particular ancient horse was wild or domesticated is not straightforward. A tamed animal does not look dramatically different from its wild relative, at least at first, so archaeologists must look for indirect clues. One approach examines the age and sex of the horses found at a site: a herd kept by people tends to contain a different mixture from one that has simply been hunted, because herders cull their animals selectively. Another approach searches for wear on the horses' teeth, since a bit placed in the mouth to control the animal can leave a characteristic mark. Such evidence is suggestive rather than conclusive, and scholars have argued at length over how to interpret it.\n\nGenetics has transformed the debate. By extracting and comparing DNA from horse remains of different ages and places, researchers have been able to trace the ancestry of modern horses with a precision that bones alone could never provide. The findings point to the western part of the Eurasian steppe as the region where the ancestors of nearly all domestic horses were first bred, at a date somewhat more recent than some earlier theories had proposed. From that homeland the domestic horse spread with astonishing speed, replacing other lineages across a vast area within a few centuries.\n\nWhy did this particular population spread so far and so fast? Part of the answer may lie in the animals themselves. Comparisons of ancient and modern DNA suggest that the successful lineage carried genetic variants associated with a calmer temperament and a stronger back, qualities that would have made the horses easier to handle and better suited to carrying weight. If so, the animals that people found most useful were also the ones best equipped to be bred in large numbers and traded over long distances.\n\nThe consequences of domestication reached far beyond transport. Once people could ride, the distances that a single individual might cover in a day expanded enormously, and with them the reach of trade, of ideas and of armies. Herders on horseback could manage far larger flocks across far wider territories than those on foot. Some historians argue that the mobility the horse provided helped to spread languages and technologies across the continent, knitting distant communities into wider networks of contact. The horse, in this reading, was not merely a means of getting about but an engine of cultural change.\n\nMuch remains uncertain, and each new discovery tends to revise the picture rather than complete it. Fresh samples of ancient DNA and newly excavated sites continue to sharpen, and sometimes overturn, earlier conclusions. What is clear is that the taming of the horse was one of the pivotal events of prehistory, an achievement whose effects rippled outward for millennia and can still be felt in the shape of the world today.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Ancient DNA has proved that horses were first tamed in Central Asia for use in warfare.",
+            "New scientific methods have clarified where and how horses were domesticated, an event with wide consequences.",
+            "Horses were more important to prehistoric people as a source of meat than as a means of transport.",
+            "Archaeologists disagree so sharply about horses that no firm conclusions are possible."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what does the presence of horse bones in early rubbish heaps indicate?",
+          "options": [
+            "That horses were being ridden earlier than once thought.",
+            "That people kept horses in large managed herds.",
+            "That for a long time horses were hunted rather than tamed.",
+            "That the earliest domestic horses came from Eastern Europe."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, why can wear on a horse's teeth serve as a clue about domestication?",
+          "options": [
+            "Because tamed horses were fed a softer diet than wild ones.",
+            "Because a bit used to control the animal can leave a distinctive mark.",
+            "Because domestic horses lived longer and so wore down their teeth more.",
+            "Because the age of a horse can only be judged from its teeth."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the domestic lineage spread so rapidly partly because",
+          "options": [
+            "all rival horse populations had already died out.",
+            "it possessed traits that made the animals both easier to handle and easier to breed and trade.",
+            "early peoples deliberately destroyed wild herds to protect their own.",
+            "the western steppe had a climate unsuitable for other lineages."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'cull' in paragraph 3 is closest in meaning to",
+          "options": [
+            "selectively remove certain animals from",
+            "feed and care for",
+            "count carefully",
+            "release into the wild"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the writer describe the horse as 'an engine of cultural change' in paragraph 6?",
+          "options": [
+            "To emphasise that horses were mainly used to power machinery.",
+            "To stress that the horse's impact went well beyond transport, spreading ideas and connecting peoples.",
+            "To suggest that horses were more important than any human invention.",
+            "To argue that cultural change would have been impossible without warfare."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "篇目讲马的驯化及其影响；覆盖主旨、细节(x2)、推断、词汇(cull)、写作意图六种题型。"
+    },
+    {
+      "passage": "Farming Upwards\n\nAs the world's population grows and more of it moves into cities, feeding everyone poses a mounting challenge. Traditional agriculture demands enormous areas of land and vast quantities of water, and it often lies far from the mouths it feeds, so that food must be transported over long distances before it reaches a plate. One response to these pressures is an idea that turns the ordinary picture of a farm on its head: instead of spreading crops out across the countryside, why not stack them upwards inside the city itself? This is the promise of vertical farming.\n\nA vertical farm grows plants in layers, one above another, inside a controlled indoor environment. Rather than relying on sunlight and soil, such farms typically use energy-efficient lamps tuned to the wavelengths that plants use most effectively, and they feed the roots with a nutrient solution rather than earth. Because every condition, from temperature to humidity to the concentration of nutrients, can be adjusted precisely, growers can create an ideal climate for their crops regardless of the weather outside. A building in a cold and cloudy city can, in principle, produce fresh salad leaves every day of the year.\n\nThe potential advantages are considerable. A vertical farm uses a fraction of the water that a conventional field requires, because the water that plants do not absorb can be captured and recirculated rather than draining away into the ground. Growing indoors also removes the need for the chemical sprays used to fight pests and weeds in open fields, since the sealed environment keeps most intruders out. Perhaps most importantly, a farm inside a city sits close to its customers, so produce can be harvested and sold within hours, arriving fresher and travelling only a short distance. Land, too, is used intensively: a stack of ten growing layers can in theory yield as much as ten fields of the same footprint.\n\nYet the obstacles are real, and the greatest of them is energy. The lamps that replace the sun must run for many hours a day, and running them consumes a great deal of electricity. If that electricity is generated by burning fossil fuels, the environmental benefit of saving water and land may be cancelled out, or worse, by the carbon released to keep the lights on. Critics point out that sunlight, whatever its inconveniences, is free, whereas artificial light is not. The economics are correspondingly demanding: the buildings, equipment and power are expensive, and a vertical farm must command a good price for its produce to cover these costs.\n\nThese constraints help to explain why vertical farms today concentrate on a narrow range of crops. Leafy greens and herbs are ideal candidates, because they grow quickly, are light, contain little inedible material and can be sold fresh at a premium. Staple crops such as wheat and rice are quite another matter. They demand far more light and space for each unit of food they yield, and they are cheap to buy, so growing them indoors under lamps would make no economic sense with current technology. For the foreseeable future, then, vertical farms are likely to supplement conventional agriculture rather than to replace it.\n\nSupporters argue that the technology is still young and that its costs will fall as it matures, much as the costs of other new technologies have done. Cheaper and more efficient lamps, smarter systems for controlling the growing environment, and above all a shift towards low-carbon electricity could gradually widen the range of crops that can be grown profitably and cleanly. If those conditions are met, they suggest, vertical farms might one day form a routine part of the urban landscape, tucked into disused warehouses, basements and the upper floors of buildings.\n\nWhether that vision is realised will depend as much on the price of clean energy as on advances in farming itself. For now, vertical farming is neither the miracle its most enthusiastic promoters proclaim nor the folly its harshest critics dismiss. It is a genuine tool with genuine limits, one option among several for making the food system of a crowded and warming world more secure.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Vertical farming will soon replace all conventional agriculture in cities.",
+            "Vertical farming offers real benefits but faces serious limits, especially over energy, so it is best seen as a complement to traditional farming.",
+            "Vertical farming is a failed idea that wastes electricity for no useful return.",
+            "Vertical farming is chiefly valuable because it can grow staple crops such as wheat and rice."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, how does a vertical farm reduce its water use compared with a conventional field?",
+          "options": [
+            "By growing only crops that need very little water.",
+            "By capturing and recirculating water that the plants do not absorb.",
+            "By collecting rainwater from the roof of the building.",
+            "By using a nutrient solution that contains no water at all."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, why are leafy greens and herbs well suited to vertical farming?",
+          "options": [
+            "They can be stored for long periods before being sold.",
+            "They require more light per unit of food than staple crops.",
+            "They grow quickly, are light, and can be sold fresh at a premium.",
+            "They are the only plants that can grow without soil."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the environmental value of a vertical farm depends heavily on",
+          "options": [
+            "how close the farm is to the nearest conventional field.",
+            "whether the electricity powering its lamps comes from clean or fossil-fuel sources.",
+            "the number of growing layers stacked inside the building.",
+            "whether the farm chooses to grow herbs or leafy greens."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'intensively' in paragraph 3 is closest in meaning to",
+          "options": [
+            "in a way that produces much from a small area",
+            "in a careless and wasteful manner",
+            "over a very long period of time",
+            "with the help of many workers"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's overall attitude towards vertical farming, as expressed in the final paragraph?",
+          "options": [
+            "Wholly enthusiastic, seeing it as the solution to world hunger.",
+            "Entirely dismissive, regarding it as an expensive mistake.",
+            "Balanced, treating it as a useful but limited tool among several options.",
+            "Indifferent, considering the outcome impossible to predict at all."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "篇目讲城市垂直农业的利弊；覆盖主旨、细节(x2)、推断、词汇(intensively)、作者态度六种题型。"
+    },
+    {
+      "passage": "Sleep and the Making of Memory\n\nWe spend roughly a third of our lives asleep, a fact that once seemed to demand an apology. Sleep looks, from the outside, like wasted time: an animal that is asleep cannot hunt, cannot guard against danger and cannot reproduce. For an activity so apparently costly to have survived the pressures of evolution, it must serve some purpose important enough to outweigh the risks. One of the most compelling answers to emerge from modern research is that sleep is essential for learning and, in particular, for the fixing of new memories.\n\nWhen we first encounter something new, whether a fact, a face or a physical skill, the memory of it is at first fragile and easily lost. Over time, if it is to last, it must be strengthened and integrated with what we already know, a process that scientists call consolidation. A growing body of evidence indicates that much of this work takes place while we sleep. In experiments, people who are allowed to sleep after learning a task tend to remember it better than those who stay awake for the same interval, even when the total time is carefully matched.\n\nSleep is not a single uniform state but a cycle of distinct stages that repeat through the night. Broadly, these fall into deep, slow-wave sleep and the lighter phase associated with dreaming. Different kinds of memory appear to benefit from different stages. Deep sleep seems especially important for memories of facts and events, while the dreaming phase has been linked to emotional memories and to certain kinds of skill. This division of labour suggests that a full night's sleep, passing through all the stages in turn, may do more for memory than the same number of hours snatched in fragments.\n\nHow might sleep accomplish this? One influential idea is that during deep sleep the brain replays the patterns of activity that occurred during waking experience. Recordings from animals show that the same groups of cells that fired as an animal explored a maze fire again, in the same order but greatly speeded up, while the animal sleeps. This replay is thought to help transfer memories from a temporary store, where they are first laid down, to more durable storage elsewhere in the brain, rather like copying a file from a crowded desktop into long-term archives. Freed of the day's accumulated information, the temporary store is ready to record afresh the following day.\n\nSleep may also help by doing the opposite of strengthening, namely by weakening. According to one theory, the connections between brain cells grow steadily stronger during the day as we take in new information, until they risk becoming saturated. Sleep, on this view, scales these connections back down overall, while preserving the relative differences between them. The most important memories survive the pruning, while trivial ones are trimmed away, so that the brain wakes refreshed and with its capacity to learn restored. Strengthening the useful and discarding the useless may be two sides of the same nightly process.\n\nThe practical implications are sobering, particularly for students who sacrifice sleep in order to study. Staying awake through the night before an examination may allow a few more hours of revision, but it deprives the brain of exactly the state in which what has been learned would be made secure. Research consistently suggests that a person who studies and then sleeps will, on average, retain more than one who studies and then goes without sleep. The all-night cramming session, a familiar ritual of student life, may be among the least efficient ways to prepare.\n\nMuch about sleep remains mysterious, and scientists are careful not to claim that memory is its only function; sleep also plays roles in mood, in the immune system and in the clearing of waste products from the brain. But the once-puzzling insistence of the body on so many hours of unconsciousness looks less strange in the light of these findings. Far from being lost time, sleep appears to be when a great deal of the brain's most important work is quietly done.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Sleep is a single uniform state that mainly serves to rest the muscles.",
+            "Sleep, though it looks like wasted time, plays a crucial role in strengthening and organising memory.",
+            "Students should sleep more because it improves their mood and immune system.",
+            "Dreaming is the most important stage of sleep for all types of memory."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what does research suggest about people who sleep after learning a task?",
+          "options": [
+            "They tend to remember it better than those who stay awake for the same period.",
+            "They forget it more quickly than those who remain awake.",
+            "They remember it only if the task involved a physical skill.",
+            "They show no measurable difference from those who stay awake."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what happens during the 'replay' observed in sleeping animals?",
+          "options": [
+            "The brain invents entirely new patterns of activity unrelated to the day.",
+            "Cells that fired during waking experience fire again in the same order but faster.",
+            "The animal physically repeats the movements it made while awake.",
+            "The temporary memory store is permanently emptied of all information."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred from the passage that sleeping in short, broken fragments would be less beneficial for memory than a full night's sleep because",
+          "options": [
+            "fragmented sleep prevents the brain from replaying any memories at all.",
+            "different memory types depend on different stages, which a full cycle passes through in turn.",
+            "short naps strengthen only emotional memories and nothing else.",
+            "the brain can consolidate memories only during the very first hour of sleep."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'saturated' in paragraph 5 is closest in meaning to",
+          "options": [
+            "filled to the point where no more can be taken in",
+            "damaged beyond any repair",
+            "completely emptied out",
+            "divided into separate parts"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's main purpose in discussing all-night study sessions in paragraph 6?",
+          "options": [
+            "To recommend cramming as an efficient way to prepare for exams.",
+            "To show how the research findings apply to a familiar real-life decision.",
+            "To prove that students never benefit from any form of revision.",
+            "To argue that examinations should be abolished altogether."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "篇目讲睡眠与记忆巩固的科学；覆盖主旨、细节(x2)、推断、词汇(saturated)、写作意图六种题型。"
+    }
+  ]
+}

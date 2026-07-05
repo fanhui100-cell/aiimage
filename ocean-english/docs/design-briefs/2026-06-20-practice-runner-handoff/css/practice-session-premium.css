@@ -1,0 +1,123 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   practice-session-premium.css  ·  Phase 5 视觉升级「回灌」层
+   ───────────────────────────────────────────────────────────────────────────
+   纯叠加（additive overlay）。在 LexiverseQuizClient / PracticeRunner 里于
+   现有 import './practice-session.css' 之后再 import './practice-session-premium.css'。
+   只升级既有 .pr-v2 class 的观感，不改任何 class 名、不改 DOM 结构 → 零行为风险。
+   令牌全部沿用 globals :root（teal/paper/ink/line/gold/rose/font-*）。
+   桌面两栏「任务栏」是结构性改动（需新增 markup）→ 见文件末 §RAIL，默认不启用。
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── 局部令牌（仅作用域内新增，不污染全局）────────────────────────────────── */
+.pr-v2{
+  --teal-deep:#0a6e5f;
+  --elev-1:0 1px 0 rgba(255,255,255,.7) inset, 0 1px 2px rgba(20,30,40,.04), 0 8px 24px -16px rgba(20,30,40,.22);
+  --elev-2:0 1px 0 rgba(255,255,255,.8) inset, 0 2px 8px rgba(20,30,40,.05), 0 26px 60px -30px rgba(20,30,40,.34);
+  --teal-glow:0 0 0 1px rgba(14,140,122,.18), 0 10px 30px -12px rgba(14,140,122,.32);
+  /* 纸面光晕 + 极淡噪点（替换原 background:var(--paper)） */
+  background:
+    radial-gradient(1100px 560px at 50% -8%, #fdfbf6 0%, rgba(253,251,246,0) 62%),
+    radial-gradient(900px 700px at 92% 8%, rgba(14,140,122,.06) 0%, rgba(14,140,122,0) 55%),
+    radial-gradient(820px 620px at 4% 96%, rgba(179,120,31,.05) 0%, rgba(179,120,31,0) 55%),
+    var(--paper);
+}
+
+@keyframes pr-sweep{ from{transform:translateX(-100%)} to{transform:translateX(100%)} }
+
+/* ── 进度条：青绿渐变 + 流光 ─────────────────────────────────────────────── */
+.pr-v2 .pbar{ height:8px; background:var(--paper-2); box-shadow:inset 0 1px 2px rgba(20,30,40,.06); }
+.pr-v2 .pbar i{ background:linear-gradient(90deg,var(--teal-deep),var(--teal-ink)); }
+.pr-v2 .pbar i::after{ content:""; position:absolute; inset:0; border-radius:99px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent); animation:pr-sweep 1.8s linear infinite; }
+
+/* ── 题干卡：渐变发丝边 + 顶部柔光 + 大字编辑感 + teal 下划线 ─────────────── */
+.pr-v2 .prompt{ position:relative; padding:38px 30px; border-radius:24px; min-height:150px; gap:6px;
+  background:radial-gradient(120% 120% at 50% 0%, rgba(14,140,122,.05), rgba(14,140,122,0) 60%), var(--card-2);
+  box-shadow:var(--elev-1); }
+.pr-v2 .prompt::after{ content:""; position:absolute; inset:0; border-radius:24px; padding:1px; pointer-events:none;
+  background:linear-gradient(155deg, rgba(14,140,122,.34), rgba(20,30,40,.06) 42%, rgba(20,30,40,.04));
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; }
+.pr-v2 .prompt .word{ font-size:clamp(40px, 5vw, 52px); position:relative; }
+.pr-v2 .prompt .word::after{ content:""; display:block; width:42px; height:3px; border-radius:3px; margin:14px auto 0;
+  background:linear-gradient(90deg,var(--teal-ink),var(--teal-deep)); opacity:.85; }
+.pr-v2 .prompt .zh{ font-size:clamp(26px, 3.4vw, 30px); }
+.pr-v2 .prompt .cloze{ font-size:22px; line-height:1.7; }
+.pr-v2 .prompt .blank{ min-width:78px; border-bottom-width:2.5px; }
+
+/* ── eyebrow：加一根渐隐分割线（纯样式，不需要新 DOM；用 ::after）─────────── */
+.pr-v2 .eyebrow{ margin-bottom:20px; }
+.pr-v2 .eyebrow .tag{ padding:5px 11px; }
+.pr-v2 .eyebrow::after{ content:""; flex:1; height:1px; background:linear-gradient(90deg, var(--line-strong), transparent); }
+
+/* ── 选项：层次 + hover 光泽扫过 + 选中发光 ───────────────────────────────── */
+.pr-v2 .opts{ gap:13px; }
+.pr-v2 .opt{ padding:17px 16px; border-radius:16px; min-height:62px; gap:12px; overflow:hidden; box-shadow:var(--elev-1); background:var(--card-2); }
+.pr-v2 .opt::before{ content:""; position:absolute; inset:0; transform:translateX(-120%); transition:transform .5s var(--ease);
+  background:linear-gradient(115deg, transparent 30%, rgba(14,140,122,.08) 50%, transparent 70%); }
+.pr-v2 .opt:hover:not(.locked){ transform:translateY(-3px); border-color:color-mix(in srgb,var(--teal-ink) 40%, var(--line)); box-shadow:var(--teal-glow); }
+.pr-v2 .opt:hover:not(.locked)::before{ transform:translateX(120%); }
+.pr-v2 .opt .key{ width:24px; height:24px; border-radius:8px; }
+.pr-v2 .opt.correct{ box-shadow:var(--teal-glow); }
+/* 作答后未选中项淡出，聚焦正解/错选（需组件给非选中项加既有 .locked 即可，无需新 class；
+   如需更强引导，可加 .dimmed，此处提供样式） */
+.pr-v2 .opt.locked:not(.correct):not(.wrong){ opacity:.55; }
+
+/* ── 拼写：更厚的输入 + 4px 聚焦环 ───────────────────────────────────────── */
+.pr-v2 .lg-input{ padding:17px 20px; border-radius:16px; font-size:20px; box-shadow:var(--elev-1); }
+.pr-v2 .lg-input:focus{ box-shadow:0 0 0 4px var(--teal-bg), var(--elev-1); }
+.pr-v2 .lg-input.tol{ box-shadow:0 0 0 4px var(--gold-bg), var(--elev-1); }
+.pr-v2 .lg-input.bad{ box-shadow:0 0 0 4px var(--rose-bg), var(--elev-1); }
+.pr-v2 .lg-input.good{ box-shadow:0 0 0 4px var(--teal-bg), var(--elev-1); }
+
+/* ── 反馈卡：平滑入场（替换原 display 切换的硬跳；保留 .show 触发）─────────── */
+.pr-v2 .feedback{ border-radius:16px; }
+.pr-v2 .feedback.show{ animation:pr-fbUp .34s var(--ease); }
+@keyframes pr-fbUp{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+
+/* ── 主 CTA：更深的青绿投影 ──────────────────────────────────────────────── */
+.pr-v2 .cta{ padding:16px 22px; box-shadow:0 12px 26px -14px rgba(79,230,206,.75); }
+.pr-v2 .cta:hover{ box-shadow:0 16px 32px -14px rgba(79,230,206,.85); }
+
+/* ── 结算：更大的环 + bento 投影 ─────────────────────────────────────────── */
+.pr-v2 .res-hero .ring{ width:148px; height:148px; }
+.pr-v2 .res-hero .ring .pct b{ font-size:40px; }
+.pr-v2 .res-stat{ border-radius:16px; box-shadow:var(--elev-1); }
+.pr-v2 .res-stat b{ font-size:24px; }
+.pr-v2 .wrongbook{ border-radius:16px; }
+
+/* 结算环描边动画（组件把 strokeDashoffset 初值设为整圈 C，挂载后再设到目标值即可；
+   这里给 transition 让它「画」出来。需在组件里加 className="pr-ring" 到那个 <circle>） */
+.pr-v2 .pr-ring{ transition:stroke-dashoffset 1s var(--ease); }
+
+/* ── 移动端收敛大字号，避免溢出 ─────────────────────────────────────────── */
+@media (max-width:560px){
+  .pr-v2 .prompt{ padding:30px 22px; border-radius:20px; }
+  .pr-v2 .prompt .word{ font-size:42px; }
+}
+@media (prefers-reduced-motion:reduce){
+  .pr-v2 .pbar i::after{ animation:none; }
+  .pr-v2 .feedback.show{ animation:none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   §RAIL · 桌面两栏「任务栏」布局（可选 · 需新增 markup，非纯 CSS）
+   ───────────────────────────────────────────────────────────────────────────
+   默认不启用。启用时：把 PracticeFrame 的外层 <main class="pr-v2"> 升级为
+   <main class="pr-v2 has-rail">，并在 .pr-app 之外、左侧渲染 <aside class="pr-rail">…</aside>。
+   .pr-rail 内容建议：当前练习 pill / 等级 / 来源 / 进度点阵 / 得分·连击·正确率·XP 四宫格。
+   ≥980px 显示两栏，<980px 自动回落为现有单栏（侧栏 display:none，连击/分数留在 topbar）。
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (min-width:980px){
+  .pr-v2.has-rail .pr-app{ max-width:none; display:grid; grid-template-columns:332px minmax(0,640px);
+    gap:30px; justify-content:center; align-items:start; padding:26px 28px; }
+  .pr-v2.has-rail .pr-rail{ position:sticky; top:26px; display:flex; flex-direction:column; gap:16px; }
+  /* topbar/qbody/qfoot 归到第 2 栏 —— 用一个包裹层 .pr-stage 收纳它们（组件需补这层 div） */
+  .pr-v2.has-rail .pr-stage{ grid-column:2; min-width:0; border-radius:26px; background:var(--card);
+    border:1px solid var(--line); box-shadow:var(--elev-2); overflow:hidden; }
+}
+.pr-v2 .pr-rail{ display:none; }   /* 桌面媒体查询里再打开；移动端永远隐藏 */
+.pr-v2 .pr-panel{ position:relative; border-radius:22px; padding:22px; background:var(--card); border:1px solid var(--line); box-shadow:var(--elev-1); }
+.pr-v2 .pr-panel::after{ content:""; position:absolute; inset:0; border-radius:22px; padding:1px; pointer-events:none;
+  background:linear-gradient(150deg, rgba(14,140,122,.34), rgba(20,30,40,.05) 42%, rgba(20,30,40,.04));
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; }

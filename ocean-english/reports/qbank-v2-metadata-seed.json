@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-07-04T20:25:50.800Z",
+  "apply": true,
+  "plan": {
+    "examSpecs": 8,
+    "examSections": 42,
+    "taskTemplates": 33,
+    "rubrics": 12,
+    "templateIds": [
+      "cet-banked-cloze",
+      "cet-para-match",
+      "cet6-listening-mcq",
+      "cet6-reading-mcq",
+      "gaokao-cloze-passage",
+      "gaokao-grammar-fill",
+      "gaokao-listening-mcq",
+      "gaokao-reading-mcq",
+      "gaokao-seven-select",
+      "ielts-academic-reading-mcq",
+      "kaoyan-cloze-passage",
+      "kaoyan-reading-b",
+      "kaoyan-reading-mcq",
+      "reading-comprehension-mcq",
+      "sat-craft-and-structure",
+      "sat-expression-of-ideas",
+      "sat-information-and-ideas",
+      "sat-rw-domains",
+      "sat-standard-english-conventions",
+      "toefl-academic-discussion",
+      "toefl-academic-reading",
+      "toefl-build-a-sentence",
+      "toefl-choose-a-response",
+      "toefl-complete-the-words",
+      "toefl-email-writing",
+      "toefl-four-skills",
+      "toefl-interview-speaking",
+      "toefl-listen-and-repeat",
+      "toefl-listening-mcq",
+      "toefl-read-daily-life",
+      "zhongkao-cloze-passage",
+      "zhongkao-grammar-fill",
+      "zhongkao-listening-mcq"
+    ],
+    "rubricKeys": [
+      "zhongkao:writing",
+      "gaokao:writing",
+      "cet4:writing",
+      "cet4:translation",
+      "cet6:writing",
+      "cet6:translation",
+      "kaoyan:writing",
+      "kaoyan:translation",
+      "toefl:writing",
+      "toefl:speaking",
+      "ielts:writing",
+      "ielts:speaking"
+    ]
+  },
+  "rubricResult": {
+    "inserted": 2,
+    "updated": 10
+  }
+}

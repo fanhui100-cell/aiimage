@@ -1,0 +1,160 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Last weekend our school held a big sports meeting. The weather was sunny, and all the students felt (1)____ (excite). My best friend Lucy and I (2)____ (take) part in the long jump together. Before the game, we (3)____ practised hard every day. When the game began, Lucy jumped (4)____ (far) than me, so she won first place. I was a little sad, but she said, \"Don't worry. You did your best, (5)____ that is the most important thing.\" Her words made me (6)____ (feel) much better. After the meeting, we walked home (7)____ the warm sunlight. I think a sports meeting is not only (8)____ winning. It also teaches us about friendship (9)____ teamwork. I am really looking forward to (10)____ (join) it again next year.",
+      "gblanks": [
+        {
+          "answer": "excited",
+          "acceptable": [
+            "excited"
+          ],
+          "hint": "adjective ending in -ed (people's feelings)"
+        },
+        {
+          "answer": "took",
+          "acceptable": [
+            "took"
+          ],
+          "hint": "past tense"
+        },
+        {
+          "answer": "had",
+          "acceptable": [
+            "had"
+          ],
+          "hint": "auxiliary verb for the past perfect (an action completed before the game)"
+        },
+        {
+          "answer": "farther",
+          "acceptable": [
+            "farther",
+            "further"
+          ],
+          "hint": "comparative"
+        },
+        {
+          "answer": "and",
+          "acceptable": [
+            "and"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "feel",
+          "acceptable": [
+            "feel"
+          ],
+          "hint": "base form after 'made me'"
+        },
+        {
+          "answer": "in",
+          "acceptable": [
+            "in"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "about",
+          "acceptable": [
+            "about"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "and",
+          "acceptable": [
+            "and"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "joining",
+          "acceptable": [
+            "joining"
+          ],
+          "hint": "gerund after 'looking forward to'"
+        }
+      ],
+      "explain_zh": "本文围绕学校运动会展开。第1空 excite 变形容词 excited 表示人的感受；第2空 take 用一般过去时 took；第3空填助动词 had 构成过去完成时 had practised；第4空 far 用比较级 farther/further；第5空用并列连词 and；第6空 make sb. do 后接动词原形 feel；第7空 in the sunlight 固定搭配；第8空 be about 表示“关于”；第9空用并列连词 and 连接 friendship 与 teamwork；第10空 look forward to 后接动名词 joining。"
+    },
+    {
+      "passage": "The Spring Festival is the (1)____ (great) festival in China. Every year my family (2)____ (clean) the house carefully before it comes. We believe this can bring us good luck (3)____ the new year. On New Year's Eve, my grandmother always cooks a big dinner (4)____ us. The dumplings she makes are (5)____ (delicious) than any other food in the world. After dinner, my cousins and I (6)____ (watch) the special TV show together while my parents chat happily. At midnight, the sky becomes bright (7)____ colourful fireworks. Children love this festival because they can get red packets (8)____ their relatives. My little brother is too young, so he often (9)____ (forget) to say thank you. The Spring Festival makes (10)____ feel that family is the warmest place in the world.",
+      "gblanks": [
+        {
+          "answer": "greatest",
+          "acceptable": [
+            "greatest"
+          ],
+          "hint": "superlative"
+        },
+        {
+          "answer": "cleans",
+          "acceptable": [
+            "cleans"
+          ],
+          "hint": "third person singular, present tense"
+        },
+        {
+          "answer": "in",
+          "acceptable": [
+            "in",
+            "for"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "for",
+          "acceptable": [
+            "for"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "more delicious",
+          "acceptable": [
+            "more delicious"
+          ],
+          "hint": "comparative of a long adjective"
+        },
+        {
+          "answer": "watch",
+          "acceptable": [
+            "watch"
+          ],
+          "hint": "present tense, plural subject"
+        },
+        {
+          "answer": "with",
+          "acceptable": [
+            "with"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "from",
+          "acceptable": [
+            "from"
+          ],
+          "hint": ""
+        },
+        {
+          "answer": "forgets",
+          "acceptable": [
+            "forgets"
+          ],
+          "hint": "third person singular, present tense"
+        },
+        {
+          "answer": "us",
+          "acceptable": [
+            "us"
+          ],
+          "hint": "object pronoun after 'makes'"
+        }
+      ],
+      "explain_zh": "本文介绍中国春节。第1空 great 用最高级 greatest，前有 the；第2空主语 my family 视为单数，用一般现在时第三人称单数 cleans；第3空 in（或 for）the new year 表示时间；第4空 cook ... for sb. 表示“为某人做”；第5空 delicious 是长形容词，比较级用 more delicious；第6空主语 my cousins and I 为复数，用动词原形 watch；第7空 with 表示“伴随、用”；第8空 get ... from sb. 表示“从某人处得到”；第9空主语 my little brother 第三人称单数，用 forgets；第10空 make sb. do 中 sb. 用宾格 us。"
+    }
+  ]
+}

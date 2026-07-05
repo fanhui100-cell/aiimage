@@ -1,0 +1,25 @@
+{
+  "templateId": "toefl-interview-speaking",
+  "examIds": ["toefl"],
+  "taskType": "interview_speaking",
+  "skill": "speaking",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL 2026『访谈口语』原创问题：一个开放式个人/观点类访谈问题（贴近日常：经历/偏好/看法/计划，10-40 词），考生听后口头作答；referencePoints 给出好答案可覆盖的要点，rubric 评内容/流利/语言。Claude 亲撰，neutral US，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": { "kind": "speech" },
+  "itemCount": 1,
+  "optionCount": 0,
+  "answerSchema": { "shape": "speak_prompt" },
+  "subskills": ["fluency", "coherence", "vocabulary", "task_response"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "script 为一个开放式访谈问题，10-40 词，自然口语",
+    "问题可由考生凭个人经验作答，无需专业背景",
+    "referencePoints 给 2-4 个好答案要点（参考，非唯一）",
+    "neutral US，适合 ~6-15 秒音频",
+    "input_mode=speak，rubric 评分（非客观判分）",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

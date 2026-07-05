@@ -1,0 +1,528 @@
+{
+  "examId": "toefl",
+  "level": 6,
+  "skill": "writing",
+  "taskType": "email_writing",
+  "tasks": [
+    {
+      "category": "lost and found, item claim",
+      "prompt": "You left your laptop in a lecture hall after your morning class and believe it may have been handed in to the campus Lost and Found office. Write an email to the Lost and Found office. In your email, describe the laptop and where you think you left it, ask whether it has been turned in, and explain how and when you can come to collect it.",
+      "promptZh": "你把笔记本电脑落在教室，写信给失物招领处描述物品与遗失地点、询问是否已被上交、并说明何时前来领取。",
+      "referencePoints": [
+        "语域：写给学校失物招领办公室，用礼貌正式的语气与恰当称呼（如 Dear Lost and Found Office）。",
+        "任务完成度：须完成三个动作——描述电脑外观与遗失地点、询问是否已被上交、说明领取的时间与方式。",
+        "组织连贯：按情况说明—询问—领取安排顺序展开，段落过渡自然。",
+        "语法准确：正确使用过去时叙述遗失经过与情态动词表达请求。",
+        "词汇得体：准确使用 lost and found、hand in、collect、describe 等相关词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "recreation center, locker rental",
+      "prompt": "You want to rent a personal locker for the semester at the campus recreation center so you can store your gym gear. Write an email to the recreation center front desk. In your email, request a semester-long locker, ask about the rental fee and how to pay, and ask where to pick up the key or lock.",
+      "promptZh": "你想在校园健身中心租一个学期的储物柜，写信给前台申请租柜、询问费用与付款方式、并问在哪里领取钥匙或锁。",
+      "referencePoints": [
+        "语域：写给健身中心前台服务人员，语气礼貌友好且清晰。",
+        "任务完成度：须完成三个动作——申请一个学期的储物柜、询问租金与付款方式、询问领取钥匙或锁的地点。",
+        "组织连贯：请求—费用—领取三部分层次清楚。",
+        "语法准确：疑问句结构与情态动词（could/would）使用正确。",
+        "词汇得体：恰当使用 rent、locker、rental fee、semester-long 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "IT print services, refund request",
+      "prompt": "The campus printer charged money to your print account, but it jammed and produced no usable pages. Write an email to the IT print services team. In your email, explain what happened, request a refund of the amount charged, and ask what information they need from you to process it.",
+      "promptZh": "校园打印机扣了费却因卡纸没打出可用页面，写信给IT打印服务说明情况、申请退款、并询问需要提供哪些信息。",
+      "referencePoints": [
+        "语域：写给IT打印服务团队，语气礼貌、就事论事。",
+        "任务完成度：须完成三个动作——说明扣费与卡纸经过、申请退回被扣金额、询问办理退款所需信息。",
+        "组织连贯：问题—诉求—后续所需信息顺序清楚。",
+        "语法准确：过去时叙述故障、现在时提出请求，时态一致。",
+        "词汇得体：准确使用 charge、refund、jam、print account 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "scholarship office, interview scheduling",
+      "prompt": "You have been invited to a scholarship interview, but the assigned time clashes with a required class. Write an email to the scholarship committee coordinator. In your email, thank them for the interview invitation, explain the scheduling conflict, and ask whether the interview can be moved to another time you are available.",
+      "promptZh": "你收到奖学金面试邀请但时间与必修课冲突，写信给奖学金委员会协调员致谢、说明冲突、并请求改到你有空的时间。",
+      "referencePoints": [
+        "语域：写给奖学金委员会协调员，语气正式、感激且专业。",
+        "任务完成度：须完成三个动作——感谢面试邀请、说明时间冲突、请求改期并提供可行时间。",
+        "组织连贯：致谢—说明冲突—提出改期请求，逻辑连贯。",
+        "语法准确：正确使用情态动词与条件/让步结构表达委婉请求。",
+        "词汇得体：恰当使用 interview、scheduling conflict、reschedule、availability 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "graduate studies office, travel funding",
+      "prompt": "You have been accepted to present your work at an academic conference in another city and want to apply for departmental travel funding. Write an email to the graduate studies funding office. In your email, state that your paper was accepted and give the conference name and dates, ask how to apply for travel funding, and ask what expenses the funding can cover.",
+      "promptZh": "你的论文被外地学术会议接收，想申请院系差旅资助，写信给研究生资助办公室说明接收情况、询问申请方式、并问资助可覆盖哪些费用。",
+      "referencePoints": [
+        "语域：写给研究生资助办公室，语气正式、条理清楚。",
+        "任务完成度：须完成三个动作——说明论文被接收及会议名称与日期、询问差旅资助申请方式、询问可报销的费用范围。",
+        "组织连贯：背景—申请方式—费用范围层层推进。",
+        "语法准确：被动语态（was accepted）与疑问句使用准确。",
+        "词汇得体：准确使用 conference、present、travel funding、cover expenses 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "health and safety office, training makeup",
+      "prompt": "You missed the mandatory laboratory safety training session that all students must complete before using the lab. Write an email to the Environmental Health and Safety office. In your email, explain that you missed the required session, ask when the next session is offered, and ask whether there is an online option you could complete instead.",
+      "promptZh": "你错过了进实验室前必须完成的安全培训，写信给环境健康与安全办公室说明缺席、询问下一场时间、并问是否有线上替代方式。",
+      "referencePoints": [
+        "语域：写给环境健康与安全办公室，语气正式、负责。",
+        "任务完成度：须完成三个动作——说明错过强制安全培训、询问下一场次时间、询问是否有可完成的线上选项。",
+        "组织连贯：情况—询问下一场—询问替代方式顺序清楚。",
+        "语法准确：现在完成时/过去时叙述缺席与情态动词提问准确。",
+        "词汇得体：恰当使用 mandatory、safety training、session、online option 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "bookstore, textbook rental extension",
+      "prompt": "You rented a textbook from the campus bookstore, but the return date is approaching and you still need it for your final exam. Write an email to the bookstore rental desk. In your email, give your rental details, request an extension until after your final exam, and ask whether any extra fee applies.",
+      "promptZh": "你从校园书店租的教材快到期但期末考试还要用，写信给书店租赁处提供租借信息、申请延期到考试后、并询问是否加收费用。",
+      "referencePoints": [
+        "语域：写给书店租赁服务处，语气礼貌、清晰。",
+        "任务完成度：须完成三个动作——提供租借信息、申请延期至期末考试之后、询问是否产生额外费用。",
+        "组织连贯：信息—延期请求—费用询问，结构完整。",
+        "语法准确：正确使用一般现在时与情态动词表达请求与询问。",
+        "词汇得体：准确使用 rent、textbook、extension、return date、fee 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "student health center, appointment booking",
+      "prompt": "You need to see a doctor at the student health center for a routine check-up and also need a vaccination form signed for a program you are joining. Write an email to the student health center. In your email, request an appointment and give your preferred days, explain that you also need a vaccination form completed, and ask what documents to bring.",
+      "promptZh": "你需要在学生健康中心做常规检查并让医生填一份疫苗表，写信预约、说明还需填写疫苗表、并询问需带哪些材料。",
+      "referencePoints": [
+        "语域：写给学生健康中心，语气礼貌、私事表述得体。",
+        "任务完成度：须完成三个动作——预约并给出可就诊日期、说明还需完成疫苗表、询问需携带的材料。",
+        "组织连贯：预约—附加需求—携带材料顺序自然。",
+        "语法准确：情态动词请求与时间状语使用准确。",
+        "词汇得体：恰当使用 appointment、check-up、vaccination form、documents 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "international student office, travel document",
+      "prompt": "As an international student, you plan to travel home during the break and need your travel document signed before you leave. Write an email to the international student services office. In your email, explain your travel plans and dates, ask how to get the required travel signature on your document, and request an appointment before your departure.",
+      "promptZh": "作为国际学生你假期要回国，出发前需要在证件上签字，写信给国际学生服务办公室说明行程、询问如何取得旅行签字、并预约出发前的办理时间。",
+      "referencePoints": [
+        "语域：写给国际学生服务办公室，语气正式、清晰。",
+        "任务完成度：须完成三个动作——说明回国行程与日期、询问如何取得所需旅行签字、预约出发前办理时间。",
+        "组织连贯：行程—签字流程—预约时间层次分明。",
+        "语法准确：将来时（will travel/am planning to）与情态动词请求准确。",
+        "词汇得体：准确使用 international student、travel signature、document、departure 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "alumni mentoring program, mentor request",
+      "prompt": "Your university runs a program that matches students with alumni mentors in their field, and you would like to take part. Write an email to the alumni mentoring program office. In your email, express your interest in being matched with a mentor, describe your field of study and career goals, and ask what the next steps are to join.",
+      "promptZh": "学校有校友导师配对项目，你想参加，写信给校友导师项目办公室表达兴趣、介绍专业与职业目标、并询问加入的下一步。",
+      "referencePoints": [
+        "语域：写给校友导师项目办公室，语气正式、积极。",
+        "任务完成度：须完成三个动作——表达参加配对的意愿、介绍专业方向与职业目标、询问加入的下一步流程。",
+        "组织连贯：意愿—自我介绍—后续步骤衔接顺畅。",
+        "语法准确：一般现在时陈述目标与疑问句提问准确。",
+        "词汇得体：恰当使用 mentor、match、field of study、career goals、next steps 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "professor, thesis advising meeting",
+      "prompt": "You would like Professor Lee to supervise your thesis and want to meet to discuss it. Write an email to Professor Lee. In your email, introduce yourself and your research interests, explain why you would like Professor Lee to advise your thesis, and ask to arrange a first meeting.",
+      "promptZh": "你希望Lee教授指导你的论文，写信自我介绍与研究兴趣、说明为何希望其指导、并请求安排第一次会面。",
+      "referencePoints": [
+        "语域：写给教授，语气正式、尊敬且得体。",
+        "任务完成度：须完成三个动作——自我介绍与研究兴趣、说明希望其担任论文导师的原因、请求安排首次会面。",
+        "组织连贯：自我介绍—说明原因—请求会面，逻辑连贯。",
+        "语法准确：情态动词（would like to）与从句结构使用准确。",
+        "词汇得体：准确使用 thesis、supervise/advise、research interests、arrange a meeting 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "media center, poster printing deadline",
+      "prompt": "You need a large research poster printed at the campus media center in time for a symposium in three days. Write an email to the media center print team. In your email, ask whether they can print a large-format poster by your deadline, ask about the file format and size they require, and ask how much it will cost.",
+      "promptZh": "你三天后有研讨会需要在媒体中心印大幅研究海报，写信询问能否按期印制、需要什么文件格式与尺寸、以及费用多少。",
+      "referencePoints": [
+        "语域：写给媒体中心印制团队，语气礼貌、明确带时间压力但不失礼。",
+        "任务完成度：须完成三个动作——询问能否在截止前印制大幅海报、询问所需文件格式与尺寸、询问费用。",
+        "组织连贯：期限—技术要求—费用顺序清楚。",
+        "语法准确：条件句与疑问句（whether/how much）使用准确。",
+        "词汇得体：恰当使用 large-format、poster、deadline、file format、cost 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "course instructor, field trip logistics",
+      "prompt": "Your geology course is offering an optional weekend field trip, and you want to join it. Write an email to your course instructor, Dr. Park. In your email, say that you would like to sign up for the field trip, ask what you need to bring and wear, and ask how students will travel to the site.",
+      "promptZh": "你的地质课有周末选修野外考察，你想参加，写信给Park老师报名、询问需带与穿什么、以及如何前往考察地。",
+      "referencePoints": [
+        "语域：写给授课教师，语气礼貌、积极。",
+        "任务完成度：须完成三个动作——表示报名参加野外考察、询问需携带与穿着的物品、询问前往考察地的交通方式。",
+        "组织连贯：报名—准备—交通顺序自然。",
+        "语法准确：情态动词与疑问句（what/how）使用准确。",
+        "词汇得体：准确使用 field trip、sign up、bring、travel to the site 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "IT service desk, software license",
+      "prompt": "You need a licensed copy of a statistics program installed on your laptop for a course project. Write an email to the IT service desk. In your email, request access to the statistics software, explain that you need it for a course, and ask how to install it on your personal laptop.",
+      "promptZh": "课程项目需要在你笔记本上安装正版统计软件，写信给IT服务台申请软件、说明用于课程、并询问如何在个人电脑安装。",
+      "referencePoints": [
+        "语域：写给IT服务台，语气礼貌、清晰。",
+        "任务完成度：须完成三个动作——申请统计软件使用权限、说明用于课程项目、询问在个人电脑上的安装方法。",
+        "组织连贯：请求—用途—安装方式层次分明。",
+        "语法准确：情态动词请求与目的状语（for a course project）使用准确。",
+        "词汇得体：恰当使用 license、software、install、access 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "campus transportation, bike registration",
+      "prompt": "You just brought a bicycle to campus and want to register it so it is allowed on the racks. Write an email to the campus transportation office. In your email, ask how to register your bicycle, ask whether a permit sticker is required, and ask where the nearest bike racks to your dormitory are.",
+      "promptZh": "你带了自行车到校园想注册以便停放，写信给校园交通办公室询问如何注册、是否需要许可贴、以及宿舍附近最近的车架在哪。",
+      "referencePoints": [
+        "语域：写给校园交通办公室，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——询问自行车注册方法、询问是否需要许可贴、询问宿舍附近最近的车架位置。",
+        "组织连贯：注册—许可—停放地点顺序清楚。",
+        "语法准确：疑问句（how/whether/where）与介词短语使用准确。",
+        "词汇得体：准确使用 register、bicycle、permit、bike rack 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "student employment, timesheet error",
+      "prompt": "You work part-time on campus, but your latest paycheck is missing several hours you worked. Write an email to the student employment payroll office. In your email, explain that hours are missing from your paycheck, give the dates and hours you actually worked, and ask how the error can be corrected.",
+      "promptZh": "你在校园兼职但最新工资少算了工时，写信给学生就业薪资办公室说明少算、提供实际工作日期与时数、并询问如何更正。",
+      "referencePoints": [
+        "语域：写给学生就业/薪资办公室，语气礼貌、就事论事。",
+        "任务完成度：须完成三个动作——说明工资单漏算工时、提供实际工作的日期与时数、询问如何更正错误。",
+        "组织连贯：问题—证据—更正请求，逻辑清楚。",
+        "语法准确：过去时叙述工时、现在时提出请求，时态一致。",
+        "词汇得体：恰当使用 timesheet、paycheck、hours、correct the error 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "career center, resume review",
+      "prompt": "You are applying for internships and want a staff member at the career center to review your resume. Write an email to the career center. In your email, request an appointment to have your resume reviewed, mention the type of internship you are applying for, and ask whether you should send your resume in advance.",
+      "promptZh": "你要申请实习想让职业中心帮看简历，写信预约简历修改、说明申请的实习类型、并询问是否需提前发送简历。",
+      "referencePoints": [
+        "语域：写给职业发展中心，语气礼貌、专业。",
+        "任务完成度：须完成三个动作——预约简历修改、说明所申请实习的类型、询问是否需提前发送简历。",
+        "组织连贯：预约—背景—材料准备顺序自然。",
+        "语法准确：情态动词请求与条件疑问句（whether）使用准确。",
+        "词汇得体：准确使用 resume、review、appointment、internship 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "registrar, enrollment verification",
+      "prompt": "Your bank needs an official letter confirming that you are currently enrolled as a full-time student. Write an email to the registrar's office. In your email, request an enrollment verification letter, explain that your bank requires it, and ask how long it takes to issue and how you can receive it.",
+      "promptZh": "银行需要一份在读全日制学生的正式证明，写信给教务处申请在读证明、说明银行要求、并询问出具时长与领取方式。",
+      "referencePoints": [
+        "语域：写给教务处/注册办公室，语气正式、清晰。",
+        "任务完成度：须完成三个动作——申请在读证明信、说明银行需要该证明、询问出具所需时间与领取方式。",
+        "组织连贯：请求—用途—出具与领取顺序清楚。",
+        "语法准确：情态动词请求与被动语态（it is required）使用准确。",
+        "词汇得体：恰当使用 enrollment verification、full-time、issue、receive 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "campus mail services, key replacement",
+      "prompt": "You have lost the key to your assigned campus mailbox and cannot collect your mail. Write an email to campus mail services. In your email, report that you lost your mailbox key, give your mailbox number and location, and ask how to get a replacement key and whether there is a fee.",
+      "promptZh": "你弄丢了校园信箱钥匙无法取件，写信给校园邮政服务报告丢失、提供信箱号与位置、并询问如何补办及是否收费。",
+      "referencePoints": [
+        "语域：写给校园邮政服务，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——报告信箱钥匙丢失、提供信箱号与位置、询问补办钥匙方式及是否收费。",
+        "组织连贯：报告—信息—补办与费用顺序清楚。",
+        "语法准确：现在完成时（have lost）与疑问句使用准确。",
+        "词汇得体：准确使用 mailbox、key、replacement、fee 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "library, study carrel reservation",
+      "prompt": "During the final exam period you want to reserve a private quiet study carrel in the library for two weeks. Write an email to the library reservations desk. In your email, request a quiet study carrel for the exam period, ask about the daily hours you could use it, and ask how to reserve it.",
+      "promptZh": "期末考试期间你想在图书馆预订一个安静的个人研读间两周，写信给图书馆预约处申请、询问每日可用时段、并问如何预订。",
+      "referencePoints": [
+        "语域：写给图书馆预约处，语气礼貌、明确。",
+        "任务完成度：须完成三个动作——申请考试期间的安静个人研读间、询问每日可使用时段、询问预订方式。",
+        "组织连贯：需求—时段—预订流程顺序清楚。",
+        "语法准确：情态动词请求与时间状语使用准确。",
+        "词汇得体：恰当使用 study carrel、reserve、exam period、hours 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "professor, course audit request",
+      "prompt": "You are interested in a course but want to sit in on it without taking it for credit. Write an email to the professor teaching it, Dr. Nguyen. In your email, ask whether you may audit the course, explain why you are interested in the subject, and ask whether you would still be expected to do the readings and assignments.",
+      "promptZh": "你对某课程感兴趣但想旁听不修学分，写信给Nguyen教授询问能否旁听、说明兴趣原因、并问是否仍需完成阅读与作业。",
+      "referencePoints": [
+        "语域：写给授课教授，语气正式、尊敬。",
+        "任务完成度：须完成三个动作——询问能否旁听该课、说明对该学科感兴趣的原因、询问是否仍需完成阅读与作业。",
+        "组织连贯：请求—原因—课程要求顺序自然。",
+        "语法准确：情态动词（may/would）与条件表达使用准确。",
+        "词汇得体：准确使用 audit、for credit、sit in、readings and assignments 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "instructor, lecture captions request",
+      "prompt": "You find it hard to follow fast spoken lectures and would benefit from captions or a transcript of the recorded lectures. Write an email to your instructor, Dr. Silva. In your email, politely explain your difficulty, ask whether captions or a transcript could be added to the recorded lectures, and offer to help if any information is needed.",
+      "promptZh": "你难以跟上语速快的讲课，希望录制讲课能有字幕或文字稿，写信给Silva老师礼貌说明困难、询问能否添加字幕或文字稿、并表示可配合提供所需信息。",
+      "referencePoints": [
+        "语域：写给授课教师，语气礼貌、得体，表述个人需求不失分寸。",
+        "任务完成度：须完成三个动作——礼貌说明听讲困难、询问能否为录播添加字幕或文字稿、表示愿意配合提供所需信息。",
+        "组织连贯：说明困难—提出请求—表示配合，衔接自然。",
+        "语法准确：情态动词与委婉请求结构（could/would it be possible）使用准确。",
+        "词汇得体：恰当使用 captions、transcript、recorded lectures、follow 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "IT help desk, WiFi outage",
+      "prompt": "The WiFi in your dormitory has stopped working, and you cannot study online. Write an email to the IT help desk. In your email, report that the WiFi in your building is down, give your building and room number, and ask how soon it can be fixed.",
+      "promptZh": "宿舍WiFi中断无法在线学习，写信给IT帮助台报告故障、提供楼栋与房号、并询问多久能修好。",
+      "referencePoints": [
+        "语域：写给IT帮助台，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——报告楼内WiFi中断、提供楼栋与房间号、询问修复所需时间。",
+        "组织连贯：报告—位置信息—修复时间顺序清楚。",
+        "语法准确：现在时/现在完成时叙述故障与疑问句使用准确。",
+        "词汇得体：准确使用 WiFi、down/not working、building、room number、fix 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "library equipment desk, loan extension",
+      "prompt": "You borrowed a loaner laptop from the library equipment desk, but you still need it for a few more days to finish a project. Write an email to the library equipment lending desk. In your email, give your loan details, request to extend the loan by several days, and ask whether you can renew it online or must return it in person first.",
+      "promptZh": "你从图书馆设备处借的笔记本还需几天完成项目，写信提供借用信息、申请延长几天、并询问能否在线续借还是须先本人归还。",
+      "referencePoints": [
+        "语域：写给图书馆设备借用处，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——提供借用信息、申请延长借期数日、询问能否在线续借或须本人先归还。",
+        "组织连贯：信息—延期请求—续借方式顺序清楚。",
+        "语法准确：情态动词请求与选择疑问句（whether…or）使用准确。",
+        "词汇得体：恰当使用 loaner laptop、loan、extend、renew、return 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "student activities finance, reimbursement",
+      "prompt": "You paid out of your own pocket for supplies for a student club event and now want to be reimbursed. Write an email to the student activities finance office. In your email, explain what you bought and why, ask how to claim reimbursement, and ask what receipts or forms you need to submit.",
+      "promptZh": "你自付了社团活动物资费用想报销，写信给学生活动财务办公室说明所购物品与用途、询问报销方式、并问需提交哪些收据或表格。",
+      "referencePoints": [
+        "语域：写给学生活动财务办公室，语气礼貌、条理清楚。",
+        "任务完成度：须完成三个动作——说明所购物品及用途、询问报销申请方式、询问需提交的收据或表格。",
+        "组织连贯：说明—申请方式—所需材料顺序自然。",
+        "语法准确：过去时叙述购买、现在时提出请求，时态一致。",
+        "词汇得体：准确使用 reimburse、supplies、receipts、submit、claim 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "housing office, break accommodation",
+      "prompt": "The dormitories usually close during winter break, but you need to stay on campus because you cannot travel home. Write an email to the housing office. In your email, ask whether you can stay in your dorm over the winter break, explain why you need to stay, and ask about any extra cost or application form.",
+      "promptZh": "宿舍寒假通常关闭但你无法回家需留校，写信给住宿办公室询问能否寒假留宿、说明原因、并问是否有额外费用或申请表。",
+      "referencePoints": [
+        "语域：写给住宿办公室，语气礼貌、诚恳。",
+        "任务完成度：须完成三个动作——询问能否寒假留宿、说明需要留校的原因、询问额外费用或申请表。",
+        "组织连贯：请求—原因—费用/手续顺序清楚。",
+        "语法准确：情态动词请求与because/since原因状语使用准确。",
+        "词汇得体：恰当使用 winter break、stay on campus、extra cost、application form 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "testing center, exam reschedule",
+      "prompt": "You are studying abroad this term, and a required proctored online exam is scheduled at 3 a.m. in your current time zone. Write an email to the testing center. In your email, explain the time-zone problem, request a more reasonable exam time for your location, and ask how to confirm any new arrangement.",
+      "promptZh": "你本学期在国外，一场必考的线上监考考试在你所在时区是凌晨三点，写信给考试中心说明时差问题、请求更合理的考试时间、并询问如何确认新安排。",
+      "referencePoints": [
+        "语域：写给考试中心，语气正式、礼貌、说理清楚。",
+        "任务完成度：须完成三个动作——说明时差导致的问题、请求适合你所在地的考试时间、询问如何确认新的安排。",
+        "组织连贯：问题—请求—确认方式顺序清楚。",
+        "语法准确：现在进行时（am studying）与情态动词请求使用准确。",
+        "词汇得体：准确使用 time zone、proctored、reschedule、arrangement 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "advising office, change advisor",
+      "prompt": "Your assigned academic advisor's specialty does not match your interests, and you would like to switch to another advisor. Write an email to the department advising office. In your email, request to change your academic advisor, explain why the current match is not a good fit, and ask what the procedure is to make the change.",
+      "promptZh": "你被分配的学业导师专长与你的兴趣不符想更换，写信给院系指导办公室申请更换导师、说明现有匹配不合适的原因、并询问更换流程。",
+      "referencePoints": [
+        "语域：写给院系指导办公室，语气礼貌、专业，避免指责语气。",
+        "任务完成度：须完成三个动作——申请更换学业导师、说明现有匹配不合适的原因、询问更换的具体流程。",
+        "组织连贯：请求—原因—流程顺序自然。",
+        "语法准确：情态动词与原因状语从句使用准确。",
+        "词汇得体：恰当使用 academic advisor、switch/change、good fit、procedure 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "language center, conversation exchange",
+      "prompt": "The campus language center runs a program that pairs students to practice speaking each other's languages, and you want to join. Write an email to the language center. In your email, say which language you want to practice and which you can offer, ask how students are paired, and ask when the program starts.",
+      "promptZh": "语言中心有语伴互助项目，你想参加，写信说明想练与能提供的语言、询问如何配对、并问项目何时开始。",
+      "referencePoints": [
+        "语域：写给语言中心，语气礼貌、积极。",
+        "任务完成度：须完成三个动作——说明想练习与能提供的语言、询问配对方式、询问项目开始时间。",
+        "组织连贯：意愿与自身条件—配对方式—开始时间顺序清楚。",
+        "语法准确：一般现在时陈述与疑问句使用准确。",
+        "词汇得体：准确使用 conversation exchange、practice、pair、program 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "campus wellness office, CPR workshop",
+      "prompt": "You want to sign up for the campus first-aid and CPR certification workshop offered by the wellness office. Write an email to the campus wellness office. In your email, ask to register for the next workshop, ask how long the session lasts and whether you receive a certificate, and ask if there is any fee for students.",
+      "promptZh": "你想报名健康办公室的急救与心肺复苏认证工作坊，写信申请报名下一场、询问时长及是否发证、并问学生是否收费。",
+      "referencePoints": [
+        "语域：写给校园健康办公室，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——报名下一场工作坊、询问时长及是否颁发证书、询问学生是否收费。",
+        "组织连贯：报名—时长与证书—费用顺序清楚。",
+        "语法准确：情态动词请求与疑问句（how long/whether）使用准确。",
+        "词汇得体：恰当使用 first aid、CPR、register、certificate、fee 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "writing center, personal statement consultation",
+      "prompt": "You are applying to a graduate program and want feedback on your personal statement from the writing center. Write an email to the writing center. In your email, request a consultation about your personal statement, mention the application deadline you are working toward, and ask whether you should send your draft before the session.",
+      "promptZh": "你申请研究生项目想请写作中心看个人陈述，写信预约咨询、说明申请截止日期、并询问是否需提前发送草稿。",
+      "referencePoints": [
+        "语域：写给写作中心，语气礼貌、专业。",
+        "任务完成度：须完成三个动作——预约个人陈述咨询、说明申请截止日期、询问是否需在咨询前发送草稿。",
+        "组织连贯：预约—时间背景—材料准备顺序自然。",
+        "语法准确：情态动词请求与现在进行时（am applying）使用准确。",
+        "词汇得体：准确使用 personal statement、consultation、deadline、draft 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "media services, equipment borrowing",
+      "prompt": "Your student club is holding an evening event and needs to borrow a projector for it. Write an email to the campus media services office. In your email, request to borrow a projector for a specific date, ask how far in advance you must book it, and ask whether you need to return it the same night.",
+      "promptZh": "你的社团办晚间活动需借投影仪，写信给校园媒体服务处申请指定日期借用、询问需提前多久预订、并问是否须当晚归还。",
+      "referencePoints": [
+        "语域：写给校园媒体服务处，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——申请在指定日期借用投影仪、询问需提前多久预订、询问是否须当晚归还。",
+        "组织连贯：借用请求—预订时限—归还要求顺序清楚。",
+        "语法准确：情态动词请求与疑问句（how far in advance/whether）使用准确。",
+        "词汇得体：恰当使用 projector、borrow、book in advance、return 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "visitor center, tour-guide volunteering",
+      "prompt": "You would like to volunteer as a student tour guide for campus visitors. Write an email to the admissions visitor center. In your email, express your interest in becoming a volunteer tour guide, describe why you would be a good guide, and ask what training or time commitment is involved.",
+      "promptZh": "你想当校园参观志愿导览员，写信给招生访客中心表达意愿、说明自己适合的理由、并询问需要哪些培训或时间投入。",
+      "referencePoints": [
+        "语域：写给招生访客中心，语气礼貌、热情、专业。",
+        "任务完成度：须完成三个动作——表达担任志愿导览员的意愿、说明自己适合的理由、询问所需培训或时间投入。",
+        "组织连贯：意愿—自我推荐—要求了解顺序自然。",
+        "语法准确：情态动词与理由陈述（because/as）使用准确。",
+        "词汇得体：准确使用 volunteer、tour guide、training、time commitment 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "student union events, fair table reservation",
+      "prompt": "Your club wants a table at the upcoming student organization fair to recruit new members. Write an email to the student union events office. In your email, request a table for your club at the fair, ask what the table setup includes, and ask by when you must confirm your spot.",
+      "promptZh": "你的社团想在即将举行的学生社团展上摆桌招新，写信给学生会活动办公室申请展位、询问展桌配置、并问最迟何时确认名额。",
+      "referencePoints": [
+        "语域：写给学生会活动办公室，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——为社团申请展会展桌、询问展桌配置内容、询问确认名额的最迟时间。",
+        "组织连贯：申请—配置—确认时限顺序清楚。",
+        "语法准确：情态动词请求与疑问句（what/by when）使用准确。",
+        "词汇得体：恰当使用 organization fair、table、set up、confirm、spot 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "professor, incomplete grade request",
+      "prompt": "Because of a family emergency, you could not finish the last assignments of a course and would like to request an Incomplete instead of a failing grade. Write an email to your professor, Dr. Adams. In your email, explain your situation briefly, request an Incomplete grade so you can finish the work later, and propose a date by which you could complete it.",
+      "promptZh": "因家庭紧急情况你无法完成课程最后的作业，想申请未完成(Incomplete)而非不及格，写信给Adams教授简述情况、申请I成绩以便日后补交、并提出完成期限。",
+      "referencePoints": [
+        "语域：写给教授，语气正式、诚恳、尊重。",
+        "任务完成度：须完成三个动作——简要说明情况、申请未完成成绩以便日后补交、提出可完成作业的日期。",
+        "组织连贯：情况—请求—完成计划顺序清楚。",
+        "语法准确：过去时叙述原因、情态动词与将来时提出计划，时态协调。",
+        "词汇得体：准确使用 Incomplete、assignment、complete、propose a date 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "lab coordinator, open house sign-up",
+      "prompt": "A research lab you are interested in is holding an open house for prospective student members. Write an email to the lab coordinator. In your email, say you would like to attend the open house, ask whether you need to sign up in advance, and ask what kind of projects students in the lab work on.",
+      "promptZh": "你感兴趣的研究实验室将办开放日面向有意加入的学生，写信给实验室协调员表示想参加、询问是否需提前报名、并问实验室学生做哪类项目。",
+      "referencePoints": [
+        "语域：写给实验室协调员，语气礼貌、积极、专业。",
+        "任务完成度：须完成三个动作——表示想参加开放日、询问是否需提前报名、询问实验室学生所做的项目类型。",
+        "组织连贯：意愿—报名方式—项目了解顺序自然。",
+        "语法准确：情态动词与疑问句（whether/what kind of）使用准确。",
+        "词汇得体：恰当使用 open house、attend、sign up、projects 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "financial aid office, emergency fund",
+      "prompt": "You are facing an unexpected financial difficulty and have heard the university offers a short-term emergency fund for students. Write an email to the financial aid office. In your email, explain that you are in temporary financial difficulty, ask whether you qualify for the emergency fund, and ask what documents you would need to apply.",
+      "promptZh": "你遇到突发经济困难，听说学校有短期紧急基金，写信给助学金办公室说明暂时困难、询问是否符合申请条件、并问申请需哪些材料。",
+      "referencePoints": [
+        "语域：写给助学金办公室，语气正式、得体、诚恳。",
+        "任务完成度：须完成三个动作——说明暂时的经济困难、询问是否符合紧急基金条件、询问申请所需材料。",
+        "组织连贯：情况—资格询问—所需材料顺序清楚。",
+        "语法准确：情态动词（whether you qualify/would need）与条件表达使用准确。",
+        "词汇得体：准确使用 emergency fund、financial difficulty、qualify、documents 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "registrar, mailing address update",
+      "prompt": "You are graduating soon and have recently moved, so your diploma will be sent to the wrong address on file. Write an email to the registrar's office. In your email, ask them to update your mailing address, provide your new address, and ask them to confirm once the change has been made.",
+      "promptZh": "你即将毕业且刚搬家，档案里的地址已过时会寄错毕业证，写信给教务处请求更新邮寄地址、提供新地址、并请其在更改后确认。",
+      "referencePoints": [
+        "语域：写给教务处/注册办公室，语气正式、清楚。",
+        "任务完成度：须完成三个动作——请求更新邮寄地址、提供新地址、请其在更改完成后予以确认。",
+        "组织连贯：请求—新信息—确认顺序清楚。",
+        "语法准确：情态动词请求与现在完成时（once the change has been made）使用准确。",
+        "词汇得体：恰当使用 mailing address、update、confirm、diploma 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "IT identity services, account reactivation",
+      "prompt": "Your student email and login account seem to have expired, and you can no longer sign in to campus systems. Write an email to IT identity services. In your email, report that your account appears to be deactivated, ask how to reactivate it, and ask whether your saved files and email are still safe.",
+      "promptZh": "你的学生邮箱与登录账号似乎已过期无法登录校园系统，写信给IT身份服务报告账号被停用、询问如何重新激活、并问已保存的文件和邮件是否仍安全。",
+      "referencePoints": [
+        "语域：写给IT身份服务，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——报告账号疑似被停用、询问重新激活的方法、询问已保存的文件与邮件是否安全。",
+        "组织连贯：报告—激活方式—数据安全顺序清楚。",
+        "语法准确：现在完成时/现在时叙述与疑问句使用准确。",
+        "词汇得体：准确使用 account、expire/deactivate、reactivate、safe 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    },
+    {
+      "category": "arts facilities, rehearsal room booking",
+      "prompt": "Your drama group needs to book a rehearsal room in the arts building to prepare for an upcoming performance. Write an email to the arts facilities office. In your email, request a rehearsal room for several evenings next week, ask how many hours you may book at a time, and ask how to get into the room after office hours.",
+      "promptZh": "你的话剧社需在艺术楼预订排练室备演，写信给艺术设施办公室申请下周几个晚上、询问单次可预订时长、并问办公时间后如何进入房间。",
+      "referencePoints": [
+        "语域：写给艺术设施办公室，语气礼貌、清楚。",
+        "任务完成度：须完成三个动作——申请下周几个晚上的排练室、询问单次可预订的时长、询问办公时间后进入房间的方式。",
+        "组织连贯：申请—时长规则—进入方式顺序清楚。",
+        "语法准确：情态动词请求与疑问句（how many/how to）使用准确。",
+        "词汇得体：恰当使用 rehearsal room、book、hours、after office hours 等词。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-140 words."
+    }
+  ]
+}

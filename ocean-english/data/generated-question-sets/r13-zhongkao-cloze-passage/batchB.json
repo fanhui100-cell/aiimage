@@ -1,0 +1,186 @@
+{
+  "template": "zhongkao-cloze-passage",
+  "level": 1,
+  "sets": [
+    {
+      "passage": "Next Saturday is my mother's birthday, so my sister and I want to give her a (1)____ party. We started to plan it last week. First, we made a list of the people we wanted to (2)____. There were ten of them, all good friends of my mother. Then I wrote each of them a short (3)____ and asked them to come at six o'clock. My sister said we should keep the party a (4)____, so we told everyone not to tell my mother. On Friday afternoon, we went to the shop and (5)____ some balloons, fruit and a big cake. The cake was chocolate because my mother (6)____ it very much. When we got home, we cleaned the living room and (7)____ the balloons on the wall. Everything looked beautiful. On Saturday, my mother came home late from work. She was very (8)____ when she opened the door, because all her friends were waiting inside. They shouted, \"Happy birthday!\" together. My mother almost (9)____ because she was so happy. We sang a song and she made a (10)____ before she cut the cake. The party was a great (11)____. My mother said it was the best birthday she had ever had. I felt very (12)____ that we could make her so happy.",
+      "blanks": [
+        { "options": ["surprise", "homework", "problem", "lesson"], "answer": "A" },
+        { "options": ["sell", "invite", "leave", "follow"], "answer": "B" },
+        { "options": ["song", "story", "letter", "rule"], "answer": "C" },
+        { "options": ["joke", "noise", "secret", "promise"], "answer": "C" },
+        { "options": ["bought", "broke", "lost", "found"], "answer": "A" },
+        { "options": ["hates", "loses", "fears", "loves"], "answer": "D" },
+        { "options": ["put", "ate", "washed", "moved"], "answer": "A" },
+        { "options": ["tired", "bored", "surprised", "angry"], "answer": "C" },
+        { "options": ["cried", "slept", "fell", "left"], "answer": "A" },
+        { "options": ["wish", "call", "bed", "plan"], "answer": "A" },
+        { "options": ["mistake", "danger", "success", "problem"], "answer": "C" },
+        { "options": ["sorry", "afraid", "happy", "worried"], "answer": "C" }
+      ],
+      "explain_zh": "(1)给妈妈一个惊喜派对，surprise 符合下文保密的情节。(2)做名单是为了邀请客人，invite。(3)给客人写短信/便条，letter 与“写”搭配。(4)要把派对保密，secret，下文“别告诉妈妈”。(5)去商店买气球、水果和蛋糕，bought。(6)选巧克力蛋糕因为妈妈很喜欢它，loves。(7)把气球贴/挂在墙上，put。(8)朋友都在屋里等她，妈妈很惊讶，surprised。(9)太高兴几乎哭了，cried。(10)切蛋糕前许愿，make a wish。(11)派对很成功，success。(12)能让妈妈开心，我感到很高兴，happy。"
+    },
+    {
+      "passage": "Last Monday morning, it was raining very hard. The rain made big floods on the roads near our school. When I arrived at the school gate, I saw a (1)____ on the wall. It said classes would not start that day. I was very (2)____ because I did not need to study. At first I planned to go back (3)____ and sleep, but then I had a better idea. I called my best friend Tom and asked him to come to my (4)____. He came twenty minutes later with his football. We could not play outside because of the (5)____, so we stayed in my room. We played computer games for an hour, and Tom (6)____ every game. After that, we felt hungry, so we went to the kitchen and (7)____ some noodles together. They tasted great. In the afternoon, the rain finally (8)____ and the sun came out. We decided to go to the park near my home. The grass was still (9)____, but we did not care. We played football for a long time and (10)____ a lot. When I got home in the evening, I was very (11)____, but I felt happy. This unexpected holiday was one of the best (12)____ of my life.",
+      "blanks": [
+        { "options": ["map", "ticket", "notice", "photo"], "answer": "C" },
+        { "options": ["sad", "happy", "afraid", "sorry"], "answer": "B" },
+        { "options": ["work", "school", "home", "shop"], "answer": "C" },
+        { "options": ["house", "office", "factory", "library"], "answer": "A" },
+        { "options": ["sun", "wind", "rain", "snow"], "answer": "C" },
+        { "options": ["lost", "won", "missed", "left"], "answer": "B" },
+        { "options": ["bought", "sold", "cooked", "washed"], "answer": "C" },
+        { "options": ["started", "stopped", "grew", "fell"], "answer": "B" },
+        { "options": ["dry", "clean", "wet", "warm"], "answer": "C" },
+        { "options": ["cried", "slept", "studied", "laughed"], "answer": "D" },
+        { "options": ["hungry", "tired", "angry", "bored"], "answer": "B" },
+        { "options": ["days", "weeks", "years", "months"], "answer": "A" }
+      ],
+      "explain_zh": "(1)墙上看到一则通知，notice。(2)不用学习，我很高兴，happy。(3)本打算回家睡觉，home。(4)叫朋友来我家，house。(5)因为下雨不能在外面玩，rain。(6)Tom 每局都赢了，won。(7)在厨房一起煮面条，cooked。(8)下午雨终于停了，stopped。(9)草地还是湿的，wet。(10)踢球时笑得很开心，laughed。(11)回到家我很累，tired。(12)这是我一生中最美好的日子之一，days。"
+    },
+    {
+      "passage": "My good friend Lucy did not come to school for three days last week. I was (1)____ about her, so on Friday afternoon I went to see her at her home. Her mother opened the door and told me that Lucy was (2)____. She had a bad cold and a high fever. I went into her room quietly. Lucy was lying in (3)____ and looked very weak. \"How are you feeling now?\" I asked her in a soft (4)____. She said she felt a little better, but she was (5)____ about her lessons. I told her not to worry, because I would help her. First, I gave her the new (6)____ that our teacher gave us. Then I explained the math problems to her one by one. She listened (7)____ and soon understood them. After that, I made some hot tea for her and asked her to (8)____ it slowly. I also told her to take her (9)____ on time and have a good rest. Before I left, I said, \"Please get (10)____ soon. We all miss you at school.\" Lucy smiled and (11)____ me for my help. On Monday, Lucy came back to school. She was (12)____ again and thanked me in front of the whole class.",
+      "blanks": [
+        { "options": ["sure", "worried", "happy", "proud"], "answer": "B" },
+        { "options": ["sick", "busy", "out", "late"], "answer": "A" },
+        { "options": ["chair", "bed", "box", "car"], "answer": "B" },
+        { "options": ["color", "size", "voice", "smell"], "answer": "C" },
+        { "options": ["excited", "glad", "worried", "surprised"], "answer": "C" },
+        { "options": ["lessons", "shoes", "toys", "tickets"], "answer": "A" },
+        { "options": ["loudly", "carefully", "angrily", "sadly"], "answer": "B" },
+        { "options": ["throw", "drink", "break", "cut"], "answer": "B" },
+        { "options": ["medicine", "food", "money", "books"], "answer": "A" },
+        { "options": ["lost", "older", "better", "ready"], "answer": "C" },
+        { "options": ["thanked", "asked", "told", "left"], "answer": "A" },
+        { "options": ["weak", "ill", "tired", "healthy"], "answer": "D" }
+      ],
+      "explain_zh": "(1)朋友几天没来，我很担心她，worried。(2)妈妈说 Lucy 生病了，sick。(3)Lucy 躺在床上，bed。(4)用温柔的声音问，voice。(5)她担心功课，worried。(6)给她老师布置的新课/作业，lessons。(7)她认真地听，carefully。(8)让她慢慢喝茶，drink。(9)按时吃药，medicine。(10)祝你早日康复，get better。(11)感谢我的帮助，thanked。(12)她又健康了，healthy。"
+    },
+    {
+      "passage": "Last Sunday my parents took me to the zoo. It was a sunny day and I was very (1)____ because I love animals. When we got to the gate, my father (2)____ the tickets and we went in. The first animals we saw were the monkeys. They were so (3)____ that they jumped from tree to tree and made everyone laugh. Next, we walked to see the big (4)____. It had a long nose and two large ears, and it was eating grass slowly. I gave it some bananas and it took them with its (5)____. After that, we visited the lions. They were sleeping in the sun and looked very (6)____. My mother told me not to make any (7)____ because we should not wake them up. At noon, we sat down under a tree and (8)____ our lunch. The food was delicious. In the afternoon, my favorite part was watching the (9)____. They swam in the cold water and could move very fast. I (10)____ many photos of them with my camera. We stayed at the zoo until it was almost (11)____. On our way home, I felt tired but very happy. It was a wonderful (12)____ and I will never forget it.",
+      "blanks": [
+        { "options": ["excited", "afraid", "sorry", "tired"], "answer": "A" },
+        { "options": ["sold", "lost", "bought", "made"], "answer": "C" },
+        { "options": ["quiet", "funny", "slow", "sad"], "answer": "B" },
+        { "options": ["tiger", "rabbit", "elephant", "bird"], "answer": "C" },
+        { "options": ["foot", "tail", "wing", "nose"], "answer": "D" },
+        { "options": ["lazy", "angry", "hungry", "thirsty"], "answer": "A" },
+        { "options": ["trouble", "noise", "food", "money"], "answer": "B" },
+        { "options": ["cooked", "had", "sold", "washed"], "answer": "B" },
+        { "options": ["fish", "snakes", "horses", "cows"], "answer": "A" },
+        { "options": ["broke", "took", "sent", "drew"], "answer": "B" },
+        { "options": ["morning", "dark", "summer", "winter"], "answer": "B" },
+        { "options": ["test", "lesson", "trip", "match"], "answer": "C" }
+      ],
+      "explain_zh": "(1)我爱动物，所以很兴奋，excited。(2)爸爸买了票，bought。(3)猴子很有趣，跳来跳去逗大家笑，funny。(4)长鼻子大耳朵的是大象，elephant。(5)大象用鼻子接香蕉，nose。(6)狮子在睡觉，看上去很懒，lazy。(7)别发出声音以免吵醒它们，noise。(8)中午我们吃午饭，had。(9)最喜欢看在水里游得很快的鱼，fish。(10)用相机拍了很多照片，took。(11)在动物园待到快天黑，dark。(12)这是一次美妙的旅行，trip。"
+    },
+    {
+      "passage": "When I was eight years old, I could not swim, and I was even (1)____ of deep water. One summer my father decided to (2)____ me how to swim. The first day, we went to the swimming pool together. The water looked so deep that I did not dare to go (3)____. My father held my hand and said, \"Don't be afraid. I will (4)____ you.\" Slowly, I stepped into the water. It was cool and (5)____. My father taught me how to move my arms and (6)____ my legs at the same time. At first, I could only stay above the water for a few (7)____, and then I sank down. I tried again and again, but I still could not do it (8)____. I felt like giving up. My father told me, \"If you want to learn something, you must keep (9)____.\" His words gave me courage. After many days of practice, I could finally swim a short (10)____ by myself. I was so (11)____ that I shouted to my father. Now swimming is my favorite (12)____, and I go to the pool every week. I have learned that nothing is difficult if you never give up.",
+      "blanks": [
+        { "options": ["sure", "afraid", "proud", "tired"], "answer": "B" },
+        { "options": ["ask", "tell", "teach", "leave"], "answer": "C" },
+        { "options": ["in", "out", "up", "back"], "answer": "A" },
+        { "options": ["leave", "help", "follow", "watch"], "answer": "B" },
+        { "options": ["dirty", "warm", "comfortable", "hot"], "answer": "C" },
+        { "options": ["wash", "kick", "break", "open"], "answer": "B" },
+        { "options": ["hours", "days", "seconds", "weeks"], "answer": "C" },
+        { "options": ["well", "badly", "early", "late"], "answer": "A" },
+        { "options": ["sleeping", "trying", "crying", "eating"], "answer": "B" },
+        { "options": ["road", "street", "distance", "way"], "answer": "C" },
+        { "options": ["sorry", "angry", "afraid", "happy"], "answer": "D" },
+        { "options": ["food", "sport", "color", "subject"], "answer": "B" }
+      ],
+      "explain_zh": "(1)我连深水都害怕，afraid。(2)爸爸决定教我游泳，teach。(3)水太深我不敢下水（进去），go in。(4)爸爸说会帮我，help。(5)水又凉又舒服，comfortable。(6)同时摆臂和蹬腿，kick。(7)起初只能浮几秒，seconds。(8)还是做不好，well。(9)想学会就得一直尝试，keep trying。(10)终于能自己游一小段距离，distance。(11)我太高兴了，happy。(12)游泳成了我最喜欢的运动，sport。"
+    },
+    {
+      "passage": "Our school held a talent show last month, and I (1)____ to take part in it. I love music, so I decided to play the (2)____ on the stage. There were still two weeks before the show, so I had enough time to (3)____. Every day after school, I went to the music room and played the same song again and again. Sometimes I made (4)____, but I did not give up. My music teacher helped me a lot and gave me good (5)____ on how to play better. On the day of the show, the hall was (6)____ of students and teachers. When it was my (7)____, I walked onto the stage. My heart was beating fast and my hands felt (8)____. But when the music started, I forgot all my fear. I played the song from the (9)____ to the end without any mistakes. When I finished, everyone (10)____ loudly and some of them even stood up. I felt so (11)____ of myself. My teacher came to me and said I did a great job. That day I learned that hard work always brings good (12)____. I will never forget this wonderful experience.",
+      "blanks": [
+        { "options": ["forgot", "decided", "refused", "feared"], "answer": "B" },
+        { "options": ["football", "piano", "computer", "card"], "answer": "B" },
+        { "options": ["sleep", "eat", "practice", "travel"], "answer": "C" },
+        { "options": ["friends", "mistakes", "money", "noise"], "answer": "B" },
+        { "options": ["advice", "food", "money", "tickets"], "answer": "A" },
+        { "options": ["short", "empty", "full", "free"], "answer": "C" },
+        { "options": ["turn", "name", "seat", "book"], "answer": "A" },
+        { "options": ["warm", "cold", "clean", "dry"], "answer": "B" },
+        { "options": ["middle", "side", "beginning", "corner"], "answer": "C" },
+        { "options": ["cried", "left", "clapped", "slept"], "answer": "C" },
+        { "options": ["afraid", "tired", "sorry", "proud"], "answer": "D" },
+        { "options": ["luck", "results", "weather", "news"], "answer": "B" }
+      ],
+      "explain_zh": "(1)我决定参加才艺表演，decided。(2)我爱音乐，决定在台上弹钢琴，piano。(3)还有两周可以练习，practice。(4)有时会出错，mistakes。(5)老师给我好的建议，advice。(6)大厅里挤满了人，full of。(7)轮到我时，my turn。(8)紧张得手发凉，cold。(9)从头到尾弹完，from the beginning。(10)大家大声鼓掌，clapped。(11)我为自己感到骄傲，proud。(12)努力总会带来好的结果，results。"
+    },
+    {
+      "passage": "Last summer, a big rain fell on our town for three days. The river became higher and higher, and soon there was a serious (1)____. Many houses near the river were full of water, and some people could not (2)____ from their homes. When my father heard the news, he wanted to (3)____ the people in danger. He took me with him to the village by the river. There we saw many soldiers (4)____ hard to save people. They used boats to carry the old people and (5)____ to a safe place. My father and I helped them carry food, clean water and (6)____ for the people who lost their homes. We worked from morning (7)____ night without a rest. I was very (8)____, but I did not stop, because the people needed our (9)____. One little girl could not find her mother, and she was (10)____ loudly. I held her hand and told her not to be afraid. Later her mother came back and they were together again. Everyone felt (11)____ when the rain finally stopped. Though I was very tired, I felt proud because I had done something (12)____ for others.",
+      "blanks": [
+        { "options": ["fire", "flood", "snow", "wind"], "answer": "B" },
+        { "options": ["sleep", "eat", "escape", "play"], "answer": "C" },
+        { "options": ["help", "watch", "leave", "follow"], "answer": "A" },
+        { "options": ["sleeping", "working", "eating", "playing"], "answer": "B" },
+        { "options": ["animals", "children", "trees", "cars"], "answer": "B" },
+        { "options": ["toys", "clothes", "books", "games"], "answer": "B" },
+        { "options": ["before", "after", "until", "since"], "answer": "C" },
+        { "options": ["happy", "tired", "lazy", "free"], "answer": "B" },
+        { "options": ["help", "money", "advice", "name"], "answer": "A" },
+        { "options": ["laughing", "singing", "crying", "reading"], "answer": "C" },
+        { "options": ["sad", "afraid", "relaxed", "angry"], "answer": "C" },
+        { "options": ["dangerous", "useless", "meaningful", "wrong"], "answer": "C" }
+      ],
+      "explain_zh": "(1)河水上涨，发生了严重的洪水，flood。(2)有些人无法从家里逃出来，escape。(3)爸爸想帮助有危险的人，help。(4)看到士兵们努力工作救人，working。(5)用船把老人和孩子运到安全地方，children。(6)给失去家园的人送食物、水和衣服，clothes。(7)从早到晚工作，until。(8)我很累，tired。(9)因为人们需要我们的帮助，help。(10)小女孩大声哭，crying。(11)雨停后大家都松了口气/放松，relaxed。(12)为别人做了有意义的事，meaningful。"
+    },
+    {
+      "passage": "My grandmother's birthday was coming, and I wanted to give her a special (1)____. I did not have much money, so I decided to make something by (2)____. I thought about what my grandmother liked. She loved flowers, so I had a good (3)____. I would draw a beautiful picture of her favorite flowers for her. First, I took out my colored (4)____ and a big piece of paper. Then I began to draw red roses and yellow sunflowers. I drew very (5)____ because I wanted it to be perfect. It (6)____ me three whole days to finish the picture. When it was done, I (7)____ it with a nice frame and wrote \"Happy Birthday\" on it. On her birthday, I gave the picture to my grandmother. She looked at it for a long time, and tears came into her (8)____. She said it was the most beautiful (9)____ she had ever received. She hung it on the (10)____ in her living room at once. I was so (11)____ to see her happy face. Now I know that the best gift does not need to be (12)____. A gift made with love means much more than money can buy.",
+      "blanks": [
+        { "options": ["gift", "lesson", "rule", "test"], "answer": "A" },
+        { "options": ["myself", "luck", "chance", "mistake"], "answer": "A" },
+        { "options": ["problem", "idea", "story", "question"], "answer": "B" },
+        { "options": ["shoes", "books", "pens", "toys"], "answer": "C" },
+        { "options": ["quickly", "carefully", "loudly", "badly"], "answer": "B" },
+        { "options": ["took", "spent", "made", "cost"], "answer": "A" },
+        { "options": ["broke", "lost", "covered", "ate"], "answer": "C" },
+        { "options": ["mouth", "ears", "hands", "eyes"], "answer": "D" },
+        { "options": ["food", "gift", "house", "song"], "answer": "B" },
+        { "options": ["floor", "wall", "bed", "table"], "answer": "B" },
+        { "options": ["sorry", "afraid", "happy", "tired"], "answer": "C" },
+        { "options": ["expensive", "small", "old", "useful"], "answer": "A" }
+      ],
+      "explain_zh": "(1)想送奶奶一份特别的礼物，gift。(2)钱不多，决定自己动手做，by myself。(3)奶奶爱花，我有了好主意，idea。(4)拿出彩色笔，pens。(5)画得很认真，carefully。(6)花了我三天，it took me。(7)给画配了相框（盖/装上），covered with a frame。(8)眼里含着泪，eyes。(9)是收到过最美的礼物，gift。(10)挂在客厅的墙上，wall。(11)看到她开心我很高兴，happy。(12)最好的礼物不必昂贵，expensive。"
+    },
+    {
+      "passage": "During the summer holiday, my parents sent me to spend a weekend at my grandfather's (1)____ in the countryside. I was very happy because I had never lived in the country (2)____. The air there was fresh and the sky was very (3)____. On the first morning, my grandfather woke me up early. He took me to feed the (4)____. I gave them some grass and they ate it happily. Then we went to the field to pick (5)____. We picked red tomatoes and green beans, and put them into a big (6)____. My grandfather taught me how to (7)____ the plants with water. The work was hard, and soon I was covered with (8)____. But I felt it was great fun. In the afternoon, we sat under a big tree and my grandfather told me many interesting (9)____ about his life when he was young. I listened to him (10)____. In the evening, we ate the vegetables we picked, and they were the most (11)____ food I had ever eaten. The weekend at the farm was short, but I learned a lot. I hope I can (12)____ there again next year.",
+      "blanks": [
+        { "options": ["office", "farm", "factory", "school"], "answer": "B" },
+        { "options": ["after", "ago", "before", "yet"], "answer": "C" },
+        { "options": ["dirty", "dark", "blue", "small"], "answer": "C" },
+        { "options": ["cars", "books", "animals", "toys"], "answer": "C" },
+        { "options": ["fish", "stones", "vegetables", "flowers"], "answer": "C" },
+        { "options": ["basket", "cup", "bottle", "bag"], "answer": "A" },
+        { "options": ["water", "burn", "cut", "throw"], "answer": "A" },
+        { "options": ["snow", "sweat", "rain", "paint"], "answer": "B" },
+        { "options": ["songs", "stories", "rules", "tests"], "answer": "B" },
+        { "options": ["angrily", "sadly", "carefully", "badly"], "answer": "C" },
+        { "options": ["expensive", "delicious", "strange", "cold"], "answer": "B" },
+        { "options": ["sleep", "study", "stay", "play"], "answer": "C" }
+      ],
+      "explain_zh": "(1)去爷爷在乡下的农场，farm。(2)我以前从没在乡下住过，before。(3)天空很蓝，blue。(4)爷爷带我去喂动物，animals。(5)去地里摘蔬菜，vegetables。(6)放进一个大篮子，basket。(7)教我怎么给植物浇水，water。(8)很快满身是汗，sweat。(9)讲他年轻时有趣的故事，stories。(10)我认真地听，carefully。(11)是我吃过最美味的食物，delicious。(12)希望明年还能在那儿住，stay。"
+    },
+    {
+      "passage": "Every morning I take the bus to school, and the (1)____ of the bus is a kind old man named Mr. Li. He always has a big (2)____ on his face and says good morning to every student. One cold winter morning, I ran to the bus stop, but I was (3)____ because my watch was wrong. The bus had already left. I felt very (4)____ and almost cried. Suddenly, I saw the bus (5)____ back. Mr. Li had noticed that I was not on the bus, so he came back for (6)____. \"Don't worry, get on quickly,\" he said with a smile. I was so (7)____ that I thanked him again and again. On the bus, an old woman could not find a (8)____ to sit. Mr. Li stopped the bus and kindly asked a young man to (9)____ his seat to her. Everyone on the bus felt (10)____ because of his kindness. Mr. Li is not only a good driver but also a good (11)____ to all of us. He always says that helping others makes him (12)____. I really hope I can be a person like him when I grow up.",
+      "blanks": [
+        { "options": ["teacher", "driver", "doctor", "farmer"], "answer": "B" },
+        { "options": ["smile", "book", "hat", "bag"], "answer": "A" },
+        { "options": ["early", "late", "happy", "ready"], "answer": "B" },
+        { "options": ["excited", "glad", "sad", "proud"], "answer": "C" },
+        { "options": ["coming", "leaving", "falling", "stopping"], "answer": "A" },
+        { "options": ["him", "her", "me", "them"], "answer": "C" },
+        { "options": ["angry", "thankful", "afraid", "tired"], "answer": "B" },
+        { "options": ["seat", "ticket", "door", "window"], "answer": "A" },
+        { "options": ["sell", "give", "buy", "keep"], "answer": "B" },
+        { "options": ["bored", "warm", "angry", "afraid"], "answer": "B" },
+        { "options": ["enemy", "stranger", "example", "winner"], "answer": "C" },
+        { "options": ["sad", "tired", "happy", "busy"], "answer": "C" }
+      ],
+      "explain_zh": "(1)公交车司机李师傅，driver。(2)脸上总挂着微笑，smile。(3)因为表错了，我迟到了，late。(4)我很难过，几乎哭了，sad。(5)突然看到车开回来，coming back。(6)李师傅发现我没上车，回来接我，for me。(7)我很感激，thankful。(8)一位老太太找不到座位，seat。(9)请年轻人把座位让给她，give。(10)因他的善良，大家都感到温暖，warm。(11)他是大家学习的榜样，example。(12)他说帮助别人让他快乐，happy。"
+    }
+  ]
+}

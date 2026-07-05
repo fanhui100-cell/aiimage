@@ -1,0 +1,167 @@
+{
+  "template": "zhongkao-grammar-fill",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao-level 语法填空 (gblanks shape, 10 blanks each), batch G4. Topics distinct from G1-G3; points rotate over tense/preposition/article/pronoun/comparative-superlative/word-form/connector/subject-verb agreement/non-finite. Dialogue single-quoted. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "My hometown is a small but beautiful town (1)____ the south of China. It is famous (2)____ its green hills and clear rivers. When I was young, I often (3)____ (swim) in the river with my friends. The people there are friendly, and life is much (4)____ (slow) than in big cities. In recent years, my hometown (5)____ (change) a lot. New roads and schools (6)____ (build) everywhere. Although it is more modern now, it still keeps (7)____ (it) natural beauty. Every time I go back, I feel (8)____ (relax) and happy. My grandmother says that no place is (9)____ comfortable as home. I love my hometown, and I hope it will become even (10)____ (good) in the future.",
+      "gblanks": [
+        { "answer": "in", "acceptable": ["in"], "hint": "in the south of" },
+        { "answer": "for", "acceptable": ["for"], "hint": "famous for" },
+        { "answer": "swam", "acceptable": ["swam"], "hint": "past tense, when I was young" },
+        { "answer": "slower", "acceptable": ["slower"], "hint": "comparative of slow" },
+        { "answer": "has changed", "acceptable": ["has changed"], "hint": "present perfect, in recent years" },
+        { "answer": "have been built", "acceptable": ["have been built"], "hint": "present perfect passive" },
+        { "answer": "its", "acceptable": ["its"], "hint": "possessive of it" },
+        { "answer": "relaxed", "acceptable": ["relaxed"], "hint": "adjective describing feeling" },
+        { "answer": "as", "acceptable": ["as"], "hint": "as ... as" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good" }
+      ],
+      "explain_zh": "(1) in the south；(2) famous for；(3) when I was young 过去 swam；(4) slower 比较级；(5) in recent years 现在完成 has changed；(6) have been built 现在完成被动；(7) its 物主；(8) relaxed 感受形容词；(9) as...as；(10) better 比较级。"
+    },
+    {
+      "passage": "The Dragon Boat Festival is a traditional Chinese festival (1)____ falls in summer. People hold it (2)____ remember an ancient poet named Qu Yuan. On that day, families eat zongzi, (3)____ are made of rice and wrapped in leaves. The most exciting part is the dragon boat race, (4)____ many teams take part. Each team rows (5)____ (fast) than the others to win. The drums beat loudly, and the crowd cheers with (6)____ (excite). My grandmother makes the (7)____ (delicious) zongzi I have ever tasted. Last year, I helped her wrap them, but mine looked very (8)____ (ugly). She laughed and said practice (9)____ (make) perfect. This festival teaches us never (10)____ (forget) our history and culture.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "relative, the festival" },
+        { "answer": "to", "acceptable": ["to"], "hint": "purpose, in order to" },
+        { "answer": "which", "acceptable": ["which"], "hint": "non-defining relative, zongzi" },
+        { "answer": "where", "acceptable": ["where", "in which"], "hint": "relative, the race (in which)" },
+        { "answer": "faster", "acceptable": ["faster"], "hint": "comparative of fast" },
+        { "answer": "excitement", "acceptable": ["excitement"], "hint": "noun form, with ..." },
+        { "answer": "most delicious", "acceptable": ["most delicious"], "hint": "superlative" },
+        { "answer": "ugly", "acceptable": ["ugly"], "hint": "adjective, no change" },
+        { "answer": "makes", "acceptable": ["makes"], "hint": "practice makes, subject-verb" },
+        { "answer": "to forget", "acceptable": ["to forget"], "hint": "never to do" }
+      ],
+      "explain_zh": "(1) which/that 指物；(2) to remember 目的；(3) which 非限定指物；(4) where/in which 引导(比赛中)；(5) faster 比较级；(6) excitement 名词；(7) the most delicious 最高级；(8) ugly 形容词；(9) practice makes 主谓一致；(10) never to forget。"
+    },
+    {
+      "passage": "Last week, our science teacher showed us an interesting (1)____ (experiment). She put an egg into a glass of salt water, and the egg did not (2)____ (sink). We were all surprised, and everyone asked (3)____ this happened. The teacher explained that salt water is (4)____ (heavy) than fresh water. Then she let each of us (5)____ (try) it ourselves. My partner and I worked together (6)____ (careful). It was the first time that I (7)____ (see) science in such a fun way. After class, I could not stop (8)____ (think) about it. Now I understand that science is all (9)____ us in daily life. I hope I (10)____ become a scientist one day.",
+      "gblanks": [
+        { "answer": "experiment", "acceptable": ["experiment"], "hint": "singular noun after an" },
+        { "answer": "sink", "acceptable": ["sink"], "hint": "did not + base verb" },
+        { "answer": "why", "acceptable": ["why"], "hint": "asked why" },
+        { "answer": "heavier", "acceptable": ["heavier"], "hint": "comparative of heavy" },
+        { "answer": "try", "acceptable": ["try"], "hint": "let sb do" },
+        { "answer": "carefully", "acceptable": ["carefully"], "hint": "adverb form" },
+        { "answer": "had seen", "acceptable": ["had seen"], "hint": "past perfect, the first time that ..." },
+        { "answer": "thinking", "acceptable": ["thinking"], "hint": "stop doing" },
+        { "answer": "around", "acceptable": ["around", "round"], "hint": "all around us" },
+        { "answer": "will", "acceptable": ["will", "can"], "hint": "future, one day" }
+      ],
+      "explain_zh": "(1) an experiment 单数；(2) did not sink 原形；(3) asked why；(4) heavier 比较级；(5) let sb try；(6) carefully 副词；(7) the first time that 过去完成 had seen；(8) stop thinking 停止做；(9) all around us；(10) 将来 will。"
+    },
+    {
+      "passage": "Last summer, my friends and I started a small lemonade stand (1)____ the street. We wanted to earn some money (2)____ (buy) gifts for our parents. Every morning, we made fresh lemonade and sold (3)____ to the people passing by. At first, business was slow, and we sold (4)____ (few) than ten cups a day. But we did not give up. We made a big colourful sign, and soon (5)____ (many) customers came. My friend Lily was the (6)____ (good) at talking to people. By the end of the holiday, we (7)____ (earn) enough money for the gifts. Our parents were very proud (8)____ us. This experience taught me that hard work always (9)____ (pay) off. I will never forget that (10)____ (success) summer.",
+      "gblanks": [
+        { "answer": "on", "acceptable": ["on", "in"], "hint": "on the street" },
+        { "answer": "to buy", "acceptable": ["to buy"], "hint": "purpose, to do" },
+        { "answer": "it", "acceptable": ["it"], "hint": "object pronoun, the lemonade" },
+        { "answer": "fewer", "acceptable": ["fewer"], "hint": "comparative of few" },
+        { "answer": "more", "acceptable": ["more"], "hint": "comparative of many" },
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" },
+        { "answer": "had earned", "acceptable": ["had earned", "earned"], "hint": "by the end of, past perfect" },
+        { "answer": "of", "acceptable": ["of"], "hint": "proud of" },
+        { "answer": "pays", "acceptable": ["pays"], "hint": "hard work pays, subject-verb" },
+        { "answer": "successful", "acceptable": ["successful"], "hint": "adjective form" }
+      ],
+      "explain_zh": "(1) on the street；(2) to buy 目的；(3) sold it 宾格；(4) fewer 比较级；(5) more customers；(6) the best 最高级；(7) by the end of 过去完成 had earned；(8) proud of；(9) hard work pays 主谓一致；(10) successful 形容词。"
+    },
+    {
+      "passage": "My favourite writer is a woman (1)____ books are loved by children all over the world. I have read almost all of (2)____ stories. Her words are simple, (3)____ they are full of warmth and wisdom. The first book of hers that I read (4)____ (be) about a lonely little fox. It moved me so deeply (5)____ I cried at the end. Since then, reading her books (6)____ (become) my favourite hobby. I think a good story can teach us more than a (7)____ (thousand) lessons. Last month, I wrote a letter to her, and I hope she (8)____ reply soon. One day, I want to write stories (9)____ (good) than hers. She has shown me how (10)____ (powerful) words can be.",
+      "gblanks": [
+        { "answer": "whose", "acceptable": ["whose"], "hint": "possessive relative" },
+        { "answer": "her", "acceptable": ["her"], "hint": "possessive, her stories" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "was", "acceptable": ["was"], "hint": "the first book was, past" },
+        { "answer": "that", "acceptable": ["that"], "hint": "so ... that" },
+        { "answer": "has become", "acceptable": ["has become"], "hint": "present perfect, since then" },
+        { "answer": "thousand", "acceptable": ["thousand"], "hint": "a thousand, no -s after a" },
+        { "answer": "will", "acceptable": ["will", "can"], "hint": "future, hope she ..." },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good" },
+        { "answer": "powerful", "acceptable": ["powerful"], "hint": "adjective, how + adj" }
+      ],
+      "explain_zh": "(1) whose books；(2) her stories 物主；(3) 转折 but；(4) the first book was 过去；(5) so...that；(6) reading...has become 现在完成；(7) a thousand 不加 s；(8) 将来 will；(9) better 比较级；(10) how powerful 形容词。"
+    },
+    {
+      "passage": "Two years ago, I failed an important maths exam, and I felt very (1)____ (sad). I almost believed that I was not good (2)____ maths at all. My teacher noticed this and talked (3)____ me kindly. 'Failure is the mother of success,' she said. From that day on, I studied (4)____ (hard) than before. I did a little maths every evening, (5)____ slowly my marks went up. Last term, I got the (6)____ (high) score in my class. My classmates asked me what the secret (7)____ (be). I told them that the secret was never (8)____ (give) up. Now I am no longer afraid (9)____ difficult problems. This experience has made me (10)____ (strong) than ever.",
+      "gblanks": [
+        { "answer": "sad", "acceptable": ["sad"], "hint": "adjective, no change" },
+        { "answer": "at", "acceptable": ["at"], "hint": "good at" },
+        { "answer": "to", "acceptable": ["to", "with"], "hint": "talk to sb" },
+        { "answer": "harder", "acceptable": ["harder"], "hint": "comparative of hard" },
+        { "answer": "and", "acceptable": ["and"], "hint": "result connector" },
+        { "answer": "highest", "acceptable": ["highest"], "hint": "superlative of high" },
+        { "answer": "was", "acceptable": ["was"], "hint": "what the secret was, past" },
+        { "answer": "to give", "acceptable": ["to give"], "hint": "never to give up" },
+        { "answer": "of", "acceptable": ["of"], "hint": "afraid of" },
+        { "answer": "stronger", "acceptable": ["stronger"], "hint": "comparative of strong" }
+      ],
+      "explain_zh": "(1) sad 形容词；(2) good at；(3) talk to sb；(4) harder 比较级；(5) 结果 and；(6) the highest 最高级；(7) what the secret was 过去；(8) never to give up；(9) afraid of；(10) stronger 比较级。"
+    },
+    {
+      "passage": "Healthy eating is very important (1)____ growing children. Doctors say that we should eat more vegetables and (2)____ (little) junk food. Breakfast is the most important meal (3)____ the day, so we should never skip it. My mother always tells me that an apple a day (4)____ (keep) the doctor away. In the past, I loved drinking cola, (5)____ now I prefer water and fresh juice. Eating too much sugar is bad (6)____ our teeth. If we want (7)____ (stay) healthy, we must also do exercise every day. Last year, I changed my eating habits, and I feel much (8)____ (good) now. A balanced diet helps us grow (9)____ (tall) and stronger. Remember, health is the (10)____ (rich) treasure in life.",
+      "gblanks": [
+        { "answer": "for", "acceptable": ["for", "to"], "hint": "important for/to" },
+        { "answer": "less", "acceptable": ["less"], "hint": "comparative of little" },
+        { "answer": "of", "acceptable": ["of"], "hint": "meal of the day" },
+        { "answer": "keeps", "acceptable": ["keeps"], "hint": "an apple keeps, subject-verb" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "for", "acceptable": ["for"], "hint": "bad for" },
+        { "answer": "to stay", "acceptable": ["to stay"], "hint": "want to do" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of well" },
+        { "answer": "taller", "acceptable": ["taller"], "hint": "comparative of tall" },
+        { "answer": "richest", "acceptable": ["richest"], "hint": "superlative of rich" }
+      ],
+      "explain_zh": "(1) important for/to；(2) less junk food 比较级；(3) meal of the day；(4) an apple keeps 主谓一致；(5) 转折 but；(6) bad for；(7) want to stay；(8) better 比较级；(9) taller 比较级；(10) the richest 最高级。"
+    },
+    {
+      "passage": "My grandmother is the best cook (1)____ I know. Every Sunday, our whole family (2)____ (gather) at her home for lunch. The kitchen is always full (3)____ wonderful smells. Her best dish is fish soup, (4)____ tastes better than any restaurant's. She has cooked for our family (5)____ more than forty years. 'The secret is love,' she often (6)____ (say) with a smile. When I was little, I loved (7)____ (watch) her cook. Now she is teaching me how (8)____ (make) some simple dishes. I think cooking is one of the (9)____ (useful) skills in life. I hope that one day my food will be as delicious (10)____ hers.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that"], "hint": "relative after best (the cook that)" },
+        { "answer": "gathers", "acceptable": ["gathers"], "hint": "whole family gathers, subject-verb" },
+        { "answer": "of", "acceptable": ["of"], "hint": "full of" },
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "relative, the dish" },
+        { "answer": "for", "acceptable": ["for"], "hint": "for + duration" },
+        { "answer": "says", "acceptable": ["says"], "hint": "she says, subject-verb" },
+        { "answer": "watching", "acceptable": ["watching", "to watch"], "hint": "love doing / to do" },
+        { "answer": "to make", "acceptable": ["to make"], "hint": "how + to do" },
+        { "answer": "most useful", "acceptable": ["most useful"], "hint": "superlative" },
+        { "answer": "as", "acceptable": ["as"], "hint": "as ... as" }
+      ],
+      "explain_zh": "(1) the best cook that；(2) whole family gathers 主谓一致；(3) full of；(4) which/that 指物；(5) for forty years；(6) she says 主谓一致；(7) love watching/to watch；(8) how to make；(9) the most useful 最高级；(10) as delicious as。"
+    },
+    {
+      "passage": "Last winter, I took my first flight to visit my uncle in Beijing. I was both nervous (1)____ excited. When the plane took (2)____, I held my mother's hand tightly. Soon we were flying high above the (3)____ (cloud). Everything on the ground looked so (4)____ (small) that the cars were like tiny ants. A kind flight attendant brought us some food and asked if we (5)____ (need) anything. The flight was much (6)____ (smooth) than I had expected. After two hours, the plane landed (7)____ (safe) at the airport. My uncle was already waiting (8)____ us outside. It was the most exciting day of my whole (9)____ (holiday). Now I am not afraid of flying any more, and I cannot wait (10)____ (take) another flight.",
+      "gblanks": [
+        { "answer": "and", "acceptable": ["and"], "hint": "both ... and" },
+        { "answer": "off", "acceptable": ["off"], "hint": "take off" },
+        { "answer": "clouds", "acceptable": ["clouds"], "hint": "plural after the" },
+        { "answer": "small", "acceptable": ["small"], "hint": "so ... that, adjective" },
+        { "answer": "needed", "acceptable": ["needed"], "hint": "past tense, reported question" },
+        { "answer": "smoother", "acceptable": ["smoother"], "hint": "comparative of smooth" },
+        { "answer": "safely", "acceptable": ["safely"], "hint": "adverb form" },
+        { "answer": "for", "acceptable": ["for"], "hint": "wait for" },
+        { "answer": "holiday", "acceptable": ["holiday", "holidays"], "hint": "noun, my whole holiday" },
+        { "answer": "to take", "acceptable": ["to take"], "hint": "cannot wait to do" }
+      ],
+      "explain_zh": "(1) both...and；(2) take off；(3) above the clouds 复数；(4) so small that 形容词；(5) asked if we needed 过去；(6) smoother 比较级；(7) safely 副词；(8) wait for；(9) my whole holiday；(10) cannot wait to take。"
+    },
+    {
+      "passage": "A new term has just begun, and I feel full (1)____ energy and hope. This year, I (2)____ (make) a plan to improve myself. First, I will get up (3)____ (early) than last term so that I have time to read. Our class has a new English teacher (4)____ comes from another city. Everyone says her lessons are very (5)____ (interest). I have also decided (6)____ (join) the school choir, because I love singing. My parents told me that good habits (7)____ (be) the key to success. I know the new term will not always be easy, (8)____ I am ready to work hard. I want to make this term the (9)____ (good) one ever. With effort and patience, I believe I (10)____ achieve my goals.",
+      "gblanks": [
+        { "answer": "of", "acceptable": ["of"], "hint": "full of" },
+        { "answer": "have made", "acceptable": ["have made"], "hint": "present perfect" },
+        { "answer": "earlier", "acceptable": ["earlier"], "hint": "comparative of early" },
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "relative, the teacher" },
+        { "answer": "interesting", "acceptable": ["interesting"], "hint": "adjective, -ing" },
+        { "answer": "to join", "acceptable": ["to join"], "hint": "decide to do" },
+        { "answer": "are", "acceptable": ["are"], "hint": "good habits are, subject-verb" },
+        { "answer": "but", "acceptable": ["but"], "hint": "contrast connector" },
+        { "answer": "best", "acceptable": ["best"], "hint": "superlative of good" },
+        { "answer": "will", "acceptable": ["will", "can"], "hint": "future, believe I ..." }
+      ],
+      "explain_zh": "(1) full of；(2) have made 现在完成；(3) earlier 比较级；(4) who/that 指人；(5) interesting 形容词；(6) decide to join；(7) good habits are 主谓一致；(8) 转折 but；(9) the best one 最高级；(10) 将来 will。"
+    }
+  ]
+}

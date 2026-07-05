@@ -1,0 +1,68 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that university education should be free for all students, while others argue that students should pay for their own studies. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：大学教育应否全民免费——讨论双方观点并给出你的看法，不少于 250 词。",
+      "referencePoints": ["both views genuinely discussed", "clear personal position", "developed reasons and examples", "essay structure with introduction and conclusion"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many cities, private car ownership continues to grow despite worsening congestion and pollution. What problems does this trend cause, and what measures could governments take to address them? Give reasons for your answer and include any relevant examples. Write at least 250 words.",
+      "promptZh": "学术类大作文：私家车增长带来的问题与政府对策（问题+解决型），不少于 250 词。",
+      "referencePoints": ["specific problems identified", "feasible government measures", "problem-solution linkage", "cohesive paragraphing"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that the best way to reduce crime is to give longer prison sentences. Others, however, believe there are better alternative ways of reducing crime. Discuss both views and give your opinion. Write at least 250 words.",
+      "promptZh": "学术类大作文：加长刑期 vs 其他减少犯罪的方式——讨论双方并表态，不少于 250 词。",
+      "referencePoints": ["both positions addressed with reasons", "alternatives explained (education, rehabilitation, policing)", "clear stance", "formal register"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many employers now allow their staff to work from home for part of the week. Do the advantages of this development outweigh the disadvantages? Give reasons for your answer and include any relevant examples. Write at least 250 words.",
+      "promptZh": "学术类大作文：混合办公的利是否大于弊（利弊权衡型），不少于 250 词。",
+      "referencePoints": ["advantages and disadvantages both covered", "explicit outweigh judgement", "workplace examples", "balanced but decisive conclusion"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say that advertising aimed at children should be banned. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples. Write at least 250 words.",
+      "promptZh": "学术类大作文：应否禁止针对儿童的广告（同意程度型），不少于 250 词。",
+      "referencePoints": ["clear degree of agreement", "consideration of counter-arguments", "consumer-protection vs industry perspectives", "consistent position throughout"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries, an increasing number of young people leave rural areas to live and work in cities. What are the causes of this trend, and what effects does it have on rural communities? Write at least 250 words.",
+      "promptZh": "学术类大作文：青年离乡进城的原因及其对乡村社区的影响（原因+影响型），不少于 250 词。",
+      "referencePoints": ["distinct causes (employment, education, services)", "effects on rural communities (ageing, labour shortage, service decline)", "cause-effect organisation", "relevant examples"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that unpaid community service should be a compulsory part of secondary school education. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples. Write at least 250 words.",
+      "promptZh": "学术类大作文：中学应否强制社区服务（同意程度型），不少于 250 词。",
+      "referencePoints": ["clear stance with justification", "educational and social benefits weighed against compulsion concerns", "concrete school examples", "well-signposted paragraphs"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. International tourism has grown enormously in recent decades. Some argue it brings economic benefits to host countries, while others say it damages local cultures and the environment. Discuss both views and give your own opinion. Write at least 250 words.",
+      "promptZh": "学术类大作文：国际旅游的经济收益 vs 文化环境代价——讨论双方并表态，不少于 250 词。",
+      "referencePoints": ["economic benefits explained", "cultural/environmental costs explained", "personal position with criteria", "specific destination-style examples without naming real protected content"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Scientific research should be carried out and controlled by governments rather than private companies. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples. Write at least 250 words.",
+      "promptZh": "学术类大作文：科研应由政府而非企业主导？（同意程度型），不少于 250 词。",
+      "referencePoints": ["public-interest vs innovation-incentive arguments", "funding and accountability considerations", "nuanced position acceptable", "academic tone"],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, people are living longer than ever before. Some think this trend mainly benefits society, while others believe it creates serious challenges. Discuss both views and give your own opinion. Write at least 250 words.",
+      "promptZh": "学术类大作文：人口长寿化的社会收益与挑战——讨论双方并表态，不少于 250 词。",
+      "referencePoints": ["benefits (experience, workforce, family) discussed", "challenges (pensions, healthcare) discussed", "opinion supported by comparison", "clear conclusion"],
+      "wordLimit": ">=250"
+    }
+  ]
+}

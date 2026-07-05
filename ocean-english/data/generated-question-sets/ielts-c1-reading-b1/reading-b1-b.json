@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The Printing Press and the Reshaping of Knowledge\n\nBefore the middle of the fifteenth century, every book in Europe was produced by hand. A scribe, often working in the quiet of a monastery, copied a text letter by letter onto parchment or paper, a labour that might occupy months for a single volume. Books were consequently scarce and costly, and the knowledge they contained circulated slowly among a narrow circle of clergy, scholars and wealthy patrons. The situation changed dramatically when Johannes Gutenberg, a goldsmith working in the German city of Mainz, combined several existing techniques into a practical system for printing with movable metal type.\n\nGutenberg's genius lay less in a single invention than in the integration of many. He devised a durable alloy for casting individual letters, an oil-based ink that adhered well to metal, and a press adapted from those used to squeeze grapes and olives. Each letter could be arranged into words and lines, inked, and pressed onto paper hundreds of times before being redistributed for the next page. What had taken a scribe a season could now be accomplished in a day. The famous Bible he produced around 1455 demonstrated that mechanically printed pages could rival the beauty of the finest manuscripts. That single volume, produced in a workshop that had to be financed like any modern enterprise, quietly announced the arrival of an entirely new kind of craft.\n\nThe consequences of this innovation were profound and far-reaching. Within fifty years, presses had been established in more than two hundred European towns, and millions of volumes had been printed. As the supply of books expanded, their price fell, and reading ceased to be the exclusive privilege of a small elite. Merchants, physicians and craftsmen could now own reference works relevant to their trades, and literacy gradually spread through the growing towns. The very appearance of the book evolved: printers introduced title pages, page numbers and indexes, features that made information easier to locate and cite.\n\nPerhaps the most significant effect was on the reliability of knowledge itself. When texts were copied by hand, errors inevitably crept in, and no two manuscripts of the same work were ever quite identical. Printing allowed thousands of copies to be produced from a single setting of type, each one bearing exactly the same words. Scholars in distant cities could at last refer to the same page of the same edition, a shared foundation that made the accumulation and correction of knowledge far more efficient. Scientific observations, mathematical tables and astronomical charts could be reproduced without the distortions of repeated copying. A single mistake in a printed table was serious precisely because it was multiplied so faithfully, and this awareness encouraged printers and scholars alike to check their work with a new and deliberate care.\n\nThe press also became a powerful instrument of change in religion and politics. Pamphlets, printed quickly and cheaply, could spread a controversial argument across a country within weeks. Rulers and churches alike came to recognise the double-edged nature of the new technology: it could disseminate official doctrine, but it could equally carry dissent beyond their control. Efforts to license or censor printing appeared almost as soon as the presses themselves, a testament to the authorities' awareness of print's persuasive reach.\n\nIt would be a mistake, however, to imagine that the printed book swept all before it overnight. Manuscripts continued to be produced for decades, and many readers initially regarded printed volumes as inferior imitations of handwritten originals. The transformation was gradual, unfolding over generations rather than years. Yet by the close of the sixteenth century, the printed word had become the ordinary vehicle of learning, commerce and debate. The quiet labour of the solitary scribe had given way to an industry, and with it the modern world's expectation that knowledge, once recorded, can be shared widely, checked against a common source, and preserved for those who come after.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "The printing press, by making identical texts widely and cheaply available, fundamentally transformed the spread and reliability of knowledge in Europe.",
+            "Johannes Gutenberg was a goldsmith who invented an entirely new form of metal type without relying on earlier techniques.",
+            "Handwritten manuscripts were more beautiful than printed books and therefore remained more valuable for centuries.",
+            "Governments and churches were the groups most responsible for encouraging the growth of printing across Europe."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what did Gutenberg adapt for use in his printing press?",
+          "options": [
+            "A weaving loom used by textile workers",
+            "A machine originally used for pressing grapes and olives",
+            "A furnace designed by monastery scribes",
+            "A water wheel used to grind grain"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which of the following features does the passage say printers introduced to books?",
+          "options": [
+            "Coloured illustrations and gold leaf",
+            "Leather bindings and metal clasps",
+            "Title pages, page numbers and indexes",
+            "Translations into local languages"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that authorities attempted to license or censor printing because",
+          "options": [
+            "they understood that printing could spread ideas that threatened their control",
+            "they believed printed books were of poorer quality than manuscripts",
+            "they wanted to reduce the price of books for ordinary people",
+            "they hoped to protect the livelihoods of traditional scribes"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"distortions\" is closest in meaning to",
+          "options": [
+            "errors or inaccuracies",
+            "delays or postponements",
+            "expenses or costs",
+            "decorations or embellishments"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "argue that manuscripts should have been abandoned much more quickly than they were",
+            "criticise early readers for wrongly preferring printed books to handwritten ones",
+            "prove that the sixteenth century produced no significant works of learning",
+            "emphasise that the shift to printing was gradual yet ultimately reshaped how knowledge is shared and preserved"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讲印刷术如何改变知识的传播与可靠性。题型覆盖主旨、细节、推断、词义与作者意图。"
+    },
+    {
+      "passage": "Coral Reefs and the Science of Restoration\n\nCoral reefs are among the most diverse ecosystems on the planet, occupying less than one per cent of the ocean floor yet providing a home for roughly a quarter of all marine species. The structures themselves are built by tiny animals called coral polyps, which extract calcium carbonate from seawater to construct the hard skeletons that, over centuries, accumulate into vast reef formations. Within the tissues of these polyps live microscopic algae known as zooxanthellae. The relationship between the two is a partnership: the algae photosynthesise and pass sugars to their coral hosts, while the coral offers the algae shelter and a steady supply of nutrients. It is this exchange of food for protection, repeated across countless polyps, that allows a reef to flourish in the clear but nutrient-poor tropical waters where little else can grow so abundantly.\n\nThis delicate arrangement is also the source of the reef's vulnerability. When ocean temperatures rise even slightly above the summer maximum, corals expel their algae, losing both their colour and their principal source of food. The phenomenon, called bleaching, leaves the coral pale and weakened. If cooler conditions return quickly, the coral may recover, but prolonged heat can kill entire reefs. Warming seas, ocean acidification, pollution from the land and destructive fishing practices have combined to place reefs under unprecedented stress. Scientists estimate that a significant proportion of the world's shallow reefs have already been lost or seriously degraded.\n\nFaced with these losses, researchers and conservationists have turned to active restoration. The best known technique resembles underwater gardening. Fragments of healthy coral are broken off, either from wild colonies or from specimens grown in nurseries, and attached to frames or ropes suspended in the water. There the fragments grow, sometimes several times faster than they would in the wild, until they are large enough to be transplanted onto a damaged reef. Because many corals reproduce readily from such cuttings, a single donor colony can eventually give rise to thousands of new individuals.\n\nOther approaches are more ambitious still. Some laboratories collect the eggs and sperm that corals release during their brief annual spawning, rear the larvae in protected tanks, and then settle the young corals onto damaged reefs where natural recruitment has failed. A further line of research seeks to identify and propagate corals that show a natural tolerance of heat. By selectively breeding these hardier individuals, scientists hope to produce reefs better able to survive the warmer oceans that the coming decades will almost certainly bring.\n\nRestoration is not without its critics, and their reservations deserve attention. Transplanting coral is slow, expensive and labour-intensive, and even the largest projects cover only a tiny fraction of the reefs at risk. Some ecologists warn that focusing on restoration may distract from the underlying causes of decline. Planting new coral, they argue, is of little lasting value if the waters remain too warm or too polluted for it to thrive. Restoration, in this view, treats the symptom rather than the disease.\n\nMost practitioners readily acknowledge this point. They present restoration not as a substitute for reducing greenhouse gas emissions and curbing pollution, but as a way of buying time. A restored patch of reef can preserve local biodiversity, support the fisheries and tourism on which coastal communities depend, and maintain a stock of living coral from which reefs might one day regenerate on a larger scale. It can also serve as an outdoor laboratory, teaching scientists which species and methods work best. The ultimate fate of the world's reefs, however, will be decided less by gardeners in the water than by decisions made on land about how quickly humanity is willing to slow the warming of the seas.",
+      "questions": [
+        {
+          "prompt": "What is the writer's main purpose in the passage?",
+          "options": [
+            "To explain how coral reefs function, why they are threatened, and how restoration can help while addressing its limitations",
+            "To prove that coral restoration can fully solve the crisis facing the world's reefs",
+            "To argue that coral reefs are less important than other marine ecosystems",
+            "To describe the life cycle of coral polyps in complete scientific detail"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, what do the zooxanthellae provide to the coral?",
+          "options": [
+            "Calcium carbonate for building skeletons",
+            "Sugars produced through photosynthesis",
+            "Protection from predatory fish",
+            "Resistance to rising water temperatures"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, coral bleaching occurs when",
+          "options": [
+            "polyps stop extracting calcium carbonate from the water",
+            "fishermen physically break apart the reef structures",
+            "corals expel their algae after ocean temperatures rise above the summer maximum",
+            "larvae fail to settle onto a damaged reef"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the writer regards restoration as",
+          "options": [
+            "helpful but insufficient on its own to secure the future of reefs",
+            "a complete and permanent solution to reef decline",
+            "a pointless activity that should be abandoned",
+            "more important than reducing greenhouse gas emissions"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"reservations\" is closest in meaning to",
+          "options": [
+            "bookings or appointments",
+            "protected areas of land",
+            "supplies kept in store",
+            "doubts or objections"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "In the final paragraph, the writer suggests that the future of coral reefs depends mainly on",
+          "options": [
+            "human decisions about slowing the warming of the seas",
+            "the number of coral nurseries built underwater",
+            "the natural spawning cycles of wild corals",
+            "the willingness of tourists to visit reefs"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇介绍珊瑚礁生态与人工修复技术及其局限。题型覆盖主旨、细节、推断、词义与作者态度。"
+    },
+    {
+      "passage": "The Psychology of Decision Fatigue\n\nEvery day, from the moment we wake, we make a stream of choices. Some are trivial, such as what to wear or which route to take to work; others carry real weight, such as how to respond to an email from a difficult colleague or whether to accept a job offer. For a long time it was assumed that the quality of our decisions depended chiefly on our knowledge and our character. Research in psychology, however, suggests that the sheer number of choices we face also matters, and that the mental resource we draw on when deciding can become depleted through use. This effect is often described as decision fatigue, and once it is named, examples of it seem to appear everywhere in ordinary life.\n\nThe idea grew out of a broader theory of self-control. In a series of experiments, participants who had first been required to resist a temptation or force themselves through a tedious task performed worse on a subsequent test of willpower than those who had not. It appeared as though exerting self-control drew down a limited reserve, leaving less available for the effort that followed. Deciding, the researchers reasoned, draws on the same reserve, for choosing between options requires us to weigh alternatives, suppress impulses and commit to a course of action, all of which demand mental effort.\n\nThe practical consequences can be surprising. One frequently cited study examined the rulings of judges considering requests for parole. The researchers found that prisoners whose cases were heard early in the morning, or shortly after a meal break, were considerably more likely to be granted parole than those whose hearings fell late in a long session. As the judges worked through case after case without rest, they seemed increasingly inclined to take the mentally easier option of denying the request and leaving matters unchanged. The pattern is consistent with the notion that repeated deciding gradually wears down the capacity for careful judgement.\n\nWhen the mind is fatigued, it tends to fall back on shortcuts. One is simply to do nothing, preserving the current situation rather than risking a change. Another is to seize on the most immediately appealing option without weighing its long-term costs. Marketers understand this tendency well. Shoppers who have already navigated a long series of choices in a store are, studies suggest, more likely to make impulsive purchases at the checkout, where small tempting items are deliberately placed. The tired decider reaches for what is easy rather than what is best. Over the course of a busy day these small surrenders can accumulate, and the choices made in the evening may bear little resemblance to those the same person would have made at dawn.\n\nNot every psychologist accepts the strongest version of the theory. Some argue that the effect is smaller than early studies implied, and that a person's beliefs about their own stamina can influence how quickly they tire. Others point out that motivation and a timely rest can restore much of the lost capacity. What is less disputed is the everyday observation that a long, unbroken sequence of demanding choices tends to erode the quality of the decisions that come at its end.\n\nUnderstanding decision fatigue offers some practical guidance. Important decisions, where possible, are best faced when the mind is fresh rather than at the end of a crowded day. Reducing the number of trivial choices, perhaps by settling routines in advance, can preserve mental energy for matters that truly deserve it. Some notably productive people deliberately simplify parts of their lives for precisely this reason, wearing much the same clothes each day so that no attention is wasted on the question. The aim is not to decide less but to spend one's limited capacity for judgement where it counts.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Making many choices can deplete our mental capacity for good judgement, and understanding this can help us decide more wisely.",
+            "Judges are generally unfair when deciding parole cases late in the day.",
+            "Willpower and character are the only factors that determine the quality of our decisions.",
+            "Shoppers should never buy small items placed near a store's checkout."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, the concept of decision fatigue grew out of research into",
+          "options": [
+            "the reliability of human memory",
+            "self-control and willpower",
+            "the effects of sleep on the brain",
+            "the influence of advertising on children"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did the study of parole rulings find?",
+          "options": [
+            "Prisoners heard late in a long session were less likely to be granted parole",
+            "Judges granted parole more often as the day went on",
+            "The time of a hearing had no effect on the outcome",
+            "Prisoners heard after a meal break were treated more harshly"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred that marketers place small tempting items near the checkout because",
+          "options": [
+            "the checkout is the only place with room to display them",
+            "customers there have the most time to compare prices carefully",
+            "shoppers who have made many choices are more likely to buy on impulse",
+            "such items are too fragile to be stored elsewhere in the store"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the fourth paragraph, the word \"shortcuts\" is closest in meaning to",
+          "options": [
+            "quick, effort-saving ways of deciding",
+            "brief periods of physical rest",
+            "sudden changes of opinion",
+            "detailed written instructions"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fifth paragraph, the writer's attitude towards the theory of decision fatigue can best be described as",
+          "options": [
+            "completely dismissive of any evidence for the effect",
+            "uncritically enthusiastic about the strongest version of the theory",
+            "indifferent to whether the theory has any practical value",
+            "balanced, acknowledging both its supporting evidence and the doubts raised about it"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇讨论决策疲劳的心理学及其现实影响。题型覆盖主旨、细节、推断、词义与作者态度。"
+    },
+    {
+      "passage": "The History of Mapmaking\n\nMaps are among humanity's oldest tools for making sense of the world, and the story of their development mirrors the growth of human knowledge itself. The earliest surviving maps are not the accurate representations we take for granted today but symbolic sketches scratched onto clay tablets or painted on walls. A Babylonian tablet dating from around the sixth century BCE, for instance, shows the known world as a flat disc encircled by a ring of water, with the city of Babylon placed firmly at its centre. Such maps were less concerned with precise geography than with expressing a people's sense of their own place in the cosmos.\n\nThe ancient Greeks brought a more systematic spirit to the task. Recognising that the Earth was a sphere, scholars such as Ptolemy in the second century CE attempted to project its curved surface onto a flat sheet. Ptolemy devised a grid of lines corresponding to latitude and longitude and compiled the coordinates of thousands of places drawn from travellers' reports. His great work, later known as the Geography, was lost to western Europe for many centuries but preserved and studied in the Islamic world, where geographers extended and corrected his findings. Only when his coordinates were reintroduced to Europe during the Renaissance did western mapmakers rediscover the ambition of describing the whole world within a single mathematical framework.\n\nDuring the European Middle Ages, mapmaking served purposes that were as much spiritual as practical. The elaborate maps of this period, sometimes called mappae mundi, typically placed the holy city of Jerusalem at the centre and arranged lands and seas around it in a manner intended to teach religious lessons rather than to guide a traveller. Alongside them, however, a more practical tradition was quietly developing. Sailors in the Mediterranean produced charts covered with a web of lines radiating from compass points, designed to help a navigator plot a course between ports. These charts were remarkably accurate for the coastlines they described.\n\nThe great age of European exploration transformed the demand for maps. As ships ventured across oceans, accurate charts became matters of commercial and military importance, and rulers guarded their best maps as state secrets. The central problem of the era was how to represent a round Earth on a flat page without hopelessly distorting it. In the sixteenth century the cartographer Gerardus Mercator devised an ingenious solution. His projection stretched the spacing between the lines of latitude towards the poles in such a way that a line of constant compass bearing appeared as a straight line. For sailors this was invaluable, though it came at a cost: regions far from the equator appeared far larger than they truly were.\n\nMercator's compromise illustrates a truth that lies at the heart of all mapmaking. No flat map can faithfully preserve every property of the curved surface it represents; to gain accuracy in one respect, the cartographer must accept distortion in another. A map that keeps shapes true will misrepresent areas, and one that preserves areas will bend familiar shapes. Every map is therefore a deliberate compromise, shaped by the purpose for which it was made.\n\nModern technology has changed the tools of the trade beyond recognition. Photographs taken from aircraft and satellites, together with signals from global positioning systems, allow the Earth's surface to be measured with a precision the ancients could scarcely have imagined. Yet the fundamental challenge remains the same. The mapmaker must still decide what to include and what to leave out, which features to emphasise and which to ignore. A map, however sophisticated, is never a perfect mirror of reality but a selective and purposeful picture of it, and reading one wisely means remembering the choices that went into its making.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "The history of mapmaking reflects both the growth of knowledge and the unavoidable compromises involved in representing the world.",
+            "Ptolemy was the single most important figure in the entire history of cartography.",
+            "Modern satellite maps have finally made all earlier forms of mapmaking obsolete.",
+            "Maps from the Middle Ages were more accurate than those made by ancient sailors."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, the Babylonian tablet map was mainly concerned with",
+          "options": [
+            "helping sailors navigate between distant ports",
+            "expressing a people's sense of their place in the cosmos",
+            "recording precise distances between cities",
+            "teaching scholars about latitude and longitude"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, what was the drawback of Mercator's projection?",
+          "options": [
+            "Lines of constant compass bearing became curved and hard to follow",
+            "Coastlines near the equator were left off the map entirely",
+            "Regions far from the equator appeared much larger than they really were",
+            "The projection could only be used on very small maps"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that rulers guarded their best maps as state secrets because",
+          "options": [
+            "accurate maps gave commercial and military advantages",
+            "maps were regarded as sacred religious objects",
+            "there were too few skilled cartographers to make copies",
+            "the public was thought unable to understand them"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the fifth paragraph, the word \"compromise\" is closest in meaning to",
+          "options": [
+            "a disagreement between two rival cartographers",
+            "a promise made to a paying customer",
+            "a mistake caused by careless measurement",
+            "a trade-off that gives up one thing to gain another"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main purpose is to",
+          "options": [
+            "stress that even advanced modern maps remain selective, purposeful pictures rather than perfect mirrors of reality",
+            "argue that satellite technology has removed all difficulty from mapmaking",
+            "criticise ancient mapmakers for failing to use scientific methods",
+            "recommend that people stop relying on maps altogether"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇梳理制图术的历史及其固有的取舍。题型覆盖主旨、细节、推断、词义与作者意图。"
+    },
+    {
+      "passage": "Glass as a Building Material Through History\n\nGlass is so familiar a part of the modern city that it is easy to forget how remarkable a substance it is. Hard yet transparent, it allows light to enter a building while keeping out wind and rain, a combination of properties that no natural material offers so conveniently. We pass whole days surrounded by it, in windows, walls and screens, rarely pausing to consider the long effort that made such abundance possible. Its journey from a rare luxury to a defining feature of contemporary architecture spans several thousand years and reflects the steady advance of human craft and industry.\n\nGlass itself is ancient. The peoples of Mesopotamia and Egypt were making small glass objects, such as beads and vessels, well over three thousand years ago. Turning glass into flat sheets suitable for windows, however, proved far more difficult, and for most of history windows were either left open, covered with cloth or animal horn, or filled with tiny panes. The Romans were among the first to use glass in windows, producing small, often cloudy panes by casting molten glass onto a flat surface. Such glass was thick and uneven, and it admitted light without offering a clear view.\n\nThroughout the medieval period, the finest glasswork was reserved for the great churches of Europe. Craftsmen learned to colour glass by adding metal compounds and to assemble small pieces into the luminous stained-glass windows that remain among the era's most admired achievements. These windows were prized for their beauty and their capacity to tell stories to congregations, but they were not intended, and were not able, to provide the clear, even light that later builders would seek. Making a large, flat, transparent pane remained beyond the reach of the craftsman's art.\n\nThe manufacture of clearer window glass advanced slowly over the following centuries. One widespread method involved blowing a large bubble of molten glass, spinning it rapidly until centrifugal force flattened it into a broad disc, and then cutting panes from the cooled sheet. The result was better than before but still marked by ripples and a thick, distorted centre. Only in the industrial age did techniques emerge for producing large sheets of consistent quality, and glass began its transformation from a decorative accent into a structural element of buildings.\n\nA decisive moment came in the middle of the nineteenth century, when a vast exhibition hall was erected in London almost entirely from iron and glass. Assembled from thousands of identical panes supported on a slender metal frame, the building enclosed a huge, light-filled space of a kind never seen before. It demonstrated to architects and the public alike that glass need not be confined to windows but could form the very envelope of a great structure. The achievement depended as much on advances in ironwork as on glassmaking, for only a strong, lightweight frame could carry so many panes.\n\nThe twentieth century carried this vision to its conclusion. The invention of a process for floating molten glass on a bed of liquid metal at last made it possible to manufacture large sheets that were flawlessly flat and clear, and at a modest cost. Combined with steel frames and new methods of insulation, such glass allowed architects to clothe entire towers in a shimmering transparent envelope. Today the glass curtain wall is a symbol of the modern city, admired for its lightness and its play of reflected sky. Yet the same transparency that makes such buildings striking also poses challenges, for great expanses of glass can let in unwanted heat and lose it again, and much recent effort has gone into developing coatings and layered panes that let in light while keeping the temperature within comfortable bounds.",
+      "questions": [
+        {
+          "prompt": "Which statement best expresses the main idea of the passage?",
+          "options": [
+            "Glass developed over thousands of years from a rare luxury into a defining structural material of modern architecture.",
+            "Stained-glass windows in medieval churches were the greatest achievement in the history of glassmaking.",
+            "Roman window glass was superior to the glass produced in the industrial age.",
+            "Modern glass buildings have no practical disadvantages compared with older structures."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, how did the Romans produce window glass?",
+          "options": [
+            "By floating molten glass on a bed of liquid metal",
+            "By casting molten glass onto a flat surface to make small, cloudy panes",
+            "By spinning a bubble of glass into a broad disc",
+            "By adding metal compounds to create coloured sheets"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, medieval stained-glass windows were valued mainly for",
+          "options": [
+            "their beauty and their ability to tell stories to congregations",
+            "the clear, even light they provided to church interiors",
+            "the large, flat, transparent panes they were made from",
+            "their low cost and ease of manufacture"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the London exhibition hall was significant because it",
+          "options": [
+            "was the first structure ever to include any glass at all",
+            "proved that iron frames were unnecessary for large glass buildings",
+            "showed that glass could form the main envelope of a large building, not just its windows",
+            "used stained glass to tell stories to the visiting public"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In the final paragraph, the word \"envelope\" (as in \"clothe entire towers\") refers most closely to",
+          "options": [
+            "the outer covering or skin of a building",
+            "a paper container for a letter",
+            "the internal supporting frame of a tower",
+            "a written contract between builder and client"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's purpose in mentioning coatings and layered panes is to",
+          "options": [
+            "argue that glass should no longer be used in tall buildings",
+            "prove that modern glass is exactly the same as Roman glass",
+            "suggest that transparency is the only quality that matters in architecture",
+            "acknowledge that large glass walls create problems that engineers are still working to solve"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇追溯玻璃作为建筑材料的历史演变。题型覆盖主旨、细节、推断、词义与作者意图。注意：末题词义题的目标词 envelope 出现在指定段落。"
+    }
+  ]
+}

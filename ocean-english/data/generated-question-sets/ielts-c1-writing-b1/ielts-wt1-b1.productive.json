@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows annual coffee consumption per person (in kilograms) in five countries in 2000 and 2020. Data: Finland 2000 = 11.2 kg, 2020 = 12.0 kg; Brazil 2000 = 4.8 kg, 2020 = 6.5 kg; Japan 2000 = 3.1 kg, 2020 = 3.9 kg; South Korea 2000 = 1.6 kg, 2020 = 4.2 kg; United Kingdom 2000 = 2.4 kg, 2020 = 3.0 kg. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：表格呈现五国 2000 与 2020 年人均咖啡消费量变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note that consumption rose in all five countries, with Finland remaining highest and South Korea showing the fastest growth",
+        "Compare the near-tripling in South Korea (1.6 to 4.2 kg) with the modest rise in Finland (11.2 to 12.0 kg)",
+        "Figures must be reported accurately with correct units (kilograms per person)",
+        "Maintain a formal, objective register without personal opinion or speculation"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of international students enrolled in four fields of study at Northbay University in 2012 and 2022. Data: Business 2012 = 1,450, 2022 = 2,100; Engineering 2012 = 980, 2022 = 1,720; Health Sciences 2012 = 410, 2022 = 1,150; Arts and Humanities 2012 = 620, 2022 = 540. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：表格呈现某大学四个学科国际学生人数 2012 与 2022 年对比，不少于 150 词。",
+      "referencePoints": [
+        "Overview should highlight overall growth in enrolment, with Arts and Humanities as the only field to decline",
+        "Compare the near-tripling of Health Sciences (410 to 1,150) with the drop in Arts and Humanities (620 to 540)",
+        "Data selection should cover all four fields without listing every figure mechanically",
+        "Use academic vocabulary for trends (rose, almost tripled, fell slightly) in a formal register"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows average daily commuting time (in minutes) and the percentage of commuters using public transport in four cities in 2021. Data: Jakarta average commute = 68 minutes, public transport share = 32%; Berlin average commute = 39 minutes, public transport share = 57%; Toronto average commute = 47 minutes, public transport share = 41%; Auckland average commute = 43 minutes, public transport share = 18%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：表格呈现四城市平均通勤时间与公共交通使用比例，不少于 150 词。",
+      "referencePoints": [
+        "Overview should identify Jakarta as having the longest commute and Berlin the shortest, alongside Berlin's highest public transport share",
+        "Draw the contrast between long commutes and low public transport use (Jakarta, Auckland) versus Berlin's pattern",
+        "Both measures (minutes and percentages) must be reported with correct units and no invented causal claims",
+        "Keep the tone descriptive and formal; do not explain why differences exist"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of electricity generated from four sources in the country of Meridia in 2000, 2010 and 2020. Data: Coal 2000 = 52%, 2010 = 40%, 2020 = 21%; Natural gas 2000 = 28%, 2010 = 33%, 2020 = 30%; Wind and solar 2000 = 3%, 2010 = 12%, 2020 = 34%; Hydroelectric 2000 = 17%, 2010 = 15%, 2020 = 15%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：表格呈现某国三个年份四种发电来源占比变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should capture the shift from coal dominance to wind and solar becoming the largest source by 2020",
+        "Compare the steep fall of coal (52% to 21%) with the elevenfold rise of wind and solar (3% to 34%)",
+        "Note the relative stability of natural gas and hydroelectric power across the period",
+        "Percentages must be accurate and the register formal and impersonal"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the percentage of people in three age groups who visited a cinema at least once a month in the country of Valoria in 2010 and 2022. Data: Aged 15-24: 2010 = 54%, 2022 = 36%; Aged 25-44: 2010 = 38%, 2022 = 31%; Aged 45 and over: 2010 = 16%, 2022 = 22%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：表格呈现三年龄段每月观影人群比例 2010 与 2022 年变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note declining attendance among younger groups while the oldest group increased",
+        "Compare the sharp fall in the 15-24 group (54% to 36%) with the rise among those 45 and over (16% to 22%)",
+        "Point out that despite the decline, the youngest group remained the most frequent cinema-goers in 2022",
+        "Report percentages precisely and avoid speculation about streaming or other causes"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the percentage of households in the country of Estara owning a smartphone and owning a landline telephone between 2005 and 2025. Smartphone ownership: 2005 = 4%, 2010 = 29%, 2015 = 63%, 2020 = 84%, 2025 = 91%. Landline ownership: 2005 = 88%, 2010 = 79%, 2015 = 58%, 2020 = 37%, 2025 = 24%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：折线图呈现 2005-2025 年智能手机与固定电话家庭拥有率的相反走势，不少于 150 词。",
+      "referencePoints": [
+        "Overview should describe the two opposite trends and the crossover point between 2010 and 2015",
+        "Compare the steepest period of smartphone growth (2010-2015) with the fastest landline decline",
+        "Select key data points (start, crossover, end) rather than listing every year",
+        "Use varied trend language (surged, declined steadily) in a formal register"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows annual bicycle sales (in thousands of units) in three countries between 1995 and 2020. Netherlands: 1995 = 950, 2000 = 1,000, 2005 = 1,050, 2010 = 1,100, 2015 = 1,150, 2020 = 1,200. Spain: 1995 = 300, 2000 = 380, 2005 = 520, 2010 = 700, 2015 = 940, 2020 = 1,250. Poland: 1995 = 620, 2000 = 560, 2005 = 480, 2010 = 520, 2015 = 640, 2020 = 780. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：折线图呈现三国 1995-2020 年自行车年销量变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note steady growth in the Netherlands, rapid growth in Spain overtaking it by 2020, and Poland's dip-then-recovery pattern",
+        "Compare Spain's fourfold increase (300 to 1,250 thousand) with the Netherlands' gradual rise",
+        "Identify Poland's turning point around 2005 (fall to 480 before recovering to 780)",
+        "Figures should be quoted accurately in thousands of units, with formal tone throughout"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the average price of a three-bedroom house (in thousands of US dollars) in three cities between 2000 and 2020. Rivermouth: 2000 = 180, 2005 = 260, 2010 = 310, 2015 = 420, 2020 = 560. Calderton: 2000 = 220, 2005 = 290, 2010 = 240, 2015 = 280, 2020 = 330. Grelling: 2000 = 150, 2005 = 160, 2010 = 170, 2015 = 185, 2020 = 200. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：折线图呈现三城市 2000-2020 年三居室房价走势，不少于 150 词。",
+      "referencePoints": [
+        "Overview should contrast Rivermouth's continuous steep rise with Grelling's near-stability and Calderton's fluctuation",
+        "Note that Calderton began highest in 2000 but was overtaken by Rivermouth by 2005",
+        "Identify Calderton's fall between 2005 and 2010 (290 to 240) as a distinctive feature",
+        "Prices must be reported in thousands of dollars with accurate comparisons and formal register"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the number of overseas tourist arrivals (in thousands) to the island of Kalowa between 1990 and 2020. Data: 1990 = 120, 1995 = 210, 2000 = 380, 2005 = 640, 2010 = 590, 2015 = 820, 2020 = 940. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：折线图呈现某海岛 1990-2020 年海外游客到访人数变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should state the overall upward trend, with numbers almost increasing eightfold over 30 years",
+        "Identify the single dip between 2005 and 2010 (640 to 590) as the only interruption to growth",
+        "Highlight the fastest growth periods (2000-2005 and 2010-2015) with supporting figures",
+        "Avoid explaining causes; describe the data objectively in formal language"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of total water consumption used by three sectors (agriculture, industry, households) in four countries in 2019. Data: Egypt: agriculture = 82%, industry = 8%, households = 10%. Germany: agriculture = 21%, industry = 55%, households = 24%. Vietnam: agriculture = 71%, industry = 17%, households = 12%. Canada: agriculture = 34%, industry = 48%, households = 18%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：柱状图呈现四国农业、工业、家庭三部门用水占比，不少于 150 词。",
+      "referencePoints": [
+        "Overview should group the countries: agriculture dominates in Egypt and Vietnam, industry in Germany and Canada",
+        "Compare the extremes, such as Egypt's 82% agricultural use against Germany's 21%",
+        "Note that household consumption is the smallest or near-smallest share in every country (10%-24%)",
+        "Percentages should be accurate and comparisons expressed in formal academic style"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the average number of hours per week that men and women in the country of Doria spent on four leisure activities in 2022. Data: Watching television: men = 9.5 hours, women = 8.0 hours. Playing sport or exercising: men = 5.2 hours, women = 3.6 hours. Reading: men = 2.1 hours, women = 4.3 hours. Socialising with friends: men = 4.8 hours, women = 5.4 hours. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：柱状图呈现某国男女每周四类休闲活动时长对比，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note television as the most time-consuming activity for both genders, with reading showing the largest proportional gender gap",
+        "Compare activities where men spend more (television, sport) with those where women spend more (reading, socialising)",
+        "Report hours accurately, noting women read roughly twice as long as men (4.3 vs 2.1 hours)",
+        "Maintain neutral, formal description without gender stereotyping or opinion"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of four materials that were recycled in the country of Ostrava in 2005 and 2020. Data: Paper and cardboard: 2005 = 48%, 2020 = 71%. Glass: 2005 = 41%, 2020 = 68%. Plastics: 2005 = 9%, 2020 = 27%. Electronic goods: 2005 = 5%, 2020 = 34%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：柱状图呈现四类材料 2005 与 2020 年回收率对比，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note that recycling rates rose for all four materials, with paper remaining highest in both years",
+        "Highlight electronic goods as the fastest-growing category, increasing almost sevenfold (5% to 34%)",
+        "Contrast the mature categories (paper, glass, both around 70% by 2020) with the still-low plastics rate (27%)",
+        "Percentages must be exact and the register formal and objective"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the main reason adults in the country of Lundia gave for learning a foreign language in 2023, by percentage of respondents. Data: Career advancement = 34%, Travel = 26%, Personal interest or enjoyment = 19%, Family or relationships = 12%, Academic study = 9%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：柱状图呈现成年人学习外语的主要原因分布，不少于 150 词。",
+      "referencePoints": [
+        "Overview should identify career advancement as the leading reason and academic study as the least common",
+        "Compare the top two practical motives (career 34%, travel 26%) with the smaller personal motives",
+        "Note that career and travel together account for six in ten respondents (60%)",
+        "Keep description factual and formal; do not add reasons or interpretations not in the data"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the breakdown of average household spending in the country of Farlow in 1995 and 2020. Data for 1995: Housing = 22%, Food = 30%, Transport = 14%, Entertainment and recreation = 9%, Communications = 3%, Other = 22%. Data for 2020: Housing = 34%, Food = 19%, Transport = 15%, Entertainment and recreation = 12%, Communications = 8%, Other = 12%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：两张饼图对比 1995 与 2020 年家庭支出结构变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note that housing replaced food as the largest expense between the two years",
+        "Compare the rise in housing (22% to 34%) against the fall in food (30% to 19%)",
+        "Mention smaller but notable changes such as communications almost tripling (3% to 8%)",
+        "All percentages must be accurate and both charts covered in a balanced, formal summary"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show how workers in the city of Merrivale travelled to work in 2000 and 2020. Data for 2000: Private car = 58%, Bus = 18%, Train or tram = 10%, Bicycle = 5%, Walking = 9%. Data for 2020: Private car = 41%, Bus = 15%, Train or tram = 19%, Bicycle = 14%, Walking = 11%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：两张饼图对比某市 2000 与 2020 年通勤方式构成变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should state that the car remained the most common mode but its share fell considerably while rail and cycling grew",
+        "Compare the drop in car use (58% to 41%) with the near-tripling of cycling (5% to 14%)",
+        "Note that bus use declined slightly while train or tram use almost doubled (10% to 19%)",
+        "Report figures precisely and keep an impersonal academic tone"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the sources of income for Westcliff University in 2000 and 2020. Data for 2000: Government funding = 51%, Tuition fees = 27%, Research grants and contracts = 12%, Donations and endowments = 6%, Other commercial activities = 4%. Data for 2020: Government funding = 29%, Tuition fees = 43%, Research grants and contracts = 16%, Donations and endowments = 7%, Other commercial activities = 5%. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：两张饼图对比某大学 2000 与 2020 年经费来源结构变化，不少于 150 词。",
+      "referencePoints": [
+        "Overview should capture the shift from government funding to tuition fees as the main income source",
+        "Compare the fall in government funding (51% to 29%) with the rise in tuition fees (27% to 43%)",
+        "Note the relative stability of the three smaller categories, each changing by four percentage points or fewer",
+        "Use accurate percentages and formal comparative structures throughout"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the process of producing olive oil, consisting of seven stages: (1) olives are harvested from trees by mechanical shakers in late autumn; (2) leaves and twigs are removed on a vibrating screen; (3) the olives are washed with cold water; (4) they are crushed into a paste by granite millstones within 24 hours of picking; (5) the paste is slowly mixed (malaxed) for 30 to 45 minutes; (6) the oil is separated from water and solids in a centrifuge; (7) the oil is filtered and stored in stainless steel tanks at 15 degrees Celsius before bottling. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：流程图描述橄榄油生产的七个阶段，不少于 150 词。",
+      "referencePoints": [
+        "Overview should state the number of stages and the overall transformation from harvested fruit to bottled oil",
+        "Stages must be sequenced correctly using linking devices (first, once, after which, finally)",
+        "Key details such as timings (within 24 hours, 30-45 minutes) and the storage temperature should be included accurately",
+        "Passive voice and formal register are expected for process description; no opinions"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows how drinking yoghurt is produced in a commercial dairy, in six stages: (1) raw milk is collected from farms and tested for quality; (2) the milk is standardised and homogenised to distribute the fat evenly; (3) it is pasteurised at 85 degrees Celsius for 30 minutes and then cooled to 43 degrees; (4) live bacterial cultures are added and the mixture ferments in tanks for 4 to 6 hours until it thickens; (5) fruit puree and a small amount of sugar are blended in; (6) the yoghurt is chilled to 5 degrees Celsius, poured into bottles and dispatched to shops in refrigerated lorries. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：流程图描述工厂生产饮用酸奶的六个阶段，不少于 150 词。",
+      "referencePoints": [
+        "Overview should identify six man-made stages from raw milk collection to refrigerated delivery",
+        "Temperatures and durations (85 degrees for 30 minutes, fermentation 4-6 hours, chilled to 5 degrees) must be reported accurately",
+        "Clear sequencing with appropriate connectors and consistent use of the passive voice",
+        "Formal, objective description without evaluation of the product or process"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the life cycle of a dragonfly, which takes place in five stages over approximately two to three years: (1) the adult female lays up to 1,500 eggs on plants just below the surface of a pond; (2) after two to five weeks the eggs hatch into aquatic larvae called nymphs; (3) the nymph lives underwater for one to two years, feeding on insects and small fish and moulting its skin up to 12 times; (4) the mature nymph climbs a plant stem out of the water, its skin splits, and the adult dragonfly emerges over several hours; (5) the adult lives for four to six weeks, during which it mates and the cycle begins again. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：图示描述蜻蜓五阶段生命周期，不少于 150 词。",
+      "referencePoints": [
+        "Overview should note the cyclical nature and the striking contrast between the long aquatic nymph stage and the brief adult stage",
+        "Report durations and figures accurately (up to 1,500 eggs, moulting up to 12 times, adult life of 4-6 weeks)",
+        "Use present simple tense and clear sequencing appropriate for a natural cycle",
+        "Compare stage lengths explicitly (one to two years underwater versus weeks as an adult) in formal language"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the life cycle of a sea turtle, in six stages forming a continuous cycle: (1) the female comes ashore at night and lays around 110 eggs in a nest dug in the sand; (2) the eggs incubate under the sand for about 60 days; (3) the hatchlings emerge together at night and crawl to the ocean; (4) juvenile turtles drift in open-ocean currents for 5 to 10 years, feeding on plankton; (5) older juveniles move to coastal feeding grounds, where they mature over a further 10 to 15 years; (6) adults migrate up to 2,000 kilometres back to the beach where they hatched in order to breed, and the cycle repeats. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：图示描述海龟六阶段生命周期，不少于 150 词。",
+      "referencePoints": [
+        "Overview should emphasise the cyclical structure and the very long time (over 20 years) needed to reach breeding age",
+        "Include key figures accurately (about 110 eggs, 60-day incubation, migration of up to 2,000 km)",
+        "Contrast the short vulnerable early stages with the decades-long juvenile and maturing phases",
+        "Present simple tense, clear sequencing and formal register are required; no conservation commentary"
+      ],
+      "wordLimit": ">=150"
+    }
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "examId": "toefl",
+  "level": 6,
+  "skill": "writing",
+  "taskType": "academic_discussion",
+  "tasks": [
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on note-taking methods and memory. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Hartman: As laptops and tablets become common in lectures, some instructors worry about how students record information. Do you think students learn course material better when they take notes by hand or when they type their notes on a device?\n\nAiden: I think handwriting is better. Writing by hand forces you to summarize ideas in your own words, so you actually process the material instead of just copying it.\n\nBianca: I disagree. Typing lets me capture more of what the professor says and reorganize it later, and I can search my notes instantly when I review for exams.",
+      "promptZh": "学术讨论：手写笔记和用电子设备打字记笔记，哪种更有助于学习？回应教授并就 Aiden/Bianca 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持手写记笔记、打字记笔记，还是视情况而定的折中立场。",
+        "理由/例证支撑：用具体理由或个人/课堂经历说明所选方式如何影响理解、记忆或复习效率。",
+        "回应至少一位同学：明确呼应 Aiden 或 Bianca 的观点，表示赞同、反驳或加以补充延伸。",
+        "组织连贯：先表态再展开理由，使用恰当的连接词使段落层次清晰、逻辑顺畅。",
+        "语法与学术词汇：句式多样、用词准确，恰当使用如 retention、process、efficiency 等学术词汇并控制语法错误。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on second-language acquisition. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Okafor: People disagree about the best time to begin studying a foreign language. Is it more effective for someone to start learning a new language in early childhood, or can a motivated teenager or adult learn it just as well?\n\nCamille: Early childhood is clearly better. Young children pick up pronunciation and grammar almost automatically, while adults struggle to sound natural no matter how hard they try.\n\nDiego: I see it differently. Older learners can study more strategically and stay disciplined, so a motivated adult often makes faster progress than a young child does.",
+      "promptZh": "学术讨论：外语学习从幼年开始更有效，还是有动力的青少年/成年人也能学得同样好？回应教授并就 Camille/Diego 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你认为幼年起步更优、成年起步也可、还是各有优势的综合立场。",
+        "理由/例证支撑：用发音、语法、学习策略或自身学语言经历等具体理由支撑观点。",
+        "回应至少一位同学：明确呼应 Camille 或 Diego 的看法，表示赞同、反驳或补充。",
+        "组织连贯：观点—理由—例证层次分明，使用过渡词衔接，段落结构完整。",
+        "语法与学术词汇：恰当使用如 acquisition、fluency、motivation 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on assessment and student motivation. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Lindqvist: Schools use different ways to evaluate students. Do letter grades and scored exams motivate students to learn more effectively, or would detailed written feedback without any grade encourage deeper learning?\n\nEsther: Grades motivate students best. A clear score gives people a concrete goal and lets them see exactly where they stand compared with the expected standard.\n\nFarah: I think written feedback without grades works better. When there is no score to chase, students focus on actually improving their skills instead of just protecting their average.",
+      "promptZh": "学术讨论：字母等级与分数考试更能激励学习，还是不打分、只给详细书面反馈更能促进深度学习？回应教授并就 Esther/Farah 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持评分制、无分数反馈，还是两者结合的折中方案。",
+        "理由/例证支撑：用动机、学习深度、压力或公平性等角度的具体理由与例子支撑。",
+        "回应至少一位同学：明确呼应 Esther 或 Farah 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：先表态后论证，使用连接词使因果与对比关系清晰，段落收尾自然。",
+        "语法与学术词汇：恰当使用如 assessment、feedback、incentive 等学术词汇，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on study habits and learning strategies. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Moreau: Students prepare for difficult courses in very different ways. When trying to master challenging material, do you think students benefit more from studying alone or from studying together in a group?\n\nGabriel: Studying alone is more effective for me. I can move at my own pace, concentrate without distractions, and spend extra time on exactly the parts I find hard.\n\nHina: I prefer studying in groups. Explaining ideas to classmates and hearing their questions exposes gaps in my understanding that I would never notice on my own.",
+      "promptZh": "学术讨论：攻克难学内容时，独自学习更有效还是小组学习更有效？回应教授并就 Gabriel/Hina 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持独自学习、小组学习，还是按内容/阶段灵活搭配的立场。",
+        "理由/例证支撑：从专注度、节奏、互相讲解、查漏补缺等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Gabriel 或 Hina 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点与理由层层展开，过渡自然，段落结构完整。",
+        "语法与学术词汇：恰当使用如 collaborate、concentrate、comprehension 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on the purpose of higher education. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Tanaka: Universities must decide what to emphasize in their programs. Should universities focus mainly on teaching practical skills that prepare students for specific jobs, or on teaching broad theory and general knowledge?\n\nInes: Universities should prioritize practical skills. Students invest years and money expecting to be ready for real work, so courses should connect directly to the tasks employers actually need.\n\nJamal: I disagree. A broad foundation in theory teaches people how to think and adapt, which matters more over a long career than narrow skills that quickly become outdated.",
+      "promptZh": "学术讨论：大学应主要教授面向具体职业的实用技能，还是更广泛的理论与通识知识？回应教授并就 Ines/Jamal 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持实用技能导向、理论通识导向，还是二者兼顾的立场。",
+        "理由/例证支撑：从就业、长期适应力、思维训练或技能过时等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Ines 或 Jamal 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：先表态再论证，使用连接词处理对比与让步，段落逻辑清晰。",
+        "语法与学术词汇：恰当使用如 practical、theoretical、adaptable 等词，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on classroom policy and student responsibility. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Vasquez: Instructors set different rules about showing up to class. Should attendance at university lectures be mandatory and counted toward the grade, or should students be free to decide whether to attend?\n\nKenji: Attendance should be mandatory. Showing up keeps students on track, and the discussions and questions that happen in person are hard to recreate from recordings or notes.\n\nLucia: I think attendance should be optional. Adults should manage their own time, and a student who learns better from the textbook should not be penalized for skipping a lecture.",
+      "promptZh": "学术讨论：大学课堂出勤应强制并计入成绩，还是应让学生自主决定是否到课？回应教授并就 Kenji/Lucia 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持强制出勤、自主出勤，还是设条件的折中立场。",
+        "理由/例证支撑：从学习效果、自律、课堂互动或个体差异等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Kenji 或 Lucia 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点—理由—例证衔接顺畅，恰当使用过渡词，段落收尾完整。",
+        "语法与学术词汇：恰当使用如 mandatory、attendance、autonomy 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "education and learning",
+      "prompt": "Your professor is teaching a class on how people learn from experience. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Bellini: There are different paths to gaining a new skill. Do people generally learn more by making their own mistakes and figuring things out, or by following the guidance and examples of someone more experienced?\n\nMateo: People learn most from their own mistakes. A lesson you discover the hard way sticks with you far longer than advice you are simply told to follow.\n\nNoor: I disagree. Learning from an expert's example saves you from repeating errors that others already solved, so you reach a higher level much faster.",
+      "promptZh": "学术讨论：人们更多是通过自己犯错摸索来学习，还是通过遵循有经验者的指导与示范来学习？回应教授并就 Mateo/Noor 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持从自身错误中学习、从他人指导中学习，还是结合两者的立场。",
+        "理由/例证支撑：从记忆深度、效率、试错成本或专家示范等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Mateo 或 Noor 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：先表态后论证，使用连接词体现对比或让步，段落逻辑清晰。",
+        "语法与学术词汇：恰当使用如 guidance、trial and error、expertise 等表达，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on artificial intelligence in the workplace. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Nguyen: As AI tools become capable of writing reports and analyzing data, some say employers should be required to retrain workers whose jobs are automated rather than simply replacing them. Do you think companies have this responsibility, or should retraining be left to individuals and governments?\n\nOtto: Companies that profit from automation should bear the cost of retraining, since they create the disruption and have the resources to manage it fairly.\n\nPablo: I'd put the responsibility on individuals and public programs; firms can't predict every job shift, and mandates would just slow the adoption of useful technology.",
+      "promptZh": "学术讨论：企业是否有义务对因 AI 自动化而失业的员工进行再培训，还是应交给个人和政府？回应教授并就 Otto/Pablo 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明企业是否应承担再培训义务，或提出折中/第三种立场（如成本分摊）。",
+        "理由/例证支撑：用具体理由或例子说明，如企业获利与责任对等、政府项目效率、技术推广速度等。",
+        "回应至少一位同学：明确呼应 Otto 或 Pablo 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 automation、retraining、responsibility 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on data privacy and consumer technology. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Abadi: Many free apps and websites fund themselves by collecting and selling users' personal data. Should governments ban this business model, or is allowing users to trade their data for free services a fair exchange?\n\nQuentin: I think the trade is fair as long as it's disclosed; people who don't want ads or tracking can pay for premium versions or use other tools.\n\nRosa: I disagree. Most users can't really understand what they're giving up, so the exchange isn't truly informed, and the practice should be restricted.",
+      "promptZh": "学术讨论：政府是否应禁止靠收集并出售用户数据来提供免费服务的商业模式，还是这属于公平交换？回应教授并就 Quentin/Rosa 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明应禁止、允许，还是有条件允许（如强制透明）。",
+        "理由/例证支撑：用具体理由或例子说明，如知情同意、用户选择权、数据滥用风险等。",
+        "回应至少一位同学：明确呼应 Quentin 或 Rosa 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 privacy、consent、disclosure 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on technology in education. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Castellano: Some schools are introducing AI tutoring systems that adapt lessons to each student. Do you think such personalized software improves learning more than a human teacher leading the whole class, or does it lose something important?\n\nSamir: Personalized AI tutoring is more effective because it lets every student move at their own pace instead of waiting for the rest of the class.\n\nTara: I think a human teacher matters more; they notice when students are confused or discouraged in ways software can't, and that emotional support drives real learning.",
+      "promptZh": "学术讨论：自适应的 AI 辅导软件是否比人类教师带全班授课更能促进学习，还是会失去重要的东西？回应教授并就 Samir/Tara 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明更看重 AI 个性化辅导、人类教师，还是两者结合。",
+        "理由/例证支撑：用具体理由或例子说明，如学习节奏、情感支持、动机激励、规模化等。",
+        "回应至少一位同学：明确呼应 Samir 或 Tara 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 personalized、adaptive、engagement 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on automation and transportation. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Whitfield: As self-driving vehicles improve, some argue cities should eventually ban human drivers from busy areas to reduce accidents. Would such a ban be a reasonable safety measure, or does it go too far?\n\nUma: A ban makes sense once the technology is proven, since most crashes are caused by human error and lives would be saved.\n\nViktor: I think banning human drivers goes too far; people value the freedom to drive, and we shouldn't hand control of movement entirely to machines and the companies that build them.",
+      "promptZh": "学术讨论：当自动驾驶足够成熟后，城市是否应在繁忙区域禁止人类驾驶以提高安全，还是这样做太过头？回应教授并就 Uma/Viktor 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明支持禁令、反对禁令，还是提出有条件方案（如分区或分阶段）。",
+        "理由/例证支撑：用具体理由或例子说明，如事故率、个人自由、技术可靠性、企业控制等。",
+        "回应至少一位同学：明确呼应 Uma 或 Viktor 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 autonomous、regulation、safety 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on screen time and child development. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Okonkwo: Some experts recommend that children under a certain age be kept away from smartphones and tablets almost entirely. Do you think strict limits on young children's screen use are wise, or do they overlook the benefits these devices can offer?\n\nWesley: Strict limits are wise; early heavy screen use can crowd out play, conversation, and sleep that young children need to develop well.\n\nXimena: I think that view overlooks the benefits; well-chosen apps and video calls can support learning and keep families connected, so guidance matters more than bans.",
+      "promptZh": "学术讨论：是否应对幼儿的屏幕使用设定严格限制，还是这种做法忽视了设备可能带来的益处？回应教授并就 Wesley/Ximena 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明支持严格限制、强调益处，还是主张有引导的适度使用。",
+        "理由/例证支撑：用具体理由或例子说明，如睡眠与游戏、教育类应用、家庭联系、内容质量等。",
+        "回应至少一位同学：明确呼应 Wesley 或 Ximena 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 development、moderation、guidance 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on technology and the environment. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Sorensen: Smartphones and other devices are often redesigned and replaced every year or two, creating large amounts of electronic waste. Should manufacturers be required to design products that last much longer and are easy to repair, even if this slows innovation?\n\nYara: Yes, durability and repairability should be required; cutting electronic waste matters more than releasing slightly improved models every year.\n\nZane: I'm not convinced; forcing longer life cycles could discourage the rapid improvements that make devices more efficient, so the choice should stay with the market.",
+      "promptZh": "学术讨论：是否应要求厂商把产品设计得更耐用、易维修以减少电子垃圾，即使这会拖慢创新？回应教授并就 Yara/Zane 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明支持强制耐用易修、反对此类要求，还是提出折中（如可选标准）。",
+        "理由/例证支撑：用具体理由或例子说明，如电子垃圾、维修权、创新速度、能效提升等。",
+        "回应至少一位同学：明确呼应 Yara 或 Zane 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 durability、innovation、sustainability 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "technology and society",
+      "prompt": "Your professor is teaching a class on automation in everyday services. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Delacroix: More stores, banks, and restaurants now rely on self-checkout machines and automated kiosks instead of staff. Is this shift toward automated service mainly a benefit for customers, or does it cost us something worth protecting?\n\nAmara: It's mainly a benefit; automated service is faster, available around the clock, and lets businesses keep prices lower for everyone.\n\nBruno: I'm less sure it's a gain; replacing staff removes jobs and human help, and it can leave behind customers who struggle with the machines.",
+      "promptZh": "学术讨论：商店、银行和餐厅转向自助机器与自动化服务，主要是对顾客有利，还是会失去值得保留的东西？回应教授并就 Amara/Bruno 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明认为自动化服务主要有利、弊大于利，还是利弊并存需权衡。",
+        "理由/例证支撑：用具体理由或例子说明，如效率与营业时间、就业、人工帮助、可及性等。",
+        "回应至少一位同学：明确呼应 Amara 或 Bruno 的观点，表示同意、反驳或补充。",
+        "组织连贯：先亮明观点再展开论证，使用衔接词使段落逻辑清晰。",
+        "语法与学术词汇：句式多样，准确使用 automation、convenience、accessibility 等学术词汇，语法错误少。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on municipal waste policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Yamamoto: Some cities now charge households a fee based on the weight or volume of trash they throw away, while recycling stays free. Do you think charging people for the garbage they produce is a fair and effective way to reduce waste, or does it unfairly burden some residents?\n\nCeline: I think pay-as-you-throw is smart because it ties cost directly to behavior. When people see that producing less trash saves them money, they actually change their habits.\n\nDmitri: I worry it punishes larger families and lower-income households who can't easily afford the fees. Wealthy people will just pay and keep wasting, so the burden falls on those least able to absorb it.",
+      "promptZh": "学术讨论：城市是否应按垃圾产生量向家庭收费以减少废弃物？回应教授并就 Celine/Dmitri 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表态支持、反对，或在两者间提出折中的第三立场，不含糊其辞。",
+        "理由/例证支撑：用具体理由或例子说明按量收费的激励效应或对低收入家庭的负担。",
+        "回应至少一位同学：直接呼应 Celine 或 Dmitri 的观点，表示赞同、反驳或补充。",
+        "组织连贯：段落有清晰的主旨句、展开与收束，逻辑衔接自然。",
+        "语法与学术词汇：句式多样、用词准确，恰当使用如 incentive、burden、equitable 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on urban green space policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Rahman: When a city has limited land downtown, planners must decide how to use it. Should cities require that a fixed share of new downtown developments be set aside as public parks and green space, even if that reduces housing or commercial floor area?\n\nEliana: Yes, mandatory green space should be required. Parks improve air quality, mental health, and community life, and once land is built over it is almost impossible to reclaim.\n\nFelipe: I disagree with forcing it. Cities desperately need housing and jobs, and rigid green-space rules can drive up rents and push development to the suburbs, which causes more sprawl and driving.",
+      "promptZh": "学术讨论：城市是否应规定新建市中心项目必须留出固定比例的公共绿地，即使因此减少住房或商业面积？回应教授并就 Eliana/Felipe 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明赞成强制绿地、反对，或提出灵活折中的第三立场。",
+        "理由/例证支撑：用具体理由或例子论证绿地的环境/健康价值或对住房供给的影响。",
+        "回应至少一位同学：直接呼应 Eliana 或 Felipe 的论点，加以赞同、反驳或延伸。",
+        "组织连贯：段落结构清晰，观点层层推进，过渡自然。",
+        "语法与学术词汇：句式多样、表达准确，恰当使用如 mandate、density、sprawl 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on urban environmental policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Cordova: Many cities are considering a congestion charge, a daily fee that drivers must pay to bring a private car into the most polluted downtown area. Do you think a city should adopt such a fee, or does it place an unfair burden on ordinary residents?\n\nGreta: I support the fee. When driving downtown costs money, fewer people do it, the air gets cleaner, and the money raised can be used to improve buses and trains for everyone.\n\nHassan: I disagree. The fee hits low-income workers the hardest, because wealthy drivers can simply pay it while people who cannot afford it are pushed out of the city centre where many jobs are located.",
+      "promptZh": "学术讨论：城市是否应对驶入污染最严重市中心的私家车征收每日拥堵费？回应教授并就 Greta（支持，可减排并资助公交）与 Hassan（反对，对低收入者不公）的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明赞成、反对或有条件支持征收拥堵费，开门见山给出可辨识的观点。",
+        "理由/例证支撑：用具体理由或合理例子支撑立场，如空气质量、交通量、公交资金或对不同收入群体的影响。",
+        "回应至少一位同学：明确呼应 Greta 或 Hassan 的观点，表示认同、反驳或补充，体现参与讨论。",
+        "组织连贯：段落结构清晰，使用恰当的衔接词，观点之间过渡自然、逻辑顺畅。",
+        "语法与学术词汇：句式多样、语法准确，恰当使用与环境与公共政策相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on energy and land-use policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ashby: Large solar and wind farms need a lot of open land, and they are sometimes proposed for farmland or natural areas near towns. When clean energy projects conflict with protecting farmland or local landscapes, which interest should a community give greater weight?\n\nIris: Clean energy should come first. The long-term threat of climate change is far more serious than the loss of some farmland or a changed view, and we need to build renewable capacity quickly.\n\nJonas: I think local land and farming deserve more protection. Food production and natural habitat matter too, and we should put these projects on rooftops, deserts, or already-developed land before sacrificing productive farmland.",
+      "promptZh": "学术讨论：当清洁能源项目与保护农田/本地景观冲突时，社区应更看重哪一方？回应教授并就 Iris/Jonas 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明优先清洁能源、优先保护农田，或提出兼顾的第三立场。",
+        "理由/例证支撑：用具体理由或例子权衡气候效益与农田/景观保护。",
+        "回应至少一位同学：直接呼应 Iris 或 Jonas 的论点，加以赞同、反驳或延伸。",
+        "组织连贯：段落结构清晰，权衡论证有层次。",
+        "语法与学术词汇：句式多样、表达准确，恰当使用如 renewable、trade-off、habitat 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on transportation and environmental policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Petrov: Some cities have begun closing certain downtown streets to private cars entirely, allowing only pedestrians, bicycles, and buses. Do you think creating car-free zones in city centers does more to improve urban life, or does it create too many problems for residents and businesses?\n\nKira: Car-free zones make cities cleaner, quieter, and safer. Foot traffic actually helps local shops, and people enjoy spaces they can walk through without worrying about cars.\n\nLukas: I think the downsides are real. Older people, people with disabilities, and delivery drivers depend on cars, and some businesses lose customers who can no longer drive to them easily.",
+      "promptZh": "学术讨论：在市中心设立禁止私家车的步行区，是更能改善城市生活，还是给居民和商家带来太多问题？回应教授并就 Kira/Lukas 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表态支持无车区、反对，或提出折中安排的第三立场。",
+        "理由/例证支撑：用具体理由或例子说明环境/宜居改善或对弱势群体与商家的影响。",
+        "回应至少一位同学：直接回应 Kira 或 Lukas 的观点，表示赞同、反驳或补充。",
+        "组织连贯：段落有清晰主旨与展开，正反衔接自然。",
+        "语法与学术词汇：句式多样、用词准确，恰当使用如 pedestrian、accessibility、emissions 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "environment and public policy",
+      "prompt": "Your professor is teaching a class on water conservation policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Mwangi: During periods of water shortage, some regions raise the price of water sharply once a household uses more than a basic amount, while others simply set rules limiting how much water everyone may use. Which approach do you think is fairer and more effective for getting people to conserve water?\n\nMaya: I favor higher prices for heavy use. Pricing lets each household decide how to cut back, and it gently pushes the biggest users to waste less without banning anything.\n\nNadia: I prefer clear limits for everyone. Rules treat all households the same, while pricing lets the wealthy keep using as much as they want as long as they can pay for it.",
+      "promptZh": "学术讨论：缺水时期，对超额用水大幅提价与对所有人设定用水上限，哪种更公平有效？回应教授并就 Maya/Nadia 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明支持价格手段、支持统一限额，或提出兼顾的第三立场。",
+        "理由/例证支撑：用具体理由或例子比较两种手段在公平与节水效果上的差异。",
+        "回应至少一位同学：直接呼应 Maya 或 Nadia 的论点，加以赞同、反驳或延伸。",
+        "组织连贯：段落结构清晰，比较论证有条理。",
+        "语法与学术词汇：句式多样、表达准确，恰当使用如 conservation、pricing、equity 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on labor economics and minimum-wage policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Calderon: Some argue that a substantially higher minimum wage mainly helps low-income workers, while others worry it pushes small employers to cut jobs. When a government sets the legal minimum wage, should it prioritize raising the incomes of those already employed, or protecting the total number of available jobs?\n\nOscar: I think raising incomes should come first. Workers who already have jobs deserve enough to live on, and higher pay can increase spending that supports local businesses in turn.\n\nPetra: I see it differently. If wages rise too fast, some firms hire fewer people or rely on machines, so protecting the number of jobs matters more for those still trying to get hired.",
+      "promptZh": "学术讨论：设定最低工资时，应优先提高在职者收入，还是优先保护就业岗位总量？回应教授并就 Oscar/Petra 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更看重提高收入还是保护岗位数量，或提出兼顾两者的折中立场。",
+        "理由/例证支撑：用经济学逻辑或具体情景说明你的选择，如对小企业、自动化或消费需求的影响。",
+        "回应至少一位同学：明确呼应 Oscar 或 Petra 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点、理由与回应之间过渡自然，段落结构清晰。",
+        "语法与学术词汇：正确使用与劳动经济相关的词汇（如 employment, wages, incentive），句法准确多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on entrepreneurship and career choices. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Engstrom: For someone just finishing their studies, is it wiser to start their own business early, while they have few financial obligations, or to first spend several years gaining experience as an employee at an established company?\n\nRafael: I believe starting early is the smart move. When you have fewer responsibilities, you can take risks, fail cheaply, and learn lessons that no employer would ever teach you.\n\nSelma: I would advise the opposite. Working at an established company first builds skills, contacts, and savings, which make any future business far more likely to survive.",
+      "promptZh": "学术讨论：刚毕业者应尽早创业，还是先在成熟公司积累几年经验再创业？回应教授并就 Rafael/Selma 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你支持尽早创业、先就业积累，还是提出条件性的折中看法。",
+        "理由/例证支撑：用风险承受力、技能积累、资金或人脉等理由支撑立场，可举具体情景。",
+        "回应至少一位同学：明确呼应 Rafael 或 Selma 的观点，表示赞同、反驳或补充。",
+        "组织连贯：论点与理由层次分明，结尾对讨论有所推进。",
+        "语法与学术词汇：恰当使用创业与职业相关词汇（如 entrepreneur, experience, risk），语法准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on consumer behavior and marketing. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Haddad: When deciding what to buy, do people generally make better choices when companies offer them a very wide range of products, or when companies offer only a small, carefully selected set of options?\n\nTheo: I think more choice leads to better decisions. With many options, buyers can compare features and prices and find exactly what fits their needs.\n\nUrsula: I disagree. Too many options can overwhelm people, so a small, well-curated selection often helps them choose faster and feel more satisfied afterward.",
+      "promptZh": "学术讨论：消费者在面对极丰富的产品选择时，还是面对少而精的选项时，更容易做出更好的购买决定？回应教授并就 Theo/Ursula 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你认为更多选择更好、精选选项更好，还是视情况而定。",
+        "理由/例证支撑：结合比较成本、信息过载、满意度等理由，并可举购物情景说明。",
+        "回应至少一位同学：明确呼应 Theo 或 Ursula 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点到理由再到结论衔接顺畅，逻辑清楚。",
+        "语法与学术词汇：恰当使用消费与营销词汇（如 consumers, options, satisfaction），句式准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on workplace management and motivation. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Sinclair: To encourage employees to work hard, should a company rely mainly on financial rewards such as bonuses and raises, or mainly on non-financial factors such as recognition, interesting tasks, and a sense of purpose?\n\nVera: I think money is the strongest motivator. People work to support their lives, and clear financial rewards give them a concrete reason to put in extra effort.\n\nWei: I would emphasize non-financial factors. Once basic pay is fair, what keeps people engaged over time is feeling respected and finding their work meaningful.",
+      "promptZh": "学术讨论：激励员工努力工作，公司应主要依靠奖金加薪等经济奖励，还是主要依靠认可、有趣任务与意义感等非经济因素？回应教授并就 Vera/Wei 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更看重经济奖励、非经济因素，还是两者结合的立场。",
+        "理由/例证支撑：用动机理论或职场情景说明你的选择，如长期投入或员工留存。",
+        "回应至少一位同学：明确呼应 Vera 或 Wei 的观点，表示赞同、反驳或补充。",
+        "组织连贯：论证层次清晰，对讨论有进一步推进。",
+        "语法与学术词汇：恰当使用激励与管理词汇（如 motivation, recognition, incentive），语法准确多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on automation and the future of work. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Montoya: As machines take over more routine tasks, should governments invest mainly in retraining adult workers for new kinds of jobs, or mainly in redesigning school education so that young people are prepared before they enter the workforce?\n\nXander: I think retraining current workers should come first. People are losing jobs now, and they cannot wait years for a new generation of students to graduate.\n\nYusuf: I would put schools first. Reforming education prevents the problem at its source, so future workers will not need expensive retraining in the first place.",
+      "promptZh": "学术讨论：面对自动化，政府应主要投资于成年劳动者再培训，还是主要投资于改革学校教育以提前培养年轻人？回应教授并就 Xander/Yusuf 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持再培训、改革学校教育，还是分阶段兼顾的立场。",
+        "理由/例证支撑：用时效性、成本、长期效果等理由支撑，可举具体行业或群体情景。",
+        "回应至少一位同学：明确呼应 Xander 或 Yusuf 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点、理由与回应衔接自然，段落结构完整。",
+        "语法与学术词汇：恰当使用自动化与就业词汇（如 automation, retraining, workforce），句法准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "economics and work",
+      "prompt": "Your professor is teaching a class on international trade and local economies. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Eriksson: When a country can either import a product cheaply from abroad or produce it at home for a higher cost, should the government encourage buying the cheaper imports, or support local producers even when their goods cost more?\n\nZoya: I think buying cheaper imports usually makes sense. Lower prices leave families with more money to spend on other needs and let the country focus on what it does best.\n\nAnya: I lean toward supporting local producers. Keeping production at home protects domestic jobs and skills, which can matter more than saving a little money on each purchase.",
+      "promptZh": "学术讨论：当某商品进口更便宜而本地生产成本更高时，政府应鼓励购买廉价进口品，还是支持成本更高的本地生产者？回应教授并就 Zoya/Anya 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持廉价进口、保护本地生产，还是有条件兼顾的立场。",
+        "理由/例证支撑：用价格、就业、专业分工或本地技能等理由支撑，可举具体情景。",
+        "回应至少一位同学：明确呼应 Zoya 或 Anya 的观点，表示赞同、反驳或补充。",
+        "组织连贯：论点与理由层次分明，结尾推进讨论。",
+        "语法与学术词汇：恰当使用贸易与经济词汇（如 imports, producers, trade-off），语法准确多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on student wellbeing and daily habits. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Bhatt: Students often have to choose between getting an extra hour of sleep and fitting in an hour of exercise. If a busy student could reliably protect only one of these each day, which should they prioritize for their overall wellbeing?\n\nBodhi: I would protect sleep first. Without enough rest, attention, mood, and even the benefits of exercise all suffer, so sleep is the foundation everything else builds on.\n\nCarmen: I disagree and would protect exercise. Regular movement reduces stress, improves the quality of the sleep a person does get, and builds long-term physical health that sitting still never will.",
+      "promptZh": "学术讨论：忙碌学生若每天只能稳定保住睡眠或锻炼之一，应优先哪一项以利整体身心健康？回应教授并就 Bodhi/Carmen 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表态优先睡眠、优先锻炼，或提出有条件的折中/第三方案，不模棱两可。",
+        "理由/例证支撑：用生理或心理机制、个人或同伴经历等具体理由支撑所选优先项。",
+        "回应至少一位同学：明确呼应 Bodhi 或 Carmen 的论点，表示赞同、反驳或加以延伸。",
+        "组织连贯：先亮观点再展开理由，使用衔接词使段落层次清晰、逻辑顺畅。",
+        "语法与学术词汇：句式多样、时态准确，恰当使用 wellbeing、prioritize、long-term 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on access to mental health support. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Larsson: Many people now use mental health apps for guided breathing, mood tracking, and self-help exercises. For someone facing mild anxiety, are these apps a good substitute for talking with a human counselor, or should they mainly be a supplement to it?\n\nDario: I think the apps can genuinely substitute for a counselor in mild cases. They are available at any hour, cost far less, and let people work on their feelings privately at their own pace.\n\nEva: I see them only as a supplement. A counselor can notice things a person hides from an app, adjust to each individual, and offer the human connection that real recovery often depends on.",
+      "promptZh": "学术讨论：对轻度焦虑者而言，心理健康类 App 能否替代真人咨询，还是只应作为补充？回应教授并就 Dario/Eva 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：明确表态 App 可替代、仅为补充，或视情况而定，不回避问题核心。",
+        "理由/例证支撑：用可及性、成本、隐私、个性化或人际连接等具体理由支撑立场。",
+        "回应至少一位同学：直接呼应 Dario 或 Eva 的论点，表示赞同、反驳或补充延伸。",
+        "组织连贯：观点—理由—回应结构清晰，借助衔接词保持段内逻辑连贯。",
+        "语法与学术词汇：时态与句式准确多样，恰当使用 substitute、supplement、anxiety 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on health education in schools. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Conti: Some educators argue that secondary schools should add a required class on stress management and emotional skills, even if it means less time for an academic subject. Is making such a class mandatory a wise use of limited school hours?\n\nFinn: Yes, it is wise. Students who can manage stress and emotions tend to learn better and stay healthier, so the class would support, not compete with, their academic work.\n\nGita: I am not convinced it should be mandatory. Emotional skills are hard to teach in a graded class, and the lost hours might be better spent on subjects schools can actually assess and improve.",
+      "promptZh": "学术讨论：中学是否应开设一门必修的压力管理与情绪技能课，即便会挤占学科课时？回应教授并就 Finn/Gita 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表态支持设为必修、反对必修，或提出选修/融入式等折中方案。",
+        "理由/例证支撑：用学习成效、健康、可教性或课时机会成本等具体理由支撑立场。",
+        "回应至少一位同学：明确呼应 Finn 或 Gita 的论点，加以赞同、反驳或延伸。",
+        "组织连贯：先表态后论证，结尾自然补充新角度,使用衔接词保持条理。",
+        "语法与学术词汇：句式多样、主谓一致，恰当使用 mandatory、emotional skills、academic 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on public health policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Osei: Governments worried about diet-related illness sometimes debate how to reduce sugary-drink consumption. Is it more effective to place an extra tax on these drinks, or to run large public campaigns that educate people and leave the choice to them?\n\nHugo: A tax works better. People respond to price, so making sugary drinks more expensive nudges everyday choices in a way that posters and slogans rarely manage on their own.\n\nImani: I favor education instead. Taxes feel like punishment and hit lower-income people hardest, while helping people truly understand the risks can change habits more lastingly and fairly.",
+      "promptZh": "学术讨论：为减少含糖饮料消费，对其加税与开展公众教育宣传哪种更有效？回应教授并就 Hugo/Imani 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：明确表态偏向征税、偏向教育宣传,或主张两者结合的具体方案。",
+        "理由/例证支撑：用价格效应、公平性、可持续性或实际效果等具体理由支撑立场。",
+        "回应至少一位同学：直接呼应 Hugo 或 Imani 的论点，表示赞同、反驳或补充。",
+        "组织连贯：观点鲜明在前，理由分点展开，借助衔接词使段落条理清楚。",
+        "语法与学术词汇：句式与时态准确多样，恰当使用 consumption、effective、policy 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on technology and motivation. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Romano: Wearable fitness trackers count steps, heart rate, and calories, and many people wear them daily. On balance, do these devices help people stay motivated to be active, or do they end up doing more harm than good?\n\nJoon: They mostly help. Seeing clear data and daily goals turns vague intentions into concrete habits, and the small rewards keep many people moving who would otherwise give up.\n\nKasia: I think they often do more harm. Constant numbers can create anxiety, make exercise feel like a chore, and leave people feeling like failures whenever they miss a target.",
+      "promptZh": "学术讨论：可穿戴健身追踪设备总体上是帮助人们保持运动动力，还是弊大于利？回应教授并就 Joon/Kasia 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表态设备总体有益、弊大于利，或视使用方式而定，不含糊。",
+        "理由/例证支撑：用习惯养成、数据反馈、焦虑或挫败感等具体理由或事例支撑立场。",
+        "回应至少一位同学：明确呼应 Joon 或 Kasia 的论点，加以赞同、反驳或延伸。",
+        "组织连贯：先亮立场再论证，结尾补充新视角，使用衔接词保持逻辑连贯。",
+        "语法与学术词汇：句式多样、时态准确，恰当使用 motivated、device、habit 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "health and psychology",
+      "prompt": "Your professor is teaching a class on the design of healthcare systems. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Fairchild: When a health system has limited funding, leaders must decide where the extra money does the most good. Should they direct more resources toward preventing illness before it starts, or toward treating patients who are already sick?\n\nLiam: Prevention should come first. Spending on healthier habits, screenings, and early care can stop many illnesses from ever developing, which saves both suffering and money over time.\n\nMarta: I would put treatment first. People who are sick right now need care immediately, and it would be unfair to underfund them in the hope of preventing future illnesses that may never occur.",
+      "promptZh": "学术讨论：医疗经费有限时，应更多投向疾病预防还是已患病者的治疗？回应教授并就 Liam/Marta 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：明确表态优先预防、优先治疗，或提出按比例分配的具体折中方案。",
+        "理由/例证支撑：用长期成本、即时需求、公平性或健康效果等具体理由支撑立场。",
+        "回应至少一位同学：直接呼应 Liam 或 Marta 的论点，表示赞同、反驳或补充。",
+        "组织连贯：观点在前、理由分层展开,借助衔接词使段落层次清晰、逻辑顺畅。",
+        "语法与学术词汇：句式与时态准确多样，恰当使用 prevention、treatment、resources 等学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on urban micro-mobility and shared bike programs. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Nakamura: Some cities are expanding public bike-share systems and reducing on-street car parking to make room for them. Is shifting space from parked cars to shared bikes a good way to improve everyday city travel, or does it create more problems than it solves?\n\nNikolai: I think it is a smart trade. Parked cars sit unused most of the day, while bike-share docks let many more people move around cheaply, so the same space serves the community far better.\n\nOlga: I am not convinced. Many residents, including older people and those carrying heavy loads, still depend on cars, and squeezing out parking just pushes the burden onto people who cannot easily switch to a bike.",
+      "promptZh": "学术讨论：城市将停车位改为共享单车站点是否真的能改善日常出行？回应教授并就 Nikolai/Olga 的不同观点表态。",
+      "referencePoints": [
+        "开篇明确表明立场：支持、反对，或提出折中/第三种方案，不可含糊。",
+        "用具体理由或例证支撑观点，如空间利用率、出行成本、不同人群的实际需求。",
+        "至少回应 Nikolai 或 Olga 一方，明确表示赞同、反驳或补充其论点。",
+        "段落组织连贯，使用衔接词，按主张—理由—例证—小结的逻辑展开。",
+        "语法准确、用词得体，恰当使用与交通和城市规划相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on urban housing policy. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Quinteros: Many cities are debating whether to let local governments cap the number of short-term vacation rentals (such as nightly tourist lets) in residential areas. Should cities limit short-term vacation rentals in order to protect the supply of long-term housing for residents?\n\nPia: I think cities should limit them. When too many apartments are rented out by the night, fewer homes are left for people who actually live and work there, and long-term rents climb out of reach for ordinary families.\n\nRashid: I disagree. Short-term rentals let homeowners earn extra income and bring visitors who spend money at local shops and restaurants, so heavy limits would hurt residents and small businesses that depend on tourism.",
+      "promptZh": "学术讨论：城市是否应限制短期度假租赁以保护长期住房供应？回应教授并就 Pia/Rashid 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：开篇清楚表明赞成或反对限制短期度假租赁，不模棱两可。",
+        "理由/例证支撑：用具体理由或例子支撑观点，如对住房供给、租金、房主收入或本地商业的影响。",
+        "回应至少一位同学：明确呼应 Pia 或 Rashid 的论点，表示赞同、反驳或补充延伸。",
+        "组织连贯：段落有逻辑顺序，使用恰当衔接词，论点层层展开、首尾呼应。",
+        "语法与学术词汇：句式多样、语法准确，使用与城市住房/交通/社区相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on urban land use and vacant lots. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Halloran: When a city owns an empty lot in a crowded neighborhood, it can turn the land into a public park or use it to build much-needed housing. Which choice generally does more for a community?\n\nSora: I would build housing. In neighborhoods where rents are high and many people struggle to find a home, adding places to live meets the most urgent need and keeps the community from being pushed out.\n\nTomas: I value the park more. Dense neighborhoods often lack open green space, and a shared park improves health, gives children a place to play, and brings neighbors together in ways another building cannot.",
+      "promptZh": "学术讨论：城市空地应优先建公园还是建住房，哪种更有益于社区？回应教授并就 Sora/Tomas 的不同观点表态。",
+      "referencePoints": [
+        "清楚提出立场：优先住房、优先公园,或提出兼顾的折中方案。",
+        "以理由和例证支撑，如住房短缺、租金压力、绿地不足、健康与社区凝聚。",
+        "至少回应 Sora 或 Tomas 一方，明确赞成、反驳或补充其观点。",
+        "段落组织连贯，论点—理由—例证—结论层次分明。",
+        "语法与拼写准确，恰当使用与土地利用和社区发展相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on public transit and night service. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Bjornson: Running buses and trains all through the night is expensive, since few people ride during the early morning hours. Should a city fund round-the-clock public transit, or is it wiser to spend that money on busier daytime service?\n\nUlla: I think round-the-clock service is worth it. Night-shift workers, hospital staff, and people leaving late jobs depend on it, and a city that only runs transit by day quietly tells those residents they do not matter.\n\nVivek: I would put the money into daytime service. With limited budgets, frequent, reliable buses during peak hours help far more riders, and the few late-night travelers can be served more cheaply in other ways.",
+      "promptZh": "学术讨论：城市应资助通宵公共交通，还是把钱用于更繁忙的白天班次？回应教授并就 Ulla/Vivek 的不同观点表态。",
+      "referencePoints": [
+        "明确立场：支持通宵运营、优先白天班次，或提出有针对性的折中方案。",
+        "用理由与例证支撑，如夜班工作者需求、运营成本、客流效率、社会公平。",
+        "至少回应 Ulla 或 Vivek 的观点，表示同意、反对或补充。",
+        "组织连贯，使用对比与因果衔接词清晰展开论证。",
+        "语法准确，恰当使用与公共交通和公共预算相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on neighborhood community building. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Acevedo: To help neighbors feel more connected, a local government can fund a physical community center where people gather in person, or it can fund an online neighborhood platform where residents post, plan, and help one another. Which approach builds a stronger sense of community?\n\nWanda: A physical center does more. Face-to-face contact at events, classes, and shared meals creates real trust between neighbors, and that kind of bond is hard to form through a screen.\n\nYael: An online platform reaches further. It includes busy parents, shift workers, and people with limited mobility who rarely make it to a building, so it can knit together far more of the neighborhood.",
+      "promptZh": "学术讨论：建实体社区中心还是建线上邻里平台,更能增强社区凝聚力？回应教授并就 Wanda/Yael 的不同观点表态。",
+      "referencePoints": [
+        "明确表态：偏向实体社区中心、线上平台，或主张两者结合的方案。",
+        "提供理由与例证，如面对面信任、参与门槛、覆盖人群、不同居民的需求。",
+        "至少回应 Wanda 或 Yael 一方，明确赞同、质疑或加以延伸。",
+        "段落结构清晰连贯，逻辑层层推进并有适当衔接。",
+        "语法得体，恰当使用与社区建设和社会联系相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "cities, transport, and community",
+      "prompt": "Your professor is teaching a class on street design for shared use. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Pirelli: Some residential streets are being redesigned as shared spaces, where cars must move slowly and give way to pedestrians and children playing, instead of having clearly separated lanes and sidewalks. Is redesigning neighborhood streets as shared spaces a change cities should encourage?\n\nZeke: I think they should. When drivers are forced to slow down and share the road, streets become safer and friendlier, and the space turns back into a part of community life rather than just a route for traffic.\n\nAlina: I have doubts. Removing clear boundaries can confuse drivers and pedestrians about who goes first, and people with visual impairments often rely on the edge of a sidewalk to navigate safely.",
+      "promptZh": "学术讨论：城市是否应推广把住宅街道改造成人车共享空间？回应教授并就 Zeke/Alina 的不同观点表态。",
+      "referencePoints": [
+        "明确立场：支持推广共享街道、反对，或提出有条件实施的折中观点。",
+        "用理由与例证支撑，如行车速度、街道安全、社区生活、视障人士导航。",
+        "至少回应 Zeke 或 Alina 一方，表示同意、反驳或补充其论点。",
+        "组织连贯，按主张—理由—例证—小结的逻辑清晰展开。",
+        "语法准确，恰当使用与街道设计和社区安全相关的学术词汇。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on advertising and influencer marketing. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Underwood: Many social-media creators are paid to feature products without always making the arrangement obvious to their followers. Should influencers be required to clearly label every paid promotion, even when doing so might make the post feel less natural?\n\nBenji: I think clear labels should be required. Followers trust creators as if they were friends, so hiding that money changed hands is a kind of deception that unfairly influences buying decisions.\n\nCira: I see it differently. Audiences today already assume that popular creators earn money from brands, so heavy labeling rules just clutter posts and treat viewers as if they cannot think for themselves.",
+      "promptZh": "学术讨论：网红是否应清晰标注每条付费推广内容，即使这会让帖子显得不够自然？回应教授并就 Benji/Cira 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持强制标注付费推广、反对繁琐标注，还是设条件的折中立场。",
+        "理由/例证支撑：从信任、欺骗风险、消费者判断力或帖子观感等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Benji 或 Cira 的观点，表示赞同、反驳或加以补充延伸。",
+        "组织连贯：先表态再展开理由，使用恰当连接词处理对比与让步，段落层次清晰。",
+        "语法与学术词汇：恰当使用如 disclosure、transparency、credibility 等学术词汇，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on creativity and artificial intelligence. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Sato: Image-generating tools are trained on the work of countless human artists. When someone produces and shares an AI-generated image, do you think the artists whose styles helped train the tool deserve credit or compensation?\n\nDunia: I believe they deserve recognition. These tools learned from real artists' labor, so building on that work without any acknowledgment treats years of human effort as if it were free raw material.\n\nEnzo: I disagree. Every artist already learns by studying others, and we never credit them for that, so expecting credit for an AI tool that does something similar sets an impossible standard.",
+      "promptZh": "学术讨论：当人们使用并分享 AI 生成的图像时，那些作品被用于训练工具的艺术家是否应获得署名或报酬？回应教授并就 Dunia/Enzo 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你认为应给予原艺术家署名/报酬、不必给予，还是视情况而定的立场。",
+        "理由/例证支撑：从劳动价值、借鉴与学习的界限、可行性或创作伦理等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Dunia 或 Enzo 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：观点—理由—例证层次分明，使用过渡词衔接，段落结构完整。",
+        "语法与学术词汇：恰当使用如 attribution、compensation、originality 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on online communities and public discourse. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Marchetti: Some websites let people comment anonymously, while others require posters to use their real names. Do you think online discussion is healthier when people must attach their real identities to what they write?\n\nAroha: I think real names make discussion healthier. When people stand behind their words, they tend to be more civil and thoughtful instead of hurling insults they would never say face to face.\n\nBeck: I disagree. Anonymity lets people raise sensitive topics and unpopular truths without fear of punishment, and forcing real names would silence many voices that most need to be heard.",
+      "promptZh": "学术讨论：网络讨论在要求使用真实身份时是否更健康？回应教授并就 Aroha/Beck 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持实名讨论、保留匿名，还是按场景区分的折中立场。",
+        "理由/例证支撑：从文明度、问责、敏感话题表达自由或安全等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Aroha 或 Beck 的观点，表示赞同、反驳或补充。",
+        "组织连贯：先表态后论证，使用连接词体现对比或让步，段落逻辑清晰。",
+        "语法与学术词汇：恰当使用如 anonymity、accountability、civility 等词，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on museums and cultural heritage. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Holloway: Many famous museums hold artifacts that were taken from other countries long ago. When a country asks for such objects back, do you think museums should return them, or are there good reasons to keep them where they are?\n\nCyrus: I believe they should generally be returned. These objects carry the history and identity of the communities they came from, and keeping them abroad continues an injustice that began when they were taken.\n\nDavina: I see it differently. Large museums protect and display these works to a global audience, so returning everything could scatter collections and limit how many people can learn from them.",
+      "promptZh": "学术讨论：当原属国请求归还文物时，博物馆是否应将其归还？回应教授并就 Cyrus/Davina 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持归还文物、留在大型博物馆，还是分情况处理的立场。",
+        "理由/例证支撑：从文化认同、历史正义、保护条件或公众可及性等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Cyrus 或 Davina 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：观点与理由层层展开，过渡自然，段落结构完整。",
+        "语法与学术词汇：恰当使用如 heritage、repatriation、preservation 等表达，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on photojournalism and reporting ethics. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Ferraro: Photojournalists sometimes witness people in distress while on assignment. When a reporter could either keep documenting an unfolding event or step in to help a suffering person, do you think the duty to record the truth should come first?\n\nElif: I think helping must come first. No image is worth more than a human being, and a journalist who stands by filming someone in danger has lost sight of basic decency.\n\nFabian: I disagree. Powerful, honest images push the public and leaders to act on problems they would otherwise ignore, so a reporter's job to document the truth can do far more good than one rescue.",
+      "promptZh": "学术讨论：当记者可以选择继续记录正在发生的事件或上前帮助受难者时，记录真相的职责是否应优先？回应教授并就 Elif/Fabian 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持记录优先、施救优先，还是按情境权衡的折中立场。",
+        "理由/例证支撑：从人道责任、新闻的社会影响、报道的更大善或现场处境等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Elif 或 Fabian 的观点，表示赞同、反驳或补充。",
+        "组织连贯：先表态再论证，使用连接词处理对比与让步，段落逻辑清晰。",
+        "语法与学术词汇：恰当使用如 ethics、documentation、bystander 等词，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "media, culture, and ethics",
+      "prompt": "Your professor is teaching a class on media history and changing cultural values. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Nystrom: Some older films and shows contain jokes or scenes that many viewers now find offensive. When streaming services revisit this material, should they edit out the offensive parts, or present the original version with a note explaining its historical context?\n\nGemma: I think the offensive parts should be edited out. Platforms reach huge new audiences, and leaving harmful stereotypes on screen can normalize them, especially for younger viewers who lack the background to judge them.\n\nHiroto: I disagree. Altering old works hides how people once thought, and a clear context note respects viewers' intelligence while keeping an honest record of cultural history.",
+      "promptZh": "学术讨论：流媒体平台重新上线含有冒犯内容的老片时，应删改冒犯部分，还是保留原版并附历史背景说明？回应教授并就 Gemma/Hiroto 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持删改、保留原版加背景说明，还是分情况处理的立场。",
+        "理由/例证支撑：从受众影响、刻板印象、历史真实性或观众判断力等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Gemma 或 Hiroto 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：观点—理由—例证衔接顺畅，恰当使用过渡词，段落收尾完整。",
+        "语法与学术词汇：恰当使用如 censorship、context、preservation 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on how research is funded. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Okeke: Funding agencies must decide where to put limited research money. When resources are tight, should agencies give priority to basic research driven by curiosity, or to applied research aimed at solving a known practical problem?\n\nIvar: I think basic research should come first. Many of today's technologies grew out of curiosity-driven discoveries that had no obvious use at the time they were made.\n\nJuno: I disagree. When money is limited, agencies should fund applied projects that address pressing problems now, since people benefit much sooner from research with a clear goal.",
+      "promptZh": "学术讨论：经费有限时，资助机构应优先支持以好奇心驱动的基础研究，还是面向已知实际问题的应用研究？回应教授并就 Ivar/Juno 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持优先基础研究、优先应用研究，还是按情况平衡两者的立场。",
+        "理由/例证支撑：从长期回报、即时收益、不确定性或社会需求等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Ivar 或 Juno 的观点，表示赞同、反驳或加以补充延伸。",
+        "组织连贯：先表态再展开理由，使用恰当的连接词处理对比与让步，段落层次清晰。",
+        "语法与学术词汇：句式多样、用词准确，恰当使用如 funding、application、breakthrough 等学术词汇并控制语法错误。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on how scientific findings are published. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Vance: Researchers can share their results through paid subscription journals or through open-access outlets that anyone can read for free. Do you think publicly funded research should be required to appear in open-access form, or should researchers be free to choose any reputable journal?\n\nKeiko: I believe publicly funded work should be open access. If taxpayers paid for the study, they should be able to read the results without hitting a paywall.\n\nLeandro: I see it differently. Researchers should pick the journal that best fits their field, even a subscription one, because the journal's reputation and review quality matter more than free access.",
+      "promptZh": "学术讨论：公共资助的研究是否应强制以开放获取形式发表，还是研究者可自由选择任何可靠期刊？回应教授并就 Keiko/Leandro 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持强制开放获取、研究者自由选择，还是设条件的折中立场。",
+        "理由/例证支撑：从公众知情、纳税人权益、期刊声誉或评审质量等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Keiko 或 Leandro 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点—理由—例证层次分明，使用过渡词衔接，段落结构完整。",
+        "语法与学术词汇：恰当使用如 open access、peer review、reputation 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on trust and reliability in research. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Brandt: Lately there has been concern about whether published studies can be repeated by other scientists. Should researchers be required to share their raw data and analysis code whenever they publish a study, or should sharing remain voluntary?\n\nMira: I think sharing should be required. When others can inspect the data and rerun the code, mistakes get caught and the whole field becomes more trustworthy.\n\nNico: I am not convinced. Preparing data and code for release takes enormous time, and some datasets involve confidentiality, so requiring it for every study would slow research down unfairly.",
+      "promptZh": "学术讨论：研究者发表论文时是否应被强制公开原始数据与分析代码，还是应保持自愿？回应教授并就 Mira/Nico 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持强制公开数据与代码、保持自愿，还是分情况处理的立场。",
+        "理由/例证支撑：从可复现性、可信度、工作量或保密性等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Mira 或 Nico 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：先表态后论证，使用连接词使因果与对比关系清晰，段落收尾自然。",
+        "语法与学术词汇：恰当使用如 reproducibility、transparency、dataset 等学术词汇，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on who collects scientific data. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Salgado: Some projects now invite ordinary volunteers to help gather observations, such as counting birds or recording local weather. Do you think large research projects benefit from involving untrained volunteers, or should data collection be left to trained specialists?\n\nOrla: Involving volunteers is a great idea. Thousands of people can gather observations across a huge area that a small team of specialists could never cover on their own.\n\nPriscilla: I disagree. Untrained volunteers may record things inconsistently, and cleaning up unreliable data can cost more effort than it saves, so specialists should handle it.",
+      "promptZh": "学术讨论：大型研究项目应让未受训练的志愿者参与数据采集，还是应交由受过训练的专业人员完成？回应教授并就 Orla/Priscilla 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持引入志愿者、专业人员主导，还是两者结合的立场。",
+        "理由/例证支撑：从覆盖范围、规模、数据一致性或可靠性等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Orla 或 Priscilla 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点与理由层层展开，过渡自然，段落结构完整。",
+        "语法与学术词汇：恰当使用如 volunteer、observation、accuracy 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on how inventions spread. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Teixeira: When researchers create a useful new invention, they can protect it with a patent or release the design openly for anyone to use. Which approach do you think leads to faster overall progress in a field?\n\nRenata: Patents speed up progress. The promise of protected rights gives inventors and companies a strong reason to invest the money and effort that new ideas require.\n\nSoren: I think open release works better. When a design is free for everyone, many people can improve and build on it at once, so the whole field advances more quickly.",
+      "promptZh": "学术讨论：研究者推出有用的新发明时，用专利保护还是公开设计供人自由使用，哪种更能加速整体进步？回应教授并就 Renata/Soren 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚说明你更支持专利保护、公开共享，还是视领域而定的折中立场。",
+        "理由/例证支撑：从投资激励、回报保障、协作改进或扩散速度等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Renata 或 Soren 的观点，表示赞同、反驳或延伸。",
+        "组织连贯：先表态再论证，使用连接词处理对比与让步，段落逻辑清晰。",
+        "语法与学术词汇：恰当使用如 patent、incentive、collaboration 等词，语法准确、句式多样。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    },
+    {
+      "category": "science, research, and innovation",
+      "prompt": "Your professor is teaching a class on the role of scientists in society. Write a post responding to the professor's question. In your response, express and support your own opinion, and add to the discussion in your own words.\n\nDr. Wexler: Scientists have only so much time and energy to spend. Should working scientists devote significant effort to explaining their research to the general public, or should they concentrate that time on doing the research itself?\n\nTalia: Scientists should spend real effort on public communication. If people understand and trust research, they are more willing to support it and use its findings wisely.\n\nVasco: I disagree. A scientist's main job is to produce solid work, and time spent on public outreach is time taken away from the discoveries only they can make.",
+      "promptZh": "学术讨论：科研人员应投入大量精力向公众解释自己的研究，还是应把时间集中在研究本身？回应教授并就 Talia/Vasco 的不同观点表态。",
+      "referencePoints": [
+        "立场明确：清楚表明你更支持重视公众沟通、专注研究本身，还是兼顾两者的立场。",
+        "理由/例证支撑：从公众信任、社会支持、时间成本或专业产出等角度给出具体理由与例子。",
+        "回应至少一位同学：明确呼应 Talia 或 Vasco 的观点，表示赞同、反驳或补充。",
+        "组织连贯：观点—理由—例证衔接顺畅，恰当使用过渡词，段落收尾完整。",
+        "语法与学术词汇：恰当使用如 communicate、outreach、credibility 等词，句式多样且语法基本准确。"
+      ],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a well-organized paragraph of roughly 100 or more words."
+    }
+  ]
+}

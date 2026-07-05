@@ -1,0 +1,24 @@
+{
+  "stage": "toefl-listening-pilot-2026-07-01",
+  "sets": 20,
+  "setsByTask": {
+    "choose_a_response": 10,
+    "listening_comprehension": 10
+  },
+  "setsByStatus": {
+    "draft": 0,
+    "active": 20
+  },
+  "items": 40,
+  "itemsByStatus": {
+    "draft": 0,
+    "active": 40
+  },
+  "stimuli": 20,
+  "audio": 20,
+  "audioByStatus": {
+    "machine_checked": 0,
+    "human_checked": 0,
+    "active": 20
+  }
+}

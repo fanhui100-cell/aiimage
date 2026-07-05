@@ -1,0 +1,309 @@
+{
+  "examId": "kaoyan",
+  "level": 5,
+  "skill": "writing",
+  "taskType": "applied_writing",
+  "_provenance": "Claude-authored original. DeepSeek not used. No official answer; rubric-scored estimate only.",
+  "tasks": [
+    {
+      "prompt": "Suppose you are the head of the student volunteer association at your university. Write a notice of about 100 words to recruit tutors for a free weekend reading program for children of migrant workers. Your notice should state: (1) the purpose of the program; (2) the duties and time commitment of the tutors; (3) the qualities expected of applicants; (4) how and by when to apply. Do not write your own name; sign as Student Volunteer Association.",
+      "promptZh": "假设你是校学生志愿者协会负责人，为面向农民工子女的周末免费阅读项目招募辅导员，写一则约 100 词的通知，说明项目目的、辅导员职责与时间投入、对申请者的素质要求、报名方式与截止时间，落款 Student Volunteer Association。",
+      "referencePoints": ["role (volunteer association head) and audience (students) clear", "covers purpose, duties/time, expected qualities, how/when to apply", "notice format with title and signature, fairly formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you recently bought a wireless headphone online that stopped working within a week. Write a letter of complaint of about 100 words to the customer service department of the online store. Your letter should: (1) describe what you bought and when; (2) explain the problem you have encountered; (3) state how the fault has affected you; (4) request a specific solution. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你最近网购的一副无线耳机用了不到一周就坏了，给网店客服部门写一封约 100 词的投诉信，说明所购商品及时间、遇到的问题、给你造成的影响、希望的具体解决方案，落款 Li Ming。",
+      "referencePoints": ["role (dissatisfied customer) and audience (customer service) clear", "covers product/date, the fault, the impact, a specific requested remedy", "complaint letter format, polite but firm register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose a foreign friend named Chris will visit your hometown next month and has asked you for advice on travelling. Write an email of about 100 words replying to Chris. Your email should: (1) recommend the best season or time to come; (2) suggest two places worth visiting; (3) give practical advice on transport or food; (4) offer to help further. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设外国朋友 Chris 下月将来访你的家乡并向你咨询旅行建议，写一封约 100 词的回信邮件，推荐最佳来访季节、建议两处值得游览的地方、给出交通或饮食方面的实用建议、表示愿意进一步提供帮助，落款 Li Hua。",
+      "referencePoints": ["role (local friend) and audience (visiting friend) clear", "covers best season, two places, practical transport/food tip, offer to help", "friendly email format, informal yet courteous register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the secretary of your university's English Club. Write an invitation letter of about 100 words to a well-known translator, inviting them to give a talk at the club. Your letter should: (1) introduce the club briefly; (2) state the theme and expected audience of the talk; (3) propose a date and length; (4) mention what the club can offer in return. Do not write your own name; sign as the English Club.",
+      "promptZh": "假设你是校英语俱乐部秘书，给一位知名翻译家写一封约 100 词的邀请函，邀请其到俱乐部做讲座，简要介绍俱乐部、说明讲座主题与预期听众、提议日期与时长、说明俱乐部可提供的回报，落款 English Club。",
+      "referencePoints": ["role (club secretary) and audience (guest speaker) clear", "covers club intro, theme/audience, proposed date/length, what is offered", "invitation letter format, formal and respectful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose your good friend Wang Lin has just won a national scholarship for academic excellence. Write a letter of congratulation of about 100 words. Your letter should: (1) express your congratulations; (2) acknowledge the effort behind the achievement; (3) share how the news made you feel; (4) wish your friend continued success. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你的好友王林刚获得国家级优秀学业奖学金，写一封约 100 词的祝贺信，表达祝贺、肯定其背后的努力、分享你听到消息的感受、祝其再创佳绩，落款 Li Hua。",
+      "referencePoints": ["role (friend) and audience (award winner) clear", "covers congratulation, acknowledged effort, personal feeling, future wish", "congratulation letter format, warm and sincere register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you had agreed to help your classmate Zhou move house this Saturday but a sudden family matter prevents you from coming. Write a letter of apology of about 100 words. Your letter should: (1) apologize for not being able to keep your promise; (2) explain the reason briefly; (3) express your understanding of the trouble caused; (4) offer to make it up. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你曾答应本周六帮同学周搬家，但突发家事无法前往，写一封约 100 词的道歉信，就未能履约致歉、简要说明原因、表示理解给对方带来的不便、提出补偿办法，落款 Li Ming。",
+      "referencePoints": ["role (apologetic friend) and audience (classmate) clear", "covers apology, brief reason, understanding of trouble, offer to compensate", "apology letter format, sincere and considerate register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are a regular reader of a university library who has noticed that the opening hours are too short during the exam period. Write a letter of suggestion of about 100 words to the library director. Your letter should: (1) state the problem you have observed; (2) explain why it matters to students; (3) propose a concrete improvement; (4) express your willingness to help if needed. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你是大学图书馆常客，发现考试期间开放时间过短，给图书馆馆长写一封约 100 词的建议信，说明你观察到的问题、解释其对学生的重要性、提出具体改进方案、表示愿意提供协助，落款 Li Hua。",
+      "referencePoints": ["role (frequent reader) and audience (library director) clear", "covers observed problem, why it matters, concrete proposal, offer to help", "suggestion letter format, polite and constructive register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are interested in a summer internship advertised by a local technology company. Write a letter of inquiry of about 100 words to the company's HR department. Your letter should: (1) state where you saw the advertisement; (2) introduce your relevant background briefly; (3) ask two specific questions about the internship; (4) request information on how to apply. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你对本地一家科技公司发布的暑期实习感兴趣，给该公司人力资源部写一封约 100 词的咨询信，说明从何处看到招聘信息、简要介绍你的相关背景、就实习提出两个具体问题、询问如何申请，落款 Li Ming。",
+      "referencePoints": ["role (prospective intern) and audience (HR department) clear", "covers source of ad, brief background, two specific questions, how to apply", "inquiry letter format, formal and purposeful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are a teaching assistant and your professor has asked you to inform students about a postponed lecture. Write a memo of about 100 words to the students of the course. Your memo should: (1) state which lecture is affected; (2) give the new date, time and place; (3) explain the reason for the change briefly; (4) tell students what to prepare. Do not write your own name; sign as the Teaching Assistant.",
+      "promptZh": "假设你是助教，教授让你通知学生某场讲座推迟，给该课程学生写一份约 100 词的备忘录，说明受影响的讲座、给出新的日期时间地点、简要说明变更原因、告知学生需准备的内容，落款 Teaching Assistant。",
+      "referencePoints": ["role (teaching assistant) and audience (course students) clear", "covers affected lecture, new date/time/place, reason, what to prepare", "memo format with clear heading, concise and informative register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the organizer of a campus charity bazaar. Write an announcement of about 100 words to the whole student body. Your announcement should: (1) state the purpose and beneficiary of the bazaar; (2) give the date, time and location; (3) describe what activities or items will be available; (4) encourage students to take part. Do not write your own name; sign as the Organizing Committee.",
+      "promptZh": "假设你是校园慈善义卖会的组织者，向全体学生写一则约 100 词的公告，说明义卖目的与受益方、给出日期时间地点、描述将有的活动或物品、鼓励学生参与，落款 Organizing Committee。",
+      "referencePoints": ["role (organizer) and audience (students) clear", "covers purpose/beneficiary, date/time/place, activities/items, call to participate", "announcement format with title and signature, lively yet formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you stayed at a hotel last week and were impressed by a receptionist who went out of her way to help you. Write a letter of appreciation of about 100 words to the hotel manager. Your letter should: (1) state when you stayed and the staff member involved; (2) describe what she did; (3) explain why it mattered to you; (4) suggest she be recognized. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你上周入住某酒店，一位前台员工热心相助令你印象深刻，给酒店经理写一封约 100 词的感谢信，说明入住时间及涉及员工、描述她所做之事、说明这对你的意义、建议予以表彰，落款 Li Hua。",
+      "referencePoints": ["role (grateful guest) and audience (hotel manager) clear", "covers stay date/staff, what she did, why it mattered, suggestion to recognize her", "appreciation letter format, warm and specific register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the captain of your university basketball team. Write a notice of about 100 words to invite first-year students to try out for the team. Your notice should: (1) introduce the team briefly; (2) state the date, time and place of the tryout; (3) explain what candidates should bring or prepare; (4) describe what membership offers. Do not write your own name; sign as the Basketball Team.",
+      "promptZh": "假设你是校篮球队队长，写一则约 100 词的通知，邀请大一新生参加选拔，简要介绍球队、说明选拔的日期时间地点、说明候选人需携带或准备的物品、介绍加入球队的收获，落款 Basketball Team。",
+      "referencePoints": ["role (team captain) and audience (first-year students) clear", "covers team intro, tryout date/time/place, what to bring, benefits of joining", "notice format with title and signature, energetic and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are a graduate student writing to a professor whose lab you wish to join. Write an email of about 100 words to request a meeting. Your email should: (1) introduce yourself and your research interest; (2) explain why you are drawn to the professor's work; (3) request a short meeting and suggest a time; (4) mention that you have attached your CV. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你是研究生，想加入某教授的实验室，写一封约 100 词的邮件请求面谈，介绍你自己与研究兴趣、说明你为何被该教授的研究吸引、请求一次简短面谈并提议时间、说明已附上简历，落款 Li Ming。",
+      "referencePoints": ["role (prospective student) and audience (professor) clear", "covers self-intro/interest, reason for interest, meeting request/time, attached CV", "email format, formal and respectful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the chair of a residential committee in a student dormitory. Write a notice of about 100 words reminding residents about new rules on saving electricity. Your notice should: (1) explain why the rules are introduced; (2) list two or three specific measures residents should take; (3) state when the rules take effect; (4) ask for everyone's cooperation. Do not write your own name; sign as the Dormitory Committee.",
+      "promptZh": "假设你是学生宿舍楼层委员会主席，写一则约 100 词的通知，提醒住户关于节约用电的新规定，说明出台规定的原因、列出住户应采取的两三项具体措施、说明规定生效时间、请求大家配合，落款 Dormitory Committee。",
+      "referencePoints": ["role (committee chair) and audience (residents) clear", "covers reason, specific measures, effective date, call for cooperation", "notice format with title and signature, formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you ordered a meal through a food delivery app and received the wrong dishes, cold and late. Write a letter of complaint of about 100 words to the platform's customer service. Your letter should: (1) give your order details; (2) describe what went wrong; (3) explain the inconvenience caused; (4) request a refund or other remedy. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你通过外卖软件点餐，收到的却是送错、冰冷且迟到的菜品，给平台客服写一封约 100 词的投诉信，给出订单信息、描述出错之处、说明造成的不便、请求退款或其他补救，落款 Li Ming。",
+      "referencePoints": ["role (dissatisfied customer) and audience (platform service) clear", "covers order details, what went wrong, inconvenience, requested remedy", "complaint letter format, firm but reasonable register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the president of your university's debate society. Write an email of about 100 words to a partner university to propose a friendly inter-university debate. Your email should: (1) introduce your society briefly; (2) state the purpose of the proposed event; (3) suggest a possible date and format; (4) invite a reply with their thoughts. Do not write your own name; sign as the Debate Society.",
+      "promptZh": "假设你是校辩论社社长，给一所合作高校写一封约 100 词的邮件，提议举办校际友谊辩论赛，简要介绍辩论社、说明拟办活动的目的、提议可能的日期与赛制、邀请对方回复想法，落款 Debate Society。",
+      "referencePoints": ["role (society president) and audience (partner university) clear", "covers society intro, purpose, proposed date/format, request for reply", "email proposal format, formal and collegial register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you found a wallet on the campus bus and want to return it to its owner. Write a notice of about 100 words to post on the campus bulletin board. Your notice should: (1) state where and when you found the wallet; (2) describe it generally without revealing too much; (3) ask the owner to provide proof of ownership; (4) explain how to contact you. Do not write your own name; sign as a Finder.",
+      "promptZh": "假设你在校园班车上捡到一个钱包，想物归原主，写一则约 100 词的失物招领通知张贴于校园公告栏，说明拾得的地点与时间、对钱包作大致描述但不透露过多、请失主提供物品归属证明、说明联系方式，落款 Finder。",
+      "referencePoints": ["role (finder) and audience (campus community) clear", "covers where/when found, general description, proof requirement, contact method", "lost-and-found notice format, helpful and clear register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you have just finished an online course taught by an instructor whose teaching greatly inspired you. Write a thank-you email of about 100 words to the instructor. Your email should: (1) state which course you took; (2) describe what you gained from it; (3) mention a specific moment that impressed you; (4) express your hope to stay in touch. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你刚学完一门让你深受启发的网络课程，给授课老师写一封约 100 词的感谢邮件，说明所学课程、描述你的收获、提及给你留下深刻印象的具体片段、表达保持联系的愿望，落款 Li Hua。",
+      "referencePoints": ["role (former student) and audience (instructor) clear", "covers course, what gained, a specific moment, hope to stay in touch", "thank-you email format, sincere and warm register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are a member of an environmental association at your university. Write an announcement of about 100 words to invite students to join a tree-planting activity. Your announcement should: (1) state the purpose and significance of the activity; (2) give the date, time and meeting point; (3) explain what participants should wear or bring; (4) tell students how to sign up. Do not write your own name; sign as the Green Earth Association.",
+      "promptZh": "假设你是校环保协会成员，写一则约 100 词的公告，邀请学生参加植树活动，说明活动的目的与意义、给出日期时间集合地点、说明参与者的着装或所需物品、告知报名方式，落款 Green Earth Association。",
+      "referencePoints": ["role (association member) and audience (students) clear", "covers purpose/significance, date/time/place, what to wear/bring, sign-up method", "announcement format with title and signature, encouraging register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose your younger cousin is hesitating about whether to take a gap year before university. Write a letter of advice of about 100 words. Your letter should: (1) acknowledge the difficulty of the decision; (2) point out one or two benefits of a gap year; (3) note one possible risk to consider; (4) encourage your cousin to decide thoughtfully. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你的表弟正犹豫上大学前是否要休学一年（间隔年），写一封约 100 词的建议信，体谅其抉择之难、指出间隔年的一两点益处、提醒需考虑的一点风险、鼓励其慎重决定，落款 Li Hua。",
+      "referencePoints": ["role (caring relative) and audience (younger cousin) clear", "covers acknowledgment, benefits, a risk, encouragement to decide thoughtfully", "advice letter format, warm and balanced register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the editor of your university's student magazine. Write a notice of about 100 words to call for submissions for a special issue on campus life. Your notice should: (1) introduce the theme of the special issue; (2) state what kinds of work are welcome; (3) give the word limit and deadline; (4) explain how and where to submit. Do not write your own name; sign as the Editorial Board.",
+      "promptZh": "假设你是校学生杂志编辑，写一则约 100 词的征稿通知，为一期关于校园生活的专刊征稿，介绍专刊主题、说明欢迎哪类作品、给出字数限制与截稿日期、说明投稿方式与渠道，落款 Editorial Board。",
+      "referencePoints": ["role (magazine editor) and audience (student writers) clear", "covers theme, types of work welcome, word limit/deadline, how/where to submit", "call-for-submissions notice format, inviting and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you booked a hotel room online but now need to cancel your reservation due to a change of plans. Write an email of about 100 words to the hotel. Your email should: (1) give your booking reference and dates; (2) request cancellation; (3) explain the reason briefly; (4) ask about the refund policy. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你在网上预订了酒店房间，但因计划变动需取消，给酒店写一封约 100 词的邮件，给出预订编号与入住日期、请求取消、简要说明原因、询问退款政策，落款 Li Ming。",
+      "referencePoints": ["role (guest cancelling) and audience (hotel) clear", "covers booking reference/dates, cancellation request, reason, refund inquiry", "email format, polite and clear register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the leader of a study group preparing for the postgraduate entrance exam. Write a notice of about 100 words to your group members about a change in the meeting schedule. Your notice should: (1) state the old and new meeting times; (2) explain the reason for the change; (3) remind members what to bring or review; (4) ask them to confirm attendance. Do not write your own name; sign as the Study Group Leader.",
+      "promptZh": "假设你是考研学习小组组长，就会面时间变更向组员写一则约 100 词的通知，说明原定与新的会面时间、解释变更原因、提醒成员需携带或复习的内容、请其确认出席，落款 Study Group Leader。",
+      "referencePoints": ["role (group leader) and audience (group members) clear", "covers old/new time, reason, what to bring/review, request to confirm", "notice format, concise and considerate register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you read an article in a newspaper that you found inaccurate and misleading. Write a letter of about 100 words to the editor. Your letter should: (1) identify the article and the issue it discussed; (2) point out what you believe is inaccurate; (3) offer your own view with brief support; (4) ask the paper to consider a correction. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你读到一篇你认为失实且具误导性的报纸文章，给编辑写一封约 100 词的信，指出该文及其所讨论的问题、指出你认为失实之处、提出你的观点并简要说明依据、请报社考虑更正，落款 Li Hua。",
+      "referencePoints": ["role (concerned reader) and audience (newspaper editor) clear", "covers article/issue, the inaccuracy, own view with support, request for correction", "letter-to-editor format, reasoned and civil register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are organizing a farewell party for a foreign teacher who is leaving your school. Write an invitation of about 100 words to your classmates. Your invitation should: (1) state the occasion and who it honours; (2) give the date, time and place; (3) describe what the party will include; (4) ask classmates to confirm and to prepare a small gift. Do not write your own name; sign as the Organizers.",
+      "promptZh": "假设你正为即将离校的外教组织一场欢送会，给同学们写一份约 100 词的邀请，说明活动及致敬对象、给出日期时间地点、描述聚会内容、请同学确认出席并准备小礼物，落款 Organizers。",
+      "referencePoints": ["role (party organizer) and audience (classmates) clear", "covers occasion/honoree, date/time/place, what is included, confirm/gift request", "invitation format, warm and inviting register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you live in an apartment where construction noise next door starts very early every morning. Write a letter of about 100 words to the property management office. Your letter should: (1) describe the noise problem and when it occurs; (2) explain how it affects the residents; (3) request specific action; (4) ask for a timely reply. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你所住公寓隔壁每天清早就开始施工噪音，给物业管理处写一封约 100 词的信，描述噪音问题及发生时间、说明对住户的影响、请求采取具体措施、请尽快回复，落款 Li Ming。",
+      "referencePoints": ["role (affected resident) and audience (property office) clear", "covers noise/timing, impact on residents, specific action, request for prompt reply", "letter format, firm but courteous register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the coordinator of an international student exchange program. Write a notice of about 100 words to inform participants about a pre-departure orientation. Your notice should: (1) state the purpose of the orientation; (2) give the date, time and venue; (3) list two or three topics that will be covered; (4) remind participants what to bring. Do not write your own name; sign as the Exchange Program Office.",
+      "promptZh": "假设你是国际学生交流项目协调人，就行前说明会向参与者写一则约 100 词的通知，说明说明会目的、给出日期时间地点、列出将涉及的两三个议题、提醒参与者需携带的物品，落款 Exchange Program Office。",
+      "referencePoints": ["role (program coordinator) and audience (participants) clear", "covers purpose, date/time/venue, topics covered, what to bring", "notice format with title and signature, organized and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose a professor wrote you a strong recommendation letter that helped you get into graduate school. Write a thank-you letter of about 100 words. Your letter should: (1) report the good news of your admission; (2) thank the professor for the recommendation; (3) acknowledge how the professor influenced you; (4) express your wish to keep them updated. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设一位教授为你写了有力的推荐信，助你被研究生院录取，写一封约 100 词的感谢信，汇报录取的好消息、感谢教授的推荐、肯定教授对你的影响、表达愿向其汇报近况的心愿，落款 Li Hua。",
+      "referencePoints": ["role (admitted student) and audience (professor) clear", "covers good news, thanks for recommendation, professor's influence, wish to update", "thank-you letter format, grateful and respectful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the manager of a small bookstore planning a poetry reading evening. Write an announcement of about 100 words to invite the public. Your announcement should: (1) introduce the event and its theme; (2) give the date, time and location; (3) mention who will be reading or featured; (4) explain how to reserve a seat. Do not write your own name; sign as the Bookstore.",
+      "promptZh": "假设你是一家小书店店长，正筹办一场诗歌朗诵之夜，写一则约 100 词的公告邀请公众，介绍活动及主题、给出日期时间地点、说明朗诵者或亮点、说明如何预约座位，落款 Bookstore。",
+      "referencePoints": ["role (bookstore manager) and audience (public) clear", "covers event/theme, date/time/place, who features, how to reserve", "announcement format with title and signature, inviting register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you applied for a part-time position but must withdraw your application because you have accepted another offer. Write an email of about 100 words to the employer. Your email should: (1) refer to the position you applied for; (2) state your decision to withdraw; (3) explain the reason politely; (4) thank them for their consideration. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你申请了一份兼职，但因已接受另一份录用而需撤回申请，给招聘方写一封约 100 词的邮件，提及所申请的职位、说明撤回的决定、礼貌说明原因、感谢对方的考虑，落款 Li Ming。",
+      "referencePoints": ["role (applicant withdrawing) and audience (employer) clear", "covers position, decision to withdraw, polite reason, thanks", "email format, courteous and professional register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the head of a community youth centre. Write a notice of about 100 words to recruit volunteers for a summer activity camp for local children. Your notice should: (1) describe the camp and its purpose; (2) explain the volunteers' duties; (3) state the requirements and time commitment; (4) tell readers how to apply. Do not write your own name; sign as the Community Youth Centre.",
+      "promptZh": "假设你是社区青少年中心负责人，写一则约 100 词的通知，为面向本地儿童的暑期活动营招募志愿者，描述活动营及其目的、说明志愿者职责、说明要求与时间投入、告知申请方式，落款 Community Youth Centre。",
+      "referencePoints": ["role (centre head) and audience (potential volunteers) clear", "covers camp/purpose, duties, requirements/time, how to apply", "notice format with title and signature, formal and welcoming register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose your friend Anna has recommended a useful book that helped you a lot in your studies. Write a letter of about 100 words to thank her. Your letter should: (1) name the book she recommended; (2) describe how it helped you; (3) share one idea from the book that impressed you; (4) suggest a book in return. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设朋友 Anna 推荐了一本对你学习帮助很大的好书，写一封约 100 词的信感谢她，点明她推荐的书、描述对你的帮助、分享书中令你印象深刻的一个观点、回赠推荐一本书，落款 Li Hua。",
+      "referencePoints": ["role (grateful friend) and audience (friend) clear", "covers the book named, how it helped, an impressive idea, a book in return", "thank-you letter format, friendly and warm register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the chair of the organizing committee for a campus science fair. Write an invitation of about 100 words to the dean of the science faculty to attend and speak. Your invitation should: (1) introduce the fair and its theme; (2) state the date, time and venue; (3) explain the role you hope the dean will play; (4) express your appreciation in advance. Do not write your own name; sign as the Organizing Committee.",
+      "promptZh": "假设你是校园科技节组委会主席，给理学院院长写一份约 100 词的邀请，邀其出席并致辞，介绍科技节及主题、说明日期时间地点、说明希望院长担当的角色、提前表达感谢，落款 Organizing Committee。",
+      "referencePoints": ["role (committee chair) and audience (faculty dean) clear", "covers fair/theme, date/time/venue, hoped role, advance thanks", "invitation format, formal and respectful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you bought a monthly gym membership but have been unable to use it because the promised facilities are unavailable. Write a letter of complaint of about 100 words to the gym manager. Your letter should: (1) state when and what you purchased; (2) describe the problem; (3) explain how it has affected you; (4) request a refund or extension. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你购买了健身房月卡，却因承诺的设施无法使用而一直无法健身，给健身房经理写一封约 100 词的投诉信，说明购买的时间与内容、描述问题、说明对你的影响、请求退款或延期，落款 Li Ming。",
+      "referencePoints": ["role (member) and audience (gym manager) clear", "covers purchase, the problem, impact, request for refund/extension", "complaint letter format, firm and reasonable register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the leader of a campus photography club. Write an announcement of about 100 words about an upcoming photography exhibition. Your announcement should: (1) state the theme and purpose of the exhibition; (2) give the dates, time and venue; (3) describe what visitors can expect to see; (4) invite students to attend or submit photos. Do not write your own name; sign as the Photography Club.",
+      "promptZh": "假设你是校园摄影社社长，就即将举办的摄影展写一则约 100 词的公告，说明展览的主题与目的、给出日期时间地点、描述参观者可看到的内容、邀请学生参观或投稿照片，落款 Photography Club。",
+      "referencePoints": ["role (club leader) and audience (students) clear", "covers theme/purpose, dates/time/venue, what to see, invitation to attend/submit", "announcement format with title and signature, inviting register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose a classmate helped you greatly when you were ill and missed several classes. Write a letter of about 100 words to thank her. Your letter should: (1) recall the situation when you were ill; (2) describe specifically what she did to help; (3) explain what her help meant to you; (4) offer to help her in the future. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你生病缺课多日时，一位同学给予你很大帮助，写一封约 100 词的信感谢她，回忆你生病时的情形、具体描述她如何帮你、说明她的帮助对你的意义、表示日后愿回报相助，落款 Li Hua。",
+      "referencePoints": ["role (grateful classmate) and audience (helpful classmate) clear", "covers the situation, specific help, what it meant, offer to reciprocate", "thank-you letter format, sincere and warm register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the president of an alumni association. Write an invitation of about 100 words to former graduates for a reunion event. Your invitation should: (1) state the occasion and the year being celebrated; (2) give the date, time and place; (3) describe what activities are planned; (4) explain how to register and by when. Do not write your own name; sign as the Alumni Association.",
+      "promptZh": "假设你是校友会会长，给往届毕业生写一份约 100 词的同学聚会邀请，说明活动及所纪念的届别、给出日期时间地点、描述计划的活动、说明报名方式与截止时间，落款 Alumni Association。",
+      "referencePoints": ["role (association president) and audience (alumni) clear", "covers occasion/year, date/time/place, planned activities, how/when to register", "invitation format with signature, warm and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you have noticed that students often waste food in your university canteen. Write a letter of suggestion of about 100 words to the canteen management. Your letter should: (1) describe the food-waste problem you have observed; (2) explain why it is a concern; (3) propose two practical measures; (4) express hope that they will act. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你注意到大学食堂中学生常浪费食物，给食堂管理方写一封约 100 词的建议信，描述你观察到的浪费现象、说明为何令人担忧、提出两项切实可行的措施、表达希望对方采取行动，落款 Li Hua。",
+      "referencePoints": ["role (concerned student) and audience (canteen management) clear", "covers observed waste, why it concerns, two practical measures, hope for action", "suggestion letter format, constructive and polite register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the organizer of a campus English speech contest. Write a notice of about 100 words to encourage students to register. Your notice should: (1) introduce the contest and its theme; (2) state who is eligible to take part; (3) give the date of the contest and the registration deadline; (4) mention the prizes and how to register. Do not write your own name; sign as the Organizing Team.",
+      "promptZh": "假设你是校园英语演讲比赛的组织者，写一则约 100 词的通知，鼓励学生报名，介绍比赛及主题、说明参赛资格、给出比赛日期与报名截止时间、说明奖项及报名方式，落款 Organizing Team。",
+      "referencePoints": ["role (contest organizer) and audience (students) clear", "covers contest/theme, eligibility, date/deadline, prizes/registration", "notice format with title and signature, encouraging register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you missed an important appointment with your tutor because of a public transport breakdown. Write an apology email of about 100 words to your tutor. Your email should: (1) apologize for missing the appointment; (2) explain what happened; (3) acknowledge any inconvenience caused; (4) request to reschedule. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你因公共交通故障错过了与导师的重要约谈，给导师写一封约 100 词的道歉邮件，就错过约谈致歉、说明发生了什么、对造成的不便表示歉意、请求另约时间，落款 Li Ming。",
+      "referencePoints": ["role (apologetic student) and audience (tutor) clear", "covers apology, what happened, acknowledged inconvenience, request to reschedule", "apology email format, sincere and respectful register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the leader of a campus volunteer team that visits a nursing home. Write a notice of about 100 words to recruit new members. Your notice should: (1) describe the team's activities; (2) explain why volunteering matters; (3) state the requirements and the time involved; (4) tell readers how and when to sign up. Do not write your own name; sign as the Volunteer Team.",
+      "promptZh": "假设你是定期探访养老院的校园志愿团队负责人，写一则约 100 词的通知招募新成员，描述团队活动、说明志愿服务的意义、说明要求与所需时间、告知报名方式与时间，落款 Volunteer Team。",
+      "referencePoints": ["role (team leader) and audience (potential members) clear", "covers activities, why it matters, requirements/time, how/when to sign up", "notice format with title and signature, warm and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are writing to a company whose product won an award for sustainable design. Write a letter of about 100 words to express your appreciation as a customer. Your letter should: (1) state which product you use; (2) explain what you value about it; (3) commend the company's commitment to sustainability; (4) encourage them to keep it up. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你写信给一家产品荣获可持续设计奖的公司，作为顾客写一封约 100 词的赞赏信，说明你使用的产品、说明你看重它的哪一点、赞扬该公司对可持续发展的坚持、鼓励其继续努力，落款 Li Hua。",
+      "referencePoints": ["role (appreciative customer) and audience (company) clear", "covers product used, what is valued, commendation on sustainability, encouragement", "appreciation letter format, positive and sincere register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the secretary of a campus film society and a planned screening must be cancelled. Write a notice of about 100 words to members. Your notice should: (1) state which screening is cancelled; (2) explain the reason; (3) apologize for the inconvenience; (4) inform members of an alternative arrangement. Do not write your own name; sign as the Film Society.",
+      "promptZh": "假设你是校园电影社秘书，一场原定放映须取消，给社员写一则约 100 词的通知，说明取消的是哪场放映、说明原因、就不便致歉、告知替代安排，落款 Film Society。",
+      "referencePoints": ["role (society secretary) and audience (members) clear", "covers cancelled screening, reason, apology, alternative arrangement", "notice format with title and signature, apologetic and clear register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you wish to apply for membership of a national academic society in your field. Write a letter of inquiry of about 100 words to the society. Your letter should: (1) introduce yourself and your field of study; (2) state your interest in joining; (3) ask about the requirements and benefits of membership; (4) request details on the application procedure. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你希望申请加入本领域的一个全国性学术学会，给该学会写一封约 100 词的咨询信，介绍你自己与研究领域、说明加入意向、询问入会要求与会员权益、请求告知申请流程，落款 Li Ming。",
+      "referencePoints": ["role (prospective member) and audience (academic society) clear", "covers self/field, interest, requirements/benefits inquiry, application procedure", "inquiry letter format, formal and earnest register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose your neighbour's child has just been admitted to a top university. Write a letter of congratulation of about 100 words to the family. Your letter should: (1) congratulate them on the good news; (2) praise the child's hard work; (3) express your good wishes for the future; (4) offer any help if needed. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你邻居的孩子刚被一所顶尖大学录取，给这家人写一封约 100 词的祝贺信，祝贺好消息、称赞孩子的勤奋、表达对其未来的美好祝愿、表示需要时愿提供帮助，落款 Li Hua。",
+      "referencePoints": ["role (neighbour) and audience (family) clear", "covers congratulation, praise for effort, good wishes, offer to help", "congratulation letter format, warm and friendly register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the chair of a campus job fair organizing committee. Write a notice of about 100 words to inform graduating students about the event. Your notice should: (1) state the date, time and venue of the job fair; (2) describe which companies or fields will be represented; (3) advise students on what to prepare; (4) explain how to register to attend. Do not write your own name; sign as the Organizing Committee.",
+      "promptZh": "假设你是校园招聘会组委会主席，写一则约 100 词的通知，告知应届毕业生有关活动信息，说明招聘会的日期时间地点、介绍将到场的公司或行业、建议学生需准备的内容、说明如何报名参加，落款 Organizing Committee。",
+      "referencePoints": ["role (committee chair) and audience (graduating students) clear", "covers date/time/venue, companies/fields, what to prepare, how to register", "notice format with title and signature, informative and formal register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you have decided to decline an invitation to a friend's wedding because you will be abroad. Write a letter of about 100 words to your friend. Your letter should: (1) thank your friend for the invitation; (2) express your regret at being unable to attend; (3) explain the reason; (4) send your warm wishes and mention a gift. Do not write your own name; sign as Li Hua.",
+      "promptZh": "假设你决定婉拒朋友的婚礼邀请，因届时你将在国外，给朋友写一封约 100 词的信，感谢邀请、表达不能出席的遗憾、说明原因、送上诚挚祝福并提及礼物，落款 Li Hua。",
+      "referencePoints": ["role (invited friend) and audience (friend) clear", "covers thanks for invitation, regret, reason, warm wishes/gift", "declining letter format, warm and gracious register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are the manager of a campus coffee shop introducing a new loyalty programme. Write a notice of about 100 words to your customers. Your notice should: (1) introduce the new programme and its benefits; (2) explain how customers can join; (3) state when it takes effect; (4) thank customers for their support. Do not write your own name; sign as the Coffee Shop.",
+      "promptZh": "假设你是校园咖啡店店长，推出一项新的会员积分计划，给顾客写一则约 100 词的通知，介绍新计划及其优惠、说明顾客如何加入、说明生效时间、感谢顾客一直以来的支持，落款 Coffee Shop。",
+      "referencePoints": ["role (shop manager) and audience (customers) clear", "covers programme/benefits, how to join, effective date, thanks", "notice format with title and signature, friendly and clear register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you are a student representative on a faculty committee. Write a memo of about 100 words to the committee proposing an improvement to the course feedback system. Your memo should: (1) state the issue with the current system; (2) explain its effect on students; (3) propose a specific change; (4) recommend a next step. Do not write your own name; sign as the Student Representative.",
+      "promptZh": "假设你是学院委员会的学生代表，给委员会写一份约 100 词的备忘录，提议改进课程反馈机制，说明现行机制存在的问题、说明其对学生的影响、提出具体改进方案、建议下一步行动，落款 Student Representative。",
+      "referencePoints": ["role (student representative) and audience (faculty committee) clear", "covers current issue, effect on students, specific change, recommended next step", "memo format with clear heading, formal and constructive register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    },
+    {
+      "prompt": "Suppose you experienced a long flight delay and poor service during a recent journey with an airline. Write a letter of complaint of about 100 words to the airline's customer relations department. Your letter should: (1) give your flight details and the date; (2) describe what went wrong; (3) explain the consequences for you; (4) state what compensation you expect. Do not write your own name; sign as Li Ming.",
+      "promptZh": "假设你最近乘坐某航空公司航班时遭遇长时间延误及服务不佳，给该公司客户关系部写一封约 100 词的投诉信，给出航班信息与日期、描述出错之处、说明给你造成的后果、说明你期望的赔偿，落款 Li Ming。",
+      "referencePoints": ["role (aggrieved passenger) and audience (airline customer relations) clear", "covers flight details/date, what went wrong, consequences, expected compensation", "complaint letter format, firm but professional register", "reference points guide scoring only; not a model answer"],
+      "wordLimit": "about 100"
+    }
+  ]
+}

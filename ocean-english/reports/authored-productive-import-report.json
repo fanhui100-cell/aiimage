@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-06-20T20:31:44.196Z",
+  "apply": true,
+  "stage": "g5",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 6,
+    "wrote": 0,
+    "dup": 6,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\g5\\cet4-essay-writing.productive.json",
+      "examId": "cet4",
+      "taskType": "essay_writing",
+      "level": 3,
+      "skill": "writing",
+      "tasks": 1,
+      "wrote": 0,
+      "dup": 1
+    },
+    {
+      "file": "data\\generated-question-sets\\g5\\cet4-translation-zh-en.productive.json",
+      "examId": "cet4",
+      "taskType": "translation_zh_en",
+      "level": 3,
+      "skill": "translation",
+      "tasks": 1,
+      "wrote": 0,
+      "dup": 1
+    },
+    {
+      "file": "data\\generated-question-sets\\g5\\gaokao-continuation-writing.productive.json",
+      "examId": "gaokao",
+      "taskType": "continuation_writing",
+      "level": 2,
+      "skill": "writing",
+      "tasks": 1,
+      "wrote": 0,
+      "dup": 1
+    },
+    {
+      "file": "data\\generated-question-sets\\g5\\kaoyan-translation-en-zh.productive.json",
+      "examId": "kaoyan",
+      "taskType": "translation_en_zh",
+      "level": 5,
+      "skill": "translation",
+      "tasks": 1,
+      "wrote": 0,
+      "dup": 1
+    },
+    {
+      "file": "data\\generated-question-sets\\g5\\zhongkao-applied-writing.productive.json",
+      "examId": "zhongkao",
+      "taskType": "applied_writing",
+      "level": 1,
+      "skill": "writing",
+      "tasks": 2,
+      "wrote": 0,
+      "dup": 2
+    }
+  ]
+}

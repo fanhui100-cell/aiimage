@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-04T20:34:42.485Z",
+  "apply": false,
+  "blockedReason": "legacy_qb_not_for_promotion",
+  "candidates": 600,
+  "byTask": {
+    "def_to_word": 200,
+    "confusable_choice": 200,
+    "synonym_choice": 200
+  },
+  "alreadyMarked": 600,
+  "toMark": 0,
+  "updated": 0,
+  "failures": [],
+  "sample": []
+}

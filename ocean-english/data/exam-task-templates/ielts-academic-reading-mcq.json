@@ -1,0 +1,28 @@
+{
+  "templateId": "ielts-academic-reading-mcq",
+  "examIds": ["ielts"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "IELTS Academic Reading pilot（MCQ 子集）。原创学术短文（书籍/期刊/杂志风格的 general-interest 学术题材），每篇 6 道 4 选 1（主旨/细节/推断/语境词义/作者态度/篇章功能混合）。真实 IELTS 阅读还含 TFNG/YNNG/matching/completion 等题型——那些需要专用 answer shape，属产线计划后续阶段；本模板只覆盖 MCQ 子集。100% 原创，不抄真题，不调 DeepSeek。draft-only；IELTS 保持 coming_soon。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 550,
+    "maxWords": 950,
+    "perStimulusItems": 6
+  },
+  "itemCount": 6,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi" },
+  "subskills": ["main_idea", "detail", "inference", "vocabulary_in_context", "writer_attitude"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭剑桥/官方真题",
+    "篇幅 550-950 词，学术 general-interest 题材",
+    "每篇恰 6 题、每题 4 选项、答案唯一命中",
+    "推断题须真推断（非原文复述）；干扰项同域可信",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

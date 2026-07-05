@@ -1,0 +1,107 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original Zhongkao reading, batch C1. Short simple passages (~130-160 words), 4 MCQs each (detail/main idea/inference/vocab). DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Lin Hao is a 14-year-old student from Hangzhou. Last year, he noticed that his grandmother often forgot to turn off the kitchen lights, which wasted electricity. Lin Hao wanted to help, so he decided to make something useful. After watching online videos and trying many times, he made a small device. When no one is in the room, it turns the lights off by itself. His grandmother loves it. 'Now I never worry about the lights,' she says with a smile. Lin Hao's teacher was so impressed that she showed the device to the whole class, and some students now want to make their own. Lin Hao hopes to become an engineer one day. 'I want to invent things that make life easier and protect the Earth,' he says.",
+      "questions": [
+        { "prompt": "What problem did Lin Hao notice?", "options": ["His grandmother was often ill.", "His grandmother often forgot to turn off the lights.", "The kitchen was too small.", "He had no money for school."], "answer": "B" },
+        { "prompt": "What does Lin Hao's device do?", "options": ["It cooks food automatically.", "It cleans the kitchen floor.", "It turns the lights off when no one is in the room.", "It plays music in the evening."], "answer": "C" },
+        { "prompt": "Why did the teacher show the device to the class?", "options": ["She was impressed by it.", "She wanted to sell it.", "She thought it was dangerous.", "She had made it herself."], "answer": "A" },
+        { "prompt": "What is Lin Hao's dream?", "options": ["To become a famous singer.", "To become an engineer and invent useful things.", "To open a restaurant.", "To stop going to school."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 奶奶常忘关灯)、细节(C 无人时自动关灯)、细节(A 老师被打动)、推断/主旨(B 想当工程师做有用发明)。"
+    },
+    {
+      "passage": "Our school has a special place that everyone loves: the Reading Corner. It is a small, quiet room next to the library. Inside, there are soft chairs, warm lights, and shelves full of books of every kind. Students can go there during lunch breaks to read or just relax. The best part is the rule of the corner: no phones are allowed. At first, some students did not like this rule. But soon they found that, without phones, they could read more and feel calmer. Now the Reading Corner is often full, and some students have even discovered a love of reading they never knew they had. 'It is the most peaceful place in the school,' one student says. Our teachers are happy too, because more students are reading than ever before.",
+      "questions": [
+        { "prompt": "Where is the Reading Corner?", "options": ["Next to the library.", "In the playground.", "Above the kitchen.", "Outside the school gate."], "answer": "A" },
+        { "prompt": "What is the special rule of the corner?", "options": ["No talking at all.", "No phones are allowed.", "No eating books.", "No sitting down."], "answer": "B" },
+        { "prompt": "How did students feel after following the rule?", "options": ["Angry and bored.", "Calmer, and they read more.", "Tired and sleepy.", "Sad and lonely."], "answer": "B" },
+        { "prompt": "What is the passage mainly about?", "options": ["A school sports team.", "A quiet reading place that students love.", "How to use a mobile phone.", "A difficult school exam."], "answer": "B" }
+      ],
+      "explain_zh": "细节(A 图书馆旁)、细节(B 不许带手机)、细节(B 更平静、读得更多)、主旨(B 学生喜爱的安静阅读角)。"
+    },
+    {
+      "passage": "Bella is not an ordinary dog. She is a guide dog, and she helps her owner, Mr. Wang, who cannot see. Every day, Bella leads Mr. Wang safely through the busy streets. She stops at every red light and waits until it is safe to cross. She helps him find the bus, the shop, and the way home. Training a guide dog takes a long time. Bella learned for almost two years before she could start her job. She must stay calm even when there is a lot of noise around her. Mr. Wang says Bella has changed his life. 'Before Bella, I was afraid to go out alone,' he says. 'Now I can go almost anywhere. She is not just my eyes; she is my best friend.'",
+      "questions": [
+        { "prompt": "Who is Bella?", "options": ["A pet cat.", "A guide dog.", "A police officer.", "A toy dog."], "answer": "B" },
+        { "prompt": "What does Bella do at a red light?", "options": ["She runs across quickly.", "She barks loudly.", "She stops and waits until it is safe.", "She sits down to sleep."], "answer": "C" },
+        { "prompt": "How long did Bella train before starting her job?", "options": ["A few days.", "One week.", "Almost two years.", "More than ten years."], "answer": "C" },
+        { "prompt": "How does Mr. Wang feel about Bella?", "options": ["He is afraid of her.", "He is grateful, because she changed his life.", "He does not really like her.", "He wants to give her away."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 导盲犬)、细节(C 红灯停下等安全)、细节(C 训练近两年)、推断(B 感激,她改变了他的生活)。"
+    },
+    {
+      "passage": "Last weekend, our class visited a farm in the countryside. It was the first time many of us had ever been to a real farm. In the morning, a farmer named Uncle Li showed us around. We fed the chickens, milked a cow, and even planted some vegetables. The work was harder than we had expected, and by lunchtime our hands were dirty and our backs were sore. But we were having a wonderful time. Uncle Li told us that all the food we eat comes from hard work like this. After lunch, we picked fresh tomatoes and ate them right away; they were the sweetest tomatoes I had ever tasted. On the bus home, everyone was tired but happy. We had learned that farming is not easy, and we promised never to waste food again.",
+      "questions": [
+        { "prompt": "What did the students do in the morning?", "options": ["They watched television.", "They fed chickens and planted vegetables.", "They went swimming in a river.", "They slept in the sun."], "answer": "B" },
+        { "prompt": "How did the students feel by lunchtime?", "options": ["Bored and angry.", "Tired, with dirty hands and sore backs.", "Cold and frightened.", "Hungry and sleepy."], "answer": "B" },
+        { "prompt": "What did Uncle Li tell the students?", "options": ["That farming is very easy.", "That all our food comes from hard work.", "That they should buy a farm.", "That tomatoes are bad for us."], "answer": "B" },
+        { "prompt": "What did the students learn from the visit?", "options": ["Never to visit a farm again.", "That farming is not easy, and not to waste food.", "How to drive a bus.", "That vegetables are very cheap."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 喂鸡种菜)、细节(B 累、手脏背酸)、细节(B 食物来自辛勤劳动)、推断/主旨(B 务农不易、不浪费食物)。"
+    },
+    {
+      "passage": "On a quiet street in our town, there is a small wooden box on a pole. It looks like a tiny house, and it is full of books. It is a 'free library'. The rule is simple: take a book you want to read, and leave a book for someone else. Anyone can use it, and it is open all day and night. Mrs. Chen, who lives nearby, built the box three years ago. She wanted to share her love of reading with her neighbours. At first, only a few people used it. Now, people of all ages stop by every day: children find storybooks, and old people find novels. The little box has done something special. It has brought the neighbours closer together. Many people who were once strangers now meet at the box and talk about the books they love.",
+      "questions": [
+        { "prompt": "What is inside the wooden box?", "options": ["Food.", "Books.", "Toys.", "Money."], "answer": "B" },
+        { "prompt": "What is the rule of the free library?", "options": ["Pay money for each book.", "Take a book and leave a book.", "Only read it at night.", "Borrow a book for one day."], "answer": "B" },
+        { "prompt": "Why did Mrs. Chen build the box?", "options": ["To make money.", "To share her love of reading.", "To sell her old books.", "To keep the street clean."], "answer": "B" },
+        { "prompt": "What special thing has the box done?", "options": ["Made the street dirty.", "Brought neighbours closer together.", "Made people pay a lot of money.", "Closed the town library."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 装满书)、细节(B 拿一本留一本)、细节(B 分享阅读之爱)、主旨/推断(B 让邻里更亲近)。"
+    },
+    {
+      "passage": "When I first saw a boy riding a unicycle at the park, I thought it looked impossible. A bike has two wheels, but a unicycle has only one! I really wanted to learn, so my parents bought me one for my birthday. The first week was terrible. I fell down again and again, and my knees were covered in bruises. Many times I wanted to give up. But my father told me that every skill is hard at the start. So I kept practising every day after school, holding onto a wall at first. Slowly, I learned to balance. After a month, I could ride a few metres on my own. After three months, I could ride all around the park. Now my friends think I am amazing, and some of them want to learn too. Riding a unicycle taught me that, with patience, even the impossible becomes possible.",
+      "questions": [
+        { "prompt": "How many wheels does a unicycle have?", "options": ["One.", "Two.", "Three.", "Four."], "answer": "A" },
+        { "prompt": "How was the writer's first week of learning?", "options": ["Easy and fun.", "Terrible; he fell down a lot.", "Boring and quiet.", "Cold and wet."], "answer": "B" },
+        { "prompt": "What did the writer's father tell him?", "options": ["To give up at once.", "That every skill is hard at the start.", "To buy a normal bike instead.", "To stop falling down."], "answer": "B" },
+        { "prompt": "What did riding a unicycle teach the writer?", "options": ["That unicycles are too dangerous.", "That with patience, the impossible becomes possible.", "That he should never try new things.", "That parks are boring."], "answer": "B" }
+      ],
+      "explain_zh": "细节(A 一个轮子)、细节(B 第一周很糟、常摔)、细节(B 万事开头难)、主旨(B 有耐心,不可能也能变可能)。"
+    },
+    {
+      "passage": "Last month, our class held a sale to raise money for a sick classmate, Xiao Ming, who needed an expensive operation. Everyone wanted to help. We brought toys, books and clothes that we no longer needed, and we also baked cakes and cookies. On Saturday morning, we set up our tables in the school playground. Many parents and teachers came to buy our things. My job was to sell the cakes, and I was a little nervous at first. But soon I was so busy that I forgot to be shy. By the end of the day, we were all tired, but we had raised more than three thousand yuan. When we gave the money to Xiao Ming's family, his mother cried and thanked us. It felt wonderful to know that, together, we had really helped a friend in need.",
+      "questions": [
+        { "prompt": "Why did the class hold the sale?", "options": ["To buy new school books.", "To raise money for a sick classmate.", "To clean the school playground.", "To have a birthday party."], "answer": "B" },
+        { "prompt": "What did the writer sell?", "options": ["Toys.", "Clothes.", "Cakes.", "Books."], "answer": "C" },
+        { "prompt": "How much money did the class raise?", "options": ["About ten yuan.", "About one hundred yuan.", "More than three thousand yuan.", "Nothing at all."], "answer": "C" },
+        { "prompt": "How did the writer feel at the end of the day?", "options": ["Angry.", "Wonderful and happy to have helped.", "Bored.", "Afraid."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 为生病同学手术筹款)、细节(C 卖蛋糕)、细节(C 筹了三千多元)、推断(B 感觉很棒、乐于助人)。"
+    },
+    {
+      "passage": "Mr. Green is my neighbour. He is over seventy years old, but he is busier than many young people. Every morning, he works in his small garden behind his house. He grows all kinds of vegetables: tomatoes, beans, carrots and more. His garden is the most beautiful one on our street. Mr. Green is also very kind. He often gives his fresh vegetables to the neighbours for free. 'Vegetables taste better when they are shared,' he always says. Last summer, he taught me how to grow my own tomatoes. I learned that plants need water, sunlight and a lot of patience. When I picked my first tomato, I felt so proud. Now I understand why Mr. Green loves his garden so much. It is not just about the vegetables; it is about caring for something every day and watching it grow.",
+      "questions": [
+        { "prompt": "What does Mr. Green do every morning?", "options": ["Watches television.", "Works in his garden.", "Goes shopping in town.", "Sleeps until noon."], "answer": "B" },
+        { "prompt": "What does he do with his vegetables?", "options": ["Sells them at a high price.", "Throws them away.", "Gives them to neighbours for free.", "Keeps all of them for himself."], "answer": "C" },
+        { "prompt": "What did the writer learn that plants need?", "options": ["Only money.", "Water, sunlight and patience.", "Nothing at all.", "Loud music."], "answer": "B" },
+        { "prompt": "Why does Mr. Green love his garden so much?", "options": ["Because it makes him rich.", "Because the work is very easy.", "Because it is about caring for something and watching it grow.", "Because he has nothing else to do."], "answer": "C" }
+      ],
+      "explain_zh": "细节(B 早晨打理菜园)、细节(C 免费送邻居)、细节(B 水/阳光/耐心)、推断(C 在于日日照料、看其生长)。"
+    },
+    {
+      "passage": "This term, our school started a new project to protect the environment. It is called 'Green Monday'. Every Monday, students bring things that can be recycled, such as paper, plastic bottles and old cans. We sort them into different boxes in the playground. At first, some students forgot to bring anything. But the teachers gave a prize each week to the class that recycled the most, and soon everyone joined in. In just two months, our school has recycled hundreds of kilograms of waste. The money from selling the recycled materials is used to plant trees around the school. Our headmaster says that small actions can make a big difference. I agree. 'Green Monday' has taught us that protecting the Earth is not the job of one person, but of all of us working together.",
+      "questions": [
+        { "prompt": "What is 'Green Monday'?", "options": ["A sports day.", "A recycling project.", "An exam day.", "A school holiday."], "answer": "B" },
+        { "prompt": "What do students bring on Mondays?", "options": ["Food and drinks.", "Paper, bottles and cans.", "Toys and games.", "Money."], "answer": "B" },
+        { "prompt": "What is the money used for?", "options": ["To buy phones.", "To plant trees around the school.", "To pay the teachers.", "For a class party."], "answer": "B" },
+        { "prompt": "What has 'Green Monday' taught the students?", "options": ["That recycling is useless.", "That protecting the Earth is everyone's job.", "That Mondays are boring.", "That trees are too expensive."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 回收项目)、细节(B 纸/瓶/罐)、细节(B 用于种树)、主旨(B 护地球是大家共同的事)。"
+    },
+    {
+      "passage": "Last summer, my family climbed a mountain to watch the sunrise. We started walking in the dark, very early in the morning. The path was steep, and soon my legs felt tired. 'Are we there yet?' I kept asking. My father just smiled and said, 'The best views need a little effort.' Finally, just before the sky turned light, we reached the top. We were not alone; many other people were waiting too. Everyone was quiet, looking towards the east. Then it happened. Slowly, the sun rose above the clouds, and the whole sky turned gold and pink. It was the most beautiful thing I had ever seen. In that moment, I completely forgot how tired I was. My father was right. Now, whenever something feels too hard, I remember that morning on the mountain, and I keep going.",
+      "questions": [
+        { "prompt": "When did the family start walking?", "options": ["At noon.", "Very early, in the dark.", "In the evening.", "At night after dinner."], "answer": "B" },
+        { "prompt": "What did the father say on the way up?", "options": ["That the mountain was dangerous.", "That the best views need a little effort.", "That they should go home.", "That he was too tired to continue."], "answer": "B" },
+        { "prompt": "What did the sky look like at sunrise?", "options": ["Grey and dark.", "Gold and pink.", "Green all over.", "Completely black."], "answer": "B" },
+        { "prompt": "What does the writer remember when things feel hard?", "options": ["To give up quickly.", "That morning on the mountain, and to keep going.", "To stay in bed.", "Never to climb again."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B 天黑很早出发)、细节(B 好风景需努力)、细节(B 天空金粉色)、主旨/推断(B 想起那个清晨,坚持下去)。"
+    }
+  ]
+}

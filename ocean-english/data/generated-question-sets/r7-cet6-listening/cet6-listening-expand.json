@@ -1,0 +1,1446 @@
+{
+  "template": "cet6-listening-mcq",
+  "level": 4,
+  "sets": [
+    {
+      "passage": "Good morning. Today I want to talk about something psychologists call decision fatigue. The basic idea is surprisingly simple: every choice you make throughout the day, from what to wear to which email to answer first, draws on the same limited pool of mental energy. By late afternoon, that pool is nearly empty, so your decisions become poorer. You either act impulsively or you avoid deciding altogether. One famous study looked at judges reviewing parole requests. Researchers found that prisoners who appeared early in the morning were far more likely to be granted parole than those reviewed just before lunch, when the judges were tired and hungry. The case files were equally strong, yet timing alone shaped the outcome. What can we learn from this? First, schedule your hardest choices for when your mind is fresh. Second, reduce trivial decisions. This is why some successful people wear the same outfit every day. They are not eccentric; they are simply protecting their mental energy for things that truly matter.",
+      "questions": [
+        {
+          "prompt": "What did the study on judges reveal?",
+          "options": [
+            "Prisoners reviewed in the morning were more likely to get parole",
+            "Judges preferred cases with stronger files",
+            "Lunch breaks made judges stricter",
+            "Older judges granted parole more often"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the main point of the talk?",
+          "options": [
+            "Judges are often unfair to prisoners",
+            "Daily choices deplete a shared pool of mental energy",
+            "People should make all decisions in the afternoon",
+            "Eccentric habits lead to career success"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why do some successful people wear the same outfit daily, according to the speaker?",
+          "options": [
+            "To appear professional and consistent",
+            "To follow a current fashion trend",
+            "To save mental energy for important matters",
+            "To avoid spending money on clothes"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为细节题：讲座明确指出清晨受审的犯人更易获得假释。第2题为主旨题：全篇围绕“决策疲劳”——日常选择消耗共享的心理能量。第3题为推断题：穿同样衣服是为节省心理能量用于要紧之事，而非时尚或省钱。"
+    },
+    {
+      "passage": "Hey, did you hear about the new dorm access policy starting next month? Yeah, I read the email. From now on we'll use our phones to tap in instead of the plastic key cards. Honestly, I think it's about time. I'm always losing those cards. Same here, I've paid the replacement fee twice this year. But wait, doesn't that mean the building tracks exactly when we come and go? It does log entry times, but the housing office says the data is only used for safety, like confirming who was in the building during an emergency. I guess that makes sense. There's one more thing, though. The main entrance now locks at midnight instead of one a.m. After midnight you have to use the side door near the parking lot. That's a bit inconvenient if you're coming back late from the library. True, but the side door has better lighting and a camera now, so security should actually improve. Well, as long as I don't get locked out, I'm fine with it.",
+      "questions": [
+        {
+          "prompt": "What is the main change described in the conversation?",
+          "options": [
+            "Students will use phones instead of key cards for dorm access",
+            "The dorm will hire more security guards",
+            "Replacement card fees will be eliminated",
+            "The library will extend its hours"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What happens to the main entrance after the new policy starts?",
+          "options": [
+            "It stays open all night",
+            "It locks at midnight, and the side door must be used",
+            "It locks at one a.m. as before",
+            "It will be closed permanently"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the second speaker's overall attitude toward the new policy?",
+          "options": [
+            "Strongly opposed to the tracking feature",
+            "Indifferent and uninterested",
+            "Generally accepting, despite minor concerns",
+            "Confused about how it works"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为主旨/细节题：核心变化是用手机刷卡进门。第2题为细节题：主门午夜上锁，之后须走侧门。第3题为态度题：该说话者总体接受，只是担心被锁在外，故选“总体接受但有小顾虑”。"
+    },
+    {
+      "passage": "Have you ever noticed that a city feels much hotter than the countryside nearby, even on the same day? This is what scientists call the urban heat island effect. Cities are built from concrete, asphalt, and brick, materials that absorb sunlight during the day and slowly release that heat at night. Rural areas, by contrast, have soil and plants that cool the air through the evaporation of water. As a result, the center of a large city can be several degrees warmer than the surrounding fields, especially after sunset. This extra heat is not just uncomfortable. It raises the demand for air conditioning, which in turn burns more energy and releases more heat outdoors, creating a vicious cycle. So what can be done? One promising solution is to plant more trees along streets and to install so called green roofs, gardens placed on top of buildings. Another is to paint roofs white, since light colors reflect sunlight rather than absorbing it. These measures are inexpensive, yet together they can lower a city's temperature noticeably.",
+      "questions": [
+        {
+          "prompt": "Why are city centers often warmer than nearby rural areas?",
+          "options": [
+            "Cities have more people breathing",
+            "Building materials absorb and slowly release heat",
+            "Rural areas receive less sunlight",
+            "Cities are usually at higher elevations"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What 'vicious cycle' does the speaker describe?",
+          "options": [
+            "More air conditioning burns energy and releases more outdoor heat",
+            "Hotter cities attract more residents who build more",
+            "Trees die in heat, so fewer are planted",
+            "White roofs fade and stop reflecting light"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can we infer about the suggested solutions?",
+          "options": [
+            "They require advanced new technology",
+            "They are too costly for most cities",
+            "They are simple and affordable yet effective",
+            "They only work in rural regions"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为细节题：城市建材吸热并缓慢释放，导致市中心更热。第2题为细节题：空调耗能并向外排热，形成恶性循环。第3题为推断题：原文称这些措施“便宜”且“能明显降温”，可推断简单实惠而有效。"
+    },
+    {
+      "passage": "Thanks for staying a few minutes after the meeting. I wanted to discuss how we handle the time difference with the London office. Sure, I've been meaning to bring that up. They start their day when we're just finishing ours. Exactly. Right now we lose almost a full day every time we wait for a reply. So here's my proposal. Instead of sending long emails back and forth, let's record short video updates each evening. London can watch them first thing in the morning and reply before we even arrive. That's clever. It keeps things moving overnight. There's another benefit too. When you explain a problem on video, people grasp the tone better than in a written message, so there are fewer misunderstandings. I like it. Should we still keep one live call a week? Definitely. One overlapping hour on Wednesdays should be enough to handle anything urgent face to face. Great. I'll set up a shared folder for the videos and send everyone the new schedule tomorrow.",
+      "questions": [
+        {
+          "prompt": "What problem are the speakers trying to solve?",
+          "options": [
+            "The London office produces poor quality work",
+            "The time difference causes long delays in communication",
+            "Weekly meetings run too long",
+            "Emails contain too many errors"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What additional advantage of video updates is mentioned?",
+          "options": [
+            "They are cheaper than phone calls",
+            "They can be edited easily",
+            "Tone comes across better, reducing misunderstandings",
+            "They require no internet connection"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What can be inferred about the live weekly call?",
+          "options": [
+            "It will be eliminated entirely",
+            "It is kept for urgent face-to-face matters during the overlapping hour",
+            "It will be moved to London time only",
+            "It will happen every day"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为主旨题：核心问题是时差造成沟通延迟。第2题为细节题：视频额外好处是语气更清楚、减少误解。第3题为推断题：保留周三重叠时段的直播通话以处理紧急当面事务。"
+    },
+    {
+      "passage": "Today let's explore why people so often copy the behavior of those around them. Psychologists call this social proof. In uncertain situations, we assume that if many others are doing something, it must be the correct thing to do. Consider a simple experiment. Researchers placed one person in a room and asked a question with an obvious answer. When alone, almost everyone answered correctly. But when actors in the room deliberately gave the wrong answer out loud, a surprising number of real participants changed their reply to match the group, even though their own eyes told them otherwise. Why does this happen? Partly because we fear standing out, and partly because we trust the crowd as a shortcut for judgment. Social proof is not always harmful. It helps us learn customs quickly in a new place. But it can also lead crowds astray, as when investors all rush to buy a worthless stock simply because everyone else is buying. The lesson is not to ignore others, but to pause and ask whether the crowd actually knows something you don't.",
+      "questions": [
+        {
+          "prompt": "What happened when actors gave wrong answers aloud in the experiment?",
+          "options": [
+            "All participants kept their correct answers",
+            "Many real participants changed to match the group",
+            "The actors were asked to leave",
+            "Participants refused to answer"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main message about social proof?",
+          "options": [
+            "It is always dangerous and should be resisted",
+            "It is a useful shortcut that can also mislead, so we should think critically",
+            "It only affects investors",
+            "It is unique to certain cultures"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker mention investors buying a worthless stock?",
+          "options": [
+            "To prove the stock market is unfair",
+            "To show how social proof can lead crowds astray",
+            "To recommend a safe investment strategy",
+            "To explain why prices rise over time"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：演员故意答错后，许多真实参与者随大流改答案。第2题为主旨题：从众是有用的捷径但也会误导，应批判思考。第3题为推断/目的题：举投资买无价值股票是为说明从众如何把人群引入歧途。"
+    },
+    {
+      "passage": "Did you see the notice about the library's new food rules? I did, and I have mixed feelings. So they're finally allowing drinks again? Yes, but only in containers with lids, like travel mugs or bottles with caps. No open cups, because of all the spills last year that damaged books. That seems fair. What about snacks? Quiet snacks are now allowed on the ground floor only, things like crackers or fruit. But the upper study floors stay completely food free to protect the rare books and the computers. Honestly I think that's a smart compromise. Last semester they banned everything, and people just sneaked food in anyway. Right, a total ban never worked. People got hungry during long study sessions and left to eat, then lost their seats. Now at least the rules match how students actually behave. Exactly. And the library hired two part time staff to clean the ground floor each evening. So they thought it through. It sounds like they did. I'm actually looking forward to studying there again.",
+      "questions": [
+        {
+          "prompt": "Under the new rules, where are quiet snacks allowed?",
+          "options": [
+            "On all floors",
+            "On the ground floor only",
+            "On the upper study floors only",
+            "Nowhere in the library"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why did the previous total ban fail, according to the speakers?",
+          "options": [
+            "The library was too small",
+            "Students sneaked food in or left and lost their seats",
+            "There was no staff to enforce it",
+            "Books were already damaged"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speakers' attitude toward the new policy?",
+          "options": [
+            "They think it is a sensible compromise",
+            "They believe it is far too strict",
+            "They are completely against any food rules",
+            "They find it confusing and unworkable"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第1题为细节题：安静零食仅限一楼。第2题为细节题：全面禁令失败因学生偷带或外出吃饭丢座位。第3题为态度题：两人都认为这是明智折中，故选“合理的折中”。"
+    },
+    {
+      "passage": "Let's turn now to a part of the climate story that often goes unnoticed: the ocean. The seas absorb roughly a quarter of the carbon dioxide that humans release into the atmosphere each year. At first this sounds like good news, since it slows the warming of the air. But there is a hidden cost. When carbon dioxide dissolves in seawater, it forms a weak acid, gradually lowering the water's pH. Scientists call this process ocean acidification. The change may seem tiny, but it has real consequences. Many sea creatures, such as oysters, corals, and certain tiny plankton, build their shells and skeletons from calcium carbonate. In more acidic water, building those structures becomes harder, and existing shells can even begin to dissolve. Since these small organisms sit at the base of the food web, the effects ripple upward to fish and ultimately to the people who depend on the sea for food. So while the ocean has been quietly shielding us from some warming, it is paying a price, and that price could eventually return to us.",
+      "questions": [
+        {
+          "prompt": "What happens chemically when carbon dioxide dissolves in seawater?",
+          "options": [
+            "It turns into oxygen",
+            "It forms a weak acid and lowers the pH",
+            "It evaporates back into the air",
+            "It freezes into ice crystals"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why are oysters and corals especially affected by acidification?",
+          "options": [
+            "They need warm water to survive",
+            "They rely on calcium carbonate for shells, which is harder to build in acidic water",
+            "They cannot move to find food",
+            "They depend on plankton for oxygen"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main point about the ocean's role?",
+          "options": [
+            "The ocean fully solves the climate problem",
+            "The ocean shields us from warming but at a hidden cost that may rebound on us",
+            "Acidification only harms deep-sea fish",
+            "Carbon dioxide makes the ocean cleaner"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：二氧化碳溶于海水形成弱酸、降低pH。第2题为细节题：牡蛎珊瑚靠碳酸钙造壳，酸性水中更难形成。第3题为主旨题：海洋为我们挡住部分变暖却付出隐性代价，最终或反噬人类。"
+    },
+    {
+      "passage": "Can I ask your advice on something? Of course. I have to give feedback to a teammate whose report had several errors, but I don't want to discourage him. He's new and trying hard. That's a thoughtful concern. Have you heard of the idea of separating the person from the work? You mean don't make it feel like a personal attack? Right. Instead of saying the report is careless, point to specific lines and ask questions, like how did you arrive at this figure? That invites him to reflect rather than defend himself. That makes sense. Should I also mention what he did well? Absolutely. Start with something genuine he got right, because it shows you actually read his work closely. Then people are far more open to hearing what needs fixing. Okay. And should I send all this by email? I'd suggest talking in person or on a call. Written feedback can sound colder than you intend, and he can't ask follow up questions easily. Good point. I'll set up a short chat this afternoon. He'll appreciate that. The goal is to help him grow, not just to catch mistakes.",
+      "questions": [
+        {
+          "prompt": "What does the adviser suggest doing instead of calling the report 'careless'?",
+          "options": [
+            "Ignoring the errors entirely",
+            "Pointing to specific lines and asking questions",
+            "Reporting him to the manager",
+            "Rewriting the whole report personally"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the adviser recommend giving feedback in person rather than by email?",
+          "options": [
+            "It is faster to type a message",
+            "Written feedback can sound colder and limits follow-up questions",
+            "Email is against company policy",
+            "The teammate has no email account"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the overall goal of the feedback approach discussed?",
+          "options": [
+            "To punish the teammate for mistakes",
+            "To help the teammate grow rather than just catch errors",
+            "To finish the report faster",
+            "To impress the manager"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：建议指出具体行并提问，而非说报告“粗心”。第2题为细节题：当面反馈因书面易显冷淡且不便追问。第3题为主旨题：整体目的是帮助同事成长，而非仅抓错。"
+    },
+    {
+      "passage": "Today's lecture is about how we can remember information for the long term. Most students prepare for exams by cramming, studying for many hours the night before. It feels productive, and it may get you through the test. But research on memory shows that what you learn this way fades within days. A far better method is called spaced repetition. The idea is to review material several times, with growing gaps between each review, perhaps one day, then three days, then a week, then a month. Why does this work? Each time you struggle to recall something just before you forget it, your brain strengthens that memory, treating it as important. This struggle is the key. If reviewing feels too easy, the gap was too short to do much good. A small effort to retrieve is exactly what makes the memory stick. So the practical advice is this: instead of one long session, break your studying into short reviews spread across many days. You will spend less total time and remember far more. It is, in a sense, working smarter rather than harder.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what is the problem with cramming?",
+          "options": [
+            "It is impossible to do",
+            "What is learned fades within days",
+            "It always leads to failing the test",
+            "It requires special equipment"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does spaced repetition strengthen memory?",
+          "options": [
+            "It uses pictures instead of words",
+            "Recalling something just before forgetting it signals the brain to keep it",
+            "It involves studying with friends",
+            "It eliminates the need for review"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can we infer if a review session feels very easy?",
+          "options": [
+            "The material is fully mastered forever",
+            "The gap before reviewing was too short to be useful",
+            "The student should stop studying",
+            "The method has failed completely"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第1题为细节题：临时抱佛脚学到的内容几天内消退。第2题为细节题：在快遗忘前回忆会让大脑强化该记忆。第3题为推断题：原文说复习太轻松说明间隔太短、作用不大。"
+    },
+    {
+      "passage": "Have you seen the new rules for bikes and scooters on campus? Yeah, the safety office just posted them. About time, honestly. People were riding way too fast near the lecture halls. So what changed? The big one is that the main walkway between the library and the science building is now a walk only zone during class hours. You have to get off and push your bike or scooter through. That sounds reasonable. It got really crowded between classes. There's also a designated parking area now, behind the student center, with locks provided. No more bikes chained to every railing. Finally. I tripped over one last week. There's a catch, though. If you park outside the marked zones, security can move your bike to a holding lot, and you pay a small fee to get it back. Ouch. Well, that should keep things tidy. The school says it's mainly about safety and access, especially for students using wheelchairs who couldn't get through before. That's a fair reason. I hadn't thought about that part.",
+      "questions": [
+        {
+          "prompt": "What is the main change to the walkway between the library and the science building?",
+          "options": [
+            "It is closed to everyone during class hours",
+            "It becomes a walk-only zone during class hours where riders must push",
+            "It is now reserved for scooters only",
+            "It will be widened next year"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What happens if a bike is parked outside the marked zones?",
+          "options": [
+            "Nothing, it is simply ignored",
+            "Security may move it to a holding lot and charge a fee for return",
+            "The owner receives a warning letter",
+            "The bike is given away"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What reason does the school give as the main purpose of the new rules?",
+          "options": [
+            "To raise money through fees",
+            "To reduce the number of bikes on campus",
+            "Safety and access, especially for wheelchair users",
+            "To promote the use of scooters"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第1题为细节题：主步道在上课时段变为只可步行区，骑行者须下车推行。第2题为细节题：在标线外停放，保安可将车移至暂存处并收费取回。第3题为推断/目的题：校方称主要目的是安全与通行，尤其方便坐轮椅的学生。"
+    },
+    {
+      "passage": "Welcome back to Research Foundations. Today I want to clear up a common confusion about control groups. Imagine a team testing whether a new study app improves memory. The temptation is to give everyone the app and then compare their scores to how they did last semester. But that comparison is unreliable, because too many other things changed between semesters. A proper design splits participants randomly into two groups. One group uses the app; the other, the control group, does not. Random assignment matters enormously. If you let students choose, the more motivated ones might flock to the app, and you'd never know whether it was the app or their motivation that mattered. Ideally, neither the students nor the people scoring the tests should know who belongs to which group. That's what we call a double-blind setup, and it guards against unconscious bias creeping into the results. Remember, a single dramatic result proves very little on its own. What gives a finding weight is replication: other teams, in other places, running the same procedure and reaching the same conclusion. Treat any study that hasn't been repeated as a promising hint, not a settled fact.",
+      "questions": [
+        {
+          "prompt": "Why does the speaker say comparing app users to their own scores from last semester is unreliable?",
+          "options": [
+            "The app was not designed for memory tasks",
+            "Too many other factors changed between the two semesters",
+            "Last semester's tests were too easy",
+            "Students forget their previous scores"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main point the speaker wants students to take away?",
+          "options": [
+            "Study apps reliably improve memory",
+            "Sound experimental design and replication are what make findings trustworthy",
+            "Double-blind setups are too expensive for most studies",
+            "Motivation is the strongest predictor of test scores"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about a single dramatic study result?",
+          "options": [
+            "It should be treated as a tentative hint rather than proven fact",
+            "It is usually the product of fraud",
+            "It outweighs many smaller studies",
+            "It cannot be published until replicated"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题为细节题：原文指出两学期之间太多其他因素发生了变化，故选 B。第二题为主旨题：讲座核心是良好实验设计与可重复性使结论可信，选 B。第三题为推断题：原文称未被重复的结果只是线索而非定论，故选 A。"
+    },
+    {
+      "passage": "So, you actually went back to work after retiring? I thought you'd been looking forward to those quiet mornings. I was, honestly. The first few months felt like a long holiday. But by the end of the year, the days started to blur together, and I missed having a reason to get up. A friend mentioned that the local library was short of staff for its reading program, just three mornings a week. That sounds perfect. Was it hard to adjust after being away from work for so long? The technology was the steepest part. The checkout system had changed completely, and at first I felt slow next to the younger volunteers. But they were patient, and within a month I was helping new people instead of asking for help. Now you sound like you'd recommend it to everyone. Not to everyone, no. Some of my friends are genuinely happy doing nothing, and that's fine. But for people like me, who feel adrift without a routine, a little part-time work does more for the spirits than any amount of rest. It isn't really about the money. It's about still feeling useful.",
+      "questions": [
+        {
+          "prompt": "Why did the speaker decide to return to work after retiring?",
+          "options": [
+            "His pension was not enough to live on",
+            "The library offered him a full-time salary",
+            "He felt aimless and missed having a daily purpose",
+            "His doctor recommended physical activity"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What did the speaker find most difficult about the new job?",
+          "options": [
+            "Adapting to the new technology and checkout system",
+            "Getting along with the younger volunteers",
+            "Waking up early three mornings a week",
+            "The long commute to the library"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the speaker's attitude toward retirees who prefer to do nothing?",
+          "options": [
+            "He thinks they are wasting their abilities",
+            "He accepts that it suits some people just fine",
+            "He is convinced they will regret it later",
+            "He urges them all to volunteer"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：他退休后感到无所事事、怀念有目标的生活，选 C。第二题细节题：最难的是适应新技术与借还系统，选 A。第三题态度推断题：他明确说有些朋友闲着也很开心，那也很好，体现接纳态度，选 B。"
+    },
+    {
+      "passage": "Let's turn to one of the thorniest debates in technology ethics: facial recognition. The appeal is obvious. It can unlock your phone in an instant, help reunite missing children with their families, and speed travelers through airports. But the same capability that makes it convenient is exactly what makes it risky. When cameras can identify you anywhere, the simple act of walking down a street stops being anonymous. There's a second problem that's easy to overlook. These systems are trained on images, and if those images mostly show one group of people, the system performs worse on everyone else. Studies have repeatedly found higher error rates for women and for people with darker skin. A false match isn't a minor glitch when it leads police to question an innocent person. So what should we do? Banning the technology outright ignores its genuine benefits. My own view is that we need clear rules: people should know when they're being scanned, the data shouldn't be stored indefinitely, and high-stakes decisions should never rest on the software alone. Technology itself is neutral. What matters is the framework of rules we build around it before, not after, it spreads everywhere.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what makes facial recognition risky?",
+          "options": [
+            "It is too expensive for most governments",
+            "The very capability that makes it convenient erodes anonymity",
+            "It can only recognize faces in good lighting",
+            "It drains phone batteries quickly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What problem does the speaker say is easy to overlook?",
+          "options": [
+            "The systems make more errors on women and people with darker skin",
+            "The cameras are frequently stolen",
+            "Travelers dislike using the systems",
+            "The software is slow at airports"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the speaker's overall position on facial recognition?",
+          "options": [
+            "It should be banned outright",
+            "It should be adopted without restrictions",
+            "It should be governed by clear rules established before it spreads",
+            "It is too flawed to be useful"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：使其便利的能力正是其风险所在，破坏匿名性，选 B。第二题细节题：易被忽视的问题是对女性和深肤色人群错误率更高，选 A。第三题主旨/态度题：讲者主张在技术普及前建立明确规则，选 C。"
+    },
+    {
+      "passage": "Can we talk about the group project for a minute? I'm a bit worried about how it's going. Yeah, I've been meaning to bring that up too. We're supposed to present on Friday, and half the slides aren't even started. That's my concern exactly. The trouble is that nobody seems to own any particular section. We all assumed someone else would handle the introduction. Maybe that's the real issue. We never actually divided the work. We just said we'd all contribute and left it vague. You're right. So how about this: I'll take the research data, you write the conclusion, and we ask Mei to design the slides since she's good with that. That makes much more sense. Should we set a deadline so we're not scrambling Thursday night? Definitely. Let's say everyone sends their part by Wednesday evening, and we meet Thursday afternoon to rehearse once together. Honestly, I wish we'd done this two weeks ago. Same. Next time, let's agree on who does what on day one. It's not that anyone's lazy. We just never made it clear.",
+      "questions": [
+        {
+          "prompt": "What do the two speakers identify as the root cause of their problem?",
+          "options": [
+            "Some members are lazy and refuse to work",
+            "They never clearly divided the work among themselves",
+            "The professor changed the deadline",
+            "They lack the skills to make slides"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What do they decide to do to fix the situation?",
+          "options": [
+            "Ask the professor for an extension",
+            "Assign specific sections and set an internal deadline",
+            "Cancel the presentation entirely",
+            "Let one person do all the work"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What lesson do the speakers draw for future projects?",
+          "options": [
+            "To agree on who does what from the very first day",
+            "To avoid working in groups altogether",
+            "To always start presentations a month early",
+            "To choose group members more carefully"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题：根源是从未明确分工，选 B。第二题细节题：他们决定分配具体部分并设定内部截止时间，选 B。第三题推断题：教训是下次第一天就定好分工，选 A。"
+    },
+    {
+      "passage": "In today's session we'll look at why surveys, despite seeming straightforward, can mislead us so easily. Suppose a website asks visitors to rate their satisfaction. The numbers look glowing, ninety percent positive. But think about who actually answers. People with strong feelings, especially the very pleased or the very angry, are far more likely to respond than the indifferent majority. This is what we call response bias, and it can quietly distort the whole picture. The wording of questions matters just as much. Ask people whether they support helping struggling students, and most say yes. Ask the same people whether taxes should rise to fund it, and support drops sharply. Same underlying issue, different framing, opposite answers. Then there's the order of questions. If you first ask people to list problems in their neighborhood, they'll rate their overall happiness lower than if you'd asked about happiness first. So when you read a headline claiming most people believe something, pause and ask three questions: Who was surveyed? How exactly were they asked? And who chose not to reply at all? A survey is only as trustworthy as the care taken in designing it.",
+      "questions": [
+        {
+          "prompt": "What is 'response bias' as described by the speaker?",
+          "options": [
+            "When survey software miscounts answers",
+            "When people with strong feelings are far more likely to respond than the indifferent majority",
+            "When questions are translated incorrectly",
+            "When researchers ignore negative replies"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the example about taxes illustrate?",
+          "options": [
+            "People dislike paying taxes",
+            "The way a question is framed can produce opposite answers",
+            "Students always need financial help",
+            "Surveys should avoid political topics"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main advice to listeners?",
+          "options": [
+            "To trust large surveys over small ones",
+            "To question who was surveyed, how, and who didn't reply",
+            "To avoid reading survey headlines entirely",
+            "To design their own surveys"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：response bias 指有强烈感受者比中立大多数更愿意回应，选 B。第二题细节题：税收例子说明问题措辞会导致相反答案，选 B。第三题主旨题：核心建议是追问调查对象、提问方式与未回应者，选 B。"
+    },
+    {
+      "passage": "Good morning. I want to describe an experiment some towns are running to address an aging population: the so-called age-friendly community. The idea isn't to build separate facilities that wall older residents off from everyone else. Quite the opposite. It's to redesign ordinary public spaces so that people can stay independent for as long as possible. Consider something as humble as a park bench. Place benches every few hundred meters along a walking route, and suddenly an eighty-year-old who tires easily can still reach the shops on foot, resting along the way. That single change keeps people mobile, social, and out of cars. Lighting, wider sidewalks, and clear signage do similar work. What's striking is that these adjustments help everyone, not just the elderly. Parents with strollers, people recovering from injuries, tired commuters, all benefit. Designers call this the curb-cut effect: a feature built for one group ends up serving the whole community. The deeper message is that aging should not be treated as a separate problem requiring separate solutions. When we design towns that work for the oldest among us, we tend to design towns that work better for absolutely everyone.",
+      "questions": [
+        {
+          "prompt": "What is the goal of an age-friendly community according to the speaker?",
+          "options": [
+            "To build separate facilities for older residents",
+            "To redesign ordinary public spaces so people can stay independent longer",
+            "To move elderly people closer to hospitals",
+            "To reduce the cost of elderly care"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the 'curb-cut effect' as described in the talk?",
+          "options": [
+            "A feature built for one group ends up benefiting the whole community",
+            "A way to lower sidewalks for wheelchairs only",
+            "A method for cutting town budgets",
+            "An effect that slows down traffic near parks"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What deeper message does the speaker convey?",
+          "options": [
+            "Aging is a separate problem needing separate solutions",
+            "Designing for the oldest tends to make towns better for everyone",
+            "Cars are the main obstacle to mobility",
+            "Public spending on parks should increase"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：目标是重新设计普通公共空间使人更久保持独立，选 B。第二题细节题：curb-cut 效应指为某群体设计的功能惠及整个社区，选 A。第三题主旨题：核心讯息是为最年长者设计往往让城镇对所有人更好，选 B。"
+    },
+    {
+      "passage": "Did you read about that self-driving car that had to choose between two bad outcomes? It's been on my mind all week. You mean the ethics problem, where the car can't avoid an accident no matter what? Exactly. And it made me realize how strange the question really is. We talk as if the car decides in the moment, but it doesn't. The decision was made months earlier by the engineers who wrote the code. That's a good point. So the real question isn't what the car should do, but what we should program it to do. Right. And here's what bothers me. If a human driver swerves and something goes wrong, we usually accept it was a split-second reaction. But a programmed choice is deliberate. Someone sat down and decided in advance. So who's responsible when it goes wrong? The manufacturer? The programmer? The owner who switched it on? That's the part nobody has solved. I think that's why these cars are taking so long to arrive. The technical side is nearly ready. It's the question of accountability that's holding everything up. Honestly, I'd rather they take their time than rush something this serious.",
+      "questions": [
+        {
+          "prompt": "What point does the second speaker emphasize about the car's decision?",
+          "options": [
+            "The car decides entirely in the moment of the crash",
+            "The decision was actually made earlier by the engineers who wrote the code",
+            "The car cannot make any decisions at all",
+            "The owner programs the car personally"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does a programmed choice trouble the speakers more than a human reaction?",
+          "options": [
+            "Because computers are slower than humans",
+            "Because a programmed choice is deliberate rather than a split-second reaction",
+            "Because humans never cause accidents",
+            "Because the law forbids programming such choices"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What do the speakers conclude is delaying self-driving cars?",
+          "options": [
+            "The technology is nowhere near ready",
+            "The unresolved question of accountability",
+            "The high cost of manufacturing",
+            "A lack of public interest"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：决定实际由编写代码的工程师提前作出，选 B。第二题细节题：编程选择是深思熟虑的、而非瞬间反应，故更令人不安，选 B。第三题推断/主旨题：拖延的是责任归属问题，选 B。"
+    },
+    {
+      "passage": "Thanks for seeing me. I'm completely stuck on choosing my major, and the deadline is next week. Let's talk it through. What's pulling you in different directions? Well, my parents really want me to study accounting because the job prospects are stable. But I've always loved history, and I'm honestly more excited in my history seminars than anywhere else. That's a familiar tension. Let me ask you something. When you picture yourself five years from now, which path feels more like you? Honestly, when I imagine an accounting office, my heart sinks a little. But I worry that a history degree won't lead anywhere. That's a common fear, though it's not quite accurate. History trains you to read carefully, build arguments, and handle evidence, skills employers in many fields value. The major you choose rarely locks you into a single career. So you're saying I shouldn't think of it as history versus a job. Precisely. I'd also gently suggest that this is your life, not your parents'. You can respect their concern while still making your own choice. Could you talk to a few history graduates about what they're doing now? That might ease everyone's worries, including yours.",
+      "questions": [
+        {
+          "prompt": "What is the central conflict the student faces?",
+          "options": [
+            "Whether to attend university at all",
+            "Between the stable accounting path her parents prefer and her passion for history",
+            "Between two different universities",
+            "Whether to study full-time or part-time"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the adviser say about a history degree?",
+          "options": [
+            "It guarantees a job in teaching",
+            "It teaches skills valued by employers in many fields",
+            "It is harder than accounting",
+            "It should be combined with accounting"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What practical step does the adviser suggest?",
+          "options": [
+            "Talking to a few history graduates about their careers",
+            "Switching to accounting immediately",
+            "Asking her parents to decide",
+            "Delaying the decision for a year"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题主旨题：核心矛盾是父母偏好的会计稳定路线与她对历史的热爱，选 B。第二题细节题：顾问说历史训练多领域雇主看重的技能，选 B。第三题细节题：建议与几位历史专业毕业生交谈，选 A。"
+    },
+    {
+      "passage": "Here's a statistic that sounds alarming: towns with more ice cream shops report more cases of sunburn. Should we shut down the ice cream shops to protect public health? Of course not, and you can already see why. Both ice cream sales and sunburn rise in hot, sunny weather. The weather is the hidden third factor driving both. Neither one causes the other. This is the single most important lesson in interpreting data: correlation is not causation. Two things rising together may share a common cause, or the link may be pure coincidence. So how do researchers establish that one thing actually causes another? The gold standard is a controlled experiment, where you deliberately change one variable while holding everything else steady. But in many situations, experiments are impossible or unethical. You can't, for instance, assign people to smoke for decades. In those cases scientists look for converging evidence from many angles, a plausible mechanism, a consistent pattern across populations, a dose-response relationship. No single study seals the case. The next time a headline screams that one thing causes another based on a simple correlation, I hope you'll feel a healthy flicker of doubt and ask what else might be going on.",
+      "questions": [
+        {
+          "prompt": "Why do towns with more ice cream shops report more sunburn?",
+          "options": [
+            "Ice cream weakens the skin",
+            "Hot, sunny weather drives both ice cream sales and sunburn",
+            "People eat ice cream after getting sunburned",
+            "The towns are near beaches only"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the single most important lesson the speaker stresses?",
+          "options": [
+            "Correlation does not mean causation",
+            "Experiments are always unethical",
+            "Headlines are never accurate",
+            "Hot weather is dangerous"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the speaker hope listeners will do when seeing a causal headline based on correlation?",
+          "options": [
+            "Accept it if it comes from a large study",
+            "Feel a healthy doubt and ask what else might explain it",
+            "Ignore all news about science",
+            "Demand a controlled experiment every time"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：炎热晴朗天气同时推高冰淇淋销量和晒伤，选 B。第二题主旨题：最重要的教训是相关不等于因果，选 A。第三题推断题：希望听众保持健康怀疑并追问其他可能解释，选 B。"
+    },
+    {
+      "passage": "I finally deleted three apps from my phone last night. Some article got me thinking about what they actually do with my data. Oh? What pushed you over the edge? It was a simple line: if the product is free, you're probably the product. I'd heard it before, but this time it clicked. These apps don't charge me anything because they're selling what they learn about me. But isn't that a fair trade? They give me a useful service, and I give up a bit of information. That's the thing, though. I never actually agreed to it in any meaningful way. I clicked accept on a page of text nobody reads. That's not real consent. You've got a point there. The terms are deliberately long and dull so we won't look. And it's not just one app. Each one knows a fragment, but together they can build a frighteningly complete picture of your life. So are you going offline completely? No, that's not realistic. I just want to be deliberate, keep the apps that genuinely earn their place, and drop the ones quietly harvesting everything. Awareness is the first step, I suppose.",
+      "questions": [
+        {
+          "prompt": "What line from the article changed the speaker's thinking?",
+          "options": [
+            "Free apps are the most useful",
+            "If the product is free, you're probably the product",
+            "Privacy is dead anyway",
+            "Always read the terms carefully"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the speaker argue that clicking 'accept' is not real consent?",
+          "options": [
+            "The button does not work properly",
+            "The terms are deliberately long and dull so people won't read them",
+            "Apps change their terms every day",
+            "Users are forced to click it"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker decide to do about the situation?",
+          "options": [
+            "Go completely offline",
+            "Keep apps that earn their place and drop those quietly harvesting data",
+            "Pay for every app instead",
+            "Stop using a smartphone"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：触动他的是\"若产品免费，你可能就是产品\"，选 B。第二题细节题：条款故意冗长乏味让人不读，故非真正同意，选 B。第三题推断题：他决定保留有价值的应用、删除暗中收割数据的，选 B。"
+    },
+    {
+      "passage": "Welcome back to History in Focus. Today we're looking at the printing press and a common myth about it. Many people believe Johannes Gutenberg invented printing itself, but that's not quite accurate. Block printing had existed in East Asia for centuries before him, and movable type was first developed in China during the eleventh century by a craftsman named Bi Sheng. What Gutenberg actually did, around 1440, was design a system of metal movable type suited to the European alphabet, combined with a mechanical press adapted from wine-making equipment. This combination made it practical to produce books quickly and cheaply in Europe. Within fifty years, printed books spread across the continent, and the price of a book dropped to a small fraction of what a hand-copied manuscript had cost. Scholars often argue that this affordability, more than any single political event, allowed new scientific and religious ideas to circulate beyond the wealthy elite. So when we credit Gutenberg, we should credit him not as the inventor of printing, but as the person who made the printed book an everyday object.",
+      "questions": [
+        {
+          "prompt": "What does the speaker say Gutenberg actually accomplished?",
+          "options": [
+            "He invented printing for the very first time",
+            "He designed metal movable type for the European alphabet and a workable press",
+            "He brought block printing from Asia to Europe",
+            "He wrote the first printed scientific books"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the talk, why was the printing press historically important?",
+          "options": [
+            "It made books cheap enough to spread ideas beyond the elite",
+            "It ended all hand-copying of manuscripts immediately",
+            "It was funded by European political leaders",
+            "It replaced wine-making across Europe"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What attitude does the speaker take toward the common belief about Gutenberg?",
+          "options": [
+            "Fully supportive of the popular view",
+            "Correcting it while still recognizing his real contribution",
+            "Dismissive of Gutenberg's importance entirely",
+            "Uncertain about whether printing mattered"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：讲者明确说古登堡设计了适合欧洲字母的金属活字并结合压印机。第二题主旨题：印刷术让书籍便宜，使思想传播到精英阶层之外。第三题态度题：讲者纠正了流行误解，但仍肯定古登堡的真正贡献。"
+    },
+    {
+      "passage": "Professor Lin: Thanks for meeting me. I'm curious why so many old European cities have a central market square. Are they really that ancient? Dr. Avery: Most of them are, yes. In the medieval period, a market square was the economic heart of a town. Merchants needed an open, public space where buyers and sellers could meet under the eyes of local officials. Professor Lin: So it wasn't just for convenience? Dr. Avery: Not at all. The openness was deliberate. If trade happened in private, it was hard to collect taxes or stop cheating with weights and measures. A public square let the town inspect goods and settle disputes openly. Professor Lin: I see. And the grand buildings around the square? Dr. Avery: Those came later, usually. Once a town grew wealthy from trade, it would build a town hall or a guild house facing the square, almost as a display of pride. So the architecture you admire today is really a record of past prosperity. Professor Lin: Fascinating. So the square tells us about both governance and money. Dr. Avery: Exactly. Read the square, and you read the town's history.",
+      "questions": [
+        {
+          "prompt": "According to Dr. Avery, why were medieval market squares kept open and public?",
+          "options": [
+            "To make travel through the town easier",
+            "To allow officials to tax trade and prevent cheating",
+            "To leave room for future grand buildings",
+            "Because private trade was forbidden by religion"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Dr. Avery say about the grand buildings around the square?",
+          "options": [
+            "They were built before the market existed",
+            "They were usually added after a town grew wealthy from trade",
+            "They were homes for visiting merchants",
+            "They replaced the original marketplace function"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main point Dr. Avery makes about the market square?",
+          "options": [
+            "It reveals a town's governance and economic history",
+            "It was mainly a religious gathering place",
+            "It was an accident of medieval city planning",
+            "It mattered only to wealthy merchants"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题：开放的广场便于官方征税、防止度量衡作弊。第二题细节题：宏伟建筑通常在城镇因贸易致富后才建。第三题主旨题：广场反映了城镇的治理与经济历史。"
+    },
+    {
+      "passage": "Good morning, everyone. In today's economics session, I want to clear up a misunderstanding about inflation. When people hear that inflation is two percent, they often think prices are falling or that the government is doing something wrong. In fact, a low, steady inflation rate of around two percent is what most central banks actually aim for. Why would anyone want prices to rise at all? The reason is that mild inflation encourages people to spend and invest rather than hoard cash, because money sitting idle slowly loses value. It also gives businesses a little room to adjust wages and prices without sudden shocks. The real danger lies at the two extremes. Very high inflation erodes savings quickly and makes planning impossible, while deflation, when prices fall across the board, can be just as harmful. If shoppers expect things to be cheaper next month, they delay purchases, demand drops, and companies cut jobs. So the goal is not zero inflation but a gentle, predictable rise. Stability and predictability, not the absence of inflation, are what keep an economy healthy.",
+      "questions": [
+        {
+          "prompt": "Why do most central banks aim for mild inflation, according to the speaker?",
+          "options": [
+            "To punish people who save money",
+            "Because it encourages spending and investment and avoids sudden shocks",
+            "Because high inflation is good for the economy",
+            "To raise government tax revenue directly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker say is the problem with deflation?",
+          "options": [
+            "It forces wages up too quickly",
+            "Shoppers delay purchases, demand drops, and jobs are cut",
+            "It makes savings grow too fast",
+            "It has no real effect on the economy"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main message about inflation?",
+          "options": [
+            "Zero inflation is the ideal target",
+            "A gentle, predictable rise is healthier than either extreme",
+            "All inflation harms the economy",
+            "Governments should ignore inflation entirely"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：温和通胀鼓励消费投资，避免突然冲击。第二题细节题：通缩使消费者推迟购买、需求下降、岗位削减。第三题主旨题：稳定可预测的温和上涨比两个极端都健康。"
+    },
+    {
+      "passage": "Reporter: I'm here with an economist to talk about why coffee prices keep jumping around. Could you explain it simply? Economist: Sure. Coffee is what we call a commodity, and its price depends heavily on supply and demand worldwide. A single frost in a major growing region, say Brazil, can damage the harvest and push prices up months later. Reporter: So weather thousands of miles away affects my morning cup? Economist: Exactly. And it's not only weather. Shipping costs, currency exchange rates, and even speculation in financial markets all feed into the price. Reporter: Speculation? You mean people betting on coffee? Economist: In a sense. Traders buy and sell contracts for coffee they may never physically touch, trying to profit from expected price changes. That activity can amplify swings. Reporter: That sounds risky for ordinary farmers. Economist: It is. A small grower in one country has almost no control over the global price they receive. That's why some farmers join cooperatives or sign long-term contracts to gain a bit of stability. Reporter: So the price on the shelf hides a very complicated global story. Economist: Precisely. Every cup connects you to a worldwide chain.",
+      "questions": [
+        {
+          "prompt": "According to the economist, what can a frost in Brazil cause?",
+          "options": [
+            "An immediate drop in shipping costs",
+            "Damage to the harvest that pushes prices up months later",
+            "A rise in the value of local currency",
+            "An end to coffee speculation"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the economist say about speculation in coffee markets?",
+          "options": [
+            "It guarantees stable prices for farmers",
+            "Traders deal in contracts and this can amplify price swings",
+            "It only affects shipping companies",
+            "It has been banned in most countries"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred about small coffee growers?",
+          "options": [
+            "They set the global price of coffee",
+            "They are vulnerable because they have little control over global prices",
+            "They profit most from market speculation",
+            "They are unaffected by weather events"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：巴西霜冻损害收成，数月后推高价格。第二题细节题：投机者交易合约，会放大价格波动。第三题推断题：小种植户对全球价格几乎无控制权，因而处境脆弱。"
+    },
+    {
+      "passage": "Welcome to the Wellness Minute. Today's topic is something we all do but rarely think about: sleep. A common myth is that you can train your body to thrive on just four or five hours a night. The truth is that for the vast majority of adults, the body needs roughly seven to nine hours to function well. During deep sleep, the brain clears out waste products that build up while you're awake, and it strengthens the memories you formed during the day. Cutting sleep short doesn't just make you tired; it weakens your immune response and impairs concentration the next day. Now, some people insist they feel perfectly fine on very little sleep. Researchers find that most of these people have actually adapted to feeling tired. They no longer notice how impaired they are, even though tests show their reaction times and judgment have slipped. The lesson is simple but easy to ignore: sleep is not wasted time or a sign of laziness. It is active, essential maintenance for both body and mind. Protect it as you would any other part of your health.",
+      "questions": [
+        {
+          "prompt": "What does the brain do during deep sleep, according to the talk?",
+          "options": [
+            "It slows down completely and does nothing",
+            "It clears out waste products and strengthens memories",
+            "It increases the need for caffeine",
+            "It stops forming new memories"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does research find about people who claim to feel fine on very little sleep?",
+          "options": [
+            "They genuinely need less sleep than others",
+            "They have adapted to tiredness and no longer notice their impairment",
+            "Their reaction times are faster than average",
+            "They sleep more deeply than other people"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the main message of the talk?",
+          "options": [
+            "Sleep is wasted time that can be reduced",
+            "Sleep is essential maintenance and should be protected",
+            "Four hours of sleep is enough for most adults",
+            "Only memory benefits from sleep"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：深睡时大脑清除废物并强化记忆。第二题细节题：少睡却自称没事的人其实已适应疲倦，察觉不到受损。第三题主旨题：睡眠是必要的身心维护，应加以保护。"
+    },
+    {
+      "passage": "Patient: Doctor, my friend told me I should take vitamin supplements every day to stay healthy. Should I? Doctor: That's a question I hear a lot. For most people who eat a balanced diet, extra supplements offer little benefit. The vitamins in real food come packaged with fiber and other compounds that pills can't fully copy. Patient: So supplements are useless? Doctor: I wouldn't say useless. Some groups genuinely need them. For example, people with certain deficiencies, pregnant women, or those who get very little sunlight may benefit from specific supplements. Patient: But I see ads saying high doses boost your energy and immune system. Doctor: Be careful with those claims. Taking very large doses of some vitamins can actually be harmful, because your body can't store unlimited amounts and may struggle to remove the excess. Patient: I had no idea more could be worse. Doctor: It often can be. My advice is simple. Focus on eating a variety of whole foods first, and only take a supplement when there's a clear medical reason, ideally one I've recommended. Patient: That makes sense. I'll fix my diet before reaching for pills.",
+      "questions": [
+        {
+          "prompt": "According to the doctor, why is food often better than supplements for most people?",
+          "options": [
+            "Food vitamins come with fiber and compounds pills can't fully copy",
+            "Food contains higher vitamin doses than pills",
+            "Supplements are always dangerous",
+            "Food is cheaper than any supplement"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Who does the doctor say may genuinely benefit from supplements?",
+          "options": [
+            "Everyone, regardless of diet",
+            "People with deficiencies, pregnant women, or those lacking sunlight",
+            "Only professional athletes",
+            "People who already eat a balanced diet"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the doctor's attitude toward advertised high-dose supplements?",
+          "options": [
+            "Enthusiastically in favor of them",
+            "Cautious, warning that large doses can be harmful",
+            "Completely indifferent",
+            "Convinced they cure all illnesses"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：食物中的维生素含纤维等药片无法复制的成分。第二题细节题：缺乏症患者、孕妇、缺少阳光者可能受益。第三题态度题：医生对高剂量广告持谨慎态度，警告大剂量可能有害。"
+    },
+    {
+      "passage": "Hello, and welcome to Think Before You Share. In this episode we tackle clickbait headlines. You've all seen them: titles like You won't believe what happened next, or This one trick doctors don't want you to know. These headlines are engineered to trigger curiosity so strongly that you feel you must click. The problem is that the article often fails to deliver what the headline promised. Why does this happen? Many websites earn money from advertising, and more clicks mean more income. So the headline's job is simply to get the click, not to inform you accurately. Once you understand that, you can read more critically. Before clicking, ask yourself whether the headline makes a specific, checkable claim or just a vague emotional promise. Notice whether it names a real source or hides behind phrases like experts say. And after reading, ask whether the content actually matched the title. Developing this small habit protects your time and your judgment. The goal isn't to distrust everything you read online, but to slow down just enough to tell the difference between information and bait.",
+      "questions": [
+        {
+          "prompt": "According to the speaker, what is the main purpose of clickbait headlines?",
+          "options": [
+            "To inform readers accurately",
+            "To trigger curiosity and get clicks for advertising income",
+            "To warn readers about dangerous websites",
+            "To replace traditional news sources"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker suggest doing before clicking a headline?",
+          "options": [
+            "Sharing it with friends immediately",
+            "Asking whether it makes a specific, checkable claim or just a vague promise",
+            "Trusting it if it sounds exciting",
+            "Ignoring all online articles"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's overall recommendation?",
+          "options": [
+            "Distrust everything you read online",
+            "Slow down enough to tell information from bait",
+            "Only read headlines, never the articles",
+            "Avoid all websites that show advertising"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：标题党旨在激发好奇、获取点击以赚广告费。第二题细节题：点击前应判断标题是具体可核实的主张还是模糊承诺。第三题主旨题：建议放慢节奏，区分信息与诱饵，而非全盘怀疑。"
+    },
+    {
+      "passage": "Student: I'm writing a report and I found a website with great statistics, but my teacher said to check if the source is reliable. How do I do that? Librarian: Good question. Start by asking who published the information and why. Is it a university, a government agency, or an unknown blog? Student: This one is just a website I'd never heard of. Librarian: Then dig a little. Look for an about page that names the authors and their qualifications. Reliable sources usually tell you who is responsible for the content. Student: It doesn't really say. It just has a lot of confident numbers. Librarian: That's a warning sign. Confident numbers without a clear source can be invented or copied incorrectly. Try to trace each statistic back to where it originally came from. Student: How would I do that? Librarian: See if the page links to the original study or report. If it does, check that the real document actually says what the website claims. Sometimes data gets twisted along the way. Student: So I shouldn't trust numbers just because they look official? Librarian: Exactly. Looking official and being trustworthy are two very different things. Always follow the trail to the source.",
+      "questions": [
+        {
+          "prompt": "What does the librarian suggest checking first about a source?",
+          "options": [
+            "How colorful the website looks",
+            "Who published the information and why",
+            "How many advertisements it shows",
+            "Whether friends have recommended it"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why does the librarian call confident numbers without a clear source a warning sign?",
+          "options": [
+            "Because numbers are always false",
+            "Because they can be invented or copied incorrectly",
+            "Because official-looking pages are illegal",
+            "Because statistics are never useful in reports"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred from the librarian's advice?",
+          "options": [
+            "Anything that looks official is automatically reliable",
+            "Appearing official and being trustworthy are not the same",
+            "Students should never use online sources",
+            "Government websites are always wrong"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：首先要查谁发布信息、目的为何。第二题细节题：缺乏明确来源的自信数字可能是编造或抄错的。第三题推断题：看起来官方与真正可信是两回事。"
+    },
+    {
+      "passage": "Welcome to Money Basics. Today let's talk about why saving early matters so much, through an idea called compound interest. Imagine you put a small amount of money into an account that earns interest each year. In the first year, you earn interest on your original deposit. But here's the key: in the second year, you earn interest not only on your deposit but also on the interest you already gained. Over time, your money begins earning money on its own earnings, and the growth speeds up. This is why financial advisors keep repeating that time is your greatest ally. A person who starts saving a modest sum at age twenty-five may end up with far more than someone who saves a larger sum starting at forty, simply because the early saver's money had more years to compound. The lesson is not that you must save huge amounts. It's that starting early, even with small contributions, can matter more than the size of those contributions. Patience, in this case, is genuinely profitable. So if you take one thing away today, let it be this: begin sooner rather than later.",
+      "questions": [
+        {
+          "prompt": "How does the speaker explain compound interest?",
+          "options": [
+            "You earn interest only on your original deposit",
+            "You earn interest on both your deposit and previously gained interest",
+            "Interest decreases each year",
+            "Interest is only paid once"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why might an early saver end up with more than a later saver?",
+          "options": [
+            "Early savers always deposit larger sums",
+            "The early saver's money has more years to compound",
+            "Later savers pay higher taxes",
+            "Banks reward only young customers"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main point?",
+          "options": [
+            "You must save very large amounts to benefit",
+            "Starting early can matter more than the size of contributions",
+            "Saving money is pointless without high income",
+            "Interest rates are the only thing that matters"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：复利让你对本金和已获利息都赚取利息。第二题细节题：早存者的钱有更多年复利增长。第三题主旨题：尽早开始比缴款金额大小更重要。"
+    },
+    {
+      "passage": "Host: Today we're exploring a question many people ask: does drinking more water really make you healthier? I've invited a nutrition researcher to weigh in. Researcher: It's a great topic, because there's a lot of confusion. Staying properly hydrated is genuinely important. Your body uses water for temperature control, joint movement, and removing waste. Host: So the more water, the better? Researcher: Not exactly. That's the part people get wrong. The popular rule of eight glasses a day isn't based on strong evidence. Your real needs depend on your size, your activity, the climate, and even the food you eat, since fruits and vegetables contain water too. Host: So how do I know if I'm drinking enough? Researcher: A simple guide is to drink when you're thirsty and to glance at the color of your urine. Pale yellow usually means you're fine. Host: Can you actually drink too much? Researcher: Rarely, but yes. In extreme cases, drinking enormous amounts very quickly can dangerously dilute the salts in your body. Host: So the message is balance, not extremes. Researcher: Precisely. Listen to your body rather than chasing a fixed number.",
+      "questions": [
+        {
+          "prompt": "What does the researcher say about the rule of eight glasses a day?",
+          "options": [
+            "It is strongly supported by evidence",
+            "It isn't based on strong evidence and needs vary by person",
+            "It applies equally to everyone",
+            "It was invented by doctors recently"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What simple guide does the researcher give for checking hydration?",
+          "options": [
+            "Weigh yourself every morning",
+            "Drink when thirsty and check urine color",
+            "Count exactly eight glasses",
+            "Drink only during meals"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the researcher's overall attitude toward water intake?",
+          "options": [
+            "More is always better",
+            "Balance and listening to your body matter more than a fixed number",
+            "Water intake is unimportant",
+            "People should drink as little as possible"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：八杯水的规则缺乏有力证据，需求因人而异。第二题细节题：口渴时喝水并观察尿液颜色。第三题态度题：研究者强调平衡、倾听身体，而非追求固定数字。"
+    },
+    {
+      "passage": "Good morning, everyone. Today I want to talk about a project that has quietly transformed our city. Twenty years ago, the river running through downtown was little more than an open drain. Factories dumped waste into it, fish disappeared, and residents simply avoided the area. In 2010, the city council launched a restoration plan. Instead of pouring concrete along the banks, engineers chose a softer approach. They planted reeds and native grasses, which naturally filter pollutants and absorb excess nutrients. They also reconnected the river to old wetlands that had been drained for parking lots. The results surprised even the experts. Within five years, oxygen levels rose, and migrating birds returned. Today, you can see families fishing and children studying water insects for school projects. The lesson here is important. We often assume that fixing nature requires expensive technology. But sometimes the best solution is to step back and let natural systems do the work, with only gentle guidance from us. That principle is now shaping how other cities approach their own rivers.",
+      "questions": [
+        {
+          "prompt": "What was the condition of the river twenty years ago?",
+          "options": [
+            "It was a popular fishing spot.",
+            "It was heavily polluted by factory waste.",
+            "It was protected as a wildlife reserve.",
+            "It had already been lined with concrete."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How did engineers choose to restore the riverbanks?",
+          "options": [
+            "By building tall concrete walls.",
+            "By installing mechanical water filters.",
+            "By planting reeds and native grasses.",
+            "By importing fish from other regions."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the main point the speaker wants listeners to take away?",
+          "options": [
+            "Natural systems can often heal with gentle guidance rather than costly technology.",
+            "Cities should ban all factories near rivers.",
+            "Restoration projects rarely succeed within five years.",
+            "Concrete banks are the safest option for urban rivers."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题：开头说二十年前河流如同露天排水沟，工厂倾倒废物，故选B。第二题细节题：工程师采用种植芦苇和本地草的软性方案，选C。第三题主旨题：演讲者强调修复自然有时不需昂贵技术，让自然系统在轻度引导下自我修复，选A。"
+    },
+    {
+      "passage": "Hi Daniel, I heard you're leading the campus plastic-reduction campaign this term. How is it going? Honestly, Mia, it's harder than I expected. We thought banning plastic bottles in the cafeteria would be the big win, but students just brought bottles from outside. So what changed your strategy? We realized you can't simply take something away. You have to offer a better alternative. So we installed twelve free water-refill stations across campus and gave every new student a reusable bottle during orientation. Did people actually use them? That's the surprising part. Within two months, refill-station counters showed over forty thousand uses. Plastic bottle sales on campus dropped by nearly seventy percent. That's impressive. Were there any complaints? A few, mostly from people who said the stations were crowded between classes. So we're adding six more next semester. What I learned is that behavior change isn't about rules. It's about making the good choice the easy choice. Honestly, that idea could apply far beyond plastic bottles.",
+      "questions": [
+        {
+          "prompt": "Why did the initial cafeteria ban fail to work well?",
+          "options": [
+            "The cafeteria refused to cooperate.",
+            "Students simply brought bottles from outside.",
+            "The refill stations broke down quickly.",
+            "The campaign had no budget."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What result did the new strategy achieve within two months?",
+          "options": [
+            "Plastic bottle sales rose slightly.",
+            "Refill stations were rarely used.",
+            "Plastic bottle sales dropped by nearly seventy percent.",
+            "Students complained the bottles were too heavy."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What broader lesson does Daniel draw from the campaign?",
+          "options": [
+            "Strict rules are the only way to change behavior.",
+            "Making the good choice the easy choice drives behavior change.",
+            "Reusable bottles are too expensive for most campuses.",
+            "Banning products always backfires completely."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：Daniel说禁令失败因为学生从外面带瓶子，选B。第二题细节题：两个月内塑料瓶销量下降近70%，选C。第三题推断/主旨题：Daniel总结行为改变不靠规则，而是让好选择变成容易的选择，选B。"
+    },
+    {
+      "passage": "Welcome back, class. Last week we discussed traditional lecture-based teaching. Today, let's examine a growing trend called project-based learning. In a project-based classroom, students don't just memorize facts for an exam. Instead, they tackle a real-world problem over several weeks. For example, one middle school asked students to design a more efficient bus route for their own neighborhood. To do this, they had to collect data, apply mathematics, interview residents, and present their findings to the local transit office. Notice how many skills that single task involves. Now, supporters argue that this method prepares students for actual jobs, where problems are messy and rarely have a single correct answer. Critics, however, raise a fair concern. They worry that students may gain confidence and teamwork skills while missing core knowledge that standardized tests still measure. So the research is mixed. Studies show project-based learning improves long-term retention and motivation, but only when teachers receive proper training. Without that support, projects can drift into busy work. So the takeaway is not that one method is perfect, but that how we apply it matters as much as the method itself.",
+      "questions": [
+        {
+          "prompt": "What did the middle school students do in the example given?",
+          "options": [
+            "Memorized facts for a final exam.",
+            "Designed a more efficient bus route for their neighborhood.",
+            "Wrote essays about public transportation history.",
+            "Visited a distant city to study its subways."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What concern do critics of project-based learning raise?",
+          "options": [
+            "Students may miss core knowledge measured by standardized tests.",
+            "Projects are too easy for advanced students.",
+            "The method requires no teacher involvement.",
+            "It eliminates teamwork entirely."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the speaker conclude about project-based learning?",
+          "options": [
+            "It is clearly superior to all other methods.",
+            "It should replace standardized tests immediately.",
+            "How it is applied matters as much as the method itself.",
+            "It works only in middle schools."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：例子中学生为自己社区设计更高效的公交路线，选B。第二题细节题：批评者担心学生可能缺失标准化考试所测的核心知识，选A。第三题主旨题：演讲者结论是应用方式与方法本身同样重要，选C。"
+    },
+    {
+      "passage": "Professor Lin, I wanted to ask about these short online courses everyone calls micro-credentials. Are they actually worth my time? That's a great question, Sara. Let me give you the honest picture. A micro-credential is a focused certificate, usually earned in a few weeks, that proves you can do one specific thing, like analyze data or manage a small budget. So it's not a full degree? Correct. And that's both its strength and its limit. Employers increasingly value them because they show current, practical skills. But a stack of certificates can't replace the deep thinking a full program develops. So I shouldn't drop my degree for them? Definitely not. Think of them as a supplement. Many of my former students earn one or two while finishing their studies, and it helps them stand out in interviews. Are they expensive? Some are free; others cost a few hundred dollars. My advice is simple. Pick credentials that fill a real gap in your skills, not just shiny titles to collect. The market rewards what you can actually do, not how many badges sit on your profile.",
+      "questions": [
+        {
+          "prompt": "According to Professor Lin, what is a micro-credential?",
+          "options": [
+            "A full university degree earned online.",
+            "A focused certificate proving one specific skill.",
+            "A free badge with no real value.",
+            "A replacement for job interviews."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What advice does Professor Lin give about choosing credentials?",
+          "options": [
+            "Collect as many badges as possible.",
+            "Always choose the most expensive ones.",
+            "Pick those that fill a real gap in your skills.",
+            "Avoid them until after graduation."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is Professor Lin's overall attitude toward micro-credentials?",
+          "options": [
+            "They should fully replace traditional degrees.",
+            "They are a useful supplement but not a substitute for a degree.",
+            "They are worthless for serious students.",
+            "They are only suitable for people without jobs."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：林教授说微证书是证明一项具体技能的聚焦证书，选B。第二题细节题：建议选择填补真实技能缺口的证书，选C。第三题态度/主旨题：教授认为它是有用补充但不能替代学位，选B。"
+    },
+    {
+      "passage": "Good afternoon. In today's talk, I'll explore how artificial intelligence is changing medical diagnosis, and why doctors are not disappearing anytime soon. Let's start with a striking fact. In several recent studies, AI systems read certain medical scans, such as those for early lung disease, as accurately as experienced specialists, and far faster. That sounds like the machine wins, right? Not quite. Here's the interesting part. When doctors and AI worked together, the results were better than either alone. The AI flagged suspicious areas a tired human eye might skip, while the doctor judged the full context, the patient's history, symptoms, and fears. Now, a word of caution. These systems learn from past data, and if that data is incomplete or biased, the AI can repeat old mistakes confidently. For instance, a tool trained mostly on one population may perform poorly on another. So the future of medicine is not human versus machine. It is human with machine. The doctor remains the one who explains, comforts, and decides. The AI becomes a powerful assistant that never gets tired, but also never truly understands the person in front of it.",
+      "questions": [
+        {
+          "prompt": "What did recent studies find about AI reading medical scans?",
+          "options": [
+            "It performed far worse than beginners.",
+            "It read certain scans as accurately as specialists and faster.",
+            "It could only read scans for broken bones.",
+            "It replaced all radiologists in hospitals."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What caution does the speaker give about AI systems?",
+          "options": [
+            "They are too slow for emergency use.",
+            "They can repeat old mistakes if trained on biased data.",
+            "They require no electricity to run.",
+            "They always understand a patient's emotions."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What is the speaker's main message about the future of medicine?",
+          "options": [
+            "Machines will soon replace doctors entirely.",
+            "Doctors should refuse to use AI tools.",
+            "The best outcomes come from humans working with machines.",
+            "AI understands patients better than doctors do."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：研究发现AI读某些扫描与专家一样准且更快，选B。第二题细节题：警告AI若用有偏差的数据训练会重复旧错误，选B。第三题主旨题：核心信息是人机协作效果最佳，选C。"
+    },
+    {
+      "passage": "Hey Tom, you look frustrated. Is it the new AI writing assistant the company gave us? You read my mind, Grace. Everyone said it would save hours, but my first drafts came out sounding generic, like a polite robot wrote them. So you're giving up on it? No, actually I changed how I use it. At first I asked it to write whole emails for me. The results were bland and sometimes just wrong. Now I write the rough idea myself, and I ask the tool to tighten my wording or suggest a clearer opening. So you treat it like an editor, not a ghostwriter. Exactly. And that small shift made a huge difference. My emails sound like me again, just sharper. Does it ever make mistakes now? Sometimes it invents a statistic that looks convincing but is completely false. So I always check the facts before sending. That's smart. So your real advice is? Use it to improve your own thinking, not to replace it. The moment you stop reading critically, the tool starts making decisions for you, and that's where the trouble begins.",
+      "questions": [
+        {
+          "prompt": "Why was Tom frustrated with the AI writing assistant at first?",
+          "options": [
+            "It was too expensive to use.",
+            "His first drafts sounded generic and sometimes wrong.",
+            "It refused to write any emails.",
+            "It deleted his existing files."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How did Tom change the way he uses the tool?",
+          "options": [
+            "He stopped using it completely.",
+            "He let it write entire emails automatically.",
+            "He uses it as an editor to sharpen his own writing.",
+            "He only uses it for translation."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is Tom's main piece of advice about the tool?",
+          "options": [
+            "Use it to improve your own thinking, not to replace it.",
+            "Trust every statistic it produces.",
+            "Avoid checking the facts to save time.",
+            "Let it make all your decisions."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "第一题细节题：Tom起初不满因为初稿显得平庸且有时出错，选B。第二题细节题：他改为把工具当编辑来打磨自己的写作，选C。第三题主旨题：核心建议是用工具提升思考而非取代思考，选A。"
+    },
+    {
+      "passage": "Thank you all for coming tonight. I want to share the story of a small idea that grew into something far bigger than we imagined. Three years ago, a few neighbors noticed two problems on the same street. A bakery threw away unsold bread every evening, while a nearby shelter struggled to feed people. So we asked a simple question. What if we just connected them? We started with one volunteer, one bicycle, and a basket. Every night, she carried leftover bread three blocks to the shelter. That was it. No funding, no office, no app. Word spread quickly. Soon a grocery store joined, then a restaurant, then twenty volunteers with cars. Last year alone, this network rescued over eighteen tons of food that would have been wasted. But here's what moved me most. The volunteers told me they joined to help others, yet they gained something themselves. They made friends across generations and felt part of their community again. So my message tonight is this. You don't need a grand plan or deep pockets to start. You need to notice a need, and take one small, repeated action.",
+      "questions": [
+        {
+          "prompt": "How did the food-sharing project begin?",
+          "options": [
+            "With a large government grant.",
+            "With one volunteer carrying leftover bread by bicycle.",
+            "With a popular mobile app.",
+            "With a chain of supermarkets."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What did volunteers say they unexpectedly gained?",
+          "options": [
+            "Free meals for their families.",
+            "Paid full-time jobs.",
+            "Friendships and a renewed sense of community.",
+            "Discounts at local restaurants."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the speaker's main message to the audience?",
+          "options": [
+            "Only large organizations can fight food waste.",
+            "Charity work requires significant funding.",
+            "You can start helping by noticing a need and taking small, repeated action.",
+            "Volunteering rarely benefits the volunteers."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：项目以一名志愿者骑自行车运送剩面包起步，选B。第二题细节题：志愿者意外收获了友谊和重归社区的归属感，选C。第三题主旨题：核心信息是注意需求并采取微小而重复的行动即可开始,选C。"
+    },
+    {
+      "passage": "Aunt Carol, ever since you retired from teaching, you seem busier than before. What are you up to? Well, Kevin, I joined a volunteer tutoring program for kids who fell behind during the pandemic. Most of them just need someone patient to sit with them. Isn't that tiring after thirty years in the classroom? You'd think so, but it feels completely different. There's no grading, no paperwork, no pressure. I just help one child at a time understand something that confused them. Do you really see results? More than I expected. One boy who hated reading now brings me his favorite comic books to discuss. His mother told me his school confidence has soared. That's wonderful. Are there enough volunteers? Honestly, no. That's the hard part. We have a long waiting list of children but too few tutors. So I keep telling friends my age. You spent a career learning how to explain things. Why let that skill sit on a shelf? Retirement gave me time, and these kids gave it meaning. I can't imagine my weeks without them now.",
+      "questions": [
+        {
+          "prompt": "What does Aunt Carol do in her retirement?",
+          "options": [
+            "She runs a private school.",
+            "She tutors children who fell behind during the pandemic.",
+            "She grades exams for a local college.",
+            "She writes textbooks at home."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What problem does the tutoring program currently face?",
+          "options": [
+            "Too many tutors and too few children.",
+            "A lack of classroom space.",
+            "A long waiting list of children but too few tutors.",
+            "Children who refuse all help."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How does Aunt Carol feel about her volunteer work?",
+          "options": [
+            "She finds it exhausting and regrets starting.",
+            "She feels it gives her time meaning and can't imagine her weeks without it.",
+            "She considers it the same stressful pressure as her old job.",
+            "She plans to quit soon."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：Carol阿姨辅导疫情期间落后的孩子，选B。第二题细节题：项目面临孩子排队多但导师太少的问题，选C。第三题态度题：她觉得这份工作让退休时光有了意义、离不开孩子们，选B。"
+    },
+    {
+      "passage": "Have you ever looked up at the night sky in a big city and seen almost no stars? Tonight I want to discuss a kind of pollution we rarely think about, light pollution. Most of us treat bright streets as a sign of safety and progress. But excessive artificial light at night carries hidden costs. First, consider wildlife. Sea turtles, for example, rely on the natural glow of the horizon to find the ocean after hatching. Bright coastal lights confuse them, leading hatchlings inland where they die. Migrating birds, drawn to lit towers, collide with buildings by the thousands. And it isn't only animals. Studies link constant nighttime brightness to disrupted sleep and stress in humans. Now, here's the encouraging part. Unlike many environmental problems, this one has a remarkably simple fix. We don't need to live in darkness. We just need smarter lighting, shielded lamps that point downward, warmer colors, and motion sensors that switch off when no one is around. Several towns that adopted these measures cut energy bills and brought the stars back within a single year. Sometimes the solution is simply to point the light where it belongs.",
+      "questions": [
+        {
+          "prompt": "How does light pollution affect sea turtles?",
+          "options": [
+            "It helps them find the ocean faster.",
+            "Bright coastal lights confuse hatchlings and lead them inland.",
+            "It warms the water they swim in.",
+            "It has no measurable effect on them."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the speaker say makes light pollution different from many environmental problems?",
+          "options": [
+            "It cannot be solved at all.",
+            "It only affects humans.",
+            "It has a remarkably simple fix.",
+            "It requires complete darkness to solve."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What is the speaker's overall point?",
+          "options": [
+            "Cities should remove all street lighting.",
+            "Light pollution is harmless and exaggerated.",
+            "Smarter lighting can reduce harm while keeping streets usable.",
+            "Wildlife is unaffected by artificial light."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "第一题细节题：明亮的海岸灯光迷惑刚孵化的海龟，使其爬向内陆，选B。第二题细节题：与许多环境问题不同，光污染有极其简单的解决办法，选C。第三题主旨题：核心观点是更智能的照明能在保持街道可用的同时减少危害，选C。"
+    },
+    {
+      "passage": "Mr. Reed, my students keep asking whether AI will take away their future jobs. As a career advisor, what do you tell them? It's the question I hear most often, Professor. And my answer surprises them. AI rarely eliminates an entire job. It eliminates certain tasks within jobs. Can you give an example? Sure. Take an accountant. AI now handles routine data entry in seconds. But the accountant who once spent hours on that now spends time advising clients and spotting unusual patterns, work that needs judgment. So the job changes rather than disappears? Exactly. The danger isn't AI itself. The danger is standing still while the tools around you advance. Those who refuse to learn new skills are the ones truly at risk. So what should students focus on? Two things machines struggle with. First, working well with other people. Second, asking good questions and thinking critically about messy situations. Technical skills matter, but they age quickly. The ability to keep learning is what protects a career. I tell every student the same thing. Don't fear the machine. Fear staying the same.",
+      "questions": [
+        {
+          "prompt": "According to Mr. Reed, what does AI usually eliminate?",
+          "options": [
+            "Entire job categories at once.",
+            "Certain tasks within jobs.",
+            "The need for any human workers.",
+            "All technical skills."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does Mr. Reed say students should focus on?",
+          "options": [
+            "Only memorizing technical facts.",
+            "Avoiding all new technology.",
+            "Working well with people and thinking critically.",
+            "Choosing jobs AI can never touch."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What does Mr. Reed mean by 'Fear staying the same'?",
+          "options": [
+            "People should resist using AI tools.",
+            "The real risk is refusing to keep learning while tools advance.",
+            "Jobs never change over time.",
+            "Students should switch careers frequently."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "第一题细节题：Reed先生说AI通常消除的是工作中的某些任务，选B。第二题细节题：他建议学生专注于与人协作和批判性思考，选C。第三题推断题：'怕一成不变'指真正的风险是工具进步时拒绝持续学习，选B。"
+    }
+  ]
+}

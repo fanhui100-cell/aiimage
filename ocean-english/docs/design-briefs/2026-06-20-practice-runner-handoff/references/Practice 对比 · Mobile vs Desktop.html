@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Practice 高级版 · Mobile / Desktop 对比</title>
+<style>
+  html,body{ margin:0; height:100%; background:#e9e6df; }
+  .ab-frame{ width:100%; height:100%; border:0; display:block; background:#f2efe9; }
+  /* 让两块艺术板里的 iframe 充满艺术板 */
+  .dc-iframe-wrap{ position:absolute; inset:0; border-radius:inherit; overflow:hidden; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel">
+const { useState } = React;
+const SRC = 'PracticeRunner Premium.html';
+
+// 给每块艺术板一个独立 iframe（独立交互），加一个「重载」角标方便对照
+function Device({ w, h, title }){
+  const [k, setK] = useState(0);
+  return (
+    <div style={{ position:'absolute', inset:0 }}>
+      <iframe key={k} className="ab-frame" src={SRC} title={title}
+        style={{ width:w+'px', height:h+'px' }} />
+      <button onClick={()=>setK(k+1)} title="重新加载这块"
+        style={{ position:'absolute', top:10, right:10, width:30, height:30, borderRadius:9,
+          border:'1px solid rgba(20,30,40,.12)', background:'rgba(255,255,255,.82)', backdropFilter:'blur(6px)',
+          color:'#4a5a66', cursor:'pointer', display:'grid', placeItems:'center', boxShadow:'0 4px 12px -6px rgba(20,30,40,.3)' }}>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-6.4 2.6L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+  );
+}
+
+function App(){
+  return (
+    <DesignCanvas>
+      <DCSection id="practice" title="Practice · 高级版" subtitle="同一套 ocean-english 设计语言 · 两种形态并排对照（各自可交互）">
+        <DCArtboard id="desktop" label="网页端 · Desktop 1180" width={1180} height={720}>
+          <Device w={1180} h={720} title="Desktop" />
+        </DCArtboard>
+        <DCArtboard id="mobile" label="移动端 · Mobile 390" width={390} height={812}>
+          <Device w={390} h={812} title="Mobile" />
+        </DCArtboard>
+      </DCSection>
+    </DesignCanvas>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

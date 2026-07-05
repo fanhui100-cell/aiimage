@@ -1,0 +1,34 @@
+{
+  "templateId": "zhongkao-grammar-fill",
+  "examIds": ["zhongkao"],
+  "taskType": "grammar_fill",
+  "skill": "grammar",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "约 90-140 词中考语篇短文（贴近中考，话题日常/校园/人物/节日），挖 10 个语法填空空并编号 1-10：约 7 个给括号提示词需变形（时态/非谓语/比较级最高级/词性/主谓一致），约 3 个纯空格填功能词（冠词/介词/连词/代词）。每空给唯一标准答案 answer 与可接受答案集 acceptable；提示词空给括号原形 hint。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 90,
+    "maxWords": 140,
+    "perStimulusItems": 10,
+    "topicDomains": ["日常生活", "校园生活", "人物故事", "传统节日", "兴趣爱好", "环保公益"]
+  },
+  "itemCount": 10,
+  "optionCount": 0,
+  "answerSchema": {
+    "shape": "gblanks",
+    "blanks": 10,
+    "perBlank": { "answer": "string", "acceptable": "string[]", "hint": "string?" }
+  },
+  "subskills": ["verb_tense", "non_finite", "subject_verb_agreement", "article", "preposition", "pronoun", "connective", "comparative", "word_form"],
+  "qualityRules": [
+    "100% 原创短文，禁止抄袭任何真题原文或片段",
+    "篇幅 90-140 词，难度贴近中考（词汇与句式简单）",
+    "恰好 10 个空，编号 1-10，与文中顺序一致",
+    "每空提供唯一标准答案；如确有多解，给可接受答案集 acceptable",
+    "提示词空必须给出括号原形提示 hint；纯空格只考功能词",
+    "不得出现退役题型；语言地道、无语法错误"
+  ],
+  "copyrightPolicy": "original_only"
+}

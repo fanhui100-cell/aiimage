@@ -1,0 +1,186 @@
+{
+  "template": "cet-para-match",
+  "level": 3,
+  "sets": [
+    {
+      "passage": "[A] Many young people today cannot imagine keeping in touch with friends without their phones. Apps such as instant messengers and photo-sharing platforms have quietly reshaped the way human relationships begin, grow, and sometimes fall apart. For a generation raised on screens, the line between an online contact and a real friend has grown blurry.\n\n[B] One clear benefit is that distance no longer ends a friendship. A student who moves to another city, or even another country, can still chat daily with the people she grew up with. A quick video call costs nothing, so families and old classmates remain part of one another's everyday lives in a way that was impossible a few decades ago.\n\n[C] Social platforms also make it easier to find people who share unusual hobbies. Someone who loves an obscure board game or a rare style of music may never meet a fellow fan at school, yet online he can join a lively group within minutes. These shared-interest communities often turn strangers into close companions.\n\n[D] However, researchers warn that the quality of online ties is not always high. Pressing a button to show approval is far easier than offering real comfort when a friend is suffering. Some users collect hundreds of contacts but feel lonelier than before, because few of those links involve genuine care.\n\n[E] There is also the problem of comparison. People tend to post only their happiest moments, so a feed can look like an endless parade of holidays and celebrations. Seeing this, an ordinary person may wrongly conclude that everyone else leads a more exciting life, which can quietly damage self-confidence.\n\n[F] Time is another cost. Hours that once went to face-to-face meetings are now spent scrolling alone. Sitting together at dinner, friends sometimes stare at separate screens rather than talk to one another, so being physically close no longer guarantees real connection.\n\n[G] Experts therefore suggest treating these tools as a bridge rather than a destination. Used wisely, a message can arrange a real meeting instead of replacing it. The healthiest approach keeps technology in the role of a helper, while warm, in-person contact remains the heart of any lasting friendship.",
+      "statements": [
+        "A simple tap of approval requires far less effort than truly consoling someone in trouble.",
+        "Friendships can survive even when people relocate far away from each other.",
+        "The boundary between an internet acquaintance and a genuine friend has become unclear.",
+        "Sitting at the same table, companions may focus on their phones instead of conversing.",
+        "Viewing others' carefully selected highlights can mistakenly make someone feel their own life is dull.",
+        "These platforms allow people to quickly locate others who enjoy uncommon pastimes.",
+        "The wisest use lets a digital message set up a face-to-face gathering rather than substitute for it.",
+        "Some individuals have many contacts yet feel more isolated than before.",
+        "Communities formed around a common interest frequently transform unfamiliar people into close friends.",
+        "Hours formerly spent meeting in person are now used up scrolling by oneself."
+      ],
+      "answers": [3, 1, 0, 5, 4, 2, 6, 3, 2, 5],
+      "paras": 7,
+      "explain_zh": "1. D段指出按赞远比真正安慰痛苦的朋友容易。\n2. B段说明搬到远方也能保持友谊。\n3. A段提到网络联系人与真朋友的界线变模糊。\n4. F段描述同桌却各看手机不交谈。\n5. E段说看别人精选的美好瞬间会误以为自己生活无趣。\n6. C段讲平台能快速找到有冷门爱好的人。\n7. G段建议用信息促成线下见面而非取代见面。\n8. D段提到有人联系人很多却更孤独。\n9. C段说兴趣社群常把陌生人变成密友。\n10. F段指出原本见面的时间现在用来独自刷屏。"
+    },
+    {
+      "passage": "[A] Forming good study habits is something almost every learner wishes for, yet few manage to do it smoothly. The truth is that strong habits are not born from a single burst of motivation. They are slowly built through small, repeated choices that gradually become automatic.\n\n[B] The first step is to set clear and reachable goals. Telling yourself to \"study harder\" is too vague to act on. A better aim might be to review one chapter every evening. When a target is specific and not too large, the brain can measure progress and feel rewarded by each completed step.\n\n[C] A fixed time and place also help enormously. If a learner always sits at the same desk right after dinner, the body and mind soon learn to switch into work mode there. This routine removes the daily struggle of deciding when and where to begin, which often wastes energy.\n\n[D] Many students underestimate how harmful distractions can be. A phone buzzing nearby can break concentration even if it is never picked up. Turning off alerts, or leaving the device in another room, protects the deep focus that real learning demands.\n\n[E] Rest is part of the process too, though it is easy to forget. The brain cannot absorb information for hours without pause. Short breaks every fifty minutes or so allow the mind to recover, and learners who rest properly usually remember more than those who push on stubbornly.\n\n[F] Tracking progress keeps motivation alive. Marking each finished task on a calendar creates a visible chain of success, and most people feel reluctant to break a chain they have worked hard to build. This simple record turns an abstract effort into something one can actually see.\n\n[G] Finally, patience matters more than speed. Habits take weeks to settle, and early failures are normal rather than signs of weakness. A learner who forgives an occasional missed day and simply starts again the next morning is far more likely to succeed in the long run.",
+      "statements": [
+        "Even an unanswered phone vibrating beside you can interrupt your attention.",
+        "Solid study routines come from many small repeated decisions, not one rush of energy.",
+        "Studying at the same desk after a meal trains the mind to enter work mode automatically.",
+        "An occasional skipped day should be forgiven rather than treated as failure.",
+        "A goal like reviewing one chapter nightly works better than a vague wish to try harder.",
+        "Marking completed tasks builds a visible run of success people dislike breaking.",
+        "Learners who pause regularly tend to retain more than those who stubbornly continue.",
+        "Telling yourself simply to study harder is too unclear to actually act upon.",
+        "Recording finished work turns a vague effort into something one can literally observe.",
+        "The brain is unable to keep taking in material for hours without any break."
+      ],
+      "answers": [3, 0, 2, 6, 1, 5, 4, 1, 5, 4],
+      "paras": 7,
+      "explain_zh": "1. D段说手机震动即使不接也会打断注意力。\n2. A段指出好习惯靠众多重复的小决定而非一时冲动。\n3. C段说饭后在同一书桌学习能让大脑自动进入状态。\n4. G段建议偶尔漏掉一天要原谅而非视为失败。\n5. B段说每晚复习一章比模糊地想更努力更有效。\n6. F段讲打勾形成不愿打断的成功链条。\n7. E段指出常休息的人比硬撑的人记得更多。\n8. B段提到只说要更努力太模糊难以行动。\n9. F段说记录已完成的任务把抽象努力变得可见。\n10. E段说大脑无法连续数小时不间断地吸收信息。"
+    },
+    {
+      "passage": "[A] Not long ago, an electric car was a curiosity that turned heads on the street. Today such vehicles roll quietly through cities all over the world, and many drivers no longer think twice about choosing one. This shift has happened faster than almost anyone predicted.\n\n[B] A major reason is the steady fall in battery prices. Batteries were once the costliest part of an electric vehicle, putting it out of reach for ordinary buyers. As factories grew larger and technology improved, costs dropped sharply, and the gap with petrol cars narrowed.\n\n[C] Governments have pushed the change as well. In many countries buyers receive money back from the state, while some cities plan to ban the sale of new petrol engines within a decade or two. Such policies give both makers and customers strong reasons to act now.\n\n[D] Worries about running out of power once held many people back. A driver feared being stranded with an empty battery far from any plug. The rapid spread of public charging stations along highways and in car parks has eased that fear considerably.\n\n[E] The driving experience itself wins many converts. Electric motors deliver power instantly and run almost silently, so the ride feels smooth and calm. People who test one are often surprised by how pleasant and effortless it feels compared with a noisy engine.\n\n[F] There are still real obstacles, of course. In some regions chargers remain scarce, and a full charge can take far longer than filling a tank. Producing the batteries also raises environmental questions that the industry has not yet fully solved.\n\n[G] Even so, the direction seems clear. Traditional carmakers that once dismissed the trend are now racing to launch their own models. Most analysts agree that within a generation the quiet hum of an electric motor will be the ordinary sound of the road.",
+      "statements": [
+        "Electric motors provide power immediately and operate with hardly any noise.",
+        "Only recently, seeing an electric vehicle on the street was unusual enough to attract attention.",
+        "Manufacturing the batteries still raises unsolved environmental concerns.",
+        "State cash returns and planned bans on new petrol engines encourage quick action.",
+        "The dramatic drop in battery costs narrowed the price gap with petrol cars.",
+        "The fear of being stranded with no power has eased as charging points multiplied.",
+        "Established carmakers that once ignored the trend now hurry to release their own versions.",
+        "First-time testers are frequently amazed at how relaxed and effortless the drive feels.",
+        "In certain areas charging stations are few and a full charge takes much longer than refueling.",
+        "Once the most expensive component, the battery had made these cars unaffordable for average buyers."
+      ],
+      "answers": [4, 0, 5, 2, 1, 3, 6, 4, 5, 1],
+      "paras": 7,
+      "explain_zh": "1. E段说电动机即刻输出动力且几乎无噪音。\n2. A段指出不久前路上见到电动车还很稀奇引人注目。\n3. F段提到电池生产仍带来未解的环境问题。\n4. C段说国家返现与禁售新燃油车计划促人尽快行动。\n5. B段说电池成本大幅下降缩小了与燃油车的差价。\n6. D段讲充电点增多缓解了被困没电的担忧。\n7. G段说曾忽视趋势的老车企现在争相推出自家车型。\n8. E段说初次试驾者常惊讶于驾驶的轻松惬意。\n9. F段指出某些地区充电桩少且充满电比加油慢得多。\n10. B段提到电池曾是最贵部件使普通买家买不起。"
+    },
+    {
+      "passage": "[A] Whether on a sports field, in an office, or inside a classroom, the ability to work well with others often decides whether a project succeeds. A single brilliant person can achieve a great deal, but most large goals are simply too big for one pair of hands. Teamwork turns scattered effort into shared power.\n\n[B] One of the greatest advantages of a team is the mixing of different minds. Where one member sees only problems, another may spot an opportunity. By combining varied viewpoints, a group can reach solutions that no individual would have found while thinking alone.\n\n[C] Sharing the workload also matters. When tasks are divided according to each person's strengths, the heavy burden that might crush one worker becomes manageable. The accountant handles the numbers while the writer shapes the words, and the whole job moves forward at once.\n\n[D] Good teams keep members motivated as well. Knowing that others depend on you makes it harder to give up when things get difficult. The encouragement of teammates can carry a discouraged person through a low moment that might have ended a solo attempt.\n\n[E] Yet teamwork is not automatically smooth. Disagreements are common, and if they are handled badly, a group can split into hostile camps. Clear communication and a willingness to listen are needed to turn conflict into useful debate rather than bitter quarrels.\n\n[F] Trust forms the foundation of any strong team. Members must believe that their colleagues will do their part honestly and on time. Without this confidence, people waste energy checking on one another instead of doing their own work properly.\n\n[G] In the end, the lessons of teamwork reach far beyond any single task. People who learn to cooperate develop patience, empathy, and leadership that serve them throughout their lives. These human skills, gained through working together, often prove more valuable than the project itself.",
+      "statements": [
+        "When duties are split by each person's talents, a crushing load becomes manageable.",
+        "Combining different perspectives lets a group find answers no lone thinker would reach.",
+        "Believing colleagues will honestly complete their share is the basis of a strong team.",
+        "The ability to cooperate decides project success across sports, offices, and classrooms alike.",
+        "If disagreements are mishandled, a group may break into opposing camps.",
+        "The patience and empathy gained from cooperating often outlast the value of the task itself.",
+        "Knowing others rely on you makes quitting harder when difficulties arise.",
+        "Most ambitious goals are simply too large for one person to accomplish alone.",
+        "Without mutual confidence, people waste effort checking on each other instead of working.",
+        "Encouragement from teammates can pull a discouraged person through a low point."
+      ],
+      "answers": [2, 1, 5, 0, 4, 6, 3, 0, 5, 3],
+      "paras": 7,
+      "explain_zh": "1. C段说按各人特长分工能使沉重负担变得可控。\n2. B段指出结合不同视角能找到独自思考找不到的答案。\n3. F段说相信同事会诚实完成本份是强团队的基础。\n4. A段说协作能力在运动场、办公室、教室都决定成败。\n5. E段提到分歧处理不当群体会分裂成对立阵营。\n6. G段说协作中获得的耐心同理心常比任务本身更有价值。\n7. D段说知道别人依赖你会让人遇难时更难放弃。\n8. A段指出多数宏大目标对一个人来说太大无法独自完成。\n9. F段说缺乏互信人们会浪费精力互相监督而非工作。\n10. D段说队友的鼓励能拉一个气馁的人走出低谷。"
+    },
+    {
+      "passage": "[A] Across the planet, countless species are slipping toward extinction, and many could vanish within our lifetime. The loss is not merely sad; it threatens the delicate web of life on which humans themselves depend. Protecting endangered animals has therefore become an urgent task for everyone.\n\n[B] The chief danger is the disappearance of natural homes. As forests are cleared for farms and wetlands are drained for cities, the creatures that lived there are left with nowhere to go. When a habitat shrinks too far, the animals within it cannot survive.\n\n[C] Hunting and illegal trade add to the pressure. Some animals are killed for their horns, skins, or other body parts, which sell for high prices on black markets. This cruel trade has pushed several famous species, such as certain rhinos, to the very edge of survival.\n\n[D] A warming climate brings further harm. Rising temperatures shift the seasons and melt the ice that some animals need, leaving them confused and short of food. Creatures adapted to a narrow range of conditions find it especially hard to cope with such rapid change.\n\n[E] Fortunately, protected areas offer real hope. By setting aside large parks where hunting is forbidden and the land stays wild, governments give threatened animals a safe place to breed. Within such reserves, some populations that were once collapsing have slowly recovered.\n\n[F] Ordinary citizens can help too, often in surprisingly simple ways. Refusing to buy products made from rare animals removes the profit that drives poaching. Supporting conservation groups with small donations also funds the rangers and scientists who do the daily work of protection.\n\n[G] Saving these creatures is ultimately about saving ourselves. Healthy forests clean our air, and rich oceans feed millions of people. When we protect the animals that share these systems, we are also guarding the resources that keep human life possible.",
+      "statements": [
+        "Some creatures are slaughtered for horns or skins that fetch high prices illegally.",
+        "The biggest threat is the vanishing of the places where animals naturally live.",
+        "Declining to purchase goods made from rare species removes the profit behind poaching.",
+        "Within protected reserves, certain shrinking populations have gradually rebounded.",
+        "The loss of species endangers the fragile web of life that humans rely on.",
+        "Rising heat shifts the seasons and melts ice that some animals require to live.",
+        "Guarding these animals ultimately means safeguarding resources human life depends on.",
+        "Animals suited only to narrow conditions struggle most with such rapid change.",
+        "Small donations to conservation groups pay for the rangers and scientists doing daily work.",
+        "When farmland and cities replace forests and wetlands, the resident creatures have nowhere to go."
+      ],
+      "answers": [2, 1, 5, 4, 0, 3, 6, 3, 5, 1],
+      "paras": 7,
+      "explain_zh": "1. C段说有些动物因高价非法交易的角或皮而被猎杀。\n2. B段指出最大威胁是动物自然栖息地的消失。\n3. F段说拒买稀有动物制品可去除盗猎背后的利润。\n4. E段说保护区内一些萎缩的种群已逐渐恢复。\n5. A段说物种消失危及人类赖以生存的脆弱生命网。\n6. D段说升温改变季节并融化某些动物所需的冰。\n7. G段说保护这些动物最终是保护人类赖以生存的资源。\n8. D段说只适应狭窄条件的动物最难应对快速变化。\n9. F段说给保护组织的小额捐款资助做日常工作的护林员和科学家。\n10. B段说农田城市取代森林湿地后当地生物无处可去。"
+    },
+    {
+      "passage": "[A] Few pleasures in life rival the excitement of setting off for a place one has never seen. The moment a journey begins, ordinary worries seem to shrink, and the mind opens to fresh possibilities. Travel, in this sense, is less about distance than about discovery.\n\n[B] One of its richest rewards is the meeting of other cultures. Tasting an unfamiliar dish, hearing a strange language in a busy market, or watching a local festival can teach more in a day than a book teaches in a month. Such moments make distant peoples feel real rather than abstract.\n\n[C] Travel also stretches the mind by challenging old assumptions. A traveller who once believed there was only one sensible way to live may discover, in another land, that people are perfectly happy doing things differently. This gentle shock often makes a person more open and humble.\n\n[D] There is great value, too, in stepping outside daily routine. At home the same streets and schedules can dull the senses, while a new environment forces the eyes to look closely again. Even small things, like an unusual street sign, suddenly seem fascinating.\n\n[E] The difficulties of a trip can be rewarding in their own way. A missed train or a wrong turn, frustrating at the time, often becomes the story most fondly retold later. Solving such problems far from home builds a quiet confidence that stays with the traveller.\n\n[F] Memories formed on the road tend to last unusually long. A scent or a song can later carry a person straight back to a particular street in a foreign city. These vivid recollections become treasures that no amount of money could buy afterward.\n\n[G] Of course, travel asks something of us in return. It costs money and time, and careless visitors can damage the very places they admire. The thoughtful traveller treads lightly, respecting local customs so that the wonders enjoyed today remain for others tomorrow.",
+      "statements": [
+        "Encountering another culture can teach more in one day than a book does in a month.",
+        "When a journey starts, everyday worries appear to shrink and the mind opens up.",
+        "Tackling problems far from home builds a quiet confidence that stays with you.",
+        "A traveller may learn that people happily live in ways different from one's own.",
+        "Careless visitors can harm the very places they came to admire.",
+        "A familiar routine at home can dull the senses, while new surroundings sharpen attention.",
+        "A scent or a tune can later transport a person back to a foreign street.",
+        "Discovery, more than distance, is what travel is truly about.",
+        "Respecting local customs keeps today's wonders available for future visitors.",
+        "An annoying wrong turn often becomes the tale most fondly retold afterward."
+      ],
+      "answers": [1, 0, 4, 2, 6, 3, 5, 0, 6, 4],
+      "paras": 7,
+      "explain_zh": "1. B段说接触他文化一天学到的比读书一月还多。\n2. A段说旅程开始时日常烦恼仿佛缩小心灵开放。\n3. E段说在异乡解决问题建立长留心中的自信。\n4. C段说旅行者会发现别人以不同方式生活也很快乐。\n5. G段说粗心游客会破坏他们前来欣赏的地方。\n6. D段说熟悉的日常令感官迟钝而新环境令人重新专注。\n7. F段说气味或曲调日后能把人带回异国街道。\n8. A段指出旅行真正关乎的是发现而非距离。\n9. G段说尊重当地习俗能让今日奇景留给未来访客。\n10. E段说恼人的走错路常成为日后最爱讲述的故事。"
+    },
+    {
+      "passage": "[A] What we put on our plates each day quietly shapes how we feel, how we think, and how long we may live. Yet with shelves crowded by tempting packaged foods, choosing a healthy diet has become surprisingly confusing. A few clear principles, however, can guide almost anyone.\n\n[B] The most basic rule is variety. No single food, however praised, contains everything the body needs. By eating a wide range of vegetables, grains, and proteins, a person is far more likely to receive the full set of nutrients that good health requires.\n\n[C] Fresh ingredients generally beat processed ones. Foods that come straight from a farm tend to keep their natural goodness, whereas heavily packaged products often hide large amounts of salt, sugar, and fat behind attractive labels. Reading those labels carefully protects the unwary shopper.\n\n[D] Portion size deserves attention as well. Even wholesome food can cause problems when eaten in great excess, while modest helpings of less perfect dishes rarely do much harm. Learning to stop when comfortably full, rather than completely stuffed, is a skill worth practising.\n\n[E] Drinking enough water is easy to overlook. The body often mistakes thirst for hunger, so people sometimes eat when they merely need a glass of water. Staying well hydrated supports digestion and helps prevent needless snacking between meals.\n\n[F] Habits formed in childhood are especially powerful. Children who grow up enjoying fruit and vegetables usually carry that taste into adulthood, while those raised on sweets may struggle for years to change. Parents thus shape their children's health long after the meals are forgotten.\n\n[G] Finally, a healthy diet need not feel like punishment. The occasional treat causes no harm and can make sensible eating easier to sustain. A balanced approach that allows small pleasures is far more lasting than any strict plan built on guilt and denial.",
+      "statements": [
+        "Eating a wide range of vegetables, grains, and proteins helps supply all needed nutrients.",
+        "What appears on our plates daily quietly shapes how we feel, think, and how long we live.",
+        "Heavily packaged products often conceal large amounts of salt, sugar, and fat.",
+        "An occasional treat does no harm and makes sensible eating easier to keep up.",
+        "The body can mistake thirst for hunger, leading people to eat when water is all they need.",
+        "Children raised enjoying fruit and vegetables tend to keep that preference as adults.",
+        "Even wholesome food can cause trouble when eaten in great excess.",
+        "No single food, however celebrated, holds everything the body requires.",
+        "A balanced plan allowing small pleasures lasts longer than a strict one built on guilt.",
+        "Staying well hydrated aids digestion and helps prevent pointless snacking."
+      ],
+      "answers": [1, 0, 2, 6, 4, 5, 3, 1, 6, 4],
+      "paras": 7,
+      "explain_zh": "1. B段说吃多样蔬菜谷物蛋白质有助获得所需全部营养。\n2. A段说每天盘中食物悄悄塑造我们的感受思维与寿命。\n3. C段说重度包装产品常隐藏大量盐糖脂肪。\n4. G段说偶尔的零食无害并使理性饮食更易坚持。\n5. E段说身体会把口渴误当饥饿使人只需喝水却进食。\n6. F段说从小爱吃果蔬的孩子成年后多保持这一偏好。\n7. D段说健康食物大量过食也会引发问题。\n8. B段指出没有单一食物能包含身体所需的一切。\n9. G段说允许小乐趣的均衡方案比靠内疚的严格计划更持久。\n10. E段说充足饮水助消化并防止无谓的加餐。"
+    },
+    {
+      "passage": "[A] A museum is far more than a building full of old objects behind glass. At its best it is a doorway through which the past, the natural world, and human creativity all become real to a visitor. For learners of every age, this experience can change the way they understand a subject.\n\n[B] One special strength of museums is that they make abstract ideas concrete. A child may read about ancient Egypt in class, but standing before a real mummy turns dry facts into something vivid and unforgettable. Seeing the actual object engages the senses in a way words alone cannot.\n\n[C] Museums also welcome curiosity without pressure. Unlike a classroom with its tests and grades, a gallery lets a visitor wander freely, pausing at whatever catches the eye. This relaxed freedom often sparks a genuine interest that no required lesson could force.\n\n[D] Many museums now invite people to touch, build, and experiment. Hands-on exhibits let visitors feel how a machine works or mix colours themselves, and such active involvement helps knowledge stick. People tend to remember what they have done far better than what they have merely been told.\n\n[E] These institutions serve scholars as well as the general public. Behind the public galleries, experts study and preserve fragile items, adding steadily to humanity's store of knowledge. The research carried out in such places often reaches far beyond the walls of the museum itself.\n\n[F] Importantly, museums open learning to everyone. With low or free admission, they offer treasures that no single family could ever own to rich and poor alike. In this way they help close the gap between those who can afford rare experiences and those who cannot.\n\n[G] As technology advances, museums keep finding new ways to teach. Digital displays and online collections now let a student in a distant village explore a famous gallery from a screen. Far from fading, the museum is reinventing itself for a new century of learners.",
+      "statements": [
+        "Hands-on exhibits let visitors experiment, and active involvement makes knowledge stick.",
+        "A museum is a doorway making the past and human creativity real to a visitor.",
+        "Standing before a real mummy turns dry facts into something vivid and unforgettable.",
+        "Online collections now let a student in a remote village explore a famous gallery on screen.",
+        "Free or low admission offers rare treasures to rich and poor alike.",
+        "Without tests or grades, a gallery lets visitors wander and pause at whatever interests them.",
+        "Behind the public rooms, experts preserve fragile items and add to humanity's knowledge.",
+        "People usually remember what they have done better than what they were merely told.",
+        "By offering treasures to all, museums help close the gap between rich and poor.",
+        "The relaxed freedom of a gallery can spark genuine interest no required lesson could force."
+      ],
+      "answers": [3, 0, 1, 6, 5, 2, 4, 3, 5, 2],
+      "paras": 7,
+      "explain_zh": "1. D段说动手展品让人实验主动参与使知识牢固。\n2. A段说博物馆是让过去与人类创造力变真实的大门。\n3. B段说站在真木乃伊前把枯燥事实变得生动难忘。\n4. G段说在线藏品让偏远村庄的学生在屏幕上游览名馆。\n5. F段说免费或低价门票把稀有珍宝提供给贫富双方。\n6. C段说没有考试分数展厅让人自由徜徉停在感兴趣处。\n7. E段说公众展厅之后专家保存脆弱文物并增进人类知识。\n8. D段说人通常更记得做过的事而非被告知的事。\n9. F段说把珍宝提供给所有人帮助缩小贫富差距。\n10. C段说展厅轻松的自由能激发必修课无法强求的真兴趣。"
+    },
+    {
+      "passage": "[A] As exams approach, many students feel their hearts beating faster and their thoughts racing in unhelpful circles. A certain amount of nervousness is natural and can even sharpen the mind, but when stress grows too heavy it can block clear thinking. Learning to manage it is a skill worth mastering.\n\n[B] The first thing to understand is that some pressure is not the enemy. Mild tension keeps a student alert and focused, much as a runner needs a rush of energy before a race. The goal is not to remove every nerve but to keep anxiety within a useful range.\n\n[C] Good preparation is the strongest defence against panic. A student who has studied steadily over weeks walks into the hall knowing the material, while one who crams the night before carries a heavier load of fear. Confidence built on real work calms the mind better than any trick.\n\n[D] The body and the mind are closely linked. Poor sleep, skipped meals, and too much caffeine all make worry worse, while regular rest and gentle exercise steady the nerves. Caring for the body is therefore a direct way of caring for the anxious mind.\n\n[E] Simple breathing methods can help in tense moments. Taking slow, deep breaths signals the body to relax and slows a racing heart. Practised beforehand, this quiet technique can be used unnoticed even while sitting at the exam desk.\n\n[F] How a student thinks about the test matters greatly. Imagining total disaster only feeds the fear, whereas viewing the exam as a chance to show what one has learned eases the pressure. Replacing dark predictions with calmer thoughts is a powerful habit.\n\n[G] Finally, it helps to keep the whole thing in proportion. A single exam, however important it feels, rarely decides an entire future. Remembering that there will be other chances allows a student to face the paper with a steadier and more hopeful heart.",
+      "statements": [
+        "Slow, deep breaths signal the body to relax and slow a racing heart.",
+        "A modest level of tension keeps a student alert, much like a runner before a race.",
+        "Studying steadily for weeks brings calm confidence that beats any last-minute trick.",
+        "Recalling that other chances will come lets a student face the paper more hopefully.",
+        "Poor sleep, missed meals, and excess caffeine all make worry worse.",
+        "Some nervousness before an exam is natural and can even sharpen the mind.",
+        "Viewing the exam as a chance to show learning eases pressure better than imagining disaster.",
+        "A single exam, however weighty it feels, seldom decides a whole future.",
+        "Caring for the body through rest and gentle exercise steadies the anxious mind.",
+        "A breathing technique practised in advance can be used unnoticed at the exam desk."
+      ],
+      "answers": [4, 1, 2, 6, 3, 0, 5, 6, 3, 4],
+      "paras": 7,
+      "explain_zh": "1. E段说缓慢深呼吸示意身体放松减缓飞快的心跳。\n2. B段说适度紧张让学生警觉如赛跑前的运动员。\n3. C段说数周稳扎稳打带来胜过任何小技巧的自信。\n4. G段说记住还有别的机会让学生更有希望地面对试卷。\n5. D段说睡眠差漏餐过量咖啡因都加重焦虑。\n6. A段说考前一定紧张是自然的甚至能让头脑更敏锐。\n7. F段说把考试看作展示所学的机会比想象灾难更能减压。\n8. G段说一场考试无论多重要很少决定整个未来。\n9. D段说通过休息与轻度运动照顾身体能稳定焦虑的心。\n10. E段说事先练好的呼吸法可在考桌上不被察觉地使用。"
+    },
+    {
+      "passage": "[A] Only a short while ago, working from a kitchen table seemed like a rare privilege granted to a lucky few. Now millions of people log on each morning without ever leaving home, and the office desk is no longer the obvious centre of working life. This change has reshaped how, where, and even when people do their jobs.\n\n[B] The most obvious gain is the time saved on commuting. Hours once lost crawling through traffic or crowded trains can now go to family, rest, or extra work. For many employees this recovered time has quietly improved the overall quality of daily life.\n\n[C] Flexibility is another prize. A remote worker can often shape the day around personal needs, starting early or pausing to collect a child from school. This freedom suits people whose best hours of concentration do not match the rigid timetable of a traditional office.\n\n[D] Companies benefit as well, sometimes in unexpected ways. With fewer staff in the building, a business can rent a smaller space and cut its bills. Just as importantly, it can hire talented people from distant towns or even other countries who could never have commuted in.\n\n[E] Yet the arrangement carries real costs. Working alone day after day, some people begin to feel cut off from colleagues, missing the casual chats that once made work feel human. This quiet loneliness can slowly wear down both mood and motivation.\n\n[F] The blurring of work and home is a further danger. When the laptop sits in the living room, the working day can stretch endlessly, and some employees find it hard ever to switch off. Without a clear boundary, rest and labour bleed into each other.\n\n[G] The likely future is a mix rather than an extreme. Many firms now combine office days with home days, hoping to keep the gains of both. The lasting lesson is that where we work can be rethought, and that the old assumption of a daily journey to a desk was only ever one option among many.",
+      "statements": [
+        "A remote worker can shape the day around personal needs, like collecting a child.",
+        "Hours once lost in traffic or crowded trains can now go to family or rest.",
+        "Working alone repeatedly, some people feel cut off and miss casual chats with colleagues.",
+        "A short while ago, working from home seemed a rare privilege for a lucky few.",
+        "When the laptop sits at home, the workday can stretch endlessly and never switch off.",
+        "Firms can rent smaller spaces and cut bills with fewer staff in the building.",
+        "Many companies now blend office days with home days to keep the gains of both.",
+        "Businesses can now hire talented people from distant towns who could never have commuted.",
+        "This quiet loneliness can slowly wear down both mood and motivation.",
+        "The old assumption of a daily journey to a desk was only one option among many."
+      ],
+      "answers": [2, 1, 4, 0, 5, 3, 6, 3, 4, 6],
+      "paras": 7,
+      "explain_zh": "1. C段说远程工作者可围绕个人需要安排一天如接孩子。\n2. B段说曾耗在堵车或拥挤列车上的时间现在可给家人或休息。\n3. E段说独自工作久了有人感到被孤立想念与同事的闲聊。\n4. A段说不久前在家工作还像少数幸运者的特权。\n5. F段说笔记本放家里工作日可能无限延长难以关机。\n6. D段说楼里员工少公司可租更小空间削减开支。\n7. G段说许多公司现在把办公日与居家日结合以兼得两者好处。\n8. D段说企业现在能雇用从前无法通勤的远方人才。\n9. E段说这种悄然的孤独会慢慢磨损情绪与动力。\n10. G段说每天通勤到办公桌的旧假设只是众多选项之一。"
+    }
+  ]
+}

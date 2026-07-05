@@ -1,0 +1,621 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Lexiverse — "Abyssal Luminescence / 深海辉光" 设计系统
+   深↔浅双环境:沉浸探索走深海暗色,日常学习/阅读走米白日光。
+   - 单一主辉光(青绿),金色仅用于成就。
+   - 向后兼容:保留旧 var 名(--bg-deep / --accent-blue / --glass-* / --particle-*),
+     现有组件不会立刻崩;新增 token 供逐页迁移使用。
+   ========================================================================= */
+
+:root {
+  /* ── P1：固定顶栏高度（AppShell 内容区与锚点补偿共用）── */
+  --nav-h: 64px;
+
+  /* ── 深海暗色环境(沉浸:首页 hero / 星图 LexiGraph / Lexiverse) ── */
+  --bg-deep: #05090f;          /* 页面海床(较旧版更深更克制) */
+  --bg-ocean: #081320;
+  --ink-700: #0f1c2e;          /* 抬升玻璃面板 */
+  --ink-600: #16273d;
+
+  /* ── 主辉光:唯一强调色(青绿) ── */
+  --teal: #4fe6ce;             /* 暗色环境用 */
+  --teal-deep: #1f9f8c;
+  --teal-glow: rgba(79, 230, 206, 0.45);
+  --teal-ink: #0e8c7a;         /* 浅色/米白环境用(对纸面有足够对比) */
+
+  /* ── 支撑色(克制使用,按角色而非装饰) ── */
+  --aqua: #8ad7ff;             /* 链接 / 信息 */
+  --gold: #f1c879;             /* 成就 / 连续(暗) */
+  --gold-ink: #b3781f;         /* 成就(浅) */
+  --rose: #ff8a72;             /* due / 告警(暗) */
+  --rose-ink: #bf4a30;         /* (浅) */
+  --blue-ink: #3b5bd9;         /* 学习中(浅色环境) */
+  --violet-ink: #6d4bc4;       /* 阅读 / 精读(浅) */
+  /* 角色色淡底（练习 / 今日卡用；与各 -ink 同色低透明） */
+  --gold-bg: rgba(179,120,31,0.10);
+  --rose-bg: rgba(191,74,48,0.09);
+  --blue-bg: rgba(59,91,217,0.08);
+  --violet-bg: rgba(109,75,196,0.10);
+
+  /* ── 暗色文字 ── */
+  --text-primary: #eef5f9;
+  --text-secondary: #9fb6c6;
+  --text-muted: #5f7689;
+
+  /* ── 暗色玻璃面板 ── */
+  --glass-bg: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012) 60%), #0a1320;
+  --glass-border: rgba(150,196,222,0.12);
+  --glass-bg-hover: rgba(255,255,255,0.055);
+  --glass-border-hover: rgba(79,230,206,0.30);
+  --glass-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 24px 60px -28px rgba(0,0,0,0.8);
+
+  /* ── 米白日光环境(词典 / 单词 / 学习中枢 / 复习 / 扫描 / 导学 / 阅读 / 听力) ── */
+  --paper: #f2efe9;            /* 页面底 */
+  --paper-2: #ece8df;
+  --card: #fbf9f4;             /* 卡片 */
+  --card-2: #ffffff;           /* 强调卡 / 输入 */
+  --ink: #14191e;              /* 主文字 */
+  --ink-sub: #4a5a66;          /* 次文字（F1-4：对齐设计稿，米白底 AA 5.3:1） */
+  --ink-muted: #8a97a2;
+  --line: rgba(20,30,40,0.10);
+  --line-strong: rgba(20,30,40,0.16);
+  --teal-bg: rgba(14,140,122,0.08);
+  /* Demo07：阴影收敛两档 token（旧 --card-shadow* 全站引用映射到新档） */
+  --shadow-rest: 0 1px 2px rgba(20,30,40,.05), 0 4px 14px -8px rgba(20,30,40,.08);
+  --shadow-hover: 0 2px 4px rgba(20,30,40,.06), 0 12px 28px -12px rgba(20,30,40,.16);
+  --card-shadow: var(--shadow-hover);
+  --card-shadow-sm: var(--shadow-rest);
+
+  /* ── 旧粒子色(榕树 WebGL 用,保持不变) ── */
+  --particle-cyan: #7ef9ff;
+  --particle-mint: #b8ffb2;
+  --particle-gold: #ffd76a;
+  --accent-blue: #38bdf8;      /* 兼容旧组件;新代码请改用 --teal / --teal-ink */
+  --accent-violet: #8b5cf6;
+
+  /* ── 区块小标题 ── */
+  --section-head-color: rgba(79,230,206,0.55);
+  --section-head-spacing: 0.16em;
+
+  /* ── 字体(由 next/font 在 layout.tsx 注入) ── */
+  --font-serif: 'Instrument Serif', 'Noto Serif SC', Georgia, serif;
+  --font-serif-zh: 'Noto Serif SC', serif;
+  --font-news: 'Newsreader', Georgia, serif;
+  --font-sans: 'Space Grotesk', 'Noto Sans SC', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  /* ── 圆角 ── */
+  --r-card: 18px;
+  --r-sm: 12px;
+  --r-pill: 999px;
+
+  /* ── 字号 scale ── */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   17px;
+  --text-xl:   20px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  /* P1：锚点滚动补偿固定顶栏 */
+  scroll-padding-top: calc(var(--nav-h) + 8px);
+}
+* { scroll-margin-top: calc(var(--nav-h) + 8px); }
+
+/* ── F1：主页深色画框卡（固定尺寸，嵌入米白页的「望向深海的窗」）── */
+/* F1-2：掌握度分段条 hover 提起 + 双栏栅格 */
+.seg-grow { transition: transform .18s, filter .18s; }
+.seg-grow:hover { transform: scaleY(1.35); filter: brightness(1.1); }
+.home-duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+.home-duo > :only-child { grid-column: 1 / -1; }
+@media (max-width: 640px) { .home-duo { grid-template-columns: 1fr; } }
+
+.home-hero-frame {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: var(--r-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-rest);
+  background: radial-gradient(120% 90% at 50% 30%, #0a1622 0%, #060b12 60%, #04070c 100%);
+}
+@media (max-width: 640px) {
+  .home-hero-frame { height: 340px; }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================================
+   日光环境作用域 —— 给"浮出水面"的内容页根节点加 class="theme-light"
+   即可整页切换到米白。
+   ========================================================================= */
+.theme-light {
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+.theme-light ::selection { background: rgba(14,140,122,0.18); }
+
+/* 中文领衔的双语标题工具类 */
+.zh-display { font-family: var(--font-serif-zh); font-weight: 600; letter-spacing: 0.01em; }
+.en-display { font-family: var(--font-serif); font-weight: 400; }
+.en-italic  { font-family: var(--font-news); font-style: italic; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--teal-deep); border-radius: 3px; }
+.theme-light ::-webkit-scrollbar-track { background: var(--paper); }
+.theme-light ::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Skeleton shimmer */
+@keyframes skeletonShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes banyanPulse { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: .5; } 50% { transform: translate(-50%,-50%) scale(1.45); opacity: .15; } }
+
+/* ── LexiGraph SVG node state rings ─────────────────────────────────────── */
+@keyframes lexiPulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+@keyframes lexiGlow  { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+.lxi-pulse { animation: lexiPulse 2s ease-in-out infinite; }
+.lxi-glow  { animation: lexiGlow 2.5s ease-in-out infinite; }
+
+/* ── Lumi Companion ──────────────────────────────────────────────────────── */
+@keyframes lumiFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes lumiOrbit0 { from { transform: translate(-50%,-50%) rotate(0deg) translateX(28px) scale(1); } to { transform: translate(-50%,-50%) rotate(360deg) translateX(28px) scale(1); } }
+@keyframes lumiOrbit1 { from { transform: translate(-50%,-50%) rotate(90deg) translateX(24px) scale(1); } to { transform: translate(-50%,-50%) rotate(450deg) translateX(24px) scale(1); } }
+@keyframes lumiOrbit2 { from { transform: translate(-50%,-50%) rotate(200deg) translateX(32px) scale(1); } to { transform: translate(-50%,-50%) rotate(560deg) translateX(32px) scale(1); } }
+@keyframes lumiOrbit3 { from { transform: translate(-50%,-50%) rotate(310deg) translateX(20px) scale(1); } to { transform: translate(-50%,-50%) rotate(670deg) translateX(20px) scale(1); } }
+.lumi-orbit { animation-timing-function: linear; animation-iteration-count: infinite; }
+.lumi-orbit-0 { animation-name: lumiOrbit0; animation-duration: 4s; }
+.lumi-orbit-1 { animation-name: lumiOrbit1; animation-duration: 6s; }
+.lumi-orbit-2 { animation-name: lumiOrbit2; animation-duration: 5s; }
+.lumi-orbit-3 { animation-name: lumiOrbit3; animation-duration: 7s; }
+
+/* ── LexiGraph pronunciation wave ring ──────────────────────────────────── */
+@keyframes lxiWave { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(2.8); opacity: 0; } }
+.lxi-wave { animation: lxiWave 1.6s ease-out forwards; transform-box: fill-box; transform-origin: center; pointer-events: none; }
+
+/* ── §15.1 夜间模式 — data-theme="night" ──────────────────────────────────
+   覆盖米白环境的纸面/卡片/文字变量,深色页面保持不变。
+   CSS 自定义属性在行内样式中也会被正确解析,无需额外类名。
+   ────────────────────────────────────────────────────────────────────────── */
+[data-theme="night"] {
+  --paper:      #1c1a17;
+  --paper-2:    #211f1b;
+  --card:       #252320;
+  --card-2:     #2e2c28;
+  --card-3:     #333028;
+
+  --ink:        #e4dcc8;
+  --ink-sub:    #9e9380;
+  --ink-muted:  #6a6055;
+
+  --line:        rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.14);
+
+  /* 夜间米白页面用亮青绿,保持对比度 */
+  --teal-ink:   #4fe6ce;
+
+  --gold-ink:   #d4a24a;
+  --rose-ink:   #e06055;
+  --blue-ink:   #7da0ff;
+  --violet-ink: #a98be6;
+
+  /* 角色色淡底（夜间提亮，避免浅底贴深卡） */
+  --teal-bg:    rgba(79,230,206,0.12);
+  --gold-bg:    rgba(212,162,74,0.14);
+  --rose-bg:    rgba(224,96,85,0.14);
+  --blue-bg:    rgba(125,160,255,0.14);
+  --violet-bg:  rgba(169,139,230,0.14);
+
+  --card-shadow:    0 2px 12px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3);
+  --card-shadow-sm: 0 1px 6px rgba(0,0,0,0.28);
+  --shadow-rest:  0 1px 2px rgba(0,0,0,.4), 0 4px 14px -8px rgba(0,0,0,.5);
+  --shadow-hover: 0 2px 4px rgba(0,0,0,.45), 0 12px 28px -12px rgba(0,0,0,.6);
+}
+
+/* ── §15.2 移动端底部 Tab 安全间距 ─────────────────────────────────────── */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+}
+
+/* ── §9 + §15.5 微交互 ───────────────────────────────────────────────────── */
+
+/* 卡片 hover 上浮 */
+@keyframes cardLift { to { transform: translateY(-2px); box-shadow: var(--card-shadow); } }
+
+/* 按钮按压缩放 */
+.btn-press:active { transform: scale(0.97); }
+
+/* 通用可点击卡片 hover / focus 效果（Demo07：220ms + -2px 抬升） */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card-hover:hover,
+.card-hover:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+  outline: none;
+}
+/* 深色变体 */
+.card-hover.is-dark:hover,
+.card-hover.is-dark:focus-visible {
+  border-color: var(--glass-border-hover) !important;
+}
+
+/* 链接淡入下划线 */
+.link-underline {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease;
+}
+.link-underline:hover { background-size: 100% 1px; }
+
+/* 平板响应断点补充 (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* PageShell padding 在平板稍收窄 */
+  .page-shell-inner { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
+/* Mobile 安全区 + overflow 防侧滚 */
+@media (max-width: 767px) {
+  .theme-light { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+}
+
+/* NightModeToggle + AIGuideButton 在移动端避开底部 Tab */
+@media (max-width: 767px) {
+  /* bottom 28px + 56px tab bar = 84px */
+  .float-btn-stack { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+
+/* ── §B0 Button CSS classes ──────────────────────────────────────────────── */
+.lx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.4;
+  transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.lx-btn:hover   { opacity: 0.88; }
+.lx-btn:active  { transform: scale(0.97); }
+.lx-btn:focus-visible { outline: 2px solid var(--teal-ink); outline-offset: 2px; }
+.lx-btn--primary   { background: var(--teal-ink); color: #fff; border: none; box-shadow: 0 12px 26px -14px rgba(14,140,122,0.8); }
+.lx-btn--ghost     { background: var(--card); border: 1px solid var(--line-strong); color: var(--ink); }
+.lx-btn--dark-ghost { background: rgba(255,255,255,0.03); border: 1px solid rgba(225,238,244,0.3); color: #eaf3f6; }
+.lx-btn--success   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.4); color: #34D399; }
+.lx-btn--secondary { background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.4); color: #8B5CF6; }
+.lx-btn--danger    { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.35); color: #EF4444; }
+.lx-btn--sm  { padding: 8px 16px; font-size: 13px; border-radius: var(--r-pill); }
+.lx-btn--md  { padding: 12px 22px; font-size: 14px; border-radius: var(--r-pill); }
+.lx-btn--lg  { padding: 14px 28px; font-size: 15px; border-radius: var(--r-pill); }
+
+/* ── §B3 SpotlightCard ───────────────────────────────────────────────────── */
+.spotlight-host:hover .spotlight-glow,
+.spotlight-host:focus-within .spotlight-glow { opacity: 1 !important; }
+
+/* ── §B7 ShinyText ───────────────────────────────────────────────────────── */
+.shiny-text {
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shinyTextSweep var(--shiny-speed, 3.2s) linear infinite;
+}
+@keyframes shinyTextSweep { to { background-position: -220% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text { animation: none; -webkit-text-fill-color: currentColor; color: var(--gold-ink); }
+}
+
+/* ── §B6 PronunciationButton EQ bars ────────────────────────────────────── */
+@keyframes eqBar {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+.eq-bar {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--teal-ink);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: eqBar 0.7s ease-in-out infinite;
+}
+.eq-bar:nth-child(2) { animation-delay: 0.12s; }
+.eq-bar:nth-child(3) { animation-delay: 0.24s; }
+.eq-bar:nth-child(4) { animation-delay: 0.36s; }
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar { animation: none; transform: scaleY(0.6); }
+}
+
+/* ── §B4 TodayMission progress bar + sweep ──────────────────────────────── */
+@keyframes missionBarGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.mission-bar-fill {
+  transform-origin: left;
+  animation: missionBarGrow 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes missionSweep {
+  0%   { opacity: 0; left: -40%; }
+  40%  { opacity: 1; }
+  100% { opacity: 0; left: 110%; }
+}
+.mission-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: missionSweep 0.9s ease-out 0.5s forwards;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mission-bar-fill { animation: none; }
+  .mission-sweep::after { display: none; }
+}
+
+/* ── Desktop: always hide mobile bottom tab bar ── */
+@media (min-width: 768px) {
+  .mobile-tab-bar { display: none !important; }
+}
+
+/* ── Mobile: pad main content above bottom tab bar ── */
+@media (max-width: 767px) {
+  .page-shell-content { padding-bottom: 80px; }
+}
+
+/* ── 榕树 Hero 节点层 ── */
+.hero-nodes-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+.hero-nodes-wrap > * { pointer-events: auto; }
+.hero-node { -webkit-tap-highlight-color: transparent; }
+@media (max-width: 640px) { .hero-nodes-wrap { display: none; } }
+
+/* ── 功能入口卡片 hover ── */
+.entry-card {
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.entry-card:hover {
+  border-color: var(--accent, var(--teal-ink)) !important;
+  transform: translateY(-2px);
+}
+
+/* ── 状态动画 ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.fade-up { animation: fadeUp 0.25s ease; }
+
+/* ════ 界面优化5 阶段4 · 微交互（Demo 参数即规格） ════════════════════════ */
+
+/* Demo06：纸面噪点 — feTurbulence 0.9 · 2 octaves · 160 平铺 · opacity .018
+   fix2-B：z-index 0 + body isolation —— 原置顶全屏层盖在动画 canvas 上方，
+   canvas 每帧变化迫使整屏重新合成（灰罩 + 卡顿双重根因）。
+   现在噪点只垫在内容下方，浅色页面仍隐约可见；深色 hero 不需要纸纹。 */
+body {
+  isolation: isolate;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Demo01：测验答对弹跳 + 描边扩散 / 答错抖动 */
+@keyframes quizCorrect { 0% { transform: scale(1); } 50% { transform: scale(1.025); } 100% { transform: scale(1); } }
+@keyframes quizRing { from { opacity: .8; transform: scale(1); } to { opacity: 0; transform: scale(1.06); } }
+@keyframes quizWrong {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+.quiz-correct { animation: quizCorrect 260ms cubic-bezier(.34,1.56,.64,1); position: relative; }
+.quiz-correct::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--teal-ink);
+  border-radius: inherit;
+  pointer-events: none;
+  animation: quizRing 500ms ease-out forwards;
+}
+.quiz-wrong { animation: quizWrong 320ms ease-in-out; }
+
+/* Demo02：状态 chip morph + 换色弹跳 */
+.chip-morph { transition: background .45s ease, color .45s ease, border-color .45s ease; }
+@keyframes chipPop { 0% { transform: scale(1); } 50% { transform: scale(1.07); } 100% { transform: scale(1); } }
+.chip-pop { animation: chipPop 400ms cubic-bezier(.34,1.56,.64,1); }
+
+/* Demo03：进度环 100% 粒子迸发 */
+@keyframes ringBurst {
+  from { transform: translate(0, 0) scale(1); opacity: 1; }
+  to { transform: var(--burst-t) scale(.6); opacity: 0; }
+}
+.ring-burst-p {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ringBurst 750ms cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+/* Demo05：列表 stagger 入场（调用方 inline animation-delay = i×30ms，仅首屏 ≤10 项） */
+@keyframes staggerIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.stagger-item { animation: staggerIn .32s ease both; }
+
+/* Demo08：深海光斑极慢漂移（仅 transform） */
+@keyframes driftA { to { transform: translate(-36px, 22px) scale(1.12); } }
+@keyframes driftB { to { transform: translate(30px, -18px) scale(1.08); } }
+.drift-a { animation: driftA 20s ease-in-out infinite alternate; }
+.drift-b { animation: driftB 26s ease-in-out infinite alternate; }
+
+/* Demo10：闪卡真 3D 翻转 */
+.flip-outer { perspective: 1200px; }
+.flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .45s cubic-bezier(.4,1.4,.4,1);
+}
+.flip-inner.flipped { transform: rotateY(180deg); }
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back { transform: rotateY(180deg); }
+
+/* Demo11：中文衬线大标题呼吸（inline 自带 lineHeight 的标题不受影响） */
+.theme-light h1, .theme-light h2 {
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* Demo04：数字滚动配套（等宽数字不抖动） */
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* 收尾：键盘焦点环（全局） */
+:focus-visible {
+  outline: 2px solid var(--teal-ink);
+  outline-offset: 2px;
+}
+
+/* 收尾：小按钮 44px 热区（SoundBtn 等包一层） */
+.hit-44 {
+  position: relative;
+}
+.hit-44::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ===== 界面优化2·组件接入（globals.additions.css）===== */
+/* ============================================================================
+   组件接入补丁 · 追加到 app/globals.css 末尾
+   ----------------------------------------------------------------------------
+   · 沿用既有 §Bn 分段命名（B3 SpotlightCard / B7 ShinyText 已在库中）
+   · 颜色一律走 CSS 变量；结构 / 动画在此，主题色由 TSX 内联 style 按 dark 切换
+   · 每段都给 prefers-reduced-motion 兜底
+   ============================================================================ */
+
+/* ── §B7b Button「shimmer」变体（扫光主 CTA）─────────────────────────────── */
+.lx-btn--shimmer {
+  position: relative; overflow: hidden;
+  background: var(--teal-ink); color: #fff; border: none;
+  box-shadow: 0 12px 26px -14px rgba(14, 140, 122, 0.8);
+}
+.lx-btn--shimmer::after {
+  content: ''; position: absolute; top: 0; left: -60%; width: 48%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: skewX(-18deg); animation: btnSweep 2.8s ease-in-out infinite; pointer-events: none;
+}
+@keyframes btnSweep { 0% { left: -60%; } 55%, 100% { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { .lx-btn--shimmer::after { display: none; } }
+
+/* ── §B8 CommandPalette（⌘K）──────────────────────────────────────────────── */
+@keyframes cmdkFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cmdkPop  { from { opacity: 0; transform: translateY(-10px) scale(.99); } to { opacity: 1; transform: none; } }
+.cmdk-backdrop { animation: cmdkFade .16s ease; }
+.cmdk-panel    { animation: cmdkPop .2s cubic-bezier(.2,.8,.2,1); }
+.cmdk-list::-webkit-scrollbar { width: 8px; }
+.cmdk-list::-webkit-scrollbar-thumb { background: var(--teal-deep); border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { .cmdk-backdrop, .cmdk-panel { animation: none; } }
+
+/* ── §B9 BorderBeam（流光描边 · 克制使用：战绩 / 里程碑卡）─────────────────── */
+@property --beam-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.border-beam { position: relative; }
+.border-beam::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: var(--beam-w, 1.6px);
+  background: conic-gradient(from var(--beam-angle, 0deg), transparent 0deg,
+    var(--beam-c, var(--teal-ink)) 42deg, var(--beam-c2, var(--gold-ink)) 72deg, transparent 116deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: beamSpin var(--beam-speed, 4s) linear infinite; pointer-events: none;
+}
+@keyframes beamSpin { to { --beam-angle: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .border-beam::before { animation: none; opacity: .45; } }
+
+/* ── §B10 RingProgress（环形进度）────────────────────────────────────────── */
+.ring-fg { transition: stroke-dashoffset .7s cubic-bezier(.4,0,.2,1), stroke .3s; }
+@media (prefers-reduced-motion: reduce) { .ring-fg { transition: none; } }
+
+/* ── §B11 Marquee（词汇跑马灯）───────────────────────────────────────────── */
+.marquee { overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; width: max-content; gap: 12px; animation: marqueeMarch var(--mq-speed, 18s) linear infinite; }
+.marquee-track.is-reverse { animation-direction: reverse; }
+.marquee:hover .marquee-track.is-pausable { animation-play-state: paused; }
+@keyframes marqueeMarch { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* ── §B12 AnimatedBeam（节点连线 · 词根→派生词 / LexiGraph）───────────────── */
+.abeam-flow { stroke-dasharray: 6 10; animation: abeamDash 1s linear infinite; }
+@keyframes abeamDash { to { stroke-dashoffset: -32; } }
+@media (prefers-reduced-motion: reduce) { .abeam-flow { animation: none; stroke-dasharray: none; } }
+
+/* ── §B13 AIPromptInput（领航员输入条 · 米白）────────────────────────────── */
+@property --aip-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.aip-pill { position: relative; }
+.aip-pill::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.6px;
+  background: conic-gradient(from var(--aip-angle, 0deg), transparent, var(--teal-ink), transparent 50%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: aipRot 3.6s linear infinite; pointer-events: none; opacity: .6;
+}
+.aip-pill:focus-within::before { opacity: 1; }
+@keyframes aipRot { to { --aip-angle: 360deg; } }
+.aip-typing i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-muted); animation: aipEq .9s ease-in-out infinite; }
+.aip-typing i:nth-child(2) { animation-delay: .15s; }
+.aip-typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes aipEq { 0%, 100% { opacity: .3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) { .aip-pill::before, .aip-typing i { animation: none; } }

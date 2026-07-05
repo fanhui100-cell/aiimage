@@ -1,0 +1,69 @@
+{
+  "audit": "word-universe-qb-to-gen",
+  "date": "2026-07-01",
+  "writesToDatabase": false,
+  "scope": "word-universe def_to_word / synonym_choice / confusable_choice；只读审计，未下线 qb、未 promote、未改状态、未调 DeepSeek",
+  "keyFinding": "active word-universe 零 qb 依赖：171 active 全部 gen:/original_authored/claude；qb 600 条全部仍在 draft（0 active）。'qb→gen 替换' 的前提（active 有 qb）不成立。",
+  "A_activeSourceDistribution": {
+    "active_wu_total": 171,
+    "byType_gen": { "def_to_word": 57, "synonym_choice": 57, "confusable_choice": 57 },
+    "qb_active": 0,
+    "migrated_v1_active": 0,
+    "other_active": 0,
+    "provenanceTripleCheck": "171 全部 legacy_id gen: + qa_flags.provider=claude-authored + source=original_authored + authored=claude（三标识一致，识别可靠）",
+    "gen_active_letters": { "a": 21, "b": 20, "c": 7, "d": 7, "e": 6, "f": 5, "g": 3, "h": 4, "i": 4, "j": 2, "k": 19, "l": 4, "m": 3, "n": 3, "o": 3, "p": 7, "q": 5, "r": 6, "s": 6, "t": 6, "u": 5, "v": 5, "w": 6, "x": 3, "y": 6, "z": 5 },
+    "gen_active_exam_level": "全部 toefl / level 6"
+  },
+  "qb_draft": {
+    "total": 600,
+    "byType": { "def_to_word": 200, "synonym_choice": 200, "confusable_choice": 200 },
+    "status": "全部 draft（0 active）",
+    "letters": { "a": 491, "b": 109, "c_to_z": 0 },
+    "exam_spread": ["zhongkao", "gaokao", "cet4", "cet6", "kaoyan", "toefl", "sat"],
+    "answer_position": {
+      "def_to_word": "A46/B52/C44/D58 (max 29%)",
+      "synonym_choice": "A56/B45/C50/D49 (max 28%)",
+      "confusable_choice": "A54/B51/C49/D46 (max 27%)"
+    },
+    "structure_health": "三型各 200：answer 命中 100%、choices 恰 4 无重复 100%（结构健康）"
+  },
+  "B_qbQualitySample": {
+    "verdict": "结构健康但内容质量明显低于 gen：送分干扰、生僻词、个别错题",
+    "issues": [
+      { "type": "送分干扰(词性混乱/生僻无关)", "examples": ["def accept: 干扰 pain/let/prefer(词性乱)", "def accomplishment: 干扰 daguerreotype(生僻无关)", "def acoustic: 干扰 eukaryotic", "def accession: 干扰 apostasy/pediatrics(完全无关)"] },
+      { "type": "生僻目标词/同义词", "examples": ["synonym acquit→assoil(古语)", "synonym acidify→acetify", "synonym actuate→trip", "synonym adequacy→adequateness"] },
+      { "type": "错误同义(错题)", "examples": ["synonym activate→aerate：activate 激活 ≠ aerate 充气"] },
+      { "type": "过简送分", "examples": ["confusable are (zhongkao)"] }
+    ],
+    "note": "样本为分层抽样(def/syn/confusable 各 7，跨 exam)；a/b 必含。qb 均为 a/b 字母。"
+  },
+  "C_qbVsGen": {
+    "answer_position": "两者均均衡(qb DeepSeek 随机放位 max~29%；gen 经 rebalance 达 5/5/5/5 或合并<40%)",
+    "content_quality": "gen 明显优：干扰同词性/语义邻域、无送分、无生僻错题、释义/同义/易混经人工自审；qb 有送分/生僻/错题",
+    "coverage": "gen: a–z 全字母但仅 toefl/level6；qb: 仅 a/b 字母但跨 7 exam(zhongkao–sat)",
+    "gen_covers_qb": "gen 已覆盖 toefl 的 a/b(41 active)并扩展至 c–z；但 qb 的非-toefl exam(zhongkao/gaokao/cet4/cet6/kaoyan/sat) a/b 无 gen 对应"
+  },
+  "D_strategy": {
+    "option1_conservative": "active 继续只用 gen(现状)，qb 永久留 draft 不上线；未来扩字母/题量仍生成 gen。",
+    "option2_smallBatchReplace": "不适用：active 无 qb 可下线，'替换' 前提不成立。",
+    "option3_fullMigration": "长期弃用 qb(不 promote)，用 gen 逐步覆盖各 exam；需先为非-toefl exam 生成 gen 题池。qb 600 draft 最终清理(独立决策)。",
+    "recommended": "option1(保守) + option3 精神(长期弃用 qb)",
+    "rationale": [
+      "active 已零 qb，无 '替换' 需要(前提不成立)。",
+      "qb 内容质量不达标(送分/生僻/错题 activate→aerate)，不应 promote 到 active。",
+      "gen 已是 active 唯一来源且质量高、答案位置均衡。",
+      "未来若要非-toefl exam 的 word-universe active，应生成对应 exam 的 gen，不用 qb。",
+      "qb 600 draft 可保留作素材参考或最终清理；本阶段不动。"
+    ]
+  },
+  "E_replacementCandidates": "不出下线/上线清单——无 qb active 可下线，小批替换不适用。若后续要扩非-toefl exam active，属新一轮 gen 生成任务(非替换)。",
+  "F_guardScriptSuggestions": [
+    "audit-active-source-distribution.ts：断言 active word-universe 中 qb/migrated=0(防未来误 promote qb 到 active)。",
+    "promote 词汇题时用 --words --stage=wu-*(gen stage)天然只解析 gen；可再在 promote 脚本加 '来源须 gen:' 硬校验作纵深防御。",
+    "现有 audit-answer-position.ts 已覆盖答案位置守卫，无需新增。"
+  ],
+  "commands": {
+    "note": "只读回归；exit code 见 md 报告 §10（预期全 0）"
+  },
+  "declarations": "未下线 qb、未 promote、未改题库状态、未调用 DeepSeek。"
+}

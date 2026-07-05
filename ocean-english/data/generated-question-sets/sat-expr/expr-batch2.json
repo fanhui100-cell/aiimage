@@ -1,0 +1,103 @@
+{
+  "template": "sat-expression-of-ideas",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Expression of Ideas items, batch 2. 100% original, not copied from College Board. DeepSeek not used.",
+  "sets": [
+    {
+      "passage": "Electric cars produce no exhaust at all as they drive down the road. ______, the electricity that powers them may still come from plants that burn coal, so their true emissions depend heavily on the local power grid.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["However", "Therefore", "For example", "Similarly"],
+      "answer": "However",
+      "domain": "Expression of Ideas",
+      "explain_zh": "行驶无尾气，但电力可能源自燃煤，为转折/限定，用 However。其余表因果、举例或并列。"
+    },
+    {
+      "passage": "The very first attempt to reach the summit ended in failure when a sudden storm forced the exhausted team back down. ______, the climbers returned the following spring, far better prepared, and reached the top on their second try.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Nevertheless", "Therefore", "For example", "Meanwhile"],
+      "answer": "Nevertheless",
+      "domain": "Expression of Ideas",
+      "explain_zh": "尽管首次失败，仍卷土重来成功，为让步转折，用 Nevertheless。其余不合逻辑。"
+    },
+    {
+      "passage": "The museum was determined to attract a younger crowd of visitors. ______, it launched a series of evening concerts, hands-on interactive displays, and a popular run of late-night film screenings.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["To this end", "However", "In contrast", "Nevertheless"],
+      "answer": "To this end",
+      "domain": "Expression of Ideas",
+      "explain_zh": "先有目的（吸引年轻人）后述手段（办活动），为目的-手段关系，用 To this end。其余表转折。"
+    },
+    {
+      "passage": "Many people still assume that a goldfish has a memory lasting only a few seconds. ______, careful experiments have shown that goldfish can remember tasks, signals, and routes for months at a time.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["In fact", "Therefore", "Likewise", "As a result"],
+      "answer": "In fact",
+      "domain": "Expression of Ideas",
+      "explain_zh": "纠正普遍误解（假设 vs 实验结果），用 In fact。其余表因果或并列。"
+    },
+    {
+      "passage": "The recipe looks intimidating at first, with its long list of unfamiliar spices and unusual steps. ______, each individual step is quite simple, and the whole dish can be on the table in under half an hour.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["In reality", "Consequently", "For instance", "Furthermore"],
+      "answer": "In reality",
+      "domain": "Expression of Ideas",
+      "explain_zh": "看似复杂、实则简单，为纠正性对比，用 In reality。其余表因果、举例或递进。"
+    },
+    {
+      "passage": "Wind power now supplies a steadily growing share of the country's electricity each year. ______, solar farms are expanding rapidly across the same sunny regions, adding still more clean power to the national grid.",
+      "prompt": "Which choice completes the text with the most logical transition?",
+      "options": ["Likewise", "However", "Nevertheless", "In contrast"],
+      "answer": "Likewise",
+      "domain": "Expression of Ideas",
+      "explain_zh": "风电增长，太阳能同样扩张，为并列添加，用 Likewise。其余表转折。"
+    },
+    {
+      "passage": "A student studying octopuses took the following notes:\n- An octopus can change the color and texture of its skin in less than a second.\n- It uses this ability both to hide from predators and to communicate.\n- Special cells in its skin contain tiny sacs of pigment that expand or shrink.",
+      "prompt": "The student wants to explain how an octopus changes its appearance. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["An octopus changes its appearance using special skin cells whose tiny sacs of pigment expand or shrink.", "An octopus can change its color and texture in less than a single second.", "An octopus uses its quick color changes both to hide and to communicate.", "The octopus is a remarkably clever and adaptable ocean animal."],
+      "answer": "An octopus changes its appearance using special skin cells whose tiny sacs of pigment expand or shrink.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释如何改变外观，A 给出机制（色素囊伸缩）。B 讲速度，C 讲用途，D 无关。"
+    },
+    {
+      "passage": "A student researching a town library took the following notes:\n- The old library held only about 4,000 books and was rarely visited.\n- After it was rebuilt with study spaces and free internet, weekly visits tripled.\n- It now also hosts classes, hobby clubs, and community meetings.",
+      "prompt": "The student wants to emphasize how the library's role has expanded beyond simply lending books. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Beyond lending books, the rebuilt library now hosts classes, hobby clubs, and community meetings.", "The old library held only about 4,000 books and was rarely visited at all.", "After the rebuilding, the library's weekly visits roughly tripled.", "The town's small library has been part of the community for years."],
+      "answer": "Beyond lending books, the rebuilt library now hosts classes, hobby clubs, and community meetings.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调超出借书的角色扩展，A 列出课程/俱乐部/会议。B 是旧况，C 讲访问量，D 泛述。"
+    },
+    {
+      "passage": "A student studying maple syrup took the following notes:\n- It takes about 40 liters of maple sap to make just 1 liter of finished syrup.\n- The watery sap must be boiled for hours to drive off most of its water.\n- A single maple tree yields only a small amount of sap each spring.",
+      "prompt": "The student wants to emphasize how much effort is required to produce maple syrup. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Making just one liter of syrup takes about forty liters of sap, boiled for hours to drive off the water.", "Maple syrup is made from the watery sap of maple trees.", "A single maple tree yields only a little sap each spring.", "The sap must be boiled before it can become syrup."],
+      "answer": "Making just one liter of syrup takes about forty liters of sap, boiled for hours to drive off the water.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调耗费之大，A 兼顾 40:1 的比例与长时间熬煮。B 泛述，C、D 只一面。"
+    },
+    {
+      "passage": "A student researching a self-taught artist took the following notes:\n- She painted almost nothing during the first forty years of her life.\n- She began painting only after an illness left her unable to keep farming.\n- Within a single decade her work hung in major museums.",
+      "prompt": "The student wants to emphasize how late and unexpected the artist's success was. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["After barely painting for the first forty years of her life, she saw her work reach major museums within a decade.", "She had spent the first forty years of her life without painting much at all.", "An illness once left the artist no longer able to continue farming.", "The artist eventually became fairly well known for her paintings."],
+      "answer": "After barely painting for the first forty years of her life, she saw her work reach major museums within a decade.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是强调起步之晚与成功之意外，A 兼顾四十年未画与十年进大馆。B、C 只一面，D 泛述。"
+    },
+    {
+      "passage": "A student studying glaciers took the following notes:\n- Glaciers store roughly three-quarters of the world's fresh water.\n- Many are now melting faster than fresh snow can replenish them.\n- Towns downstream depend on their meltwater for drinking and farming.",
+      "prompt": "The student wants to explain why the shrinking of glaciers is a serious concern for some communities. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["Because downstream towns rely on glacial meltwater for drinking and farming, shrinking glaciers threaten their water supply.", "Glaciers hold roughly three-quarters of all the fresh water on Earth.", "Many glaciers are now melting faster than snow can replace them.", "Glaciers are vast, slow-moving masses of packed ice and snow."],
+      "answer": "Because downstream towns rely on glacial meltwater for drinking and farming, shrinking glaciers threaten their water supply.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是解释为何对社区严重，A 点出下游依赖融水、缩减即威胁供水。B 泛述，C 是现象，D 无关。"
+    },
+    {
+      "passage": "A student researching sleep took the following notes:\n- During deep sleep, the brain replays and strengthens the day's memories.\n- People deprived of sleep struggle to recall what they have just learned.\n- Even a short afternoon nap can improve performance on memory tasks.",
+      "prompt": "The student wants to support the claim that sleep plays an important role in memory. Which choice most effectively uses relevant information from the notes to accomplish this goal?",
+      "options": ["People deprived of sleep struggle to recall what they learned, while even a short nap can improve memory.", "During deep sleep, the brain quietly replays the events of the day.", "A short afternoon nap can leave a tired person feeling refreshed.", "Sleep is something that every human being needs every single night."],
+      "answer": "People deprived of sleep struggle to recall what they learned, while even a short nap can improve memory.",
+      "domain": "Expression of Ideas",
+      "explain_zh": "目标是支持睡眠对记忆重要，A 用剥夺睡眠记忆变差、小睡改善记忆这两个直接证据。B 是机制陈述，C 不涉记忆，D 泛述。"
+    }
+  ]
+}

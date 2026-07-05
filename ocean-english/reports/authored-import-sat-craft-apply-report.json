@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-21T17:45:34.539Z",
+  "apply": true,
+  "stage": "sat-craft",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\sat-craft\\craft-batch1.json",
+      "template": "sat-craft-and-structure",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-craft\\craft-batch2.json",
+      "template": "sat-craft-and-structure",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-craft\\craft-batch3.json",
+      "template": "sat-craft-and-structure",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\sat-craft\\craft-batch4.json",
+      "template": "sat-craft-and-structure",
+      "level": 7,
+      "parsedOk": 12,
+      "reject": 0,
+      "wrote": 12,
+      "dupSkip": 0
+    }
+  ]
+}

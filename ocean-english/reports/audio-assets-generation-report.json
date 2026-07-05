@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-03T17:41:34.630Z",
+  "schema": "applied",
+  "apply": true,
+  "provider": "azure",
+  "task": "listening_comprehension",
+  "exam": "toefl",
+  "counts": {
+    "plannedSynthesizable": 90,
+    "synthesized": 90,
+    "skippedExisting": 0,
+    "uploaded": 90,
+    "inserted": 90,
+    "failed": 0
+  },
+  "totalChars": 92802,
+  "qaStatus": "machine_checked",
+  "neverActive": true,
+  "failures": [],
+  "note": "apply：所有新行 machine_checked，绝不 active；幂等按 checksum 跳过；失败补偿删除。"
+}

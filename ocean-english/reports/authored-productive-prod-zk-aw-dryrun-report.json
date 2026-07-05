@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-21T18:58:39.656Z",
+  "apply": false,
+  "stage": "prod-zk-aw",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 5,
+    "wrote": 0,
+    "dup": 0,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-zk-aw\\zhongkao-applied-writing.productive.json",
+      "examId": "zhongkao",
+      "taskType": "applied_writing",
+      "level": 1,
+      "skill": "writing",
+      "tasks": 5,
+      "wrote": 5,
+      "dup": 0
+    }
+  ]
+}

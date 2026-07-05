@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-06-20T20:03:00.237Z",
+  "schema": "applied",
+  "apply": true,
+  "requestedStatus": "draft",
+  "v1Rows": 200,
+  "setsPlanned": 0,
+  "itemsPlanned": 0,
+  "countsByOldType": {
+    "grammar_fill": 200
+  },
+  "countsByNewTaskType": {},
+  "statusCounts": {},
+  "rejectionReasons": {},
+  "downgradeReasons": {},
+  "deprecated": {},
+  "samples": [],
+  "note": "已写入 v2（跳过 200 个已迁移 set）。"
+}

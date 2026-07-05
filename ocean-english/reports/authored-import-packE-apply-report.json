@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-06-21T12:49:00.842Z",
+  "apply": true,
+  "stage": "packE",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 48,
+    "reject": 0,
+    "wrote": 48,
+    "dupSkip": 0
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\packE\\reading-cet6-lv4-e1.json",
+      "template": "cet6-reading-mcq",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packE\\reading-cet6-lv4-e2.json",
+      "template": "cet6-reading-mcq",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packE\\reading-cet6-lv4-e3.json",
+      "template": "cet6-reading-mcq",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packE\\reading-cet6-lv4-e4.json",
+      "template": "cet6-reading-mcq",
+      "level": 4,
+      "parsedOk": 10,
+      "reject": 0,
+      "wrote": 10,
+      "dupSkip": 0
+    },
+    {
+      "file": "data\\generated-question-sets\\packE\\reading-cet6-lv4-e5.json",
+      "template": "cet6-reading-mcq",
+      "level": 4,
+      "parsedOk": 8,
+      "reject": 0,
+      "wrote": 8,
+      "dupSkip": 0
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+'use client'
+// HomeHero — 首页 hero 装配层（fix1）
+// 3D 粒子大树（LuminousBanyan，最新调参版）+ BanyanHero 抽出的 HeroOverlay 覆盖层；
+// 不支持 WebGL 或 prefers-reduced-motion 时回退 2D Canvas 版 BanyanHero。
+//
+// 偏离说明：HomeHeroVisual 切换器包的是「自带覆盖层 + 调参面板」的整段组件，
+// 直接叠 HeroOverlay 会出现双标题；故按 HOME_HERO_VISUAL 配置直接挂对应
+// 画布（luminous-banyan → LuminousBanyanCanvas，参数取 LuminousBanyanHero
+// 定稿默认值），legacy-banyan 则整段渲染旧组件。
+
+import { useEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
+import { HOME_HERO_VISUAL } from '@/config/home-hero-visual'
+import { BanyanHero } from './BanyanHero'
+import { HeroOverlay } from './HeroOverlay'
+
+const LuminousBanyanCanvas = dynamic(
+  () => import('@/components/visual/LuminousBanyanHero/LuminousBanyanCanvas').then(m => ({ default: m.LuminousBanyanCanvas })),
+  { ssr: false },
+)
+const LegacyBanyanParticleHero = dynamic(
+  () => import('@/components/visual/BanyanParticleHero/BanyanParticleHero').then(m => ({ default: m.BanyanParticleHero })),
+  { ssr: false },
+)
+
+function detectWebGL(): boolean {
+  try {
+    const c = document.createElement('canvas')
+    return !!(c.getContext('webgl2') || c.getContext('webgl'))
+  } catch {
+    return false
+  }
+}
+
+export function HomeHero({ navigate }: { navigate: (go: string) => void }) {
+  // null = 未检测（SSR/首帧只渲染深色底，避免闪烁）
+  const [mode, setMode] = useState<'3d' | '2d' | null>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  // fix2-D：滚出视口 / 后台标签 → 停 3D 渲染循环
+  const [inView, setInView] = useState(true)
+  const [pageVisible, setPageVisible] = useState(true)
+
+  useEffect(() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    setMode(!reduce && detectWebGL() ? '3d' : '2d')
+  }, [])
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0 })
+    io.observe(el)
+    const onVis = () => setPageVisible(document.visibilityState === 'visible')
+    document.addEventListener('visibilitychange', onVis)
+    return () => { io.disconnect(); document.removeEventListener('visibilitychange', onVis) }
+  }, [mode])
+
+  // F1：深色画框卡 — 3D/2D 统一嵌进固定尺寸卡（420/340px，无缩放交互）
+  const reduce = typeof window !== 'undefined'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  return (
+    <section ref={sectionRef} id="home-hero" className="home-hero-frame">
+      {mode === '3d' && HOME_HERO_VISUAL === 'legacy-banyan' ? (
+        <div style={{ position: 'absolute', inset: 0 }}><LegacyBanyanParticleHero /></div>
+      ) : mode === '3d' ? (
+        <div style={{ position: 'absolute', inset: 0 }}>
+          {/* 参数 = LuminousBanyanHero 定稿默认值（13ce2aa 深海辉光调参版） */}
+          <LuminousBanyanCanvas
+            pointSize={3.0} tailAlpha={0.25} tint="#ffffff" animationKey={0}
+            paused={!inView || !pageVisible}
+          />
+        </div>
+      ) : mode === '2d' ? (
+        <BanyanHero animate={!reduce} fill />
+      ) : null}
+      <HeroOverlay navigate={navigate} />
+    </section>
+  )
+}

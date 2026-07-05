@@ -1,0 +1,27 @@
+{
+  "template": "reading-comprehension-mcq",
+  "level": 1,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Zhongkao-level reading, 4 MCQs each (detail/inference/vocab/main idea).",
+  "sets": [
+    {
+      "passage": "Last month, our city library got a new helper — a small white robot called Bo. Bo cannot read stories, but it can do many useful things. If you tell Bo the name of a book, it will lead you to the right shelf. It moves slowly so that children and older people can follow it easily. Bo also reminds people to be quiet. When it hears too much noise, its eyes turn from blue to red, and it says softly, 'Please keep your voice down.' Most children think this is fun, and they try hard to stay quiet just to keep Bo's eyes blue. The library says Bo has made more young people want to visit. Since Bo arrived, the number of children borrowing books has grown by almost a third. 'Books are still the stars here,' the head librarian said, 'but Bo helps the stars shine.'",
+      "questions": [
+        { "prompt": "What will Bo do if you tell it the name of a book?", "options": ["Read the whole story aloud to you.", "Lead you to the right shelf.", "Borrow the book for you.", "Buy a new copy of the book."], "answer": "B" },
+        { "prompt": "What happens when Bo hears too much noise?", "options": ["Its eyes turn from blue to red.", "It stops moving at once.", "It leaves the room quickly.", "It turns off its lights."], "answer": "A" },
+        { "prompt": "Why do many children try hard to stay quiet?", "options": ["They are afraid of the librarian.", "They want to keep Bo's eyes blue.", "They cannot find their books.", "They want to take Bo home."], "answer": "B" },
+        { "prompt": "What is the passage mainly about?", "options": ["How to borrow books from a library.", "A helpful new robot in a library.", "Why children make noise in libraries.", "The long history of the city library."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B：领到正确书架)、细节(A：眼睛蓝变红)、推断(B：想让 Bo 眼睛保持蓝色)、主旨(B：图书馆里的有用机器人)。"
+    },
+    {
+      "passage": "At Greenhill School, students have started a club with a funny name: the Sock Exchange. The idea is simple. When students grow out of clothes that are still in good condition, they bring them to school, and other students who need them can take them home for free. Lily, a Grade 8 student, started the club after she saw her little brother's warm coat thrown away just because it had become a little small. 'So many good things are wasted,' she said. 'But one person's too-small coat is another person's perfect fit.' The club now meets every Friday afternoon. Teachers help wash and fold the clothes, and students design colourful boxes to keep them in. In only three months, more than 600 pieces of clothing have found new owners. Lily hopes other schools will start their own exchanges too.",
+      "questions": [
+        { "prompt": "What do students bring to the Sock Exchange?", "options": ["Money to buy new clothes.", "Clothes they have grown out of but are still good.", "Only old socks with holes.", "Books they no longer read."], "answer": "B" },
+        { "prompt": "Why did Lily start the club?", "options": ["She wanted to earn some money.", "Her teacher ordered her to.", "She saw a good coat wasted just because it was too small.", "She needed warmer clothes for herself."], "answer": "C" },
+        { "prompt": "What does Lily mean when she says one person's too-small coat is another person's perfect fit?", "options": ["Everyone should wear the same size.", "Clothes one person cannot use may fit someone else.", "Small clothes are always the best choice.", "People should always buy smaller clothes."], "answer": "B" },
+        { "prompt": "What does Lily hope will happen in the future?", "options": ["The club will close down soon.", "Other schools will start similar exchanges.", "Students will stop growing taller.", "Teachers will run the club by themselves."], "answer": "B" }
+      ],
+      "explain_zh": "细节(B：还能穿的旧衣)、细节(C：看到好外套因变小被丢)、词义/推断(B：对一个人小的衣服可能合另一个人)、推断(B：希望其他学校也办)。"
+    }
+  ]
+}

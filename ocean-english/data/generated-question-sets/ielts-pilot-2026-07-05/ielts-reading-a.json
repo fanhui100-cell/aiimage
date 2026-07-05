@@ -1,0 +1,204 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "For most of human history, the honeybee was a creature of the countryside, tended in orchards, on heathland and beside fields of flowering crops. The idea that a hive might thrive on the roof of an apartment block or in the corner of a city park would once have seemed absurd. Yet urban beekeeping has grown from a niche hobby into a widespread movement, and the reasons behind its rise reveal a great deal about both the biology of bees and the changing character of modern cities.\n\nThe practice is not entirely new. Records from the nineteenth century describe hives kept in the gardens of townhouses in London and Paris, often more for curiosity than for profit. What has changed is the scale and the motivation. In the past two decades, rooftops from New York to Tokyo have been colonised by amateur keepers, restaurants seeking a distinctive local honey, and companies eager to demonstrate their environmental credentials. City authorities that once discouraged the keeping of livestock have quietly amended their regulations, and beekeeping associations report waiting lists for their introductory courses.\n\nOne of the surprises of urban beekeeping is that bees often fare better in the city than in the surrounding farmland. This seems counter-intuitive, given the popular image of the countryside as a natural paradise. The explanation lies in the way modern agriculture has transformed rural landscapes. Large fields planted with a single crop may burst into bloom for a fortnight and then offer nothing for the rest of the season. Pesticides, applied to protect those crops, can weaken or kill foraging insects. Cities, by contrast, present a patchwork of gardens, parks, street trees and balcony planters, each flowering at a slightly different time. The result is a longer and more varied supply of nectar and pollen, and a reduced exposure to the chemicals that trouble their rural cousins.\n\nThe science of foraging helps to explain why this diversity matters. A honeybee colony functions as a single decision-making unit, dispatching scouts across a radius of several kilometres to locate food. When a scout discovers a promising patch of flowers, she returns to the hive and performs a movement known as the waggle dance, which communicates both the direction and the distance of the find. Through thousands of such exchanges, the colony continually redirects its workforce towards the richest available sources. In a monotonous agricultural landscape, that collective intelligence has little to work with; in a varied urban one, it can be exploited to the full.\n\nUrban honey itself has become a subject of fascination. Because city bees draw on such a wide range of plants, the flavour of their honey can shift from street to street and season to season, reflecting the lime trees, the ornamental cherries or the wild flowers that happen to dominate a particular neighbourhood. Chemists have even used the pollen trapped in honey to build a picture of the plant life within a hive's range, a technique that offers an unexpected snapshot of a city's hidden flora.\n\nEnthusiasm, however, has outpaced caution in some quarters. As hives multiply, a few researchers have begun to warn that the honeybee, a domesticated and heavily managed animal, may be competing with the many species of wild bee that share the same flowers. Wild bees, including the solitary and bumblebee species that are often more effective pollinators, cannot summon the numbers that a managed hive commands. If a city's floral resources are finite, adding ever more honeybee colonies could inadvertently crowd out the very insects that conservationists hope to protect. The lesson, these voices suggest, is that planting more flowers matters at least as much as keeping more bees.\n\nDespite such concerns, the broader value of urban beekeeping is hard to dispute. Few activities bring city dwellers into such direct contact with the rhythms of the natural world. A person who keeps a hive soon learns to read the weather, to notice which trees are in blossom and to understand the fragile dependence of food upon pollination. In this sense the movement is as much about education as about honey. Whether or not every rooftop should host a colony, the spread of the hive through the modern city has reminded a great many people that even the most built-up environment remains, in its quiet corners, surprisingly alive.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Urban beekeeping has become popular for several reasons, and its rise raises both benefits and questions worth weighing.",
+            "Honeybees produce better honey in cities than in the countryside because of pollution.",
+            "City authorities have been too slow to regulate the keeping of livestock in built-up areas.",
+            "The waggle dance is the most important discovery in the modern study of honeybees."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, why do bees often do better in cities than in nearby farmland?",
+          "options": [
+            "Cities are warmer, which allows colonies to remain active throughout the winter.",
+            "Cities offer a more varied and longer-lasting supply of flowers and less exposure to pesticides.",
+            "Urban keepers feed their colonies sugar syrup when natural nectar runs short.",
+            "Farmland contains too many competing wild bees for honeybees to thrive."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What does the passage say about the flavour of urban honey?",
+          "options": [
+            "It is generally milder than honey produced on farmland.",
+            "It remains constant because city bees prefer a single type of tree.",
+            "It can vary between neighbourhoods and seasons depending on nearby plants.",
+            "It is considered inferior by most professional chemists."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from the passage that adding more honeybee hives to a city may:",
+          "options": [
+            "guarantee an increase in the total amount of pollination carried out there.",
+            "be less helpful to overall insect diversity than increasing the number of flowering plants.",
+            "eliminate the need for city authorities to regulate beekeeping.",
+            "cause honeybees to abandon the waggle dance in favour of other signals."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'monotonous' in paragraph 4 is closest in meaning to:",
+          "options": [
+            "lacking in variety",
+            "extremely fertile",
+            "difficult to reach",
+            "carefully protected"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's attitude towards urban beekeeping in the final paragraph?",
+          "options": [
+            "Broadly positive, valuing its educational effect while stopping short of unconditional endorsement.",
+            "Strongly opposed, on the grounds that it harms wild bee populations.",
+            "Indifferent, treating it as a passing fashion of little consequence.",
+            "Uncertain, arguing that no firm conclusion about its value is yet possible."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为城市养蜂的历史与科学，涉及其兴起原因、蜜蜂觅食机制及对野生蜂的潜在影响。题型覆盖主旨、细节两题、推断、词汇（monotonous）与作者态度各一。"
+    },
+    {
+      "passage": "Every year, a tree that grows in a temperate climate lays down a fresh layer of wood beneath its bark. In spring, when growth is rapid, the new cells are large and pale; as the season slows towards autumn, they become smaller and darker. Together these two bands form a single annual ring. Counting the rings of a felled trunk to estimate a tree's age is an old and familiar trick. Far less obvious is that those same rings preserve a detailed record of the conditions under which the tree grew, and that this record can be read to reconstruct the climate of centuries long past. The science devoted to this reading is called dendrochronology.\n\nThe central insight is simple. In a good year, with ample rainfall and mild temperatures, a tree adds a broad ring; in a year of drought or bitter cold, the ring is narrow. Because trees of the same species in the same region respond to the same weather, their rings tend to vary in step, producing a shared pattern of wide and narrow bands. This shared pattern is the key that unlocks the method. A researcher can match the outer rings of a very old living tree with the outer rings of timber cut from a beam in an ancient building, then match that timber with wood from a still older structure, and so on, extending an unbroken sequence backwards through time. Where sequences overlap, they can be joined, and in some regions such chains now stretch back more than ten thousand years.\n\nOnce a sequence has been anchored to the calendar, each ring can be assigned to a precise year, and this is where the discipline becomes genuinely powerful. Unlike many methods of dating the past, which yield only an approximate range, a well-constructed ring sequence can pin an event to a single growing season. When a distant volcano erupts and throws a veil of dust into the atmosphere, temperatures may fall across a whole hemisphere, and trees thousands of kilometres from the eruption may record the chill as a run of unusually narrow rings. By locating that signature in dated timber, scientists can establish the year of an eruption whose ash left no written trace.\n\nThe method has its limits, and honest practitioners are quick to acknowledge them. A tree responds to whatever most constrains its growth, and this varies with place. In a cold northern forest, ring width chiefly reflects summer temperature; in a dry region, it reflects rainfall. A ring, in other words, is a record of the single factor in shortest supply, not of the weather in general. Local disturbances complicate matters further: a fallen neighbour that suddenly lets in light, an insect infestation, or damage from fire can all distort the pattern in one tree without saying anything about the wider climate. For this reason researchers never rely on a single specimen. They sample many trees, average their measurements, and treat only the shared signal as trustworthy.\n\nModern laboratories have added further layers of information to the simple width of a ring. The density of the wood, measured with fine instruments, often tracks temperature more faithfully than width alone. The chemistry of the wood is more revealing still. The relative proportions of certain forms of oxygen and carbon locked into each ring shift with humidity and with the source of the water the tree took up, allowing specialists to estimate past rainfall and even to trace the movement of weather systems.\n\nThe results of all this patient work reach well beyond the study of trees. Long ring records provide a yardstick against which other dating techniques can be calibrated and corrected, sharpening the entire chronology of the ancient world. They supply archaeologists with firm dates for the construction of buildings and ships. Above all, by revealing how often severe droughts and cold spells struck in the past, and how landscapes and societies responded, they lend a valuable long-term perspective to present debates about a changing climate. In the quiet accumulation of a tree's yearly rings, then, lies an archive of remarkable reach, written not in words but in wood, and waiting only to be deciphered.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the passage?",
+          "options": [
+            "To argue that dendrochronology is more reliable than every other method of studying the past.",
+            "To explain how tree rings are formed and how scientists use them to date and reconstruct past climate.",
+            "To describe the life cycle of trees growing in temperate climates.",
+            "To warn that damage to individual trees makes climate reconstruction impossible."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "How are ring sequences extended far back beyond the age of any living tree?",
+          "options": [
+            "By chemically ageing the wood of a single very old specimen.",
+            "By estimating how many rings would have formed before the tree began to grow.",
+            "By matching overlapping ring patterns in progressively older pieces of timber and joining them.",
+            "By comparing living trees from many different regions and continents."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, how can a volcanic eruption be dated using tree rings?",
+          "options": [
+            "The eruption leaves ash inside the rings of nearby trees.",
+            "Cooler temperatures after the eruption produce a run of narrow rings that can be found in dated timber.",
+            "Trees near the volcano stop forming rings for several years.",
+            "The chemistry of the wood changes colour permanently after the eruption."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "It can be inferred that a single tree ring on its own is an unreliable guide to past weather because:",
+          "options": [
+            "trees in temperate climates do not always form a ring every year.",
+            "it may reflect a local disturbance or only one limiting factor rather than the broader climate.",
+            "the density of wood cannot be measured accurately in a single specimen.",
+            "living trees respond differently from timber taken from old buildings."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'constrains' in paragraph 4 is closest in meaning to:",
+          "options": [
+            "limits",
+            "encourages",
+            "records",
+            "replaces"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the writer describe the practitioners of the method as 'honest'?",
+          "options": [
+            "To suggest that scientists in other fields frequently exaggerate their findings.",
+            "To emphasise that the method produces results too vague to be useful.",
+            "To show that its careful users openly acknowledge the method's limitations.",
+            "To imply that the technique is more trustworthy than written historical records."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇讲述树木年轮定年法（dendrochronology）的原理、交叉定年、火山事件定年、方法局限与现代化学手段。题型含主旨、细节两题、推断、词汇（constrains）与作者用词意图各一。"
+    },
+    {
+      "passage": "Why do some people become genuinely accomplished at a difficult skill, whether playing the violin, solving chess problems or performing surgery, while others, having practised for years, seem to reach a plateau and stay there? The comfortable answer is that the accomplished were simply born with a gift. Over the past few decades, however, psychologists who study expert performance have offered a more demanding and, in some ways, more encouraging account. The quality of practice, they argue, matters at least as much as its quantity, and the kind of practice that produces real improvement is neither easy nor especially enjoyable.\n\nMuch of the research in this area centres on the concept of deliberate practice. Ordinary practice, of the sort most learners engage in, involves repeating what one can already do more or less comfortably. A pianist runs through familiar pieces; an amateur golfer hits balls at the driving range in much the same way each time. Such repetition may feel productive, but studies suggest it does little to raise performance once a basic competence has been reached. Deliberate practice is different in character. It is highly focused, aimed at specific weaknesses rather than at the activity as a whole, and it deliberately pushes the learner just beyond the edge of current ability, into the region where mistakes are frequent and effort is uncomfortable.\n\nCentral to this process is feedback. To improve, a learner must know, quickly and accurately, whether an attempt has succeeded or failed, and precisely how it fell short. In some fields such feedback is built into the task: a chess move leads to a stronger or weaker position, a note is in tune or it is not. In others it is far harder to obtain, which may partly explain why experience alone does not reliably breed expertise. A physician may treat patients for decades and yet, receiving little clear information about the long-term outcomes of many decisions, improve remarkably little after the early years. The mere accumulation of hours, in other words, is no guarantee of progress.\n\nThe role of a good teacher or coach becomes clearer in this light. Beyond conveying knowledge, the skilled instructor designs the very tasks that stretch a learner appropriately, identifies the flaws the learner cannot yet perceive, and supplies the sharp, timely feedback that unguided practice so often lacks. This is one reason why, in field after field, those who reach the highest levels have almost always trained under expert guidance rather than teaching themselves in isolation.\n\nNone of this implies that natural differences count for nothing. Height offers an obvious advantage in basketball, and some cognitive traits may make certain forms of learning easier. But researchers in this tradition are wary of the word talent, at least as it is popularly used. Too readily, they observe, a label of talent is applied after the fact, to explain a success that in truth grew out of thousands of hours of the right kind of work. The danger of the label is practical as well as intellectual. A young learner who is told that success depends chiefly on an inborn gift may conclude that struggle is a sign of its absence, and give up precisely when persistence would have paid off.\n\nThere are, admittedly, limits and complications that the more careful writers in the field are keen to stress. Not every domain has been studied equally, and the exact contribution of practice appears to vary from one activity to another; it explains a great deal in fields with clear rules and measurable outcomes, and rather less in messier, more creative pursuits. Motivation, too, remains something of a puzzle, for deliberate practice is demanding enough that sustaining it for years requires a drive whose own origins are not fully understood.\n\nEven so, the practical message that emerges is a hopeful one. It shifts attention away from fixed and largely unalterable endowments and towards the things a learner can actually influence: the design of practice, the pursuit of honest feedback, and the willingness to remain, day after day, in the uncomfortable territory just beyond one's present reach. Skill, on this view, is less a possession than a process, built deliberately and slowly, and available in principle to a far wider range of people than the language of natural gifts would suggest.",
+      "questions": [
+        {
+          "prompt": "Which statement best captures the central argument of the passage?",
+          "options": [
+            "Natural talent is the single most important factor in reaching a high level of skill.",
+            "The way people practise, and especially the quality of that practice, matters more than is commonly assumed.",
+            "Most people are incapable of becoming truly expert at a demanding skill.",
+            "Teachers and coaches are unnecessary once a learner has mastered the basics."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, how does deliberate practice differ from ordinary practice?",
+          "options": [
+            "It involves comfortably repeating tasks the learner has already mastered.",
+            "It focuses on specific weaknesses and pushes the learner just beyond current ability.",
+            "It requires far more hours than ordinary practice but is more enjoyable.",
+            "It can only be carried out in fields that have clear rules and scores."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Why, according to the passage, may a physician improve little after the early years of a career?",
+          "options": [
+            "Because medicine relies more on natural talent than other professions.",
+            "Because physicians rarely have time to engage in any practice at all.",
+            "Because they often receive little clear feedback on the long-term results of their decisions.",
+            "Because the tasks they face become easier and less demanding over time."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred that labelling a learner as lacking talent may be harmful because it could:",
+          "options": [
+            "encourage the learner to seek out a more demanding coach.",
+            "lead the learner to interpret difficulty as proof of an inborn deficiency and abandon the effort.",
+            "cause teachers to design tasks that are too easy for the learner.",
+            "make the learner practise for far more hours than is useful."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The word 'wary' in paragraph 5 is closest in meaning to:",
+          "options": [
+            "cautious about",
+            "fond of",
+            "confused by",
+            "dependent on"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What is the writer's purpose in the final paragraph?",
+          "options": [
+            "To warn readers that becoming skilled is ultimately beyond most people's control.",
+            "To conclude by stressing the encouraging, practical implications of the research.",
+            "To introduce a new objection that undermines the earlier argument.",
+            "To compare the study of skill with unrelated areas of psychology."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇探讨技能学习心理学与刻意练习（deliberate practice）：练习质量、反馈、教练作用与天赋标签的风险。题型含主旨、细节两题、推断、词汇（wary）与作者写作意图各一。"
+    }
+  ]
+}

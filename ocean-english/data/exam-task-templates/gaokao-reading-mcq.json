@@ -1,0 +1,30 @@
+{
+  "templateId": "gaokao-reading-mcq",
+  "examIds": ["gaokao"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "高考难度原创短文（200-280 词，记叙/说明/夹叙夹议）+ 4 道四选一理解题（细节/推断/主旨/态度/词义）。硬下限 200 词，建议 220-280。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 200,
+    "maxWords": 280,
+    "perStimulusItems": 4,
+    "topicDomains": ["人物", "科技", "环境", "社会", "文化", "教育", "成长", "健康"]
+  },
+  "itemCount": 4,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["detail", "inference", "main_idea", "attitude", "vocab_in_context", "purpose"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "篇幅 200-280 词（硬下限 200，建议 220-280），语言为高考难度（不要 CET/考研化）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "干扰项需合理、与文意相关但可排除",
+    "至少含 1 道推断或主旨题",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

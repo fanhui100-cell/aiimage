@@ -1,0 +1,1215 @@
+{
+  "generatedAt": "2026-07-03T16:52:40.320Z",
+  "phase": "F2-promote",
+  "total": 198,
+  "setIds": [
+    "4b15e795-be39-419e-8eba-556288b0dfe7",
+    "76498eb0-b785-493d-b814-d9c03469a127",
+    "08b5e73a-54e0-488b-830e-17fb709184a3",
+    "6fcd3302-c74b-4a05-99ee-cff70ccd106a",
+    "6ecdd8f6-1d9d-4916-9d5c-47393378d7dc",
+    "88a19660-88d6-4677-a3c2-4fef960fff05",
+    "e079c844-26b1-4729-9b5e-bfba3626c37a",
+    "69c2a828-006d-40b3-b4af-50f82861fbe1",
+    "f2868c22-a66e-4143-addc-5178cc6e707d",
+    "bb3bdcdf-ee80-40b1-a7f3-42b619c13422",
+    "574f88e8-9b8c-4c8c-bac7-7e9d140321a4",
+    "0ba77822-b3d1-470c-a6b2-ad619c0811ea",
+    "7ba7cd4f-de37-4811-98b8-f7ecb10f1e25",
+    "2dd1cda9-431e-4c36-b00c-1d71d06d7da9",
+    "2bb5de80-f075-4d5c-82c1-96468f7d6f2d",
+    "6769f4cf-4270-4890-9400-77734cf659c6",
+    "df63eaf0-f46b-4f31-bba9-3bd1f8c80ad2",
+    "4ad28650-2a5c-41be-925e-9fcde6feddbc",
+    "74952697-ed97-426b-894e-4942b62bd923",
+    "50f75ba5-b73d-44a5-a520-e409288021a9",
+    "4e70c017-bbec-4cf8-88c3-dd4d87129fef",
+    "bbada1ce-baac-4715-b9ea-bcda70703c57",
+    "1172e1a8-a694-41ba-a390-4c5980098c5b",
+    "d4901fd0-8fe6-4c11-958e-a57940bb31c1",
+    "007ac4e3-f442-4c4a-8dad-9714b5c0e33a",
+    "c702a70c-0e98-4d59-aed1-38539cff11f9",
+    "95d19034-bf96-4814-8921-8dd4bfdac3a6",
+    "f13a3e87-54f5-4547-a468-94ec6ba58ed5",
+    "2a16b875-d145-4c38-8112-1e854f2f442b",
+    "77e5d748-4762-4e2b-87d0-2eee8b98bed9",
+    "62dc5649-7d68-4071-8b96-fc77e14f98a2",
+    "27f3457a-2625-4b2c-984b-d36e1153ea78",
+    "e3eacd84-baad-43fb-9012-a5a58bb02d68",
+    "4aff2bcd-e40a-49ed-b81c-05894becf891",
+    "3df651fd-41f1-4bdb-9d1c-c173c38b2a78",
+    "cca07a0c-c005-4e7d-9283-b17a1c48d58b",
+    "3d29b14b-758b-4d5e-8b29-83338cc0c89e",
+    "7210f5a6-a9e9-4ae8-a8b6-7964256e5521",
+    "a53a48cf-b231-4a23-9bfc-8b7efa5acf53",
+    "f67fd2ec-c500-40da-8719-69621d82f557",
+    "05e8bbeb-3e11-4edb-8d32-e769204ecf14",
+    "5b5ce688-685f-4ace-8b6e-956519ddb5f5",
+    "493505c2-e97f-4810-b74e-6ae6dbc40f79",
+    "38aa1db7-d99a-4949-a58c-1cdfbfbed983",
+    "f7619177-cac1-4308-81fd-cbfb8b891856",
+    "739e986d-a7a9-4dc9-8db3-4a1b7fe62198",
+    "4ffb70ef-4e72-43f9-80a7-7a6d6039582a",
+    "ceac8036-e30a-421e-aa18-f61ef734b640",
+    "68faf96b-f4f6-4c2f-872c-c8278f9006e5",
+    "ff764bae-a508-4479-8acf-9dc101994c84",
+    "d4fd5ac8-8ca7-48a4-90f0-bea9288f111d",
+    "aa023bbf-19a4-4fe8-ba57-42909f4f5d90",
+    "7aad8b44-7519-4a4d-8c95-29accef584eb",
+    "2a24cdeb-1780-4e34-ba6f-e39dfe858f0e",
+    "01c2f739-26e6-4210-b12e-413ca25b1dcb",
+    "2e4dc0c1-d807-444c-b3db-ff689f3983d8",
+    "77dd0e9b-351c-406f-988a-b523e43676de",
+    "90654fd6-6d75-421a-bad7-b47de8a7a2df",
+    "abf7dca5-5905-4abc-9f57-e9d1b0215ad7",
+    "73adf3e4-c19b-4a09-8aed-35c1bdc73c4b",
+    "61cdc8db-1b6b-4064-909f-3c9e3c663708",
+    "cd04e6c9-d972-493a-99ce-c88578286253",
+    "d2115d08-ac5e-4240-b500-c18992184c99",
+    "3343804b-799f-48e9-ae36-81b78e8c37ca",
+    "e796f36b-f89a-4f71-b136-68b1cc2253b1",
+    "968a2332-5341-4ee4-8d43-11cea90907c7",
+    "c51abd91-b335-4dcc-bc65-56fe81ccecee",
+    "198e4689-ab4f-4a89-8aa0-6219cc250957",
+    "24399493-89ce-4897-8352-7baf578d8a3f",
+    "33600c59-fca7-4225-97d8-60aac3429c2d",
+    "fd3376f6-4a7b-4f22-9633-41a295b6ce16",
+    "060c5f0d-9cf2-4540-9dfd-bf1b5dfee38c",
+    "6e0ebf5e-1413-4bde-929e-9c6fb31140f7",
+    "0ce6c991-a2e1-400c-8b5f-b80c42c8cc79",
+    "e2c64c1e-45c6-4d57-86b0-51df6390a1c9",
+    "6f5f6e7d-90a6-4b97-8733-ea698901a384",
+    "8a47e958-2f85-4e98-bb39-8288cfec56d2",
+    "b61f2f1c-b4b7-4cfd-a414-35fd4c82051e",
+    "dec32f63-8106-4d9c-8209-b7e8ed972ddd",
+    "e42e3ec9-be61-4eee-b745-500307824b03",
+    "803ce30d-5322-4932-8d85-7ed9d69bdf4e",
+    "d7c2f930-dee1-405b-8995-7e3d3289f8d6",
+    "8fa86258-95b8-4c18-b3d1-fccf0818c1c4",
+    "1d1ab500-5259-4580-ad2d-a2bd7e18ca1b",
+    "1dbc0f7b-0b4a-472f-8a6f-9b725aa8ca92",
+    "a06ded3e-6758-47c2-a7ef-41506e6ffe16",
+    "5140a1e7-6efc-4e08-a29f-cce0ceb9c7df",
+    "d41e31ed-4880-4c30-b2da-be3164fceca0",
+    "6217f4ae-bb99-4e4e-86e5-e0cc309446bc",
+    "c758c73c-8bc5-450c-93ef-dd214501b9dd",
+    "ee591fcc-769d-4c54-8aa3-577c3aa23cf1",
+    "c25d9636-9d43-4d84-921e-d313cdb23d6d",
+    "3934406a-34a3-497b-bb81-c7d6422d5b09",
+    "213a3d22-5254-4715-89d5-b97652e052be",
+    "6f23417b-7428-40f8-8c9f-0c9d465a3c33",
+    "2c8db13a-4b6a-4aee-9888-bd99b5803956",
+    "544a598d-c94a-41bb-9ae1-0fa654ecf2ec",
+    "8c9f61c8-0530-423e-b702-effda6f1a789",
+    "b5d5b044-ce3f-45ef-a629-b9f735e91ee3",
+    "7ecf1247-ce6f-4873-b3de-0407afcf1a87",
+    "ea2ecaae-5155-42c5-bbb7-22adfa56b6d6",
+    "fe9f32de-2004-404b-a1ea-ad05f471c014",
+    "d4293d6d-5d3f-4663-b7c2-600b42e82d09",
+    "e27a1b16-3638-49dc-858e-82ac19e597ba",
+    "e9e2e266-b7e6-4a59-9065-e6d838ae3cd6",
+    "e0845898-abb6-421c-95d8-8760ee4e2804",
+    "95d3040e-78ae-4d1a-95b6-f3fd4ad7e495",
+    "ed6e892d-4e0f-482c-9ddb-3aee97f3b7ec",
+    "eb2cb3de-08bc-4956-b520-ff6e8000edad",
+    "a5f40cff-05be-48af-900c-b8b35c37d93f",
+    "80a50976-3e0a-428b-b6a9-44393fea77cb",
+    "9b8be33b-691c-4837-a938-2588c8741744",
+    "6be42f64-cd02-4e77-b53e-0df1bc908bcc",
+    "d2e62dd8-c8c5-4c52-a1a4-eb83d71e7d9f",
+    "60fdfe1e-634a-4d31-b1cc-f7b35897a522",
+    "764830f3-635e-4a23-a956-60da23d7deef",
+    "9d957fda-221b-49c1-bd30-0e18cf8aab6c",
+    "10fbbbec-da00-4732-89d1-5da92801a310",
+    "5c40d3a2-baad-4734-9117-2c989f78dc9a",
+    "f55c882c-c69e-4998-a7f5-19141bd14641",
+    "7e922f62-f1cd-4b65-9d24-73242c4f9075",
+    "31d6a98a-ddec-4ae1-8d60-d6d93afb17a6",
+    "ddcab40b-fd65-4efa-8857-cfc429022405",
+    "e4a583d5-0559-456f-bb60-95ba875d25ae",
+    "528505aa-8c91-4d18-baa1-4369782a2d34",
+    "b85ed2db-db49-4466-972d-1b78f86bb835",
+    "995239a7-5111-4cf5-a0ac-2952aeb2409e",
+    "41025950-16a3-4181-aa0a-72b87de3f843",
+    "9ec8014d-60b1-4832-9d5d-88a636e442c3",
+    "2e31db59-0db2-4e33-ba08-d3d6f8a503ae",
+    "3b8e4ceb-0072-4919-877e-a11de7d0a434",
+    "c7e82003-afc4-45b5-a620-0ef0b02d8d4f",
+    "b7547570-28ed-4c14-8c7c-9c5c9e217a76",
+    "0ee4c137-d8b7-49e4-8494-3b0bc9fc2533",
+    "75b2a570-84bb-456e-8057-94fe73049b85",
+    "b912eff2-4083-40d9-a4f4-423230c37939",
+    "a21fefb4-59d3-40c4-a113-d182ccc9a287",
+    "7a782025-049e-4c73-b886-98bbade85661",
+    "b22a294b-5bd2-4343-b54e-62c34b39915f",
+    "65f63312-d177-4fb1-8af3-3829beb4454e",
+    "bb3e0c6f-5d56-4da4-9091-11ba1a9f8599",
+    "7a65e7aa-18a0-4eff-8d09-399f852fa47c",
+    "244ddf44-eb3e-409c-9253-45e9c7d8ea99",
+    "d2b93de5-c009-4271-bae0-22cf7ef20884",
+    "22fe4cde-07c6-41e7-9e4e-89ea27bd6155",
+    "91b32d23-12e2-4e1a-b4a1-93b579b39d7b",
+    "35c4d72b-96d3-4bc1-b9c2-a10c99ecc2c9",
+    "5f8cedb8-b7f2-4d40-8514-555b7e227477",
+    "dc5453cd-77ac-449b-ba9f-137b88759745",
+    "92419c53-7eb2-4003-a6bd-2a734950afa3",
+    "8dda227c-9045-4e8d-ada0-e65baf4022e1",
+    "e3e6e2d9-797e-46c8-8db2-bd564ff97b50",
+    "e847b203-49ea-47f9-b799-ddc4e27b9c7b",
+    "82127b3e-b791-4d50-beb6-9d54e9d71947",
+    "a4f635d0-f20e-43e8-b7f0-9427555933a4",
+    "88ecb702-665b-4181-9cac-8571d229345a",
+    "34a66a10-9ee4-4459-87b6-48ea029a5ad1",
+    "0f4e70ee-6876-43d5-934e-42ec28a87556",
+    "8a4a5995-ed79-438f-b9a6-bd231b78abc3",
+    "d57a1008-9dd1-49c6-94df-06d575e8fef0",
+    "74679747-4c9b-4276-8e23-175ffc2bcfee",
+    "c7269765-6048-42b2-88b0-bad7d1824db0",
+    "0b4716b2-6668-4ba2-b70f-c492ef5b70df",
+    "58d9f169-d17a-4864-996b-ea279fad8462",
+    "b39405e1-3032-4610-ade7-1df80dcb384e",
+    "2f44a7f4-8cb9-4c7f-909d-a64fcb968112",
+    "a7ef8694-41c2-4b9a-bddb-336a53d204ec",
+    "645e5c1d-a411-42b6-9e22-22120d30180d",
+    "9cb266d0-dafa-4667-991a-36ed1c110477",
+    "765281ee-92ef-4a62-9cef-ebdfe0ab1988",
+    "bfaa4da1-b8bb-41f5-b27d-a1425b98c203",
+    "fdc7eb2d-35db-45d4-80b5-9638eb0ba37d",
+    "0573f38b-1804-4095-8841-6bde9476699b",
+    "6fe9443d-8654-4cbd-a1f5-a03cbd2b01a5",
+    "c4b47a26-7e61-4da1-ad2e-419f11e9d258",
+    "f142b645-e30a-4613-9751-fa94940f5463",
+    "4fb646b1-93a0-40fc-acea-e7efe825142b",
+    "f89be2c3-1e08-473a-8d53-4e5ddbda129a",
+    "e9463213-b09b-41e2-8ed2-393c12bcea05",
+    "7759a097-7399-41d9-84fb-f1166c8a53a6",
+    "8dd2d362-82d9-42a2-8c70-dff07ffaaf52",
+    "d95d41c6-f248-4b82-a858-1c49b2dc91a5",
+    "96c47c4f-0051-4df4-9b84-0891a2b2fe01",
+    "79fb69b7-c0ca-47fb-b20c-f9da184b75c7",
+    "707556f7-40a3-4ec9-bacb-4d61a39f97bf",
+    "13008611-b230-44bb-b382-8a5b0d4d388f",
+    "f25a2aab-725d-4d2f-8223-686670269c91",
+    "0c4d812e-293e-4244-b906-3ad38f248bbe",
+    "291c83bc-e3b7-417e-adfa-e5bba36eb780",
+    "1f97801e-9bdc-4b6f-97b3-426d21fda6b8",
+    "565fafd7-7447-4300-9711-c74239b8adb1",
+    "4383b797-eac5-4f5f-961f-56028c7b93cc",
+    "6183ee62-040f-4b3e-a856-38df019babab",
+    "b91849f7-6a35-4b81-a6f8-2c1086f8571f",
+    "f5afecad-5811-45f1-b433-b418b77edd87",
+    "ccfa519e-d0f1-4cc8-8bc1-d05b6c8f9b7b",
+    "0bd56139-6ced-44bc-b3a7-92afdba9e9f4",
+    "94778d00-a3d1-4663-b121-9f0d5de66830"
+  ],
+  "expectedDelta": {
+    "read_daily_life": 100,
+    "reading_comprehension": 98
+  },
+  "excludedReviewPilot": [
+    {
+      "id": "ade8669d-bc3d-4386-b29e-6bf30a213d70",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1mdm4aa",
+      "reason": "pilot_review_weak_inference_Q4"
+    },
+    {
+      "id": "480a4006-da23-4438-9cc2-9649711917aa",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1y6294l",
+      "reason": "pilot_review_weak_inference_Q4"
+    }
+  ],
+  "read_daily_life": [
+    {
+      "id": "4b15e795-be39-419e-8eba-556288b0dfe7",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:11yaha6",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "76498eb0-b785-493d-b814-d9c03469a127",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1wxewhs",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "08b5e73a-54e0-488b-830e-17fb709184a3",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:18ybrft",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6fcd3302-c74b-4a05-99ee-cff70ccd106a",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:n1fzt6",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6ecdd8f6-1d9d-4916-9d5c-47393378d7dc",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1n3xqko",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "88a19660-88d6-4677-a3c2-4fef960fff05",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:s956lg",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "e079c844-26b1-4729-9b5e-bfba3626c37a",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:homzvh",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "69c2a828-006d-40b3-b4af-50f82861fbe1",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1p8pfyc",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "f2868c22-a66e-4143-addc-5178cc6e707d",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:jjv1md",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "bb3bdcdf-ee80-40b1-a7f3-42b619c13422",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1mr1h10",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "574f88e8-9b8c-4c8c-bac7-7e9d140321a4",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1ikq1g2",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "0ba77822-b3d1-470c-a6b2-ad619c0811ea",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1r9p75k",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "7ba7cd4f-de37-4811-98b8-f7ecb10f1e25",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1y6bcf1",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2dd1cda9-431e-4c36-b00c-1d71d06d7da9",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:ymgh8g",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2bb5de80-f075-4d5c-82c1-96468f7d6f2d",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:bqr501",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6769f4cf-4270-4890-9400-77734cf659c6",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:gk88q3",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "df63eaf0-f46b-4f31-bba9-3bd1f8c80ad2",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1mlirls",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "4ad28650-2a5c-41be-925e-9fcde6feddbc",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:e20b3q",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "74952697-ed97-426b-894e-4942b62bd923",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1yom9rp",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "50f75ba5-b73d-44a5-a520-e409288021a9",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:12uxxpj",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "4e70c017-bbec-4cf8-88c3-dd4d87129fef",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:kvzyp1",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "bbada1ce-baac-4715-b9ea-bcda70703c57",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:106c3x2",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "1172e1a8-a694-41ba-a390-4c5980098c5b",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1gh9bv5",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "d4901fd0-8fe6-4c11-958e-a57940bb31c1",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:18p2hy9",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "007ac4e3-f442-4c4a-8dad-9714b5c0e33a",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1xsciyr",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "c702a70c-0e98-4d59-aed1-38539cff11f9",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1l1p1he",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "95d19034-bf96-4814-8921-8dd4bfdac3a6",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:hymvhw",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "f13a3e87-54f5-4547-a468-94ec6ba58ed5",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1dtuhj6",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2a16b875-d145-4c38-8112-1e854f2f442b",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:h9ykwu",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "77e5d748-4762-4e2b-87d0-2eee8b98bed9",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1ql4zt6",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "62dc5649-7d68-4071-8b96-fc77e14f98a2",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:nksksk",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "27f3457a-2625-4b2c-984b-d36e1153ea78",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1klrk4t",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "e3eacd84-baad-43fb-9012-a5a58bb02d68",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1xmlcjg",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "4aff2bcd-e40a-49ed-b81c-05894becf891",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:ea92hl",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "3df651fd-41f1-4bdb-9d1c-c173c38b2a78",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1utnmrp",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "cca07a0c-c005-4e7d-9283-b17a1c48d58b",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:15babwk",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "3d29b14b-758b-4d5e-8b29-83338cc0c89e",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:116pm02",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "7210f5a6-a9e9-4ae8-a8b6-7964256e5521",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:3zhhek",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "a53a48cf-b231-4a23-9bfc-8b7efa5acf53",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:qbvrtb",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "f67fd2ec-c500-40da-8719-69621d82f557",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1jguhxj",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "05e8bbeb-3e11-4edb-8d32-e769204ecf14",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:eiycew",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "5b5ce688-685f-4ace-8b6e-956519ddb5f5",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:18i00nq",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "493505c2-e97f-4810-b74e-6ae6dbc40f79",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1al6kiw",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "38aa1db7-d99a-4949-a58c-1cdfbfbed983",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1hpezad",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "f7619177-cac1-4308-81fd-cbfb8b891856",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1mni1rn",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "739e986d-a7a9-4dc9-8db3-4a1b7fe62198",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:2ojc9",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "4ffb70ef-4e72-43f9-80a7-7a6d6039582a",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1j2filj",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "ceac8036-e30a-421e-aa18-f61ef734b640",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:x9fttt",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "68faf96b-f4f6-4c2f-872c-c8278f9006e5",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1fimnm9",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "ff764bae-a508-4479-8acf-9dc101994c84",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:13juz99",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "d4fd5ac8-8ca7-48a4-90f0-bea9288f111d",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:c1rb7r",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "aa023bbf-19a4-4fe8-ba57-42909f4f5d90",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:7fecrq",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "7aad8b44-7519-4a4d-8c95-29accef584eb",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1wp7g26",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2a24cdeb-1780-4e34-ba6f-e39dfe858f0e",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1layl2g",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "01c2f739-26e6-4210-b12e-413ca25b1dcb",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1qaccwn",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2e4dc0c1-d807-444c-b3db-ff689f3983d8",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:jp67j6",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "77dd0e9b-351c-406f-988a-b523e43676de",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:8ylztb",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "90654fd6-6d75-421a-bad7-b47de8a7a2df",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:3kqhfl",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "abf7dca5-5905-4abc-9f57-e9d1b0215ad7",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:181xxho",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "73adf3e4-c19b-4a09-8aed-35c1bdc73c4b",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:krtciu",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "61cdc8db-1b6b-4064-909f-3c9e3c663708",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1soh2ts",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "cd04e6c9-d972-493a-99ce-c88578286253",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1s435qe",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "d2115d08-ac5e-4240-b500-c18992184c99",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:aorvev",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "3343804b-799f-48e9-ae36-81b78e8c37ca",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:gemmaz",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "e796f36b-f89a-4f71-b136-68b1cc2253b1",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:ph8vug",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "968a2332-5341-4ee4-8d43-11cea90907c7",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:12opbyy",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "c51abd91-b335-4dcc-bc65-56fe81ccecee",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:8srwyw",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "198e4689-ab4f-4a89-8aa0-6219cc250957",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:aj6wnw",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "24399493-89ce-4897-8352-7baf578d8a3f",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:azmyp9",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "33600c59-fca7-4225-97d8-60aac3429c2d",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1i4h2bz",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "fd3376f6-4a7b-4f22-9633-41a295b6ce16",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1m9ivp4",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "060c5f0d-9cf2-4540-9dfd-bf1b5dfee38c",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:13p8y2r",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6e0ebf5e-1413-4bde-929e-9c6fb31140f7",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:zff1a3",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "0ce6c991-a2e1-400c-8b5f-b80c42c8cc79",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:17kgapx",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "e2c64c1e-45c6-4d57-86b0-51df6390a1c9",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:14315hf",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6f5f6e7d-90a6-4b97-8733-ea698901a384",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1ta0k8",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "8a47e958-2f85-4e98-bb39-8288cfec56d2",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:stn6e7",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "b61f2f1c-b4b7-4cfd-a414-35fd4c82051e",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:zxw34i",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "dec32f63-8106-4d9c-8209-b7e8ed972ddd",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1rgg5pl",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "e42e3ec9-be61-4eee-b745-500307824b03",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:piwkmw",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "803ce30d-5322-4932-8d85-7ed9d69bdf4e",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:xernu0",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "d7c2f930-dee1-405b-8995-7e3d3289f8d6",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1nhnpo2",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "8fa86258-95b8-4c18-b3d1-fccf0818c1c4",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1ujpij2",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "1d1ab500-5259-4580-ad2d-a2bd7e18ca1b",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1srtzyb",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "1dbc0f7b-0b4a-472f-8a6f-9b725aa8ca92",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1gf9juj",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "a06ded3e-6758-47c2-a7ef-41506e6ffe16",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:fooree",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "5140a1e7-6efc-4e08-a29f-cce0ceb9c7df",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:6h2o21",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "d41e31ed-4880-4c30-b2da-be3164fceca0",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:12w7nnf",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6217f4ae-bb99-4e4e-86e5-e0cc309446bc",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:t1eli1",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "c758c73c-8bc5-450c-93ef-dd214501b9dd",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:l1vvos",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "ee591fcc-769d-4c54-8aa3-577c3aa23cf1",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1nuhw6l",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "c25d9636-9d43-4d84-921e-d313cdb23d6d",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1yc9xgm",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "3934406a-34a3-497b-bb81-c7d6422d5b09",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:3hzadn",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "213a3d22-5254-4715-89d5-b97652e052be",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:107c4rt",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "6f23417b-7428-40f8-8c9f-0c9d465a3c33",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:coessi",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "2c8db13a-4b6a-4aee-9888-bd99b5803956",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1ayw61w",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "544a598d-c94a-41bb-9ae1-0fa654ecf2ec",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:shepvt",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "8c9f61c8-0530-423e-b702-effda6f1a789",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:us72ox",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "b5d5b044-ce3f-45ef-a629-b9f735e91ee3",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:1v2yuqp",
+      "task_type": "read_daily_life"
+    },
+    {
+      "id": "7ecf1247-ce6f-4873-b3de-0407afcf1a87",
+      "legacy_id": "gen:toefl-read-daily-life:set:claude:15rzryx",
+      "task_type": "read_daily_life"
+    }
+  ],
+  "reading_comprehension": [
+    {
+      "id": "ea2ecaae-5155-42c5-bbb7-22adfa56b6d6",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:150frq5",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "fe9f32de-2004-404b-a1ea-ad05f471c014",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:fkzh0i",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "d4293d6d-5d3f-4663-b7c2-600b42e82d09",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1i4x2kh",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e27a1b16-3638-49dc-858e-82ac19e597ba",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1mg22nr",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e9e2e266-b7e6-4a59-9065-e6d838ae3cd6",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:pdqsnk",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e0845898-abb6-421c-95d8-8760ee4e2804",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1uoyp53",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "95d3040e-78ae-4d1a-95b6-f3fd4ad7e495",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1ar8qln",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "ed6e892d-4e0f-482c-9ddb-3aee97f3b7ec",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:yikjcd",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "eb2cb3de-08bc-4956-b520-ff6e8000edad",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:5bxjkh",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "a5f40cff-05be-48af-900c-b8b35c37d93f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:ml2y50",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "80a50976-3e0a-428b-b6a9-44393fea77cb",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:9an8ei",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "9b8be33b-691c-4837-a938-2588c8741744",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1swefie",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "6be42f64-cd02-4e77-b53e-0df1bc908bcc",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:7ca31t",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "d2e62dd8-c8c5-4c52-a1a4-eb83d71e7d9f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:c17d5d",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "60fdfe1e-634a-4d31-b1cc-f7b35897a522",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1d1o3n",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "764830f3-635e-4a23-a956-60da23d7deef",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:c5mvf2",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "9d957fda-221b-49c1-bd30-0e18cf8aab6c",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1x54f6w",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "10fbbbec-da00-4732-89d1-5da92801a310",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1298tyc",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "5c40d3a2-baad-4734-9117-2c989f78dc9a",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1ds8qnc",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "f55c882c-c69e-4998-a7f5-19141bd14641",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1ju56mk",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "7e922f62-f1cd-4b65-9d24-73242c4f9075",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:dfuofc",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "31d6a98a-ddec-4ae1-8d60-d6d93afb17a6",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:nkhnp3",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "ddcab40b-fd65-4efa-8857-cfc429022405",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1by7d56",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e4a583d5-0559-456f-bb60-95ba875d25ae",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:vvqadj",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "528505aa-8c91-4d18-baa1-4369782a2d34",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:rq7k6d",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b85ed2db-db49-4466-972d-1b78f86bb835",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:4408rb",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "995239a7-5111-4cf5-a0ac-2952aeb2409e",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1w93m60",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "41025950-16a3-4181-aa0a-72b87de3f843",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1cyv9kx",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "9ec8014d-60b1-4832-9d5d-88a636e442c3",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1sywjug",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "2e31db59-0db2-4e33-ba08-d3d6f8a503ae",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:uwl99g",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "3b8e4ceb-0072-4919-877e-a11de7d0a434",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1avvcsw",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "c7e82003-afc4-45b5-a620-0ef0b02d8d4f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:cq2bpv",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b7547570-28ed-4c14-8c7c-9c5c9e217a76",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:oj2n71",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0ee4c137-d8b7-49e4-8494-3b0bc9fc2533",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:11bdjee",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "75b2a570-84bb-456e-8057-94fe73049b85",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:8wp35n",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b912eff2-4083-40d9-a4f4-423230c37939",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1c20grb",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "a21fefb4-59d3-40c4-a113-d182ccc9a287",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:acnfma",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "7a782025-049e-4c73-b886-98bbade85661",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:158i9i",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b22a294b-5bd2-4343-b54e-62c34b39915f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:nnwgqx",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "65f63312-d177-4fb1-8af3-3829beb4454e",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:pinmoe",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "bb3e0c6f-5d56-4da4-9091-11ba1a9f8599",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:13y0qdw",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "7a65e7aa-18a0-4eff-8d09-399f852fa47c",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:5zcqcf",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "244ddf44-eb3e-409c-9253-45e9c7d8ea99",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1jk0ixu",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "d2b93de5-c009-4271-bae0-22cf7ef20884",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:19n62ac",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "22fe4cde-07c6-41e7-9e4e-89ea27bd6155",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1j50o9y",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "91b32d23-12e2-4e1a-b4a1-93b579b39d7b",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:19vhg3z",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "35c4d72b-96d3-4bc1-b9c2-a10c99ecc2c9",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:162jg02",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "5f8cedb8-b7f2-4d40-8514-555b7e227477",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:iwv52r",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "dc5453cd-77ac-449b-ba9f-137b88759745",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1eahi8z",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "92419c53-7eb2-4003-a6bd-2a734950afa3",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1hl4wg1",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "8dda227c-9045-4e8d-ada0-e65baf4022e1",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:2h4i59",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e3e6e2d9-797e-46c8-8db2-bd564ff97b50",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:16t0pti",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e847b203-49ea-47f9-b799-ddc4e27b9c7b",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:qbrsjd",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "82127b3e-b791-4d50-beb6-9d54e9d71947",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:z3fbmn",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "a4f635d0-f20e-43e8-b7f0-9427555933a4",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:16rfd65",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "88ecb702-665b-4181-9cac-8571d229345a",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:194lwv0",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "34a66a10-9ee4-4459-87b6-48ea029a5ad1",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1w8448v",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0f4e70ee-6876-43d5-934e-42ec28a87556",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:jitk9i",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "8a4a5995-ed79-438f-b9a6-bd231b78abc3",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1tjugis",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "d57a1008-9dd1-49c6-94df-06d575e8fef0",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1jtc2x3",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "74679747-4c9b-4276-8e23-175ffc2bcfee",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:dkumt3",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "c7269765-6048-42b2-88b0-bad7d1824db0",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:n6e3jt",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0b4716b2-6668-4ba2-b70f-c492ef5b70df",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:16n11xm",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "58d9f169-d17a-4864-996b-ea279fad8462",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:iacfh1",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b39405e1-3032-4610-ade7-1df80dcb384e",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:3go6el",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "2f44a7f4-8cb9-4c7f-909d-a64fcb968112",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:13xqmkr",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "a7ef8694-41c2-4b9a-bddb-336a53d204ec",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1xifzw",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "645e5c1d-a411-42b6-9e22-22120d30180d",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1pq8k5d",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "9cb266d0-dafa-4667-991a-36ed1c110477",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1hvq2h6",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "765281ee-92ef-4a62-9cef-ebdfe0ab1988",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1sc91ju",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "bfaa4da1-b8bb-41f5-b27d-a1425b98c203",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:osgtg5",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "fdc7eb2d-35db-45d4-80b5-9638eb0ba37d",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:176udpv",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0573f38b-1804-4095-8841-6bde9476699b",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1yewfh9",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "6fe9443d-8654-4cbd-a1f5-a03cbd2b01a5",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1mgcacg",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "c4b47a26-7e61-4da1-ad2e-419f11e9d258",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1bz84ke",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "f142b645-e30a-4613-9751-fa94940f5463",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:19ef4ad",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "4fb646b1-93a0-40fc-acea-e7efe825142b",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:mh84jw",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "f89be2c3-1e08-473a-8d53-4e5ddbda129a",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:yqpr94",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "e9463213-b09b-41e2-8ed2-393c12bcea05",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1kvn7wd",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "7759a097-7399-41d9-84fb-f1166c8a53a6",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:iwhmk3",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "8dd2d362-82d9-42a2-8c70-dff07ffaaf52",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:199wbkx",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "d95d41c6-f248-4b82-a858-1c49b2dc91a5",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:14w8ubm",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "96c47c4f-0051-4df4-9b84-0891a2b2fe01",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:gac5d0",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "79fb69b7-c0ca-47fb-b20c-f9da184b75c7",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:jrb3sx",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "707556f7-40a3-4ec9-bacb-4d61a39f97bf",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:hkeioa",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "13008611-b230-44bb-b382-8a5b0d4d388f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:q6yad1",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "f25a2aab-725d-4d2f-8223-686670269c91",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:pzcdxu",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0c4d812e-293e-4244-b906-3ad38f248bbe",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:82q9za",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "291c83bc-e3b7-417e-adfa-e5bba36eb780",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1i4gwdd",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "1f97801e-9bdc-4b6f-97b3-426d21fda6b8",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:jzsy0i",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "565fafd7-7447-4300-9711-c74239b8adb1",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1asp83j",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "4383b797-eac5-4f5f-961f-56028c7b93cc",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1yxzpag",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "6183ee62-040f-4b3e-a856-38df019babab",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:gpxmut",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "b91849f7-6a35-4b81-a6f8-2c1086f8571f",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:zuq1mt",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "f5afecad-5811-45f1-b433-b418b77edd87",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:1mq1kak",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "ccfa519e-d0f1-4cc8-8bc1-d05b6c8f9b7b",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:cq9deq",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "0bd56139-6ced-44bc-b3a7-92afdba9e9f4",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:142c9on",
+      "task_type": "reading_comprehension"
+    },
+    {
+      "id": "94778d00-a3d1-4663-b121-9f0d5de66830",
+      "legacy_id": "gen:toefl-academic-reading:set:claude:l4cwg5",
+      "task_type": "reading_comprehension"
+    }
+  ]
+}

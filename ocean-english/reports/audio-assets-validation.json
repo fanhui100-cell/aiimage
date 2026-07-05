@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-05T01:58:18.166Z",
+  "status": "applied",
+  "counts": {
+    "listeningSets": 844,
+    "activeListeningSets": 424,
+    "draftListeningWithoutAudio": 420,
+    "audioRows": 444,
+    "activeAudioRows": 424
+  },
+  "clientTranscriptContract": "enforced",
+  "practicePayloadContract": "enforced",
+  "livePayloadChecked": false,
+  "errors": [],
+  "ok": true
+}

@@ -1,0 +1,167 @@
+{
+  "template": "gaokao-grammar-fill",
+  "level": 2,
+  "_provenance": "Claude-authored original passages (DeepSeek not used). Gaokao 语法填空 style: 10 blanks per passage, 7 word-form (inline base word) + 3 pure function-word, testing tense/voice, non-finite verbs, comparatives, derivation, plus articles/prepositions/conjunctions/relatives. Batch E: 10 distinct topics.",
+  "sets": [
+    {
+      "passage": "When Tom was twelve, he built his first machine, (1)____ was a small wooden car powered by a rubber band. The idea came to him on a rainy afternoon while he (2)____ (read) a science magazine. At first, the car refused to move at all, and Tom felt quite (3)____ (disappoint). Instead of giving up, he decided (4)____ (study) the problem more carefully. He soon found that the wheels (5)____ (make) of cardboard were too soft, so he replaced them with bottle caps. After three days of (6)____ (patient) work, the little car finally rolled across the floor, moving (7)____ (fast) than he had ever imagined. His parents were amazed by (8)____ their clever son had created with his own hands. That sweet little success filled Tom (9)____ great confidence, and over the years he gradually came to understand that almost every great invention in history (10)____ (begin) with a curious mind and a brave, willing heart. From that day on, Tom spent countless evenings sketching new ideas in a worn notebook, and he never again feared a single failure. Each small mistake, he learned, was merely another quiet step toward a better, smarter design that truly worked.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "was reading", "acceptable": ["was reading"], "hint": "while + past continuous" },
+        { "answer": "disappointed", "acceptable": ["disappointed"], "hint": "-ed adjective for how a person feels" },
+        { "answer": "to study", "acceptable": ["to study"], "hint": "decide + to do" },
+        { "answer": "made", "acceptable": ["made"], "hint": "past participle as post-modifier (made of)" },
+        { "answer": "patient", "acceptable": ["patient"], "hint": "noun -> adjective before 'work'" },
+        { "answer": "faster", "acceptable": ["faster"], "hint": "comparative of fast + than" },
+        { "answer": "what", "acceptable": ["what"], "hint": "" },
+        { "answer": "with", "acceptable": ["with"], "hint": "" },
+        { "answer": "begins", "acceptable": ["begins"], "hint": "general truth -> present simple, third person singular" }
+      ],
+      "explain_zh": "(1) 非限制性定语从句指物用 which；(2) while 引导时间状语，过去进行 was reading；(3) 形容人感受用 -ed 形容词 disappointed；(4) decide to do；(5) 过去分词作后置定语 made of；(6) patient 形容词修饰 work；(7) fast 比较级 faster + than；(8) 宾语从句缺宾语用 what；(9) fill sb with 固定搭配；(10) 普遍真理用一般现在时第三人称 begins。"
+    },
+    {
+      "passage": "Every Saturday morning, I volunteer at our community recycling station, (1)____ is run entirely by local residents. My main task is to help people sort their waste (2)____ different categories such as paper, glass and plastic. At first I found the work tiring, but soon I came to enjoy (3)____ (talk) with the neighbours. One elderly woman told me proudly that recycling (4)____ (become) far more popular than it had been ten years before. I was truly surprised to learn how much rubbish (5)____ (turn) into useful products every single day. The station manager taught me to handle the sharp materials (6)____ (care). He said that protecting our shared environment was the (7)____ (responsible) of every citizen, young or old. Working there has made me far (8)____ (thoughtful) about the planet than I used to be. Now I never throw away a glass bottle (9)____ thinking twice. I firmly believe that small actions, when (10)____ (do) together, can truly change the world. My friends have started joining me on these bright weekend mornings, and our cheerful little team keeps growing month after month. Every clean bottle and folded box reminds me that one caring person can quietly inspire a whole neighbourhood to act.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "into", "acceptable": ["into"], "hint": "" },
+        { "answer": "talking", "acceptable": ["talking"], "hint": "enjoy + doing" },
+        { "answer": "had become", "acceptable": ["had become", "became"], "hint": "past time reference; 'had become' (backshifted) or simple past 'became'" },
+        { "answer": "is turned", "acceptable": ["is turned"], "hint": "passive, present (every single day): rubbish is turned into" },
+        { "answer": "carefully", "acceptable": ["carefully"], "hint": "care -> adverb modifying 'handle'" },
+        { "answer": "responsibility", "acceptable": ["responsibility"], "hint": "responsible -> noun" },
+        { "answer": "more thoughtful", "acceptable": ["more thoughtful"], "hint": "comparative of thoughtful + than" },
+        { "answer": "without", "acceptable": ["without"], "hint": "" },
+        { "answer": "done", "acceptable": ["done"], "hint": "past participle: when (they are) done together" }
+      ],
+      "explain_zh": "(1) 非限制性定语从句指物用 which；(2) sort ... into 固定搭配；(3) enjoy doing；(4) 过去时间参照，回溯过去完成 had become 或一般过去 became 均可；(5) every single day 表一般现在，被动 is turned；(6) care→副词 carefully 修饰 handle；(7) responsible→名词 responsibility；(8) thoughtful 比较级 more thoughtful + than；(9) without doing 不假思索；(10) 状语从句省略，when (they are) done 用过去分词 done。"
+    },
+    {
+      "passage": "I will never forget the most memorable English class (1)____ I had in my third year of high school. That morning our teacher walked in with a warm smile, (2)____ (hold) a worn-out box full of old letters. She told us that the letters (3)____ (write) by students many years before and kept safely in the school library. Each of us was asked to choose one and read it (4)____ (loud) to the whole class. The words were simple, yet they sounded so (5)____ (move) that several students nearly cried. Listening carefully, I suddenly understood (6)____ language could carry such real emotion. Our wise teacher explained that English was not merely a subject (7)____ a living bridge connecting human hearts. (8)____ (encourage) by her gentle words, I began to read English stories every day. Gradually my reading became much (9)____ (smooth) than before. That single lesson completely changed the way I (10)____ (think) about learning the language. I now keep my own small box of letters, where I write down the new words and warm feelings I gather each day. Whenever I feel tired or discouraged, I simply open that box and remember why language matters so deeply to me.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "holding", "acceptable": ["holding"], "hint": "present participle as adverbial (she holding)" },
+        { "answer": "had been written", "acceptable": ["had been written"], "hint": "passive + earlier than the narrative past (and kept)" },
+        { "answer": "aloud", "acceptable": ["aloud"], "hint": "loud -> adverb meaning out loud" },
+        { "answer": "moving", "acceptable": ["moving"], "hint": "-ing adjective: the words were moving" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "but", "acceptable": ["but"], "hint": "" },
+        { "answer": "Encouraged", "acceptable": ["Encouraged"], "hint": "past participle phrase as adverbial (I was encouraged)" },
+        { "answer": "smoother", "acceptable": ["smoother"], "hint": "comparative of smooth + than" },
+        { "answer": "thought", "acceptable": ["thought"], "hint": "past tense: the way I thought" }
+      ],
+      "explain_zh": "(1) 限制性定语从句作宾语用 that/which；(2) 主语 she 拿着盒子，现在分词 holding 作状语；(3) 信被写且早于叙述过去，过去完成被动 had been written；(4) loud→副词 aloud；(5) 物作主语用 -ing 形容词 moving；(6) 宾语从句强调方式用 how；(7) not merely...but；(8) 主语 I 被鼓励，过去分词 Encouraged 作状语；(9) smooth 比较级 smoother + than；(10) the way I thought 一般过去时。"
+    },
+    {
+      "passage": "Last autumn, my classmates and I went on a hiking trip in the mountains near our small town. We set off early, (1)____ (carry) heavy bags filled with water and food. The path was steep, and climbing it proved much (2)____ (hard) than we had expected. Halfway up, one of my friends hurt his ankle and could (3)____ (hard) walk at all. We decided to help him (4)____ taking turns to support his weight. The higher we climbed, the (5)____ (fresh) the mountain air became. When we finally reached the top, a vast sea of clouds (6)____ (spread) out below us, and everyone fell silent with pure wonder. It was the most beautiful scene (7)____ I had ever seen in my life. Our teacher reminded us (8)____ teamwork had made the difficult journey possible. (9)____ (stand) proudly on the peak, I felt the deep joy of not giving up. That trip taught me that reaching any goal depends (10)____ the courage to keep going. On the long way back down, we laughed about our sore legs and promised to climb an even higher mountain next summer. The friendship we built among those clouds has stayed with me far longer than the ache in my tired feet.",
+      "gblanks": [
+        { "answer": "carrying", "acceptable": ["carrying"], "hint": "present participle as adverbial (we carrying)" },
+        { "answer": "harder", "acceptable": ["harder"], "hint": "comparative of hard + than" },
+        { "answer": "hardly", "acceptable": ["hardly"], "hint": "hard -> adverb 'hardly' (almost not)" },
+        { "answer": "by", "acceptable": ["by"], "hint": "" },
+        { "answer": "fresher", "acceptable": ["fresher"], "hint": "the + comparative, the + comparative" },
+        { "answer": "spread", "acceptable": ["spread"], "hint": "past tense narrative (spread is irregular, unchanged)" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "Standing", "acceptable": ["Standing"], "hint": "present participle as adverbial (I standing)" },
+        { "answer": "on", "acceptable": ["on", "upon"], "hint": "" }
+      ],
+      "explain_zh": "(1) 我们背着包，现在分词 carrying 作状语；(2) hard 比较级 harder + than；(3) hard→副词 hardly 几乎不；(4) by doing 通过…方式；(5) the+比较级 the+比较级，fresh→fresher；(6) 过去叙述，spread 过去式同形；(7) 先行词被最高级 most 修饰，定语从句用 that；(8) reminded sb 后宾语从句用 that；(9) 主语 I 站立，现在分词 Standing 作状语；(10) depend on 固定搭配。"
+    },
+    {
+      "passage": "In a quiet corner of our old town lives a craftsman (1)____ has made paper umbrellas for over forty years. His small workshop, whose walls are covered with bright samples, (2)____ (smell) of bamboo and glue. Every umbrella he makes is unique, for he paints each one (3)____ hand. As a child I often watched him work, deeply (4)____ (amaze) by his skilful fingers. He told me that making a single umbrella (5)____ (require) more than thirty careful steps. The most difficult part, he said, was keeping the bamboo frame (6)____ (perfect) balanced. (7)____ (sad), few young people today are willing to learn this dying craft. The patient old man hopes that one day his art (8)____ (pass) on to the next generation. He firmly believes a handmade umbrella carries a kind of warmth (9)____ no machine can ever copy. Whenever I open the umbrella he gave me, I think (10)____ the quiet patience that true craftsmanship demands. Sometimes I sit beside him and try to paint a tiny flower on the paper, though my clumsy lines never match his graceful strokes. He only smiles kindly and tells me that every master once held the brush exactly as awkwardly as I do now.",
+      "gblanks": [
+        { "answer": "who", "acceptable": ["who", "that"], "hint": "" },
+        { "answer": "smells", "acceptable": ["smells"], "hint": "subject 'workshop' is singular, present simple -> smells" },
+        { "answer": "by", "acceptable": ["by"], "hint": "" },
+        { "answer": "amazed", "acceptable": ["amazed"], "hint": "past participle as adverbial (I was amazed)" },
+        { "answer": "required", "acceptable": ["required"], "hint": "reported in past tense to match 'told' / 'said'" },
+        { "answer": "perfectly", "acceptable": ["perfectly"], "hint": "perfect -> adverb modifying 'balanced'" },
+        { "answer": "Sadly", "acceptable": ["Sadly"], "hint": "sad -> sentence adverb" },
+        { "answer": "will be passed", "acceptable": ["will be passed"], "hint": "future passive: the art will be passed on" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "of", "acceptable": ["of"], "hint": "" }
+      ],
+      "explain_zh": "(1) 先行词 craftsman 指人用 who/that；(2) 主语 workshop 单数，一般现在时 smells of；(3) by hand 手工；(4) 主语 I 被吸引，过去分词 amazed 作状语；(5) 与 told/said 时态一致，过去时 required；(6) perfect→副词 perfectly 修饰 balanced；(7) sad→句子副词 Sadly；(8) 将来被动 will be passed on；(9) 限制性定语从句作宾语用 that/which；(10) think of 固定搭配。"
+    },
+    {
+      "passage": "Our school held a charity book sale last month, and all the money raised (1)____ (use) to support children in poor mountain areas. For weeks, students collected books they no longer needed, (2)____ they then cleaned and sorted carefully. On the day of the sale, the playground was crowded with eager buyers. I was put in charge of a small stall (3)____ sold colourful picture books for younger readers. Selling them turned out to be (4)____ (easy) than I had thought, because every book had a fair, friendly price. By noon, we (5)____ (sell) almost half of our whole collection. A little girl bought a fairy tale and hugged it tightly, her bright eyes (6)____ (shine) with joy. Our headteacher proudly announced that we had raised enough money (7)____ (build) a new library far away. (8)____ (see) how happy everyone looked, I felt that simple kindness could spread like warm sunlight. The (9)____ (true) reward, I realised, was the smiles around me. I do hope our school will hold such (10)____ meaningful event again next year.",
+      "gblanks": [
+        { "answer": "was used", "acceptable": ["was used"], "hint": "passive, past: the money was used" },
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" },
+        { "answer": "easier", "acceptable": ["easier"], "hint": "comparative of easy + than" },
+        { "answer": "had sold", "acceptable": ["had sold"], "hint": "by noon (a past point) -> past perfect" },
+        { "answer": "shining", "acceptable": ["shining"], "hint": "present participle in an absolute construction (her eyes shining)" },
+        { "answer": "to build", "acceptable": ["to build"], "hint": "enough money + to do" },
+        { "answer": "Seeing", "acceptable": ["Seeing"], "hint": "present participle as adverbial (I seeing)" },
+        { "answer": "truest", "acceptable": ["truest"], "hint": "superlative of true with 'the'" },
+        { "answer": "a", "acceptable": ["a"], "hint": "" }
+      ],
+      "explain_zh": "(1) the money 被使用，过去被动 was used；(2) 非限制性定语从句指物 books 用 which；(3) 限制性定语从句修饰 stall 用 that/which；(4) easy 比较级 easier + than；(5) by noon 用过去完成 had sold；(6) 独立主格 her eyes shining 用现在分词；(7) enough money to build；(8) 主语 I 看到，现在分词 Seeing 作状语；(9) the+最高级 truest；(10) such a meaningful event，单数可数名词前用 a。"
+    },
+    {
+      "passage": "Two years ago I began (1)____ (learn) to play the guzheng, a traditional Chinese instrument with twenty-one strings. At the very first lesson, my gentle teacher told me that patience was even (2)____ (important) than natural talent. My stiff fingers ached, and the sounds I made were far from (3)____ (please). Many times I wanted to quit, (4)____ the beautiful melodies she played softly kept me going. She often reminded me (5)____ steady practice was the only road to real progress. Slowly, my hands grew (6)____ (flexible), and I learned to feel the gentle rhythm in my heart. (7)____ (practise) for two hours every single day, I finally performed a complete piece at the school concert. When the last clear note faded away, the whole audience rose to their feet, (8)____ (clap) warmly. (9)____ that unforgettable moment, I truly understood (10)____ my patient teacher had loved this ancient instrument all her life. Now I practise not because anyone forces me, but because each gentle string seems to whisper a small story to my listening heart. I have even begun teaching a younger neighbour, hoping that the warm music my teacher gave me will keep flowing on to others for many happy years to come.",
+      "gblanks": [
+        { "answer": "to learn", "acceptable": ["to learn", "learning"], "hint": "begin + to do / doing" },
+        { "answer": "more important", "acceptable": ["more important"], "hint": "comparative of important + than" },
+        { "answer": "pleasing", "acceptable": ["pleasing"], "hint": "-ing adjective: far from pleasing (the sounds)" },
+        { "answer": "but", "acceptable": ["but", "yet"], "hint": "" },
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "more flexible", "acceptable": ["more flexible"], "hint": "comparative of flexible" },
+        { "answer": "Having practised", "acceptable": ["Having practised", "Having practiced"], "hint": "perfect participle for an action completed before the main verb" },
+        { "answer": "clapping", "acceptable": ["clapping"], "hint": "present participle as adverbial (audience clapping)" },
+        { "answer": "At", "acceptable": ["At"], "hint": "" },
+        { "answer": "why", "acceptable": ["why"], "hint": "" }
+      ],
+      "explain_zh": "(1) begin to do / doing 均可；(2) important 比较级 more important + than；(3) the sounds 作主语，far from pleasing 用 -ing 形容词；(4) 转折用 but/yet；(5) reminded sb 后宾语从句用 that；(6) flexible 比较级 more flexible；(7) 先于主句已练习，完成分词 Having practised；(8) 观众鼓掌，现在分词 clapping 作状语；(9) at that moment 固定搭配；(10) understood 后宾语从句问原因用 why。"
+    },
+    {
+      "passage": "One winter evening, a sudden snowstorm trapped my father and me on a country road far from home. The howling wind was so strong (1)____ we could barely see the way ahead. Our old car stopped working, and the temperature dropped (2)____ (quick) than we had imagined. Father stayed calm and told me (3)____ (keep) moving to stay warm. We struggled for an hour through the deep snow, (4)____ covered the whole field like a white blanket. Just when I felt I could not go on, we saw a faint light coming from a small farmhouse. The kind family living there welcomed us warmly, (5)____ (offer) us hot soup and dry clothes. I had never tasted anything (6)____ (good) in my whole life. The gentle farmer said that helping (7)____ (stranger) in trouble was simply natural. (8)____ (sit) by the crackling fire, I felt deeply grateful for their warmth. That cold night taught me a (9)____ (value) lesson about human kindness. Ever since, I have tried to be as generous (10)____ that family was to us.",
+      "gblanks": [
+        { "answer": "that", "acceptable": ["that"], "hint": "" },
+        { "answer": "more quickly", "acceptable": ["more quickly"], "hint": "comparative adverb of quick + than" },
+        { "answer": "to keep", "acceptable": ["to keep"], "hint": "tell sb + to do" },
+        { "answer": "which", "acceptable": ["which"], "hint": "" },
+        { "answer": "offering", "acceptable": ["offering"], "hint": "present participle as adverbial (the family offering)" },
+        { "answer": "better", "acceptable": ["better"], "hint": "comparative of good (anything better)" },
+        { "answer": "strangers", "acceptable": ["strangers"], "hint": "plural noun for people in general" },
+        { "answer": "Sitting", "acceptable": ["Sitting"], "hint": "present participle as adverbial (I sitting)" },
+        { "answer": "valuable", "acceptable": ["valuable"], "hint": "value -> adjective before 'lesson'" },
+        { "answer": "as", "acceptable": ["as"], "hint": "" }
+      ],
+      "explain_zh": "(1) so...that 结果状语从句用 that；(2) quick 比较级 more quickly + than；(3) tell sb to do；(4) 非限制性定语从句指 snow 用 which；(5) 那家人提供，现在分词 offering 作状语；(6) good 比较级 better，anything better；(7) 泛指人用复数 strangers；(8) 主语 I 坐着，现在分词 Sitting 作状语；(9) value→形容词 valuable 修饰 lesson；(10) as...as 同级比较，第二个 as。"
+    },
+    {
+      "passage": "Mr Lin, my next-door neighbour, is over eighty years old, (1)____ he and I have somehow become the closest of friends. Every afternoon I visit him after school, and we sit in his peaceful garden, (2)____ (share) tea and stories. He has lived through difficult times, so the tales he tells are always (3)____ (fascinate). In return, I patiently teach him how to use a smartphone, something that once seemed quite impossible (4)____ him. He often says that true friendship (5)____ (have) nothing to do with age. Last spring, when he fell ill, I visited the hospital every day, (6)____ (bring) him fresh flowers. The busy doctors were surprised that an old man and a teenager could be (7)____ close. Our unusual friendship has taught me (8)____ to listen and how to care. Mr Lin always says I am the (9)____ (young) friend he has ever had. (10)____ (look) back now, I clearly realise that real friendship knows no boundaries of time. Whenever the weather turns warm, we plant new flowers together and argue cheerfully about which colours look the brightest in his garden. I have come to treasure those slow, golden afternoons more than almost anything else in my busy young life.",
+      "gblanks": [
+        { "answer": "but", "acceptable": ["but", "yet"], "hint": "" },
+        { "answer": "sharing", "acceptable": ["sharing"], "hint": "present participle as adverbial (we sharing)" },
+        { "answer": "fascinating", "acceptable": ["fascinating"], "hint": "-ing adjective: the tales are fascinating" },
+        { "answer": "for", "acceptable": ["for", "to"], "hint": "" },
+        { "answer": "has", "acceptable": ["has"], "hint": "general truth, present simple; 'friendship' is singular" },
+        { "answer": "bringing", "acceptable": ["bringing"], "hint": "present participle as adverbial (I bringing)" },
+        { "answer": "so", "acceptable": ["so"], "hint": "" },
+        { "answer": "how", "acceptable": ["how"], "hint": "" },
+        { "answer": "youngest", "acceptable": ["youngest"], "hint": "superlative of young with 'the ... ever'" },
+        { "answer": "Looking", "acceptable": ["Looking"], "hint": "present participle as adverbial (I looking back)" }
+      ],
+      "explain_zh": "(1) 转折关系用 but/yet（老少成挚友）；(2) 我们共享茶与故事，现在分词 sharing 作状语；(3) the tales 作主语用 -ing 形容词 fascinating；(4) impossible for/to sb；(5) 普遍真理一般现在时，friendship 单数 has nothing to do with；(6) 我带花，现在分词 bringing 作状语；(7) so close 如此亲近，副词 so；(8) 与 to listen 并列，how to do 用 how；(9) the+最高级，与 ever 连用 youngest；(10) 主语 I 回顾，现在分词 Looking back 作状语。"
+    },
+    {
+      "passage": "Last weekend our city museum held a calligraphy exhibition (1)____ attracted thousands of curious visitors. The works on display, some of them hundreds of years old, showed the timeless beauty of Chinese characters. As I walked slowly through the quiet halls, I was deeply (2)____ (impress) by the power hidden in each single brushstroke. A patient guide explained that calligraphy (3)____ (regard) as one of the highest art forms in China for many centuries. In front of one famous scroll, an old master was giving a free lesson (4)____ a group of curious children. He told them that writing well always required deep (5)____ (concentrate) and a peaceful mind. (6)____ (encourage) by his kind words, several children picked up brushes and began to practise. Watching them carefully, I realised that this ancient art was still (7)____ (live) on in young hands. The exhibition was (8)____ a great success that the museum decided to extend it for another week. I left the hall with a (9)____ (deep) respect than ever for the wisdom (10)____ our ancestors had passed down.",
+      "gblanks": [
+        { "answer": "which", "acceptable": ["which", "that"], "hint": "" },
+        { "answer": "impressed", "acceptable": ["impressed"], "hint": "past participle as adjective (I was impressed)" },
+        { "answer": "had been regarded", "acceptable": ["had been regarded"], "hint": "passive + 'for many centuries' up to a past point" },
+        { "answer": "to", "acceptable": ["to"], "hint": "" },
+        { "answer": "concentration", "acceptable": ["concentration"], "hint": "concentrate -> noun" },
+        { "answer": "Encouraged", "acceptable": ["Encouraged"], "hint": "past participle phrase as adverbial (children were encouraged)" },
+        { "answer": "living", "acceptable": ["living"], "hint": "be (still) living on -> present continuous" },
+        { "answer": "such", "acceptable": ["such"], "hint": "" },
+        { "answer": "deeper", "acceptable": ["deeper"], "hint": "comparative of deep + than" },
+        { "answer": "that", "acceptable": ["that", "which"], "hint": "" }
+      ],
+      "explain_zh": "(1) 限制性定语从句修饰 exhibition 用 which/that；(2) 主语 I 用 -ed 形容词 impressed；(3) 持续 for many centuries 到过去某点，过去完成被动 had been regarded；(4) give a lesson to sb；(5) concentrate→名词 concentration；(6) 孩子们被鼓励，过去分词 Encouraged 作状语；(7) be living on 现在进行，living；(8) such a success that 结构用 such；(9) deep 比较级 deeper + than；(10) 限制性定语从句作宾语用 that/which。"
+    }
+  ]
+}

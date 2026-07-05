@@ -1,0 +1,31 @@
+{
+  "templateId": "toefl-read-daily-life",
+  "examIds": ["toefl"],
+  "taskType": "read_daily_life",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL iBT 2026 Reading · Read in Daily Life。原创短的非学术实用文本（材料类型限：sign/notice/menu/email/message/social_media_post/schedule/label/advertisement），Social Interpersonal 语境，12-70 词（简单文本 15-50，列表型如菜单/日程可至 ~70）。每篇配 2 或 3 道四选一理解题，唯一正确，干扰项合理。机器评分，无 rubric。Claude 亲撰，不抄真题、不调 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "short_passage",
+    "minWords": 12,
+    "maxWords": 70,
+    "perStimulusItems": 3,
+    "perStimulusItemsRange": [2, 3],
+    "materialTypes": ["sign", "notice", "menu", "email", "message", "social_media_post", "schedule", "label", "advertisement"]
+  },
+  "itemCount": 3,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["locate_information", "literal_comprehension", "purpose", "inference"],
+  "qualityRules": [
+    "100% 原创非学术实用文本，禁止抄袭 ETS 真题或真实商家/品牌文案",
+    "材料类型须属白名单（sign/notice/menu/email/message/social_media_post/schedule/label/advertisement）",
+    "篇幅 12-70 词（简单文本 15-50，列表型材料可至 70），CEFR A1-C1",
+    "每篇 2 或 3 道四选一，唯一正确答案，干扰项与材料相关但可排除",
+    "正确选项位置分散，不集中于某一项",
+    "机器评分，无 rubric；不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

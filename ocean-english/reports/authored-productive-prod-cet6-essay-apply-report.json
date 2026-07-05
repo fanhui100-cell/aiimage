@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T05:11:58.749Z",
+  "apply": true,
+  "stage": "prod-cet6-essay",
+  "provider": "claude-authored",
+  "totals": {
+    "tasks": 50,
+    "wrote": 0,
+    "dup": 50,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\prod-cet6-essay\\cet6-essay.productive.json",
+      "examId": "cet6",
+      "taskType": "essay_writing",
+      "level": 4,
+      "skill": "writing",
+      "tasks": 50,
+      "wrote": 0,
+      "dup": 50
+    }
+  ]
+}

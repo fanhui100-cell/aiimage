@@ -1,0 +1,192 @@
+{
+  "generatedAt": "2026-07-04T17:35:44.337Z",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "expectedTasks": [
+    {
+      "sectionId": "reading",
+      "taskType": "complete_the_words",
+      "templateId": "toefl-complete-the-words",
+      "shape": "complete_words",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "active_ok"
+    },
+    {
+      "sectionId": "reading",
+      "taskType": "read_daily_life",
+      "templateId": "toefl-read-daily-life",
+      "shape": "reading_multi",
+      "itemCount": 3,
+      "optionCount": 4,
+      "readiness": "active_ok"
+    },
+    {
+      "sectionId": "reading",
+      "taskType": "reading_comprehension",
+      "templateId": "toefl-academic-reading",
+      "shape": "reading_multi",
+      "itemCount": 4,
+      "optionCount": 4,
+      "readiness": "active_ok"
+    },
+    {
+      "sectionId": "listening",
+      "taskType": "choose_a_response",
+      "templateId": "toefl-choose-a-response",
+      "shape": "listening_multi",
+      "itemCount": 1,
+      "optionCount": 4,
+      "readiness": "active_ok"
+    },
+    {
+      "sectionId": "listening",
+      "taskType": "listening_comprehension",
+      "templateId": "toefl-listening-mcq",
+      "shape": "listening_multi",
+      "itemCount": 3,
+      "optionCount": 4,
+      "readiness": "active_ok"
+    },
+    {
+      "sectionId": "writing",
+      "taskType": "build_a_sentence",
+      "templateId": "toefl-build-a-sentence",
+      "shape": "build_sentence",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "scoring_not_ready"
+    },
+    {
+      "sectionId": "writing",
+      "taskType": "email_writing",
+      "templateId": "toefl-email-writing",
+      "shape": "free_text_rubric",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "rubric_active_ok"
+    },
+    {
+      "sectionId": "writing",
+      "taskType": "academic_discussion",
+      "templateId": "toefl-academic-discussion",
+      "shape": "free_text_rubric",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "rubric_active_ok"
+    },
+    {
+      "sectionId": "speaking",
+      "taskType": "listen_and_repeat",
+      "templateId": "toefl-listen-and-repeat",
+      "shape": "speak_prompt",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "speaking_pipeline_not_ready"
+    },
+    {
+      "sectionId": "speaking",
+      "taskType": "interview_speaking",
+      "templateId": "toefl-interview-speaking",
+      "shape": "speak_prompt",
+      "itemCount": 1,
+      "optionCount": 0,
+      "readiness": "speaking_pipeline_not_ready"
+    }
+  ],
+  "staticSummary": {
+    "status": "active",
+    "paperReady": true,
+    "sections": [
+      {
+        "id": "reading",
+        "taskTypes": [
+          "complete_the_words",
+          "read_daily_life",
+          "reading_comprehension"
+        ],
+        "requiresAudio": false,
+        "requiresRubric": false
+      },
+      {
+        "id": "listening",
+        "taskTypes": [
+          "choose_a_response",
+          "listening_comprehension"
+        ],
+        "requiresAudio": true,
+        "requiresRubric": false
+      },
+      {
+        "id": "writing",
+        "taskTypes": [
+          "build_a_sentence",
+          "email_writing",
+          "academic_discussion"
+        ],
+        "requiresAudio": false,
+        "requiresRubric": true
+      },
+      {
+        "id": "speaking",
+        "taskTypes": [
+          "listen_and_repeat",
+          "interview_speaking"
+        ],
+        "requiresAudio": true,
+        "requiresRubric": true
+      }
+    ]
+  },
+  "dbSummary": {
+    "status": "checked",
+    "stage": "toefl-listening-pilot-2026-07-01",
+    "expectedRuntimeStatus": "active",
+    "counts": {
+      "sets": 20,
+      "choose_a_response": 10,
+      "listening_comprehension": 10,
+      "items": 40,
+      "stimuli": 20,
+      "activeToeflListeningSets": 200,
+      "activePilotAudioAssets": 20,
+      "readingPilotSets": 20,
+      "readingPilotItems": 64
+    }
+  },
+  "blockerSummary": {
+    "paperReady": true,
+    "mockV1": {
+      "open": true,
+      "sections": [
+        "reading",
+        "listening",
+        "writing"
+      ],
+      "excludedFromPaper": [
+        "speaking",
+        "build_a_sentence"
+      ]
+    },
+    "reviewedActive": [
+      "read_daily_life",
+      "reading_comprehension",
+      "complete_the_words",
+      "email_writing",
+      "academic_discussion"
+    ],
+    "readingAcademicReviewHeldDraft": 0,
+    "audioReviewedAndActive": [
+      "choose_a_response",
+      "listening_comprehension"
+    ],
+    "scoringNotReady": [
+      "build_a_sentence"
+    ],
+    "speakingPipelineNotReady": [
+      "listen_and_repeat",
+      "interview_speaking"
+    ]
+  }
+}

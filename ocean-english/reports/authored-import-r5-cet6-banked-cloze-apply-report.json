@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-22T23:54:48.210Z",
+  "apply": true,
+  "stage": "r5-cet6-banked-cloze",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 16,
+    "reject": 0,
+    "wrote": 1,
+    "dupSkip": 15
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\r5-cet6-banked-cloze\\cet6-banked-cloze-16.json",
+      "template": "cet-banked-cloze",
+      "level": 4,
+      "parsedOk": 16,
+      "reject": 0,
+      "wrote": 1,
+      "dupSkip": 15
+    }
+  ]
+}

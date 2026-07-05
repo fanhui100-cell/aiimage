@@ -12,7 +12,10 @@ import openai
 from openai import AsyncOpenAI
 from app.config import settings
 
-client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+client = AsyncOpenAI(
+    api_key=settings.OPENAI_API_KEY,
+    base_url="https://api.302.ai/v1",
+)
 
 async def generate_from_text(prompt: str, size: str = "1024x1024") -> tuple[bytes, int]:
     """Text-to-image. Returns (image_bytes, output_tokens)."""
@@ -23,7 +26,6 @@ async def generate_from_text(prompt: str, size: str = "1024x1024") -> tuple[byte
             size=size,
             quality="medium",
             n=1,
-            response_format="b64_json",
         )
     except openai.OpenAIError as e:
         raise RuntimeError(f"Image generation failed: {e}") from e
@@ -46,7 +48,6 @@ async def generate_from_reference(
             prompt=prompt,
             size=size,
             n=1,
-            response_format="b64_json",
         )
     except openai.OpenAIError as e:
         raise RuntimeError(f"Image generation failed: {e}") from e

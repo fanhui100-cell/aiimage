@@ -1,0 +1,28 @@
+{
+  "templateId": "toefl-choose-a-response",
+  "examIds": ["toefl"],
+  "taskType": "choose_a_response",
+  "skill": "listening",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "TOEFL 2026 Listening pilot. Original short spoken prompt or mini-dialogue, followed by one selected-response item asking for the best response. No real ETS text. Draft only until audio is produced and reviewed."
+  },
+  "stimulusRequirements": {
+    "kind": "short_audio_prompt",
+    "minWords": 25,
+    "maxWords": 90,
+    "perStimulusItems": 1,
+    "topicDomains": ["campus_life", "classroom", "student_services", "academic_advising", "library", "housing"]
+  },
+  "itemCount": 1,
+  "optionCount": 4,
+  "answerSchema": { "shape": "listening_multi", "optionCount": 4 },
+  "subskills": ["pragmatic_response", "speaker_intent", "campus_interaction"],
+  "qualityRules": [
+    "100% original; use official TOEFL task style only as structure guidance.",
+    "The correct response must be natural, contextually appropriate, and uniquely best.",
+    "Distractors must be plausible but violate tone, purpose, timing, or stated facts.",
+    "Draft only until stable audio is generated and reviewed."
+  ],
+  "copyrightPolicy": "original_only"
+}

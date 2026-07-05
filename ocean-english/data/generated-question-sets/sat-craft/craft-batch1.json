@@ -1,0 +1,103 @@
+{
+  "template": "sat-craft-and-structure",
+  "level": 7,
+  "_provenance": "Claude-authored original Digital SAT Craft and Structure items, batch 1. 100% original, not copied from College Board. DeepSeek not used. Words in Context items depend on context, not isolated synonyms; cross-text items use two short original texts.",
+  "sets": [
+    {
+      "passage": "The scientist's curious mind led her to question results that nearly everyone else accepted without a second thought. Where her colleagues saw a settled fact, she saw a door left slightly open, an invitation to look closer.",
+      "prompt": "As used in the text, what does the word 'curious' most nearly mean?",
+      "options": ["inquiring", "strange", "careful", "well known"],
+      "answer": "inquiring",
+      "domain": "Craft and Structure",
+      "explain_zh": "curious 兼有好奇与古怪之义；语境为质疑结论、想看更深，取爱探究之意 inquiring。strange 是另一词典义但不合语境。"
+    },
+    {
+      "passage": "Although the new bridge appeared delicate, almost like lace stretched against the sky, the engineers insisted it could bear the weight of the heaviest loaded trucks without the faintest tremor.",
+      "prompt": "As used in the text, what does the word 'delicate' most nearly mean?",
+      "options": ["fragile in appearance", "pleasing in taste", "easily offended", "requiring great tact"],
+      "answer": "fragile in appearance",
+      "domain": "Craft and Structure",
+      "explain_zh": "delicate 多义；although 转折表明外表看似纤弱却能承重，取看上去脆弱 fragile in appearance。其余义项不合语境。"
+    },
+    {
+      "passage": "His early novels were dismissed as light entertainment, but his later work revealed a grave concern with how ordinary people endure deep loss and somehow carry on with their lives.",
+      "prompt": "As used in the text, what does the word 'grave' most nearly mean?",
+      "options": ["serious", "a burial site", "grayish in color", "carved by hand"],
+      "answer": "serious",
+      "domain": "Craft and Structure",
+      "explain_zh": "grave 多义（坟墓/严肃）；语境为对苦难与坚持的关切，取严肃 serious。其余为字面或无关义。"
+    },
+    {
+      "passage": "The committee's final report was so dense that even seasoned experts had to read each paragraph twice, slowly untangling sentences packed with qualifications, conditions, and exceptions.",
+      "prompt": "As used in the text, what does the word 'dense' most nearly mean?",
+      "options": ["hard to understand", "heavy in weight", "thickly wooded", "lacking intelligence"],
+      "answer": "hard to understand",
+      "domain": "Craft and Structure",
+      "explain_zh": "dense 多义；语境为须读两遍、句子盘绕，取晦涩难懂 hard to understand。heavy/wooded/unintelligent 不合语境。"
+    },
+    {
+      "passage": "The old farmer had a weathered face and hands made rough by decades of labor, but his eyes remained sharp, missing nothing that moved across the distant edges of his fields.",
+      "prompt": "As used in the text, what does the word 'sharp' most nearly mean?",
+      "options": ["keenly perceptive", "having a fine cutting edge", "sudden and steep", "sour in taste"],
+      "answer": "keenly perceptive",
+      "domain": "Craft and Structure",
+      "explain_zh": "sharp 多义；修饰 eyes 且 missing nothing，取敏锐 keenly perceptive。其余为刀刃、陡峭、酸味等义，不合语境。"
+    },
+    {
+      "passage": "In the tensest negotiations, she had a rare gift for finding common ground, quietly naming the one point on which both sides could already agree and then building slowly outward from there.",
+      "prompt": "As used in the text, what does the phrase 'common ground' most nearly mean?",
+      "options": ["shared agreement", "ordinary soil", "publicly owned land", "a low-lying field"],
+      "answer": "shared agreement",
+      "domain": "Craft and Structure",
+      "explain_zh": "common ground 字面为公共土地，语境指双方已能认同之处，取共识 shared agreement。"
+    },
+    {
+      "passage": "Most of the article describes the painter's long years of obscurity: the rejected canvases, the freezing studios, the endlessly borrowed money. Only in its very last sentence does it mention, almost in passing, that one of those once-rejected paintings recently sold for a record sum.",
+      "prompt": "Which choice best describes the function of the last sentence in the text?",
+      "options": ["It provides an ironic contrast to the hardship described earlier.", "It introduces the main subject of the entire article.", "It offers detailed statistical support for an earlier claim.", "It casts doubt on the accuracy of the preceding description."],
+      "answer": "It provides an ironic contrast to the hardship described earlier.",
+      "domain": "Craft and Structure",
+      "explain_zh": "全文写潦倒，末句以天价售出形成反讽对比。B、C、D 与该句作用不符。"
+    },
+    {
+      "passage": "The essay opens with a question that seems easy to answer: what is a weed? Each paragraph that follows offers a tidy definition and then quietly dismantles it, until the reader begins to suspect that the category itself says more about human judgment than about the plants.",
+      "prompt": "Which choice best describes the overall structure of the text?",
+      "options": ["A question is raised, and proposed answers are successively undermined.", "A claim is stated and then backed with statistics.", "Two opposing views are compared and then reconciled.", "A single story is told in strict chronological order."],
+      "answer": "A question is raised, and proposed answers are successively undermined.",
+      "domain": "Craft and Structure",
+      "explain_zh": "结构为提出问题后逐一拆解各定义。B、C、D 与文本展开方式不符。"
+    },
+    {
+      "passage": "Before listing the new safety rules, the manual spends a full page describing, in vivid and unsettling detail, a single accident that the rules are meant to prevent. Only after the reader has clearly pictured the danger does the dry list of regulations finally begin.",
+      "prompt": "Which choice best describes the function of the detailed accident description?",
+      "options": ["It motivates the reader to take the rules that follow seriously.", "It proves that the rules have always been completely effective.", "It lists the correct steps for responding to an accident.", "It compares two competing safety systems."],
+      "answer": "It motivates the reader to take the rules that follow seriously.",
+      "domain": "Craft and Structure",
+      "explain_zh": "先生动描述事故，意在让读者重视随后的规则。B、C、D 与该段作用不符。"
+    },
+    {
+      "passage": "Text 1: Some economists argue that the rise of remote work will hollow out city centers, as offices empty and the shops and restaurants that once depended on daily commuters close one by one.\n\nText 2: Other researchers counter that workers freed from commuting simply spend their time and money closer to home, quietly enriching the very neighborhoods that big downtown offices had long drained of life.",
+      "prompt": "Based on the texts, how would the researchers in Text 2 most likely respond to the argument in Text 1?",
+      "options": ["By suggesting that spending shifts to other areas rather than disappearing.", "By agreeing that city centers will inevitably collapse.", "By denying that remote work has any economic effects at all.", "By arguing that commuters never spent any money downtown."],
+      "answer": "By suggesting that spending shifts to other areas rather than disappearing.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 认为消费转移到社区而非消失，以此回应 Text 1 的掏空论。B、C、D 与 Text 2 立场不符。"
+    },
+    {
+      "passage": "Text 1: A naturalist writing in 1890 insisted that wolves were nothing but ruthless killers, and that removing them entirely could only benefit the deer and the farmers alike.\n\nText 2: Modern ecologists have found that when wolves vanish, deer multiply unchecked, strip the land of young trees, and ultimately leave the whole ecosystem poorer and less stable than before.",
+      "prompt": "Based on the texts, the ecologists in Text 2 would most likely regard the 1890 naturalist's claim as",
+      "options": ["mistaken about the long-term effects of removing wolves.", "fully confirmed by the later evidence.", "irrelevant to any question of ecology.", "far too sympathetic toward the wolves."],
+      "answer": "mistaken about the long-term effects of removing wolves.",
+      "domain": "Craft and Structure",
+      "explain_zh": "现代生态学发现移除狼反而损害生态，故视 1890 观点为错判长期后果。其余与 Text 2 发现相悖。"
+    },
+    {
+      "passage": "Text 1: One historian maintains that the printing press itself caused the rapid spread of bold new religious ideas across sixteenth-century Europe.\n\nText 2: Another scholar cautions that presses had already existed for decades before those ideas spread, and that it was a sudden public hunger for reform, not the machine alone, that finally lit the fire.",
+      "prompt": "Based on the texts, how does the scholar in Text 2 qualify the claim made in Text 1?",
+      "options": ["By suggesting that demand for new ideas, not the press alone, drove their spread.", "By denying that the printing press had ever been invented.", "By agreeing that the press was the single sufficient cause.", "By arguing that the new ideas never actually spread at all."],
+      "answer": "By suggesting that demand for new ideas, not the press alone, drove their spread.",
+      "domain": "Craft and Structure",
+      "explain_zh": "Text 2 限定：真正推动传播的是改革渴望而非印刷机本身。B、C、D 与该限定不符。"
+    }
+  ]
+}

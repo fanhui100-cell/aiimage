@@ -1,0 +1,296 @@
+{
+  "template": "cet-para-match",
+  "level": 4,
+  "sets": [
+    {
+      "passage": "[A] For most of human history, money was something you could hold. Shells, salt, gold coins and paper notes all served as tokens that strangers agreed to trust. Today that physical anchor is dissolving. A growing share of the world's transactions exist only as entries in a database, moved by a tap of a card or a phone. The question is no longer whether money will become digital, but what kind of digital money will dominate, and who will control the rails on which it travels.\n\n[B] Commercial banks have long created most of the money in circulation, not by printing it but by issuing loans. When a bank approves a mortgage, it credits the borrower's account with funds that did not previously exist. This quiet power to manufacture purchasing power is one reason governments regulate banks so heavily, and one reason critics argue that ordinary citizens have surprisingly little say over how money enters the economy.\n\n[C] Cryptocurrencies emerged as a rebellion against precisely this arrangement. By recording transactions on a shared ledger that no single institution owns, they promised money without gatekeepers. Yet the dream of a frictionless, stateless currency has collided with reality. Wild swings in value make most coins poor for everyday spending, and the energy demands of some networks have drawn fierce criticism from environmentalists.\n\n[D] Partly in response, central banks have begun designing their own digital currencies. A central-bank digital currency would be issued directly by the state, combining the convenience of an app with the backing of a national treasury. Supporters say it could speed up payments and reach people who lack bank accounts. Skeptics warn that it would hand authorities an unprecedented window into every purchase a person makes.\n\n[E] That worry points to a deeper tension. Cash is anonymous; a banknote carries no record of who spent it or where. Digital money, by contrast, leaves a trail. As coins and notes fade, societies must decide how much financial privacy they are willing to surrender for the sake of efficiency and the fight against crime.\n\n[F] The shift also threatens to redraw the map of global power. The dollar dominates international trade today, giving the United States enormous leverage over the world's financial plumbing. If rival nations build alternative digital systems, that grip could loosen. Money, in other words, is never merely economic; it is a quiet instrument of statecraft.\n\n[G] Meanwhile, for billions of people the most important monetary innovation is far humbler than any blockchain. Mobile-phone wallets have allowed farmers and traders in poorer regions to save, borrow and transfer value without ever entering a bank branch. For them, the future of money has already arrived, and it looks like a text message rather than a glittering coin.\n\n[H] Whatever form prevails, one truth endures. Money works only because people believe it will be accepted tomorrow as it was today. Strip away that shared confidence and the most sophisticated technology becomes worthless. The coming revolution, then, is less about code than about trust, the oldest currency of all.",
+      "statements": [
+        "The reliability of any monetary system ultimately rests on a collective expectation that it will keep its worth.",
+        "Lenders effectively bring fresh money into being whenever they grant credit to borrowers.",
+        "A state-issued digital currency could extend financial services to those currently outside the banking system.",
+        "Tracking every payment electronically forces communities to weigh convenience against the loss of personal secrecy.",
+        "The decline of tangible currency has not ended but merely changed the contest over which system will lead.",
+        "In less wealthy areas, simple phone-based transfers have already transformed how people handle their funds.",
+        "Decentralized digital coins were created as a protest against control of money by established institutions.",
+        "Should other countries develop their own payment networks, one nation's financial dominance may weaken.",
+        "Heavy energy consumption and unstable prices undermine the everyday usefulness of certain digital coins.",
+        "A government-backed digital currency risks giving officials a detailed view of citizens' spending habits."
+      ],
+      "answers": [
+        7,
+        1,
+        3,
+        4,
+        0,
+        6,
+        2,
+        5,
+        2,
+        3
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[H]段：金钱之所以有效，全凭人们相信它明天仍会被接受，信任是最古老的货币。\n2. 对应[B]段：商业银行通过发放贷款凭空创造购买力，把新钱注入经济。\n3. 对应[D]段：央行数字货币可惠及没有银行账户的人群。\n4. 对应[E]段：数字货币留下痕迹，社会须在效率与隐私之间权衡。\n5. 对应[A]段：问题已不在于钱是否数字化，而在于哪种数字货币会主导。\n6. 对应[G]段：在较贫困地区，手机钱包已彻底改变人们储蓄与转账方式。\n7. 对应[C]段：加密货币是对机构垄断货币这一安排的反叛。\n8. 对应[F]段：若他国建立替代性数字系统，美元的金融主导地位会被削弱。\n9. 对应[C]段：剧烈波动与高能耗削弱了某些币种的日常实用性。\n10. 对应[D]段：央行数字货币可能让当局窥见每笔消费，引发隐私担忧。"
+    },
+    {
+      "passage": "[A] Trust is the invisible glue of social life. When you board a bus, eat at a restaurant or hand cash to a cashier, you rely on countless strangers to behave predictably. In small bands of hunter-gatherers, such confidence was easy to sustain: everyone knew everyone, and a cheat's reputation followed him for life. The puzzle of modern civilization is how trust survives among millions of people who will never meet.\n\n[B] Anthropologists note that face-to-face communities police themselves through gossip and shame. If a villager steals or lies, word spreads, and the offender is shunned. This mechanism is remarkably effective, but it has a ceiling. Once a group grows beyond a few hundred members, no one can keep track of everybody's behaviour, and reputation alone stops being enough to hold the community together.\n\n[C] To bridge larger numbers, societies invented shared stories. Religions, in particular, allowed strangers to cooperate by convincing them they answered to the same watchful authority. A merchant in a distant city could be trusted a little more if he prayed to the same god and feared the same punishment. Belief, in this sense, acted as a kind of social technology long before any written contract existed.\n\n[D] Formal institutions later took over much of this work. Courts, police and written laws meant that cooperation no longer depended on personal acquaintance or shared faith. If a contractor cheated you, you could sue rather than rely on his conscience. The genius of such systems is that they let people trust the rules even when they cannot trust the individual standing in front of them.\n\n[E] Money deserves special mention here, for it is itself a monument of trust. Accepting a banknote means believing that others will accept it from you in turn. Every coin in your pocket is a small bet on the stability of the whole system, a wager so habitual that most of us never notice we are making it.\n\n[F] Yet institutional trust is fragile. When citizens come to believe that judges are corrupt or that officials are lining their pockets, the entire edifice wobbles. Studies repeatedly find that nations with higher levels of social trust enjoy faster growth and less crime, while societies riddled with suspicion pay a heavy economic price for their wariness.\n\n[G] The digital age has complicated the picture further. We now extend trust to faceless platforms, leaving our savings, secrets and reputations in their care. New tools promise to verify honesty automatically, replacing human judgement with code. Whether such systems can truly substitute for the slow, reciprocal bonds that hold communities together remains an open and pressing question.\n\n[H] What seems certain is that no advanced society can function without it. Trust lowers the friction of every exchange, freeing people to plan, invest and collaborate across vast distances. It is, paradoxically, both the cheapest and the most precious resource a civilization possesses, and the hardest to rebuild once it is lost.",
+      "statements": [
+        "Below a certain population, communities keep order simply because everyone's conduct is widely known.",
+        "Accepting paper currency is essentially an act of faith that others will later honour it too.",
+        "Shared religious belief once enabled distant strangers to cooperate by invoking a common higher power.",
+        "No complex society can operate without this binding resource, which eases the cost of every dealing.",
+        "Modern challenges arise as people increasingly entrust their assets and identities to impersonal online services.",
+        "Legal systems let individuals rely on enforceable rules rather than on the character of any single person.",
+        "The central mystery of civilization is sustaining cooperation among multitudes who remain strangers to one another.",
+        "When the public suspects authorities of dishonesty, confidence in the whole structure begins to crumble.",
+        "Small mobile groups long ago could maintain honesty because a cheater's bad name clung to him permanently.",
+        "Nations rich in mutual confidence tend to grow more quickly and suffer less lawbreaking."
+      ],
+      "answers": [
+        1,
+        4,
+        2,
+        7,
+        6,
+        3,
+        0,
+        5,
+        0,
+        5
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[B]段：群体规模有上限，几百人以内靠人人知晓彼此行为来维持秩序。\n2. 对应[E]段：接受纸币就是相信他人日后也会接受，是一种信任的赌注。\n3. 对应[C]段：共同的宗教信仰让远方陌生人因敬畏同一权威而合作。\n4. 对应[H]段：任何发达社会都离不开信任，它降低每次交换的摩擦。\n5. 对应[G]段：数字时代人们把财产与身份托付给无面孔的平台。\n6. 对应[D]段：正式制度让人依赖可执行的规则而非个人品行。\n7. 对应[A]段：现代文明的谜题是数百万素不相识者之间如何维持信任。\n8. 对应[F]段：当公众怀疑官员腐败，整座信任大厦就会动摇。\n9. 对应[A]段：小型狩猎采集群体中，骗子的坏名声会跟随其一生。\n10. 对应[F]段：社会信任高的国家增长更快、犯罪更少。"
+    },
+    {
+      "passage": "[A] Few technologies have inspired such swings between euphoria and dread as artificial intelligence. Enthusiasts predict machines that cure disease and end drudgery; pessimists foresee mass unemployment or worse. Cutting through the noise requires understanding not only what these systems can do, but what they fundamentally cannot. Their limits, it turns out, are as instructive as their triumphs.\n\n[B] Modern AI excels at pattern recognition. Fed millions of examples, it can identify tumours in scans, translate languages and recommend films with uncanny skill. But this competence is narrow. A program that masters chess cannot tie a shoelace, and one trained to spot cats has no idea what a cat actually is. It manipulates correlations without grasping meaning, a difference that is easy to forget when the output sounds fluent.\n\n[C] This gap becomes dangerous when systems meet situations absent from their training. A self-driving car that has never seen a kangaroo may misjudge its leaps; a hiring tool trained on past decisions may quietly inherit the prejudices buried in that data. Because the machine cannot reason about novelty the way a person can, the unfamiliar exposes the brittleness beneath its polished surface.\n\n[D] Another stubborn limit is the hunger for data. Children learn what a giraffe is from a single picture book, whereas today's systems often need thousands of labelled examples. This appetite makes the technology expensive and confines its best performance to domains where vast records already exist, leaving many rare but important problems out of reach.\n\n[E] Then there is the riddle of transparency. The most powerful models reach conclusions through layers of computation so tangled that even their designers cannot fully explain a given decision. When such a system denies someone a loan or flags them as a risk, the absence of a clear reason is not just frustrating; it can be a violation of basic fairness.\n\n[F] Critics also point to the question of common sense. Humans navigate the world using a vast, unspoken store of knowledge about how objects, people and time behave. Machines lack this scaffolding. They may produce confident statements that are plainly absurd, precisely because they have no underlying model of reality to check their answers against.\n\n[G] None of this means the technology is a mirage. It is reshaping medicine, science and commerce in ways that were unthinkable a decade ago. The point is rather that intelligence is not a single ladder with humans on top and machines climbing behind. These systems are alien minds, brilliant in narrow corridors and strangely blind elsewhere.\n\n[H] The wisest course, many researchers argue, is to treat AI as a powerful instrument rather than a substitute for human judgement. Used to extend our capacities while we supply the wisdom, context and accountability it lacks, it becomes an ally. Forgetting where it ends and we begin is the surest path to trouble.",
+      "statements": [
+        "These systems should be seen as tools that augment people rather than replacements for human discernment.",
+        "Lacking an internal picture of how the world works, machines can assert things that are obviously nonsensical.",
+        "Grasping what such technology cannot do is as enlightening as marvelling at its successes.",
+        "Because a model cannot truly explain its own reasoning, denying someone a service without justification may be unjust.",
+        "When confronted with scenarios missing from its training, the machine's apparent competence quickly breaks down.",
+        "The strongest performance is limited to fields with abundant existing records, sidelining rarer problems.",
+        "A system skilled at recognising images grasps statistical links without understanding what it is looking at.",
+        "Rather than ranking minds on one scale, we should regard these systems as foreign intelligences, gifted yet oddly limited.",
+        "Whereas a child needs only one image to learn a new animal, these programs demand enormous labelled datasets.",
+        "Hidden biases in historical information can be silently absorbed by tools that learn from past human choices."
+      ],
+      "answers": [
+        7,
+        5,
+        0,
+        4,
+        2,
+        3,
+        1,
+        6,
+        3,
+        2
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[H]段：应把AI当作增强人类能力的工具，而非取代人的判断。\n2. 对应[F]段：机器缺乏对现实的内在模型，会自信地说出荒谬之言。\n3. 对应[A]段：理解这些系统做不到什么，与赞叹其成就同样有启发性。\n4. 对应[E]段：模型无法解释自身推理，无理由拒绝他人可能有失公平。\n5. 对应[C]段：面对训练之外的情境，机器表面的能力迅速崩塌。\n6. 对应[D]段：最佳表现局限于已有海量记录的领域，使稀有问题被忽视。\n7. 对应[B]段：擅长识别图像的系统只掌握统计关联，并不理解所见为何物。\n8. 对应[G]段：不应把智能排成一条阶梯，而应视这些系统为陌生的智能。\n9. 对应[D]段：孩子看一张图就能学会新动物，程序却需海量标注数据。\n10. 对应[C]段：从过去人类决策中学习的工具会悄然继承历史数据中的偏见。"
+    },
+    {
+      "passage": "[A] Universities occupy a peculiar place in modern life. They are at once ancient and restless, guardians of tradition that nonetheless promise to drive change. Society asks them to perform a bewildering range of tasks: to train workers, to generate discoveries, to lift the poor, to preserve culture and to act as a conscience for the nation. No single institution could fulfil all these demands perfectly, yet the university is expected to try.\n\n[B] The most visible role is economic. Degrees have become passports to better-paid work, and governments fund higher education partly because skilled graduates fuel productivity. Yet treating a university purely as a factory for employable workers misses much of its purpose, and risks crowding out subjects that bring no obvious financial reward but enrich a society's understanding of itself.\n\n[C] Equally important is the production of knowledge. Within laboratories and libraries, scholars push at the boundaries of what is known, often with no immediate application in mind. Many of the discoveries that later transformed daily life began as curiosity-driven inquiry that no commercial sponsor would have funded, a reminder that useful breakthroughs frequently grow from apparently useless questions.\n\n[D] Universities have also long been engines of social mobility. For a talented child from a modest household, a place at a good institution can rewrite the trajectory of an entire family. When admissions favour wealth or connections, however, the same institutions that promise to level society can quietly entrench the very inequalities they claim to dissolve.\n\n[E] Beyond economics and research lies a subtler function: the cultivation of judgement. A genuine education teaches students not merely facts but how to weigh evidence, tolerate ambiguity and question their own assumptions. In an age awash with confident misinformation, the ability to think carefully may be the most valuable thing a campus can pass on.\n\n[F] Campuses serve, too, as forums for open debate. Ideally they are spaces where unpopular arguments can be aired and tested without fear. Critics complain that this ideal is increasingly betrayed, as pressure to conform narrows what may safely be said, dulling the very friction from which fresh thinking springs.\n\n[G] There is also a custodial duty. Universities preserve languages, texts and ways of thinking that the market would happily let perish. By keeping alive knowledge with no immediate buyer, they act as a kind of memory for civilization, safeguarding intellectual inheritances for generations not yet born.\n\n[H] All these missions now strain against tightening budgets and rising expectations. As costs climb and public funding shrinks, institutions face hard choices about what to protect. How they answer will shape not only their own survival but the intellectual character of the societies that depend on them.",
+      "statements": [
+        "Beyond imparting information, a true education trains people to evaluate evidence and doubt their own beliefs.",
+        "Many transformative findings began as inquiry pursued for its own sake, which no business would have backed.",
+        "Society loads onto these institutions an overwhelming variety of expectations that none could wholly satisfy.",
+        "By sustaining knowledge with no immediate market, they serve as a repository of civilization's memory.",
+        "Shrinking public money and growing demands now force these institutions into difficult decisions about priorities.",
+        "Viewing the institution merely as a supplier of employable labour overlooks much of what it is for.",
+        "When entry favours the privileged, bodies that vow to reduce inequality may instead reinforce it.",
+        "Ideally these are places where controversial views can be voiced and examined without intimidation.",
+        "A coveted spot at a strong institution can transform the prospects of an entire modest family.",
+        "Mounting pressure toward conformity is said to be eroding the open exchange that breeds original thought."
+      ],
+      "answers": [
+        4,
+        2,
+        0,
+        6,
+        7,
+        1,
+        3,
+        5,
+        3,
+        5
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[E]段：真正的教育不只传授事实，更教人权衡证据、质疑自身假设。\n2. 对应[C]段：许多变革性发现源于好奇驱动、无商业赞助者会资助的探究。\n3. 对应[A]段：社会向大学提出名目繁多的期望，无一机构能全部完美达成。\n4. 对应[G]段：保存无即时买家的知识，大学成为文明的记忆库。\n5. 对应[H]段：公共资金缩减、期望上升，迫使大学就优先事项做艰难取舍。\n6. 对应[B]段：把大学仅看作可雇佣劳动力的供应者，忽略了其大部分意义。\n7. 对应[D]段：招生偏向特权阶层时，誓言减少不平等的机构反而会强化它。\n8. 对应[F]段：理想中校园是可无所畏惧地表达并检验争议观点的场所。\n9. 对应[D]段：进入优秀院校的名额能改变一个普通家庭的命运轨迹。\n10. 对应[F]段：日益增长的从众压力据说正侵蚀孕育原创思想的开放交流。"
+    },
+    {
+      "passage": "[A] Climate change is often described as the greatest market failure the world has ever seen. The reasoning is simple. When a factory burns coal, it enjoys the profit while the harm from its emissions is spread thinly across the entire planet and pushed onto future generations. Because no one pays for that damage directly, the market quietly encourages far more pollution than is good for humanity as a whole.\n\n[B] Economists call such hidden costs externalities. The classic remedy is to make polluters pay, so that the price of a tonne of carbon reflects the damage it causes. Carbon taxes and emissions-trading schemes both aim to do this, nudging firms and consumers toward cleaner choices by attaching a real cost to the dirtier ones rather than leaving that cost invisible.\n\n[C] A peculiar feature of the problem is its timing. The benefits of burning fossil fuels are immediate, while the worst consequences arrive decades later. Human beings, and the political systems they build, are notoriously bad at sacrificing present comfort for distant reward. This mismatch between today's gains and tomorrow's pain lies at the heart of why action has been so slow.\n\n[D] There is also a brutal unfairness woven through the numbers. The nations that grew rich by burning coal and oil are not, by and large, the ones that will suffer most. Many of the countries facing the fiercest droughts and floods contributed least to the problem, raising thorny questions about who should bear the cost of repair.\n\n[E] Yet the economics are not uniformly gloomy. The price of solar panels and wind turbines has collapsed far faster than forecasters predicted, and in many regions clean power is now cheaper than the fossil kind. What once looked like a painful sacrifice increasingly resembles a sound investment, provided the upfront capital can be found.\n\n[F] Adaptation forms the other half of the ledger. Even with rapid cuts in emissions, some warming is already locked in, so societies must also spend to protect themselves: building sea walls, redesigning crops and bracing infrastructure against extremes. Money poured into such defences competes with money for reducing emissions, forcing uncomfortable trade-offs.\n\n[G] Underlying every calculation is the slippery matter of how much we value the future. Economists fold this into a figure called the discount rate, which sets how heavily tomorrow's harms weigh against today's costs. Choose a high rate and distant catastrophes shrink to triviality; choose a low one and they dominate. A seemingly technical decision thus carries profound moral weight.\n\n[H] What unites these threads is the recognition that climate policy is never purely scientific. Every option redistributes burdens between rich and poor, present and future, one industry and another. Pretending otherwise only obscures the genuine choices a society must make, and delays the reckoning that delay itself makes costlier.",
+      "statements": [
+        "How heavily we weigh distant harm against present expense is captured by a single, morally loaded figure.",
+        "Putting a real price on emissions through taxes or trading aims to steer people toward cleaner options.",
+        "Spending on protective defences directly competes with funds meant to cut emissions, forcing hard trade-offs.",
+        "Because polluters profit while the harm is dispersed worldwide, the market quietly invites excess pollution.",
+        "Every policy choice shifts burdens between groups, so climate decisions can never be purely scientific.",
+        "Falling costs of renewable energy have turned what seemed a sacrifice into an increasingly attractive investment.",
+        "The countries least responsible for emissions are often those bound to endure the harshest consequences.",
+        "Immediate rewards paired with far-off damage explain much of the world's sluggish response.",
+        "The standard cure for these hidden costs is to compel those causing harm to bear its price.",
+        "Renewable power has in many places become cheaper than energy drawn from fossil fuels."
+      ],
+      "answers": [
+        6,
+        1,
+        5,
+        0,
+        7,
+        4,
+        3,
+        2,
+        1,
+        4
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[G]段：折现率这一数字决定未来损害与当前成本的权重，承载道德分量。\n2. 对应[B]段：通过碳税或排放交易给排放定价，旨在引导人们做更清洁选择。\n3. 对应[F]段：用于防护设施的资金与减排资金相互竞争，迫使艰难取舍。\n4. 对应[A]段：污染者获利而损害被全球分摊，市场默许了过度污染。\n5. 对应[H]段：每项政策都在不同群体间重新分配负担，故气候决策从非纯科学。\n6. 对应[E]段：可再生能源成本下降，使昔日的牺牲变成日益诱人的投资。\n7. 对应[D]段：排放责任最小的国家往往要承受最严酷的后果。\n8. 对应[C]段：眼前回报与遥远损害的错配，解释了世界反应的迟缓。\n9. 对应[B]段：对这些隐性成本的经典解药是让造成损害者承担其代价。\n10. 对应[E]段：许多地区可再生电力已比化石燃料发电更便宜。"
+    },
+    {
+      "passage": "[A] Creativity has long been wrapped in romantic myth. We picture the lone genius struck by sudden inspiration, a bolt of lightning that no ordinary mortal could summon. Modern psychology tells a humbler and more hopeful story. Creative thinking, researchers argue, is less a divine gift than a set of mental habits that anyone can strengthen with effort and the right conditions.\n\n[B] At its core, creativity involves combining familiar elements in unfamiliar ways. The composer borrows a folk melody and bends it; the engineer adapts a trick from nature. Far from conjuring something from nothing, the creative mind is a restless recombiner, forever asking how distant ideas might be joined. This explains why broad and varied experience so often feeds original work.\n\n[C] Curiously, the brain seems to generate its best ideas when it is not trying. Many people report breakthroughs in the shower, on a walk or just before sleep, when attention loosens and the mind wanders freely. During such idle moments, connections form between thoughts that focused concentration would keep apart, which is why relentless busyness can quietly strangle invention.\n\n[D] Yet wandering alone is not enough. Inspiration must eventually be disciplined by craft. Studies of celebrated artists and scientists reveal not effortless ease but years of patient practice, false starts and revision. The flash of insight, when it comes, lands on a mind already saturated with knowledge of its field, ground prepared by long and unglamorous labour.\n\n[E] Emotion plays a surprising part too. A positive, relaxed mood tends to widen attention and encourage playful exploration, while anxiety narrows focus onto immediate threats. This is one reason oppressive, fearful environments rarely produce bold ideas: people busy protecting themselves have little spare capacity for the risky business of imagining something new.\n\n[F] Constraints, paradoxically, can help rather than hinder. A blank page is paralysing, but a tight brief or a stubborn limitation forces the mind to search harder and abandon tired solutions. Many inventors testify that their cleverest workarounds were born precisely from the boundaries they were straining against, not from boundless freedom.\n\n[G] The social setting matters as much as the individual mind. Ideas rarely mature in isolation; they are sharpened by argument, borrowed and remixed across a community. Places that gather diverse people and let them mingle freely tend to spark more innovation than those where talent is kept apart, hinting that creativity is partly a property of networks.\n\n[H] Perhaps the most encouraging finding is that creativity can be cultivated. By embracing curiosity, tolerating the discomfort of unfinished ideas and treating failure as information rather than disgrace, ordinary people can become markedly more inventive. The muse, it seems, favours not the chosen few but those who keep showing up to do the work.\"",
+      "statements": [
+        "A relaxed, cheerful state broadens attention and invites the playful experimentation that fear shuts down.",
+        "Original work usually springs from blending known ingredients together in unexpected combinations.",
+        "Far from being innate genius, inventiveness is a collection of habits that effort can develop.",
+        "Insight tends to surface during loose, wandering moments rather than under intense concentration.",
+        "Rather than belonging to a gifted few, creative ability can be deliberately nurtured by anyone willing to persist.",
+        "Tight limitations can actually push the mind to work harder and discard worn-out answers.",
+        "Behind sudden flashes of brilliance lie years of patient practice and repeated revision.",
+        "Ideas are honed through communal debate, so settings that mix varied people generate more innovation.",
+        "Constant busyness can quietly suffocate invention by preventing the loose connections idle minds make.",
+        "Broad and varied experience supplies the raw material that the recombining mind needs."
+      ],
+      "answers": [
+        4,
+        1,
+        0,
+        2,
+        7,
+        5,
+        3,
+        6,
+        2,
+        1
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[E]段：放松愉快的情绪拓宽注意力，鼓励恐惧所压制的玩味式探索。\n2. 对应[B]段：原创往往来自以意想不到的方式组合已知元素。\n3. 对应[A]段：创造力并非天赋，而是一套可通过努力培养的习惯。\n4. 对应[C]段：灵感多在心绪松散、思维游走时浮现，而非高度集中时。\n5. 对应[H]段：创造力可被刻意培养，并非少数天选者的专属。\n6. 对应[F]段：严格的限制反而促使头脑更努力，抛弃陈旧答案。\n7. 对应[D]段：灵光乍现的背后是多年耐心练习与反复修改。\n8. 对应[G]段：想法在群体辩论中被打磨，混合多元人群的环境更出创新。\n9. 对应[C]段：持续的忙碌会阻止闲散心智形成的松散连接，悄然扼杀创造。\n10. 对应[B]段：广博多样的经历为善于重组的头脑提供原材料。"
+    },
+    {
+      "passage": "[A] No language in history has travelled as far or as fast as English. Once the speech of a small island, it is now the common tongue of science, aviation, business and the internet. A Japanese engineer and a Brazilian researcher will often conduct their work in English even though it is the mother tongue of neither. How this came to pass, and what it costs, is one of the great stories of the modern age.\n\n[B] The roots lie partly in empire. British colonial expansion planted the language across continents, embedding it in the schools and courts of distant territories. When American economic and cultural power rose in the twentieth century, it inherited and amplified this reach, so that films, music and software carried English into homes that no colonial official had ever touched.\n\n[C] Yet conquest alone cannot explain its grip. English spread because it became useful, and it became more useful the more people spoke it. A language that lets you talk to the largest number of strangers is the one worth learning, and every new speaker makes it slightly more valuable to the next. This self-reinforcing cycle has turned English into a default that is hard to dislodge.\n\n[D] The benefits are real. A shared tongue lubricates trade, lets scientists pool discoveries instantly and allows travellers to find their footing almost anywhere. Ideas that might once have stayed locked inside a single nation now circulate globally at remarkable speed, accelerating the collaborative work on which modern progress depends.\n\n[E] But the rise of one language casts a long shadow over others. As parents the world over push their children toward English for the sake of opportunity, smaller tongues lose speakers and prestige. Linguists warn that a great many languages may vanish within a century, and with each one disappears a unique way of seeing and naming the world.\n\n[F] Even the winners pay a subtler price. Native English speakers, comfortable that others will accommodate them, often neglect to learn any foreign language at all. This monolingual ease can breed a quiet provincialism, leaving them blind to nuances that bilingual colleagues grasp instinctively and dependent on translations that flatten meaning.\n\n[G] Meanwhile the language itself is slipping from its owners' grasp. Across the world, English is being reshaped into countless local varieties, blended with native grammars and seasoned with new words. The notion that London or New York sets the standard looks increasingly quaint; the majority of speakers now learned it as a second language and feel no obligation to imitate anyone.\n\n[H] Where all this leads is uncertain. Some imagine English entrenched for centuries; others suspect that translation technology could one day make a shared language unnecessary, letting everyone speak their own. What seems clear is that the story is still being written, by the very billions who have made the language their own without asking permission.",
+      "statements": [
+        "Because each additional speaker raises the language's worth to others, its dominance feeds on itself.",
+        "Comfortable that the world will adjust to them, many native speakers learn no other language at all.",
+        "Across the globe the language is fragmenting into local forms, loosening any single country's claim to set the rules.",
+        "No previous language has spread so widely or so quickly across the planet.",
+        "A common tongue speeds trade and lets researchers share findings the instant they are made.",
+        "As families everywhere steer children toward it, lesser-used languages shed speakers and standing.",
+        "Some foresee future translation tools removing any need for a shared language at all.",
+        "Colonial expansion first scattered the language, and later American influence widened its reach further.",
+        "When a minor language dies, a distinctive way of perceiving and naming reality vanishes with it.",
+        "Its usefulness, not mere conquest, explains why the language took such firm hold."
+      ],
+      "answers": [
+        2,
+        5,
+        6,
+        0,
+        3,
+        4,
+        7,
+        1,
+        4,
+        2
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[C]段：每多一个使用者就使语言对他人更有价值，主导地位自我强化。\n2. 对应[F]段：母语者笃定世界会迁就自己，往往一门外语都不学。\n3. 对应[G]段：英语在各地裂变为本地变体，削弱了任一国家制定标准的资格。\n4. 对应[A]段：历史上没有哪种语言传播得如此之广、之快。\n5. 对应[D]段：共同语言加速贸易，让研究者瞬间分享发现。\n6. 对应[E]段：各地家庭引导孩子学英语，小语种失去使用者与威望。\n7. 对应[H]段：有人预见未来翻译工具会让共同语言变得不再必要。\n8. 对应[B]段：殖民扩张最先播撒英语，后来美国影响进一步扩大其覆盖。\n9. 对应[E]段：一门小语种消亡，独特的感知与命名世界的方式也随之消失。\n10. 对应[C]段：是其实用性而非单纯征服，解释了英语为何根基如此稳固。"
+    },
+    {
+      "passage": "[A] We live, increasingly, in an age of watching. Cameras line our streets, our phones log our movements, and the websites we visit record our every click. Much of this monitoring is invisible and unremarked, yet together it forms a web of observation denser than any tyrant of the past could have dreamed. The ethical questions it raises are only beginning to be confronted.\n\n[B] Defenders of surveillance lean on the language of safety. Cameras, they argue, deter crime and help convict the guilty; tracking communications can foil plots before they unfold. There is genuine force in this case. When monitoring catches a kidnapper or thwarts an attack, few would deny that watching served the public good and spared real victims real harm.\n\n[C] The trouble is that the same tools rarely stay confined to their original purpose. A system built to catch terrorists can quietly be turned against protesters or journalists. Power, once granted the means to observe, is reluctant to surrender it, and what is justified in an emergency has a habit of hardening into a permanent feature of ordinary life.\n\n[D] Privacy, the value most obviously at stake, is easily misunderstood. It is not about having something to hide. Rather, it is the breathing space in which people form opinions, make mistakes and become themselves without an audience. Strip that space away and individuals begin, often unconsciously, to police their own behaviour, shrinking to fit what they imagine watchers expect.\n\n[E] This chilling effect troubles democracies in particular. A society where citizens fear that dissent is being logged is one where fewer will dare to dissent at all. The watchers need not punish anyone directly; the mere suspicion of being observed is enough to make people cautious, conformist and quiet, draining the open argument on which free politics depends.\n\n[F] A further worry is the imbalance of knowledge. Surveillance is rarely a two-way street. Governments and corporations learn ever more about individuals, while remaining themselves opaque. This asymmetry tilts power sharply toward the watchers, leaving the watched with little ability to know, let alone contest, how the information gathered about them is used.\n\n[G] Technology has sharpened every edge of the dilemma. Facial recognition can now pick a single face from a crowd, and vast troves of data can be sifted in seconds for patterns no human could detect. Capabilities once limited to spy agencies are spreading to ordinary police forces and private firms, outrunning the laws meant to restrain them.\n\n[H] None of this means surveillance is always wrong. The task is to draw lines: to insist on clear limits, independent oversight and the right to know when and why one is being watched. A society that monitors without restraint may gain a measure of order, but it risks losing the very freedoms that made the order worth protecting.",
+      "statements": [
+        "The watchers steadily accumulate knowledge about individuals while themselves staying hidden from scrutiny.",
+        "Supporters justify monitoring by pointing to its power to prevent crime and secure convictions.",
+        "True privacy is not concealment of wrongdoing but the room people need to develop into themselves unobserved.",
+        "Advances such as facial recognition are spreading capabilities once reserved for spy agencies to ordinary forces.",
+        "The proper response is to set firm limits and independent checks rather than to ban watching outright.",
+        "Tools created for one threat are seldom kept there, often being redirected against critics and reporters.",
+        "Knowing they may be recorded, citizens grow cautious and conformist, draining the debate democracy needs.",
+        "The sheer density of today's monitoring exceeds anything past rulers could have imagined.",
+        "When people sense an audience, they unconsciously begin restraining their own conduct to meet expectations.",
+        "Genuine harm has been prevented when surveillance has stopped an attack or caught a kidnapper."
+      ],
+      "answers": [
+        5,
+        1,
+        3,
+        6,
+        7,
+        2,
+        4,
+        0,
+        3,
+        1
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[F]段：监视者不断积累个人信息，自身却不受审视，形成知识不对称。\n2. 对应[B]段：支持者以预防犯罪、促成定罪为监控辩护。\n3. 对应[D]段：真正的隐私不是藏匿过错，而是人在无人注视下成长的空间。\n4. 对应[G]段：人脸识别等技术把昔日间谍机构专属的能力扩散到普通力量。\n5. 对应[H]段：正确之道是划清界限、设独立监督，而非彻底禁止监视。\n6. 对应[C]段：为某一威胁打造的工具很少止步于此，常被转用于批评者与记者。\n7. 对应[E]段：意识到可能被记录，公民变得谨慎从众，削弱民主所需的辩论。\n8. 对应[A]段：当今监控之密集，超过过去任何统治者所能想象。\n9. 对应[D]段：人一旦感到被注视，会无意识地约束自身行为以迎合期望。\n10. 对应[B]段：监控阻止袭击或抓获绑架者时，确实避免了真实伤害。"
+    },
+    {
+      "passage": "[A] In a culture that prizes speed above almost everything, a quiet countercurrent has been gathering force. Its champions argue that we have confused being busy with living well, and that the relentless drive to do more, faster, has hollowed out the very experiences it was supposed to enrich. They call, instead, for a deliberate slowing down.\n\n[B] The movement first took shape around food. Decades ago, a protest against the spread of fast-food chains grew into a broader celebration of meals cooked with care, shared at leisure and rooted in local tradition. From this beginning, the idea rippled outward, inspiring slower approaches to travel, work, parenting and even the design of whole cities.\n\n[C] At the heart of the philosophy is a distrust of mindless acceleration. Doing things quickly is not the same as doing them well, its advocates insist. A conversation rushed is a conversation half-heard; a landscape glimpsed from a speeding train is a landscape never truly seen. Speed, in this view, often steals the depth that gives an experience its worth.\n\n[D] Science lends the idea some support. Chronic hurry keeps the body braced in a state of low-grade stress, drip-feeding hormones that, over years, wear down health. Studies link perpetual time pressure to poor sleep, anxiety and weakened immunity, suggesting that the cult of busyness exacts a toll the busy themselves rarely pause to notice.\n\n[E] Slowness also reshapes attention. When we stop racing, we begin to register details that haste renders invisible: the taste of a meal, the expression on a friend's face, the changing light of an afternoon. This fuller awareness, advocates claim, is not a luxury but the very texture of a life felt rather than merely completed.\n\n[F] Critics, however, see privilege lurking beneath the philosophy. The freedom to slow down, they note, is not equally available. For a parent juggling two jobs, lingering over a home-cooked meal is a fantasy, not a choice. There is a risk that slow living becomes a fashionable badge for the comfortable rather than a remedy for the harried.\n\n[G] Its defenders answer that the principle need not require wealth. Slowing down can mean small refusals woven into an ordinary day: switching off a phone at dinner, walking instead of driving, resisting the urge to fill every gap with one more task. The aim is less a lifestyle to be bought than an attitude to be practised.\n\n[H] Whatever its limits, the movement poses a question worth sitting with. If a life is measured by the richness of moments rather than the quantity of tasks dispatched, then ceaseless speed may be a poor strategy indeed. To slow down, its advocates suggest, is not to fall behind but to arrive, at last, fully present in one's own life.",
+      "statements": [
+        "Defenders insist the approach demands no money, just small daily refusals anyone can adopt.",
+        "Persistent hurry locks the body in mild stress that gradually erodes physical health.",
+        "The philosophy rests on rejecting thoughtless acceleration, since doing something fast is not doing it well.",
+        "Doubters detect privilege in the idea, noting that the chance to slow down is far from evenly shared.",
+        "The whole current began as resistance to fast-food chains before widening into many areas of life.",
+        "If a life's worth lies in the richness of its moments, endless speed makes for a poor strategy.",
+        "Easing the pace lets us notice details that rushing renders invisible, deepening our awareness.",
+        "Advocates contend we have mistaken constant busyness for genuinely living well.",
+        "For someone holding down two jobs, lingering over a home-cooked meal is a fantasy rather than a choice.",
+        "Chronic time pressure has been tied to broken sleep, anxiety and a weaker immune system."
+      ],
+      "answers": [
+        6,
+        3,
+        2,
+        5,
+        1,
+        7,
+        4,
+        0,
+        5,
+        3
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[G]段：拥护者称这一理念无需财富，只需日常中的小小拒绝。\n2. 对应[D]段：长期匆忙使身体处于轻度压力，逐渐损害健康。\n3. 对应[C]段：该哲学的核心是抵制盲目加速，因为做得快不等于做得好。\n4. 对应[F]段：批评者从中察觉特权，指出放慢的机会远未平等分配。\n5. 对应[B]段：整场潮流始于反对快餐连锁，后扩展到生活诸多领域。\n6. 对应[H]段：若生命价值在于瞬间的丰盈，无尽的速度便是糟糕的策略。\n7. 对应[E]段：放慢节奏让我们注意到匆忙中看不见的细节，深化觉知。\n8. 对应[A]段：拥护者认为我们把持续忙碌误当作真正地好好生活。\n9. 对应[F]段：对身兼两职者而言，从容享用家常饭只是幻想而非选择。\n10. 对应[D]段：长期时间压力与睡眠紊乱、焦虑及免疫力下降相关联。"
+    },
+    {
+      "passage": "[A] When disaster strikes, attention naturally fixes on the physical wreckage: the flattened houses, the flooded streets, the broken power lines. Yet researchers who study how communities recover have reached a striking conclusion. The speed and success of a recovery often depend less on the scale of the damage than on the invisible bonds among the people who lived there before catastrophe came.\n\n[B] These bonds are sometimes called social capital, the web of relationships, trust and shared norms that link neighbours together. In a crisis, this web does work that no official agency can match. Neighbours who already know one another check on the elderly, share food and tools, and pass along vital information faster than any formal channel, turning a scattering of strangers into a coordinated response.\n\n[C] Studies of floods and earthquakes bear this out. After comparable disasters, districts rich in community ties have rebounded far more quickly than equally damaged places where people barely knew their neighbours. The difference is not money or engineering but the simple fact that connected people can mobilise help, and one another, when the formal systems falter.\n\n[D] Diversity of connection matters as much as quantity. Communities fare best when they enjoy both tight inner bonds and bridges to the wider world, links to other towns, to officials, to outside resources. Groups that are merely close-knit but isolated can find themselves trapped, lacking the outside lifelines that bring aid and fresh ideas when local resources run dry.\n\n[E] Resilience, importantly, is not the same as bouncing back to exactly what was there before. The communities that thrive often use the rupture as a chance to rebuild differently and better, redesigning what failed rather than faithfully restoring it. A flood-prone neighbourhood may emerge with smarter drainage; a shaken town may forge institutions stronger than the ones that fell.\n\n[F] This points to a deeper truth: resilience can be cultivated in advance. It is not a fixed trait that some places happen to possess and others lack. By investing in local groups, public spaces and the everyday occasions that bring people together, a society can quietly stockpile the trust it will need long before any emergency tests it.\n\n[G] There is a warning here too. Policies that scatter established neighbourhoods, however well intentioned, can destroy social capital that took generations to build. Relocating people for their own safety, if it severs the ties that bound them, may leave a community materially housed but socially shattered, and thus more fragile than before.\n\n[H] The lesson reframes how we think about preparing for shocks. Stockpiles and sea walls matter, but so do the relationships that knit people together. A community's true defences, it turns out, are often woven not from concrete and steel but from the patient, unglamorous fabric of human connection.",
+      "statements": [
+        "Genuine resilience can be built up beforehand by investing in groups and shared spaces that foster trust.",
+        "Recovery speed hinges less on the extent of physical destruction than on the bonds among residents.",
+        "Well-meant policies that disperse long-standing neighbourhoods can wipe out trust built over generations.",
+        "Thriving communities often seize the disruption as an opportunity to rebuild in better form rather than merely restore.",
+        "After similar disasters, areas rich in neighbourly ties recovered far faster than disconnected ones.",
+        "Pre-existing relationships let neighbours share resources and spread information faster than official channels.",
+        "A community's real defences are often woven from human connection rather than concrete and steel.",
+        "Communities do best with both strong internal ties and outward bridges to other places and resources.",
+        "Tightly bonded but isolated groups can become trapped, lacking outside lifelines when local supplies run out.",
+        "The web of trust and shared norms among neighbours performs work no official agency can replicate."
+      ],
+      "answers": [
+        5,
+        0,
+        6,
+        4,
+        2,
+        1,
+        7,
+        3,
+        3,
+        1
+      ],
+      "paras": 8,
+      "explain_zh": "1. 对应[F]段：真正的韧性可事先培育，通过投资社群与公共空间积累信任。\n2. 对应[A]段：恢复速度更多取决于居民间的纽带，而非物理损毁的程度。\n3. 对应[G]段：善意却拆散老社区的政策会摧毁几代人积累的信任。\n4. 对应[E]段：兴盛的社区常借灾难重建得更好，而非原样恢复。\n5. 对应[C]段：相似灾后，邻里联系紧密的地区恢复远快于彼此陌生的地方。\n6. 对应[B]段：既有的关系让邻居共享资源、比官方渠道更快传递信息。\n7. 对应[H]段：社区真正的防线常由人际联系而非钢筋水泥织成。\n8. 对应[D]段：社区在兼有紧密内部纽带与对外桥梁时表现最佳。\n9. 对应[D]段：仅紧密却孤立的群体会陷入困境，本地资源耗尽时缺乏外部生命线。\n10. 对应[B]段：邻里间信任与共同规范之网，做着官方机构无法替代的工作。"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "speaking",
+  "taskType": "interview_speaking",
+  "tasks": [
+    {
+      "prompt": "IELTS Speaking practice set — topic: Music.\nPart 1 (interview): What kind of music do you usually listen to? Do you prefer listening to music alone or with other people? Has the music you enjoy changed since you were a child?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a song that means a lot to you. You should say: what the song is, when you first heard it, what the song is about, and explain why it means so much to you.\nPart 3 (discussion): Why do you think music is important in most cultures? Do you believe live concerts will remain popular now that streaming is so convenient? Should schools spend more time teaching music, or is it less important than other subjects?",
+      "promptZh": "雅思口语练习组——音乐：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: keep speaking for close to 2 minutes in Part 2 without long pauses or memorised chunks",
+        "Cue coverage: address all four cue points, including the final 'explain why it means so much to you'",
+        "Part 3 abstraction: move from your personal song to general views on music in culture, live vs. streamed music, and education",
+        "Topic vocabulary: use words like melody, lyrics, genre, soundtrack, nostalgic, catchy"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Travel memories.\nPart 1 (interview): Do you enjoy travelling to new places? What do you usually do to remember a trip afterwards? Would you rather travel with family, with friends, or alone?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a memorable journey you have taken. You should say: where you went, who you travelled with, what happened during the journey, and explain why this journey has stayed in your memory.\nPart 3 (discussion): Why do people often remember their travels more clearly than everyday life? In what ways has tourism changed the places people visit? Do you think virtual travel experiences could ever replace real trips?",
+      "promptZh": "雅思口语练习组——旅行回忆：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: narrate the journey with clear sequencing (first, then, eventually) and few hesitations",
+        "Cue coverage: mention the destination, companions, key events, and explain why the journey stayed with you",
+        "Part 3 abstraction: discuss memory, tourism's effects on destinations, and speculate about virtual travel",
+        "Topic vocabulary: use words like itinerary, destination, detour, souvenir, unforgettable, off the beaten track"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Friendship.\nPart 1 (interview): How did you meet most of your friends? Do you prefer having many friends or a few close ones? How often do you meet your friends face to face?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a friend who has influenced you in a positive way. You should say: who this friend is, how you became friends, what you usually do together, and explain how this person has influenced you.\nPart 3 (discussion): What qualities do you think make a friendship last for many years? Is it harder for adults to make new friends than for children? Why? Has social media made friendships stronger or weaker, in your opinion?",
+      "promptZh": "雅思口语练习组——友谊：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: develop each answer with reasons and examples rather than single sentences",
+        "Cue coverage: cover who the friend is, how you met, shared activities, and the influence they had on you",
+        "Part 3 abstraction: generalise about lasting friendships, compare adults and children, and evaluate social media's role",
+        "Topic vocabulary: use words like loyal, supportive, get along, trustworthy, bond, keep in touch"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Weather and seasons.\nPart 1 (interview): What is the weather like in your hometown at this time of year? Which season do you like best? Does the weather ever change your plans or your mood?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a day when the weather was perfect for you. You should say: when and where it was, what the weather was like, what you did on that day, and explain why that weather felt perfect to you.\nPart 3 (discussion): How does climate affect the way people live in different countries? Do you think people talk about the weather more now because of climate change? Should governments do more to prepare cities for extreme weather? Why or why not?",
+      "promptZh": "雅思口语练习组——天气与季节：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: describe the day vividly and keep talking for close to 2 minutes",
+        "Cue coverage: include the time and place, the weather itself, your activities, and why it felt perfect",
+        "Part 3 abstraction: move from one perfect day to climate, society, and government policy",
+        "Topic vocabulary: use words like forecast, mild, humid, breeze, heatwave, pouring rain"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Shopping habits.\nPart 1 (interview): Do you enjoy shopping, or do you see it as a chore? Do you prefer shopping online or in physical shops? How do you decide whether something is worth buying?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe something you bought recently that you were happy with. You should say: what you bought, where you bought it, why you decided to buy it, and explain why you were happy with this purchase.\nPart 3 (discussion): Why do you think some people buy things they do not really need? How has online shopping changed small local shops? Do you believe advertising has too much influence on what people buy?",
+      "promptZh": "雅思口语练习组——购物习惯：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: explain your buying decision step by step without long pauses",
+        "Cue coverage: say what you bought, where, your reason for buying, and why you were satisfied",
+        "Part 3 abstraction: analyse consumer behaviour, the effect of e-commerce on local shops, and the power of advertising",
+        "Topic vocabulary: use words like bargain, refund, impulse buy, good value for money, discount, checkout"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Sports events.\nPart 1 (interview): Do you enjoy watching sports? Have you ever been to a stadium to watch a match or race? Is there a sport you would like to try one day?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an exciting sports event you watched. You should say: what the event was, where you watched it, what happened during the event, and explain why you found it exciting.\nPart 3 (discussion): Why do big sports events bring people together, even strangers? Do professional athletes deserve the high salaries some of them earn? Should cities spend public money on hosting international sports competitions?",
+      "promptZh": "雅思口语练习组——体育赛事：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: build excitement in your story using dramatic sequencing and stress",
+        "Cue coverage: name the event, where you watched, what happened, and why it excited you",
+        "Part 3 abstraction: discuss social unity, athletes' pay, and public spending — not just your own event",
+        "Topic vocabulary: use words like spectator, final, cheer, opponent, championship, atmosphere"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Art and museums.\nPart 1 (interview): Did you enjoy art lessons when you were at school? How often do you visit museums or galleries? Do you have any artwork or posters on your walls at home?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a museum or gallery you have visited. You should say: where it is, what you saw there, who you went with, and explain what impression the visit left on you.\nPart 3 (discussion): Why do some people find museums boring while others love them? Should entry to public museums be free for everyone? Do you think children learn more from seeing objects in a museum than from reading about them?",
+      "promptZh": "雅思口语练习组——艺术与博物馆：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: describe the visit in an organised way, moving from arrival to highlights to feelings",
+        "Cue coverage: include the location, what you saw, your companions, and the impression it left",
+        "Part 3 abstraction: compare attitudes to museums, debate free entry, and evaluate hands-on learning",
+        "Topic vocabulary: use words like exhibition, sculpture, masterpiece, display, admission, guided tour"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Languages.\nPart 1 (interview): How many languages can you speak? What do you find most difficult about learning English? Would you like to learn any other languages in the future?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you communicated with someone in a foreign language. You should say: when and where it happened, who you spoke to, what you talked about, and explain how you felt about the experience.\nPart 3 (discussion): Why do some people learn languages more easily than others? Will translation technology make language learning unnecessary one day? Is it important to protect small languages that few people speak? Why?",
+      "promptZh": "雅思口语练习组——语言：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: keep the story flowing even when describing communication problems",
+        "Cue coverage: set the scene, name the person, summarise the conversation, and describe your feelings",
+        "Part 3 abstraction: generalise about language aptitude, speculate on technology, and argue about language preservation",
+        "Topic vocabulary: use words like fluent, accent, mother tongue, misunderstand, phrase, bilingual"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Transport.\nPart 1 (interview): How do you usually get around your city or town? Is public transport good where you live? Do you enjoy long journeys, or do you find them tiring?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a form of transport you enjoy using. You should say: what it is, how often you use it, where you usually go with it, and explain why you enjoy this way of travelling.\nPart 3 (discussion): What are the main transport problems in big cities today? Should governments make it more expensive to drive private cars in city centres? How do you think people will travel fifty years from now?",
+      "promptZh": "雅思口语练习组——交通出行：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: expand on habits and reasons rather than giving list-like answers",
+        "Cue coverage: name the transport, say how often and where you use it, and explain your enjoyment",
+        "Part 3 abstraction: analyse urban transport problems, take a position on car restrictions, and speculate about the future",
+        "Topic vocabulary: use words like commute, traffic jam, fare, rush hour, convenient, eco-friendly"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Pets and animals.\nPart 1 (interview): Do you have a pet, or have you ever had one? What animals are popular as pets in your country? Are you afraid of any animals?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an animal you find interesting. You should say: what the animal is, where you first saw or learned about it, what it looks like and how it behaves, and explain why you find it so interesting.\nPart 3 (discussion): Why do you think people keep pets even though they cost time and money? Should wild animals ever be kept in zoos? What responsibilities do humans have towards endangered species?",
+      "promptZh": "雅思口语练习组——宠物与动物：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: sustain the description for close to 2 minutes, adding behaviour details and small stories",
+        "Cue coverage: identify the animal, where you encountered it, its appearance and behaviour, and why it interests you",
+        "Part 3 abstraction: discuss the human need for pets, ethics of zoos, and conservation duties",
+        "Topic vocabulary: use words like creature, habitat, tame, loyal companion, species, endangered"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Photography.\nPart 1 (interview): Do you like taking photos? What do you usually take photos of? Do you print your photos or keep them all on your phone?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a photograph that is special to you. You should say: what the photo shows, when and where it was taken, who took it, and explain why this photograph is special to you.\nPart 3 (discussion): Why do people take so many more photos now than in the past? Does taking photos of everything stop people from enjoying the moment? Do you think a photograph can ever tell the full truth about an event?",
+      "promptZh": "雅思口语练习组——摄影：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: paint the picture with words, describing details before moving to feelings",
+        "Cue coverage: describe the photo's content, when and where it was taken, the photographer, and its special meaning",
+        "Part 3 abstraction: analyse changing photo habits, mindfulness, and the reliability of images",
+        "Topic vocabulary: use words like snapshot, capture, album, background, pose, memory"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Neighbours and community.\nPart 1 (interview): Do you know your neighbours well? What do people in your neighbourhood do together, if anything? Is your area a friendly place to live?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a neighbour you like or find interesting. You should say: who this neighbour is, how long you have known them, what kind of contact you have with them, and explain why you like or find this person interesting.\nPart 3 (discussion): Why do people in big cities often not know their neighbours? What can local communities do to help people feel less lonely? Do you think strong communities are more important now than in the past, or less?",
+      "promptZh": "雅思口语练习组——邻里与社区：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: give extended answers about everyday contact rather than one-line replies",
+        "Cue coverage: introduce the neighbour, say how long you have known them, describe your contact, and explain your interest",
+        "Part 3 abstraction: explain urban anonymity, propose community solutions, and compare past and present",
+        "Topic vocabulary: use words like get to know, next door, community spirit, lend a hand, gathering, look out for each other"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Gifts.\nPart 1 (interview): When do people usually give gifts in your country? Do you find it easy or difficult to choose gifts for others? What was the last gift you gave someone?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a gift you received that you will never forget. You should say: what the gift was, who gave it to you, what the occasion was, and explain why you will never forget this gift.\nPart 3 (discussion): Is the price of a gift important, or is it only the thought that counts? Why do some people feel pressure when giving or receiving gifts? Do you think gift-giving customs will change as more things become digital?",
+      "promptZh": "雅思口语练习组——礼物：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: tell the story of receiving the gift with natural pacing and emotion",
+        "Cue coverage: name the gift, the giver, the occasion, and explain why it is unforgettable",
+        "Part 3 abstraction: weigh price against sentiment, analyse social pressure, and speculate about digital gifts",
+        "Topic vocabulary: use words like wrap, thoughtful, occasion, generous, sentimental value, surprise"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Movies.\nPart 1 (interview): How often do you watch films? Do you prefer watching films at home or at the cinema? What kind of films do you usually avoid?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a film that made a strong impression on you. You should say: what the film was, when you watched it, what it was about, and explain why it made such a strong impression on you.\nPart 3 (discussion): Why do people enjoy watching stories that are not real? Do films influence the way people think and behave? In what ways might cinemas need to change to survive in the streaming era?",
+      "promptZh": "雅思口语练习组——电影：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: summarise the plot briefly, then spend most of the time on your reaction",
+        "Cue coverage: name the film, when you saw it, its story, and the impression it made",
+        "Part 3 abstraction: discuss the appeal of fiction, media influence, and the future of cinemas",
+        "Topic vocabulary: use words like plot, character, scene, gripping, soundtrack, ending"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Historical places.\nPart 1 (interview): Are there any old buildings or historical sites near where you live? Did you enjoy learning history at school? Do you prefer visiting modern attractions or historical ones?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a historical place you have visited or would like to visit. You should say: where it is, what its history is, what visitors can see or do there, and explain why this place attracts you.\nPart 3 (discussion): Why is it important for countries to preserve historical buildings? Should old buildings ever be knocked down to make space for new development? Do you think visiting a place teaches people more about history than books do?",
+      "promptZh": "雅思口语练习组——历史古迹：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: combine factual description with personal interest smoothly",
+        "Cue coverage: give the location, its history, what visitors can do, and why it attracts you",
+        "Part 3 abstraction: argue about preservation versus development and compare ways of learning history",
+        "Topic vocabulary: use words like ancient, heritage, monument, restore, ruins, century"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Money and saving.\nPart 1 (interview): Did you save money when you were a child? Do you prefer to save money or spend it on experiences? Do you keep track of what you spend each month?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you saved money for something special. You should say: what you were saving for, how long it took you, how you managed to save, and explain how you felt when you finally reached your goal.\nPart 3 (discussion): Why do some people find it so hard to save money? Should schools teach children how to manage money? Has cashless payment changed the way people think about spending?",
+      "promptZh": "雅思口语练习组——金钱与储蓄：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: narrate the saving process over time using past tenses accurately",
+        "Cue coverage: state the goal, the duration, your saving method, and your feelings at the end",
+        "Part 3 abstraction: analyse saving habits, financial education, and the psychology of cashless payment",
+        "Topic vocabulary: use words like budget, afford, put money aside, tempted, expenses, worth it"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Clothes and fashion.\nPart 1 (interview): What kind of clothes do you usually wear? Do you ever wear traditional clothes from your culture? Is it important to you what other people wear?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an item of clothing you love wearing. You should say: what it is, where you got it, when you usually wear it, and explain why you love wearing it.\nPart 3 (discussion): Why do fashions change so quickly nowadays? Does what people wear affect how others treat them? Should people worry more about the environmental cost of cheap fashion?",
+      "promptZh": "雅思口语练习组——服装与时尚：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: describe the item and its story with detail rather than stopping after basic facts",
+        "Cue coverage: identify the item, its origin, when you wear it, and why you love it",
+        "Part 3 abstraction: explain fast-changing trends, discuss judgement by appearance, and evaluate fast fashion's environmental cost",
+        "Topic vocabulary: use words like outfit, comfortable, suits me, style, second-hand, fabric"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Noise and quiet places.\nPart 1 (interview): Is the area where you live noisy or quiet? What sounds do you find relaxing? Can you concentrate when there is noise around you?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a quiet place where you like to spend time. You should say: where it is, how often you go there, what you do there, and explain why this quiet place matters to you.\nPart 3 (discussion): Why is it getting harder to find quiet places in modern cities? Do you think noise affects people's health and behaviour? Should there be stricter rules about noise in public places?",
+      "promptZh": "雅思口语练习组——噪音与安静之处：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: describe the atmosphere of the place calmly and continuously for close to 2 minutes",
+        "Cue coverage: give the location, your visiting habits, your activities there, and why it matters",
+        "Part 3 abstraction: analyse urban noise, its effects on health, and the case for regulation",
+        "Topic vocabulary: use words like peaceful, background noise, escape, calm down, disturb, silence"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Plans and goals.\nPart 1 (interview): Do you usually plan your week in advance? What is something you hope to do this year? Do you write your goals down or just keep them in your head?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a goal you are working towards at the moment. You should say: what the goal is, why you set it, what you are doing to achieve it, and explain how you will feel if you achieve it.\nPart 3 (discussion): Why do many people give up on their goals halfway? Is it better to have big ambitious goals or small realistic ones? Do you think society puts too much pressure on young people to plan their whole future early?",
+      "promptZh": "雅思口语练习组——计划与目标：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: talk about present efforts and future outcomes using a range of tenses",
+        "Cue coverage: state the goal, your motivation, your current actions, and your imagined feelings on success",
+        "Part 3 abstraction: analyse why goals fail, compare goal-setting styles, and evaluate social pressure on the young",
+        "Topic vocabulary: use words like ambition, deadline, step by step, motivated, give up, achievement"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Helping others.\nPart 1 (interview): Do you often help people in your daily life? Who helped you most when you were growing up? Have you ever done any volunteer work?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you helped someone. You should say: who you helped, what the situation was, what you did to help, and explain how you felt after helping this person.\nPart 3 (discussion): Why do some people help strangers while others walk past? Should governments rely on volunteers to provide social services, or is that their own job? Do you think people today are more willing to help others than in the past, or less?",
+      "promptZh": "雅思口语练习组——帮助他人：Part 1 访谈、Part 2 个人陈述（1 分钟准备，至多 2 分钟）、Part 3 深入讨论。",
+      "referencePoints": [
+        "Fluency: tell the helping story with a clear beginning, middle, and end",
+        "Cue coverage: identify the person, the situation, your actions, and your feelings afterwards",
+        "Part 3 abstraction: discuss motives for helping strangers, the role of volunteers versus government, and changes in social behaviour",
+        "Topic vocabulary: use words like give someone a hand, in trouble, grateful, kindness, support, make a difference"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    }
+  ]
+}

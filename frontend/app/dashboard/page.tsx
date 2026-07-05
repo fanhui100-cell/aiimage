@@ -33,7 +33,16 @@ export default function Dashboard() {
   const [resultUrl, setResultUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    const slug = new URLSearchParams(window.location.search).get("prompt");
+    const params = new URLSearchParams(window.location.search);
+    const text = params.get("text");
+    if (text) {
+      setMode("custom");
+      setCustomPrompt(text);
+      toast.success("已载入自定义提示词");
+      return;
+    }
+
+    const slug = params.get("prompt");
     if (!slug) return;
     const prompt = getPromptBySlug(slug);
     if (!prompt) return;

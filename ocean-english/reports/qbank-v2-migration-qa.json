@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-06-20T21:26:08.010Z",
+  "status": "applied",
+  "counts": {
+    "migratedSets": 3734,
+    "migratedItems": 4000,
+    "activeMigratedSets": 0,
+    "targetWordRefs": 640
+  },
+  "errors": [],
+  "ok": true
+}

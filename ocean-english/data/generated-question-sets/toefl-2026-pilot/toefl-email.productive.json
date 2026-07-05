@@ -1,0 +1,68 @@
+{
+  "examId": "toefl",
+  "level": 6,
+  "skill": "writing",
+  "taskType": "email_writing",
+  "tasks": [
+    {
+      "prompt": "You are a student in Professor Lee's history class. You have just been offered a part-time job interview at the same time as your scheduled meeting with the professor this Thursday. Write an email to Professor Lee. In your email, explain why you cannot attend, apologize, and suggest two other times when you are free to meet.",
+      "promptZh": "给历史课 Lee 教授写邮件：周四面试与会面冲突，说明原因、致歉、并提出两个可替代时间。",
+      "referencePoints": ["以正式称呼称呼教授（如 Dear Professor Lee）", "清楚说明无法赴约的原因与时间冲突", "表达诚恳歉意，语气礼貌正式", "主动提出两个具体的可替代时间", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You borrowed several books from the university library for a research paper, but they are due tomorrow and you still need them for about another week. Write an email to the library staff. In your email, request an extension, explain why you need the books longer, and ask what you should do if an extension is not possible.",
+      "promptZh": "给图书馆工作人员写邮件：所借书明天到期但仍需一周，请求续借、说明原因、并询问若无法续借该怎么办。",
+      "referencePoints": ["礼貌称呼图书馆工作人员", "明确提出续借请求并给出大致天数", "简要说明为何仍需要这些书", "询问若无法续借的替代办法", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You and three classmates have been assigned a group presentation that is due next week, but no one has arranged a meeting yet. Write an email to your group members. In your email, propose a time and place to meet, suggest how the work could be divided, and ask them to reply with their availability.",
+      "promptZh": "给小组三位同学写邮件：下周要做小组展示但还没约时间，提议会面时间地点、建议分工、并请大家回复各自的空闲时间。",
+      "referencePoints": ["对同学使用友好但清楚的语气", "提出具体的会面时间和地点", "给出合理的分工建议", "请对方回复各自的可行时间", "简短礼貌的结尾"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "The heater in your dormitory room has stopped working, and the nights have become very cold. Write an email to the dormitory manager. In your email, describe the problem, explain how it is affecting you, and politely ask when it can be repaired.",
+      "promptZh": "给宿舍管理员写邮件：房间暖气坏了、夜里很冷，描述问题、说明影响、并礼貌询问何时能修。",
+      "referencePoints": ["礼貌称呼宿舍管理员", "清楚描述暖气故障与房间号等具体信息", "说明对自己生活/休息的影响", "礼貌询问预计维修时间", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "Your university's photography club is holding an exhibition next month and has asked for volunteers. Write an email to the club president. In your email, offer to help, explain what skills or experience you can contribute, and ask what tasks still need to be done.",
+      "promptZh": "给摄影社社长写邮件：下月办展览招募志愿者，表示愿意帮忙、说明自己能贡献的技能或经验、并询问还有哪些工作需要做。",
+      "referencePoints": ["友好礼貌地称呼社长", "明确表示愿意做志愿者", "说明自己能贡献的相关技能或经验", "询问目前还需要哪些帮助", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You are thinking about dropping one of your courses this semester because the workload has become too heavy. Write an email to your academic advisor. In your email, explain your situation, ask whether dropping the course would affect your graduation, and request a short meeting to discuss your options.",
+      "promptZh": "给学业导师写邮件：因课业太重想退掉一门课，说明情况、询问是否影响毕业、并请求面谈讨论选择。",
+      "referencePoints": ["以正式语气称呼导师", "说明想退课的原因与课程名称", "询问退课是否影响按时毕业", "请求一次简短面谈", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You need more time to finish an experiment, but the laboratory closes before you can complete your work during normal hours. Write an email to the lab coordinator. In your email, explain your situation, request permission to use the lab in the evening, and ask about any safety rules you must follow.",
+      "promptZh": "给实验室协调员写邮件：正常开放时间不够完成实验，说明情况、请求晚间使用实验室、并询问须遵守的安全规定。",
+      "referencePoints": ["礼貌称呼实验室协调员", "说明为何需要额外时间完成实验", "请求晚间使用实验室的许可", "询问须遵守的安全规定", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You do not understand part of the instructions for your biology assignment, which is due in three days. Write an email to the teaching assistant. In your email, identify exactly which part is unclear, explain what you have already tried, and ask a specific question so that you can continue.",
+      "promptZh": "给助教写邮件：三天后要交的生物作业有一处说明看不懂，指出具体不清楚的部分、说明已尝试过什么、并提出一个具体问题。",
+      "referencePoints": ["礼貌称呼助教", "准确指出作业中不清楚的具体部分", "说明自己已经尝试过的做法", "提出一个清晰、具体的问题", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You have lost your student ID card, which you need in order to enter the library and the dining hall. Write an email to the student services office. In your email, report that your card is lost, ask how to get a replacement, and find out whether there is a fee and how long it will take.",
+      "promptZh": "给学生事务办公室写邮件：学生证丢了、进图书馆和食堂都要用，报告丢失、询问如何补办、以及是否收费和需要多久。",
+      "referencePoints": ["礼貌称呼学生事务办公室", "清楚报告学生证丢失", "询问补办的具体流程", "询问是否收费及所需时间", "礼貌结尾并署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    },
+    {
+      "prompt": "You are applying for a summer research program and need a recommendation letter. Professor Garcia taught your favorite course last year. Write an email to Professor Garcia. In your email, politely ask for the letter, remind her of the work you did in her class, and mention the deadline for submitting it.",
+      "promptZh": "给 Garcia 教授写邮件：申请暑期科研项目需要推荐信，礼貌请求写信、提醒她你在其课上的表现、并说明提交截止日期。",
+      "referencePoints": ["以正式礼貌的语气称呼教授", "礼貌而明确地请求推荐信", "简要提醒教授你在其课程中的具体表现", "说明推荐信的提交截止日期", "感谢并礼貌结尾署名"],
+      "wordLimit": "Project guidance (not an official TOEFL requirement): write a short, complete email of roughly 90-120 words."
+    }
+  ]
+}

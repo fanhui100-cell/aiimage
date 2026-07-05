@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-07-04T20:40:19.168Z",
+  "applied": true,
+  "rows": [
+    {
+      "exam": "zhongkao",
+      "mode": "mini",
+      "generated": true,
+      "sections": 4,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "zhongkao",
+      "mode": "full",
+      "generated": true,
+      "sections": 5,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "gaokao",
+      "mode": "mini",
+      "generated": true,
+      "sections": 5,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "gaokao",
+      "mode": "full",
+      "generated": true,
+      "sections": 7,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "cet4",
+      "mode": "mini",
+      "generated": true,
+      "sections": 4,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "cet4",
+      "mode": "full",
+      "generated": true,
+      "sections": 6,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "cet6",
+      "mode": "mini",
+      "generated": true,
+      "sections": 4,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "cet6",
+      "mode": "full",
+      "generated": true,
+      "sections": 6,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "kaoyan",
+      "mode": "mini",
+      "generated": true,
+      "sections": 3,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "kaoyan",
+      "mode": "full",
+      "generated": true,
+      "sections": 6,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "toefl",
+      "mode": "mini",
+      "generated": true,
+      "sections": 2,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "toefl",
+      "mode": "full",
+      "generated": true,
+      "sections": 3,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "sat",
+      "mode": "mini",
+      "generated": true,
+      "sections": 4,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "sat",
+      "mode": "full",
+      "generated": true,
+      "sections": 4,
+      "insufficientPool": false,
+      "expectedRefusal": null,
+      "refusal": [],
+      "warnings": []
+    },
+    {
+      "exam": "ielts",
+      "mode": "mini",
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "expectedRefusal": "exam_coming_soon",
+      "refusal": [
+        "exam_coming_soon"
+      ],
+      "warnings": [
+        "exam_coming_soon"
+      ]
+    },
+    {
+      "exam": "ielts",
+      "mode": "full",
+      "generated": false,
+      "sections": 0,
+      "insufficientPool": false,
+      "expectedRefusal": "exam_coming_soon",
+      "refusal": [
+        "exam_coming_soon"
+      ],
+      "warnings": [
+        "exam_coming_soon"
+      ]
+    }
+  ],
+  "errors": [],
+  "ok": true
+}

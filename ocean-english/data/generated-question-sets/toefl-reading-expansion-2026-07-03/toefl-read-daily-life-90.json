@@ -1,0 +1,2806 @@
+{
+  "template": "toefl-read-daily-life",
+  "level": 6,
+  "sets": [
+    {
+      "passage": "Safety goggles must be worn at all times in this laboratory. Contact lenses are not permitted during experiments. Store personal bags in the lockers by the entrance. Report any spills to the supervisor immediately. Eating and drinking inside the lab are strictly forbidden.",
+      "questions": [
+        {
+          "prompt": "What must people do with their personal bags?",
+          "options": [
+            "Store them in the lockers by the entrance",
+            "Carry them during experiments",
+            "Leave them with the supervisor",
+            "Take them to the water station"
+          ],
+          "answer": "Store them in the lockers by the entrance"
+        },
+        {
+          "prompt": "What should you do if a spill occurs?",
+          "options": [
+            "Clean it yourself quietly",
+            "Report it to the supervisor immediately",
+            "Leave the laboratory at once",
+            "Wait until the experiment ends"
+          ],
+          "answer": "Report it to the supervisor immediately"
+        }
+      ],
+      "explain_zh": "标牌明确要求把个人背包放进入口处的储物柜，并在发生泼溅时立即报告主管。"
+    },
+    {
+      "passage": "Group study rooms may be reserved for up to two hours per day. Reservations are made online through the library portal. If you are more than fifteen minutes late, your booking is released to others. Please keep noise low and clean the whiteboard before leaving.",
+      "questions": [
+        {
+          "prompt": "How long can a group study room be reserved each day?",
+          "options": [
+            "One hour",
+            "Three hours",
+            "The whole day",
+            "Two hours"
+          ],
+          "answer": "Two hours"
+        },
+        {
+          "prompt": "What happens if you arrive twenty minutes late for your reservation?",
+          "options": [
+            "You lose your booking to others",
+            "You get an extra hour",
+            "You must pay a fee",
+            "You are given a new room"
+          ],
+          "answer": "You lose your booking to others"
+        }
+      ],
+      "explain_zh": "通知说明每天最多可预约两小时，且迟到超过十五分钟预约就会释放给他人，二十分钟即属此列。"
+    },
+    {
+      "passage": "The east elevator is out of service for repairs until Friday. Please use the west elevator or the stairs. Visitors needing step-free access can reach upper floors through the north entrance ramp. We apologize for the inconvenience and thank you for your patience.",
+      "questions": [
+        {
+          "prompt": "Until when is the east elevator unavailable?",
+          "options": [
+            "Monday",
+            "Wednesday",
+            "Friday",
+            "Sunday"
+          ],
+          "answer": "Friday"
+        },
+        {
+          "prompt": "How can a visitor who cannot use stairs reach the upper floors?",
+          "options": [
+            "By waiting for the east elevator",
+            "Through the north entrance ramp",
+            "By calling the front desk",
+            "Only on weekends"
+          ],
+          "answer": "Through the north entrance ramp"
+        },
+        {
+          "prompt": "Why was this notice posted?",
+          "options": [
+            "To inform people about a repair and offer alternatives",
+            "To announce a new building entrance",
+            "To advertise elevator maintenance jobs",
+            "To warn about a fire drill"
+          ],
+          "answer": "To inform people about a repair and offer alternatives"
+        }
+      ],
+      "explain_zh": "通知告知东电梯维修至周五并提供了坡道等替代通道，目的是说明维修情况并给出替代方案。"
+    },
+    {
+      "passage": "Paper, clean cardboard, and empty bottles go in the blue bins. Food scraps belong in the green compost container. Plastic bags cannot be recycled here; return them to a grocery store instead. Please rinse containers before recycling and flatten large boxes to save space.",
+      "questions": [
+        {
+          "prompt": "Where should food scraps be placed?",
+          "options": [
+            "In the green compost container",
+            "In the blue bins",
+            "At a grocery store",
+            "In any recycling bin"
+          ],
+          "answer": "In the green compost container"
+        },
+        {
+          "prompt": "What should you do with plastic bags?",
+          "options": [
+            "Put them in the blue bins",
+            "Add them to the compost",
+            "Flatten them like boxes",
+            "Return them to a grocery store"
+          ],
+          "answer": "Return them to a grocery store"
+        },
+        {
+          "prompt": "Why does the label ask people to flatten large boxes?",
+          "options": [
+            "To make them easier to read",
+            "To clean them properly",
+            "To save space in the bins",
+            "To separate paper from plastic"
+          ],
+          "answer": "To save space in the bins"
+        }
+      ],
+      "explain_zh": "标签指明厨余入绿色堆肥桶、塑料袋应退回杂货店，并说明压扁纸箱是为了节省空间。"
+    },
+    {
+      "passage": "The dining hall serves breakfast from 7:00 to 10:00 a.m. and lunch from noon until 2:30 p.m. Dinner is available every evening except Sunday. Meal cards must be scanned at the entrance. Guests without a card may pay in cash at the register.",
+      "questions": [
+        {
+          "prompt": "On which day is dinner not served?",
+          "options": [
+            "Saturday",
+            "Friday",
+            "Monday",
+            "Sunday"
+          ],
+          "answer": "Sunday"
+        },
+        {
+          "prompt": "What can a guest do if they do not have a meal card?",
+          "options": [
+            "Enter for free",
+            "Pay in cash at the register",
+            "Come back another day",
+            "Borrow a student's card"
+          ],
+          "answer": "Pay in cash at the register"
+        }
+      ],
+      "explain_zh": "通知说明除周日外每晚供应晚餐，且没有餐卡的客人可在收银台用现金付款。"
+    },
+    {
+      "passage": "In case of fire, pull the handle, aim at the base of the flames, and sweep from side to side. This extinguisher is for small fires only. If flames spread quickly, leave the area and call emergency services. Inspection is due each month.",
+      "questions": [
+        {
+          "prompt": "What should you do first when using the extinguisher?",
+          "options": [
+            "Sweep from side to side",
+            "Aim at the flames",
+            "Pull the handle",
+            "Call emergency services"
+          ],
+          "answer": "Pull the handle"
+        },
+        {
+          "prompt": "What should you do if the fire spreads quickly?",
+          "options": [
+            "Keep using the extinguisher",
+            "Leave the area and call emergency services",
+            "Aim higher at the flames",
+            "Wait for the monthly inspection"
+          ],
+          "answer": "Leave the area and call emergency services"
+        },
+        {
+          "prompt": "How often should the extinguisher be inspected?",
+          "options": [
+            "Every year",
+            "Every week",
+            "Only after use",
+            "Every month"
+          ],
+          "answer": "Every month"
+        }
+      ],
+      "explain_zh": "标牌按顺序要求先拉手柄，火势迅速蔓延时应撤离并报警，并说明每月须检查一次。"
+    },
+    {
+      "passage": "Each student receives a free printing balance of two hundred pages per term. Color printing costs three times as much as black and white. To release your job, tap your card at the printer within one hour. Unclaimed jobs are deleted automatically overnight.",
+      "questions": [
+        {
+          "prompt": "How many free pages does each student get per term?",
+          "options": [
+            "One hundred",
+            "Two hundred",
+            "Three hundred",
+            "Unlimited"
+          ],
+          "answer": "Two hundred"
+        },
+        {
+          "prompt": "What happens to a print job that is not collected within an hour?",
+          "options": [
+            "It is printed again",
+            "It is emailed to you",
+            "It is deleted overnight",
+            "It is charged twice"
+          ],
+          "answer": "It is deleted overnight"
+        },
+        {
+          "prompt": "How does color printing compare to black and white?",
+          "options": [
+            "It is free",
+            "It costs the same",
+            "It is not allowed",
+            "It costs three times as much"
+          ],
+          "answer": "It costs three times as much"
+        }
+      ],
+      "explain_zh": "通知说明每学期有两百页免费额度、彩印是黑白的三倍，且一小时内未取的任务会在夜间删除。"
+    },
+    {
+      "passage": "Lockers in the fitness center are for daily use only. Bring your own lock and remove it before closing time each night. Any locks left overnight will be cut off, and the contents will be held at the front desk for two weeks.",
+      "questions": [
+        {
+          "prompt": "What will happen to a lock left on overnight?",
+          "options": [
+            "It will be cut off",
+            "It will be returned by mail",
+            "It will stay until morning",
+            "It will be replaced"
+          ],
+          "answer": "It will be cut off"
+        },
+        {
+          "prompt": "How long are the contents of cut locks kept?",
+          "options": [
+            "One day",
+            "One week",
+            "Two weeks",
+            "One month"
+          ],
+          "answer": "Two weeks"
+        }
+      ],
+      "explain_zh": "通知说明过夜未取的锁会被剪断，且物品会在前台保管两周。"
+    },
+    {
+      "passage": "This lot is reserved for permit holders between 8:00 a.m. and 6:00 p.m. on weekdays. Visitors must display a temporary pass from the visitor center on the dashboard. Vehicles without a valid permit may be ticketed or towed at the owner's expense.",
+      "questions": [
+        {
+          "prompt": "Where can visitors get a temporary pass?",
+          "options": [
+            "From the visitor center",
+            "From a parking meter",
+            "From any permit holder",
+            "From the front gate"
+          ],
+          "answer": "From the visitor center"
+        },
+        {
+          "prompt": "What may happen to a car parked here without a permit at noon on a weekday?",
+          "options": [
+            "Nothing, parking is free",
+            "It will be given a permit",
+            "It must move after 6:00 p.m.",
+            "It may be ticketed or towed"
+          ],
+          "answer": "It may be ticketed or towed"
+        }
+      ],
+      "explain_zh": "标牌说明访客须到访客中心领临时通行证，工作日中午无证停放会被开罚单或拖走。"
+    },
+    {
+      "passage": "This station dispenses filtered water for reusable bottles. The counter above shows how many plastic bottles our campus has saved this year. Press the button gently and hold your bottle steady. If the light turns red, the filter needs changing; please notify building services.",
+      "questions": [
+        {
+          "prompt": "What does a red light indicate?",
+          "options": [
+            "The filter needs changing",
+            "The water is too cold",
+            "The bottle is full",
+            "The station is off"
+          ],
+          "answer": "The filter needs changing"
+        },
+        {
+          "prompt": "What does the counter display?",
+          "options": [
+            "The temperature of the water",
+            "The number of plastic bottles saved this year",
+            "The cost of filtered water",
+            "The time until the next refill"
+          ],
+          "answer": "The number of plastic bottles saved this year"
+        }
+      ],
+      "explain_zh": "标签说明红灯表示滤芯需更换，计数器显示本年度校园节省的塑料瓶数量。"
+    },
+    {
+      "passage": "This reading room is a silent study zone. Please switch phones to vibrate and take calls in the hallway. Group discussion is available in the rooms on the second floor. Laptops are welcome, but keyboard sounds should be kept soft out of respect for others.",
+      "questions": [
+        {
+          "prompt": "Where should a student take a phone call?",
+          "options": [
+            "At their desk quietly",
+            "In the hallway",
+            "On the second floor",
+            "Outside the building"
+          ],
+          "answer": "In the hallway"
+        },
+        {
+          "prompt": "Where can students hold group discussions?",
+          "options": [
+            "In the reading room",
+            "In the hallway",
+            "In the rooms on the second floor",
+            "At the front desk"
+          ],
+          "answer": "In the rooms on the second floor"
+        },
+        {
+          "prompt": "What is the main purpose of this notice?",
+          "options": [
+            "To advertise new laptops",
+            "To announce a room closure",
+            "To ban all electronics",
+            "To keep the reading room quiet"
+          ],
+          "answer": "To keep the reading room quiet"
+        }
+      ],
+      "explain_zh": "通知要求在走廊接电话、到二楼房间讨论，整体目的是维持阅览室安静。"
+    },
+    {
+      "passage": "The third-floor corridor will be repainted this weekend. Wet paint signs will mark freshly coated walls. Please do not lean bicycles or post flyers on these surfaces until Monday. Offices remain open, but use the stairwell at the south end to avoid the work area.",
+      "questions": [
+        {
+          "prompt": "Which stairwell should people use during the work?",
+          "options": [
+            "The one at the north end",
+            "The one at the south end",
+            "The main central stairs",
+            "Any stairwell"
+          ],
+          "answer": "The one at the south end"
+        },
+        {
+          "prompt": "Why are wet paint signs posted?",
+          "options": [
+            "To warn people not to touch freshly coated walls",
+            "To advertise a painting class",
+            "To show where flyers may go",
+            "To mark the office entrances"
+          ],
+          "answer": "To warn people not to touch freshly coated walls"
+        },
+        {
+          "prompt": "Until when should people avoid leaning bicycles on the walls?",
+          "options": [
+            "Until this evening",
+            "Until Saturday",
+            "Until Sunday",
+            "Until Monday"
+          ],
+          "answer": "Until Monday"
+        }
+      ],
+      "explain_zh": "通知要求走南端楼梯并在周一前勿倚靠或张贴，湿漆标志是提醒人们别碰刚粉刷的墙面。"
+    },
+    {
+      "passage": "When the alarm sounds, stop what you are doing and leave through the nearest marked exit. Do not use the elevators. Walk calmly to the assembly point in the courtyard behind the library. Wait there for a head count before anyone returns to the building.",
+      "questions": [
+        {
+          "prompt": "Where is the assembly point?",
+          "options": [
+            "In the courtyard behind the library",
+            "Inside the library",
+            "By the elevators",
+            "At the nearest exit"
+          ],
+          "answer": "In the courtyard behind the library"
+        },
+        {
+          "prompt": "How should people leave the building?",
+          "options": [
+            "By using the elevators",
+            "Through the nearest marked exit",
+            "Through the main entrance only",
+            "By waiting for instructions"
+          ],
+          "answer": "Through the nearest marked exit"
+        },
+        {
+          "prompt": "Why must people wait at the assembly point?",
+          "options": [
+            "To collect their belongings",
+            "To use the elevators safely",
+            "To sign an attendance sheet",
+            "So a head count can be taken"
+          ],
+          "answer": "So a head count can be taken"
+        }
+      ],
+      "explain_zh": "标牌说明集合点在图书馆后院、须走最近的安全出口，且在清点人数前不得返回。"
+    },
+    {
+      "passage": "Found items are kept at the information desk for thirty days. To claim something, describe it accurately and show your student identification. Unclaimed clothing is donated to charity at the end of each month. Valuables such as keys and wallets are logged and stored separately.",
+      "questions": [
+        {
+          "prompt": "How long are found items kept?",
+          "options": [
+            "Seven days",
+            "Fourteen days",
+            "Thirty days",
+            "Ninety days"
+          ],
+          "answer": "Thirty days"
+        },
+        {
+          "prompt": "What must you do to claim a lost item?",
+          "options": [
+            "Pay a small fee",
+            "Describe it and show your student ID",
+            "Fill out an online form",
+            "Wait until the end of the month"
+          ],
+          "answer": "Describe it and show your student ID"
+        },
+        {
+          "prompt": "What happens to clothing that no one claims?",
+          "options": [
+            "It is thrown away immediately",
+            "It is kept for a year",
+            "It is sold at the desk",
+            "It is donated to charity"
+          ],
+          "answer": "It is donated to charity"
+        }
+      ],
+      "explain_zh": "通知说明失物保管三十天、认领需描述并出示学生证，无人认领的衣物会捐给慈善机构。"
+    },
+    {
+      "passage": "Please cover food before heating to keep the microwave clean. Wipe up any splatters right away. This appliance is not suitable for metal containers or sealed packages. If the turntable stops rotating, unplug the unit and leave a note for the office manager.",
+      "questions": [
+        {
+          "prompt": "What should you not put in this microwave?",
+          "options": [
+            "Metal containers",
+            "Covered food",
+            "Ceramic bowls",
+            "Paper towels"
+          ],
+          "answer": "Metal containers"
+        },
+        {
+          "prompt": "What should you do if the turntable stops turning?",
+          "options": [
+            "Keep using it carefully",
+            "Unplug it and leave a note for the office manager",
+            "Clean it while it runs",
+            "Heat food for less time"
+          ],
+          "answer": "Unplug it and leave a note for the office manager"
+        }
+      ],
+      "explain_zh": "标签说明不能放金属容器，且转盘停转时应拔掉电源并给办公室经理留言。"
+    },
+    {
+      "passage": "Caution: the floor ahead is wet and slippery. Cleaning is in progress. Please walk on the dry side marked by the cones, or take the alternate route past the reception desk. This sign will be removed once the surface is completely dry. Thank you.",
+      "questions": [
+        {
+          "prompt": "What marks the dry side of the floor?",
+          "options": [
+            "A red carpet",
+            "A rope barrier",
+            "The cones",
+            "The reception desk"
+          ],
+          "answer": "The cones"
+        },
+        {
+          "prompt": "When will the sign be taken away?",
+          "options": [
+            "At the end of the day",
+            "When the floor is completely dry",
+            "After the reception closes",
+            "Once the cones are moved"
+          ],
+          "answer": "When the floor is completely dry"
+        }
+      ],
+      "explain_zh": "标牌说明干燥一侧由锥形标志标示，且地面完全干燥后才会撤下该标志。"
+    },
+    {
+      "passage": "The advising office is open Monday through Thursday from 9:00 a.m. to 4:00 p.m. Walk-in questions are answered in the morning; afternoons are reserved for scheduled appointments. During exam week the office closes early at noon. Book appointments by email at least one day ahead.",
+      "questions": [
+        {
+          "prompt": "When are walk-in questions handled?",
+          "options": [
+            "In the morning",
+            "In the afternoon",
+            "Only during exam week",
+            "Any time by appointment"
+          ],
+          "answer": "In the morning"
+        },
+        {
+          "prompt": "What time does the office close during exam week?",
+          "options": [
+            "9:00 a.m.",
+            "Noon",
+            "4:00 p.m.",
+            "It stays open all day"
+          ],
+          "answer": "Noon"
+        },
+        {
+          "prompt": "How far ahead should appointments be booked?",
+          "options": [
+            "At least one week",
+            "At least three days",
+            "No advance needed",
+            "At least one day"
+          ],
+          "answer": "At least one day"
+        }
+      ],
+      "explain_zh": "通知说明上午接待临时提问、考试周中午提前关门，且预约须至少提前一天用邮件预定。"
+    },
+    {
+      "passage": "Starting next week, the campus shuttle will run every twenty minutes instead of every half hour. The route now includes a stop at the sports complex. Late-night service ends at eleven o'clock. Check the updated timetable posted at each shelter or on the transit app.",
+      "questions": [
+        {
+          "prompt": "How often will the shuttle run after the change?",
+          "options": [
+            "Every ten minutes",
+            "Every twenty minutes",
+            "Every half hour",
+            "Every hour"
+          ],
+          "answer": "Every twenty minutes"
+        },
+        {
+          "prompt": "Which new stop has been added to the route?",
+          "options": [
+            "The sports complex",
+            "The library",
+            "The dining hall",
+            "The train station"
+          ],
+          "answer": "The sports complex"
+        },
+        {
+          "prompt": "Where can riders find the new timetable?",
+          "options": [
+            "Only at the main office",
+            "In the printed course catalog",
+            "By calling the driver",
+            "At each shelter or on the transit app"
+          ],
+          "answer": "At each shelter or on the transit app"
+        }
+      ],
+      "explain_zh": "通知说明班车改为每二十分钟一班、新增体育馆站，最新时刻表张贴在各候车亭或在出行应用上查看。"
+    },
+    {
+      "passage": "If this machine takes your money without releasing a product, do not hit or shake it. Write down the machine number shown on the front panel and the amount lost. Submit a refund request at the campus store within seven days. Refunds are issued in cash.",
+      "questions": [
+        {
+          "prompt": "What should you do if the machine takes your money?",
+          "options": [
+            "Shake the machine firmly",
+            "Record the machine number and amount lost",
+            "Wait by the machine",
+            "Ask another student for money"
+          ],
+          "answer": "Record the machine number and amount lost"
+        },
+        {
+          "prompt": "Where do you submit a refund request?",
+          "options": [
+            "By email to the company",
+            "At the front office",
+            "At the campus store",
+            "Online only"
+          ],
+          "answer": "At the campus store"
+        }
+      ],
+      "explain_zh": "通知要求记录机器编号和损失金额，并在校园商店提交退款申请。"
+    },
+    {
+      "passage": "Flyers may be posted on this board for up to two weeks. Please write the date in the bottom corner before pinning. Only one flyer per event is allowed. Staff remove outdated notices every Friday. Commercial advertisements and items for sale are not permitted here.",
+      "questions": [
+        {
+          "prompt": "What must you write on a flyer before posting it?",
+          "options": [
+            "Your name",
+            "The date",
+            "The event location",
+            "A phone number"
+          ],
+          "answer": "The date"
+        },
+        {
+          "prompt": "When do staff remove outdated notices?",
+          "options": [
+            "Every Monday",
+            "Every Wednesday",
+            "Every Friday",
+            "Every day"
+          ],
+          "answer": "Every Friday"
+        },
+        {
+          "prompt": "Which of the following would not be allowed on this board?",
+          "options": [
+            "A club meeting flyer",
+            "A free lecture notice",
+            "A study group announcement",
+            "An advertisement selling a used phone"
+          ],
+          "answer": "An advertisement selling a used phone"
+        }
+      ],
+      "explain_zh": "通知要求张贴前写上日期、每周五清理过期通知，并禁止商业广告和出售物品，故卖旧手机的广告不被允许。"
+    },
+    {
+      "passage": "This item is made in a kitchen that also handles nuts, milk, eggs, and wheat. Traces of these ingredients may be present even when not listed. Guests with severe allergies should ask a staff member before ordering. A full ingredient sheet is available at the counter.",
+      "questions": [
+        {
+          "prompt": "What should a guest with a severe allergy do?",
+          "options": [
+            "Ask a staff member before ordering",
+            "Avoid the counter",
+            "Order only listed items",
+            "Read the label twice"
+          ],
+          "answer": "Ask a staff member before ordering"
+        },
+        {
+          "prompt": "Where can a full ingredient list be found?",
+          "options": [
+            "On the company website",
+            "On the back of the item",
+            "At the counter",
+            "By phone"
+          ],
+          "answer": "At the counter"
+        }
+      ],
+      "explain_zh": "标签建议严重过敏的客人点餐前先询问员工，并说明完整配料表可在柜台取得。"
+    },
+    {
+      "passage": "First aid supplies are stored inside this cabinet for minor injuries only. After using an item, record it on the log sheet so stock can be replaced. For serious injuries, call security and stay with the injured person. Do not move anyone with a possible back injury.",
+      "questions": [
+        {
+          "prompt": "Why should you record items you take from the cabinet?",
+          "options": [
+            "So the supplies can be restocked",
+            "To pay for them later",
+            "To report an injury",
+            "To lock the cabinet"
+          ],
+          "answer": "So the supplies can be restocked"
+        },
+        {
+          "prompt": "What should you do for a serious injury?",
+          "options": [
+            "Use the cabinet supplies",
+            "Move the person to a chair",
+            "Call security and stay with the person",
+            "Fill out the log sheet first"
+          ],
+          "answer": "Call security and stay with the person"
+        },
+        {
+          "prompt": "What should you not do to someone with a possible back injury?",
+          "options": [
+            "Talk to them",
+            "Move them",
+            "Stay nearby",
+            "Call for help"
+          ],
+          "answer": "Move them"
+        }
+      ],
+      "explain_zh": "标签说明登记取用是为了补充库存，重伤时应呼叫保安并守在伤者身旁，且不可移动疑似背部受伤的人。"
+    },
+    {
+      "passage": "This public repair stand includes a pump and basic tools attached by cables. Hang your bicycle by the seat to reach the wheels easily. Please return each tool to its holder when finished so the next rider can use it. Report broken tools using the code below.",
+      "questions": [
+        {
+          "prompt": "How should you position your bicycle on the stand?",
+          "options": [
+            "Hang it by the seat",
+            "Lay it on the ground",
+            "Lean it against the wall",
+            "Turn it upside down"
+          ],
+          "answer": "Hang it by the seat"
+        },
+        {
+          "prompt": "Why should tools be returned to their holders?",
+          "options": [
+            "To keep them clean",
+            "To charge the pump",
+            "So the next rider can use them",
+            "To lock the stand"
+          ],
+          "answer": "So the next rider can use them"
+        }
+      ],
+      "explain_zh": "标签说明应把自行车挂在坐垫上，并把工具放回原位以便下一位骑行者使用。"
+    },
+    {
+      "passage": "This bench charges phones using solar panels on its roof. Free ports are located under each armrest. Charging works best on sunny days and may slow when clouds cover the sky. Please do not leave devices unattended. The bench is available from dawn until dusk daily.",
+      "questions": [
+        {
+          "prompt": "Where are the charging ports?",
+          "options": [
+            "On the roof",
+            "Behind the backrest",
+            "Under each armrest",
+            "Inside a drawer"
+          ],
+          "answer": "Under each armrest"
+        },
+        {
+          "prompt": "Why might charging be slower at times?",
+          "options": [
+            "When too many phones connect",
+            "At night only",
+            "When the bench is full",
+            "When clouds cover the sky"
+          ],
+          "answer": "When clouds cover the sky"
+        }
+      ],
+      "explain_zh": "通知说明充电口在每个扶手下方，并说明云层遮挡阳光时充电会变慢。"
+    },
+    {
+      "passage": "Entry to the teaching greenhouse is limited to enrolled students and staff. Keep the outer door closed to hold in warmth and humidity. Do not touch labeled experiments or remove any plants. Water only the trays marked with your class color. Gloves are provided by the sink.",
+      "questions": [
+        {
+          "prompt": "Why should the outer door be kept closed?",
+          "options": [
+            "To keep out insects",
+            "To reduce noise",
+            "To hold in warmth and humidity",
+            "To save electricity"
+          ],
+          "answer": "To hold in warmth and humidity"
+        },
+        {
+          "prompt": "Which trays should you water?",
+          "options": [
+            "All the trays",
+            "The trays near the door",
+            "Only trays marked with your class color",
+            "None of the trays"
+          ],
+          "answer": "Only trays marked with your class color"
+        }
+      ],
+      "explain_zh": "通知说明关外门是为了保持温度和湿度，并要求只浇标有本班颜色的托盘。"
+    },
+    {
+      "passage": "This copier is temporarily out of toner. A replacement has been ordered and should arrive tomorrow. In the meantime, please use the machine in the mailroom across the hall. Large jobs can be sent to the print shop on the ground floor. Sorry for the delay.",
+      "questions": [
+        {
+          "prompt": "Where can you make copies right now?",
+          "options": [
+            "In the mailroom across the hall",
+            "On this copier",
+            "At the front desk",
+            "Nowhere until tomorrow"
+          ],
+          "answer": "In the mailroom across the hall"
+        },
+        {
+          "prompt": "Where should large jobs be sent?",
+          "options": [
+            "To the mailroom",
+            "To another building",
+            "To the print shop on the ground floor",
+            "To the office manager"
+          ],
+          "answer": "To the print shop on the ground floor"
+        },
+        {
+          "prompt": "When is the replacement expected to arrive?",
+          "options": [
+            "Later today",
+            "Next week",
+            "It is unknown",
+            "Tomorrow"
+          ],
+          "answer": "Tomorrow"
+        }
+      ],
+      "explain_zh": "通知说明目前可到对面收发室复印、大批量送一楼打印店，且新墨盒预计明天到货。"
+    },
+    {
+      "passage": "Quiet hours in this hall begin at ten o'clock each night and last until seven in the morning. During final exams, quiet hours apply all day. Please use headphones and close your door when watching videos. Repeated noise complaints may be referred to the residence coordinator.",
+      "questions": [
+        {
+          "prompt": "When do quiet hours normally end in the morning?",
+          "options": [
+            "At six o'clock",
+            "At eight o'clock",
+            "At seven o'clock",
+            "At ten o'clock"
+          ],
+          "answer": "At seven o'clock"
+        },
+        {
+          "prompt": "What is different about quiet hours during final exams?",
+          "options": [
+            "They are cancelled",
+            "They start earlier only",
+            "They end at midnight",
+            "They apply all day"
+          ],
+          "answer": "They apply all day"
+        }
+      ],
+      "explain_zh": "通知说明安静时段每晚十点至次日早七点，而期末考试期间则全天适用。"
+    },
+    {
+      "passage": "Want to practice a new language? Our conversation circle meets every Tuesday evening in the student lounge. Beginners are welcome, and no sign-up is required. Bring a snack to share if you like. Native speakers of several languages attend, so come ready to listen and speak.",
+      "questions": [
+        {
+          "prompt": "When does the conversation circle meet?",
+          "options": [
+            "Every Monday morning",
+            "Every weekend",
+            "Every Tuesday evening",
+            "Every Friday afternoon"
+          ],
+          "answer": "Every Tuesday evening"
+        },
+        {
+          "prompt": "Who is welcome to join the circle?",
+          "options": [
+            "Only advanced students",
+            "Only native speakers",
+            "Only registered members",
+            "Beginners as well as others"
+          ],
+          "answer": "Beginners as well as others"
+        }
+      ],
+      "explain_zh": "通知说明会话小组每周二晚在学生休息室聚会，且欢迎包括初学者在内的所有人参加。"
+    },
+    {
+      "passage": "This projector cart is available for classroom use by reservation. Return it to this closet within four hours, fully charged and with all cables coiled. A missing remote or cable delays the next booking. Check the screen and focus before your session to report any faults early.",
+      "questions": [
+        {
+          "prompt": "Within how many hours must the cart be returned?",
+          "options": [
+            "Four hours",
+            "Two hours",
+            "Six hours",
+            "Twenty-four hours"
+          ],
+          "answer": "Four hours"
+        },
+        {
+          "prompt": "Why should you check the screen and focus before your session?",
+          "options": [
+            "To report any faults early",
+            "To charge the cart",
+            "To coil the cables",
+            "To reserve the closet"
+          ],
+          "answer": "To report any faults early"
+        },
+        {
+          "prompt": "How should the cart be returned?",
+          "options": [
+            "Empty and unplugged",
+            "Fully charged with cables coiled",
+            "With the remote removed",
+            "To any nearby room"
+          ],
+          "answer": "Fully charged with cables coiled"
+        }
+      ],
+      "explain_zh": "标签要求四小时内归还、充满电并盘好线材，且课前检查屏幕与对焦是为了尽早报告故障。"
+    },
+    {
+      "passage": "Only food scraps and paper napkins belong in this compost bin. Please keep out plastic, foil, and drink cups, which slow down the composting process. Finished compost is used in the campus garden each spring. Give the lid a firm push to close it and keep pests away.",
+      "questions": [
+        {
+          "prompt": "What is allowed in this compost bin?",
+          "options": [
+            "Food scraps and paper napkins",
+            "Plastic and foil",
+            "Drink cups",
+            "Glass bottles"
+          ],
+          "answer": "Food scraps and paper napkins"
+        },
+        {
+          "prompt": "Why should the lid be pushed firmly closed?",
+          "options": [
+            "To keep the compost warm",
+            "To keep pests away",
+            "To save space",
+            "To hold in moisture"
+          ],
+          "answer": "To keep pests away"
+        },
+        {
+          "prompt": "Where is the finished compost used?",
+          "options": [
+            "At the recycling center",
+            "In the dining hall",
+            "It is thrown away",
+            "In the campus garden"
+          ],
+          "answer": "In the campus garden"
+        }
+      ],
+      "explain_zh": "标签说明堆肥桶只放厨余和纸巾、盖紧盖子是为了防止害虫，成品堆肥每年春天用于校园花园。"
+    },
+    {
+      "passage": "Your student account was locked after several failed login attempts. To restore access, please reset your password using the link below within twenty-four hours. If you did not attempt these logins, contact our office immediately so we can secure your account.",
+      "questions": [
+        {
+          "prompt": "Why was the account locked?",
+          "options": [
+            "Repeated failed login attempts",
+            "The student changed devices",
+            "The account fee went unpaid",
+            "The email address was invalid"
+          ],
+          "answer": "Repeated failed login attempts"
+        },
+        {
+          "prompt": "What should you do if you did not attempt the logins?",
+          "options": [
+            "Wait twenty-four hours",
+            "Contact the office right away",
+            "Create a new account",
+            "Ignore the message"
+          ],
+          "answer": "Contact the office right away"
+        }
+      ],
+      "explain_zh": "账户因多次登录失败被锁定；如非本人尝试登录，应立即联系办公室以保护账户。"
+    },
+    {
+      "passage": "The book you requested is now waiting for you at the front desk. Please collect it before Friday, since holds are only kept for three days. Bring your student card to check it out. Renewals can be done online if you need more time.",
+      "questions": [
+        {
+          "prompt": "How long are holds kept?",
+          "options": [
+            "One week",
+            "Until Monday",
+            "Three days",
+            "Twenty-four hours"
+          ],
+          "answer": "Three days"
+        },
+        {
+          "prompt": "What must you bring to check out the book?",
+          "options": [
+            "A receipt",
+            "Cash payment",
+            "A printed email",
+            "Your student card"
+          ],
+          "answer": "Your student card"
+        },
+        {
+          "prompt": "What can you do if you need more time with the book?",
+          "options": [
+            "Renew it online",
+            "Buy the book",
+            "Visit another branch",
+            "Keep it late"
+          ],
+          "answer": "Renew it online"
+        }
+      ],
+      "explain_zh": "预约书在前台保留三天，需带学生卡借出；若需更长时间可在线续借。"
+    },
+    {
+      "passage": "This is a reminder that course registration for the fall term closes next Wednesday at midnight. Students who miss this deadline must wait until the add period in September and may lose their preferred sections. Please confirm your schedule early to avoid disappointment.",
+      "questions": [
+        {
+          "prompt": "When does registration close?",
+          "options": [
+            "This Friday",
+            "Next Wednesday at midnight",
+            "In September",
+            "At the end of the month"
+          ],
+          "answer": "Next Wednesday at midnight"
+        },
+        {
+          "prompt": "What happens to students who miss the deadline?",
+          "options": [
+            "They are removed from school",
+            "They pay a small fee",
+            "They must wait until the September add period",
+            "They keep their sections automatically"
+          ],
+          "answer": "They must wait until the September add period"
+        }
+      ],
+      "explain_zh": "秋季选课下周三午夜截止；错过者须等到九月补选期，可能失去心仪课程。"
+    },
+    {
+      "passage": "Because of a faculty meeting, my office hours this week will move from Thursday afternoon to Friday morning. If that time does not work for you, send me two options and I will try to meet you separately. The essay questions will be discussed then.",
+      "questions": [
+        {
+          "prompt": "Why are the office hours moving?",
+          "options": [
+            "The professor is sick",
+            "A holiday is coming",
+            "The room is unavailable",
+            "The professor has a faculty meeting"
+          ],
+          "answer": "The professor has a faculty meeting"
+        },
+        {
+          "prompt": "What should a student do if Friday morning does not work?",
+          "options": [
+            "Send two alternative times",
+            "Skip office hours",
+            "Email the department head",
+            "Wait until next week"
+          ],
+          "answer": "Send two alternative times"
+        },
+        {
+          "prompt": "What will be discussed at the meeting?",
+          "options": [
+            "Final grades",
+            "The essay questions",
+            "The reading list",
+            "A field trip"
+          ],
+          "answer": "The essay questions"
+        }
+      ],
+      "explain_zh": "因系里开会，办公时间由周四下午改到周五上午；不便者可发两个时间另约，届时讨论论文题目。"
+    },
+    {
+      "passage": "Hi everyone, our photography club will not meet in the usual studio tonight because it is being repainted. Instead, we will gather in the library seminar room at seven. Bring your edited photos on a memory stick so we can review them together on the big screen.",
+      "questions": [
+        {
+          "prompt": "Why is the club not meeting in the studio?",
+          "options": [
+            "It is closed for a holiday",
+            "It is fully booked",
+            "It is being repainted",
+            "It is too small"
+          ],
+          "answer": "It is being repainted"
+        },
+        {
+          "prompt": "What should members bring?",
+          "options": [
+            "A camera",
+            "Printed photos",
+            "Snacks to share",
+            "Edited photos on a memory stick"
+          ],
+          "answer": "Edited photos on a memory stick"
+        }
+      ],
+      "explain_zh": "摄影社因工作室在粉刷改到图书馆研讨室七点聚会，成员需带存有已修图片的U盘。"
+    },
+    {
+      "passage": "Residents of the east tower should know that the basement laundry room will be closed Monday and Tuesday for new machine installation. During those two days, please use the west tower facilities on the first floor. Normal service returns Wednesday, and the first wash cycle will be free.",
+      "questions": [
+        {
+          "prompt": "Why will the laundry room close?",
+          "options": [
+            "To install new machines",
+            "For a water leak",
+            "For painting",
+            "For an inspection"
+          ],
+          "answer": "To install new machines"
+        },
+        {
+          "prompt": "Where should residents do laundry during the closure?",
+          "options": [
+            "A nearby laundromat",
+            "The west tower first floor",
+            "The east tower lobby",
+            "Their own rooms"
+          ],
+          "answer": "The west tower first floor"
+        },
+        {
+          "prompt": "What is offered when normal service returns?",
+          "options": [
+            "A discount coupon",
+            "Free detergent",
+            "The first wash cycle free",
+            "Extended hours"
+          ],
+          "answer": "The first wash cycle free"
+        }
+      ],
+      "explain_zh": "东楼洗衣房周一周二因安装新机器关闭，期间用西楼一楼；周三恢复且首次洗涤免费。"
+    },
+    {
+      "passage": "Our office is offering a free time-management workshop for first-year students next Thursday at four. Space is limited to twenty people, so reply to reserve a seat. Those who attend will receive a planner and tips for balancing coursework with part-time jobs.",
+      "questions": [
+        {
+          "prompt": "Who is the workshop for?",
+          "options": [
+            "Graduate students",
+            "Faculty members",
+            "International students",
+            "First-year students"
+          ],
+          "answer": "First-year students"
+        },
+        {
+          "prompt": "What should students do to attend?",
+          "options": [
+            "Reply to reserve a seat",
+            "Pay a small fee",
+            "Bring a friend",
+            "Arrive early"
+          ],
+          "answer": "Reply to reserve a seat"
+        }
+      ],
+      "explain_zh": "办公室为大一学生办免费时间管理讲座，名额限二十人需回复预留，参加者获日程本和建议。"
+    },
+    {
+      "passage": "The career center has openings for mock interviews on Friday. Each session lasts thirty minutes, and you will get written feedback afterward. Please bring a printed copy of your resume and dress as you would for a real interview. Sign up through the online portal by Wednesday.",
+      "questions": [
+        {
+          "prompt": "How long is each session?",
+          "options": [
+            "Fifteen minutes",
+            "Thirty minutes",
+            "One hour",
+            "Ten minutes"
+          ],
+          "answer": "Thirty minutes"
+        },
+        {
+          "prompt": "What should students bring?",
+          "options": [
+            "A laptop",
+            "A reference letter",
+            "A printed resume",
+            "A photo"
+          ],
+          "answer": "A printed resume"
+        },
+        {
+          "prompt": "By when must students sign up?",
+          "options": [
+            "Friday",
+            "Thursday",
+            "Monday",
+            "Wednesday"
+          ],
+          "answer": "Wednesday"
+        }
+      ],
+      "explain_zh": "就业中心周五提供三十分钟模拟面试并给书面反馈，需带纸质简历、正装出席，周三前在线报名。"
+    },
+    {
+      "passage": "We noticed that one document is still missing from your scholarship file. To keep your award on track, please upload last year's tax summary before the fifteenth. Without it, we cannot process your payment for the spring term, and your funding may be delayed.",
+      "questions": [
+        {
+          "prompt": "What document is missing?",
+          "options": [
+            "Last year's tax summary",
+            "A recommendation letter",
+            "A photo ID",
+            "A class schedule"
+          ],
+          "answer": "Last year's tax summary"
+        },
+        {
+          "prompt": "What may happen if the document is not uploaded?",
+          "options": [
+            "The scholarship increases",
+            "The spring payment is delayed",
+            "The student is expelled",
+            "A late fee is added"
+          ],
+          "answer": "The spring payment is delayed"
+        }
+      ],
+      "explain_zh": "奖学金档案缺一份材料，需在十五号前上传去年税单，否则春季学期款项将延迟。"
+    },
+    {
+      "passage": "Students may change their meal plan for one more week. If you eat on campus less than you expected, switching to the smaller plan could save money. After next Sunday, all plans are locked until the winter break. Log in to your dining account to make changes.",
+      "questions": [
+        {
+          "prompt": "What is the benefit of switching to the smaller plan?",
+          "options": [
+            "More guest passes",
+            "Longer dining hours",
+            "Saving money",
+            "Extra dessert"
+          ],
+          "answer": "Saving money"
+        },
+        {
+          "prompt": "When are all plans locked?",
+          "options": [
+            "Tonight",
+            "This Friday",
+            "In one month",
+            "After next Sunday"
+          ],
+          "answer": "After next Sunday"
+        },
+        {
+          "prompt": "How do students make changes?",
+          "options": [
+            "Through the dining account online",
+            "By visiting the cafeteria",
+            "By calling a manager",
+            "By filling a paper form"
+          ],
+          "answer": "Through the dining account online"
+        }
+      ],
+      "explain_zh": "还可再改一周餐饮计划，校内用餐少可换小份省钱；下周日后锁定至寒假，需登录餐饮账户修改。"
+    },
+    {
+      "passage": "Tonight's evening yoga class is cancelled because the instructor is traveling. As an apology, we have added an extra weekend session on Saturday at ten. If you were signed up for tonight, your spot rolls over automatically, but please cancel online if you cannot attend.",
+      "questions": [
+        {
+          "prompt": "Why is tonight's class cancelled?",
+          "options": [
+            "The room flooded",
+            "The instructor is traveling",
+            "Not enough students signed up",
+            "A holiday closure"
+          ],
+          "answer": "The instructor is traveling"
+        },
+        {
+          "prompt": "What should you do if you cannot attend the Saturday session?",
+          "options": [
+            "Nothing at all",
+            "Call the front desk",
+            "Cancel online",
+            "Pay a fee"
+          ],
+          "answer": "Cancel online"
+        }
+      ],
+      "explain_zh": "今晚瑜伽课因教练出行取消，周六十点加课；报名者自动顺延，不能来须在线取消。"
+    },
+    {
+      "passage": "Interested in studying overseas next year? Join our information session on Tuesday evening to hear from students who have returned. We will explain application steps, costs, and language requirements. Snacks are provided, and you can ask questions one-on-one afterward. No sign-up is needed; just come to room twelve.",
+      "questions": [
+        {
+          "prompt": "Who will speak at the session?",
+          "options": [
+            "Local employers",
+            "The university president",
+            "Language teachers",
+            "Students who studied overseas"
+          ],
+          "answer": "Students who studied overseas"
+        },
+        {
+          "prompt": "What is provided at the session?",
+          "options": [
+            "Free snacks",
+            "Travel vouchers",
+            "Course credit",
+            "A textbook"
+          ],
+          "answer": "Free snacks"
+        },
+        {
+          "prompt": "What will the session explain?",
+          "options": [
+            "Only travel dates",
+            "Application steps, costs, and language requirements",
+            "Only housing options",
+            "How to pack luggage"
+          ],
+          "answer": "Application steps, costs, and language requirements"
+        }
+      ],
+      "explain_zh": "留学信息会周二晚举行，由归来的学生介绍申请步骤、费用和语言要求，提供点心，无需报名。"
+    },
+    {
+      "passage": "The used textbooks you ordered have arrived and are being held at the customer service counter. Please pick them up within five business days; unclaimed orders are returned to stock and refunded. Remember to check the condition before leaving, as returns are not accepted afterward.",
+      "questions": [
+        {
+          "prompt": "What happens to unclaimed orders?",
+          "options": [
+            "They are donated",
+            "They are mailed home",
+            "They are returned to stock and refunded",
+            "They are kept for a month"
+          ],
+          "answer": "They are returned to stock and refunded"
+        },
+        {
+          "prompt": "Why should you check the books before leaving?",
+          "options": [
+            "To sign a form",
+            "To pay the balance",
+            "To meet the manager",
+            "Because returns are not accepted afterward"
+          ],
+          "answer": "Because returns are not accepted afterward"
+        }
+      ],
+      "explain_zh": "订购的二手教材已到客服台，五个工作日内取，逾期退库退款；离店前须检查因之后不接受退货。"
+    },
+    {
+      "passage": "Free flu shots will be offered at the health center all next week. You do not need an appointment; simply walk in between nine and four. Bring your insurance card if you have one, though it is not required. Students who get vaccinated will receive a small water bottle.",
+      "questions": [
+        {
+          "prompt": "Do students need an appointment?",
+          "options": [
+            "No, they can walk in",
+            "Yes, they must call ahead",
+            "Only in the morning",
+            "Only for a fee"
+          ],
+          "answer": "No, they can walk in"
+        },
+        {
+          "prompt": "What is said about the insurance card?",
+          "options": [
+            "It must be new",
+            "It is helpful but not required",
+            "It costs extra",
+            "It replaces the shot"
+          ],
+          "answer": "It is helpful but not required"
+        },
+        {
+          "prompt": "What do vaccinated students receive?",
+          "options": [
+            "A discount",
+            "Extra credit",
+            "A small water bottle",
+            "A free meal"
+          ],
+          "answer": "A small water bottle"
+        }
+      ],
+      "explain_zh": "下周健康中心免费打流感疫苗，无需预约九点至四点直接来，有保险卡可带但非必需，接种者获小水瓶。"
+    },
+    {
+      "passage": "Our geology class will visit the river cliffs on Saturday to study rock layers. Wear sturdy shoes and bring water and a notebook. Please return the signed permission slip by Thursday, or you will not be allowed on the bus. We leave campus promptly at eight.",
+      "questions": [
+        {
+          "prompt": "What is the purpose of the trip?",
+          "options": [
+            "To collect water samples",
+            "To photograph birds",
+            "To relax by the river",
+            "To study rock layers"
+          ],
+          "answer": "To study rock layers"
+        },
+        {
+          "prompt": "What must students return by Thursday?",
+          "options": [
+            "The signed permission slip",
+            "A trip fee",
+            "A completed quiz",
+            "A packing list"
+          ],
+          "answer": "The signed permission slip"
+        }
+      ],
+      "explain_zh": "地质课周六去河崖研究岩层，需穿结实鞋带水和笔记本；周四前交签字同意书否则不能上车。"
+    },
+    {
+      "passage": "Hey, I'm at the store now. We're out of milk and dish soap, so I'll grab those. Can you send me your half of the rent tonight? The landlord wants it before noon tomorrow. Also, your package came; I left it on your desk.",
+      "questions": [
+        {
+          "prompt": "What does the sender ask the roommate to do tonight?",
+          "options": [
+            "Buy milk",
+            "Send half of the rent",
+            "Call the landlord",
+            "Clean the kitchen"
+          ],
+          "answer": "Send half of the rent"
+        },
+        {
+          "prompt": "Where did the sender leave the package?",
+          "options": [
+            "By the front door",
+            "With the landlord",
+            "On the roommate's desk",
+            "In the kitchen"
+          ],
+          "answer": "On the roommate's desk"
+        },
+        {
+          "prompt": "What is the landlord's deadline for the rent?",
+          "options": [
+            "Tonight",
+            "This weekend",
+            "Next week",
+            "Before noon tomorrow"
+          ],
+          "answer": "Before noon tomorrow"
+        }
+      ],
+      "explain_zh": "室友在超市会买牛奶和洗洁精，请对方今晚转房租，房东要求明天中午前；包裹已放在书桌上。"
+    },
+    {
+      "passage": "Sorry to ask last minute, but could you take the Wednesday lab slot instead of me? My grandmother is visiting and I want to pick her up. I already entered Monday's readings into the shared sheet, so you'll have everything you need. I'll cover your Friday shift.",
+      "questions": [
+        {
+          "prompt": "Why does the sender want to swap the Wednesday slot?",
+          "options": [
+            "To pick up a visiting grandmother",
+            "To finish another assignment",
+            "Because of illness",
+            "To attend a concert"
+          ],
+          "answer": "To pick up a visiting grandmother"
+        },
+        {
+          "prompt": "What did the sender already do?",
+          "options": [
+            "Cleaned the lab",
+            "Entered Monday's readings into the shared sheet",
+            "Emailed the professor",
+            "Booked the room"
+          ],
+          "answer": "Entered Monday's readings into the shared sheet"
+        }
+      ],
+      "explain_zh": "发信人想临时换掉周三实验班次去接来访的祖母，已把周一读数录入共享表，并答应替对方值周五班。"
+    },
+    {
+      "passage": "Coach just texted: practice is moved from the outdoor field to the indoor court because of the rain. Same time, six sharp. Bring your indoor shoes, since street shoes aren't allowed on the wood floor. Tell Sam if you see him, because his phone died.",
+      "questions": [
+        {
+          "prompt": "Why was practice moved indoors?",
+          "options": [
+            "The field is being mowed",
+            "A game is scheduled",
+            "Because of the rain",
+            "The court is warmer"
+          ],
+          "answer": "Because of the rain"
+        },
+        {
+          "prompt": "Why must players bring indoor shoes?",
+          "options": [
+            "They are more comfortable",
+            "They match the team colors",
+            "They are cheaper",
+            "Street shoes aren't allowed on the wood floor"
+          ],
+          "answer": "Street shoes aren't allowed on the wood floor"
+        },
+        {
+          "prompt": "Why should the reader tell Sam in person?",
+          "options": [
+            "His phone died",
+            "He is the captain",
+            "He lives far away",
+            "He forgot his shoes"
+          ],
+          "answer": "His phone died"
+        }
+      ],
+      "explain_zh": "因下雨训练从室外场移到室内木地板球场，时间不变六点，须带室内鞋；Sam手机没电请当面转告。"
+    },
+    {
+      "passage": "The study rooms are all booked, so let's meet at the coffee shop across from the science building instead. I'll get there around three and save a big table near the back. Bring the slides on your laptop; mine won't hold a charge without the cable.",
+      "questions": [
+        {
+          "prompt": "Why are they meeting at the coffee shop?",
+          "options": [
+            "It has free snacks",
+            "The study rooms are all booked",
+            "It is quieter",
+            "It is closer to home"
+          ],
+          "answer": "The study rooms are all booked"
+        },
+        {
+          "prompt": "Why should the reader bring the slides on their laptop?",
+          "options": [
+            "The reader made the slides",
+            "It is the newest laptop",
+            "The sender's laptop won't hold a charge",
+            "The coffee shop has no screen"
+          ],
+          "answer": "The sender's laptop won't hold a charge"
+        }
+      ],
+      "explain_zh": "自习室订满，改到理科楼对面咖啡店三点见；因发信人电脑不带线没电，请对方用其笔记本带幻灯片。"
+    },
+    {
+      "passage": "Hey, I missed this morning's lecture because my alarm never went off. Could I borrow your notes for chapter five? I'll photograph them and give them right back at lunch. If you're free, I'll buy you a sandwich to say thanks. Meet at the usual bench?",
+      "questions": [
+        {
+          "prompt": "Why did the sender miss the lecture?",
+          "options": [
+            "A doctor's appointment",
+            "The bus was late",
+            "A family emergency",
+            "The alarm never went off"
+          ],
+          "answer": "The alarm never went off"
+        },
+        {
+          "prompt": "What does the sender plan to do with the notes?",
+          "options": [
+            "Photograph them and return them at lunch",
+            "Keep them for a week",
+            "Copy them by hand tonight",
+            "Scan them at the library"
+          ],
+          "answer": "Photograph them and return them at lunch"
+        },
+        {
+          "prompt": "How does the sender offer to say thanks?",
+          "options": [
+            "By lending a textbook",
+            "By buying a sandwich",
+            "By sharing an umbrella",
+            "By paying cash"
+          ],
+          "answer": "By buying a sandwich"
+        }
+      ],
+      "explain_zh": "发信人闹钟没响错过讲课，想借第五章笔记午饭前拍照归还，并请对方在老长椅见面，以三明治致谢。"
+    },
+    {
+      "passage": "The final is at the north campus this year, which is a long walk from the dorms. I'm driving over at eight and have two empty seats. Want a ride? We should leave early because parking fills up fast on exam days. Text me if you're in.",
+      "questions": [
+        {
+          "prompt": "Why is the sender offering a ride?",
+          "options": [
+            "The bus is not running",
+            "It is raining hard",
+            "The exam is far from the dorms",
+            "The sender is lonely"
+          ],
+          "answer": "The exam is far from the dorms"
+        },
+        {
+          "prompt": "Why should they leave early?",
+          "options": [
+            "To eat breakfast first",
+            "To review notes together",
+            "To beat traffic lights",
+            "Because parking fills up fast on exam days"
+          ],
+          "answer": "Because parking fills up fast on exam days"
+        }
+      ],
+      "explain_zh": "期末考在北校区离宿舍远，发信人八点开车有两个空位邀同学搭车；因考试日停车位很快满建议早出发。"
+    },
+    {
+      "passage": "Good news—I reserved the corner room in the library for Thursday from six to eight. It has a whiteboard and a screen, so we can finally practice the presentation properly. Please look over your section beforehand. If we finish early, we can grab dinner together downstairs.",
+      "questions": [
+        {
+          "prompt": "What did the sender reserve?",
+          "options": [
+            "The corner room in the library",
+            "A café table",
+            "A classroom",
+            "The auditorium"
+          ],
+          "answer": "The corner room in the library"
+        },
+        {
+          "prompt": "Why is the room useful for the group?",
+          "options": [
+            "It is free of charge",
+            "It has a whiteboard and a screen",
+            "It is near the exit",
+            "It has comfortable chairs"
+          ],
+          "answer": "It has a whiteboard and a screen"
+        },
+        {
+          "prompt": "What should members do before the meeting?",
+          "options": [
+            "Print handouts",
+            "Bring snacks",
+            "Look over their section",
+            "Email the professor"
+          ],
+          "answer": "Look over their section"
+        }
+      ],
+      "explain_zh": "发信人订了图书馆角落房间周四六到八点，配白板和屏幕可正式排练演讲，请成员事先看好各自部分，早结束可一起吃饭。"
+    },
+    {
+      "passage": "Just a heads up: I have an early online exam tomorrow at seven, so I'll go to bed soon. Could you keep the music low after ten? Also, a delivery driver dropped a heavy box for you by the mailboxes—it looked too big to carry up alone.",
+      "questions": [
+        {
+          "prompt": "Why does the sender want quiet after ten?",
+          "options": [
+            "A guest is coming",
+            "The neighbors complained",
+            "A bad headache",
+            "An early online exam tomorrow"
+          ],
+          "answer": "An early online exam tomorrow"
+        },
+        {
+          "prompt": "Where was the box left?",
+          "options": [
+            "By the mailboxes",
+            "At the front desk",
+            "Inside the room",
+            "With a neighbor"
+          ],
+          "answer": "By the mailboxes"
+        }
+      ],
+      "explain_zh": "发信人明早七点有在线考试要早睡，请室友十点后音乐小声；另有一沉重包裹放在信箱旁，独自搬上楼太大。"
+    },
+    {
+      "passage": "I think I left my laptop charger in your room last night. It's white with a blue tag on the cord. No rush, but I have a paper due Friday and my battery is almost dead. Are you around this afternoon? I can swing by between classes.",
+      "questions": [
+        {
+          "prompt": "What is the sender looking for?",
+          "options": [
+            "A blue notebook",
+            "A laptop charger",
+            "A phone case",
+            "A set of keys"
+          ],
+          "answer": "A laptop charger"
+        },
+        {
+          "prompt": "How can the item be recognized?",
+          "options": [
+            "It is black with a red tag",
+            "It has the sender's name",
+            "It is white with a blue tag",
+            "It is in a case"
+          ],
+          "answer": "It is white with a blue tag"
+        },
+        {
+          "prompt": "Why does the sender need it soon?",
+          "options": [
+            "To sell it",
+            "To lend it to someone",
+            "To watch a movie",
+            "A paper is due Friday and the battery is low"
+          ],
+          "answer": "A paper is due Friday and the battery is low"
+        }
+      ],
+      "explain_zh": "发信人昨晚可能把白色带蓝标的笔记本充电器落在对方房间，因周五要交论文且电量将尽，想下午课间去取。"
+    },
+    {
+      "passage": "The team orders new jerseys this week, and I need your size by tonight. Reply with small, medium, or large, and whether you want your nickname on the back. They cost fifteen each, due when they arrive. If you don't answer, I'll guess medium for you.",
+      "questions": [
+        {
+          "prompt": "What does the sender need by tonight?",
+          "options": [
+            "Your jersey size",
+            "The payment",
+            "Your address",
+            "A photo"
+          ],
+          "answer": "Your jersey size"
+        },
+        {
+          "prompt": "What happens if you don't reply?",
+          "options": [
+            "You get no jersey",
+            "The sender orders a medium for you",
+            "You pay double",
+            "The order is cancelled"
+          ],
+          "answer": "The sender orders a medium for you"
+        }
+      ],
+      "explain_zh": "球队本周订新球衣，需今晚回复尺码及是否印昵称，每件十五元到货付；不回复则默认订中号。"
+    },
+    {
+      "passage": "Heads up—you weren't in seminar today. The professor pushed the reading response deadline to Monday and asked us to focus on the second article instead of the first. She also mentioned a surprise quiz next week. I took photos of the board if you want them.",
+      "questions": [
+        {
+          "prompt": "What changed about the deadline?",
+          "options": [
+            "It was cancelled",
+            "It moved earlier",
+            "It was pushed to Monday",
+            "It stayed the same"
+          ],
+          "answer": "It was pushed to Monday"
+        },
+        {
+          "prompt": "Which article should students now focus on?",
+          "options": [
+            "Both articles",
+            "The first article",
+            "A new article",
+            "The second article"
+          ],
+          "answer": "The second article"
+        },
+        {
+          "prompt": "What did the professor warn about?",
+          "options": [
+            "A surprise quiz next week",
+            "A cancelled class",
+            "A new textbook",
+            "A longer essay"
+          ],
+          "answer": "A surprise quiz next week"
+        }
+      ],
+      "explain_zh": "同学今天缺课，教授把阅读回应截止推到周一，改为重点看第二篇文章，还提到下周有突击测验；发信人拍了黑板照片可分享。"
+    },
+    {
+      "passage": "The dishwasher is making a strange grinding noise, so I turned it off and left a note for the building manager. Please don't run it until someone checks it. I washed the mugs by hand so you'd have a clean one for morning coffee. Fingers crossed it's cheap to fix.",
+      "questions": [
+        {
+          "prompt": "What did the sender do about the dishwasher?",
+          "options": [
+            "Repaired it themselves",
+            "Turned it off and notified the manager",
+            "Ran it once more",
+            "Ignored the noise"
+          ],
+          "answer": "Turned it off and notified the manager"
+        },
+        {
+          "prompt": "Why did the sender wash the mugs by hand?",
+          "options": [
+            "To save water",
+            "Because the sink was full",
+            "So the roommate has a clean one for coffee",
+            "To test the soap"
+          ],
+          "answer": "So the roommate has a clean one for coffee"
+        }
+      ],
+      "explain_zh": "洗碗机发出奇怪磨擦声，发信人关掉并给管理员留言，请勿使用待检修；并手洗了杯子让室友早上有干净杯喝咖啡。"
+    },
+    {
+      "passage": "The student band is playing Saturday and tickets are only five dollars if we buy before Friday—after that they double. I can grab two if you pay me back later. The show starts at nine, but doors open at eight and it gets crowded fast. Interested?",
+      "questions": [
+        {
+          "prompt": "What happens to ticket prices after Friday?",
+          "options": [
+            "They are refunded",
+            "They stay the same",
+            "They are free",
+            "They double"
+          ],
+          "answer": "They double"
+        },
+        {
+          "prompt": "Why does the sender suggest arriving before nine?",
+          "options": [
+            "Doors open at eight and it gets crowded fast",
+            "Parking is limited",
+            "The band signs autographs",
+            "Food is served early"
+          ],
+          "answer": "Doors open at eight and it gets crowded fast"
+        },
+        {
+          "prompt": "What does the sender offer to do?",
+          "options": [
+            "Drive to the show",
+            "Buy two tickets now",
+            "Save seats in front",
+            "Lend money for dinner"
+          ],
+          "answer": "Buy two tickets now"
+        }
+      ],
+      "explain_zh": "学生乐队周六演出，周五前买票每张五美元之后翻倍；发信人可先买两张让对方后还，提醒八点开门人多要早到。"
+    },
+    {
+      "passage": "The incubator we need is booked solid until Thursday, so we can't start the bacteria samples on Tuesday as planned. Let's push our experiment to Thursday afternoon. Meanwhile, could you finish writing the procedure section? I'll prepare the materials list and label the tubes before we begin.",
+      "questions": [
+        {
+          "prompt": "Why must the experiment be delayed?",
+          "options": [
+            "The samples spoiled",
+            "A teammate is sick",
+            "The incubator is booked until Thursday",
+            "The lab is closed"
+          ],
+          "answer": "The incubator is booked until Thursday"
+        },
+        {
+          "prompt": "What does the sender ask the partner to do?",
+          "options": [
+            "Prepare the materials list",
+            "Label the tubes",
+            "Book the incubator",
+            "Finish the procedure section"
+          ],
+          "answer": "Finish the procedure section"
+        }
+      ],
+      "explain_zh": "所需培养箱周四前已订满，样本无法按周二开始，改到周四下午；请对方写完步骤部分，发信人备料并贴标签。"
+    },
+    {
+      "passage": "Great news for us: the professor postponed Thursday's quiz to the following Monday because half the class is at the conference. That gives us the weekend to review together. Want to meet Sunday at the tea house near the station? I'll bring the practice problems I made.",
+      "questions": [
+        {
+          "prompt": "Why was the quiz postponed?",
+          "options": [
+            "Half the class is at a conference",
+            "The professor is ill",
+            "The room was double-booked",
+            "A storm is expected"
+          ],
+          "answer": "Half the class is at a conference"
+        },
+        {
+          "prompt": "When is the quiz now scheduled?",
+          "options": [
+            "This Thursday",
+            "The following Monday",
+            "Next Friday",
+            "During the conference"
+          ],
+          "answer": "The following Monday"
+        },
+        {
+          "prompt": "What will the sender bring on Sunday?",
+          "options": [
+            "Snacks",
+            "A textbook",
+            "Practice problems they made",
+            "A laptop"
+          ],
+          "answer": "Practice problems they made"
+        }
+      ],
+      "explain_zh": "因半数同学去开会，教授把周四测验推迟到下周一，给出周末复习时间；发信人邀周日在车站附近茶馆见并带自制练习题。"
+    },
+    {
+      "passage": "New this week at the North Dining Hall: a build-your-own oatmeal bar opens every morning from 7 to 9. Choose from warm oats, fresh berries, sliced almonds, and honey. The bar sits near the juice station and replaces the old cereal shelf.",
+      "questions": [
+        {
+          "prompt": "When does the oatmeal bar open each day?",
+          "options": [
+            "All day until closing",
+            "From 7 to 9 in the morning",
+            "Only on weekends",
+            "From noon to 2"
+          ],
+          "answer": "From 7 to 9 in the morning"
+        },
+        {
+          "prompt": "What can students add to their oatmeal?",
+          "options": [
+            "Berries, almonds, and honey",
+            "Eggs and bacon",
+            "Yogurt and granola bars",
+            "Cheese and crackers"
+          ],
+          "answer": "Berries, almonds, and honey"
+        },
+        {
+          "prompt": "What was removed to make room for the oatmeal bar?",
+          "options": [
+            "The juice station",
+            "The coffee machine",
+            "The old cereal shelf",
+            "The salad bar"
+          ],
+          "answer": "The old cereal shelf"
+        }
+      ],
+      "explain_zh": "燕麦吧每天早上7到9点开放，配料有浆果、杏仁和蜂蜜，并取代了旧的麦片架。"
+    },
+    {
+      "passage": "Autumn Flavors are back at the Corner Café! Starting Monday, order a spiced pear latte or a maple oat muffin. The pear latte comes hot or iced for the same price. Ask about our rewards card and earn a free drink after ten purchases.",
+      "questions": [
+        {
+          "prompt": "How can the spiced pear latte be ordered?",
+          "options": [
+            "Only iced",
+            "Hot or iced for the same price",
+            "Only in a large size",
+            "Hot for an extra charge"
+          ],
+          "answer": "Hot or iced for the same price"
+        },
+        {
+          "prompt": "Why does the café mention the rewards card?",
+          "options": [
+            "To encourage repeat purchases",
+            "To warn about price increases",
+            "To announce it is closing",
+            "To hire new staff"
+          ],
+          "answer": "To encourage repeat purchases"
+        }
+      ],
+      "explain_zh": "香梨拿铁冷热同价，会员卡意在鼓励顾客多次消费。"
+    },
+    {
+      "passage": "The Green Plate vegetarian station now serves lunch daily from 11:30 until 2. Today's dish is a chickpea and spinach stew with brown rice. All items are nut-free, and gluten-free bread is available on request. Please tell staff about any allergies before ordering.",
+      "questions": [
+        {
+          "prompt": "What is today's dish at the Green Plate?",
+          "options": [
+            "Grilled chicken salad",
+            "Chickpea and spinach stew",
+            "Beef noodle soup",
+            "Cheese pizza"
+          ],
+          "answer": "Chickpea and spinach stew"
+        },
+        {
+          "prompt": "What must diners do to get gluten-free bread?",
+          "options": [
+            "Pay an extra fee",
+            "Order before 11:30",
+            "Show a student ID",
+            "Ask staff for it"
+          ],
+          "answer": "Ask staff for it"
+        },
+        {
+          "prompt": "Why does the station ask about allergies?",
+          "options": [
+            "To keep diners safe",
+            "To count how many people eat",
+            "To limit portion sizes",
+            "To promote the rewards card"
+          ],
+          "answer": "To keep diners safe"
+        }
+      ],
+      "explain_zh": "今日菜品是鹰嘴豆菠菜炖菜，无麸质面包需向员工索取，询问过敏是为了保障用餐安全。"
+    },
+    {
+      "passage": "Night Owl Snack Bar is open again for the semester. Between 9 p.m. and midnight you can grab grilled cheese, sweet potato fries, and hot cocoa. Cash is no longer accepted; please pay with your student card or a phone app.",
+      "questions": [
+        {
+          "prompt": "What time does the snack bar close?",
+          "options": [
+            "9 p.m.",
+            "Midnight",
+            "2 a.m.",
+            "When food runs out"
+          ],
+          "answer": "Midnight"
+        },
+        {
+          "prompt": "How can students pay at the snack bar?",
+          "options": [
+            "Only with cash",
+            "With a check",
+            "With a meal ticket",
+            "With a student card or phone app"
+          ],
+          "answer": "With a student card or phone app"
+        }
+      ],
+      "explain_zh": "夜猫子小吃吧午夜关门，只能用学生卡或手机应用付款。"
+    },
+    {
+      "passage": "Weekend Brunch at the Student Union runs Saturday and Sunday, 10 to 1. This week features fluffy pancakes, a make-your-own omelet counter, and fresh fruit. Seating fills quickly, so arrive early. Brunch is included in the standard meal plan at no extra cost.",
+      "questions": [
+        {
+          "prompt": "On which days is weekend brunch served?",
+          "options": [
+            "Friday and Saturday",
+            "Saturday and Sunday",
+            "Sunday only",
+            "Every day"
+          ],
+          "answer": "Saturday and Sunday"
+        },
+        {
+          "prompt": "What is featured this week?",
+          "options": [
+            "Pancakes and an omelet counter",
+            "Waffles and bacon",
+            "Soup and salad",
+            "Tacos and rice"
+          ],
+          "answer": "Pancakes and an omelet counter"
+        },
+        {
+          "prompt": "Why does the notice tell students to arrive early?",
+          "options": [
+            "Food is cheaper early",
+            "The union closes at eleven",
+            "Seating fills quickly",
+            "Parking is limited"
+          ],
+          "answer": "Seating fills quickly"
+        }
+      ],
+      "explain_zh": "周末早午餐在周六和周日供应，本周主打松饼和煎蛋窗口，早到是因为座位很快坐满。"
+    },
+    {
+      "passage": "The Morning Cart by the library has added three new pastries: almond croissants, blueberry scones, and cinnamon rolls. All pastries are baked fresh each dawn on campus. Buy any pastry with a coffee and save a dollar. The cart takes card payments only.",
+      "questions": [
+        {
+          "prompt": "Where is the Morning Cart located?",
+          "options": [
+            "By the library",
+            "Inside the gym",
+            "Near the dorms",
+            "At the stadium"
+          ],
+          "answer": "By the library"
+        },
+        {
+          "prompt": "How can a customer save a dollar?",
+          "options": [
+            "Arrive before dawn",
+            "Buy a pastry with a coffee",
+            "Pay with cash",
+            "Show a rewards card"
+          ],
+          "answer": "Buy a pastry with a coffee"
+        }
+      ],
+      "explain_zh": "晨间小推车在图书馆旁，买糕点加咖啡可省一美元。"
+    },
+    {
+      "passage": "International Food Night returns Thursday at the East Commons. Stations will serve dumplings, jollof rice, and empanadas, each prepared by student volunteers from campus culture clubs. Tickets are five dollars and include one plate from every station. Proceeds support next year's cultural festival.",
+      "questions": [
+        {
+          "prompt": "Who prepares the food at the stations?",
+          "options": [
+            "Professional chefs",
+            "Local restaurants",
+            "Dining hall staff",
+            "Student volunteers"
+          ],
+          "answer": "Student volunteers"
+        },
+        {
+          "prompt": "What does a ticket include?",
+          "options": [
+            "Free drinks all night",
+            "A cooking lesson",
+            "One plate from every station",
+            "Entry to the festival"
+          ],
+          "answer": "One plate from every station"
+        },
+        {
+          "prompt": "What will the money raised be used for?",
+          "options": [
+            "Paying the volunteers",
+            "Next year's cultural festival",
+            "Buying new dining tables",
+            "A club trip abroad"
+          ],
+          "answer": "Next year's cultural festival"
+        }
+      ],
+      "explain_zh": "食物由学生志愿者准备，门票含每个摊位一份菜，收益用于明年的文化节。"
+    },
+    {
+      "passage": "Cool Blends smoothie bar just launched two new flavors: mango-ginger and berry-beet. Both are made with real fruit and no added sugar. Add a scoop of protein powder for a small fee. Show your gym membership at the counter for ten percent off.",
+      "questions": [
+        {
+          "prompt": "What are the two new smoothie flavors?",
+          "options": [
+            "Mango-ginger and berry-beet",
+            "Strawberry and banana",
+            "Chocolate and vanilla",
+            "Apple and pear"
+          ],
+          "answer": "Mango-ginger and berry-beet"
+        },
+        {
+          "prompt": "How can a customer get ten percent off?",
+          "options": [
+            "Buy two smoothies",
+            "Add protein powder",
+            "Show a gym membership",
+            "Come before noon"
+          ],
+          "answer": "Show a gym membership"
+        }
+      ],
+      "explain_zh": "两款新口味是芒果姜和莓菜根，出示健身房会员卡可享九折。"
+    },
+    {
+      "passage": "Fresh Finds Farmers Market comes to the main quad every Saturday this fall, from 9 to 1. Local growers bring seasonal vegetables, honey, and fresh bread. Bring your own bag, and pay with cash or your student card. Free tote bags go to the first fifty shoppers.",
+      "questions": [
+        {
+          "prompt": "When is the market held?",
+          "options": [
+            "Every Sunday afternoon",
+            "Every Saturday morning",
+            "Every weekday evening",
+            "Only once this fall"
+          ],
+          "answer": "Every Saturday morning"
+        },
+        {
+          "prompt": "How can shoppers pay?",
+          "options": [
+            "Only with cash",
+            "By card only",
+            "With cash or a student card",
+            "With a printed coupon"
+          ],
+          "answer": "With cash or a student card"
+        },
+        {
+          "prompt": "What do the first fifty shoppers receive?",
+          "options": [
+            "A jar of honey",
+            "A loaf of bread",
+            "A discount code",
+            "A free tote bag"
+          ],
+          "answer": "A free tote bag"
+        }
+      ],
+      "explain_zh": "农夫市集每周六上午9到1点在主广场举行，可用现金或学生卡付款，前五十名购物者获免费手提袋。"
+    },
+    {
+      "passage": "During finals week the Central Library will stay open twenty-four hours a day. Quiet floors are on levels three and four; group study rooms remain on level one. Free coffee is served each night at 11. Regular hours return the Monday after exams.",
+      "questions": [
+        {
+          "prompt": "Where are the quiet floors during finals week?",
+          "options": [
+            "Levels three and four",
+            "Level one",
+            "The basement",
+            "Level two"
+          ],
+          "answer": "Levels three and four"
+        },
+        {
+          "prompt": "When will normal library hours resume?",
+          "options": [
+            "The Friday of finals week",
+            "The Monday after exams",
+            "Never, they stay open",
+            "The first day of exams"
+          ],
+          "answer": "The Monday after exams"
+        }
+      ],
+      "explain_zh": "期末周安静楼层在三四层，正常开放时间在考试后的周一恢复。"
+    },
+    {
+      "passage": "The Recreation Center posts its spring yoga timetable. Gentle Flow meets Tuesdays at 6 p.m., and Power Yoga meets Thursdays at 7. Bring your own mat, since rentals have ended this term. Classes are free for members but fill fast, so sign up online early.",
+      "questions": [
+        {
+          "prompt": "When does Power Yoga meet?",
+          "options": [
+            "Tuesdays at 6",
+            "Mondays at 5",
+            "Fridays at 8",
+            "Thursdays at 7"
+          ],
+          "answer": "Thursdays at 7"
+        },
+        {
+          "prompt": "Why should students bring their own mat?",
+          "options": [
+            "Mats are too dirty",
+            "Rentals have ended this term",
+            "Members dislike sharing",
+            "The floor is cold"
+          ],
+          "answer": "Rentals have ended this term"
+        },
+        {
+          "prompt": "Why does the notice suggest signing up early?",
+          "options": [
+            "Classes cost more later",
+            "The center may close",
+            "Classes fill fast",
+            "Mats are limited"
+          ],
+          "answer": "Classes fill fast"
+        }
+      ],
+      "explain_zh": "力量瑜伽在周四7点，需自带垫子因为本学期停止租借，尽早报名因为名额很快满。"
+    },
+    {
+      "passage": "Free Writing Tutoring is available all semester at the Learning Commons. Drop-in help runs Monday through Thursday, 1 to 5. Appointments for longer sessions can be booked on the tutoring website. No help is offered on weekends. Bring a printed draft of your assignment.",
+      "questions": [
+        {
+          "prompt": "When is drop-in tutoring available?",
+          "options": [
+            "Weekends only",
+            "Monday through Thursday afternoons",
+            "Every evening",
+            "Fridays at noon"
+          ],
+          "answer": "Monday through Thursday afternoons"
+        },
+        {
+          "prompt": "What should students bring to tutoring?",
+          "options": [
+            "A laptop",
+            "A textbook",
+            "A blank notebook",
+            "A printed draft of the assignment"
+          ],
+          "answer": "A printed draft of the assignment"
+        }
+      ],
+      "explain_zh": "面对面辅导在周一至周四下午，学生需带打印好的作业草稿。"
+    },
+    {
+      "passage": "Midterm Movie Night is this Friday on the lawn behind the arts center. The film starts at sunset, around 8:15. Blankets are welcome; chairs are provided for the first hundred guests. Popcorn is free while supplies last. If it rains, the screening moves to the auditorium.",
+      "questions": [
+        {
+          "prompt": "Where will the movie be shown if it rains?",
+          "options": [
+            "On the lawn anyway",
+            "In the auditorium",
+            "In the dining hall",
+            "It will be cancelled"
+          ],
+          "answer": "In the auditorium"
+        },
+        {
+          "prompt": "What is provided for the first hundred guests?",
+          "options": [
+            "Free blankets",
+            "Movie tickets",
+            "Chairs",
+            "Umbrellas"
+          ],
+          "answer": "Chairs"
+        },
+        {
+          "prompt": "When does the film begin?",
+          "options": [
+            "At noon",
+            "Around 8:15, at sunset",
+            "At 10 p.m.",
+            "In the early afternoon"
+          ],
+          "answer": "Around 8:15, at sunset"
+        }
+      ],
+      "explain_zh": "电影之夜周五在草坪举行、日落约8:15开始，前一百名观众有椅子，下雨则移到礼堂。"
+    },
+    {
+      "passage": "The autumn Career Fair schedule is set. Morning sessions from 9 to noon focus on technology and engineering employers. Afternoon sessions from 1 to 4 cover business and healthcare. Bring several copies of your résumé, and dress in professional attire. Registration opens at the main entrance.",
+      "questions": [
+        {
+          "prompt": "Which employers attend the afternoon sessions?",
+          "options": [
+            "Technology and engineering",
+            "Business and healthcare",
+            "Media and design",
+            "Government and law"
+          ],
+          "answer": "Business and healthcare"
+        },
+        {
+          "prompt": "What are attendees told to bring?",
+          "options": [
+            "Copies of their résumé",
+            "A laptop computer",
+            "Business cards",
+            "A cover letter"
+          ],
+          "answer": "Copies of their résumé"
+        }
+      ],
+      "explain_zh": "下午场面向商业和医疗雇主，参加者被告知携带简历副本。"
+    },
+    {
+      "passage": "Pool hours at the Aquatic Center change for winter break. Lap swimming runs mornings, 6 to 9, while open recreation swim is offered afternoons, 2 to 5. The pool closes entirely on the two holidays. Lifeguards are on duty during all posted hours; swimming alone is not permitted.",
+      "questions": [
+        {
+          "prompt": "When is open recreation swim offered?",
+          "options": [
+            "Mornings, 6 to 9",
+            "All day",
+            "Afternoons, 2 to 5",
+            "Evenings only"
+          ],
+          "answer": "Afternoons, 2 to 5"
+        },
+        {
+          "prompt": "When is the pool completely closed?",
+          "options": [
+            "Every weekend",
+            "During lap swim",
+            "On Fridays",
+            "On the two holidays"
+          ],
+          "answer": "On the two holidays"
+        },
+        {
+          "prompt": "Why is swimming alone not permitted?",
+          "options": [
+            "The water is too deep",
+            "Lifeguards must supervise swimmers",
+            "The pool is too small",
+            "Members dislike crowds"
+          ],
+          "answer": "Lifeguards must supervise swimmers"
+        }
+      ],
+      "explain_zh": "自由游泳在下午2到5点，泳池在两个假日全天关闭，禁止独自游泳因为需救生员看护。"
+    },
+    {
+      "passage": "Photography Club here! This Saturday we're leading a sunrise photo walk along the river path. Meet at the boathouse by 5:45 a.m., cameras charged. Beginners are absolutely welcome, and a few members will share lens tips along the way. Comment below if you plan to join.",
+      "questions": [
+        {
+          "prompt": "Where should participants meet?",
+          "options": [
+            "At the boathouse",
+            "At the club office",
+            "At the river bridge",
+            "At the main gate"
+          ],
+          "answer": "At the boathouse"
+        },
+        {
+          "prompt": "What does the post suggest about newcomers?",
+          "options": [
+            "They must bring a tripod",
+            "They pay a joining fee",
+            "They should come next week",
+            "They are welcome to join"
+          ],
+          "answer": "They are welcome to join"
+        }
+      ],
+      "explain_zh": "集合地点在船屋，帖子表明新手也欢迎参加。"
+    },
+    {
+      "passage": "The Chess Club is looking for new players before the winter tournament! We meet Wednesday evenings in the game lounge, and we teach everyone from total beginners to seasoned players. No entry fee, and boards are provided. Follow this account for weekly puzzles and match updates.",
+      "questions": [
+        {
+          "prompt": "When does the Chess Club meet?",
+          "options": [
+            "Monday mornings",
+            "Friday afternoons",
+            "Wednesday evenings",
+            "Sunday nights"
+          ],
+          "answer": "Wednesday evenings"
+        },
+        {
+          "prompt": "What does the club provide?",
+          "options": [
+            "Chess boards",
+            "Free snacks",
+            "Cash prizes",
+            "Transport"
+          ],
+          "answer": "Chess boards"
+        },
+        {
+          "prompt": "Why should readers follow the account?",
+          "options": [
+            "To pay their fees",
+            "To reserve a board",
+            "To vote for a captain",
+            "To get weekly puzzles and updates"
+          ],
+          "answer": "To get weekly puzzles and updates"
+        }
+      ],
+      "explain_zh": "象棋社周三晚聚会，提供棋盘，关注账号可获每周谜题和赛况。"
+    },
+    {
+      "passage": "What a night! Our debate team took first place at the regional championship, beating eleven other schools. Huge thanks to our coach and to everyone who came to cheer. We're already preparing for nationals in the spring. Swipe to see photos from the award ceremony.",
+      "questions": [
+        {
+          "prompt": "How did the debate team place at the championship?",
+          "options": [
+            "Second place",
+            "Third place",
+            "They did not place",
+            "First place"
+          ],
+          "answer": "First place"
+        },
+        {
+          "prompt": "What will the team do next?",
+          "options": [
+            "Retire for the year",
+            "Change its coach",
+            "Prepare for nationals in spring",
+            "Host the next regional"
+          ],
+          "answer": "Prepare for nationals in spring"
+        }
+      ],
+      "explain_zh": "辩论队获得第一名，接下来将备战春季全国赛。"
+    },
+    {
+      "passage": "Hiking Club weekend alert! Sunday we tackle the Ridgeline Trail, a moderate six-mile loop with amazing valley views. Bring at least two liters of water, sturdy shoes, and a packed lunch. We carpool from the gym lot at 8 a.m. sharp. Spots are limited to sixteen hikers.",
+      "questions": [
+        {
+          "prompt": "How long is the Ridgeline Trail loop?",
+          "options": [
+            "Three miles",
+            "Two miles",
+            "Six miles",
+            "Ten miles"
+          ],
+          "answer": "Six miles"
+        },
+        {
+          "prompt": "Where does the group carpool from?",
+          "options": [
+            "The gym lot",
+            "The dorm entrance",
+            "The trailhead",
+            "The library"
+          ],
+          "answer": "The gym lot"
+        },
+        {
+          "prompt": "Why does the post mention that spots are limited?",
+          "options": [
+            "The trail is dangerous",
+            "Water is expensive",
+            "The club is closing",
+            "Only sixteen people can join"
+          ],
+          "answer": "Only sixteen people can join"
+        }
+      ],
+      "explain_zh": "山脊步道全长六英里，从健身房停车场拼车，名额有限因为只能容纳十六人。"
+    },
+    {
+      "passage": "Coding Club is hosting a beginner web-design workshop next Tuesday at 6 in Room 204. We'll build a simple personal page from scratch, no experience needed. Laptops are available to borrow if you don't have one. Pizza afterward for everyone who registers by Monday.",
+      "questions": [
+        {
+          "prompt": "What will the workshop teach?",
+          "options": [
+            "Building a simple personal web page",
+            "Repairing laptops",
+            "Editing videos",
+            "Writing a résumé"
+          ],
+          "answer": "Building a simple personal web page"
+        },
+        {
+          "prompt": "What is offered to those who register by Monday?",
+          "options": [
+            "A free laptop to keep",
+            "Pizza afterward",
+            "A certificate",
+            "Extra credit"
+          ],
+          "answer": "Pizza afterward"
+        }
+      ],
+      "explain_zh": "工作坊教做一个简单的个人网页，周一前报名者可享披萨。"
+    },
+    {
+      "passage": "Drama Club auditions for our spring play are open! Come to the black-box theater this Friday between 4 and 7. Prepare a short one-minute monologue; scripts to choose from are pinned in our group chat. Backstage crew members are needed too, so bring your friends who love building sets.",
+      "questions": [
+        {
+          "prompt": "Where should students go to audition?",
+          "options": [
+            "The main auditorium",
+            "The music room",
+            "The library",
+            "The black-box theater"
+          ],
+          "answer": "The black-box theater"
+        },
+        {
+          "prompt": "What should students prepare for the audition?",
+          "options": [
+            "A painted backdrop",
+            "A written essay",
+            "A short one-minute monologue",
+            "A costume design"
+          ],
+          "answer": "A short one-minute monologue"
+        },
+        {
+          "prompt": "Why does the post mention friends who love building sets?",
+          "options": [
+            "To recruit backstage crew",
+            "To sell tickets",
+            "To find a new director",
+            "To borrow tools"
+          ],
+          "answer": "To recruit backstage crew"
+        }
+      ],
+      "explain_zh": "试镜在黑箱剧场，需准备一分钟独白，提到爱搭布景的朋友是为招募后台人员。"
+    },
+    {
+      "passage": "Green Campus Club is running a clothing-swap drive all next week outside the dining hall. Drop off clean clothes you no longer wear, and take home something new to you, completely free. Whatever is left over gets donated to a local shelter. Let's cut waste together!",
+      "questions": [
+        {
+          "prompt": "What happens to leftover clothes?",
+          "options": [
+            "They are thrown away",
+            "They are sold online",
+            "They are donated to a local shelter",
+            "They are returned to owners"
+          ],
+          "answer": "They are donated to a local shelter"
+        },
+        {
+          "prompt": "What is the main goal of the drive?",
+          "options": [
+            "To raise money for the club",
+            "To design new uniforms",
+            "To clean the dining hall",
+            "To reduce waste by reusing clothes"
+          ],
+          "answer": "To reduce waste by reusing clothes"
+        }
+      ],
+      "explain_zh": "剩余衣物捐给本地收容所，活动主旨是通过重复利用衣物来减少浪费。"
+    },
+    {
+      "passage": "Book Club's next meeting is set! We're discussing a mystery novel about a small island town, so finish through chapter twelve before Thursday. We gather in the reading nook on the library's second floor at 5. New readers can join anytime; snacks and tea are on us.",
+      "questions": [
+        {
+          "prompt": "How much should members read before Thursday?",
+          "options": [
+            "The whole book",
+            "Only the first chapter",
+            "Through chapter twelve",
+            "Nothing yet"
+          ],
+          "answer": "Through chapter twelve"
+        },
+        {
+          "prompt": "Where does the club meet?",
+          "options": [
+            "The reading nook on the second floor",
+            "A downtown café",
+            "The club president's room",
+            "The main lecture hall"
+          ],
+          "answer": "The reading nook on the second floor"
+        },
+        {
+          "prompt": "What does the post suggest about newcomers?",
+          "options": [
+            "They must read the whole series first",
+            "They pay for their own snacks",
+            "They need an invitation",
+            "They can join at any meeting"
+          ],
+          "answer": "They can join at any meeting"
+        }
+      ],
+      "explain_zh": "周四前需读到第十二章，社团在图书馆二楼阅读角聚会，新成员随时可加入。"
+    },
+    {
+      "passage": "Flat tire? The Campus Bike Hub offers free basic repairs every weekday afternoon behind the recreation center. Trained student mechanics will patch tubes, adjust brakes, and pump tires while you wait. Parts are sold at cost. Bring your bike and a valid student ID to get started.",
+      "questions": [
+        {
+          "prompt": "Where is the Campus Bike Hub located?",
+          "options": [
+            "Behind the recreation center",
+            "Inside the library",
+            "Next to the dining hall",
+            "At the main gate"
+          ],
+          "answer": "Behind the recreation center"
+        },
+        {
+          "prompt": "What must you bring to use the service?",
+          "options": [
+            "A repair fee",
+            "Your bike and a valid student ID",
+            "A membership card",
+            "Your own tools"
+          ],
+          "answer": "Your bike and a valid student ID"
+        },
+        {
+          "prompt": "What does 'parts are sold at cost' suggest?",
+          "options": [
+            "Parts are free",
+            "Parts must be ordered online",
+            "Only members can buy parts",
+            "The hub adds no profit to part prices"
+          ],
+          "answer": "The hub adds no profit to part prices"
+        }
+      ],
+      "explain_zh": "自行车维修点在康乐中心后面，需带自行车和有效学生证，按成本价意味着不加利润。"
+    },
+    {
+      "passage": "Need your résumé to stand out? The Career Office offers free thirty-minute review sessions with trained advisers. They'll check your formatting, wording, and layout, then suggest clear improvements. Book a slot through the careers portal; walk-ins are not accepted. First-year students are especially encouraged to come.",
+      "questions": [
+        {
+          "prompt": "How can students get a review session?",
+          "options": [
+            "Walk in anytime",
+            "Email a professor",
+            "Book a slot through the careers portal",
+            "Pay a small fee"
+          ],
+          "answer": "Book a slot through the careers portal"
+        },
+        {
+          "prompt": "Who is especially encouraged to attend?",
+          "options": [
+            "Graduate students",
+            "Faculty members",
+            "International visitors",
+            "First-year students"
+          ],
+          "answer": "First-year students"
+        }
+      ],
+      "explain_zh": "通过求职门户预约评审，特别鼓励一年级学生参加。"
+    },
+    {
+      "passage": "Lost your keys again? The new Smart Locker wall near the gym entrance lets you store small items for up to six hours. Scan your student card to open a free locker, and remember your locker number. Items left after closing are moved to campus security overnight.",
+      "questions": [
+        {
+          "prompt": "How long can items be stored in a Smart Locker?",
+          "options": [
+            "Up to six hours",
+            "Overnight",
+            "Up to two days",
+            "One hour only"
+          ],
+          "answer": "Up to six hours"
+        },
+        {
+          "prompt": "How do you open a locker?",
+          "options": [
+            "With a metal key",
+            "By paying a small fee",
+            "By scanning your student card",
+            "By calling security"
+          ],
+          "answer": "By scanning your student card"
+        },
+        {
+          "prompt": "What happens to items left after closing?",
+          "options": [
+            "They are thrown away",
+            "They are moved to campus security",
+            "They stay locked for a week",
+            "They are donated"
+          ],
+          "answer": "They are moved to campus security"
+        }
+      ],
+      "explain_zh": "智能储物柜最多存放六小时，刷学生卡开柜；闭馆后未取物品会转交校园保安处。"
+    },
+    {
+      "passage": "Study Abroad Photo Contest: share one photo from your exchange semester by the end of this month. Winning photos will hang in the international hall for a year, and the top entry earns a dinner voucher. Submit through the contest page; one entry per student.",
+      "questions": [
+        {
+          "prompt": "How many photos may each student submit?",
+          "options": [
+            "As many as they like",
+            "Three",
+            "One",
+            "Five"
+          ],
+          "answer": "One"
+        },
+        {
+          "prompt": "What does the top entry win?",
+          "options": [
+            "A dinner voucher",
+            "A camera",
+            "A plane ticket",
+            "A photo album"
+          ],
+          "answer": "A dinner voucher"
+        }
+      ],
+      "explain_zh": "留学摄影赛每人限投一张，最佳作品可获晚餐券，获奖照片将在国际馆展示一年。"
+    },
+    {
+      "passage": "Feeling overwhelmed? The Peer Support Center offers free, confidential chats with trained student listeners. Drop by the quiet room in the wellness building, open Monday to Friday, noon to eight. No appointment is required. Remember, listeners offer a friendly ear but are not a replacement for professional counseling.",
+      "questions": [
+        {
+          "prompt": "What is needed to use the Peer Support Center?",
+          "options": [
+            "A booked appointment",
+            "A referral form",
+            "No appointment at all",
+            "A membership fee"
+          ],
+          "answer": "No appointment at all"
+        },
+        {
+          "prompt": "When is the center open?",
+          "options": [
+            "Weekends only",
+            "Evenings after nine",
+            "Twenty-four hours",
+            "Monday to Friday, noon to eight"
+          ],
+          "answer": "Monday to Friday, noon to eight"
+        },
+        {
+          "prompt": "Why does the ad note the listeners are not professional counselors?",
+          "options": [
+            "To set clear expectations about the service",
+            "To charge a higher fee",
+            "To discourage students from visiting",
+            "To recruit licensed therapists"
+          ],
+          "answer": "To set clear expectations about the service"
+        }
+      ],
+      "explain_zh": "使用同伴支持中心无需预约，周一至周五中午到八点开放，声明倾听者非专业咨询是为明确服务范围。"
+    },
+    {
+      "passage": "Protect your ride! Campus Security is holding free bike-registration days this month at the transit plaza. Officers log your serial number and attach a tamper-proof tag, which helps return stolen bikes to their owners. The whole process takes under five minutes. Registration is open to all students and staff.",
+      "questions": [
+        {
+          "prompt": "How does registration help if a bike is stolen?",
+          "options": [
+            "It replaces the bike for free",
+            "It pays the owner cash",
+            "It locks the bike automatically",
+            "The tag and serial number help return it to the owner"
+          ],
+          "answer": "The tag and serial number help return it to the owner"
+        },
+        {
+          "prompt": "Who may register a bike?",
+          "options": [
+            "Only first-year students",
+            "Only faculty",
+            "All students and staff",
+            "Only club members"
+          ],
+          "answer": "All students and staff"
+        }
+      ],
+      "explain_zh": "标签和序列号有助于找回被盗车，登记面向所有学生和教职工。"
+    },
+    {
+      "passage": "Laundry day made simple. The new Campus Wash app shows which machines are free in every residence hall in real time. Get a phone alert the moment your cycle finishes, so you never leave clothes sitting. Pay straight from the app. Download it free using your student login.",
+      "questions": [
+        {
+          "prompt": "What does the app show in real time?",
+          "options": [
+            "Which machines are free",
+            "The weather forecast",
+            "Dining hall menus",
+            "Bus arrival times"
+          ],
+          "answer": "Which machines are free"
+        },
+        {
+          "prompt": "When does the app send a phone alert?",
+          "options": [
+            "When the hall closes",
+            "Every morning",
+            "When your laundry cycle finishes",
+            "When machines break down"
+          ],
+          "answer": "When your laundry cycle finishes"
+        },
+        {
+          "prompt": "Why does the app send finish alerts?",
+          "options": [
+            "To sell detergent",
+            "To charge extra fees",
+            "To count how many students wash",
+            "So clothes are not left sitting"
+          ],
+          "answer": "So clothes are not left sitting"
+        }
+      ],
+      "explain_zh": "应用实时显示空闲洗衣机，洗衣完成时发提醒，目的是不让衣物久放。"
+    }
+  ]
+}

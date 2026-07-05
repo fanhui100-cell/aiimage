@@ -1,0 +1,30 @@
+{
+  "templateId": "kaoyan-reading-mcq",
+  "examIds": ["kaoyan"],
+  "taskType": "reading_comprehension",
+  "skill": "reading",
+  "generation": {
+    "mode": "manual_seed",
+    "promptHintZh": "考研英语（一）难度原创论证性短文（320-430 词，抽象、论证强、句式复杂）+ 4 道四选一题（作者态度/论证逻辑/推断/主旨/词义）。Claude 亲撰，不调用 DeepSeek。"
+  },
+  "stimulusRequirements": {
+    "kind": "passage",
+    "minWords": 320,
+    "maxWords": 430,
+    "perStimulusItems": 4,
+    "topicDomains": ["社会", "科技哲学", "经济", "历史", "文化", "心理", "认识论", "伦理"]
+  },
+  "itemCount": 4,
+  "optionCount": 4,
+  "answerSchema": { "shape": "reading_multi", "optionCount": 4 },
+  "subskills": ["attitude", "inference", "main_idea", "vocab_in_context", "argument", "purpose"],
+  "qualityRules": [
+    "100% 原创，禁止抄袭真题",
+    "篇幅 320-430 词，语言抽象、论证性强、句式复杂（达考研英语一难度）",
+    "每题恰好 4 个选项，唯一正确答案",
+    "干扰项具强迷惑性但可凭文本排除，答案唯一",
+    "重作者态度/论证逻辑/推断/主旨/词义，少纯细节直取",
+    "不得出现退役题型"
+  ],
+  "copyrightPolicy": "original_only"
+}

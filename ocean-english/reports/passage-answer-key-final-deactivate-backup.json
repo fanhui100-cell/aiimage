@@ -1,0 +1,1463 @@
+[
+  {
+    "id": "banked_cloze-bp-cet4-14d35ui",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "balance",
+        "understanding",
+        "weakness",
+        "expand",
+        "maturity",
+        "tool",
+        "destructive",
+        "commodity",
+        "focus",
+        "reduce",
+        "confusion",
+        "anxiety",
+        "reliable",
+        "therapeutic",
+        "ignore"
+      ],
+      "answers": [
+        7,
+        5,
+        9,
+        8,
+        13,
+        1,
+        4,
+        12,
+        6,
+        0
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-1xye193",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "eliminate",
+        "support",
+        "retreat",
+        "resist",
+        "constantly",
+        "destroy",
+        "counterintuitive",
+        "discourage",
+        "emerged",
+        "promote",
+        "escape",
+        "enhance",
+        "feared",
+        "viewed",
+        "encouraged"
+      ],
+      "answers": [
+        14,
+        13,
+        8,
+        11,
+        0,
+        7,
+        6,
+        2,
+        12,
+        3
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-eav1yg",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "harmful",
+        "strengthen",
+        "valuable",
+        "embrace",
+        "ordinary",
+        "distraction",
+        "pursuits",
+        "original",
+        "resist",
+        "stimuli",
+        "ignore",
+        "weaken",
+        "productive",
+        "boredom",
+        "stimulating"
+      ],
+      "answers": [
+        13,
+        12,
+        14,
+        6,
+        9,
+        7,
+        1,
+        8,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet4-zitff2",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "complex",
+        "impossible",
+        "accumulate",
+        "daunting",
+        "power",
+        "relaxed",
+        "trivial",
+        "succeed",
+        "perfection",
+        "frustrated",
+        "absurd",
+        "resist",
+        "ambitious",
+        "failure",
+        "effective"
+      ],
+      "answers": [
+        12,
+        9,
+        14,
+        2,
+        4,
+        3,
+        10,
+        8,
+        7,
+        6
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-13outwr",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "curb",
+        "costly",
+        "subtle",
+        "emphasize",
+        "beneficial",
+        "eliminating",
+        "subtly",
+        "emphasized",
+        "eliminate",
+        "pervasively",
+        "benefit",
+        "abstinence",
+        "pervasive",
+        "indicate",
+        "cost"
+      ],
+      "answers": [
+        12,
+        14,
+        2,
+        7,
+        10,
+        0,
+        13,
+        11,
+        5,
+        8
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-1d4umg2",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "executive",
+        "enhance",
+        "promotes",
+        "sustainable",
+        "complicates",
+        "portion",
+        "prioritizing",
+        "diminishing",
+        "foster",
+        "reduces",
+        "fraction",
+        "boost",
+        "undermines",
+        "cognitive",
+        "challenged"
+      ],
+      "answers": [
+        14,
+        12,
+        0,
+        7,
+        2,
+        6,
+        11,
+        10,
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-1rtl9u9",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "celebrate",
+        "reap",
+        "complex",
+        "isolation",
+        "complain",
+        "temporarily",
+        "exhaustingly",
+        "devolve",
+        "enhance",
+        "ambiguity",
+        "solidarity",
+        "burden",
+        "simplicity",
+        "routine",
+        "autonomy"
+      ],
+      "answers": [
+        2,
+        6,
+        3,
+        11,
+        4,
+        9,
+        14,
+        7,
+        13,
+        1
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-w3i3c2",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "counter",
+        "reinforces",
+        "philosophical",
+        "detrimental",
+        "isolated",
+        "abandon",
+        "evaluate",
+        "erode",
+        "verify",
+        "ignore",
+        "entertaining",
+        "beneficial",
+        "enhance",
+        "pressing",
+        "confront"
+      ],
+      "answers": [
+        13,
+        14,
+        1,
+        11,
+        4,
+        0,
+        6,
+        8,
+        2,
+        7
+      ]
+    }
+  },
+  {
+    "id": "banked_cloze-bp-cet6-wm8zs0",
+    "type": "banked_cloze",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "adjusted",
+        "deeply",
+        "persistent",
+        "escape",
+        "temporary",
+        "advocate",
+        "abstinence",
+        "reluctant",
+        "calm",
+        "eliminate",
+        "spontaneous",
+        "embrace",
+        "disconnect",
+        "chaos",
+        "deliberate"
+      ],
+      "answers": [
+        1,
+        3,
+        5,
+        12,
+        2,
+        8,
+        0,
+        6,
+        14,
+        9
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-11589wz",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "This model often restricted the visibility of important research to wealthy institutions.",
+        "Digital technologies have made it easier for anyone to publish and distribute content online.",
+        "This practice aims to increase accountability and reduce the potential for bias.",
+        "This shift has not been without controversy, as some editors fear losing revenue.",
+        "These platforms allow scientists to claim priority for their discoveries without delay.",
+        "The traditional gatekeeping role of journals is therefore being steadily eroded.",
+        "Open-access policies have been widely adopted by governments and universities worldwide."
+      ],
+      "answers": [
+        1,
+        2,
+        4,
+        5,
+        0
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-15f5dys",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet the enthusiasm for planting trees has sometimes overshadowed the unintended consequences.",
+        "These chemical reactions are particularly problematic in sunny, traffic-heavy urban areas.",
+        "Water scarcity is already a critical issue in many cities around the world.",
+        "Furthermore, the shade from trees can reduce the need for air conditioning in summer.",
+        "Consequently, some cities have started to revise their greening policies accordingly.",
+        "Tree roots can also damage underground pipes and building foundations over time.",
+        "Nevertheless, the overall benefits of urban greenery still outweigh the drawbacks."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-173g7gn",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "It does not advocate for the complete abandonment of technology.",
+        "Regularly disconnecting from digital platforms—even for a few hours a day—has been shown to significantly improve mental health and concentration.",
+        "Critics argue that the true solution lies in systemic change rather than individual abstinence.",
+        "However, the movement has also sparked a backlash from those who see it as impractical or elitist.",
+        "For many, the goal is not to reject technology outright but to cultivate a more mindful relationship with it.",
+        "The paradox is that while we have more tools for connection than ever, loneliness and distraction are at an all-time high.",
+        "These structural dependencies make wholesale disconnection unrealistic for the majority."
+      ],
+      "answers": [
+        0,
+        1,
+        6,
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-194s4a8",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet, this very act of removal can trigger a sense of isolation, leading some to secretly reinstall apps within days.",
+        "Studies show that constant connectivity reshapes neural pathways, making withdrawal symptoms a real phenomenon.",
+        "Interestingly, those who succeed often report an initial period of discomfort followed by a profound sense of freedom.",
+        "Many people mistake digital minimalism for a complete rejection of technology, which is a common misconception.",
+        "Nevertheless, the real test lies in maintaining this discipline when work or social life exerts pressure.",
+        "Instead, they should focus on replacing passive consumption with purposeful activities like reading or face-to-face conversations.",
+        "Consequently, the minimalist approach has been criticized for being too extreme for the average user."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1cvvqk",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet this well-intentioned trend has sparked an unexpected backlash among sociologists.",
+        "Consequently, the very notion of digital wellness risks becoming a privilege reserved for the elite.",
+        "Moreover, schools in affluent districts have started implementing phone-free policies, widening the educational gap.",
+        "Instead, they propose creating affordable offline alternatives for essential services.",
+        "On the contrary, some tech companies are capitalizing on this trend by selling expensive 'dumb phones.'",
+        "These findings challenge the assumption that digital minimalism is universally beneficial.",
+        "Without such measures, the digital divide may deepen along class lines."
+      ],
+      "answers": [
+        0,
+        1,
+        5,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1drppke",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "It does not call for abandoning technology altogether.",
+        "This constant interruption has been linked to higher stress and lower productivity.",
+        "Adherents recommend a gradual, rather than abrupt, transition to a less digital lifestyle.",
+        "For low-income workers, smartphones are often essential tools for job hunting and communication.",
+        "These simple changes can help restore a sense of control over one's time and attention.",
+        "Many people find it impossible to imagine life without their devices.",
+        "The movement's core principle is to align technology use with personal values."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1fy4i53",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people swear by periodic breaks from their devices to restore mental clarity.",
+        "The pressure to present a flawless life online can erode real-world self-esteem.",
+        "These tools, they claim, do little to address the underlying drivers of compulsive usage.",
+        "Such findings have sparked debates among educators and mental health professionals.",
+        "Adopting a mindful approach to technology can enhance both productivity and well-being.",
+        "Nevertheless, the allure of instant gratification remains a powerful counterforce.",
+        "Some even argue that digital platforms are deliberately engineered to be addictive."
+      ],
+      "answers": [
+        0,
+        1,
+        6,
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1s1bfx0",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many employees even report that they have never met some of their colleagues in person.",
+        "Consequently, companies must redesign their performance evaluation systems to account for these new dynamics.",
+        "Yet the benefits of flexibility and autonomy are often celebrated in public discourse.",
+        "Without these informal interactions, younger employees especially may miss crucial career development opportunities.",
+        "This isolation can also weaken the sense of belonging and loyalty to the company.",
+        "To mitigate these issues, some firms have adopted hybrid models that combine remote and in-office work.",
+        "The lack of face-to-face contact further exacerbates feelings of loneliness among team members."
+      ],
+      "answers": [
+        2,
+        3,
+        4,
+        0,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-1tf9ogt",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people find that unplugging completely for a week can reset their relationship with technology.",
+        "To truly disconnect, one often needs to rely on the very tools one wishes to avoid.",
+        "The irony is that the more we try to reduce screen time, the more we find ourselves staring at screens.",
+        "Friends and colleagues may expect immediate replies, making it hard to step away without feeling guilty.",
+        "After all, the goal is not to eliminate technology but to use it as a servant, not a master.",
+        "Some researchers argue that digital minimalism is merely a privilege for those with flexible schedules.",
+        "Consequently, the pursuit of digital minimalism can inadvertently increase the very stress it aims to reduce."
+      ],
+      "answers": [
+        1,
+        2,
+        3,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-fz1gsi",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Digital minimalism encourages people to disconnect from online platforms for extended periods, often leading to a renewed appreciation for offline activities.",
+        "Critics argue that digital minimalism is merely a privilege for those who can afford to step away from the digital economy.",
+        "Research has shown that constant connectivity can lead to cognitive overload and diminished productivity.",
+        "By consciously choosing which technologies to engage with, individuals can align their digital habits with their core values.",
+        "Many people find it difficult to resist the lure of instant gratification provided by social media platforms.",
+        "These boundaries help create mental space and reduce the compulsive urge to check devices.",
+        "The concept was popularized by computer science professor Cal Newport in his 2019 book of the same title."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        5,
+        3
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-h1rmqm",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Digital minimalists often delete unnecessary apps and disable non-essential notifications to minimize distractions.",
+        "Instead, they propose a more radical approach: total disconnection from all digital platforms for at least one month.",
+        "At its core, digital minimalism is a philosophy of technology use in which you focus your online time on a small number of carefully selected and optimized activities.",
+        "Many people find it difficult to resist the lure of instant gratification provided by notifications and likes.",
+        "This practice not only improves productivity but also fosters deeper engagement with the physical environment.",
+        "These findings suggest that the costs of constant connectivity may outweigh its apparent benefits.",
+        "Nevertheless, the movement has gained traction among tech workers who are acutely aware of the industry's addictive design."
+      ],
+      "answers": [
+        2,
+        5,
+        0,
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-mz1nh2",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Advocates argue that this practice enhances mental health and deepens real-world relationships.",
+        "Such individuals often find themselves excluded from after-work social gatherings or informal decision-making.",
+        "One study found that heavy social media users experience higher levels of anxiety than moderate users.",
+        "The key is to strike a balance between digital detox and social participation.",
+        "These expectations are rarely articulated but powerfully enforced through social norms.",
+        "This sense of superiority, whether real or perceived, can damage workplace camaraderie.",
+        "Many companies now encourage employees to disconnect during weekends to prevent burnout."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        5,
+        3
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-qipj39",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. Consequently, users are often trapped in echo chambers where their own beliefs are constantly reinforced.",
+        "B. The economic incentives behind algorithmic curation are driven by advertising revenue and user engagement metrics.",
+        "C. However, such measures have met with mixed success, as users often resist content that challenges their worldview.",
+        "D. This tailored content, while convenient, can subtly narrow our worldview by excluding dissenting voices.",
+        "E. Governments around the world are beginning to regulate algorithmic transparency to mitigate these effects.",
+        "F. In contrast, traditional media relied on human editors who consciously balanced diverse viewpoints.",
+        "G. The psychological comfort of confirmation bias makes it difficult for individuals to break out of these informational silos."
+      ],
+      "answers": [
+        0,
+        3,
+        6,
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-rhdyyb",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "However, this seemingly efficient approach may be counterproductive.",
+        "For example, a student who checks social media every ten minutes may take twice as long to finish a reading assignment.",
+        "When information overload occurs, the brain struggles to filter out irrelevant stimuli, causing key details to be missed.",
+        "People often overestimate their output when multitasking and underestimate the error rate.",
+        "Participants reported significant improvements in comprehension and retention.",
+        "This phenomenon is particularly evident in the workplace, where employees are expected to respond to emails instantly.",
+        "In contrast, a quiet environment without digital distractions can significantly boost focus."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-uri3ls",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "The researchers emphasize that digital detox programs should be customized rather than one-size-fits-all.",
+        "However, a new wave of research suggests that the benefits of digital minimalism might be more complex than previously assumed.",
+        "Without these digital ties, people may feel disconnected from their support networks, leading to heightened anxiety and a sense of isolation.",
+        "Those who merely scrolled through feeds without engaging showed less emotional disturbance after quitting.",
+        "For instance, one participant replaced evening social media browsing with weekly face-to-face dinners with neighbors, which significantly improved her mood.",
+        "Digital minimalism has been widely praised for improving mental health and productivity.",
+        "Therefore, it is crucial to recognize that digital tools themselves are not inherently harmful."
+      ],
+      "answers": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-kaoyan-x2s9pf",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "This movement advocates for a deliberate reduction in non-essential digital consumption to reclaim time and focus.",
+        "The more we try to control our digital habits, the more we become entangled in the very ecosystem we wish to escape.",
+        "It encourages people to delete social media apps and turn off push notifications entirely.",
+        "Such meticulous management can transform a liberating practice into a source of stress and self-monitoring.",
+        "The constant pressure to optimize one’s digital life can lead to burnout rather than relief.",
+        "Peer reactions often force minimalists to justify their choices, which can strain relationships.",
+        "Some proponents even suggest periodic digital detoxes lasting from a weekend to a full month."
+      ],
+      "answers": [
+        0,
+        3,
+        1,
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-11k33im",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "He practiced almost every day but improved slowly.",
+        "He felt very disappointed.",
+        "He had never thought about that.",
+        "Tom was very thankful.",
+        "He finally understood.",
+        "The old man was his grandfather.",
+        "Tom decided to give up basketball."
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-150i4ht",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "But to my surprise,",
+        "However, my parents didn’t buy me anything.",
+        "When I opened the box, I found something strange inside.",
+        "I realized I had my own space.",
+        "Then my mother took me to the study room.",
+        "I thanked my parents and gave them a big hug.",
+        "I immediately ran to the study and opened the door."
+      ],
+      "answers": [
+        0,
+        2,
+        6,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-17is9qf",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "They gave me a thick, old book.",
+        "I felt sad and didn't want to read it.",
+        "Each page told a piece of our family history.",
+        "I put the book aside and played with my phone.",
+        "That evening, I stayed up late reading the book.",
+        "I decided to buy a phone with my own money later.",
+        "The stories made me smile and sometimes cry."
+      ],
+      "answers": [
+        0,
+        2,
+        6,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1b356l4",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "But when I woke up, something surprising happened.",
+        "Inside was a model spaceship!",
+        "However, I felt a little sad at first.",
+        "I was so excited that I couldn’t say a word.",
+        "To my surprise, they remembered my dream.",
+        "I thought it was just an empty box.",
+        "Then my mother asked me to make a wish."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1cvfqcw",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Everyone needs friends to share happiness and sadness.",
+        "Showing interest in others is a good way to start a conversation.",
+        "Friends can help you with your homework sometimes.",
+        "Being a good listener makes others feel valued.",
+        "Just say sorry and learn from it.",
+        "You should always buy gifts for your new friends.",
+        "Joining a club is also a great way to meet new people."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1pphh45",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. It will help you think more clearly.",
+        "B. Food like bread and milk gives you energy.",
+        "C. Eat as much as you can before the exam.",
+        "D. This can help you feel less worried.",
+        "E. Don’t spend too much time on one question.",
+        "F. Skip the hardest questions first.",
+        "G. Talking to friends can also make you feel better."
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-1tnei31",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Then we got some new plants from the store.",
+        "We also found a small pond in the corner.",
+        "It was hard work but we felt happy.",
+        "The wildflowers were not planted by us.",
+        "We invited friends to see the garden.",
+        "Finally, we cleaned up the garden tools.",
+        "Everyone in the family helped with the work."
+      ],
+      "answers": [
+        6,
+        2,
+        0,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-3333oq",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. Then I began to make it carefully.",
+        "B. I bought a beautiful card from the store.",
+        "C. I thought for a while and got an idea.",
+        "D. My mother asked me to clean my room.",
+        "E. I decorated the card with my favorite colors.",
+        "F. She gave me a big hug and thanked me.",
+        "G. I felt a little sad because I couldn’t buy a gift."
+      ],
+      "answers": [
+        2,
+        0,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-3idw56",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Your brain needs time to rest and organize information.",
+        "Studying all night before a test is a common habit.",
+        "It is also important to choose a quiet place to study.",
+        "They can help you stay focused and avoid feeling tired.",
+        "Some people prefer to study in the morning, while others like the evening.",
+        "By doing this, you can make your study time more effective.",
+        "Many students enjoy studying with their friends in a group."
+      ],
+      "answers": [
+        0,
+        3,
+        5,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-b9cunn",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "We decided to buy her a new dress.",
+        "Then I had an idea—why not find that book for her?",
+        "She was very happy to see all of us.",
+        "I told my cousins about my plan and they all agreed.",
+        "However, we didn't know what to buy at first.",
+        "She hugged me and said, “Thank you, my dear.”",
+        "Everyone clapped and cheered for her."
+      ],
+      "answers": [
+        4,
+        1,
+        3,
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-gkh8ae",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "I bought a beautiful dress for her.",
+        "I worked on the card for almost two hours.",
+        "She put the card on the table and said nothing.",
+        "I also decorated it with some colorful stars.",
+        "I didn’t know what to do at first.",
+        "Then I began to make the card carefully.",
+        "My father helped me choose a gift."
+      ],
+      "answers": [
+        4,
+        5,
+        1,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-qcji8a",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "At first, we made many mistakes.",
+        "Our coach taught us some new skills.",
+        "The other team was very strong.",
+        "Finally, we won the game.",
+        "However, we didn't give up.",
+        "In the end, we lost but felt happy.",
+        "We helped each other and scored many points."
+      ],
+      "answers": [
+        0,
+        4,
+        6,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-uloqiz",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Instead of buying something expensive, we wanted to make something by ourselves.",
+        "Then we put them into a beautiful album and wrote some words under each picture.",
+        "She hugged us and even had tears in her eyes.",
+        "We went to the store and bought a new camera for her.",
+        "After that, we started to collect photos from our family members.",
+        "She didn't like the gift at all.",
+        "We thought about what to give her for a long time."
+      ],
+      "answers": [
+        0,
+        6,
+        4,
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-xe0dqy",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "People prefer those who are honest and genuine.",
+        "Don't forget to shake hands firmly when you say hello.",
+        "Your clothes should be suitable for the occasion.",
+        "Speaking clearly is also very important.",
+        "Try not to interrupt others so they feel you respect them.",
+        "A pleasant appearance can make others feel comfortable.",
+        "Making a good first impression is not difficult at all."
+      ],
+      "answers": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-z1a8zl",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Always use a strong password for your accounts.",
+        "Here are some tips to keep you safe online.",
+        "Ask yourself: Does this seem believable?",
+        "Don’t click on links from people you don’t know.",
+        "Never post your vacation plans online before you return.",
+        "It’s important to choose a safe place to use the computer.",
+        "Your parents can help you decide if it’s safe."
+      ],
+      "answers": [
+        1,
+        3,
+        6,
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-中考-zyhpxo",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. I spent two hours making it carefully.",
+        "B. She put it in a box and forgot about it.",
+        "C. I bought a beautiful card from the shop.",
+        "D. I also added some small flowers around the heart.",
+        "E. My father gave her a big cake that day.",
+        "F. She said it was the best gift she had ever received.",
+        "G. It is not the price but the love behind it that matters."
+      ],
+      "answers": [
+        0,
+        3,
+        5,
+        2,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-11127xb",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Yet many people underestimate how powerful these small acts can be.",
+        "These positive effects are supported by numerous psychological studies.",
+        "However, some argue that kindness is a sign of weakness.",
+        "Acts of kindness have been shown to reduce stress and anxiety.",
+        "This chain reaction can transform a community over time.",
+        "Kindness requires no special skills or resources.",
+        "Small gestures are often forgotten as quickly as they happen."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-14b3f8q",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Adolescents, for instance, typically need more sleep than older adults.",
+        "One common habit that harms sleep is consuming caffeine late in the day.",
+        "Many people mistakenly believe they can function well on just five hours of sleep.",
+        "Therefore, prioritizing sleep is crucial for both physical and mental health.",
+        "Sleep allows the body to repair muscles and strengthen the immune system.",
+        "Without enough sleep, you may find it harder to learn new skills.",
+        "However, external factors like noise and light can also interfere with sleep."
+      ],
+      "answers": [
+        2,
+        3,
+        0,
+        1,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-14vqwmj",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Actually, research shows that small talk can reduce anxiety and increase a sense of belonging.",
+        "Those who avoid it may miss out on valuable opportunities to connect with others.",
+        "Instead, they should focus on deep topics to impress others.",
+        "By doing so, you create a comfortable atmosphere for both parties.",
+        "Without it, many interactions would remain cold and distant.",
+        "For example, discussing hobbies or weekend plans can reveal common interests.",
+        "Some people feel awkward or unsure about what to say in such situations."
+      ],
+      "answers": [
+        0,
+        4,
+        3,
+        6,
+        1
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-19xoqgr",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people rely on digital maps today, but paper maps still have unique advantages.",
+        "This is why map reading is often taught as a basic skill in geography classes.",
+        "Different types of maps serve different purposes.",
+        "Understanding these basic elements is crucial for accurate navigation.",
+        "Actually, the first maps were drawn on clay tablets thousands of years ago.",
+        "For instance, a map designed for drivers may ignore walking paths.",
+        "These updates ensure that maps remain useful for travelers."
+      ],
+      "answers": [
+        1,
+        5,
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1c0s25s",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Writing by hand requires you to form each letter and word individually.",
+        "As a result, you are more likely to remember what you have written.",
+        "Handwriting is slower than typing, which can be a disadvantage in fast-paced environments.",
+        "Some people prefer typing because it is faster and neater.",
+        "These brain activities are crucial for long-term memory formation.",
+        "Typing, however, allows you to produce text much more quickly.",
+        "Many schools have already replaced handwriting lessons with typing classes."
+      ],
+      "answers": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1qwer0g",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "A. We often try to fill every spare moment with social media or video games.",
+        "B. Actually, boredom can be a powerful tool for sparking creativity.",
+        "C. These wandering thoughts can lead to innovative solutions to problems.",
+        "D. Many people think boredom is a waste of time.",
+        "E. Boredom can also help us appreciate the simple joys in life.",
+        "F. Moments of boredom can reduce stress and improve our mood.",
+        "G. However, we should avoid staying bored for too long."
+      ],
+      "answers": [
+        0,
+        2,
+        1,
+        5,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1typtbc",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "It creates a shared experience that fosters emotional connection.",
+        "Many studies have shown that reading silently is more efficient for adults.",
+        "Parents often find it hard to make time for reading aloud every day.",
+        "It can turn a passive activity into an interactive one.",
+        "However, some people argue that reading aloud is too time-consuming.",
+        "This practice also enhances comprehension and critical thinking.",
+        "Listening to stories helps children understand how written language works."
+      ],
+      "answers": [
+        0,
+        6,
+        5,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1uacb77",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Learning to say no helps you focus on your own goals and well-being.",
+        "Instead, you should always try to please everyone around you.",
+        "By saying no, you avoid overcommitting and reduce stress.",
+        "People who say no are often seen as rude and uncooperative.",
+        "Setting boundaries is a sign of self-care, not weakness.",
+        "Without clear limits, you may end up feeling overwhelmed.",
+        "Actually, saying no can sometimes open doors to better opportunities."
+      ],
+      "answers": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-1wpbao5",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "By doing so, you avoid overcommitting and reduce your stress levels.",
+        "Instead, they often feel relieved when you express your limits clearly.",
+        "This makes it easier to balance your own needs with those of others.",
+        "Without this ability, you may end up feeling exhausted and resentful.",
+        "Actually, most people will understand if you explain your situation honestly.",
+        "Learning to say no helps you focus on what is truly important to you.",
+        "Moreover, a simple refusal can sometimes strengthen your relationship."
+      ],
+      "answers": [
+        0,
+        4,
+        3,
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-53ob9m",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people find it difficult to refuse others directly.",
+        "Setting boundaries can actually improve your mental health.",
+        "On the other hand, saying yes all the time makes you more popular.",
+        "It also prevents you from overcommitting and feeling exhausted.",
+        "Instead of feeling guilty, you should explain your situation honestly.",
+        "Some people might get angry if you turn them down.",
+        "Practicing this skill will make you more confident over time."
+      ],
+      "answers": [
+        0,
+        3,
+        4,
+        1,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-76v6gg",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Actually, listening is a key communication skill that many people overlook.",
+        "By doing so, you can build deeper connections with others.",
+        "However, it is also important to express your own opinions clearly.",
+        "This habit can prevent us from truly connecting with others.",
+        "Therefore, we should speak less and listen more in every situation.",
+        "Additionally, summarizing what the other person said can confirm your understanding.",
+        "Listening carefully can also help you learn new things from different perspectives."
+      ],
+      "answers": [
+        0,
+        1,
+        5,
+        3,
+        6
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-d7k5dt",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "These moments of connection can reduce stress and make people feel more comfortable.",
+        "Many consider it trivial or a waste of time.",
+        "Without small talk, it is hard to build any relationship at all.",
+        "It also helps to smooth over awkward silences in social situations.",
+        "Therefore, small talk is not as important as deep conversations.",
+        "Such small gestures can gradually strengthen workplace relationships.",
+        "Small talk is often seen as a necessary evil in daily life."
+      ],
+      "answers": [
+        1,
+        3,
+        0,
+        5,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-k0rrv7",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people find it hard to refuse because they fear disappointing others.",
+        "Instead of a direct refusal, offer an alternative or a later time if possible.",
+        "Remember, every “yes” to others is a “no” to yourself.",
+        "Practicing this skill can improve your overall well-being and productivity.",
+        "However, saying “no” does not have to be rude or abrupt.",
+        "Sometimes, saying “yes” can open up new opportunities.",
+        "Once you master it, you may find yourself with more free time."
+      ],
+      "answers": [
+        0,
+        4,
+        1,
+        3,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-om1v8c",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Many people find it hard to stay quiet for even a minute.",
+        "Silence allows the brain to rest and process information more effectively.",
+        "Without quiet reflection, we may miss important insights.",
+        "Some even take regular 'silent retreats' to recharge their minds.",
+        "This practice has been linked to lower blood pressure and better sleep.",
+        "However, not everyone agrees on the benefits of silence.",
+        "Modern technology makes it increasingly difficult to find true silence."
+      ],
+      "answers": [
+        1,
+        0,
+        3,
+        4,
+        2
+      ]
+    }
+  },
+  {
+    "id": "seven_select-sp-高考-ycicj7",
+    "type": "seven_select",
+    "status": "active",
+    "is_reviewed": true,
+    "hint": {
+      "bank": [
+        "Walking meetings are especially useful for solving complex problems.",
+        "They also help employees avoid the negative effects of prolonged sitting.",
+        "Complex tasks requiring detailed documents are better handled indoors.",
+        "Participants often find it easier to express their thoughts freely.",
+        "This practice is becoming popular in tech companies like Google and Facebook.",
+        "Some people worry about privacy when talking outdoors.",
+        "Even a short 20-minute walk can make a difference."
+      ],
+      "answers": [
+        4,
+        1,
+        3,
+        2,
+        6
+      ]
+    }
+  }
+]
