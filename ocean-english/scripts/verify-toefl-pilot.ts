@@ -27,10 +27,18 @@ const db: SupabaseClient = createClient(readEnv('NEXT_PUBLIC_SUPABASE_URL'), rea
 
 const DIR = 'data/generated-question-sets/toefl-2026-pilot'
 const TPLDIR = 'data/exam-task-templates'
-const OBJECTIVE = [
-  { template: 'toefl-complete-the-words', source: 'toefl-complete-the-words.json', inputMode: 'spell', scoringNotReady: false },
-  { template: 'toefl-build-a-sentence', source: 'toefl-build-a-sentence.json', inputMode: 'multi_blank', scoringNotReady: true },
+// 2026-07-05 基线同步（owner 决策：接受 accepted-sequence 契约现状，不回滚，不 promote，不激活）：
+// build_a_sentence 的 pilot 期望从「scoring_not_ready=true + legacy index answer」更新为
+// 「qa_flags.scoringContract=accepted_sequence_exact + 契约对象 answer（canonical 锚定源记录）」，
+// 且 status 收紧为必须 draft（旧基线允许 draft|active——这里是收紧而非放宽）。
+// 契约来源：data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json（已入库 35cd668）。
+const BAS_CONTRACT_FILE = 'data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json'
+type ObjectiveSpec = { template: string; source: string; inputMode: string; contract: { file: string; mustStayDraft: true } | null }
+const OBJECTIVE: ObjectiveSpec[] = [
+  { template: 'toefl-complete-the-words', source: 'toefl-complete-the-words.json', inputMode: 'spell', contract: null },
+  { template: 'toefl-build-a-sentence', source: 'toefl-build-a-sentence.json', inputMode: 'multi_blank', contract: { file: BAS_CONTRACT_FILE, mustStayDraft: true } },
 ]
+type ContractEntry = { legacyId: string; canonicalIdx: number[]; acceptedIdx: number[][] }
 const PRODUCTIVE = [
   { taskType: 'email_writing', source: 'toefl-email.productive.json' },
   { taskType: 'academic_discussion', source: 'toefl-discussion.productive.json' },
@@ -72,6 +80,10 @@ async function main() {
     const tpl = JSON.parse(readFileSync(`${TPLDIR}/${o.template}.json`, 'utf8')) as { taskType: string; skill: string; itemCount: number; optionCount: number; answerSchema: Record<string, unknown>; stimulusRequirements?: Record<string, unknown> }
     const st: ShapeTemplate = { taskType: tpl.taskType, skill: tpl.skill, itemCount: tpl.itemCount, optionCount: tpl.optionCount, answerSchema: tpl.answerSchema, stimulusRequirements: tpl.stimulusRequirements }
     const af = JSON.parse(readFileSync(`${DIR}/${o.source}`, 'utf8')) as { template: string; level: number; sets: Record<string, unknown>[] }
+    // 契约模板：加载已审定 accepted-sequence 契约（按 legacyId 键控），供 status/qa_flags/answer 断言
+    const contractMap = o.contract
+      ? new Map((JSON.parse(readFileSync(o.contract.file, 'utf8')) as { entries: ContractEntry[] }).entries.map((e) => [e.legacyId, e]))
+      : null
     const expectedLegacy = new Set<string>()
     let okCmp = 0
     for (const raw of af.sets) {
@@ -82,8 +94,18 @@ async function main() {
       expectedLegacy.add(setLegacy)
       const dbSet = byLegacy.get(setLegacy)
       if (!dbSet) { errors.push(`${o.template}: 源记录无对应 DB set（legacy ${setLegacy}）`); continue }
-      if (dbSet.status !== 'draft' && dbSet.status !== 'active') errors.push(`${o.template}: ${setLegacy} status=${dbSet.status}（须 draft 或 active）`)
-      if (o.scoringNotReady && (dbSet.qa_flags as { scoring_not_ready?: boolean } | null)?.scoring_not_ready !== true) errors.push(`${o.template}: ${setLegacy} 缺 scoring_not_ready`)
+      // status：契约模板（build_a_sentence）必须 draft（激活未获批，收紧）；其余 draft|active
+      if (o.contract?.mustStayDraft) {
+        if (dbSet.status !== 'draft') errors.push(`${o.template}: ${setLegacy} status=${dbSet.status}（契约未获批激活，须 draft）`)
+      } else if (dbSet.status !== 'draft' && dbSet.status !== 'active') {
+        errors.push(`${o.template}: ${setLegacy} status=${dbSet.status}（须 draft 或 active）`)
+      }
+      // qa_flags：契约模板要求 scoringContract=accepted_sequence_exact 且 scoring_not_ready 已清除
+      if (o.contract) {
+        const f = dbSet.qa_flags as { scoringContract?: string; scoring_not_ready?: boolean } | null
+        if (f?.scoringContract !== 'accepted_sequence_exact') errors.push(`${o.template}: ${setLegacy} 缺 qa_flags.scoringContract=accepted_sequence_exact`)
+        if (f?.scoring_not_ready === true) errors.push(`${o.template}: ${setLegacy} scoring_not_ready 仍为 true（契约模式下应已清除）`)
+      }
       const items = await itemsOf(dbSet.id)
       if (items.length !== out.result.items.length) { errors.push(`${o.template}: ${setLegacy} item 数 ${items.length}≠${out.result.items.length}`); continue }
       const exp = out.result.items[0]
@@ -92,13 +114,36 @@ async function main() {
       if ((it.prompt ?? '') !== exp.prompt) errors.push(`${o.template}: ${setLegacy} prompt 不一致`)
       const dbCh = Array.isArray(it.choices) ? (it.choices as DraftChoice[]) : []
       if (normChoices(dbCh) !== normChoices(exp.choices)) errors.push(`${o.template}: ${setLegacy} choices 不一致`)
-      if (JSON.stringify(it.answer) !== JSON.stringify(exp.answer)) errors.push(`${o.template}: ${setLegacy} answer 不一致`)
+      if (o.contract) {
+        // answer：契约对象，canonical 必须锚定源记录（exp.answer 的 index 排列映射 chunks 文本），
+        // acceptedSequences 必须与已审定契约一致且包含 canonical。防契约/DB 被静默篡改。
+        const ce = contractMap!.get(setLegacy)
+        if (!ce) { errors.push(`${o.template}: ${setLegacy} 契约文件缺条目`) } else {
+          const text = (i: number) => String(exp.choices[i]?.text ?? '')
+          const wantCanonical = (exp.answer as number[]).map(text)
+          if (JSON.stringify(ce.canonicalIdx.map(text)) !== JSON.stringify(wantCanonical)) errors.push(`${o.template}: ${setLegacy} 契约 canonicalIdx 与源 answer 不一致`)
+          const a = it.answer as { scoring?: string; official?: boolean; canonical?: string[]; acceptedSequences?: string[][] } | null
+          if (a?.scoring !== 'accepted_sequence_exact') errors.push(`${o.template}: ${setLegacy} answer.scoring≠accepted_sequence_exact`)
+          if (a?.official !== false) errors.push(`${o.template}: ${setLegacy} answer.official≠false`)
+          if (JSON.stringify(a?.canonical) !== JSON.stringify(wantCanonical)) errors.push(`${o.template}: ${setLegacy} answer.canonical 与源不一致`)
+          const wantSeqs = ce.acceptedIdx.map((seq) => seq.map(text))
+          const seqKey = (t: string[]) => t.join(' ').toLowerCase()
+          if (!wantSeqs.some((s) => seqKey(s) === seqKey(wantCanonical))) wantSeqs.unshift(wantCanonical)
+          const gotSeqs = a?.acceptedSequences ?? []
+          if (JSON.stringify(gotSeqs) !== JSON.stringify(wantSeqs)) {
+            const gk = gotSeqs.map(seqKey).sort().join('|'), wk = wantSeqs.map(seqKey).sort().join('|')
+            if (gk !== wk) errors.push(`${o.template}: ${setLegacy} acceptedSequences 与契约不一致`)
+          }
+        }
+      } else if (JSON.stringify(it.answer) !== JSON.stringify(exp.answer)) {
+        errors.push(`${o.template}: ${setLegacy} answer 不一致`)
+      }
       okCmp++
     }
     // R0 历史范围修订：pilot 校验器只负责这 10 条 pilot 记录的源↔DB 映射（上方前向 1:1 已断言每条为 draft 且 payload 一致）。
     // 扩产集（相同 template）由 verify-toefl-complete-words-expansion.ts 拥有；聚合数（70/60/60、0 active）由 verify-toefl-current.ts 断言。
     // 因此不再断言「总数==10」或「无源外 set」，以免与已集成的扩产冲突。
-    console.log(`  ${o.template}: pilot 源↔DB 逐条一致 ${okCmp}/${af.sets.length} · pilot 期望 ${expectedLegacy.size}` + (o.scoringNotReady ? ' · scoring_not_ready' : ''))
+    console.log(`  ${o.template}: pilot 源↔DB 逐条一致 ${okCmp}/${af.sets.length} · pilot 期望 ${expectedLegacy.size}` + (o.contract ? ' · accepted_sequence_exact 契约（draft-only）' : ''))
   }
 
   // ── 生产性包：确定性逐条比对 ──

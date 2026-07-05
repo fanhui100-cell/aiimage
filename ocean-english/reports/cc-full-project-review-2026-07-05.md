@@ -28,7 +28,7 @@
 |---|---|---|
 | 基础质量门禁 | `npm run lint` exit 0，无 warning；`npx tsc --noEmit --incremental false` exit 0，无类型错误 | 通过 |
 | 考试规格与题型分类 | `validate:exam-specs` 覆盖 8 个 spec，level 1-8 各一次，IELTS 为 `coming_soon`；`validate:question-types` 显示废弃题型为 antonym_choice/cet_cloze，errors 0 | 通过 |
-| TOEFL 边界 | `build_a_sentence` active=0，`antonym_choice+cet_cloze`=0，speaking excluded；`validate:toefl-task-alignment` errors 0 warnings 0。注：`verify:toefl-current` 当前 **exit 1**——其 pilot 校验仍按旧 `scoring_not_ready`/legacy-answer 基线断言，与 P1-2 已决策接受的契约现状不符（**已解释**，跟进项：同步 pilot 期望基线）；全局边界断言本身全部通过 | 边界通过（校验器基线待同步） |
+| TOEFL 边界 | `build_a_sentence` active=0，`antonym_choice+cet_cloze`=0，speaking excluded；`validate:toefl-task-alignment` errors 0 warnings 0。注：`verify:toefl-current` pilot 期望基线已于 2026-07-05 同步（契约对象 + flag 已清 + **收紧为 draft-only** + 新增组卷器排除静态断言 3/3；draft 规模锁 10→30，承认已提交的 C3 批次 `e7e17cf`），**恢复 exit 0** | 通过 |
 | 试卷 answerKey 剥离 | 对 toefl/cet4/gaokao/sat 的 full/mini/section 调用 `toClientPaper` 做线上探测：客户端 payload **不携带** answerKey，服务端保留用于判分；`smoke:paper-e2e` 14/14 断言通过 | 通过 |
 | 听力原文剥离（v2/papers） | `smoke:active-serve` 通过：听力只下发签名 `audioUrl`，无 `textEn`/transcript；generator 对音频题省略 `textEn`，`toClientPaper` 再次剥离，形成双层保护 | 通过 |
 | IELTS 门控 | `smoke:papers`：IELTS mini/full 都以 `exam_coming_soon` 拒绝；不会从其他考试抽 IELTS 题 | 通过 |
@@ -86,7 +86,7 @@
 - **处置（owner 决策，2026-07-05）：接受现状，不回滚 DB，不 promote，不激活。**审计轨迹已对齐：
   - 契约数据与 apply 报告（`data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json`、`reports/build-sentence-accepted-sequences-apply-report.json`）及 `reports/promote-qsets-v2-report.json`（eligible 10 现状）**均已入库**（commit `35cd668`），不再有未记录写入。
   - 两份 07-05 报告顶部已加“状态订正 + 已决策”横幅，正文历史声称保留但已被横幅覆盖说明。
-  - 运行时复核：`npm run verify:toefl-current` exit 1——pilot 校验仍按旧 `scoring_not_ready`/legacy-answer 基线断言，属**已解释状态**；唯一跟进项是同步该校验器的 pilot 期望基线使其恢复 exit 0。全局边界（active=0、组卷排除）持续通过。
+  - 运行时复核与收尾（2026-07-05）：pilot 期望基线**已同步**——契约对象逐字段断言（canonical 锚定源记录 + acceptedSequences 与已审定契约一致）、`scoring_not_ready` 须已清除、status **收紧为 draft-only**（旧基线允许 active）、新增组卷器 `PAPER_EXCLUDED_TASK_TYPES` 静态断言、draft 规模锁更新 10→30（承认已提交 C3 批次 `e7e17cf`，20 条同为 contract-ready draft）。`npm run verify:toefl-current` **恢复 exit 0**。
   - **仍然禁止对 `build_a_sentence` 执行 `promote --apply`**，直至 owner 明确批准激活且 server RPC 确认行为。
 
 ### P2
@@ -210,7 +210,7 @@
 | `npm run validate:question-types` | 0 | 通过：废弃 antonym_choice/cet_cloze，errors 0 |
 | `npm run validate:rubrics` | 0 | warning：IELTS writing/speaking rubric 缺口（coming_soon，controlled-reject） |
 | `npm run validate:toefl-task-alignment` | 0 | 通过：errors 0 warnings 0 |
-| `npm run verify:toefl-current` | 1 | 已解释：全局断言通过（build_a_sentence active 0），exit 1 来自 pilot 校验仍按旧 scoring_not_ready/legacy-answer 基线；P1-2 已决策接受契约现状，跟进项为同步 pilot 期望基线（审查时点 gate 记录为 exit 0，漂移在 post-review 复核中显现） |
+| `npm run verify:toefl-current` | 0 | 通过（2026-07-05 基线同步后）：pilot 契约断言 10/10（accepted_sequence_exact + flag 已清 + draft-only 收紧）、build_a_sentence draft=30（10 pilot + 20 C3 `e7e17cf`）/active=0、组卷器排除静态断言 3/3。此前曾 exit 1（旧 scoring_not_ready/legacy-answer 基线与 P1-2 已决策契约现状不符，见 P1-2 处置记录） |
 | `npm run validate:qbank-v2` | 0 | 通过：2,854 active sets / 4,684 items，errors 0 |
 | `npm run qa:qsets-v2` | 0 | 通过：32 templates，errors 0 |
 | `npm run validate:coverage-audit` | 0 | 通过：fixtures 与 report cross-check 全部通过 |
@@ -244,7 +244,7 @@
 |---|---|---|
 | 浏览器真实渲染（Lexiverse WebGL camera/glow、实际 404 页面、redirect runtime） | 本次审查没有启动 dev server 或浏览器，只做了只读静态代码 + DB 审查 | 在**非 3000** 端口运行 `next dev`，并实际驱动 `/lexiverse?word=accept`、`/dictionary?word=notarealwordxyz`、`/word/benefit` |
 | Playwright e2e suite 执行 | 需要运行中的 server；且 `closed-loop.spec.ts` 4/4 都是 `test.fixme`，本次审查的闭环即使跑也不会执行 | 增加 app-identity globalSetup，重写 fixme cases，然后运行 `npx playwright test` |
-| ~~`build_a_sentence` 对抗验证~~（已于 2026-07-05 运行时确认并决策） | 专项对抗验证器当时触发会话 token 限制未返回；**post-review 复核已运行时证实**：`npm run verify:toefl-current` exit 1，pilot 校验报 10 条 `build_a_sentence` "缺 scoring_not_ready" + "answer 不一致"，即 flag 已清除、契约已应用（仍全部 draft、active=0）。P1-2 由高置信升为**已确认** | **owner 已决策（2026-07-05）：接受现状，不回滚，不 promote，不激活**；产物已入库（`35cd668`）；跟进项为同步 pilot 期望基线使门禁恢复 exit 0 |
+| ~~`build_a_sentence` 对抗验证~~（已于 2026-07-05 运行时确认并决策） | 专项对抗验证器当时触发会话 token 限制未返回；**post-review 复核已运行时证实**：`npm run verify:toefl-current` exit 1，pilot 校验报 10 条 `build_a_sentence` "缺 scoring_not_ready" + "answer 不一致"，即 flag 已清除、契约已应用（仍全部 draft、active=0）。P1-2 由高置信升为**已确认** | **owner 已决策（2026-07-05）：接受现状，不回滚，不 promote，不激活**；产物已入库（`35cd668`）；pilot 期望基线已同步，门禁**已恢复 exit 0** |
 | dictionary/practice/relations 的 HTTP route 行为 | 需要运行 server；本次是从 route 代码、底层 client 和 DB read 推理 | 对运行中的 server 请求 `/api/dictionary/word/benefit`、`/api/practice/session?mode=word&word=benefit`、`/api/dictionary/relations` |
 | 音频主观质量（口音、语速、考试场景匹配） | 已验证存在性、签名和无泄露，但没有实际听音频 | 等非 CET6 listening audio 存在后，每个考试抽样试听 |
 | 真实 DeepSeek provider 行为 | 当前环境没有实际调用 live API key；只验证了 mock/real switch 结构 | 在 staging 中加入 rate limit 后 smoke 真实 provider 路径（P2-13） |
@@ -282,7 +282,7 @@ Runtime smoke on 2026-07-05 (dev server `127.0.0.1:3107`, non-3000 port):
 
 | Item | Why not auto-fixed | Current mitigation | Next owner decision |
 |---|---|---|---|
-| P1-2 `build_a_sentence` audit drift（**运行时已确认**：`verify:toefl-current` exit 1） | ~~owner decision~~ **已决策（owner，2026-07-05）：接受现状，不回滚 DB，不 promote，不激活** | 两份 07-05 报告已订正为已决策状态；所有 set 仍 draft/active=0/组卷器排除；审计产物已入库（commit `35cd668`）；未 `promote --apply` | 跟进项（非阻塞）：同步 `verify:toefl-current` 的 pilot 期望基线，使该门禁恢复 exit 0（当前 exit 1 为已解释状态） |
+| P1-2 `build_a_sentence` audit drift（**运行时已确认**：`verify:toefl-current` exit 1） | ~~owner decision~~ **已决策（owner，2026-07-05）：接受现状，不回滚 DB，不 promote，不激活** | 两份 07-05 报告已订正为已决策状态；所有 set 仍 draft/active=0/组卷器排除；审计产物已入库（commit `35cd668`）；未 `promote --apply` | ✅ 跟进项已完成（2026-07-05）：pilot 期望基线已同步（契约断言 + draft-only 收紧 + 组卷排除静态断言），门禁已恢复 exit 0 |
 | P2-5/P2-6 thin v2 word coverage | Requires generating/backfilling content and target-word links | UI/report must disclose non-WU words mostly use v1 fallback | Plan a word-level v2 coverage expansion batch |
 | P2-11 non-CET6 listening audio missing | Requires audio/content production and human QA | UI/report must disclose listening availability by exam | Plan audio generation/import/QA for zhongkao, gaokao, CET4, TOEFL |
 | P2-7 "考试语境" CTA | Current link behaves the same as normal word practice | Hide or soften the CTA now; do not promise cloze/exam-style coverage | Build real exam-context mode only after target-word coverage exists |
@@ -297,7 +297,7 @@ Runtime smoke on 2026-07-05 (dev server `127.0.0.1:3107`, non-3000 port):
 
 1. **[P0，上线阻塞] 关闭 `/api/mock-exam` 泄露。**删除未引用路由，或剥离 `answer/answer_text/audio_ref/explanation_zh`，只返回 signed/TTS handle。之后重新 grep `app/`，确认没有客户端依赖它。
 2. **[P1] 修复 structured/free-text scoring 链路。**把 renderer 计算出的 correctness 传入 `postAttempt`；让 `error-classifier` 在 `isCorrect` 为 undefined 时返回 null；让 `skill-state-writer` 跳过 null 行。这个改动会同时修复 mastery、error typing、结果百分比和错题本虚假提示（P1-1 + P2-4）。
-3. **[P1-2 收尾项] 同步 `verify:toefl-current` 的 pilot 期望基线。**漂移已决策（接受现状）且审计轨迹已对齐入库（`35cd668`），当前唯一残留是该校验器的 pilot 断言仍按旧 `scoring_not_ready`/legacy-answer 基线而 exit 1；把 pilot 期望更新为"契约对象 + flag 已清（保持 draft）"后即恢复 exit 0。激活仍被禁止：不 `promote --apply`，直至 owner 批准且 server RPC 确认。
+3. **[P1-2 收尾项 — ✅ 已完成（2026-07-05）] 同步 `verify:toefl-current` 的 pilot 期望基线。**已把 pilot 期望更新为"契约对象 + flag 已清 + **draft-only 收紧**"，并新增组卷器排除静态断言与 draft 规模锁 10→30（C3 批次 `e7e17cf`）；`verify:toefl-current` 已**恢复 exit 0**。激活仍被禁止：不 `promote --apply`，直至 owner 批准且 server RPC 确认。
 4. **[P2，状态诚实] 停止宣传完整 v2 word loop。**修复“考试语境”死 lens（P2-7），纠正 word-mode v1 fallback 的披露（P2-6），修复多词条目跳转（P2-8）、词形/派生标签和反义 sector 缺口（P2-1/P2-2/P2-3）。
 5. **[P2，覆盖度] 决定听力策略。**要么把 active listening audio 扩展到 CET6 之外，要么在 mock UI 中披露各考试听力可用性（P2-11）；同时为核心 vocab drills 回填 v2 pool，或披露 v1-only，使 diagnostics 能看到这些 attempts（P2-5）。
 6. **[P2，测试可信度] 恢复 closed-loop e2e。**基于当前 UI 增加 app-identity health check，重写并启用闭环测试（P2-10 + P3 Playwright hardening），并重新接入或下线 wrong-edge 可视化（P2-12）。

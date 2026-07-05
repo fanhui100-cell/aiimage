@@ -57,16 +57,18 @@ async function assertAggregateCounts(): Promise<boolean> {
 
   let ok = true
   // Post-R10（用户授权"将剩余全部完成"）：complete_the_words/email_writing/academic_discussion 已晋 active
-  // （draft→0）；build_a_sentence 仍阻塞（scoring_not_ready，draft 10/active 0）。以 draft+active 总量锁内容规模。
+  // （draft→0）。2026-07-05 基线更新：build_a_sentence 已带 accepted_sequence_exact 契约（owner 决策接受，
+  // scoring_not_ready 已清），但激活未获批 → 仍锁 draft-only / active=0。以 draft+active 总量锁内容规模。
   const totalOf = (t: string) => draftOf(t) + activeOf(t)
   // Post-F2B + promote (owner-approved 2026-07-04): each text task is now 100 (pilot 10 + earlier
-  // expansion + F2B top-up), all active. build_a_sentence stays 10 draft / 0 active (F4 option 4, blocked).
+  // expansion + F2B top-up), all active. build_a_sentence: contract-ready but activation NOT approved.
   const checks: [string, number, number][] = [
     ['complete_the_words total(draft+active)', totalOf('complete_the_words'), 100],
     ['email_writing total(draft+active)', totalOf('email_writing'), 100],
     ['academic_discussion total(draft+active)', totalOf('academic_discussion'), 100],
-    // build_a_sentence has NO expansion verifier; it stays at the 10 pilot drafts, still blocked (0 active).
-    ['build_a_sentence draft', draftOf('build_a_sentence'), 10],
+    // build_a_sentence: 10 pilot + 20 C3 (e7e17cf "+20 contract-ready draft rows", import per 51c5e26 dryrun report).
+    // All stay draft — contract-ready, activation NOT approved. Scale lock updated 10→30 on 2026-07-05.
+    ['build_a_sentence draft', draftOf('build_a_sentence'), 30],
     ['complete_the_words active', activeOf('complete_the_words'), 100],
     ['email_writing active', activeOf('email_writing'), 100],
     ['academic_discussion active', activeOf('academic_discussion'), 100],
@@ -78,9 +80,9 @@ async function assertAggregateCounts(): Promise<boolean> {
     if (!pass) ok = false
   }
   // 阻塞/退役题型必须 0 active。2026-07-04：read_daily_life + choose_a_response 移除
-  // （reading 专项 F2 晋级 active、listening pilot 2026-07-02 起 active，均合法）。仍阻塞 =
-  // build_a_sentence（scoring_not_ready，F4 option 4）+ 口语两型（speaking_pipeline_not_ready，F5 defer）
-  // + 退役 antonym_choice/cet_cloze。
+  // （reading 专项 F2 晋级 active、listening pilot 2026-07-02 起 active，均合法）。仍不得 active =
+  // build_a_sentence（accepted_sequence_exact 契约就绪但激活未获批，2026-07-05 owner 决策）
+  // + 口语两型（speaking_pipeline_not_ready，F5 defer）+ 退役 antonym_choice/cet_cloze。
   const BLOCKED_ACTIVE = new Set(['build_a_sentence', 'listen_and_repeat', 'interview_speaking', 'antonym_choice', 'cet_cloze'])
   const genActive = sets.filter((s) => s.status === 'active').length
   const blockedActive = sets.filter((s) => s.status === 'active' && BLOCKED_ACTIVE.has(s.task_type)).length
@@ -91,10 +93,29 @@ async function assertAggregateCounts(): Promise<boolean> {
   return ok
 }
 
+// 静态断言（只读源码）：组卷器必须持续排除 build_a_sentence / listen_and_repeat / interview_speaking。
+// 2026-07-05 加入：build_a_sentence 契约就绪但激活未获批，此排除是 mock 卷的第一道防线，不得静默移除。
+function assertPaperGeneratorExclusion(): boolean {
+  const src = readFileSync('lib/papers/paper-generator.ts', 'utf8')
+  const m = src.match(/PAPER_EXCLUDED_TASK_TYPES\s*=\s*new Set\(\[([^\]]*)\]\)/)
+  const inside = m ? m[1] : ''
+  let ok = true
+  for (const t of ['build_a_sentence', 'listen_and_repeat', 'interview_speaking']) {
+    const has = inside.includes(`'${t}'`)
+    console.log(`  ${has ? '✓' : '✗'} paper-generator PAPER_EXCLUDED_TASK_TYPES 含 ${t}`)
+    if (!has) ok = false
+  }
+  return ok
+}
+
 async function main() {
   console.log('\n=== [verify:toefl-current] aggregate DB count assertion ===')
   let countsOk = false
   try { countsOk = await assertAggregateCounts() } catch (e) { console.error('  ✗ count assertion error:', (e as Error)?.message ?? e); countsOk = false }
+  console.log('\n=== [verify:toefl-current] paper-generator exclusion (static) ===')
+  let exclusionOk = false
+  try { exclusionOk = assertPaperGeneratorExclusion() } catch (e) { console.error('  ✗ exclusion assertion error:', (e as Error)?.message ?? e); exclusionOk = false }
+  if (!exclusionOk) countsOk = false
 
   if (childFailed || !countsOk) {
     console.error('\n✗ verify:toefl-current FAILED')
