@@ -1,0 +1,27 @@
+{
+  "template": "toefl-build-a-sentence",
+  "level": 6,
+  "note": "Build-a-Sentence C3 batch 1 — sentences with a genuinely frontable time/place adverbial → 2 legitimate word orders (adverbial-final canonical + adverbial-initial). Both use every chunk exactly once. acceptedSequences are index permutations; the importer/shape converts to the accepted_sequence_exact contract (canonical auto-included). Claude-authored, original, draft-only, non-official.",
+  "sets": [
+    { "chunks": ["the children", "walk", "to school", "every morning"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "参考语序（非唯一）：the children walk to school every morning；时间状语可前置：every morning the children walk to school。" },
+    { "chunks": ["we", "visited", "the museum", "last weekend"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 last weekend 可置句末或句首。" },
+    { "chunks": ["she", "reads", "a book", "before bed"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 before bed 可前后。" },
+    { "chunks": ["they", "play", "football", "on Saturdays"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "频率/时间状语 on Saturdays 可前置。" },
+    { "chunks": ["the train", "arrives", "at the station", "at noon"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 at noon 可前置。" },
+    { "chunks": ["I", "drink", "coffee", "in the afternoon"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 in the afternoon 可前后。" },
+    { "chunks": ["the shop", "opens", "its doors", "at eight"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 at eight 可前置。" },
+    { "chunks": ["my brother", "studies", "chemistry", "every evening"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 every evening 可前后。" },
+    { "chunks": ["the birds", "fly", "south", "in autumn"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 in autumn 可前置。" },
+    { "chunks": ["we", "meet", "our friends", "after work"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 after work 可前后。" },
+    { "chunks": ["the farmer", "feeds", "the animals", "each day"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 each day 可前置。" },
+    { "chunks": ["she", "practises", "the piano", "on weekends"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 on weekends 可前后。" },
+    { "chunks": ["the students", "take", "an exam", "in June"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 in June 可前置。" },
+    { "chunks": ["he", "washes", "his car", "every Sunday"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 every Sunday 可前后。" },
+    { "chunks": ["the bakery", "sells", "fresh bread", "in the morning"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 in the morning 可前置。" },
+    { "chunks": ["tourists", "gather", "in the square", "at sunset"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 at sunset 可前后。" },
+    { "chunks": ["the committee", "meets", "in the hall", "once a month"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "频率状语 once a month 可前置。" },
+    { "chunks": ["the gardener", "waters", "the flowers", "every day"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 every day 可前后。" },
+    { "chunks": ["our teacher", "gives", "us homework", "on Fridays"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 on Fridays 可前置。" },
+    { "chunks": ["the museum", "closes", "its gates", "at five"], "answer": [0,1,2,3], "acceptedSequences": [[0,1,2,3],[3,0,1,2]], "explain_zh": "时间状语 at five 可前后。" }
+  ]
+}
