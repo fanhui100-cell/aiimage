@@ -28,7 +28,7 @@
 - **timestamp-only validator JSON（6 个，逐一 diff 验证仅 generatedAt/计时行）**：`authored-import-ielts-c1-reading-b3-dryrun-report.json`、`authored-productive-ielts-c1-speaking-b3-dryrun-report.json`、`question-bank-v2-validation.json`、`question-sets-v2-qa.json`、`paper-generator-validation.json`、`toefl-task-alignment-validation.json`
 - **仓库根无关项**：`.claude/settings.local.json`、`.claude/scheduled_tasks.lock`、`korean-cosmos` submodule、`.agents/skills/`、`.claude/skills/`、`.firecrawl/`、根 `reports/`、`shanju/`、`test-results/`、`tmp/`、`ocean-english-lexiverse-poetrycloud-spike/`
 - **并行 IELTS 生产会话的文件（非本轮工作，留给其会话自行提交）**：`data/generated-question-sets/ielts-c1-{listening-b2, reading-b4, speaking-b4, speaking-b5, writing-b3, writing-b4}/` 与 7 个 `reports/authored-*-ielts-c1-*-{apply,dryrun}-report.json`。**说明**：这些文件在本任务 Phase 0 之后出现，证明有另一会话在并行导入 IELTS **draft**（apply-report 存在）；已确认 IELTS active 仍为 0（见 §7），不触发停止条件，但如实报告。
-- **待 owner 确认**：`docs/cc-full-project-review-checklist-2026-07-05.md`（审查清单输入文档，untracked；默认未纳入）
+- ~~待 owner 确认~~ **已确认（owner，2026-07-05）：`docs/cc-full-project-review-checklist-2026-07-05.md` 纳入 PR**（审查清单输入文档，随收尾一并入库留档）
 
 ## 4. DB 写入
 
@@ -77,7 +77,7 @@
 3. **Word-level v2 coverage 扩大**（255 → ≥2,000 词）— 见 `2026-07-05-word-v2-coverage-expansion-plan.md`
 4. **Build-a-Sentence promote 是否批准** — owner 决策项；批准前需确认 server RPC 契约识别
 5. **非 MCQ IELTS 官方题型实现** — IELTS 开放前的产品工作
-6. （小项）closed-loop e2e 三条用例重写（`2026-07-05-closed-loop-e2e-restoration-plan.md`）；`galaxyForWord` 多等级词选带稳定性（smoke 报告 §检查项 4）
+6. （小项）closed-loop e2e 三条用例重写（`2026-07-05-closed-loop-e2e-restoration-plan.md`）；**[P3，owner 确认不阻塞合并]** `galaxyForWord` 多等级词选带稳定性（smoke 报告 §检查项 4：优先按 `primaryLevel` 选带并优先选静态词表实含该词的星系）
 
 ## 10. 是否建议合并 PR
 
