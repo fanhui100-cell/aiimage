@@ -1,5 +1,7 @@
 # Final QBank + Learning Loop Readiness — Report (2026-07-05)
 
+> **⚠️ 状态订正（2026-07-05，post-CC-review 复核，运行时确认；owner 已决策）：** 本文中关于 `build_a_sentence` 的"10 draft 保持 blocked；promote dry-run 证明 eligible 0 / 10 拒"已不符当前 DB：accepted-sequence 契约已应用、`scoring_not_ready` 已清除，本地 promote dry-run 现为 **eligible 10**。**owner 决策（2026-07-05）：接受现状，不回滚，不 promote，不激活**——10 条行保持 `draft` / `active=0` / 被组卷器排除；审计产物已入库（commit `35cd668`）。`npm run verify:toefl-current` 的 exit 1（pilot 期望仍为旧基线）现属**已解释状态**，跟进项为同步该校验器的 pilot 期望基线。详见 `reports/toefl-build-sentence-scoring-2026-07-05.md` 顶部订正与 `reports/cc-full-project-review-2026-07-05.md` 的 P1-2。
+
 **Task 8（终章）of `2026-07-05-remaining-qbank-toefl-mock-completion-plan.md`.**
 **总体结论：PASS（conditional 项均为显式产品决策，非缺陷）。**
 

@@ -1,3 +1,5 @@
+> **⚠️ SUPERSEDED (2026-07-05)：** 时点快照。此后 TOEFL mock v1 已开放（`paperReady=true`，见 `reports/toefl-mock-v1-open-2026-07-05.md` 与 `reports/final-qbank-learning-loop-readiness-2026-07-05.md`）。本文中"TOEFL full/mini：paper_not_ready"等结论仅反映 2026-07-04 状态，已不符合当前 `lib/exam-specs/specs.ts`，勿据此判断当前状态。
+
 # CC 自复核 + 剩余任务盘点（2026-07-04，只读审计）
 
 范围：owner 指令的全项自复核。本轮**无 DB 写入、无 promote、无题库内容改动、无代码修改**。

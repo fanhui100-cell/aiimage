@@ -352,7 +352,11 @@ export function PracticeRunner(props: PracticeRunnerProps) {
 
   // 结算环（top-level hook：strokeDashoffset 初值=整圈 C，挂载后画到目标）
   const correctN = S.results.filter((r) => r.correct).length
-  const pct = total ? Math.round((correctN / total) * 100) : 0
+  // P2-4 fix (cc-full-project-review-2026-07-05): 仅 choice/spell 自动判分并入 S.results；
+  // multi_blank/matching/build_sentence/free_text 在题内自评、从不入 S.results。旧代码用 `total`（含自评题）
+  // 作分母，把每道自评题都算作答错（0/total + 假的「N 个错词已存入错词本」）。改为只对已判分题计分。
+  const gradedTotal = S.results.length
+  const pct = gradedTotal ? Math.round((correctN / gradedTotal) * 100) : 0
   const R = 53, C = 2 * Math.PI * R, off = C * (1 - pct / 100)
   const [ringOff, setRingOff] = useState(C)
   useEffect(() => {
@@ -393,7 +397,7 @@ export function PracticeRunner(props: PracticeRunnerProps) {
   }
 
   if (S.step === 'results') {
-    const wrong = total - correctN
+    const wrong = gradedTotal - correctN
     const secs = Math.max(1, Math.round(((S.completedAt || Date.now()) - S.startedAt) / 1000))
     const ss = String(secs % 60).padStart(2, '0')
     const mm = Math.floor(secs / 60)
@@ -407,9 +411,9 @@ export function PracticeRunner(props: PracticeRunnerProps) {
                 <circle className="pr-ring" cx="60" cy="60" r={R} fill="none" stroke="var(--teal-ink)" strokeWidth="8"
                   strokeLinecap="round" strokeDasharray={C} strokeDashoffset={ringOff} transform="rotate(-90 60 60)" />
               </svg>
-              <span className="pct"><b>{correctN}/{total}</b><span>正确率 {pct}%</span></span>
+              <span className="pct"><b>{gradedTotal ? `${correctN}/${gradedTotal}` : '✓'}</b><span>{gradedTotal ? `正确率 ${pct}%` : '练习完成'}</span></span>
             </div>
-            <h2>{pct >= 80 ? '练得漂亮' : pct >= 50 ? '继续保持' : '再练一轮会更好'}</h2>
+            <h2>{gradedTotal === 0 ? '本轮为自评题 · 已完成' : pct >= 80 ? '练得漂亮' : pct >= 50 ? '继续保持' : '再练一轮会更好'}</h2>
           </div>
           <div className="res-stats">
             <div className="res-stat"><b>{mm}:{ss}</b><span>用时</span></div>

@@ -1,3 +1,5 @@
+> **⚠️ SUPERSEDED (2026-07-05):** Point-in-time snapshot. TOEFL is now `paperReady=true` (mock v1 opened — see `reports/toefl-mock-v1-open-2026-07-05.md` and `reports/final-qbank-learning-loop-readiness-2026-07-05.md`); active-set counts have moved (2672→2854). Statements below such as "TOEFL paperReady=false / paper_not_ready" reflect 2026-07-04 state only and no longer match `lib/exam-specs/specs.ts`. Do not read this as current status.
+
 # Question Bank Production — Final Summary (F9 audit, 2026-07-04)
 
 Driver: `docs/superpowers/plans/2026-07-03-toefl-and-remaining-qbank-fable5-master-prompt.md`.

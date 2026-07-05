@@ -1,5 +1,9 @@
 # Build-a-Sentence Accepted-Sequence Scoring Boundary — Report (2026-07-05)
 
+> **⚠️ 状态订正（2026-07-05，post-CC-review 复核，运行时确认）：** 本文正文记录的是 Task 2 当时的**意图**（"零 DB 写入 / 保持 blocked / scoring_not_ready=true / dry-run eligible 0 · rejected 10"）。此后一次**未跟踪的 apply** 已把 10 条 draft 的 `scoring_not_ready` flag **清除**，并把 accepted-sequence 契约写入（answer 由 legacy index 排列改为契约对象）。
+> **当前真实 DB 状态：** 10 条 `build_a_sentence` 仍全部 `draft`、`active=0`、仍被组卷器 `PAPER_EXCLUDED_TASK_TYPES` 排除（TOEFL 卷不含）；本地 `promote` dry-run 现显示 **eligible 10**（非本文所述 0）；`npm run verify:toefl-current` 的 pilot 校验因此会 **exit 1**（报 "缺 scoring_not_ready" + "answer 不一致"，即校验器的 pilot 期望仍是旧的 scoring_not_ready/legacy-answer 基线）。
+> **已决策（owner，2026-07-05）：接受现状，不回滚 DB，不 promote，不激活。** 即：承认 accepted-sequence 契约已写入 10 条 draft 行并清除 `scoring_not_ready`，这些行**保持 draft、active=0、继续被组卷器排除**。两个审计产物已入库（commit `35cd668`）：`data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json`、`reports/build-sentence-accepted-sequences-apply-report.json`。本轮未运行 `promote --apply`；服务端 RPC 仍拦截激活。后续跟进项：同步 `verify:toefl-current` 的 pilot 期望基线（当前它仍按旧 scoring_not_ready/legacy-answer 基线校验而 exit 1，现属**已解释状态**而非未决漂移）。
+
 **Task 2 of `2026-07-05-remaining-qbank-toefl-mock-completion-plan.md`.**
 **Scope decision（owner，本次会话确认）：仅建判分基础设施，不 promote** ——
 与 F4 决定（2026-07-04「keep blocked」）保持一致；10 条 draft 行维持 draft + `scoring_not_ready`，零 DB 写入。

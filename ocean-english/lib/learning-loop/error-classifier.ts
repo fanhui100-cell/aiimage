@@ -51,7 +51,10 @@ const TASK_TO_ERROR: Record<string, ErrorType> = {
 
 /** 答对→null；答错→按 subskills 优先、再按 taskType、再按 dimension 推断；都不确定→'unknown'。 */
 export function classifyError(input: ClassifyInput): ErrorType | null {
-  if (input.isCorrect) return null
+  // P1 fix (cc-full-project-review-2026-07-05): 仅当「明确判错」才归错误类型。
+  // 结构题/产出题以 isCorrect=undefined 记录（未判分），旧写法 `if (input.isCorrect)` 把 undefined 当假，
+  // 会给未判分作答硬扣一个错误类型（如 cloze_passage→grammar）。改为只有 isCorrect===false 才分类。
+  if (input.isCorrect !== false) return null
 
   // 1) listening 最先特判：听力错误归 listening_detail / listening_inference，
   //    否则会被通用 subskill 映射（如 inference）抢先，永远到不了 listening_inference。

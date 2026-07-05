@@ -345,7 +345,9 @@ async function buildSection(
       ...base, subjective: true, scoring: 'needs_manual_or_ai_scoring',
       taskType: drawn?.taskType ?? sec.taskTypes[0] ?? null,
       sets: drawn?.sets ?? [], items: drawn?.items ?? [],
-      placeholder: { reason: 'needs_manual_or_ai_scoring', taskTypes: sec.taskTypes },
+      // P3 fix (cc-full-project-review-2026-07-05): placeholder.taskTypes 也要过滤退役/被排除题型，
+      // 否则 build_a_sentence 等会以字符串出现在下发前端的 client JSON（虽不下发对应题），误导 UI 展示为该区覆盖题型。
+      placeholder: { reason: 'needs_manual_or_ai_scoring', taskTypes: sec.taskTypes.filter((t) => !isDeprecatedQuestionType(t) && !PAPER_EXCLUDED_TASK_TYPES.has(t)) },
       warnings: drawn ? [] : ['insufficient_pool'],
     }
   }

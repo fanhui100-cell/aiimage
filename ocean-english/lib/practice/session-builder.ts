@@ -466,6 +466,13 @@ async function tryBuildFromV2(
     if (input.examId) { const norm = normalizeExamId(input.examId); if (norm) setsQ = setsQ.eq('exam_id', norm) }
     if (input.sectionId) setsQ = setsQ.eq('section_id', input.sectionId)
     if (input.taskType && !isDeprecatedQuestionType(input.taskType)) setsQ = setsQ.eq('task_type', input.taskType)
+    // P3 fix (cc-full-project-review-2026-07-05): examId 但无 taskType/sectionId 时，约束到该考试规格的客观题型，
+    // 否则 exam_id 标记的 word-universe 词汇 drill（section_id=null，非该考试真实题型）会混入考试练习，
+    // 与 SAT/TOEFL「语境词义，非孤立词汇」规格冲突。ExamTaskPicker 恒带 taskType，仅直连 API 的无-taskType 路径受影响。
+    if (input.examId && !input.taskType && !input.sectionId) {
+      const okTypes = objectiveTypesForExam(input.examId).types
+      if (okTypes.length) setsQ = setsQ.in('task_type', okTypes)
+    }
     if (input.level) setsQ = setsQ.eq('level', input.level)
     const { data: setsData, error: setsErr } = await setsQ.limit(200)
     if (setsErr) return []

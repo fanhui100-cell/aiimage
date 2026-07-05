@@ -55,7 +55,9 @@ const SOURCE_META: Record<string, { zh: string; accent: string }> = {
   wrong: { zh: '错题', accent: '#bf4a30' }, scan: { zh: '扫描', accent: '#b3781f' }, reading: { zh: '阅读', accent: '#6d4bc4' },
 }
 
-const FORM_ZH: Record<string, string> = { plural: '复数', past: '过去式', pastParticiple: '过去分词', presentParticiple: '现在分词', third: '三单', comparative: '比较级', superlative: '最高级', gerund: '动名词' }
+// P2 fix (cc-full-project-review-2026-07-05): DB 词形键用 'pp'/'ing'（非 pastParticiple/presentParticiple），
+// 缺失别名会让 FORM_ZH[k] ?? k 落到原始英文键（几乎每个动词都显示 "pp"/"ing"）。补齐别名。
+const FORM_ZH: Record<string, string> = { plural: '复数', past: '过去式', pp: '过去分词', pastParticiple: '过去分词', ing: '现在分词', presentParticiple: '现在分词', third: '三单', comparative: '比较级', superlative: '最高级', gerund: '动名词' }
 function ruleForms(word: string, pos: string): [string, string][] {
   const b = word, p = (pos || '').toLowerCase()
   if (/^v|vt|vi|v\./.test(p)) {
@@ -169,7 +171,9 @@ export function DictionaryVaultScreen() {
         if (cancelled) return
         const wmap = (j?.data?.words ?? {}) as Record<string, { word: string; zh: string }>
         const rel = (j?.data?.relations ?? []) as { a: string; b: string; type?: string }[]
-        const relKind = (t: string): RelNode['rel'] => /ant/i.test(t) ? 'ant' : /confus/i.test(t) ? 'confused' : 'syn'
+        // P2 fix (cc-full-project-review-2026-07-05): derivative 关系应归 'form'（金色·词形/派生），
+        // 否则落到默认 'syn' 被误着绿色近义，且与 LexiGraph 图例不一致。
+        const relKind = (t: string): RelNode['rel'] => /ant/i.test(t) ? 'ant' : /confus/i.test(t) ? 'confused' : /deriv|form|morph/i.test(t) ? 'form' : 'syn'
         const out: RelNode[] = []
         for (const r of rel) {
           const other = r.a === slug ? r.b : r.b === slug ? r.a : null
@@ -217,6 +221,9 @@ export function DictionaryVaultScreen() {
   const formEntries = word ? (Object.entries(word.inflections ?? {}).filter(([, v]) => v) as [string, string][]).map(([k, v]) => [FORM_ZH[k] ?? k, v] as [string, string]) : []
   const forms = formEntries.length ? formEntries : (word ? ruleForms(wordStr, pos) : [])
   const nuance = (word?.nuance ?? []).filter(n => n.member && n.nuanceZh)
+  // P2 fix (cc-full-project-review-2026-07-05): 真正的派生词族来自 /relations 的 derivative 关系（rel==='form'），
+  // 而非把同义词/搭配当作派生。用于「派生词族 · Family」卡。
+  const derivatives = rels.filter(r => r.rel === 'form' && r.id)
 
   // 出处（记忆面板热度 + 链接提及）—— 真实信号派生（直接计算，避免对可变 entry 做 memo）
   const backlinks = (() => {
@@ -360,9 +367,9 @@ export function DictionaryVaultScreen() {
             <div className="lv-muted" style={{ fontSize: 11.5, marginTop: 8 }}>保持率随时间衰减；复习一次曲线上提、间隔拉长。</div>
           </div>
 
-          {/* 派生词族 */}
-          {(collocations.length > 0 || synonyms.length > 0) && <div className="fcard glass">{FK('派生词族 · Family')}
-            {synonyms.length > 0 && <div className="lv-rels" style={{ marginBottom: collocations.length ? 10 : 0 }}>{synonyms.slice(0, 6).map(s => <button key={s} className="lv-wlink" onClick={() => jump(s)}>{I.link}{s}</button>)}</div>}
+          {/* 派生词族 —— 优先展示真实派生关系（derivative），再补搭配作语境。同义词归「同义辨析」卡。 */}
+          {(derivatives.length > 0 || collocations.length > 0) && <div className="fcard glass">{FK('派生词族 · Family')}
+            {derivatives.length > 0 && <div className="lv-rels" style={{ marginBottom: collocations.length ? 10 : 0 }}>{derivatives.slice(0, 6).map(d => <button key={d.id!} className="lv-wlink" onClick={() => d.id && setCur(d.id)}>{I.link}{d.label}{d.sub ? <small style={{ marginLeft: 4, color: 'var(--ink-muted)' }}>{d.sub}</small> : null}</button>)}</div>}
             {collocations.length > 0 && <div className="lv-collo">{collocations.map(c => <span key={c}>{hl(c, wordStr)}</span>)}</div>}
           </div>}
 
@@ -460,7 +467,7 @@ function WordPalette({ words, onPick, onClose }: { words: WordEntry[]; onPick: (
         <div className="lvault-pal-list">
           {list.length === 0 && <div className="lv-muted" style={{ padding: 24, textAlign: 'center' }}>没有匹配的词</div>}
           {list.map(w => { const st = STATE_META[w.state] ?? STATE_META.learning; return (
-            <button key={w.id} className="lvault-pal-item" onClick={() => onPick(w.word.toLowerCase())}>
+            <button key={w.id} className="lvault-pal-item" onClick={() => onPick(w.id)}>
               <span className="pal-w">{w.word}</span><span className="pal-zh">{w.zh}</span>
               <span className="lv-chip" style={{ color: st.light, borderColor: st.light }}><i style={{ background: st.light }} />{st.zh}</span>
             </button>
@@ -604,8 +611,10 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
             <div className="lib-group">
               <div className="lib-ghead"><b>{lib.mode === 'level' ? LEVEL_NAMES[lib.level] : `字母 ${lib.letter}`}</b><span className="gn">{libTotal} 词</span></div>
               {libWords.length === 0 && !libBusy && <div className="lv-muted" style={{ padding: '16px 8px' }}>暂无词条</div>}
-              {libWords.map(dw => { const zh = dw.definitions?.[0]?.definitionZh ?? ''; const lemma = dw.word.toLowerCase(); const has = inLib(dw); return (
-                <button key={dw.id} className={`lib-row${lemma === current ? ' on' : ''}`} onClick={() => onPick(lemma)}>
+              {/* P2 fix (cc-full-project-review-2026-07-05): 按 dictionary id 定位（多词条为连字符 id，如 carbon-dioxide），
+                  而非带空格的 lemma —— 否则多词条点击后落到「暂未收录」空态。 */}
+              {libWords.map(dw => { const zh = dw.definitions?.[0]?.definitionZh ?? ''; const has = inLib(dw); return (
+                <button key={dw.id} className={`lib-row${dw.id.toLowerCase() === current ? ' on' : ''}`} onClick={() => onPick(dw.id)}>
                   <span className="wdot" style={{ background: 'var(--ink-muted)', width: 7, height: 7, borderRadius: '50%', flexShrink: 0 }} />
                   <span className="lw">{dw.word}</span><span className="lz">{zh}</span>
                   {/* 按等级浏览：标签显示当前浏览档（大纲全量，避免把跨档基础词标成其 primary_level）；按字母浏览：显示词自身档 */}
@@ -624,7 +633,7 @@ function VaultRail({ words, wrongSet, dictTotal, current, due, onPick, onReview 
               {list.map(w => {
                 const col = (STATE_META[w.state] ?? STATE_META.learning).light, r = riskOf(w), due2 = isDue(w)
                 return (
-                  <button key={w.id} className={`lvr-wrow${w.word.toLowerCase() === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(w.word.toLowerCase())}>
+                  <button key={w.id} className={`lvr-wrow${w.word.toLowerCase() === current || w.id === current ? ' on' : ''}`} onClick={() => onPick(w.id)}>
                     <span className={`wdot${due2 ? ' due' : ''}`} style={{ background: col, color: col }} />
                     <span className="wmain"><span className="wl1"><span className="ww">{w.word}</span><span className="wphon">{w.phon || ''}</span></span><span className="wz">{w.zh}</span><span className="wmsbar"><i style={{ width: `${Math.round(masteryOf(w) * 100)}%`, background: col }} /></span></span>
                     <span className="wright"><span className="wrisk" style={{ color: riskColor(r) }}>{Math.round(r * 100)}%</span><span className={`wnext${due2 ? ' due' : ''}`}>{reviewLabel(w.nextReviewAt)}</span></span>

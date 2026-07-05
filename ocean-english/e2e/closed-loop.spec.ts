@@ -1,6 +1,10 @@
 /**
- * P5-B7 闭环 E2E — 最终整合包阶段 5 规格四条
+ * P5-B7 闭环 E2E — 最终整合包阶段 5 规格
  * 复用 learning-loop 的 persist v5 注入手法（localStorage['lexi-store-v1']）。
+ *
+ * 现状（2026-07-05 post-CC-review）：原「共错红边」用例(3)已随 wrong-edge 特性下线移除（owner de-scope）。
+ * 其余 3 条(1/2/4)仍为 test.fixme：v2→v3 iframe 改版 + 5 步 onboarding + 旧选择器全失效，需贴合当前 v3 UI 重写。
+ * owner 决定作为独立后续 track 执行，见 docs/superpowers/plans/2026-07-05-closed-loop-e2e-restoration-plan.md。
  */
 import { test, expect, type Page } from '@playwright/test'
 
@@ -163,42 +167,9 @@ test.describe('最终整合包 · 闭环 E2E', () => {
     // 评分前过期 → 红；评分后未到期且 interval<16 → teal（学习中）
   })
 
-  // FIXME(e2e-removed·product-gap): 记忆图谱「红边(data-wrong-edges)」唯一承载组件 components/lexigraph-v2/LexiGraphScreen.tsx
-  // 已成孤儿(全仓无路由 import)，/lexigraph 改渲染 iframe 原型(LexiGraphFrame)未暴露该特性。需产品侧在 iframe 原型/桥
-  // 重新实装共错红边并对外暴露计数(postMessage/data 属性)后才能验证——属功能恢复，非测试修复。
-  test.fixme('3. 测验双错 → 记忆图谱红边 → 辨析题答对 → 红边消退', async ({ page }) => {
-    test.setTimeout(120_000)
-    const now = Date.now()
-    const session = (ids: string[], correct: boolean, t: number) => ({
-      id: 's' + t, startedAt: t, completedAt: t, score: correct ? ids.length : 0, total: ids.length,
-      attempts: ids.map(w => ({ questionId: 'q' + w + t, wordId: w, word: w, userAnswer: 'x', correct, timestamp: t })),
-    })
-    await seed(page, {
-      words: [
-        entry({ id: 'accept', word: 'accept', state: 'weak' }),
-        entry({ id: 'access', word: 'access', state: 'weak' }),
-      ],
-      quizHistory: [session(['accept', 'access'], false, now - 200000), session(['accept', 'access'], false, now - 100000)],
-    })
-    // 红边出现（≥2 次共错）
-    await page.goto('/lexigraph')
-    await page.getByRole('button', { name: '记忆图谱' }).click()
-    await expect(page.locator('[data-wrong-edges="1"]')).toHaveCount(1, { timeout: 15_000 })
-
-    // 辨析题：Q1 目标 accept、Q2 目标 access（buildVsQuestions 顺序），全答对
-    await page.goto('/quiz?word=accept&vs=access')
-    await expect(page.getByText('辨析模式')).toBeVisible({ timeout: 20_000 })
-    for (const target of ['accept', 'access']) {
-      await page.locator(`main button:has-text("${target}")`).last().click()
-      await page.waitForTimeout(400)
-      await page.keyboard.press('Enter')
-      await page.waitForTimeout(500)
-    }
-    // 回记忆图谱：红边消退
-    await page.goto('/lexigraph')
-    await page.getByRole('button', { name: '记忆图谱' }).click()
-    await expect(page.locator('[data-wrong-edges="0"]')).toHaveCount(1, { timeout: 15_000 })
-  })
+  // REMOVED(2026-07-05, owner de-scope · CC review P2-12): 原「3. 测验双错→记忆图谱红边→答对→红边消退」已删除。
+  // 共错红边(data-wrong-edges)唯一承载组件 components/lexigraph-v2/LexiGraphScreen.tsx 为孤儿(全仓无路由 import)，
+  // 线上 /lexigraph 渲染 iframe 原型未暴露该特性。owner 决定下线该特性，故该组件与本用例一并移除。
 
   // FIXME(e2e-stale): /word→/dictionary 重定向 + /lexigraph、/lexiverse 改 iframe(v3) 外壳；旧文案(「在词图中展开」「在宇宙中查看 ✦」)
   // 与 .lv2-dock 选择器全失效，需 frameLocator + v3 选择器(#detail h1 / #module-grid .mg-item)重写；另「带词跳宇宙」有桥丢 ?word= 产品缺口。

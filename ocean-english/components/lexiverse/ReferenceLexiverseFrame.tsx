@@ -387,7 +387,7 @@ export function ReferenceLexiverseFrame() {
             color: '#FFD27A', fontSize: 13, fontWeight: 600, textAlign: 'center',
             backdropFilter: 'blur(8px)',
           }}
-        >「{focusMiss}」暂不在本星系词表 · 已带你到它所属星系</div>
+        >「{focusMiss}」暂不在本星系词表 · 已带你到最接近的星系视角</div>
       )}
 
       {loadPhase !== 'done' && (

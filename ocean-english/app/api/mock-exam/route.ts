@@ -8,7 +8,11 @@ import { createClient } from '@/lib/supabase/server'
 import { getPaperSpec, type MockSection } from '@/lib/mock-exam/paper-specs'
 import { isDeprecatedQuestionType } from '@/lib/question-bank/question-type-taxonomy'
 
-const SEL = 'id,type,input_mode,word_id,normalized_word,prompt,prompt_zh,choices,answer,answer_text,hint,audio_ref,explanation_zh,exam_tags,theme_tags'
+// P0 fix (cc-full-project-review-2026-07-05): NEVER select answer/answer_text/audio_ref(=听力原文)/explanation_zh —
+// this endpoint returns 题面 to any (unauthenticated) client, so shipping those fields leaked answerKey + 听力 transcript.
+// Runtime smoke follow-up: `hint` is JSONB and for 语法填空/完形 carries hint.blanks[].answer + .explain (per-blank
+// answer key + 中文解析) — so hint must be excluded too. Answer-bearing paper flow lives in /api/papers.
+const SEL = 'id,type,input_mode,word_id,normalized_word,prompt,prompt_zh,choices,exam_tags,theme_tags'
 type Row = Record<string, unknown> & { id: string; type: string; normalized_word: string | null }
 function mulberry32(seed: number) { return () => { let t = (seed += 0x6D2B79F5); t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296 } }
 function shuffle<T>(a: T[], r: () => number): T[] { const x = [...a]; for (let i = x.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1));[x[i], x[j]] = [x[j], x[i]] } return x }

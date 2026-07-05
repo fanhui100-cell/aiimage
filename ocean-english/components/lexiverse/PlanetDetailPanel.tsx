@@ -9,7 +9,7 @@
 // This keeps the panel pure-presentational and easy to test.
 //
 // ROUTES (parent must implement when handling actions — Stage C):
-//   open_word_detail   → router.push(`/word/${planet.normalizedWord}`)
+//   open_word_detail   → router.push(`/dictionary?word=${planet.normalizedWord}`)  // 主词详情（/word/[slug] 亦重定向至此）
 //   open_lexigraph     → router.push(`/lexigraph?word=${planet.normalizedWord}`)
 //   start_quiz         → router.push(`/quiz?mode=vocabulary-drill&word=${planet.normalizedWord}&returnTo=${returnTo}`)
 //   ask_ai             → router.push(`/chat?context=word&word=${planet.normalizedWord}&returnTo=${returnTo}`)

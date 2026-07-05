@@ -1,6 +1,6 @@
 'use client'
 /* WordPracticeActions — 词详情页聚焦 CTA 组（Phase 7 核心）
-   从一个词出发：练这个词 | 考试语境（同一词池两种镜头，绝不回退随机题）·词图关系·加入今日。
+   从一个词出发：练这个词；考试语境在 per-word v2 覆盖不足时只显示补充中，绝不把普通背词题冒充考试题。
    空池 → 练习 split 整体禁用 + 文案提示，词图/加入今日不受影响。视觉规格见 Claude Design 交付。 */
 import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 import Link from 'next/link'
@@ -114,13 +114,18 @@ export function WordPracticeActions({ word, returnTo, poolEmpty = false, inToday
               </span>
             </span>
           ) : (
-            <Link href={links.examContext} title="该词的语境 / 考试风格题（cloze · 同义 · 辨析），仍来自本词题库" style={{ ...splitItem, padding: '13px 17px', background: 'rgba(255,214,107,0.12)', color: '#FFD66B' }}>
+            <span
+              role="button"
+              aria-disabled
+              title="考试语境题正在补充；当前不会用普通背词题冒充考试题。"
+              style={{ ...splitItem, padding: '13px 17px', background: 'rgba(255,214,107,0.08)', color: '#BDA761', cursor: 'default' }}
+            >
               <IconExam />
               <span style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.12, alignItems: 'flex-start' }}>
-                <b style={{ fontSize: 13.5, fontWeight: 700 }}>考试语境</b>
-                <span style={{ fontSize: 10, opacity: 0.82, fontFamily: "'Space Mono', monospace" }}>EXAM CONTEXT</span>
+                <b style={{ fontSize: 13.5, fontWeight: 700 }}>考试语境补充中</b>
+                <span style={{ fontSize: 10, opacity: 0.82, fontFamily: "'Space Mono', monospace" }}>COMING WITH V2 ITEMS</span>
               </span>
-            </Link>
+            </span>
           )}
         </div>
 

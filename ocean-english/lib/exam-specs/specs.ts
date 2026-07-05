@@ -5,7 +5,8 @@
    - 客观题 task type 复用 taxonomy 的 EXAM_TASK_TYPES。
    - 写作/翻译/口语等生产性板块作为「目标结构」先确立位（v1 暂无题库，留待 v2/生成）。
    - 退役题型 antonym_choice / cet_cloze 一律不出现。
-   - TOEFL/SAT 标 status='draft'：官方结构明确，但产品题库仍在建设（coming soon）。
+   - status（2026-07-05 起）：仅 IELTS='coming_soon'（题库建设中）；TOEFL/SAT 均已='active'
+     （TOEFL mock v1 已开放、paperReady=true；SAT 覆盖 Digital R&W）。此前"draft"注释已过时，勿据此判断。
    - 分值口径：CET=710 制按官方占比折算；TOEFL=2026 新 1-6 量表（分项不计固定分，
      section.points 置 0）；SAT RW=200-800 模块自适应 IRT（分项不计固定分，points 置 0）。
      具体题量/分值以各考试官方说明为准，详见 sourceUrls。

@@ -29,8 +29,11 @@ export async function persistSkillStates(db: SupabaseClient, userId: string | nu
     if (page.length < 1000) break
   }
   rows.reverse() // newest-first → 时间升序，供顺序敏感的 EMA 正确累积
+  // P1 fix (cc-full-project-review-2026-07-05): 跳过 is_correct=null（未判分）的作答。
+  // 结构题/产出题以 null 记录；旧写法把 null 当 false（答错），使答对的多空/匹配把掌握度拉向 0、
+  // 令 diagnostics 把强项误判为弱项。未判分不应参与掌握度聚合。
   const attempts: SkillAttempt[] = rows
-    .filter((r) => r.exam_id)
+    .filter((r) => r.exam_id && r.is_correct !== null)
     .map((r) => ({ examId: r.exam_id as string, sectionId: r.section_id ?? undefined, taskType: r.task_type ?? undefined, subskills: r.subskills ?? undefined, isCorrect: r.is_correct === true }))
   const states = aggregateSkillStates(attempts)
 

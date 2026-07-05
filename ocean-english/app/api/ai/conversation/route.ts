@@ -7,9 +7,12 @@
    → { ok, reply, feedbackZh }
    ============================================================================ */
 import { NextResponse, type NextRequest } from 'next/server'
+import { checkRateLimit, getClientIP, rateLimitKey } from '@/lib/ai/ai-rate-limit'
 
 export const runtime = 'nodejs'
 
+// P2 fix (cc-full-project-review-2026-07-05): 匿名限流，防止无鉴权环节被循环打爆付费 DeepSeek（其它 AI/评分路由均有）。
+const LIMIT = { windowMs: 60_000, max: 20 }
 const LV: Record<number, string> = { 1: 'CEFR A2（初中）', 2: 'CEFR B1（高中）', 3: 'CEFR B1-B2（四级）', 4: 'CEFR B2（六级）', 5: 'CEFR B2-C1（考研）', 6: 'CEFR C1（托福）', 7: 'CEFR C1-C2（SAT）' }
 
 interface Msg { role: 'user' | 'assistant'; content: string }
@@ -27,6 +30,9 @@ function clean(messages: unknown): Msg[] {
 export async function POST(req: NextRequest) {
   const key = process.env.DEEPSEEK_API_KEY
   if (!key) return NextResponse.json({ ok: false, error: 'ai_not_configured' }, { status: 503 })
+  if (!(await checkRateLimit(rateLimitKey('ai-conversation', getClientIP(req)), LIMIT))) {
+    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 })
+  }
 
   let body: { scenario?: unknown; level?: unknown; messages?: unknown }
   try { body = await req.json() } catch { return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 }) }

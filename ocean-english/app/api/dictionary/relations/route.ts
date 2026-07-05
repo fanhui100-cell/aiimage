@@ -66,6 +66,22 @@ export async function GET(req: NextRequest) {
       }
     }
 
+    // P2 fix (cc-full-project-review-2026-07-05): word_relations 无 antonym 行；反义词存于 dictionary_antonyms(text)。
+    // 补入 center 的反义为 'antonym' 关系，使 /relations 语义完整（LexiGraph 反义扇区/记忆图谱据此渲染），
+    // 与词详情 /api/dictionary/word 的 word.antonyms 口径一致。additive、只读、失败不影响其余关系。
+    const { data: antRows } = await db
+      .from('dictionary_antonyms')
+      .select('antonym, order_index')
+      .eq('word_id', slug)
+      .order('order_index', { ascending: true })
+      .limit(12)
+    for (const a of (antRows ?? []) as { antonym: string | null }[]) {
+      const other = (a.antonym ?? '').toLowerCase().trim()
+      if (!other || other === slug) continue
+      if (relations.some(r => r.type === 'antonym' && (r.related_id === other || r.word_id === other))) continue
+      relations.push({ word_id: slug, related_id: other, type: 'antonym', note: null })
+    }
+
     // 每类截断（易混每词 ≤3 在生成端已保证；这里防御性整体截断）
     const byType = new Map<string, RelRow[]>()
     for (const r of relations) {
