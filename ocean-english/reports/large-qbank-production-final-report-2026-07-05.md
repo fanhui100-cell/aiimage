@@ -1,8 +1,10 @@
-# Large QBank Production — Final Report (2026-07-05)
+# Large QBank Production - Final Report (2026-07-05)
+
+> 编码说明：本文件为 UTF-8（无 BOM）。若查看器出现乱码，请以 UTF-8 打开（Windows 默认 ANSI/GBK 解码会把本文件的合法 UTF-8 字节显示为乱码——字节层面文件无 mojibake，可用 `file` / mojibake 特征扫描复核）。
 
 Controlling prompt: `docs/superpowers/plans/2026-07-05-full-remaining-work-and-large-qbank-production-prompt.md`.
 
-**总体结论：Part A（15 阶段产品/治理）全部完成并通过；Part B 全门 16/16 exit 0；Part C 大规模 draft 生产已启动并取得可验证进展（IELTS 215 draft + Build-a-Sentence 30 契约就绪），因子代理机群触发账号会话限流（重置 09:20 Asia/Shanghai）而未跑满第一阶段全部目标。所有已产内容 draft-only、原创、幂等入库、0 promote、全门绿。**
+**总体结论：Part A（15 阶段产品/治理）全部完成并通过；Part B 全门 16/16 exit 0；Part C 大规模 draft 生产为「已启动、部分完成」——非整体完成（已入库 IELTS 215 draft + Build-a-Sentence 30 契约就绪；IELTS 剩余约 55/100/50/80、TOEFL speaking 200、WU 450、coverage top-up 均未完成，详见 §1/§7），因子代理机群触发账号会话限流而中断。所有已产内容 draft-only、原创、幂等入库、0 promote、全门绿。**
 
 ## 1. 生成计数（本 run 新增，按 exam/task）
 
