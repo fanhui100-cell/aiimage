@@ -28,7 +28,7 @@
 |---|---|---|
 | 基础质量门禁 | `npm run lint` exit 0，无 warning；`npx tsc --noEmit --incremental false` exit 0，无类型错误 | 通过 |
 | 考试规格与题型分类 | `validate:exam-specs` 覆盖 8 个 spec，level 1-8 各一次，IELTS 为 `coming_soon`；`validate:question-types` 显示废弃题型为 antonym_choice/cet_cloze，errors 0 | 通过 |
-| TOEFL 边界 | `verify:toefl-current` DB-strict 通过：`build_a_sentence` active=0，`antonym_choice+cet_cloze`=0，speaking excluded；`validate:toefl-task-alignment` errors 0 warnings 0 | 通过 |
+| TOEFL 边界 | `build_a_sentence` active=0，`antonym_choice+cet_cloze`=0，speaking excluded；`validate:toefl-task-alignment` errors 0 warnings 0。注：`verify:toefl-current` 当前 **exit 1**——其 pilot 校验仍按旧 `scoring_not_ready`/legacy-answer 基线断言，与 P1-2 已决策接受的契约现状不符（**已解释**，跟进项：同步 pilot 期望基线）；全局边界断言本身全部通过 | 边界通过（校验器基线待同步） |
 | 试卷 answerKey 剥离 | 对 toefl/cet4/gaokao/sat 的 full/mini/section 调用 `toClientPaper` 做线上探测：客户端 payload **不携带** answerKey，服务端保留用于判分；`smoke:paper-e2e` 14/14 断言通过 | 通过 |
 | 听力原文剥离（v2/papers） | `smoke:active-serve` 通过：听力只下发签名 `audioUrl`，无 `textEn`/transcript；generator 对音频题省略 `textEn`，`toClientPaper` 再次剥离，形成双层保护 | 通过 |
 | IELTS 门控 | `smoke:papers`：IELTS mini/full 都以 `exam_coming_soon` 拒绝；不会从其他考试抽 IELTS 题 | 通过 |
@@ -77,16 +77,17 @@
 - 复现：登录用户访问 `/quiz?mode=task&examId=cet4&taskType=cloze_passage&level=3`，所有空都答对，每次 `POST /api/practice/attempts` 仍会得到 `is_correct=null`、`error_type='grammar'`；`persistSkillStates` 会按错误聚合，降低 mastery；diagnostics 会错误标弱。P2-4 的结果页问题是同一根因的 UI 表现。
 - 修复：把 renderer 计算出的整体 correctness 传入 `postAttempt`；真正不可判分的题型要显式标记 `is_correct`；`error-classifier` 遇到 `isCorrect === undefined` 时返回 null；`skill-state-writer` 对 `is_correct` 为 null 的行应跳过，而不是当错题处理。
 
-**P1-2 · `build_a_sentence` 状态漂移：报告说 blocked / 0 DB writes，但 DB 已清 flag 并应用契约**：`category: report-consistency`，高置信（对抗验证未完成，见“未验证”）
+**P1-2 · `build_a_sentence` 历史状态漂移（已决策并对齐审计轨迹）**：`category: report-consistency`，运行时已确认
 
-- 证据：
-  - `reports/toefl-build-sentence-scoring-2026-07-05.md:35-38` 声称“scoring-ready 行：0 / 保持 blocked 10/10 (scoring_not_ready=true) / dry-run eligible 0 · rejected 10 / DB 写入 0”；`reports/final-qbank-learning-loop-readiness-2026-07-05.md:38,64` 也重复“eligible 0 / 10/10 拒”。
-  - service-role SELECT `question_sets` 中 `task_type=build_a_sentence`：总数 10，全部 `draft`，但所有 10 条的 `scoring_not_ready` 都已清除（剩余 0），`qa_flags.scoringContract=accepted_sequence_exact` 已存在，说明 flag 已清并且契约已应用。
-  - 当前工作区 `reports/promote-qsets-v2-report.json`（task=build_a_sentence）显示 candidates 10、**eligible 10**、rejected []，与报告中的“eligible 0 / rejected 10”相反。
-  - 未跟踪产物证明存在未记录写入：`data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json`（git `??`）和 `reports/build-sentence-accepted-sequences-apply-report.json`（`apply:true, entries 10, dupSkipped 10`，说明早先 apply 已经修改了 10 条）。
-- 影响范围：**可控**。这些 set 仍为 `draft`，`paper-generator` 按 task type 排除 `build_a_sentence`，server activation RPC 仍然把关。当前缺陷不是线上泄露，而是**审计轨迹实质错误**。
-- 复现：`git diff reports/promote-qsets-v2-report.json` 可见 task null 到 build_a_sentence、eligible 1 到 10；再执行 service-role SELECT `id,status,qa_flags FROM question_sets WHERE task_type='build_a_sentence'`，会看到 10 条 draft，`scoring_not_ready` 缺失，`scoringContract=accepted_sequence_exact`。
-- 修复：二选一。要么回滚 DB mutation，使其与已提交“blocked”说法一致；要么更新两份 07-05 报告，说明 accepted-sequences 已应用、`scoring_not_ready` 已清除、确实发生过 DB 写入、本地 promote 当前 eligible 10，唯一剩余激活屏障是 server RPC 与 draft 状态。同时提交未跟踪 data 和 apply-report，使 mutation 可追踪。**在确认 RPC 仍会拒绝前，不要对 build_a_sentence 执行 `promote --apply`。**
+- 审查时点发现（历史证据，保留供追溯）：
+  - 两份 07-05 报告当时声称“scoring-ready 行：0 / 保持 blocked 10/10 (scoring_not_ready=true) / dry-run eligible 0 · rejected 10 / DB 写入 0”。
+  - service-role SELECT `question_sets` 中 `task_type=build_a_sentence`：总数 10，全部 `draft`，但所有 10 条的 `scoring_not_ready` 都已清除，`qa_flags.scoringContract=accepted_sequence_exact` 已存在——flag 已清、契约已应用，与报告声称相反（promote dry-run 实际 eligible 10）。
+- 影响范围：**可控**。这些 set 全程保持 `draft`，`paper-generator` 按 task type 排除 `build_a_sentence`，server activation RPC 仍然把关。缺陷从来不是线上泄露，而是审计轨迹与 DB 不一致。
+- **处置（owner 决策，2026-07-05）：接受现状，不回滚 DB，不 promote，不激活。**审计轨迹已对齐：
+  - 契约数据与 apply 报告（`data/generated-question-sets/toefl-build-sentence-accepted-sequences-2026-07-05.json`、`reports/build-sentence-accepted-sequences-apply-report.json`）及 `reports/promote-qsets-v2-report.json`（eligible 10 现状）**均已入库**（commit `35cd668`），不再有未记录写入。
+  - 两份 07-05 报告顶部已加“状态订正 + 已决策”横幅，正文历史声称保留但已被横幅覆盖说明。
+  - 运行时复核：`npm run verify:toefl-current` exit 1——pilot 校验仍按旧 `scoring_not_ready`/legacy-answer 基线断言，属**已解释状态**；唯一跟进项是同步该校验器的 pilot 期望基线使其恢复 exit 0。全局边界（active=0、组卷排除）持续通过。
+  - **仍然禁止对 `build_a_sentence` 执行 `promote --apply`**，直至 owner 明确批准激活且 server RPC 确认行为。
 
 ### P2
 
@@ -209,7 +210,7 @@
 | `npm run validate:question-types` | 0 | 通过：废弃 antonym_choice/cet_cloze，errors 0 |
 | `npm run validate:rubrics` | 0 | warning：IELTS writing/speaking rubric 缺口（coming_soon，controlled-reject） |
 | `npm run validate:toefl-task-alignment` | 0 | 通过：errors 0 warnings 0 |
-| `npm run verify:toefl-current` | 0 | 通过：DB-strict PASS；build_a_sentence active 0 |
+| `npm run verify:toefl-current` | 1 | 已解释：全局断言通过（build_a_sentence active 0），exit 1 来自 pilot 校验仍按旧 scoring_not_ready/legacy-answer 基线；P1-2 已决策接受契约现状，跟进项为同步 pilot 期望基线（审查时点 gate 记录为 exit 0，漂移在 post-review 复核中显现） |
 | `npm run validate:qbank-v2` | 0 | 通过：2,854 active sets / 4,684 items，errors 0 |
 | `npm run qa:qsets-v2` | 0 | 通过：32 templates，errors 0 |
 | `npm run validate:coverage-audit` | 0 | 通过：fixtures 与 report cross-check 全部通过 |
@@ -296,7 +297,7 @@ Runtime smoke on 2026-07-05 (dev server `127.0.0.1:3107`, non-3000 port):
 
 1. **[P0，上线阻塞] 关闭 `/api/mock-exam` 泄露。**删除未引用路由，或剥离 `answer/answer_text/audio_ref/explanation_zh`，只返回 signed/TTS handle。之后重新 grep `app/`，确认没有客户端依赖它。
 2. **[P1] 修复 structured/free-text scoring 链路。**把 renderer 计算出的 correctness 传入 `postAttempt`；让 `error-classifier` 在 `isCorrect` 为 undefined 时返回 null；让 `skill-state-writer` 跳过 null 行。这个改动会同时修复 mastery、error typing、结果百分比和错题本虚假提示（P1-1 + P2-4）。
-3. **[P1] 对齐 `build_a_sentence` 审计轨迹。**更新两份 07-05 报告，反映真实 DB mutation（flag 已清、契约已应用、promote 当前 eligible 10），并提交未跟踪 data + apply-report；或回滚 mutation。在确认 server RPC 仍拒绝前，不要执行 `promote --apply`。
+3. **[P1-2 收尾项] 同步 `verify:toefl-current` 的 pilot 期望基线。**漂移已决策（接受现状）且审计轨迹已对齐入库（`35cd668`），当前唯一残留是该校验器的 pilot 断言仍按旧 `scoring_not_ready`/legacy-answer 基线而 exit 1；把 pilot 期望更新为"契约对象 + flag 已清（保持 draft）"后即恢复 exit 0。激活仍被禁止：不 `promote --apply`，直至 owner 批准且 server RPC 确认。
 4. **[P2，状态诚实] 停止宣传完整 v2 word loop。**修复“考试语境”死 lens（P2-7），纠正 word-mode v1 fallback 的披露（P2-6），修复多词条目跳转（P2-8）、词形/派生标签和反义 sector 缺口（P2-1/P2-2/P2-3）。
 5. **[P2，覆盖度] 决定听力策略。**要么把 active listening audio 扩展到 CET6 之外，要么在 mock UI 中披露各考试听力可用性（P2-11）；同时为核心 vocab drills 回填 v2 pool，或披露 v1-only，使 diagnostics 能看到这些 attempts（P2-5）。
 6. **[P2，测试可信度] 恢复 closed-loop e2e。**基于当前 UI 增加 app-identity health check，重写并启用闭环测试（P2-10 + P3 Playwright hardening），并重新接入或下线 wrong-edge 可视化（P2-12）。
