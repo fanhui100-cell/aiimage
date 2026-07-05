@@ -14,10 +14,13 @@
 | `data/generated-question-sets/ielts-c1-reading-b3/*.json`（4 文件 20 篇） | **已验证待导入批次草稿 → 提交归档** | wave-3 代理死亡前落盘（05:36-38）；source QA dry-run 20/20 parsed_ok reject 0；**未导入 DB**（收口不动 DB），导入留待续跑批次纪律执行 |
 | `data/generated-question-sets/ielts-c1-speaking-b3/ielts-speaking-b3.productive.json`（20 套） | **已验证待导入批次草稿 → 提交归档** | 同上；productive dry-run 20 tasks 通过 |
 | `reports/authored-import-*-dryrun-report.json`（5 个） | **批次证据 → 提交** | dry-run 报告，与已提交的 apply 报告配对 |
-| `reports/authored-productive-ielts-c1-speaking-b3-dryrun-report.json` | **批次证据 → 提交** | 本收口 source QA 产物 |
-| `reports/final-qbank-learning-loop-readiness-2026-07-05.md`、`reports/toefl-build-sentence-scoring-2026-07-05.md`、`reports/qbank-production-final-summary-2026-07-04.md`、`reports/self-review-audit-2026-07-04.md` | **复审状态订正/SUPERSEDED 标注 → 提交保留** | 复审会话添加的审计轨迹，内容准确（一处澄清见 §四） |
+| `reports/authored-productive-ielts-c1-speaking-b3-dryrun-report.json` | **批次证据 → 提交** | 本收口 source QA 产物（口径订正：dry-run 报告 file 层已改用 `dryRunTasks`，不再出现 `wrote:20`；totals 保持 `wrote:0`——见收口后续 commit） |
 | `reports/large-qbank-production-final-report-2026-07-05.md` | **修订 → 提交** | 总结论改为「已启动、部分完成——非整体完成」并列剩余量；标题排版字符改 ASCII；加编码说明 |
 | `reports/worktree-closeout-2026-07-05.md` | 本报告 | |
+
+**订正（归属更正）**：`51c5e26` 实际只包含上表 13 个文件（b3 数据 5 + dryrun 报告 6 + final-report 修订 + 本报告）。
+下列 4 个 md 的复审状态订正/SUPERSEDED 标注 **不在 `51c5e26` 内**——它们在本收口 `git add` 之前已由**外部并行会话的 commit `e911138`**（"fix: resolve CC review blockers and document remaining production tracks"）提交，故本收口 add 时无增量：
+`reports/final-qbank-learning-loop-readiness-2026-07-05.md`、`reports/toefl-build-sentence-scoring-2026-07-05.md`、`reports/qbank-production-final-summary-2026-07-04.md`、`reports/self-review-audit-2026-07-04.md`（内容准确、予以保留；一处事实澄清见 §四）。
 
 ### B. 已删除
 

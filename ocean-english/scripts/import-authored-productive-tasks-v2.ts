@@ -145,7 +145,9 @@ async function main() {
       fileWrote++; wrote++
     }
     console.log(`${APPLY ? '[APPLY]' : '[DRY-RUN]'} ${pf.examId}/${pf.taskType} lv${level} (${inputMode}): tasks ${pf.tasks.length}` + (APPLY ? ` · wrote ${fileWrote} · dup ${fileDup}` : ''))
-    report.push({ file: path, examId: pf.examId, taskType: pf.taskType, level, skill: pf.skill, tasks: pf.tasks.length, wrote: fileWrote, dup: fileDup })
+    // 报告字段口径：dry-run 不写库，file 层不得出现 wrote>0（误导）——用 dryRunTasks 表示「本次 dry-run 通过校验的任务数」；
+    // 仅 apply 时才写 wrote/dup。totals 的 wrote 本就只在 apply 路径累加，保持不变。
+    report.push({ file: path, examId: pf.examId, taskType: pf.taskType, level, skill: pf.skill, tasks: pf.tasks.length, ...(APPLY ? { wrote: fileWrote, dup: fileDup } : { dryRunTasks: fileWrote }) })
   }
 
   const report_path = `reports/authored-productive-${STAGE ?? 'adhoc'}-${APPLY ? 'apply' : 'dryrun'}-report.json`
