@@ -1,0 +1,118 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "speaking",
+  "taskType": "interview_speaking",
+  "tasks": [
+    {
+      "prompt": "IELTS Speaking practice set — topic: Games with Friends.\nPart 1 (interview): Do you often play games with your friends? / What kinds of games did you play when you were younger? / Do you prefer playing games indoors or outdoors?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a game you enjoy playing with your friends. You should say: what the game is, who you usually play it with, how the game is played, and explain why you enjoy playing it with friends rather than alone.\nPart 3 (discussion): Why do you think games are an important part of friendships? / Do adults and children benefit from games in different ways? / Is competition in games generally a positive or negative thing for society?",
+      "promptZh": "雅思口语练习组——和朋友玩的游戏",
+      "referencePoints": [
+        "Part 2: name a specific game (card game, board game, video game, or outdoor game) and set the scene with when and where you play it",
+        "Describe the rules briefly and the social atmosphere — laughter, teamwork, friendly rivalry",
+        "Explain the 'why' clearly: bonding, shared memories, relieving stress together",
+        "Part 3: discuss cooperation vs competition, social skills from games, and cultural attitudes to winning"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: An Older Person You Respect.\nPart 1 (interview): Do you spend much time with older people in your family or community? / What can younger people learn from older generations? / Do you enjoy listening to older people's stories about the past?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an older person you know and respect. You should say: who this person is, how you know them, what qualities they have, and explain why you respect them so much.\nPart 3 (discussion): How has the role of elderly people in society changed over the past few decades? / Should governments do more to support older citizens, or is that the family's responsibility? / Do you think modern society values experience less than it used to?",
+      "promptZh": "雅思口语练习组——一位你尊敬的长者",
+      "referencePoints": [
+        "Part 2: choose a concrete person (grandparent, elderly neighbour, retired teacher) and give a brief portrait",
+        "Mention two or three admirable qualities with a short example for each — patience, resilience, generosity",
+        "End with a personal reflection on what their example has taught you",
+        "Part 3: compare traditional extended families with modern living arrangements; balance state support against family duty"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Website That Helps You Learn.\nPart 1 (interview): How often do you use the internet for studying? / Do you prefer learning from websites or from books? / What was the last thing you looked up online?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a website that helps you learn something. You should say: what the website is, how you found out about it, how often you use it, and explain how it has helped your learning.\nPart 3 (discussion): Do you think online learning will ever completely replace classroom teaching? / How can people judge whether information on a website is reliable? / Should high-quality educational websites be free for everyone?",
+      "promptZh": "雅思口语练习组——一个帮助你学习的网站",
+      "referencePoints": [
+        "Part 2: pick one specific site (a language platform, video tutorials, an encyclopedia-style site) and describe its main features",
+        "Give a concrete example of something you actually learned from it",
+        "Explain the benefit: convenience, self-paced study, free access, engaging format",
+        "Part 3: weigh online flexibility against classroom interaction; discuss misinformation and equal access to education"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Being Early or Late.\nPart 1 (interview): Are you usually early, on time, or late for appointments? / How do you feel when other people keep you waiting? / Do you use anything to help you manage your time?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a time when you arrived very early or very late for something. You should say: what the occasion was, why you were early or late, what happened as a result, and explain how you felt about the experience.\nPart 3 (discussion): Why do attitudes towards punctuality differ between cultures? / Has modern technology made people more or less punctual? / Is being constantly busy a sign of success or a problem in today's society?",
+      "promptZh": "雅思口语练习组——早到或迟到",
+      "referencePoints": [
+        "Part 2: tell a clear story with a timeline — the event, the reason (traffic, misreading the time, over-caution), the consequence",
+        "Include how others reacted and what you did while waiting or after arriving late",
+        "Reflect on whether the experience changed your habits",
+        "Part 3: contrast strict-punctuality cultures with more flexible ones; discuss phones enabling last-minute changes and excuses"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Season You Enjoy.\nPart 1 (interview): How many distinct seasons are there where you live? / Does your daily routine change with the seasons? / What clothes do you like wearing in cold weather?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a season of the year that you particularly enjoy. You should say: which season it is, what the weather is like then, what activities you do during this season, and explain why you enjoy it more than other seasons.\nPart 3 (discussion): How do seasons affect people's moods and behaviour? / In what ways do seasonal changes influence a country's economy? / Do you think climate change is altering how people experience the seasons?",
+      "promptZh": "雅思口语练习组——你喜欢的季节",
+      "referencePoints": [
+        "Part 2: use sensory description — temperature, light, colours, smells typical of the season",
+        "Link the season to specific activities: festivals, food, sports, family gatherings",
+        "Make a comparison with a season you like less to justify your preference",
+        "Part 3: mention seasonal mood changes, tourism and agriculture cycles, and shifting weather patterns"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Good Advice.\nPart 1 (interview): Who do you usually ask for advice when you have a problem? / Do you find it easy to give advice to other people? / Have you ever ignored advice and regretted it?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a piece of good advice someone gave you. You should say: what the advice was, who gave it to you, why they gave you this advice, and explain how following it affected your life.\nPart 3 (discussion): Why do some people find it difficult to accept advice? / Is advice from family members more valuable than advice from friends or professionals? / Do you think people today rely too much on the internet for advice?",
+      "promptZh": "雅思口语练习组——你收到的一条好建议",
+      "referencePoints": [
+        "Part 2: quote or paraphrase the advice in one memorable sentence, then give the backstory",
+        "Describe the situation you were in and why the advice was exactly what you needed",
+        "Show the outcome with a before-and-after contrast",
+        "Part 3: discuss pride and independence as barriers to accepting advice; compare emotional support from family with expert professional guidance"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: Borrowing Books.\nPart 1 (interview): Do you prefer borrowing books or buying your own copies? / Is there a library near where you live? / Have you ever lent a book to someone and never got it back?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a book you borrowed from a library or a friend. You should say: what the book was, who or where you borrowed it from, why you wanted to read it, and explain whether you would recommend it to others.\nPart 3 (discussion): Do public libraries still matter in the digital age? / Why are some people reluctant to lend their belongings to others? / How might the sharing of resources, rather than owning them, change society in the future?",
+      "promptZh": "雅思口语练习组——借书",
+      "referencePoints": [
+        "Part 2: identify the book's genre and give a spoiler-light summary of what it is about",
+        "Explain the borrowing context — a friend's recommendation, a library display, needing it for study",
+        "Give a clear verdict with reasons: writing style, usefulness, emotional impact",
+        "Part 3: cover libraries as community spaces, trust and ownership, and the wider sharing economy"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: An Interesting Building.\nPart 1 (interview): What kinds of buildings are common in your hometown? / Do you prefer modern buildings or older, traditional ones? / Would you like to live in a very tall building?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe an interesting building you have seen or visited. You should say: where the building is, what it looks like, what it is used for, and explain why you find it interesting.\nPart 3 (discussion): Should cities spend money preserving old buildings, or focus on new construction? / How does architecture affect the way people feel in a city? / Do you think buildings in the future will look very different from today's?",
+      "promptZh": "雅思口语练习组——一座有趣的建筑",
+      "referencePoints": [
+        "Part 2: describe the exterior and interior with concrete details — materials, shape, size, unusual features",
+        "Mention its function and any history or story attached to it",
+        "Explain the personal angle: when you first saw it and the impression it made",
+        "Part 3: weigh heritage preservation costs against housing needs; discuss green buildings and smart architecture"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Small Daily Habit.\nPart 1 (interview): What is the first thing you usually do in the morning? / Do you think you have more good habits or bad habits? / Is it easy for you to start doing something new every day?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a small habit that improves your day. You should say: what the habit is, when and how you started it, how often you do it, and explain how it makes your day better.\nPart 3 (discussion): Why do people find it hard to keep good habits? / Do you think schools should teach children how to build healthy routines? / How much of a person's success depends on daily habits rather than talent?",
+      "promptZh": "雅思口语练习组——一个改善你一天的小习惯",
+      "referencePoints": [
+        "Part 2: choose one small, concrete habit — a morning walk, journalling, tidying your desk, a short stretch",
+        "Tell the origin story: what prompted you to start and how you made it stick",
+        "Describe the tangible effect on mood, energy, or productivity",
+        "Part 3: discuss willpower vs environment design, habit education for children, and consistency versus natural ability"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    },
+    {
+      "prompt": "IELTS Speaking practice set — topic: A Journey That Didn't Go as Planned.\nPart 1 (interview): How do you usually plan a trip before you leave? / What do you take with you on a long journey? / Do you get stressed when travel arrangements change suddenly?\nPart 2 (long turn, 1 min prep, speak up to 2 min): Describe a journey that did not go as you had planned. You should say: where you were going, what went wrong during the journey, what you did to deal with the situation, and explain what you learned from the experience.\nPart 3 (discussion): Why do some people enjoy unpredictable travel while others avoid it? / Has technology made travel problems easier or harder to deal with? / Do you think difficult experiences teach people more than comfortable ones?",
+      "promptZh": "雅思口语练习组——一次不按计划进行的旅程",
+      "referencePoints": [
+        "Part 2: structure as a narrative — the plan, the disruption (missed connection, breakdown, sudden weather), the response",
+        "Include your feelings at each stage: frustration, worry, eventual relief or amusement",
+        "Finish with a genuine takeaway: flexibility, patience, better preparation",
+        "Part 3: contrast adventurous and cautious traveller personalities; discuss real-time travel apps and resilience built through adversity"
+      ],
+      "wordLimit": "speak up to 2 minutes in Part 2"
+    }
+  ]
+}

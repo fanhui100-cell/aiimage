@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "A  When a ship goes down, it carries with it a precisely dated cross-section of the world that launched it. A settlement on land accumulates, discards and rebuilds material over many centuries, so that its remains form a tangled sequence which excavators must painstakingly unpick. A wreck, by contrast, is sealed in a single catastrophic instant: the crockery in the galley, the coins in the captain's chest and the storage jars in the hold all belong to the same final voyage. For this reason maritime archaeologists often describe shipwrecks as time capsules, and over the past half-century they have become some of the most informative sites in the whole discipline.\n\nB  For most of recorded history, however, sunken ships attracted salvors rather than scholars. Divers were hired to bring up cannon, bullion and anything else with resale value, and the hull around these prizes was smashed apart or simply ignored. The decisive change came in the middle of the twentieth century, when the invention of lightweight self-contained breathing equipment allowed researchers themselves to work underwater instead of directing operations from the surface and depending on commercial divers. Pioneering excavations in the Mediterranean soon demonstrated that the exacting methods of land archaeology, including measured grids, systematic recording and the careful removal of material layer by layer, could be transferred successfully to the seabed. What had long been little more than treasure hunting began to turn into a science.\n\nC  Modern practitioners command tools their predecessors could scarcely have imagined. Sonar can sweep enormous tracts of seabed and flag unusual shapes for closer inspection. Remotely operated vehicles carry cameras and mechanical arms to depths no human diver could survive, opening the deep ocean, long assumed to be archaeologically empty, to systematic survey. Perhaps the most transformative technique is photogrammetry, in which thousands of overlapping photographs are stitched together by software into a three-dimensional model of a site that is accurate to the millimetre. Such models allow a wreck to be measured, analysed and even virtually revisited years after the fieldwork itself has ended, and they can be shared with researchers who will never put on a diving suit.\n\nD  The sea can be a surprisingly good custodian. In deep, cold or oxygen-poor water, the organisms that normally devour wood cannot survive, and decay is effectively arrested. The brackish Baltic, for example, preserves timber hulls so completely that vessels several centuries old still stand upright on the bottom with their masts in place. Yet this protection is strictly conditional. The moment a waterlogged plank or corroded iron object is lifted into the air it begins to deteriorate rapidly, and stabilising it can demand years of chemical treatment and considerable expense. Raising an entire ship, some conservators therefore argue, can be an act of destruction as much as an act of rescue, and museums have learned this lesson at great cost.\n\nE  What justifies all this effort is the sheer breadth of what a wreck can reveal. A cargo of wine jars, copper ingots and glass beads maps trading connections that written sources barely mention. Personal possessions, such as a sailor's comb, a set of dice or a shoe mended twice, illuminate ordinary lives that almost never enter official documents. Even the hull itself is a kind of text: its joints and timbers can show where a vessel was built, how shipwrights solved engineering problems, and how those solutions travelled from one culture to another. Some economic historians now count securely dated wrecks in aggregate and treat the totals as an index of the rise and fall of ancient trade across whole seas.\n\nF  This scientific promise, however, coexists with a persistent threat. The same technology that guides archaeologists to wrecks also guides commercial salvage firms and souvenir-hunting divers, and a plundered site loses most of its evidential value even when the objects themselves survive intact. International agreements now encourage states to protect underwater heritage and, wherever possible, to leave it undisturbed on the seabed for future generations equipped with better methods and better questions. Critics respond that leaving sites alone in practice abandons them to looters, to dragging fishing gear and to shipworm spreading into newly warming waters. The argument over who owns the drowned past, and who can be trusted with it, remains very far from settled.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Raising sunken ships is almost always more destructive than leaving them on the seabed.",
+            "Modern technology has made traditional diving skills unnecessary in marine research.",
+            "Shipwrecks are uniquely valuable archaeological sites whose study has matured into a science that still faces conservation and ethical challenges.",
+            "Commercial salvage companies deserve most of the credit for discovering the world's important wrecks."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to Paragraph B, what development in the mid-twentieth century changed the study of shipwrecks?",
+          "options": [
+            "Portable breathing equipment enabled researchers to carry out underwater work themselves.",
+            "Governments began paying commercial divers to record wrecks scientifically.",
+            "New ships were built specifically for lifting entire hulls to the surface.",
+            "Museums started to refuse objects recovered without photographs."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to the passage, why are wooden ships in the Baltic Sea so well preserved?",
+          "options": [
+            "Its waters are too shallow for salvage vessels to operate safely.",
+            "Strict laws have prevented divers from visiting wrecks there.",
+            "Cold currents bury wrecks quickly under protective sand.",
+            "Conditions in its water prevent the survival of organisms that consume wood."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph F about the policy of leaving wrecks undisturbed on the seabed?",
+          "options": [
+            "It has been adopted by every nation with a coastline.",
+            "It carries risks of its own, since unexcavated sites remain exposed to looting and physical damage.",
+            "It was originally proposed by commercial salvage companies.",
+            "It guarantees that a wreck will survive until better methods are developed."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In Paragraph D, the word 'arrested' is closest in meaning to",
+          "options": [
+            "punished",
+            "accelerated",
+            "halted",
+            "concealed"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why does the writer mention a sailor's comb, a set of dice and a mended shoe in Paragraph E?",
+          "options": [
+            "To illustrate how wrecks can reveal everyday lives that written records ignore.",
+            "To show that most objects recovered from wrecks have little financial worth.",
+            "To argue that personal items should be returned to descendants of the crew.",
+            "To prove that sailors on ancient ships were poorly paid."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本文介绍沉船考古学:沉船如同密封的时间胶囊,记录单一时刻的历史信息。文章回顾该学科从打捞寻宝走向科学研究的历程,并讨论保存、打捞与掠夺之间尚未解决的伦理争议。"
+    },
+    {
+      "passage": "A  A century of urban growth has wrapped cities in materials that shed water. Roofs, roads, pavements and car parks are almost completely impervious, so rain that once soaked slowly into soil now races across hard surfaces, collecting oil, metals and litter as it goes, and arrives in streams and rivers in sudden, violent pulses. The consequences are familiar to city dwellers everywhere: flooded underpasses after a summer storm, eroded stream banks, and waterways too polluted for swimming. Hydrologists estimate that in a forest, roughly half of the rainfall filters into the ground, whereas in a dense city centre the great majority runs straight off. Managing this runoff, known as stormwater, has quietly become one of the defining engineering problems of modern urban life.\n\nB  The traditional response was to get rid of the water as fast as possible. Engineers built ever larger networks of gutters, drains and buried pipes whose single purpose was rapid removal, an approach now often called grey infrastructure. In many older cities these pipes also carry household sewage, and this combination has an unfortunate weakness: when a heavy storm delivers more water than the treatment works can process, the system is deliberately allowed to overflow, discharging a mixture of untreated sewage and runoff directly into rivers or the sea. Enlarging the pipes is possible but extremely expensive, and it merely delivers the flood more efficiently to whoever lives downstream. By the late twentieth century it was clear that simply building bigger drains was a race that could not be won.\n\nC  A different philosophy has since gained ground. Instead of removing rain quickly, green infrastructure tries to mimic the way a natural landscape handles water, catching it where it falls and releasing it slowly. Rain gardens are shallow planted basins that swallow the runoff from nearby roofs; bioswales are vegetated channels that slow and filter water along roadsides; permeable paving allows puddles to drain through the surface into gravel beds below; green roofs soak up rain before it ever reaches a gutter. Each installation is small, but together they reduce the volume and the speed of runoff while trapping many pollutants in soil and root systems. The side benefits are considerable: streets are cooler in summer, insects and birds find habitat, and residents gain greenery in neighbourhoods that often lack it.\n\nD  Some governments have scaled these ideas up to entire districts. In so-called sponge city programmes, planners set targets for the share of rainfall a neighbourhood must absorb on site, and design accordingly: wetlands are restored on the urban fringe, and low-lying parks are built to flood harmlessly, serving as playing fields and picnic grounds in dry weather and as storage basins during a downpour. A few cities have even excavated streams that earlier generations buried in culverts, returning them to the surface where they can carry floodwater and support wildlife. The ambition is a city that behaves, hydrologically, a little more like the landscape it replaced.\n\nE  None of this is a simple cure. Green systems must be maintained: a permeable pavement clogged with fine sediment sheds water just like ordinary asphalt, and a neglected rain garden becomes a weedy ditch. Responsibility is scattered across thousands of small installations owned by different households and agencies, which is administratively harder than managing one large pipe. Retrofitting dense districts is costly, and researchers have documented a further complication: ambitious greening can raise property values so sharply that the poorer residents it was meant to protect are priced out of the neighbourhood. Engineers also caution that in a truly extreme storm, soil and vegetation saturate quickly, so green measures must always be backed by conventional drains and by honest planning about where floodwater will go.\n\nF  That need is growing. A warming atmosphere holds more moisture, and cities on every continent are recording downpours that overwhelm systems designed for the gentler storms of the past. The emerging consensus is therefore not a choice between grey and green but a deliberate combination of the two, alongside a change of attitude: stormwater is increasingly treated not only as a hazard to be expelled but as a resource to be kept, harvested for irrigation and allowed to refill the aquifers beneath the city. It is a modest kind of revolution, conducted through pavements and flowerbeds rather than grand monuments, but its success will help decide how liveable the crowded cities of this century turn out to be.",
+      "questions": [
+        {
+          "prompt": "Which statement best summarises the main idea of the passage?",
+          "options": [
+            "Climate change has made urban flooding impossible to prevent.",
+            "Cities are moving from simply piping stormwater away towards absorbing it where it falls, though both approaches remain necessary.",
+            "Green roofs are the most cost-effective way to manage urban rainfall.",
+            "Older cities should replace their combined sewers before attempting any other reforms."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to Paragraph B, what happens in a combined sewer system during a very heavy storm?",
+          "options": [
+            "The treatment works shuts down until the storm has passed.",
+            "Stormwater is automatically diverted into underground storage caverns.",
+            "Household sewage is redirected into rain gardens.",
+            "A mixture of untreated sewage and runoff is released into natural waterways."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to Paragraph D, low-lying parks in sponge city programmes are designed to",
+          "options": [
+            "serve as recreation space in dry weather and hold floodwater during storms.",
+            "remain permanently underwater as artificial wetlands.",
+            "replace conventional drains entirely within a district.",
+            "generate hydroelectric power from captured runoff."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph E about a city that relied on green infrastructure alone?",
+          "options": [
+            "Its property values would be certain to fall.",
+            "It would no longer need to maintain its drainage installations.",
+            "It could still suffer serious flooding in an extreme storm once soils became saturated.",
+            "Its residents would refuse to accept new parks and gardens."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In Paragraph C, the word 'mimic' is closest in meaning to",
+          "options": [
+            "mock",
+            "imitate",
+            "replace",
+            "measure"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude towards green infrastructure?",
+          "options": [
+            "Dismissive, because its benefits have never been demonstrated.",
+            "Neutral, refusing to weigh its advantages against its drawbacks.",
+            "Uncritically enthusiastic, presenting it as a complete solution.",
+            "Supportive but qualified, acknowledging both its value and its practical limits."
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本文讨论城市雨洪管理:传统灰色基础设施靠管道快速排水,存在合流制溢流等弊端;绿色基础设施与海绵城市则就地吸纳雨水。作者支持绿色方案但指出维护、成本与公平问题,主张灰绿结合。"
+    },
+    {
+      "passage": "A  The first writing systems were feats of memory as much as of invention. Mesopotamian cuneiform and Egyptian hieroglyphs each employed many hundreds of distinct signs, some standing for whole words, others for syllables or categories of meaning, and mastering them took years of specialised schooling. Literacy was therefore the property of a small professional class of scribes, who kept the accounts, recorded the decrees and wrote the letters of everyone else. These scripts were powerful and astonishingly durable, remaining in use for some three thousand years, but their sheer complexity set a high wall around the written word.\n\nB  Roughly four thousand years ago, somewhere in the territory between Egypt and the Levant, that wall was breached. Semitic-speaking workers who were familiar with the appearance of Egyptian writing, though probably not schooled in it, borrowed a small number of hieroglyphic pictures and put them to a wholly new use: each picture was made to stand not for a word but for a single sound, the first sound of the object's name in their own language. A drawing of a house, called bet in their tongue, no longer meant house; it meant simply the sound b. Scholars call this the acrophonic principle, and it was a radical simplification. Any word that could be spoken could now be spelled with a stock of fewer than thirty signs, a set small enough to be learned in weeks rather than years.\n\nC  The idea might have remained a local curiosity had it not been adopted by the Phoenicians, the great maritime traders of the eastern Mediterranean. They trimmed the signs into quick, abstract letter shapes, fixed their order, and carried the system wherever their ships went, from the Levantine coast to North Africa and the shores of southern Europe. Their alphabet recorded consonants only. For Phoenician and its Semitic relatives this was no great loss, since in those languages the consonantal skeleton of a word carries most of its meaning and readers could readily supply the vowels themselves.\n\nD  For Greek, a language in which vowels distinguish one word from another far more heavily, the borrowed system fitted badly, and its Greek adopters made a fateful adjustment. Several Phoenician letters stood for consonant sounds that Greek did not possess; rather than discard them, the Greeks reassigned these spare letters to vowel sounds, producing the first alphabet to represent vowels and consonants alike as full letters. From Greek the alphabet passed to the Etruscans of Italy and from them to the Romans, whose Latin letters now serve hundreds of languages. From related Levantine scripts descended the Hebrew and Arabic writing systems, and many scholars argue, though the evidence is debated, that the scripts of India ultimately spring from the same source.\n\nE  Trace the family tree backwards, and an extraordinary conclusion emerges: nearly every alphabet in use today descends from that single experiment by Semitic workers on the edge of Egypt. Even scripts that look entirely unrelated often turn out to be adaptations, as when scholars devised the Cyrillic alphabet from Greek models to write Slavic languages. Genuinely independent alphabetic inventions are rare. The most celebrated is Korean Hangul, deliberately designed in the fifteenth century as a logical system whose letter shapes depict the positions of the tongue and lips, and created precisely so that ordinary people could learn it quickly.\n\nF  Why did the alphabet spread so far? The usual answer is economy: a reader must memorise dozens of letters rather than hundreds or thousands of characters, so literacy becomes easier to acquire and harder to monopolise. There is much truth in this, but the story invites a lazy conclusion that alphabets are simply superior and that all writing naturally evolves towards them. The history of Chinese is a standing rebuttal: a script of thousands of characters has served a continuous literary civilisation for well over three thousand years and functions perfectly well in the digital economy of the present day. Scripts survive and spread for reasons of empire, religion, trade and prestige as much as of efficiency. The alphabet's triumph was real, but it was a matter of history, not of destiny.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Egyptian hieroglyphs were too complex ever to influence later writing systems.",
+            "The Greeks deserve sole credit for inventing the alphabet.",
+            "Writing systems always evolve from pictures into letters.",
+            "The alphabet arose from a single simplifying adaptation of Egyptian signs and spread widely, though its success was historical rather than inevitable."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to Paragraph B, under the acrophonic principle a borrowed picture-sign was used to represent",
+          "options": [
+            "the object shown in the picture.",
+            "the first sound of the object's name in the borrowers' language.",
+            "a complete syllable chosen at random.",
+            "a sacred word that could not be spoken aloud."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to Paragraph D, what change did Greek adopters make to the Phoenician system?",
+          "options": [
+            "They doubled the number of consonant letters.",
+            "They abandoned the fixed order of the letters.",
+            "They reassigned unneeded consonant letters to represent vowel sounds.",
+            "They replaced abstract letters with realistic pictures."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "It can be inferred from Paragraph F that the writer would most likely disagree with which statement?",
+          "options": [
+            "All writing systems are destined to develop into alphabets eventually.",
+            "Political and religious forces influence which scripts spread.",
+            "Alphabets are generally quicker to learn than scripts with thousands of characters.",
+            "Chinese writing has a very long continuous history."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In Paragraph B, the word 'radical' is closest in meaning to",
+          "options": [
+            "political",
+            "temporary",
+            "accidental",
+            "fundamental"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the writer mention Korean Hangul in Paragraph E?",
+          "options": [
+            "To show that fifteenth-century scripts were more artistic than ancient ones.",
+            "To argue that Hangul should replace other alphabets.",
+            "To give an example of an alphabet invented independently rather than descended from the early Semitic experiment.",
+            "To prove that alphabets cannot be designed deliberately."
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文讲述字母文字的演化:闪米特工人借用埃及符号按首音原则创出仅数十个字母的书写体系,经腓尼基人传播、希腊人补充元音,衍生出当今绝大多数字母。作者强调字母的成功源于历史机缘而非必然优越。"
+    },
+    {
+      "passage": "A  Ask how to transform an athlete's performance and most people imagine a single dramatic breakthrough: a new training method, a miracle diet, a piece of revolutionary equipment. An influential school of thought in modern sport argues the opposite. Improve every factor that contributes to performance by a tiny amount, perhaps one per cent, and the individual gains, each trivial on its own, will accumulate into a decisive advantage. The approach became famous in professional road cycling in the early years of this century, when the managers of one leading team credited it for a string of victories, and the phrase associated with it, the aggregation of marginal gains, escaped the velodrome and entered the wider language of management.\n\nB  The examples that made the idea famous were memorable precisely because they seemed so small. The team in question searched for its one per cents everywhere: riders' bedding was transported from hotel to hotel so that they slept on a familiar mattress and pillow every night; staff were taught rigorous hand-washing to keep colds from sweeping through the squad before a major race; clothing was tested for aerodynamic drag; the trucks that carried the bicycles were cleaned to hospital standards so that dust would not interfere with delicate components. None of these measures could win a race by itself. The claim was that, stacked together, they might buy the handful of seconds that separates the champion from the also-rans in a contest lasting many days.\n\nC  Behind the anecdotes stands a serious scientific apparatus. Modern professional teams employ physiologists, nutritionists, biomechanists, statisticians and psychologists. Riders and runners train with power meters and satellite trackers that record every session; wind-tunnel testing refines posture and equipment; nutrition is periodised so that fuelling changes with the demands of each day; sleep is monitored as carefully as training load. The marginal-gains philosophy, at its best, is simply disciplined empiricism, an insistence that every assumption be measured, because a sport decided by fractions of a second leaves nowhere for waste to hide.\n\nD  Yet the doctrine has attracted sharp criticism, much of it from within sports science itself. The central problem is attribution. A professional team adopts dozens of interventions at once, so when it wins, no one can say which measure was responsible, or whether the victories flowed instead from the oldest advantages of all, namely exceptional athletes, sound training and generous budgets. Many of the claimed effects are so small that they fall within the margin of error of the instruments used to measure them, and few have been tested in controlled trials. Sceptics also warn of a subtler danger: a team mesmerised by negligible refinements may neglect the fundamentals that actually determine outcomes, polishing the truck while under-training the rider.\n\nE  There is, however, a twist. Even an intervention with no direct physiological effect may still improve performance if the athlete believes in it. Placebo effects in sport are well documented and can be substantial. A rider who is convinced that every detail of her preparation has been perfected may start a race with a confidence that is itself worth real seconds, and a culture obsessed with detail can sharpen the professionalism of an entire organisation. On this reading, marginal gains work partly as theatre, and the criticism that a measure is merely psychological loses some of its force, since psychology is part of performance.\n\nF  The idea has long since migrated beyond sport. Consultants urge hospitals, schools and businesses to hunt for their own one per cents, and checklists inspired by elite teams have genuinely reduced errors in operating theatres. Still, a note of caution is in order. Elite sport is a peculiar world in which the fundamentals are already optimised, margins of victory are microscopic and budgets are lavish; in that setting, tiny refinements may be all that remains. An organisation that has not yet mastered its basics is in a different position entirely, and for it the pursuit of marginal gains risks becoming an expensive distraction dressed up as rigour. The lesson of the velodrome is not that small things always matter most, but that they begin to matter once, and only once, the large things have been done well.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "The marginal-gains approach holds that many tiny improvements can add up to victory, but its true contribution remains disputed.",
+            "Professional cycling teams win mainly because of superior bicycles.",
+            "Placebo effects have been proven not to exist in elite sport.",
+            "Sports science has abandoned the study of training fundamentals."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "According to Paragraph B, which of the following was among the measures adopted by the cycling team?",
+          "options": [
+            "Paying riders bonuses for every second gained.",
+            "Hiring extra riders to exhaust rival teams.",
+            "Transporting riders' own bedding between hotels.",
+            "Secretly modifying competitors' equipment."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to Paragraph D, why is it difficult to know whether marginal-gains measures caused a team's success?",
+          "options": [
+            "Teams refuse to publish their financial accounts.",
+            "Many interventions are adopted at once, so no single measure can be isolated as the cause.",
+            "Athletes are forbidden to discuss their preparation.",
+            "The measures are changed every day during a race."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph E?",
+          "options": [
+            "Confidence has no measurable effect on race results.",
+            "Athletes should be told which of their preparations are placebos.",
+            "Psychological preparation matters only in cycling.",
+            "An intervention with no direct physical effect could still improve an athlete's performance."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "In Paragraph D, the word 'negligible' is closest in meaning to",
+          "options": [
+            "too small to be important",
+            "carelessly performed",
+            "impossible to repeat",
+            "extremely expensive"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Which of the following best describes the writer's attitude towards applying marginal gains outside elite sport?",
+          "options": [
+            "Enthusiastic endorsement of the idea for every organisation.",
+            "Cautious, because conditions in elite sport differ from those in ordinary organisations.",
+            "Indifferent, since the question has no practical importance.",
+            "Hostile to any exchange of ideas between sport and business."
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本文探讨体育科学中的'边际增益'理念:通过在睡眠、卫生、空气动力学等无数细节上各改进百分之一来累积优势。作者既肯定其数据化训练的价值,也指出归因困难、安慰剂效应等争议,并提醒该理念未必适用于基础尚未打牢的普通组织。"
+    },
+    {
+      "passage": "A  A garden looks like the most natural thing in the world: soil, water, plants and light. Yet almost nothing about a garden is natural. Every path, pond and flowerbed records a decision, and behind each decision lies an idea about what the relationship between human beings and nature ought to be. For this reason historians have learned to read gardens the way they read buildings or books, as documents of the societies that made them. Follow the garden through history and you follow, in miniature, the changing ambitions, beliefs and anxieties of civilisation itself.\n\nB  The oldest gardens we can reconstruct were statements of order wrung from difficult land. Egyptian tomb paintings show walled enclosures with rectangular pools, rows of fruit trees and tame waterfowl, images of abundance meant to comfort the dead. In Persia, gardeners perfected the walled garden as an answer to a harsh, dry landscape: enclosed against dust and wind, divided into four quarters by channels of running water, and planted with shade trees and roses. The very word paradise descends from an ancient Iranian term for such a walled enclosure, and when these forms were inherited by the Islamic world, the four-part garden with its central fountain became a conscious image of heaven, reproduced from Spain to northern India. In these traditions the garden's message is unmistakable: within these walls, chaos has been shut out and the world made perfect.\n\nC  A different philosophy took shape in East Asia. Chinese scholar-officials built gardens not as symbols of paradise but as landscapes in miniature, where a heaped rock could stand for a sacred mountain and a winding pond for a great lake, and where an educated visitor moved through a sequence of composed views as if unrolling a painted scroll. The aim was not symmetry but suggestion, a setting for poetry, contemplation and retreat from official life. Japanese designers refined this aesthetic further, raking gravel into dry gardens that evoke water without a single drop, and perfecting the technique of borrowed scenery, in which a distant hill or the sea is deliberately framed so that the garden seems to continue to the horizon. Here the gardener's art lies in concealing itself, so that the visitor seems to encounter nature distilled rather than nature commanded.\n\nD  Europe, in its grand age of monarchy, wanted the opposite: art that displayed itself. Renaissance Italians laid out terraces, staircases and fountains on geometric plans, treating the garden as architecture in green. Seventeenth-century France carried the logic to its climax in vast formal gardens where clipped hedges traced patterns best appreciated from the palace windows, and avenues radiated outward as if the king's authority ran along them to the horizon. Nothing here pretended to be natural. A tree that grew where it pleased was a tree that had not yet been disciplined, and the perfectly ruled parterre proclaimed that its owner commanded nature as completely as he commanded his subjects.\n\nE  The eighteenth-century English reaction swept this geometry away. Landowners demolished their formal parterres and commissioned rolling lawns, serpentine lakes and artfully scattered clumps of trees, a style that looked as if it had grown there by itself. The look of nature, however, was contrived with staggering effort: hills were reshaped, mature trees hauled into position, rivers dammed, and in some notorious cases entire villages demolished and rebuilt out of the landowner's view. A concealed ditch known as the ha-ha kept cattle away from the house without any visible fence, so that the lawn appeared to flow unbroken into the fields. Admirers gave the style a political reading, contrasting free, irregular English nature with the regimented gardens of absolutist France, a flattering argument that conveniently ignored how much power and money the natural look required.\n\nF  The garden's story since then has been one of widening ownership. The nineteenth century invented the public park, offering crowded industrial cities fresh air and green space as instruments of health and social reform. The twentieth added allotments and community gardens, where growing vegetables became a modest form of self-reliance and neighbourliness. Today's designers increasingly let wildness back in, planting for drought, for insects and for birds, and tolerating the untidiness that earlier gardeners fought. Each of these gardens, like every garden before them, is a portrait of its makers: what we plant, and how we arrange it, quietly declares what we believe the world should look like.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Gardening techniques have improved steadily since ancient Egypt.",
+            "Across cultures and eras, gardens express the ideas and values of the societies that create them.",
+            "European gardens are historically more important than Asian ones.",
+            "Modern gardens have finally achieved a truly natural state."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to Paragraph B, which of the following was a feature of the classic Persian garden?",
+          "options": [
+            "An open design without walls, exposed to the desert wind.",
+            "A single large lawn used for public ceremonies.",
+            "Raked gravel arranged to suggest flowing water.",
+            "Division into four quarters by channels of running water."
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "According to Paragraph E, what was the purpose of the ha-ha?",
+          "options": [
+            "To keep livestock away from the house without interrupting the view with a visible fence.",
+            "To drain floodwater from the serpentine lakes.",
+            "To mark the legal boundary between two estates.",
+            "To provide a hidden path for servants crossing the lawn."
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What can be inferred from Paragraph E about English landscape gardens?",
+          "options": [
+            "They were cheaper to create than formal French gardens.",
+            "They were designed mainly by the villagers who lived nearby.",
+            "A visitor might easily mistake their carefully engineered scenery for untouched countryside.",
+            "They abandoned the use of lakes and trees altogether."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "In Paragraph E, the word 'contrived' is closest in meaning to",
+          "options": [
+            "forbidden",
+            "discovered by accident",
+            "ruined",
+            "deliberately engineered"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Why does the writer mention the demolition and rebuilding of entire villages in Paragraph E?",
+          "options": [
+            "To emphasise the enormous artifice and power behind scenery that appeared natural.",
+            "To show that English landowners cared deeply about their tenants' comfort.",
+            "To explain why formal gardens returned to fashion in the nineteenth century.",
+            "To prove that village houses spoiled the fertility of the soil."
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本文纵览花园的文化史:从波斯四分天堂园、中国与日本的写意山水,到法国的几何式权力景观和英国'看似天然实则人工'的风景园,再到近代公园与社区花园。作者指出花园始终是各时代社会理想与观念的映照。"
+    }
+  ]
+}

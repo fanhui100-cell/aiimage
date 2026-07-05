@@ -1,0 +1,336 @@
+{
+  "template": "ielts-academic-reading-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "The way a concert hall sounds is often described in mystical terms, as if certain rooms possessed a magic that engineers cannot explain. In truth, the behaviour of sound in an enclosed space obeys well-understood physical laws, and the reputation of a great hall rests on a handful of measurable properties. Chief among these is reverberation time, the number of seconds a sound takes to decay by sixty decibels after its source falls silent. A reverberation time of around two seconds tends to flatter orchestral music, allowing notes to blend into a warm, sustained texture. Shorten that interval and the music turns dry and clinical; lengthen it and individual notes smear into an indistinct wash.\n\nReverberation, however, is only the start. Early reflections, the sound reaching a listener within the first eighty milliseconds after the direct signal, are equally decisive. When these reflections arrive from the side walls rather than the ceiling, they reach the two ears at slightly different moments, producing a sensation acousticians call spatial impression: the feeling of being surrounded by music rather than merely facing it. This insight, established in the middle of the twentieth century, solved a puzzle that had long troubled designers. The most admired halls of the nineteenth century were narrow rectangular boxes, the so-called 'shoebox' design, and their tall, closely spaced walls proved ideal for delivering strong lateral reflections. Later architects, hoping to seat larger audiences, built wide fan-shaped auditoriums that scattered listeners across a broad arc. Acoustically, many of these newer rooms disappointed, precisely because the side walls stood too far away to help.\n\nMaterials matter as much as geometry. Every surface either reflects sound or absorbs it, and the balance between the two shapes the character of a room. Hard plaster, stone and heavy timber return energy to the audience, sustaining the reverberant field, while thick carpet, curtains and upholstered seating drink it up. A subtle complication is the audience itself: a hall full of people absorbs far more sound than an empty one. Designers therefore specify seats whose absorption, whether occupied or vacant, remains almost constant, so that a rehearsal in a deserted hall sounds much like a sold-out performance.\n\nFor most of history, acousticians could only predict a room's behaviour by analogy with existing buildings, and costly mistakes were common. Today, computer models trace thousands of imaginary sound rays as they bounce around a proposed interior, and scale models fitted with miniature microphones can be tested with ultrasonic pulses. Some halls now include adjustable elements, movable panels, retractable banners, and chambers that can be opened or sealed, so that reverberation can be tuned for a string quartet one evening and an amplified band the next. Such flexibility would have seemed extravagant to earlier builders, yet it reflects a hard commercial reality: few institutions can afford a hall that suits only one kind of music.\n\nThere is also the matter of what a hall must keep out. The faint rumble of a subway, the hum of ventilation, or traffic on a nearby street can raise the background noise to a level that masks the quietest passages of a symphony. Modern concert halls are frequently built as a 'box within a box', the inner shell resting on rubber or steel springs so that vibration from the surrounding structure cannot pass through. Ventilation is delivered slowly through wide ducts to keep air movement silent. These precautions are invisible to the audience, yet without them the most carefully shaped interior would be undermined by intrusion from the world outside.\n\nEven with these tools, the final judgement remains stubbornly human. Two rooms with nearly identical measurements can earn very different reputations among musicians and critics, and no single number captures the elusive quality that performers call 'responsiveness', the sense that a hall returns their effort and lets them hear themselves clearly. Acoustic science has narrowed the gap between intention and result, but it has not abolished the surprises. When a new hall opens, its designers still wait anxiously for the first concert, knowing that the verdict of a living, listening audience is the only test that ultimately counts.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Concert halls that sound magical cannot be explained by science.",
+            "The acoustic quality of a concert hall arises from identifiable, measurable physical properties.",
+            "Nineteenth-century halls were acoustically superior to all modern ones.",
+            "Reverberation time is the only factor that determines how a hall sounds."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, a reverberation time of about two seconds:",
+          "options": [
+            "makes orchestral music sound dry and clinical",
+            "causes individual notes to smear together into a wash",
+            "suits orchestral music by letting notes blend into a warm texture",
+            "is too long for any kind of music"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Why do designers specify seats whose absorption stays nearly constant?",
+          "options": [
+            "so that a rehearsal in an empty hall sounds much like a full performance",
+            "because empty halls are cheaper to heat",
+            "because audiences dislike soft upholstery",
+            "because carpet absorbs too much sound"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred that the architects who built fan-shaped auditoriums:",
+          "options": [
+            "had access to computer sound modelling",
+            "deliberately rejected lateral reflections for artistic effect",
+            "preferred halls designed only for amplified music",
+            "placed a higher priority on seating capacity than on ideal acoustics"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The word 'flatter' in the first paragraph is closest in meaning to:",
+          "options": [
+            "deceive",
+            "enhance",
+            "exaggerate",
+            "imitate"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the final paragraph, the writer's main point is that:",
+          "options": [
+            "acoustic measurements can now predict a hall's reputation with certainty",
+            "musicians are unreliable judges of acoustics",
+            "despite scientific advances, human judgement remains the ultimate test of a hall",
+            "two halls with identical measurements always sound the same"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本文说明音乐厅的音质源于可测量的物理特性，如混响时间与早期反射，而非神秘魔力；但最终评判仍取决于人的听觉体验。"
+    },
+    {
+      "passage": "Beneath roughly a quarter of the land in the Northern Hemisphere lies ground that has remained frozen for at least two consecutive years, and often for far longer. This is permafrost, and although the word suggests a simple block of ice, it is in fact a complex mixture of soil, rock, sand and frozen water that can extend hundreds of metres below the surface. For scientists, permafrost is far more than a geological curiosity. It is one of the planet's great natural archives, a deep freezer that has locked away the remains of ancient life and vast quantities of carbon, and its stability has become one of the more urgent questions in climate research.\n\nPermafrost is defined purely by temperature: any ground that stays at or below zero degrees Celsius for two years or more qualifies, regardless of what it is made of. In the coldest regions of Siberia and northern Canada this frozen layer is continuous, blanketing almost the entire landscape; further south it becomes patchy and discontinuous, surviving in shaded hollows and beneath insulating peat while neighbouring slopes stay unfrozen. Above the permafrost lies the 'active layer', a shallow band of soil that thaws each summer and refreezes each winter, and it is within this layer that plants send down their roots. The permafrost proper, sealed beneath, may hold material that has not seen liquid water or open air for tens of thousands of years. Because cold dramatically slows the bacteria and chemical reactions that normally cause decay, whatever falls into this frozen ground tends to stay remarkably intact.\n\nThe preservation can be astonishing. Researchers have recovered the frozen carcasses of woolly mammoths so well kept that their stomach contents, and even the last meal they ate, can be identified. Seeds tens of thousands of years old have been coaxed back into growth, and microbes that lay dormant for millennia have revived in the laboratory. Layer upon layer, the frozen soil records pollen, ash and the chemical signatures of past climates, offering researchers a calendar of environmental change stretching back across ice ages.\n\nThis makes permafrost an unusually rich source of scientific information. Cores drilled from it allow specialists to reconstruct ancient temperatures, vegetation and even the diseases that once circulated among prehistoric animals. Fragments of DNA extracted from the frozen ground can reveal which species roamed a landscape long before written records began. In this sense the value of permafrost lies not only in what it stores but in what it can teach: it is a library whose volumes happen to be written in ice and mud.\n\nYet the same warming that makes this archive so scientifically interesting also threatens to destroy it. As air temperatures rise, the active layer deepens and the permafrost beneath begins to thaw. When it does, the long-frozen organic matter starts to rot, and microbes release carbon dioxide and methane into the atmosphere. Because these gases trap heat, their escape encourages further warming, which thaws more ground in turn, a self-reinforcing cycle that researchers regard with considerable unease. The consequences are not only atmospheric. Roads, pipelines and entire towns built on solid frozen ground begin to sag and crack as the earth softens beneath them, and some scientists warn that ancient microbes released by the thaw could pose unfamiliar health risks, although the scale of that danger remains uncertain and much debated.\n\nNone of this means the ground will vanish overnight. Permafrost thaws slowly and unevenly, and the deepest layers may endure for centuries even as the surface degrades. But the trend is unmistakable, and it carries a certain irony. The very cold that turned these northern soils into an incomparable record of the past is now retreating, and in retreating it may erase the archive even as scientists hurry to read it. What has been preserved for tens of thousands of years could be lost within a few human generations, releasing its stored carbon into a warming world.",
+      "questions": [
+        {
+          "prompt": "What is the main idea of the passage?",
+          "options": [
+            "Permafrost is simply a large block of underground ice.",
+            "Permafrost preserves ancient life and carbon but is increasingly at risk from warming.",
+            "The chief danger of permafrost is the release of ancient diseases.",
+            "Scientists have already extracted all useful information from permafrost."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, ground qualifies as permafrost when it:",
+          "options": [
+            "contains a large proportion of ice",
+            "lies more than a hundred metres deep",
+            "remains at or below zero degrees Celsius for at least two years",
+            "has never been exposed to liquid water"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The 'active layer' is described as:",
+          "options": [
+            "the shallow soil that thaws in summer and holds plant roots",
+            "the deepest part of the permafrost",
+            "a band of pure ice beneath the soil",
+            "the region where mammoth remains are always found"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred that research on permafrost has become urgent because:",
+          "options": [
+            "funding for polar science is declining",
+            "mammoth remains are becoming scarce",
+            "new Arctic laboratories are required",
+            "the archive may be destroyed by the same warming that makes it valuable"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The word 'endure' in the final paragraph is closest in meaning to:",
+          "options": [
+            "suffer",
+            "collapse",
+            "persist",
+            "freeze"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The writer describes the situation as carrying 'a certain irony' mainly to emphasize that:",
+          "options": [
+            "scientists enjoy the challenge of Arctic fieldwork",
+            "permafrost was never truly frozen",
+            "the cold that created the archive is now destroying it",
+            "ancient diseases are the greatest threat of all"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "永久冻土如同天然档案库，保存着古代生物与大量碳；但全球变暖正加速其融化，可能在科学家读取之前就将其摧毁并释放温室气体。"
+    },
+    {
+      "passage": "Few inventions have been declared obsolete so often, and so wrongly, as the bicycle. First sketched in the early nineteenth century and repeatedly written off as a toy, a fad or a relic of a slower age, the humble two-wheeler has instead proved one of the most durable machines ever built. Its story is not a straight line of steady improvement but a series of false starts and sudden leaps, and today, as cities struggle with congestion and pollution, the bicycle finds itself unexpectedly at the centre of debates about how urban life should be organised.\n\nThe earliest ancestor, introduced around 1817, had no pedals at all. Riders of this wooden 'running machine' pushed themselves along with their feet, steering a front wheel while effectively walking astride a beam. Decades later came the 'boneshaker', fitted with pedals attached directly to the front wheel and a rigid iron frame that transmitted every bump in the road to the rider, as its nickname suggests. Inventors soon realised that a larger front wheel travelled further with each turn of the pedals, and the result was the towering high-wheeler, whose enormous front wheel could exceed a metre and a half across. Fast but perilous, it demanded athleticism and courage to mount, and a fall from such a height could be serious. Cycling in this era remained the preserve of wealthy and adventurous young men.\n\nThe transformation came in the 1880s with the 'safety bicycle', whose design is essentially the one we still ride today. Two wheels of equal, moderate size, a diamond-shaped frame and, crucially, a chain connecting the pedals to the rear wheel meant that riders no longer needed a giant front wheel to gain speed. When the pneumatic tyre, a tube of air rather than solid rubber, was added a few years later, the ride became smoother and faster still. The effect was revolutionary. Suddenly the bicycle was affordable, comparatively safe and easy to learn, and it spread across social classes with remarkable speed. For many people of modest means it offered the first taste of independent travel, a way to reach work, countryside or neighbouring towns without relying on a horse or a railway timetable. Reformers of the period noted, too, how the machine loosened social restrictions, giving women in particular a new and unprecedented freedom of movement.\n\nFor a few decades the bicycle reigned, only to be overshadowed by the motor car. Through much of the twentieth century, planners in wealthy nations reshaped their cities around the automobile, widening roads, building car parks and treating the bicycle as a nuisance or a child's plaything. In many places cycling declined sharply, surviving mainly as sport or recreation rather than as serious transport.\n\nThe pendulum has since swung back. Choked by traffic, worried about air quality and conscious of the health benefits of exercise, a growing number of cities have set about reclaiming street space for cyclists. Protected lanes, public bike-share schemes and traffic rules that favour vulnerable road users have all helped to coax people back into the saddle. The arrival of the electric bicycle, which flattens hills and shortens sweaty commutes, has widened the appeal further, tempting riders who might never have considered pedalling to work. Some of the cities now most admired for their cycling cultures were, within living memory, as car-dominated as any other; their transformation was the product of deliberate policy rather than of geography or tradition.\n\nWhat makes the bicycle so persistent is its rare combination of virtues. It is cheap, quiet, clean and efficient, taking up little space and demanding no fuel but the rider's own energy. For short urban journeys, which make up the majority of trips in most cities, it is often faster, door to door, than a car trapped in traffic. The machine that has been pronounced dead so many times may yet turn out to be one of the keys to making crowded cities liveable, a nineteenth-century invention curiously well suited to twenty-first-century problems.",
+      "questions": [
+        {
+          "prompt": "Which statement best captures the main idea of the passage?",
+          "options": [
+            "The bicycle improved through a steady, uninterrupted process of refinement.",
+            "The car will always be superior to the bicycle for urban travel.",
+            "Despite being written off many times, the bicycle has proved durable and newly relevant to modern cities.",
+            "The safety bicycle was the last important development in cycling."
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The earliest ancestor of the bicycle, from around 1817:",
+          "options": [
+            "had a chain driving the rear wheel",
+            "had no pedals and was pushed along by the rider's feet",
+            "used pneumatic tyres",
+            "had an enormous front wheel"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "According to the passage, the chain of the safety bicycle was important because it:",
+          "options": [
+            "made the bicycle heavier and therefore steadier",
+            "replaced the need for tyres",
+            "was first used on the boneshaker",
+            "allowed riders to gain speed without an enormous front wheel"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "It can be inferred from the passage that the cities now admired for cycling:",
+          "options": [
+            "achieved their status through deliberate policy rather than natural advantage",
+            "have always had large numbers of cyclists",
+            "have banned cars entirely",
+            "are all located in flat regions with mild climates"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "The word 'reigned' in the paragraph about the motor car is closest in meaning to:",
+          "options": [
+            "governed a country",
+            "was dominant",
+            "rained down",
+            "rested quietly"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The writer's attitude toward the future of the bicycle is best described as:",
+          "options": [
+            "dismissive",
+            "alarmed",
+            "nostalgic but resigned",
+            "optimistic"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "文章讲述自行车屡被唱衰却始终耐用，如今因城市拥堵与污染而重新成为焦点；作者对其前景持乐观态度。"
+    },
+    {
+      "passage": "For most of history plants were regarded as the very emblem of passivity: rooted in one spot, silent, and incapable of the signalling that animals use to warn, compete or cooperate. That picture has changed dramatically. A growing body of research suggests that plants are engaged in a constant, if invisible, exchange of information and resources, and that much of this traffic takes place underground, through their roots and the networks of fungi that connect them.\n\nAt the heart of this hidden world are mycorrhizal fungi, organisms that thread their fine filaments through the soil and into the roots of most land plants. The relationship is an ancient partnership: the fungus draws sugars from the plant, which it cannot make for itself, while the plant gains access to water and mineral nutrients that the fungal threads, far finer than roots, can reach. Because a single fungal network may link the roots of many different plants at once, some scientists have described the result, only half in jest, as a 'wood wide web', a living infrastructure through which materials and, possibly, messages can pass from one plant to another.\n\nWhat travels along these threads? The clearest evidence concerns nutrients. Using carbon labelled with a traceable isotope, researchers have shown that sugars can move from one tree into the fungal network and out again into a neighbour, sometimes flowing from a large, well-lit tree to smaller, shaded seedlings nearby. Nitrogen and phosphorus travel too. More intriguingly, some experiments suggest that plants under attack by insects can prompt defensive changes in their neighbours: when one plant is nibbled, others connected to the same network appear to strengthen their chemical defences before the pest reaches them, as though a warning had been relayed underground.\n\nSuch findings have captured the public imagination, and it is easy to see why. The image of trees nourishing their young and sending each other alarm signals is irresistibly appealing, and popular accounts often describe forests as cooperative communities bound together by mutual aid. Yet many scientists urge caution. The fungi that build these networks are not selfless messengers; they are organisms pursuing their own interests, and they may move resources in whatever direction serves the fungus rather than any particular plant. What looks like generosity between trees might equally be the fungus managing its own supply lines. Nor is the underground world purely harmonious: some plants use chemical signals to poison rivals, and the same networks that carry nutrients may also spread harmful substances or allow one species to draw resources away from another.\n\nThere is a further difficulty. Demonstrating that a signal travels through a specific fungal connection, rather than through the soil, the air or the roots directly, is technically demanding, and a number of headline-grabbing claims rest on a small number of studies conducted under artificial conditions. Critics argue that enthusiasm has sometimes outrun the evidence, and that describing plants as 'talking' or 'sharing' risks projecting human motives onto processes that may be entirely automatic. The safest conclusion is that plants and fungi are linked in ways that undoubtedly move materials and information, but that the language of friendship and altruism should be used sparingly, if at all.\n\nNone of this diminishes how remarkable the underground world has turned out to be. Whether or not trees can properly be said to communicate, the discovery that a forest floor is laced with living connections, along which chemicals and nutrients constantly flow, has transformed the way ecologists think about plants. Far from being isolated individuals competing only for light, they are embedded in a dense web of relationships whose full complexity is only beginning to be mapped. The old image of the passive plant, at least, can be safely retired.",
+      "questions": [
+        {
+          "prompt": "Which of the following best states the main idea of the passage?",
+          "options": [
+            "Trees consciously care for their young and warn their neighbours.",
+            "Plants are linked underground through fungal networks that move resources and information, overturning the view of plants as passive and isolated.",
+            "Mycorrhizal fungi are harmful parasites on plant roots.",
+            "There is no reliable evidence that anything passes between plants underground."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "In the partnership between plants and mycorrhizal fungi:",
+          "options": [
+            "the plant supplies sugars and the fungus provides access to water and minerals",
+            "the fungus makes its own sugars from sunlight",
+            "the plant gains nothing in return",
+            "the fungus supplies sugars to the plant"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Experiments using labelled carbon have shown that:",
+          "options": [
+            "fungi are unable to transport any sugars",
+            "nitrogen is the only nutrient that ever moves",
+            "seedlings routinely feed mature trees",
+            "sugars can flow through the network from a well-lit tree to shaded seedlings"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "It can be inferred that the writer believes claims about trees 'sharing' and 'warning' each other:",
+          "options": [
+            "are completely false",
+            "have been fully proven by many studies",
+            "should be treated with caution because they may reflect human bias rather than evidence",
+            "are of no interest to ecologists"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "The word 'emblem' in the first paragraph is closest in meaning to:",
+          "options": [
+            "enemy",
+            "symbol",
+            "exception",
+            "origin"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The writer's overall stance in the passage can best be described as:",
+          "options": [
+            "enthusiastic acceptance of the idea that forests are cooperative communities",
+            "total rejection of the idea of underground plant networks",
+            "cautiously interested, accepting the connections while warning against romantic interpretations",
+            "indifferent to recent discoveries"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "植物通过根系和菌根真菌网络在地下交换养分与信息，颠覆了植物被动孤立的旧观念；但作者提醒不应用拟人化的合作、警告来夸大证据。"
+    },
+    {
+      "passage": "A modern food package is a crowded document. Alongside the brand name and the picture of the contents, it may carry a list of ingredients, a table of nutritional values, a use-by date, allergy warnings, a country of origin and, increasingly, a coloured symbol rating the product's healthiness at a glance. Little more than a century ago, most food was sold with no such information at all. The transformation of the blank wrapper into a densely regulated surface is a story about the shifting relationship between shoppers, manufacturers and the state, and about who is trusted to know what is in our food.\n\nFor much of history, buyers simply had to take the seller's word. This left ample room for fraud, and nineteenth-century food was notoriously adulterated: bread whitened with alum, milk diluted with water, tea bulked out with dried leaves and dust, and sweets coloured with compounds we now know to be poisonous. Public alarm, fed by campaigning chemists and journalists, eventually forced governments to act. The first food laws concentrated on preventing such deception, requiring that food be what it claimed to be and, in time, that packaged goods list their ingredients so that buyers could see what they were actually purchasing.\n\nListing ingredients was only the beginning. As diet came to be linked with chronic disease, attention shifted from fraud to nutrition. Many countries introduced mandatory panels stating the quantities of fat, sugar, salt, protein and energy a product contained, along with clear warnings about ingredients such as nuts, gluten and shellfish capable of causing dangerous allergic reactions. The aim was no longer merely to stop cheating but to help citizens make informed choices about their long-term health, on the assumption that better information would lead to better decisions.\n\nThat assumption has proved more complicated than it first appeared. Detailed nutritional tables, printed in small type on the back of a packet, are consulted by relatively few shoppers and understood by fewer still. In response, some authorities have adopted simplified 'front-of-pack' schemes: colour-coded traffic lights that mark levels of fat, sugar and salt as red, amber or green, or blunt warning labels declaring a product high in a particular nutrient. Studies suggest that such simple signals do influence choices, at least modestly, and are easier for busy or less confident readers to interpret. But there is no international agreement on which system works best, and manufacturers, unsurprisingly, tend to prefer schemes that show their products in the most flattering light.\n\nIndeed, the same labels intended to inform can also be used to persuade. Words such as 'natural', 'wholesome' and 'light' carry an aura of health while often meaning very little, and unless such terms are strictly defined in law, they can mislead as easily as they inform. Regulators have therefore moved to police not only what must appear on a label but what may be claimed on it, restricting health and nutrition claims to those supported by evidence. Manufacturers, for their part, have become adept at working within the rules, emphasising a single virtuous ingredient, for instance, while drawing attention away from high levels of sugar or salt elsewhere in the product.\n\nThe result is a continuing contest. Each new labelling requirement is a compromise between the public interest in clear information, the commercial interest in selling products, and the practical limits of what shoppers will actually read and act upon. Labels have undoubtedly made the food supply safer and more transparent than it was in the age of adulterated bread, and few would wish to return to the blank wrapper. Yet it would be naive to imagine that information alone can solve the complex problems of diet and health. A label can tell a shopper what is in a product; it cannot, by itself, make anyone eat well. For all their usefulness, labels are a tool, not a cure, and the argument over how they should be designed is unlikely to end soon.",
+      "questions": [
+        {
+          "prompt": "Which of the following best expresses the main idea of the passage?",
+          "options": [
+            "Food labels have always contained detailed nutritional information.",
+            "The evolution of food labelling reflects a continuing tension between informing shoppers, commercial interests and public health, and labels alone cannot solve dietary problems.",
+            "Front-of-pack traffic-light schemes have been adopted uniformly worldwide.",
+            "Nineteenth-century food was safer than food today."
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "The passage states that nineteenth-century food was often:",
+          "options": [
+            "sold with detailed nutrition panels",
+            "strictly regulated from the start",
+            "frequently adulterated, such as bread whitened with alum and diluted milk",
+            "entirely free of deception"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the passage, the first food laws mainly aimed to:",
+          "options": [
+            "prevent deception and ensure food was what it claimed to be",
+            "list the calorie content of every product",
+            "ban all artificial colours",
+            "introduce traffic-light labels"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "It can be inferred that manufacturers favour front-of-pack schemes that:",
+          "options": [
+            "list every ingredient in tiny print",
+            "are mandated by international treaty",
+            "discourage customers from buying anything",
+            "show their products in the most favourable light"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "The word 'aura' in the paragraph about persuasive labels is closest in meaning to:",
+          "options": [
+            "impression",
+            "danger",
+            "price",
+            "flavour"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "In the final paragraph, the writer concludes that food labels are:",
+          "options": [
+            "a complete solution to problems of diet and health",
+            "useless in the modern marketplace",
+            "a useful tool that cannot by itself ensure healthy eating",
+            "mainly a marketing trick with no public benefit"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "食品标签从无到有、日益规范，反映了信息、商业与公共健康之间的持续博弈；标签虽有用，却无法单凭自身解决饮食健康问题。"
+    }
+  ]
+}

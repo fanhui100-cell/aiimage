@@ -1,0 +1,338 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that housing developments where young families and elderly residents live together in shared buildings benefit everyone involved, while others think the generations are better served by living in separate communities designed for their different needs. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论老少同住的跨代混合社区与分龄社区各自的优劣并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Companionship and informal childcare/eldercare exchange in mixed buildings",
+        "Differing lifestyle needs: noise levels, accessibility features, daily routines",
+        "Effect on loneliness among older residents and housing costs for young families",
+        "Whether purpose-built separate communities deliver better specialised services"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that every child at school should be required to learn to play a musical instrument, while others believe music lessons should remain a voluntary activity chosen by pupils themselves. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论学校应强制所有学生学习乐器还是应让音乐课保持自愿选择，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Claimed cognitive and discipline benefits of instrumental practice",
+        "Pressure on curriculum time and school budgets for instruments and teachers",
+        "Motivation differences between compulsory and self-chosen activities",
+        "Equal access for children whose families cannot afford private lessons"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some educationalists say that secondary schools should begin classes later in the morning to match teenagers' natural sleep patterns, while others insist the traditional early start prepares young people for working life. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论中学应推迟到校时间以顺应青少年作息，还是保留传统早晨开课以适应未来工作，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Adolescent biology and evidence on concentration in early lessons",
+        "Knock-on effects for parents' work schedules and school transport",
+        "Whether school hours should model adult working hours at all",
+        "Practical trade-offs: after-school activities and daylight hours"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that museums in wealthy countries should return historical artefacts to the countries where they were originally made, while others believe these objects are better preserved and seen by more people where they are now. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论发达国家博物馆应否将文物归还原属国，还是留在现址更利于保护与展示，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Cultural identity and the moral case for returning objects taken in the past",
+        "Conservation facilities, security and visitor numbers at major museums",
+        "Loan schemes, replicas and digital access as middle-ground options",
+        "Who has the right to decide where heritage belongs"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that taking a part-time job while still at secondary school teaches teenagers valuable lessons about money and responsibility, while others think paid work distracts young people from their studies. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论中学生兼职打工是培养责任感还是影响学业，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Financial literacy, time management and workplace confidence gained early",
+        "Risk of fatigue, reduced study hours and exam performance",
+        "Difference between a few weekend hours and long shifts on school nights",
+        "Role of parents and laws in limiting working hours for minors"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people feel that giving second-hand items as presents is a thoughtful and environmentally responsible custom, while others regard it as disrespectful to the person receiving the gift. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论送二手物品作为礼物是环保且用心，还是对收礼者不够尊重，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Environmental cost of manufacturing new goods versus reusing existing ones",
+        "Cultural expectations around gifts as symbols of effort and status",
+        "Vintage, antique and collectible items as a special category",
+        "How attitudes to consumption are changing among younger generations"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say schools should stop setting homework at weekends so that children can rest and spend time with family, while others argue that weekend assignments are essential for keeping up with the curriculum. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论学校应否只在周末停止布置作业，让孩子休息陪伴家人，还是周末作业对跟上课程必不可少，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Value of unstructured rest, hobbies and family time for development",
+        "Whether weekday-only homework can cover the same material",
+        "Differences by age group and by exam-year pressure",
+        "Impact on children who rely on weekends to catch up"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe governments should spend money on retraining older workers in new technologies, while others think these funds would achieve more if invested in educating the young. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论政府应投入资金为年长劳动者提供新技术再培训，还是把资金投向青年教育更有成效，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Longer working lives and the cost of early retirement to the economy",
+        "Return on investment: years of productive work remaining in each group",
+        "Experience and reliability that older employees bring once retrained",
+        "Whether the choice is genuinely either/or for public budgets"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people think that leaving school and training on the job through an apprenticeship prepares young people for a career better than studying for a university degree, while others believe a degree remains the more valuable path. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：讨论学徒制在职培训与大学学位哪种更能为年轻人的职业发展做好准备，并给出个人观点，不少于 250 词。",
+      "referencePoints": [
+        "Earning while learning versus student debt",
+        "Practical skills demanded by employers versus broad academic knowledge",
+        "Long-term salary prospects and flexibility to change careers",
+        "How the best choice may depend on the industry and the individual"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some city authorities now close their central streets to private cars one day every month. To what extent do you agree or disagree that such regular car-free days should be made compulsory in all large cities? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意所有大城市都应强制每月设立市中心无车日？请阐述同意或不同意的程度，不少于 250 词。",
+      "referencePoints": [
+        "Air quality, noise and public enjoyment of reclaimed streets",
+        "Disruption for deliveries, tradespeople and residents with mobility needs",
+        "Whether one day a month changes travel habits or is merely symbolic",
+        "Alternatives such as congestion charging or permanent pedestrian zones"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people say every child should be taught to swim as a compulsory part of the school curriculum, in the same way as reading and mathematics. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意游泳应像语文数学一样成为学校必修课？请阐述同意或不同意的程度，不少于 250 词。",
+      "referencePoints": [
+        "Swimming as a life-saving skill rather than an ordinary sport",
+        "Cost of pool access and qualified instructors for schools",
+        "Fairness for schools in regions without facilities",
+        "Whether responsibility should rest with schools or families"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some countries it is common for landlords to forbid tenants from keeping pets in rented flats. Some people argue that this practice should be banned by law so that renters have the same right to keep animals as homeowners. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意应立法禁止房东拒绝租客养宠物，让租房者享有与业主同等的养宠权利？请阐述立场，不少于 250 词。",
+      "referencePoints": [
+        "Emotional and health benefits of pet ownership, especially for people living alone",
+        "Property damage, noise and allergy concerns for landlords and neighbours",
+        "Pet deposits and insurance as possible compromises",
+        "Balance between property rights and tenants' quality of life"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many public libraries have recently stopped charging fines for books returned late. Some people believe abolishing these fines encourages more people to use libraries, and that all libraries should do the same. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意所有公共图书馆都应取消逾期罚款以鼓励更多人使用图书馆？请阐述立场，不少于 250 词。",
+      "referencePoints": [
+        "Fines as a barrier that drives low-income users away from libraries",
+        "Whether borrowers still return books on time without a financial penalty",
+        "Lost fine revenue versus increased membership and community value",
+        "Alternative measures such as replacement charges or borrowing limits"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some governments require people applying for citizenship to pass an examination in the country's traditional national language, even when most daily business is conducted in another language. To what extent do you agree or disagree with this requirement? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意入籍申请者必须通过该国传统民族语言考试，即使日常事务多用另一种语言？请阐述立场，不少于 250 词。",
+      "referencePoints": [
+        "Language as a carrier of national culture and a symbol of commitment",
+        "Practical usefulness of the tested language in everyday life",
+        "Burden on applicants who already work and pay taxes in the country",
+        "Whether integration is better measured in other ways"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some rail companies designate certain train carriages as quiet zones where phone calls and loud conversation are not allowed. Some people believe such quiet carriages should be a legal requirement on every long-distance train. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意法律应规定所有长途列车必须设置禁止通话喧哗的静音车厢？请阐述立场，不少于 250 词。",
+      "referencePoints": [
+        "Passengers' need to work, rest or travel without constant noise",
+        "Difficulty of enforcing rules without staff on every carriage",
+        "Whether market demand rather than law should decide onboard services",
+        "Competing needs of families with young children and business travellers"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people argue that manufacturers should be required by law to reduce the amount of plastic used in children's toys and to design toys that last longer. To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：是否同意应立法要求玩具制造商减少塑料用量并设计更耐用的玩具？请阐述立场，不少于 250 词。",
+      "referencePoints": [
+        "Short lifespan of many plastic toys and their contribution to landfill",
+        "Higher prices of durable or wooden alternatives for ordinary families",
+        "Whether regulation or consumer choice drives better product design",
+        "Safety and hygiene reasons that plastics are widely used in toys"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some people believe that the growing popularity of walking clubs is a sign that modern lifestyles have become unhealthy. Nevertheless, meal delivery applications have made it possible to have restaurant food brought to the door within minutes, and many people now rarely cook. What problems does the widespread use of food delivery apps cause for individuals and society, and what measures could be taken to address them? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：外卖点餐应用的普及给个人和社会带来哪些问题？可以采取哪些措施加以解决？不少于 250 词。",
+      "referencePoints": [
+        "Diet quality, portion sizes and declining cooking skills",
+        "Working conditions and safety of delivery riders",
+        "Packaging waste and traffic from frequent small deliveries",
+        "Possible responses: labelling, platform regulation, cooking education"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many towns, bright street lighting and illuminated advertising mean the night sky is no longer dark, and stars are rarely visible. Why has artificial light at night increased so much, and what can be done to reduce the problems it causes for people and wildlife? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城市夜间人工照明为何不断增加？光污染对人和野生动物造成的问题应如何解决？不少于 250 词。",
+      "referencePoints": [
+        "Drivers: safety concerns, commerce, cheap LED technology",
+        "Effects on human sleep and on nocturnal animals and insects",
+        "Dark-sky rules: shielded lamps, curfews on illuminated signs, dimming",
+        "Balancing genuine safety needs against unnecessary brightness"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many cities, public transport stops running late in the evening, leaving night-shift workers and people who socialise after dark with few safe or affordable ways to travel. What problems does the lack of night-time public transport create, and how could city authorities solve them? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城市夜间公共交通匮乏造成哪些问题？市政当局应如何解决？不少于 250 词。",
+      "referencePoints": [
+        "Impact on hospital, hospitality and cleaning staff who work at night",
+        "Safety risks, especially for women travelling alone, and reliance on costly taxis",
+        "Options: night bus networks, demand-responsive minibuses, subsidised shared rides",
+        "Funding night services that carry fewer passengers than daytime routes"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. As cities expand, many animal species find their habitats broken up by roads and buildings, and urban wildlife populations are declining. What are the causes of this decline, and what measures could cities take to help wildlife survive alongside people? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城市扩张导致野生动物数量下降的原因是什么？城市可采取哪些措施帮助野生动物与人共存？不少于 250 词。",
+      "referencePoints": [
+        "Habitat fragmentation by roads, fences and continuous construction",
+        "Wildlife corridors, green bridges and connected parks as remedies",
+        "Planning rules that require nature-friendly design in new developments",
+        "Role of residents: gardens, ponds and reduced pesticide use"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, most children are now driven to school by car, even over short distances. What problems does this trend cause for children and for the local community, and what steps could schools and parents take to encourage walking to school instead? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：家长普遍开车接送孩子上学带来哪些问题？学校和家长可采取哪些措施鼓励步行上学？不少于 250 词。",
+      "referencePoints": [
+        "Congestion and danger at school gates, reduced exercise for children",
+        "Parents' safety fears and time pressure as underlying causes",
+        "Supervised walking groups, safe crossings and staggered start times",
+        "Longer-term planning: locating schools within walkable neighbourhoods"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many people in cities buy bottled water because free public drinking fountains have largely disappeared from streets, parks and stations. Why have public drinking fountains declined, and what can be done to bring free drinking water back to public places? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城市公共饮水设施为何逐渐消失？如何让免费饮用水重回公共场所？不少于 250 词。",
+      "referencePoints": [
+        "Maintenance costs, hygiene worries and vandalism as reasons for removal",
+        "Link between fountain decline and single-use plastic bottle consumption",
+        "Refill schemes with cafés and modern sensor-operated fountains",
+        "Who should pay: councils, water companies or businesses"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Several countries now offer special visas that allow foreign employees to live there for a year or more while working remotely for companies based abroad. Do the advantages of these remote-work visa schemes outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：多国推出允许外国人远程为境外公司工作的长居签证，这类政策利大于弊吗？不少于 250 词。",
+      "referencePoints": [
+        "Spending power that remote workers bring to local economies",
+        "Rising rents and prices for local residents in popular destinations",
+        "Tax questions and limited integration of temporary residents",
+        "Effects on the visa holders' home countries and employers"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some companies are beginning to deliver small packages in cities using unmanned flying drones instead of vans and motorcycles. Do the advantages of drone delivery in urban areas outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城市中使用无人机替代车辆配送小件包裹利大于弊吗？不少于 250 词。",
+      "referencePoints": [
+        "Speed, reduced road traffic and lower emissions per delivery",
+        "Noise, privacy concerns and safety of objects flying over crowds",
+        "Job losses among couriers versus new technical roles",
+        "Airspace regulation and reliability in bad weather"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In some cities, coffee shops charge customers a small deposit for a reusable cup, which is refunded when the cup is returned to any participating café. Do the advantages of such reusable cup schemes outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：咖啡店推行押金制循环杯计划利大于弊吗？不少于 250 词。",
+      "referencePoints": [
+        "Reduction of single-use cup waste that is hard to recycle",
+        "Inconvenience for customers and washing/logistics costs for cafés",
+        "Whether deposits genuinely change habits or only add friction",
+        "Comparison with discounts for bringing one's own cup"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Some towns have introduced local currencies that can only be spent in independent shops and businesses within the area, with the aim of keeping money in the community. Do the advantages of local currencies outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：城镇发行只能在本地独立商户使用的社区货币利大于弊吗？不少于 250 词。",
+      "referencePoints": [
+        "Support for small traders against national chains and online retail",
+        "Limited acceptance and inconvenience compared with normal money",
+        "Community identity and awareness of local spending",
+        "Administrative costs and what happens if the scheme collapses"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In a growing number of neighbourhoods, volunteers run repair cafés where residents bring broken household items, such as lamps, clothes and bicycles, to be fixed for free instead of thrown away. Do the advantages of these community repair cafés outweigh the disadvantages? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：社区志愿者开设免费维修咖啡馆帮助居民修理旧物利大于弊吗？不少于 250 词。",
+      "referencePoints": [
+        "Waste reduction and money saved by extending product lifespans",
+        "Skills sharing between generations and community connection",
+        "Possible impact on professional repair businesses",
+        "Safety and liability when amateurs fix electrical goods"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. In many countries, schools are creating vegetable gardens where pupils grow food as part of their lessons. Why are school gardening programmes becoming popular, and do you think the time spent gardening is a worthwhile part of a child's education? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：学校菜园课程为何日益流行？花时间种菜是否是儿童教育中值得的一部分？不少于 250 词。",
+      "referencePoints": [
+        "Concerns about children's diets and disconnection from food origins",
+        "Hands-on science, patience and teamwork learned outdoors",
+        "Curriculum time taken from traditional academic subjects",
+        "Seasonal limits and who maintains gardens during holidays"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Many local councils have installed free outdoor exercise machines in parks and public squares. Why do city authorities invest in this kind of public exercise equipment, and is this the best way to improve the health of local residents? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：市政当局为何在公园安装免费户外健身器材？这是否是改善居民健康的最佳方式？不少于 250 词。",
+      "referencePoints": [
+        "Removing cost and membership barriers to regular exercise",
+        "Visibility of equipment as a prompt to be active",
+        "Actual usage rates, weather and maintenance problems",
+        "Alternatives: subsidised gyms, sports clubs, cycling infrastructure"
+      ],
+      "wordLimit": ">=250"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 2. Fast food and soft drink companies frequently sponsor major sporting events and display their advertising inside stadiums. Why are these companies so keen to be associated with sport, and should this kind of advertising at sports events be restricted? Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "promptZh": "学术类大作文：快餐和软饮公司为何热衷赞助体育赛事？是否应限制此类广告出现在赛场？不少于 250 词。",
+      "referencePoints": [
+        "Borrowing sport's healthy image to market unhealthy products",
+        "Huge audiences, including children, reached through live events",
+        "Sponsorship money that many sports and athletes depend on",
+        "Precedents such as restrictions on tobacco advertising in sport"
+      ],
+      "wordLimit": ">=250"
+    }
+  ]
+}

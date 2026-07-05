@@ -1,0 +1,228 @@
+{
+  "examId": "ielts",
+  "level": 8,
+  "skill": "writing",
+  "taskType": "essay_writing",
+  "tasks": [
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the number of passengers (in millions) passing through four international airports in 2003, 2013 and 2023. Northgate Airport: 18.2 in 2003, 27.5 in 2013, 41.0 in 2023. Silverport Airport: 32.6 in 2003, 35.1 in 2013, 33.8 in 2023. Kestrel Airport: 9.4 in 2003, 16.8 in 2013, 29.3 in 2023. Marlow Airport: 24.0 in 2003, 22.1 in 2013, 18.6 in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中四个国际机场 2003、2013 与 2023 年的旅客数量变化，不少于 150 词。",
+      "referencePoints": [
+        "Include a clear overview identifying the strongest growth (Kestrel and Northgate) and the decline at Marlow",
+        "Support comparisons with selected figures rather than listing every number",
+        "Group airports by upward versus downward trends across the three years",
+        "Use appropriate language of change and comparison (more than doubled, fell steadily, overtook)"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the average number of pupils per class in primary and secondary schools in five countries in 2022. Country A: 19 pupils in primary, 23 in secondary. Country B: 27 in primary, 31 in secondary. Country C: 16 in primary, 18 in secondary. Country D: 33 in primary, 29 in secondary. Country E: 22 in primary, 26 in secondary. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中五个国家 2022 年中小学平均班级人数，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview noting that secondary classes are larger in most countries, with Country D as the exception",
+        "Compare the largest (Country D primary) and smallest (Country C) class sizes with figures",
+        "Rank or group countries rather than describing each in isolation",
+        "Keep the report factual with no opinions or explanations of causes"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the official retirement age and the actual average age at which people stopped working in six countries in 2022. Country A: official 67, actual 65.1. Country B: official 62, actual 63.4. Country C: official 65, actual 61.8. Country D: official 66, actual 66.9. Country E: official 60, actual 62.5. Country F: official 65, actual 60.2. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中六个国家 2022 年法定退休年龄与实际平均退休年龄的对比，不少于 150 词。",
+      "referencePoints": [
+        "Give an overview distinguishing countries where people retire before the official age from those retiring after it",
+        "Highlight the largest gap (Country F, nearly five years early) with figures",
+        "Make cross-country comparisons of both official and actual ages",
+        "Avoid speculating about reasons; report only what the data shows"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows the consumption of bottled water in litres per person per year in five countries in 2012 and 2022. Country A: 145 litres in 2012, 188 litres in 2022. Country B: 96 litres in 2012, 84 litres in 2022. Country C: 31 litres in 2012, 79 litres in 2022. Country D: 210 litres in 2012, 205 litres in 2022. Country E: 58 litres in 2012, 122 litres in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中五个国家 2012 年与 2022 年人均瓶装水消费量的变化，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview contrasting rising consumption (Countries A, C, E) with stable or falling figures (B, D)",
+        "Quantify the most dramatic changes, such as Country C more than doubling and Country E rising by over 100 percent",
+        "Note that Country D remained the highest consumer in both years despite a slight fall",
+        "Use accurate comparative structures and data selection rather than listing all ten figures"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The table below shows milk exports from four countries in 2022, giving the volume exported (in millions of tonnes) and the value of those exports (in billions of US dollars). Country A: 8.4 million tonnes, 5.9 billion dollars. Country B: 3.1 million tonnes, 4.2 billion dollars. Country C: 6.7 million tonnes, 3.8 billion dollars. Country D: 1.9 million tonnes, 1.1 billion dollars. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述表格中四个国家 2022 年牛奶出口量与出口额的数据，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview noting that the largest exporter by volume (Country A) also earned the most, but volume and value do not always align",
+        "Highlight that Country B earned more than Country C despite exporting less than half the volume",
+        "Compare countries on both measures rather than treating them separately",
+        "Select and combine figures meaningfully instead of repeating the table row by row"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows the number of rooftop solar panel installations (in thousands) completed each year in three regions between 2010 and 2022. Northern Region: 4 thousand in 2010, 9 thousand in 2014, 22 thousand in 2018, 51 thousand in 2022. Central Region: 12 thousand in 2010, 18 thousand in 2014, 21 thousand in 2018, 24 thousand in 2022. Coastal Region: 7 thousand in 2010, 6 thousand in 2014, 15 thousand in 2018, 38 thousand in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2010 至 2022 年三个地区每年屋顶太阳能板安装数量的变化，不少于 150 词。",
+      "referencePoints": [
+        "Give an overview stating that installations rose in all three regions, with the Northern Region growing fastest and overtaking the others",
+        "Describe the Coastal Region's initial dip before its later surge",
+        "Contrast the Central Region's steady, modest growth with the sharper rises elsewhere",
+        "Use a range of trend vocabulary and cite key data points at the start and end of the period"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows average annual levels of fine-particle air pollution (PM2.5, measured in micrograms per cubic metre) in three cities between 2000 and 2020. Grandale: 38 in 2000, 34 in 2005, 27 in 2010, 21 in 2015, 14 in 2020. Ostmere: 22 in 2000, 24 in 2005, 25 in 2010, 23 in 2015, 22 in 2020. Verlington: 12 in 2000, 15 in 2005, 19 in 2010, 24 in 2015, 28 in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2000 至 2020 年三座城市空气中 PM2.5 年均浓度的变化趋势，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview contrasting Grandale's steady improvement with Verlington's continuous deterioration and Ostmere's stability",
+        "Identify the crossover point where Verlington overtook Grandale as the most polluted city",
+        "Support the description with start and end figures for each city",
+        "Report the data neutrally without discussing causes of pollution"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows marriage and divorce rates (per 1,000 people) in one country between 1980 and 2020. Marriages: 9.6 in 1980, 8.8 in 1990, 7.5 in 2000, 6.4 in 2010, 5.2 in 2020. Divorces: 2.1 in 1980, 3.0 in 1990, 3.8 in 2000, 3.6 in 2010, 2.9 in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中某国 1980 至 2020 年结婚率与离婚率的变化，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview noting the steady decline in marriages against the rise-then-fall pattern of divorces",
+        "Identify the divorce peak around 2000 and the narrowing gap between the two lines",
+        "Quantify the overall changes across the forty-year period with figures",
+        "Compare the two trends directly rather than describing each line separately"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The line graph below shows average daily ridership (in thousands of passengers) on buses and trams in the city of Halverton between 2005 and 2023. Buses: 310 thousand in 2005, 295 thousand in 2010, 268 thousand in 2015, 240 thousand in 2020, 226 thousand in 2023. Trams: 45 thousand in 2005, 78 thousand in 2010, 130 thousand in 2015, 172 thousand in 2020, 214 thousand in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述折线图中 2005 至 2023 年 Halverton 市公交车与有轨电车日均客流量的变化，不少于 150 词。",
+      "referencePoints": [
+        "Give an overview of the opposing trends: bus use declined steadily while tram use rose sharply",
+        "Note that tram ridership nearly quintupled and was approaching bus levels by 2023",
+        "Use figures from the start, middle and end of the period to support the description",
+        "Employ varied language for increase, decrease and convergence"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of people in four age groups who attended a live theatre performance at least once a year in 2005 and 2023. Aged 16-29: 24 percent in 2005, 15 percent in 2023. Aged 30-44: 31 percent in 2005, 27 percent in 2023. Aged 45-59: 35 percent in 2005, 38 percent in 2023. Aged 60 and over: 29 percent in 2005, 41 percent in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中 2005 年与 2023 年四个年龄段观看现场戏剧演出比例的变化，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview contrasting falling attendance among younger groups with rising attendance among older groups",
+        "Highlight the largest changes: the drop for 16-29s and the 12-point rise for the over-60s",
+        "Compare age groups within each year as well as changes across the two years",
+        "Select representative figures rather than mechanically listing all eight percentages"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the percentage of internet users in one country who bought five categories of goods or services online in 2015 and 2023. Clothing: 41 percent in 2015, 63 percent in 2023. Groceries: 12 percent in 2015, 44 percent in 2023. Electronics: 35 percent in 2015, 48 percent in 2023. Books and media: 38 percent in 2015, 33 percent in 2023. Travel bookings: 29 percent in 2015, 52 percent in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中某国网民 2015 年与 2023 年网购五类商品或服务比例的变化，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview stating that online purchasing rose in four of the five categories, with books and media the exception",
+        "Highlight groceries as the fastest-growing category, almost quadrupling its share",
+        "Compare the ranking of categories in 2015 with the ranking in 2023",
+        "Support claims with well-chosen percentages and clear comparative language"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the number of people (in thousands) starting apprenticeships in five sectors in one country in 2010 and 2022. Construction: 28 thousand in 2010, 34 thousand in 2022. Engineering: 22 thousand in 2010, 25 thousand in 2022. Health and social care: 15 thousand in 2010, 41 thousand in 2022. Hospitality: 19 thousand in 2010, 12 thousand in 2022. Digital and IT: 6 thousand in 2010, 30 thousand in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中某国 2010 年与 2022 年五个行业学徒制注册人数的变化，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview identifying health and social care and digital as the sectors with the most dramatic growth",
+        "Note that hospitality was the only sector to decline, and quantify the fall",
+        "Compare the leading sector in 2010 (construction) with the leader in 2022 (health and social care)",
+        "Group sectors by scale of change rather than describing all five separately"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The bar chart below shows the average price of a standard cinema ticket (in US dollars) in six cities in 2012 and 2022. City A: 8.50 in 2012, 14.20 in 2022. City B: 11.00 in 2012, 12.10 in 2022. City C: 6.20 in 2012, 9.80 in 2022. City D: 13.40 in 2012, 19.60 in 2022. City E: 5.10 in 2012, 5.60 in 2022. City F: 9.30 in 2012, 15.00 in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述柱状图中六座城市 2012 年与 2022 年电影票平均价格的变化，不少于 150 词。",
+      "referencePoints": [
+        "Give an overview stating that prices rose in every city but at very different rates",
+        "Contrast the steep rises in Cities A, D and F with the near-stagnant prices in Cities B and E",
+        "Note that City D was the most expensive and City E the cheapest in both years",
+        "Use percentage or proportional language (roughly two-thirds higher, barely changed) alongside dollar figures"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show how farmland in one country was used in 1990 and 2020. In 1990: cereal crops 42 percent, livestock grazing 35 percent, fruit and vegetables 11 percent, forestry plantations 5 percent, other uses 7 percent. In 2020: cereal crops 30 percent, livestock grazing 28 percent, fruit and vegetables 19 percent, forestry plantations 14 percent, other uses 9 percent. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两张饼图中某国 1990 年与 2020 年农田用途构成的变化，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview noting the shift away from cereals and grazing towards horticulture and forestry",
+        "Quantify the largest changes, such as forestry almost tripling its share",
+        "Note that cereals remained the largest single use in both years despite declining",
+        "Compare the two charts directly rather than describing each year in isolation"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show the age structure of the population of the town of Bramwick in 1990 and 2020. In 1990: under 15 years 24 percent, 15-39 years 38 percent, 40-64 years 26 percent, 65 years and over 12 percent. In 2020: under 15 years 16 percent, 15-39 years 29 percent, 40-64 years 32 percent, 65 years and over 23 percent. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两张饼图中 Bramwick 镇 1990 年与 2020 年人口年龄结构的变化，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview describing the clear ageing of the town's population over the thirty years",
+        "Highlight that the share of over-65s nearly doubled while the under-15 share fell by a third",
+        "Identify the change in the largest group, from 15-39 in 1990 to 40-64 in 2020",
+        "Support all comparisons with percentages from both charts"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two pie charts below show how volunteers in one country divided their volunteering hours among different activities in 2005 and 2020. In 2005: sports coaching 26 percent, environmental projects 9 percent, helping elderly people 22 percent, youth clubs 28 percent, emergency services support 15 percent. In 2020: sports coaching 18 percent, environmental projects 24 percent, helping elderly people 27 percent, youth clubs 17 percent, emergency services support 14 percent. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述两张饼图中某国志愿者 2005 年与 2020 年志愿服务时间在不同活动上的分配变化，不少于 150 词。",
+      "referencePoints": [
+        "Give an overview contrasting the surge in environmental volunteering with declines in sports coaching and youth clubs",
+        "Note that helping elderly people became the largest category by 2020",
+        "Point out that emergency services support stayed almost unchanged",
+        "Group rising, falling and stable categories rather than listing each percentage in turn"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows the process of making hard cheese, described here in stages. Stage 1: raw milk is collected from dairy farms and delivered to the cheese plant in refrigerated tankers. Stage 2: the milk is pasteurised at 72 degrees Celsius for 15 seconds. Stage 3: a starter culture and rennet are added, causing the milk to separate into solid curds and liquid whey. Stage 4: the whey is drained off and the curds are cut, salted and pressed into moulds for 24 hours. Stage 5: the pressed cheese wheels are moved to a cool storage room and matured for 6 to 18 months. Stage 6: the matured cheese is graded, cut, packaged and distributed to shops. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述硬质奶酪从原料奶到成品上市的六个生产阶段流程，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview stating the number of stages and the overall transformation from raw milk to packaged cheese",
+        "Use present simple passive voice appropriately throughout (is pasteurised, are pressed)",
+        "Connect stages with clear sequencing language (once, after which, at the final stage)",
+        "Include key details such as temperatures and maturation time without inventing extra steps"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The diagram below shows how waste paper is recycled into new paper, described here in stages. Stage 1: used paper is collected from homes and offices and taken to a sorting centre, where it is separated by type and contaminants such as plastic are removed. Stage 2: the sorted paper is shredded and mixed with water and chemicals in a pulper to create a fibre slurry. Stage 3: the slurry passes through screens and a de-inking flotation tank, where ink and glue are removed. Stage 4: the cleaned pulp is sometimes blended with a small amount of new wood fibre to strengthen it. Stage 5: the pulp is sprayed onto a moving mesh, pressed between rollers and dried to form continuous sheets. Stage 6: the finished paper is wound onto large reels and transported to printers and packaging factories. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：描述废纸回收再造成新纸的六个阶段流程，不少于 150 词。",
+      "referencePoints": [
+        "Open with an overview summarising the cycle from collected waste paper to reusable paper reels",
+        "Describe every stage in the correct order using passive constructions and sequencing markers",
+        "Mention the purpose of key steps, such as de-inking and blending with new fibre",
+        "Paraphrase the stage descriptions rather than copying them verbatim"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps below show the sports facilities in the town of Ferndale in 2010 and today, described here in words. In 2010, a rectangular park occupied the area north of Mill Road, containing two grass football pitches in its western half and a small pavilion in the centre; south of Mill Road there was a car park in the southwest corner and open wasteland in the southeast. Today, the western football pitches remain but have been reduced to one, with the space gained now holding a 25-metre indoor swimming pool; the central pavilion has been enlarged into a two-storey sports centre with a gym; on the former wasteland in the southeast there are now four floodlit tennis courts and a skate park, and the car park has been extended eastwards along the southern edge to twice its original size. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：对比描述 Ferndale 镇 2010 年与现在体育设施布局的变化，不少于 150 词。",
+      "referencePoints": [
+        "Provide an overview stating that facilities have been significantly expanded and diversified, especially south of Mill Road",
+        "Use accurate location language (in the southeast corner, along the southern edge, north of Mill Road)",
+        "Describe changes with appropriate map verbs (was converted into, was extended, was replaced by)",
+        "Cover both what remained (western pitches, in reduced form) and what is new"
+      ],
+      "wordLimit": ">=150"
+    },
+    {
+      "prompt": "IELTS Academic Writing Task 1. The two maps below show the campus of Westhollow University in 2005 and today, described here in words. In 2005, the campus was entered from the west via Main Gate, which led to a central lawn; the library stood on the north side of the lawn, a lecture block on the east side, and student residences in the far southeast; the south of the campus was occupied by a large open-air car park, and a small cafe sat next to the Main Gate. Today, the central lawn and library remain unchanged, but the lecture block has been extended northwards to connect with a new science laboratory building; the open-air car park has been replaced by a multi-storey car park in the southwest corner, freeing land for a new student services hub and a landscaped garden in the south; the cafe by the Main Gate has been demolished and replaced by a larger food court beside the residences, and a second entrance has been added on the eastern boundary. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "promptZh": "学术类小作文：对比描述 Westhollow 大学校园 2005 年与现在布局的变化，不少于 150 词。",
+      "referencePoints": [
+        "Include an overview noting that teaching and student facilities have grown while land use in the south has been reorganised",
+        "Organise the answer spatially or by theme (unchanged features, expanded buildings, replacements) rather than randomly",
+        "Use passive map language (has been demolished, has been replaced by, has been extended)",
+        "Mention retained features such as the lawn and library to enable before-and-after comparison"
+      ],
+      "wordLimit": ">=150"
+    }
+  ]
+}

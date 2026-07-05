@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-07-05T07:45:55.691Z",
+  "apply": true,
+  "stage": "ielts-c1-reading-b4",
+  "provider": "claude-authored",
+  "totals": {
+    "parsedOk": 20,
+    "reject": 0,
+    "wrote": 0,
+    "dupSkip": 20
+  },
+  "rejectsByReason": {},
+  "files": [
+    {
+      "file": "data\\generated-question-sets\\ielts-c1-reading-b4\\reading-b4-a.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 5
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-c1-reading-b4\\reading-b4-b.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 5
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-c1-reading-b4\\reading-b4-c.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 5
+    },
+    {
+      "file": "data\\generated-question-sets\\ielts-c1-reading-b4\\reading-b4-d.json",
+      "template": "ielts-academic-reading-mcq",
+      "level": 8,
+      "parsedOk": 5,
+      "reject": 0,
+      "wrote": 0,
+      "dupSkip": 5
+    }
+  ]
+}

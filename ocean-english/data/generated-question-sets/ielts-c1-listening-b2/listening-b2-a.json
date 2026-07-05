@@ -1,0 +1,366 @@
+{
+  "template": "ielts-listening-mcq",
+  "level": 8,
+  "sets": [
+    {
+      "passage": "Woman: Good morning, Riverside Dental Practice. How can I help? Man: Hello, I'd like to book a check-up with Dr Hanley, please. Woman: Let me see. She has a space this Thursday at nine fifteen, or next Monday at two thirty. Man: Thursday morning is tricky because I work until noon. Could I take the Monday slot instead? Woman: Of course, Monday at two thirty. Are you a registered patient? Man: Yes, but I've moved recently. My new address is forty-two Elm Crescent. Woman: Thank you, I'll update that. Now, a standard check-up costs twenty-five pounds, but as you haven't visited for over two years, the dentist will also take X-rays, which brings it to forty pounds altogether. Man: That's fine. Should I arrive early? Woman: Please come ten minutes before your appointment to fill in a health form. And if you need to cancel, give us at least twenty-four hours' notice, otherwise there's a charge. Man: Understood. Monday at two thirty, then. Thanks very much. Woman: See you then. Goodbye.",
+      "questions": [
+        {
+          "prompt": "Why is the man calling the dental practice?",
+          "options": [
+            "To cancel an existing appointment",
+            "To arrange a dental check-up",
+            "To register as a new patient",
+            "To ask about the cost of X-rays"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When will the man's appointment take place?",
+          "options": [
+            "Thursday at nine fifteen",
+            "Monday at nine fifteen",
+            "Monday at two thirty",
+            "Thursday at two thirty"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How much will the man pay for his visit?",
+          "options": [
+            "Forty pounds",
+            "Twenty-five pounds",
+            "Twenty-four pounds",
+            "Ten pounds"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为预约牙医的电话对话,需抓住最终确定的时间与含X光检查在内的总费用。"
+    },
+    {
+      "passage": "Man: Hello, Butterworth's Bakery, how can I help? Woman: Hi, I'd like to order a birthday cake for my daughter. She's turning seven on Saturday. Man: Lovely. We do sponge, chocolate, and lemon. Woman: She loves chocolate, but two of her friends can't eat dairy, so could you do the lemon one instead? I've heard your lemon cake is dairy-free. Man: That's right, it is. What size were you thinking? The small serves eight, the medium serves fifteen, and the large serves twenty-five. Woman: There'll be about twelve children plus a few parents, so the medium should be right. Man: Medium lemon, then. That's thirty-two pounds. Any message on top? Woman: Yes, please write Happy Birthday Amy, and could you add a unicorn decoration? Man: We can, though the sugar unicorn is an extra five pounds. Woman: Go ahead, that's fine. When should I collect it? Man: The party's Saturday afternoon, you said? Come any time after ten that morning. We close at four on Saturdays. Woman: I'll come at about eleven then. Thank you so much. Man: You're welcome. We'll see you on Saturday.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the woman's call?",
+          "options": [
+            "To order a cake for a child's birthday",
+            "To ask about dairy-free bread",
+            "To book a party at the bakery",
+            "To complain about a previous order"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "Why does the woman choose the lemon cake?",
+          "options": [
+            "It is her daughter's favourite flavour",
+            "The chocolate cake is sold out",
+            "It is the cheapest option available",
+            "Some of the party guests cannot eat dairy"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "How much will the woman pay in total?",
+          "options": [
+            "Thirty-two pounds",
+            "Thirty-seven pounds",
+            "Twenty-five pounds",
+            "Thirty-five pounds"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇为订购生日蛋糕的对话,总价需将蛋糕价与独角兽装饰的加价相加得出。"
+    },
+    {
+      "passage": "Woman: Hi, I saw your poster about the Westgate Cycling Club. Is it open to beginners? Man: Absolutely. We have three groups: the social group does about fifteen kilometres at an easy pace, the intermediate group does forty, and the fast group trains for races. Woman: I cycle to work every day, but I've never ridden long distances, so maybe the social group first. Man: Good choice. We meet on Sunday mornings at nine outside the library, not the market square. We changed that last month. Woman: Do I need any special equipment? Man: A roadworthy bike and a helmet are essential. Lights aren't needed since we ride in daylight, and you can wear ordinary sports clothes. Woman: How much is membership? Man: It's twenty pounds a year, but your first two rides are free, so you can try before you join. Students pay half. Woman: I'm not a student, unfortunately. Can I just turn up on Sunday? Man: Yes, but email me tonight so I can add you to the list. The rides are capped at twelve riders for safety. Woman: Great, I'll do that this evening. Thanks for your help.",
+      "questions": [
+        {
+          "prompt": "What does the woman want to find out?",
+          "options": [
+            "How to complain about a change of meeting place",
+            "How to book a cycling holiday",
+            "Whether she can join the cycling club",
+            "How to register for a race"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "Where does the club now meet on Sundays?",
+          "options": [
+            "In the market square",
+            "Outside the library",
+            "At the sports centre",
+            "Outside the man's house"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What should the woman do before Sunday?",
+          "options": [
+            "Pay twenty pounds membership",
+            "Buy lights for her bike",
+            "Show her student card",
+            "Send the man an email"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为咨询加入骑行俱乐部的对话,注意集合地点上个月已从集市广场改到图书馆门口。"
+    },
+    {
+      "passage": "Man: Good afternoon, Parkside Housing Office. Woman: Hello, I'm calling about my neighbour in flat nine. I'm in flat seven. For the past three weeks he's been playing loud music, sometimes until two in the morning. Man: I'm sorry to hear that. Have you spoken to him directly? Woman: I tried twice. The first time he apologised, but it started again the following weekend. The second time he didn't even answer the door. Man: I see. The next step is to keep a diary of the disturbances, with dates, times, and how long the noise lasts. Woman: I've actually been noting things down on my phone since last Tuesday. Man: Excellent. Email that to us, and we'll send him a formal warning letter. If the problem continues after that, an officer can visit in the evening to witness the noise. Woman: How long does the warning usually take? Man: Letters go out within five working days. And please don't confront him again yourself. Leave it with us now. Woman: All right. I'll email my notes this afternoon. Thank you for your help.",
+      "questions": [
+        {
+          "prompt": "Why is the woman calling the housing office?",
+          "options": [
+            "To ask for a transfer to another flat",
+            "To complain about the housing office staff",
+            "To report a broken door in her building",
+            "To get help with a noisy neighbour"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What has the woman already done?",
+          "options": [
+            "Recorded details of the noise on her phone",
+            "Sent a diary to the housing office",
+            "Called the police at two in the morning",
+            "Written a warning letter to the neighbour"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What does the man advise the woman to do?",
+          "options": [
+            "Speak to the neighbour one more time",
+            "Wait five days before keeping a diary",
+            "Avoid confronting the neighbour herself",
+            "Visit the office in the evening"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇为向住房管理处投诉邻居噪音的对话,注意她已在手机上记录噪音情况且被建议不要再当面交涉。"
+    },
+    {
+      "passage": "Woman: Hello? Man: Hi Dana, it's Marcus. I'm just confirming my flight details so you know when to collect me. Woman: Go ahead, I've got a pen. Man: I land at Terminal Two on Friday. The flight's due in at six forty in the evening, but the airline says it's often about twenty minutes late. Woman: So I should aim for around seven. Do you want me to park and meet you inside? Man: Parking there is expensive, four pounds for just fifteen minutes. Use the free waiting area instead, and I'll text you when I've got my suitcase. Woman: Good idea. Which exit will you come out of? Man: Arrivals has two exits. I'll use the one near the coffee kiosk, exit B, because it's closer to the lifts. Woman: Exit B, got it. Anything else? Man: Yes, could you bring my thick winter coat? I've been somewhere warm for a month and it's meant to be freezing on Friday. Woman: I'll put it on the back seat. Safe flight, Marcus. Man: Thanks. See you Friday evening.",
+      "questions": [
+        {
+          "prompt": "Why is Marcus calling Dana?",
+          "options": [
+            "To ask her to book him a flight",
+            "To arrange for her to collect him from the airport",
+            "To complain about a delayed flight",
+            "To change the day he is arriving"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What will Dana do when she gets to the airport?",
+          "options": [
+            "Park and meet Marcus inside Terminal Two",
+            "Wait at the coffee kiosk in arrivals",
+            "Pay for fifteen minutes of parking",
+            "Wait in the free area until Marcus texts her"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What does Marcus ask Dana to bring?",
+          "options": [
+            "His winter coat",
+            "A spare suitcase",
+            "His phone charger",
+            "Some warm boots"
+          ],
+          "answer": "A"
+        }
+      ],
+      "explain_zh": "本篇为安排机场接机的对话,重点区分停车费、免费等候区以及托运行李后发短信等细节。"
+    },
+    {
+      "passage": "Good morning, everyone. Before we finish today's lecture, a quick announcement about the study skills seminars running next term. There are three of them: one on essay planning, one on presentation techniques, and one on managing exam stress. Each seminar lasts ninety minutes and takes place in Room Twelve of the Harper Building, not the main lecture theatre, please note. Places are limited to twenty students per session, and last year they filled up within days, so don't leave it too late. To sign up, you used to add your name to a paper list outside the department office, but from this year everything is done through the student portal. Log in, click Events, and select the seminar you want. Registration opens this Friday at nine and closes at the end of the month. The seminars themselves are free, but if you book a place and don't attend without cancelling, a five-pound administration charge is added to your account, so do cancel if your plans change. Finally, the essay planning seminar is strongly recommended for first-year students, as it links directly to your January assignments. Any questions, email Dr Osei at the department.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the announcement?",
+          "options": [
+            "To advertise a new lecture course",
+            "To explain changes to the January exams",
+            "To tell students about study skills seminars",
+            "To introduce a new member of staff"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "How should students sign up this year?",
+          "options": [
+            "Through the online student portal",
+            "On a paper list outside the office",
+            "By emailing Dr Osei",
+            "At the department reception desk"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What happens if a student books a place but does not attend?",
+          "options": [
+            "They lose access to the student portal",
+            "They cannot book any future seminars",
+            "They must email an apology to the department",
+            "A five-pound charge is added to their account"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为学习技能研讨课的报名通知,注意报名方式已由纸质名单改为学生门户网站。"
+    },
+    {
+      "passage": "Welcome to the Milldale Sports Centre induction. My name's Priya, and I'm the duty manager. This session lasts about forty minutes, and by the end you'll be able to use the gym independently. First, a word about access. Your membership card opens the turnstile at the main entrance. If you forget it, reception can issue a day pass, but after three forgotten cards there's a replacement fee. The gym floor is upstairs, and the pool and studios are on the ground floor. In a moment my colleague Tom will demonstrate the cardio machines, and then each of you will try the equipment while we watch and correct your technique. Please don't skip this part. It's the whole point of the induction, and our insurance requires it. A few rules: bring a towel every visit, wear clean indoor trainers, and put weights back on the racks. Water bottles are allowed, but no glass anywhere in the building. The centre opens at six in the morning on weekdays and eight at weekends, closing at ten every night. Lastly, personal training taster sessions are half price this month, so ask at reception if you're interested. Right, let's head upstairs and meet Tom.",
+      "questions": [
+        {
+          "prompt": "What is the purpose of this session?",
+          "options": [
+            "To prepare new members to use the gym safely",
+            "To sell personal training sessions",
+            "To explain how to renew a membership",
+            "To introduce all the centre's staff"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What will listeners do after Tom's demonstration?",
+          "options": [
+            "Watch a safety video",
+            "Tour the pool and studios",
+            "Practise on the machines while staff watch",
+            "Sign an insurance form"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "What time does the centre open at weekends?",
+          "options": [
+            "Six in the morning",
+            "Eight in the morning",
+            "Ten in the morning",
+            "Eight in the evening"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇为体育中心入门培训的独白,注意工作日与周末开门时间不同,周末为早上八点。"
+    },
+    {
+      "passage": "Good morning, and welcome to your first day at Calder and Voss. I'm Renata, the internship coordinator, and I'll be your main contact for the next eight weeks. Here's how today works. First, you'll each get a security badge from the front desk. Please wear it visibly at all times, as staff are told to challenge anyone without one. Then at ten we'll tour the building, and at eleven the IT team will set up your laptops and email accounts. Lunch is from twelve to one. The staff canteen on the fifth floor gives interns a discount, or there are cafes across the street. This afternoon you'll meet your team supervisors. Your supervisor, not me, will assign your daily tasks, but come to me with anything about pay, absence, or problems you don't feel comfortable raising with your team. Working hours are nine to five thirty, with Friday afternoons reserved for the intern project, a group presentation you'll deliver in your final week. One warning: never send company documents to your personal email. It's the quickest way to lose your placement. Any questions? No? Then let's go and get your badges.",
+      "questions": [
+        {
+          "prompt": "What is the speaker mainly doing in this talk?",
+          "options": [
+            "Describing the history of the company",
+            "Assigning the interns their first tasks",
+            "Training the interns in email security",
+            "Explaining the arrangements for the internship"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "Who will give the interns their daily tasks?",
+          "options": [
+            "Renata, the internship coordinator",
+            "Their team supervisor",
+            "The IT team",
+            "The front desk staff"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "What are Friday afternoons reserved for?",
+          "options": [
+            "Meetings with supervisors",
+            "Visits to the staff canteen",
+            "Work on a group project",
+            "IT training sessions"
+          ],
+          "answer": "C"
+        }
+      ],
+      "explain_zh": "本篇为实习生入职第一天的说明,注意日常任务由团队主管而非协调员分配。"
+    },
+    {
+      "passage": "Hi everyone, thanks for coming to this volunteer meeting for Fenwick University Radio. I'm Jo, the station manager, and I want to explain how you can get involved. People assume radio volunteering means presenting shows, but honestly presenting is the smallest part of what we do. We also need people to research stories, edit interviews, run our social media, and look after the technical side in the studio. New volunteers actually start behind the scenes. You can apply to present your own show after one full term, once you've completed your studio training. Speaking of which, training sessions run every Wednesday evening at six, and you need to attend three of them before you can touch the broadcast desk. The station broadcasts online from ten in the morning until midnight, seven days a week, so there are plenty of slots to fill. There's no fee to join, as the students' union covers our costs, but we do ask for a commitment of at least four hours a week. If that sounds like you, put your name and email on the sheet by the door before you leave tonight, and I'll invite you to next Wednesday's training session.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of Jo's talk?",
+          "options": [
+            "To recruit presenters for new shows",
+            "To explain volunteering opportunities at the station",
+            "To announce changes to broadcast hours",
+            "To ask for donations for studio equipment"
+          ],
+          "answer": "B"
+        },
+        {
+          "prompt": "When can new volunteers present their own show?",
+          "options": [
+            "After one full term and studio training",
+            "After three weeks at the station",
+            "As soon as they sign up tonight",
+            "After paying the joining fee"
+          ],
+          "answer": "A"
+        },
+        {
+          "prompt": "What should interested people do before leaving tonight?",
+          "options": [
+            "Email Jo their weekly availability",
+            "Book a Wednesday training session",
+            "Choose a broadcast slot",
+            "Write their details on the sheet by the door"
+          ],
+          "answer": "D"
+        }
+      ],
+      "explain_zh": "本篇为大学电台招募志愿者的介绍,注意新人须先做幕后工作并完成培训后才能主持节目。"
+    },
+    {
+      "passage": "Tonight I want to talk about a neighbour most of you have seen but few of you really know: the urban fox. Foxes first moved into British cities in the nineteen thirties, when new suburbs with large gardens spread into the countryside. The foxes didn't invade our space; we built our streets around theirs. Today a typical city fox lives in a territory of around forty hectares, far smaller than a rural fox needs, because food is so much easier to find. And what do they eat? Many people imagine foxes survive by raiding bins, but studies in Bristol found that scavenged food makes up less than half their diet. They mostly eat earthworms, insects, wild fruit, and small rodents. City foxes don't live long, sadly. The average is only about eighteen months, mainly because of traffic. Should we feed them? Experts say occasional food left on the lawn does little harm, but never feed a fox by hand, because a fox that loses its fear of people is usually the one that ends up causing trouble and being destroyed. Next week, I'll be talking about another urban survivor: the peregrine falcon.",
+      "questions": [
+        {
+          "prompt": "What is the main purpose of the talk?",
+          "options": [
+            "To warn people that urban foxes are dangerous",
+            "To describe the history of the city of Bristol",
+            "To give listeners a clearer picture of city foxes",
+            "To ask for volunteers for a fox survey"
+          ],
+          "answer": "C"
+        },
+        {
+          "prompt": "According to the Bristol studies, what do city foxes mostly eat?",
+          "options": [
+            "Food scavenged from bins",
+            "Food left out by residents",
+            "Birds such as pigeons",
+            "Worms, insects, fruit and small rodents"
+          ],
+          "answer": "D"
+        },
+        {
+          "prompt": "What do experts advise about feeding foxes?",
+          "options": [
+            "Never leave any food out for them",
+            "Never feed a fox from your hand",
+            "Report any fox seen in a garden",
+            "Only feed foxes during the winter"
+          ],
+          "answer": "B"
+        }
+      ],
+      "explain_zh": "本篇为关于城市狐狸的科普短讲,纠正了狐狸主要翻垃圾桶觅食的普遍误解。"
+    }
+  ]
+}
